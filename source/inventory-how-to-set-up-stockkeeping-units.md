@@ -1,45 +1,48 @@
 ---
-title: Jak založit skladové jednotky | Microsoft Docs
-description: Pomocí skladových jednotek můžete zaznamenávat informace o svým zboží pro konkrétní lokaci nebo kód konkrétní varianty.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 11/15/2018
-ms.author: sgroespe
+    title: How to Set Up Stockkeeping Units | Microsoft Docs
+    description: You can use stockkeeping units to record information about your items for a specific location or a specific variant code.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
-# <a name="set-up-stockkeeping-units"></a>Nastavení skladové jednotky
-Pomocí skladových jednotek můžete zaznamenávat informace o svém zboží pro konkrétní lokaci nebo kód konkrétní varianty.  
+# Set Up Stockkeeping Units
+You can use stockkeeping units to record information about your items for a specific location or a specific variant code.  
 
- Skladové jednotky jsou doplňkem ke kartám zboží. Nenahrazují je, i když s nimi souvisí. Skladové jednotky umožňují rozlišovat informace o zboží pro konkrétní lokaci, jako je sklad nebo distribuční centrum, nebo konkrétní varianta, jako jsou různá čísla polic a různé informace o doplňování, pro stejné zboží.  
+ Stockkeeping units are a supplement to item cards. They do not replace them, although they are related to them. Stockkeeping units allow you to differentiate information about an item for a specific location, such as a warehouse or distribution center, or a specific variant, such as different shelf numbers and different replenishment information, for the same item.  
 
-## <a name="to-set-up-a-stockkeeping-unit"></a>Nastavení skladové jednotky  
+## To set up a stockkeeping unit  
 
-1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skladové jednotky** a poté vyberte související odkaz.  
-2.  Zvolte akci **Nový**.  
-3.  Vyplňte pole na kartě. Vyžadují se následující pole: **Číslo zboží**, **Kód lokace**, a/nebo **Kód varianty**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Stockkeeping Units**, and then choose the related link.  
+2.  Choose the **New** action.  
+3.  Fill in the fields on the card. The following fields are required: **Item No.**, **Location Code**, and/or **Variant Code**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-Pokud jste pro zboží nastavili první skladovou jednotku, je zaškrtnuto políčko **Skladová jednotka existuje** na kartě **Zboží**.  
+When you have set up the first stockkeeping unit for an item, the **Stockkeeping Unit Exists** check box on the **Item** card is selected.  
 
-Chcete-li pro zboží vytvořit několik skladových jednotek, použijte dávkovou úlohu **Vytvořit skladovou jednotku**.  
+To create several stockkeeping units for an item, use the **Create Stockkeeping Unit** batch job.  
 
 > [!NOTE]  
->  Informace na kartě **Skladové jednotky** mají přednost před kartou **Zboží**.
+>  The information on the **Stockkeeping Unit** card has priority over the **Item** card.
 
 > [!Warning]
-> Pokud je SKU dodávána prostřednictvím výroby, pole **Pevná pořizovací cena** se nepoužívá při fakturaci a úpravě skutečných nákladů na vyrobené zboží. Místo toho se použije pole **Pevná pořizovací cena** na kartě podkladového zboží a veškeré odchylky se vypočítají na základě podílů na nákladech daného zboží.<br /><br />
-> Protože výrobní kusovníky a zaokrouhlování nemohou být přiřazeny k jednotkám SKU, pak souhrn jednotkových nákladů a související výpočet podílů na nákladech také nejsou k dispozici na jednotkách SKU. Pro více informací navštivte [O výpočtu pevné pořizovací ceny](finance-about-calculating-standard-cost.md).
+> If the SKU is supplied through production, then the **Standard Cost** field is not used when invoicing and adjusting the actual cost of the produced item. Instead, the **Standard Cost** field on the underlying item card is used, and any variances are calculated against the cost shares of that item.<br /><br />
+> Because production BOMs and routing cannot be assigned to SKUs, then the unit cost roll-up and the related calculation of cost shares are also not available on SKUs. For more information, see [About Calculating Standard Cost](finance-about-calculating-standard-cost.md)
 
-## <a name="see-also"></a>Viz také  
-[Evidence nového zboží](inventory-how-register-new-items.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa skladů](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Správa montáže](assembly-assemble-items.md)    
-[Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+## See Also  
+[Register New Items](inventory-how-register-new-items.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

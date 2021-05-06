@@ -1,38 +1,49 @@
 ---
-title: Nastavení účetní osnovy
-description: 'Výchozí účty změníte v účtové osnově, kde i můžete přidat nové účty.'
+title: Set Up the Chart of Accounts
+description: You change the default accounts in the chart of accounts (COA), and you can add new accounts.
 author: edupont04
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'COA, cha of acc'
-ms.date: 12/10/2018
+ms.search.keywords: COA, cha of acc
+ms.date: 04/01/2021
 ms.author: edupont
----
-# <a name="setting-up-or-changing-the-chart-of-accounts"></a>Nastavení nebo změnění účetní osnovy
-Účetní osnova je soubor účtů hlavní knihy, na které se účtují vaše finanční pohyby. [!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje standardní účetní osnovu, která je připravena podpořit váš obchod.
-Avšak můžete měnit výchozí účty a přidávat nové.  
 
-## <a name="adding-or-changing-accounts"></a>Přidání nebo změna účtů
-Z účtové osnovy můžete otevřít každý finanční účet a přidat, nebo změnit jeho nastavení.
+---
+# Setting Up or Changing the Chart of Accounts
+The chart of accounts shows the ledger accounts that store your financial data. [!INCLUDE[prod_short](includes/prod_short.md)] includes a standard chart of accounts that is ready to support your business.
+However, you can change the default accounts, and you can add new accounts.
+<br><br>  
+
+> [!Video https://www.microsoft.com/videoplayer/embed/RE43KO9?rel=0]
+
+
+## Adding or Changing Accounts
+From the chart of accounts, you can open each G/L account and add or change settings.
 
 > [!NOTE]  
->   Můžete smazat účet hlavní knihy. Avšak než jej smažete, musí platit následující:  
+>   You can delete a general ledger account. However, before you delete it, the following must be true:  
 >  
->   * Zůstatek na účtu musí být nula.  
->   * Pole **Povolit odstr.fin.účtu před** musí být nastaveno na stránce **Nastavení Financí** a účet nesmí mít položky toho stejného, nebo pozdějšího data.  
->   * Pokud je vybráno pole **Kontrolovat použití fin. Účtu** na stránce **Nastavení financí**, pak účet nesmí být využíván v žádné z účto skupin nebo nastavení účtování.  
+>   * The balance on the account must be zero.  
+>   * The **Allow G/L Acc. Deletion Before** field must be set on the **General Ledger Setup** page, and the account must not have ledger entries on or after that date.  
+>   * If the **Check G/L Account Usage** field on the **General Ledger Setup** page is selected, then the account must not be used in any posting groups or posting setup.  
 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] bude předcházet tomu, abyste si vymazali účet hlavní knihy, který ukládá potřebné data v účtové osnově.  
+[!INCLUDE[prod_short](includes/prod_short.md)] will prevent you from deleting a general ledger account that stores data that is needed in the chart of accounts.  
 
-## <a name="see-also"></a>Viz také
-[Hlavní kniha a Účtová osnova](finance-general-ledger.md)  
-[Správa bankovních účtů](bank-manage-bank-accounts.md)  
-[Práce s dimenzemi](finance-dimensions.md)  
-[Import dat z jiných finančních systémů](across-import-data-configuration-packages.md)(across-import-data-configuration-packages.md)  
-[Práce s účetními schématy](bi-how-work-account-schedule.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+## See Related Training at [Microsoft Learn](/learn/modules/chart-accounts-dynamics-365-business-central/index)
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]
+## See Also
+[The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
+[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
+[Working with Dimensions](finance-dimensions.md)  
+[Importing Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Work with Account Schedules](bi-how-work-account-schedule.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

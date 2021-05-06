@@ -1,47 +1,50 @@
 ---
 title: Work with Incoming Documents| Microsoft Docs
 description: You can manage incoming external business documents, such as payment receipts or PDFs, manage OCR tasks, and convert files to electronic documents and records.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Došlé doklady
-Některé obchodní transakce nejsou od počátku používání zaznamenány v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Místo toho se do vaší společnosti dostane externí obchodní doklad jako příloha e-mailu nebo papírová kopie, kterou naskenujete. To je typické pro nákupy, kde takové soubory příchozích dokladů představují potvrzení o platbách za výdaje nebo malé nákupy.
+# Incoming Documents
 
-Z PDF nebo obrazových souborů představujících příchozí doklady můžete nechat externí službu OCR (Optické rozpoznávání znaků) generovat elektronické doklady, které pak mohou být převedeny záznam v evidenci dokladů v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+Some business transactions are not recorded in [!INCLUDE[prod_short](includes/prod_short.md)] from the outset. Instead, an external business document comes into your company as an email attachment or a paper copy that you scan to file. This is typical of purchases, where such incoming document files represent payment receipts for expenses or small purchases.
 
-Na stránce **Došlé doklady** můžete pomocí různých funkcí prohlížet účtenky, spravovat úlohy OCR a ručně nebo automaticky převádět soubory příchozích dokladů na příslušné doklady nebo řádky deníku. Externí soubory lze připojit v libovolné fázi procesu, včetně zaúčtovaných dokladů a výsledných položek dodavatele, zákazníka a financí.
+From PDF or image files representing incoming documents, you can have an external OCR service (Optical Character Recognition) generate electronic documents that can then be converted to document records inside [!INCLUDE[prod_short](includes/prod_short.md)]. Choose a service package that is appropriate for your organization and/or country/region. Alternatively, you can create entries manually to represent the external documents.  
 
-Proces došlých dokladů se může skládat z následujících hlavních činností:
+On the **Incoming Documents** page, you can use different functions to review expense receipts, manage OCR tasks, and convert incoming document files, manually or automatically, to the relevant documents or journal lines. The external files can be attached at any process stage, including to posted documents and to the resulting vendor, customer, and general ledger entries.
 
-* Evidence externích dokladů v [!INCLUDE[d365fin](includes/d365fin_md.md)] vytvořením řádků na stránce **Došlé doklady** jedním z následujících způsobů:
-   * Ručně pomocí jednoduchých funkcí, buď z počítače nebo z mobilního zařízení, jedním z následujících způsobů:
-      * Použitím tlačítka **Vytvořit ze souboru** a vyplněním patřičných polí na stránce **Došlý doklad**. Soubor se automaticky připojí.
-      * Použitím tlačítka **Nový**, vyplněním patřičných polí na stránce **Došlý doklad** a manuální připojení dokladu.
-      * Z tabletu nebo telefonu použitím tlačítka **Vytvořit z fotoaparátu** k vytvoření nového záznamu příchozího dokladu a potom odesláním obrázku například službě OCR.
-   * Automaticky přijetím dokladu ze služby OCR jako elektronického dokladu poté, co jste odeslali e-mailem související soubor PDF nebo obrázek službě OCR. Záložka **Finanční Informace** je automaticky vyplněna na stránce **Došlý doklad**.
-* Pomocí služby OCR můžete mít PDF nebo obrazové soubory převedené na elektronické doklady, které lze převést na záznamy dokladů v [!INCLUDE[d365fin](includes/d365fin_md.md)].
-* Vytvořte nové doklady nebo řádky finančního deníku pro záznamy příchozích dokladů zadáním informací při jejich čtení z příchozích souborů.
-* Připojte příchozí soubory k nákupním a prodejním dokladům v jakémkoli stavu, včetně položek dodavatele, zákazníka a financí, které vyplývají z účtování.
-* Zobrazení záznamů příchozích dokladů a jejich příloh z libovolného nákupního a prodejního dokladu, položek nebo vyhledání všech finančních položek bez příchozích záznamů dokladů na stránce **Účetní osnova**.
+The incoming document process can consist of the following main activities:
 
-| Viz | Také |
+* Record the external documents inside [!INCLUDE[prod_short](includes/prod_short.md)] by creating lines on the **Incoming Documents** page in either of the following ways:
+  * Manually, by using simple functions, either from a PC or from a mobile device, in one of the following ways:
+    * Use the **Create from File** button, and then fill relevant fields on the **Incoming Document** page. The file is automatically attached.  
+    * Use the **New** button, and then fill relevant fields on the **Incoming Document** page and manually attach the related file.
+    * From a tablet or phone, use the **Create from Camera** button to create a new incoming document record, and then send the image to the OCR service, for example.
+  * Automatically, by receiving the document from the OCR service as an electronic document after you have emailed the related PDF or image file to the OCR service. The **Financial Information** FastTab is automatically filled on the **Incoming Document** page.
+* Use the OCR service to have PDF or image files turned into electronic documents that can be converted to document records in [!INCLUDE[prod_short](includes/prod_short.md)].
+* Create new documents or general journal lines for incoming document records by entering the information as you read it from incoming document files.
+* Attach incoming document files to purchase and sales documents of any status, including to the vendor, customer, and general ledger entries that result from posting.
+* View incoming document records and their attachments from any purchase and sales document or entry, or find all general ledger entries without incoming document records from the **Chart of Accounts** page.
+
+| To | See |
 | --- | --- |
-| Nastavení funkce Došlých dokladů a nastavení služby OCR | [Nastavení došlých dokladů](across-how-setup-income-documents.md) |
-| Vytváření záznamů došlých dokladů, připojování souborů, použití služby OCR k přeměně PDF souborů na elektronické doklady, převedení elektronických dokladů na evidenci dokladů, kontrola záznamů došlých dokladů z zaúčtovaných prodejních a nákupních dokladů. | [Zpracování došlých dokladů](across-process-income-documents.md) |
+| Set up the Incoming Documents feature and set up the OCR service. |[Set Up Incoming Documents](across-how-setup-income-documents.md) |
+| Create incoming document records, attach files, use OCR to turn PDF files into electronic documents, convert electronic documents to document records, audit incoming document records from posted sales and purchase documents. |[Processing Incoming Documents](across-process-income-documents.md) |
 
-## Viz související školení v programu [Microsoft Learn](/learn/modules/incoming-documents-dynamics-365-business-central/index)
+## See Related Training at [Microsoft Learn](/learn/modules/incoming-documents-dynamics-365-business-central/index)
 
-## Viz také
-[Nakupování](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

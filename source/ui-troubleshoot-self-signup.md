@@ -1,70 +1,50 @@
 ---
-title: Způsoby řešení problémů při samoobslužné registraci | Microsoft Docs
-description: Přečtěte si o nejčastějších důvodech, proč nelze dokončit registraci do Business Central, a o způsobech, jakými tyto problémy vyřešit.
-author: ZdenekBicek
+title: Troubleshoot Issues with Self-Service Sign-Up | Microsoft Docs
+description: Learn about the most common reasons why you may not be able to complete the signup to Business Central, and ways to work around them.
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/13/2020
-ms:reviewer: v-zdbice
+ms.date: 04/01/2021
 ms.author: edupont
+
 ---
-# Řešení problémů při samoobslužné registraci
+# Troubleshooting Self-Service Sign-Up
+Signing up for [!INCLUDE[prod_short](includes/prod_short.md)] is easy and can be done very quickly. You can create a free account even if you are an existing organization. This article addresses issues that you may have during signup.
 
-Registrace do [!INCLUDE[d365fin](includes/d365fin_md.md)] je jednoduchá a lze ji provést velmi rychle. Můžete si vytvořit účet zdarma, i když jste již existující organizací. Tento článek se zabývá problémy, které se mohou vyskytnout během registrace.
+## What email address can I use with Business Central?
+[!INCLUDE[prod_short](includes/prod_short.md)] requires that you use a work, or school, email address to sign up. [!INCLUDE[prod_short](includes/prod_short.md)] does not support email addresses provided by consumer email services or telecommunication providers. This includes outlook.com, hotmail.com, gmail.com, and others.
 
-## <a name="what-email-address-can-i-use-with-business-central"></a>Jakou e-mailovou adresu mohu použít v Business Central?
+If you try to sign up with a personal email address, you will get a message indicating to use a work or school email address.
 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] vyžaduje, abyste k registraci použili pracovní nebo školní e-mailovou adresu. [!INCLUDE[d365fin](includes/d365fin_md.md)] nepodporuje e-mailové adresy poskytované spotřebitelskými e-mailovými službami nebo poskytovateli telekomunikačních služeb. To zahrnuje outlook.com, hotmail.com, gmail.com a další.
+## Troubleshooting
+In many cases, registering for [!INCLUDE[prod_short](includes/prod_short.md)] can be achieved by following the sign-up process. However, there are several reasons why you may not be able to complete self-service signup. The table below summarizes some of the most common reasons you may not be able to complete signup and ways you can workaround these issues.
 
-Pokud se pokusíte zaregistrovat pomocí své osobní e-mailové adresy, zobrazí se zpráva, že je třeba použít pracovní nebo školní e-mailovou adresu.
+| Symptom/Error Message | Cause and Workaround |
+| --------------------- | -------------------- |
+| For Microsoft 365 email addresses that are not registered in a supported country, you receive a message like the following during signup:<br /><br />**That didn't work, we don't support your country or region yet.** |[!INCLUDE[prod_short](includes/prod_short.md)] currently only supports Microsoft 365 email accounts that are registered in a limited number of markets. For more information, see [Regional Availability](#regional-availability). |
+| Personal email addresses such as nancy@gmail.com are not supported. You receive a message like the following during signup:<br /><br />**You entered a personal email address: Please enter your work email address so we can securely store your company's data.**<br> or <br> **That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.** |[!INCLUDE[prod_short](includes/prod_short.md)] does not support email addresses provided by consumer email services or telecommunications providers. To complete signup, try again using an email address assigned by your work or school. If you still cannot sign up and are willing to complete a more advanced setup process, you can register for a new Microsoft 365 trial subscription and use that email address to sign up. |
+| .gov or .mil email addresses You receive a message like the following during signup:<br /><br />**[!INCLUDE[prod_short](includes/prod_short.md)] unavailable: [!INCLUDE[prod_short](includes/prod_short.md)] is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.** <br>or <br>**We can't finish signing you up. It looks like [!INCLUDE[prod_short](includes/prod_short.md)] isn't currently available for your work or school.** |[!INCLUDE[prod_short](includes/prod_short.md)] does not support .gov or .mil addresses at this time. |
+| Self-service signup is not enabled. You receive a message like the following during signup:<br /><br />**We can't finish signing you up. Your IT department has turned off signup for [!INCLUDE[prod_short](includes/prod_short.md)]. Contact them to complete signup.** <br>or <br> **That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.** |Your organization’s IT administrator has disabled self-service signup for [!INCLUDE[prod_short](includes/prod_short.md)]. To complete signup, contact your IT administrator and ask them to follow the instructions on [this page](/dynamics365/business-central/dev-itpro/developer/devenv-business-central-manage-selfservice-signups) to allow existing users to sign up for [!INCLUDE[prod_short](includes/prod_short.md)] and to allow new users to join your existing tenant. You may also experience this problem if you signed up for Microsoft 365 through a partner. |
+| Email address is not a Microsoft 365 ID. You receive a message like the following during signup:<br /><br />**We can't find you at contoso.com. Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.** |Your organization uses IDs to sign in to Microsoft 365 and other Microsoft services that are different than your email address. For example, your email address might be Nancy.Smith@contoso.com but your ID is nancys@contoso.com. To complete signup, use the ID that your organization has assigned to for signing in to Microsoft 365 or other Microsoft services. If you do not know what this is, contact your IT administrator. If you still cannot sign up and are able to complete a more advanced setup process, you can register for a new Microsoft 365 trial subscription and use that email address to sign up. |
+| If your Microsoft 365 account is registered to a supported country, and you are signing up for [!INCLUDE[prod_short](includes/prod_short.md)] while in a different country, you receive a message like the following during signup:<br /><br />**That didn't work, we don't support your country or region yet.**| Your organization's Microsoft 365 subscription is registered to a specific country in the Microsoft 365 administration portal. The signup experience for [!INCLUDE[prod_short](includes/prod_short.md)] uses the language and locale that your current browser uses, and as a result, you can get the error message even though you are in a supported country. Ask your IT administrator to verify the country that is specified in the organization profile in the [Microsoft 365 administration portal](https://portal.office.com/adminportal/home#/companyprofile). You may have to use a different account for [!INCLUDE[prod_short](includes/prod_short.md)].|
 
-## <a name="troubleshooting"></a>Odstraňování problémů
+## Regional Availability
 
-V mnoha případech lze registraci do [!INCLUDE[d365fin](includes/d365fin_md.md)] provést řízením se dle procesu registrace. Existuje však několik důvodů, proč nemusí být možné samostatnou registraci dokončit. Níže uvedená tabulka shrnuje některé nejčastější důvody proč není možné registraci dokončit, a způsoby, jakými tyto problémy vyřešit.
+[!INCLUDE[prod_short](includes/prod_short.md)] is available in a number of countries or regions with localization provided either by Microsoft or an approved localization partner. For a complete list of supported countries and regions, see [Country/Regional Availability and Supported Translations](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json).  
 
-| Příznak / chybová zpráva | Příčina a řešení |
-| --- | --- |
-| U e-mailových adres Office 365, které nejsou registrovány v podporované zemi, se během registrace zobrazí následující zpráva:<br /><br />**To nefungovalo, zatím nepodporujeme vaši zemi nebo region.** |[!INCLUDE[d365fin](includes/d365fin_md.md)] v současné době podporuje pouze e-mailové účty Office 365, které jsou registrovány na omezeném počtu trhů. Pro více informací navštivte [Dostupnost pro oblasti](#regional-availability) |
-| Osobní e-mailové adresy, jako například nancy@gmail.com, nejsou podporovány. Během registrace se zobrazí následující zpráva:<br /><br />**Zadali jste osobní e-mailovou adresu. Zadejte prosím svou pracovní e-mailovou adresu, abychom mohli bezpečně ukládat data vaší společnosti.**<br> nebo <br> **To vypadá jako osobní e-mailová adresa. Zadejte svou pracovní adresu, abychom vás mohli spojit s ostatními ve vaší společnosti. A nebojte se. S nikým vaši adresu sdílet nebudeme.** |[!INCLUDE[d365fin](includes/d365fin_md.md)] nepodporuje e-mailové adresy poskytované spotřebitelskými e-mailovými službami nebo poskytovateli telekomunikačních služeb. Pro dokončení registrace zkuste použít e-mailovou adresu přiřazenou vaší prací nebo školou. Pokud se stále nemůžete zaregistrovat a jste ochotni dokončit pokročilejší proces nastavení, můžete si zaregistrovat nové zkušební předplatné sady Office 365 a pomocí této e-mailové adresy se zaregistrovat. |
-| Pro e-mailové adresy .gov nebo .mil se během registrace zobrazí následující zpráva:<br /><br />**[!INCLUDE[d365fin](includes/d365fin_md.md)] nedostupné: [!INCLUDE[d365fin](includes/d365fin_md.md)] není v současné době k dispozici uživatelům s e-mailovými adresami .gov nebo .mil. Použijte jinou pracovní e-mailovou adresu nebo to zkuste později.** <br>nebo <br>**Nemůžeme dokončit vaši registraci. Vypadá to, že [!INCLUDE[d365fin](includes/d365fin_md.md)] pro vaši práci nebo školu momentálně není k dispozici.** |[!INCLUDE[d365fin](includes/d365fin_md.md)] v současné době nepodporuje adresy .gov nebo .mil. |
-| Samostatná registrace není povolena. Během registrace se zobrazí následující zpráva:<br /><br />**Nemůžeme dokončit vaši registraci. Vaše IT oddělení vypnulo registraci do [!INCLUDE[d365fin](includes/d365fin_md.md)]. Chcete-li dokončit registraci, kontaktujte je.** <br>nebo <br> **To vypadá jako osobní e-mailová adresa. Zadejte svou pracovní adresu, abychom vás mohli spojit s ostatními ve vaší společnosti. A nebojte se. S nikým vaši adresu sdílet nebudeme.** |IT správce vaší organizace zakázal samostatnou registraci pro [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pro dokončení registrace se obraťte na správce IT a požádejte jej, aby postupoval podle pokynů na níže uvedené stránce a umožnil stávajícím uživatelům registrovat se do [!INCLUDE[d365fin](includes/d365fin_md.md)] a umožnil novým uživatelům připojit se ke stávajícímu klientovi. Tento problém může také nastat, pokud jste se zaregistrovali do Office 365 prostřednictvím partnera. |
-| E-mailová adresa není ID Office 365. Během registrace se zobrazí následující zpráva:<br /><br />**Nemůžeme vás najít na contoso.com. Používáte v práci nebo ve škole jiné ID ? Zkuste se přihlásit pomocí něj a pokud to nepomůže, obraťte se na Vaše IT oddělení.** |ID používané Vaší organizací k přihlášení do Office 365 a dalších služeb společnosti Microsoft se liší od vaší e-mailové adresy. Například vaše e-mailová adresa může být Nancy.Smith@contoso.com, ale vaše ID je nancys@contoso.com. Chcete-li dokončit registraci, použijte ID, kterou vaše organizace přiřadila k přihlášení do Office 365 nebo jiných služeb společnosti Microsoft. Pokud neznáte svou ID, obraťte se na svého IT správce. Pokud se stále nemůžete zaregistrovat a jste ochotni dokončit pokročilejší proces nastavení, můžete si zaregistrovat nové zkušební předplatné sady Office 365 a pomocí této e-mailové adresy se zaregistrovat. |
-| Pokud je váš účet Office 365 registrován v podporované zemi a vy se přihlašujete do [!INCLUDE[d365fin](includes/d365fin_md.md)], zatímco jste v jiné zemi, obdržíte při registraci následující zprávu:<br /><br />**To nefungovalo, zatím nepodporujeme vaši zemi nebo region.**| Předplatné sady Office 365 vaší organizace je zaregistrováno v konkrétní zemi na administrativním portálu Office 365. Registrace do [!INCLUDE[d365fin](includes/d365fin_md.md)] používá jazyk a národní prostředí, které používá váš aktuální prohlížeč, a výsledkem je, že se vám může zobrazit chybová zpráva, i když se nacházíte v podporované zemi. Požádejte svého IT správce o ověření země, která je uvedena v profilu organizace na [Administrativním portálu Office 365](https://portal.office.com/adminportal/home#/companyprofile). Možná budete muset použít jiný účet pro [!INCLUDE[d365fin](includes/d365fin_md.md)].|
+For an overview of currently supported markets across Dynamics 365, see the [International availability of Microsoft Dynamics 365](/dynamics365/get-started/availability) deck. For an overview of local functionality in [!INCLUDE[prod_short](includes/prod_short.md)], see the [Local Functionality](about-localization.md) landing page.  
 
-## <a name="regional-availability"></a>Dostupnost pro oblasti
+## See Also
 
-[!INCLUDE [prodshort](includes/prodshort.md)] je k dispozici v řadě zemí nebo regionů s lokalizací poskytovanou společností Microsoft nebo schváleným lokalizačním partnerem. Úplný seznam podporovaných zemí a regionů naleznete v části [Dostupnost zemí a regionů a podporované lokalizace](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json).
+[Welcome to [!INCLUDE[prod_short](includes/prod_long.md)]](index.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Local Functionality](about-localization.md)  
+[Country/Regional Availability and Supported Translations](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json)  
+[International availability of Microsoft Dynamics 365](/dynamics365/get-started/availability)  
 
-Pro seznam aktuálně podporovaných trhů navštivte [Mezinárodní dostupnost Microsoft Dynamics 365](/dynamics365/get-started/availability) a vstupní stránku sekce [Lokální funkcionalita](about-localization.md).
 
-<!-- [!INCLUDE[d365fin](includes/d365fin_md.md)] je v současné době k dispozici na následujících trzích:
-
-| Europe | North America |
-| --- | --- |
-| Australia | Canada |
-| Austria | |
-| Belgium | United States |
-| Denmark | |
-| Germany | |
-| Finland | |
-| France | |
-| Italy | |
-| Netherlands | |
-| New Zealand | |
-| Spain | |
-| Sweden | |
-| Switzerland | |
-| United Kingdom | |
--->
-
-## Viz také
-
-[Vítejte v [!INCLUDE[d365fin](includes/d365fin_long_md.md)]](index.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Lokální funkcionalita](about-localization.md)  
-[Dostupnost zemí a regionů a podporované lokalizace](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json)  
-[Mezinárodní dostupnost Microsoft Dynamics 365](/dynamics365/get-started/availability)
+[!INCLUDE[footer-include](includes/footer-banner.md)]

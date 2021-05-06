@@ -9,28 +9,28 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Inventory Periods
-Zpětné transakce nebo úpravy nákladů často ovlivňují zůstatky a ocenění zásob za účetní období, která lze považovat za uzavřená. To může nepříznivě ovlivnit jinak přesné vykazování, zejména v rámci globálních korporací. Funkci Období zásob lze použít k zabránění těmto problémům otevřením nebo uzavřením skladových období, aby se omezilo účtování v nastaveném časovém období.
+# Design Details: Inventory Periods
+Backdated transactions or cost adjustments often affect balances and stock valuations for accounting periods that may be considered closed. This can have adverse effects on accurate reporting, especially within global corporations. The Inventory Periods feature can be used to avoid such problems by opening or closing inventory periods to limit posting in a set period of time.  
 
-Skladové období je časové období definované koncovým datem, ve kterém účtujete skladové transakce. Když uzavřete skladové období, nelze v uzavřeném období zaúčtovat žádné změny hodnoty. To zahrnuje účtování nové hodnoty, očekávané nebo fakturované účtování, změny existujících hodnot a úpravy nákladů. Stále však můžete vyrovnat otevřenou položku zboží, která spadá do uzavřeného období. Pro více informací navštivte [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md).
+ An inventory period is a period of time, defined by an ending date, in which you post inventory transactions. When you close an inventory period, no value changes can be posted in the closed period. This includes new value postings, expected or invoiced postings, changes to existing values, and cost adjustments. However, you can still apply to an open item ledger entry that falls in the closed period. For more information, see [Design Details: Item Application](design-details-item-application.md).  
 
-Chcete-li zajistit, aby všechny položky transakcí v uzavřeném období byly konečné, musí být před uzavřením skladového období splněny následující podmínky:
+ To make sure that all transaction entries in a closed period are final, the following conditions must be met before an inventory period can close:  
 
-- Všechny výstupní položky zboží v období musí být uzavřeny (bez záporných zásob).
-- Všechny položky zboží v období musí být adjustovány.
-- Všechny vydané a dokončené výrobní zakázky v období musí adjstované náklady.
+-   All outbound item ledger entries in the period must be closed (no negative inventory).  
+-   All item costs in the period must be adjusted.  
+-   All released and finished production orders in the period must be cost adjusted.  
 
-Když uzavřete skladové období, vytvoří se položka skladového období pomocí čísla poslední položky žurnálu zboží, který spadá do období inventury. Čas, datum a kód uživatele, který období uzavírá, se navíc zaznamenává do položky období zásob. Pomocí těchto informací s poslední položkou žurnálu zboží za předchozí období můžete zjistit, které skladové transakce byly zaúčtovány v období zásob. Je také možné znovu otevřít období zásob, pokud potřebujete zaúčtovat v uzavřeném období. Při opětovném otevření období zásob je vytvořena položka období zásob.
+ When you close an inventory period, an inventory period entry is created by using the number of the last item register that falls in the inventory period. In addition, the time, date, and user code of the user closing the period are recorded in the inventory period entry. By using this information with the last item register for the previous period, you can see which inventory transactions were posted in the inventory period. It is also possible to reopen inventory periods if you need to post in a closed period. When you reopen an inventory period, an inventory period entry is created.  
 
-## Viz také
-[Detaily návrhu: Náklady zásob](design-details-inventory-costing.md)  
-[Správa nákladů zásob](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Práce s Business Central](ui-work-product.md)
+## See Also  
+ [Design Details: Inventory Costing](design-details-inventory-costing.md)
+ [Managing Inventory Costs](finance-manage-inventory-costs.md)
+ [Finance](finance.md)  
+ [Working with Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

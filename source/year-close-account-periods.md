@@ -1,41 +1,43 @@
 ---
 title: Close Accounting Periods for a Fiscal Year | Microsoft Docs
 description: Describes how to close the accounting periods that make up the fiscal year.
-services: project-madeira
-documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, bank account detailed trial balance
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
-# Uzavírání účetního období
-Když skončí fiskální rok, musíte uzavřít období, která jej tvoří.
+# Close Accounting Periods
+When a fiscal year is over, you must close the periods that comprise it.
 
-## Uzavírání účetních období
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní období** a poté vyberte související odkaz.
-2. Na stránce **Účetní období** vyberte akci **Uzavřít rok**.
+## To close accounting periods
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Accounting Periods**, and then choose the related link.
+2. On the **Accounting Periods** page, choose the **Close Year** action.
 
-   Pokud je otevřeno více než jeden fiskální rok, je nejbližší fiskální rok automaticky vybrán k uzavření. Zobrazí se zpráva identifikující rok, který bude ukončen, a důsledky uzavření roku.
-3. Chcete-li rok zavřít, vyberte tlačítko **Ano**.
+    If more than one fiscal year is open, the earliest one is automatically selected to be closed. A message displays identifying the year that will close and the consequences of closing the year.
+3. To close the year, choose the **Yes** button.
 
-Fiskální rok je uzavřen a jsou vybrána pole **Uzavřeno** a **Datum uzavřeno** pro všechna období v roce. Fiskální rok nelze znovu otevřít a nelze zrušit zaškrtnutí z polí **Uzavřeno** nebo **Datum uzavřeno**.
+The fiscal year is closed, and the **Closed** and **Date Locked** fields for all the periods in the year are selected. The fiscal year cannot be opened again and you cannot remove the check mark from the **Closed** or **Date Locked** fields.
 
-> [!NOTE]
-> Fiskální rok nelze zavřít dříve, než vytvoříte nový. Všimněte si, že po uzavření fiskálního roku nelze změnit počáteční datum následujícího fiskálního roku.
+> [!NOTE]  
+>   You cannot close a fiscal year before you create a new one. Notice that when a fiscal year has been closed, you cannot change the starting date of the following fiscal year.
 
-Přestože byl fiskální rok uzavřen, můžete do něj stále zaúčtovat položky hlavní knihy. Když tak učiníte, budou položky označeny jako zaúčtované do uzavřeného fiskálního roku a bude vybráno pole **Položka předchozího roku**.
+Even though a fiscal year has been closed, you can still post general ledger entries to it. When you do this, the entries will be marked as posted to a closed fiscal year and the **Prior-Year Entry** field will be selected.
 
-Po uzavření fiskálního roku musíte uzavřít účty výkazu zisku a ztráty a převést výsledky roku na účet v rozvaze. Tuto akci můžete opakovat pokaždé, když pošlete příspěvek do uzavřeného fiskálního roku.
+After a fiscal year is closed, you must close the income statement accounts and transfer the year's results to an account in the balance sheet. You can repeat this every time that you post to the closed fiscal year.
 
-## Viz také
-[Uzavírání knih](year-close-books.md)  
-[Účtování položky konce roku](year-how-post-year-end-close-entry.md)  
-[Otevření nového fiskálního roku](finance-how-open-new-fiscal-year.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+
+[Closing Books](year-close-books.md)  
+[Post the Year-End Closing Entry](year-how-post-year-end-close-entry.md)  
+[Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

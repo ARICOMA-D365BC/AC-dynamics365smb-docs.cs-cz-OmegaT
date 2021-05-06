@@ -9,184 +9,184 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/28/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Historické změny v Codeunitě 12: Změny prodecur účtování ve Finančním deníku
+# Historical Changes to Codeunit 12: Changes in General Journal Post Procedures
 
-Následující změny byly implementovány ve verzích [!INCLUDE [navnow_md](includes/navnow_md.md)].
+The following changes have been implemented in versions of [!INCLUDE [navnow_md](includes/navnow_md.md)].  
 
-| **Microsoft Dynamics NAV 2009 R2** | **Microsoft Dynamics NAV 2013 R2** | **Komentář** |
+|**Microsoft Dynamics NAV 2009 R2**|**Microsoft Dynamics NAV 2013 R2**|**Comment**|  
 |----------------------------------------|----------------------------------------|-----------------|  
-| GetGLReg | GetGLReg | Aktualizováno |
-| RunWithCheck | RunWithCheck | Aktualizováno |
-| RunWithoutCheck | RunWithoutCheck | Aktualizováno |
-| Kód | Kód | Aktualizováno |
-|  | PostGenJnlLine | Přidáno |
-|  | InitAmounts | Přidáno |
-|  | InitLastDocDate | Přidáno |
-| InitVAT | InitVAT | Aktualizováno |
-| PostVAT | PostVAT | Aktualizováno |
-| InsertVAT | InsertVAT | Aktualizováno |
-| SummarizeVAT | SummarizeVAT | Aktualizováno |
-| InsertSummarizedVAT | InsertSummarizedVAT | Aktualizováno |
-| PostGLAcc | PostGLAcc | Aktualizováno |
-| PostCust | PostCust | Aktualizováno |
-| PostVend | PostVend | Aktualizováno |
-| PostBankAcc | PostBankAcc | Aktualizováno |
-| PostFixedAsset | PostFixedAsset | Aktualizováno |
-| PostICPartner | PostICPartner | Aktualizováno |
-| InitCodeUnit | StartPosting | Aktualizováno |
-|  | ContinuePosting | Přidáno |
-| FinishCodeunit | FinishPosting | Aktualizováno |
-|  | PostUnrealizedVAT | Přidáno |
-|  | CheckPostUnrealizedVAT | Přidáno |
-|  | ExchangeAccounts | Přidáno |
-| InitGLEntry | InitGLEntry | Aktualizováno |
-|  | InitGLEntryVAT | Přidáno |
-|  | InitGLEntryVATCopy | Přidáno |
-| InsertGLEntry | InsertGLEntry | Aktualizováno |
-|  | CreateGLEntry | Přidáno |
-|  | CreateGLEntryBalAcc | Přidáno |
-|  | CreateGLEntryVAT | Přidáno |
-|  | CreateGLEntryVATCollectAdj | Přidáno |
-|  | CreateGLEntryFromVATEntry | Přidáno |
-|  | UpdateCheckAmounts | Přidáno |
-| ApplyCustLedgEntry | ApplyCustLedgEntry | Aktualizováno |
-|  | CalcPmtDiscPossible | Přidáno |
-|  | CalcPmtTolerancePossible | Přidáno |
-| CalcPmtTolerance | CalcPmtTolerance | Aktualizováno |
-| CalcPmtDisc | CalcPmtDisc | Aktualizováno |
-| CalcPmtDiscIfAdjVAT | CalcPmtDiscIfAdjVAT | Aktualizováno |
-| CalcPmtDiscTolerance | CalcPmtDiscTolerance | Aktualizováno |
-|  | CalcPmtDiscVATBases | Přidáno |
-|  | CalcPmtDiscVATAmounts | Přidáno |
-|  | InsertPmtDiscVATForVATEntry | Přidáno |
-|  | InsertPmtDiscVATForGLEntry | Přidáno |
-| CalcCurrencyApplnRounding | CalcCurrencyApplnRounding | Aktualizováno |
-| FindAmtForAppln | FindAmtForAppln | Aktualizováno |
-| CalcCurrencyUnrealizedGainLoss | CalcCurrencyUnrealizedGainLoss | Aktualizováno |
-| CalcCurrencyRealizedGainLoss | CalcCurrencyRealizedGainLoss | Aktualizováno |
-| CalcApplication | CalcApplication | Aktualizováno |
-| CalcRemainingPmtDisc | CalcRemainingPmtDisc | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CalcAmtLCYAdjustment | CalcAmtLCYAdjustment | Přidáno |
-| InitNewCVLedgEntry | InitFromGenJnlLine | Přesunuto do tabulky 383 Zásobník detailní položky zák./dodav. |
-| InitOldCVLedgEntry | CopyFromCVLedgEntryBuf | Přesunuto do tabulky 383 Zásobník detailní položky zák./dodav. |
-| InsertDtldCVLedgEntry | InsertDtldCVLedgEntry | Přesunuto do tabulky 383 Zásobník detailní položky zák./dodav. |
-|  | InitBankAccLedgEntry | Přidáno |
-|  | InitCheckLedgEntry | Přidáno |
-|  | InitCustLedgEntry | Přidáno |
-|  | InitVendLedgEntry | Přidáno |
-|  | InsertDtldCustLedgEntry | Přidáno |
-|  | InsertDtldVendLedgEntry | Přidáno |
-| CustUnrealizedVAT | CustUnrealizedVAT | Aktualizováno |
-| CustPostApplyCustLedgEntry | CustPostApplyCustLedgEntry | Aktualizováno |
-|  | PrepareTempCustLedgEntry | Přidáno |
-| UnapplyCustLedgEntry | UnapplyCustLedgEntry | Aktualizováno |
-| TransferCustLedgEntry | CopyFromGenJnlLine | Přesunuto do tabulky 21  Položka zákazníka |
-| PostDtldCustLedgEntries | PostDtldCustLedgEntries | Aktualizováno |
-|  | PostDtldCustLedgEntry | Přidáno |
-|  | PostDtldCustLedgEntryUnapply | Přidáno |
-|  | GetDtldCustLedgEntryAccNo | Přidáno |
-| ZeroTransNoDtldCustLedgEntries | SetZeroTransNo | Přesunuto do tabulky 379 Detailní položka zákazníka |
-| AutoEntrForDtldCustLedgEntries | Refactored to PostDtldCustLedgEntryUnapply |
-| CustUpdateDebitCredit | UpdateDebitCredit | Přesunuto do tabulky 379 Detailní položka zákazníka |
-| ApplyVendLedgEntry | ApplyVendLedgEntry | Aktualizováno |
-|  | PrepareTempVendLedgEntry | Přidáno |
-| VendPostApplyVendLedgEntry | VendPostApplyVendLedgEntry | Aktualizováno |
-| UnapplyVendLedgEntry | UnapplyVendLedgEntry | Aktualizováno |
-| TransferVendLedgEntry | CopyFromGenJnlLine | Přesunuto do tabulky 25 Položky dodavatele |
-| PostDtldVendLedgEntries | PostDtldVendLedgEntries | Aktualizováno |
-|  | PostDtldVendLedgEntry | Přidáno |
-|  | PostDtldVendLedgEntryUnapply | Přidáno |
-|  | GetDtldVendLedgEntryAccNo | Přidáno |
-|  | PostDtldCVLedgEntry | Přidáno |
-|  | PostDtldCustVATAdjustment | Přidáno |
-|  | PostDtldVendVATAdjustment | Přidáno |
-| ZeroTransNoDtldVendLedgEntries | SetZeroTransNo | Přesunuto do tabulky 380 Detailní položka dodavatele |
-| AutoEntrForDtldVendLedgEntries | Refactored to PostDtldVendLedgEntryUnapply |
-| VendUpdateDebitCredit | UpdateDebitCredit | Přesunuto do tabulky 380 Detailní položka dodavatele |
-| VendUnrealizedVAT | VendUnrealizedVAT | Aktualizováno |
-|  | PostUnrealVATEntry | Přidáno |
-|  | PostApply | Přidáno |
-| PostUnrealVATByUnapply | PostUnrealVATByUnapply | Aktualizováno |
-|  | PostUnapply | Přidáno |
-|  | InsertDtldCustLedgEntryUnapply | Přidáno |
-|  | InsertDtldVendLedgEntryUnapply | Přidáno |
-|  | InsertTempVATEntry | Přidáno |
-|  | ProcessTempVATEntry | Přidáno |
-|  | UpdateCustLedgEntry | Přidáno |
-|  | UpdateVendLedgEntry | Přidáno |
-| UpdateCalcInterest | UpdateCalcInterest | Aktualizováno |
-| UpdateCalcInterest2 | UpdateCalcInterest2 | Aktualizováno |
-| GLCalcAddCurrency | GLCalcAddCurrency | Aktualizováno |
-| HandleAddCurrResidualGLEntry | HandleAddCurrResidualGLEntry | Aktualizováno |
-| CalcLCYToAddCurr | CalcLCYToAddCurr | Aktualizováno |
-| CalcAddCurrFactor | Deleted |
-| GetCurrencyExchRate | GetCurrencyExchRate | Aktualizováno |
-| ExchAmount | ExchangeAmount | Přesunuto do tabulky 330 Směnný kurz |
-| ExchangeAmtLCYToFCY2 | ExchangeAmtLCYToFCY2 | Aktualizováno |
-| CalcAddCurrForUnapplication | CalcAddCurrForUnapplication | Aktualizováno |
-| CheckNonAddCurrCodeOccurred | CheckNonAddCurrCodeOccurred | Aktualizováno |
-| CheckCalcPmtDisc | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CheckCalcPmtDiscCVCust | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CheckCalcPmtDiscCust | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CheckCalcPmtDiscGenJnlCust | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CheckCalcPmtDiscCVVend | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CheckCalcPmtDiscVend | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| CheckCalcPmtDiscGenJnlVend | Přesunuto do Codeunity 426 Payment Tolerance Management |
-| Reverse | Reverse | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| ReverseCustLedgEntry | ReverseCustLedgEntry | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| ReverseVendLedgEntry | ReverseVendLedgEntry | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| ReverseBankAccLedgEntry | ReverseBankAccLedgEntry | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| ReverseVAT | ReverseVAT | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| SetReversalDescription | SetReversalDescription | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| ApplyCustLedgEntryByReversal | ApplyCustLedgEntryByReversal | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| ApplyVendLedgEntryByReversal | ApplyVendLedgEntryByReversal | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-| PostPmtDiscountVATByUnapply | PostPmtDiscountVATByUnapply | Přesunuto do Codeunity 17 Gen. Jnl.-Post Reverse |
-|  | CheckDimComb | Přidáno do Codeunity 17 Gen. Jnl.-Post Reverse |
-|  | CopyCustLedgEntry | Přidáno do Codeunity 17 Gen. Jnl.-Post Reverse |
-|  | CopyVendLedgEntry | Přidáno do Codeunity 17 Gen. Jnl.-Post Reverse |
-|  | CopyBankAccLedgEntry | Přidáno do Codeunity 17 Gen. Jnl.-Post Reverse |
-| HandlDtlAddjustment | HandleDtldAdjustment | Aktualizováno |
-| CollectAddjustment | CollectAdjustment | Aktualizováno |
-| SetOverDimErr | SetOverDimErr | Aktualizováno |
-| PostJob | PostJob | Aktualizováno |
-| InsertVATEntriesFromTemp | InsertVATEntriesFromTemp | Aktualizováno |
-| CaptureOrRefundCreditCardPmnt | CaptureOrRefundCreditCardPmnt | Aktualizováno |
-| UpdateDOPaymentTransactEntry | UpdateDOPaymentTransactEntry | Aktualizováno |
-| ABSMin | ABSMin | Aktualizováno |
-| GetApplnRoundPrecision | GetApplnRoundPrecision | Aktualizováno |
-| CheckDimValueForDisposal | CheckDimValueForDisposal | Aktualizováno |
-| CalculateCurrentBalance | CalculateCurrentBalance | Aktualizováno |
-| IncludeVATAmount | Přesunuto do tabulky 81 Gen. finančího deníku |
-| CalcVATAmountFromVATEntry | CalcVATAmountFromVATEntry | Aktualizováno |
-|  | TotalVATAmountOnJnlLines | Přidáno |
-|  | SetGLRegReverse | Přidáno |
-|  | GetGLSetup | Přidáno |
-|  | ReadGLSetup | Přidáno |
-|  | CheckSalesExtDocNo | Přidáno |
-|  | CheckPurchExtDocNo | Přidáno |
-|  | CheckGLAccDimError | Přidáno |
-|  | GetCurrency | Přidáno |
-|  | PostDtldAdjustment | Přidáno |
-|  | GetNextEntryNo | Přidáno |
-|  | GetNextTransactionNo | Přidáno |
-|  | GetNextVATEntryNo | Přidáno |
-|  | IncrNextVATEntryNo | Přidáno |
-|  | IsNotPayment | Přidáno |
-|  | IsTempGLEntryBufEmpty | Přidáno |
-|  | IsVATAdjustment | Přidáno |
-|  | IsVATExcluded | Přidáno |
-|  | UpdateDimensions | Přidáno |
-|  | UpdateDimensionsFromCustLedgEntry | Přidáno |
-|  | UpdateDimensionsFromVendLedgEntry | Přidáno |
-|  | UpdateTotalAmounts | Přidáno |
-|  | CreateGLEntriesForTotalAmounts | Přidáno |
+|GetGLReg|GetGLReg|Updated|  
+|RunWithCheck|RunWithCheck|Updated|  
+|RunWithoutCheck|RunWithoutCheck|Updated|  
+|Code|Code|Updated|  
+||PostGenJnlLine|Added|  
+||InitAmounts|Added|  
+||InitLastDocDate|Added|  
+|InitVAT|InitVAT|Updated|  
+|PostVAT|PostVAT|Updated|  
+|InsertVAT|InsertVAT|Updated|  
+|SummarizeVAT|SummarizeVAT|Updated|  
+|InsertSummarizedVAT|InsertSummarizedVAT|Updated|  
+|PostGLAcc|PostGLAcc|Updated|  
+|PostCust|PostCust|Updated|  
+|PostVend|PostVend|Updated|  
+|PostBankAcc|PostBankAcc|Updated|  
+|PostFixedAsset|PostFixedAsset|Updated|  
+|PostICPartner|PostICPartner|Updated|  
+|InitCodeUnit|StartPosting|Updated|  
+||ContinuePosting|Added|  
+|FinishCodeunit|FinishPosting|Updated|  
+||PostUnrealizedVAT|Added|  
+||CheckPostUnrealizedVAT|Added|  
+||ExchangeAccounts|Added|  
+|InitGLEntry|InitGLEntry|Updated|  
+||InitGLEntryVAT|Added|  
+||InitGLEntryVATCopy|Added|  
+|InsertGLEntry|InsertGLEntry|Updated|  
+||CreateGLEntry|Added|  
+||CreateGLEntryBalAcc|Added|  
+||CreateGLEntryVAT|Added|  
+||CreateGLEntryVATCollectAdj|Added|  
+||CreateGLEntryFromVATEntry|Added|  
+||UpdateCheckAmounts|Added|  
+|ApplyCustLedgEntry|ApplyCustLedgEntry|Updated|  
+||CalcPmtDiscPossible|Added|  
+||CalcPmtTolerancePossible|Added|  
+|CalcPmtTolerance|CalcPmtTolerance|Updated|  
+|CalcPmtDisc|CalcPmtDisc|Updated|  
+|CalcPmtDiscIfAdjVAT|CalcPmtDiscIfAdjVAT|Updated|  
+|CalcPmtDiscTolerance|CalcPmtDiscTolerance|Updated|  
+||CalcPmtDiscVATBases|Added|  
+||CalcPmtDiscVATAmounts|Added|  
+||InsertPmtDiscVATForVATEntry|Added|  
+||InsertPmtDiscVATForGLEntry|Added|  
+|CalcCurrencyApplnRounding|CalcCurrencyApplnRounding|Updated|  
+|FindAmtForAppln|FindAmtForAppln|Updated|  
+|CalcCurrencyUnrealizedGainLoss|CalcCurrencyUnrealizedGainLoss|Updated|  
+|CalcCurrencyRealizedGainLoss|CalcCurrencyRealizedGainLoss|Updated|  
+|CalcApplication|CalcApplication|Updated|  
+|CalcRemainingPmtDisc|CalcRemainingPmtDisc|Moved to Codeunit 426 Payment Tolerance Management|  
+|CalcAmtLCYAdjustment|CalcAmtLCYAdjustment|Added|  
+|InitNewCVLedgEntry|InitFromGenJnlLine|Moved to Table 383 Detailed CV Ledg. Entry Buffer|  
+|InitOldCVLedgEntry|CopyFromCVLedgEntryBuf|Moved to Table 383 Detailed CV Ledg. Entry Buffer|  
+|InsertDtldCVLedgEntry|InsertDtldCVLedgEntry|Moved to Table 383 Detailed CV Ledg. Entry Buffer|  
+||InitBankAccLedgEntry|Added|  
+||InitCheckLedgEntry|Added|  
+||InitCustLedgEntry|Added|  
+||InitVendLedgEntry|Added|  
+||InsertDtldCustLedgEntry|Added|  
+||InsertDtldVendLedgEntry|Added|  
+|CustUnrealizedVAT|CustUnrealizedVAT|Updated|  
+|CustPostApplyCustLedgEntry|CustPostApplyCustLedgEntry|Updated|  
+||PrepareTempCustLedgEntry|Added|  
+|UnapplyCustLedgEntry|UnapplyCustLedgEntry|Updated|  
+|TransferCustLedgEntry|CopyFromGenJnlLine|Moved to Table 21 Cust. Ledger Entry|  
+|PostDtldCustLedgEntries|PostDtldCustLedgEntries|Updated|  
+||PostDtldCustLedgEntry|Added|  
+||PostDtldCustLedgEntryUnapply|Added|  
+||GetDtldCustLedgEntryAccNo|Added|  
+|ZeroTransNoDtldCustLedgEntries|SetZeroTransNo|Moved to Table 379 Detailed Cust. Ledg. Entry|  
+|AutoEntrForDtldCustLedgEntries||Refactored to PostDtldCustLedgEntryUnapply|  
+|CustUpdateDebitCredit|UpdateDebitCredit|Moved to Table 379 Detailed Cust. Ledg. Entry|  
+|ApplyVendLedgEntry|ApplyVendLedgEntry|Updated|  
+||PrepareTempVendLedgEntry|Added|  
+|VendPostApplyVendLedgEntry|VendPostApplyVendLedgEntry|Updated|  
+|UnapplyVendLedgEntry|UnapplyVendLedgEntry|Updated|  
+|TransferVendLedgEntry|CopyFromGenJnlLine|Moved to Table 25 Vendor Ledger Entry|  
+|PostDtldVendLedgEntries|PostDtldVendLedgEntries|Updated|  
+||PostDtldVendLedgEntry|Added|  
+||PostDtldVendLedgEntryUnapply|Added|  
+||GetDtldVendLedgEntryAccNo|Added|  
+||PostDtldCVLedgEntry|Added|  
+||PostDtldCustVATAdjustment|Added|  
+||PostDtldVendVATAdjustment|Added|  
+|ZeroTransNoDtldVendLedgEntries|SetZeroTransNo|Moved to Table 380 Detailed Vend. Ledg. Entry|  
+|AutoEntrForDtldVendLedgEntries||Refactored to PostDtldVendLedgEntryUnapply|  
+|VendUpdateDebitCredit|UpdateDebitCredit|Moved to Table 380 Detailed Vend. Ledg. Entry|  
+|VendUnrealizedVAT|VendUnrealizedVAT|Updated|  
+||PostUnrealVATEntry|Added|  
+||PostApply|Added|  
+|PostUnrealVATByUnapply|PostUnrealVATByUnapply|Updated|  
+||PostUnapply|Added|  
+||InsertDtldCustLedgEntryUnapply|Added|  
+||InsertDtldVendLedgEntryUnapply|Added|  
+||InsertTempVATEntry|Added|  
+||ProcessTempVATEntry|Added|  
+||UpdateCustLedgEntry|Added|  
+||UpdateVendLedgEntry|Added|  
+|UpdateCalcInterest|UpdateCalcInterest|Updated|  
+|UpdateCalcInterest2|UpdateCalcInterest2|Updated|  
+|GLCalcAddCurrency|GLCalcAddCurrency|Updated|  
+|HandleAddCurrResidualGLEntry|HandleAddCurrResidualGLEntry|Updated|  
+|CalcLCYToAddCurr|CalcLCYToAddCurr|Updated|  
+|CalcAddCurrFactor||Deleted|  
+|GetCurrencyExchRate|GetCurrencyExchRate|Updated|  
+|ExchAmount|ExchangeAmount|Moved to Table 330 Currency Exchange Rate|  
+|ExchangeAmtLCYToFCY2|ExchangeAmtLCYToFCY2|Updated|  
+|CalcAddCurrForUnapplication|CalcAddCurrForUnapplication|Updated|  
+|CheckNonAddCurrCodeOccurred|CheckNonAddCurrCodeOccurred|Updated|  
+|CheckCalcPmtDisc||Moved to Codeunit 426 Payment Tolerance Management|  
+|CheckCalcPmtDiscCVCust||Moved to Codeunit 426 Payment Tolerance Management|  
+|CheckCalcPmtDiscCust||Moved to Codeunit 426 Payment Tolerance Management|  
+|CheckCalcPmtDiscGenJnlCust||Moved to Codeunit 426 Payment Tolerance Management|  
+|CheckCalcPmtDiscCVVend||Moved to Codeunit 426 Payment Tolerance Management|  
+|CheckCalcPmtDiscVend||Moved to Codeunit 426 Payment Tolerance Management|  
+|CheckCalcPmtDiscGenJnlVend||Moved to Codeunit 426 Payment Tolerance Management|  
+|Reverse|Reverse|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|ReverseCustLedgEntry|ReverseCustLedgEntry|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|ReverseVendLedgEntry|ReverseVendLedgEntry|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|ReverseBankAccLedgEntry|ReverseBankAccLedgEntry|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|ReverseVAT|ReverseVAT|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|SetReversalDescription|SetReversalDescription|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|ApplyCustLedgEntryByReversal|ApplyCustLedgEntryByReversal|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|ApplyVendLedgEntryByReversal|ApplyVendLedgEntryByReversal|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+|PostPmtDiscountVATByUnapply|PostPmtDiscountVATByUnapply|Moved to Codeunit 17 Gen. Jnl.-Post Reverse|  
+||CheckDimComb|Added in Codeunit 17 Gen. Jnl.-Post Reverse|  
+||CopyCustLedgEntry|Added in Codeunit 17 Gen. Jnl.-Post Reverse|  
+||CopyVendLedgEntry|Added in Codeunit 17 Gen. Jnl.-Post Reverse|  
+||CopyBankAccLedgEntry|Added in Codeunit 17 Gen. Jnl.-Post Reverse|  
+|HandlDtlAddjustment|HandleDtldAdjustment|Updated|  
+|CollectAddjustment|CollectAdjustment|Updated|  
+|SetOverDimErr|SetOverDimErr|Updated|  
+|PostJob|PostJob|Updated|  
+|InsertVATEntriesFromTemp|InsertVATEntriesFromTemp|Updated|  
+|CaptureOrRefundCreditCardPmnt|CaptureOrRefundCreditCardPmnt|Updated|  
+|UpdateDOPaymentTransactEntry|UpdateDOPaymentTransactEntry|Updated|  
+|ABSMin|ABSMin|Updated|  
+|GetApplnRoundPrecision|GetApplnRoundPrecision|Updated|  
+|CheckDimValueForDisposal|CheckDimValueForDisposal|Updated|  
+|CalculateCurrentBalance|CalculateCurrentBalance|Updated|  
+|IncludeVATAmount||Moved to Table 81 Gen. Journal Line|  
+|CalcVATAmountFromVATEntry|CalcVATAmountFromVATEntry|Updated|  
+||TotalVATAmountOnJnlLines|Added|  
+||SetGLRegReverse|Added|  
+||GetGLSetup|Added|  
+||ReadGLSetup|Added|  
+||CheckSalesExtDocNo|Added|  
+||CheckPurchExtDocNo|Added|  
+||CheckGLAccDimError|Added|  
+||GetCurrency|Added|  
+||PostDtldAdjustment|Added|  
+||GetNextEntryNo|Added|  
+||GetNextTransactionNo|Added|  
+||GetNextVATEntryNo|Added|  
+||IncrNextVATEntryNo|Added|  
+||IsNotPayment|Added|  
+||IsTempGLEntryBufEmpty|Added|  
+||IsVATAdjustment|Added|  
+||IsVATExcluded|Added|  
+||UpdateDimensions|Added|  
+||UpdateDimensionsFromCustLedgEntry|Added|  
+||UpdateDimensionsFromVendLedgEntry|Added|  
+||UpdateTotalAmounts|Added|  
+||CreateGLEntriesForTotalAmounts|Added|  
 
-## Viz také
-[Detaily návrhu: Změny v Codeunitě 12: Mapování globálních proměnných pro řádek finančího deníku](design-details-codeunit-12-changes-mapping-global-variables-for-general-journal-post-line.md)
+## See Also  
+ [Design Details: Codeunit 12 Changes: Mapping Global Variables for General Journal Post Line](design-details-codeunit-12-changes-mapping-global-variables-for-general-journal-post-line.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,42 +1,47 @@
 ---
-title: Nastavení dlouhodobého majetku | Microsoft Docs
-description: 'Zjistěte více o posloupnosti úkolů, které musíte provést při nastavování dlouhodobých majetků, jako jsou stroje nebo budovy.'
+title: Set Up Fixed Assets| Microsoft Docs
+description: Learn about the sequence of tasks you must do to set up fixed assets, such as machinery or buildings.
 documentationcenter: ''
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'machinery, buildings'
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.search.keywords: machinery, buildings
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="setting-up-fixed-assets"></a>Nastavení dlouhodobého majetku
-Než budete moci v pracovat s dlouhodobým majetkem, je potřeba definovat tyto oblasti:  
+# Setting Up Fixed Assets
+Before you can work with Fixed Assets, you need to define a few things:  
 
-* Jak pojistíte, udržujete a odepisujete dlouhodobý majetek.  
-* Jak zaznamenáváte náklady a další hodnoty v hlavní knize.  
+* How you insure, maintain, and depreciate fixed assets.  
+* How you record costs and other values in the general ledger.  
 
-Níže uvedená tabulka obsahuje odkazy na další informace. Po nastavení těchto oblastí můžete zahájit různé aktivity. Pro více informací navštivte [Dlouhodobý majetek](fa-manage.md).  
+The table below has links to more information. After you set those things up, you can start various activities. For more information, see [Fixed Assets](fa-manage.md).  
 
 > [!NOTE]  
->   Můžete zaznamenat transakce dlouhodobého majetku na stránce **Finanční deník DM** nebo v okně **Deník dlouhodobého majetku** podle toho, zda jsou transakce pro finanční výkaznictví nebo interní správu. Nápověda pro dlouhodobý majetek ukazuje pouze, jak používat stránku **Finanční deník DM**.  
+>   You can record fixed asset transactions in the **Fixed Asset G/L Journal** or **Fixed Asset Journal** pages, depending on whether the transactions are for financial reporting or for internal management. Help for Fixed Assets only describes how to use the **Fixed Asset G/L Journal** page.  
 
-Když povolíte aktivitu dlouhodobého majetku v sekci **Finanční integrace** na stránce **Karta knihy odpisů**, stránka **Finanční deník DM** je použita k zaúčtování transakcí pro tuto aktivitu.
+When you enable a fixed asset activity in the **G/L Integration** section on the **Depreciation Book Card** page, the **Fixed Asset G/L Journal** page is used to post transactions for the activity.
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.  
+The following table describes a sequence of tasks, with links to the topics that describe them.  
 
-| Viz | také |
+| To | See |
 | --- | --- |
-| Nastavení výchozích finančních účtů, alokačních klíčů, šablon deníků a dávek pro účtování dlouhodobého majetku a nastavení tříd a podtříd dlouhodobého majetku, např. hmotný a nehmotný majetek. |[Nastavení obecných informací o dlouhodobém majetku](fa-how-setup-general.md) |
-| Vytvoření knihy odpisů, definice různých odpisových metod, integrace s hlavní knihou a povolení duplikací položek v několika knihách odpisů. |[Nastavení odpisů dlouhodobého majetku.](fa-how-setup-depreciation.md) |
-| Povolení pojištění dlouhodobého majetku, nastavení obecných informací o pojištění, karty pojištění podle smlouvy a příprava deníku k zaúčtování pojistných nákladů. |[Nastavení pojištění dlouhodobého majetku](fa-how-setup-insurance.md) |
-| Povolení údržby dlouhodobého majetku, nastavení obecných informací údržby, nastavení účtů pro zaúčtování údržby a definování typů údržbových prací. |[Nastavení údržby dlouhodobého majetku](fa-how-setup-maintenance.md) |
-| Zjistěte více o různých odpisových metodách dlouhodobého majetku |[Metody odpisování](fa-depreciation-methods.md) |
+| Set up default G/L accounts, allocation keys, journal templates and batches for fixed asset posting, and set up fixed asset classes and subclasses, such as Tangible and Intangible. |[Set Up General Fixed Assets Information](fa-how-setup-general.md) |
+| Create depreciation books, define various depreciation methods, integrate with the general ledger, and enable duplication of entries in several depreciation books. |[Set Up Fixed Asset Depreciation](fa-how-setup-depreciation.md) |
+| Enable insurance of fixed assets, set up general insurance information, an insurance card per policy, and prepare journals to post insurance costs. |[Set Up Fixed Asset Insurance](fa-how-setup-insurance.md) |
+| Enable maintenance of fixed assets, set up general maintenance information, set up maintenance posting accounts, and define types of maintenance work. |[Set Up Fixed Asset Maintenance](fa-how-setup-maintenance.md) |
+| Learn about different fixed asset depreciation methods. |[Depreciation Methods](fa-depreciation-methods.md) |
 
-## <a name="see-also"></a>Viz také
-[Dlouhodobý majetek](fa-manage.md)  
+## See Also
+[Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,74 +1,132 @@
 ---
-title: Zobrazení vlastních sestav Power BI | Microsoft Docs
-description: Pomocí sestav Power BI můžete získat další přehled o datech v seznamech.
-services: project-madeira
-documentationcenter: ''
-author: edupont04
+title: Display Custom Power BI Reports for Business Central data| Microsoft Docs
+description: You can use Power BI reports to gain extra insight into data in lists.
+author: jswymer
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'business intelligence, KPI, Odata, Power App, SOAP, analysis'
-ms.date: 10/01/2018
-ms.author: edupont
+ms.search.keywords: business intelligence, KPI, Odata, Power App, SOAP, analysis
+ms.date: 04/26/2021
+ms.author: jswymer
 ---
-# <a name="viewing-list-data-in-power-bi-reports-in-business-central"></a>Zobrazení dat seznamu v Power BI Reports v Business Central 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] zahrnuje ovládací prvek Informačního okna na řadě klíčových stránek seznamu, který poskytuje další pohled do dat v seznamu. Při přechodu mezi řádky v seznamu se sestava aktualizuje a filtruje pro vybranou položku. Můžete vytvořit vlastní sestavy pro zobrazení v tomto ovládacím prvku, ale při vytváření sestav je třeba dodržovat několik pravidel, která zajistí požadované chování.  
+# Creating Power BI Reports for Displaying List Data in [!INCLUDE[prod_short](includes/prod_short.md)]
 
-> [!NOTE]  
->   Musíte mít platný účet v [!INCLUDE[d365fin](includes/d365fin_md.md)] a ve službě Power BI. Také si musíte stáhnout [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/). Pro více informací navštivte [Použití [!INCLUDE[d365fin](includes/d365fin_md.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md).  
+[!INCLUDE[prod_long](includes/prod_long.md)] includes a Power BI FactBox control element on many key list pages. The purpose of this FactBox is to display Power BI reports that are related to records in the lists, providing extra insight into the data. The idea is that as you move between rows in the list, the report updates for the selected entry.
 
-## <a name="report-data-set"></a>Datová sada sestavy
-Když vytváříte sestavu v Power BI Desktop, zadejte zdroj dat nebo webovou službu, která obsahuje data související se seznamem, ke kterému chcete sestavu přidružit. Pokud například chcete vytvořit sestavu pro Přehled prodeje, ujistěte se, že sada dat obsahuje informace týkající se prodeje.  
+[!INCLUDE[prod_long](includes/prod_long.md)] comes ready with some of these reports. You can also create your own custom reports that display in this FactBox. Creating these reports is similar to other reports. But there are a few design rules you'll have to follow to make sure the reports display as expected. These rules are explained in this article.
 
-Chcete-li filtrovat data v sestavách na základě záznamu vybraného ze seznamu, musí být primární klíč použit jako filtr sestav. Aby bylo možné sestavy správně filtrovat, bude nutné, aby primární klíče byly součástí vaší sady dat. Ve většině případů je primárním klíčem seznamu pole **Číslo**.  
+> [!NOTE]
+> For general information about creating and publishing Power BI reports for Business Central, see [Building Power BI Reports to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md). 
 
-## <a name="defining-the-report-filter"></a>Definice filtru sestavy
-Aby bylo možné správně filtrovat v  informačním panelu Power BI, musí mít sestava základní filtr sestavy (nikoli filtr stránky nebo vizuální filtr, a také ne pokročilý filtr). Filtr, který je předán do sestavy Power BI z každé stránky seznamu, bude založen na primárním klíči, jak je popsáno v předchozí části.  
+## Prerequisites
 
-Chcete-li definovat filtr pro sestavu, vyberte primární klíč ze seznamu dostupných polí a poté toto pole přetáhněte do sekce **Filtr sestav**.  
+- A Power BI account.
+- Power BI Desktop.
 
-![Nastavení filtru sestavy pro přehled aktivity prodejní faktury](./media/across-how-use-powerbi-reports-factbox/financials-powerbi-report-filter.png)
+<!-- 
+For more information about getting started, see [Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md).-->
 
-## <a name="report-size-and-color"></a>Velikost a barva sestavy
-Velikost sestavy musí být nastavena na 325 pixelů na 310 pixelů. To je nutné pro správné škálování sestavy v dostupném prostoru povoleném v informačním okně Power BI. Chcete-li definovat velikost sestavy, umístěte zaměření mimo oblast rozložení sestavy a poté vyberte ikonu malířského válečku.
+## Create a report for a list page
 
-![Nastavení šířky a výšky sestavy pro sestavu aktivity prodejní faktury](./media/across-how-use-powerbi-reports-factbox/financials-powerbi-report-sizing.png)
+1. Start Power BI Desktop.
+2. Select **Get Data**, and start choosing the data source for the report.
 
-Šířku a výšku sestavy můžete změnit výběrem možnosti **Vlastní** v poli **Typ**.
+    Specify the Business Central list pages that contain the data that you want in the report. For example, to create a report for the **Sales Invoices** list, include pages related to sales.
 
-Podobně, pokud chcete aby se pozadí sestavy mísilo s barvou pozadí informačního okna Power BI, definujte barvu pozadí vlastní sestavy jako *E5E5E5*. Toto je volitelné.  
+    For more information, follow the instructions [Add [!INCLUDE[prod_short](includes/prod_short.md)] as a data source in Power BI Desktop](across-how-use-financials-data-source-powerbi.md#getdata).
 
-## <a name="reports-with-multiple-pages"></a>Sestavy s více stránkami
-S Power BI můžete vytvořit jednu sestavu s více stránkami. Vizuální prvky, které chcete vidět na [!INCLUDE[d365fin](includes/d365fin_md.md)] stránkách seznamu, musí být na první stránce sestavy v Power BI.  
+3. Set the report filter.
 
-> [!NOTE]  
->  Power BI Fact Box může zobrazovat pouze první stránku sestavy; Pokud chcete vidět další sestavy, musíte rozbalit sestavu a pomocí karet ve spodní části přehledu přejít na jiné stránky.  
+    To make the data update to the selected record in the list, you add a filter to the report. The filter must include a field of the data source that's used to uniquely identify each record in the list. In developer terms, this field is the *primary key*. In most cases, the primary key for a list is the **No.** field.
 
-## <a name="saving-your-report"></a>Uložení vaší sestavy
+    To set the filter, do the following steps:
 
-Při uložení sestavy je doporučeno, aby název sestavy obsahoval název stránky seznamu, ve které chcete sestavu zobrazit. Například slovo *Dodavatel* musí být někde v názvu sestavy u těch sestav, které chcete zpřístupnit v Seznamu dodavatelů.  
+    1. In the **Filters**, select the primary key field from the list of available fields.
+    2. Drag the field to **Filters** pane and drop it in the **Filters on all pages** box.
+    3. Set the **Filter type** to **Basic filtering**. It can't be page, visual, or advanced filter.
 
-Toto není požadavek; urychlí to však proces výběru sestav. Když je stránka výběru sestavy otevřena ze stránky seznamu, předáme filtr na základě názvu stránky, abychom omezili zobrazené sestavy.  Filtr můžete odebrat a získat tak úplný seznam sestav, které máte k dispozici v Power BI.  
+    ![Setting the report filter for the Sales Invoice Activity report](./media/across-how-use-powerbi-reports-factbox/financials-powerbi-report-filter-v3.png)
+4. Design the report layout.
 
-## <a name="troubleshooting"></a>Odstraňování problémů
-Tato část poskytuje řešení pro nejčastější problémy, které mohou nastat při vytváření sestavy Power BI.  
+    Create the layout by dragging fields and adding visualizations. For more information, see, [Work with Report view in Power BI Desktop](/power-bi/create-reports/desktop-report-view) in the Power BI documentation.
 
-**Uživatel nevidí na stránce výběru sestavy tu sestavu, kterou chce vybrat**  
-Pokud nemůžete vybrat sestavu, možným řešením je ověření názvu sestavy, aby se zajistilo, že obsahuje název stránky seznamu. Můžete také vymazat filtr a získat tak úplný seznam dostupných sestav Power BI.  
+5. See the next sections about sizing the report and using multiple pages.
 
-**Sestava je načtena, ale prázdná, nefiltrovaná nebo nesprávně filtrovaná**  
-Ověřte, zda filtr sestavy obsahuje správný primární klíč. Ve většině případů se jedná o pole **Číslo**, ale například v tabulce **Věcných položek** musíte použít pole **Číslo položky**.
+6. Save and name the report.
 
-**Sestava je načtena, ale zobrazuje stránku, kterou jste neočekávali**  
-Ověřte, že stránka, kterou chcete zobrazit, je první stránkou ve vaší sestavě.  
+    Give the report a name that contains the name of the list page associated with the report, as it is in the client. The name isn't case-sensitive though. Suppose the report is for the **Sales Invoices** list page. In this case, include the words *sales invoices** somewhere in the name, like **my sales invoices.pbix** or **my_Sales Invoices_list.pbix**.
 
-**Sestava se zobrazuje s nežádoucími šedými okraji, je příliš malá nebo příliš velká.**  
-Ověřte, že velikost sestavy je nastavena na 325 pixelů x 310 pixelů. Uložte sestavu a poté obnovte stránku seznamu.  
+    This naming convention isn't a requirement. However, it makes selecting reports in [!INCLUDE[prod_short](includes/prod_short.md)] quicker. When the report selection page opens from a list page, it's automatically applied a filter based on the page name. The filter has the syntax: `@*<caption>*`,  like `@*Sales Invoices*`. This filtering is done to limit the reports that are displayed. Users can clear the filter to get a full list of reports available in Power BI.
 
-## <a name="see-also"></a>Viz také
-[Použití [!INCLUDE[d365fin](includes/d365fin_md.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)  
-[Začínáme](product-get-started.md)    
-[Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md)    
+7. When you're done, publish the report as usual.
+
+    For more information, see [Publishing a Report](across-how-use-financials-data-source-powerbi.md#publish-reports).
+
+8. Test the report.
+
+    Once the report's been published to your workspace, it should be available from the Power BI FactBox on the list page in [!INCLUDE[prod_short](includes/prod_short.md)].
+
+    To test it, do the following steps.
+
+    1. Open [!INCLUDE[prod_short](includes/prod_short.md)] and go to the list page.
+    2. If you don't see the Power BI FactBox, go the action bar, then select **Actions** > **Display** > **Show/Hide Power BI Reports**.
+    3. In the Power BI FactBox, select **Select Reports**, select the **Enable** box for the report, then select **OK**.
+
+    If designed correctly, the report displays.  
+
+## Set the report size and color
+
+The size of the report must be set to 325 pixels by 310 pixels. This size provides the proper scaling of the report in the available space of the Power BI FactBox control in [!INCLUDE[prod_short](includes/prod_short.md)]. To define the size of the report, place focus outside of the report layout area, and then choose the paint roller icon.
+
+![Setting the report width and height for the Sales Invoice Activity report](./media/across-how-use-powerbi-reports-factbox/financials-powerbi-report-sizing-v3.png)
+
+You can change the width and height of the report by choosing **Custom** in the **Type** field.
+
+If you want the background of the report to blend with the background color of the Power BI FactBox control, set report background color to *#FFFFFF* (white). 
+
+> [!TIP]
+> Use the [!INCLUDE [prod_short](includes/prod_short.md)] theme file to build reports with the same color styling as the [!INCLUDE [prod_short](includes/prod_short.md)] apps. For more information, see [Using the [!INCLUDE [prod_short](includes/prod_short.md)] report theme](across-how-use-financials-data-source-powerbi.md#theme).
+
+## Reports with multiple pages
+
+With Power BI, you can create a single report with multiple pages. However, for reports that will display with list pages, we recommend that they don't have more than one page. The Power BI FactBox will only show the first page of your report.
+
+## Fixing problems
+
+This section explains how to fix problems that you might run into when you try to view a Power BI report for a list page in [!INCLUDE[prod_short](includes/prod_short.md)].  
+
+### You can't see the Power BI FactBox on a list page
+
+By default, the Power BI FactBox is hidden from view. To show the FactBox on a page, from the action bar, select **Actions** > **Display** > **Show/Hide Power BI Reports**.
+
+### You can't see the report in the Select Report pane
+
+The report's name doesn't contain the name of the list page that's being shown. Clear the filter to get a full list of Power BI reports available.  
+
+### Report is loaded but blank, not filtered, or filtered incorrectly
+
+Verify the report filter contains the right primary key. In most cases, this field is the **No.** field, but in the **G/L Entry** table, for example, you must use the **Entry No.** field.
+
+### Report is loaded, but it shows a page you didn't expect
+
+Verify that the page you want displayed is the first page in your report.  
+
+### Report appears with an unwanted gray boarder, or it's too small or too large
+
+Verify that the report size is set to 325 pixels x 310 pixels. Save the report, and then refresh the list page.  
+
+## See Related Training at [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+
+## See Also
+
+[Enabling Your Business Data for Power BI](admin-powerbi.md)  
+[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
 [Finance](finance.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

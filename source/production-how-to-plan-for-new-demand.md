@@ -4,111 +4,116 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Plán nové poptávky podle objednávky
-Tuto plánovací úlohu lze provést na stránce **Plánování objednávek**, která zobrazuje veškerou novou poptávku spolu s informacemi o dostupnosti a návrhy na dodávku. Poskytuje přehled a nástroje potřebné k efektivnímu plánování poptávky z prodejních řádků a řádků komponent a následnému přímému vytvoření různých typů objednávek dodávek.
+# Plan for New Demand Order by Order
+This planning task can be performed on the **Order Planning** page, which displays all new demand along with availability information and suggestions for supply. It provides the visibility and tools needed to effectively plan demand from sales lines and component lines and then create different types of supply orders directly.  
 
-Můžete otevřít stránku **Plánování objednávek** dvěma způsoby v závislosti na vašem zaměření: Z objednávky, kterou chcete naplánovat specificky, nebo v dávkovém režimu, protože chcete naplánovat pro všechny a jakékoliv nové poptávky.
+You can enter the **Order Planning** page in two ways depending on your focus: From an order that you want to plan for specifically or in batch mode because you want to plan for all and any new demand.  
 
 
-## Plánování nové poptávky výrobní zakázky
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz. (Tyto kroky můžete provést pro plánovanou, pevně plánovanou objednávku, nebo vydané výrobní zakázky.)
-2. Otevřete výrobní zakázku, pro kterou chcete naplánovat, a poté vyberte akci **Plánování**.
-3. Na stránce **Plánování objednávek**, vyberte akci **Vypočítat plán**.
+## To plan for new production order demand  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planned Production Orders**, and then choose the related link. (You can perform these steps for planned, firm planned, or released production orders).
+2.  Open the production order you want to plan for, and then choose the **Planning** action.  
+3.  On the **Order Planning** page, choose the **Calculate Plan** action.  
 
-Stránka zobrazuje plánovací řádky podle filtru zobrazení **Výrobní poptávka**, což znamená nesplněné řádky komponent všech existujících výrobních zakázek. Poptávka pouze po jedné výrobní zakázce není zobrazena, protože je nutné naplánovat jednu výrobní zakázku s přehledem poptávky po potenciálně dřívějších řádcích komponent. Řádky plánování pro výrobní zakázku jsou v kontextu rozbalené.
+The page displays planning lines according to the view filter **Production Demand**, meaning unfulfilled component lines of all existing production orders. Demand for only the one production order is not shown because it is necessary to plan for one production order with an overview of demand for potentially earlier components lines. Planning lines for the production order in context are expanded.  
 
-## Plánování nové poptávky
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Plánování objednávek**, a poté vyberte související odkaz.
-2. Na stránce **Plánování objednávek**, vyberte akci **Vypočítat plán**.
-3. Zvolte tlačítko **Rozbalit (+)** před datem v poli **Datum poptávky** chcete-li zobrazit základní řádky plánování, které představují řádky poptávky s nedostatečnou dostupností.
-4. Pro každý rozšířený plánovací řádek, tj. řádek poptávky, můžete vidět hodnoty v informačních polích v dolní části stránky.
+## To plan for any new demand  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Order Planning**, and then choose the related link.  
+2.  On the **Order Planning** page, choose the **Calculate Plan** action.
+3.  Choose the **Expand (+)** button in front of the date in the **Demand Date** field to see the underlying planning lines that represent demand lines with insufficient availability.  
+4.  For each expanded planning line, that is, demand line, you can see values in information fields at the bottom of the page.  
 
-   | Možnost | Popis |
-   |----------------------------------|---------------------------------------|  
-   | **Množství na jiných lokacích** | Zobrazuje, zda položka existuje na jiné lokaci. Poté ji můžete vyhledat a vybrat ji. |
-   | **Náhrada existuje** | Zobrazuje, zda je pro položku vytvořena náhradní zboží. Poté ji můžete vyhledat a vybrat ji. Všimněte si, že tato funkce se vztahuje pouze na součásti, to znamená z řádků poptávky typu **Produkce**. |
-   | **Dostupné množství** | Zobrazuje celkovou dostupnost položky, tj. Předpokládané dostupné množství. |
-   | **Nejbližší dostupné datum** | Zobrazuje datum příjezdu příchozí nabídky, která může pokrýt potřebné množství k datu pozdějšímu, než je datum poptávky. |
+    |Option|Description|  
+    |----------------------------------|---------------------------------------|  
+    |**Qty. on Other Locations**|Shows if the item exists on another location. You can then look up and select it.|  
+    |**Substitutes Exist**|Shows if a substitute item is created for the item. You can then look up and select it. Note that this feature only applies to components, that is, from demand lines of type **Production**.|  
+    |**Quantity Available**|Shows the total availability of the item, that is, the Projected Available Balance.|  
+    |**Earliest Date Available**|Shows the arrival date of an inbound supply order that can cover the needed quantity on a date later than the demand date.|  
 
-5. Na poli **Systém doplnění**, vyberte, který typ objednávky dodávky chcete vytvořit.
+5.  In the **Replenishment System** field, select which type of supply order to create.  
 
-   Výchozí hodnota je hodnota karty zboží nebo karty skladové položky, ale můžete ji změnit na jednu ze tří možností:
+    The default value is that of the item card, or SKU card, but you can change it to one of three options:  
 
-   | Možnost | Popis |
-   |----------------------------------|---------------------------------------|  
-   | **Nákup** | Vytvoření nákupní objednávky |
-   | **Převést** | Vytvoření příkazu k převodu. |
-   | **Výrobní zakázka** | Vytvoří výrobní zakázku. |
+    |Option|Description|  
+    |----------------------------------|---------------------------------------|  
+    |**Purchase**|Creates a purchase order.|  
+    |**Transfer**|Creates a transfer order.|  
+    |**Prod. Order**|Creates a production order.|  
 
-   V poli **Dodávka od** musíte vybrat hodnotu podle vybraného systému doplnění.
+    In the **Supply From** field you must select a value according to the selected replenishment system.  
 
-   > [!NOTE]
-   > Pokud pole není vyplněno, systém zobrazí chybovou zprávu při použití funkce **Vytvořit objednávky dodávek**, pro daný plánovací řádek nebude vytvořena žádná objednávka. To však neplatí, pokud je doplňovací systém **Výrobní zakázka**.
+    > [!NOTE]  
+    >  If the field is not filled in, the system will display an error message when you use the **Make Supply Order** function, and no supply order will be created for the planning line in question. This, however, is not the case if the replenishment system is **Prod. Order**.  
 
-6. Z pole **Dodávka od**, můžete vyhledat v příslušném seznamu a vybrat, odkud má dodávka pocházet:
+6.  From the **Supply From** field, you can look up in the relevant list and select where the supply should come from:  
 
-   - Pokud je doplňovací systém **Nákup**, vyhledávací tlačítko v tomto poli vyhledá stránku **Katalog zboží dodavatele**.
-   - Pokud je systém doplnění **Převod**, vyhledávací tlačítko v tomto poli vyhledá stránku **Přehled lokací**.
-   V případě, že položka existuje na jiném místě, pole **Množství na dalších lokacích** zobrazuje v dolní části hodnotu a poté můžete vyhledat a vybrat místo, ze kterého by mělo být zboží dodáno, když provedete příkaz k převodu.
+    - If replenishment system is **Purchase**, the look-up button in this field looks up on the **Item Vendor Catalog** page.  
+    - If replenishment system is **Transfer**, the look-up button in this field looks up on the **Location List** page.  
 
-   Pokud pro poptávanou položku existuje náhrada, pole **Existuje náhrada** je nastaveno na **Ano**, a můžete jej vyhledat na stránce **Náhrada zboží zákazníka** a vybrat náhradu.
+    In case the item exists in another location, the **Qty. on Other Location** field at the bottom shows a value and you can then look up and select the location from which the item should be supplied when you make the transfer order.  
 
-7. Zvolte zaškrtávací políčko **Reservovat** pokud chcete provést rezervaci mezi objednávkou dodávky, kterou vytváříte, a řádkem poptávky, pro který je vytvořena. Ve výchozím nastavení je prázdný.
+    If a substitute exists for the demanded item, the **Substitute Exists** field is set to **Yes**, and you can then look up to the **Item Substitution Entries** page and select the substitute.  
 
-   > [!NOTE]
-   > Toto políčko můžete zaškrtnout pouze v případě, že je na kartě zboží **Volitelné** nebo **Vždy** na poli **Rezervace**.
+7.  Select the **Reserve** check box if you want to make a reservation between the supply order you are creating and the demand line that it is created for. It is empty by default.  
 
-8. Na poli **Množství na objednávce**, můžete zadat množství, které půjde na objednávku, kterou vytváříte.
-Výchozí hodnota je stejné množství jako v poli **Potřebné množství**. Ale můžete se rozhodnout objednat více nebo méně než toto množství na základě vašich znalostí o situaci poptávky. Pokud například na stránce **Plánování objednávek** uvidíte, že několik nesouvisejících poptávkových řádků je pro stejnou zakoupenou položku a jsou splatné kolem stejného data, můžete je konsolidovat zadáním celkového potřebného množství v poli **Množství na objednávce** na jednom řádku, a poté vymazat ostatní zastaralé řádky pro tuto položku.
+    > [!NOTE]  
+    >  You can only select this check box if the item has **Optional** or **Always** in the **Reserve** field on its item card.  
 
-9. V polích **Datum vyřízení** a **Datum objednávky**, můžete zadat data, která by se měla vztahovat na vytvořené objednávky dodávek.
+8.  In the **Qty. to Order** field, you can enter the quantity that will go on the supply order you are creating.   
+    The default value is the same quantity as that in the **Needed Quantity** field. But you may decide to order more or less than this quantity based on your knowledge of the demand situation. If, for example, you see on the **Order Planning** page that several unrelated demand lines are for the same purchased item, and they are due around the same date, you can consolidate these by entering the total needed quantity in the **Qty. to Order** field of one line, and then delete the other, obsolete planning lines for that item.  
 
-   Tato dvě pole jsou vzájemně propojena podle pole **Výchozí bezp.průběžná doba**, které najdete na stránce **Nastavení výroby**. Podle výchozího nastavení je datum splatnosti stejné jako datum poptávky, můžete ho ale změnit podle svých představ.
+9.  In the **Due Date** and **Order Date** fields, you can enter the dates that should apply to the created supply orders.  
 
-> [!NOTE]
-> Pokud zadáte datum později než datum poptávky, obdržíte varovnou zprávu..
+    These two fields are interrelated according to the **Default Safety Lead Time** field, which can be found on the **Manufacturing Setup** page. By default, the due date is the same as the demand date, but you can change this as you like.  
 
-## Vytvoření objednávek dodávek
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz. Tyto kroky můžete provést pro plánovanou, pevně plánovanou objednávku, nebo vydanou výrobní zakázku.
-2. Otevřete výrobní zakázku, pro kterou chcete naplánovat, a poté vyberte akci **Plánování**.
-3. Umístěte kurzor na příslušný řádek plánování a poté zvolte akci **Vytvořit objednávky**.
-4. Na stránce **Vytvoření objednávky dodávek**, na záložce s náhledem **Plánování objednávek**, v poli **Vytvořit objednávky pro**, vyberte jednu z následujících možností.
+> [!NOTE]  
+>  If you enter a date later than the demand date, you will receive a warning message.  
 
-   | Možnost | Popis |
-   |----------------------------------|---------------------------------------|  
-   | **Aktivní řádek** | Provede objednávku dodávek pouze pro řádek, na kterém je umístěn kurzor. |
-   | **Aktivní objednávka** | Provede objednávku dodávek pro všechny řádky v objednávce, na kterém je kurzor umístěn. |
-   | **Všechny řádky** | Vytvoří objednávky dodávek pro všechny řádky stránky **Plánování objednávek**. |
+## To make supply orders  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planned Production Orders**, and then choose the related link. You can perform these steps for a planned, firm planned, or released production order.  
+2.  Open the production order you want to plan for, and then choose the **Planning** action.  
+3.  Place the cursor on a relevant planning line, and then choose the **Make Orders** action.  
+4.  On the **Make Supply Orders** page, on the **Order Planning** FastTab, in the **Make Orders for** field, select one of the following options.  
 
-5. Na záložce s náhledem **Možnosti**, definujte, jaký druh objednávek dodávky nebo požadavků řádků sešitu má být provedeno.
+    |Option|Description|  
+    |----------------------------------|---------------------------------------|  
+    |**The Active Line**|Make a supply order only for the line where the cursor is placed.|  
+    |**The Active Order**|Make supply orders for all lines in the order where the cursor is placed.|  
+    |**All Lines**|Make supply orders for all lines on the **Order Planning** page.|  
 
-   > [!NOTE]
-   > Nastavení, které jste naposledy provedli na stránce **Vytvořit objednávky dodávek** budou uložena pod vaším ID uživatele, aby byla při příštím použití stránky stejná.
+5.  On the **Options** FastTab, define what kind of supply orders, or requisition worksheet lines, should be made.  
 
-6. Zvolte tlačítko **OK** chcete-li vytvořit navrhované objednávky dodávek nebo požadavky řádku sešitu.
+    > [!NOTE]  
+    >  The settings you last made on the **Make Supply Orders** page will be saved under your user ID so that they are the same the next time you use the page.  
 
-Nyní jste naplánovali nesplněnou poptávku provedením příslušných objednávek dodávek. Podrobnosti o konkrétních pracovních postupech při používání stránky **Plánování objednávek** by záviselo na interních zásadách společnosti.
+6.  Choose the **OK** button to make the suggested supply orders or requisition worksheet lines.  
 
-Když jste dokončili své plánovací práce na stránce **Plánování objednávek**, například definovali alternativní způsob dodávky množství, můžete pokračovat v tvorbě objednávek dodávky pro jednu nebo více řádků plánování.
+You have now planned for the unfulfilled demand by making respective supply orders. Details about specific work flows when using the **Order Planning** page would depend on a company’s internal policies.  
 
-> [!NOTE]
-> Objednávky dodávek, které vytvoříte, mohou představovat novou závislou poptávku, například pro základní výrobní zakázky, a proto byste měli znovu vybrat **Vypočítat plán**, abyste toto našli a vyřešili před přesunutím se níže v seznamu.
+When you have finished your planning work on the **Order Planning** page, for example defined an alternative way to supply the quantity, you can proceed to create supply orders for one or more of the planning lines.  
 
-## Viz také
-[Plánování](production-planning.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
-[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+> [!NOTE]  
+>  The supply orders you create may introduce new dependent demand, for example for underlying production orders, and you should therefore choose **Calculate Plan** again to find and resolve this before moving down the list.  
+
+## See Also  
+[Walkthrough: Planning Supplies Manually](walkthrough-planning-supplies-manually.md)  
+[Planning](production-planning.md)  
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

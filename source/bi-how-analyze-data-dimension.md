@@ -3,79 +3,85 @@ title: Analyze Data by Dimensions| Microsoft Docs
 description: Describes how to analyze various business data by dimensions.
 services: project-madeira
 documentationcenter: ''
-author: SorenGP
+author: edupont
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Analýza dat podle dimenzí
-Ve finanční analýze jsou dimenze data, která můžete přidat do položky jako druh značky. Tato data se používají k seskupení položek s podobnými charakteristikami, jako jsou zákazníci, oblasti, produkty a prodejce, a k snadnému načtení těchto skupin pro analýzu. Dimenze lze použít pro položky v denících, dokladech a rozpočtech. Termín dimenze popisuje, jak probíhá analýza. Například dvourozměrnou analýzou by byl prodej na oblast. Pokud však při vytváření záznamu použijete více než dvě dimenze, můžete provést složitější analýzu, jako je prodej za prodejní kampaň na skupinu zákazníků podle oblasti. Pro více informací navštivte [Práce s dimenzemi](finance-dimensions.md).
+#  Analyze Data by Dimensions
+In financial analysis, a dimension is data that you can add to an entry as a kind of marker. This data is used to group entries with similar characteristics, such as customers, regions, products, and salesperson, and easily retrieve these groups for analysis. Dimensions can be used on entries in journals, documents, and budgets. The term dimension describes how analysis occurs. A two-dimensional analysis, for example, would be sales per area. However, by using more than two dimensions when creating an entry, you can carry out a more complex analysis, such as sales per sales campaign per customer group per area. For more information, see [Working with Dimensions](finance-dimensions.md).
 
-Analýzou dat podle dimenzí získáte lepší přehled o své firmě, takže můžete vyhodnotit informace, například o tom, jak dobře vaše firma funguje, kde prosperuje a kde ne, a kde by mělo být přiděleno více zdrojů.
+Analyzing data by dimensions gives you greater insight into your business, so you can evaluate information, such as how well your business is operating, where it is thriving and where it is not, and where more resources should be allocated.
 
 > [!TIP]
-> Rychlý způsob, jak analyzovat transakční data podle dimenzí, je filtrovat součty v tabulce účtů a záznamů na všech stránkách **Položek** podle dimenzí. Vyhledejte akci **Nastavit filtr dimenze**.
-
-## Nastavení zobrazení analýzy
-Analýza podle dimenzí zobrazuje vybranou kombinaci dimenzí. Můžete uložit a načíst každou analýzu, kterou jste nastavili. Informace pro nastavení analýzy jsou uloženy na kartě **Zobrazení analýzy** pro zjednodušení budoucí analýzy.
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zobrazení analýzy** a poté vyberte související odkaz.
-2. Na stránce **Přehled zobrazení analýzy** vyberte akci **Nový**.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Chcete-li přidat další kódy dimenzí kromě čtyř na záložce **Dimenze**, vyberte akci **Filtr**, vyplňte pole a poté vyberte tlačítko **OK**.
-5. Chcete-li zobrazení aktualizovat, vyberte akci **Upravit**.
-
-## Analýza podle dimenzí
-Matici **Analýza dle dimenzí** můžete použít k zobrazení částek v hlavní knize pomocí pohledů na analýzu, které jste již nastavili. Vyplníte stránku **Analýza dle dimenzí**, abyste definovali, co se zobrazí v matici, a pak zvolíte **Zobrazit matici**, abyste matici zobrazili.
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zobrazení analýzy** a poté vyberte související odkaz.
-2. Vyberte příslušné zobrazení analýzy a poté vyberte akci **Analýza dle dimenzí**.
-3. Na stránce **Analýza dle dimenzí** vyplňte pole a definujte, která data jsou zobrazena a jak.
-4. Vyberte akci **Zobrazit matici** a otevřete příslušnou stránku matice pro definované zobrazení analýzy.
-5. Chcete-li zobrazit specifikaci částky zobrazené na stránce matice, zvolte částku, kterou chcete přejít k podrobnostem.
-
-- Sloupce vlevo obsahují informace založené na tom, co jste vybrali v poli **Zobrazit jako řádky** v záhlaví.
-- Sloupce vpravo obsahují informace na základě toho, co jste vybrali v poli **Zobrazit jako sloupce** v záhlaví.
-
-> [!IMPORTANT]
-> Nelze vybrat kratší období, než je období určené pro kompresi na kartě **Zobrazení analýzy**. Příkazy **Další sada** a **Předchozí sada** jsou neaktivní, pokud jste vybrali **Období** v poli **Zobrazit jako řádky** nebo **Zobrazit jako sloupce**.
+> As a quick way to analyze transactional data by dimensions, you can filter totals in the chart of accounts and entries in all **Entries** pages by dimensions. Look for the **Set Dimension Filter** action.
 
 > [!NOTE]
-> Sestava **Dimenze – detaily** můžete použít k zobrazení podrobné klasifikace toho, jak byly použity dimenze u položek za vybrané období. Pomocí sestavy **Dimenze – celkem** můžete zobrazit pouze celkové částky.
+> If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)
 
-> [!TIP]
-> Zobrazení můžete také změnit změnou obsahu pole **Zobrazit jako řádky** a **Zobrazit jako sloupce**. Chcete-li změnit nastavení zobrazení, vyberte akci **Výměna řádků a sloupců**.
+## To set up an analysis view  
+An analysis by dimensions displays a selected combination of dimensions. You can store and retrieve each analysis you have set up. The information for setting up an analysis is stored on an **Analysis View** card to simplify future analysis.  
 
-## Aktualizace zobrazení analýzy
-Částky, které se zobrazují na stránce **Analýza dle dimenzí**, vám poskytnou představu o stavu společnosti v době poslední aktualizace. Chcete-li získat obrázek o aktuálním stavu, musíte aktualizovat zobrazení analýzy spuštěním funkce aktualizace.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Analysis Views**, and then choose the related link.  
+2. On the **Analysis View List** page, choose the **New** action.
+3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. To add other dimension codes in addition to the four on the **Dimensions** FastTab, choose the **Filter** action, fill in the fields, and then choose the **OK** button.  
+5. To update the view, choose the **Update** action.
 
-Následující postup slouží k aktualizaci zobrazení analýzy ze stránky **Analýza dle dimenzí**. Kroky jsou podobné na stránkách **Karta pohledu analýzy** a **Přehled zobrazení analýzy**.
+## To analyze by dimensions
+You can use the **Analysis by Dimensions** matrix to view the amounts in your general ledger by using the analysis views that you have already set up. You fill on the **Analysis by Dimensions** page to define what will be shown in the matrix, and then you choose the **Show Matrix** action to view the matrix.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zobrazení analýzy** a poté vyberte související odkaz.
-2. Vyberte příslušné zobrazení analýzy a poté vyberte akci **Analýza dle dimenzí**.
-2. Na stránce **Analýza dle dimenzí** vyberte pole **Kód zobrazení analýzy**.
-3. Vyberte řádek s příslušným zobrazením analýzy.
-4. Na stránce **Zobrazení analýz** vyberte zobrazení analýzy a poté vyberte akci **Upravit**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Analysis Views**, and then choose the related link.  
+2. Select the relevant analysis view,  and then choose the **Analysis by Dimensions** action.
+3. On the **Analysis by Dimensions** page, fill in the fields to define which data is shown and how.
+4. Choose the **Show Matrix** action to open the respective matrix page for the defined analysis view.
+5. To see a specification of an amount shown in the matrix page, choose the amount to drill down.  
 
-> [!TIP]
-> Pokud zaškrtnete políčko **Aktualizace při účtování** na kartě s analýzou zobrazení, pohled se automaticky aktualizuje, jakmile je zaúčtována příslušná transakce.
+- The leftmost columns contain information based on what you have selected in the **Show as Lines** field in the header.  
+- The rightmost columns contain information based on to what you have selected in the **Show as Columns** field in the header.
 
-> [!NOTE]
-> Chcete-li aktualizovat některá nebo všechna zobrazení analýzy současně, musíte použít dávkovou úlohu **Aktualizace zobrazení analýzy**.
+> [!IMPORTANT]  
+>   You cannot select a period length shorter than the period specified for the date compression on the **Analysis View** card. The **Next Set** and **Previous Set** commands are inactive if you have selected **Period** in either the **Show as Lines** or the **Show as Columns** field.  
 
-## Viz Související školení na [Microsoft Learn](/learn/modules/dimensions-financial-reports-dynamics-365-business-central/index)
+> [!NOTE]  
+>   You can use the **Dimensions - Detail** report to display a detailed classification of how dimensions have been used on entries over a selected period. You can use the **Dimensions - Total** report to display only the total amounts.  
 
-## Viz také
+> [!TIP]  
+>   You can also change the view by changing the contents of the **Show as Lines** field and **Show as Columns** field. To reverse a view setting, choose the **Reverse Lines and Columns** action.
+
+## To update an analysis view  
+The amounts that are displayed on the **Analysis by Dimensions** page give you a picture of the company’s state at the time of the last update. To get a picture of the current state, you must update the analysis view by running the update function.
+
+The following procedure is for updating an analysis view from the **Analysis by Dimensions** page. The steps are similar from the **Analysis View Card** and the **Analysis View List** pages.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Analysis Views**, and then choose the related link.
+2. Select the relevant analysis view,  and then choose the **Analysis by Dimensions** action.
+2. On the **Analysis by Dimensions** page, choose the **Analysis View Code** field.  
+3. Select the line with the relevant analysis view.  
+4. On the **Analysis Views** page, select the analysis view, and then choose the **Update** action.  
+
+> [!TIP]  
+>   If you select the **Update on Posting** check box on an analysis view card, the view is automatically updated when an involved transaction is posted.
+
+> [!NOTE]  
+>   To update some or all analysis views at the same time, you must use the **Update Analysis Views** batch job.  
+
+## See Related Training at [Microsoft Learn](/learn/modules/dimensions-financial-reports-dynamics-365-business-central/index)
+
+## See Also
 [Business Intelligence](bi.md)  
 [Finance](finance.md)  
-[Nastavení financí](finance-setup-finance.md)  
-[Věcné položky a účetní osnova](finance-general-ledger.md)  
-[Práce s dimenzemi](finance-dimensions.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Setting Up Finance](finance-setup-finance.md)  
+[The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
+[Working with Dimensions](finance-dimensions.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

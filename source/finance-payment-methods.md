@@ -1,35 +1,50 @@
 ---
-title: Nastavení způsobu platby | Microsoft Docs
-description: 'Můžete použít různé metody způsobu platby, například šek, bankovní převod, hotovost nebo PayPal, k určení, jak byly prodejní a nákupní faktury zaplacené.'
+title: Set Up Payment Methods
+description: You use payment methods, for example, check, bank transfer, cash, or PayPal, to define how sales and purchase invoices will be paid.
 author: bholtorf
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'check, bank transfer, cash, PayPal'
-ms.date: 11/22/2018
+ms.search.keywords: check, bank transfer, cash, PayPal
+ms.date: 04/01/2021
 ms.author: bholtorf
+
 ---
-# <a name="defining-payment-methods"></a>Nastavení způsobu platby
-Způsoby platby definují, jaký způsob platby od zákazníků preferujete a jak chcete platit svým dodavatelům. Metody se mohou u každého zákazníka a dodavatele lišit. Mezi typické způsoby platby patří **banka**, **hotovost**, **šek**, nebo **účet**. 
+# Set Up Payment Methods
 
-Zákazníkům a dodavatelům můžete přiřadit způsob platby, tak, aby se stejný způsob vždy použil u prodejních a nákupních faktur, které pro ně vytvoříte. V případě potřeby můžete způsob změnit přímo na prodejní nebo nákupní faktuře. Například, pokud chcete platit konkrétní nákupní fakturu v hotovosti, a nikoli šekem. Tímto se nezmění výchozí způsob platby přiřazený dodavateli.
+Payment methods define the way you prefer for customers to pay you, and how you like to pay your vendors. The method can vary for each customer or vendor. Examples of typical payment methods are **bank**, **cash**, **check**, or **account**.
 
-Stejné způsoby platby se používají pro prodejní a nákupní faktury. Například, způsob platby v _hotovosti_ se používá jak při provádění plateb, tak při jejich přijímání. [!INCLUDE[d365fin](includes/d365fin_md.md)] předpokládá, že když vytváříte prodejní fakturu, očekáváte platbu, a opak zase u nákupních faktur. 
+You can assign a payment method to customers and vendors so that the same method is always used on the sales and purchase documents you create for them. If needed, you can change the method on the sales or purchase document. For example, if you want to pay a particular purchase invoice in cash rather than by check. This does not change the default payment method assigned to the vendor.
 
-Vratky z dobropisu jsou však výjimkami, protože peníze tečou opačným směrem, od vás k vašemu zákazníkovi a od vašeho dodavatele k vám. Výchozí způsob platby proto není k dobropisům přiřazen. Pokud jste však určili platební podmínky pro zákazníka nebo dodavatele, tak zde existuje řešení. Avšak pole **Výpočet skonta   na   dobropisech** není k tomuto určeno. Pokud na stránce **Platební podmínky** zaškrtnete toto políčko, při vytváření dobropisu se přidá i výchozí způsob platby.
+The same payment methods are used for sales and purchase documents. For example, a _cash_ payment method is used both when you make payments and when you receive them. [!INCLUDE[prod_short](includes/prod_short.md)] knows that when you are creating a sales invoice you expect to receive payment, and the opposite for purchase invoices.
 
-## <a name="to-set-up-a-payment-method"></a>Nastavení způsobu platby
-[!INCLUDE[d365fin](includes/d365fin_md.md)] poskytuje několik platebních metod, které podniky často používají. Můžete jich však přidat tolik, kolik potřebujete.
+Credit memos for returns, however, are exceptions because money is flowing in the opposite directions, from you to your customer and from your vendor to you. Therefore, a default payment method is not assigned to credit memos. There is, however, a workaround if you have specified terms of payment for the customer or vendor. Though the **Calc. Pmt. Disc. on Cr. Memos** field is not intended for this, if you choose the check box on the **Payment Terms** page a default payment method will be added when you create a credit memo. <br><br>  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Způsob platby** a poté vyberte související odkaz.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+> [!Video https://www.microsoft.com/videoplayer/embed/RE476Ys?rel=0]
 
-## <a name="to-assign-a-payment-method-to-a-customer-or-vendor"></a>K přiřazení platební metody zákazníkovi nebo prodejci
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazník**, nebo **Dodavatel** a poté vyberte související odkaz.
-2. V poli **Způsob platby** vyberte metodu, která se použije jako výchozí pro zákazníka, nebo dodavatele.
+## To set up a payment method
 
-## <a name="see-also"></a>Viz také
+[!INCLUDE[prod_short](includes/prod_short.md)] provides a few payment methods that businesses often use. You can, however, add as many as you need.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Methods**, and then choose the related link.
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+
+Optionally, add payment terms to your payment method. For more information, see [Set Up Payment Terms](finance-payment-terms.md).  
+
+## To assign a payment method to a customer or vendor
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer** or **Vendor**, and then choose the related link.
+2. In the **Payment Method Code** field, choose the method to use by default for the customer or vendor.
+
+## See Also
+
+[Register New Customers](sales-how-register-new-customers.md)  
+[Set Up Payment Terms](finance-payment-terms.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

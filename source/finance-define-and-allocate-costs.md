@@ -4,138 +4,141 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Definování a rozdělení nákladů
-Rozdělení nákladů přesouvá náklady a výnosy mezi typy nákladů, nákladová střediska a nositele nákladů. Můžete definovat tolik rozdělení, kolik potřebujete. Každé rozdělení se skládá z:
+# Defining and Allocating Costs
+Cost allocations move costs and revenues between cost types, cost centers, and cost objects. You can define as many allocations as you need. Each allocation consists of:  
 
-- Zdroj rozdělení.
-- Jeden nebo více cílů rozdělení.
+-   An allocation source.  
+-   One or more allocation targets.  
 
-Zdroj rozdělení stanoví, které náklady musí být rozděleny, a cíle rozdělení určují, kde musí být náklady rozděleny. Například zdrojem rozdělení mohou být náklady na typ nákladů na elektřinu a topení. Veškeré náklady na elektřinu a vytápění rozdělujete třem nákladovým střediskům: Dílna, výroba a prodej. Tato nákladová střediska jsou vaše cíle rozdělení.
+The allocation source establishes which costs must be allocated, and the allocation targets determine where the costs must be allocated. For example, an allocation source can be the costs for the Electricity and Heating cost type. You allocate all electricity and heating costs to three cost centers: Workshop, Production, and Sales. These cost centers are your allocation targets.  
 
-Pro každý zdroj rozdělení definujete úroveň rozdělení, dobu platnosti a variantu jako identifikátor seskupení. Dávkovou úlohu můžete použít k nastavení filtrů pro výběr definic rozdělení a poté automaticky spustit rozdělení nákladů.
+For each allocation source, you define an allocation level, a validity period, and a variant as grouping identifier. You can use a batch job to set filters to select allocation definitions and then run cost allocations automatically.  
 
-Pro každý cíl rozdělení definujete základ rozdělení. základ rozdělení může být statický nebo dynamický.
+For each allocation target, you define an allocation base. The allocation base can be either static or dynamic.  
 
-- Statické základy rozdělení jsou založeny na určité hodnotě, jako jsou metre čtvereční nebo stanovený poměr rozdělení, například 5:2:4.
-- Dynamické základy rozdělení závisí na proměnlivých hodnotách, jako je počet zaměstnanců v nákladovém středisku nebo tržby z prodeje nositele nákladů v průběhu určitého časového období.
+-   Static allocation bases are based on a definite value, such as square footage or an established allocation ratio, such as 5:2:4.  
+-   Dynamic allocation bases depend on changeable values, such as the number of employees in a cost center or sales revenue of a cost object throughout a certain time period.  
 
-Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-## Nastavení zdroje a cílů rozdělení
-Každé rozdělení se skládá ze zdroje rozdělení a jednoho nebo více cílů rozdělení. Zdroj rozdělení definuje, které náklady budou rozděleny. Cíle rozdělení určují, kde budou náklady rozděleny.
+## Setting Up Allocation Source and Targets
+Each allocation consists of an allocation source and one or more allocation targets. The allocation source defines which costs will be allocated. The allocation targets determine where the costs will be allocated.  
 
-### Nastavení rozdělení nákladů
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Rozdělení nákladů** a poté vyberte související odkaz.
-2. Na stránce **Rozdělení nákladů** vyberte akci **Upravit**.
-3. Do pole **ID** zadejte ID zdroje rozdělení.
-4. Definujte úroveň jako číslo mezi 1 a 99 v poli  **Úroveň**. Rozdělení nákladů bude odpovídat pořadí úrovní.
-5. Do pole **Rozsah druhů nákladů** zadejte typ nákladů a určete, které typy nákladů budou rozděleny. Pokud jsou pro určitý typ nákladů rozděleny všechny náklady, není definován žádný rozsah.
-6. Do pole **Kód nákladového střediska** zadejte nákladové středisko spolu s náklady, které mají být rozděleny.
-7. Do pole **Kód nositele nákladů** zadejte nositele nákladů spolu s náklady, které mají být rozděleny. Toto pole zůstává nejčastěji prázdné, protože nositele nákladů jsou zřídka přiděleny jiným nositelům nákladů.
-8. Do pole **Kredit k typu nákladu** zadejte typ nákladů. Náklady, které jsou rozděleny, budou připsány k typu zdrojových nákladů. Zaúčtování kreditu bude zaúčtováno na typ nákladů zde uvedený.
-9. Na záložce **Řádky** definujte cíle rozdělení. Na prvním řádku zadejte typ nákladů do pole **Cílový druh nákladů**. Definuje, jaký typ nákladů se zaúčtuje.
-10. Na prvním řádku zadejte první cíl rozdělení do pole **Cílové nákladové středisko** nebo **Cílový nositel nákladů**. Tato dvě pole definují, na které nákladové středisko nebo nositele nákladů se rozdělení zaúčtuje. Můžete vyplnit pouze jedno z těchto polí, ale ne obojí.
-11. Stejným postupem na druhém řádku nastavte další cíle rozdělení.
-12. Po nastavení cíle a zdrojů rozdělení vyberte akci **Vypočítat klíče rozdělení** a vypočítejte hodnoty celkové sdílené složky.
+### To set up cost allocations  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cost Allocation**, and then chose the related link.  
+2.  On the **Cost Allocation** page, choose the **Edit** action.  
+3.  Enter an ID for the allocation source in the **ID** field.  
+4.  Define a level as a number between 1 and 99 in the **Level** field. The allocation posting will follow the order of the levels.  
+5.  Enter a cost type to define which cost types will be allocated in the **Cost Type Range** field. If all costs for a cost type are allocated, no range is defined.  
+6.  Enter a cost center together with costs to be allocated in the **Cost Center Code** field.  
+7.  Enter a cost object together with costs to be allocated in the **Cost Object Code** field. Most often, this field stays empty, because cost objects are rarely allocated to other cost objects.  
+8.  Enter a cost type in the **Credit to Cost Type** field. The costs that are allocated will be credited to the source cost type. The credit posting will be posted to the cost type given here.  
+9. On the **Lines** FastTab, define the allocation targets. On the first line, enter a cost type in the **Target Cost Type** field. It defines which cost type the allocation is debited to.  
+10. On the first line, enter the first allocation target in the **Target Cost Center** field or **Target Cost Object** the field. These two fields define which cost center or cost object the allocation is debited to. You can only fill in one of these fields, but not both.  
+11. Repeat the same steps on the second line to set up additional allocation targets.  
+12. After you have set up the allocation target and sources, choose the **Calculate Allocation Key** action to calculate the total share values.  
 
-> [!NOTE]
-> Zaškrtnutím políčka **Uzavřeno** deaktivujete nastavení rozdělení.
+> [!NOTE]  
+>  Select the **Blocked** check box to deactivate the allocation setup.
 
-## Nastavení filtrů pro dynamické základy rozdělení
-Metoda dynamického rozdělování je založena na proměnných hodnotách. Například počet zaměstnanců v nákladovém středisku nebo položky prodané z nositele nákladů v konkrétním časovém období. Existuje devět předdefinovaných základů rozdělení a dvanáct dynamických časových období. Můžete nastavit různé filtry na základě základu rozdělení.
+## Setting Filters for Dynamic Allocation Bases
+The dynamic allocation method is based on changeable values. For example, the number of employees in a cost center or the items sold of a cost object in a specific time period. There are nine pre-defined allocation bases and twelve dynamic date ranges. You set different filters based on the allocation base.  
 
-### Nastavení filtrů pro dynamické základy rozdělení
-Následující tabulka ukazuje, které filtry jsou možné pro různé základy rozdělení a které hodnoty jsou platné v polích **Filtr  čísla** a **Filtr skupiny**. Stisknutím F1 v poli **Kód filtru data** zobrazíte podrobné popisy.
+### Setting Filters for Dynamic Allocation Bases  
+ The following table shows which filters are possible for different allocation bases and which values are valid in the **No. Filter** and **Group Filter** fields. Press F1 in the **Date Filter Code** field to read detailed descriptions.  
 
-| **Základ** | **Filtr  čísla** | **Kód filtru data** | **Filtr nákladového střediska** | **Filtr nositele nákladů** | **Filtr skupiny** |
+|**Base**|**No. Filter**|**Date Filter Code**|**Cost Center Filter**|**Cost Object Filter**|**Group Filter**|  
 |--------------|----------------------------------------|----------------------------------------------|------------------------------------------------|------------------------------------------------|------------------------------------------|  
-| Věcné položky | Finanční účet | Ano | Ano | Ano | N/A |
-| Položky finančního rozpočtu | Finanční účet | Ano | Ano | Ano | Název fin.rozpočtu |
-| Položky druhu nákladů | Druh nákladu | Ano | Ano | Ano | N/A |
-| Položky rozpočtu nákladů | Druh nákladu | Ano | Ano | Ano | Název rozpočtu |
-| Počet zaměstnanců | N/A | Ano | Ano | Ano | N/A |
-| Zboží prodáno (Mn.) | Číslo zboží | Ano | Ano | Ano | Účto skupina zboží |
-| Zboží pořízeno (Mn.) | Číslo zboží | Ano | Ano | Ano | Účto skupina zboží |
-| Zboží prodáno (Částka) | Číslo zboží | Ano | Ano | Ano | Účto skupina zboží |
-| Zboží pořízeno (Částka) | Číslo zboží | Ano | Ano | Ano | Účto skupina zboží |
+|G/L Entries|G/L Account|Yes|Yes|Yes|N/A|  
+|G/L Budget Entries|G/L Account|Yes|Yes|Yes|G/L Budget Name|  
+|Cost Type Entries|Cost Type|Yes|Yes|Yes|N/A|  
+|Cost Budget Entries|Cost Type|Yes|Yes|Yes|Budget Name|  
+|No of Employees|N/A|Yes|Yes|Yes|N/A|  
+|Items Sold (Qty)|Item No.|Yes|Yes|Yes|Inventory Posting Group|  
+|Items Purchased (Qty)|Item No.|Yes|Yes|Yes|Inventory Posting Group|  
+|Items Sold (Amount)|Item No.|Yes|Yes|Yes|Inventory Posting Group|  
+|Items Purchased (Amount)|Item No.|Yes|Yes|Yes|Inventory Posting Group|
 
-## Scénář 1: Definování statických rozdělení na základě poměru rozdělení
-Metoda statického rozdělení je založena na určité hodnotě, například použitých metrech čtverečních, nebo na stanoveném poměru rozdělení, například 5:2:4.
+## Scenario 1: Defining Static Allocations Based on Allocation Ratio
+Static allocation method is based on a definite value, such as square meters used, or an established allocation ratio such as 5:2:4.  
 
-Toto téma popisuje, jak definovat tři nové nositele cílových nákladů rozdělení pro nákladové středisko zdroje rozdělení PROD pomocí stanoveného poměru rozdělení 5:2:4. Tři cílové nositele nákladů jsou PRISLUS, BARVA a KOVÁNÍ.
+This topic describes how to define three new allocation target cost objects for the allocation source PROD cost center using the established allocation ratio 5:2:4. The three target cost objects are ACCESSO, PAINT, and FITTINGS.  
 
-> [!NOTE]
-> Příklad používá demo data v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+> [!NOTE]  
+>  The example uses the demo data in the [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-### Definování zdroje rozdělení pro nákladové středisko PROD na záložce Obecné
+### To define the allocation source PROD cost center on the General FastTab  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Rozdělení nákladů** a poté vyberte související odkaz.
-2. Na stránce **Rozdělení nákladů** vyberte akci **Nový**.
-3. V poli **ID** stiskněte klávesu Enter nebo zadejte ID.
-4. Do pole **Úroveň** zadejte **1**.
-5. Do polí **Platnost od** a **Platnost do** zadejte příslušná data.
-6. Do pole **Kód nákladového střediska** zadejte **VÝROBA**.
-7. Do pole **Kredit k typu nákladu** zadejte typ nákladů **9903**.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cost Allocation**, and then choose the related link.  
+2.  On the **Cost Allocation** page, choose the **New** action.  
+3.  In the **ID** field, press Enter or enter an ID.  
+4.  In the **Level** field, enter **1**.  
+5.  In the **Valid From** and **Valid To** fields, enter appropriate dates.  
+6.  In the **Cost Center Code** field, enter **PROD**.  
+7.  In the **Credit to Cost Type** field, enter the cost type **9903**.  
 
-### Definování cíle rozdělení nositele nákladů na záložce Řádky
+### To define the allocation target cost objects on the Lines FastTab  
 
-1. Na prvním řádku zadejte do pole **Cílový druh nákladů** **9903**.
-2. Na prvním řádku v poli **Cílový nositel nákladů** vyberte **PRISLUS**.
-3. Na prvním řádku v poli **Typ cíle rozdělení** vyberte **Všechny náklady** a definujte, jak budou rozděleny všechny vzniklé náklady.
-4. Na prvním řádku v poli **Základ** vyberte **Staticky** a použijte metodu statického rozdělení.
-5. Na prvním řádku zadejte do pole **Podíl** poměr rozdělení **5**.
-6. Na druhém řádku zadejte do pole **Cílový druh nákladů** **9903**.
-7. Na druhém řádku v poli **Cílový nositel nákladů** vyberte **BARVA**.
-8. Na druhém řádku v poli **Typ cíle rozdělení** vyberte **Všechny náklady** a definujte, jak budou rozděleny všechny vzniklé náklady.
-9. Na druhém řádku v poli **Základ** vyberte **Staticky** a použijte metodu statického rozdělení.
-10. Na druhém řádku zadejte do pole **Podíl** poměr rozdělení **2**.
-11. Na třetím řádku zadejte do pole **Cílový druh nákladů** **9903**.
-12. Na třetím řádku v poli **Cílový nositel nákladů** vyberte **KOVÁNÍ**.
-13. Na třetím řádku v poli **Typ cíle rozdělení** vyberte **Všechny náklady** a definujte, jak budou rozdeleny všechny vzniklé náklady.
-14. Na třetím řádku v poli **Základ** vyberte **Staticky** a použijte metodu statického rozdělení.
-15. Na třetím řádku zadejte do pole **Podíl** poměr rozdělení **4**.
+1.  On the first line, in the **Target Cost Type** field, enter **9903**.  
+2.  On the first line, in the **Target Cost Object** field, select **ACCESSO**.  
+3.  On the first line, in the **Allocation Target Type** field, select **All Costs** to define how all accrued costs are allocated.  
+4.  On the first line, in the **Base** field, select **Static** to use the static allocation method.  
+5.  On the first line, in the **Share** field, enter the allocation ratio **5**.  
+6.  On the second line, in the **Target Cost Type** field, enter **9903**.  
+7.  On the second line, in the **Target Cost Object** field, select **PAINT**.  
+8.  On the second line, in the **Allocation Target Type** field, select **All Costs** to define how all accrued costs are allocated.  
+9. On the second line, in the **Base** field, select **Static** to use the static allocation method.  
+10. On the second line, in the **Share** field, enter the allocation ratio **2**.  
+11. On the third line, in the **Target Cost Type** field, enter **9903**.  
+12. On the third line, in the **Target Cost Object** field, select **FITTINGS**.  
+13. On the third line, in the **Allocation Target Type** field, select **All Costs** to define how all accrued costs are allocated.  
+14. On the third line, in the **Base** field, select **Static** to use the static allocation method.  
+15. On the third line, in the **Share** field, enter the allocation ratio **4**.  
 
-> [!IMPORTANT]
-> [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vypočítá pole **Procento** pomocí procentuální sazby, která je závislá na všech třech poměrech rozdělení zadaných do pole **Podíl** pro všechny tři řádky.
+> [!IMPORTANT]  
+>  [!INCLUDE[prod_short](includes/prod_short.md)] automatically calculates the **Percent** field using a percentage rate that is dependent on all three allocation ratios that are entered in the **Share** field for all three lines.
 
-## Scénář 2: Definování dynamických rozdělení na základě prodaných položek
-Toto téma ukazuje příklad, jak definovat rozdělení pomocí metody dynamického rozdělování. V příkladu změníte dynamické rozdělení nákladů pro nákladové středisko PRODEJE na podporu nového nositele nákladů IT VYBAVENÍ. Balíčky IT VYBAVENÍ mají čísla položek v rozsahu od 8904-W do 8924-W. K výpočtu podílu použijete údaje z prodeje za předchozí rok. Rozdělení je zaúčtováno na typ nákladů 9903.
+## Scenario 2: Defining Dynamic Allocations Based on Items Sold
+This topic shows an example of how to define allocations by using the dynamic allocation method. In the example, you change the dynamic allocation of the costs for the SALES cost center to support the new cost object IT EQUIPMENT. IT EQUIPMENT packages have item numbers in the range from 8904-W to 8924-W. You use the previous year’s sales figures to calculate the share. The allocation is posted to the helping cost type 9903.  
 
-> [!NOTE]
-> Příklad používá demo data v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+> [!NOTE]  
+>  The example uses the demo data in the [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-### Definování dynamických rozdělení na základě položek prodaných v předchozím roce
+### To define dynamic allocations based on items sold in the previous year  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Rozdělení nákladů** a poté vyberte související odkaz.
-2. Na stránce **Rozdělení nákladů** vyberte akci **Nový**.
-3. V poli **ID** stiskněte klávesu Enter nebo zadejte ID.
-4. Do pole **Úroveň** zadejte **1**.
-5. Do polí **Platnost od** a **Platnost do** zadejte příslušná data.
-6. Do pole **Kód nákladového střediska** zadejte **PRODEJ**.
-7. Do pole **Kredit k typu nákladu** zadejte typ nákladů **9903**.
-8. Do pole **Cílový druh nákladů** zadejte typ nákladů **9903**.
-9. V poli **Cílový nositel nákladů** vyberte **Nový** a vytvořte nového nositele nákladů IT VYBAVENÍ a podle potřeby vyplňte pole. Vyberte **IT VYBAVENÍ**. Pole **Cílové nákladové středisko** ponechte prázdné.
-10. V poli **Typ cíle rozdělení** vyberte **Všechny náklady** a určete, jak budou rozděleny všechny akumulované náklady.
-11. V poli **Základ** vyberte základ rozdělení **Zboží prodáno (Částka)**.
-12. V poli **Filtr  čísla**, zadejte **8904-W..8924-W**.
-13. V poli **Kód filtru data**, zadejte **Poslední rok**.
-14. Vyberte akci **Vypočítat klíče rozdělení** pro výpočet podílu.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cost Allocations**, and then choose the related link.  
+2.  On the **Cost Allocation** page, choose the **New** action.  
+3.  In the **ID** field, press Enter or enter an ID.  
+4.  In the **Level** field, enter **1**.  
+5.  In the **Valid From** and **Valid To** fields, enter appropriate dates.  
+6.  In the **Cost Center Code** field, enter **SALES**.  
+7.  In the **Credit to Cost Type** field, enter the cost type **9903**.  
+8.  In the **Target Cost Type** field, enter the cost type **9903**.  
+9. In the **Target Cost Object** field, choose **New** to create a new cost object IT EQUIPMENT and fill in fields as necessary. Select **IT EQUIPMENT**. Leave the **Target Cost Center** field blank.  
+10. In the **Allocation Target Type** field, select **All Costs** to define how all accumulated costs are allocated.  
+11. In the **Base** field, select the allocation base **Items Sold (Amount)**.  
+12. In the **No. Filter** field, enter **8904-W..8924-W**.  
+13. In the **Date Filter Code** field, enter **Last Year**.  
+14. Choose the **Calculate Allocation Key** action to calculate the share.  
 
-> [!IMPORTANT]
-> [!INCLUDE[d365fin](includes/d365fin_md.md)] používá údaje o obratu z minulých let pro výpočet podílu 1596.50 LM se 100 procenty pro balíčky IT VYBAVENÍ. To znamená, že všechny položky prodané v loňském roce budou rozděleny do nákladového objektu IT VYBAVENÍ.
+> [!IMPORTANT]  
+>  [!INCLUDE[prod_short](includes/prod_short.md)] uses the previous years’ sales figures to calculate a share of 1596.50 LCY with 100 percent for the IT EQUIPMENT packages. This means that all of the items sold last year will be allocated to the cost object IT EQUIPMENT.
 
-## Viz také
-[Nastavení nákladového účetnictví](finance-set-up-cost-accounting.md)  
-[Transfer a účtování položek nákladů](finance-transfer-and-post-cost-entries.md)  
-[Účtování nákladů](finance-manage-cost-accounting.md)  
-[Terminologie v nákladovém účetnictví](finance-terminology-in-cost-accounting.md)  
-[O nákladovém účetnictví](finance-about-cost-accounting.md)
+## See Also  
+ [Setting Up Cost Accounting](finance-set-up-cost-accounting.md)   
+ [Transferring and Posting Cost Entries](finance-transfer-and-post-cost-entries.md)   
+ [Accounting for Costs](finance-manage-cost-accounting.md)   
+ [Terminology in Cost Accounting](finance-terminology-in-cost-accounting.md)   
+ [About Cost Accounting](finance-about-cost-accounting.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

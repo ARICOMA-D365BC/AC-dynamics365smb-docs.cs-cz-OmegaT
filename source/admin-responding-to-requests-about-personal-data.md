@@ -6,55 +6,58 @@ author: bholtorf
 ms.service: dynamics365-business-central
 ms.author: bholtorf
 ms.custom: na
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.reviewer: na
-ms.topic: article
+ms.topic: conceptual
 ---
 
-# Odpověď na žádost o osobní informace
-Datové subjekty mohou požadovat několik typů akcí týkajících se jejich osobních údajů. Například podle Obecného nařízení o ochraně osobních údajů (GDPR) mají obyvatelé EU právo požadovat export, úpravu a vymazání svých osobních údajů. Toto je známo jako *Žádost subjektu údajů*. Pokud jste klasifikovali citlivost vašich dat a jste si jisti, že jsou správná, může správce reagovat na požadavky pomocí možností na záložce **Ochrana soukromí** v Centru rolí **Správce IT**. Pro více informací o klasifikaci dat a klasifikaci citlivostí dat v [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)], navštivte [Klasifikace dat](/dynamics-nav/classifying-data?toc=/dynamics365/business-central/toc.json) a [Klasifikace citlivosti dat](admin-classifying-data-sensitivity.md).
+# Responding to Requests About Personal Data  
+Data subjects can request several types of actions regarding their personal data. For example, under the General Data Protection Regulation (GDPR), EU residents have the right to request the export, deletion and modification of their personal data. This is known as a *Data Subject Request*. If you have classified the sensitivity of your data, and are sure they are correct, an administrator can respond to requests by using the options under **Data Privacy** tab in the **IT Manager** Role Center. For more information about classifying data and classifying data sensitivity in [!INCLUDE[prod_long](includes/prod_long.md)], see [Classifying Data](/dynamics-nav/classifying-data?toc=/dynamics365/business-central/toc.json) and [Classifying Data Sensitivity](admin-classifying-data-sensitivity.md).  
 
-## Typy žádostí
+## Types of Requests
 
-V následující tabulce jsou uvedeny příklady typů požadavků, na které můžete odpovědět.
+The following table provides examples of the types of requests you can respond to.
 
 > [!Note]
-> Přestože jsme to my, kdo poskytuje možnosti reagovat na tyto typy požadavků, a tím získat přístup k osobním údajům, je vaší odpovědností zajistit, aby osobní a citlivé údaje byly správně lokalizovány a klasifikovány.
+> While we provide capabilities for responding to these types of request, and thereby accessing, personal data, it is your responsibility to ensure that personal and sensitive data are located and classified appropriately.
 
-| Typ požadavku | Popis a navrhovaná odpověď |
+|Request Type|Description and Suggested Response|
 |-----|-----|
-| Žádosti o přenesení | Datový subjekt může podat žádost o přenositelnost údajů, což znamená, že musíte exportovat osobní údaje subjektu údajů ze svých systémů a poskytnout je ve strukturovaném, běžně používaném formátu. Chcete-li reagovat na tyto požadavky, můžete k exportu osobních údajů do souboru aplikace Excel nebo konfiguračního balíčku RapidStart použít **Nástroj pro ochranu dat**.  Pomocí Excelu můžete upravovat osobní data a ukládat je do běžně používaného, strojově čitelného formátu, například ve formátu CSV nebo XML. U konfiguračních balíčků RapidStart můžete nakonfigurovat tabulky hlavních dat a jejich související tabulky, které obsahují osobní data. <br><br> **Note:** Při exportu dat zadáváte minimální úroveň citlivosti. Export bude zahrnovat minimální a všechny úrovně citlivosti nad ní. Pokud se například rozhodnete exportovat data, která jsou klasifikována jako osobní, bude export zahrnovat také data, která jsou klasifikována jako citlivá. <br><br> Při exportu dat souvisejících s datovým subjektem hledá **Nástroj pro ochranu dat** přímé vztahy mezi datovým subjektem a daty vztahujícími se k subjektu údajů. Nepřímé vztahy mezi údaji souvisejícími s datovým subjektem a dalšími daty nejsou automaticky exportovány **Nástrojem pro ochranu dat**. Například tabulka kontaktů má přímo související data odpovědí profilu kontaktů a tabulka odpovědí profilu kontaktů dále souvisí s daty o profilových otázkách. Pokud chcete exportovat také profilové otázky, musíte tuto tabulku přidat ručně jako řádek s příslušnými filtry v konfiguračním balíčku, který vytvoří **Nástroj pro ochranu dat**. |
-| Žádosti o výmaz | Datový subjekt může požádat o vymazání jejich osobních údajů. Existuje několik způsobů, jak odstranit osobní údaje pomocí možností přizpůsobení, ale rozhodnutí a implementace je vaší odpovědností. V některých případech se můžete rozhodnout upravit svá data přímou cestou, například odstranit kontakt a poté spustit dávkovou úlohu Odstranit položky protokolu, abyste smazali interakce kontaktu. <br><br> **Note:** Pokud jste určili datum v poli **Povolit odstranění dokladu před datem** na stránkách **Nastavení prodeje a pohledávek** nebo **Nastavení nákupu a závazků**, možná budete muset změnit datum, abyste mohli smazat zaúčtované prodejní a nákupní doklady, které jste vytiskli a které mají datum zaúčtování k tomuto datu nebo dříve. |
-| Žádosti o úpravu | Datový subjekt může požadovat opravu nepřesných osobních údajů. Existuje několik způsobů, jak toho dosáhnout. V některých případech můžete exportovat seznamy do aplikace Excel a hromadně upravovat více záznamů, následně můžete importovat aktualizovaná data. Pro více informací navštivte [Export vašich obchodních dat do Excelu](about-export-data.md). Můžete také ručně upravit pole obsahující osobní údaje, například úpravy informací o zákazníkovi na kartě Zákazníka. Záznamy transakcí, jako jsou věcné položky, položky zákazníka a daně, jsou však nezbytné pro integritu systému plánování zdrojů organizace. Pokud ukládáte osobní údaje do záznamů obchodních transakcí, zvažte použití možností přizpůsobení k úpravě těchto osobních údajů. |
+|Portability requests|A data subject can make a data portability request, meaning, in part, that you must export the data subject's personal data from your systems and provide it in in a structured, commonly used format. To respond to these requests you can use the **Data Privacy Utility** to export personal data to an Excel file or a RapidStart configuration package. Using Excel, you can edit the personal data and save it in a commonly used, machine-readable format, such as .csv or .xml. For RapidStart configuration packages, you can configure master data tables and their related tables that contain personal data. <br><br> **Note:** When you export data you specify a minimum sensitivity level. The export will include the minimum and all sensitivity levels above it. For example, if you choose to export data that is classified as Personal, the export will also include data that is classified as Sensitive. <br><br>When exporting data related to a data subject, the **Data Privacy Utility** looks for direct relationships between the data subject and data related to the data subject. Indirect relationships between data related to the data subject and other data are not exported automatically by the **Data Privacy Utility**. For example, the Contact table has directly related Contact Profile Answers data, and the Contact Profile Answers table is further related to Profile Questions data. If you want to export Profile Questions as well, you must add this table manually as a row with the appropriate filters in the configuration package that the **Data Privacy Utility** creates.|
+|Requests for deletion|A data subject can request that you delete their personal data. There are several ways to delete personal data using the customization capabilities, but the decision and implementation is your responsibility. In some cases, you may choose to directly edit your data, for example deleting a contact and then running the Delete Canceled Interaction batch job to delete interactions for the contact. <br><br> **Note:** If you have specified a date in the **Allow Document Deletion Before** field on the **Sales & Receivables Setup** or **Purchases & Payables Setup** pages, you might need to change the date so that you can delete posted sales and purchase documents that you have printed and that have posting dates on or before that date.|
+|Requests for correction|A data subject can request that you correct inaccurate personal data. There are several ways to do so. In some cases, you can export lists to Excel to quickly bulk-edit multiple records, and then import the updated data. For more information, see [Exporting your Business Data to Excel](about-export-data.md). You can also manually edit fields that contain personal data, such as editing information about a customer in the Customer card. However, transaction records such as general, customer, and tax ledger entries are essential to the integrity of the enterprise resource planning system. If you store personal data in business transaction records, consider using the customization capabilities to modify such personal data.|
 
-## Omezení zpracovávání dat pro datový subjekt
-Datový subjekt může požádat o dočasné zastavení zpracovávání jejich osobních údajů. Chcete-li těmto požadavkům vyhovět, můžete jejich záznam označit jako blokovaný z důvodu ochrany osobních údajů a zastavit zpracovávání jejich dat. Pokud je záznam označen jako blokovaný, nelze vytvořit nové transakce, které tento záznam používají. Nemůžete například vytvořit novou fakturu pro zákazníka, když je zákazník nebo prodejce zablokován. Chcete-li označit datový subjekt jako blokovaný, otevřete kartu datového subjektu, například karty zákazníka, dodavatele nebo kartu kontaktu, a zaškrtněte pole **Uzavřeno-ochrana soukromí**. Možná budete pro zobrazení pole muset zvolit **Zobrazit více**.
+## Restrict Data Processing for a Data Subject
+A data subject can request that you temporarily stop processing their personal data. To honor such requests, you can mark their record as blocked due to privacy to stop processing their data. When a record is marked as blocked, you cannot create new transactions that use that record. For example, you cannot create a new invoice for a customer when either the customer or the salesperson is blocked. To mark a data subject as blocked, open the card for the data subject, for example the Customer, Vendor, or Contact cards, and choose the **Privacy Blocked** check box. You may need to choose **Show More** to display the field.  
 
-## Zpracovávání žádostí datového subjektu ve zkušební verzi
-Některé typy osobních údajů jsou součástí vašeho účtu Office 365 a vyžadují administrativní přístup k exportu, pokud od uživatele obdržíte žádost datového subjektu ohledně tohoto typu osobních údajů podle Obecného nařízení o ochraně osobních údajů (GDPR). Proces zpracování požadavků datového subjektu se liší v závislosti na typu klienta [!INCLUDE[d365fin](includes/d365fin_md.md)].
+## Handling Data Subject Requests While in Trial
+Certain types of personal data is part of your Microsoft 365 account and requires administrative access to export, if you receive a data subject request from a user regarding this type of personal data under the General Data Protection Regulation (GDPR). The process for handling data subject requests is different depending on the type of [!INCLUDE[prod_short](includes/prod_short.md)] tenant.  
 
-Pokud máte placené předplatné pro [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte kontaktovat správce klienta vaší organizace a žádat subjekt údajů. Správce má administrátorská práva a nástroje pro splnění vaší žádosti.
+If you have a paid subscription for [!INCLUDE[prod_short](includes/prod_short.md)], you must contact your organization's tenant administrator to make a data subject request. The administrator has the administrative rights and tools to fulfil your request.  
 
-Pokud jste se zaregistrovali pro [!INCLUDE[d365fin](includes/d365fin_md.md)] ze stránky [Zkušební verze](https://trials.dynamics.com/) a nevystoupili jste z této zkušební zkušenosti prostřednictvím placeného předplatného správcem vaší organizace, pak můžete vyplnit svou vlastní žádost subjektu údajů na stránce [ Ochrana osobních údajů v práci a škole na portálu Azure](https://portal.azure.com#blade/Microsoft_AAD_IAM/GDPRViralBlade). Zde můžete exportovat a stáhnout své osobní údaje.
+If you signed up for [!INCLUDE[prod_short](includes/prod_short.md)] from the [Trials](https://trials.dynamics.com/) page, and you have not moved out of this trial experience through a paid subscription by your organization’s tenant administrator, then you can fulfil your own data subject request in the [Work and School Privacy page in the Azure Portal](https://portal.azure.com#blade/Microsoft_AAD_IAM/GDPRViralBlade). Here, you can export and download your personal data.
 
-Také na stránce Ochrana osobních údajů v práci a ve škole můžete svůj účet uzavřít. Doporučujeme však nejprve exportovat a smazat všechna data, protože smazání účtu znamená, že ztratíte přístup k [!INCLUDE[d365fin](includes/d365fin_md.md)].
+On the Work and School Privacy page, you can also close your account. However, we recommend that you make sure that you have exported and deleted all data first, since deleting your account means that you lose access to [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Stále můžete označit uživatele jako blokované z důvodu ochrany osobních údajů a exportovat, upravovat nebo odstraňovat transakce, jak je v tomto článku vysvětleno výše.
+You can still mark people as blocked due to privacy and export, edit, or delete transactions as explained elsewhere in this article.  
 
-## Exportování dat z tabulek neklasifikovaných datovým subjektem
-Pokud máte situaci, kdy musíte exportovat data, která nejsou klasifikována tak, aby byla automaticky exportována, například data z tabulky Odpovědi profilů, musíte provést následující kroky:
-- Zvažte, zda opravdu chcete nebo musíte exportovat tato doplňková data, která nesouvisí s kontaktem, což znamená, že k nim nemá žádný přímý vztah.
-- Přidejte tuto tabulku a vztah ručně do balíčku Rapid Start a exportujte jej přímo z balíčku Rapid Start - proto pro vás vygenerujeme balíček Rapid Start, abyste jej mohli vyladit v takových situacích.
+## Exporting Data from Tables not Classified by Data Subject
+If you have a situation where you have to export data that is not classified in a way so that it gets automatically exported, such as data from the Profile Answers table, you must do the following:
+-	Consider if you really want or have to export this supplemental data that is unrelated to the contact, meaning that it has no direct relationship to it
+-	Add this table and relationship manually to the Rapid Start package and export it directly from the Rapid Start package – that’s why we generate a Rapid Start package for you, so that you can tweak it in situations such as this.
 
-## Zpracování údajů nezletilých
-Pokud je věk kontaktní osoby nižší než věk zákonného souhlasu podle zákonů ve vaší oblasti, můžete to označit zaškrtnutím políčka **Nezletilý** na kartě **Kontaktu**. Když tak učiníte, je automaticky zaškrtnuto políčko **Uzavřeno-ochrana soukromí**. Pokud obdržíte souhlas od rodiče nebo zákonného zástupce nezletilé osoby, můžete pro odblokování kontaktu zvolit pole **Rodičovský souhlas byl přijat**. Přestože můžete zpracovávat osobní údaje pro nezletilé, nemůžete použít funkci profilování v Dynamics 365 pro prodej.
+## Handling Data About Minors
+If a contact person's age is below the age of legal consent according to the laws in your region, you can indicate that by choosing the **Minor** check box on the **Contact** card. When you do, the **Privacy Blocked** check box is automatically selected. When you receive consent from the minor's parent or legal guardian, you can choose the **Parental Consent Received** check box to unblock the contact. Though you can process personal data for minors, you cannot use the profiling functionality in Dynamics 365 Sales.
 
 > [!Note]
-> Protokol změn může zaznamenávat podrobnosti, například kdy a kým bylo zaškrtnuto políčko **Rodičovský souhlas byl přijat**. Správce to může nastavit pomocí průvodce **Nastavení protokolu změn**, a také zaškrtnutím políčka **Protokolová změna rodičovského souhlasu byla přijata** na kartě **Kontaktu**. Pro více informací navštivte [Zaznamenávání změn](across-log-changes.md).
+> The Change Log can record details such as when, and by whom, the **Parental Consent Received** check box was chosen. An administrator can set that up by using the **Change Log Setup** guide, and also choosing the **Log Modification for Parental Consent Received** check box on the **Contact** card. For more information, see [Logging Changes](across-log-changes.md).  
 
-## Viz také
-[Klasifikace dat](/dynamics-nav/classifying-data?toc=/dynamics365/business-central/toc.json)  
-[Klasifikace citlivosti dat](admin-classifying-data-sensitivity.md)  
-[Export vašich obchodních dat do Excelu](about-export-data.md)  
-[Zaznamenávání změn](across-log-changes.md)  
-[Žádosti datových subjektů podle GDPR](/microsoft-365/compliance/gdpr-data-subject-requests)
+## See Also
+[Classifying Data](/dynamics-nav/classifying-data?toc=/dynamics365/business-central/toc.json)  
+[Classifying Data Sensitivity](admin-classifying-data-sensitivity.md)  
+[Exporting your Business Data to Excel](about-export-data.md)  
+[Logging Changes](across-log-changes.md)  
+[Data Subject Requests for the GDPR](/microsoft-365/compliance/gdpr-data-subject-requests)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

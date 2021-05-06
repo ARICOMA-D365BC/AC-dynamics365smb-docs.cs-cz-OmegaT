@@ -1,42 +1,57 @@
 ---
-title: Uspořádaní zboží do kategorií | Microsoft Docs
-description: 'Abyste mohli vyhledávat a hledat zboží, můžete přiřadit atributy zboží a uspořádat zboží do kategorií.'
-services: project-madeira
-documentationcenter: ''
+title: Organize Items in Categories| Microsoft Docs
+description: To help you search for and find items, you can assign item attributes and organize items in categories.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'category, search, attribute, facet'
-ms.date: 03/01/2019
-ms.author: sgroespe
+ms.search.keywords: category, search, attribute, facet
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="categorize-items"></a>Kategorizace zboží
-Chcete-li udržovat přehled o vašem zboží, který vám může pomoci při řazení a hledání zboží, je vhodné ho uspořádat v kategoriích zboží.
+# Categorize Items
 
-Chcete-li vyhledat zboží podle vlastností, můžete přiřadit atributy zboží ke zboží a také ke kategoriím zboží. Pro více informací navštivte [Práce s atributy zboží](inventory-how-work-item-attributes.md).
+To maintain an overview of your items and to help you sort and find items, it is useful to organize your items in item categories.
 
-## <a name="to-create-an-item-category"></a>Vytvoření kategorie zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kategorie zboží** a poté vyberte související odkaz.
-2. Na stránce **Kategorie zboží** vyberte akci **Nový**.
-3. Na stránce **Karta kategorie zboží** na záložce **Obecné** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Na záložce **Atributy** zadejte všechny atributy zboží pro kategorii zboží. Pro více informací navštivte [Přiřadit atributy zboží ke kategorii zboží](inventory-how-work-item-attributes.md#to-assign-item-attributes-to-item-categories).
+To find items by characteristics, you can assign item attributes to items and also to item categories. For more information, see [Work with Item Attributes](inventory-how-work-item-attributes.md).
+<br><br>  
+
+> [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4j4mo?rel=0]
+
+## To create an item category
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Categories**, and then choose the related link.
+2. On the **Item Categories** page, choose the **New** action.
+3. On the **Item Category Card** page, on the **General** FastTab, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. On the **Attributes** FastTab, specify any item attributes for the item category. For more information, see [To assign item attributes to item categories](inventory-how-work-item-attributes.md#to-assign-item-attributes-to-item-categories).
 
 > [!NOTE]  
->   Pokud kategorie zboží obsahuje nadřazenou kategorii zboží, jak je uvedeno v poli **Nadřazená kategorie**, pak jakékoli atributy zboží, které jsou přiřazeny této nadřazené kategorii zboží, jsou předem vyplněny na záložce **Atributy**.
+> If the item category has a parent item category, as indicated by the **Parent Category** field, then any item attributes that are assigned to that parent item category are prefilled on the **Attributes** FastTab.
 
 > [!NOTE]  
->   Atributy zboží, které přiřadíte ke kategorii zboží, se automaticky použijí na zboží, ke kterému je kategorie zboží přiřazena.
+> Item attributes that you assign to an item category will automatically apply to the item that the item category is assigned to.
 
-## <a name="to-assign-an-item-category-to-an-item"></a>Přiřazení kategorie zboží ke zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
-2. Otevřete kartu pro zboží, které chcete přiřadit ke kategorii zboží.
-3. Vyberte vyhledávací tlačítko v poli **Kód kategorie zboží** a vyberte existující kategorii zboží. Nebo zvolte akci **Nový**, chcete-li nejprve vytvořit novou kategorii zboží, jak je vysvětleno v sekci [Vytvoření kategorie zboží](inventory-how-categorize-items.md#to-create-an-item-category).
+If you change your mind about an item category, you can delete it. However, if it has already been assigned to an item, you must remove that assignment before you can delete the item category.
 
-## <a name="see-also"></a>Viz také
-[Práce s atributy zboží](inventory-how-work-item-attributes.md)  
-[Evidence nového zboží](inventory-how-register-new-items.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To assign an item category to an item
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+2. Open the card for the item that you want to assign to an item category.
+3. Choose the lookup button in the **Item Category Code** field and select an existing item category. Alternatively, choose the **New** action to first create a new item category as explained in [To create an item category](inventory-how-categorize-items.md#to-create-an-item-category).
+
+## Categories, attributes, and variants
+
+[!INCLUDE[inventory_variant](includes/inventory_variant.md)]
+
+## See Also
+
+[Work with Item Attributes](inventory-how-work-item-attributes.md)  
+[Register New Items](inventory-how-register-new-items.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

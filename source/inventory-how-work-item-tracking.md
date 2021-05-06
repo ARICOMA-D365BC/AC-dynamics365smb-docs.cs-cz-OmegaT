@@ -1,265 +1,294 @@
 ---
-title: Přiřazení sériových čísel a čísel šarží ke zboží pro sledování | Microsoft Docs
-description: Sériová čísla a čísla šarží můžete přidat do jakéhokoli odchozího nebo příchozího dokladu a jeho účtované položky sledování zboží se zobrazí v souvisejících položkách zboží.
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 03/01/2019
-ms.author: sgroespe
+    title: Track Items with Serial, Lot, and Package Numbers
+    description: You can add serial numbers, lot numbers, and package numbers to any outbound or inbound document, and its posted item tracking entries are displayed in the related item ledger entries.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
-# <a name="work-with-serial-and-lot-numbers"></a>Práce se sériovými čísly a čísly šarží
-Sériová čísla a čísla šarží můžete přiřadit k jakémukoli odchozímu nebo příchozímu dokladu a jeho účtované položky sledování zboží se zobrazí v souvisejících položkách zboží. Práce provádíte na stránce **Řádky sledování zboží**, kterou můžete otevřít z příchozího nebo odchozího dokladu.
+# Track Items with Serial, Lot, and Package Numbers
 
-Pole matice množství v horní části stránky **Řádky sledování zboží** zobrazuje množství a součty sledovacích čísel zboží definovaných na řádcích. Množství musí odpovídat množství v řádku dokladu, které je v polích **Nedefinováno** označeno 0.
+Keep track of inventory items even in complex warehouse configurations with numbers that are specific to each item, either as an individual object, as a lot, or as a package. With item tracking, you can trace items across internal warehouse movements, and outbound and inbound documents.  
 
-Jako měřítko výkonu program shromažďuje informace o dostupnosti na stránce **Řádky sledování zboží** pouze jednou, když stránku otevřete. To znamená, že program neaktualizuje informace o dostupnosti během doby, kdy máte otevřenou stránku, i když během této doby dojde ke změnám ve skladu nebo na jiných dokladech.
+You can assign serial numbers, lot numbers, and package numbers to any outbound or inbound document, and its posted item tracking entries are displayed in the related item ledger entries. You perform the work on the **Item Tracking Lines** page, which you can open from an inbound or outbound document.
 
-Zboží se sériovým číslem nebo číslem šarže lze v dodavatelském řetězci sledovat zpět i vpřed. To je užitečné pro obecné zajištění kvality a stahování produktů z trhu. Pro více informací navštivte [Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md).
+The matrix of quantity fields at the top of the **Item Tracking Lines** page displays the quantities and sums of item tracking numbers being defined on the lines. The quantities must correspond to those of the document line, which is indicated by 0 in the **Undefined** fields.
 
-## <a name="about-picking-serial-or-lot-numbers-in-the-warehouse"></a>Vybírání sériových čísel nebo čísel šarží ve skladu
-Odchozí zpracování sériových čísel nebo čísel šarží je častým úkolem v různých skladových procesech.  
+As a performance measure, application collects the availability information on the **Item Tracking Lines** page only once, when you open the page. This means that application does not update the availability information during the time that you have the page open, even if changes occur in inventory or on other documents during that time.
 
-V některých procesech skladové zboží nenese sériové číslo nebo číslo šarže a pracovník skladu musí při odchozí manipulaci přiřadit nové číslo, obvykle z předdefinované číselné řady.
+Items with serial and lot numbers can be traced both backwards and forward in the supply chain. This is useful for general quality assurance and for product recalls. For more information, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md).  
 
-V jednoduchých procesech již skladové zboží nese sériové číslo nebo číslo šarže, například přiřazené během odkládání, a toto číslo je automaticky přenášeno prostřednictvím všech výstupních skladových činností bez interakce pracovníků skladu.
+> [!TIP]
+> In 2021 release wave 1, switch on the *Use tracking by package number in reservation and tracking system* feature update if you want to work with package numbers as well as serial and lot numbers. For more information, see [Enabling Upcoming Features Ahead of Time](admin-feature-management.md). Once the feature is switched on, you can assign package numbers to outbound and inbound documents similar to how you can work with lot numbers.  
 
-Ve zvláštních situacích u sériových nebo šaržových zásob jsou ve zdrojovém dokladu definována konkrétní sériová nebo šaržová čísla, jako je prodejní objednávka, kterou musí pracovník skladu při manipulaci s výstupním skladem respektovat. Může to být způsobeno tím, že zákazník během procesu objednávky požadoval konkrétní dávku. Když je doklad vyskladnění zásob nebo vyskladnění ze skladu vybrán z výstupního zdrojového dokladu, kde jsou již definována sériová čísla nebo čísla šarže, všechna pole na stránce **Řádky sledování zboží** pod vyskladněním zásob jsou zablokovány pro zápis, kromě pole **Množství ke zpracování**. V takovém případě řádky vyskladnění zásob určují sledovací čísla zboží na jednotlivých řádcích pro odběr a místo. Množství je již rozděleno do jedinečných kombinací sériových čísel nebo čísel šarží, protože prodejní objednávka specifikuje sledovací čísla zboží k odeslání.  
+## Numbers and item tracking
 
-## <a name="item-tracking-availability"></a>Dostupnost sledování zboží
-Když pracujete se sériovými čísly a čísly šarží, [!INCLUDE[d365fin](includes/d365fin_md.md)] vypočítá informace o dostupnosti pro čísla šarže a sériová čísla a zobrazí je na různých stránkách pro sledování zboží. To vám umožní zjistit, kolik z čísla šarže nebo sériového čísla se aktuálně používá v jiných dokladech. To snižuje chyby a nejistotu způsobenou dvojím přidělením.
+As part of your warehouse processes, to can bundle your stock in packages, boxes, containers, and so on. But in order to keep track of the items, you assign unique numbers as identification. For example, you manufacture and sell a chair that has the item number *1900-S*. Each individual chair has a serial number, *1001*, but you also bundle four chairs into a lot, *LOT0001*, and you ship the chairs in a container with the package number *CONTAINER010* that also includes other items, such as *LOT0100* with side tables, and *LOT200* with lamps.  
 
-Na stránce **Řádky sledování zboží** se v poli **Dostupnost, číslo šarže** nebo **Dostupnost, sériové číslo** zobrazí varovná ikona, pokud se některé nebo celé množství, které jste vybrali, již používá v jiných dokladech nebo pokud číslo šarže nebo sériové číslo není k dispozici.
+Depending on your configuration, you use these different numbers to keep track of inventory in [!INCLUDE [prod_short](includes/prod_short.md)] at the various stages of purchasing, sales, warehouse operations, and so on.
 
-Na stránce **Č. Šarže / Sériové č.-Seznam**,  **Č. Šarže / Sériové č.-Dostupnost** a **Sledování zboží - Vybrat položky** se zobrazí informace o tom, jak velké množství zboží se používá. To zahrnuje následující informace.
+## Picking numbers in the warehouse
 
-|Pole|Popis|
+Outbound handling of serial or lot numbers is a frequent task in different warehouse processes.  
+
+In some processes, the inventory items do not carry serial or lot numbers, and the warehouse worker must assign new during the outbound handling, typically from a predefined number series.
+
+In simple processes, the inventory items already carry serial or lot numbers, for example assigned during the put-away, and these numbers are automatically transferred through all outbound warehouse activities without interaction by warehouse workers.
+
+In special situations for serial- or lot-numbered inventory, specific serial or lot numbers are defined on the source document, such as a sales order, which the warehouse worker must respect during the outbound warehouse handling. This may be because the customer requested a specific lot during the order process. When the inventory pick or warehouse pick document is created from an outbound source document where serial or lot numbers are already defined, then all fields on the **Item Tracking Lines** page under the inventory pick are locked for writing, except the **Qty. to Handle** field. In that case, the inventory pick lines specify the item tracking numbers on individual take and place lines. The quantity is already split into unique serial or lot number combinations because the sales order specifies the item tracking numbers to ship.  
+
+## Item tracking availability
+
+When you work with serial, lot, and package numbers, [!INCLUDE[prod_short](includes/prod_short.md)] calculates availability information and shows it in the various item tracking pages. This lets you see how much of a lot, package, or serial number is currently being used on other documents. This reduces errors and uncertainty caused by double allocations.
+
+On the **Item Tracking Lines** page, a warning icon is shown in the **Availability, Lot No.** or **Availability, Serial No.** field if some or all of the quantity you have selected is already being used in other documents or if the lot or serial number is not available.
+
+On the **Lot No./Serial No.-List** page, the **Lot No./Serial No.-Availability** page, and the **Item Tracking - Select Entries** page, information is displayed about how much quantity of an item is being used. This includes the following information.
+
+|Field|Description|
 |-----|-----------|  
-|**Celkové množství**|Celkový počet zboží aktuálně ve skladu|
-|**Celkové požadované množství**|Celkový počet požadovaného zboží, které bude použito v tomto a dalších dokladech|
-|**Aktuální množství ke zpracování**|Počet zboží, které je požadováno a které bude použito v aktuálním dokladu, ale které dosud není vázáno na databázi|
-|**Aktuální požadované množství**|Počet požadovaného zboží, které bude použito v aktuálním dokladě|
-|**Celkové množství k dispozici**|Celkové množství zboží v zásobách, snížené o množství zboží, které je požadováno v tomto a dalších dokladech (celkové požadované množství), a mínus množství, které je v tomto dokladě požadováno, ale ještě není vázáno (aktuální nevyřízené množství)|
+|**Total Quantity**|The total number of item currently in inventory|
+|**Total Requested Quantity**|The total number of items that are requested that will be used in this and other documents|
+|**Current Pending Quantity**|The number of items that are requested that will be used on the current document but that is not yet committed to the database|
+|**Current Requested Quantity**|The number of items that are requested that will be used on the current document|
+|**Total Available Quantity**|The total number of items in inventory, minus the quantity of the item that are requested on this and other documents (total requested quantity), and minus the quantity that is requested but not yet committed on this document (current pending quantity)|
 
-Pokud na stránce **Řádky sledování zboží** pracujete dlouhou dobu nebo pokud existuje velká aktivita se zbožím, s kterým pracujete, můžete zvolit akci **Aktualizovat dostupnost**. Kromě toho, když zavřete stránku, je dostupnost zboží automaticky znovu zkontrolována abyste se ujistili, že neexistují žádné problémy s dostupností.
+If you work on the **Item Tracking Lines** page for a long period of time or if there is a great deal of activity with the item you are working with, then you can choose the **Refresh Availability** action. In addition, the availability of the item is automatically rechecked when you close the page to confirm that there are no availability problems.
 
-## <a name="to-set-up-item-tracking-codes"></a>Nastavení kódů sledování zboží
-Kód sledování zboží odráží různé aspekty, které má společnost ohledně používání sériových čísel a čísel šarží pro zboží pohybujíce se v zásobách.  
+## To set up item tracking codes
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kódy sledování zboží** a poté vyberte související odkaz.  
-2. Zvolte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
-4. Na záložkách **Sériové číslo** a **Číslo šarže** definujte zásady sledování zboží podle sériových čísel a čísel šarží.  
+An item tracking code reflects the different considerations a company has regarding the use of serial and lot numbers for items moving through the inventory.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracking Codes**, and then choose the related link.  
+2. Choose the **New** action.
+3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+4. On the **Serial No.**, **Lot No.**, and the **Package No.** FastTabs, define policies of item tracking by serial, lot, and package numbers respectively.  
 
 > [!NOTE]  
->  Pokud chcete sledovat konkrétní zboží nebo konkrétní šarže po celou dobu jejich životnosti, musíte zvolit pole **Sledování sériových čísel** a **Sledování určité dávky**. Výsledkem je, že při zpracování výstupní jednotky zboží s pomocí tohoto kódu sledování zboží musíte vždy určit, které stávající sériové číslo nebo které číslo šarže zpracovat. To znamená, že při prodeji jednotky zboží musí být použita proti konkrétní skupině sériových čísel nebo konkrétnímu číslu šarže v zásobách. Nebo jinými slovy, sériové číslo nebo číslo šarže přiřazené zboží při vstupu do zásob musí následovat tento typ zboží mimo zásoby.
+> If you want to track specific items or specific lots throughout their lifetime, you must choose the **SN Specific Tracking** and **Lot Specific Tracking** fields, respectively. As a result, when handling an outbound unit of an item with this item tracking code, you must always specify which existing serial number or which existing lot number to handle. This means that when selling a unit of the item, it must be applied against a specific pool of serial numbers or a specific lot number in inventory. Or in other words, a serial number or lot number assigned to the item when entering into inventory must follow that item type out of inventory.
 
-Protože toto konkrétní pole nastavení pokrývá všechny možné transakce se zbožím, budou vybrána také jednotlivá příchozí / odchozí pole. Jednotlivá příchozí / odchozí pole však nemají nic společného s aplikací napříč zásobami - definují pouze pracovní postup vaší společnosti týkající se toho, kdy mají být přiřazena sledovací čísla zboží.  
+As this particular setup field covers all possible transactions with the item, the individual inbound/outbound fields will also be selected. However, the individual inbound/outbound fields have nothing to do with application across inventory - they merely define your company's work flow concerning when to assign item tracking numbers.  
 
-### <a name="to-set-up-expiration-rules-for-serial-or-lot-numbers"></a>Nastavení pravidla vypršení platnosti pro sériová čísla nebo čísla šarže  
-U některých zboží můžete chtít v kódu sledování zboží nastavit konkrétní data a pravidla vypršení platnosti. Tato funkce umožňuje sledovat, kdy vyprší platnost specifických sériových čísel a čísel šarží.
+### To set up expiration rules for serial or lot numbers
 
-1. Vyberte existující kód sledování zboží a poté vyberte akci **Upravit**.  
-2.  Na záložce **Různé**,  zaškrtněte následující políčka.  
+For some items you might want to set up specific expiration dates and rules in the item tracking code. This functionality allows you to keep track of when specific serial numbers and lot numbers expire.
 
-    |Pole|Popis|  
+1. Select an existing item tracking code, and then choose the **Edit** action.  
+2. On the **Misc.** FastTab, select the following check boxes.  
+
+    |Field|Description|  
     |---------------------------------|---------------------------------------|  
-    |**Přísné účtování expirace**|Určuje, že datum expirace přidělené k číslu sledování zboží, když vstoupilo do zásob, musí být respektováno, když zásoby opouští.|  
-    |**Pož. ruč. zadání data platnosti**|Určuje, že musíte ručně zadat datum vypršení platnosti na řádku sledování zboží.|  
-    |**Ignorovat data vypršení platnosti**|Určuje, že nechcete počítat data vypršení platnosti. |  
+    |**Strict Expiration Posting**|Specifies that an expiration date assigned to the item tracking number as it entered inventory must be respected when it exits inventory.|  
+    |**Man. Expir. Date Entry Reqd.**|Specifies that you must manually enter an expiration date on the item tracking line.|  
+    |**Ignore Expiration Dates**|Specifies that you do not want to calculate expiration dates. |  
 
-### <a name="to-set-up-warranties-for-serial-or-lot-numbers"></a>Nastavení záruk na sériová čísla nebo čísla šarže  
-U některého zboží můžete chtít nastavit konkrétní záruky v kódu sledování zboží. Tato funkce umožňuje sledovat, kdy se vyčerpají záruky na konkrétní sériová čísla nebo čísla šarže v zásobách.        
-1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kódy sledování zboží** a poté vyberte související odkaz.  
+### To set up warranties for serial or lot numbers
 
-1. Vyberte existující kód sledování zboží a poté vyberte akci **Upravit**.  
-2.  Na záložce **Různé**,  vyplňte pole **Vzorec data záruky** a poté zaškrtněte políčko.  
+For some items, you might want to set up specific warranties in the item tracking code. This functionality allows you to keep track of when the warranties on specific serial or lot numbers in your inventory will run out.  
 
-    |Pole|Popis|  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracking Codes**, and then choose the related link.  
+
+2. Select an existing item tracking code, and then choose the **Edit** action.  
+3. On the **Misc.** FastTab, fill in the **Warranty Date Formula** field, and then select the check box as follows.  
+
+    |Field|Description|  
     |---------------------------------|---------------------------------------|  
-    |**Vzorec data záruky**|Určuje poslední den záruky zboží.|  
-    |**Pož. ručního zadání data záruky**|Určuje, že na řádku sledování zboží musíte ručně zadat datum záruky.|  
+    |**Warranty Date Formula**|Specifies the last day of warranty for the item.|  
+    |**Man. Warranty Date Entry Reqd.**|Specifies that you must manually enter a warranty date on the item tracking line.|  
 
-## <a name="to-record-serial-or-lot-number-information"></a>Zaznamenávaní informace o sériovém čísle nebo čísle šarže  
-Potřebujete-li například spojit zvláštní informace s konkrétním číslem sledování zboží, například pro zajištění kvality, můžete tak učinit na informační kartě sériového čísla nebo čísla šarže.
+## To assign serial or lot numbers during an inbound transaction  
+Companies may want to keep track of items from the moment they enter the company. In this situation, the purchase order is often the central document, although item tracking may be handled from any inbound document and its posted entries displayed in the related item ledger entries.  
 
-1. Otevřete dokument, který má přiřazeno sériové číslo nebo číslo šarže.
-2. Otevřete stránku **Řádky sledování zboží** pro doklad.
-3. Vyberte například akci **Karta informace sériového čísla**.  
-
-    Pole **Sériové číslo** a **Číslo šarže** jsou vyplněna z řádku pro sledování zboží.  
-4. Do pole **Popis** zadejte krátkou informaci, například o stavu zboží.  
-5. Zvolte akci **Komentář** k vytvoření samostatného záznamu komentářů.  
-6. Chcete-li vyloučit sériové číslo nebo číslo šarže z transakcí, zaškrtněte políčko **Blokováno**.  
-
-## <a name="to-modify-existing-serial-or-lot-number-information"></a>Úprava stávající informace o sériovém čísle nebo čísle šarže  
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.  
-2. Vyberte zboží, které má kód sledování zboží a obsahuje sériové číslo nebo číslo šarže.
-3. Na stránce **Karty zboží** vyberte akci **Položky** a poté zvolte **Položky hlavní knihy**.
-4. Vyberte pole **Číslo šarže** nebo **Sériové číslo**. Pokud pro sledovací číslo zboží existují informace, otevře se stránka **Seznam informací o čísle šarže** nebo **Seznam informací o sériovém čísle**.  
-5. Vyberte kartu a poté vyberte akci **Karta informace sériového čísla/čísla šarže**.  
-6. Upravte text s krátkým popisem, záznam komentáře nebo pole **Blokováno**.  
-
-Sériová čísla ani čísla šarží nelze upravovat. Chcete-li tak učinit, musíte překlasifikovat dotyčný účet zboží. Pro více informací navštivte [Přeřadění čísel šarže nebo sériových čísel](inventory-how-work-item-tracking.md#to-reclassify-serial-or-lot-numbers).
-
-## <a name="to-assign-serial-or-lot-numbers-during-an-inbound-transaction"></a>Přiřazení sériových čísel nebo čísel šarží během příchozí transakce  
-Společnosti mohou chtít sledovat zboží od okamžiku, kdy vstoupí do společnosti. V této situaci je objednávka často ústředním dokladem, ačkoli sledování zásilek může být zpracováno z jakéhokoli příchozího dokladu a jeho zaúčtovaného zboží zobrazeného v souvisejících položkách zboží.  
-
-Přesná pravidla pro manipulaci s čísly sledování zboží ve vaší společnosti se řídí nastavením na stránce **Karta kódu sledování zboží**.  
+The exact rules for handling item tracking numbers across your company are governed by the setup on the **Item Tracking Code Card** page.  
 
 > [!NOTE]  
->  Chcete-li v činnostech ve skladu používat čísla sledování zboží, musí být vybrána pole **Sledování šarže ve skladu** a **Sledování s.čísel ve skladu**, protože definují zvláštní principy při zpracování sériových čísel a čísel šarží v činnostech skladu.  
+>  To use item tracking numbers in warehouse activities, the **Lot Warehouse Tracking** and **SN Warehouse Tracking** setup fields must be selected, as they define the special principles in handling serial and lot numbers in warehouse activities.  
 
-1.  Vyberte ![Žárovku, která otevře funkci Řekněte Mi], ikonu (media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní objednávky** a poté vyberte související odkaz.  
-2.  Vyberte příslušný řádek dokladu a na záložce **Řádky** vyberte akci **Řádek** a poté vyberte akci **Řádky sledování zboží.**  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.  
+2. Select the relevant document line and on the **Lines** FastTab, choose the **Line** action, and then choose the **Item Tracking Lines** action.  
 
-    Sériová čísla nebo čísla šarže můžete přiřadit následujícími způsoby:  
+    You can assign serial or lot numbers in the following ways:  
 
-    -   Automaticky výběrem **Přiřadit sér.číslo** nebo **Přiřadit č.šarže** pro přiřazení sériových čísel / čísel šarží z předdefinovaných číselných řad.  
-    -   Automaticky výběrem **Vytvořit vlastní s.č.** přiřadíte sériová čísla / čísla šarže na základě číselných sérií, které definujete konkrétně pro přijaté zboží.  
-    -   Ručně, přímým zadáním sériových čísel nebo čísel šarží, například čísel prodejců.  
-    -   Ručně přiřazením konkrétního čísla každé jednotce zboží.  
+    -   Automatically, by choosing **Assign Serial No.** or **Assign Lot No.** to assign serial/lot numbers from predefined number series.  
+    -   Automatically, by choosing **Create Customized SN** to assign serial/lot numbers based on number series you define specifically for the arrived items.  
+    -   Manually, by entering serial or lot numbers directly, for example, the vendor's numbers.  
+    -   Manually, by assigning a specific number to each item unit.  
 
-3. Chcete-li automaticky přiřadit, vyberte akci **Vytvořit vlastní s.č.**.  
-4. Do pole **Vlastní s.č.** zadejte počáteční číslo popisné řady sériových čísel, například **S/N-Vend0001**.  
-5. Do pole **Přírůstek** zadejte 1, abyste definovali, že každé pořadové číslo se zvýší o jedno.  
+3. To assign automatically, choose the **Create Customized SN** action.  
+4. In the **Customized SN** field, enter the starting number of a descriptive serial number series, for example **S/N-Vend0001**.  
+5. In the **Increment** field, enter 1 to define that each sequential number increases by one.  
 
-    Pole **Množství k vytvoření** obsahuje ve výchozím nastavení množství řádků, ale můžete je upravit.  
+    The **Quantity to Create** field contains the line quantity by default, but you can modify it.  
 
-6. Zaškrtněte políčko **Vytvořit nové č.šarže**, chcete-li uspořádat nová sériová čísla v samostatné šarži.  
-7. Zvolte tlačítko **OK**.  
+6. Select the **Create New Lot No.** check box to organize the new serial numbers in a distinct lot.  
+7. Choose the **OK** button.  
 
-Číslo šarže s jednotlivými sériovými čísly se vytvoří podle množství zboží v řádku dokladu, počínaje **S/N-Vend0001**.  
+A lot number with individual serial numbers is created according to the item quantity of the document line, starting from **S/N-Vend0001**.  
 
-Pole matice množství v záhlaví dynamicky zobrazuje množství a součty čísel sledovaného zboží, které na stránce definujete. Množství musí odpovídat množství v řádku dokladu, které je v polích **Nedefinováno** označeno 0.  
+The matrix of quantity fields in the header displays dynamically the quantities and sums of the item tracking numbers you define on the page. The quantities must correspond to those of the document line, which is signified by 0 in the **Undefined** fields.  
 
-Když je doklad zaúčtován, položky sledování zboží jsou přeneseny do přidružených položek zboží.
+When the document is posted, the item tracking entries are carried to the associated item ledger entries.
 
-## <a name="to-assign-a-serial-or-lot-number-during-an-outbound-transaction"></a>Přiřazení sériového čísla nebo čísla šarže během výstupní transakce  
-Existují dva způsoby, jak přiřadit odchozí transakci sériová čísla a čísla šarže:  
+## To assign a serial or lot number during an outbound transaction  
+There are two ways to add serial and lot numbers to outbound transactions:  
 
--   Výběr ze stávajících sériových čísel nebo čísel šarží. To platí, pokud již byla během příchozí transakce přiřazena čísla pro sledování zboží. Pro více informací navštivte [Výběr ze stávajících sériových čísel a čísel šarží](inventory-how-work-item-tracking.md#to-select-from-existing-serial-or-lot-numbers).
--   Přiřazení nových sériových čísel nebo čísel šarží během odchozích transakcí. To platí, pokud sledovací čísla zboží nejsou přiřazena ke zboží, dokud nejsou prodány a připraveny k odeslání.  
+-   Selecting from existing serial or lot numbers. This applies when item tracking numbers have already been assigned during an inbound transaction. For more information, see [To select from existing serial numbers and lot numbers](inventory-how-work-item-tracking.md#to-select-from-existing-serial-or-lot-numbers).
+-   Assigning new serial or lot numbers during outbound transactions. This applies when item tracking numbers are not assigned to items until they are sold and ready to be shipped.  
 
-Různá pravidla pro čísla sledovaného zboží jsou nastavena na stránce **Karta kódu sledování zboží**.  
-
-> [!NOTE]  
->  Chcete-li při činnostech skladu přiřadit čísla sledování zboží, musí být na kartě kódu sledování položky zaškrtnuta políčka **Sledování s.čísel ve skladu** a **Sledování šarže ve skladu**.    
-
-1. Vyberte příslušný doklad a na záložce **Řádky** vyberte akci **Objednávka** a poté vyberte akci **Řádky sledování zboží**.  
-
-    Čísla pro sledování zboží můžete přiřadit následujícími způsoby:  
-    -   Automaticky z předdefinovaných číselných řad: Vyberte akci **Přiřadit sér.číslo** nebo **Přiřadit č.šarže**.  
-    -   Automaticky na základě parametrů, které definujete konkrétně pro odchozí zboží: Vyberte tlačítko **Vytvořit ID zákazníka**.  
-    -   Ručně zadáním sériových čísel nebo čísel šarží, bez použití číselné řady.  
-
-2.  Při tomto postupu přiřaďte sériové číslo automaticky výběrem **Přiřadit sér.číslo**.  
-
-    Pole **Množství k vytvoření** obsahuje ve výchozím nastavení množství řádků, ale můžete je upravit.  
-3.  Chcete-li uspořádat nová sériová čísla v samostatné části, vyberte pole **Vytvořit nové č.šarže**.  
-4.  Stisknutím tlačítka **OK** vytvoříte číslo šarže a nová jednotlivá sériová čísla podle množství, které je třeba zpracovat na příslušném řádku dokladu.  
-
-Pole matice množství v horní části dynamicky zobrazuje množství a součty čísel sledovaného zboží, které definujete na stránce. Množství musí odpovídat množství v řádku dokladu, které je v polích **Nedefinováno** označeno **0**.  
-
-Když je doklad zaúčtován, položky sledování zboží jsou přeneseny do přidružených položek zboží.  
-
-## <a name="to-select-from-existing-serial-or-lot-numbers"></a>Výběr ze stávajících sériových čísel nebo čísel šarží  
-Když pracujete se zbožím, které vyžaduje sledování zboží a vytváříte odchozí transakce, kde zboží vychází ze zásob, obvykle musíte vybrat šarže nebo sériová čísla z těch, která již v zásobách existují.  
-
- Přesná pravidla pro zpracování čísel sledování zboží ve vaší společnosti se řídí nastavením tabulky **Kód sledování zboží**.  
+The different rules for item tracking numbers are set up on the **Item Tracking Code Card** page.  
 
 > [!NOTE]  
->  Chcete-li zpracovat čísla sledování zboží v činnostech skladu, musí být zboží nastaveno pomocí Sledování šarže ve skladu/Sledování s.čísel ve skladu, protože to určuje zvláštní zásady upravující sériová čísla a čísla šarže ve skladu.
+>  To assign item tracking numbers in warehouse activities, the **SN Warehouse Tracking** and **Lot Warehouse Tracking** check boxes must be selected on the item's item tracking code card.    
 
-1.  Z libovolného odchozího dokladu vyberte řádek, pro který chcete vybrat sériové číslo nebo číslo šarže.  
-2.  Na záložce **Řádky** vyberte akci **Akce**, vyberte akci **Řádek** nebo **Zboží** a poté vyberte akci **Řádky sledování zboží**.  
-3.  Na stránce **Řádky sledování zboží** máte tři možnosti pro zadání čísla šarže nebo sériového čísla:  
+1. Select the relevant document and, on the **Lines** FastTab, choose the **Order** action, and then choose the **Item Tracking Lines** action.  
 
-    -   Vyberte pole **Číslo šarže** nebo **Sériové číslo** a potom vyberte číslo na stránce **Souhrn sledování zboží**.  
-    -   Vyberte akci **Vybrat položky**. Na stránce **Vybrat položky** jsou uvedena všechna čísla šarže nebo sériová čísla spolu s informacemi o dostupnosti.
+    You can assign item tracking numbers in the following ways:  
+    -   Automatically, from predefined number series: Choose the **Assign Serial No.** or **Assign Lot No.** action.  
+    -   Automatically, based on parameters you define specifically for the outbound item: Choose the **Create Customized SN** action.  
+    -   Manually, by entering serial or lot numbers, without using a number series.  
 
-4. Do pole **Vybrané množství** zadejte množství každé šarže nebo sériového čísla, které chcete použít.   
-5. Klikněte na tlačítko **OK** a vybrané informace o sledovaném zboží se přenesou na stránku **Řádky sledování zboží**.  
-6. Zadejte nebo naskenujte číslo sledování zboží.
+2. For this procedure, assign a serial number automatically by choosing **Assign Serial No.**  
 
-Pole matice množství v záhlaví dynamicky zobrazuje množství a součty čísel sledovaného zboží, které na stránce definujete. Množství musí odpovídat množství v řádku dokladu, které je v polích **Nedefinováno** označeno **0**.  
+    The **Quantity to Create** field contains the line quantity by default, but you can modify it.  
+3. Select the **Create New Lot No.** field to organize the new serial numbers in a distinct lot.  
+4. Choose the **OK** button to create a lot number and new individual serial numbers according to the quantity to handle on the related document line.  
 
- Když zaúčtujete řádek dokladu, informace o sledování zboží se přenesou do přidružených položek zboží.
+The matrix of quantity fields at the top displays dynamically the quantities and sums of the item tracking numbers that you define on the page. The quantities must correspond to those of the document line, which is signified by **0** in the **Undefined** fields.  
 
-## <a name="to-handle-serial-and-lot-numbers-on-transfer-orders"></a>Zpracování sériových čísel a čísel šarží při převodních objednávkách  
-Postupy pro zpracování sériových čísel a čísel šarží, které se přenášejí mezi různými lokacemi, jsou podobné postupům používaným při prodeji a nákupu zboží.  
+When the document is posted, the item tracking entries are carried to the associated item ledger entries.  
 
-Objednávka transferu je však jedinečná v tom, že zásilka i příjem jsou prováděny ze stejného řádku transferu, a proto používají stejnou instanci na stránce **Řádky sledování zboží**. To znamená, že sledovací čísla zboží dodávaná z jedné lokace musí být přijata beze změny na druhé lokaci.  
+## To select from existing serial or lot numbers  
+When you are working with items that require item tracking and you are creating outbound transactions, where the items go out of inventory, you typically need to select the lot or serial numbers from those that already exist in inventory.  
 
- Přesná pravidla pro zpracování čísel sledování zboží ve vaší společnosti se řídí nastavením tabulky **Kód sledování zboží**.    
-1.  Vyberte ![Žárovku, která otevře funkci Řekněte Mi], ikonu (media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky transferu** a poté vyberte související odkaz.  
-2.  Otevřete objednávku transferu, kterou chcete zpracovat. Na záložce **Řádky** vyberte akci **Řádek**, vyberte akci **Řádky sledování zboží** a pak vyberte akci **Dodávka**.  
-3.  Na stránce **Řádky sledování zboží** přiřaďte nebo vyberte sériová čísla nebo čísla šarže jako u jakékoli jiné odchozí transakce zboží.  
+ The exact rules for handling item tracking numbers across your company are governed by the setup of the **Item Tracking Code** table.  
 
-    Při manipulaci se sériovými čísly a čísly šarží pro zboží transferu má zboží obvykle již přiřazená čísla. Proto proces obvykle sestává z výběru ze stávajících sériových čísel nebo čísel šarží.  
+> [!NOTE]  
+>  To handle item tracking numbers in warehouse activities, the item must be set up with SN/Lot Warehouse Tracking, as this dictates the special principles governing serial and lot numbers in the warehouse.
 
-4.  Zašlete příkaz k převodu, nejprve zasílejte a poté přijměte, abyste zaznamenali, že je zboží převedeno s položkami sledování zboží.  
+1. From any outbound document, select the line that you want to select serial or lot numbers for.  
+2. On the **Lines** FastTab, choose the **Actions** action, choose the **Line** or the **Item** action, and then choose the **Item Tracking Lines** action.  
+3. On the **Item Tracking Lines** page, you have three options for specifying lot or serial number:  
 
-Během přenosu zůstane stránka **Řádky sledování zboží** zamčena pro zápis.  
+    -   Select the **Lot No.** or **Serial No.** field, and then select a number from the **Item Tracking Summary** page.  
+    -   Choose the **Select Entries** action. The **Select Entries** page shows all lot or serial numbers along with availability information.
 
-## <a name="to-handle-serial-and-lot-numbers-when-getting-receipt-lines-from-a-purchase-invoice"></a>Zpracování sériových čísel a čísel šarží z řádků nákupní faktury  
-Pokud pomocí funkce získáte řádky zaúčtovaného dokladu nebo dodávky ze souvisejících faktur nebo dobropisů, pak se všechny řádky pro sledování zboží v dokladech skladu přenášejí automaticky, jsou však zpracovávány zvláštním způsobem.
+4. In the **Selected Quantity** field, enter the quantity of each lot or serial number that you would like to use.   
+5. Choose the **OK** button, and the selected item tracking information is transferred to the **Item Tracking Lines** page.  
+6. Type or scan in the item tracking number.
 
-Funkce podporuje následující příchozí procesy:  
--   **Kopie řádků příjemky** - z kupní faktury.  
--   **Kopie řádků dodávky vratky** - z dobropisu na nákup.  
+The matrix of quantity fields in the header dynamically displays the quantities and sums of the item tracking numbers you define on the page. The quantities must correspond to those of the document line, which is signified by **0** in the **Undefined** fields.  
 
-Funkce podporuje následující výstupní procesy:  
--   **Kopie řádků dodávky** - z prodejní faktury nebo kombinovaných dodávek.  
--   **Kopie řádků příjemky vratky** - z dobropisu na prodej.  
+ When you post the document line, the item tracking information is transferred to the associated item ledger entries.
 
-V těchto situacích se stávající řádky pro sledování zboží zkopírují automaticky do faktury nebo dobropisu, ale stránka **Řádky sledování zboží** neumožňuje změny sériových čísel nebo čísel šarží. Změnit lze pouze množství.  
+## To handle serial and lot numbers on transfer orders  
+Procedures for handling serial and lot numbers that are being transferred between different locations are similar to those applied when items are sold and purchased.  
 
-1.  Vyberte ![Žárovku, která otevře funkci Řekněte Mi](media/ui-search/search_small.png " poté ikonu Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a nakonec vyberte související odkaz.  
-2.  Otevřete nákupní fakturu pro zboží, které je zakoupeno se sériovým číslem nebo číslem šarže.  
-3.  Na řádku prodejní faktury na záložce **Řádky** vyberte akci **Kopie řádků příjemky**.  
-4.  Na stránce **Kopie řádků příjemky** vyberte řádky příjemky, které mají řádky pro sledování zboží, a poté klepněte na tlačítko **OK**.  
+However, the transfer order is unique in that shipment and receipt are both done from the same transfer line and, therefore, use the same instance of the **Item Tracking Lines** page. This means that item tracking numbers shipped from one location must be received unchanged at the other location.  
 
-    Zdrojový dokument je zkopírován do nákupní faktury jako nový řádek a jeho řádky pro sledování zboží jsou zkopírovány na podkladovou stránku **Řádky sledování zboží**.  
+ The exact rules for handling item tracking numbers across your company are governed by the setup of the  **Item Tracking Code** table.    
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transfer Orders**, and then choose the related link.  
+2. Open the transfer order you want to process. On the **Lines** FastTab, choose choose the **Line** action, choose the **Item Tracking Lines** action, and then choose the **Shipment** action.  
+3. On the **Item Tracking Lines** page, assign or select serial or lot numbers as for any other outbound item transaction.  
 
-5.  Na nákupní faktuře vyberte převedený řádek příjemky.  
-6.  Na záložce **Řádky** vyberte akci **Řádek** a poté vyberte akci **Řádky sledování zboží**, abyste viděli převedené řádky sledování zboží.  
+    When handling serial and lot numbers for transfer items, the items typically have numbers already assigned to them. Therefore, the process typically consists of selecting from existing serial or lot numbers.  
 
-Obsah polí **Sériové číslo** a **Číslo šarže** nelze upravovat. Můžete však odstranit celé řádky nebo změnit množství tak, aby odpovídaly změnám na zdrojovém řádku.  
+4. Post the transfer order, first ship and then receive, to record that the items are transferred carrying their item tracking entries.  
 
-## <a name="to-reclassify-serial-or-lot-numbers"></a>Přeřazení sériových čísel nebo čísel šarží  
-Přeřazení sledování zboží u zboží znamená změnu šarže nebo sériového čísla na novou šarži nebo sériové číslo nebo změnu data vypršení platnosti na nové datum vypršení platnosti. Pokud pracujete se šaržemi, můžete také sloučit více šarží do jedné. Tyto úkoly provádíte pomocí deníku přeřazení zboží.
+During the transfer, the **Item Tracking Lines** page remains locked for writing.  
 
-1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky zboží** a poté vyberte související odkaz.  
-2.  Vyplňte řádek s příslušnými informacemi. Pro více informací navštivte [Vypočítat, upravovat a přeřazovat zásoby](inventory-how-count-adjust-reclassify.md).
-3.  Vyberte akci **Řádky sledování zboží**.  
-4.  V poli **Sériové číslo** nebo **Číslo šarže** vyberte aktuální sériové číslo nebo číslo šarže.  
-5.  Pokud chcete zadat nové číslo sledování zboží, zadejte jej do pole **Nové sériové číslo** nebo **Nové číslo šarže**. Pokud chcete, můžete sloučit jednu nebo více šarží do jedné nové nebo existující šarže.  
+## To handle serial and lot numbers when getting receipt lines from a purchase invoice  
+When you use functionality to get posted receipt or shipment lines from related invoices or credit memos, then any item tracking lines on the warehouse documents are transferred automatically, however, they are processed in a special way.
+
+The functionality supports the following inbound processes:  
+-   **Get Receipt Lines** - from a purchase invoice.  
+-   **Get Return Shipment Lines** - from a purchase credit memo.  
+
+The functionality supports the following outbound processes:  
+-   **Get Shipment Lines** - from a sales invoice or combined shipments.  
+-   **Get Return Receipt Lines** - from a sales credit memo.  
+
+In these situations, the existing item tracking lines are copied automatically to the invoice or credit memo, but the **Item Tracking Lines** page does not permit changes to the serial or lot numbers. Only the quantities can be changed.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then select the related link.  
+2. Open a purchase invoice for items that are purchase with serial or lot numbers.  
+3. From a purchase invoice line, on the **Lines** FastTab, choose the **Get Receipt Lines** action.  
+4. On the **Get Receipt Lines** page, select a receipt lines that has item tracking lines, and then choose the **OK** button.  
+
+    The source document is copied to the purchase invoice as a new line, and its item tracking lines are copied to the underlying **Item Tracking Lines** page.  
+
+5. In the purchase invoice, select the transferred receipt line.  
+6. On the **Lines** FastTab, choose the **Line** action, and then choose the **Item Tracking Lines** action to see the transferred item tracking lines.  
+
+The contents of the **Serial No.** and **Lot No.** fields are not editable. However, you can delete complete lines or change the quantities to match changes being made on the source line.  
+
+## To record serial or lot number information  
+If you need to link special information to a specific item tracking number, for example, for quality assurance, you can do so in a serial or lot number information card.
+
+1. Open a document that has serial or lot numbers assigned.
+2. Open the **Item Tracking Lines** page for the document.
+3. Choose, for example, the **Serial No. Information Card** action.  
+
+    The **Serial No.** and **Lot No.** fields are prefilled from the item tracking line.  
+4. Enter a short piece of information in the **Description** field, for example about the condition of the item.  
+5. Choose the **Comment** action to create a separate comment record.  
+6. Select the **Blocked** check box to exclude the serial or lot number from any transactions.  
+
+<!--If you create serial numbers in bulk by using the **Create Customized SN** or **Assign Serial No.** actions, you can enable **Create SN Information** and an information card will be created for each tracking line.
+
+Alternatively, you can create an information card when you post journals or documents. On the **Item Tracking Code** page, turn on the **Create SN Info. on posting** or **Create SN Info. on posting** toggles. -->
+
+You can modify created serial or lot information cards later.
+
+## To modify existing serial or lot number information  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
+2. Select an item that has an item tracking code and has serial or lot number information.
+3. From the **Item Card** page, choose the **Entries** action, and then choose **Ledger Entries**.
+4. Choose the **Lot No.** or **Serial No.** field. If information exists for the item tracking number, then the **Lot No. Information List** or **Serial No. Information List** page opens.  
+5. Select a card, and then choose the **Lot No./Serial No. Information Card** action.  
+6. Modify the short description text, the comment record, or the **Blocked** field.  
+
+You cannot modify the serial or lot numbers or quantities. To do so, you must reclassify the item ledger entry in question. For more information, see [To reclassify lot or serial numbers](inventory-how-work-item-tracking.md#to-reclassify-serial-or-lot-numbers).
+
+## To reclassify serial or lot numbers  
+Reclassifying item tracking for an item means changing a lot or serial number to a new lot or serial number or changing the expiration date to a new expiration date. If you are working with lots, you can also merge multiple lots into one. You perform these tasks using the item reclassification journal.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Reclass. Journal**, and then choose the related link.  
+2. Fill in the line with the relevant information. For more information, see [Count Inventory Using Documents](inventory-how-count-inventory-with-documents.md) or [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md).
+3. Choose the **Item Tracking Lines** action.  
+4. In the **Serial No.** or **Lot No.** field, select the current serial or lot number.  
+5. If you want to enter a new item tracking number, enter it in the **New Serial No.** or **New Lot No.** field. If you want, you can merge one or more lots to one new or existing lot.  
 
     > [!NOTE]  
-    >  Uvědomte si, že když přeřadíte data expirace, bude nejprve navrženo zboží s nejčasnějšími daty expirace pro odchozí transakce. Pro více informací navštivte [Vyskladnění pomocí FEFO](warehouse-picking-by-fefo.md).  
+    >  Be aware that when you reclassify expiration dates, then the items with the earliest expiration dates for outbound transactions are suggested first. For more information, see [Picking by FEFO](warehouse-picking-by-fefo.md).  
 
-5.  Pokud chcete zadat nové datum expirace sériového čísla nebo čísla šarže, zadejte je do pole **Nové datum expirace**.  
+6. If you would like to enter a new expiration date for the serial or lot number, enter it in the **New Expiration Date** field.  
 
     > [!IMPORTANT]  
-    >  Pokud přeřadíte šarži na stejné číslo šarže, ale s jiným datem expirace, musíte přeřadit celou šarži pomocí jednoho řádku deníku přeřazení zboží. Pokud přeřadíte více než jednu šarži na jedno nové číslo šarže, což znamená, že slučujete více šarží do jedné nové šarže, musíte pro všechny šarže zadat stejné nové datum expirace. Pokud přeřadíte jednu existující šarži na druhou existující šarži, která má jiné datum exspirace, musíte použít datum exspirace z druhé šarže. Pokud necháte pole **Nové datum expirace** prázdné, bude šarže nebo sériové číslo přeřazeno s prázdným datem expirace.  
+    >  If you are reclassifying a lot to the same lot number but with a different expiration date, you must reclassify the entire lot, using one item reclassification journal line. If you are reclassifying more than one lot to one new lot number, meaning that you are merging more than one lot into one new lot, you must enter the same new expiration date for all the lots. If you are reclassifying one existing lot to a second existing lot that has a different expiration date, you must use the expiration date from the second lot. If you leave the **New Expiration Date** field blank, the lot or serial number will be reclassified with a blank expiration date.  
 
-6.  Pokud již máte informace o starém sériovém čísle nebo čísle šarže, můžete je zkopírovat na nové sériové číslo nebo číslo šarže.  
+7. If you have existing information on the old serial or lot number, you can copy it to the new serial or lot number.  
 
-    1.  Na stránce **Řádky sledování zboží** vyberte akci **Informace o novém sériovém čísle** nebo **Informace o novém čísle šarže**.  
-    2.  Chcete-li zkopírovat informace ze staré šarže nebo sériového čísla, vyberte akci **Kopírovat informace**.  
-    3.  Na stránce se seznamem informací vyberte číslo šarže nebo sériové číslo, ze kterého chcete kopírovat, a stiskněte tlačítko **OK**.  
+    1. On the **Item Tracking Lines** page, choose the **New Serial No. Information** action or the **New Lot No. Information** action.  
+    2. To copy information from the old lot or serial number, choose the **Copy Info** action.  
+    3. In the information list page, select the lot or serial number that you would like to copy from, and choose the **OK** button.  
 
-7.  Pokud chcete upravit existující informace o šarži nebo sériovém čísle, můžete zaznamenat informace šarže nebo sériové informace.  
-8.  Zaúčtujte deník, abyste propojili obnovená sledovací čísla zboží nebo data expirace s položkou zboží.
+8. If you want to modify the existing information for the lot or serial number, you can record lot or serial information.  
+9. Post the journal to link the renewed item tracking numbers or expiration dates to the associated item ledger entry
 
-## <a name="see-also"></a>Viz také
-[Sledování zboží](inventory-how-to-trace-item-tracked-items.md)   
-[Zásoby](inventory-manage-inventory.md)  
-[Podrobnosti návrhu: Sledování zboží](design-details-item-tracking.md)
-[Podrobnosti o návrhu- sledování a rezervace zboží](design-details-item-tracking-and-reservations.md)  
-[Rezervace zboží](inventory-how-to-reserve-items.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+
+[Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Design Details: Item Tracking](design-details-item-tracking.md)  
+[Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)  
+[Reserve Items](inventory-how-to-reserve-items.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

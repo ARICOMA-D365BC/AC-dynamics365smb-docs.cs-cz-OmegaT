@@ -4,47 +4,51 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Výpočet doplnění přihrádky
-Pokud je lokace nastavena tak, aby používala řízené zaskladnění a vyskladnění, při zaskladnění příjmů se pak zohlední priority šablony zaskladnění pro lokaci. Priority zahrnují minimální a maximální množství obsahu přihrádky, které byly stanoveny pro konkrétní přihrádku a pořadí přihrádek. Pokud je tedy zboží přijímáno stálým tempem, budou při vyprázdnění nejpoužívanější přihrádky vyskladnění vyplněny.
+# Calculate Bin Replenishment
+When the location is set up to use directed put-away and pick, priorities of the put-away template for the location are taken into account when putting receipts away. Priorities include the minimum and maximum quantities of bin content that have been fixed for a particular bin, and the bin rankings. Therefore, if items are arriving at a steady pace, the most-used pick bins will be filled up as they are emptied.  
 
-Ale zásoby ne vždy dorazí do skladu postupně bez změny. Někdy je zboží nakupováno ve velkém množství, takže společnost může získat rabat nebo výrobní jednotka může vyrábět velké množství jedného zboží k dosažení nízkých jednotkových nákladů. Poté nebude zboží po určitou dobu znovu přijato do skladu a sklad musí pravidelně přesouvat zboží do vyskladňovacích přihrádek z objemných skladových prostor.
+But inventory does not always arrive in a steady trickle. Sometimes, items are purchased in large quantities so that the company can obtain a rebate, or your production unit might produce a lot of one item to achieve a low unit cost. Then items will not be received in the warehouse again for some time, and the warehouse needs to periodically move items to pick bins from bulk storage areas.  
 
-Může se také stát, že sklad očekává, že brzy dorazí nová skladová zásoba, a chce vyprázdnit objemný skladový prostor zboží před příchodem nového zboží.
+It could also be that the warehouse is expecting new stock to arrive soon and wants to empty the bulk storage area of items before the new merchandise arrives.  
 
-Nakonec, pokud jste definovali přihrádky hromadného skladu pouze akcí přihrádky typu **Zaskladnění** to znamená, že typ přihrádky nemá vybranou akci **Vyskladnění**, musíte vždy ponechat vyskladněné přihrádky doplněny, protože přihrádky typu Zaskladnění nejsou navrženy pro vyskladnění zásob.
+Finally, if you have defined your bulk storage bins with a bin type action **Put Away** only, that is, the bin type does not have the **Pick** action selected, you must always keep your pick bins replenished, since Put Away-type bins are not suggested for a pick of inventory.  
 
-## Doplnění přihrádek vyskladnění
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit přesunu** a poté vyberte související odkaz.
-2. Vyberte akci **Vypočítat doplnění přihrádky** chcete-li otevřít stránku dialogu sestavy.
-3. Vyplňte stránku požadavku na dávkovou úlohu a omezte rozsah návrhů na doplnění, které budou vypočteny. Můžete se například zabývat určitým zbožím, zónami nebo přihrádky.
-4. Vyberte tlačítko **OK**. Řádky jsou vytvářeny pro pohyby doplňování, které je třeba provádět podle pravidel stanovených pro přihrádky a obsah přihrádky, tedy zboží v přihrádkách.
-5. Pokud chcete provést všechna navrhovaná doplňování, vyberte akci **Vytvořit přesun**. Zaměstnanci nyní mohou najít pokyny v položce nabídky **Přesuny**, provést je a zapsat.
-6. Pokud chcete provést pouze některé pokyny, odstraňte méně důležité řádky a vytvořte přesun.
+## To replenish pick bins  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Movement Worksheet**, and then choose the related link.  
+2.  Choose the **Calculate Bin Replenishment** action to open the report request page.  
+3.  Fill in the batch job request page to limit the scope of the replenishment suggestions that will be calculated. For example, you might be concerned with particular items, zones, or bins.  
+4.  Choose the **OK** button. Lines are created for the replenishment movements that need to be performed according to the rules that have been set up for the bins and bin contents, that is, items in bins.  
+5.  If you want to perform all the suggested replenishments, choose the **Create Movement** action. Employees can now find instructions in the **Movements** menu item, carry them out and register them.  
+6.  If you only want some of the suggestions to be performed, delete the lines that are less important and then create a movement.  
 
-Při příštím výpočtu doplňování přihrádky budou návrhy, které jste smazali, znovu vytvořeny, pokud jsou v té době stále platné.
+The next time you calculate bin replenishment, the suggestions that you have deleted will be recreated, if they are still valid at that time.  
 
-> [!NOTE]
-> Pokud jsou u zboží splněny následující podmínky:
-> - Zboží má datum vypršení platnosti a
-> - Je vybráno pole **Vybrat na základě metody FEFO** na kartě lokace a
-- Používáte funkci **Vypočítat doplnění přihrádky**
+> [!NOTE]  
+>  If the following conditions are met for an item:  
+>   
+>  -   The item has an expiration date, and  
+> -   The **Pick According to FEFO** field on the location card is selected, and  
+> -   You use the **Calculate Bin Replenishment** functionality  
+>   
+>  then the **From Zone** and **From Bin** fields will be blank because the algorithm to calculate from where to move the items is triggered only when you activate the **Create Movement** function.  
 
-pak budou pole **Ze zóny** a **Z přihrádky** prázdná, protože algoritmus pro výpočet, odkud se má zboží přesouvat, se spustí, pouze když aktivujete funkci **Vytvořit přesun**.
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Picking by FEFO](warehouse-picking-by-fefo.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Povolení vyskladnění pomocí FEFO](warehouse-picking-by-fefo.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)  
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

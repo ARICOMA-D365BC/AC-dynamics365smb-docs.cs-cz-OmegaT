@@ -1,75 +1,78 @@
 ---
-title: Jak vytvořit přihrádky | Microsoft Docs
-description: 'Nejúčinnějším způsobem vytvoření přihrádek ve vašem skladu je vygenerování skupin podobných přihrádek v sešitu pro vytvoření přihrádky, ale také je můžete vytvořit individuálně.'
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 01/22/2019
-ms.author: sgroespe
+    title: How to Create Bins | Microsoft Docs
+    description: The most effective way to create the bins of your warehouse is to generate groups of similar bins in the bin creation worksheet, but you can also create your bins individually.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
-# <a name="create-bins"></a>Vytváření přihrádky
-Nejúčinnějším způsobem vytvoření přihrádek ve vašem skladu je vygenerování skupin podobných přihrádek v sešitu pro vytvoření přihrádky, ale také je můžete vytvořit individuálně z karty lokace. Můžete také použít funkci na stránce **Sešit vytvoření přihrádky** k vytváření přihrádek automaticky.  
+# Create Bins
+The most effective way to create the bins of your warehouse is to generate groups of similar bins in the bin creation worksheet, but you can also create your bins individually from the location card. You can also use a function on the **Bin Creation Worksheet** page to create bins automatically.  
 
-## <a name="to-create-a-bin-from-the-location-card"></a>Vytvoření přihrádek z karty lokace  
-1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.  
-2.  Vyberte lokaci, ze které budete chtít založit přihrádku a vyberte tlačítko **Přihrádky**.  
-3. Zvolte akci **Nový**.
-4. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## To create a bin from the location card  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and choose the related link.  
+2.  Select the location that you want to create a bin from, and then choose the **Bins** action.  
+3. Choose the **New** action.
+4. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-### <a name="the-dedicated-field"></a>Políčko Přiřazený
-Políčko **Přiřazený** na stránce **Přihrádky** určuje, že množství v přihrádce je chráněno před vyskladněním z jiných požadavků. Množství ve vyhrazených přihrádkách však lze stále rezervovat. V souladu s tím jsou množství ve vyhrazených přihrádkách zahrnuta do pole **Celkové množství k dispozici** na stránce **Rezervace**.
+### The Dedicated field
+The **dedicated** field on the **Bins** page specifies that quantities in the bin are protected from being picked for other demands. However, quantities in dedicated bins can still be reserved. Accordingly, the quantities in dedicated bins are included in the **Total Available Quantity** field on the **Reservation** page.
 
-Vytvoření vyhrazené přihrádky má za následek podobnou funkčnost v základním skladu jako použití typů přihrádek, což je k dispozici pouze ve velkém (rozšířeném) skladu. Pro více informací navštivte [Založení typů přihrádky](warehouse-how-to-set-up-bin-types.md).
+Making a bin dedicated results in similar functionality in basic warehousing to using bin types, which is only available in advanced warehousing. For more information, see [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md).
 
-**Příklad:** Pracovní centrum je založeno s kódem přihrádky v poli **Kód přihrádky na výrobu**. Řádky komponent výrobní zakázky s tímto kódem přihrádky vyžadují, aby zde byly umístěny dopředu propláchnuté komponenty. Dokud však nebudou komponenty spotřebovány z této přihrádky, mohou z této přihrádky vybírat nebo spotřebovávat další požadavky na komponenty, protože jsou stále považovány za dostupný obsah přihrádky. Chcete-li se ujistit, že obsah přihrádky je k dispozici pouze pro požadavek na komponentu, který používá tuto výrobní přihrádku, musíte vybrat pole **Přiřazený** na řádku pro tento kód přihrádky.
+**Example:** A work center is set up with a bin code in the **To-Production Bin Code** field. Production order component lines with that bin code require that forward-flushed components are placed there. However, until the components are consumed from that bin, other component demands may pick or consume from that bin because they are still considered available bin contents. To make sure that bin content is only available to component demand that uses that to-production bin, you must select the **Dedicated** field on the line for that bin code.
 
 > [!Caution]
-> Zboží ve vyhrazených přihrádkách není chráněno, pokud jsou vybrány a spotřebovány jako součásti výroby nebo sestavy na stránce **Vyskladnění zásob**. Pro více informací navštivte [Vyskladnění pro výrobu nebo montáž v základním skladu](warehouse-how-to-pick-for-production.md).
+> Items in dedicated bins are not protected when they are picked and consumed as production or assembly components with the **Inventory Pick** page. For more information, see [Pick for Production or Assembly in Basic Warehouse Configurations](warehouse-how-to-pick-for-production.md).
 
-## <a name="to-create-bins-individually-in-the-bin-creation-worksheet"></a>Vytvoření přihrádek individuálně v sešitu vytváření přihrádky  
-1.  Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Sešit vytvoření přihrádky** a poté vyberte související odkaz.  
-2.  Na každém řádku vyplňte pole, která jsou nezbytná pro pojmenování a charakterizaci přihrádek, které vytváříte.  
-3.  Vyberte tlačítko **vytvořit přihrádky**.  
+## To create bins individually in the bin creation worksheet  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Creation Worksheet**, and choose the related link.  
+2.  Fill in on each line the fields that are necessary to name and characterize the bins you are creating.  
+3.  Choose the **Create Bins** action.  
 
-## <a name="to-make-bins-automatically-in-the-bin-creation-worksheet"></a>Vytvořte přihrádky automatizovaně pomocí sešitu vytvoření přihrádek.  
-Než začnete automaticky vytvářet přihrádky, měli byste určit druh přihrádek, které jsou nezbytné pro vaši činnost, jakož i nejpraktičtější tok zboží prostřednictvím fyzické struktury vašeho skladu.  
+## To make bins automatically in the bin creation worksheet  
+Before you start creating bins automatically, you should determine the kind of bins that are essential for your operations, as well as the most practical flow of items through the physical structure of your warehouse.  
 
 > [!NOTE]  
->  Jakmile přihrádku použijete, nemůžete ji odstranit, pokud není prázdná. Pokud však chcete použít jiný systém pojmenování přihrádek, můžete pomocí deníku přeřazení přesunout své zboží do nového systému přihrádek. Tento proces je ruční a vyžaduje čas, proto je nejlepší správně nastavit své přihrádky od začátku.  
+>  As soon as you use a bin, you cannot delete it unless it is empty. But if you want to use another bin-naming system, you can use the reclassification journal to in effect move your items to a new bin system. This process is manual and takes time, however, so it is best to set up your bins correctly from the start.  
 
-Chcete-li pracovat se stránkou **Sešit vytvoření přihrádky**, musíte být nastaveni jako zaměstnanec skladu v místě, kde se nachází přihrádky. Pro více informací navštivte [Založení zaměstnanců skladu](warehouse-how-to-set-up-warehouse-employees.md).    
+To work with the **Bin Creation Worksheet** page, you must be set up as a warehouse employee at the location where the bins exist. For more information, see [Set Up Warehouse Employees](warehouse-how-to-set-up-warehouse-employees.md).    
 
-1.  Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Sešit vytvoření přihrádky** a poté vyberte související odkaz.  
-2.  Vyberte tlačítko **Výpočet přihrádek**.
-3. Na stránce **Výpočet přihrádek** v poli **Kód šablony přihrádky** vyberte šablonu přihrádky, kterou chcete použít jako model pro přihrádky, které vytváříte.
-4.  Vyplňte popis přihrádek, které právě vytváříte.  
-5.  Chcete-li vytvořit kódy přihrádky, vyplňte políčka **Od čísla** a **Do čísla** ve třech kategoriích zobrazených na stránce: **Regál**, **Sekce,** a **Úroveň**. Kód přihrádky může mít až 20 znaků.  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Creation Worksheet**, and then choose the related link.  
+2.  Choose the **Calculate Bins** action.
+3. On the **Calculate Bins** page, in the **Bin Template Code** field, select the bin template that you want to use as the model for the bins you are creating.
+4.  Fill in a description for the bins you are in the process of creating.  
+5.  To create the bin codes, fill in the **From No.** and **To No.** fields in the three categories shown on the page: **Rack**, **Section,**, and **Level.** The bin code can contain up to 20 characters.  
 
     > [!NOTE]  
-    >  Počet znaků, které jste zadali do tří kategorií pro každé pole, například znaky, které jste zadali do tří polí **Od čísla** plus oddělovače pole, pokud existují, musí být 20 nebo méně.  
+    >  The number of characters that you have entered in the three categories for either field, for example, the characters you have entered in the three **From No.** fields, plus the field separators, if any, must be 20 or less.  
 
-     Písmena v kódu můžete použít jako identifikační kombinaci, ale písmeno, které používáte, musí být stejné v poli **Od čísla** a **Do čísla** . Můžete například definovat část kódu Regál **Od čísla A01** a **do čísla A10**. Program není nastaven tak, aby generoval kódy se sekvencemi písmen, například od A01 do F05.  
+     You can use letters in the code as an identifying combination, but the letter you use must be the same in the **From No.** and **To No.** fields. For example, you might define the Rack part of the code as **From No. A01** and **To No. A10**. The application is not set up to generate codes with letter sequences, for example, from A01 to F05.  
 
-6.  Pokud chcete, aby znak, například spojovací čárka, oddělila pole kategorií, která jste definovali jako součást kódu přihrádky, vyplňte tento znak do  pole **Oddělovač pole**.  
-7.  Pokud chcete, aby program nevytvořil řádek pro přihrádku, pokud již existuje, vyberte pole **Zkontrolovat existující přihrádky**.  
-8. Po vyplnění polí zvolte tlačítko **OK**.
+6.  If you want a character, such as a hyphen, to separate the category fields you have defined as part of the bin code, fill in the **Field Separator** field with this character.  
+7.  If you want application not to create a line for a bin if it exists already, select the **Check on Existing Bin** field.  
+8. When you have finished filling in the fields, choose the **OK** Button.
 
-    Program vytvoří řádek pro každou přihrádku v sešitu. Nyní můžete odstranit některé přihrádky, například pokud máte regál s průchodem přes první dvě úrovně několika sekcí.  
+    The application creates a line for each bin in the worksheet. You can now delete some of the bins, for example, if you have a rack with a passageway through the first two levels of a couple of sections.  
 
-9. Po odstranění všech nepotřebných přihrádek, vyberte akci **Vytvořit přihrádky** a program vytvoří přihrádky pro každý řádek v sešitu.  
+9. When you have deleted all unnecessary bins, choose the **Create Bins** action, and application will create bins for each line in the worksheet.  
 
-Opakujte postup pro další sadu přihrádek, dokud nevytvoříte všechny přihrádky ve skladu.  
+Repeat the process for another set of bins until you have created all the bins in your warehouse.  
 
-## <a name="see-also"></a>Viz také  
-[Správa skladů](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)     
-[Správa montáže](assembly-assemble-items.md)    
-[Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

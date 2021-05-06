@@ -9,37 +9,37 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Dostupnost sledování zboží
-Stránky **Řádky sledování zboží** a **Souhrn sledování zboží** poskytují dynamické informace o dostupnosti sériových čísel nebo čísel šarží. Účelem je zvýšit transparentnost pro uživatele na odchozích dokladech, jako jsou prodejní objednávky, tím, že jim ukážete, která sériová čísla nebo kolik jednotek čísel šarže je aktuálně přiřazeno na jiných otevřených dokladech. To snižuje nejistotu způsobenou dvojitým přidělením a dává zpracovatelům objednávek důvěru, že sledování zboží a data, která slibují na nezaúčtovaných prodejních objednávkách, mohou být splněny. Pro více informací navštivte [Detaily návrhu: Stránka Řádky sledování zboží](design-details-item-tracking-lines-window.md).
+# Design Details: Item Tracking Availability
+The **Item Tracking Lines** and **Item Tracking Summary** pages provide dynamic availability information for serial or lot numbers. The purpose of this is to increase transparency for users on outbound documents, such as sales orders, by showing them which serial numbers or how many units of a lot number are currently assigned on other open documents. This reduces uncertainty that is caused by double allocation and instills confidence in order processors that the item tracking numbers and dates that they are promising on unposted sales orders can be fulfilled. For more information, see [Design Details: Item Tracking Lines Page](design-details-item-tracking-lines-window.md).  
 
-Když otevřete stránku **Řádky sledování zboží**, data dostupnosti se načtou z tabulky **Položky zboží** a tabulky **Položky rezervace** bez filtru data. Pokud zbolíte pole **Séeriové číslo** nebo **Číslo šarže**, otevře se stránka **Souhrn sledování zboží** a zobrazí souhrn informace o sledování položky v tabulce **Položka rezervace**. Souhrn obsahuje následující informace o každém sériovém čísle nebo čísle šarže na řádku sledování zboží:
+ When you open the **Item Tracking Lines** page, availability data is retrieved from the **Item Ledger Entry** table and the **Reservation Entry** table, with no date filter. When you choose the **Serial No.** field or the **Lot No.** field, the **Item Tracking Summary** page opens and shows a summary of the item tracking information in the **Reservation Entry** table. The summary contains the following information about each serial or lot number on the item tracking line:  
 
-| Pole | Popis |
+|Field|Description|  
 |---------------------------------|---------------------------------------|  
-| **Celkové množství** | Celkové množství sériových čísel nebo čísla šarže, které jsou aktuálně na skladě. |
-| **Celkové požadované množství** | Celkové množství sériových čísel nebo čísla šarže, které jsou aktuálně požadovány ve všech dokladech. |
-| **Aktuální množství ke zpracování** | Množství, které je zadáno v aktuální instanci stránky **Řádky sledování zboží**, ale ještě nejsou zapsány do databáze |
-| **Celkové množství k dispozici** | Množství sériových čísel nebo čísel šarží, které má uživatel k dispozici.<br /><br /> Toto množství se počítá z ostatních polí na stránce následujícím způsobem:<br /><br /> Celkové množství – (Celkové požadované množství + Aktuální množství ke zpracování). |
+|**Total Quantity**|The total quantity of the serial or lot number that is currently in inventory.|  
+|**Total Requested Quantity**|The total quantity of the serial or lot number that is currently requested in all documents.|  
+|**Current Pending Quantity**|The quantity that is entered in the current instance of the **Item Tracking Lines** page but is not yet committed to the database.|  
+|**Total Available Quantity**|The quantity of the serial or lot number that is available for the user to request.<br /><br /> This quantity is calculated from other fields on the page as follows:<br /><br /> total quantity – (total requested quantity + current pending quantity).|  
 
 > [!NOTE]  
-> Informace také můžete zobrazit v předchozí tabulce pomocí funkce **Vybrat položky** na stránce **Řádky sledování zboží**.
+>  You can also see the information in the preceding table by using the **Select Entries** function on the **Item Tracking Lines** page.  
 
-Pro zachování výkonu databáze, jsou data dostupnosti načtena z databáze pouze jednou, když otevřete stránku **Řádky sledování zboží** a když použijte funkci **Aktualizovat dostupnost**.
+ To preserve database performance, availability data is only retrieved once from the database when you open the **Item Tracking Lines** page and when you use the **Refresh Availability** function on the page.  
 
-## Vzorec výpočtu
-Jak je popsáno v předchozí tabulce, dostupnost daného sériového čísla nebo čísla šarže se počítá následujícím způsobem.
+## Calculation Formula  
+ As described in the preceding table, the availability of a given serial or lot number is calculated as follows.  
 
-Celkové množství k dispozici = Množství ve skladu  – (všechny požadavky + množství dosud nezapsáno v databázi)
+ total available quantity = quantity in inventory – (all demands + quantity not yet committed to the database)  
 
 > [!IMPORTANT]  
-> Tento vzorec znamená, že výpočet dostupnosti sériového čísla nebo čísla šarže zohledňuje pouze zásoby a ignoruje předpokládané příjmy.. Proto dodávka, která ještě není zaúčtována do zásob, nemá vliv na dostupnost sledování zboží, na rozdíl od běžné dostupnosti zboží, kde jsou zahrnuty předpokládané příjmy.
+>  This formula implies that the serial or lot number availability calculation considers only inventory and ignores projected receipts. Accordingly, supply that is not yet posted to inventory does not affect item tracking availability, as opposed to regular item availability where projected receipts are included.  
 
-## Viz také
-[Detaily návrhu: Sledování zboží](design-details-item-tracking.md)
+## See Also  
+ [Design Details: Item Tracking](design-details-item-tracking.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

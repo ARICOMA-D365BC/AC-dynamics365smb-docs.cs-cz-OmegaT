@@ -6,66 +6,69 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2019
-ms.author: SorenGP
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Správa absence zaměstnance
-Chcete-li spravovat nepřítomnost zaměstnance, musíte ji zaznamenat na stránce **Evidence absence**. Na potřeby analýzy a vykazování je pak možné pohlížet různými způsoby.
+# Manage Employee Absence
+To manage an employee's absence, you must record the absence on the **Absence Registration** page. It can then be viewed in different ways for analysis and reporting needs.
 
-Absenci zaměstnanců můžete zobrazit na dvou různých stránkách:
+You can view employee absence in two different pages:
 
-* Stránka **Evidence absence**, kde zaregistrujete všechny nepřítomnosti zaměstnanců v řádku pro každou nepřítomnost.
-* Stránka **Absence zaměstnance**, kde jsou zobrazeny absence pouze pro jednoho zaměstnance. Toto jsou informace, které jste zadali na stránce **Evidence absence**, filtrované konkrétním zaměstnancem.
+* The **Absence Registration** page, where you register all employee absences with a line for each absence.
+* The **Employee Absences** page, where the absences for one employee only is shown. This is the information that you entered on the **Absence Registration** page, filtered by the particular employee.
 
-Chcete-li získat smysluplnou statistiku, měli byste při registraci nepřítomnosti zaměstnanců vždy používat stejnou měrnou jednotku (hodinu nebo den).
+To obtain meaningful statistics, you should always use the same unit of measure (hour or day) when registering employee absences.
 
-## Registrace absence zaměstnance
-Absenci zaměstnanců můžete registrovat denně nebo v jiném intervalu, který odpovídá potřebám vaší organizace.
+## To register employee absence
+You can register employee absences on a daily basis or at some other interval that meets your organizational needs.
 
-1. V pravém horním rohu vyberte ikonu **Hledat stránku nebo sestavu**, zadejte **Evidence absence**, a pak vyberte související odkaz.
-2. Zvolte akci **Nový**.
-3. Vyplňte řádek pro každou nepřítomnost zaměstnance, kterou chcete zaregistrovat.
-4. Zavřete stránku.
+1. In the top right corner, choose the **Search for Page or Report** icon, enter **Absence Registration**, and then choose the related link.
+2. Choose the **New** action.
+3. Fill in a line for each employee absence you want to register.
+4. Close the page.
 
-   > [!Tip]
-   > Chcete-li získat smysluplné statistiky, vždy používejte stejnou měrnou jednotku, hodinu nebo den při registraci absencí zaměstnanců.
+    > [!Tip]
+    > To obtain meaningful statistics, always use the same unit of measure, hour or day, when registering employee absences.
 
-## Zobrazení absence jednotlivého zaměstnance
-1. V pravém horním rohu zvolte ikonu **Hledat stránku nebo sestavu**, zadejte **Zaměstnanci**, a poté vyberte související odkaz.
-2. Vyberte příslušného zaměstnance a pak zvolte akci **Absence**.
+## To view an individual employee's absence
+1. In the top right corner, choose the **Search for Page or Report** icon, enter **Employees**, and then choose the related link.
+2. Select the relevant employee, and then choose the **Absences** action.
 
-   Otevře se stránka **Absence zaměstnance** kde jsou uvedeny všechny nepřítomnosti a datum jejich zahájení a ukončení.
+    The **Employee Absences** page opens showing all the absences and the date on which they started and ended.
 
-## Zobrazení absence zaměstnance podle kategorií
-1. V pravém horním rohu zvolte ikonu **Hledat stránku nebo sestavu**, zadejte **Zaměstnanci**, a poté vyberte související odkaz.
-2. Vyberte příslušného zaměstnance a poté vyberte akci **Absence dle kategorií**.
-3. Na stránce**Absence  zam.dle kategorií.**, vyplňte podle potřeby pole filtru a poté vyberte akci **Zobrazit matici**.
+## To view an employee's absence by categories
+1. In the top right corner, choose the **Search for Page or Report** icon, enter **Employees**, and then choose the related link.
+2. Select the relevant employee, and then choose the **Absences by Categories** action.
+3. On the **Empl. Absences by categories** page, fill in the filter fields as necessary, and then choose the **Show Matrix** action.
 
-   Stránka **Matice  abs.zam.dle  kategorie** otevře a zobrazí všechny absence, rozčleněny podle důvodů absence.
+    The **Empl. Absences by Cat. Matrix** page opens showing all absences, broken down by causes of absence.
 
-## Zobrazení všech absencí zaměstnanců podle kategorie
-1. V pravém horním rohu vyberte ikonu **Hledat stránku nebo sestavu**, zadejte **Evidence absence**, a pak vyberte související odkaz.
-2. Na stránce **Evidence absence**, zvolte akci **Přehled dle kategorií**.
-3. Na stránce**Přehled absence dle kategorií**, nastavte filtr v poli **Filtr čísla  zaměstnance** umožňuje zobrazit nepřítomnosti jednotlivých, nebo definovaných skupin zaměstnanců.
-4. Vyberte akci **Zobrazit matici**.
+## To view all employee absences by category
+1. In the top right corner, choose the **Search for Page or Report** icon, enter **Absence Registration**, and then choose the related link.
+2. On the **Absence Registration** page, choose the **Overview by Categories** action.
+3. On the **Absence Overview by Categories** page, set a filter in the **Employee No. Filter** field to view employee absences for individual or a defined group of employees.
+4. Choose the **Show Matrix** action.
 
-   Stránka **Matice přehledu absence dle kategorií** otevře a zobrazí všechny absence zaměstnanců, rozčleněny podle důvodů absence.
+    The **Absence Overview by Categories Matrix** page opens showing all employees’ absences broken down by the various causes of absence.
 
-## Zobrazení všech absencí zaměstnanců podle období
-1. V pravém horním rohu vyberte ikonu **Hledat stránku nebo sestavu**, zadejte **Evidence absence**, a pak vyberte související odkaz.
-Na stránce **Evidence absence**, vyberte akci **Přehled dle období**.
-2. Na stránce **Přehled absence dle období**, nastavte filtr v poli**Filtr důvodu absence**, abyste zobrazili nepřítomnosti zaměstnanců pro zadané příčiny nepřítomnosti.
-3. Vyberte akci **Zobrazit matici**.
+## To view all employee absences by period
+1. In the top right corner, choose the **Search for Page or Report** icon, enter **Absence Registration**, and then choose the related link.
+   On the **Absence Registration** page, choose the **Overview by Periods** action.
+2. On the **Absence Overview by Periods** page, set a filter in the **Cause of Absence Filter** field to view employee absences for specified causes of absence.
+3. Choose the **Show Matrix** action.
 
-   Otevře se stránka **Matice  přehledu absence dle období** zobrazující absence zaměstnanců v členění podle období.
+    The **Abs. Overview by Periods Matrix** page opens showing employee absences broken down by periods.
 
-## Viz také
-[Správa lidských zdrojů](hr-manage-human-resources.md)  
+## See Also
+[Manage Human Resources](hr-manage-human-resources.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
-[Změna zobrazovaných funkcí](ui-experiences.md)
+[Working With [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

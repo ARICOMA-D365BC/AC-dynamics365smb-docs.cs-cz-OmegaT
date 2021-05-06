@@ -4,37 +4,40 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Účtování kapacit
-V deníku kapacity můžete zaúčtovat spotřebované kapacity, které nejsou přiřazeny k výrobní zakázce. Například údržbářské práce musí být přiřazeny ke kapacitě, ale ne k výrobní zakázce.
+# Post Capacities
+In the capacity journal, you post consumed capacities that are not assigned to the production order. For example, maintenance work must be assigned to capacity, but not to a production order.  
 
-## Účtování kapacit
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky kapacity** a poté vyberte související odkaz.
-2. Vyplňte pole **Zúčtovací datum** a **Číslo dokladu**.
-3. Do pole **Typ** zadejte typ kapacity **Strojní centrum** nebo **Pracovní centrum**, kterou chcete účtovat.
-4. Do pole **Číslo** zadejte číslo strojního nebo pracovního centra.
-5. Zadejte příslušná data do ostatních polí, například **Čas zahájení**, **Čas dokončení**, **Množství** a **Zmetky**.
-6. Vyberte akci **Účtovat**, chcete-li kapacity zaúčtovat.
+## To post capacities  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Capacity Journals**, and then choose the related link.  
+2.  Fill in the **Posting Date** and **Document No.** fields.  
+3.  In the **Type** field, enter the type of the capacity, either **Machine Center** or **Work Center**, that you are posting.  
+4.  In the **No.** field, enter the number of the machine center or work center.  
+5.  Enter the relevant data in the other fields, such as **Starting Time**, **Ending Time**, **Quantity**, and **Scrap**.  
+6.  Choose the **Post** action to post the capacities.  
 
-## Zobrazení položek pracovního centra
-Na stránkách **Karta pracovního centra** a **Karta strojního centra** můžete zobrazit zaúčtované kapacity v důsledku dokončených výrobních zakázek.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pracovní centra** a poté vyberte související odkaz.
-2. Ze seznamu otevřete příslušnou kartu pro **Pracovní centrum** a poté vyberte akci **Položky kapacity**.
+## To view work center ledger entries  
+In the **Work Center Card** and **Machine Center Card** pages, you can view the posted capacities as a result of finished production orders.    
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Work Centers**, and then choose the related link.  
+2.  Open the relevant **Work Center** card from the list, and then choose the **Capacity Ledger Entries** action.  
 
-Stránka **Položky kapacity** zobrazuje zaúčtované položky z pracovního centra v pořadí, v jakém byly zaúčtovány.
+The **Capacity Ledger Entries** page displays the posted entries from the work center in the order they were posted.   
 
-## Viz také
-[Výroba](production-manage-manufacturing.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Plánování](production-planning.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Manufacturing](production-manage-manufacturing.md)    
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Planning](production-planning.md)      
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

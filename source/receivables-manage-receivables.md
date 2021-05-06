@@ -1,57 +1,58 @@
 ---
 title: Overview of Tasks to Manage Receivables | Microsoft Docs
 description: Outlines tasks to manage receivables and apply payments to customer or vendor ledger entries.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: customer payment, debtor, balance due, AR
-ms.date: 01/13/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Správa pohledávek
-Pravidelným krokem v jakémkoli finančním cyklu je odsouhlasení bankovních účtů, které vyžadují, abyste k uzavření zaplacených prodejních faktur a nákupu dobropisů použili na položky zákazníků nebo prodejců příchozí platby.
+# Managing Receivables
 
-Zatímco většina zákazníků v prostředích B2B zaplatí nějaký čas po dodání a ponechá zaúčtované prodejní faktury otevřené oddělení účtů pohledávek po přijetí platby, některé prodejní faktury lze zaplatit okamžitě, například pomocí PayPal. Tyto faktury jsou okamžitě použity jako zaplacené, když jsou zaúčtovány, a proto se nezobrazují jako platby, které mají být zpracovány v AR. Pro více informací navštivte, například [Prodejní faktury](sales-how-invoice-sales.md).
+A regular step in any financial rhythm is to reconcile bank accounts, which requires that you apply incoming payments to customer or vendor ledger entries to close sales invoices and purchase credit memos as paid.
 
-V [!INCLUDE[d365fin](includes/d365fin_md.md)], je jedním z nejrychlejších způsobů jak zaregistrovat platby stránka **Deník odsouhlasení plateb** a to pomocí importu bankovního výpisu. Platby se aplikují na otevřené položky zákazníků nebo dodavatelů na základě datových shod mezi textem platby a vstupními informacemi. Před účtováním deníku si můžete shody zkontrolovat nebo změnit a při zaúčtování deníku uzavřít položky bankovního účtu pro položky hlavní knihy. Bankovní účet je odsouhlasen, když jsou uplatněny všechny platby.
+While most customers in B2B environments pay some time after delivery, leaving the posted sales invoices open for the Accounts Receivable department to close (apply) when payment is received, some sales invoices can be paid immediately, for example with PayPal. Such invoices are immediately applied as paid when they are posted and, therefore, do not appear as payments to be processes in AR. For more information, see, for example, [Invoice Sales](sales-how-invoice-sales.md).  
 
-Existují další stránky, kde můžete buď použít platby, nebo odsouhlasit bankovní účty:
+In [!INCLUDE[prod_short](includes/prod_short.md)], one of the fastest ways to register payments is with the **Payment Reconciliation Journal** page by importing a bank statement file or feed. The payments are applied to open customer or vendor ledger entries based on data matches between payment text and entry information. You can review and change the matches before you post the journal, and close bank account ledger entries for ledger entries when you post the journal. The bank account is reconciled when all payments are applied.
 
-* Stránka **Odsouhlasení bank. účtu**, kde odsouhlasíte bankovní účty porovnáním importovaných řádků bankovního výpisu s položkami bankovního účtu systému. Zde můžete také odsouhlasit platby šeku. Pro více informací navštivte [Odsouhlasení bankovních účtů](bank-how-reconcile-bank-accounts-separately.md). Zde nemůžete použít platby.
-* Stránka **Registrace plateb**, kde můžete ručně použít platby přijaté jako hotovost, šek nebo bankovní transakci na vygenerovaný seznam nezaplacených prodejních dokladů. Všimněte si, že tato funkce je k dispozici pouze pro prodejní doklady. Zde nemůžete použít odchozí platby a nemůžete tedy odsouhlasit bankovní účty.
-* Na stránce **Deníky přijaté hotovosti**, kde ručně účtujete příjmy na příslušnou hlavní knihu, zákazníka nebo jiný účet zadáním platebního řádku. Příjem nebo refundaci můžete vyrovnat na jednu nebo více otevřených položek před zaúčtováním deníku přijaté hotovosti nebo z položek zákazníka. Zde nelze odsouhlasit bankovní účty.
+Other pages exist where you can either apply payments or reconcile bank accounts:
 
-**Deník odsouhlasení plateb** a stránka **Odsouhlasení bankovního účtu** používají logiku automatického párování, kterou můžete nastavit na stránce **Pravidla vyrovnání plateb**. Pro více informací navštivte [Nastavení pravidel pro automatické vyrovnání plateb](receivables-how-set-up-payment-application-rules.md).
+* The **Bank Account Reconciliations** page, where you reconcile bank accounts by matching imported bank statement lines with your system bank account ledger entries. Here, you can also reconcile check payments. For more information, see [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md). Here, you cannot apply payments.
+* The **Payment Registration** page, where you can manually apply payments received as cash, check, or bank transaction against a generated list of unpaid sales documents. Note that this functionality is available only for sales documents. Here, you cannot apply outgoing payments, and you cannot reconcile bank accounts.
+* The **Cash Receipt Journal** page, where you manually post receipts to the relevant general ledger, customer, or other account by entering a payment line. You can either apply the receipt or refund to one or more open entries before you post the cash receipt journal, or from the customer ledger entries. Here, you cannot reconcile bank accounts.
 
-Mezi další aspekty správy pohledávek patří shromažďování neuhrazených zůstatků, včetně finančních poplatků a upomínek, a nastavení bankovních účtů, aby bylo možné automaticky vybírat platby z jejich účtu.
+The **Payment Reconciliation Journal** page use automatic matching logic that you can set up on the **Payment Application Rules** page. For more information, see [Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md).  
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
+Other aspects of managing receivables include to collect outstanding balances, including finance charges and reminders, and to set bank accounts up to allow customers' payments to be withdrawn from their account automatically.
 
-| Pro | Navštivte |
+The following table describes a sequence of tasks, with links to the topics that describe them.  
+
+| To | See |
 | --- | --- |
-| Použijte platby k otevření záznamů odběratelů nebo dodavatelů na základě importovaného souboru výpisu nebo zdroje a při použití všech plateb sjednejte bankovní účet. | [Automatické vyrovnání plateb a odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md) |
-| Použijte platby k otevření položek zákazníka na základě seznamu nezaplacených prodejních dokladů na stránce **Platební registrace**. | [Odsouhlasení plateb zákazníků ze seznamu nezaplacených prodejních dokladů](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md) |
-| Účtujte příjemky nebo refundace zákazníkům v deníku přijaté hotovosti a použijte je na položky zákazníků, buď z deníku, nebo ze zaúčtovaných položek. | [Odsouhlasení plateb zákazníků s deníkem přijaté hotovosti nebo z položek zákazníka](receivables-how-apply-sales-transactions-manually.md) |
-| Připomeňte zákazníkům částky po splatnosti, vypočítejte úroky a finanční náklady a spravujte pohledávky. | [Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md) |
-| Se souhlasem zákazníka inkasujte platby přímo z jeho bankovního účtu, pouze v měně euro. | [Sběr plateb pomocí SEPA – příkaz k inkasu](finance-collect-payments-with-sepa-direct-debit.md) |
-| Zablokujte zákazníka, aby nemohl být zadáván do dokumentů nebo účtován, například z důvodu platební neschopnosti. | [Blokace zákazníků](receivables-how-block-customers.md) |
-| Ujistěte se, že znáte náklady zaslaných položek přiřazením dodatečných nákladů na položky, jako jsou náklady na dopravu, fyzickou manipulaci, pojištění a dopravu, které vám vzniknou po prodeji. | [Použít poplatky za zboží na účet pro dodatečné obchodní náklady](payables-how-assign-item-charges.md) |
-| Nastavte toleranci, podle které systém uzavře fakturu, i když platba, včetně jakékoli slevy, nepokrývá celou částku faktury. | [Práce s odchylkami plateb a skont](finance-payment-tolerance-and-payment-discount-tolerance.md) |
-| Předpovídejte, kdy budou platby za prodejní doklady provedeny pozdě. | [Předpovědi pozdních plateb](ui-extensions-late-payment-prediction.md) |
+| Apply payments to open customer or vendor ledger entries based on an imported bank statement file or feed, and reconcile the bank account when all payments are applied. |[Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md) |
+| Apply payments to open customer ledger entries based on a list of unpaid sales documents on the **Payment Registration** page. |[Reconcile Customer Payments from a List of Unpaid Sales Documents](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md) |
+| Post cash receipts or refunds for customers in the cash receipt journal and apply to customer ledger entries, either from the journal or from posted ledger entries. |[Reconcile Customer Payments with the Cash Receipt Journal or from Customer Ledger Entries](receivables-how-apply-sales-transactions-manually.md) |
+| Remind customers of overdue amounts, calculate interest and finance charges, and manage accounts receivable. |[Collect Outstanding Balances](receivables-collect-outstanding-balances.md) |
+|With your customer’s consent, collect payments directly from the customer’s bank account according, in the Euro currency only.|[Collect Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md)|
+|Block a customer from being entered on documents or from posting, for example because of insolvency.|[Block Customers](receivables-how-block-customers.md)|
+|Set up a tolerance by which the system closes an invoice even though the payment, including any discount, does not fully cover the amount on the invoice.|[Work with Payment Tolerances and Payment Discount Tolerances](finance-payment-tolerance-and-payment-discount-tolerance.md)|
+| Predict when payments will be made late for sales documents. | [The Late Payment Prediction Extension](ui-extensions-late-payment-prediction.md) |
 
-## Viz související kurzy na [Microsoft Learn](/learn/paths/process-customer-vendor-payments-dynamics-365-business-central/)
+## See Related Training at [Microsoft Learn](/learn/paths/process-customer-vendor-payments-dynamics-365-business-central/)
 
-## Viz také
-[Prodej](sales-manage-sales.md)  
-[Správa závazků](payables-manage-payables.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)
+## See Also
+[Sales](sales-manage-sales.md)  
+[Managing Payables](payables-manage-payables.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

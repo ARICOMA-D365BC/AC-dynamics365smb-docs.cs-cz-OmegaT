@@ -4,46 +4,48 @@ description: If you're using cash-based accounting, you can specify how to handl
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cash, VAT, unrealized, cash-based
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
 
-# Nastavení nerealizované DPH pro účetnictví založené na hotovosti
-Pokud používáte metody účtování na základě hotovosti, můžete nastavit [!INCLUDE[d365fin](includes/d365fin_md.md)] pro zpracování nerealizované DPH.
+# Set Up Unrealized VAT for Cash-Based Accounting
+If you are using cash-based accounting methods, you can set up [!INCLUDE[prod_short](includes/prod_short.md)] to handle unrealized VAT.
 
-## Použití účtů účetní osnovy k nerealizované DPH
-Můžete zvolit, aby byly částky DPH vypočteny a zaúčtovány na dočasný účet účetní osnovy při zaúčtování faktury, poté zaúčtovány na správný účet a nakonec zahrnuty do výkazů DPH při zaúčtování skutečné platby faktury. Než to budete moci provést, musíte dokončit nastavení účtování DPH.
+## To use general ledger accounts for unrealized VAT
+You can choose to have VAT amounts calculated and posted to a temporary general ledger account when an invoice is posted, and then posted to the correct general ledger account and included in VAT statements when the actual payment of the invoice is posted. Before you can do this, you must complete the VAT posting setup.
 
-Chcete-li použít účty pro nerealizovanou DPH, postupujte takto:
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení financí** a vyberte související odkaz.
-2. Na stránce **Nastavení financí**, zaškrtněte políčko **Nerealizovaná DPH**.
-3. Vyberte ikonu **Vyhledat stránku nebo sestavu**, která otevře ![funkci Řekněte mi, co chcete dělat](media/ui-search/search_small.png "Řekněte mi co chcete dělat") a zadejte **Nastavení účtování DPH**.
-4. Na stránce **Nastavení účtování DPH**, vyberte Účto skupina DPH a zvolte tlačítko **Úpravy**.
-5. V poli **Typ nerealizované DPH** vyberte možnost, jak určit, jak přiřadit platby k částce faktury (bez DPH) a samotné částce DPH, a jak převést částky DPH z nerealizovaného účtu DPH na realizovaný účet. Následující tabulka popisuje možnosti.
+To use accounts for unrealized VAT, follow these steps:
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, and enter **General Ledger Setup**.
+2. On the **General Ledger Setup** page, select the **Unrealized VAT** check box.
+3. Choose the **Search for Page or Report** icon ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do"), and enter **VAT Posting Setup**.
+4. On the **VAT Posting Setup** page, choose the VAT posting group, and then choose the **Edit** action.
+5. In the **Unrealized VAT Type** field, choose an option to specify how to allocate payments to the invoice amount (excluding VAT) and the VAT amount itself, and how to transfer VAT amounts from the unrealized VAT account to the realized account. The following table describes the options.
 
-| Možnost | Popis |
+| Option | Description |
 | --- | --- |
-| Prázdný | Tuto možnost vyberte, pokud nechcete používat nerealizovanou funkci DPH. |
-| Procento | Platby zahrnují jak DPH, tak i částku faktury v poměru k procentu platby ze zbývající částky faktury. Zaplacená částka DPH je převedena z nerealizovaného účtu DPH na realizovaný účet DPH. |
-| První | Platby nejprve zahrnují částky DPH a poté fakturované částky. V tomto případě se částka převedená z nerealizovaného účtu DPH na účet DPH bude rovnat částce platby, dokud nebude zaplacena celková DPH. |
-| Poslední | Platby nejprve pokrývají částku faktury a poté DPH. V takovém případě nebude z nerealizovaného účtu DPH převedena žádná částka na účet DPH, dokud nebude zaplacena celková částka faktury bez DPH. |
-| První (plně zaplaceno) | Platby budou nejprve pokrývat DPH (jako možnost _První_), ale žádná částka nebude převedena na účet DPH, dokud nebude zaplacena plná částka DPH. |
-| Poslední (plně zaplaceno) | Platby pokryjí nejprve částku faktury (jako možnost _Poslední_), ale žádná částka nebude převedena na účet DPH, dokud nebude zaplacena plná částka DPH. |
+| Blank | Choose this option if you don't want to use the unrealized VAT feature. |
+| Percentage | Payments covers both VAT and the invoice amount in proportion to the payment's percentage of the remaining invoice amount. The paid VAT amount is transferred from the unrealized VAT account to the realized VAT account. |
+| First | Payments cover VAT first and then invoice amounts. In this case, the amount transferred from the unrealized VAT account to the VAT account will equal the amount of the payment until the total VAT has been paid. |
+| Last | Payments cover the invoice amount first and then VAT. In this case, no amount will be transferred from the unrealized VAT account to the VAT account until the total amount of the invoice, excluding VAT, has been paid. |
+| First (Fully Paid) | Payments will cover VAT first (like the _First_ option), but no amount will be transferred to the VAT account until the full amount of VAT has been paid. |
+| Last (Fully Paid) | Payments will cover invoice amount first (like the _Last_ option), but no amount will be transferred to the VAT account until the full amount of VAT has been paid. |
 
-6. V poli **Účet nereal. prodejní DPH**, vyberte účet pro nerealizovanou prodejní DPH.
+6. In the **Sales VAT Unreal. Account** field, choose the account for unrealized sales VAT.
 
-   > [!NOTE]  
-   > Částka DPH bude zaúčtována na tento účet a zůstane na účtě, dokud nebude zaúčtována platba zákazníka. Částka je poté převedena na účet prodejní DPH.
-7. V poli **Účet.  nereal. nákupů DPH**, zadejte účet hlavní knihy pro nerealizovanou nákupní DPH.
+    > [!NOTE]  
+    > The VAT amount will be posted to this account, and stay there until the customer payment is posted. The amount is then transferred to the account for sales VAT.
+7. In the **Purch. VAT Unreal. Account** field, enter the general ledger account for unrealized purchase VAT.
 
 > [!NOTE]  
-> Částka DPH bude zaúčtována na tento účet a zůstane na účtě, dokud nebude zaúčtována platba zákazníka. Částka je poté převedena na účet nákupní DPH.
+> The VAT amount will be posted to this account, and stay there until the customer payment is posted. The amount is then transferred to the account for purchase VAT.
 
-## Viz také
-[Nastavení DPH](finance-setup-vat.md)
+## See Also
+[Set Up Calculations and Posting Methods for Value Added Tax](finance-setup-vat.md)
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

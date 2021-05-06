@@ -6,45 +6,49 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: IC, group, consolidation, affiliate, subsidiary
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Správa vnitropodnikových transakcí
-Vaše organizace se může skládat z několika společností, ale nemusí mít stejný počet účetních a administrativních týmů. Funkce vnitropodniku vám umožňuje obchodovat s vašimi dceřinými a interními partnerskými organizacemi stejným způsobem, jako když spolupracujete s vašimi externími prodejci a zákazníky. Informace o vnitropodnikových transakcích zadáte pouze jednou v příslušných dokladech. Můžete použít funkce, které již znáte, jako jsou například správa pohledávek a závazků. Mapovací zařízení pro účetní osnovu a dimenze pomáhá zajistit, aby se informace zobrazovaly na správných místech.
+# Managing Intercompany Transactions
+Your organization may consist of several companies, but might not have the equivalent number of accounting and administrative teams. The Intercompany functionality lets you do business with your subsidiary and internal partner organizations in the same way as you engage with your external vendors and customers. You enter intercompany transaction information only once in the appropriate documents. You can use the functionality you are already familiar with, such as receivables and payables management. Mapping facilities for the chart of accounts and dimensions help ensure that information appears in the right places.  
 
-Funkce vnitropodniku má čtyři hlavní výhody:
+There are four main benefits to the Intercompany functionality:  
 
-- Zvýšená produktivita díky úsporám času a zjednodušeným transakcím
-- Minimalizace chyb díky jednorázovému zadávání informací a automatickým aktualizacím v celém systému
-- Kompletní revizní záznam a úplné zviditelnění obchodních aktivit a historie transakcí
-- Efektivní transakce (včetně nákladů) s přidruženými a dceřinými společnostmi
+- Increased productivity as a result of time saved and simplified transactions  
+- Minimized error potential with one-time entry of information and system-wide, automated updates  
+- Complete audit trail and full visibility into business activities and transaction histories  
+- Efficient, cost-effective transactions with affiliate and subsidiary companies  
 
-Máte plnou kontrolu nad všemi transakčními doklady. Můžete například odmítnout doklad, který vám byl zaslán, a tímto způsobem zpětně účtovat v deníku a vrátit zpět příjemky/dodávky, které byly nesprávné. Nebo při nákupu od partnera nebo dceřiné společnosti můžete nákupní objednávku aktualizovat, pokud prodávající společnost ještě nedodala žádné zboží.
+You are in full control of all transaction documents. For example, you can reject a document sent to you and, in this way, Reverse Journal Postings and Undo Receipts/Shipments that were incorrect. Or, when making a purchase from a partner or subsidiary company, you can update the purchase order as long as the selling company has not shipped any goods.  
 
-Když zadáváte transakci, nemusíte specifikovat účty pro jednotlivé sady knih, ale jednoduše zadejte identifikaci partnerské společnosti. Vnitropodnikové funkce vytvoří řádky finančního deníku, které vedou k přidělení finančních účtů knih obou společností zapojených do transakce. U pohledávek a závazků přidělujete kód vnitropodnikového partnera jakémukoli zákazníkovi nebo dodavateli. Od tohoto okamžiku budou všechny objednávky a faktury vytvořené v oblasti transakcí s těmito společnostmi vytvářet odpovídající doklady v partnerské společnosti, což povede ke správnému nastavení účtů.
+When you enter a transaction, you do not need to specify the accounts for an individual set of books, but simply give the identification of the partner company. The Intercompany functionality creates general journal lines that result in the balancing of the books of both companies involved in a transaction. In receivables and payables, you assign an intercompany partner code to any customer or vendor. From that moment on, all orders and invoices generated pertaining to transactions with these companies will produce corresponding documents in the partner company, resulting in correct balancing of the accounts.  
 
-Po nastavení obchodních partnerů jako zákazníků a dodavatelů v systému a po přiřazení kódu vnitropodnikového partnera v rámci společnosti, je možné vyměňovat nákupní a prodejní doklady v rámci společnosti, včetně zboží a poplatků za zboží. Funkce vnitropodniku umožňuje vnitropodnikové transakce mezi více databázemi, například v různých zemích/regionech, jakož i více měn, různé účetní mapy, různé dimenze a různé číslování zboží.
+ After you set up business partners as customers and vendors in the system, and assign them intercompany partner codes, it is possible to exchange intercompany purchase and sales documents, including items and item charges. The Intercompany functionality allows intercompany transactions between multiple databases, for example, in different countries/regions, as well as multiple currencies, different charts of accounts, different dimensions, and different item numbering.  
 
-Konsolidace finančních údajů může být důležitá zejména v souvislosti s vnitropodnikovými procesy. Pro více informací navštivte [Konsolidace finančních údajů od více společností](finance-consolidated-company-reporting.md).
+Consolidating financial data may especially be relevant in connection with intercompany processes. For more information, see [Consolidating Financial Data from Multiple Companies](finance-consolidated-company-reporting.md).
 
-Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-| K | Vidění |
+|To |See|
 |---|---|
-| Vytvořte vnitropodnikové dodavatele a zákazníky jako tzv. vnitropodnikové partnery a nastavte vnitropodnikovou účetní osnovu. | [Nastavení vnitropodniku](intercompany-how-setup.md) |
-| K zaúčtování transakcí s vnitropodnikovými partnery použijte vnitropodnikové doklady nebo deníky. | [Práce s vnitropodnikovými doklady a deníky](intercompany-how-work-documents-journals.md) |
-| Uspořádejte a zpracujte příchozí a odchozí transakce, které si vyměňujete se svými vnitropodnikovými partnery. | [Správa vnitropodnikové doručené pošty a pošty k odeslání](intercompany-how-manage-intercompany-inbox.md) |
+|Create your intercompany vendors and customers as so-called intercompany partners, and set up an intercompany chart of accounts.|[Set Up Intercompany](intercompany-how-setup.md)|
+|Use intercompany documents or journals to post transactions with your intercompany partners.|[Work with Intercompany Documents and Journals](intercompany-how-work-documents-journals.md)|
+|Organize and process incoming and outgoing transactions that you exchange with your intercompany partners.|[Manage the Intercompany Inbox and Outbox](intercompany-how-manage-intercompany-inbox.md)|
+|Use intercompany postings to distribute costs between partner companies.|[Allocate Costs to Intercompany Partners](intercompany-allocate-costs.md)|
 
-## Viz také
+## See Also
 [Finance](finance.md)  
-[Nastavení financí](finance-setup-finance.md)  
-[Práce s finančními deníky](ui-work-general-journals.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Setting Up Finance](finance-setup-finance.md)  
+[Working with General Journals](ui-work-general-journals.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

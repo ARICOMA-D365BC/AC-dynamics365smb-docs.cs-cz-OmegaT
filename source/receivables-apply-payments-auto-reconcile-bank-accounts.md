@@ -6,42 +6,48 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, direct payment posting, reconcile payment, expenses, cash receipts
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Automatické vyrovnávání plateb a odsouhlasení bankovních účtů
-Musíte pravidelně sladit své bankovní účty, pohledávky a závazky použitím plateb evidovaných v bance s jejich souvisejícími otevřenými (nezaplacenými) fakturami a dobropisy nebo jinými otevřenými položkami v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+# Applying Payments Automatically and Reconciling Bank Accounts
+You must regularly reconcile your bank, receivables, and payables accounts by applying payments recorded in the bank to their related open (unpaid) invoices and credit memos or other open entries in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Tuto úlohu můžete provést na stránce **Deníky odsouhlasení plateb** například importem bankovního výpisu nebo zdroje pro rychlou evidenci plateb. Platby jsou vyrovnány s otevřenými položkami zákazníků nebo dodavatelů na základě shod mezi textem platby a informacemi o položce. Před zaúčtováním deníku můžete zkontrolovat a změnit vyrovnání aplikace. Při zaúčtování deníku můžete zavřít všechny otevřené položky bankovního účtu související s vyrovnanými položami. Bankovní účet je automaticky vyrovnán, když jsou vyrovnány všechny platby.
+You can perform this task on the **Payment Reconciliation Journal** page, for example, by importing a bank statement file or feed to quickly register the payments. Payments are applied to open customer or vendor ledger entries based on matches between payment text and entry information. You can review and change automatic applications before you post the journal. You can choose to close any open bank account ledger entries related to the applied ledger entries when you post the journal. The bank account is automatically reconciled when all payments are applied.
 
-Logika, která řídí způsob, jakým je text platby automaticky spárován s informacemi o položce, se nastavuje na nastránce **Pravidla vyrovnání plateb** jako pravidla s prioritou, které se dají upravit.
+The logic that governs how payment text is automatically matched with entry information is set up on the **Payment Application Rules** page as a number of prioritized rules that you can edit.
 
-Můžete také odsouhlasit bankovní účty bez současného vyrovnání plateb. To provedete na stránce **Odsouhlasení bankovního účtu**. Pro více informací navštivte [Odsouhlasení bankovních účtů](bank-how-reconcile-bank-accounts-separately.md).
+You can also reconcile bank accounts without simultaneously applying payments. You perform this work on the **Bank Acc. Reconciliation** page. For more information, see [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md).   
 
-Chcete-li importovat bankovní výpisy jako bankovní zdroj, musíte nejprve nastavit a povolit službu Envestnet Yodlee Bank Feed a poté propojit své bankovní účty se souvisejícími online bankovními účty. Pro více informací běžte na [Nastavení služby Envestnet Yodlee Bank](bank-how-setup-bank-statement-service.md).
+To import bank statements as a bank feed, you must first set up and enable the Envestnet Yodlee Bank Feed service, and then link your bank accounts to the related online bank accounts. For more information, see [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md).  
 
-Případně můžete použít rozšíření AMC Banking 365 Fundamentals k převodu bankovního výpisu z libovolného formátu na datový typ, který můžete importovat do [!INCLUDE[d365fin](includes/d365fin_md.md)]. Další informace naleznete v části [Používání rozšíření AMC Banking 365 Fundamentals](ui-extensions-amc-banking.md).
+> [!TIP]
+> You can also import bank statement files in comma or semicolon delimited format (.CSV). Use the **Set up a bank statement file format** assisted setup to define bank statement import formats and attach the format to a bank account. You can then use these formats when you import bank statements in the **Bank Account Reconciliation** page.
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
+Alternatively, you can use the AMC Banking 365 Fundamentals extension to convert a bank statement file, from any format, to a data stream that you can import into [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md).  
 
-| Viz | Také |
+The following table describes a sequence of tasks, with links to the topics that describe them.  
+
+| To | See |
 | --- | --- |
-| Využití vyrování plateb k otevření položek zákazníků nebo dodavatelů importem bankovního výpisu a odsouhlasení bankovních účtů po vyrovnání všech plateb. | [Odsouhlasení plateb pomocí automatického vyrovnání](receivables-how-reconcile-payments-auto-application.md) |
-| Ruční vyrovnání plateb prohlížením podrobných informací spojených dat a návrhy a doporučení pro otevřené položky, které se mají vyrovnat. | [Kontrol nebo vyrovnání plateb po automatickém vyrovnání](receivables-how-review-apply-payments-auto-application.md) |
-| Vyřešte platby, které nelze automaticky vyrovnat na souvisejících položkách účetní knihy. Například proto, že částky se liší nebo protože související položka knihy neexistuje. | [Odsouhlasení plateb, které nemohou být vyrovnány automaticky](receivables-how-reconcile-payments-cannot-apply-auto.md) |
-| Propojte text plateb s konkrétními účty zákazníka, dodavatele nebo hlavní knihy tak, aby vždy zaúčtoval opakované příjmy v hotovosti nebo výdaje na tyto účty, pokud neexistují žádné doklady, na které by se vztahovaly. | [Namapovaný text o opakovaných platbách na účtech pro automatické odsouhlasení.](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md) |
-| Nastavte pravidla, která určují, jak mají být platby/bankovní transakce automaticky vyrovnány s jejich souvisejícími otevřenými položkami při použití funkce **Vyrovnat automaticky** na stránce **Deník odsouhlasení plateb**. | [Nastavení pravidel pro automatické vyrovnání plateb](receivables-how-set-up-payment-application-rules.md) |
+| Apply payments to open customer or vendor ledger entries by importing a bank statement, and reconcile the bank account when all payments are applied. |[Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md) |
+| Manually apply payments by viewing detailed information about matched data and suggestions for candidate open entries to apply payments to. |[Review or Apply Payments After Automatic Application](receivables-how-review-apply-payments-auto-application.md) |
+| Resolve payments that cannot be applied automatically to their related open ledger entries. For example because the amounts differ, or because a related ledger entry does not exist. |[Reconcile Payments that Cannot be Applied Automatically](receivables-how-reconcile-payments-cannot-apply-auto.md) |
+| Link text on payments to specific customer, vendor, or general ledger accounts to always post recurring cash receipts or expenses to those accounts when no documents exist to apply to. |[Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md) |
+|Set up the rules to govern how payments/bank transactions should be automatically applied to their related open ledger entries when you use the **Apply Automatically** function on the **Payment Reconciliation Journal** page.|[Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md)|
 
-## Viz souvisejnící školení [Microsoft Learn](/learn/modules/use-journals-dynamics-365-business-central/index)
+## See Related Training at [Microsoft Learn](/learn/modules/use-journals-dynamics-365-business-central/index)
 
-## Viz také
-[Odsouhlasení bankovních účtů](bank-how-reconcile-bank-accounts-separately.md)  
-[Správa pohledávek](receivables-manage-receivables.md)  
-[Proej](sales-manage-sales.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md)  
+[Managing Receivables](receivables-manage-receivables.md)  
+[Sales](sales-manage-sales.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

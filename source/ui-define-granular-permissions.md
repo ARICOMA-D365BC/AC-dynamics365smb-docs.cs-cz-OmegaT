@@ -4,224 +4,262 @@ description: Describes how to give users access to objects by assigning permissi
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: access, right, security
-ms.date: 04/22/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Přiřazení oprávnění uživatelům a skupinám uživatelů
-Systém zabezpečení v [!INCLUDE[d365fin](includes/d365fin_md.md)] vám umožňuje řídit, ke kterým objektům má uživatel přístup v rámci každé databáze nebo prostředí. Pro každého uživatele můžete určit, zda je schopen číst, upravovat nebo zadávat data do vybraných databázových objektů. Pro více informací navštivte [Zabezpečení dat](/dynamics365/business-central/dev-itpro/security/data-security?tabs=object-level) v ITPro help pro [!INCLUDE[d365fin](includes/d365fin_md.md)].
+# Assign Permissions to Users and Groups
 
-Před přiřazením oprávnění uživatelům a skupinám uživatelů je nutné definovat, kdo se může přihlásit  pomocí vytvoření uživatelů podle licence definované v Microsoftu 365 Admin Center. Pro více informací navštivte [Vytvoření uživatelů dle licencí](ui-how-users-permissions.md).
+The [!INCLUDE[prod_short](includes/prod_short.md)] security system allows you to control which objects a user can access within each database or environment. You can specify for each user whether they are able to read, modify, or enter data in the selected database objects. For detailed information, see [Data Security](/dynamics365/business-central/dev-itpro/security/data-security?tabs=object-level) in the Developer and ITPro help for [!INCLUDE[prod_short](includes/prod_short.md)].
 
-V [!INCLUDE[d365fin](includes/d365fin_md.md)],  existují dvě úrovně oprávnění k databázovým objektům:
-- Celková oprávnění podle licence, také označovaná jako nároková.
-- Podrobnější oprávnění, která byla přidělena v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+Before you assign permissions to users and user groups, you must define who can sign in to by creating users according to the license as defined in the Microsoft 365 Admin Center. For more information, see [Create Users According to Licenses](ui-how-users-permissions.md).
 
-Chcete-li usnadnit správu oprávnění pro více uživatelů, můžete je uspořádat do skupin uživatelů a tím přiřadit nebo změnit jednu sadu oprávnění pro mnoho uživatelů v jednom okamžiku. Pro více informací navštivte  [Správa oprávnění prostřednictvím skupin uživatelů](ui-define-granular-permissions.md#to-manage-permissions-through-user-groups)
+In [!INCLUDE[prod_short](includes/prod_short.md)], there are two levels of permissions to database objects:
+
+- Overall permissions according to the license, also referred to as the entitlement.
+- More detailed permissions as assigned from within [!INCLUDE[prod_short](includes/prod_short.md)].
+
+To make it easier to manage permissions for multiple users, you can organize them in user groups and thereby assign or change one permission set for many users in one action. For more information, see [To manage permissions through user groups](ui-define-granular-permissions.md#to-manage-permissions-through-user-groups).
 
 > [!NOTE]
-> Dalším způsobem, jak definovat, ke kterým funkcím má uživatel přístup, je nastavení pole **Zkušenost** na stránce **Informace o společnosti**. Pro další informace se podívejte na [Změna zobrazování funkcí](ui-experiences.md).
+> An additional method of defining which features a user has access to is by setting the **Experience** field on the **Company Information** page. For more information, see [Change Which Features are Displayed](ui-experiences.md).
 >
-> Prostřednictvím stránek můžete také definovat, co se uživatelům zobrazí v uživatelském rozhraní a jak pracují s povolenými funkcemi. To provedete prostřednictvím profilů, které přiřadíte různým typům uživatelů podle jejich pracovní role nebo oddělení. Pro více informací navštivte [Správa profilů](admin-users-profiles-roles.md) a [Úpravy [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-customizing-overview.md).
+> You can also define what users see in the user interface and how they interact with their permitted functionality through pages. You do this through profiles that you assign to different types of users according to their job role or department. For more information, see [Manage Profiles](admin-users-profiles-roles.md) and [Customizing [!INCLUDE[prod_short](includes/prod_short.md)]](ui-customizing-overview.md).
 
-## Přiřazení sad oprávnění uživatelům
-Sada oprávnění je kolekce oprávnění pro konkrétní databázové objekty. Všem uživatelům musí být před přístupem přiřazena jedna nebo více sad oprávnění [!INCLUDE[d365fin](includes/d365fin_md.md)].
+## To assign permission sets to users
 
-Řešení [!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje řadu předdefinovaných sad oprávnění, které jsou přidány společností Microsoft nebo poskytovatelem řešení. Můžete také přidat nové sady oprávnění přizpůsobené potřebám vaší organizace. Pro více informací navštivte [Vytvoření nebo úprava sady oprávnění](ui-define-granular-permissions.md#to-create-or-modify-a-permission-set).
+A permission set is a collection of permissions for specific database objects. All users must be assigned one or more permission sets before they can access [!INCLUDE[prod_short](includes/prod_short.md)].
 
-> [!NOTE]
-> Pokud nechcete omezit přístup uživatele více než stanoveno licencí, můžete uživateli přiřadit speciální sadu oprávnění s názvem SUPER. Tato sada oprávnění zajišťuje, že uživatel má přístup ke všem objektům uvedeným v licenci.<br /><br />
-> Uživatel s licencí Essential a sadou oprávnění SUPER má přístup k více funkcím než uživatelé s licencí Team Member a sadou oprávnění SUPER.
-
-Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
-- Na **Kartě uživatele** vybráním sady oprávnění a přiřazením k uživateli.
-- Ze stránky **Sada oprávnění dle uživatele** vybráním uživatelů a oprávnění, která je jim přiřazena.
-
-### Přiřazení sady oprávnění na kartě uživatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Uživatelé** a vyberte související odkaz.
-2. Vyberte uživatele, kterému chcete přiřadit oprávnění.
-   Všechny sady oprávnění, které jsou již přiřazeny uživateli, jsou zobrazeny v informačním okně **Sady oprávnění**.
-3. Zvolte akci **Upravit** a otevřete stránku **Karta uživatele**.
-4. Na záložce s náhledem **Sady oprávnění uživatele**, na novém řádku vyplňte pole podle potřeby. Pro více informací navštivte [Vytvoření nebo úprava sady oprávnění](ui-define-granular-permissions.md#to-create-or-modify-a-permission-set).
-
-### Přiřazení sady oprávnění na stránce **Sada oprávnění dle uživatel**
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Uživatelé** a vyberte související odkaz.
-2. Na stránce **Uživatelů** vyberte příslušného uživatele a poté vyberte akci **Sada oprávnění dle uživatele**.
-3. Na stránce **Sada oprávnění** dle uživatele zaškrtněte políčko **[Název uživatele]** na řádku pro příslušnou sadu oprávnění k přiřazení sady uživateli.
-4. Zaškrtněte políčko **Všichni uživatelé** a přiřaďte sadu oprávnění všem uživatelům.
-
-## Získání přehledu oprávnění uživatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Uživatelé** a vyberte související odkaz.
-2. Otevřete kartu příslušného uživatele.
-3. Zvolte akci **Platná oprávnění**.
-
-   Část **Oprávnění obsahuje** seznam všech databázových objektů, ke kterým má uživatel přístup. Tuto sekci nelze upravit.
-
-   Část **Podle sady oprávnění** zobrazuje přiřazené sady oprávnění, prostřednictvím kterých jsou oprávnění udělena uživateli, zdroj a typ sady oprávnění a pro které jsou povoleny různé typy přístupu.
-
-   Pro každý řádek, který vyberete v části **Oprávnění**, část **Podle sady oprávnění** zobrazuje sadu nebo sady oprávnění, prostřednictvím kterých je oprávnění udělováno. V této části můžete upravit hodnotu v každém z pěti polí typu přístupu, **Právo čtení**, **Právo vložit**, **Právo změnit**, **Právo odstranit** a **Právo spustit**.
-
-   > [!NOTE]  
-   > Lze upravovat pouze sady oprávnění typu **Uživatelem definované**.<br /><br />
-   > Řádky zdrojového oprávnění pocházejí z předplacené licence. Hodnoty oprávnění hodnot oprávnění nadřazují hodnoty v jiných sadách oprávnění, pokud mají vyšší hodnocení. Hodnota v sadě oprávnění bez nároku, která má vyšší hodnocení než související hodnota v nároku, bude ohraničena závorkami, což znamená, že není účinná, protože je potlačena nárokem..<br /><br />
-   > Vysvětlení hodnocení viz [Vytvoření nebo úprava práv ručně](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).
-
-4. Chcete-li upravit sadu oprávnění, v části **Podle sady oprávnění** na řádku pro příslušnou sadu oprávnění typu **Definováno uživatelem** vyberte jedno z pěti polí typu přístupu a vyberte jinou hodnotu.
-
-5. Chcete-li upravit jednotlivá oprávnění v rámci sady oprávnění, zvolte hodnotu v poli **Sady oprávnění** k otevření stránky **Práva**. Postupujte podle pokynů v části [Vytvoření nebo úprava oprávnění](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).
-
-> [!NOTE]  
-> Při úpravě sady oprávnění se změny projeví také u ostatních uživatelů, kterým byla sada oprávnění přiřazena.
-
-## Vytvoření nebo úprava sady oprávnění
-Sady oprávnění fungují jako kontejnery oprávnění, takže můžete snadno spravovat více oprávnění v jednom záznamu.
-
-> [!NOTE]  
-> Řešení [!INCLUDE[d365fin](includes/d365fin_md.md)] řešení obvykle obsahuje řadu předdefinovaných sad oprávnění přidaných společností Microsoft nebo poskytovatelem softwaru. Tyto sady oprávnění jsou typu **Systém** nebo **Extension**. Tyto typy sad oprávnění nelze vytvářet ani upravovat. Můžete je však zkopírovat a definovat vlastní sady oprávnění a oprávnění. <br /><br />
-> Sady oprávnění, které uživatelé vytvářejí, nové nebo jako kopie jsou typu **Uživatelem definované** a mohou být upraveny.
-
-### Vytvoření nové sady oprávnění od nuly
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sady oprávnění** a poté vyberte související odkaz.
-2. Chcete-li vytvořit novou sadu oprávnění, vyberte akci **Nový**.
-3. Na novém řádku vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-   Po vytvoření sady oprávnění musíte přidat skutečná oprávnění. Pro více informací navštivte [Ruční vytvoření nebo úprava oprávnění](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).
-
-### Kopírování sady oprávnění
-Funkci kopírování můžete také použít k rychlému přenesení všech oprávnění jiného oprávnění nastaveného na novou sadu oprávnění.
-
-> [!NOTE]  
-> Pokud se změní systémová oprávnění, která jste zkopírovali, budete upozorněni (v závislosti na vašem výběru), abyste mohli zvážit, zda jsou změny relevantní pro kopírování nebo zápis do vaší uživatelem definované sady oprávnění.
-
-1. Na stránce **Sady oprávnění**vyberte řádek pro sadu oprávnění, kterou chcete kopírovat, a poté vyberte akci **Kopírovat sadu oprávnění**.
-2. Na stránce **Kopírovat sadu oprávnění**zadejte název nové sady oprávnění a pak zvolte tlačítko **OK**.
-3. Zaškrtněte políčko **Upozornit na změněnou sadu oprávnění** pokud chcete zachovat propojení mezi originálem a zkopírovanou sadou oprávnění. Propojení se potom použije k upozornění, pokud se název nebo obsah původní sady oprávnění změní v budoucí verzi, na kterou bude řešení upgradováno na později.
-
-Nová sada oprávnění obsahující všechna oprávnění zkopírované sady oprávnění je přidána jako nový řádek na stránce **Sada oprávnění**. Nyní mužete začít upravovat opravnění v nové sadě oprávnění. Všimněte si, že řádky jsou seřazeny abecedně v rámci každého typu.
-
-### Export a import sady oprávnění
-Chcete-li rychle nastavit oprávnění, můžete importovat sady oprávnění, které jste exportovali z jiného [!INCLUDE[d365fin](includes/d365fin_md.md)].
-
-Ve víceklientských prostředích bude sada oprávnění importována do konkrétního klienta.
-
-1. V prvním klientu, na stránce **Sada oprávnění**, Vyberte řádek nebo řádky oprávnění pro exporta zvolte tlačítko **Export Sady oprávnění**.
-
-   Soubor XML je vytvořen ve složce pro stahování ve vašem počítači. Ve výchozím nastavení se nazývá "Export Permission Sets.xml"
-
-2. V druhém klientu, na stránce **Sada oprávnění**, vyberte **Import Sady oprávnění**.
-3. V dialogové stránce **Import Sady oprávnění** zvažte, zda chcete sloučit stávající sady oprávnění s novými sadami oprávnění v souboru xml.
-
-   Pokud zaškrtnete políčko **Aktualizovat existující oprávnění**, existující sady oprávnění se stejným názvem jako ty, které existují v souboru XML, budou sloučeny s importovanými sadami oprávnění.
-
-   Pokud nezaškrtnete políčko **Aktualizovat existující oprávnění**, budou během importu přeskočeny sady oprávnění se stejným názvem jako ty, které existují v souboru XML. V takovém případě budete informováni o přeskočených sadách oprávnění.
-
-4. Na stránce dialogového okna **Import** najděte a vyberte soubor XML, který chcete importovat, a pak zvolte **Otevřít**.
-
-Sady oprávnění jsou importovány.
-
-## Ruční vytvoření nebo úprava oprávnění
-Tento postup vysvětluje, jak ručně přidat nebo upravit oprávnění. Můžete také mít oprávnění generována automaticky z vašich akcí v uživatelském rozhraní. Pro více informací navštivte [Vytvoření nebo úprava sady oprávnění zaznamem uživatelských akcí](ui-define-granular-permissions.md#to-create-or-modify-permissions-by-recording-your-actions).
+A [!INCLUDE[prod_short](includes/prod_short.md)] solution contains a number of predefined permission sets that are added by Microsoft or by your solution provider. You can also add new permission sets tailored to meet the needs of your organization. For more information, see [To create or edit a permission set](ui-define-granular-permissions.md#to-create-or-modify-a-permission-set).
 
 > [!NOTE]
-> Když upravíte oprávnění a tím související sadu oprávnění, změny se budou vztahovat také na ostatní uživatele, kterým je sada oprávnění přiřazena.
+> If you do not want to restrict a user's access more than already defined by the license, you can assign a special permission set called SUPER to the user. This permission set ensures that the user can access all objects specified in the license.
+>
+> A user with the Essential license and the SUPER permission set has access to more functionality than users with the Team Member license and the SUPER permission set.
 
-1. Na stránce **Sady oprávnění** vyberte řádek sady oprávnění, a poté vyberte akci **Oprávnění**.
-2. Na stránce **Oprávnění** vytvořte nový řádek nebo upravte pole na existujícím řádku.
+You can assign permissions sets to users in two ways:
 
-V každém z pěti polí typu přístupu, **Právo čtení**, **Právo vložit**, **Právo změnit**, **Právo odstranit** a **Právo spustit**, můžete vybrat jednu z následujících tří možností oprávnění:
+- From the **User Card** page by selecting permission sets to assign to the user.
+- From the **Permission Set by User** page by selecting users that a permission set is assigned to.
 
-| Možnost | Popis | Hodnocení |
-|------|-----------|
-| **Ano** | Uživatel může provést akci s dotyčným objektem. | Nejvyšší |
-| **Nepřímo** | Uživatel může provést akci na dotyčném objektu, ale pouze prostřednictvím jiného souvisejícího objektu, ke kterému má uživatel plný přístup. Další informace o nepřímých oprávněních naleznete v části [Vlastnosti oprávnění](/dynamics365/business-central/dev-itpro/developer/properties/devenv-permissions-property) v Developer and IT-Pro Help | Druhý nejvyšší |
-| **Prázdný** | Uživatel nemůže provést akci s daným objektem. | Nejnižší |
+### To assign a permission set on a user card
 
-### Příklad - Nepřímé opravnění
-Můžete přiřadit nepřímé oprávnění k použití objektu pouze prostřednictvím jiného objektu.
-Uživatel může mít například oprávnění ke spuštění Codeunity 80 Sales-Post. Codeunita Sales-Post ykonává mnoho úkolů, včetně úpravy tabulky 37, prodejní řádek. Když uživatel zaúčtuje prodejní doklad, Codeunita Sales-Post [!INCLUDE[d365fin](includes/d365fin_md.md)]  zkontroluje, zda má uživatel oprávnění k úpravám tabulky Prodejní řádek. Pokud ne, Codeunita nemůže dokončit své úlohy a uživatel obdrží chybovou zprávu. Pokud ano, Codeunita se spustí úspěšně.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+2. Select the user that you want to assign permission to.
+Any permission sets that are already assigned to the user are displayed in the **Permission Sets** FactBox.
+3. Choose the **Edit** action to open the **User Card** page.
+4. On the **User Permission Sets** FastTab, on a new line, fill in the fields as necessary. For more information, see [To create or edit a permission set](ui-define-granular-permissions.md#to-create-or-modify-a-permission-set).
 
-Uživatel však nemusí mít úplný přístup k tabulce Prodejní řádek, aby mohl spustit codeunitu. Pokud má uživatel nepřímé oprávnění pro tabulku Prodejní řádek, bude Codeunita Sales-Post úspěšně spuštěna. Pokud má uživatel nepřímé oprávnění, může upravit tabulku Prodejní řádek pouze spuštěním Codeunity Sales-Post nebo jiného objektu, který má oprávnění k úpravě tabulky Prodejní řádek. Uživatel může upravit tabulku Prodejní řádek pouze v případě, že tak činí z podporovaných oblastí aplikace. Uživatel nemůže tuto funkci spustit neúmyslně nebo škodlivě jinými metodami.
+### To assign a permission set on the Permission Set by User page
 
-## Vytvoření nebo úprava sady oprávnění zaznamenáním vlastní akce
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sady oprávnění** a poté vyberte související odkaz.
-2. Případně na stránce **Uživatelé** vyberte akci **Sady oprávnění**.
-3. Na stránce **Sady oprávnění** vyberte akci **Nový**.
-4. Na novém řádku vyplňte pole dle potřeby.
-5. Zvolte akci **Oprávnění**.
-6. Na stránce **Oprávnění** vyberte akci **Zaznamenat oprávnění** a poté vyberte akci **Spustit**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+2. On the **Users** page, select the relevant user, and then choose the **Permission Set by User** action.
+3. On the **Permission Set by User** page, select the **[user name]** check box on a line for the relevant permission set to assign the set to the user.
+4. Select the **All Users** check box to assign the permission set to all users.
 
-    Tím se spustí proces nahrávání, který zachytí všechny akce v uživatelském rozhraní.
-7. Projděte různé stránky a aktivity v [!INCLUDE[d365fin](includes/d365fin_md.md)] , ke kterým chcete, aby uživatelé s tímto oprávněním měli přístup. Je nutné provést úkoly, pro které chcete zaznamenat oprávnění.
-8. Pokud chcete nahrávání ukončit, vraťte se na stránku **Práva** a poté vyberte akci **Stop**.
-9. Zvolte tlačítko **Ano**, chcete-li přidat zaznamenaná oprávnění do nové sady oprávnění.
-10. U každého objektu v zaznamenaném seznamu určete, zda jsou uživatelé schopni do zaznamenaných tabulek vkládat, upravovat nebo mazat záznamy.
+## To get an overview of a user's permissions
 
-## Filtry zabezpečení - omezení přístupu uživatele k určitým záznamům v tabulce
-Pro zabezpečení na úrovni záznamu v [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete pomocí bezpečnostních filtrů omezit přístup uživatele k datům v tabulce. Vytvořte filtry zabezpečení na data tabulky. Filtr zabezpečení popisuje sadu záznamů v tabulce, ke kterým má uživatel oprávnění. Můžete například určit, že uživatel může číst pouze záznamy, které obsahují informace o konkrétním zákazníkovi. To znamená, že uživatel nemá přístup k záznamům, které obsahují informace o jiných zákaznících. Pro více informací navštivte [Používání bezpečnostních filtrů](/dynamics365/business-central/dev-itpro/security/security-filters) v nápovědě pro vývojáře a IT-Pro help.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+2. Open the card of the relevant user.
+3. Choose the **Effective Permissions** action.
 
-## Správa oprávnění prostřednictvím Skupiny uživatelů
-Můžete nastavit skupiny uživatelů, které vám pomohou spravovat sady oprávnění pro skupiny uživatelů ve vaší společnosti.
+    The **Permissions** part lists all the database objects that the user has access to. You cannot edit this section.
 
-Začnete vytvořením skupiny uživatelů. Potom skupině přiřadíte sady oprávnění, které definují, ke kterému objektu mají uživatelé skupiny přístup. Když přidáte uživatele do skupiny, budou se na něj vztahovat sady oprávnění definované pro skupinu.
+    The **By Permission Set** part shows the assigned permission sets through which the permissions are granted to the user, the source and type of the permission set, and to which extend the different access types are permitted.
 
-Sady oprávnění přiřazené uživateli prostřednictvím skupiny uživatelů zůstanou synchronizovány tak, aby změna oprávnění skupiny uživatelů byla automaticky rozšířena na uživatele. Pokud odeberete uživatele ze skupiny uživatelů, příslušná oprávnění budou automaticky odebrána.
+    For each row that you select in the **Permissions** section, the **By Permission Set** section shows which permission set or sets that the permission is granted through. In this section, you can edit the value in each of the five access type fields, **Read Permission**, **Insert Permission**, **Modify Permission**, **Delete Permission**, **Execute Permission**.
 
-### Seskupení uživatelů do skupin uživatelů
-Následující postup vysvětluje, jak vytvořit skupiny uživatelů ručně. Chcete-li vytvořit skupiny uživatelů automaticky, přečtěte si téma [Kopírování skupiny uživatelů a všech jejích sad oprávnění](ui-define-granular-permissions.md#to-copy-a-user-group-and-all-its-permission-sets).
+    > [!NOTE]  
+    > Only permission sets of type **User-Defined** can be edited.
+    >
+    > Rows of source Entitlement originate from the subscription license. The permission values of the entitlement overrule values in other permission sets if they have a higher ranking. A value in a non-entitlement permission set that has a higher ranking than the related value in the entitlement will be surrounded by brackets to indicate that it is not effective as it is overruled by the entitlement.
+    >
+    > For an explanation of ranking, see [To create or edit permissions manually](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter **Skupiny uživatelů** a vyberte související odkaz.
-2. Případně na stránce **Uživatelé** vyberte akci **Skupiny uživatelů**.
-3. Na stránce **Skupiny uživatelů** vyberte akci **Člen skupiny uživatelů**.
-4. Na stránce **Skupiny uživatelů** vyberte akci **Přidat uživatele**
+4. To edit a permission set, in the **By Permission Set** part, on the line for a relevant permission set of type **User-Defined**, choose one of the five access type fields and select a different value.
 
-### Kopírování skupiny uživatelů a všech jejích sad oprávnění
-Chcete-li rychle definovat novou skupinu uživatelů, můžete zkopírovat všechny sady oprávnění z existující skupiny uživatelů do nové skupiny uživatelů.
+5. To edit individual permissions within the permission set, choose the value in the **Permission Set** field to open the **Permissions** page. Follow the steps described in [To create or edit permissions](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).  
+
+> [!NOTE]  
+> When you edit a permission set, the changes will also apply to other users that have the permission set assigned.
+
+## To create or modify a permission set
+
+Permission sets function as containers of permissions, so that you can easily manage multiple permissions in one record.
+
+> [!NOTE]  
+> A [!INCLUDE[prod_short](includes/prod_short.md)] solution typically contains a number of predefined permission sets that are added by Microsoft or by your software provider. These permission sets are of type **System** or **Extension**. You cannot create or edit these types of permission sets or the permissions within them. However, you can copy them to define your own permission sets and permissions.
+>
+> Permission sets that users create, from new or as copies, are of type **User-Defined** and can be edited.
+
+### To create new permission set from scratch
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Permission Sets**, and then choose the related link.
+2. To create a new permission set, choose the **New** action.
+3. On the new line, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+When you have created a permission set, you must add the actual permissions. For more information, see [To create or modify permissions manually](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).
+
+### To copy a permission set
+
+You can also use a copy function to quickly carry all the permissions of another permission set to a new permission set.
+
+> [!NOTE]  
+> If a System permission set that you have copied is changed, you will be notified (depending on your selection), so that you can consider if the changes are relevant to copy or write into your user-defined permission set.
+
+1. On the **Permission Sets** page, select the line for a permission set that you want to copy, and then choose the **Copy Permission Set** action.
+2. On the **Copy Permission Set** page, specify the name of the new permission set, and then choose the **OK** button.
+3. Select the **Notify on Changed Permission Set** check box if you want to maintain a link between the original and the copied permission sets. The link is then used to notify you if the name or content of the original permission set changes in a future version that the solution is upgraded to later.
+
+The new permission set, containing all the permissions of the copied permission set, is added as a new line on the **Permission Sets** page. Now you can modify permission in the new permission set. Note that the lines are sorted alphabetically within each type.
+
+### To export and import a permission set
+
+To quickly set up permissions, you can import permission sets that you have exported from another [!INCLUDE[prod_short](includes/prod_short.md)] tenant.
+
+In multitenant environments, a permission set will be imported into a specific tenant, i.e. the scope of the import is "Tenant".
+
+1. In tenant 1, on the **Permission Sets** page, select the line or lines for the permission sets to export, and then choose the **Export Permission Sets** action.
+
+    An xml file is created in the download folder on your machine. By default it is named "Export Permission Sets.xml"
+
+2. In tenant 2, on the **Permission Sets** page, select the **Import Permission Sets** action.
+3. On the **Import Permission Sets** dialog page, consider if you want to merge existing permission sets with any new permission sets in the xml file.
+
+    If you select the **Update existing permissions** check box, existing permission sets with the same name as those that exist in the xml file will be merged with the imported permission sets.
+
+    If you do not select the **Update existing permissions** check box, permission sets with the same name as those that exist in the xml file will be skipped during import. In that case, you will be notified about permission sets that are skipped.
+
+4. From the **Import** dialog page, find and select the xml file to be imported, and then choose the **Open** action.
+
+The permission sets are imported.
+
+## To create or modify permissions manually
+
+This procedure explains how to add or edit permissions manually. You can also have a permissions generated automatically from your actions in the UI. For more information, see [To create or modify permissions by recording your actions](ui-define-granular-permissions.md#to-create-or-modify-permissions-by-recording-your-actions).
 
 > [!NOTE]
-> Členové skupiny uživatelů nejsou zkopírováni do nové skupiny uživatelů. Poté je musíte přidat ručně. Pro více informací navštivte [Seskupení uživatelů do skupin uživatelů](ui-define-granular-permissions.md#to-group-users-in-user-groups).
+> When you edit a permission and thereby the related permission set, the changes will also apply to other users that have the permission set assigned.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter **Skupiny uživatelů** a vyberte související odkaz.
-2. Vyberte skupinu uživatelů, kterou chcete kopírovat, a poté vyberte akci **Kopírovat skupinu uživatelů**.
-3. Do pole **Kód nové skupiny uživatelů** adejte název skupiny a poté vyberte tlačítko **OK**.
+1. On the **Permission Sets** page, select the line for a permission set, and then choose the **Permissions** action.
+2. On the **Permissions** page, create a new line or edit the fields on an existing line.
 
-Nová skupina uživatelů se přidá na stránku **Skupiny uživatelů** page. Pokračujte v přidávání uživatelů. Pro více informací navštivte [Seskupení uživatelů do skupin uživatelů](ui-define-granular-permissions.md#to-group-users-in-user-groups).
+In each of the five access type fields, **Read Permission**, **Insert Permission**, **Modify Permission**, **Delete Permission**, and **Execute Permission**, you can select one of the following three permission options:
 
-### Přiřazení sad oprávnění skupinám uživatelů
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter **Skupiny uživatelů** a vyberte související odkaz.
-2. Vyberte skupinu uživatelů, kterým chcete přiřadit oprávnění.
-   Všechny sady oprávnění, které jsou již přiřazeny uživateli, jsou zobrazeny v informačním okně **Sady oprávnění**.
-3. Zvolte tlačítko **Sady oprávnění uživatele** k otevření stránky **Sady oprávnění uživatele**.
-4. Na stránce **Sady oprávnění uživatele** a novém řádku vyplňte pole podle potřeby.
+|Option|Description|Ranking|
+|------|-----------|-------|
+|**Yes**|The user can perform the action on the object in question.|Highest|
+|**Indirect**|The user can perform the action on the object in question but only through another related object that the user has full access to. For more information about indirect permissions, see [Permissions Property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-permissions-property) in Developer and IT-Pro Help|Second highest|
+|**Blank**|The user cannot perform the action on the object in question.|Lowest|
 
-### Přiřazení sady oprávnění na stránce **Sada oprávnění dle skupiny uživatelů**
-Následující postup vysvětluje, jak přiřadit sady oprávnění skupině uživatelů na stránce **Sada oprávnění dle skupiny uživatelů**.
+### Example - Indirect Permission
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Uživatelé** a vyberte související odkaz.
-2. Na stránce **Uživatelé** vyberte příslušného uživatele a poté vyberte akci**Sada oprávnění dle skupiny uživatelů**.
-3. Na stránce **Sada oprávnění dle skupiny uživatelů** vyberte zaškrtávací políčko **[Název skupiny uživatelů]** na řádku pro příslušnou sadu oprávnění, která má přiřadit sadu skupině uživatelů.
-4. Zaškrtněte políčko **Všechny skupiny uživatelů** a přiřaďte sadu oprávnění všem skupinám uživatelů.
+You can assign an indirect permission to use an object only through another object.
+For example, a user can have permission to run codeunit 80, Sales-Post. The Sales-Post codeunit performs many tasks, including modifying table 37, Sales Line. When the user posts a sales document, the Sales-Post codeunit, [!INCLUDE[prod_short](includes/prod_short.md)] checks if the user has permission to modify theSales Line table. If not, the codeunit cannot complete its tasks, and the user receives an error message. If so, the codeunit runs successfully.
 
-## Odstranění zastaralých oprávnění ze všech sad oprávnění
-1. Na stránce **Sady oprávnění** vyberte **Odstranit zastaralá oprávnění**.
+However, the user does not need to have full access to the Sales Line table to run the codeunit. If the user has indirect permission for the Sales Line table, then the Sales-Post codeunit runs successfully. When a user has indirect permission, that user can only modify the Sales Line table by running the Sales-Post codeunit or another object that has permission to modify the Sales Line table. The user can only modify the Sales Line table when doing so from supported application areas. The user cannot run the feature inadvertently or maliciously by other methods.
 
-## Nastavení časových omezení uživatele
-Správci mohou definovat časové období, během kterého mohou zadaní uživatelé účtovat, a také určit, zda systém zaznamenává dobu, po kterou jsou uživatelé přihlášeni. Administrátoři mohou také uživatelům přiřadit centra odpovědnosti. Pro více informací navštivte [Práce s Centry zodpovědnosti](inventory-responsibility-centers.md).
+## To create or modify permissions by recording your actions
 
-1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Nastavení uživatelů** a poté vyberte související odkaz.
-2. Na stránce **Nastavení uživatelů** vyberte akci **Nový**.
-3. Do pole **ID uživatele** zadejte ID uživatele nebo vyberte pole pro zobrazení všech aktuálních uživatelů systému Windows v systému.
-4. Podle potřeby vyplňte pole.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Permission Sets**, and then choose the related link.
+2. Alternatively, on the **Users** page, choose the **Permission Sets** action.
+3. On the **Permission Sets** page, choose the **New** Action.
+4. On a new line, fill in the fields as necessary.
+5. Choose the **Permissions** action.
+6. On the **Permissions** page, choose the **Record Permissions** action, and then choose the **Start** action.
 
-## Viz také
-[Vytváření uživatelů dle licence](ui-how-users-permissions.md)  
-[Správa profilů](admin-users-profiles-roles.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)  
-[Úprava [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-customizing-overview.md)  
-[Připřavte se na business](ui-get-ready-business.md)  
-[Administrace](admin-setup-and-administration.md)  
-[Přidání uživatelů Office 365](https://aka.ms/CreateOffice365Users)  
-[Zabezpečení a ochrana v Business Central](/dynamics365/business-central/dev-itpro/security/security-and-protection) v Developer and IT-pro Help
+    This starts a recording process that captures all your action in the user interface.
+7. Go to the various pages and activities in [!INCLUDE[prod_short](includes/prod_short.md)] that you want users with this permission set to access. You must carry out the tasks that you want to record permissions for.
+8. When you want to finish the recording, return to the **Permissions** page, and then choose the **Stop** action.
+9. Choose the **Yes** button to add the recorded permissions to the new permission set.
+10. For each object in the recorded list, specify if users are able to insert, modify, or delete records in the recorded tables.
+
+## Security Filters - To limit a user's access to specific records in a table
+
+For record-level security in [!INCLUDE[prod_short](includes/prod_short.md)], you use security filters to limit a user's access to data in a table. You create security filters on table data. A security filter describes a set of records in a table that a user has permission to access. You can specify, for example, that a user can only read the records that contain information about a particular customer. This means that the user cannot access the records that contain information about other customers. For more information, see [Using Security Filters](/dynamics365/business-central/dev-itpro/security/security-filters) in Developer and IT-Pro help.
+
+## To manage permissions through user groups
+
+You can set up user groups to help you manage permission sets for groups of users in your company.
+
+You start by creating a user group. Then you assign permission sets to the group to define which object users of the group can access. When you add user to the group, the permission sets defined for the group will apply to the user.
+
+Permission sets assigned to a user through a user group stay synchronized so that a change to the user group permissions are automatically propagated to the user. If you remove a user from a user group, the involved permissions are automatically revoked.
+
+### To group users in user groups
+
+The following procedure explains how to create user groups manually. To create user groups automatically, see [To copy a user group and all its permission sets](ui-define-granular-permissions.md#to-copy-a-user-group-and-all-its-permission-sets).
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
+2. Alternatively, on the **Users** page, choose the **User Groups** action.
+3. On the **User Group** page, choose the **User Group Members** action.
+4. On the **User Group Members** page, choose the **Add Users** action.
+
+### To copy a user group and all its permission sets
+
+To quickly define a new user group, you can copy all permission sets from an existing user group to your new user group.
+
+> [!NOTE]
+> The user group members are not copied to the new user group. You must add them manually afterwards. For more information, see [To group users in user groups](ui-define-granular-permissions.md#to-group-users-in-user-groups).
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
+2. Select the user group that you want to copy, and then choose the **Copy User Group** action.
+3. In the **New User Group Code** field, enter a name for the group, and then choose the **OK** button.
+
+The new user group is added to the **User Groups** page. Proceed to add users. For more information, see [To group users in user groups](ui-define-granular-permissions.md#to-group-users-in-user-groups).  
+
+### To assign permission sets to user groups
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
+2. Select the user group that you want to assign permission to.
+Any permission sets that are already assigned to the user are displayed in the **Permission Sets** FactBox.
+3. Choose the **User Permission Sets** action to open the **User Permission Sets** page.
+4. On the **User Permission Sets** page, on a new line, fill in the fields as necessary.
+
+### To assign a permission set on the **Permission Set by User Group** page
+
+The following procedure explains how to assign permission sets to a user group on the **Permission Set by User Group** page.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+2. On the **Users** page, select the relevant user, and then choose the **Permission Set by User Group** action.
+3. On the **Permission Set by User Group** page, select the **[user group name]** check box on a line for the relevant permission set to assign the set to the user group.
+4. Select the **All User Groups** check box to assign the permission set to all user groups.
+
+## To remove obsolete permissions from all permission sets
+
+1. On the **Permission Sets** page, choose the **Remove Obsolete Permissions** action.
+
+## To set up user time constraints
+
+Administrators can define periods of time during which specified users are able to post, and also specify if the system logs the amount of time users are logged on. Administrators can also assign responsibility centers to users. For more information, see [Work with Responsibility Centers](inventory-responsibility-centers.md).
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Setup**, and then choose the related link.
+2. On the **User Setup** page opens, choose the **New** action.
+3. In the **User ID** field, enter the ID of a user, or choose the field to see all current Windows users in the system.
+4. Fill in the fields as necessary.
+
+
+## Viewing permission changes telemetry 
+
+You can set up [!INCLUDE[prod_short](includes/prod_short.md)] to send changes that are done to permission to an Application Insights resource in Microsoft Azure. Then, using Azure Monitor, you create reports and set up alerts on the gathered data. For more information, see the following articles in the [!INCLUDE[prod_short](includes/prod_short.md)] Developer and IT Pro help:
+
+- [Monitoring and Analyzing Telemetry - Enabling Application Insights](/dynamics365/business-central/dev-itpro/administration/telemetry-overview#enable)
+- [Analyzing Field Monitoring Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-permission-changes-trace)
+
+## See Also
+
+[Create Users According to Licenses](ui-how-users-permissions.md)  
+[Manage Profiles](admin-users-profiles-roles.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)]](ui-customizing-overview.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Administration](admin-setup-and-administration.md)  
+[Add Users to Microsoft 365 for business](/microsoft-365/admin/add-users/add-users)  
+[Security and Protection in Business Central](/dynamics365/business-central/dev-itpro/security/security-and-protection) in Developer and IT-pro Help
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

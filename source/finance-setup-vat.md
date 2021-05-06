@@ -1,190 +1,198 @@
 ---
-title: About Setting Up Value-Added Tax | Microsoft Docs
+title: Set Up Value-Added Tax
 description: Make sure that you correctly calculate, post, and report on VAT for sales and purchases.
 author: bholtorf
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: VAT, posting, tax, value-added tax
-ms.date: 01/13/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
 
-# Nastavení daně z přidané hodnoty
-Spotřebitelé a podniky platí daň z přidané hodnoty (DPH) při nákupu zboží nebo služeb. Výše DPH se může lišit v závislosti na několika faktorech. V [! INCLUDE [d365fin](includes/d365fin_md.md)] nastavíte DPH, k určení sazeb, které se použijí pro výpočet daně, na základě následujících kritérií:
+# Set Up Calculations and Posting Methods for Value-Added Tax
 
-* Komu prodáváte
-* Od koho nakupujete
-* Co prodáváte
-* Co kupujete
+Consumers and businesses pay value-added tax (VAT) when they purchase goods or services. The amount of VAT to pay can vary, depending on several factors. In [!INCLUDE[prod_short](includes/prod_short.md)], you set up VAT to specify the rates to use to calculate tax amounts based on the following:
 
-Výpočty DPH můžete nastavit ručně, ale to může být složité a časově náročné. Abychom vám to usnadnili, poskytujeme asistovaného průvodce nastavením s názvem **Nastavit DPH**, který vám pomůže udělat patřičné kroky. K nastavení DPH doporučujeme použít průvodce nastavením.
+* Who you sell to  
+* Who you buy from  
+* What you sell  
+* What you buy  
 
-> [!NOTE]  
-> Průvodce můžete použít pouze v případě, že jste vytvořili společnost a neúčtovali jste transakce, které zahrnují DPH. V opačném případě by bylo velmi snadné omylem použít různé sazby DPH a učinit sestavy související s DPH nepřesnými.
-
-Pokud si chcete sami stanovit výpočty DPH nebo se chcete o každém kroku dozvědět, toto téma obsahuje popisy jednotlivých kroků.
-
-## Použití asistovaného průvodce Nastavit DPH pro nastavení DPH
-Doporučujeme použít asistované nastavení Nastavit DPH pro nastavení DPH v [!INCLUDE[d365fin](includes/d365fin_md.md)].
-
-Chcete-li spustit průvodce asistovaným nastavením, postupujte takto:
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Asistované nastavení** a vyberte související odkaz.
-2. Vyberte **Nastavit DPH** a dokončete kroky.
-3. Po dokončení asistovaného nastavení navštivte stránku <x1 />Nastavení účtování DPH<x2 /> a zkontrolujte, zda je třeba vyplnit další pole podle Vaší země. Pro víc informací navštivte [Lokální funkcionality v Business Central](about-localization.md) .
-
-## Nastavení DIČ pro vaší zemi nebo oblast
-Chcete-li zajistit, aby lidé zadávali platná DIČ, můžete definovat formáty pro DIČ, která se používají v zemích nebo regionech, ve kterých podnikáte. [!INCLUDE[d365fin](includes/d365fin_md.md)] zobrazí chybovou zprávu, když někdo udělá chybu nebo použije formát, který je pro danou zemi nebo oblast nesprávný.
-
-Pro nastavení DIČ postupujte takto:
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Země/oblasti** a vyberte související odkaz.
-2. Vyberte zemi nebo oblast a péte vyberte tlačítko **Formáty  DIČ**.
-3. V poli **Formáty**, definujte formát zadáním jednoho nebo více z následujících znaků:
-
-* **#** vyžaduje jednociferné číslo.
-* **@** vyžaduje písmeno. Na velikosti písmen nezáleží.
-* **?** umožňuje libovolný znak.
-
-   > [!Tip]
-   > Můžete použít i jiné znaky, pokud jsou ve formátu vybrané země nebo oblasti.. Pokud například potřebujete zahrnout tečku nebo pomlčku mezi sadami čísel, můžete formát definovat jako ##.######## nebo @@@-###-####.
-
-## Nastavení DPH obchodních účto skupin
-Obchodní DPH účto skupiny by měly představovat trhy, na kterých obchodujete se zákazníky a prodejci, dále skupiny určijí, jak vypočítat a účtovat DPH na každém trhu. Příklad obchodních DPH účto skupin jsou **Domácí** and **Evropská unie (EU)**.
-
-Používejte kódy, které jsou snadno zapamatovatelné a popisují obchodní účto skupinu, například **EU**, **EXPORT**, nebo **DOMÁCÍ**. Kód musí být jedinečný. Můžete nastavit libovolný počet kódů, ale nemůžete mít stejný kód více než jednou v tabulce.
-
-Pro nastavení DPH obchodních účto skupin postupujte takto:
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **DPH obchodní účto skupiny** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
-
-Výchozí DPH obchodní účto skupiny nastavíte jejich propojením s obecnými obchodními účto skupinami. [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky přiřadí DPH obchodní účto skupinu při přiřazení obchodní účto skupiny k zákazníkovi, dodavateli nebo účtu.
-
-## Nastavení DPH účto skupin zboží
-DPH účto skupiny zboží reprezentují zboží a zdrojde, které kupujete nebo prádáváte a určují jak se bude počítat DPH podle typu zboží nebo zdroje a zda se nakupuje nebo prodává.  
-Je vhodné používat kódy, které jsou snadno zapamatovatelné a popisují sazbu, například **BEZ DPH** nebo **NULOVE**, **DPH10** nebo **REDUKOVANA** pro 10% DPH a **DPH25** nebo **STANDARD** pro 25%.
-
-Pro nastavení DPH obchodních účto skupin postupujte takto:
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **DPH účto skupiny zboží** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
-
-## Kombinace DPH účto skupin v nastavení účtování DPH
-[!INCLUDE[d365fin](includes/d365fin_md.md)] vypočítá částky DPH za prodeje a nákup na základě nastavení účtování DPH, což jsou kombinace DPH obchodních účto skupin a DPH účto skupin zboží. Pro každou kombinaci můžete zadat procento DPH, typ výpočtu DPH a účty pro účtování DPH za prodej, nákup a vratky. Můžete také určit, zda se má přepočítat DPH při uplatnění nebo obdržení skonta.
-
-Nastavte tolik kombinací, kolik potřebujete. Pokud chcete seskupit kombinace nastavení účtování DPH s podobnými atributy, můžete definovat **Identifikátor DPH** pro každou skupinu a přiřadit identifikátor členům skupiny.
-
-Chcete-li kombinovat nastavení účtování DPH, postupujte takto:
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení účtování DPH** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
-
-## Přiřazení Účto skupin DPH ve výchozím nastavení k více entitám
-Pokud chcete použít stejné účto skupiny DPH pro více entit, můžete nastavit [!INCLUDE[d365fin](includes/d365fin_md.md) ] tak učinit ve výchozím nastavení. Existuje několik způsobů, jak to udělat:
-
-* Obchodní účto skupiny DPH můžete přiřadit k obecným obchodním účto skupinám nebo k šablonám zákazníků nebo dodavatelů.
-* Můžete přiřadit DPH účto skupiny zboží k obecným účto skupinám zboží.
-
-Dph obchodní nebo účto skupina zboží je přiřazena při výběru obchodní nebo zbožové účto skupině pro zákazníky, dodavatele, zboží nebo zdroj.
-
-## Přiřazení DPH účto skupin k účtům, zákazníkům, dodavatelům, zboží a zdrojům
-Následující části popisují, jak přiřadit DPH účto skupiny k jednotlivým subjektům.
-
-### Přiřazení DPH účto skupin k jednotlivým účtům hlavní knihy
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Účetní osnova** a vyberte související odkaz.
-2. Otevřete kartu **Účtu účetní osnovy** pro vybraný účet.
-3. Na záložce **Účtování** v poli **Typ obecného účtování**, vybertě buď **Prodej** nebo **Nákup**.
-5. Zvolte DPH účto skupiny, které chcete použít pro prodejní nebo nákupní účet.
-
-### Přiřazení DPH obchodních účto skupin zákazníkům a dodavatelům
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zákazníci** nebo **Dodavatelé** a vyberte související odkaz.
-2. Na kartě **Zákazníka** nebo **Dodavatele**, rozbalte záložku **Fakturace**.
-3. Vyberte DPH obchodní účto skupinu.
-
-### Přiřazení DPH účto skupin zboží k jednotlivému zboží a zdrojům
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** nebo **Zdroje** a vyberte související odkaz.
-2. Proveďte jeden z následujících úkonů:
-
-* Na kartě **Zboží** rozbalte záložku **Cena a Účtování** a použijte tlačítko **Zobrazit více polí** k zobrazení políčka **DPH účto skupina zboží**.
-* Na kartě **Zdroje**, rozbalte záložku **Fakturace**.
-3. Vyberte DPH účto skupinu zboží.
-
-## Nastavení doložek k vysvětlení osvobození od DPH nebo nestandardních DPH sazeb
-Nastavte klauzuli DPH popisující informace o typu DPH, která je použita. Informace mohou být vyžadovány nařízením vlády. Po nastavení klauzule DPH a přidružení k nastavení účtování DPH, se klauzule DPH zobrazí na vytištěných prodejních dokladech, které používají účto skupiny nastavení DPH.
-
-V případě potřeby můžete také určit, jak převést klauzule DPH do jiných jazyků. Potom při vytváření a tisku prodejního dokladu, který obsahuje identifikátor DPH, bude dokument obsahovat přeloženou klauzuli DPH. Kód jazyka uvedený na kartě zákazníka určuje jazyk.
-
-Pokud jsou nestandardní sazby DPH používány v různých typech dokumentů, jako jsou faktury nebo dobropisy, musí společnosti obvykle uvést text osvobození (klauzuli o DPH), v níž je uvedeno, proč byla vypočtena snížená nebo nulová sazba DPH. Můžete definovat různé klauzule DPH, které mají být zahrnuty do obchodních dokladů podle typu dokladu, například faktury nebo dobropisu. Můžete nastavení udělat na stránce **Klauzule DPH**.
-
-Můžete upravit nebo odstranit klauzuli DPH a změny se následně projeví ve vygenerované sestavě. Nicméně, [!INCLUDE[d365fin](includes/d365fin_md.md)] neuchovává historii změny. V sestavě jsou popisy klauzule DPH vytištěny a zobrazeny pro všechny řádky v sestavě vedle částky DPH a základní částky DPH. Pokud nebyla klauzule DPH definována pro žádné řádky v prodejním dokladu, je při tisku sestavy vynechán celý oddíl.
-
-### Nastavení klauzule DPH
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Klauzule DPH** a vyberte související odkaz.
-2. Na stránce **Klauzule DPH** vytvořte nový řádek.
-3. V poli **Kód** zadejte identifikátor klauzule. Pomocí tohoto kódu přiřadíte klauzuli skupinám účtování DPH.
-4. V poli **Popis** zadejte text osvobození DPH, který chcete zobrazit v dokumentech, které mohou zahrnovat DPH. V poli **Popis 2** zadejte v případě potřeby další text. Text se zobrazí na nových řádcích dokumentu.
-5. Vyberte tlačítko **Popis dle typu dokladu**.
-6. Na stránce **Popis dle typu dokladu**, vyplňte pole, abyste nastavili, jaký text osvobození DPH se zobrazí pro který typ dokumentu.
-7. Volitelné: Chcete-li klauzuli DPH přiřadit k nastavení účtování DPH ihned, zvolte **Nastavení** a následně vyberte klauzuli. Pokud chcete počkat, můžete klauzuli přiřadit později na stránce **Nastavení účtování DPH**.
-8. Volitelné: Chcete-li určit, jak se má překládat doložka o DPH, vyberte akci **Překlady**.
-
-### Přiřazení klauzule DPH k nastavení účtování DPH
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení účtování DPH** a vyberte související odkaz.
-2. Ve sloupci **Klauzule DPH** zvolte klauzuli, která se má použít pro každé nastavení účtování DPH, na které se vztahuje.
-
-### Nastavení překladů pro klauzule DPH
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Klauzule DPH** a vyberte související odkaz.
-2. Vyberte tlačítko **Překlady**.
-3. V poli **Kód jazyka** vyberte požadovaný jazyk.
-4. V polích **Popis** a **Popis 2**, vložte překlady popisů. Tento text se zobrazí v přeložených dokladech DPH.
-
-## Nastavení účtování DPH pro zpracování importní DPH
-Funkce Importní DPH se používá v případě, že potřebujete zaúčtovat doklad, kde je celá částka DPH. Tuto možnost použijete, pokud obdržíte od finančního úřadu fakturu na DPH za dovážené zboží.
-
-Pro nastavení kódů pro importní DPH postupujte takto:
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **DPH účto skupiny zboží** a vyberte související odkaz.
-2. Na stránce DPH účto skupiny zboží nastavte novou DPH účto skupinu zboží pro importní DPH.
-3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení účtování DPH** a vyberte související odkaz.
-4. Na stránce Nastavení účtování DPH vytvořte nový řádek nebo použijte existující DPH obchodní účto skupiny v kombinaci s novou DPH účto skupinou zboží pro importní DPH.
-5. V poli **Typ výpočtu DPH**, vyberte **Plná DPH**.
-6. V poli  **Účet nákupní DPH** zadejte účet, na který chcete použít k zaúčtování dovozní DPH. Všechny ostatní účty jsou volitelné.
-
-
-## Použití vratné DPH pro obchod mezi zeměmi nebo oblastmi EU
-Některé společnosti musí při obchodování s jinými společnostmi používat vratnou DPH. Toto pravidlo se například vztahuje na nákupy ze zemí nebo oblastí EU a prodej do zemí nebo oblastí EU.
+You can set up VAT calculations manually, but that can be tricky and time consuming. To make it easy, we provide an assisted setup guide named **VAT Setup** that will help you with the steps. We recommend that you use the assisted setup guide to set up VAT.
 
 > [!NOTE]  
-> Toto pravidlo platí při obchodování se společnostmi, které jsou registrovány jako plátce DPH v jiné zemi EU. Pokud obchodujete přímo se spotřebiteli v jiných zemích nebo oblastech EU, měli byste se obrátit na svůj daňový úřad s žádostí o příslušná pravidla DPH.
+> You can use the guide only if you have created a My Company, and have not posted transactions that include VAT. Otherwise, it would be very easy to use different VAT rates by mistake, and make VAT-related reports inaccurate.  
+
+If you want to set up VAT calculations yourself, or just want to learn about each step, this topic contains descriptions of each step.
+
+## To use the VAT Setup assisted setup guide to set up VAT (recommended)
+
+We recommend that you use the VAT Setup assisted setup guide to set up VAT in [!INCLUDE[prod_short](includes/prod_short.md)].
+
+To start the assisted setup guide, follow these steps:
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assisted Setup**.  
+2. Choose **Set up VAT** and complete the steps.
+3. When you have completed the assisted setup, visit the **Vat Posting Setup** page and check if you have to fill in additional fields according to the local requirements in your version pf [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Local functionality in Business Central](about-localization.md)  
+
+## To set up VAT registration numbers for your country or region
+
+To help ensure that people enter valid VAT registration numbers, you can define formats for the VAT registration numbers that are used in the countries or regions in which you do business. [!INCLUDE[prod_short](includes/prod_short.md)] will display an error message when someone makes a mistake or uses a format that is incorrect for the country or region.
+
+To setup VAT registration numbers, follow these steps:
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Countries/Regions**.
+2. Choose the country or region, and then choose the **VAT Reg. No. Formats** action.
+3. In the **Formats** field, define the format by entering one or more of the following characters:  
+
+* **#** Requires a single-digit number.  
+* **@** Requires a letter. This is not case-sensitive.  
+* **?** Allows any character.  
+
+    > [!Tip]
+    > You can use other characters as long as they are always present in the country or region format. For example, if you need to include a period or a hyphen between sets of numbers, you can define the format as ##.####.### or @@-###-###.  
+
+## To set up VAT business posting groups
+VAT business posting groups should represent the markets in which you do business with customers and vendors, and define how to calculate and post VAT in each market. Examples of VAT business posting groups are **Domestic** and **European Union (EU)**.  
+
+Use codes that are easy to remember and describe the business posting group, such as **EU**, **Non-EU**, or **Domestic**. The code must be unique. You can set up as many codes as you need, but you cannot have the same code more than once in a table.
+
+To set up a VAT business posting group, follow these steps:
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Business Posting Group**, and then choose the related link.  
+2. Fill in the fields as necessary.
+
+You set up default VAT business posting groups by linking them to general business posting groups. [!INCLUDE[prod_short](includes/prod_short.md)] automatically assigns the VAT business posting group when you assign the business posting group to a customer, vendor, or general ledger account.
+
+## To set up VAT product posting groups
+VAT product posting groups represent the items and resources you buy or sell, and determine how to calculate and post VAT according to the type of item or resource that is being bought or sold.  
+It is a good idea to use codes that are easy to remember and describe the rate, such as **NO-VAT** or **Zero**, **VAT10** or **Reduced** for 10% VAT, and **VAT25** or **Standard** for 25%.
+
+To set up a VAT business posting group, follow these steps:
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Product Posting Groups**, and then choose the related link.  
+2. Fill in the fields as necessary.
+
+## To combine VAT posting groups in VAT posting setups
+[!INCLUDE[prod_short](includes/prod_short.md)] calculates VAT amounts on sales and purchases based on VAT posting setups, which are combinations of VAT business and product posting groups. For each combination, you can specify the VAT percent, VAT calculation type, and general ledger accounts for posting VAT for sales, purchases, and reverse charges. You can also specify whether to recalculate VAT when a payment discount is applied or received.  
+
+Set up as many combinations as you need. If you want to group VAT posting setup combinations with similar attributes, you can define a **VAT Identifier** for each group, and assign the identifier to the group members.
+
+To combine VAT posting setups, follow these steps:
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Posting Setup**, and then choose the related link.
+2. Fill in the fields as necessary.
+
+## To assign VAT posting groups by default to multiple entities
+If you want to apply the same VAT posting groups to multiple entities, you can set up [!INCLUDE[prod_short](includes/prod_short.md)] to do so by default. There are a couple of ways to do this:
+
+* You can assign VAT business posting groups to general business posting groups, or customer or vendor templates
+* You can assign VAT product posting groups on general product posting groups  
+
+The VAT business or product posting group is assigned when you choose a business or product posting group for a customer, vendor, item, or resource.
+
+## Assigning VAT Posting Groups to Accounts, Customers, Vendors, Items, and Resources
+The following sections describe how to assign VAT posting groups to individual entities.
+
+### To assign VAT posting groups to individual general ledger accounts
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
+2. Open the **G/L Account** card for the account.  
+3. On the **Posting** FastTab, in the **Gen. Posting Type** field, choose either **Sale** or **Purchase**.  
+5. Choose the VAT posting groups to use for the sales or purchase account.  
+
+### To assign VAT business posting groups to customers and vendors  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer** or **Vendor**, and then choose the related link.  
+2. On the **Customer** or **Vendor** card, expand the **Invoicing** FastTab.  
+3. Choose the VAT business posting group.  
+
+### To assign VAT product posting groups to individual items and resources  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item** or **Resource**, and then choose the related link.  
+2. Do one of the following:  
+
+* On the **Item** card, expand the **Price & Posting** FastTab, and then choose **Show more** to display the **VAT Product Posting Group** field.  
+* On the **Resource** card, expand the **Invoicing** FastTab.  
+3. Choose the VAT product posting group.  
+
+## Setting Up Clauses to Explain VAT Exemption or Non-Standard VAT Rates
+You set up a VAT clause to describe information about the type of VAT that is being applied. The information may be required by government regulation. After you set up a VAT clause, and associate it with a VAT posting setup, the VAT clause is displayed on printed sales documents that use the VAT posting setup group.
+
+If needed, you can also specify how to translate VAT clauses to other languages. Then, when you create and print a sales document that contains a VAT identifier, the document will include the translated VAT clause. The language code specified on the customer card determines the language.
+
+When non-standard VAT rates are used in different types of documents, such as invoices or credit memos, companies are usually required to include an exemption text (VAT clause) stating why a reduced VAT or zero VAT rate has been calculated. You can define different VAT clauses to be included on business documents per the type of document, such as invoice or credit memo. You do this on the **VAT Clauses by Doc. Type** page.
+
+You can modify or delete a VAT clause, and your modifications will be reflected in a generated report. However, [!INCLUDE[prod_short](includes/prod_short.md)] does not keep a history of the change. On the report, the VAT clause descriptions are printed and displayed for all lines in the report alongside the VAT amount and the VAT base amount. If a VAT clause has not been defined for any lines on the sales document, then the whole section is omitted when the report is printed.
+
+### To set up VAT clauses
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Clauses**, and then choose the related link.  
+2. On the **VAT Clauses** page, create a new line.  
+3. In the **Code** field, enter an identifier for the clause. You use this code to assign the clause to VAT posting groups.  
+4. In the **Description** field, enter the VAT exemption text that you want to display on documents that can include VAT. In the **Description 2** field, enter additional text, if needed. The text will be displayed on new document lines.
+5. Choose the **Description by Document Type** action.
+6. On the **VAT Clauses by Doc. Type** page, fill in the fields to set up which VAT exemption text to display for which document type.  
+7. Optional: To assign the VAT clause to a VAT posting setup right away, choose **Setup**, and then choose the clause. If you want to wait, you can assign the clause later on the **VAT Posting Setup** page.  
+8. Optional: To specify how to translate the VAT clause, choose the **Translations** action.
+
+### To assign a VAT clause to a VAT posting setup
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Posting Setup**, and then choose the related link.  
+2. In the **VAT Clause** column, choose the clause to use for each VAT posting setup it applies to.  
+
+### To specify translations for VAT clauses
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Clauses**, and then choose the related link.  
+2. Choose the **Translations** action.  
+3. In the **Language Code** field, choose the language you are translating to.  
+4. In the **Description** and **Description 2** fields, enter the translations of the descriptions. This text displays in the translated VAT report documents.  
+
+## To create a VAT posting setup to handle Import VAT
+You use the Import VAT feature when you need to post a document where the entire amount is VAT. You will use this if you receive an invoice from the tax authorities for VAT for imported goods.  
+
+To set up codes for import VAT, follow these steps:  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Product Posting Groups**, and then choose the related link.  
+2. On the VAT Product Posting Groups page, set up a new VAT product posting group for import VAT.  
+3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Posting Setup**, and then choose the related link.  
+4. On the VAT Posting Setup page, create a new line, or use an existing VAT business posting groups in combination with the new VAT product posting group for import VAT.  
+5. In the **VAT Calculation Type** field, choose **Full VAT**.  
+6. In the **Purchase VAT Account** field, enter the general ledger account to use for posting import VAT. All other accounts are optional.  
+
+
+## Using Reverse Charge VAT for Trade between EU Countries or Regions
+Some companies must use reverse charge VAT when trading with other companies. For example this rule applies to purchases from EU countries/regions and sales to EU countries/regions.  
+
+> [!NOTE]  
+> This rule applies when trading with companies that are registered as VAT liable in another EU country/region. If you do business directly with consumers in other EU countries/regions, then you should contact your tax authority for applicable VAT rules.  
 
 > [!TIP]  
-> Ověřením, že společnost je registrována jako plátce DPH v jiné zemi EU, použijte službu ověřování DIČ v EU. Služba je k dispozici zdarma v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pro více informace navštivte sekci _Ověření DIČ_.
+> You can verify that a company is registered as VAT liable in another EU country by using the EU VAT Registration Number Validation service. The service is available for free in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see the section titled _Verify VAT registration numbers_ in this topic.
 
-### Prodej do zemí EU
-DPH se nepočítá z prodeje společnostem povinným k DPH v jiných zemích nebo oblastech EU. Hodnotu těchto prodejů musíte nahlásit do zemí EU samostatně ve svém daňovém přiznání.
+### Sales to EU Countries or Regions
+VAT is not calculated on sales to VAT-liable companies in other EU countries/regions. You must report the value of these sales to EU countries/regions separately on your VAT statement.  
 
-Chcete-li správně vypočítat DPH z prodeje do zemí nebo oblastí EU, měli byste udělat:
+To correctly calculate VAT on sales to EU countries/regions, you should:  
 
-* Založte řádek pro prodej se stejnými informacemi pro nákupy. Pokud jste již nastavili řádky na stránce Nastavení účtování DPH pro nákupy ze zemí nebo oblastí EU, můžete tyto řádky použít také pro prodej.
-* Přiřaďte DPH obchodní účto skupiny v  poli **DPH obchodní účto skupina** na záložce **Fakturace** na kartě každého zákazníka EU. DIČ zákazníka byste měli také zadat do pole**DIČ** v záložce **Zahraniční obchod**.
+* Set up a line for sales with the same information for purchases. If you have already set up lines on the VAT Posting Setup page for purchases from EU countries/regions, then you can also use these lines for sales.  
+* Assign the VAT business posting groups in the **VAT Bus. Posting Group** field on the **Invoicing** FastTab of the customer card of each EU customer. You should also enter the customer's VAT registration number in the **VAT Registration No.** field on the **Foreign Trade** FastTab.  
 
-Když účtujete prodej zákazníkovi v jiné zemi nebo oblasti EU, vypočítá se částka DPH a položka DPH se vytvoří pomocí informací o přenesené daňové povinnosti DPH a základu DPH, což je částka, která se používá k výpočtu částky DPH. Na účtech DPH nejsou v hlavní knize zaúčtovány žádné položky.
+When you post a sale to a customer in another EU country/region, the VAT amount is calculated, and a VAT entry is created by using the information about the reverse charge VAT and the VAT base, which is the amount that is used to calculate the VAT amount. No entries are posted to the VAT accounts in the general ledger.
 
-## Principy zaokrouhlení DPH v dokladech
-Částky v dokladech, které ještě nejsou zaúčtovány, jsou zaokrouhleny a zobrazeny tak, aby odpovídaly konečnému zaokrouhlení částek, které jsou skutečně zaúčtovány. DPH se vypočítá pro celý doklad, což znamená, že DPH je vypočtena na základě součtu všech řádků se stejnou sazbou DPH v dokladu.
-
-
+## Understanding VAT Rounding for Documents
+Amounts in documents that are not yet posted are rounded and displayed to correspond with the final rounding of amounts that are actually posted. VAT is calculated for a complete document, which means that VAT is calculated based on the sum of all lines with the same VAT identifier in the document.
 
 
-## Viz také
-[Nastavení šablony výkazu DPH a názvů výkazů DPH](finance-how-setup-vat-statement.md)   
-[Nastavení nerealizované DPH](finance-setup-unrealized-vat.md)      
-[Hlášení DPH finančním úřadům](finance-how-report-vat.md)      
-[Práce s DPH v nákupu a prodeji](finance-work-with-vat.md)    
-[Práce s změnou sazby DPH](finance-how-use-vat-rate-change-tool.md)    
-[Ověření DIČ](finance-how-validate-vat-registration-number.md)  
-[Lokální funkcionality v Business Central](about-localization.md)
 
-## Viz související školení v programu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
+
+## See Also
+[Setting up VAT Statement Templates and VAT Statement Names](finance-how-setup-vat-statement.md)   
+[Setting Up Unrealized Value Added Tax](finance-setup-unrealized-vat.md)      
+[Report VAT to a Tax Authority](finance-how-report-vat.md)      
+[Work with VAT on Sales and Purchases](finance-work-with-vat.md)    
+[Work with the VAT Rate Change Tool](finance-how-use-vat-rate-change-tool.md)    
+[Verify VAT registration numbers](finance-how-validate-vat-registration-number.md)  
+[Local functionality in Business Central](about-localization.md)  
+
+## See Related Training at [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

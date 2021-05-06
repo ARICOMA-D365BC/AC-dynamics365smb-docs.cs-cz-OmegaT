@@ -9,39 +9,39 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, general ledger, post
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Přehled účtování řádku finančního deníku
-Codeunit 12, **Gen. Jnl.-Post Line**, je hlavní objekt aplikace pro účtování finančího deníku a je jediným místem pro vložení věcných položek, položek DPH, zákazníka a dodavatele. Codeunita se také používá pro vyrovnávání, zrušení vyrovnání a rezervace.
-
-I když byla Codeunita vylepšena v každém vydání za posledních deset let, její architektura zůstala v podstatě nezměněna. Codeunita byla velmi velká a měla přibližně 7600 řádků kódu. S vydáním [!INCLUDE[prod_short](includes/prod_short.md)], se architektura změnila a procedura byla zjednodušena a více udržovatelnější. Tato dokumentace představuje změny a poskytuje informace, které budete potřebovat pro upgrade.
-
-## Stará architektura
-Stará architektura měla následující vlastnosti:
-
-* Existovalo rozsáhlé využití globálních proměnných, což zvýšilo možnost skrytých chyb v důsledku použití proměnných se špatným rozsahem.
-* Existovalo mnoho dlouhých procedur (s více než 100 řádky kódu) tkteré měly také vysokou cyklomatickou složitost (tj. Mnoho vnořených příkazů CASE, REPEAT a IF), což velmi ztěžuje čtení a údržbu kódu
-* Několik procedur, které byly použity pouze lokálně a byly určeny pouze k lokálnímu použití, nebylo označeno jako lokální.
-* Většina procedur neměla žádné parametry a používala globální proměnné. Některé použité parametry a přetížené globální proměnné s lokálními.
-* Vzory kódu pro vyhledávání ve věcných položkách, vytváření položek a položek DPH nebyly standardizovány a lišily se od místa k místu. Kromě toho došlo k mnoha duplikacím kódu a přerušení symetrii mezi kódem zákazníka a dodavatele.
-* Velká část kódu v Codeunitě 12, přibližně 30 procent, souvisela s výpočty slevy a tolerancí plateb, i když tyto funkce nejsou v mnoha zemích nebo oblastech potřebné.
-* Účtování, Vyrovnání, Zrušení vyrovnání, Stornování, Skonto, Odchylky a Úprava směnných kurzů byly společně v Codeunitě 12 pomocí dlouhého seznamu globálních proměnných.
-
-### Nová Architektura
-V [!INCLUDE[prod_short](includes/prod_short.md)], codeunit 12 prošla následující úpravou:
-
-* Codeunita 12 byla přepracována do menších procedur (všechny méně jak 100 řádků kódu).
-* Standardizované vzory pro vyhledávání účtů hlavní knihy byly implementovány pomocí pomocových funkcí z tabulek účto skupin.
-* Architektura účtovacího modulu byla implementována pro správu zahájení a dokončení transakcí a pro izolaci vytváření do položek hlavní knihy a položek DPH, inkasa úpravy DPH a výpočtu dalších částek měny.
-* Duplikace kódu byla odstraněna.
-* Mnoho pomocných funkcí bylo převedeno do odpovídajících tabulek položek zboží, zákazníka a dodavatele.
-* Použití globálních proměnných bylo minimalizováno, takže každá procedura používá parametry a zapouzdřuje vlastní aplikační logiku.
-
-## Viz také
-[Detaily návrhu: Struktura rozhraní účtování](design-details-posting-interface-structure.md)   
-[Detaily návrhu: Struktura enginu účtování](design-details-posting-engine-structure.md)
+# General Journal Post Line Overview
+Codeunit 12, **Gen. Jnl.-Post Line**, is the major application object for general ledger posting and is the only place to insert general ledger, VAT, and customer and vendor ledger entries. This codeunit is also used for all Apply, Unapply and Reverse operations.  
+  
+While the codeunit has been improved in each release over the last ten years, its architecture remained essentially unchanged. The codeunit became very large, with approximately 7,600 code lines. With this release of [!INCLUDE[prod_short](includes/prod_short.md)], the architecture is changed and the codeunit has been made simpler and more maintainable. This documentation introduces the changes and provides information that you will need for upgrade.  
+  
+## Old Architecture  
+The old architecture had the following features:  
+  
+* There was extensive use of global variables, which increased the possibility of hidden errors due to use of variables with the wrong scope.  
+* There were many long procedures (with more than 100 code lines) that also had high cyclomatic complexity (that is, a lot of CASE, REPEAT, IF nested statements), which made the code very difficult to read and maintain.  
+* Several procedures that were only used locally and were only meant to be used locally were not marked as local.  
+* Most procedures had no parameters and used global variables. Some used parameters and overrode global variables with locals.  
+* Code patterns for searching the general ledger accounts and creating general ledger and VAT entries was not standardized and varied from place to place. In addition, there was a lot of code duplication and broken symmetry between customer and vendor code.  
+* A large part of the code in codeunit 12, approximately 30 percent, related to payment discount and tolerance calculations, although these features are not needed in many countries or regions.  
+* Posting, Apply, Unapply, Reverse, Payment Discount and Tolerance, and Exchange Rate Adjustment were married together in codeunit 12 using a long list of global variables.  
+  
+### New Architecture  
+In [!INCLUDE[prod_short](includes/prod_short.md)], codeunit 12 has had the following improvements:  
+  
+* Codeunit 12 has been refactored into smaller procedures (all less than 100 code lines).  
+* Standardized patterns for the search of general ledger accounts have been implemented by using helper functions from Posting Group tables.  
+* A Posting Engine Framework has been implemented to manage the start and finish of transactions and to isolate the creation to general ledger and VAT entries, the collection of VAT adjustment, and the calculation of additional currency amounts.  
+* Code duplication has been eliminated.  
+* Many helper functions have been transferred to corresponding customer and vendor ledger entry tables.  
+* The use of global variables has been minimized, so that each procedure uses parameters and encapsulates its own application logic.  
+  
+## See Also  
+[Design Details: Posting Interface Structure](design-details-posting-interface-structure.md)   
+[Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

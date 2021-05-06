@@ -1,61 +1,74 @@
 ---
     title: How to Create Prepayment Invoices | Microsoft Docs
     description: Learn how to handle situations where you require prepayment, or your vendor does.
-    author: SorenGP
+    author: edupont04
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Vytvoření zálohové faktury
-Pokud požadujete, aby vaši zákazníci před odesláním objednávky odeslali platbu, nebo pokud váš prodejce požaduje, abyste odeslali platbu před odesláním objednávky, můžete použít funkci zálohy.
+# Create Prepayment Invoices
 
-Po vytvoření prodejní nebo nákupní objednávky můžete vytvořit zálohovou fakturu. Pro každý prodejní nebo nákupní řádek můžete použít výchozí procenta nebo můžete podle potřeby upravit částku. Můžete například zadat celkovou částku pro celou objednávku.
+If you require your customers to submit payment before you ship an order to them, you can use the prepayment functionality. The same applies if your vendor requires you to submit payment before they ship an order to you.  
 
-Následující postup popisuje, jak fakturovat zálohu z prodejní objednávky. Kroky jsou podobné pro nákupní objednávky.
+You can start the prepayment process when you create a sales or purchase order. If you have a default prepayment percentage for this customer or vendor, that will be included automatically in the resulting prepayment invoice. You can also specify a prepayment percentage to the entire document.
 
-## Vytvoření zálohové faktury
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Vytvořte novou prodejní objednávku. Pro více informací navštivte [Prodej produktů](sales-how-sell-products.md).
+After you create a sales or purchase order, you can create a prepayment invoice. You can use the default percentages for each sales or purchase line, or you can adjust the amount as necessary. For example, you can specify a total amount for the entire order.  
 
-   Na záložce **Záloha** se pole **Záloha (%)** vyplní automaticky, pokud je na kartě zákazníka výchozí procento zálohy. Můžete změnit obsah pole. Procento zálohy je zkopírováno z hlavičky pouze na řádky, které nekopírují výchozí procento zálohy z položky.
+The following procedure describes how to invoice a prepayment for a sales order. The steps are similar for purchase orders.  
 
-   Pokud je vybráno pole **Slučovat zálohy**, budou řádky na faktuře sloučeny, pokud:
-   - Mají stejný účet hlavní knihy pro zálohy, jak je stanoveno v obecném nastavení účtování.
-   - Mají stejné dimenze.
-   Pole ponechejte prázdné, pokud chcete zadat zálohovou fakturu s jedním řádkem pro každý řádek prodejní objednávky, který má procento zálohy.
+## To create a prepayment invoice
 
-3. Vyplňte prodejní řádky.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
+2. Create a new sales order for the relevant customer. For more information, see [Sell Products](sales-how-sell-products.md).  
 
-   Pokud byly pro vaše položky nastaveny výchozí procenta záloh, budou automaticky zkopírovány do pole **Záloha (%)** na řádku. V opačném případě je procentuální částka zálohy zkopírována z hlavičky. Na řádku můžete změnit obsah pole **Záloha (%)**.
-4. Pokud chcete použít jedno procento zálohy na celou objednávku, změňte pole **Záloha (%)** v záhlaví po vyplnění řádků.
-5. Chcete-li zobrazit celkovou částku zálohy, vyberte akci **Statistika**.
+    On the **Prepayment** FastTab, the **Prepayment %** field specifies the percentage to use to calculate the prepayment amount. If there is a default prepayment percentage on the customer card, the field is filled in automatically. You can change the percentage. <!--This percentage is applied to lines where the item on that line does not already specify a prepayment percentage. The prepayment percentage is only copied from the header to lines that do not copy the default prepayment percentage from the item.-->  
 
-   Pokud chcete upravit celkovou částku zálohy pro objednávku, můžete změnit obsah pole **Částka zálohy** na stránce **Statistika prodejní objednávky**.
+    Choose the **Compress Prepayment** field if you want to create lines on the prepayment invoice that combine lines from the sales order if:  
 
-   Pokud je vybráno pole **Ceny včetně DPH** můžete pole **Částka zálohy včetně  DPH** upravovat.
+    - They have the same general ledger account for prepayments as determined by the general posting setup.  
+    - They have the same dimensions.  
 
-   Pokud změníte obsah pole **Částka zálohy**, bude částka rozdělena proporcionálně mezi všechny řádky, s výjimkou těch, které mají **0** v poli **Záloha (%)**.
-6. Chcete-li vytisknout zkušební zprávu před zaúčtováním zálohové faktury, vyberte akci **Záloha** a poté vyberte akci **Testovací sestava zálohy**.
-7. Chcete-li zaúčtovat zálohovou fakturu, vyberte akci **Záloha** a poté vyberte akci **Zaúčtovat zálohovou fakturu**.
+    If you want to specify a prepayment invoice with one line for each sales order line that has a prepayment percentage, then do not choose the **Compress Prepayment** field.  
 
-   Chcete-li zaúčtovat a vytisknout zálohovou fakturu, vyberte akci **Zaúčtovat a vytisknout zálohovou  fakturu**.
+    The due date for the prepayment is calculated automatically based on the value of the **Prepmt. Payment Terms Code**.
 
-Pro objednávku můžete vystavit další zálohovou faktury. Chcete-li to provést, zvyšte částku zálohy na jednom nebo více řádcích, v případě potřeby upravte datum dokladu a zaúčtujte zálohovou fakturu. Pro rozdíl mezi dosud fakturovanými částkami zálohy a novou částkou zálohy bude vytvořena nová faktura.
+3. Fill in the sales lines.  
 
-> [!NOTE]
-> Pokud se nacházíte v Severní Americe, nemůžete po zaúčtování faktury změnit procentní sazbu zálohy. Tomu je zabráněno v severoamerické verzi [!INCLUDE[d365fin](includes/d365fin_md.md)], protože výpočet daně z prodeje bude jinak nesprávný.
+    If you have specified a default prepayment percentage either for the customer or on the **Prepayment** FastTab on this document, this value is copied to each line. You can change the contents of the **Prepayment %** field on the line.  
 
-Pokud jste připraveni zaúčtovat zbývající částku faktury, zaúčtujte ji stejně jako jakoukoli jinou fakturu a částka zálohy bude automaticky odečtena z dlužné částky.
+4. To view the total prepayment amount, choose the **Statistics** action.
 
-## Viz také
-[Fakturace záloh](finance-invoice-prepayments.md)  
-[Návod: Nastavení a fakturace prodejních záloh](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
+    If you want to adjust the total prepayment amount for the order, you can change the contents of the **Prepayment Amount** field on the **Sales Order Statistics** page.  
+
+    If the **Prices Including VAT** field is selected, the **Prepayment Amount Incl. VAT** field is editable.  
+
+    If you change the contents of the **Prepayment Amount** field, the amount will be distributed proportionately between all lines, except those that have **0** in the **Prepayment %** field.  
+
+5. To print a test report before posting the prepayment invoice, choose the **Prepayment** action, and then choose the **Prepayment Test Report** action.  
+6. To post the prepayment invoice, choose the **Prepayment** action, and then choose the **Post Prepayment Invoice** action.  
+
+    To post and print the prepayment invoice, choose the **Post and Print Prepmt. Invoice** action.  
+
+You can issue additional prepayment invoices for the order. To do this, increase the prepayment amount on one or more lines, adjust the document date if necessary, and post the prepayment invoice. A new invoice will be created for the difference between the prepayment amounts invoiced so far and the new prepayment amount.  
+
+> [!NOTE]  
+> If you are located in North America, you cannot change the prepayment percentage after the prepayment invoice has been posted. This is prevented in the North American version of [!INCLUDE[prod_short](includes/prod_short.md)] because the calculation of sales tax will otherwise be incorrect.  
+
+ When you are ready to post the rest of the invoice, post it as you would post any invoice, and the prepayment amount will automatically be deducted from the amount due.  
+
+## See Also
+
+[Invoicing Prepayments](finance-invoice-prepayments.md)  
+[Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

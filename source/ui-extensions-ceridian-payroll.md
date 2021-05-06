@@ -1,26 +1,31 @@
 ---
-title: Importování výplatních a mzdových dat pomocí rozšíření Ceridian Payroll | Microsoft Docs
-description: Toto rozšíření použijte k importu mzdových transakcí ze služeb Ceridian HR/Payroll (USA) a Ceridian PowerPay (Kanada).
-services: project-madeira
-documentationcenter: ''
+title: Importing Payroll or Salary Data Using the Ceridian Payroll Extension
+description: Use this extension to import payroll transactions from the Ceridian HR/Payroll (US) and Ceridian PowerPay (Canada) services.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms. search.keywords: 'app, add-in, manifest, customize, salary, wage'
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms. search.keywords: app, add-in, manifest, customize, salary, wage
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="the-ceridian-payroll-extension"></a>Rozšíření Ceridian Payroll 
-Pro možnost vyplacení mezd a souvisejících transakcí musíte importovat a zaúčtovat finanční transakce vytvořené vaším mzdovým poskytovatelem do hlavní knihy.
+# The Ceridian Payroll Extension
 
-Chcete-li toto provést, nejprve importujte soubor, který obdržíte od poskytovatele mezd do stránky **Finanční deník**. Pak namapujete externí účty v mzdovém souboru k souvisejícím finančním účtům. Nakonec zaúčtujete mzdové transakce podle mapování účtu. Pro další informace se navštivte [Změna základního nastavení](finance-how-import-payroll-transactions.md).
+To account for salary payments and related transactions, you must import and post financial transactions made by your payroll provider to the general ledger.
 
-Rozšíření Ceridian Payroll umožňuje importovat mzdové transakce ze služeb Ceridian HR/Payroll (USA) a Ceridian PowerPay (Kanada).
+To do this, you first import a file that you receive from the payroll provider into the **General Journal** page. Then you map the external accounts in the payroll file to the relevant G/L accounts. Lastly, you post the payroll transactions according to the account mapping. For more information, see [Import Payroll Transactions](finance-how-import-payroll-transactions.md).
 
-## <a name="see-also"></a>Viz také
-[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí rozšíření ](ui-extensions.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+The Ceridian Payroll extension allows you to import payroll transactions from the Ceridian HR/Payroll (US) and Ceridian PowerPay (Canada) services.
+
+## See Also
+
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions ](ui-extensions.md)  
+[Finance](finance.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

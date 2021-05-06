@@ -4,42 +4,45 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Export a import workflow
-Pro přenesení workflow do jiných [!INCLUDE[d365fin](includes/d365fin_md.md)] databází, například kvůli ušetření času při vytváření nových workflow, můžete daný workflow exportovat a importovat.
+# Export and Import Workflows
+To transfer workflows to other [!INCLUDE[prod_short](includes/prod_short.md)] databases, for example to save time when creating new workflows, you can export and import workflows.  
 
-Dalším způsobem rychlého vytvoření workflow je vytvoření ze šablon workflow. Pro více informací navštivte [Vytvoření workflow z šablony workflow](across-how-to-create-workflows-from-workflow-templates.md).
+ Another way to quickly create workflows is to create workflows from workflow templates. For more information, see [Create Workflows from Workflow Templates](across-how-to-create-workflows-from-workflow-templates.md).  
 
-Na stránce **Workflow** vytvoříte workflow vypsáním příslušných kroků na řádcích. Každý krok sestává z události workflow, která je řízená podmínkami událostí, a odezvy workflow, která je řízená možnostmi odezvy. Kroky workflow definujete vyplněním polí na řádcích workflow z pevných seznamů hodnot událostí a odezev představujících scénáře, které jsou podporovány kódem aplikace. Pro více informací navštivte [Vytvoření workfloworkflow](across-how-to-create-workflows.md).
+ On the **Workflow** page, you create a workflow by listing the involved steps on the lines. Each step consists of a workflow event, moderated by event conditions, and a workflow response, moderated by response options. You define workflow steps by filling fields on workflow lines from fixed lists of event and response values representing scenarios that are supported by the application code. For more information, see [Create Workflows](across-how-to-create-workflows.md).  
 
-## Exportování workflow
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Workflow** a poté vyberte související odkaz.
-2. Vyberte workflow a pak zvolte akci **Export do souboru**.
-3. Na stránce **Export souboru** zvolte tlačítko **Uložit**.
-4. Na stránce **Export** vyberte umístění souboru a pak klepněte na tlačítko **Uložit**.
+## To export a workflow  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Workflows**, and then choose the related link.  
+2.  Select a workflow, and then choose the **Export to File** action.  
+3.  On the **Export File** page, choose the **Save** button.  
+4.  On the **Export** page, select a file location, and then choose the **Save** button.  
 
-## Importování workflow
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Workflow** a poté vyberte související odkaz.
-2. Zvolte akci **Importovat ze souboru**.
-3. Na stránce **Importu** zvolte soubor XML, který obsahuje workflow, a pak zvolte tlačítko **Otevřít**.
+## To import a workflow  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Workflows**, and then choose the related link.  
+2.  Choose the **Import from File** action.  
+3.  On the **Import** page, choose the XML file that contains the workflow, and then choose the **Open** button.  
 
-> [!CAUTION]
-> Pokud kód workflow již v databázi existuje, kroky workflow budou přepsány kroky v importovaném workflow.
+> [!CAUTION]  
+>  If the workflow code already exists in the database, the workflow steps will be overwritten with the steps in the imported workflow.  
 
-## Viz také
-[Vytvoření Workflow](across-how-to-create-workflows.md)  
-[Vytvoření workflow z šablony workflow](across-how-to-create-workflows-from-workflow-templates.md)  
-[Zobrazení archivovaných instancí kroku workflow](across-how-to-view-archived-workflow-step-instances.md)  
-[Odstranění workflow](across-how-to-delete-workflows.md)  
-[Návod: Nastavení a použití workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
-[Nastavení workflow](across-set-up-workflows.md)  
-[Použití workflow](across-use-workflows.md)  
-[Workflow](across-workflow.md)
+## See Also  
+ [Create Workflows](across-how-to-create-workflows.md)   
+ [Create Workflows from Workflow Templates](across-how-to-create-workflows-from-workflow-templates.md)   
+ [View Archived Workflow Step Instances](across-how-to-view-archived-workflow-step-instances.md)   
+ [Delete Workflows](across-how-to-delete-workflows.md)   
+ [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)   
+ [Setting Up Workflows](across-set-up-workflows.md)   
+ [Using Workflows](across-use-workflows.md)   
+ [Workflow](across-workflow.md)   
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

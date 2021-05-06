@@ -1,46 +1,51 @@
 ---
-title: Nastavení údržby Dlouhodobého majetku | Microsoft Docs
-description: 'Chcete-li spravovat opravy a servis dlouhodobého majetku, určíte obecné informace o údržbě, kódy pro typ práce a účet pro účtování pro náklady.'
+title: Set Up FA Maintenance| Microsoft Docs
+description: To manage fixed asset repairs and service, you specify general maintenance information, codes for the type of work, and a posting account for costs.
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'repair, service'
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.search.keywords: repair, service
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="set-up-fixed-asset-maintenance"></a>Nastavení údržby dlouhodobého majetku
-Ke správě údržby dlouhodobého majetku musíte nejprve nastavit nějaké obecné informace o údržbě, účet pro zaúčtování nákladů údržby a kódy údržby pro typy práce, jako je např. pravidelný servis nebo oprava.
+# Set Up Fixed Asset Maintenance
+To manage fixed asset maintenance, you must first set up some general maintenance information, a posting account for maintenance costs, and maintenance codes for types of work, such as Routine Service or Repair.
 
-## <a name="to-set-up-general-maintenance-information"></a>Nastavení obecných informací o údržbě
-Pokud nastavíte pole pro údržbu, můžete účtovat výdaje za údržbu z deníku dlouhodobého majetku.
+## To set up general maintenance information
+If you set up the fields for maintenance, you can post maintenance expenses from the fixed asset journal.
 
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Dlouhodobý majetek** a poté vyberte související odkaz.
-2. Vyberte dlouhodobý majetek, pro který chcete definovat pojistné krytí, a pak vyberte akci **Upravit** .
-3. Na pevné záložce **Údržba** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+2. Select the fixed asset that you to define insurance coverage for, and then choose the **Edit** action.
+3. On the **Maintenance** FastTab, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## <a name="to-set-up-maintenance-codes"></a>Pro nastavení kódů údržby
-Když účtujete náklady na údržbu z obecného deníku, vyplníte pole **Kód údržby** k zaznamenání, k jaké údržbě došlo, např. pravidelný servis nebo oprava.
+## To set up maintenance codes
+When you post maintenance costs from a general journal, you fill in the **Maintenance Code** field to record what kind of maintenance has been performed, such as routine service or repair.
 
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Údržba** a poté vyberte související odkaz.
-2. Na stránce **Údržba** nastavte kódy pro různé typy údržbářských prací.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Maintenance**, and then choose the related link.
+2. On the **Maintenance** page, set up codes for different types of maintenance work.
 
-## <a name="to-set-up-maintenance-expense-accounts"></a>Nastavení účtů nákladů údržby
-K účtování nákladů za údržbu musíte nejprve zvolit číslo účtu na stránce **Účto skupiny DM**.
+## To set up maintenance expense accounts
+To post maintenance costs, you must first enter an account number on the **FA Posting Groups** page.
 
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Účto skupiny DM** a poté vyberte související odkaz.
-2. Vyplňte pole **Účet nákladů údržby** pro každou účto skupinu.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.
+2. Fill in the **Maintenance Expense Account** field for each posting group.
 
 > [!NOTE]  
->   Chcete-li definovat, že náklady na údržbu jsou přidělovány oddělením nebo projektům, nastavte alokační klíče. Pro více informací navštivte [Nastavení obecných funkcí dlouhodobého majetku](fa-how-setup-general.md).
+>   To define that maintenance costs are allocated to departments or projects, set up an allocation keys. For more information, see [Set Up General Fixed Assets Features](fa-how-setup-general.md).
 
-## <a name="see-also"></a>Viz také
-[Nastavení dlouhodobého majetku](fa-setup.md)  
-[Dlouhodobý majetek](fa-manage.md)  
+## See Also
+[Setting Up Fixed Assets](fa-setup.md)  
+[Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

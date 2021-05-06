@@ -1,49 +1,57 @@
 ---
-title: Založení Bankovních účtů | Microsoft Docs
-description: Můžete spárovat bankovní účty z výpisy z banky.
-services: project-madeira
-documentationcenter: ''
+title: Set Up Bank Accounts| Microsoft Docs
+description: You can reconcile bank accounts with statements from the bank.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'Yodlee, feed, stream'
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.search.keywords: Yodlee, feed, stream
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="set-up-bank-accounts"></a>Nastavení bankovních účtů
-Použití bankovní účtů v [!INCLUDE[d365fin](includes/d365fin_md.md)] slouží ke sledování vašich bankovních transakcí. Účty mohou být denominovány v místní měně nebo v cizí měně. Po nastavení bankovních účtů můžete použít také možnost kontroly tisku.
+# Set Up Bank Accounts
+You use bank accounts in the [!INCLUDE[prod_short](includes/prod_short.md)] to keep track of your banking transactions. Accounts can be denominated in your local currency or in a foreign currency. After you have set up bank accounts, you can also use the check printing option.<br><br>  
 
+> [!Video https://www.microsoft.com/videoplayer/embed/RE3Vhpl?rel=0]
 
-## <a name="to-set-up-bank-accounts"></a>Založení Bankovních účtů
-1. Vyberte ikonu žárovky ![, která otevře funkci Tell Me](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Na stránce **Bankovní účty** vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## To set up bank accounts
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. On the **Bank Accounts** page, choose the **New** action.
+3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!NOTE]
-> Chcete-li vyplnit pole **Saldo** počáteční bilancí, musíte zaúčtovat položku bankovního účtu s danou částkou. Můžete to provést odsouhlasením bankovního účtu. Pro více informací běžte na [Odsouhlasení bankovních účtů separátně](bank-how-reconcile-bank-accounts-separately.md). Případně můžete počáteční stav implementovat jako součást vytváření obecných dat v nových společnostech pomocí asistovaného nastavení  **Migrace dat**. Další informace naleznete v [Začínáme](product-get-started.md).
+> To fill in the **Balance** field with an opening balance, you must post a bank account ledger entry with the amount in question. You can do this by performing a bank account reconciliation. For more information, see [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md). Alternatively, you can implement the opening balance as a part of general data creation in new companies by using the **Migrate Business Data** assisted setup guide. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
-## <a name="to-set-up-your-bank-account-for-import-or-export-of-bank-files"></a>Založení bankovního účtu pro import nebo export bankovních souborů.
-Pole na záložce s náhledem **Transfer** na stránce **karta bankovního účtu** se vztahují k importu a exportu bankovních kanálů a souborů. Další informace naleznete v [Nastavení služby převodu Bankovních dat](bank-how-setup-bank-data-conversion-service.md) a [Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md).
+## To set up your bank account for import or export of bank files
+Fields on the **Transfer** FastTab on the **Bank Account Card** page are related to import and export of bank feeds and files. For more information, see [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md) and [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md).
 
-1. Vyberte ikonu žárovky ![, která otevře funkci Tell Me](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty**a poté vyberte související odkaz.
-2. Otevřete kartu Bankovního účtu, který budete exportovat nebo importovat pomocí služby pro transfer bankovních dat.
-3. Na záložce s náhledem **Transfer** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Open the card for a bank account that you will export or import bank files for.
+3. On the **Transfer** FastTab, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!NOTE]  
->   Různé služby exportu souborů a jejich formáty vyžadují různé hodnoty nastavení na stránce **Karta bankovního účtu**. Při pokusu o export souboru budete informováni o chybných nebo chybějících hodnotách nastavení. Proto si pozorně přečtěte krátký popis polí nebo se podívejte na související témata procedur. Například export platebního souboru pro severoamerický elektronický převod finančních prostředků (EFT) vyžaduje, aby byla vyplněna pole **Číslo posledního poukazu na úhradu** i pole **Číslo převodu**. Další informace naleznete v části [Export plateb do Bankovních dokladů](payables-how-export-payments-bank-file.md).
+>   Different file export services and their formats require different setup values on the **Bank Account Card** page. You will be informed about wrong or missing setup values as you try to export the file. So read the short descriptions of the fields carefully or refer to the related procedure topics. For example, exporting a payment file for North American electronic funds transfer (EFT) requires that both the **Last Remittance Advice No.** field and the **Transit No.** field are filled in. For more information, see [Export Payments to a Bank File](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file).
 
-## <a name="to-set-up-vendor-bank-accounts-for-export-of-bank-files"></a>Založení bankovního účtu pro export bankovních dokladů.
-Pole na záložce s náhledem **Transfer** na stránce **karta bankovního účtu dodavatele** jsou spojena s exporty bankovních kanálů a souborů. Další informace naleznete v [Nastavení služby převodu Bankovních dat](bank-how-setup-bank-data-conversion-service.md) a [Export plateb do Bankovních dokladů](payables-how-export-payments-bank-file.md).
+## To set up vendor bank accounts for export of bank files
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
-2. Otevřete kartu dodavatele, jehož bankovní účet exportujete do bankovních souborů plateb.
-3. Vyberte akci **Bankovní účty**.
-3. Na stránce **Karta Bankovního účetu dodavatele** v záložce **Transfer** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+Fields on the **Transfer** FastTab on the **Vendor Bank Account Card** page are related to export of bank feeds and files. For more information, see [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md) and [Export Payments to a Bank File](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file).
 
-## <a name="see-also"></a>Viz také
-[Nastavení bankovnictví](bank-setup-banking.md)  
-[Správa bankovních účtů](bank-manage-bank-accounts.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
+2. Open the card for a vendor whose bank account you will export payment bank files to.
+3. Choose the **Bank Accounts** action.
+4. From the **Vendor Bank Accounts List**, choose the relevant bank account, or add a new bank account.  
+5. On the **Vendor Bank Account Card** page, on the **Transfer** FastTab, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+
+## See Also
+
+[Setting Up Banking](bank-setup-banking.md)  
+[Setting Up Posting Groups](finance-posting-groups.md)  
+[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

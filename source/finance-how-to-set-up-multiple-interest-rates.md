@@ -5,31 +5,34 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Nastavení více úrokových sazeb
-Pro zpožděné platby v obchodních transakcích se pro různá období používá více úrokových sazeb. Vláda například specifikuje maximální úrok, který má být pro spotřebitele vybrán. Tato úroková sazba může být změněna dvakrát ročně: 1. ledna a 1. července. Úroková sazba mezi podniky (B2B) je smluvními stranami dohodnuta a pro tuto skupinu zákazníků neexistuje žádný limit. Vyhlášená sazba je obvykle o čtyři procenta vyšší, než je obvyklý bankovní úrok.
+# Set Up Multiple Interest Rates
+Multiple interest rates are used for different periods for delayed payments in trade transactions. For example, a government specifies the maximum interest to be levied for a consumer. This interest rate can be changed twice a year on 01 January and 01 July. The interest rate between businesses (B2B) is agreed by the parties and there is no limit to that customer group. The announced rate is usually four percent more than the normal bank interest.
 
-Při vytváření podmínek penále a upomínek pro zpožděné platby penále můžete zadat více úrokových sazeb tak, aby se penále počítalo z různých úrokových sazeb v různých obdobích. Pro více informací navštivte **Evidence nového zákazníka**. Pro více informací navštivte **Inkaso nevyrovnaných zůstatků**.
+When you create finance charge terms and reminder terms, for delayed payment penalty, you can specify multiple interest rates so that the penalty fee is calculated from different interest rates in different periods. For more information, see [Collect Outstanding Balances](receivables-collect-outstanding-balances.md).
 
-## Nastavení více úrokových sazeb
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále** a vyberte související odkaz.
-2. Na stránce **Podmínky penále** vyberte požadovaný finanční termín a poté vyberte akci **Sazby úroků**.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Vyberte tlačítko **OK**.
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky upomínky** a vyberte související odkaz.
-6. Na stránce **Podmínky upomínky** vyberte požadovaný termín připomenutí a poté vyberte akci **Úrovně**.
-7. Na stránce **Úrovně upomínky** vyberte pole **Výpočet splatnosti**.
+## To set up multiple interest rates  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Terms**, and then choose the related link.  
+2.  On the **Finance Charge Terms** page, select the required finance term, and then choose the **Interest Rates** action.  
+3.  Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4.  Choose the **OK** button.  
+5.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.  
+6.  On the **Reminder Terms** page, select the required reminder term, and then choose the **Levels** action.  
+7.  On the **Reminder Levels** page, select the **Calculate Interest** field.  
 
-Když vydáte penále, zobrazí se finanční poplatky s více úrokovými sazbami pro určité časové období. Penále také obsahuje kontaktní údaje o zákazníkovi, společnosti, která oznámení vydala, další částku a celkovou částku. Úvodní položka v penálích je zobrazena tučně. Finanční poplatky se počítají s více úrokovými sazbami za určité časové období a tisknou se po otevření záznamu.
+When you issue a finance charge memo, the memo shows the finance charges with multiple interest rates for a specific time period. The memo also contains the contact details of the customer, the company issuing the memo, the additional amount, and the total amount. The opening entry on the memo is displayed in bold. The finance charges are calculated with multiple interest rates for a specific time period and are printed after the opening entry of the memo.  
 
-## Viz také
-[Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)  
-[Nastavení financí](finance-setup-finance.md)
+## See Also  
+[Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
+[Setting Up Finance](finance-setup-finance.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

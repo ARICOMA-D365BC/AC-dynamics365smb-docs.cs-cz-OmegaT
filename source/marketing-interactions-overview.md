@@ -6,24 +6,27 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Správa interakcí
-V [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou interakce všechny typy komunikace mezi vaší společností a vašimi kontakty. Komunikace může být například e-mail, dopis, telefon, schůzky a tak dále.
+# Managing Interactions
+In [!INCLUDE[prod_short](includes/prod_short.md)], interactions are all types of communications between your company and your contacts. For example, communications can be email, letter, telephone, meetings, and so on.
 
-Můžete zaznamenat všechny interakce, které s vašimi kontakty máte, abyste mohli sledovat prodejní a marketingové úsilí, které jste nasměrovali na své kontakty, a zlepšit budoucí obchodní interakce s nimi.
+You can record all the interactions that you have with your contacts in order to keep track of the sales and marketing efforts you have directed at your contacts and to improve your future business interactions with them.
 
-Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-| K | vidění |
+| To | See |
 | --- | --- |
-| Nastavte svůj systém pro zaznamenávání interakcí. | [Nastavení kontaktů](marketing-setup-contacts.md) |
-| Vytvářejte interakce a zaznamenávejte všechny interakce a komunikaci, které máte s vašimi kontakty a segmenty, například e-mailem. | [Vytváření interakcí s kontakty a segmenty](marketing-how-create-interactions.md) |
-| Nastavte systém tak, aby automaticky zaznamenával interakce s prodejními, nákupními a servisními doklady, například když je dokumentováno vytvořeno, zaúčtováno nebo vytištěno. | [Automatické zaznamenávání interakcí s kontakty](marketing-auto-record-interactions.md) |
+| Set up your system to record interactions. |[Set Up Contacts](marketing-setup-contacts.md) |
+|Create interactions to record all the interactions and communications you have with your contacts and segments, such as emailing.|[Create Interactions on Contacts and Segments](marketing-how-create-interactions.md)|
+|Set up your system to automatically record interactions for sales, purchase, and service documents, such as when a documented is created, posted, or printed.|[Automatically Record Interactions with Contacts](marketing-auto-record-interactions.md)|
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

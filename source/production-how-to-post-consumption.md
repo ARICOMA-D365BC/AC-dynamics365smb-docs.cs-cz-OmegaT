@@ -1,34 +1,46 @@
 ---
-    title: How to Batch Post Consumption | Microsoft Docs
-    description: If the flushing method is **Manual**, you must post the components manually, using a consumption journal.
+    title: Batch Post Consumption
+    description: If the flushing method is Manual, you must post the components manually, using a consumption journal.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Dávkové účtování spotřeby
-Pokud je metoda vyprázdnění nastavena na **Ruční**,  je nutné zaúčtovat komponenty ručně pomocí deníku spotřeby.
+# Batch Post Production Consumption
 
-Můžete také nastavit systém tak, aby automaticky účtoval (*vyprazdňoval*) komponenty při spuštění nebo dokončení výrobních zakázek. Pro více informací navštivte [Povolit vyprázdnění komponent podle operace výstupu](production-how-to-flush-components-according-to-operation-output.md).
+If the flushing method is **Manual**, you must post the components manually, using a consumption journal.  
 
-## Zaúčtování spotřeby pro jeden nebo více řádků výrobní zakázky
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník spotřeby** a poté vyberte související odkaz.
-2. Vyplňte pole údaji o výrobní zakázce a údaji o spotřebě. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+>[!NOTE]
+> If you have placed a check mark in the **Require Pick** field on the location card to indicate that the location requires inventory pick processing, then you do not need to use this batch job. [!INCLUDE[prod_short](includes/prod_short.md)] will handle consumption when you post the inventory pick. For more information, see [Pick for Production in Basic Warehouse Configurations](warehouse-how-to-pick-for-production.md#pick-for-production-in-basic-warehouse-configurations).  
 
-   Pokud je umístění ve skladu, kde jsou komponenty uloženy, nastaveno na použití přihrádek, ale nevyžaduje zpracování vyskladnění, přiřaďte k řádku deníku kód přihrádky, který označuje, odkud má být zboží ve skladu odebráno. Pro více informací navštivte [Vyskladnění pro výrobu nebo montáž v základních konfiguracích skladu](warehouse-how-to-pick-for-production.md).
-3. Vyberte akci **Účtovat** abyste zaúčtovali spotřebu. Související položky zboží jsou sníženy.
+You can also set up [!INCLUDE[prod_short](includes/prod_short.md)] to automatically post (*flush*) components when you start or finish production orders. For more information, see [Enable Flushing of Components According to Operation Output](production-how-to-flush-components-according-to-operation-output.md).
 
-## Viz také
-[Výroba](production-manage-manufacturing.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Plánování](production-planning.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To post consumption for one or more production order lines
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Consumption Journal**, and then choose the related link.  
+2. Fill in the fields with the production order data and the consumption data. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+
+    Use the **Calc. Consumption** action to generate journal lines from production orders based on the actual output (the quantity of finished goods that you have reported) or on the expected output (the quantity of finished goods that you expect to produce).
+
+    > [!NOTE]
+    > If you configured the location card to require warehouse pick processing, then only quantities that are already picked through a warehouse activity can be entered in the **Quantity** field in the **Consumption Journal** page, not any calculated quantity. For more information, see [Pick for Production or Assembly in Advanced Warehouse Configurations](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md)
+
+3. Choose the **Post** action to post the consumption. The related inventories are reduced.
+
+## See Also
+
+[Manufacturing](production-manage-manufacturing.md)  
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Planning](production-planning.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -6,118 +6,127 @@ documentationcenter: ''
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, Intrastat, trade, EU, European Union
-ms.date: 01/13/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Nastavení a hlášení Intrastatu
-Všechny společnosti v Evropské unii musí hlásit svůj obchod s ostatními zeměmi nebo oblastmi EU. Pohyb zboží musíte nahlásit statistickým úřadům ve vaší zemi / regionu každý měsíc a zpráva musí být doručena daňovým úřadům. Toto se nazývá hlášení Intrastatu. Pomocí stránky **Deníky Intrastat** můžete dokončit pravidelné hlášení Intrastat.
+# Set Up and Report Intrastat
+All companies in the European Union must report their trade with other EU countries/regions. You must report the movement of goods to the statistics authorities in your country/region every month, and the report must be delivered to the tax authorities. This is referred to as Intrastat Reporting. You use the **Intrastat Journal** page to complete periodic Intrastat reports.  
 
-## Povinné a volitelné nastavení
-Před použitím deníku Intrastat k vykazování informací o intrastatu je třeba nastavit několik věcí:
+## Required and Optional Setups
+Before you can use the Intrastat journal to report Intrastat information, there are several things you must set up:  
 
-* **Nastavení Intrastat**: Stránka Nastavení Intrastatu se používá k povolení hlášení intrastatu a nastavení výchozích hodnot pro něj. Můžete určit, zda chcete nahlásit Intrastat ze dodávek (odchozí), příjemek (příchozí) nebo obojí v závislosti na prahových hodnotách stanovených místními předpisy. Můžete také nastavit výchozí typy transakcí pro běžné doklady a doklady vratky, které se používají podle povahy vykazování transakcí.
-* **Šablony deníků Intrastat**: Je nutné nastavit šablony deníku Intrastat, které budete používat. Protože je Intrastat hlášen měsíčně, musíte vytvořit 12 deníků založených na stejné šabloně.
-* **Kódy komodity**: Celní a daňové orgány zavedly číselné kódy, které klasifikují položky a služby. Tyto kódy zadáte u zboží.
-* **Typy transkací**: Země a oblasti mají různé kódy pro typy transakcí Intrastat, jako je běžný nákup a prodej, výměna vráceného zboží a výměna nevráceného zboží. Nastavte všechny kódy, které platí pro vaši zemi nebo oblast. Tyto kódy se používají v prodejních a nákupních dokladech a při zpracování vratek.
-* **Typy přepravy**: Existuje sedm jednomístných kódů pro metody přepravy Intrastatu. **1** po moři, **2** po železnici, **3** po silnici, **4** letecky, **5** poštou, **7** pevné instalace, a **9** vlastní doprava (například, doprava vlasním vozem). [!INCLUDE[d365fin](includes/d365fin_md.md)] tyto kódy nevyžaduje, doporučujeme však, aby popisy poskytovaly podobný význam.
+* **Intrastat Setup**: Intrastat Setup page is used to enable intrastat reporting and set defaults for it. You can specify whether you need to report Intrastat from shipments (dispatches), receipts (arrivals) or both depending on thresholds set by your local regulations. You can also set default transaction types for regular and return documents, used for nature of transaction reporting.
+* **Intrastat journal templates**: You must set up the Intrastat journal templates and batches you will use. Because Intrastat is reported monthly, you must create 12 Intrastat journal batches based on the same template.  
+* **Commodity codes**: Customs and tax authorities have established numerical codes that classify items and services. You specify these codes on items.
+* **Transaction nature codes**: Countries and regions have different codes for types of Intrastat transactions, such as ordinary purchase and sale, exchange of returned goods, and exchange of non-returned goods. Set up all of the codes that apply to your country/region. You use these codes on sales and purchase documents, and when you process returns.  
+* **Transport methods**: There are seven, one-digit codes for Intrastat transport methods. **1** for sea, **2** for rail, **3** for road, **4** for air, **5** for post, **7** for fixed installations, and **9** for own propulsion (for eample, transporting a car by driving it). [!INCLUDE[prod_short](includes/prod_short.md)] does not require these codes, however, we recommend that the descriptions provide a similar meaning.  
 
-Volitelně můžete také nastavit:
+Optionally, you can also set up:
 
-* **Specifikace transakcí**: Pomocí nich můžete doplnit popisy typů transakcí.
-* **Oblasti**: Slouží k doplnění informací o zemích a regionech.
-* **Místa přechodu**: Pomocí nich můžete určit místa, kam odesíláte nebo přijímáte zboží do nebo z jiných zemí. Letiště Heathrow je příkladem vstupního nebo výstupního bodu. Vstupní nebo výstupní body zadáte na prodejní a nákupní doklady na záložce s náhledem **Zahraniční obchod**. Tyto informace budou také zkopírovány z položek zboží při vytváření deníku Intrastatu.
+* **Transaction specifications**: Use these to supplement the descriptions from the transaction types.  
+* **Areas**: Use these to supplement information about countries and regions.  
+* **Entry/exit points**: Use these to specify the locations where you ship or receive items to or from other countries. Heathrow Airport is an example of an entry or exit point. You enter entry or exit points on sales and purchase documents on the **Foreign Trade** FastTab. This information will also be copied from the item entries when you create the Intrastat journal.  
 
-### Nastavení šablon a listů Intrastat
-Dávkové úlohy Intrastat obsahují pouze položky zboží, nikoli finanční položky. Pokud máte položky hlavní knihy, které splňují podmínky pro hlášení Intrastat, musíte je zadat ručně. Pokud například kupujete počítač z jiné země nebo oblasti EU, počítač není uskladněn, ale je zaúčtován přímo na účet hlavní knihy. Tento typ záznamu musíte ručně zadat do deníku Intrastatu.
+### To set up Intrastat templates and batches
+The Intrastat batch jobs include only item entries, and not general ledger entries. If you have general ledger entries that qualify for Intrastat reporting, you must enter them manually. For example, if you purchase a computer from another EU country or region, the computer is not placed in inventory, but is posted to a general ledger account. You must manually enter this type of entry in the Intrastat journal.  
 
-Položky můžete exportovat do souboru, který můžete odeslat orgánům Intrastatu. Můžete také vytisknout zprávu, ručně zadat informace do formulářů od svých úřadů a poté tyto informace odeslat.
-
-> [!Note]
-> Doporučujeme nastavit dávkovou úlohu instrastatu každý měsíc..
-
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Šablony deníků Intrastat** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]. Vytvořte šablonu pro každý formulář Intrastat.
-3. Chcete-li vytvořit Listy, vyberte akci **Listy**.
-4. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]. Vytvořte šablonu pro každý formulář Intrastat, který používáte.
+You can export the entries to a file that you can send to your Intrastat authorities. You can also print a report, manually enter the information on the forms from your authorities, and then submit the information.
 
 > [!Note]
-> Do pole **Statistické období** zadejte období jako čtyř místné číslo, kde první dvě čísla reprezentují rok a ostatní dvě měsíc. Zadejte například hodnotu 1706 pro červen 2017.
+> We recommended that you set up an Intrastat journal batch for each month.  
 
-### Nastavení čísel sazebníku
-Všechny zboží, které nakupujete nebo prodáváte, musí mít kód komodity.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journal Templates**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]. Create a template for each Intrastat form you use.  
+3. To create batches, choose the **Batches** action.  
+4. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]. Create a template for each Intrastat form you use. 
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Čísla sazebníku** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Pro přiřazení komodity ke zboží, bežte na **kartu zboží**, zobrazte celou záložku **Cena a Účtování**, a vyberte kód v poli **Číslo sazebníku**.
+> [!Note]
+> In the **Statistics Period** field, enter the statistics period as a four-digit number, where the first two digits represent the year and the next two digits represent the month. For example, enter 1706 for June, 2017.
 
-### Nastavení typů transkací
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Typy transkací** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+### To set up commodity codes
+All items that you buy or sell must have a commodity code.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Commodity Codes**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+3. To assign a commodity code to an item, go to the **Item Card** page, expand the **Costs & Posting** FastTab, and then enter the code in the **Commodity Code** field.   
+
+### To set up transaction nature codes
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transaction Nature Codes**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
 > [!Tip]
-> Pokud často používáte určitý kód povahy transakce, můžete jej nastavit jako výchozí. Chcete-li to provést, přejděte na stránku **Nastavení Intrastatu** a vyberte kód.
+> If you frequently use a particular transaction nature code, you can make it the default. To do this, go to the **Intrastat Setup** page, and choose the code.
 
-### Nastavení typů přepravy
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Typy transakcí** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+### To set up transport methods
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transport Methods**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-### Nastavení povinných polí v sestavě Intrastatu
-V některých zemích, například ve Španělsku a Velké Británii, úřady požadují, aby zprávy Intrastatu zahrnovaly například způsob přepravy nákupů nebo nějaké jiné hodnoty, pokud prodej přesáhne určitou hranici. Na stránce **Nastavení Intrastatu**, můžete vybrat nastavení **Nastavení Intrastat Checkist** a nastavit povinná pole na stránce **Deníku Intrastatu**.
+### To set up which Intrastat report fields are mandatory
+In some countries, such as Spain and UK, the authorities require that Intrastat reports include, for example, the shipment method for purchases or some other values when sales is over a certain threshold. On the **Intrastat Setup** page, you can select to make **Intrastat Checkist Setup** to set mandatory fields on the **Intrastat Journal** page.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení Intrastat** a vybrat související odkaz.
-2. Vybere tlačítko **Nastavení Intrastat checklist**.
-3. Na stránce **Nastavení Intrastat Checklist** klikněte na pole **Název pole** a vyberte pole sestavy Intrastat, které chcete nastavit jako povinné.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Setup**, and then choose the related link.
+2. Chooes the **Intrastat Checklist Setup** action.
+3. On the **Intrastat Checklist Setup** page, click in the **Field Name** to pick Intrastat report field you want to make mandatory.
 
-## Hlášení Intrastat
-Po vyplnění deníku Intrastat můžete spustit  **Kontrolní seznam** a ujistit se, že jsou všechny informace v deníku správné. Povinná pole, která jste nastavili v nastavení **Intrastat kontrolní seznamu**, která nevykazují hodnoty, se zobrazí v poli Chyby a upozornění na stránce **Deník Intrastat**. Poté můžete vytisknout výkaz Intrastat jako formulář nebo vytvořit soubor, který odešlete finančnímu úřadu ve vaší zemi / regionu.
+## To Report Intrastat
+After you fill in the Intrastat journal, you can run the **Checklist report** action to make sure that that all information in the journal is correct. Mandatory fields you have set in **Intrastat Checklist Setup** page that are missing values, will be shown in Errors and warning factbox on **Intrastat Journal** page. Afterward, you can print an Intrastat report as a form, or create a file to submit to the tax authority in your country/region.  
 
-### Vyplnění deníků Intrastat
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky Intrastat** a vyberte související odkaz.
-2. Na stránce **Deníky Intrastat**, v poli **Název listu**, vyberte příslušný list a stiskněte **OK**.
-3. Klidněte na tlačítko **navrhnout řádky**. Pole **Počáteční** a **Koncové** datum již budou obsahovat data zadaná pro statistické období v listu deníku.
-4. V poli **Nepřímé náklady %**, můžete zadat procento pro pokrytí dopravy a pojištění. Pokud zadáte procento, je obsah pole **Statistická hodnota** v deníku úměrně vyšší.
-5. Zvolte **OK** pro spuštění dávkové úlohy.
+### To fill in Intrastat journals  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journal** and then choose the related link.  
+2. On the **Intrastat Journal** page, in the **Batch Name** field, choose the relevant journal batch, and then choose **OK**.  
+3. Choose the **Suggest Lines** action. The **Starting Date** and **Ending Date** fields will already contain the dates specified for the statistics period on the journal batch.  
+4. In the **Cost Regulation %** field, you can enter a percentage to cover transport and insurance. If you enter a percentage, the content of the **Statistical Value** field in the journal is proportionally higher.  
+5. Choose **OK** to start the batch job.  
 
-Dávková úloha načte všechny položky zboží v období statistiky a vloží je jako řádky do deníku Intrastat. V případě potřeby můžete řádky upravit.
+The batch job retrieves all the item entries in the statistics period and inserts them as lines in the Intrastat journal. You can edit the lines if needed.  
 
 > [!IMPORTANT]  
-> Dávková úloha načte pouze položky, které obsahují kód země/oblasti, pro který byl zadán kód Intrastat na stránce **Země/Oblasti**. Proto je nutné zadat kódy Intrastat pro kódy zemí nebo oblastí, pro které budete dávkovou úlohu spouštět.
+>  The batch job retrieves only the entries that contain a country/region code for which an Intrastat code has been entered on the **Countries/Regions** page. Therefore, you must enter Intrastat codes for the country/region codes for which you will run the batch job.  
 
-### Hlášení Intrastatu ve formuláři nebo souboru
-Chcete-li získat informace, které jsou požadovány ve formuláři Intrastat od statistických úřadů, musíte vytisknout sestavu **Intrastat - Form**. Než to budete moci provést, musíte připravit deník Intrastat a vyplnit jej. Pokud máte jak prodejní, tak nákupní transakce, musíte pro každý typ vyplnit samostatný formulář, takže musíte sestavu vytisknout dvakrát.
+### Report Intrastat on a form or a file
+To get the information that is required on the Intrastat form from the statistical authorities, you must print the **Intrastat – Form** report. Before you can do this, you must prepare the Intrastat journal and fill it in. If you have both sales and purchase transactions, you must complete a separate form for each type, so that you must print the report two times.  
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky Intrastat** a vyberte související odkaz.
-2. Na stránce **Deníky Intrastat** vyberte příslušnou list deníku v poli **Název listu**.
-3. Pokud jste tak ještě neučinili, vyplňte deník ručně nebo zvolte **Navrhnout řádky**.
-4. Zvolte **Tisk deníku Intrastat**
-5. V záložce **Řádek deníku Intrastat**, přijdete filtr **Typ** a potom určete, zda se jedná o **Příjemku** nebo **Dodávku**.
-6. Zvolte **Tisk...** k tisku sestavy.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journals**, and then choose the related link.  
+2. On the **Intrastat Journal** page, choose the relevant journal batch in the **Batch Name** field.  
+3. If you have not already done this, fill in the journal manually or choose **Suggest Lines** action.  
+4. Choose the **Prints Intrastat Journal** action.  
+5. On the **Intrastat Jnl. Line** FastTab, add a **Type** filter and then specify whether this is a **Receipt** or a **Shipment**.  
+6. Choose **Send to** to print the report.  
 
-### Vykazování Intrastat do souboru
-Hlášení Intrastatu můžete také odeslat jako datový soubor. Před vytvořením souboru si můžete vytisknout kontrolní seznam, který obsahuje stejné informace, jaké budou v souboru.
+### Report Intrastat in a file
+You can submit the Intrastat report as a file. Before creating the file, you can print a checklist that contains the same information that will be in the file.  
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky Intrastat** a vyberte související odkaz.
-2. Na stránce **Deníky Intrastat** vyberte příslušný list deníku v poli **Název listu**.
-3. Pokud jste tak ještě neučinili, vyplňte deník ručně nebo zvolte **Navrhnout řádky**.
-4. Klidněte na tlačítko **Vytvořit soubor...**.
-5. Na stránce úlohy, zvolte **OK**.
-6. Vyberte **Uložit**.
-7. Vyhledejte umístění, kam chcete soubor uložit, zadejte název souboru a vyberte **Uložit**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journal**, and then choose the related link.  
+2. On the **Intrastat Journal** page, select the relevant journal batch in the **Batch Name** field.  
+3. If you have not already done this, fill in the journal manually or by choosing the **Suggest Lines** action.  
+4. Choose the **Create File** action.  
+5. On the batch job page, choose the **OK** button.  
+6. Choose **Save**.  
+7. Browse to the location where you want to save the file, enter the file name, and then choose **Save**.
 
-## Reorganizace deníků Intrastatu
-Vzhledem k tomu, že musíte odeslat sestavu Intrastat každý měsíc a vytvořit nový list deníku pro každou sestavu, budete mít nakonec mnoho listů deníku. Řádky deníku nejsou automaticky odstraněny. Možná budete chtít periodicky reorganizovat názvy dávek deníku. To provést odstraněním listů deníků, které již nepotřebujete. Řádky deníku v těchto dávkách jsou také odstraněny.
+## Reorganize Intrastat Journals
+Because you must submit an Intrastat report every month, and you create a new journal batch for each report, you will eventually have many journal batches. The journal lines are not deleted automatically. You may want to reorganize the journal batch names periodically. You do this by deleting the journal batches that you no longer need. The journal lines in these batches are also deleted.  
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky Intrastat** a vyberte související odkaz.
-2. Chcete-li zobrazit možnosti, vyberte pole **Název listu**.
-3. Vyberte listy deníku, které chcete odstranit, a poté zvolte tlačítko **Odstranit**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journals**, and then choose the related link.  
+2. To view the options, choose the **Batch Name** field.  
+3. Choose the journal batches to deleted, and then choose the **Delete** button.  
 
-## Viz související školení v programu [Microsoft Learn](/learn/modules/process-intrastat-dynamics-365-business-central/index)
+## Tariff numbers
 
-## Viz také
-[Správa financí](finance.md)
+In many countries, the customs and tax authorities establish 8-digit item codes for various items. In order for item entries to contain the necessary information when the program imports them to the Intrastat journal line, you must have entered the information about the tariff number in the **Tariff Numbers** page. Find the codes for the items that your company deals with and enter them in the **Tariff Numbers** page.
+
+In the **Tariff Numbers** page, add all the codes that you use. You must enter the codes on the item card before you begin to post. When you have set up the codes, enter them in the **Tariff No.** field on the item card. You must also fill in the **Net Weight** field on the item card.
+
+## See Related Training at [Microsoft Learn](/learn/modules/process-intrastat-dynamics-365-business-central/index)
+
+## See Also
+[Financial Management](finance.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,56 +1,80 @@
 ---
-title: Minimální požadavky na použití Business Cental | Microsoft Docs
-description: Dověďte se více o minimálních požadavcích na systém a verzi pro použití produktu Business Central.
-author: ZdenekBicek
-
+title: Minimum requirements for using Business Central| Microsoft Docs
+description: Learn about the minimum system and version requirements for using Business Central online.
+author: edupont04
 ms.service: dynamics365-business-central
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: version
-ms.date: 01/07/2020
-ms.reviewer: v-zdbice
+ms.date: 04/01/2021
 ms.author: edupont
+
 ---
-# Minimální požadavky na používání Business Central
+# Minimum Requirements for Using Business Central
 
-Před přístupem do [!INCLUDE[d365fin](includes/d365fin_md.md)] doporučujeme ověřit, zda váš počítač nebo mobilní zařízení splňuje nebo překračuje minimální systémové požadavky na produkt. V tomto článku jsou uvedeny požadavky.  
+Before you access [!INCLUDE[prod_short](includes/prod_short.md)] online, we recommend that you verify that your computer or mobile device meets or exceeds the minimum system requirements for the product. This article lists the requirements.  
 
-## Prohlížeče
+## Browsers
 
-### Doporučené prohlížeče
+**Microsoft Edge:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of the new Microsoft Edge.
+  
+**Chrome for Windows and Firefox for Windows:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of these desktop browsers. 
+ 
+**Safari:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of Safari on macOS.  
 
-**Chrome pro Windows a Firefox pro Windows:** [!INCLUDE[d365fin](includes/d365fin_md.md)] je navržen tak, aby pracoval s aktuální verzí těchto prohlížečů pro stolní počítače.  
-**Safari:** [!INCLUDE[d365fin](includes/d365fin_md.md)] je navržen tak, aby pracoval s aktuální verzí Safari na OSX.  
-**Microsoft Edge:** [!INCLUDE[d365fin](includes/d365fin_md.md)] je navržen tak, aby pracoval s aktuální verzí Microsoft Edge.  
+## Mobile devices
 
-### Ostatní podporované prohlížeče
+**Windows:** Windows 10 S, Home, Pro, Enterprise, or Education (32-bit and 64-bit editions).
 
-**Internet Explorer:** [!INCLUDE[d365fin](includes/d365fin_md.md)] je navržen tak, aby pracoval s aktuální verzí Internet Explorer 11 (build 11.0.9600.17239) pro Windows 10 (32-bit a 64-bit verze). Doporučujeme upgradovat na nejnovější verzi aplikace Internet Explorer podporovanou pro vaši verzi systému Windows.  
+**Android (tablet and phone):** One of the latest three major versions and their updates.
 
-## Mobilní zařízení
+**iOS (iPad and iPhone):** One of the latest three major versions and their updates.
 
-**Windows:** [!INCLUDE[d365fin](includes/d365fin_md.md)] pro Windows lze nainstalovat na zařízení s alespoň 1 GB RAM a Windows 10 Home, Pro, Enterprise nebo Education (32bitové a 64bitové edice).  
-**iOS:** [!INCLUDE[d365fin](includes/d365fin_md.md)] pro iPad a iPhone vyžaduje iOS 10.0 nebo novější.  
-**Android:** [!INCLUDE[d365fin](includes/d365fin_md.md)] pro tablety s Androidem a telefony s Androidem lze nainstalovat do zařízení s alespoň 1 GB RAM a Android 6.0 nebo vyšší.  
-**Velikost zařízení:** [!INCLUDE[d365fin](includes/d365fin_md.md)] je podporována na chytrých telefonech s minimální velikostí obrazovky 4 ”a tabletech s minimální velikostí obrazovky 7”.  
+<!--
 
+**Windows:** [!INCLUDE[prod_short](includes/prod_short.md)] for Windows can be installed on devices with at least 1 GB of RAM and Windows 10 S, Home, Pro, Enterprise, or Education (32-bit and 64-bit editions).  
+**iOS:** [!INCLUDE[prod_short](includes/prod_short.md)] for iPad and iPhone requires iOS 10.0 or later.  
+**Android:** [!INCLUDE[prod_short](includes/prod_short.md)] for Android tablet and Android phone can be installed on devices with at least 1 GB of RAM and Android 6.0 or higher.  
+**Device size:** [!INCLUDE[prod_short](includes/prod_short.md)] is supported on smart phones with a minimum screen size of 4" and tablets with a minimum screen size of 7".  
+-->
 ## Outlook
 
-**Aplikace Outlook :** Chcete-li používat [!INCLUDE[d365fin](includes/d365fin_md.md)] jako svou obchodní schránku v aplikaci Outlook, budete potřebovat aplikaci Outlook 2016 nebo novější, aplikaci Outlook v prohlížeči, Outlook pro iPhone, Outlook pro iPad nebo Outlook pro Android.Vaše organizace musí také používat Office 365. Nelze použít [!INCLUDE [prodshort](includes/prodshort.md)] online jako vaši obchodní schránku v aplikaci Outlook, pokud vaše organizace používá Exchange Server on-premises.  
-**Prohlížeče:** Při použití [!INCLUDE[d365fin](includes/d365fin_md.md)] jako obchodní schránky v aplikaci Outlook v prohlížeči vyžaduje doplněk, aby počítač používal jeden z uvedených podporovaných prohlížečů, které jsou uvedeny výše v tomto článku.  
-**Platformy:** Při použití [!INCLUDE[d365fin](includes/d365fin_md.md)] Outlook doplňku v Outlook pro iPhone,  Outlook pro iPad a  Outlook pro Android vyžaduje doplněk, aby Vaše mobilní zařízení používalo jedno z uvedených podporovaných mobilních zařízení pro [!INCLUDE[d365fin](includes/d365fin_md.md)].  
+**Outlook applications:** To use [!INCLUDE[prod_short](includes/prod_short.md)] online as your business inbox in Outlook, you'll need Outlook 2019 or later, Outlook on the web, Outlook for iOS, or Outlook for Android. Your organization must also use Microsoft 365. You can't use [!INCLUDE[prod_short](includes/prod_short.md)] online as your business inbox in Outlook if your organization uses Exchange Server on-premises. 
+ 
+**Browsers:** When using [!INCLUDE[prod_short](includes/prod_short.md)] as your business inbox in Outlook in a browser, the add-in requires that your computer is running one of the listed supported browsers that are listed earlier in this article. 
+ 
+**Platforms:** When using the [!INCLUDE[prod_short](includes/prod_short.md)] Outlook Add-In in Outlook for iOS or Outlook for Android, the add-in requires that your mobile device is running one of the listed supported mobile devices for [!INCLUDE[prod_short](includes/prod_short.md)].  
+
+## Teams
+
+**Teams desktop applications:** The [!INCLUDE[prod_short](includes/prod_short.md)] app for Teams supports the latest version of the Teams Windows desktop client. 
+
+**Browsers:** When using the [!INCLUDE[prod_short](includes/prod_short.md)] app for Teams in the browser (web client), the app requires that your computer is running one of the supported browsers listed earlier in this article. 
+
+**Platforms:** When using the [!INCLUDE[prod_short](includes/prod_short.md)] app in Teams for iOS or Android, the app requires that your mobile device is running one of the supported mobile platforms, listed earlier in this article.
 
 ## Excel
 
-**Editace v aplikaci Excel:** Chcete-li pomocí doplňku pro Excel provést změny dat v aplikaci Excel a nahrát změny zpět do [!INCLUDE[d365fin](includes/d365fin_md.md)], potřebujete Excel 2016 nebo novější. Další informace naleznete v části [Analýza finančních výkazů v aplikaci Microsoft Excel.](finance-analyze-excel.md).  
+**Edit in Excel:** To use the Excel add-in to make changes in Excel and push the changes back into [!INCLUDE[prod_short](includes/prod_short.md)], you need Excel 2019 or later. For more information, see [Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md).  
 
-## Používání Business Central on-premises
+## <a name="TAC"></a> Using the Business Central Administration Center
 
-Pokud chcete nasadit Business Central přímo na místě, měli byste zkontrolovat systémové požadavky. Další informace viz [Systémové požadavky pro Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirement-business-central) a [Přehled nasazení](/dynamics365/business-central/dev-itpro/deployment/deployment).  
+The administration center is designed to work with the current version of the following browsers:
 
-## Viz také
+- The new Microsoft Edge
+- Chrome for Windows
+- Firefox for Windows
+- Safari for macOS
 
-[Začínáme](product-get-started.md)  
-[Systémové požadavky pro Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirement-business-central)  
+## Using Business Central on-premises
+
+If you want to deploy Business Central on-premises, you should check the system requirements. For more information, see [System Requirements for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirements-business-central-v18) and [Deployment Overview](/dynamics365/business-central/dev-itpro/deployment/deployment).  
+
+## See Also
+
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[System Requirements for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirements-business-central-v18)  
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

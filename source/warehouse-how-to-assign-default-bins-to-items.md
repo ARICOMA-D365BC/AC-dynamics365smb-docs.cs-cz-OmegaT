@@ -1,45 +1,46 @@
 ---
     title: How to Assign Default Bins to Items | Microsoft Docs
     description: If you are using bins at a location, assigning default bins to your items can make the process of shipping, receiving, and moving your items much easier. When a default bin is assigned to an item, this bin is suggested every time you initiate a transaction for this item.
-    services: project-madeira
-    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Přiřazení výchozí přihrádky ke zboží
-Pokud používáte přihrádky v lokaci, přiřazení výchozích přihrádek k vašemu zboží může proces expedice, příjmu a přesunu podstatně zjednodušit. Pokud je ke zboží přiřazena výchozí přihrádka, je tato přihrádka navržena pokaždé, když zahájíte transakci pro toto zboží. Výchozí přihrádky jsou definovány na stránce**Obsah přihrádky** .
+# Assign Default Bins to Items
+If you are using bins at a location, assigning default bins to your items can make the process of shipping, receiving, and moving your items much easier. When a default bin is assigned to an item, this bin is suggested every time you initiate a transaction for this item. Default bins are defined on the **Bin Content** page.  
 
-## Přiřazení výchozí přihrádky ke zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit vytvoření obsahu přihrádky** a poté vyberte související odkaz.
-2. Vyplňte kód přihrádky a informace o zboží pro každou přihrádku, kterou chcete nastavit pro zboží jako výchozí. Ujistěte se, že jste vybrali pole **Výchozí**.
-3. Vyberte tlačítko **Vytvořit obsah přihrádky**. Pro zboží jsou nyní přiřazeny výchozí přihrádky.
+## To assign a default bin to an item
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Content Creation Worksheet**, and choose the related link.  
+2.  Fill in the bin code and item information for each bin that you would like to set up as a default for an item. Make sure to select the **Default** field.  
+3.  Choose the **Create Bin Content** action. Default bins are now assigned for your item.  
 
-> [!NOTE]
-> Pokud je zboží zaskladněno, a pokud zboží nemá přiřazenou výchozí přihrádku, nastaví se jako výchozí ta, kde je zaskladněno.
+> [!NOTE]  
+>  When an item is put away, if the item does not have a default bin assigned, the bin where the item is put away is assigned as the default.  
 
-## Změna výchozí přihrádky zboží
-Pravděpodobně bude nutné změnit přiřazení výchozí přihrádky pro zboží nebo přiřadit výchozí přihrádku novému zboží.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Obsah přihrádky** a poté vyberte související odkaz.
-2. V poli **Filtr lokace** vyberte příslušný kód lokace.
-3. Najděte aktuální výchozí položku obsahu přihrádky pro zboží a zrušte zaškrtnutí políčka **Výchozí přihrádka** .
-4. Najděte řádek s obsahem přihrádky, pro který chcete novou výchozí přihrádku. Zaškrtněte políčko **Výchozí přihrádka**.
+## To change the default bin for an item  
+You may need to change the default bin assignment for an item or assign a default bin to a new item.    
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Contents**, and then choose the related link.  
+2.  In the **Location Filter** field, select the appropriate location code.  
+3.  Find the current default bin content entry for the item and clear the **Default Bin** check box.  
+4.  Find the bin content line for the bin that you would like as the new default bin. Select the **Default Bin** check box.  
 
-> [!NOTE]
-> Pokud je zboží zaskladěné poprvé a nemá přiřazenou výchozí přihrádku, systém přiřadí přihrádku, ve které je zboží zaskladněno jako výchozí.
+> [!NOTE]  
+>  When an item is put away for the first time, and the item does not have a default bin assigned, the system will assign the bin where the item is put away as the default bin for the item.  
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení sprívy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

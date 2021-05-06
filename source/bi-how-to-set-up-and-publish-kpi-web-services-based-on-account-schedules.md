@@ -3,50 +3,56 @@
     description: This topic describes how to show the account-schedule KPI data based on specific account schedules.
     author: bholtorf
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
-# Nastavení a publikování webových služeb KPI na základě účetních schémat
-Na stránce **Nastavení webové služby KPI účetního schématu** nastavíte způsob zobrazení dat KPI účetního schématu a konkrétní účetní schémata, na kterých mají být KPI založeny. Když vyberete tlačítko **Publikovat webovou službu** zadaná data KPI účetního schématu budou přidána do seznamu publikovaných webových služeb na stránce **Webové služby**.
-
-## Nastavení a publikování webových služeb KPI na základě účetních schémat
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení webové služby KPI účetního schématu** a poté vyberte související odkaz.
-2. Na záložce **Obecné** vyplňte pole, jak je popsáno v následující tabulce.
-
-   | Pole | Popis |
-   |---------------------------------|---------------------------------------|  
-   | **Začátek hodnot prognózy** | Určete, v jakém okamžiku se budou prognózované hodnoty zobrazovat na grafe KPI s plánem účtů.<br /><br /> Prognózované hodnoty se získají z rozpočtu hlavní knihy, který vyberete v poli **Název fin.rozpočtu**. **Poznámka:**  Chcete-li získat ukazatele KPI, které zobrazují předpovídané hodnoty po určitém datu a skutečné údaje před datem, můžete změnit pole **Povolit účto od** na stránce **Nastavení financí**. Pro více informací navštivte Povolit účto od. |
-   | **Název fin.rozpočtu** | Zadejte název rozpočtu hlavní knihy, který poskytuje předpokládané hodnoty účetní schémy webové služby KPI. |
-   | **Období** | Určete období, na kterém je založena účetní schéma webové služby KPI. |
-   | **Zobrazit podle** | Určete, v jakém intervalu je zobrazeno účetní schéma KPI. |
-   | **Název webové služby** | Zadejte název účetní schémy webové služby KPI.<br /><br /> Tento název se zobrazí v poli **Název služby** na stránce **Webové služby**. |
-
-   Určete jeden nebo více plánů účtů, které chcete publikovat jako webovou službu KPI, podle nastavení provedeného v předchozí tabulce.
-
-3. Na záložce **Účetní schémata** vyplňte pole, jak je popsáno v následující tabulce.
-
-   | Pole | Popis |
-   |---------------------------------|---------------------------------------|  
-   |   **Název účetního schéma** | Určete plán účtu, na kterém je webová služba KPI založena. |
-   |   **Popis účetního schématu** | Zadejte popis plánu účtu, na kterém je webová služba KPI založena. |
-
-4. Opakujte krok 3 pro všechny účetní schémata, na kterých chcete založit účetní schému webové služby KPI.
-5. Chcete-li zobrazit nebo upravit vybraný plán účtu, na záložce **Účetní schéma** vyberte akci **Upravit účetní schéma**.
-6. Chcete-li zobrazit údaje účetní schémy KPI, které jste nastavili, vyberte akci **Účetní schéma webové služby KPI**.
-7. Chcete-li publikovat účetní schému webové služby KPI, vyberte akci **Publikovat webovou službu**. Webová služba je přidána do seznamu publikovaných webových služeb na stránce **Webové služby**.
+# Set Up and Publish KPI Web Services Based on Account Schedules
+On the **Account Schedule KPI Web Service Setup** page, you set up how to show the account-schedule KPI data and which specific account schedules to base the KPIs on. When you choose the **Publish Web Service** button, the specified account-schedule KPI data is added to the list of published web services on the **Web Services** page.  
 
 > [!NOTE]
-> Webovou službu KPI můžete také publikovat tak, že přejdete na stránku **Nastavení webové služby KPI účetního schématu** ze stránky **Webové služby**. Pro více informací navštivte [Publikování webové služby](across-how-publish-web-service.md).
+> When you use this web service, closing dates are not included in your data set. This lets you use filters in Power BI to analyze various time periods.
 
-## Viz také
+## To set up and publish a KPI web service that is based on account schedules  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedule KPI Web Service Setup**, and then choose the related link.  
+2.  On the **General** FastTab, fill in the fields as described in the following table.  
+
+    |Field|Description|  
+    |---------------------------------|---------------------------------------|  
+    |**Forecasted Values Start**|Specify at what point in time forecasted values are shown on the account-schedule KPI graphic.<br /><br /> The forecasted values are retrieved from the general ledger budget that you select in the **G/L Budget Name** field. **Note:**  To obtain KPIs that show forecasted figures after a certain date and actual figures before the date, you can change the **Allow Posting From** field on the **General Ledger Setup** page. For more information, see Allow Posting From.|  
+    |**G/L Budget Name**|Specify the name of the general ledger budget that provides forecasted values to the account-schedule KPI web service.|  
+    |**Period**|Specify the period that the account-schedule KPI web service is based on.|  
+    |**View By**|Specify which time interval the account-schedule KPI is shown in.|  
+    |**Web Service Name**|Specify the name of the account-schedule KPI web service.<br /><br /> This name will appear in the **Service Name** field on the **Web Services** page.|  
+
+    Specify one or more account schedules that you want to publish as a KPI web service according to the setup that you made in the previous table.  
+
+3.  On the **Account Schedules** FastTab, fill in the fields as described in the following table.  
+
+    |Field|Description|  
+    |---------------------------------|---------------------------------------|  
+    |**Acc. Schedule Name**|Specify the account schedule that the KPI web service is based on.|  
+    |**Acc. Schedule Description**|Specify the description of the account schedule that the KPI web service is based on.|  
+
+4.  Repeat step 3 for all the account schedules that you want to base the account-schedule KPI web service on.  
+5.  To view or edit the selected account schedule, on the **Account Schedule** FastTab, choose the **Edit Account Schedule** action.  
+6.  To view the account-schedule KPI data that you have set up, choose the **Account Schedule KPI Web Service** action.  
+7.  To publish the account-schedule KPI web service, choose the **Publish Web Service** action. The web service is added to the list of published web services on the **Web Services** page.  
+
+> [!NOTE]  
+>  You can also publish the KPI web service by pointing to the **Account Schedule KPI Web Service Setup** page object from the **Web Services** page. For more information, see [Publish a Web Service](across-how-publish-web-service.md).  
+
+## See Also  
 [Business Intelligence](bi.md)  
 [Finance](finance.md)  
-[Nastavení financí](finance-setup-finance.md)  
-[Položky zboží a účetní osnova](finance-general-ledger.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Setting Up Finance](finance-setup-finance.md)  
+[The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

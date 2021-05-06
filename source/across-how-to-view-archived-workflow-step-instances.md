@@ -1,40 +1,41 @@
 ---
     title: How to View Archived Workflow Step Instances | Microsoft Docs
     description: All completed workflow step instances are saved on the **Archived Workflow Step Instances** page.
-    services: project-madeira
-    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Zobrazení archivovaných instancí kroku workflow
-Všechny dokončené instance kroku workflow jsou uloženy na stránce **Archivované instance workflow**.
+# View Archived Workflow Step Instances
+All completed workflow step instances are saved on the **Archived Workflow Step Instances** page.  
 
-Na stránce **Workflow** vytvoříte workflow vypsáním příslušných kroků na řádcích. Každý krok sestává z události workflow, která je řízená podmínkami událostí, a odezvy workflow, která je řízená možnostmi odezvy. Kroky workflow definujete vyplněním polí na řádcích workflow z pevných seznamů hodnot událostí a odezev představujících scénáře, které jsou podporovány kódem aplikace. Pro více informací navštivte [Vytvoření workfloworkflow](across-how-to-create-workflows.md).
+ On the **Workflow** page, you create a workflow by listing the involved steps on the lines. Each step consists of a workflow event, moderated by event conditions, and a workflow response, moderated by response options. You define workflow steps by filling fields on workflow lines from fixed lists of event and response values representing scenarios that are supported by the application code. For more information, see [Create Workflows](across-how-to-create-workflows.md).  
 
-## Zobrazení archivovaných instancí kroku workflow
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Workflow** a poté vyberte související odkaz.
-2. Otevřete workflow, pro který chcete zobrazit všechny archivované instance kroku workflow.
-3. Na stránce **Workflow** vyberte akci **Archivované instance kroku workflow**.
+## To view archived workflow step instances  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Workflows**, and then choose the related link.  
+2.  Open the workflow for which you want to view all archived workflow step instances.  
+3.  On the **Workflow** page, choose the **Archived Workflow Step Instances** action.  
 
-   Otevře se stránka **Archivované instance kroku workflow** a zobrazí se instance archivovaných kroků workflow vybraného workflow.
-4. Alternativně můžete vybrat ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Archivované instance kroku workflow** a poté vyberte související odkaz.
+    The **Archived Workflow Step Instances** page opens showing the archived workflow step instances of the selected workflow.  
+4.  Alternatively, Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Archived Workflow Step Instances**, and then choose the related link.  
 
-Otevře se stránka **Archivované instance kroku workflow** a zobrazí se všechny archivované instance kroku workflow. V poli **Kód workflow** můžete vidět, ke kterému workflow instance archivovaného kroku workflow patřila.
+The **Archived Workflow Step Instances** page opens showing all archived workflow step instances. In the **Workflow Code** field, you can see which workflow the archived workflow step instance belonged to.  
 
-## Viz také
-[Odstranění workflow](across-how-to-delete-workflows.md)  
-[Vytvoření workflow](across-how-to-create-workflows.md)  
-[Povolení workflow](across-how-to-enable-workflows.md)  
-[Návod: Nastavení a použití workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
-[Nastavení workflow](across-set-up-workflows.md)  
-[Použití workflow](across-use-workflows.md)  
-[Workflow](across-workflow.md)
+## See Also  
+ [Delete Workflows](across-how-to-delete-workflows.md)   
+ [Create Workflows](across-how-to-create-workflows.md)   
+ [Enable Workflows](across-how-to-enable-workflows.md)   
+ [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)   
+ [Setting Up Workflows](across-set-up-workflows.md)   
+ [Using Workflows](across-use-workflows.md)   
+ [Workflow](across-workflow.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

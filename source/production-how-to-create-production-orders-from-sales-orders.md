@@ -4,34 +4,37 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Vytvoření výrobní zakázky z prodejních objednávek
-Výrobní zakázky pro vyrobené zboží můžete vytvořit přímo z prodejních objednávek.
+# Create Production Orders from Sales Orders
+You can create production orders for produced items directly from sales orders.  
 
-## Vytvoření výrobní zakázky z prodejní objednávky
+## To create a production order from a sales order  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Vyberte prodejní objednávku, pro kterou chcete vytvořit výrobní zakázku.
-3. Vyberte akci **Plánování**. Na stránce **Plánování prod.objednávky**, můžete zobrazit dostupnost položky prodejní objednávky.
-4. Vyberte akci **Vytvořit výr. zakázku**.
-5. Vyberte stav a typ objednávky.
-6. Zvolte tlačítko **Ano** a vytvořte tak výrobní zakázku.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
+2.  Select the sales order you want to create a production order for.  
+3.  Choose the **Planning** action. On the **Sales Order Planning** page, you can view the availability of the sales order item.  
+4.  Choose the **Create Prod. Order** action.  
+5.  Select the status and order type.  
+6.  Choose the **Yes** button to create the production order.
 
-Můžete se také rozhodnout vytvořit projekt výrobní zakázku. Pro více informací navštivte [ Plánování projektové objednávky](production-how-to-plan-project-orders.md).
+You can also choose to make a project production order. For more information, see [Plan Project Orders](production-how-to-plan-project-orders.md).   
 
-## Viz také
-[Nastavení výroby](production-configure-production-processes.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
-[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

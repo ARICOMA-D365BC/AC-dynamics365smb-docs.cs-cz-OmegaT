@@ -1,74 +1,80 @@
 ---
 title: Reclassify Fixed Assets| Microsoft Docs
 description: You reclassify a fixed asset to transfer it to a different department, split it up, or combine it with other fixed assets.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Převod, rozdělení nebo kombinování dlouhodobého majetku
-Deník přeřazení dlouhodobého majetku se používá k převodu, rozdělení a kombinování dlouhodobého majetku. Výsledky přeřazení dlouhodobého majetku můžete zobrazit nebo vytisknout pomocí sestavy **Dlouhodobý majetek-úč.hodn.02**.
+# Transfer, Split, or Combine Fixed Assets
 
-## Převod dlouhodobého majetku do jiného oddelení
-Dlouhodobý majetek může být nutné převést do jiného oddelení, když například umístíte majetek do výrobního oddělení, když je ve výstavbě, a po dokončení jej přesunete do administrativního oddelení.
+You use the fixed asset reclassification journal to transfer, split up, and combine fixed assets. You view or print the results of fixed asset reclassification with the **Fixed Asset-Book Value 02** report.
 
-1. Nastavte nový dlouhodobý majetek. Do pole **Kód oddělení** zadejte nové oddělení.
-2. K novému dlouhodobému majetku přiřaďte knihu odpisů dlouhodobého majetku. Pro více informací navštivte [Pořízení dlouhodobého majetku](fa-how-acquire.md).
-3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník  přeřazení DM** a poté vyberte související odkaz.
-4. Vytvořte deník přeřazení, kde pole **Číslo DM** obsahuje původní dlouhodobý majetek a pole **Nové číslo DM** obsahuje nový dlouhodobý majetek, který má být přesunut.
-5. Vyberte akci **Přeřadit**.
+## To transfer a fixed asset to a different department
 
-   Dva řádky jsou nyní vytvořeny ve finančním deníku dlouhodobého majetku pomocí šablony a dávky, které jste zadali na stránce **Nastavení deníku DM** pro zadanou knihu odpisů. Pro více informací navštivte [Nastavení odpisů dlouhodobého majetku](fa-how-setup-depreciation.md).
-6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky dlouhodobého majetku** a poté vyberte související odkaz.
-7. Na stránce **Finanční deník DM** vyberte akci **Účtovat** pro zaúčtování přeřazení, které jste provedli v krocích 4 a 5.
+You may need to transfer a fixed asset to a different department when, for example, you place an asset in the production department while it is under construction and then move it to the administration department when it is finished.  
 
-Pokud jste zaúčtovali náklady na pořízení pro jeden majetek, můžete použít deník přeřazení dlouhodobého majetku k rozdělení nákladů na pořízení mezi několik majetků.
+1. Set up a new fixed asset. Enter the new department as a dimension.  
+2. Assign a fixed asset depreciation book to the new fixed asset. For more information, see [Acquire Fixed Assets](fa-how-acquire.md).
+3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Reclassification Journals**, and then choose the related link.
+4. Create a journal line where the **FA No.** field contains the original fixed asset, and the **New FA No.** field contains the new fixed asset to be moved. Fill in the other fields as appropriate.  
+5. Choose the **Reclassify** action.
 
-## Rozdělení dlouhodobého majetku na tři dlouhodobá aktiva
-Jeden dlouhodobý majetek můžete rozdělit na více dlouhodobých aktiv, například když potřebujete rozdělit dlouhodobý majetek do tří různých oddělení. V takovém případě můžete například přesunout 25 procent nákladů na pořízení a odpisů původního dlouhodobého majetku na druhý dlouhodobý majetek a 45 procent na třetí majetek. Zbývajících 30 procent zůstane na původním dlouhodobém majetku.
+    Two lines are now created in the fixed asset G/L journal using the template and batch that you have specified on the **FA Journal Setup** page for the specified depreciation book. For more information, see [Set Up Fixed Asset Depreciation](fa-how-setup-depreciation.md).
+6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.    
+7. On the **Fixed Asset G/L Journal** page, choose the **Post** action to post the reclassification that you performed in steps 4 and 5.
 
-1. Nastavte dva nové dlouhodobé majetky. Do pole **Kód oddělení** zadejte nové oddělení.
-2. Přiřaďte knihy odpisů dlouhodobého majetku k novému dlouhodobému majetku. Pro více informací navštivte [Pořízení dlouhodobého majetku](fa-how-acquire.md).
-3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník  přeřazení DM** a poté vyberte související odkaz.
-4. Vytvořte dva řádky deníku přeřazení, jeden pro každý nový dlouhodobý majetek.
-5. Na prvním řádku zadejte druhý dlouhodobý majetek do pole **Nové číslo DM** a 25 do pole **Přeřadit %  pořízení**.
-6. Na druhém řádku zadejte třetí dlouhodobý majetek do pole **Nové číslo DM** a 40 do pole **Přeřadit %  pořízení**.
-7. Na obou řádcích zaškrtněte políčka **Přeřadit náklady pořízení** a **Přeřadit odpis**.
-8. Vyberte akci **Přeřadit**.
+If you have posted an acquisition cost for one asset, you can use the fixed asset reclassification journal to split the acquisition cost among several assets.  
 
-   Dva řádky jsou nyní vytvořeny ve finančním deníku dlouhodobého majetku pomocí šablony a dávky, které jste zadali na stránce **Nastavení deníku DM** pro zadanou knihu odpisů. Pro více informací navštivte [Nastavení odpisů dlouhodobého majetku](fa-how-setup-depreciation.md).
-9. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky dlouhodobého majetku** a poté vyberte související odkaz.
-10. Na stránce **Finanční deník DM** vyberte akci **Účtovat** pro zaúčtování přeřazení, které jste provedli v krocích 4 až 8.
+## To split a fixed asset into three fixed assets
+You can split one fixed asset into multiple fixed assets, for example when you need to distribute a fixed asset onto three different departments. In that case, you can move, for example, 25 percent of the acquisition cost and depreciation for the original fixed asset to the second fixed asset and 45 percent to the third asset. The remaining 30 percent will remain on the original fixed asset.
 
-## Sloučení dvou dlouhodobých aktiv do jednoho
-Můžete kombinovat více dlouhodobého majetku do jednoho dlouhodobého majetku, například při přesunu distribuovaného dlouhodobého majetku do jednoho oddělení. Pokud jste zaúčtovali náklady na pořízení a odpisy dlouhodobého majetku, který má být přesunut, budou tyto hodnoty sloučeny do jedinoho dlouhodobého majetku.
+1. Set up two new fixed assets. Enter the relevant departments as dimensions.  
+2. Assign fixed asset depreciation books to the new fixed assets. For more information, see [Acquire Fixed Assets](fa-how-acquire.md).
+3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Reclassification Journals**, and then choose the related link.
+4. Create two reclassification journal lines, one for each new fixed asset.
+5. On the first line, enter the second fixed asset in the **New FA No.** field and 25 in the **Reclassify Acq. Cost %** field.
+6. On the second line, enter the third fixed asset in the **New FA No.** field and 40 in the **Reclassify Acq. Cost %** field.
+7. On both lines, select the **Reclassify Acquisition Cost** and **Reclassify Depreciation** check boxes.  
+8. Choose the **Reclassify** action.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník  přeřazení DM** a poté vyberte související odkaz.
-2. Vytvořte deník přeřazení, kde pole **Číslo DM** obsahuje dlouhodobý majetek, který má být přesunut nebo kombinován, a pole **Nové číslo DM** obsahuje dlouhodobý majetek, se kterým bude kombinován.
-3. Ponechte pole **Přeřadit %  pořízení** prázdné pro přesunutí nebo sloučení celých nákladů na pořízení.
-4. Zaškrtněte políčka **Přeřadit náklady pořízení** a **Přeřadit odpis**.
-5. Vyberte akci **Přeřadit**.
+    Two lines are now created in the fixed asset G/L journal using the template and batch that you have specified on the **FA Journal Setup** page for the specified depreciation book. For more information, see [Set Up Fixed Asset Depreciation](fa-how-setup-depreciation.md).    
+9. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.
+10. On the **Fixed Asset G/L Journal** page, choose the **Post** action to post the reclassification that you performed in steps 4 through 8.
 
-   Dva řádky jsou nyní vytvořeny ve finančním deníku dlouhodobého majetku pomocí šablony a dávky, které jste zadali na stránce **Nastavení deníku DM** pro zadanou knihu odpisů. Pro více informací navštivte [Nastavení odpisů dlouhodobého majetku](fa-how-setup-depreciation.md).
-6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky dlouhodobého majetku** a poté vyberte související odkaz.
-7. Na stránce **Finanční deník DM** vyberte akci **Účtovat** pro zaúčtování přeřazení, které jste provedli v krocích 2 až 5.
+## To combine two fixed assets into one
 
-## Zobrazení změněných hodnot knihy odpisů z důvodu přeřazení dlouhodobého majetku
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní hodnota DM 02** a poté vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
-3. Vyberte tlačítko **Tisk** nebo **Náhled**.
+You can combine multiple fixed assets into one fixed asset, for example when you move distributed fixed assets into one department. If you have posted acquisition costs and depreciation for the fixed asset to be moved, those values will be combined in the single fixed asset.
 
-## Viz také
-[Dlouhodobý majetek](fa-manage.md)  
-[Nastavení dlouhodobého majetku](fa-setup.md)  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Reclassification Journals**, and then choose the related link.
+2. Create a reclassification journal where the **FA No.** field contains the fixed asset to be moved/combined, and the **New FA No.** field contains the fixed asset that it will be combined with.
+3. Leave the **Reclassify Acq. Cost %** field empty to move/combine the entire acquisition cost.  
+4. Select the **Reclassify Acquisition Cost** and **Reclassify Depreciation** check boxes.
+5. Choose the **Reclassify** action.
+
+    Two lines are now created in the fixed asset G/L journal using the template and batch that you have specified on the **Fixed Asset Journal Setup** page for the specified depreciation book. For more information, see [Set Up Fixed Asset Depreciation](fa-how-setup-depreciation.md).   
+6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset G/L Journals**, and then choose the related link.
+7. On the **Fixed Asset G/L Journal** page, choose the **Post** action to post the reclassification that you performed in steps 2 through 5.
+
+## To view changed depreciation book values due to fixed asset reclassification
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Book Value 02**, and then choose the related link.
+2. Fill in the fields as necessary.
+3. Choose the **Print** or **Preview** button.  
+
+## See Also
+
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

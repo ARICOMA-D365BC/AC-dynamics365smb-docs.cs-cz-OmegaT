@@ -1,108 +1,117 @@
 ---
-title: Create Contact Companies| Microsoft Docs
-ddescription: Outlines the tasks to create contact companies, including assigning relevant data about prospects and defining the business relationships you have with companies.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+title: Create Business Contacts
+description: Outlines the tasks to create contacts and define your business relationships.
+author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Vytvoření kontaktů
-Pravidelně se setkáváte s osobami z jiných společností, z kterých se mohou časem vyvinout obchodní vztahy, například vztahy se zákazníky. Při navázání takového nového kontaktu musí být na kartě kontaktu zaznamenáno co nejvíce informací, aby mohla komunikace pokračovat.
+# Create Contacts
+When you develop a business relationship to someone in another company, add them as a contact in [!INCLUDE[prod_short](includes/prod_short.md)]. Then, add any information about them, or their company, that can be useful for future communications. On the **Contact Card** page, you can create the following types of contacts:
 
-Kontakt můžete vytvořit jako typ **Společnost**, například pokud se nejedná o jednotlivou osobu, ale o entitu, jako je dodavatel nebo banka. Kontakt můžete také vytvořit jako typ **Osoba**. Funkčnost je pro oba typy víceméně stejná a oba se mohou měnit v závislosti na vývoji vztahu.
+* **Person** - Typically, this is when you've had direct contact with someone and have their contact details.
+* **Company** - For example, if the contact is not an individual person but an entity, such as a contractor or a bank. 
 
-Když je například karta kontaktu převedena na zákaznickou kartu, stává se kontaktní osobou nebo kontaktní společností jméno zákazníka. Karta kontaktu zůstane a data na obou kartách budou synchronizována do budoucna, pokud je propojíte.
+The information that's relevant for each type of contact differs, so the fields and actions that are available are different. For example, you can only assign job responsibilities to a person, and an industry group to a company. 
 
-## Osoba nebo společnost
-Můžete se rozhodnout nastavit kontakt jako osobu nebo společnost, obvykle v závislosti na tom, zda znáte jméno kontaktní osoby v době vytvoření. To provedete, když vyplníte pole **Typ** na stránce **Karta kontaktu**. Můžete také udržovat karty kontaktů pro společnost i pro jednu nebo více osob pracujících ve společnosti. K tomu dochází automaticky, když vyplníte pole **Název společnosti** na kartě kontaktu typu **Osoba**.
+You can change the value of the **Type** field later. Alternatively, use the fields on the **Inheritance** FastTab on the **Marketing Setup** page to specify the data to share between a person and their company. For more information, see [Setting Up Contacts](marketing-setup-contacts.md).
 
-Funkce je stejná pro oba typy, s tím rozdílem, že možnosti pro další informace se mění v závislosti na typu. Pracovní odpovědnosti můžete například přiřadit pouze osobě a průmyslové skupině ve společnosti. Toto je indikováno v uživatelském rozhraní šedým zaškrtnutím políček a akcí, které se nepoužijí. Hodnotu pole **Typ** můžete později změnit, nebo můžete použít pole na záložce **Dědičnost** na stránce **Nastavení marketingu** ke kontrole, která data jsou sdílena mezi osobou a společností, která je s ní ve spojení. Pro více informací navštivte [Nastavení kontaktů](marketing-setup-contacts.md).
+When a contact is converted to a customer, for example, the contact person or contact company becomes the name of the customer. The record for the contact is kept, and you can link the contact and the customer so that their data is synchronized going forward.
 
-## Ruční vytvoření kontaktu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kontakty** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
-3. Do pole **Číslo** zadejte číslo kontaktu.
+## To create a contact manually
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Contacts**, and then choose the related link.
+2. Choose the **New** action.
+3. In the **No.** field, enter a number for the contact.
 
-   Alternativně, pokud jste nastavili číselnou řadu pro kontakty na stránce **Nastavení marketingu**, můžete stisknutím klávesy Enter vložit další dostupné číslo kontaktu.
-5. Podle potřeby vyplňte zbývající pole. [!INCLUDE [tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+    Alternatively, if you have set up a number series for contacts on the **Marketing Setup** page, you can press **Enter** to insert the next available contact number.  
+5. Fill in the remaining fields as required. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## Vytvoření kontaktu z karty zákazníka, dodavatele nebo z bankovního účtu
-Pokud máte zákazníky, dodavatele a bankovní účty, pro které chcete vytvořit karty kontaktů, můžete pomocí dávkové úlohy **Vytvořit kontakty z** vytvořit kontakty na základě existujících dat. Když vytvoříte kontakt tímto způsobem, kontaktní informace budou následně synchronizovány se souvisejícími informacemi o zákazníkovi, dodavateli nebo bankovním účtu. Pro více informací navštivte [Synchronizace kontaktů se zákazníky, dodavateli a bankovními účty](marketing-create-contact-companies.md).
+## To create a contact from a customer, vendor, or bank account
+If you have customers, vendors, and bank accounts that you want to create contact cards for, you can use the **Create Contacts from** batch jobs to create contacts from the existing data. When you create a contact this way, the contact information is afterwards synchronized with the related customer, vendor, or bank account information. For more information, see [Synchronizing Contacts with Customers, Vendors, and Bank Accounts](marketing-create-contact-companies.md#synchronizing-contacts-with-customers-vendors-employees-and-bank-accounts).
 
-> [!NOTE]
-> Než budete moci vytvořit kontakty na základě existujících dat, musíte zadat kód obchodního vztahu pro zákazníky, dodavatele nebo bankovní účty na záložce **Interakce** na stránce **Nastavení marketingu**. Pro více informací navštivte [Nastavení kontaktů](marketing-setup-contacts.md).
+> [!NOTE]  
+> Before you can create contacts based on existing data, you must specify a business relation code for customers, vendors, or bank accounts on the **Interactions** FastTab on the **Marketing Setup** page. For more information, see [Set up Contacts](marketing-setup-contacts.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte jednu z následujících možností v závislosti na tom, z čeho chcete vytvořit kontakty, a pak zvolte související odkaz.
-   * **Vytváření kontaktů ze zákazníků**
-   * **Vytváření kontaktů z dodavatelů**
-   * **Vytváření kontaktů z bankovních účtů**
-2. Na stránce požadavku, která se otevře, v sekci **Zákazník**, **Dodavatel** nebo **Bankovní účet** nastavte filtry, pokud chcete vytvořit kontakty od konkrétních zákazníků, dodavatelů nebo bankovních účtů.
-3. Stisknutím tlačítka **OK** zahajte vytváření kontaktů.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter one of the following, depending what you want to create contacts from, and then choose the related link.
+   * **Create Contacts from Customers**
+   * **Create Contacts from Vendors**
+   * **Create Contacts from Bank Accounts**
+2. On the request page that opens, in the **Customer**, **Vendor**, or **Bank Account** section, set filters if you want to create contacts from specific customers, vendors, or bank accounts.
+3. Choose the **OK** button to start creating contacts.
 
-Novým kontaktům jsou přiřazena další čísla kontaktů v číselné řadě. Nově vytvořeným kontaktům jsou přiřazeny obchodní vztahy uvedené na stránce **Nastavení marketingu**.
+The next contact numbers in the number series are assigned to the new contacts. The business relations that are specified on the **Marketing Setup** page is assigned to the newly created contacts.
 
-> [!TIP]
-> Můžete to udělat i naopak, a to vytvořením zákazníka, dodavatele nebo bankovního účtu z kontaktu. Pro více informací navštivte [Vytvoření kontaktu jako zákazníka, dodavatele nebo bankovního účtu](marketing-create-contact-companies.md).
+> [!TIP]  
+> You can also do this the other way around, namely by creating a customer, vendor, or bank account from a contact. For more information, see [To create a contact as a customer, vendor, or bank account](marketing-create-contact-companies.md#to-create-a-customer-vendor-employee-or-bank-account-from-a-contact).
 
-## Vytvoření zákazníka, dodavatele nebo bankovního účtu z kontaktu
-Pokud máte zákazníka, dodavatele nebo bankovní účet pro společnost, pro kterou chcete vytvořit kontakt, můžete použít funkci **Vytvořit jako**. Když vytvoříte kontakt tímto způsobem, kontaktní informace budou následně synchronizovány se souvisejícími informacemi o zákazníkovi, dodavateli nebo bankovním účtu. Pro více informací navštivte [Synchronizace kontaktů se zákazníky, dodavateli a bankovními účty](marketing-create-contact-companies.md).
+## To create a customer, vendor, employee, or bank account from a contact
+If you have a customer, vendor, employee, or bank account for the company that you want to create a contact for, use the **Create as** action. When you create a contact this way, the contact information is afterwards synchronized with the related customer, vendor, employee, or bank account information. For more information, see [Synchronizing Contacts with Customers, Vendors, and Bank Accounts](marketing-create-contact-companies.md#synchronizing-contacts-with-customers-vendors-employees-and-bank-accounts).
 
-> [!NOTE]
-> Před vytvořením zákazníků, dodavatelů nebo bankovních účtů z kontaktů musíte na záložce **Interakce** na stránce **Nastavení marketingu** zadat obchodní vztah pro zákazníky, dodavatelé nebo bankovní účty. Pro více informací navštivte [Nastavení kontaktů](marketing-setup-contacts.md).
+> [!NOTE]  
+> Before you can create customers, vendors, employees, or bank accounts from contacts, you must specify a business relation code on the **Marketing Setup** page on the **Interactions** FastTab. For more information, see [Setting up Contacts](marketing-setup-contacts.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kontakty** a poté vyberte související odkaz.
-2. Vyberte kontakt, který chcete vytvořit jako zákazníka, dodavatele nebo bankovní účet.
-3. Vyberte akci **Vytvořit jako** a poté vyberte **Zákazník**, **Dodavatel** nebo **Banka**.
-4. Vyberte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Contacts**, and then choose the related link.
+2. Select the contact you want to create as a customer, vendor, employee, or bank account.
+3. Choose the **Create As** action, and then choose either **Customer**, **Vendor**, **Bank**, or **Employee**.
+4. Choose the **OK** button.
 
-Kontaktní informace jsou přeneseny z karty kontaktu na nového zákazníka, dodavatele nebo kartu bankovního účtu. Možná budete chtít přidat ke každé kartě konkrétní informace, například fakturaci a platební údaje. Pro více informací navštivte například [Registrace nových zákazníků](sales-how-register-new-customers.md).
+The contact information is transferred from the contact card to a new customer, vendor, employee, or bank account card. You may want to add specific information to each of the cards, such as invoicing and payment details. For more information, see, for example, [Register New Customers](sales-how-register-new-customers.md).
 
-## Propojení kontaktu s existujícím zákazníkem, dodavatelem nebo bankovním účtem
-Pokud máte kontakt a zákazníka, dodavatele nebo bankovní účet pro stejnou společnost, můžete propojit tyto dvě entity, aby byla synchronizována běžná data.
+## To link a contact to an existing customer, vendor, employee, or bank account
+If you have a contact and either a customer, vendor, employee, or bank account for the same company, you can link the two entities to synchronize data.
 
-1. Otevřete kontakt, který chcete propojit.
-2. Vyberte akci **Spojit s existujícím** a poté vyberte akci **Zákazník**, **Dodavatel** nebo **Banka**.
-3. Na stránce, která se otevře, vyberte zákazníka, dodavatele nebo bankovní účet, na který chcete vytvořit odkaz.
-4. V poli **Aktuální platná pole** zadejte, která pole mají být upřednostňována v případě konfliktních informací v polích společných pro kontakt a zákazníka, dodavatele nebo účet. Pokud je například kód prodejce na kartě kontaktu odlišný než na kartě zákazníka, můžete si vybrat, zda chcete zachovat tento kód na kartě kontaktu výběrem možnosti **Kontakt**.
-5. Vyberte tlačítko **OK**.
+1. Open the contact that you want to link.
+2. Choose the **Link with existing** action, and then choose the **Customer**, **Vendor**, **Bank**, or **Employee** action.
+3. On the page that opens, select the customer, vendor, employee, or bank account to link to.
+4. In the **Current Master Fields** field, specify whose fields to prioritize in when there is conflicting information in fields common to the contact and customer, vendor, employee, or bank account. For example, if the salesperson code is different for the contact and customer, you can choose to keep the one on the contact card by selecting **Contact**.
+5. Choose the **OK** button.
 
-## Synchronizace kontaktů se zákazníky, dodavateli a bankovními účty
-Pokud jsou některé z vašich kontaktů také zákazníci, dodavatelé nebo bankovní účty, můžete synchronizovat kontaktní informace se souvisejícím zákazníkem, dodavatelem nebo bankovním účtem.
+## To remove a link between a contact and an existing customer, vendor, employee, or bank account
 
-Při synchronizaci kontaktu se zákazníkem, dodavatelem nebo bankovním účtem existují následující výhody.
+If you have wrongly linked a contact and a customer, vendor, employee, or bank account, remove the link between the entities so that data no longer synchronizes.
 
-* Informace je třeba aktualizovat pouze na jednom místě. Pokud například změníte telefonní číslo kontaktu, bude telefonní číslo automaticky aktualizováno se stejnou úpravou u zákazníka, dodavatele nebo bankovního účtu.
-* Pokud jste pro kontakty zadali číselnou řadu, při vytváření karty zákazníka, karty dodavatele nebo karty bankovního účtu se automaticky vytvoří karta kontaktu pro zákazníka, dodavatele nebo bankovní účet.
-* Můžete vytvořit prodejní nabídky a objednávky a nakupovat jejich pomocí kontaktu.
-* Interakce můžete zaznamenat při provádění akcí, jako je tisk objednávek, hromadné objednávky, vytváření prodejních servisních objednávek, odesílání e-mailů a tak dále.
-* Pokud odstraníte kontakt propojený se zákazníkem, dodavatelem nebo bankovním účtem, bude odstraněn pouze kontakt. Zákazník, dodavatel nebo bankovní účet zůstane.
-* Pokud odstraníte zákazníka, dodavatele nebo bankovní účet, který je spojen s kontaktem, zůstane kontakt nezměněn.
+1. Open the contact that has the wrong link.  
+2. Choose the **Business Relations** action.  
+3. On the page that opens, select the customer, vendor, employee, or bank account to remove the link from.  
+4. Choose the **Delete** action.  
 
-> [!NOTE]
-> Na kartě kontaktu se pouze neobjeví některé podrobnosti, například fakturační a účtovací údaje. Proto je vhodné je přidat ručně na kartu zákazníka, kartu dodavatele nebo kartu bankovního účtu při vytváření kontaktů jako zákazníka, dodavatele nebo bankovní účet.
+> [!NOTE]  
+> Do not use the **Business Relations** window to change existing relations. Instead, remove the relation and use the **Link with existing** action. For more information, see the [To link a contact to an existing customer, vendor, or bank account](marketing-create-contact-companies.md#to-link-a-contact-to-an-existing-customer-vendor-employee-or-bank-account) section.
 
-Synchronizace běžných dat mezi kontakty a příbuznými zákazníky, dodavateli nebo bankovními účty je povolena třemi způsoby:
+## Synchronizing Contacts with Customers, Vendors, Employees, and Bank Accounts
+If some of your contacts are also customers, vendors, employees, or bank accounts, you can synchronize then with data from the contact and gain the following benefits:
 
-* Při vytváření kontaktů ze zákazníků, dodavatelů nebo bankovních účtů. Viz [Vytvoření kontaktu ze zákazníka, dodavatele nebo bankovního účtu](marketing-create-contact-companies.md).
-* Při vytváření zákazníků, dodavatelů nebo bankovních účtů z kontaktů. Viz [Vytvoření zákazníka, dodavatele nebo bankovního účtu z kontaktu](marketing-create-contact-companies.md).
-* Když propojíte kontakty s existujícími zákazníky, dodavateli nebo bankovními účty z karty kontaktu. Viz [Propojení kontaktu s existujícím zákazníkem, dodavatelem nebo bankovním účtem](marketing-create-contact-companies.md).
+* You only have to update information in one place. For example, if you modify the phone number on the contact, the phone number is automatically updated for the customer, vendor, employee, or bank account.
+* If you have specified a number series for contacts, when you create a customer, vendor, employee, or bank account card, a contact is automatically created.
+* You can create sales quotes and orders, and purchase quotes and orders, from the contact.
+* You can record your interactions, such as printing orders, blanket orders, creating sales service orders, sending e-mails, and so on.
+* If you delete a contact linked to a customer, vendor, employee, or bank account, only the contact is removed. The customer, vendor, employee, or bank account remains.
+* If you delete a customer, vendor, employee, or bank account that is linked to a contact, the contact remains.
 
-## Zobrazení, se kterým zákazníkem, dodavatelem nebo bankovním účtem kontakt souvisí
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kontakty** a poté vyberte související odkaz.
-2. Vyberte řádek kontaktu, zvolte akci **Související informace** a pak vyberte akci **Zákazník/Dodavatel/Banka**.
+> [!NOTE]  
+> Certain details, such as invoicing and posting details, are not available for contacts. When you create contacts as customers, vendors, employees, or bank accounts, you may want to add them manually.
 
-Otevře se stránka související karty.
+There are three ways to enable data synchronization between contacts and customers, vendors, employees, or bank accounts:
 
-## Viz také
-[Správa kontaktů](marketing-contacts.md)  
-[Nastavení kontaktů](marketing-setup-contacts.md)  
-[Práce s Business Central](ui-work-product.md)
+* When you create contacts from customers, vendors, employees, or bank accounts. See [To create a contact from a customer, vendor, or bank account](marketing-create-contact-companies.md#to-create-a-contact-from-a-customer-vendor-or-bank-account).
+* When you create customers, vendors, employees, or bank accounts from contacts. See [To create a customer, vendor, or bank account from a contact](marketing-create-contact-companies.md#to-create-a-customer-vendor-employee-or-bank-account-from-a-contact).
+* When you link contacts with existing customers, vendors, employees, or bank accounts from the contact card. See [To link a contact to an existing customer, vendor, or bank account](marketing-create-contact-companies.md#to-link-a-contact-to-an-existing-customer-vendor-employee-or-bank-account).
+
+## To view which customer, vendor, employee, or bank account a contact is related to
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Contacts**, and then choose the related link.
+2. Select the line for a contact, choose the **Related Information** action, and then choose the **Customer/Vendor/Bank Acc/Employee** action.
+
+## See Also
+[Managing Contacts](marketing-contacts.md)  
+[Setting Up Contacts](marketing-setup-contacts.md)  
+[Working with Business Central](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

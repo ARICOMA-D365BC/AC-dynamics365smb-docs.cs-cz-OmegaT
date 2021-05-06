@@ -4,291 +4,294 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Zpracování způsobu přiobjednání
-Aby se zboží mohlo účastnit plánování zásobování, musí být definován způsob přiobjednání. Existují následující čtyři způsob přiobjednání:
+# Design Details: Handling Reordering Policies
+For an item to participate in supply planning, a reorder policy must be defined. The following four reordering policies exist:  
 
-* Pevné přiobj.množ.
-* Maximální množství
-* Pořadí
-* Dávka-pro-dávku
+* Fixed Reorder Qty.  
+* Maximum Qty.  
+* Order  
+* Lot-for-Lot  
 
-Pevné přiobj.množ. a Maximální množství zásady se týkají plánování zásob. Ačkoli je plánování zásob technicky jednodušší než postup vyvažování, musí tyto zásady existovat společně s postupným vyvažováním nabídky a sledování objednávek. Aby bylo možné řídit integraci mezi těmito dvěma možnostmi a zajistit viditelnost v zapojené logice plánování, řídí přísné zásady způsob, jakým jsou zásady přeuspořádání zpracovávány.
+Fixed Reorder Qty. and Maximum Qty. policies relate to inventory planning. Although inventory planning is technically simpler than the balancing procedure, these policies must coexist with the step-by-step balancing of supply and order tracking. To control the integration between the two, and to provide visibility into the involved planning logic, strict principles govern how reordering policies are handled.  
 
-## Role bodu přiobjednání
-Kromě obecného vyvážení nabídky a poptávky musí plánovací systém také sledovat úrovně zásob u dotčených položek, aby respektoval definované způsoby přiobjednání
+## The Role of the Reorder Point
+In addition to the general balancing of supply and demand, the planning system must also monitor inventory levels for the affected items to respect the defined reordering policies.  
 
-Bod přiobjednání představuje poptávku během doby realizace. Když projektovaná zásoba projde pod úroveň zásob definovanou bodem přiobjednání, je na čase objednat větší množství. Mezitím se očekává, že se zásoby budou postupně snižovat a pravděpodobně dosáhnou nuly (nebo úrovně pojistné zásoby), dokud nedojde k doplnění.
+A reorder point represents demand during lead time. When the projected inventory passes below the inventory level defined by the reorder point, it is time to order more quantity. Meanwhile, the inventory is expected to decrease gradually and possibly reach zero (or the safety stock level), until the replenishment arrives.  
 
-V souladu s tím plánovací systém navrhne dopředu naplánovanou zakázku na dodávku v okamžiku, kdy projektovaný inventář projde pod bodem přiobjednání zásob.
+Accordingly, the planning system will suggest a forward-scheduled supply order at the point when the projected inventory passes below the reorder point.  
 
-Bod přiobjednání odráží určitou úroveň zásob. Úrovně zásob se však mohou během časového intervalu výrazně měnit, a proto musí plánovací systém neustále sledovat předpokládané dostupné zásoby.
+The reorder point reflects a certain inventory level. However, inventory levels can move significantly during the time bucket and, therefore, the planning system must constantly monitor the projected available inventory.
 
-## Sledování předpokládané úrovně zásob a bodu přiobjednání
-Zásoby jsou typem nabídky, ale pro plánování zásob systém plánování rozlišuje mezi dvěma úrovněmi zásob:
+## Monitoring the Projected Inventory Level and the Reorder Point
+Inventory is a type of supply, but for inventory planning, the planning system distinguishes between two inventory levels:  
 
-* Předpokládané zásoby
-* Plánované dostupné zásoby
+* Projected inventory  
+* Projected available inventory  
 
-### Plánované zásoby
-Zpočátku jsou předpokládané zásoby množstvím hrubých zásob, včetně nabídky a poptávky v minulosti, i když nebyly zaúčtovány, při zahájení procesu plánování. V budoucnu se z tohoto stane pohyblivá projektovaná úroveň zásob, která je udržována hrubými množstvími z budoucí nabídky a poptávky, protože jsou zaváděny podél časové osy (ať už rezervované nebo jiným způsobem alokované).
+### Projected Inventory  
+Initially, projected inventory is the quantity of gross inventory, including supply and demand in the past even if not posted, when starting the planning process. In the future, this becomes a moving projected inventory level that is maintained by gross quantities from future supply and demand because those are introduced along the time line (whether reserved or in other ways allocated).  
 
-Projektované zásoby používají plánovací systém ke sledování bodu přiobjednání a k určení množství přiobjednávky při použití maximálního množství způsobu přiobjednání.
+The projected inventory is used by the planning system to monitor the reorder point and to determine the reorder quantity when using the Maximum Qty. reordering policy.  
 
-### Očekávané dostupné zásoby
-Očekávané dostupné zásoby jsou součástí plánovaných zásob, které jsou v daném okamžiku k dispozici pro splnění poptávky. Očekávané dostupné zásoby jsou používány plánovacím modulem při sledování úrovně pojistných zásob.
+### Projected Available Inventory  
+The projected available inventory is the part of the projected inventory that at a given point in time is available to fulfill demand. The projected available inventory is used by the planning engine when monitoring the safety stock level.  
 
-Očekávané dostupné zásoby jsou používány plánovacím systémem ke sledování úrovně pojistných zásob, protože pojistné zásoby musí být vždy k dispozici, aby sloužily neočekávané poptávce.
+The projected available inventory is used by the planning system to monitor the safety stock level, since the safety stock must always be available to serve unexpected demand.  
 
-### Intervaly dostupnosti
-Přísná kontrola předpokládaného inventáře je zásadní pro zjištění, kdy je dosažen nebo překročen bod přiobjednání a pro výpočet správného množství objednávky při použití maximálního množství způsobu přiobjednání.
+### Time Buckets  
+Having a tight control of the projected inventory is crucial to detect when the reorder point is reached or crossed and to calculate the right order quantity when using the Maximum Qty. reordering policy.  
 
-Jak již bylo uvedeno dříve, předpokládaná úroveň zásob se vypočítá na začátku plánovacího období. Jedná se o hrubou úroveň, která nebere v úvahu rezervace a podobné příděly. K monitorování této úrovně zásob během plánovací sekvence, systém monitoruje agregované změny za určité časové období, interval dostupnosti. Systém zajišťuje, že interval dostupnosti je alespoň jeden den, protože se jedná o nejpřesnější jednotku času pro událost poptávky nebo nabídky.
+As stated earlier, the projected inventory level is calculated at the start of the planning period. It is a gross level that does not consider reservations and similar allocations. To monitor this inventory level during the planning sequence, the system monitors the aggregated changes over a period of time, a time bucket. The system ensures that the time bucket is at least one day since it is the most precise unit of time for a demand or supply event.  
 
-### Stanovení předpokládané úrovně zásoby
-Následující pořadí popisuje, jak je určena předpokládaná úroveň zásob:
+### Determining the Projected Inventory Level  
+The following sequence describes how the projected inventory level is determined:  
 
-* Pokud byla událost nabídky, například nákupní objednávka, zcela naplánována, zvýší se předpokládané zásoby k datu splatnosti.
-* Pokud byla událost poptávky plně uspokojena, nebudou předpokládané zásoby ihned snižovány. Místo toho zaúčtuje připomenutí snížení, což je interní záznam, který obsahuje datum a množství příspěvku do předpokládaného inventáře.
-* Když je naplánována následná událost nabídky a umístěna na časovou linii, budou se po aktualizaci prozkoumávaná zveřejněná připomenutí poklesu po plánovaném datu nabídky prošetřována jedna po druhé. Během tohoto procesu může být dosažena nebo překročena úroveň bodu změny pořadí interního připomenutí zvýšení.
-* Pokud je zavedena nová objednávka dodávky, systém zkontroluje, zda je zadána před aktuální nabídkou. Pokud je, nová nabídka se stane současnou nabídkou a vyvažovací procedura začíná znovu.
+* When a supply event, such as a purchase order has been totally planned, it will increase the projected inventory on its due date.  
+* When a demand event has been fully satisfied, it will not decrease the projected inventory right away. Instead, it posts a decrease reminder, which is an internal record that holds the date and quantity of the contribution to the projected inventory.  
+* When a subsequent supply event is planned and placed on the time line, the posted decrease reminders are investigated one by one up until the planned date of the supply while updating the projected inventory. During this process, the reorder point level of the internal increase reminder may be reached or crossed.  
+* If a new supply order is introduced, the system checks if it is entered before the current supply. If it is, the new supply becomes current supply and the balancing procedure starts over.  
 
-Následující obrázek znázorňuje tento princip:
+The following shows a graphical illustration of this principle:  
 
-![Stanovení předpokládané úrovně zásob](media/nav_app_supply_planning_2_projected_inventory.png "Stanovení předpokládané úrovně zásob")
+![Determining the Projected Inventory Level](media/nav_app_supply_planning_2_projected_inventory.png "Determining the Projected Inventory Level")  
 
-1. Nabídka **Sa** s 4 (pevná) uzavírá poptávku **Da** z -3.
-2. ZavřítPoptávku: Vytvoření upomínky snížení o -3 (není ukázáno).
-3. Nabídka **Sa** je uzavřena s přebytkem 1 (již neexistuje žádná poptávka).
+1. Supply **Sa** of 4 (fixed) closes Demand **Da** of -3.  
+2. CloseDemand: Create a decrease reminder of -3 (not shown).  
+3. Supply **Sa** is closed with a surplus of 1 (no more demand exists).  
 
-   Tím se zvýší úroveň předpokládaných zásob na +4, zatímco předpokládané **dostupné** zásoby budou mít stav -1.
+     This increases the projected inventory level to +4, while the projected **available** inventory becomes -1.  
 
-4. Další nabídka **Sb** s 2 (další objednávka), byla již umístěna na časovou osu.
-5. Systém zkontroluje, zda je před **Sb** nějaké připomenutí poklesu (není, takže není podniknuta žádná akce).
-6. Systém uzavře nabídku **Sb** (neexistuje žádná poptávka)—buď A: snížením ji na 0 (zrušení) nebo B: ponecháním tak, jak je.
+4. The next supply **Sb** of 2 (another order) has already been placed on the timeline.  
+5. System checks if there is any decrease reminder preceding **Sb** (there is not, so no action is taken).  
+6. System closes supply **Sb** (no more demand exists)—either A: by reducing it to 0 (cancel) or B: by leaving as is.  
 
-   Tím se zvýší předpokládaná úroveň zásob (A: +0 => +4 nebo B: +2 = +6).
+     This increases the projected inventory level (A: +0 => +4 or B: +2 = +6).  
 
-7. Systém provede závěrečnou kontrolu: Existuje nějaká připomínka snížení? Ano, je tam jedna na datum **Da**.
-8. Systém přidá připomenutí poklesu o -3 na předpokládanou úroveň zásob, buď A: +4 -3 = 1 nebo B: +6 -3 = +3.
-9. V případě A, systém vytvoří dopředu naplánovanou objednávku počínaje datem **Da**.
+7. System makes a final check: Is there any decrease reminder? Yes, there is one on the date of **Da**.  
+8. System adds the decrease reminder of -3 reminder to the projected inventory level, either A: +4 -3 = 1 or B: +6 -3 = +3.  
+9. In case of A, the system creates a forward-scheduled order starting on date **Da**.  
 
-   V případě B je dosaženo bodu přiobjednání a je vytvořena nová objednávka.
+     In case of B, the reorder point is reached and a new order is created.
 
-## Role Intervalu dostupnosti
-Účelem intervalu dostupnosti je shromáždit události poptávky v časové stránce, aby bylo možné vytvořit společnou objednávku dodávky.
+## The Role of the Time Bucket
+The purpose of the time bucket is to collect demand events within the time page in order to make a joint supply order.  
 
-Pro způsoby přiobjednávání, které používají bod přiobjednávání, můžete definovat interval dostupnosti. Tím je zajištěno, že se poptávka ve stejném časovém období hromadí před kontrolou dopadu na předpokládané zásoby a zda byl předán bod přiobjednání. Pokud je bod přiobjednání předán, je nová objednávka dodávky naplánována dopředu od konce období definovaného intervalem dostupnosti. Intervaly dostupnosti začínají datem zahájení plánování.
+For reordering policies that use a reorder point, you can define a time bucket. This ensures that demand within the same time period is accumulated before checking the impact on the projected inventory and whether the reorder point has been passed. If the reorder point is passed, a new supply order is scheduled forward from the end of the period defined by the time bucket. The time buckets begin on the planning starting date.  
 
-Koncept intervalu dostupnosti odráží manuální proces kontroly úrovně zásob častěji než u každé transakce. Uživatel musí definovat frekvenci (interval dostupnosti). Uživatel například shromažďuje všechny potřeby zboží od jednoho dodavatele k vytvoření týdenní objednávky.
+The time-bucketed concept reflects the manual process of checking the inventory level on a frequent basis rather than for each transaction. The user needs to define the frequency (the time bucket). For example, the user gathers all item needs from one vendor to place a weekly order.  
 
-![Příklad intervalu dostupnosti v plánování](media/nav_app_supply_planning_2_reorder_cycle.png "Příklad intervalu dostupnosti v plánování")
+![Example of time bucket in planning](media/nav_app_supply_planning_2_reorder_cycle.png "Example of time bucket in planning")  
 
-Časový interval se obvykle používá, aby se zabránilo kaskádovému efektu. Například vyvážená řada poptávky a nabídky, kde je zrušena předčasná poptávka nebo je vytvořena nová. Výsledkem by bylo, že každá objednávka dodávky (kromě té poslední) je přeplánována.
+The time bucket is generally used to avoid a cascade effect. For example, a balanced row of demand and supply where an early demand is canceled, or a new one is created. The result would be that every supply order (except the last one) is rescheduled.
 
-## Pobyt pod úrovní přetečení
-Při použití Maximálního množství a způsob Pevného přiobj.množ., systém plánování se zaměřuje pouze na předpokládané zásoby v daném časovém intervalu. To znamená, že plánovací systém může navrhnout nadbytečnou nabídku, když dojde k negativní poptávce nebo pozitivní změny nabídky mimo daný časový interval. Pokud je z tohoto důvodu navržena nadbytečná dodávka, plánovací systém vypočítá, na jaké množství by měla být dodávka snížena (nebo zrušena), aby se zabránilo nadbytečné nabídce. Tomuto množství se říká „úroveň přetečení“. Přetečení je sděleno jako plánovací řádek s akci **Změnit množství. (Úbytek)** nebo **Zrušit** na následující varovné zprávě:
+## Staying under the Overflow Level
+When using the Maximum Qty. and Fixed Reorder Qty. policies, the planning system focuses on the projected inventory in the given time-bucket only. This means that the planning system may suggest superfluous supply when negative demand or positive supply changes occur outside of the given time bucket. If, for this reason, a superfluous supply is suggested, the planning system calculates which quantity the supply should be decreased to (or deleted) to avoid the superfluous supply. This quantity is called the “overflow level.” The overflow is communicated as a planning line with a **Change Qty. (Decrease)** or **Cancel** action and the following warning message:  
 
-*Upozornění: Předpokládané zásoby [xx] jsou větší než úroveň přetečení[xx] v den splatnosti [xx].*
+*Attention: The projected inventory [xx] is higher than the overflow level [xx] on the Due Date [xx].*  
 
-![Úroveň přetečení zásob](media/supplyplanning_2_overflow1_new.png "Úroveň přetečení zásob")
+![Inventory overflow level](media/supplyplanning_2_overflow1_new.png "Inventory overflow level")  
 
-### Výpočet úrovně přetečení
-Úroveň přetečení se počítá různými způsoby v závislosti na nastavení plánování.
+###  Calculating the Overflow Level  
+The overflow level is calculated in different ways depending on planning setup.  
 
-#### Maximální množství způsob přiobjednání
-Úroveň přetečení = Maximální zásoby
-
-> [!NOTE]  
-> Pokud existuje minimální množství objednávky, bude přidáno následovně: Úroveň přetečení = Maximální zásoba + Minimální množství objednávky.
-
-#### Pevné přiobj.množ. způsob přiobjednání
-Úroveň přetečení = Množství přiobjednání + Bod přiobjednání
+#### Maximum Qty. reordering policy  
+Overflow level = Maximum Inventory  
 
 > [!NOTE]  
-> Pokud je minimální objednané množství vyšší než bod přiobjednávání, nahradí se pak takto: Úroveň přetečení = Množství přiobjednání + Minimální množství objednávky
+>  If a minimum order quantity exists, then it will be added as follows: Overflow level = Maximum Inventory + Minimum Order Quantity.  
 
-#### Násobek objednávky
-Pokud existuje násobek objednávky, pak upraví úroveň přetečení pro obě maximální množství a způsob Pevného přiobj.množ., způsobu přiobjednávání.
+#### Fixed Reorder Qty. reordering policy  
+Overflow level = Reorder Quantity + Reorder Point  
 
-### Vytvoření řádku plánování s upozorněním na přetečení
-Když existující nabídka způsobí, že předpokládané zásoby budou na konci časového úseku vyšší než úroveň přetečení, vytvoří se plánovací řádek. Chcete-li upozornit na potenciální nadbytečné nabídky, použijte řádek plánování s varovnou zprávou, pole **Přijmout hlášené akce** není vybráno a zpráva akce je buď Zrušit nebo Změnit množství.
+> [!NOTE]  
+>  If the minimum order quantity is higher than the reorder point, then it will replace as follows: Overflow Level = Reorder Quantity + Minimum Order Quantity  
 
-#### Výpočet množství řádku plánování
-Množství řádku plánování = Současné množství nabídky – (Předpokládané zásoby – Úroveň přetečení)
+#### Order Multiple  
+If an order multiple exists, then it will adjust the overflow level for both Maximum Qty. and Fixed Reorder Qty. reordering policies.  
 
-> <x1 />! POZNÁMKA <x2 /> <x3 />
-> Stejně jako u všech varovných řádků bude jakékoli maximální / minimální množství objednávky nebo násobek objednávky ignorováno.
+###  Creating the Planning Line with Overflow Warning  
+When an existing supply causes the projected inventory to be higher than the overflow level at the end of a time bucket, a planning line is created. To warn about the potential superfluous supply, the planning line has a warning message, the **Accept Action Message** field is not selected, and the action message is either Cancel or Change Qty.  
 
-#### Definování typu hlášení akce
+#### Calculating the Planning Line Quantity  
+Planning Line Quantity = Current Supply Quantity – (Projected Inventory – Overflow Level)  
 
-- Pokud je množství řádku plánování vyšší než 0, je hlášení akce Změnit množství.
-- Pokud je množství řádku plánování rovno nebo nižší než 0, pak je hlášení akce Zrušit
+> [!NOTE]  
+>  As with all warning lines, any maximum/minimum order quantity or order multiple will be ignored.  
 
-#### Složení varovné zprávy
-V případě přetečení se na stránce **Nesledované prvky plánování** zobrazí varovná zpráva s následujícími informacemi:
+#### Defining the Action Message Type  
 
-- Předpokládaná úroveň zásob, která spustila upozornění
-- Vypočítaná úroveň přetečení
-- Datum splatnosti události nabídky
+-   If the planning line quantity is higher than 0, then the action message is Change Qty.  
+-   If the planning line quantity is equal to or lower than 0, then the action message is Cancel  
 
-Příklad: "Předpokládané zásoby 120 jsou vyšší než úroveň přetečení 60 v 28-01-11"
+#### Composing the Warning Message  
+In case of overflow, the **Untracked Planning Elements** page displays a warning message with the following information:  
 
-### Scénář
-V tomto scénáři zákazník změní prodejní objednávku ze 70 na 40 kusů mezi dvěma běhy plánování. Funkce přetečení se nastaví, aby se snížila nákup, který byl navržen pro počáteční prodejní množství.
+-   The projected inventory level that triggered the warning  
+-   The calculated overflow level  
+-   The due date of the supply event.  
 
-#### Nastavení zboží
+Example: “The projected inventory 120 is higher than the overflow level 60 on 28-01-11”  
 
-| Způsob přiobjednání | Maximální množství |
+### Scenario  
+In this scenario, a customer changes a sales order from 70 to 40 pieces between two planning runs. The overflow feature sets in to reduce the purchase that was suggested for the initial sales quantity.  
+
+#### Item Setup  
+
+|Reordering Policy|Maximum Qty.|  
 |-----------------------|------------------|  
-| Maximální množství objednávky | 100 |
-| Bod přiobjednání | 50 |
-| Zásoby | 80 |
+|Maximum Order Quantity|100|  
+|Reorder Point|50|  
+|Inventory|80|  
 
-#### Situace před poklesem prodeje
+#### Situation Before Sales Decrease  
 
-| Událost | Změnit množství | Plánované zásoby |
+|Event|Change Qty.|Projected Inventory|  
 |-----------|-----------------|-------------------------|  
-| Den první | Žádné | 80 |
-| Prodej | -70 | 10 |
-| Konec intervalu dostupnosti | Žádné | 10 |
-| Návrh nové nákupní objednávky | +90 | 100 |
+|Day one|None|80|  
+|Sale|-70|10|  
+|End of time bucket|None|10|  
+|Suggest new purchase order|+90|100|  
 
-#### Situace po poklesu prodeje
+#### Situation After Sales Ddecrease  
 
-| Změna | Změnit množství | Plánované zásoby |
+|Change|Change Qty.|Projected Inventory|  
 |------------|-----------------|-------------------------|  
-| Den první | Žádné | 80 |
-| Prodej | -40 | 40 |
-| Nákup | +90 | 130 |
-| Konec intervalu dostupnosti | Žádné | 130 |
-| Návrh snížení nákupní<br /><br /> objednávky z 90 na 60 | -30 | 100 |
+|Day one|None|80|  
+|Sale|-40|40|  
+|Purchase|+90|130|  
+|End of time bucket|None|130|  
+|Suggest to decrease purchase<br /><br /> order from 90 to 60|-30|100|  
 
-#### Výsledné řádky plánování
-Jeden řádek plánování (upozornění) je vytvořen pro snížení nákupu z 30 na 90 do 60, aby se předpokládané zásoby udržely na 100 podle úrovně přetečení.
+#### Resulting Planning Lines  
+ One planning line (warning) is created to reduce the purchase with 30 from 90 to 60 to keep the projected inventory on 100 according to the overflow level.  
 
-![Plán podle úrovně přetečení](media/nav_app_supply_planning_2_overflow2.png "Plán podle úrovně přetečení")
-
-> [!NOTE]  
-> Bez funkce Přetečení se nevytvoří žádné varování, pokud je úroveň plánované zásoby vyšší než maximální inventář. To by mohlo způsobit nadbytečnou zásobu 30.
-
-## Zpracování předpokládaných negativních zásob
-Bod přiobjednání vyjadřuje očekávanou poptávku během doby realizace zboží. Když je předán bod přiobjednávání, je čas objednat více. Předpokládané zásoby však musí být dostatečně velké, aby pokryly poptávku, dokud nebude přijata nová objednávka. Mezitím by se měly pojistné zásoby postarat o výkyvy v poptávce až na cílenou úroveň služeb.
-
-V důsledku toho systém plánování považuje za stav nouze, pokud budoucí poptávka nemůže být doručena z předpokládaných zásob nebo vyjádřena jiným způsobem tak, že předpokládaná zásoba jde do záporu. Systém řeší takovou výjimku tím, že navrhuje novou objednávku dodávky, aby uspokojil část poptávky, kterou nelze uspokojit zásobami nebo jinou nabídkou. Velikost objednávky nové objednávky dodávky nebude brát v úvahu maximální zásobu nebo objednané množství, ani nebude brát v úvahu modifikátory objednávky, Maximální obj.množství, Minimální obj.množství a Násobek objednávky. Místo toho bude odrážet přesný nedostatek.
-
-Řádek plánování pro tento typ objednávky dodávky zobrazí ikonu nouzového varování a při vyhledávání budou poskytnuty další informace, které uživatele informují o situaci.
-
-Na následujícím obrázku nabídka D představuje nouzový příkaz k úpravě pro negativní zásoby.
-
-![Návrh nouzového plánování, aby se zabránilo záporným zásobám](media/nav_app_supply_planning_2_negative_inventory.png "Návrh nouzového plánování, aby se zabránilo záporným zásobám")
-
-1. Nabídka**A**, počáteční předpokládané zásoby, je pod bodem přiobjednáním.
-2. Vytvoří se nová dopředu naplánovaná dodávka (**C**).
-
-   (Množství = Maximální zásoby – Předpokládaná úroveň zásob)
-3. Nabídka **A** je uzavřena poptávkou **B**, která není plně pokrytá.
-
-   (Poptávka **B** by se mohla pokusit naplánovat Nabídku C ale to se podle konceptu intervalu dostupnosti nestane).
-4. Nová nabídka (**D**) je vytvořena tak, aby pokryla zbývající množství na vyžádání poptávky **B**.
-5. Poptávka **B** je uzavřena (vytvoření připomenutí předpokládaných zásob).
-6. Nová nabídka **D** je uzavřena.
-7. Předpokládané zásoby jsou zkontrolovány ; bod přiobjednání nebyl překročen.
-8. Nabídka **C** je uzavřena (neexistuje žádná další poptávka).
-9. Závěrečná kontrola: Neexistují žádné nevyřízené upomínky na úrovni zásob.
+![Plan according to overflow level](media/nav_app_supply_planning_2_overflow2.png "Plan according to overflow level")  
 
 > [!NOTE]  
-> Krok 4 odráží, jak systém reaguje ve verzích starších než Microsoft Dynamics NAV 2009 SP1.
+>  Without the Overflow feature, no warning is created if the projected inventory level is above maximum inventory. This could cause a superfluous supply of 30.
 
-Tím se uzavírá popis hlavních zásad týkajících se plánování zásob na základě způsobu přiobjednání. Následující část popisuje vlastnosti čtyř podporovaných zásad způsobu přiobjednání.
+## Handling Projected Negative Inventory
+The reorder point expresses the anticipated demand during the lead time of the item. When the reorder point is passed, it is time to order more. But the projected inventory must be large enough to cover the demand until the new order is received. Meanwhile, the safety stock should take care of fluctuations in demand up to a targeted service level.  
 
-## Způsob přiobjednání
-Zásady přiobjednání definují, kolik má být objednáno, když je třeba zboží doplnit. Existují následující čtyři různé způsoby přiobjednání.
+ Consequently, the planning system considers it an emergency if a future demand cannot be served from the projected inventory, or expressed in another way, that the projected inventory goes negative. The system deals with such an exception by suggesting a new supply order to meet the part of the demand that cannot be met by inventory or other supply. The order size of the new supply order will not take the maximum inventory or the reorder quantity into consideration, nor will it take into consideration the order modifiers Maximum Order Quantity, Minimum Order Quantity, and Order Multiple. Instead, it will reflect the exact deficiency.  
 
-### Pevné přiobj.množ.
-Způsob Pevného přiobj.množ. souvisí s plánováním zásob typických položek zboží skupiny C (nízké náklady na zásoby, nízké riziko zastarávání, mnoho položek). Tato zásada se obvykle používá v souvislosti s bodem přiobjednání, který odráží očekávanou poptávku během doby realizace položky.
+ The planning line for this type of supply order will display an Emergency warning icon, and additional information will be provided upon lookup to inform the user of the situation.  
 
-#### Vypočet podle intervalu dostupnosti
-Pokud plánovací systém zjistí, že v daném intervalu dostupnosti (cyklus přiobjednání) byl dosažen nebo překročen bod přiobjednání - nad nebo v bodě přiobjednání na začátku období a pod nebo v bodě přiobjednání na konci období - navrhne vytvoření nové objednávky dodávky zadaného přiobjednavacího množství a naplánování dopředu od prvního data po konci intervalu dostupnosti
+ In the following illustration, supply D represents an emergency order to adjust for negative inventory.  
 
-Koncept bodu přiobjednání snižuje počet návrhů nabídky. To odráží manuální proces častého procházení skladem, aby se zkontroloval skutečný obsah v různých zásobnících.
+ ![Emergency planning suggestion to avoid negative inventory](media/nav_app_supply_planning_2_negative_inventory.png "Emergency planning suggestion to avoid negative inventory")  
 
-#### Vytvoří pouze nezbytnou nabídku
-Před navržením nové objednávky dodávky, která splní bod přiobjednání, plánovací systém zkontroluje, zda již byla objednána dodávka v rámci dodací lhůty zboží. Pokud stávající objednávka na dodávku vyřeší problém tím, že během doby realizace přivede projektované zboží do bodu přiobjednání nebo nad něj, systém nenavrhne novou objednávku na dodávku.
+1.  Supply **A**, initial projected inventory, is below reorder point.  
+2.  A new forward-scheduled supply is created (**C**).  
 
-Objednávky dodávek, které jsou vytvořeny konkrétně za účelem splnění bodu přiobjednání, jsou vyloučeny z běžného vyvažování dodávek a nebudou v žádném případě následně měněny. V důsledku toho, pokud má být zboží používající bod přiobjednání vyřazeno (nedoplněno), je vhodné ručně zkontrolovat nevyřízené objednávky dodávek nebo změnit způsob přiobjednání na Dávka pro dávku, čímž systém sníží nebo zruší nadbytečnou dodávku.
+     (Quantity = Maximum Inventory – Projected Inventory Level)  
+3.  Supply **A** is closed by demand **B**, which is not fully covered.  
 
-#### Kombinace s Modifikátory objednávky
-Modifikátory objednávek, minimální množství objednávky, maximální množství objednávky a násobek objednávky, by neměly hrát velkou roli, když se použijí zásady pevného přiobjednání množství. Plánovací systém však stále bere v úvahu tyto modifikátory a sníží množství na zadané maximální množství objednávky (a vytvoří dva nebo více nabídek za účelem dosažení celkového množství objednávky), zvýší objednávku na zadané minimální množství objednávky nebo zaokrouhlí množství objednávky nahoru, aby splnilo zadaný násobek objednávky.
+     (Demand **B** could try to schedule Supply C in but that will not happen according to the time-bucket concept.)  
+4.  New supply (**D**) is created to cover the remaining quantity on Demand **B**.  
+5.  Demand **B** is closed (creating a reminder to the projected inventory).  
+6.  The new supply **D** is closed.  
+7.  Projected Inventory is checked; reorder point has not been crossed.  
+8.  Supply **C** is closed (no more demand exists).  
+9. Final check: No outstanding inventory level reminders exist.  
 
-#### Kombinace s kalendáři
-Před navržením nové objednávky dodávky ke splnění bodu přiobjednání systém plánování zkontroluje, zda je objednávka naplánována na nepracovní den, podle všech kalendářů, které jsou definovány v poli **Kód základního kalendáře** na stránkách **Informace o společnosti** a **Karta umístění.**
+> [!NOTE]  
+>  Step 4 reflects how the system reacts in versions earlier than Microsoft Dynamics NAV 2009 SP1.  
 
-Pokud je naplánovaným dnem nepracovní den, plánovací systém přesune objednávku dopředu na nejbližší pracovní datum. To může mít za následek objednávku, která splňuje bod přiobjednání, ale nesplňuje určitou specifickou poptávku. Pro takovou nevyváženou poptávku vytváří plánovací systém další nabídku.
+This concludes the description of central principles relating to inventory planning based on reordering policies. The following section describes the characteristics of the four supported reordering policies.
 
-#### Nemělo by být užíváno s prognózou
-Protože očekávaná poptávka je již vyjádřena na úrovni bodu přiobjednání, není nutné zahrnout prognózu do plánování zboží pomocí bodu přiobjednání. Pokud je důležité založit plán na prognóze, použijte zásady dávky-pro-dávku
+## Reordering Policies
+Reordering policies define how much to order when the item needs to be replenished. Four different reordering policies exist.  
 
-#### Nesmí být použito s rezervacemi
-Pokud uživatel rezervoval množství, například množství v zásobách, pro nějakou vzdálenou poptávku, bude plánovací základna narušena. I když je plánovaná úroveň zásob přijatelná s ohledem na bod přiobjednání, množství nemusí být kvůli k dispozici. Systém se to může pokusit kompenzovat vytvářením objednávek výjimek; u položek, které jsou plánovány pomocí bodu přiobjednání, se však doporučuje nastavit pole Rezervovat na Nikdy na zboží.
+### Fixed Reorder Qty.
+The Fixed Reorder Qty. policy is related to inventory planning of typical C-items (low inventory cost, low risk of obsolescence, and/or many items). This policy is usually used in connection with a reorder point reflecting the anticipated demand during the lead time of the item.  
 
-### Maximální množství
-Zásada Maximální množství je způsob, jak udržovat zásoby pomocí bodu přiobjednání
+#### Calculated per Time Bucket  
+If the planning system detects that the reorder point has been reached or crossed in a given time bucket (reorder cycle) – above or on the reorder point at the start of the period and below or on the reorder point at the end of the period – it will suggest to create a new supply order of the specified reorder quantity and forward schedule it from the first date after the end of the time bucket.  
 
-Vše, co se týká zásady Pevné přiobj.množ. se také vztahuje i na tyto zásady. Jediným rozdílem je množství navrhované nabídky. Při použití zásady maximálního množství bude objednané množství definováno dynamicky na základě předpokládané úrovně zásob, a proto se obvykle liší od objednávky k objednávce.
+The bucketed reorder point concept reduces the number of supply suggestions. This reflects a manual process of frequently walking through the warehouse to check the actual contents in the various bins.  
 
-#### Vypočet podle intervalu dostupnosti
-Množství přiobjednávky se určuje v okamžiku (konec časového úseku), když plánovací systém zjistí, že byl bod přiobjednání překročen. V tomto okamžiku systém měří mezeru od aktuální předpokládané úrovně zásob až po určené maximální zásoby. Jedná se o množství, které by mělo být znovu objednáno. Systém poté zkontroluje, zda již byla objednána dodávka jinde, aby byla přijata v dodací lhůtě, a pokud ano, sníží množství nové zakázky na dodávku o již objednané množství.
+#### Creates only Necessary Supply  
+Before suggesting a new supply order to meet a reorder point, the planning system checks if supply has already been ordered to be received within the item’s lead time. If an existing supply order will solve the problem by bringing the projected inventory to or above the reorder point within the lead time, the system will not suggest a new supply order.  
 
-Systém zajistí, aby předpokládané zásoby alespoň dosáhly úrovně bodu přiobjednání – v případě, že uživatel zapomněl zadat maximální množství zásob.
+Supply orders that are created specifically to meet a reorder point is excluded from ordinary supply balancing, and will not in any way be changed afterwards. Consequently, if an item using reorder point is to be phased out (not replenished), it is advisable to review outstanding supply orders manually or change the reordering policy to Lot-for-Lot, whereby the system will reduce or cancel superfluous supply.  
 
-#### Kombinace s Modifikátory objednávky
-V závislosti na nastavení může být nejlepší kombinovat zásady Maximálního množství s modifikátory objednávky, aby bylo zajištěno minimální množství objednávky nebo zaokrouhleno na celý počet měrných jednotek nákupu nebo ji rozdělit na více položek, jak je definováno maximálním množstvím objednávky.
+#### Combines with Order Modifiers  
+The order modifiers, Minimum Order Quantity, Maximum Order Quantity, and Order Multiple, should not play a big role when the fixed reorder quantity policy is used. However, the planning system still takes these modifiers into account and will decrease the quantity to the specified maximum order quantity (and create two or more supplies in order to reach the total order quantity), increase the order to the specified minimum order quantity, or round the order quantity up to meet a specified order multiple.  
 
-### Kombinace s kalendáři
-Před navržením nové objednávky dodávky ke splnění bodu přiobjednání systém plánování zkontroluje, zda je objednávka naplánována na nepracovní den, podle všech kalendářů, které jsou definovány v poli **Kód základního kalendáře** na stránkách **Informace o společnosti** a **Karta umístění.**
+#### Combines with Calendars  
+Before suggesting a new supply order to meet a reorder point, the planning system checks if the order is scheduled for a non-working day, according to any calendars that are defined in the **Base Calendar Code** field in the **Company Information** and **Location Card** pages.  
 
-Pokud je naplánovaným dnem nepracovní den, plánovací systém přesune objednávku dopředu na nejbližší pracovní datum. To může mít za následek objednávku, která splňuje bod přiobjednání, ale nesplňuje určitou specifickou poptávku. Pro takovou nevyváženou poptávku vytváří plánovací systém další nabídku.
+If the scheduled date is a non-working day, the planning system moves the order forward to the nearest working date. This may result in an order that meets a reorder point but does not meet some specific demand. For such unbalanced demand, the planning system creates an extra supply.  
 
-### Pořadí
-V prostředí vyrobit na zakázku se zboží nakupuje nebo vyrábí výhradně k pokrytí konkrétní poptávky. Typicky se vztahuje k zboží A a motivací pro volbu způsobu přiobjednávání objednávek může být to, že poptávka není častá, dodací lhůta je zanedbatelná nebo se požadované atributy liší.
+#### Should Not be Used with Forecast  
+Because the anticipated demand is already expressed in the reorder point level it is not necessary to include a forecast in the planning of an item using a reorder point. If it is relevant to base the plan on a forecast, use the lot-for-lot policy.  
 
-Aplikace vytvoří odkaz zakázky na zakázku, který funguje jako předběžné spojení mezi nabídkou, objednávkou dodávky nebo zásobou a poptávkou, kterou bude umořovat.
+#### Must Not be Used with Reservations  
+If the user has reserved a quantity, for instance a quantity in inventory, for some distant demand, the planning foundation will be disturbed. Even if the projected inventory level is acceptable in relation to the reorder point, the quantities might not be available. The system may try to compensate for that by creating exception orders; however, it is recommended that the Reserve field is set to Never on items that are planned using a reorder point.
 
-Kromě použití zásady Objednávky lze odkaz zakázky na zakázku použít při plánování následujícími způsoby:
+### Maximum Qty.
+The Maximum Quantity policy is a way to maintain inventory using a reorder point.  
 
-* Při použití způsobu výroby Vyrobit na zakázku k vytvoření víceúrovňových nebo projektových výrobních zakázek (výroba potřebných komponent ve stejné výrobní zakázce).
-* Při použití funkce Plánování prodejní objednávky k vytvoření výrobní zakázky z prodejní objednávky.
+Everything regarding the Fixed Reorder Qty. policy also applies to this policy. The only difference is the quantity of the suggested supply. When using the maximum quantity policy, the reorder quantity will be defined dynamically based on the projected inventory level and will therefore usually differ from order to order.  
 
-I když se výrobní společnost považuje za prostředí výroby na zakázku, mohlo by být nejlepší použít způsob přiobjednání Dávka pro dávku pokud jsou položky čistým standardem bez odchylek v atributech. V důsledku toho bude systém používat neplánované zásoby a shromažďuje pouze prodejní objednávky se stejným datem dodávky nebo v rámci definovaného intervalu dostupnosti.
+#### Calculated per Time Bucket  
+The reorder quantity is determined at the point of time (the end of a time bucket) when the planning system detects that the reorder point has been crossed. At this time, the system measures the gap from the current projected inventory level up to the specified maximum inventory. This constitutes the quantity that should be reordered. The system then checks if supply has already been ordered elsewhere to be received within the lead time and, if so, reduces the quantity of the new supply order by already ordered quantities.  
 
-#### Propojení zakázky na zakázku a minulá data splatnosti 
-Na rozdíl od většiny sad poptávky a nabídky jsou propojené objednávky s daty splatnosti před datem zahájení plánování plně plánovány systémem. Obchodním důvodem této výjimky je, že konkrétní sady nabídky a poptávky musí být synchronizovány až po provedení. Další informace o zmrazené zóně, která se vztahuje na většinu typů poptávky a dodávek, naleznete v tématu[Vyřizování objednávek před datem zahájení plánování](design-details-balancing-demand-and-supply.md#dealing-with-orders-before-the-planning-starting-date).
+The system will ensure that the projected inventory at least reaches the reorder point level – in case the user has forgotten to specify a maximum inventory quantity.  
 
-### Dávka-pro-dávku
-Zásada dávka-pro-dávku je nejflexibilnější, protože systém reaguje pouze na skutečnou poptávku, navíc působí na očekávanou poptávku z prognózy a hromadných objednávek a poté vypořádá množství objednávky na základě poptávky. Zásada dávka-pro-dávku je zaměřena na zboží A a B, kde lze přijmout zásoby, ale je třeba se jim vyhnout.
+#### Combines with Order Modifiers  
+Depending on the setup, it may be best to combine the Maximum Quantity policy with order modifiers to ensure a minimum order quantity or round it to an integer number of purchase units of measure, or split it into more lots as defined by the maximum order quantity.  
 
-V některých ohledech zásady dávka-pro-dávku vypadá jako zásady pořadí, ale má obecný přístup ke zboží; může přijímat množství ve skladu a sdružuje poptávku a odpovídající dodávku do intervalů dostupnosti definovaných uživatelem.
+### Combines with Calendars  
+Before suggesting a new supply order to meet a reorder point, the planning system checks if the order is scheduled for a non-working day, according to any calendars that are  defined in the **Base Calendar Code** field in the **Company Information** and **Location Card** pages.  
 
-Interval dostupnosti je definován na poli **Interval dostupnosti**. Systém pracuje s minimálním časovým intervalem jednoho dne, protože se jedná o nejmenší časovou měrnou jednotku na události poptávky a dodávky v systému (i když v praxi mohou být měrnou jednotkou času na výrobních zakázkách a potřebách komponenty sekundy).
+If the scheduled date is a non-working day, the planning system moves the order forward to the nearest working date. This may result in an order that meets a reorder point but does not meet some specific demand. For such unbalanced demand, the planning system creates an extra supply.
 
-Interval dostupnosti také stanoví limity, kdy by se měla stávající objednávka dodávky přeplánovat, aby vyhověla dané poptávce. Pokud dodávka leží v intervalu dostupnosti, bude přeplánována dovnitř nebo ven, aby uspokojila poptávku. V opačném případě, pokud je dříve, způsobí zbytečné hromadění zásob a měla by být zrušena. Pokud je později, bude místo toho vytvořena nová objednávka dodávky.
+### Order
+In a make-to-order environment, an item is purchased or produced to exclusively cover a specific demand. Typically it relates to A-items, and the motivation for choosing the order reordering policy can be that the demand is infrequent, the lead-time is insignificant, or the required attributes vary.  
 
-Pomocí této politiky je také možné definovat pojistné zásoby, aby se vyrovnaly možné výkyvy nabídky nebo uspokojila náhlá poptávka.
+The application creates an order-to-order link, which acts as a preliminary connection between the supply, a supply order or inventory, and the demand that it is going to fulfill.  
 
-Vzhledem k tomu, že množství objednávky dodávky je založeno na skutečné poptávce, může mít smysl použít modifikátory objednávky: zaokrouhlit množství objednávky tak, aby splňovala zadaný násobek objednávky (nebo měrnou jednotku nákupu), zvýšit objednávku na stanovené minimální množství objednávky, nebo snížit množství na stanovené maximální množství (a vytvořit tak dvě nebo více zásob k dosažení celkového potřebného množství).
+Apart from using the Order policy, the order-to-order link can be applied during planning in the following ways:  
 
-## Viz také
-[Detaily návrhu: Parametry plánování](design-details-planning-parameters.md)   
-[Detaily návrhu: Tabulka přiřazení plánování](design-details-planning-assignment-table.md)   
-[Detaily návrhu: Centrální koncepce plánovacího systému](design-details-central-concepts-of-the-planning-system.md)   
-[Detaily návrhu: Vyvažování poptávky a nabídky](design-details-balancing-demand-and-supply.md)   
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)
+* When using the Make-to-Order manufacturing policy to create multi-level or project type production orders (producing needed components on the same production order).  
+* When using the Sales Order Planning feature to create a production order from a sales order.  
+
+Even if a manufacturing company considers itself as a make-to-order environment, it might be best to use a Lot-for-Lot reordering policy if the items are pure standard without variation in attributes. As a result, the system will use unplanned inventory and only accumulates sales orders with the same shipment date or within a defined time bucket.  
+
+#### Order-to-Order Links and Past Due Dates  
+Unlike most supply-demand sets, linked orders with due dates before the planning starting date are fully planned for by the system. The business reason for this exception is that specific demand-supply sets must be synchronized through to execution. For more information about the frozen zone that applies to most demand-supply types, see [Dealing with Orders Before the Planning Starting Date](design-details-balancing-demand-and-supply.md#dealing-with-orders-before-the-planning-starting-date).
+
+### Lot-for-Lot
+The lot-for-lot policy is the most flexible because the system only reacts on actual demand, plus it acts on anticipated demand from forecast and blanket orders and then settles the order quantity based on the demand. The lot-for-lot policy is aimed at A- and B-items where inventory can be accepted but should be avoided.  
+
+In some ways, the lot-for-lot policy looks like the Order policy, but it has a generic approach to items; it can accept quantities in inventory, and it bundles demand and corresponding supply in time buckets defined by the user.  
+
+The time bucket is defined in the **Time Bucket** field. The system works with a minimum time bucket of one day, since this is the smallest time unit of measure on demand and supply events in the system (although, in practice, the time unit of measure on production orders and component needs can be seconds).  
+
+The time bucket also sets limits on when an existing supply order should be rescheduled to meet a given demand. If the supply lies within the time bucket, it will be rescheduled in or out to meet the demand. Otherwise, if it lies earlier, it will cause unnecessary build-up of inventory and should be canceled. If it lies later, a new supply order will be created instead.  
+
+With this policy, it is also possible to define a safety stock in order to compensate for possible fluctuations in supply, or to meet sudden demand.  
+
+Because the supply order quantity is based on the actual demand it can make sense to use the order modifiers: round the order quantity up to meet a specified order multiple (or purchase unit of measure), increase the order to a specified minimum order quantity, or decrease the quantity to the specified maximum quantity (and thus create two or more supplies to reach the total needed quantity).
+
+## See Also  
+[Design Details: Planning Parameters](design-details-planning-parameters.md)   
+[Design Details: Planning Assignment Table](design-details-planning-assignment-table.md)   
+[Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)   
+[Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md)   
+[Design Details: Supply Planning](design-details-supply-planning.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

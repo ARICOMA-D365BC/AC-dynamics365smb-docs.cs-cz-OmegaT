@@ -4,88 +4,91 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Přeplánování nebo přímá aktualizace výrobních zakázek
-Funkce **Přeplánování** na výrobních zakázkách se obvykle používá poté, co jste přidali nebo změnili komponenty, které tvoří základní výrobní zakázky. Funkce vypočítá změny provedené u součástí a řádků technologického postupu a zahrnuje zboží na nižších úrovních výrobního kusovníku, pro které může generovat nové výrobní zakázky.
+# Replan or Refresh Production Orders Directly
+The **Replan** function on production orders is typically used after you have added or changed components that constitute underlying production orders. The function calculates changes made to components and routings lines, and it includes items on lower production BOM levels for which it may generate new production orders.  
 
-Na základě změn provedených v součástech a řádcích technologického postupu, funkce přeplánování vypočítá a naplánuje novou poptávku pro výrobní zakázku.
+Based on the changes you have made to the components and routing lines, the Replan function calculates and plans for any new demand for the production order.  
 
-Funkce **Aktualizovat** na výrobních zakázkách se obvykle používá po provedení jedné z následujících akcí:
+The **Refresh** function on production orders is typically used after you have done one of the following:
 
-- Ručním vytvořením hlavičky výrobní zakázky pro první výpočet a vytvoření dat řádku.
-- Provedením změn v záhlaví výrobní zakázky, aby se přepočítaly všechna data linky.
+- Created a production order header manually to calculate and create line data for the first time.
+- Made changes to the production order header to recalculate all the line data.
 
-Funkce Aktualizovat vypočítá změny provedené v hlavičce výrobní zakázky a nezahrnuje úrovně výrobního kusovníku. Funkce vypočítá a iniciuje hodnoty řádků komponenty a řádků postupu na základě hlavních dat definovaných v přiřazeném výrobním kusovníku a postupu podle množství objednávky a data splatnosti v hlavičce výrobní zakázky.
+The Refresh function calculates changes made to a production order header and does not involve production BOM levels. The function calculates and initiates the values of the component lines and routing lines based on the master data defined in the assigned production BOM and routing, according to the order quantity and due date on the production order’s header.
 
-Řádky výrobní zakázky můžete vložit buď ručně, nebo použít funkci, která vypočítá řádky výrobní zakázky z hlavičky.
-
-> [!NOTE]
-> Použijete-li funkci aktualizovat pro přepočet řádků výrobních zakázek, staré výrobní řádky se odstraní a vypočtou se nové řádky.
-
-## Přeplánování výrobní zakázky
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. zakázka** a poté vyberte související odkaz.
-2. Otevřete výrobní zakázku, kterou chcete přeplánovat.
-3. Na záložce s náhledem **Řádky**, zvolte akci **Řádky**, a potom vyberte akci **Komponenty**.
-4. Pro přidání součásti, která je vyrobenou položkou nebo podsestavou.
-5. Z výrobní zakázky zvolte akci **Přeplánovat**.
-
-   Na stránce **Přeplánovat výrobní zakázku**, pokračujte v definování jak a co znovu naplánovat.
-6. V poli **Způsob plánování**, vyberte jednu z následujících možností.
-
-   | Možnost | Popis |
-   |----------------------------------|---------------------------------------|  
-   | **Zpět** | Vypočítá posloupnost operací zpět od nejbližšího možného data ukončení, definovaného podle data splatnosti a / nebo jiných naplánovaných příkazů, do posledního možného data zahájení. **Poznámka:**  Tato výchozí možnost je relevantní ve většině situací. |
-   | **Vpřed** | Vypočítá posloupnost operací vpřed od nejbližšího možného data ukončení, definovaného podle data splatnosti a / nebo jiných naplánovaných příkazů, do posledního možného data zahájení. **Poznámka:**  Tato možnost je relevantní pouze pro urychlené zpracování objednávky. |
-
-7. V poli **Plán** vyberte, zda se mají vypočítat výrobní požadavky na vyráběné položky na kusovníku produkce následujícím způsobem.
-
-   | Možnost | Popis |
-   |----------------------------------|---------------------------------------|  
-   | **Bez úrovní** | Nezvažujete výrobu nižší úrovně. Tím se aktualizuje pouze plán zboží, například aktualizace. |
-   | **Jedna úroveň** | Plánování poptávky po produkci první úrovně. Mohou být vytvořeny výrobní zakázky první úrovně. |
-   | **Všechny úrovně** | Plán pro všechny úrovně výrobní poptávky. Mohou být vytvořeny výrobní zakázky všech úrovní. |
-
-8. Vyberte **Jedna úroveň**, a zvolte tlačítko **OK** chcete-li znovu naplánovat výrobní zakázku, vypočítat a vytvořit novou základní výrobní zakázku pro zavedenou podsestavu, pokud není plně k dispozici.
+You can either insert the production order lines manually or use the function that calculates the production order lines from the header.  
 
 > [!NOTE]
-> Změny implementované pomocí funkce **Přeplánovat** s velkou pravděpodobností změní potřebu kapacity výrobní zakázky, a proto bude pravděpodobně nutné operace později přeřadit.
+> If you use the Refresh function to recalculate production order lines, the old production order lines are deleted and new lines are calculated.  
 
-## Aktualizace výrobní zakázky
-Pokud jste změnili řádky výrobní zakázky, komponenty nebo řádky TNG postupu, musíte také aktualizovat informace o výrobní zakázce. V následujícím postupu se komponenty počítají pro pevně plánovanou výrobní zakázku. Kroky jsou podobné pro řádky TNG postupu.
+## To replan a production order  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Orders**, and then choose the related link.  
+2.  Open the production order you want to replan.  
+3.  On the **Lines** FastTab, choose the **Lines** action, and then choose the **Components** action.  
+4.  Add a component, which is a produced item or subassembly.  
+5.  From the production order, choose the **Replan** action.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. zakázka** a poté vyberte související odkaz.
-2. Zvolte akci **Nový**. Pro více informací navštivte [Vytvoření montážní zakázky](production-how-to-create-production-orders.md).
-3. Vyberte akci **Aktualizovat**.
-4. Na stránce **Aktualizace výrobní zakázky**, vyberte jednu z následujících možností::
+    On the **Replan Production Order** page, proceed to define how and what to replan.  
+6.  In the **Scheduling Direction** field, select one of the following options.  
 
-   | Možnost | Popis |
-   |----------------------------------|---------------|---------------------------------------|  
-   | **Směr plánování** | **Vpřed** | Plánování začíná od data zahájení a pokračuje dopředu k datu ukončení. Chcete-li použít tuto možnost, musíte vyplnit počáteční datum. |
-   |  | **Zpět** | Plánování začíná od data ukončení a pokračuje zpět k počátečnímu datu. |
-   | **Vypočítat** | **Řádky** | Toto pole vyberte, chcete-li vypočítat řádky výrobní zakázky. |
-   |  | **TNG postupy** | Toto pole nemá žádný vliv na výpočet výrobních řádků. |
-   |  | **Potřebné komponenty** | Toto pole nemá žádný vliv na výpočet výrobních řádků. |
-   | **Sklad** | **Vytvořit vstupní požadavek** | Toto pole nemá žádný vliv na výpočet výrobních řádků. |
+    |Option|Description|  
+    |----------------------------------|---------------------------------------|  
+    |**Back**|Calculates the operation sequence backwards from the earliest possible ending date, defined by due date and/or other scheduled orders, to the latest possible starting date. **Note:**  This default option is relevant in the majority of situations.|  
+    |**Forward**|Calculates the operation sequence forward from the earliest latest possible starting date, defined by due date and/or other scheduled orders, to the earliest possible ending date. **Note:**  This option is only relevant for expedite orders.|  
 
-5. Zvolte tlačítko **OK** pro potvrzení vašeho výběru. Nyní se vypočítají řádky výrobní linky.
+7.  In the **Plan** field, select whether to calculate production requirements for produced items on the production BOM, as follows.  
 
-> [!NOTE]
-> Vypočtením komponent výrobní zakázky se odstraní předchozí změny v komponentách.
+    |Option|Description|  
+    |----------------------------------|---------------------------------------|  
+    |**No Levels**|Do not consider lower level production. This only updates the item’s schedule, like refresh.|  
+    |**One Level**|Plan for first-level production demand. First-level production orders may be created.|  
+    |**All Levels**|Plan for all-level production demand. All-level production orders may be created.|  
 
-## Viz také
-[Plánování](production-planning.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
-[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+8.  Select **One Level**, and choose the **OK** button to replan the production order, and calculate and create a new underlying production order for the introduced subassembly, if it is not fully available.  
+
+> [!NOTE]  
+>  Changes implemented with the **Replan** function are very likely to change the capacity need of the production order and you may therefore have to reschedule operations afterwards.  
+
+## To refresh a production order  
+If you have amended production order lines, components, or routing lines, you must also refresh the information on the production order. In the following procedure, the components are calculated for a firm planned production order. The steps are similar for routing lines.
+
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Order**, and then choose the related link.  
+2.  Choose the **New** action. For more information, see [Create Production orders](production-how-to-create-production-orders.md).  
+3.  Choose the **Refresh** action.
+4. On the **Refresh Production Order** page, select one of the following options:
+
+    |Option|Description|  
+    |----------------------------------|---------------|---------------------------------------|  
+    |**Scheduling Direction**|**Forward**|Scheduling starts from the starting date and proceeds forward to the finishing date. You must fill in the starting date to use this option.|  
+    ||**Backward**|Scheduling starts from the ending date and proceeds backward to the starting date.|  
+    |**Calculate**|**Lines**|Select this field to calculate the production order lines.|  
+    ||**Routings**|This field has no influence on calculating the production lines.|  
+    ||**Component Need**|This field has no influence on calculating the production lines.|  
+    |**Warehouse**|**Create Inbound Request**|This field has no influence on calculating the production lines.|  
+
+5. Choose the **OK** button to confirm your selection. Now the production order lines are calculated.
+
+> [!NOTE]  
+>  Calculating production order components deletes previous changes in the components.
+
+## See Also  
+[Planning](production-planning.md)  
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

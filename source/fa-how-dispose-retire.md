@@ -1,50 +1,60 @@
 ---
 title: Dispose or Retire FA| Microsoft Docs
 description: You must post a disposal value when you scrap, sell, or retire a fixed asset.
-author: SorenGP
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: scrap
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Likvidace nebo vyřazení dlouhodobého majetku
-Pokud prodáváte nebo jinak vyřazujete dlouhodobý majetek, musí být za účelem výpočtu a zaznamenání zisku nebo ztráty zaúčtována hodnota vyřazení. Položka vyřazení musí být poslední položkou zaúčtovnou pro dlouhodobý majetek. U částečně vyřazeného dlouhodobého majetku můžete zaúčtovat více než jednu položku vyřazení. Součet všech zaúčtovaných částek likvidace musí být částka Dal.
+# Dispose of or Retire Fixed Assets
 
-> [!NOTE]
-> Pokud vyměňujete dlouhodobý majetek za jiný, musíte zaznamenat jak prodej starého aktiva (vyřazení), tak nákup nového (akvizice). Pro více informací navštivte [Získání dlouhodobého majetku](fa-how-acquire.md).
+When you sell or otherwise dispose of a fixed asset, the disposal value must be posted to calculate and record the gain or loss. A disposal entry must be the last entry posted for a fixed asset. For partially disposed fixed assets, you can post more than one disposal entry. The total of all posted disposal amounts must be a credit amount.  
 
-## Zaúčtování vyřazení z finančního deníku dlouhodobého majetku
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deník DM** a poté vyberte související odkaz.
-2. Vytvořte počáteční řádek deníku a vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. V poli **Typ účtování DM** vyberte **Vyřazení**.
-4. Vyberte akci **Vložit protiúčet  DM**. Druhý řádek deníku je vytvořen pro protiúčet, který je nastaven pro zaúčtování vyřazení.
+> [!NOTE]  
+> If you trade-in a fixed asset for another one, you must record both the sale of the old asset (disposal) and the purchase of the new one (acquisition). For more information, see [Acquire Fixed Assets](fa-how-acquire.md).  
 
-   > [!NOTE]
-   > Krok 4 funguje, pouze pokud jste nastavili následující položky: Na stránce **Karta účto skupiny DM** pro účto skupinu dlouhodobého majetku musí pole **Účet vyřazení DM** obsahovat účet Dal hlavní knihy a pole **Protiúčet  vyřazení** musí obsahovat účet hlavní knihy, na který chcete zaúčtovat vyrovnávací položky. Pro více informací navštivte [Nastavení účto skupin dlouhodobého majetku](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
-5. Vyberte akci **Účtovat**.
+The following steps assume that you have already set up the relevant posting groups in the **FA Posting Groups** page. For more information, see [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).  
 
-Pokud prodáváte nebo likvidujete část dlouhodobého majetku, musíte majetek před zaznamenáním transakce vyřazení rozdělit. Pro více informací navštivte [Převod, Rozdělení nebo Kombinování dlouhodobého majetku](fa-how-trans-split-combine.md).
+## To post a disposal from the fixed asset G/L journal
 
-## Zobrazení položek vyřazení
-Při prodeji nebo vyřazení dlouhodobého majetku je hodnota vyřazení zaúčtována do hlavní knihy, kde můžete zobrazit výsledek.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset G/L Journals**, and then choose the related link.  
+2. Create an initial journal line and fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+3. In the **FA Posting Type** field, select **Disposal**.  
+4. Choose the **Insert FA Bal. Account** action. A second journal line is created for the balancing account that is set up for disposal posting.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek** a poté vyberte související odkaz.
-2. Vyberte dlouhodobý majetek, pro který chcete zobrazit položky, a pak zvolte akci **Knihy odpisů**.
-3. Vyberte knihu odpisů, pro kterou chcete zobrazit položky, a pak zvolte akci **Položky**.
-4. V poli **Kategorie účtování DM** vyberte řádek s hodnotou **Vyřazení** a potom vyberte akci **Navigovat**.
-5. Na stránce **Navigovat** vyberte řádek položky hlavní knihy a pak zvolte akci **Zobrazit**.
+    > [!NOTE]  
+    >  Step 4 only works if you have set up the following: On the **FA Posting Group Card** page for the posting group of the fixed asset, the **Disposal Account** field contains the general ledger debit account and the **Disposal Bal. Account** field contains the general ledger account to which you want to post balancing entries for appreciation. For more information, see [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).  
+5. Choose the **Post** action.  
 
-Otevře se stránka **Věcné položky**, kde můžete zobrazit položky, ve kterých bylo vyřazení zaúčtováno.
+If you sell or dispose of part of a fixed asset, you must split up the asset before you can record the disposal transaction. For more information, see [Transfer, Split, or Combine Fixed Assets](fa-how-trans-split-combine.md).  
 
-## Viz také
-[Dlouhodobý majetek](fa-manage.md)  
-[Nastavení dlouhodobého majetku](fa-setup.md)  
+## To view disposal ledger entries
+When you sell or dispose of a fixed asset, the disposal value is posted to the general ledger where you can view the result.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.  
+2. Select the fixed asset that you want to view entries for, and then choose the **Depreciation Books** action.  
+3. Select the depreciation book that you want to view entries for, and then choose the **Ledger Entries** action.  
+4. Select a line with **Disposal** in the **FA Posting Category** field, and then choose the **Find Entries** action.  
+5. On the **Find Entries** page, select the general ledger entry line, and then choose the **Show Related Entries** action.  
+
+The **General Ledger Entries** page opens where you can see the entries that the disposal posting resulted in.  
+
+## See Also
+
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
+[To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Find Entries](ui-find-entries.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

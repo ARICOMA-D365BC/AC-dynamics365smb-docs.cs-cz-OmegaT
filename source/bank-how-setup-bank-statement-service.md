@@ -1,120 +1,132 @@
 ---
-title: Nastavení Yodlee Bank Feeds | Microsoft Docs'
-description: 'Můžete převést platební údaje do jakéhokoli formátu dat, který vaše banka vyžaduje a povolit export nebo import bankovních souborů.'
-services: project-madeira
-documentationcenter: ''
+title: Set Up Yodlee Bank Feeds
+description: You can convert payment information to any data format that your bank requires and enable the export or import of bank files.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'Yodlee, feed, stream, payment process'
-ms.date: 02/26/2019
-ms.author: sgroespe
+ms.search.keywords: Yodlee, feed, stream, payment process
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="set-up-the-envestnet-yodlee-bank-feeds-service"></a>Nastavení služby Envestnet Yodlee Bank Feeds
-Můžete importovat elektronické bankovní výpisy z vaší banky pro rychlé naplnění na stránce **Deník odsouhlasení plateb**, abyste mohli zaplatit a odsouhlasit bankovní účet. Další informace naleznete v části [Automatické vyrovnání plateb a odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md).
+# Set Up the Envestnet Yodlee Bank Feeds Service
 
-Rozšíření služba Envestnet Yodlee Bank Feeds do [!INCLUDE[d365fin](includes/d365fin_md.md)] je připravena k použití. Pro další informace se podívejte na [Přizpůsobení[!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí Extensions](ui-extensions.md).
+You can import electronic bank statements from your bank to quickly fill on the **Payment Reconciliation Journal** page so you can apply payments and reconcile the bank account. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
 
-> [!NOTE]
-> Služba Envestnet Yodlee Bank Feeds je podporovaná pouze  v US, Kanadě a UK.<br /><br />
-> Funkce je podporována pouze v online verzi Business Central. Chcete-li tuto funkci používat on-premise, musíte získat cobrand účet od Envestnet Yodlee.
-
-Poté, co aktivujete službu bankovního informačního kanálu, musíte propojit bankovní účet s online bankovním účtem, ze kterého zdroj pochází. Bankovní účty propojíte s online bankovními účty pomocí různých scénářů:
-
-* Bankovní účet v [!INCLUDE[d365fin](includes/d365fin_md.md)] pro váš online bankovní účet neexistuje. Proto vytvoříte bankovní účet tím, že ho propojíte s online bankovním účtem.
-* Bankovní účet, který chcete propojit s online bankovním účtem, existuje v [!INCLUDE[d365fin](includes/d365fin_md.md)].
-* Propojený bankovní účet musí být odpojen, protože chcete přestat používat bankovní službu pro daný účet.
-* Online bankovní účty se změnily a vy chcete aktualizovat informace o bankovních účtech v [!INCLUDE[d365fin](includes/d365fin_md.md)].
-
-Když je bankovní služba aktivována, můžete nastavit bankovní účet, aby automaticky importoval nové bankovní výpisy do **Deníku odsouhlasení plateb** každé dvě hodiny. Transakce plateb, které již byly zveřejněny jako zaúčtované a/nebo odsouhlasené v **Deníku odsouhlasení plateb** nebudou importovány. Další informace naleznete v části “Povolit automatický import bankovních výpisů.“
-
-> [!NOTE]  
-> Používáte-li asistované nastavení Nastavení společností, některé kroky v následujících postupech budou realizovány automaticky, když se dostanete k nastavení firemního bankovního účtu. Další informace naleznete v [Začínáme](product-get-started.md).
-
-## <a name="to-enable-the-bank-feed-service"></a>Povolení bankovní služby
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Otevřete bankovní účet, který použijete pro bankovní službu.
-3. Na stránce **Bankovní účty** v poli **Formát importu bankovního výpisu** vyberte YODLEEBANKFEED.  
-
-Bankovní služba bude aktivována, když propojíte bankovní účet s jeho souvisejícím online bankovním účtem. Viz další postup.  
+> [!IMPORTANT]
+> Due to the Payment Services Directive in Europe (PSD2), after September 14, 2019, you will no longer be able to automatically import bank statements from banks in the United Kingdom into [!INCLUDE[prod_short](includes/prod_short.md)]. We are looking into the possibility of offering this feature again in the future.
 
 > [!NOTE]
-> Pokud používáte průvodce **nastavením společnosti** pro nastavení společnosti, povolíte službu zaškrtnutím políčka Použít **Služba bankovního informačního kanálu**. Více informací naleznete na [vytvíření nových společností v Business Cental](about-new-company.md)
+> The Envestnet Yodlee Bank Feeds service is only supported in the online version of Business Central. To use this functionality on-premises, you must obtain a cobrand account from Envestnet, and you must add code to integrate with the Yodlee API.
+>
+> The Envestnet Yodlee Bank Feeds service is only supported in the United States and Canada.
+> Only banks residing in these countries are supported, even though banks from other countries may appear in the Envestnet Yodlee Bank Feeds bank selection window in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-## <a name="to-create-a-new-linked-bank-account"></a>Vytvoření nového propojeného bankovního účtu
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Vyberte relevantní bankovní účet a pak zvolte **Vytvořit nový propojený bankovní účet**. Po několika okamžicích se otevře stránka **Propojení bankovního účtu**.
+> [!IMPORTANT]
+> For technical assistance with the Envestnet Yodlee functionality, contact Microsoft Support. Do not contact Envestnet Yodlee. For more information, see [Configuring Technical Support for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/technical-support).
 
-    > [!NOTE]  
-    > Toto stránka zobrazuje skutečnou webovou stránku služby Envestnet Yodlee Bank Feeds. Terminologie a funkčnost na stránce nemusí odpovídat instrukcím uvedeným v tomto tématu.  
-3. Na stránce **Propojení online bankovního účtu** v podokně **Propojit účet** použijte funkci Hledat a vyhledejte banku, kde máte jeden nebo více online bankovních účtů.
-4. Vyberte název banky. Otevře se podokno **Přihlášení**.
-5. Zadejte uživatelské jméno a heslo, které používáte pro přihlášení do online banky a poté zvolte tlačítko **Další**.  
-6. Služba bankovního informačního kanálu se připravuje na propojení prvního bankovního účtu v určené bance s novým bankovním účtem v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+The Envestnet Yodlee Bank Feeds service is installed as an extension to [!INCLUDE[prod_short](includes/prod_short.md)] online and is ready to be enabled in the supported countries. For more information, see [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md).
 
-    > [!NOTE]  
-    > Máte-li v bance více online bankovních účtů, musíte pro tyto další online bankovní účty vytvořit bankovní účty v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Viz kroky 8 až 10.  
+After you enable the bank feed service, you must link a bank account to the online bank account that the feed will come from. You link bank accounts to online bank accounts in the following different scenarios:
 
-    Po dokončení procesu se název banky zobrazí v podokně **Mé účty** v záložce **Propojené**. Číslo v závorce udává, kolik online bankovních účtů bylo spojeno.  
-7. Zvolte tlačítko **OK**.
+* A bank account does not exist in [!INCLUDE[prod_short](includes/prod_short.md)] for your online bank account. Therefore, you create the bank account by linking from the online bank account.
+* A bank account exists in [!INCLUDE[prod_short](includes/prod_short.md)], which you want to link to an online bank account.
+* A linked bank account must be unlinked because you want to stop using the bank feed service for the account.
+* Online bank accounts have changed and you want to update the information on bank accounts in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-    Pokud propojujete pouze jeden bankovní účet online, otevře se stránka **Bankovní účet** a zobrazí se název bankovního účtu online. V tomto případě je dokončena úloha propojení bankovního účtu. Zbývá jen nastavení bankovního účtu. Další informace naleznete v části [Nastavení bankovních účtů](bank-how-setup-bank-accounts.md).
-
-    Pokud propojujete více online bankovních účtů, otevře se stránka **Propojení bankovníhch účtů** s uvedenými online bankovními účty, které nejsou ještě propojeny s bankovními účty v [!INCLUDE[d365fin](includes/d365fin_md.md)]. V tomto případě, následujte další krok.  
-8. Na stránce **Propojení bankovního účtu** vyberte řádek pro online bankovní účet a poté zvolte akci **Odkaz na nový bankovní účet**.  
-
-    Na stránce **Karta bankovního účtu** se otevře nový bankovní účet, který je předem vyplněn názvem online bankovního účtu.
-
-    Pokud v [!INCLUDE[d365fin](includes/d365fin_md.md)] již existuje bankovní účet, ke kterému chcete připojit další bankovní účet, postupujte podle následujícího kroku.  
-9. Na stránce **Propojení bankovního účtu** vyberte řádek pro online bankovní účet a poté zvolte akci **Odkaz na existující bankovní účet**.
-10. Na stránce **Seznam bankovních účtů** vyberte bankovní účet, ke kterému ho chcete propojit a potom klepněte na tlačítko **OK**.
-
-## <a name="to-link-a-bank-account-to-an-online-bank-account"></a>Propojení bankovního účtu s bankovním účtem online
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Vyberte řádek pro bankovní účet, který není propojen s bankovním účtem online, a poté vyberte akci **Propojit s bankovním účtem online**. Otevře se stránka **Propojení online bankovního účtu** s názvem banky, která je vyplněna v podokně **Propojení účtu**.
-3. Vyberte název banky. Otevře se podokno **Přihlášení**.
-4. Zadejte uživatelské jméno a heslo, které používáte pro přihlášení do online banky a poté zvolte tlačítko **Další**.  
-
-    Bankovní služba se připravuje na propojení vašeho bankovního účtu v [!INCLUDE[d365fin](includes/d365fin_md.md)] s příslušným online bankovním účtem.  
-
-    Po úspěšném dokončení procesu se název banky zobrazí v podokně **Mé účty** na kartě **Propojené**. Pokud má banka více než jeden bankovní účet, je propojen pouze bankovní účet, který jste vybrali v kroku 2.  
-5. Zvolte tlačítko **OK**.
-
-Na stránce **Seznam bankovních účtů** je zaškrtnuto políčko **Propojené**.
-
-## <a name="to-unlink-a-bank-account"></a>Zrušení propojení bankovního účtu
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.  
-2. Vyberte řádek pro propojený bankovní účet, který chcete odpojit od souvisejícího online bankovního účtu a vyberte akci **Odpojit online bankovní účet**.
+When the bank feed service is enabled, you can set a bank account up to automatically import new bank statements into the **Payment Reconciliation Journal** page every two hour. Transactions for payments that have already been posted as applied and/or reconciled on the **Payment Reconciliation Journal** page will not be imported. For more information, see the “To enable automatic import of bank statements” section.
 
 > [!NOTE]  
-> Pokud v dialogovém okně pro potvrzení zvolíte možnost **Ano**, odstraní se odkaz na online bankovní účet a údaje o přihlašování se vymažou. Chcete-li bankovní účet znovu propojit s bankovním účtem online, musíte se znovu přihlásit. Další informace naleznete v části "Propojení bankovního účtu s online bankovním účtem."
+> If you use the Set Up Company assisted setup guide, some of the steps in the following procedures happen automatically when you get to the company bank account setup. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
-## <a name="to-update-bank-account-linking"></a>Aktualizace propojení bankovního účtu
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Vyberte příslušný bankovní účet a poté vyberte akci **Aktualizovat propojení bankovního účtu**.
+## To enable the bank feed service
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Open the bank account that you will use for the bank feed service.
+3. On the **Bank Account** page, in the **Bank Statement Import Format** field, select YODLEEBANKFEED.  
 
-Pokud existují problémy pro kterýkoliv z propojených bankovních účtů v okně **Seznam bankovních účtů** otevře se okno **Propojení bankovního účtu**, které specifikuje bankovní účty s problémy. Problémy lze nejlépe vyřešit zrušením propojení online bankovního účtu a následným znovu vytvořením odkazu. Další informace naleznete v části "Propojení bankovního účtu s online bankovním účtem."
+The bank feed service will be enabled when you link a bank account to its related online bank account. See the next procedure.  
 
-## <a name="to-enable-automatic-import-of-bank-statements"></a>Povolení automatického importu bankovních výpisů
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Vyberte řádek propojeného bankovního účtu a poté zvolte akci **Automatický import výpisu z bankovního účtu**.
-3. Na stránce **Nastavení automatického importu bankovního výpisu** v poli **Počet dní k započítání** nastavíte kolik dní zpětně se mají získat translakce.
+> [!NOTE]
+> If you use the **Company Setup** assisted setup guide, then you enable the service by selecting the **Use a bank feed service** check box. For more information, see [Creating New Companies in Business Central](about-new-company.md).
+
+## To create a new linked bank account
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Select the relevant bank account, and then choose the **Create New Linked Bank Account**. The **Bank Account Linking** page opens after a few moments.
 
     > [!NOTE]  
-    > Doporučujeme nastavit tuto hodnotu na 7 nebo více dní.  
-4. Zaškrtněte políčko **Povolit**.  
+    > This page shows the actual web page of the Envestnet Yodlee Bank Feeds service. Terminology and functionality on the page may not match instructions provided in this topic.  
+3. On the **Online Bank Account Linking** page, in the **Link Account** pane, use the Search function to find the bank where you have one or more online bank accounts.
+4. Choose the bank name. The **Log In** pane opens.
+5. Enter the username and password that you use to log on to the online bank, and then choose the **Next** button.  
+6. The bank feed service prepares to link the first online bank account at the specified bank to a new bank account in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-Každou hodinu bude nyní **Deník odsouhlasení plateb** naplněno novými platbami provedenými na online bankovním účtu.
+    > [!NOTE]  
+    > If you have more than one online bank account at the bank, you must create additional bank accounts in [!INCLUDE[prod_short](includes/prod_short.md)] for them. See steps 8 through 10.  
+
+    After the process completes, the bank name will appear in the **My Accounts** pane on the **Linked** tab. The number in brackets indicates how many online bank accounts were linked.  
+7. Choose the **OK** button.
+
+    If you are only linking one online bank account, the **Bank Account Card** page opens and displays the name of the online bank account. In this case, the bank account linking task is completed. All that's left to do is to set up the bank account. For more information, see [Set Up Bank Accounts](bank-how-setup-bank-accounts.md).
+
+    If you are linking more than one online bank accounts, the **Bank Account Linking** page opens and lists the online bank accounts that are not yet linked to bank accounts in [!INCLUDE[prod_short](includes/prod_short.md)]. In that case, follow the next step.  
+8. On the **Bank Account Linking** page, select the line for an online bank account, and then choose the **Link to New Bank Account** action.  
+
+    The **Bank Account Card** page for a new bank account opens and displays the name of the online bank account.
+
+    If a bank account already exists in [!INCLUDE[prod_short](includes/prod_short.md)] that you want to link the additional online bank account to, follow the next step.  
+9. On the **Bank Account Linking** page, select the line for an online bank account, and then choose the **Link to Existing Bank Account** action.
+10. On the **Bank Account List** page, select the bank account that you want to link to, and then choose the **OK** button.
+
+## To link a bank account to an online bank account
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Select the line for a bank account that is not linked to an online bank account, and then choose the **Link to Online Bank Account** action. The **Online Bank Account Linking** page opens with the name of the bank prefilled in the **Link Account** pane.
+3. Choose the bank name. The **Log In** pane opens.
+4. Enter the username and password that you use to log on to the online bank, and then choose the **Next** button.  
+
+    The bank feed service prepares to link your bank account in [!INCLUDE[prod_short](includes/prod_short.md)] to the related online bank account.  
+
+    When the process has completed successfully, the bank name will appear in the **My Accounts** pane on the **Linked** tab. If the bank has more than one bank account, only the bank account that you selected in step 2 is linked.  
+5. Choose the **OK** button.
+
+On the **Bank Account List** page, the **Linked** check box is selected.
+
+## To unlink a bank account
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.  
+2. Select the line for a linked bank account that you want to unlink from its related online bank account, and the choose the **Unlink Online Bank Account** action.
 
 > [!NOTE]  
-> Transakce plateb, které již byly zveřejněny jako zaúčtované a/nebo odsouhlasené v **Deníku odsouhlasení plateb** nebudou importovány.
+> If you choose **Yes** on the confirmation dialog, the link to the online bank account is removed, and the log-in details are cleared. To link the bank account to the online bank account again, you must log on to the bank again. For more information, see the “To link a bank account to an online bank account“ section.
 
-## <a name="see-also"></a>Viz také
-[Nastavení bankovnictví](bank-setup-banking.md)  
-[Správa bankovních účtů](bank-manage-bank-accounts.md)  
-[Automatické aplikování plateb a odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md)  
-[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření ](ui-extensions.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To update bank account linking
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Select the relevant bank account, and then choose the **Update Bank Account Linking** action.
+
+If issues exist for any of the linked bank accounts on the **Bank Account List** page, the **Bank Account Linking** page opens specifying which bank accounts have issues. Issues can best be resolved by unlinking the online bank account and then re-creating the link. For more information, see the “To link a bank account to an online bank account“ section.
+
+## To enable automatic import of bank statements
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Select the line for a linked bank account, and then choose the **Automatic Bank Statement Import Setup** action.
+3. On the **Automatic Bank Statement Import Setup** page, in the **Number of Days Included** field, specify how far back in time to get new bank transactions for.
+
+    > [!NOTE]  
+    > It is recommended that you set this value to 7 days or more.  
+4. Select the **Enabled** check box.  
+
+Every hour, the **Payment Reconciliation Journal** page will display new payments that are made on the online bank account.
+
+> [!NOTE]  
+> Transactions for payments that have already been posted as applied and/or reconciled on the **Payment Reconciliation Journal** page will not be imported.
+
+## See Also
+[Setting Up Banking](bank-setup-banking.md)  
+[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
+[Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md)  
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions ](ui-extensions.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

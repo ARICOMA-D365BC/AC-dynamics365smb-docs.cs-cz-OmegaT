@@ -9,179 +9,175 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu:  Struktura tabulky
-Chcete-li pochopit, jak jsou položky dimenzí uloženy a zaúčtovány, je důležité porozumět struktuře tabulky.
+# Design Details: Table Structure
+To understand how dimension entries are stored and posted, it is important to understand the table structure.  
 
-## Tabulka 480, Položka sady dimenzí
-Tuto tabulku nelze změnit. Po zapsání dat do tabulky není možné data odstranit ani upravit.
+## Table 480, Dimension Set Entry  
+You cannot change this table. After data has been written to the table, you cannot delete or edit it.
 
-| Číslo pole. | Název pole | Datový typ | Komentář |
+|Field No.|Field Name|Data Type|Comment|  
 |---------------|----------------|---------------|-------------|  
-| 1 | **ID** | Integer | >0,0 je rezervováno pro prázdnou sadu dimenzí. Odkazuje na pole 3 v tabulce 481. |
-| 2 | **Kód Dimenze** | Code 20 | Vztah tabulky k tabulce 348. |
-| 3 | **Kód hodnoty dimenze** | Code 20 | Vztah tabulky k tabulce 349. |
-| 4 | **ID Hodnoty dimenze** | Integer | Odkazuje na pole 12 v tabulce 349. Jedná se o sekundární klíč, který se používá při procházení tabulky 481. |
-| 5 | **Název Dimenze** | Text 30 | CalcField. Lookup do tabulky 348. |
-| 6 | **Název Hodnoty dimenze** | Text 30 | CalcField. Lookup do tabulky 349. |
+|1|**ID**|Integer|>0.0 is reserved for the empty dimension set. References field 3 in table 481.|  
+|2|**Dimension Code**|Code 20|Table relation to table 348.|  
+|3|**Dimension Value Code**|Code 20|Table relation to table 349.|  
+|4|**Dimension Value ID**|Integer|References field 12 in table 349. It is the secondary key that is used when traversing table 481.|  
+|5|**Dimension Name**|Text 30|CalcField. Lookup to table 348.|  
+|6|**Dimension Value Name**|Text 30|CalcField. Lookup to table 349.|  
 
-## Tabulka, Uzel stromu sady dimenzí
-Tuto tabulku nelze změnit. Používá se k vyhledání sady dimenzí. Pokud sada dimenzí není nalezena, vytvoří se nová sada.
+## Table 481, Dimension Set Tree Node  
+You cannot change this table. It is used to search for a dimension set. If the dimension set is not found, a new set is created.  
 
-| Číslo pole. | Název pole | Datový typ | Komentář |
+|Field No.|Field Name|Data Type|Comment|  
 |---------------|----------------|---------------|-------------|  
-| 1 | **ID sady nadřazených dimenzí** | Integer | 0 pro uzel nejvyšší úrovně. |
-| 2 | **ID Hodnoty dimenze** | Integer | Vztah tabulky k poli 12 v tabulce 349. |
-| 3 | **ID sady dimenzí** | Integer | AutoIncrement. Používá se v poli 1 v tabulce 480. |
-| 4 | **V použití** | Boolean | False, pokud se nepoužívá. |
+|1|**Parent Dimension Set ID**|Integer|0 for top level node.|  
+|2|**Dimension Value ID**|Integer|Table relation to field 12 in table 349.|  
+|3|**Dimension Set ID**|Integer|AutoIncrement. Used in field 1 in table 480.|  
+|4|**In Use**|Boolean|False if not in use.|  
 
-## Tabulka 482 Zásobník přeřazení sady dimenzí
-Tato tabulka se používá, když měníte kód hodnoty dimenze, například na položce zboží pomocí využití **Deníků přeřazení zboží**.
+## Table 482 Reclas. Dimension Set Buffer  
+This table is used when you change a dimension value code, for example, on an item ledger entry by using the **Item Reclassification Journal** page.  
 
-| Číslo pole. | Název pole | Datový typ | Komentář |
+|Field No.|Field Name|Data Type|Comment|  
 |---------------|----------------|---------------|-------------|  
-| 1 | **Kód Dimenze** | Code 20 | Vztah tabulky k tabulce 348. |
-| 2 | **Kód hodnoty dimenze** | Code 20 | Vztah tabulky k tabulce 349. |
-| 3 | **ID Hodnoty dimenze** | Integer | Odkazuje na pole 12 v tabulce 349. |
-| 4 | **Nový kód hodnoty dimenze** | Code 20 | Vztah tabulky k tabulce 349. |
-| 5 | **Nové ID hodnoty dimenze** | Integer | Odkazuje na pole 12 v tabulce 349. |
-| 6 | **Název Dimenze** | Text 30 | CalcField. Lookup do tabulky 348. |
-| 7 | **Název Hodnoty dimenze** | Text 30 | CalcField. Lookup do tabulky 349. |
-| 8 | **Nový název hodnoty dimenze** | Text 30 | CalcField. Lookup do tabulky 349. |
+|1|**Dimension Code**|Code 20|Table relation to table 348.|  
+|2|**Dimension Value Code**|Code 20|Table relation to table 349.|  
+|3|**Dimension Value ID**|Integer|References field 12 in table 349.|  
+|4|**New Dimension Value Code**|Code 20|Table relation to table 349.|  
+|5|**New Dimension Value ID**|Integer|References field 12 in table 349.|  
+|6|**Dimension Name**|Text 30|CalcField. Lookup to table 348.|  
+|7|**Dimension Value Name**|Text 30|CalcField. Lookup to table 349.|  
+|8|**New Dimension Value Name**|Text 30|CalcField. Lookup to table 349.|  
 
-## Tabulky transakcí a rozpočtu
-Kromě dalších polí dimenzí v tabulce je toto pole důležité:
+## Transaction and Budget Tables  
+In addition to other dimension fields in the table, this field is important:  
 
-| Číslo pole. | Název pole | Datový typ | Komentář |
+|Field No.|Field Name|Data Type|Comment|  
 |---------------|----------------|---------------|-------------|  
-| 480 | **ID sady dimenzí** | Integer | Odkazuje na pole 1 v tabulce 480. |
+|480|**Dimension Set ID**|Integer|References field 1 in table 480.|  
 
-### Tabulka 83, Řádky deníku zboží
-Kromě dalších polí dimenzí v tabulce jsou tato pole důležitá.
+### Table 83, Item Journal Line  
+In addition to other dimension fields in the table, these fields are important.  
 
-| Číslo pole. | Název pole | Datový typ | Komentář |
+|Field No.|Field Name|Data Type|Comment|  
 |---------------|----------------|---------------|-------------|  
-| 480 | **ID sady dimenzí** | Integer | Odkazuje na pole 1 v tabulce 480. |
-| 481 | **Nové ID Sady dimenze** | Integer | Odkazuje na pole 1 v tabulce 480. |
+|480|**Dimension Set ID**|Integer|References field 1 in table 480.|  
+|481|**New Dimension Set ID**|Integer|References field 1 in table 480.|  
 
-### Table 349, Dimension Value
-Kromě dalších polí dimenzí v tabulce jsou tato pole důležitá.
+### Table 349, Dimension Value  
+In addition to other dimension fields in the table, these fields are important.  
 
-| Číslo pole. | Název pole | Datový typ | Komentář |
+|Field No.|Field Name|Data Type|Comment|  
 |---------------|----------------|---------------|-------------|  
-| 12 | **ID Hodnoty dimenze** | Integer | AutoIncrement. Používá se pro odkaz v tabulce 480 a 481. |
+|12|**Dimension Value ID**|Integer|AutoIncrement. Used for references in table 480 and table 481.|  
 
-### Tabulky, které obsahují pole ID sady dimenzí
-**ID Sady Dimenzí** pole (480) existuje v následujících tabulkách. U tabulek, které ukládají zaúčtovaná data, pole poskytuje pouze neupravitelné zobrazení dimenzí, které je označeno jako přechod k podrobnostem. U tabulek, které ukládají pracovní doklady, je pole upravitelné. Tabulky vyrovnávací paměti, které se používají interně, nepotřebují upravitelné nebo needitovatelné možnosti.
+### Tables That Contain the Dimension Set ID Field
+ The **Dimension Set ID** field (480) exists in the following tables. For the tables that store posted data, the field only provides a non-editable display of dimensions, which is marked as Drill-down. For the tables that store working documents, the field is editable. The buffer tables that are used internally do not need editable or non-editable capabilities.  
 
-Pole 480 nelze upravovat v následujících tabulkách.
+ Field 480 is non-editable in the following tables.  
 
-| Číslo tabulky | Název tabulky |
+|Table No.|Table Name|  
 |---------------|----------------|  
-| 17 | **Věcná položka** |
-| 21 | **Položka Zákazníka** |
-| 25 | **Položky dodavatele** |
-| 32 | **Položky zboží** |
-| 110 | **Hlavička prodejní dodávky** |
-| 111 | **Řádky prodejní dodávky** |
-| 112 | **Hlavička prodejní faktury** |
-| 113 | **Řádek prodejní faktury** |
-| 114 | **Hlavička prodejního dobropisu** |
-| 115 | **Řádek prodejního dobropisu** |
-| 120 | **Hlavička nákupní příjemky** |
-| 121 | **Řádek nákupní příjemky** |
-| 122 | **Hlavička nákupní faktury** |
-| 123 | **Řádek nákupní faktury** |
-| 124 | **Hlavička nákupního dobropisu** |
-| 125 | **Řádek nákupního dobropisu** |
-| 169 | **Položky projektu** |
-| 203 | **Položka zdroje** |
-| 271 | **Položky bankovního účtu** |
-| 281 | **Položka fyzické inventury** |
-| 297 | **Hlavička vydané upomínky** |
-| 304 | **Hlavička vydaného penále** |
-| 5107 | **Archivovaná prodejní hlavička** |
-| 5108 | **Archivovaný prodejní řádek** |
-| 5109 | **Archivovaná nákupní hlavička** |
-| 5110 | **Archivovaný nákupní řádek** |
-| 5601 | **Položky DM** |
-| 5625 | **Položky údržby** |
-| 5629 | **Položka pojistného krytí** |
-| 5744 | **Hlavička dodávky transferu** |
-| 5745 | **Řádek dodávky transferu** |
-| 5746 | **Hlavička příjemky transferu** |
-| 5747 | **Řádek příjemky transferu** |
-| 5802 | **Položky ocenění** |
-| 5832 | **Položky kapacity** |
-| 5907 | **Položky servisu** |
-| 5908 | **Hlavička servisu** |
-| 5933 | **Zásobník účtování serv.zakázky** |
-| 5970 | **Archivovaná servisní smlouva** |
-| 5990 | **Hlavička dodávky servisu** |
-| 5991 | **Řádek dodávky servisu** |
-| 5992 | **Hlavička faktury servisu** |
-| 5993 | **Řádek fakturace servisu** |
-| 5994 | **Hlavička dobropisu servisu** |
-| 5995 | **Řádek dobropisu servisu** |
-| 6650 | **Hlavička dodávky vratky** |
-| 6651 | **Řádky dodávky vratky** |
-| 6660 | **Hlavička příjmu vratky** |
-| 6661 | **Řádky příjemky vratky** |
+|17|**G/L Entry**|  
+|21|**Cust. Ledger Entry**|  
+|25|**Vendor Ledger Entry**|  
+|32|**Item Ledger Entry**|  
+|110|**Sales Shipment Header**|  
+|111|**Sales Shipment Line**|  
+|112|**Sales Invoice Header**|  
+|113|**Sales Invoice Line**|  
+|114|**Sales Cr.Memo Header**|  
+|115|**Sales Cr.Memo Line**|  
+|120|**Purch. Rcpt. Header**|  
+|121|**Purch. Rcpt. Line**|  
+|122|**Purch. Inv. Header**|  
+|123|**Purch. Inv. Line**|  
+|124|**Purch. Cr. Memo Hdr.**|  
+|125|**Purch. Cr. Memo Line**|  
+|169|**Job Ledger Entry**|  
+|203|**Res. Ledger Entry**|  
+|271|**Bank Account Ledger Entry**|  
+|281|**Phys. Inventory Ledger Entry**|  
+|297|**Issued Reminder Header**|  
+|304|**Issued Fin. Charge Memo Header**|  
+|5107|**Sales Header Archive**|  
+|5108|**Sales Line Archive**|  
+|5109|**Purchase Header Archive**|  
+|5110|**Purchase Line Archive**|  
+|5601|**FA Ledger Entry**|  
+|5625|**Maintenance Ledger Entry**|  
+|5629|**Ins. Coverage Ledger Entry**|  
+|5744|**Transfer Shipment Header**|  
+|5745|**Transfer Shipment Line**|  
+|5746|**Transfer Receipt Header**|  
+|5747|**Transfer Receipt Line**|  
+|5802|**Value Entry**|  
+|5832|**Capacity Ledger Entry**|  
+|5907|**Service Ledger Entry**|  
+|5908|**Service Header**|  
+|5933|**Service Order Posting Buffer**|  
+|5970|**Filed Service Contract Header**|  
+|5990|**Service Shipment Header**|  
+|5991|**Service Shipment Line**|  
+|5992|**Service Invoice Header**|  
+|5993|**Service Invoice Line**|  
+|5994|**Service Cr. Memo Header**|  
+|5995|**Service Cr. Memo Line**|  
+|6650|**Return Shipment Header**|  
+|6651|**Return Shipment Line**|  
+|6660|**Return Receipt Header**|  
+|6661|**Return Receipt Line**|  
 
-Pole 480 je editovatelné v následujících tabulkách.
+Field 480 is editable in the following tables.  
 
-| Číslo tabulky | Název tabulky |
+|Table No.|Table Name|  
 |---------------|----------------|  
-| 36 | **Prodejní hlavička** |
-| 37 | **Prodejní řádky** |
-| 38 | **Nákupní hlavička** |
-| 39 | **Nákupní řádky** |
-| 81 | **Řádek finančního deníku** |
-| 83 | **Řádky deníku zboží** |
-| 89 | **Řádek deníku kusovníku** |
-| 96 | **Položky finančního rozpočtu** |
-| 207 | **Řádek deníku zdrojů** |
-| 210 | **Řádek deníku projektů** |
-| 221 | **Deník rozdělení** |
-| 246 | **Řádky požadavků** |
-| 295 | **Hlavička upomínky** |
-| 302 | **Hlavička penále** |
-| 5405 | **Výrobní zakázka** |
-| 5406 | **Řádek výrobní zakázky** |
-| 5407 | **Komponenta výrobní zakázky** |
-| 5615 | **Rozdělení DM** |
-| 5621 | **Řádek deníku DM** |
-| 5635 | **Řádek deníku pojištění** |
-| 5740 | **Hlavička transferu** |
-| 5741 | **Řádky transferu** |
-| 5900 | **Hlavička servisu** |
-| 5901 | **Řádky předmětu servisu** |
-| 5902 | **Řádky servisu** |
-| 5965 | **Servisní smlouva** |
-| 5997 | **Řádek standardního servisu** |
-| 7134 | **Položky rozpočtu zboží** |
-| 99000829 | **Plánované komponenty** |
+|36|**Sales Header**|  
+|37|**Sales Line**|  
+|38|**Purchase Header**|  
+|39|**Purchase Line**|  
+|81|**Gen. Journal Line**|  
+|83|**Item Journal Line**|  
+|89|**BOM Journal Line**|  
+|96|**G/L Budget Entry**|  
+|207|**Res. Journal Line**|  
+|210|**Job Journal Line**|  
+|221|**Gen. Jnl. Allocation**|  
+|246|**Requisition Line**|  
+|295|**Reminder Header**|  
+|302|**Finance Charge Memo Header**|  
+|5405|**Production Order**|  
+|5406|**Prod. Order Line**|  
+|5407|**Prod. Order Component**|  
+|5615|**FA Allocation**|  
+|5621|**FA Journal Line**|  
+|5635|**Insurance Journal Line**|  
+|5740|**Transfer Header**|  
+|5741|**Transfer Line**|  
+|5900|**Service Header**|  
+|5901|**Service Item Line**|  
+|5902|**Service Line**|  
+|5965|**Service Contract Header**|  
+|5997|**Standard Service Line**|  
+|7134|**Item Budget Entry**|  
+|99000829|**Planning Component**|  
 
-Pole 480 existuje v následujících tabulkách vyrovnávací paměti.
+Field 480 exists in the following buffer tables.  
 
-| Číslo tabulky | Název tabulky |
+|Table No.|Table Name|  
 |---------------|----------------|  
-| 49 | **Zásobník pro fakturaci** |
-| 212 | **Zásobník pro účtování projektu** |
-| 372 | **Zásobník plateb** |
-| 382 | **Zásobník položek zákazníka/dodavatele** |
-| 461 | **Prepayment Inv. Line Buffer** |
-| 5637 | **Zásobník účtování DM** |
-| 7136 | **Zásobník rozpočtu zboží** |
+|49|**Invoice Post. Buffer**|  
+|212|**Job Posting Buffer**|  
+|372|**Payment Buffer**|  
+|382|**CV Ledger Entry Buffer**|  
+|461|**Prepayment Inv. Line Buffer**|  
+|5637|**FA G/L Posting Buffer**|  
+|7136|**Item Budget Buffer**|  
 
-## Viz také
-[Detaily návrhu: Položky sady dimenzí](design-details-dimension-set-entries.md)   
-[Přehled položek sad dimenzí](design-details-dimension-set-entries-overview.md)   
-[Detaily návrhu: Vyhledávání kombinace dimenzí](design-details-searching-for-dimension-combinations.md)
+## See Also
 
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Dimension Set Entries Overview](design-details-dimension-set-entries-overview.md)  
+[Design Details: Searching for Dimension Combinations](design-details-searching-for-dimension-combinations.md)   

@@ -1,43 +1,65 @@
 ---
-title: Porozumění Způsobu Účtování Prodejních Dokladů | Microsoft Docs
-description: Další informace o různých způsobech účtování prodejních dokladů.
-services: project-madeira
-documentationcenter: ''
-author: SusanneWindfeldPedersen
+title: Posting Sales Documents
+description: Learn about the different posting functions to post sales documents, and how you can update posted documents.
+author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2018
-ms.author: solsen
+ms.reviewer: edupont
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="posting-sales"></a>Účtování prodeje
-V **Účto skupině** v prodejním dokladu si můžete vybrat z následujících funkcí účtování:
+# Posting Sales
 
-* **Účtovat**
-* **Testovací sestava**
-* **Účtovat a odeslat**
-* **Účtovat a vytisknout**
-* **Účtovat a poslat mailem**
-* **Dávkové účtování**
-* **Náhled účtování**
+Under the **Posting** menu in a sales document, you can choose between the following posting functions:
 
-Jakmile vyplníte všechny řádky a zadáte všechny informace o prodejní objednávce, můžete ji zaúčtovat. Tím se vytvoří dodávka a faktura.
+* **Post**
+* **Post and New**
+* **Post and Send**
+* **Preview Posting**
+* **Post Batch**
+* **Test Report**
 
-Po zaúčtování prodejní objednávky se aktualizuje účet zákazníka, hlavní účetní kniha a položky zboží.
+> [!NOTE]
+> For sales orders, you can also see options related to the prepayments functionality. For more information, see [Invoicing Prepayments](finance-invoice-prepayments.md).
 
-Pro každou prodejní objednávku se v tabulce **Věcná položka** vytvoří záznam o prodeji. Položka je také vytvořena na účtu zákazníka v **Položkách  zákazníka** a položka účetní knihy se vytvoří na příslušném účtu pohledávek. Kromě toho může odeslání objednávky vést k zadání DPH a zápisu hlavní účetní knihy pro částku slevy. Zveřejnění záznamu o slevě závisí na obsahu pole **Účtování slevy** na stránce **Nastavení prodeje a pohledávek**.
+When you have completed all the lines and entered all the information on the sales order, you can post it. This creates a shipment and an invoice.
 
-Pro každý řádek prodejní objednávky bude v tabulce **Položka zboží**   vytvořena položka hlavní účetní knihy (pokud prodejní řádky obsahují čísla položek) nebo bude položka hlavní účetní knihy vytvořena v tabulce **Věcná položka** (pokud prodejní řádky obsahují účet hlavní knihy). Kromě toho jsou prodejní objednávky vždy zaznamenány v tabulkách **Hlavička prodejní dodávky** a **Hlavička prodejní faktury**.
+When a sales order is posted, the customer's account, the general ledger, and the item ledger entries are updated.
+
+For each sales order, a sales entry is created in the **G/L Entry** table. An entry is also created in the customer's account in the **Cust. Ledger Entry** table and a general ledger entry is created in the relevant receivables account. In addition, posting the order may result in a VAT entry and a general ledger entry for the discount amount. Whether an entry for the discount is posted depends on the contents of the **Discount Posting** field on the **Sales & Receivables Setup** page.
+
+For each sales order line, an item ledger entry will be created in the **Item Ledger Entry** table (if the sales lines contain item numbers) or a general ledger entry will be created in the **G/L Entry** table (if the sales lines contain a general ledger account). In addition to this, sales orders are always recorded in the **Sales Shipment Header** and **Sales Invoice Header** tables.
 
 > [!IMPORTANT]  
->   Při odeslání objednávky můžete vytvořit dodávku i fakturu. Lze to provést současně nebo samostatně. Můžete také vytvořit částečnou dodávku a částečnou fakturu vyplněním polí **K dodání** a **K fakturaci** na jednotlivých řádcích prodejní objednávky před zaúčtováním. Upozorňujeme, že nemůžete vytvořit fakturu za něco, co není dodáno. To znamená, že dříve, než budete moci fakturovat, musíte zaznamenat dodávku nebo se musíte rozhodnout dodat a fakturovat současně.
+> When you post an order, you can create both a shipment and an invoice. These can be done at the same time or independently. You can also create a partial shipment and a partial invoice by completing the **Qty. to Ship** and **Qty. to Invoice** fields on the individual sales order lines before you post. Note that you cannot create an invoice for something that is not shipped. That is, before you can invoice, you must have recorded a shipment, or you must choose to ship and invoice at the same time.
 
-Po dokončení účtování budou zaúčtované řádky z objednávky odstraněny. Po dokončení účtování se zobrazí zpráva. Poté budete moci zobrazit zaúčtované položky na různých stránkách, které obsahují zaúčtované položky, například **Zák. Stránky Položky hlavní knihy**, **Hlavní kniha**, **Položky zboží**, **Účtované prodejní dodávky** a **Účtované prodejní faktury**.
+You can either post, or post and send. If you choose to post and send, a PDF file is generated that you can then send. You can also choose the **Post Batch** function, which lets you post several orders at the same time. For more information, see [Post Multiple Documents at the Same Time](ui-batch-posting.md).
 
-## <a name="see-also"></a>Viz také
-[Prodej](sales-manage-sales.md)  
-[Odeslat dokumenty e-mailem](ui-how-send-documents-email.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## Viewing Ledger Entries
 
+When the posting is completed, the posted sales lines are removed from the order. A message tells you when the posting is completed. After this, you will be able to see the posted entries in the various pages that contain posted entries, such as the **Cust. Ledger Entries**, **G/L Entries**, **Item Ledger Entries**, **Posted Sales Shipments**, and **Posted Sales Invoices** pages.  
+
+In most cases, you can open ledger entries from the affected card or document. For example, on the **Customer Card** page, choose the **Ledger Entries** action.
+
+## Editing Ledger Entries
+
+You can edit certain fields on posted purchase documents, such as the **Package Tracking No.** field. For more information, see [Edit Posted Documents](across-edit-posted-document.md). For more critical fields that affect the auditing trail, you must reverse or undo posting. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
+
+## See Related Training at [Microsoft Learn](/learn/modules/ship-invoice-items-dynamics-365-business-central/index)
+
+## See Also
+
+[Sales](sales-manage-sales.md)  
+[Post Multiple Documents at the Same Time](ui-batch-posting.md)  
+[Edit Posted Documents](across-edit-posted-document.md)  
+[Send Documents by Email](ui-how-send-documents-email.md)  
+[Correct or Cancel Unpaid Sales Invoices](sales-how-correct-cancel-sales-invoice.md)  
+[Finding Pages and Information with Tell Me](ui-search.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]  

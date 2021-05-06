@@ -6,42 +6,44 @@ documentationcenter: ''
 author: SusanneWindfeldPedersen
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: API templates, configuring templates
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: solsen
 ---
 
-# Konfigurace šablon API
-Knihovna API pro [!INCLUDE[d365fin_md](includes/d365fin_md.md)] poskytuje zjednodušenou reprezentaci základních entit. Všechny vlastnosti v aplikaci nejsou vystaveny prostřednictvím přidruženého rozhraní. Stránka **Nastavení API** vám umožňuje definovat šablony, které se používají k naplnění prázdných vlastností v entitě při vytvoření akce ÚČTOVAT prostřednictvím rozhraní API.
+# Configuring API Templates
+The API library for [!INCLUDE[prod_short_md](includes/prod_short.md)] provides a simplified representation of the underlying entities. All the properties in the application are not exposed through the associated API. The **API Setup** page allows you to define templates that are used to populate empty properties on an entity when you create a POST action through the API. 
 
-Například, pokud je pro položku entity definována konfigurační šablona, když se vytvoří nový záznam položky prostřednictvím položek API, budou z vybrané šablony naplněny všechny vlastnosti nové položky, které nejsou definovány ve volání rozhraní API. Pokud například není definováná žádná hodnota pro pole **Obecná Účto skupina zboží** prostřednictvím rozhraní API, avšak hodnota je definována ve vybrané šabloně, pak účtovací skupina definovaná v šabloně  bude použita pro novou položku.
+For example, if a configuration template is defined for the item entity, when a new item record is created through the items API, any properties for the new item that are not defined in the API call will be populated from the selected template. If, for example, no value is defined for the **Gen. Prod. Posting Group** field through the API, but a value is defined in the selected template, then the posting group value defined in the template will be applied to the new item. 
 
-## Nastavení šablony entity
-Chcete-li používat šablony s knihovnou API, musíte nejprve nastavit a definovat vlastnosti šablon. Tyto šablony můžete nastavit na stránce **Konfigurační šablony**. Pro více informací navštivte [Příprava na migraci zákaznických dat](admin-use-templates-to-prepare-customer-data-for-migration.md).
+## Setting up the Entity Template
+To use templates with the API library, you must first set up and define properties for the templates. You can set up these templates on the **Configuration Templates** page. For more information, see [Prepare to Migrate Customer Data](admin-use-templates-to-prepare-customer-data-for-migration.md). 
 
-## Přiřazení šablony k rozhraní API
+## Assign the template to an API
 
-Chcete-li přiřadit šablonu API, musíte provést následující kroky.
+To assign a template to an API, you must go through the following steps.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení API** a poté vyberte související odkaz.
-2. Zvolte **Nový**, a poté vyberte ze záznamu hodnotu **Pořadí**.
-Pokud je pro rozhraní API (ID stránky) vybráno více než jedna šablona, budou použity v pořadí definovaném ve sloupci **Pořadí**.
-Při použití každé šablony jsou hodnoty polí definované v šabloně použity pouze pro pole, která ještě neměla definovanou hodnotu, a to buď explicitně v rozhraní API, nebo v dříve použité šabloně v pořadí.
-3. Vyberte hodnotu **ID stránky**.
-Toto je stránka rozhraní API, na které bude šablona použita. Vyhledávání **ID stránky** poskytuje seznam všech rozhraní APIs dostupných v knihovně.
-4. Vyberte hodnotu v poli **Kód šablony**.
-Kód šablony je kód šablony, který byl definován na stránce **Konfigurační šablony**. Definované hodnoty šablony jsou použity pro rozhraní API.
-5. V poli **Podmínky** určete, která šablona má být použita.
-Definovaná šablona se použije na nový záznam vytvořený pomocí API, a to pouze tehdy, jsou-li podmínky definované v poli **Podmínky** shodné s hodnotami již nadefinovanými pro novou instanci entity.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **API Setup**, and choose the related link.
+2. Choose **New**, and then choose the **Order** value for the record.  
+If there is more than one template selected for an API (Page ID), the templates are applied in the order defined in the **Order** column.   
+When each template is applied, field values defined in the template are only applied to fields that have not already had a value defined, either explicitly in the API, or in a previously applied template in the order. 
+3. Select a **Page ID** value.  
+This is the page for the API to which the template will be applied. The **Page ID** lookup provides a list of all APIs available in the library.
+4. Select a value in the **Template Code** field.  
+The template code is the code for the template that was defined on the **Configuration Templates** page. The template values defined are applied to the API. 
+5. In the **Conditions** field, specify which template should be applied.  
+The defined template is applied to a new record created through the API if, and only if, the conditions defined in the **Conditions** field are met by the values already defined for the new instance of the entity.
 
-## Viz také
-[Dokumentace API](/dynamics-nav/fin-graph)  
-[Vývoj aplikací Connec pro [!INCLUDE[d365fin_md](includes/d365fin_md.md)]](/dynamics365/business-central/dev-itpro/developer/devenv-develop-connect-apps)  
-[Povolení API](/dynamics-nav/enabling-apis-for-dynamics-nav)  
-[Koncové body API](/dynamics-nav/endpoints-apis-for-dynamics)  
-[Založení společnosti pomocí služeb RapidStart](admin-set-up-a-company-with-rapidstart.md)  
-[Správa](admin-setup-and-administration.md)
+## See Also
+[API Documentation](/dynamics-nav/fin-graph)  
+[Developing Connect Apps for [!INCLUDE[prod_short_md](includes/prod_short.md)]](/dynamics365/business-central/dev-itpro/developer/devenv-develop-connect-apps)  
+[Enabling the APIs](/dynamics-nav/enabling-apis-for-dynamics-nav)  
+[Endpoints for the APIs](/dynamics-nav/endpoints-apis-for-dynamics)  
+[Setting Up a Company with RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  
+[Administration](admin-setup-and-administration.md)
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -6,78 +6,81 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: reimbursement
-ms.date: 01/27/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Stornování účtování
-Chcete-li zrušit chybné účtování, vyberte záznam a vytvořte záznam storna (položky identické s původním záznamem, ale s opačným znaménkem v poli částky) se stejným číslem dokladu a datem účtování jako původní položka. Po stornování záznamu musíte provést správné položky.
+# Reverse Journal Postings and Undo Receipts/Shipments
+To undo an erroneous journal posting, you select the entry and create a reverse entry (entries identical to the original entry but with opposite sign in the amount field) with the same document number and posting date as the original entry. After reversing an entry, you must make the correct entry.
 
-Stornovat lze pouze položky, které jsou zaúčtovány z řádku finančního deníku. Položku lze zrušit pouze jednou.
+You can only reverse entries that are posted from a general journal line. An entry can only be reversed once.
 
-Chcete-li zrušit příjemku nebo účtování dodání, dříve než budou zaúčtovány jako faktura, můžete v zaúčtovaném dokladu použít funkci **Zpět**. Můžete vrátit množství typu **Zboží** a **Zdroj**.
+To undo a receipt or shipment posting, before they are posted as invoiced, you can use the **Undo** function on the posted document. You can undo quantities of type **Item** and **Resource**.
 
-Pokud jste provedli nesprávné zaúčtování záporného množství, například nákupní objednávku s nesprávným množstvím zboží, a zaúčtovali jste ji jako přijatou, ale nefakturovanou, můžete účtování vrátit zpět.
+If you have made an incorrect negative quantity posting, such as a purchase order with the wrong number of items, and posted it as received but not invoiced, then you can undo the posting.
 
-Pokud jste odeslali nesprávné kladné množství, například prodejní dodávku nebo dodávku nákupní vratky, se špatným počtem zboží a zaúčtovali jste ji jako dodávku, ale nebyla vyfakturována, můžete účtování zrušit.
+If you have made an incorrect positive quantity posting, such as a sales shipment or a purchase return shipment with the wrong number of items, and posted it as shipped but not invoiced, then you can undo the posting.   
 
-## Stornování účtování položek hlavní knihy
-Položky můžete stornovat ze všech stránek **Položek**. Následující postup je založen na stránce **Věcné položky**.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Věcné položky** a poté vyberte související odkaz.
-2. Vyberte položku, kterou chcete stornovat, a pak zvolte akci **Storno transakce**. Upozorňujeme, že musí pocházet z účtování v deníku.
-3. Na stránce **Stornovat položky transakce** vyberte akci **Stornovat**.
-4. V potvrzovací zprávě vyberte tlačítko **Ano**.
+## To reverse the journal posting of a general ledger entry
+You can reverse entries from all **Ledger Entries** pages. The following procedure is based on the **General Ledger Entries** page.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Entries**, and then choose the related link.
+2. Select the entry that you want to reverse, and then choose the **Reverse Transaction** action. Note that is must originate from a journal posting.
+3. On the **Reverse Transaction Entries** page, choose the **Reverse** action.
+4. Choose the **Yes** button on the confirmation message.
 
 > [!NOTE]
-> Nemůžete vrátit zpět položky, které byly zaúčtovány s informacemi z úlohy nebo které realizovaly zisky a ztráty v rámci stejné transakce.
+> You cannot reverse entries that have been posted with information from a job, or which have realized gains and losses within the same transaction.
 
-## Zaúčtování záporné položky
-Pole **Oprava** můžete použít k zaúčtování záporného MD namísto Dal nebo zaúčtování záporného Dal namísto MD na účtu. Pro splnění zákonných požadavků je toto pole ve výchozím nastavení viditelné ve všech denících. Pole **Částka MD** a **Částka Dal** zahrnují jak původní položku, tak opravenou položku. Tato pole nemají žádný vliv na zůstatek na účtu.
+## To post a negative entry  
+You can use the **Correction** field to post a negative debit instead of a credit, or to post a negative credit instead of a debit on an account. To meet legal requirements, this field is visible by default in all journals. The **Debit Amount** and **Credit Amount** fields include both the original entry, and the corrected entry. These fields have no effect on the account balance.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky** a poté vyberte související odkaz.
-2. V poli **Název listu** vyberte požadovaný název listu.
-3. Zadejte informace do příslušných polí.
-4. V řádku deníku, který chcete aktivovat pro záporné položky, zaškrtněte políčko **Oprava**.
-5. Chcete-li zaúčtovat deník, vyberte akci **Účtovat** a poté zvolte tlačítko **Ano**.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link  
+2.  In the **Batch Name** field, select the required batch name.  
+3.  Enter information into the relevant fields.  
+4.  In the journal line that you want to activate for negative entries, select the **Correction** check box.  
+5.  To post the journal, choose the **Post** action, and then choose the **Yes** button.
 
-## Zrušení účtování množství na zaúčtované nákupní příjemce
-Následující text popisuje, jak zrušit vrácení zaúčtovaného zboží nebo zdrojů. Kroky jsou podobné i pro účtované dodávky.
+## To undo a quantity posting on a posted purchase receipt  
+The following described how to undo a posted receipt of items or resources. The steps are similar for posted shipments.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované nákupní příjemky** a poté vyberte související odkaz.
-2. Otevřete zaúčtovanou příjemku, kterou chcete vrátit.
-3. Vyberte řádek nebo řádky, které chcete vrátit zpět.
-4. Vyberte akci **Vrátit příjemku**.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Purchase Receipts**, and then choose the related link.  
+2.  Open the posted receipt that you want to undo.  
+3.  Select the line or lines that you want to undo.  
+4.  Choose **Undo Receipt** action.
 
-Korekční řádek je vložen pod vybraný řádek příjmu. Pokud bylo množství přijato v příjemce skladu, je na zaúčtovou příjemku skladu vložen opravný řádek.
+A corrective line is inserted under the selected receipt line. If the quantity was received in a warehouse receipt, then a corrective line is inserted on the posted warehouse receipt.  
 
-Pole **Přijaté množství** a **Přijato,  nefakt.  (množ.)** na související objednávce jsou nastaveny na nulu.
+The **Quantity Received** and **Qty. Rcd. Not Invoiced** fields on the related purchase order are set to zero.
 
-## Vrácení a následné opětovné zaúčtování množství u zaúčtované dodávky vratky
-Následující text popisuje, jak zrušit zaúčtovanou dodávku vratky pro zboží nebo zdroj a poté znovu zaúčtovat nákupní vratku s novým množstvím. Kroky jsou podobné i pro zaúčtované příjemky vratky.
+## To undo and then redo a quantity posting on a posted return shipment
+The following describes how to undo a posted return shipment of items or resources and then repost the purchase return with a new quantity. The steps are similar for posted return receipts.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované dodávky vratek** a poté vyberte související odkaz.
-2. Otevřete zaúčtovanou dodávku vratky, kterou chcete vrátit.
-3. Vyberte řádek nebo řádky, které chcete vrátit.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Return Shipments**, and then choose the related link.  
+2.  Open the posted return shipment that you want to undo.
+3. Select the line or lines you want to undo.  
 
-4. Vyberte akci **Vrátit dodávku vratky**.
+4.  Choose the **Undo Return Shipment** action.  
 
-   Do zaúčtovaného dokladu se vloží korekční řádek a pole **Množství vratky  dodané** a **Částka vratky dodaná,  nefakt.** na vratce jsou nastaveny na nulu.
+    A corrective line is inserted in the posted document, and the **Return Qty. Shipped** and **Return Shpd. Not Invd.** fields on the return order are set to zero.  
 
-   Nyní se vraťte zpět k objednávce nákupní vratky a zopakujte účtování.
+    Now go back to the purchase return order to redo the posting.  
 
-5. Na stránce **Účtovaná dodávka vratky** si poznamenejte číslo do pole **Č.objednávky vratky**.
-6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky nákupní vratky** a poté vyberte související odkaz.
-7. Otevřete příslušnou objednávku vratky a poté vyberte akci **Znovu otevřít**.
-8. Opravte položku v poli **Množství** a znovu zaúčtujte objednávku nákupní vratky.
+5.  On the **Posted Return Shipment** page, take a note of the number in the **Return Order No.** field.  
+6.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Return Orders**, and then select the related link.  
+7.  Open the return order in question, and then choose the **Reopen** action.  
+8.  Correct the entry in the **Quantity** field and post the purchase return order again.  
 
-## Viz také
-[Zrušení účtování montáže](assembly-how-to-undo-assembly-posting.md)  
-[Zaúčtování transakcí přímo do hlavní knihy](finance-how-post-transactions-directly.md)  
-[Práce s finančními deníky](ui-work-general-journals.md)  
+## See Also
+[Undo Assembly Posting](assembly-how-to-undo-assembly-posting.md)  
+[Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md)  
+[Working with General Journals](ui-work-general-journals.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -4,58 +4,61 @@
     author: bholtorf
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
-# Nastavení zaokrouhlování faktur
-Pokud potřebujete při vytváření faktur zaokrouhlit částky faktur, můžete použít funkci automatického zaokrouhlování. Při zaokrouhlování faktury se přidá další řádek se zaokrouhlovací částkou a zaúčtuje se s ostatními řádky faktury.
+# Set Up Invoice Rounding
+If you need to round invoice amounts when you create invoices, you can use the automatic rounding function. When an invoice is rounded, an extra line is added with the rounding amount and posted with the other invoice lines.
 
 > [!NOTE]  
-> Místní předpisy nebo místní zvyklosti mohou vyžadovat, aby byla faktura zaokrouhlena zvláštním způsobem, například na částku dělitelnou 0,05.
+>  Local regulations or local custom may require the invoice to be rounded in a specific way, for example, to an amount divisible by 0.05.  
 
-Chcete-li použít automatické zaokrouhlování faktur, musíte:
+To use automatic invoice rounding, you must:  
 
-* Určete účty účetní osnovy, na které budou zaokrouhleny rozdíly.
-* Nastavte pravidla pro zaokrouhlení faktur v lokální měně a v cizí měně.
-* Aktivujte funkci.
+* Specify the general ledger accounts to which rounding differences will be posted.  
+* Set up rules for rounding invoices in local currency and in foreign currency.  
+* Activate the function.  
 
 > [!NOTE]  
-> Kromě funkcí zaokrouhlování faktur můžete zaokrouhlit částky na fakturách pomocí funkce zaokrouhlení jednotkové ceny a funkce zaokrouhlování částky.
+>  In addition to the invoice rounding features, you can round amounts on invoices by the unit-amount rounding feature and the amount rounding feature.  
 
-## Nastavení účtů hlavní knihy pro rozdíly zaokrouhlení faktur
-Chcete-li použít funkci automatického zaokrouhlování faktur, musíte nastavit účet hlavní knihy nebo účty, na kterých budou zaúčtovány rozdíly zaokrouhlování. Než to budete moci provést, musíte nastavit DPH účto skupiny zboží. Pro více informací navštivte [Nastavení DPH](finance-setup-vat.md).
+## Set up general ledger accounts for invoice rounding differences
+To use the automatic invoice rounding function, you must set up the general ledger account or accounts where rounding differences will be posted. Before you can do this, you must set up VAT product posting groups. For more information, see [Set up VAT](finance-setup-vat.md).  
 
-### Nastavení účtů hlavní knihy pro rozdíly zaokrouhlení faktur
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Účetní osnova** a vyberte související odkaz.
-2. Na stránce **Účtová osnova** nastavte účet a pojmenujte ho **Zaokrouhlování faktur** nebo nějak podobně. [!INCLUDE[d365fin](includes/d365fin_md.md)] bude používat název účtu jako text pro faktury, které jsou zaokrouhleny.
-3. V závislosti na tom, zda používáte DPH nebo daň z obratu, v polích **DPH účto  skupina zboží** nebo **Účto skupina DPH**, vyberte pro zaokrouhlenou částku skupinu účtování. Možná budete chtít nastavit nový kód skupiny, který se použije pro zaokrouhlování faktur.
-4. Nechte pole **Typ  obecného účtování**, a také **Daň.obch.účto skupina** nebo **DPH obchodní  účto skupina** prázdné. <!-- Why do we say to leave these blank, when there are a lot of other fields we also leave blank but don't mention? -->
+### To set up general ledger accounts for invoice rounding differences  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
+2. On the **Chart of Accounts** page, set up the account and name it **Invoice Rounding** or something similar. [!INCLUDE[prod_short](includes/prod_short.md)] will use the account name as text for invoices that are rounded.  
+3. Depending on whether you use VAT or sales tax, in the **Tax Prod. Posting Group** or **VAT Prod. Posting Group** fields, choose a posting group for rounded amounts. You may want to set up a new group code to use for invoice rounding.
+4. Leave the **Gen. Posting Type**, and either the **Tax Bus. Posting Group** or **VAT Bus. Posting Group** fields blank. <!-- Why do we say to leave these blank, when there are a lot of other fields we also leave blank but don't mention? -->  
 
-Nyní můžete účet zaokrouhlování faktur přiřadit skupinám účtování na stránce **Účto skupiny dodavatele**.  <!-- Why only the vendor posting groups? -->
+Now you can assign the invoice rounding account to posting groups on the **Vendor Posting Groups** page.  <!-- Why only the vendor posting groups? -->
 
-## Nastavení zaokrouhlení pro cizí a lokální měny
-Před použitím funkce automatického zaokrouhlení faktury je nutné nastavit pravidla zaokrouhlení pro cizí a místní měny.
+## Set up rounding for foreign and local currencies
+Before you can use the automatic invoice rounding function, you must set up rounding rules for foreign and local currencies.
 
-### Nastavení zaokrouhlování cizí měny
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Měny** a vyberte související odkaz.
-2. Na stránce **Měny** vyberte cizí měnu a otevřete **Kartu měny** a poté vyplňte pole **Přesnost zaokrouhlování částky**, **Přesnost zaokrouhlování jednotkové ceny**, **Přesnost zaokrouhlení faktury** a **Typ zaokrouhlení faktur**.
+### To set up rounding for foreign currencies  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Currencies**, and then choose the related link.  
+2. On the **Currencies** page, choose the foreign currency to open the **Currency Card**, and then fill in the **Amount Rounding Precision**, **Unit-Amount Rounding Precision**, **Invoice Rounding Precision** and **Invoice Rounding Type** fields.
 
-### Nastavení zaokrouhlení lokální měny
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení financí** a vyberte související odkaz.
-2. Na stránce **Nastavení financí** v záložce **Obecné** vyplňte pole **Přesnost  zaokrouhlení faktury** a **Typ  zaokrouhlení faktury**.
+### To set up rounding for your local currency
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.  
+2. On the **General Ledger Setup** page, on the **General** FastTab, fill in the **Inv. Rounding Precision** and **Inv. Rounding Type** fields.  
 
-## Aktivace funkce zaokrouhlení faktur
-Chcete-li zajistit automatické zaokrouhlení prodejních a nákupních faktur, je nutné zapnout funkci zaokrouhlení faktur. Zaokrouhlení faktur se zapíná samostatně pro prodejní a nákupní faktury.
+## Activate the invoice rounding function  
+To ensure that sales and purchase invoices are rounded automatically, you must activate the invoice rounding function. You activate invoice rounding separately for sales and purchase invoices.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení prodeje a poheldávek** a vyberte související odkaz.
-2. V záložce **Obecné** zaškrtněte políčko **Zaokrouhlení faktury**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup** or **Purchases & Payables Setup**, and then choose the related link.  
+2. On the **General** FastTab, choose the **Invoice Rounding** check box.  
 
-## Viz také
-[Fakturace prodeje](sales-how-invoice-sales.md)  
-[Evidence nákupů](purchasing-how-record-purchases.md)
+## See Also  
+[Invoice Sales](sales-how-invoice-sales.md)  
+[Record Purchases](purchasing-how-record-purchases.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

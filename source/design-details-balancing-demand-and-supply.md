@@ -4,286 +4,289 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-#  Detaily návrhu: Vyvažování poptávky a nabídky
-Abychom pochopili, jak plánovací systém funguje, je nutné porozumět prioritním cílům plánovacího systému, z nichž nejdůležitější je zajistit, aby:
+# Design Details: Balancing Demand and Supply
+To understand how the planning system works, it is necessary to understand the prioritized goals of the planning system, the most important of which are to ensure that:  
 
-- Jakákoli poptávka bude uspokojena dostatečnou nabídkou.
-- Jakákoli dodávka slouží svému účelu.
+- Any demand will be met by sufficient supply.  
+- Any supply serves a purpose.  
 
-Obecně lze těchto cílů dosáhnout vyvážením nabídky s poptávkou.
+ Generally, these goals are achieved by balancing supply with demand.  
 
-## Nabídka a poptávka
-Poptávka je běžný termín používaný pro jakýkoli druh hrubé poptávky, jako je prodejní objednávka a potřeba komponent z výrobní zakázky. Kromě toho aplikace umožňuje více technických typů poptávky, jako jsou negativní zásoby a vratky.
+## Demand and Supply
+ Demand is the common term used for any kind of gross demand, such as a sales order and component need from a production order. In addition, application allows more technical types of demand, such as negative inventory and purchase returns.  
 
-Nabídka je běžný termín používaný pro jakýkoli druh kladného nebo příchozího množství, jako jsou zásoby, nákupy, montáže, výroba nebo vstupy transferu. Kromě toho, může vratka představovat také nabídku.
+  Supply is the common term used for any kind of positive or inbound quantity, such as inventory, purchases, assembly, production, or inbound transfers. In addition, a sales return may also represent supply.  
 
-Aby bylo možné vyřešit mnoho zdrojů poptávky a nabídky, plánovací systém je uspořádá do dvou časových linií nazvaných profily zásob. Jeden profil obsahuje události poptávky a druhý obsahuje odpovídající události nabídky. Každá událost představuje jednu entitu sítě objednávky, například řádek prodejní objednávky, položka hlavní knihy nebo řádek výrobní zakázky.
+  To sort out the many sources of demand and supply, the planning system organizes them on two time lines called inventory profiles. One profile holds demand events, and the other holds the corresponding supply events. Each event represents one order network entity, such as a sales order line, an item ledger entry, or a production order line.  
 
-Když jsou načteny profily zásob, jsou různé sady nabídky a poptávky vyváženy tak, aby vydávaly plán dodávek, který splňuje uvedené cíle.
+  When inventory profiles are loaded, the different demand-supply sets are balanced to output a supply plan that fulfills the listed goals.  
 
-Parametry plánování a úrovně zásob jsou další typy poptávky a nabídky, které procházejí integrovaným vyvážením k doplnění skladových položek. Pro více informací navštivte [Detaily návrhu: Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md).
+  Planning parameters and inventory levels are other types of demand and supply respectively, which undergo integrated balancing to replenish stock items. For more information, see [Design Details: Handling Reordering Policies](design-details-handling-reordering-policies.md).
 
-## Koncept bilancování ve zkratce
-Poptávka je udána zákazníky společnosti. Nabídka je to, co společnost může vyrobit a vytvořit rovnováhu. Plánovací systém začíná nezávislou poptávkou a pak odkazuje zpátky k nabídce.
+## The Concept of Balancing in Brief
+  Demand is given by a company's customers. Supply is what the company can create and remove to establish balance. The planning system starts with the independent demand and then tracks backwards to the supply.  
 
-Profily zásob se používají k tomu, aby obsahovaly informace o požadavcích, zásobách, množství a načasování. Tyto profily v podstatě tvoří obě strany vyvažovací stupnice.
+   The inventory profiles are used to contain information about the demands and supplies, quantities, and timing. These profiles essentially make up the two sides of the balancing scale.  
 
-Cílem plánovacího mechanismu je vyvážit poptávku a nabídku položky, aby bylo zajištěno, že nabídka bude proveditelným způsobem odpovídat poptávce, jak je definováno v plánovacích parametrech a pravidlech.
+   The objective of the planning mechanism is to counterbalance the demand and supply of an item to ensure that supply will match demand in a feasible way as defined by the planning parameters and rules.  
 
-![Přehled vyrovnávání nabídky a poptávky](media/nav_app_supply_planning_2_balancing.png "Přehled vyrovnávání nabídky a poptávky")
+   ![Overview of supply-demand balancing](media/nav_app_supply_planning_2_balancing.png "Overview of supply-demand balancing")
 
-## Vyřizování objednávek před datem zahájení plánování
-Aby se zabránilo tomu, že plán dodávek ukazuje nemožné, a tudíž zbytečné návrhy, považuje systém plánování období až do data zahájení plánování jako zmrazenou zónu, kde se nic neplánuje. Pro zmrazenou zónu platí následující pravidlo:
+## Dealing with Orders Before the Planning Starting Date
+To avoid that a supply plan shows impossible and therefore useless suggestions, the planning system regards the period up until the planning starting date a frozen zone where nothing is planned for. The following rule applies to the frozen zone:  
 
-Veškerá nabídka a poptávka před začátkem plánovacího období budou považovány za součást inventáře nebo odeslány.
+All supply and demand before the starting date of the planning period will be considered a part of inventory or shipped.  
 
-Systém plánování proto až na několik výjimek nebude navrhovat žádné změny objednávek dodávek v zamrazené zóně a pro toto období nebudou vytvořeny ani udržovány žádné odkazy na sledování objednávek.
+Accordingly, the planning system will not, with a few exceptions, suggest any changes to supply orders in the frozen zone, and no order tracking links are created or maintained for that period.  
 
-Výjimky z tohoto pravidla jsou následující:
+The exceptions to this rule are as follows:  
 
-* Pokud jsou předpokládané dostupné zásoby, včetně součtu nabídky a poptávky ve zmrazené zóně, pod nulou.
-* Pokud jsou sériová čísla nebo čísla šarže požadována v zastaralých pokynech.
-* Pokud je sada nabídky a poptávky propojena se zakázkou-na-zakázku.
+   * If the projected available inventory, including the sum of supply and demand in the frozen zone, is below zero.  
+   * If serial/lot numbers are required on the backdated order(s).  
+   * If the supply-demand set is linked by an order-to-order policy.  
 
-Pokud jsou počáteční dostupné zásoby pod nulou, navrhne plánovací systém nouzovou objednávku dodávky den před plánovacím obdobím k pokrytí chybějícího množství. V důsledku toho budou plánované a dostupné zásoby vždy na počátku dalšího období plánování minimálně nulové. Řádek plánování pro tuto objednávku dodávky zobrazí ikonu nouzového varování a další informace se zobrazí při vyhledávání.
+If the initial available inventory is below zero, the planning system suggests an emergency supply order on the day before the planning period to cover the missing quantity. Consequently, the projected and available inventory will always be at least zero when planning for the future period begins. The planning line for this supply order will display an Emergency warning icon and additional information is provided upon lookup.  
 
-### Sériová čísla, čísla šarží a odkazy na objednávku jsou osvobozeny od zamrzlé zóny
-Pokud je požadováno sériové číslo, číslo šarže, nebo existuje odkaz na objednávku, systém plánování ignoruje zmrazenou zónu a začlení taková množství, která jsou zpětně datována od počátečního data, a pokud nebudou synchronizovány poptávka a nabídka, případně navrhnou nápravná opatření. Hlavním obchodním důvodem pro použití tohoto principu je, že konkrétní sady poptávky a nabídky se musí shodovat, aby bylo zajištěno splnění této konkrétní poptávky.
+### Serial/Lot Numbers and Order-to-Order Links are Exempt from the Frozen Zone  
+   If serial/lot numbers are required or an order-to-order link exists, the planning system will disregard the frozen zone and incorporate such quantities that are back-dated from the starting date and potentially suggest corrective actions if demand and supply is not synchronized. The business reason for this principle is that such specific demand-supply sets must match to ensure that this specific demand is fulfilled.
 
-## Načítání profilů zásob
-Chcete-li vyřešit mnoho zdrojů poptávky a nabídky, systém plánování je uspořádá na dvou časových osách nazývaných profily zásob.
+## Loading the Inventory Profiles
+To sort out the many sources of demand and supply, the planning system organizes them on two timelines called inventory profiles.  
 
-Do každého profilu zásob se načtou běžné typy poptávky a nabídky s daty splatnosti v den zahájení plánování nebo po něm. Po načtení se různé typy poptávky a nabídky seřadí podle obecných priorit, jako je datum splatnosti, nízkoúrovňové kódy, umístění a varianta. Kromě toho jsou priority objednávek aplikovány na různé typy, aby bylo zajištěno, že nejdůležitější poptávka bude splněna jako první. Pro více informací navštivte [Stanovení priorit objednávek](design-details-balancing-demand-and-supply.md#prioritizing-orders).
+The normal types of demand and supply with due dates on or after the planning starting date are loaded into each inventory profile. When loaded, the different demand and supply types are sorted according to overall priorities, such as due date, low-level codes, location, and variant. In addition, order priorities are applied to the different types to ensure that the most important demand is fulfilled first. For more information, see [Prioritizing Orders](design-details-balancing-demand-and-supply.md#prioritizing-orders).  
 
-Jak již bylo zmíněno dříve, poptávka může být také negativní. To znamená, že by se s ní mělo zacházet jako s dodávkou, avšak na rozdíl od běžných typů dodávky, se záporná poptávka považuje za pevnou dodávku. Systém plánování to může vzít v úvahu, ale nenavrhne žádné změny.
+As previously mentioned, demand could also be negative. This means that it should be treated as supply; however, unlike the normal types of supply, negative demand is considered fixed supply. The planning system can take it into account, but will not suggest any changes to it.  
 
-Obecně platí, že plánovací systém považuje všechny objednávky dodávek po datu zahájení plánování za předmět změny, aby vyhověl poptávce. Jakmile je však množství zaúčtováno z objednávky dodávky, systém plánování jej již nemůže změnit. Následující různé objednávky tedy nelze znovu naplánovat:
+In general, the planning system considers all supply orders after the planning starting date as subject to change in order to fulfill demand. However, as soon as a quantity is posted from a supply order, it can no longer be changed by the planning system. Accordingly, the following different orders cannot be replanned:  
 
-- Vydané výrobní zakázky, kde byla zaúčtována spotřeba nebo výstup.
-- Montážní objednávky, kde byla zaúčtována spotřeba nebo výstup.
-- Dodávky transferu, kde byla zaúčtována dodávka transferu.
-- Nákupní objednávky, kde byla zaúčtována příjemka.
+- Released production orders where consumption or output has been posted.  
+- Assembly orders where consumption or output has been posted.  
+- Transfer orders where shipment has been posted.  
+- Purchase orders where receipt has been posted.  
 
-Kromě načítání typů poptávky a nabídky jsou určité typy načítány s důrazem na speciální pravidla a závislosti, které jsou popsány v následujícím textu.
+Apart from loading demand and supply types, certain types are loaded with attention to special rules and dependencies that are described in the following.  
 
-### Dimenze položky jsou odděleny
-Plán dodávek musí být vypočítán pro kombinaci dimenzí položky, jako je varianta a umístění. Neexistuje však žádný důvod k výpočtu jakékoli teoretické kombinace. Je třeba vypočítat pouze ty kombinace, které nesou poptávku nebo nabídku.
+### Item Dimensions are Separated  
+The supply plan must be calculated per combination of the item dimensions, such as variant and location. However, there is no reason to calculate any theoretical combination. Only those combinations that carry a demand and/or supply need to be calculated.  
 
-Plánovací systém to řídí spuštěním profilu zásob Když je nalezena nová kombinace, aplikace vytvoří záznam interního řízení přístupu, který obsahuje skutečné informace o kombinaci. Aplikace vloží SKJ jako řídící záznam nebo vnější smyčku. Ve výsledku jsou nastaveny správné plánovací parametry podle kombinace varianty a umístění a aplikace může pokračovat do vnitřní smyčky.
-
-> [!NOTE]  
-> Aplikace nevyžaduje, aby uživatel zadával záznam SKJ při zadávání poptávky, nebo nabídky pro konkrétní kombinaci varianty a lokací. Proto pokud skladová položka neexistuje pro danou kombinaci, aplikace vytvoří vlastní dočasný záznam SKJ na základě dat karty zboží. Pokud je na stránce Nastavení zásob nastaveno Lokace nutná na Ano, pak musí být vytvořena SKJ nebo pole Komponenty na lokaci nastaveno na Ano. Pro více informací navštivte [Detaily návrhu: Poptávka v prázdném skladu](design-details-demand-at-blank-location.md).
-
-### Načítání sériových čísel a čísel šarží podle úrovně zadání
-Atributy ve formě sériových čísel a čísel šarží jsou načteny do profilů zásob spolu s poptávkou a nabídkou, ke které jsou přiřazeny.
-
-Atributy poptávky a nabídky jsou seřazeny podle priority objednávky a úrovně jejich specifikace. Vzhledem k tomu, že shody sériových čísel a čísel šarže odrážejí úroveň specifikace, bude konkrétnější poptávka, například číslo šarže vybraná speciálně pro řádek prodeje, hledat shodu před méně specifickou poptávkou, například prodej z libovolného vybraného čísla šarže.
+The planning system controls this by running through the inventory profile. When a new combination is found, application creates an internal control record that holds the actual combination information. The application inserts the SKU as the control record, or outer loop. As a result, the proper planning parameters according to a combination of variant and location are set, and application can proceed to the inner loop.  
 
 > [!NOTE]  
-> Pro sériové čísla a čísla šarží poptávky a nabídky neexistují žádná speciální pravidla upřednostňování, kromě úrovně specifikace definované jejich kombinací sériových čísel a čísel šarží a nastavení sledování položek u příslušných položek.
+>  The application does not require the user to enter a SKU record when entering demand and/or supply for a particular combination of variant and location. Therefore, if a SKU does not exist for a given combination, application creates its own temporary SKU record based on the item card data. If Location Mandatory is set to Yes in the Inventory Setup page, then either a SKU must be created or Components at Location must be set to Yes. For more information, see [Design Details: Demand at Blank Location](design-details-demand-at-blank-location.md).  
 
-Během vyrovnávání považuje plánovací systém dodávku, která nese sériová čísla nebo čísla šarží, za nepružnou a nebude se pokoušet tyto objednávky na objednávku zvýšit nebo přeplánovat (pokud nejsou použity ve vztahu mezi zakázka na zakázku). Viz Propojení zakázky na zakázku není nikdy zrušeno). To chrání dodávky z přijímání několika, možná konfliktních, zpráv akcí při dodání, když nese různé atributy – například kolekce různých sériových čísel.
+### Serial/Lot Numbers are Loaded by Specification Level  
+Attributes in the form of serial/lot numbers are loaded into the inventory profiles along with the demand and supply that they are assigned to.  
 
-Dalším důvodem, proč jsou sériová a čísla šarže dodávky nepružná, je to, že sériová čísla a čísla šarží jsou obecně přiřazována tak pozdě v procesu, že by bylo matoucí, kdyby byly navrženy změny.
-
-Vyvážení sériových čísel/čísel šarží nerespektuje *zmrazenou zónu*. Pokud poptávka a nabídka nejsou synchronizovány, plánovací systém navrhne změny nebo nové objednávky bez ohledu na počáteční datum plánování.
-
-### Propojení zakázky na zakázku není nikdy zrušeno
-Při plánování položky na zakázku nesmí být propojená nabídka použita pro jinou poptávku, než pro kterou byla původně určena. Propojená poptávka by neměla být pokryta žádnou jinou náhodnou nabídkou, i když je za své současné situace dostupná v čase a množství. Například montážní objednávku, která je propojena s prodejní objednávkou ve scénáři Montáž na zakázku, nelze použít k pokrytí jiné poptávky.
-
-Poptávka a nabídka zakázky na zakázku se musí přesně vyvážit. Systém plánování zajistí dodávku za všech okolností bez ohledu na parametry velikosti objednávky, modifikátory a množství v inventáři (jiné než množství vztahující se k propojeným objednávkám). Ze stejného důvodu systém navrhne snížení nadbytečných dodávek, pokud se sníží související poptávka.
-
-Toto vyvažování také ovlivňuje časování. Omezený horizont, který je dán intervalem dostupnosti, se nebere v potaz; pokud se změní načasování poptávky, bude nabídka přeplánována. Doba prodlevy však bude respektována a zabrání naplánování dodávek zakázek na zakázku, s výjimkou interních dodávek víceúrovňové výrobní zakázky (projektová objednávka).
+Demand and supply attributes are arranged by order priority as well as by their level of specification. Because serial/lot number matches reflect the level of specification, the more specific demand, such as a lot number selected specifically for a sale line, will seek a match before less specific demand, such as a sale from any lot number selected.  
 
 > [!NOTE]  
-> Sériová čísla a čísla šarží lze také určit na základě poptávky zakázky na zakázku. V takovém případě není dodávka standardně považována za nepružnou, jako je tomu obvykle u sériových čísel a čísel šarží. V tomto případě se systém bude zvyšovat a snižovat podle změn v poptávce. Kromě toho, pokud jedna poptávka nese různá sériová čísla, nebo čísla šarží, například více než jedno číslo šarže, bude pak navržena jedna objednávka dodávky na šarži.
+>  There are no dedicated prioritization rules for serial/lot-numbered demand and supply, other than the level of specification defined by their combinations of serial and lot numbers and the item tracking setup of the involved items.  
+
+During balancing, the planning system regards supply that carries serial/lot numbers as inflexible and will not try to increase or reschedule such supply orders (unless they are used in an order-to-order relation). See Order-to-Order Links are Never Broken). This protects the supply from receiving several, possibly conflicting, action messages when a supply carries varying attributes—such as a collection of different serial numbers.  
+
+Another reason that serial/lot numbered supply is inflexible is that serial/lot numbers are generally assigned so late in the process that it would be confusing if changes are suggested.  
+
+The balancing of serial/lot numbers does not respect the *frozen zone*. If demand and supply is not synchronized, the planning system will suggest changes or suggest new orders, regardless of the planning starting date.  
+
+### Order-to-Order Links are Never Broken  
+When planning an order-to-order item, the linked supply must not be used for any demand other than what it was originally intended for. The linked demand should not be covered by any other random supply, even if, in its present situation, it is available in time and quantity. For example, an assembly order that is linked to a sales order in an assemble-to-order scenario cannot be used to cover other demand.  
+
+Order-to-order demand and supply must balance precisely. The planning system will ensure the supply under all circumstances without regarding order sizing parameters, modifiers, and quantities in inventory (other than quantities relating to the linked orders). For the same reason, the system will suggest decreasing excess supplies if the linked demand is decreased.  
+
+This balancing also affects the timing. The limited horizon that is given by the time bucket is not regarded; the supply will be rescheduled if the timing of the demand has changed. However, dampener time will be respected and will prevent order-to-order supplies from being scheduled out, except for the internal supplies of a multi-level production order (project order).  
 
 > [!NOTE]  
-> Prognózy by neměly vést k vytváření objednávek na dodávky, které jsou vázány odkazem zakázky na zakázku. Pokud se použije prognóza, měla by se použít pouze jako generátor závislé poptávky ve výrobním prostředí.
-
-### Potřeba komponenty je načtena podle změn výrobní zakázky
-Při zpracování výrobních zakázek musí plánovací systém, před jejich načtením do profilu poptávky, sledovat potřebné součásti. Řádky komponent, které jsou výsledkem pozměněné výrobní zakázky, nahradí řádky původní objednávky. Tím je zajištěno, že systém plánování stanoví, že řádky plánování pro potřebu komponenty nejsou nikdy duplikovány.
-
-### <a name="BKMK_SafetyStockMayBeConsumed"></a> Pojistné zásoby mohou být spotřebovány
-Množství pojistných zásob je primárně typem poptávky, a proto je načteno do profilu zásob k datu zahájení plánování.
-
-Pojistná zásoba je množství zásob vyčleněné k vyrovnání nejistot v poptávce během dodací lhůty. Může však být spotřebována, pokud je nutné ji využít k umoření poptávky. V takovém případě plánovací systém zajistí, že pojistná zásoba bude rychle vyměněna, a to tak, že navrhne objednávku na doplnění množství pojistné zásoby k datu její spotřeby. Tento řádek plánování zobrazí ikonu upozornění výjimky, která plánovači vysvětlí, že bezpečnostní sklad byl částečně nebo plně spotřebován pomocí objednávky výjimky pro chybějící množství.
-
-### Prognóza poptávky je snížena o prodejní objednávky
-Prognóza poptávky vyjadřuje očekávanou budoucí poptávku. Zatímco je zadána skutečná poptávka, obvykle jako prodejní objednávky pro vyrobené zboží, tak spotřebovává prognózu.
-
-Samotná prognóza není ve skutečnosti snížena prodejními objednávkami; zůstává stejná. Předpokládané množství použité v plánovacím výpočtu se však sníží (o množství prodejní objednávky), než zbývající množství, pokud existuje, vstoupí do profilu zásob poptávky. Když systém plánování zkontroluje skutečný prodej během daného období, jsou zahrnuty jak otevřené prodejní objednávky, tak položky zboží z dodaného prodeje, pokud nejsou odvozeny z hromadné objednávky.
-
-Uživatel je povinen definovat platné období prognózy. Datum předpokládaného množství definuje začátek období a datum v další prognóze definuje konec období.
-
-Prognóza pro období před plánovacím obdobím se nepoužívá, bez ohledu na to, zda byla spotřebována nebo ne. První údaj o prognóze je buď datum nebo nejbližší datum před datem zahájení plánování.
-
-Prognóza může být pro nezávislou poptávku, jako jsou například prodejní objednávky, nebo závislé poptávky, jako jsou komponenty výrobní zakázky (prognóza modulu). Položka může mít oba typy prognózy. Během plánování dochází ke spotřebě samostatně, nejprve pro nezávislou poptávku a poté pro závislou poptávku.
-
-### Celková poptávka po objednávkách je snížena o prodejní objednávky
-Prognózy jsou doplněny paušální prodejní objednávkou jako prostředek k určení budoucí poptávky konkrétního zákazníka. Stejně jako u (nespecifikované) prognózy by měl skutečný prodej spotřebovat očekávanou poptávku a zbývající množství by mělo zadat profil zásob poptávky. Opět platí, že spotřeba ve skutečnosti nesnižuje plošnou objednávku.
-
-Výpočet plánování bere v úvahu otevřené prodejní objednávky spojené s konkrétním řádkem hromadné objednávky, ale nebere v úvahu žádné platné časové období. Nezohledňuje ani zaúčtované objednávky, protože postup zaúčtování již snížil zbývající hromadné množství objednávky.
-
-## Stanovení priorit objednávek
-V rámci dané SKJ představuje požadované nebo dostupné datum nejvyšší prioritu; poptávka dneška by měla být řešena před poptávkou příštího týdne. Kromě této celkové priority však systém plánování také navrhne, jaký typ poptávky by měl být splněn před splněním další poptávky. Stejně tak navrhne, jaký zdroj dodávek by měl být použit před použitím jiných zdrojů dodávek. To se provádí pomocí priorit objednávky.
-
-Načtená poptávka a nabídka přispívají k předpokládanému profilu zásob podle následujících priorit:
-
-### Priority na straně poptávky
-1. Již dodáno: Položka zboží
-2. Objednávka nákupní vratky
-3. Prodejní objednávka
-4. Servisní zakázka
-5. Potřeba výrobní komponenty
-6. Řádek montážní zakázky
-7. Objednávka odchozího transferu
-8. Hromadná objednávka (která ještě nebyla spotřebována souvisejícími prodejními objednávkami)
-9. Prognóza (která ještě nebyla spotřebována jinými prodejními objednávkami)
+>  Serial/lot numbers can also be specified on order-to-order demand. In that case, the supply is not regarded inflexible by default, as is normally the case for serial/lot numbers. In this case, the system will increase/decrease according to changes in demand. Furthermore, if one demand carries varying serial/lot numbers, such as more than one lot number, one supply order will be suggested per lot.  
 
 > [!NOTE]  
-> Výnosy z nákupu obvykle nejsou zahrnuty do plánování dodávek; vždy by si měli být vyhrazeni ze šarže, která se má vrátit. Pokud nejsou rezervovány, tak nákupní vratky hrají roli v dostupnosti a jsou vysoce upřednostňovány, aby se zabránilo tomu, že plánovací systém navrhne objednávku dodávky, aby sloužila jako nákupní vratka.
+>  Forecasts should not lead to creating supply orders that are bound by an order-to-order link. If the forecast is used, it should only be used as a generator of dependent demand in a manufacturing environment.  
 
-### Priority na straně nabídky
-1. Již v zásobách: Položky zboží (Pružnost plánování = Žádná)
-2. Objednávka prodejní vratky (Pružnost plánování = Žádná)
-3. Objednávka příchozího transferu
-4. Výrobní zakázka
-5. Montážní zakázka
-6. Nákupní objednávka
+### Component Need is Loaded according to Production Order Changes  
+When handling production orders, the planning system must monitor the needed components before loading them into the demand profile. Component lines that result from an amended production order will replace those of the original order. This ensures that the planning system establishes that planning lines for component need are never duplicated.  
 
-### Priorita týkající se stavu poptávky a nabídky
-Kromě priorit stanovených typem poptávky a nabídky definuje současný stav příkazů v procesu provádění také prioritu. Například mají dopad, aktivity skladu a zohledňuje se také stav prodejních, nákupních, transferů, montážních a výrobních objednávek:
+###  <a name="BKMK_SafetyStockMayBeConsumed"></a> Safety Stock May Be Consumed  
+The safety stock quantity is primarily a demand type and is therefore loaded into the inventory profile on the planning starting date.  
 
-1. Částečně zpracovány (Pružnost plánování = Žádná)
-2. Již probíhá ve skladu (Pružnost plánování = Žádná)
-3. Vydáno - všechny typy objednávek (Pružnost plánování = Neomezená)
-4. Pevně plánované výrobní zakázky (Pružnost plánování = Neomezená)
-5. Plánované/otevřené – všechny typy objednávek (Pružnost plánování = Neomezená)
+Safety stock is an inventory quantity set aside to compensate for uncertainties in demand during the replenishment lead time. However, it may be consumed if it is necessary to take from it to fulfill a demand. In that case, the planning system will ensure that the safety stock is quickly replaced by suggesting a supply order to replenish the safety stock quantity on the date it is consumed. This planning line will display an Exception warning icon explaining to the planner that the safety stock has been partly or fully consumed by means of an exception order for the missing quantity.  
 
-## Vyrovnávání nabídky s poptávkou
-Jádro plánovacího systému zahrnuje vyvážení poptávky a nabídky prostřednictvím návrhu uživatelských opatření na revizi objednávek dodávek v případě nerovnováhy. To se děje na kombinaci variant a umístění.
+### Forecast Demand is Reduced by Sales Orders  
+The demand forecast expresses anticipated future demand. While actual demand is entered, typically as sales orders for produced items, it consumes the forecast.  
 
-Představte si, že každý profil zásob obsahuje řetězec událostí poptávky (seřazený podle data a priority) a odpovídající řetězec událostí dodávek. Každá událost odkazuje zpět na svůj zdrojový typ a identifikaci. Pravidla pro vyvažování položky jsou jednoduchá. V kterémkoli okamžiku procesu mohou nastat čtyři případy shody poptávky a nabídky:
+The forecast itself is not actually reduced by sales orders; it remains the same. However, the forecast quantities used in the planning calculation are reduced (by the sales order quantities) before the remaining quantity, if any, enters the demand inventory profile. When the planning system examines actual sales during a period, both open sales orders and item ledger entries from shipped sales are included, unless they are derived from a blanket order.  
 
-1. Pro zboží neexistuje poptávka ani nabídka => plánování bylo dokončeno (nebo by nemělo začít).
-2. Poptávka existuje, ale neexistuje žádná nabídka => měla by být navržena nabídka.
-3. Nabídka existuje, ale není po ní poptávka => nabídka by měla být zrušena.
-4. Poptávka i nabídka existují = > prvně bychom se měli zeptat a odpovědět si na otázky, než systém může zajistit, že poptávka bude uspokojena a nabídka je dostatečná.
+A user is required to define a valid forecast period. The date on the forecasted quantity defines the start of the period, and the date on the next forecast defines the end of the period.  
 
-   Pokud načasování dodávky není vhodné, je možné dodávku přeplánovat následujícím způsobem:
+The forecast for periods prior to the planning period is not used, regardless of whether it was consumed or not. The first forecast figure of interest is either the date on or the closest date prior to the planning starting date.  
 
-   1. Pokud je nabídka umístěna dříve než poptávka, je možné nabídku přeplánovat tak, aby zásoby byly co nejnižší.
-   2. Pokud je nabídka umístěna později než poptávka, možná je možné nabídku přeplánovat. V opačném případě systém navrhne nové dodávky.
-   3. Pokud má dodávka stejné datum jako nabídka, může plánovací systém pokračovat ve zkoumání, zda množství dodávky může pokrýt poptávku.
+The forecast can be for independent demand, such as sales orders, or dependent demand, like production order components (module-forecast). An item can have both types of forecast. During planning, the consumption takes place separately, first for independent demand and then for dependent demand.  
 
-   Jakmile je načasování na místě, dostatečné množství, které má být dodáno, lze vypočítat takto:
+### Blanket Order Demand is Reduced by Sales Orders  
+Forecasting is supplemented by the blanket sales order as a means of specifying future demand from a specific customer. As with the (unspecified) forecast, actual sales should consume the anticipated demand, and the remaining quantity should enter the demand inventory profile. Again, the consumption does not actually reduce the blanket order.  
 
-   1. Pokud je množství dodávky menší než poptávka, je možné, že množství dodávky by mohlo být zvýšeno (nebo ne, pokud je omezeno zásadou maximálního množství).
-   2. Pokud je množství nabídky větší než poptávka, je možné, že množství dodávky lze snížit (nebo ne, pokud je omezeno zásadou minimálního množství).
+The planning calculation considers open sales orders linked to the specific blanket order line, but it does not consider any valid time period. Nor does it consider posted orders, since the posting procedure has already reduced the outstanding blanket order quantity.
 
-   V tomto okamžiku existuje některá z těchto dvou situací:
+## Prioritizing Orders
+Within a given SKU, the requested or available date represents the highest priority; the demand of today should be dealt with before the demand of next week. But in addition to this overall priority, the planning system will also suggest which type of demand should be fulfilled before fulfilling another demand. Likewise, it will suggest what source of supply should be applied before applying other sources of supply. This is done according to order priorities.  
 
-   1. Aktuální poptávka může být pokryta, v takovém případě může být uzavřena a plánování pro další poptávku může začít.
-   2. Nabídka dosáhla svého maxima, přičemž část poptávaného množství zůstala nezakrytá. V takovém případě může plánovací systém uzavřít aktuální napájení a přejít k dalšímu.
+Loaded demand and supply contribute to a profile for the projected inventory according to the following priorities:  
 
-Postup začíná znovu s dalším požadavkem a aktuální dodávkou nebo naopak. Současná nabídka by mohla být schopna pokrýt i tuto další poptávku, nebo současná poptávka ještě nebyla plně pokryta.
-
-### Pravidla týkající se akcí pro události zásobování
-Když plánovací systém provádí výpočet shora dolů, ve kterém musí nabídka uspokojovat poptávku, je poptávka brána jako daná, to znamená, že leží mimo kontrolu plánovacího systému. Stranu nabídky však lze spravovat. Plánovací systém proto navrhne vytvoření nových objednávek dodávek, přeplánování stávajících a / nebo změnu množství objednávky. Pokud se stávající objednávka dodávky stane nadbytečnou, plánovací systém navrhne, aby ji uživatel zrušil.
-
-Pokud chce uživatel vyloučit existující objednávku dodávky z návrhů plánování, může uvést, že nemá žádnou pružnost plánování (Pružnost plánování = Žádná) Poté bude nadbytečná nabídka z této objednávky použita k pokrytí poptávky, ale nebude navržena žádná další akce.
-
-Obecně platí, že všechny dodávky mají pružnost plánování, která je omezena podmínkami každé z navrhovaných akcí.
-
-- **Přeplánovat na**: Datum existující objednávky dodávky může být naplánováno tak, aby splňovalo datum splatnosti poptávky, pokud:
-
-   - Představuje zásoby (vždy v den nula).
-   - Má zakázku na zakázku spojenou s jinou poptávkou.
-   - Leží mimo stránku přeplánování definovanou časovým segmentem.
-   - Existuje užší nabídka, kterou lze použít.
-   - Na druhou stranu se uživatel může rozhodnout, že nebude přeplánovat, protože:
-   - Objednávka dodávky již byla vázána na jinou poptávku k předchozímu datu.
-   - Potřebné přeplánování je tak minimální, že uživatel zjistí, že zanedbatelné.
-
-- **Přeplánovat v**: Datum stávající objednávky na dodávku lze naplánovat, s výjimkou následujících podmínek:
-
-   - Je přímo spojeno s nějakou další poptávkou.
-   - Leží mimo stránku přeplánování definovanou časovým segmentem.
+### Priorities on the Demand Side  
+1. Already shipped: Item Ledger Entry  
+2. Purchase Return Order  
+3. Sales Order  
+4. Service Order  
+5. Production Component Need  
+6. Assembly Order Line  
+7. Outbound Transfer Order  
+8. Blanket Order (that has not already been consumed by related sales orders)  
+9. Forecast (that has not already been consumed by other sales orders)  
 
 > [!NOTE]  
-> Při plánování položky pomocí bodu přiobjednání lze v případě potřeby vždy naplánovat objednávku dodávky. To je běžné u dopředu naplánovaných objednávek dodávek spuštěných bodem přiobjednání.
+>  Purchase returns are usually not involved in supply planning; they should always be reserved from the lot that is going to be returned. If not reserved, purchase returns play a role in the availability and are highly prioritized to avoid that the planning system suggests a supply order just to serve a purchase return.  
 
-- **Zvýšit množství**: Množství existující objednávky může být zvýšeno, aby byla uspokojována poptávka, pokud není objednávka dodávky přímo spojena s poptávkou propojením objednávky na objednávku.
+### Priorities on the Supply Side  
+1. Already in inventory: Item Ledger Entry (Planning Flexibility = None)  
+2. Sales Return Order (Planning Flexibility = None)  
+3. Inbound Transfer Order  
+4. Production Order  
+5. Assembly Order  
+6. Purchase Order  
+
+### Priority Related to the State of Demand and Supply  
+Apart from priorities given by the type of demand and supply, the present state of the orders in the execution process also defines a priority. For example, warehouse activities have an impact, and the status of sales, purchase, transfer, assembly, and production orders is taken into account:  
+
+1. Partly handled (Planning Flexibility = None)  
+2. Already in process in the warehouse (Planning Flexibility = None)  
+3. Released – all order types (Planning Flexibility = Unlimited)  
+4. Firm Planned Production Order (Planning Flexibility = Unlimited)  
+5. Planned/Open – all order types (Planning Flexibility = Unlimited)
+
+## Balancing Supply with Demand
+The core of the planning system involves balancing demand and supply by means of suggesting user actions to revise the supply orders in case of imbalance. This takes place per combination of variant and location.  
+
+Imagine that each inventory profile contains a string of demand events (sorted by date and priority) and a corresponding string of supply events. Each event refers back to its source type and identification. The rules for counterbalancing the item are straightforward. Four instances of matching demand and supply can occur at any point of time in the process:  
+
+1. No demand or supply exists for the item => the planning has finished (or should not start).  
+2. Demand exists but there is no supply => supply should be suggested.  
+3. Supply exists but there is no demand for it => supply should be canceled.  
+4. Both demand and supply exist => questions should be asked and answered before the system can ensure that demand will be met and supply is sufficient.  
+
+    If the timing of the supply is not suitable, perhaps the supply can be rescheduled as follows:  
+
+    1.  If the supply is placed earlier than the demand, perhaps the supply can be rescheduled out so that inventory is as low as possible.  
+    2.  If the supply is placed later than the demand, perhaps the supply can be rescheduled in. Otherwise, the system will suggest new supply.  
+    3.  If the supply meets the demand on the date, the planning system can proceed to investigate whether the quantity of the supply can cover the demand.  
+
+    Once the timing is in place, the adequate quantity to be supplied can be calculated as follows:  
+
+    1.  If the supply quantity is less than the demand, it is possible that the supply quantity could be increased (or not, if limited by a maximum quantity policy).  
+    2.  If the supply quantity is greater than the demand, it is possible that the supply quantity can be decreased (or not, if limited by a minimum quantity policy).  
+
+    At this point, either of these two situations exists:  
+
+    1.  The current demand can be covered, in which case it can be closed and planning for the next demand can start.  
+    2.  The supply has reached its maximum, leaving some of the demand quantity uncovered. In this case, the planning system can close the current supply and proceed to the next one.  
+
+ The procedure starts all over with the next demand and the current supply or vice versa. The current supply might be able to cover this next demand as well, or the current demand has not yet been fully covered.  
+
+### Rules Concerning Actions for Supply Events  
+When the planning system performs a top-down calculation in which supply must fulfill demand, the demand is taken as a given, that is, it lies outside the control of the planning system. However, the supply side can be managed. Therefore, the planning system will suggest creating new supply orders, rescheduling existing ones, and/or changing the order quantity. If an existing supply order becoming superfluous, the planning system will suggest that the user cancels it.  
+
+If the user wants to exclude an existing supply order from the planning suggestions, he can state that it has no planning flexibility (Planning Flexibility = None). Then, excess supply from that order will be used to cover demand, but no action will be suggested.  
+
+In general, all supply has a planning flexibility that is limited by the conditions of each of the suggested actions.  
+
+-   **Reschedule Out**: The date of an existing supply order can be scheduled out to meet the demand due date unless:  
+
+    -   It represents inventory (always on day zero).  
+    -   It has an order-to-order linked to another demand.  
+    -   It lies outside the reschedule page defined by the time bucket.  
+    -   There is a closer supply that could be used.  
+    -   On the other hand, the user may decide not to reschedule because:  
+    -   The supply order has already been tied to another demand on a previous date.  
+    -   The needed rescheduling is so minimal that the user finds it negligible.  
+
+-   **Reschedule In**: The date of an existing supply order can be scheduled in, except in the following conditions:  
+
+    -   It is linked directly to some other demand.  
+    -   It lies outside the reschedule page defined by the time bucket.  
 
 > [!NOTE]  
-> I když je možné zvýšit objednávku dodávky, může být omezena kvůli definovanému maximálnímu množství objednávky.
+>  When planning an item using a reorder point, the supply order can always be scheduled in if necessary. This is common in forward-scheduled supply orders triggered by a reorder point.  
 
-- **Snížení množství**: Existující objednávka dodávky s přebytkem ve srovnání se stávající poptávkou může být snížena, aby uspokojila poptávku.
-
-> [!NOTE]  
-> I když je možné množství snížit, stále může existovat určitý přebytek ve srovnání s poptávkou kvůli definovanému minimálnímu množství objednávky nebo násobku objednávky.
-
-- **Zrušení**: Jako speciální událost akce snížení množství může být objednávka dodávky zrušena, pokud byla snížena na nulu.
-- **Nový**: Pokud již neexistuje žádná objednávka na dodávku nebo nelze stávající změnit, aby splňovala potřebné množství v požadovaném termínu splatnosti, je navržena nová objednávka na dodávku.
-
-### Stanovení množství dodávky
-Parametry plánování definované uživatelem řídí navrhované množství každé objednávky dodávky.
-
-Když plánovací systém vypočítá množství nové objednávky dodávky nebo změnu množství na stávající objednávce, může se navrhované množství lišit od toho, co je skutečně požadováno.
-
-Pokud je vybráno maximální množství zásob nebo pevné množství objednávky, může být navrhované množství zvýšeno, aby bylo splněno toto pevné množství nebo maximální zásoby. Pokud zásada pro změnu pořadí používá bod pro opětovné objednání, může být množství zvýšeno alespoň tak, aby splňovalo bod pro opětovné objednání.
-
-Navrhované množství lze upravit v tomto pořadí:
-
-1. Až do maximálního množství objednávky (pokud existuje).
-2. Až do minimálního množství objednávky.
-3. Až na splnění nejbližšího násobku objednávky. (V případě chybného nastavení může toto porušit maximální množství objednávky.)
-
-### Odkazy sledování objednávek během plánování objednávek
-Pokud jde o sledování objednávek během plánování, je důležité zmínit, že plánovací systém mění uspořádání dynamicky vytvořených odkazů sledování objednávek pro kombinace zboží/varianta/umístění.
-
-Existují pro to dva důvody:
-
-- Plánovací systém musí být schopen své návrhy odůvodnit; že byla pokryta veškerá poptávka a že žádné objednávky na dodávky nejsou nadbytečné.
-- Dynamicky vytvořené odkazy sledování objednávek je třeba pravidelně vyvažovat.
-
-V průběhu času se odkazy na dynamické sledování objednávek nevyrovnají, protože celá síť pro sledování objednávek není přeskupena, dokud není událost poptávky nebo nabídky skutečně uzavřena.
-
-Před vyrovnáním nabídky podle poptávky aplikace odstraní všechna existující propojení sledování objednávek. Pak během postupu vyrovnávání, když je uzavřena událost poptávky nebo nabídky, vytvoří nové propojení sledování objednávek mezi poptávkou a nabídkou.
+-   **Increase Quantity**: The quantity of an existing supply order can be increased to meet the demand unless the supply order is linked directly to a demand by an order-to-order link.  
 
 > [!NOTE]  
-> I když položka není nastavena pro dynamické sledování objednávek, plánovaný systém vytvoří vyvážené odkazy pro sledování objednávek, jak je vysvětleno výše.
-## Uzavření poptávky a nabídky
-Po provedení postupů vyvážení dodávek existují tři možné koncové situace:
+>  Even though it is possible to increase the supply order, it may be limited due to a defined maximum order quantity.  
 
-* Bylo splněno požadované množství a datum událostí poptávky a jejich plánování může být uzavřeno. Událost nabídky je stále otevřená a může být schopna pokrýt další poptávku, takže postup vyrovnávání může začít znovu s aktuální událostí nabídky a další poptávkou.
-* Objednávku nabídky nelze upravit tak, aby pokryla celou poptávku. Událost poptávky je stále otevřená, s určitým nekrytým množstvím, které může být pokryto další událostí dodávky. Aktuální událost dodávky je tedy uzavřena, takže vyrovnávací akt může začít znovu s aktuální poptávkou a další událostí dodávky.
-* Veškerá poptávka byla pokryta; neexistuje žádná následná poptávka (nebo nebyla vůbec žádná poptávka). Pokud existuje přebytek nabídky, může být snížena (nebo zrušena) a poté uzavřena. Je možné, že další události dodávky existují dále v řetězci a měly by být také zrušeny.
+-   **Decrease Quantity**: An existing supply order with a surplus compared to an existing demand can be decreased to meet the demand.  
 
-Nakonec plánovací systém vytvoří odkaz na sledování objednávky mezi nabídkou a poptávkou.
+> [!NOTE]  
+>  Even though the quantity could be decreased, there may still be some surplus compared to the demand due to a defined minimum order quantity or order multiple.  
 
-### Vytvoření řádku plánování (navrhovaná akce)
-Pokud je k revizi objednávky dodávek navržena nějaká akce – Nové, Změnit množství, Přeplánovat, Přeplánovat a Změnit množství nebo Zrušit – systém plánování vytvoří řádek plánování v sešitu plánování. Z důvodu sledování objednávky je řádek plánování vytvořen nejen při uzavření události nabídky, ale také v případě, že je uzavřena událost poptávky, i když je událost nabídky stále otevřená a může podléhat dalším změnám při zpracování další události poptávky. To znamená, že při prvním vytvoření může být řádek plánování znovu změněn.
+-   **Cancel**: As a special incident of the decrease quantity action, the supply order could be canceled if it has been decreased to zero.  
+-   **New**: If no supply order already exists, or an existing one cannot be changed to meet the necessary quantity on the demanded due date, a new supply order is suggested.  
 
-Chcete-li minimalizovat přístup k databázi při zpracování výrobních zakázek a současně provádět nejméně náročnou úroveň údržby, může být plánovací řádek udržován ve třech úrovních:
+### Determining the Supply Quantity  
+Planning parameters defined by the user control the suggested quantity of each supply order.  
 
-* Vytvořte pouze řádek plánování s aktuálním datem splatnosti a množstvím, ale bez technologického postupu a komponent.
-* Zahrnout TNG postup: plánovaný tng postup je stanoven včetně výpočtu počátečních a koncových dat a časů. To je náročné z hlediska přístupu k databázi. K určení data ukončení a splatnosti může být nutné tuto možnost vypočítat i v případě, že událost dodávky nebyla uzavřena (v případě  plánování popředu).
-* Zahrnout rozpad kusovníku: to může počkat, až těsně před uzavřením události zásobování.
+When the planning system calculates the quantity of a new supply order or the quantity change on an existing one, the suggested quantity may be different from what is actually demanded.  
 
-Tím se uzavírá popis toho, jak je plánovací systém načítán, upřednostňován a vyvážen poptávkou a nabídkou. Při integraci s touto aktivitou plánování dodávek musí systém zajistit, aby požadovaná úroveň zásob každého plánovaného zboží byla udržována v souladu se svými zásadami přiobjednání.
+If a maximum inventory or fixed order quantity are selected, the suggested quantity may be increased to meet that fixed quantity or the maximum inventory. If a reordering policy uses a reorder point, the quantity may be increased at least to meet the reorder point.  
 
-## Viz také
-[Detaily návrhu: Centrální koncepce plánovacího systému](design-details-central-concepts-of-the-planning-system.md)   
-[Detaily návrhu: Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md)   
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)
+ The suggested quantity may be modified in this sequence:  
+
+1. Down to the maximum order quantity (if any).  
+2. Up to the minimum order quantity.  
+3. Up to meet the nearest order multiple. (In case of erroneous settings, this may violate the maximum order quantity.)  
+
+### Order Tracking Links during Planning  
+Concerning order tracking during planning, it is important to mention that the planning system rearranges the dynamically created order tracking links for the item/variant/location combinations.  
+
+There are two reasons for this:  
+
+-   The planning system must be able to justify its suggestions; that all demand has been covered, and that no supply orders are superfluous.  
+-   Dynamically created order tracking links need to be rebalanced regularly.  
+
+Over time, dynamic order tracking links become out of balance since the entire order tracking network is not rearranged until a demand or supply event is actually closed.  
+
+Before balancing supply by demand, application deletes all existing order tracking links. Then during the balancing procedure, when a demand or supply event is closed, it establishes new order tracking links between the demand and supply.  
+
+> [!NOTE]  
+>  Even if the item is not set up for dynamic order tracking, the planned system will create balanced order tracking links as explained above.
+## Closing Demand and Supply
+When the supply balancing procedures have been performed, there are three possible end situations:  
+
+* The required quantity and date of the demand events have been met and the planning for them can be closed. The supply event is still open and may be able to cover the next demand, so the balancing procedure can start over with the current supply event and the next demand.  
+* The supply order cannot be modified to cover all of the demand. The demand event is still open, with some uncovered quantity that may be covered by the next supply event. Thus the current supply event is closed, so the balancing act can start over with the current demand and the next supply event.  
+* All of the demand has been covered; there is no subsequent demand (or there has been no demand at all). If there is any surplus supply, it may be decreased (or canceled) and then closed. It is possible that additional supply events exist further along in the chain, and they should also be canceled.  
+
+Last, the planning system will create an order tracking link between the supply and the demand.  
+
+### Creating the Planning Line (Suggested Action)  
+If any action – New, Change Quantity, Reschedule, Reschedule and Change Quantity, or Cancel – is suggested to revise the supply order, the planning system creates a planning line in the planning worksheet. Due to order tracking, the planning line is created not only when the supply event is closed, but also if the demand event is closed, even though the supply event is still open and may be subject to additional changes when the next demand event is processed. This means that when first created, the planning line may be changed again.  
+
+To minimize database access when handling production orders, the planning line can be maintained in three levels, while aiming to perform the least demanding maintenance level:  
+
+* Create only the planning line with the current due date and quantity but without the routing and components.  
+* Include routing: the planned routing is laid out including calculation of starting and ending dates and times. This is demanding in terms of database accesses. To determine the ending and due dates, it may be necessary to calculate this even if the supply event has not been closed (in the case of forward scheduling).  
+* Include BOM explosion: this can wait until just before the supply event is closed.  
+
+This concludes the descriptions of how demand and supply is loaded, prioritized, and balanced by the planning system. In integration with this supply planning activity, the system must ensure that the required inventory level of each planned item is maintained according to its reordering policies.
+
+## See Also  
+ [Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)   
+ [Design Details: Handling Reordering Policies](design-details-handling-reordering-policies.md)   
+ [Design Details: Supply Planning](design-details-supply-planning.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

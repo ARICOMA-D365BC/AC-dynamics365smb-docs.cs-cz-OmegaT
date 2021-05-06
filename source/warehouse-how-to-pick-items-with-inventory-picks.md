@@ -4,103 +4,120 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Vyskladnění zboží pomocí vyskladnění zásob
-Pokud je lokace nastavena tak, aby vyžadovala zpracování vyskladnění, ale ne zpracování dodávky, použijte stránku **Vyskladnění zásob** k zaznamenání a zaúčtování informací o vyskladnění a dodání pro původní doklady. Výstupní původní doklad může být prodejní objednávka, objednávka nákupní vratky, výstupní objednávka transferu nebo výrobní zakázka, jejíž komponenty jsou připraveny k vyskladnění.
+# Pick Items with Inventory Picks
 
-> [!NOTE]
-> Komponenty pro montážní objednávky nelze vyskladnit nebo zaúčtovat pomocí vyskladnění zásob. Místo toho použijte stránku **Přesun zásob**. Pro více informací navštivte [Přesouvání komponent do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+When your location is set up to require pick processing but not shipment processing, you use the **Inventory Pick** page to record and post picking and shipping information for your source documents. The outbound source document can be a sales order, a purchase return order, an outbound transfer order, or a production order whose components are ready to be picked.
 
-> Při vyskladnění a dodání množství na prodejním řádku, které je sestaveno na objednávku, musíte při vytváření řádků vyskladnění zásob dodržovat určitá pravidla. Pro více informací navštivte sekci „Zpracování zboží sestaveného na objednávku ve vyskladnění zásob“.
+> [!NOTE]  
+> Components for assembly orders cannot be picked or posted with inventory picks. Instead, use the **Inventory Movement** page. For more information, see [Move Components to an Operation Area in Basic Warehousing](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+>
+> When picking and shipping sales line quantities that are assembled to the order, you must follow certain rules when creating the inventory pick lines. For more information, see the [Handling Assemble-to-Order Items with Inventory Picks](#handling-assemble-to-order-items-with-inventory-picks) section.  
 
-Vyskladnění zásob můžete vytvořit třemi způsoby:
+You can create an inventory pick in three ways:  
 
-- Vytvořte vyskladnění ve dvou krocích tak, že nejprve požádáte o vyskladnění zásob vydáním původního dokladu. To je signalizace pro sklad, že původní doklad je připraven k vyskladnění. Vyskladnění zásob lze pak vytvořit na stránce **Vyskladnění zásob** na základě původního dokladu.
-- Vytvořte vyskladnění zásob přímo ze samotného původního dokladu.
-- Pomocí dávkové úlohy můžete vytvořit vyskladnění zásob pro několik původních dokladů současně.
+- Create the pick in two steps by first requesting an inventory pick by releasing the source document. This signals to the warehouse that the source document is ready for picking. The inventory pick can then be created on the **Inventory Pick** page based on the source document.  
+- Create the inventory pick directly from the source document itself.  
+- You can create inventory picks for several source documents at the same time by using the batch job.  
 
-## Žádost o vyskladnění zásob pomocí vydání původního dokladu
-U prodejních objednávek, objednávek nákupní vratky a výstupních objednávek transferu vytvoříte požadavek skladu pomocí vydání objednávky. Následující text popisuje, jak to provést z prodejní objednávky.
+## To request an inventory pick by releasing the source document
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Vyberte prodejní objednávku, kterou chcete vydat, a poté vyberte akci **Vydat**.
+For sales orders, purchase return orders, and outbound transfer orders, you create the warehouse request by releasing the order. The following describes how to do this from a sales order.
 
-U výrobních zakázek automaticky vytvoříte požadavek skladu pro vyskladnění komponent, nazývaný *spotřeba*, když se stav výrobní zakázky změní na **Vydaná** nebo když je vytvořena vydána výrobní zakázka. Pro více informací navštivte [Vyskladnění pro výrobu nebo montáž](warehouse-how-to-pick-for-production.md).
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+2. Select the sales order that you want to release, and then choose the **Release** action.
 
-Po vytvoření požadavku na sklad může zaměstnanec skladu přiřazený ke zboží k vyskladnění vidět, že původní doklad je připraven k vyskladnění, a může vytvořit nový doklad vyskladnění na základě požadavku skladu.
+For production orders, you automatically create the warehouse request for the picking of components, called *flushing*, when the production order status is changed to **Released** or when the released production order is created. For more information, see [Pick for Production or Assembly](warehouse-how-to-pick-for-production.md).
 
-## Vytvoření vyskladnění zásob na základě původního dokladu
-Nyní, když je požadavek vytvořen, může pracovník skladu vytvořit nové vyskladnění zásob na základě vydaného původního dokladu.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění zásob** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
-3. V poli **Původní doklad** vyberte typ původního dokladu, pro který chcete zboží vyskladnit.
-4. V poli **Číslo původu** vyberte původní doklad.
-5. Případně zvolte akci **Kopie původ.dokladu**, chcete-li vybrat doklad ze seznamu výstupních půdovních dokladů, které jsou připraveny k vyskladnění v lokaci.
-6. Zvolte tlačítko **OK**, chcete-li vyplnit řádky vyskladnění podle vybraného původního dokladu.
+After the warehouse request has been created, a warehouse employee assigned to picking items can see that the source document is ready to be picked and can create a new pick document based on the warehouse request.  
 
-## Vytvoření vyskladnění zásob z původního dokladu
-1. V původním dokladu, kterým může být prodejní objednávka, objednávka nákupní vratky, výstupní objednávka transferu nebo výrobní zakázka, zvolte akci **Vytvořit zaskl./vyskl.zásob**.
-2. Zaškrtněte políčko **Vytvořit vyskladnění  zásob**.
-3. Vyberte tlačítko **OK**. Poté bude vytvořeno nové vyskladnění zásob.
+## To create an inventory pick based on the source document
 
-## Vytvoření více vyskladnění zásob s pomocí dávkové úlohy
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vytvořit zaskl. /vyskl.zásob** a poté vyberte související odkaz.
-2. Na záložce **Požadavek skladu** použijte pole **Původní doklad** a **Číslo původu** k filtrování určitých typů dokladů nebo rozsahů čísel dokladů. Například můžete vytvářet vyskladnění pouze pro prodejní objednávky.
-3. Na záložce **Možnosti** zašktněte políčko **Vytvořit vyskladnění  zásob**.
-4. Vyberte tlačítko **OK**. Poté jsou vytvořeny zadané vyskladnění zásob.
+Now that the request is created, the warehouse employee can create a new inventory pick based on the released source document.
 
-> [!NOTE]
-> Při vyskladnění a dodání množství prodejních řádků, které jsou sestaveny na objednávku, byste měli při vytváření řádků pro vyskladnění zásob dodržovat určitá pravidla. Pro více informací navštivte sekci „Zpracování zboží sestaveného na objednávku ve vyskladnění zásob“.
-> V základních konfiguracích skladu je zboží sestavené do prodejních objednávek vyskladněno ze související prodejní objednávky, jak je vysvětleno v tomto tématu. Pro více informací navštivte „Zpracování zboží sestaveného na objednávku ve vyskladnění zásob“.
-> 
-## Zaznamenání vyskladnění zásob
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění zásob** a poté vyberte související odkaz.
-2. V poli **Kód přihrádky** na řádcích vyskladnění je přihrádka, ze které musí být zboží vyskladněno, navržena podle výchozí přihrádky zboží. V případě potřeby můžete přihrádku na této stránce změnit.
-3. Proveďte vyskladnění a zadejte informace o skutečném zaskladněném množství do pole **Množ. ke zpracování**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Picks**, and then choose the related link.  
+2. Choose the **New** action.  
+    Make sure that the **No.** field on the **General** FastTab is filled in.
+3. In the **Source Document** field, select the type of source document you are picking for.  
+4. In the **Source No.** field, select the source document.  
+5. Alternatively, choose the **Get Source Document** action to select the document from a list of outbound source documents that are ready for picking at the location.  
+6. Choose the **OK** button to fill the pick lines according to the selected source document.  
 
-   Pokud je nutné vyskladnění zboží pro jeden řádek z více než jedné přihrádky, například proto, že není k dispozici v určené přihrádce, použijte funkci **Rozdělit řádek** na záložce **Řádky**. Pro více informací o rozdělení řádků navštivte [Rozdělení řádků aktivit skladu](warehouse-how-to-split-warehouse-activity-lines.md).
-4. Po provedení vyskladnění vyberte akci **Účtovat**.
+## To create an inventory pick from the source document
 
-Proces účtování zaúčtuje dodání řádků zdrojového dokladu, které byly vyskladněny, nebo v případě výrobních zakázek proces účtování zaúčtuje spotřebu. Pokud lokace používá přihrádky, účtování také vytvoří položky skladu pro zaúčtování změn množství přihrádky.
+1. In the source document, which can be a sales order, purchase return order, outbound transfer order, or production order, choose the **Create Inventory Put-away/Pick** action.
+2. Select the **Create Invt. Pick** check box.  
+3. Choose the **OK** button. A new inventory pick will be created.
 
-## Odstranění řádků vyskladnění zásob
-Pokud zboží na vyskladnění zásob není k dispozici, můžete tyto řádky vyskladnění zásob po zaúčtování odstranit a potom odstranit i doklad vyskladnění zásob. Zdrojový doklad, například prodejní objednávka nebo výrobní zakázka, bude mít zbývající zboží, které má být vyskladněno, které lze získat prostřednictvím nového vyskladnění zásob později, jakmile bude zboží k dispozici.
+## To create multiple inventory picks with a batch job
 
-> [!WARNING]
-Tento proces není možný, pokud jsou v původním dokladu uvedena sériová čísla/čísla šarže. Pokud například řádek prodejní objednávky obsahuje sériové číslo/číslo šarže, bude tato specifikace sledování zboží odstraněna, pokud bude odstraněn řádek vyskladnění zásob pro sériové číslo/číslo šarže.
-Pokud mají řádky vyskladnění zásob sériová čísla/čísla šarží, která nejsou k dispozici, není nutné dané řádky odstranit. Místo toho musíte změnit pole **Množ. ke zpracování** na nulu, zaúčtovat skutečné vyskladnění a potom odstranit doklad vyskladnění zásob. Tím je zajištěno, že řádky vyskladnění zásob pro tato sériová čísla/čísla šarží lze později znovu vytvořit z prodejní objednávky.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Create Invt. Put-away / Pick**, and then choose the related link.  
+2. On the **Warehouse Request** FastTab, use the **Source Document** and **Source No.** fields to filter on certain types of documents  or ranges of document numbers. For example, you can create picks only for sales orders.  
+3. On the **Options** FastTab, select the **Create Invt. Pick** check box.
+4. Choose the **OK** button. The specified inventory picks are created.
 
-## Zpracování zboží montáže na zakázku pomocí vyskladnění zásob
-Stránka **Vyskladnění zásob** se také používá k vyskladnění a dodání pro prodej, kde musí být zboží sestaveno před jejich odesláním. Pro více informací navštivte [Prodej zboží montáže na obejdnávku](assembly-how-to-sell-items-assembled-to-order.md).
+> [!NOTE]  
+> If picking and shipping sales line quantities that are assembled to the order you should follow certain rules when creating the inventory pick lines. For more information, see the [Handling Assemble-to-Order Items with Inventory Picks](#handling-assemble-to-order-items-with-inventory-picks) section.  
+>
+> In basic warehouse configurations, items that are assembled to sales orders are picked from the related sales order, as explained in this topic. For more information, see the [Handling Assemble-to-Order Items with Inventory Picks](#handling-assemble-to-order-items-with-inventory-picks) section.  
 
-Zboží, které má být dodáno, není fyzicky přítomno v přihrádce, dokud není sestaveno a zaúčtováno jako výstup do přihrádky v oblasti montáže. To znamená, že vyskladnění zboží montáže na zakázku k odeslání se řídí zvláštním postupem. Z přihrádky pracovníci skladu převezou zboží montáže do dodacího prostoru a poté zaúčtují vyskladnění zásob. Zaúčtovaná vyskladnění zásob pak zaúčtuje výstup sestavy, spotřebu komponenty a prodejní dodávku.
+## To record the inventory picks
 
-Můžete nastavit [!INCLUDE[d365fin](includes/d365fin_md.md)] pro automatické vytvoření přesunu zásob při vytvoření vyskladnění zásob pro zboží montáže. Chcete-li to povolit, musíte na stránce **Nastavení montáže** vybrat pole **Vytvořit pohyby automaticky**. Pro více informací navštivte [Přesouvání komponent do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Pick**, and then choose the related link.  
+2. In the **Bin Code** field on the pick lines, the bin that the items must be picked from is suggesting per the item's default bin. You can change the bin in this page if necessary.  
+3. Perform the pick and enter the information for the actual quantity put away in the **Qty. to Handle** field.
 
-Řádky vyskladnění zásob pro prodejní zboží jsou vytvořeny různými způsoby v závislosti na tom, zda žádné, některé nebo všechna množství prodejního řádku jsou smontovány na zakázku.
+    If it is necessary to pick the items for one line from more than one bin, for example because they are not available in the designated bin, then use the **Split Line** function on the **Lines** FastTab. For more information about splitting lines, see [Split Warehouse Activity Lines](warehouse-how-to-split-warehouse-activity-lines.md).  
+4. When you have performed the pick, choose the **Post** action.  
 
-V běžném prodeji, kde používáte vyskladnění zásob k zaúčtování dodávky množství zásob, je pro každý řádek prodejní objednávky vytvořen jeden řádek vyskladnění zásob nebo několik položek, pokud je zboží umístěno do různých přihrádek. Tento řádek vyskladnění je založen na množství v poli **K  dodání**.
+The posting process will post the shipment of the source document lines that have been picked, or in the case of production orders, the posting process will post the consumption. If the location uses bins, the posting will also create warehouse entries to post the bin quantity changes.  
 
-Při montáži na zakázku, kde je na zakázku sestaveno celé množství na objednávce, je pro toto množství vytvořen jeden řádek pro vyskladnění zásob. To znamená, že hodnota v poli Množství k montáži je stejná jako hodnota v poli **K  dodání**. Na řádku je vybráno pole **Montáž na zakázku**.
+## To delete inventory pick lines
 
-Pokud je pro lokaci nastaven výstupní tok montáže, pak hodnota v poli **Kód dod. přihr. montáže-na-zák.** nebo hodnota v poli **Kód přihrádky z montáže**  v tomto pořadí je vložena do pole **Kód přihrádky** na řádku vyskladnění zásob.
+If items on the inventory pick are not available, then you can delete those inventory pick lines after posting and then delete the inventory pick document. The source document, such as a sales order or a production order, will have remaining items to be picked, which can be obtained through a new inventory pick later when the items become available.  
 
-Pokud na řádku prodejní objednávky není zadán žádný kód přihrádky a pro lokaci není nastaven žádný výstupní tok montáže, je pole **Kód přihrádky** na řádku vyskladnění zásob prázdné. Pracovník skladu musí otevřít stránku **Obsah přihrádky** a vybrat přihrádku, ve které je sestaveno zboží montáže.
+> [!WARNING]  
+> This process is not possible if serial/lot numbers are specified on the source document. For example, if a sales order line contains a serial/lot number, then that item tracking specification will be deleted if an inventory pick line for the serial/lot number is deleted.  
+>
+> If inventory pick lines have serial/lot numbers that are not available, you must not delete the lines in question. Instead, you must change the **Qty. to Handle** field to zero, post the actual picks, and then delete the inventory pick document. This ensures that the inventory pick lines for those serial/lot numbers can be recreated from the sales order later.  
 
-V kombinovaných scénářích, kde musí být nejprve sestavena část množství a další musí být vyskladněna ze skladu, jsou vytvořeny minimálně dva řádky vyskladnění zásob. Jeden řádek vyskladnění je pro množství montáže na zakázku. Druhý řádek vyskladnění závisí na tom, které přihrádky mohou vyplnit zbývající množství ze skladu. Kódy přihrádek na dvou řádcích jsou vyplněny různými způsoby, jak je popsáno pro dva různé typy prodeje. Pro více informací navštivte sekci “Kombinované scénáře” v [Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md).
+## Handling Assemble-to-Order Items with Inventory Picks
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)  
-[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+The **Inventory Pick** page is also used to pick and ship for sales where items must be assembled before they can be shipped. For more information, see [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md).
+
+Items to be shipped are not physically present in a bin until they are assembled and posted as output to a bin in the assembly area. This means that picking assemble-to-order items for shipment follows a special flow. From a bin, warehouse workers take the assembly items to the shipping dock and then post the inventory pick. The posted inventory pick then posts the assembly output, the component consumption, and the sales shipment.
+
+You can set up [!INCLUDE[prod_short](includes/prod_short.md)] to automatically create an inventory movement when the inventory pick for the assembly item is created. To enable this, you must select the **Create Movements Automatically** field on the **Assembly Setup** page. For more information, see [Move Components to an Operation Area in Basic Warehousing](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+
+Inventory pick lines for sales items are created in different ways depending on whether none, some, or all of the sales line quantities are assembled to order.
+
+In regular sales where you use inventory picks to post shipment of inventory quantities, one inventory pick line, or several if the item is placed in different bins, is created for each sales order line. This pick line is based on the quantity in the **Qty. to Ship** field.
+
+In assemble-to-order sales where the full quantity on the sales order line is assembled to order, one inventory pick line is created for that quantity. This means that the value in the Quantity to Assemble field is the same as the value in the **Qty. to Ship** field. The **Assemble to Order** field is selected on the line.
+
+If an assembly output flow is set up for the location, then the value in the **Asm.-to-Order Shpt. Bin Code** field or the value in the **From-Assembly Bin Code** field, in that order, is inserted in the **Bin Code** field on the inventory pick line.
+
+If no bin code is specified on the sales order line, and no assembly output flow is set up for the location, then the **Bin Code** field on the inventory pick line is empty. The warehouse worker must open the **Bin Contents** page and select the bin where the assembly items are assembled.
+
+In combination scenarios, where a part of the quantity must first be assembled and another must be picked from inventory, a minimum of two inventory pick lines are created. One pick line is for the assemble-to-order quantity. The other pick line depends on which bins can fulfill the remaining quantity from inventory. Bin codes on the two lines are filled in different ways as described for the two different sales types respectively. For more information, see the “Combination Scenarios” section in [Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md).
+
+## See Also
+
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Assembly Management](assembly-assemble-items.md)  
+[Walkthrough: Picking and Shipping in Basic Warehouse Configurations](walkthrough-picking-and-shipping-in-basic-warehousing.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,45 +1,50 @@
 ---
-title: Správa servisu | Microsoft Docs
-description: Naučte se používat funkce navržené pro podporu operací opravny a služeb mimo ni.
+title: Service Management | Microsoft Docs
+description: Learn to use features designed to support repair shop and field service operations.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: null
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.search.keywords:
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="service-management"></a>Správa servisu
+# Service Management
 > [!NOTE]
-> Funkce popsané v tomto tématu a dílčích tématech jsou viditelné pouze v uživatelském rozhraní, pokud máte **Premium experience** . Pro více informací navštivte [Změna funkcí, které jsou zobrazeny](ui-experiences.md).
+> Functionality described in this topic and sub topics is only visible in the user interface if you have the **Premium** experience. For more information, see [Change Which Features are Displayed](ui-experiences.md).
 
-Poskytování průběžné služby zákazníkům je důležitou součástí každého podniku, který může být kromě výnosů zdrojem spokojenosti a loajality zákazníků. Správa a sledování služeb však není vždy snadná a [!INCLUDE[d365fin](includes/d365fin_md.md)] poskytuje sadu nástrojů, které vám pomohou. Tyto nástroje jsou navrženy tak, aby podporovaly provoz opravny a servisu v terénu, a mohou být použity v obchodních scénářích, jako jsou komplexní systémy distribuce služeb zákazníkům, prostředí průmyslových služeb s kusovníky a velkoobjemové dispečinky servisních techniků s požadavky na správu náhradních dílů.  
+Providing ongoing service to customers is an important part of any business and one that can be a source of customer satisfaction and loyalty, in addition to revenue. However, managing and tracking service is not always easy, and [!INCLUDE[prod_short](includes/prod_short.md)] provides a set of tools to help. These tools are designed to support repair shop and field service operations, and can be used in business scenarios such as complex customer service distribution systems, industrial service environments with bills of materials, and high volume dispatching of service technicians with requirements for spare parts management.  
 
- Pomocí těchto nástrojů můžete provádět následující akce:  
+ With these tools you can accomplish the following:  
 
-* Plánování servisních hovorů a nastavení servisních zakázek.  
-* Sledování opravy dílů a spotřebního materiálu.  
-* Přiřazení servisního pracovníka na základě odbornosti a dostupnosti.  
-* Poskytování odhadů služeb a faktury za služby.  
+* Schedule service calls and set up service orders.  
+* Track repair parts and supplies.  
+* Assign service personnel based on skill and availability.  
+* Provide service estimates and service invoices.  
 
-Kromě toho můžete standardizovat kódování, uzavřít smlouvy, implementovat diskontní politiku a vytvořit mapy tras pro zaměstnance služeb.  
+In addition, you can standardize coding, set up contracts, implement a discounting policy, and create route maps for service employees.  
 
-Obecně existují dva aspekty správy služeb: konfigurace a nastavení systému a jeho použití pro stanovení cen, smlouvy, objednávky, odeslání servisního personálu a plánovač úloh.  
+In general, there are two aspects to service management: configuring and setting up your system, and using it for pricing, contracts, orders, service personnel dispatch, and job scheduler.  
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.   
+The following table describes a sequence of tasks, with links to the topics that describe them.   
 
-|**Viz**|**také**|  
+|**To**|**See**|  
 |------------|-------------|  
-|Nastavit správu služeb, včetně kódů chyb, zásad, výchozích dokumentů a šablon.|[Nastavení správy služeb](service-setup-service.md)|  
-|Umožňuje správu cen servisu, vytváření předmětů servisu a pochopení postupu sledování průběhu.|[Plánování servisu](service-plan-service.md)|  
-|Vytvoření a správa smluvních smlouv mezi vámi a zákazníky.|[Plnění smluv o poskytování služeb](service-fulfill-service-contracts.md)|  
-|Poskytování servisu zákazníkům a fakturace servisních zakázek|[Poskytování služeb](service-deliver-service.md)|  
+|Set up Service Management, including fault codes, policies, default documents and templates.|[Setting Up Service Management](service-setup-service.md)|  
+|Manage service pricing, create service items, and understand how to monitor progress.|[Planning Service](service-plan-service.md)|  
+|Create and manage contractual agreements between you and your customers.|[Fulfilling Service Contracts](service-fulfill-service-contracts.md)|  
+|Provide service to customers, and invoice service orders.|[Delivering Service](service-deliver-service.md)|  
 
-## <a name="see-also"></a>Viz také  
-[Správa pohledávek](receivables-manage-receivables.md)<x1 />   
-[Projekty](projects-how-create-jobs.md)   
-[Vítejte v [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)] ](index.md)
+## See Also  
+[Managing Receivables](receivables-manage-receivables.md)   
+[Jobs](projects-how-create-jobs.md)   
+[Welcome to [!INCLUDE[prod_long](includes/prod_long.md)] ](index.md)
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]  
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -6,54 +6,57 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: personnel, people, employee, staff, HR
-ms.date: 10/01/2019
-ms.author: SorenGP
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Evidence zaměstnanců
-Chcete-li používat funkci správy lidských zdrojů, musíte nejprve zaregistrovat každého zaměstnance vytvořením karty se všemi základními a souvisejícími informacemi.
+# Register Employees
+To use the Human Resources functionality, you must first register each employee by creating a card with all the core and related information.
 
-Podrobnosti o zaměstnanci můžete kdykoli upravit. Udržování aktuálních záznamů o vašich zaměstnancích zjednodušuje personální úkoly. Pokud se například změní adresa zaměstnance, zaregistrujete ji na kartě zaměstnance.
+You can modify an employee's details at any time. Keeping up-to-date records about your employees simplifies personnel tasks. For example, if an employee's address changes, you register this on the employee card.
 
-Následující postupy popisují, jak vytvořit počáteční kartu zaměstnance a jak přiřadit zaměstnanci dva typy podrobností. Kromě toho můžete přiřadit různé další související informace, například kvalifikace a příčiny nečinnosti. Informace o zaměstnancích přiřadíte buď výběrem pole nebo akce na stránce **Karta zaměstnance**.
+The following procedures describe how to create an initial employee card and how to assign two types of employee details to an employee. In addition, you can assign various other related information, such as qualifications and causes of inactivity. You assign employee information either by choosing a field or an action on the **Employee Card** page.
 
-> [!NOTE]
->  Zaměstnancům můžete uhradit jejich výdaje během obchodních aktivit. Za tímto účelem je nutné vyplnit pole na záložce **Platby** na stránce **Karta zaměstnance**. Pro více informací navštivte [Zaznamenávaní a uhrazovaní výdajů zaměstnanců](finance-how-record-reimburse-employee-expenses.md).
+> [!NOTE]  
+> You can reimburse employees for their expenses during business activities. For this purpose, you must fill in the fields on the **Payments** FastTab on the **Employee Card** page. For more information, see [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md).
 
-## Nastavení zaměstnance
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Zvolte akci **Nový**.
-3. Na stránce **Karta zaměstnance**, vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## To set up an employee
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Employees**, and then choose the related link.
+2. Choose the **New** action.
+3. On the **Employee Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## Vložení obrázku zaměstnance
-Pokud máte obrázek zaměstnance ve formátu .bmp, můžete jej vložit na kartu zaměstnance.
+## To insert a picture of an employee
+If you have a picture of an employee in .bmp format, you can insert it on the employee card.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Otevřete kartu příslušného zaměstnance.
-3. Na okně s fakty **Obrázek zaměstnance**, zvolte rozevírací tlačítko a poté **Importovat**.
-4. Na stránce **Vybrat obrázek pro nahrání**, zvolte tlačítko **Vybrat**.
-5. Vyberte soubor a poté zvolte **Otevřít**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Employees**, and then choose the related link.
+2. Open the card for the relevant employee.
+3. In the **Employee Picture** FactBox, choose the drop-down button, and then choose **Import**.
+4. On the **Select a picture to upload** page, choose the **Choose** button.
+5. Select the file, and then choose **Open**.
 
-Obrázek je vložen do okna s fakty **Obrázek zaměstnance**.
+The picture is inserted in the **Employee Picture** FactBox.
 
-## Registrace různých informací o zaměstnanci
-Na kartě zaměstnance můžete nastavit informace, jako je členství v odborech, příbuzní a smlouvy pro zaměstnance. Následující text popisuje, jak nastavit alternativní adresu. Kroky jsou podobné pro všechny ostatní informace, které lze na kartě zaměstnance nastavit.
+## To register various information about an employee
+On the employee card, you can set up information, such as union membership, relatives, and contracts for the employee. The following describes how to set up an alternate address. The steps are similar for all other information that you can set up from an employee card.
 
-Pomocí alternativních adres můžete sledovat polohu svých zaměstnanců, pokud jsou například v zahraničí, na dlouhé služební cestě nebo pobývají v letní rezidenci.
+You can use alternate addresses to keep track of your employees’ location, for example if they are stationed abroad, on a long business trip, or residing at a summer residence.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Otevřete kartu příslušného zaměstnance.
-3. Vyberte akci **Alternativní adresy**.
-4. Na stránce **Seznam alternativních adres**, vyplňte pole podle potřeby.
-5. Opakujte krok 4 pro každou alternativní adresu.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Employees**, and then choose the related link.
+2. Open the card for the relevant employee.
+3. Choose the **Alternate Addresses** action.
+4. **In the Alternate Address List** page, fill in the fields as necessary.
+5. Repeat step 4 for each alternate address.
 
-## Viz také
-[Zaznamenávaní a uhrazovaní výdajů zaměstnanců](finance-how-record-reimburse-employee-expenses.md)  
+## See Also
+[Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

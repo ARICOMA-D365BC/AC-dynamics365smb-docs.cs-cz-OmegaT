@@ -1,34 +1,40 @@
 ---
-title: 'Nastavení zdrojů, pracovních výkazů a projektu | Microsoft Docs'
-description: 'Popisuje, jak nastavit zdroje, pracovní výkazy a úlohy pro správu projektu.'
-services: project-madeira
-documentationcenter: ''
+title: Set Up Resources, Time Sheets, and Jobs| Microsoft Docs
+description: Outlines how to set up resources, time sheets, and jobs to manage projects.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: projects
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="setting-up-project-management"></a>Nastavení správy projektu
-Než budete moci použít v [!INCLUDE[d365fin](includes/d365fin_md.md)] projekty, musíte nastavit zdroje, pracovní výkazy a úlohy.
+# Setting Up Project Management
+Before you can use [!INCLUDE[prod_short](includes/prod_short.md)] to manage projects, you must set up resources, time sheets, and jobs.
 
-Poté můžete vytvářet úlohy a rozvrhnout zdroje pro projekty, spravovat rozpočty, srovnávat pracovní hodiny strojů a zaměstnanců s pracovními výkazy. Pro více informací navštivte [Správa projektů](projects-manage-projects.md).  
+Then you can create jobs and schedule resources for projects as well as manage budgets and track machine and employee hours with time sheets. For more information, see [Managing Projects](projects-manage-projects.md).  
 
-Následující tabulka popisuje úkoly s odkazy na témata, která je popisují.
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-| Pro | Viz |
+| To | See |
 | --- | --- |
-| Nastavení vašich zdrojů, souvisejících nákladů a cen, buď pro jednotlivé zdroje, skupiny zdrojů nebo pro všechny dostupné zdroje společnosti. |[Nastavení zdrojů](projects-how-setup-resources.md) |
-| Nastavení potřebná pro vykazování práce jednotlivců nebo strojů na projekty a umožnění správci zkontrolovat využití a jejich alokaci. |[Nastavení pracovních výkazů](projects-how-setup-time-sheets.md) |
-| Vytvoření projektů a úloh projektů. Nastavení cen pro zboží projektu, projektové zdroje a definice projektových účto skupin. |[Nastavení úloh](projects-how-setup-jobs.md) |
+| Set up project management.|[Set general information for jobs](projects-how-setup-jobs.md#to-set-general-information-for-jobs)|
+| Set up your resources and the related costs and prices, either for individual resources, resource groups, or for all available resources of the company. |[Set Up Resources](projects-how-setup-resources.md) |
+| Enable resources to report time usage for an individual or a machine and enable a manager to review the usage and its allocation. |[Set Up Time Sheets](projects-how-setup-time-sheets.md) |
+| Create job cards and prepare job tasks. Set up prices for job items and job resources and define job posting groups. |[Set Up Jobs](projects-how-setup-jobs.md) |
 
-## <a name="see-also"></a>Viz také
-[Správa projektů](projects-manage-projects.md)  
+## See Also
+
+[Managing Projects](projects-manage-projects.md)  
+[Video: How to create a job in Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)  
 [Finance](finance.md)  
-[Nakupování](purchasing-manage-purchasing.md)         
-[Prodej](sales-manage-sales.md)     
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Sales](sales-manage-sales.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

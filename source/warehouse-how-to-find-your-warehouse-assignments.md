@@ -4,32 +4,35 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Vyhledání vašeho zařazení skladu
-Chcete-li najít zařazení svého skladu, otevřete stránku karty s vybraným zbožím. Pokud byly vytvořeny instrukce pro sklad, jsou zobrazeny řádky Vzít a Vložit a můžete začít pracovat na přiřazení. V některých skladech může manažer každému zaměstnanci přiřadit konkrétní instrukce. Pro více informací navštivte [Nastavení zaměstnanců skladu](warehouse-how-to-set-up-warehouse-employees.md).
+# Find Your Warehouse Assignments
+To find your warehouse assignments, open the card page for a selected item. If warehouse instructions have been created, Take and Place lines are visible, and you can begin working on an assignment. In some warehouses, the manager may have assigned specific instructions to each employee. For more information, see [Set Up Warehouse Employees](warehouse-how-to-set-up-warehouse-employees.md).
 
-## Nalezení instrukcí, které vám byly přiděleny
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění**, **Vyskladnění** nebo **Skladový přesun** a poté vyberte související odkaz.
+## To find an instruction assigned to you  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Put-aways**, **Warehouse Picks**, or **Warehouse Movement**, and then choose the related link.
 
-   Všechny tři stránky zobrazují přiřazení pro všechny lokace skladu.
+    All three pages show assignments for all warehouse locations.  
 
-2. Seřaďte položky podle lokace. Nyní můžete vidět instrukce, které vám byly přiděleny.
-3. V poli **Přiřazené ID uživatele** zvolte tlačítko **OK**. Přiřazení zaskladnění systému se pak zobrazí na stránce s iniciálami v poli **Přiřazené ID uživatele** na záložce **Obecné**.
+2. Sort the items by location. You can now see the instructions that have been assigned to you.  
+3. Select one of the lines with your initials in the **Assigned User ID** field and then choose the **OK** button. The put-away assignment then appears on the page, with your initials in the **Assigned User ID** field on the **General** FastTab.  
 
-Pole **Přiřazené ID uživatele** v hlavičce můžete použít k nároku na přiřazení práce, pokud správce skladu nepřiděluje jednotlivcům konkrétní instrukce. Než začnete pracovat na instrukci, zadejte své ID uživatele do hlavičky skladu. Vaši spolupracovníci se pak mohou rozhodnout pracovat na dalších instrukcích a sklad se tak vyhne duplicitě úsilí.
+You can use the **Assigned User ID** field on the header to claim work assignments, if the warehouse manager does not assign particular instructions to individuals. Simply enter your user ID in the header of the warehouse before you begin work on an instruction. Your co-workers can then choose to work on other instructions, and the warehouse will avoid a duplication of effort.  
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)  
-[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md) 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,26 +1,28 @@
 ---
-title: Rozšíření pro Business Central poskytované jinými společnostmi | Microsoft Docs
-description: Uvádí aplikace a rozšíření pro přizpůsobení Business Central poskytované jinými společnostmi.
-documentationcenter: ''
-author: ZdenekBicek
+title: Extensions for Business Central  Provided by Other Companies | Microsoft Docs
+description: Lists the apps and extensions to customize Business Central  provided by other companies.
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms. search.keywords: 'app, add-in, manifest, customize'
-ms.date: 01/13/2020
-ms.reviewer: v-zdbice
+ms. search.keywords: app, add-in, manifest, customize
+ms.date: 04/01/2021
 ms.author: edupont
+
 ---
-# Rozšíření Business Central od jiných poskytovatelů
+# Business Central Extensions by Other Providers
 
-Na [AppSource.microsoft.com](https://appsource.microsoft.com/) můžete získat rozšíření pro [!INCLUDE[d365fin](includes/d365fin_md.md)]. Některá rozšíření jsou poskytována společností Microsoft a jiná rozšíření jsou poskytována jinými společnostmi. Odkazujeme na weby, na kterých tyto společnosti poskytují další informace o rozšířeních, které společnost Microsoft nezveřejňuje. Tyto informace naleznete na adrese [AppSource.microsoft.com](https://appsource.microsoft.com/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1).  
+At [AppSource.microsoft.com](https://appsource.microsoft.com/), you can get extensions for [!INCLUDE[prod_short](includes/prod_short.md)]. Some extensions are provided by Microsoft, and other extensions are provided by other companies. We refer to the websites that these companies provide for more information about the extensions that are not published by Microsoft. You can find this information at [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646).  
 
-Seznam rozšíření od jiných společností roste každý měsíc. Sledujte [AppSource.microsoft.com](https://appsource.microsoft.com/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1) a získejte aplikace, které vám pomohou při vaší práci v [!INCLUDE[d365fin](includes/d365fin_md.md)].  
+The list of the extensions by other companies grows each month. So keep an eye out for [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646) and get apps to help you in your work in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-## Viz také
+## See Also
 
-[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí rozšíření](ui-extensions.md)  
-[Začínáme](product-get-started.md)  
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

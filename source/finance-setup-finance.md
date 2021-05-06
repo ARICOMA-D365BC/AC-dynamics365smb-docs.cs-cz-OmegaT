@@ -1,52 +1,68 @@
 ---
-title: Nastavení finančních procesů | Microsoft Docs
-description: 'Dozvíte se o tom, jak nastavit finance ve své firmě tak, aby vyhovovaly potřebám Vašeho účetnictví, nebo auditu.'
-services: project-madeira
-documentationcenter: ''
+title: Set Up Financial Processes| Microsoft Docs
+description: Learn about the tasks to set up finance in your business to suit all your accounting, auditing, or bookkeeping needs.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'accounting, auditing, bookkeeping'
-ms.date: 12/19/2018
-ms.author: sgroespe
+ms.search.keywords: accounting, auditing, bookkeeping
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="setting-up-finance"></a>Nastavení financí
-Abychom vám pomohli rychle začít, [!INCLUDE[d365fin](includes/d365fin_md.md)] zahrnuje standardní konfigurace pro většinu finančních procesů. Pokud potřebujete změnit konfiguraci tak, aby vyhovovala vašemu podnikání, dejte se do toho. Například, z centra rolí můžete pomocí asistované příručky pro instalaci nastavit daňovou sazbu pro vaši lokaci.  
+# Setting Up Finance
+Before you can begin to run your business, you must specify rules and defaults for how you want to manage finance processes for that company. You start by setting up the core of the company's accounting records - the chart of accounts. Then you set up posting groups, which makes the process of assigning default general ledger posting accounts to customers, vendors, and items more efficient.
 
-Některé věci, ale musíte nastavit sami. Například, pokud chcete použít dimenze jako základ Business intelligence.  
+Some finance setup can be done automatically with assisted setup guides, and some must be done manually. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
+You can use dimensions to add different types of information to every transaction. You can set up your company's basic dimensions, such as Projects and Departments. Later, you can add more dimensions when you need them, and you can set up temporary dimensions for use during a limited time period, for example, in connection with a sales campaign. For more information, see [Working with Dimensions](finance-dimensions.md).
 
-| Pro | Viz |
+Many of the setup tasks must be completed before you can begin recording financial transactions, but most settings can be changed at a later date. Some of the set up tasks are optional, for example, you only set up Intercompany Postings and Consolidations if you are working with multiple companies. Some setup tasks, such as specifying the period during which posting is allowed, may have to be repeated periodically.  
+
+The following table describes a sequence of tasks, with links to the topics that describe them.
+
+| To | See |
 | --- | --- |
-| Možnosti, jak platit vašim dodavatelům. |[Definování způsobu platby](finance-payment-methods.md) |
-| Určení účetní skupiny, které mapují položky, jako jsou zákazníci, dodavatelé, zboží, zdroje, nebo prodejní a nákupní doklady, do finančních účtů hlavní knihy. |[Nastavení účto skupin](finance-posting-groups.md)|
-|Definice kategorií ve finančních tabulkách a sestavách, jako jsou výkazy rozvahy, nebo výkazy zisků a ztrát, vytvořte pro účty plány a poté definujte jejich kategorie.|[Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md)|
-|Nastavení tolerance, podle které systém uzavře fakturu, i když platba, včetně jakékoli slevy, nepokrývá celou částku faktury.|[Práce s odchylkami platby a tolerancemi platebních slev](finance-payment-tolerance-and-payment-discount-tolerance.md)|
-| Nastavení fiskálního období. |[Otevření nového fiskálního roku](finance-how-open-new-fiscal-year.md) |
-| Definice parametrů účtování DPH, jak se budou finančnímu úřadu vykazovat částky daně z přidané hodnoty. |[Nastavení výpočtů a metod účtování daně z přidané hodnoty](finance-setup-vat.md)|
-|Příprava zpracování neuplatněného DPH v souvislosti s účetními metodami založenými na hotovosti.|[Nastavení neuplatněného DPH pro hotovostní učetnictví](finance-setup-unrealized-vat.md)|
-| Nastavení funkce Prodej a Nákup tak, aby zpracovávaly i platby v cizích měnách.|[Umožnit aplikaci položek v různých měnách](finance-how-enable-application-ledger-entries-different-currencies.md)
-|Definice jedné nebo více dalších měn tak, aby částky byly automaticky vykazovány jak v LM, tak v další měně pro každou položku v hlavní knize, ale i pro ostatní položky.|[Nastavení Přídavné měny pro hlášení](finance-how-setup-additional-currencies.md)|
-|Pravidelná aktualizace směnných kurzů používaných měn..|[Aktualizace směnných kurzů](finance-how-update-currencies.md)|
-|Definice několika úrokových sazeb, které mají být použity pro různá období při zpoždění plateb obchodních transakcí.|[Nastavení více úrokových sazeb ](finance-how-to-set-up-multiple-interest-rates.md)|
-|Nastavení automatického zaokrouhlování fakturačních částek při vytváření faktur.|[Nastavení zaokrouhlování faktur](finance-set-up-invoice-rounding.md)|
-| Přidání nových účtů k existující účetní osnově. |[Nastavení účetní osnovy](finance-setup-chart-accounts.md) |
-| Nastavení grafů Business intelligence (BI) pro analýzu cashflow. |[Nastavení analýzy cashflow](finance-setup-cash-flow-analyses.md) |
-|Povolení fakturace zákazníkovi, který není nastaven v systému.|[Nastavení zákazníků platících hotovostí](finance-how-to-set-up-cash-customers.md)|
-| Nastavení sestavy Intrastat a odeslání hlášení úřadům. | [Nastavení a sestava Intrastat](finance-how-setup-report-intrastat.md)|
-|Příprava sestavy Konsolidovaná předvaha v Centru rolí Účetní, abyste získali finanční přehled pro více společností.|[Konsolidování finančních dat z několika společností](finance-consolidated-company-reporting.md)|
-|Ujistěte se, že položka ve finančním deníku je při účtování deníku přidělena několika různým účtům, a to buď množství, procento, nebo částka.|[Použití alokačního klíče ve finančních denících](ui-how-use-allocation-keys-general-journals.md)|
+| Specify how you want to be paid by customers, and how you want to pay your vendors. |[Set Up Payment Methods](finance-payment-methods.md) |
+| Specify payment terms to manage due dates and to calculate possible payment discounts.|[Set Up Payment Terms](finance-payment-terms.md) |
+| Specify the posting groups that map entities like customers, vendors, items, resources, and sales and purchase documents to general ledger accounts. |[Setting Up Posting Groups](finance-posting-groups.md)|
+|Create account schedules and define account categories to define the contents of financial charts and reports, such as the Balance Sheet and Income Statement reports.|[Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md)|
+|Set up a tolerance by which the system closes an invoice even though the payment, including any discount, does not fully cover the amount on the invoice.|[Work with Payment Tolerances and Payment Discount Tolerances](finance-payment-tolerance-and-payment-discount-tolerance.md)|
+| Set up fiscal periods. |[Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md) |
+|Set up reminder terms to help you collect for overdue payments.|[Set Up Reminder Terms and Levels](finance-setup-reminders.md)|
+| Define how you report value-added tax amounts that you have collected for sales to the tax authorities. |[Set Up Value-Added Tax (VAT)](finance-setup-vat.md)|
+|Prepare to handle unrealized VAT in connection with cash-based accounting methods.|[Set Up Unrealized VAT for Cash-Based Accounting](finance-setup-unrealized-vat.md)|
+| Set your Sales and Purchases features up to handle payments in foreign currencies.|[Enable Application of Ledger Entries in Different Currencies](finance-how-enable-application-ledger-entries-different-currencies.md)
+|Define one or more additional currencies so that amounts are automatically reported in both LCY and an additional reporting currency on each G/L entry and on other entries.|[Set Up an Additional Reporting Currency](finance-how-setup-additional-currencies.md)|
+|Periodically adjust additional currency equivalents to make up for fluctuating exchange rates.|[Update Currency Exchange Rates](finance-how-update-currencies.md)|
+|Define multiple interest rates to be used for different periods for delayed payments in trade transactions.|[Set Up Multiple Interest Rates](finance-how-to-set-up-multiple-interest-rates.md)|
+|Prepare to round invoice amounts automatically when you create invoices.|[Set Up Invoice Rounding](finance-set-up-invoice-rounding.md)|
+| Add new accounts to the existing chart of accounts. |[Setting Up the Chart of Accounts](finance-setup-chart-accounts.md) |
+| Set up business intelligence (BI) charts to analyze cash flow. |[Setting Up Cash Flow Analysis](finance-setup-cash-flow-analyses.md) |
+|Enable invoicing of a customer who is not set up in the system.|[Set Up Cash Customers](finance-how-to-set-up-cash-customers.md)|
+| Set up Intrastat reporting, and submit the report to an authority | [Set Up and Report Intrastat](finance-how-setup-report-intrastat.md)|
+|Make sure an entry in a general journal is allocated to several different accounts when you post the journal, either quantity, percentage, or amount.|[Use Allocation Keys in General Journals](ui-how-use-allocation-keys-general-journals.md)|
+|Set up source codes and reason codes that you can use to track audit trails|[Setting Up Source Codes and Reason Codes for Audit Trails](finance-setup-trail-codes.md)|
+|Specify default reports to be used for different document types.|[Report Selection in Business Central](across-report-selections.md)|
 
-## <a name="see-also"></a>Viz také
+> [!TIP]
+> Depending on your geographical location, some pages can contain fields that are not described in the articles that are listed here because they apply to local functionality or customizations. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+
+## See Related Training at [Microsoft Learn](/learn/paths/set-up-financial-management-dynamics-365-business-central/)
+
+## See Also
+
 [Finance](finance.md)  
-[Správa bankovních účtů](bank-manage-bank-accounts.md)  
-[Práce s dimenzemi](finance-dimensions.md)  
-[Import obchodních dat z jiných finančních systémů.](across-import-data-configuration-packages.md)  
-[Analýza cashflow ve Vaší firmě](finance-analyze-cash-flow.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
+[Working with Dimensions](finance-dimensions.md)  
+[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Analyzing Cash Flow in Your Company](finance-analyze-cash-flow.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]  
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

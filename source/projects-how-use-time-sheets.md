@@ -4,148 +4,173 @@ description: Describes how to create a time sheet for a job, copy planning lines
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project management, capacity, staff, resource
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Použití pracovních výkazů pro projekty
-Pomocí dávkové úlohy **Vytvořit pracovní výkazy** můžete vytvořit pracovní výkazy pro určený počet časových období nebo týdnů. Abyste mohli vytvářet pracovní výkazy, musíte mít oprávnění.
+# Use Time Sheets for Jobs
 
-Řádky pro plánování úloh můžete kopírovat a používat v pracovním výkazů. Tímto způsobem musíte zadat pouze informace na jedno místo a informace v řádku jsou vždy správné.
+You use the **Create Time Sheets** batch job to set up time sheets for a specified number of time periods or weeks. You must have permissions to be able to create time sheets.
 
-Po schválení položek pracovního výkazu je můžete zaúčtovat do příslušného deníku projektů, nebo deníku zdrojů.
+You can copy and use your job planning lines in a time sheet. In that way, you must only enter the information in one place and the line information is always correct.
 
-Před použitím pracovních výkazů je nutné nastavit obecné informace a zadat správce a jednoho nebo více schvalovatelů pracovních výkazů. Pro více informací navštivte [Nastavení pracovních výkazů](projects-how-setup-time-sheets.md).
+After you have approved time sheet entries for a job, you can post them to the relevant job journal or resource journal.
 
-## Vytvoření pracovního výkazu
-Pomocí dávkové úlohy **Vytvořit pracovní výkazy** můžete vytvořit pracovní výkazy pro určený počet časových období nebo týdnů. Poté jej může vlastník pracovního výkazu znovu otevřít a zaznamenat čas strávený na úkolu.
+Before you can use time sheets, you must set up general information and specify an administrator and one or more approvers of time sheets. For more information, see [Set Up Time Sheets](projects-how-setup-time-sheets.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pracovní výkazy**, a poté vyberte související odkaz.
-2. Na stránce **Přehled pracovních výkazů**, vyberte akci **Vytvořit pracovní výkazy**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## To create a time sheet
 
-> [!NOTE]
-> Pole **Použij pracovní výkaz** a **ID vlastníka pracovního výkazu** musí být na kartě vyplněna jako zdroj pracovního výkazu.
+You can use the **Create Time Sheets** batch job to set up time sheets for a specified number of time periods or weeks. Then, the time sheet owner can open it and record time that has been spent on a task.
 
-1. Zvolte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheets**, and then choose the related link.
+2. On the **Time Sheet List** page, choose the **Create Time Sheets** action.
+3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-Pracovní výkazy, které jste vytvořili, můžete zobrazit na stránce **Přehled pracovních výkazů**.
+    > [!NOTE]  
+    > The **Use Time Sheet** and **Time Sheet Owner User ID** fields must be filled in on the card for the resource of the time sheet.
+4. Choose the **OK** button.  
 
-## Kopírování řádků plánování projektu do pracovního výkazu
-Následující postup popisuje, jak rychle přidat řádky plánování projektu do pracovního výkazu.
+You can view the time sheets that you have created on the **Time Sheet list** page.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pracovní výkazy**, a poté vyberte související odkaz.
-2. Na stránce **Přehled pracovních výkazů** vyberte pracovní výkaz pro příslušné časové období a pak zvolte akci **Upravit pracovní výkaz**.
-3. Vyberte akci **Vytvořit řádky z plánování projektu**. Všechny řádky plánování projektu v období pracovního výkazu se zkopírují do pracovního výkazu pro osobu nebo stroj v poli **Číslo zdroje** na pracovním výkazu.
+## To copy job planning lines to a time sheet
+The following procedure describes how to quickly add job planning lines to a time sheet.
 
-## Definování typů práce a přidání do pracovního rozvrhu
-Můžete definovat typ práce pro všechny řádky pracovního výkazu pro úlohy. Tímto způsobem můžete přidat informace, které potřebujete zákazníkovi vyúčtovat za různé druhy práce.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheets**, and then choose the related link.  
+2. On the **Time Sheet List** page, select a time sheet for the relevant time period, and then choose the **Edit Time Sheet** action.  
+3. Choose the **Create lines from job planning** action. Any job planning lines in the time sheet time period are copied to the time sheet for the person or machine in the **Resource No.** field on the time sheet.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pracovní výkazy**, a poté vyberte související odkaz.
-2. Otevřete příslušný pracovní výkaz
-3. Vyberte pole **Popis**.
-4. Na stránce **Detaily řádku projektu prac.výkazu**, vyberte pole **Kód typu práce**, a vyberte ze seznamu typ práce, jako například **Míle**.
-5. Pokud neexistují žádné typy práce, vyberte akci **Nový**.
-6. Na stránce **Typy práce**, vyplňte pole podle potřeby.
-7. Opakujte krok 4 a přiřaďte nový typ práce k pracovnímu výkazu.
+## To define work types and add one to a time sheet
+You can define the work type for all time sheet lines for jobs. In this way, you can add information that you need to bill the customer for different types of work.
 
-## Opětovné použití řádků pracovního výkazu v jiných pracovních výkazech
-Pokud informace o pracovním výkazu zůstávají stejné v průběhu časového období, můžete ušetřit čas zkopírováním řádků z předchozího pracovního výkazu. Poté stačí zadat své časové využití pro nové období.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheets**, and then choose the related link.   
+2. Open the relevant time sheet.
+3. Choose the **Description** field.  
+4. On the **Time Sheet Line Job Detail** page, choose the **Work Type Code** field, and select a work type from the list, such as **Miles**.  
+5. If no work types exist, chose the **New** action.
+6. On the **Work Types** page, fill in the fields as necessary.
+7. Repeat step 4 to assign the new work type to the time sheet.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pracovní výkazy**, a poté vyberte související odkaz.
-2. Otevřete pracovní výkaz pro období, které je pozdější než období existujícího pracovního výkazu s řádky.
-3. Vyberte akci **Kopírovat řádky z předchozího pracovního výkazu**.
+## To reuse time sheet lines in other time sheets
+If your time sheet information remains the same from time period to time period, you can save time by copying the lines from the previous time period. Then, you just enter your time usage for the new period.
 
-Řádky jsou zkopírovány, včetně podrobností, jako je typ a popis. Pokud například řádek souvisí s projektem, je zkopírováno **Číslo projektu**. Všechny zkopírované řádky mají stav **Otevřeno**. Nyní můžete upravit řádky podle potřeby.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheets**, and then choose the related link.  
+2. Open the time sheet for a period later than the period for an existing time sheet with lines.  
+3. Choose the **Copy Lines from Previous Time Sheet** action.
 
-## Vyplnění řádků pracovního rozvrhu a odeslání ke schválení
-Registrace pracovního výkazu je sledována v hodinách, což je standardní základní měrná jednotka zdrojů. Ve výchozím nastavení jsou v pracovním výkazu uvedeny běžné pracovní dny od pondělí do pátku.
+The lines are copied, including details such as type and description. For example, if the line is related to a job, the **Job No.** is copied. All copied lines have the status **Open**. You can now modify the lines as needed.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pracovní výkazy**, a poté vyberte související odkaz.
-2. Vyberte pracovní výkaz pro příslušné časové období a pak zvolte akci **Upravit pracovní výkaz**.
-3. Vyplňte pole na řádku podle potřeby. Zadejte počet hodin, které zdroj používá každý den v týdnu.
+## To fill in a time sheet lines and submit for approval
+Time sheet registration is tracked in hours, the standard base unit of measure for resources. By default, a time sheet shows the common work days of Monday through Friday.
 
-   > [!TIP]
-   > Můžete zkontrolovat součet hodin pracovního výkazu, který jste zadali v okně s náhledem **Souhrn skutečnost/rozpočet**.
-4. Opakujte krok 3 pro jiné typy práce, které zdroj provádí.
-5. Zvolte akci **Odeslat**, a poté zvolte akci **Všechny otevřené řádky** chcete-li odeslat všechny řádky, nebo akci **Pouze vybrané řádky** chcete-li odeslat pouze řádky vybrané na stránce **Pracovní výkaz**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheets**, and then choose the related link.  
+2. Select a time sheet for the relevant time period, and then choose the **Edit Time Sheet** action.  
+3. Fill in the fields on a line as necessary. Enter the number of hours used by the resource on each day of the week.
 
-   > [!NOTE]
-   > Můžete zadat pouze řádky výkazů, pro které jste zadali čas.
-6. Chcete-li upravit informace na řádku, který byl nastaven na **Odesláno**, vyberte řádek a pak zvolte akci **Znovu otevřít**.
+    > [!TIP]  
+    >   You can review the sum of time sheet hours that you have entered in the **Actual/Budgeted Summary** FactBox.  
+4. Repeat step 3 for other work types that the resource performs.
+5. Choose the **Submit** action, and then choose the **All open lines** action to submit all lines or the **Selected lines only** action to submit only the lines that are selected on the **Time Sheet** page.  
 
-   > [!NOTE]
-   > Manažer může odmítnout řádek pracovního výkazu, který je předložen ke schválení. Pokud má řádek stav **Odmítnuto**, můžete na něm provést změny a poté znovu vybrat **Odeslat**.
-7. Zvolte tlačítko **OK**.
+    > [!NOTE]  
+    >   You can only submit time sheet lines for which you have entered time.  
+6. To modify information on a line that has been set to **Submitted**, select the line, and then choose the **Reopen** action.
 
-## Schválení nebo odmítnutí pracovního výkazu
-Před použitím musí být ke schválení předložen ke schválení pracovní výkaz. Jednotlivé řádky na pracovním výkazu můžete schválit a odmítnout nebo je odeslat zpět zadavateli k další akci. Pracovní výkaz lze schválit dvěma způsoby:
+    > [!NOTE]  
+    >   A manager may reject a time sheet line that is submitted for approval. If a line has a status of **Rejected**, you can make changes to the line, and then choose **Submit** again.  
+7. Choose the **OK** button.
 
-* Správce pracovního výkazu může schválit libovolný pracovní výkaz
-* Osoba, která je zadána v poli **ID schvalovatele pracovního výkazu** na kartě zdroje, může schválit časové rozvrhy zdroje. Pro více informací navštivte [Nastavení pracovních výkazů](projects-how-setup-time-sheets.md).
+## To approve or reject a time sheet
+A time sheet must be submitted for approval before it can be used. You can approve and reject individual lines on a time sheet or send them back to the submitter for additional action. A time sheet can be approved in two ways:
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Správce pracovních výkazů**, a poté vyberte související odkaz.
-2. Vyberte ze seznamu pracovní výkaz.
-3. Na stránce **Pracovní výkazy** vyberte akci **Schválit** a poté vyberte akci **Všechny odeslané řádky**, abyste schválili všechny řádky, nebo akci **Vybraný řádek pouze** ke schválení pouze řádků vybraných na stránce **Pracovní výkaz**.
-4. Zvolte tlačítko **OK**.
-5. Případně vyberte akci **Odmítnout** a postupujte podle kroků 4 až 5.
+* A time sheet administrator can approve any time sheet.
+* The person who is specified in the **Time Sheet Approver User ID** field on a resource card can approve that resource's time sheets. For more information, see [Set Up Time Sheets](projects-how-setup-time-sheets.md).
 
-> [!TIP]
-> Použijte informační okna**Stav pracovního výkazu** a **Souhrn skutečnost/rozpočet** k získání přehledu informací o pracovním výkazu.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Manager Time Sheets**, and then choose the related link.
+2. Select a time sheet from the list.  
+3. On the **Time Sheet** page, choose the **Approve** action, and then choose the **All submitted lines** action to approve all lines or the **Selected lines only** action to approve only the lines that are selected on the **Time Sheet** page.
+4. Choose the **OK** button.  
+5. Alternatively, choose the **Reject** action and follow steps 4 through 5.  
 
-Poté, co jste schválili nebo odmítli pracovní výkaz, nelze jej změnit, pokud není poprvé znovu otevřen. Následující postup vysvětluje, jak znovu otevřít schválený nebo odmítnutý výkaz.
+> [!TIP]  
+>   Use the **Time Sheet Status** and **Actual/Budgeted Summary** FactBoxes to get an overview of time sheet information.
 
-## Opětovné otevření pracovního výkazu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Správce pracovních výkazů**, nebo **Pracovní výkazy** a poté vyberte související odkaz.
-2. Otevřete ze seznamu pracovní výkaz.
+After you have approved or rejected a time sheet, it cannot be modified unless it is first reopened. The following procedure explains how to reopen an approved or rejected time sheet.
 
-   > [!NOTE]
-   > Znovu otevřít lze pouze řádky se stavem **Schváleno**. Nelze znovu otevřít řádky se stavem **Odmítnuto**. Nemůžete znovu otevřít pracovní výkaz, pokud byl zveřejněn.
-3. Na stránce **Pracovní výkazy**, zvolte akci **Znovu otevřít**, a poté vyberte akci **Všechny odeslané řádky** abyste otevřeli všechny řádky, nebo akci **Vybraný řádek pouze** ke schválení pouze řádků vybraných na stránce **Pracovní výkaz**.
-4. Zvolte tlačítko **OK**. Stav řádku nebo řádků pracovních výkazů se změní na **Odesláno**.
+## To reopen a time sheet
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Manager Time Sheets** or **Time Sheets**, and then choose the related link.
+2. Open a time sheet from the list.  
 
-## Zaúčtování řádků pracovního výkazu v deníku zdrojů
-Po schválení položek pracovní výkazu můžete zdroje zaúčtovat do příslušného deníku zdrojů.
+    > [!NOTE]  
+    >   You can only reopen lines that have the status **Approved**. You cannot reopen lines that have the status **Rejected**. You cannot reopen a time sheet if it has been posted.  
+3. On the **Time Sheet** page, choose the **Reopen** action, and then choose the **All submitted lines** action to reopen all lines or the **Selected lines only** action to reopen only the lines that are selected on the **Time Sheet** page.
+4. Choose the **OK** button. The status of the time sheets line or lines is changes to **Submitted**.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zdrojů** a poté vyberte související odkaz.
-2. Vyberte akci **Navrhni řádky z pracovního výkazu**.
-3. Vyplňte pole podle potřeby.
-4. Zvolte tlačítko **OK**. Položky pro použití jsou vytvořeny v deníku zdrojů, kde můžete podle potřeby upravit informace.
-5. Vyberte akci **Účtovat**.
-6. Chcete-li účtování ověřit, zvolte **Položky hlavní knihy**. Stránka **Položky zdrojů** zobrazuje výsledek zaúčtování deníku zdrojů.
+## To view and approve time sheets by job
 
-## Zaúčtování řádků pracovního výkazu do deníku projektů
-Poté, co jste pro úlohu schválili položky pracovního výkazu, můžete je zveřejnit v příslušném deníku úloh.
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
-2. Vyberte akci **Navrhni řádky z pracovního výkazu**.
-3. Vyplňte pole podle potřeby.
-4. Zvolte tlačítko **OK**. Položky pro použití jsou vytvářeny v deníku úloh, kde můžete informace podle potřeby upravovat.
-
-   > [!NOTE]
-   > Informace o typu práce a o tom, zda je práce fakturovatelná, jsou zkopírovány z řádku pracovního výkazu. V případě potřeby můžete snížit počet hodin a provést částečné zaúčtování. Pokud snížíte množství, při příštím zvolení akce **Navrhni řádky z pracovního výkazu**, bude vytvořený řádek obsahovat zbývající počet hodin.
-5. Vyberte akci **Účtovat**.
-6. Chcete-li účtování ověřit, zvolte **Položky hlavní knihy**. Stránka **Položky projektu** se otevře, zobrazující výsledek zaúčtování deníku zdrojů.
-
-## Archivace pracovních výkazů
-Po zaúčtování pracovních výkazů je můžete archivovat pro budoucí použití. Před archivací pracovních výkazů musí být zaúčtovány všechny řádky pracovních výkazů.
+On a job, you can specify a person who is responsible for the job. That information is linked to time sheet lines, and can be used to provide a list of the time sheets that a project manager is required to review and approve. For example, the team project manager may be responsible for certain jobs in your company. In that case, the manager should be designated as the **Person Responsible** on the job card. In this view of time sheet information, you can see the job tasks associated with a job and the quantity of hours used.
 
 > [!NOTE]
->  Když archivujete pracovní výkaz, bude odstraněn ze seznamů na stránce **Pracovní výkazy** a stránce **Správce pracovních výkazů**.
+> To be able to approve time sheets in the **Manager Time Sheet by Job** window, you must first select a **Time Sheet by Job Approval** option in the **Resources Setup** page. For more information, see [Set Up Resources](projects-how-setup-resources.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Správce pracovních výkazů**, a poté vyberte související odkaz.
-2. Podle potřeby vyplňte pole a poté zvolte tlačítko **OK**.
-3. Chcete-li zkontrolovat archivované pracovní výkazy, vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Archivy pracovních výkazů**, nebo **Správce pracovních výkazů** a poté vyberte související odkaz.
+### To approve or reject a time sheet by job
 
-## Viz také
-[Správa projektů](projects-manage-projects.md)  
-[Nastavení správy projektu](projects-setup-projects.md)  
+1. In the **Search** box, enter **Manager Time Sheet by Job**, and then choose the related link. Microsoft Dynamics NAV displays a list of time sheet lines associated with the jobs for which you have responsibility.
+2. On the **Home** tab, choose **Approve**. Choose **All** to approve all lines. Choose **Selected** to approve only selected lines.
+
+    > [!NOTE]
+    > You can only approve time sheets that have the status of **Submitted**.
+
+3. To provide additional information about the approval or rejection, select a time sheet line, and on the **Navigate** tab, select **Comments**. In the **Date** field, enter a date, and then enter a comment in the **Comment** field.
+4. Choose the **OK** button.
+
+> [!NOTE]
+> After you have approved or rejected a time sheet line by job, it cannot be reopened or modified in the **Time Sheet** window.
+
+## To post time sheet lines in a resource journal
+After you have approved time sheet entries for a resource, you can post them to the relevant resource journal.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resource Journal**, and then choose the related link.  
+2. Choose the **Suggest Lines from Time Sheets** action.  
+3. Fill in the fields as necessary.  
+4. Choose the **OK** button. Entries for usage are created in the resource journal, where you can modify the information as needed.  
+5. Choose the **Post** action.  
+6. To verify the posting, choose the **Ledger Entries** action. The **Resource Ledger Entries** page opens showing the result of posting the resource journal.
+
+## To post time sheet lines in a job journal
+After you have approved time sheet entries for a job, you can post them to the relevant job journal.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Journal**, and then choose the related link.  
+2. Choose the **Suggest Lines from Time Sheets** action.  
+3. Fill in the fields as necessary.  
+4. Choose the **OK** button. Entries for usage are created in the job journal, where you can modify the information as needed.  
+
+    > [!NOTE]  
+    >   Information about work type and whether the work is chargeable is copied from the time sheet line. If needed, you can reduce the quantity of hours and do a partial posting. If you reduce the quantity, then the next time that you choose the **Suggest Lines From Time Sheets** action, the line that is created will contain the remaining quantity of hours.  
+5. Choose the **Post** action.  
+6. To verify the posting, choose the **Ledger Entries** action. The **Job Ledger Entries** page opens showing the result of posting the resource journal.
+
+## To archive time sheets
+After you have posted time sheets, you can archive them for future reference. All time sheets lines must be posted before a time sheet can be archived.
+
+> [!NOTE]  
+>   When you archive a time sheet, it is removed from the lists in both the **Time Sheets** page and the **Manager Time Sheets** page.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Move Time Sheets to Archive**, and then choose the related link.  
+2. Fill in the fields as necessary, and then choose the **OK** button.  
+3. To review archived time sheets, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheet Archives** or **Manager Time Sheet Archives**, and then choose the related link.
+
+## See Also
+[Project Management](projects-manage-projects.md)  
+[Setting Up Project Management](projects-setup-projects.md)    
 [Finance](finance.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Prodej](sales-manage-sales.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Purchasing](purchasing-manage-purchasing.md)         
+[Sales](sales-manage-sales.md)     
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

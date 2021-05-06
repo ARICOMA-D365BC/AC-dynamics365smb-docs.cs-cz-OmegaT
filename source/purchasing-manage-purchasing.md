@@ -1,59 +1,58 @@
 ---
-title: Přehled úloh pro správu nákupu | Micorosoft Docs
-description: 'Popisuje úlohy pro správu procesů nákupu, včetně způsobu práce s nákupními fakturami a nákupními objednávkami.'
+title: Overview of Tasks to Manage Purchasing | Microsoft Docs
+description: Outlines tasks to manage your purchasing or procurement processes, including how purchase invoices and purchase orders work.
 services: project-madeira
 documentationcenter: ''
-author: ZdenekBicek
+author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'procurement, supply, vendor order'
-ms.date: 01/15/2020
-ms.reviewer: v-zdbice
-ms.author: sgroespe
+ms.search.keywords: procurement, supply, vendor order
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# Nákup
+# Purchasing
+You create a purchase invoice or purchase order to record the cost of purchases and to track accounts payable. If you need to control an inventory, purchase invoices are also used to dynamically update inventory levels so that you can minimize your inventory costs and provide better customer service. The purchasing costs, including service expenses, and inventory values that result from posting purchase invoices contribute to profit figures and other financial KPIs on your Role Center.
 
-Můžete vytvářet nákupní fakturu nebo nákupní objednávku za účelem zaznamenání nákladů na nákupy a sledování závazků. Pokud potřebujete kontrolovat zásoby, nákupní faktury se také používají k dynamické aktualizaci úrovně zásob, takže můžete minimalizovat náklady na zásoby a poskytovat lepší služby zákazníkům. Náklady na nákup, včetně nákladů na služby, a hodnoty zásob, které vyplývají z účtování nákupních faktur, přispívají k údajům o zisku a dalším finančním ukazatelům výkonnosti (KPI) ve Vašem Centru rolí.
+You must use purchase orders if your purchasing process requires that you record partial receipts of an order quantity, for example, because the full quantity was not available at the vendor. If you sell items by delivering directly from your vendor to your customer, as a drop shipment, then you must also use purchase orders. For more information, see [Make Drop Shipments](sales-how-drop-shipment.md). In all other aspects, purchase orders work the same way as purchase invoices.
 
-Nákupní objednávky musíte použít, pokud nákupní proces vyžaduje, abyste evidovali částečné příjmy na objednávce, například proto, že celé množství nebylo u dodavatele k dispozici. Pokud prodáváte zboží s dodáním přímo od dodavatele zákazníkovi jako přímou dodávku, musíte také použít nákupní objednávky. Pro více informací navštivte [Vytvoření přímé dodávky](sales-how-drop-shipment.md). Ve všech ostatních případech fungují nákupní objednávky stejným způsobem jako nákupní faktury.
+You can have purchase invoices created automatically by using the OCR (Optical Character Recognition) service to convert PDF invoices from your vendors to electronic documents, which are then converted to purchase invoices by a workflow. To use this functionality, you must first sign up for the OCR service, and then perform various setup. For more information, see [Process Incoming Documents](across-process-income-documents.md).      
 
-Nákupní faktury lze vytvářet automaticky s využitím služby OCR (Optical Character Recognition) k převodu PDF faktur od dodavatelů na elektronické dokumenty, které jsou pak převedeny na nákupní faktury. Chcete-li tuto funkci použít, musíte se nejprve zaregistrovat do služby OCR a poté provést různá nastavení. Pro více informací navštivte [Zpracování Došlých dokladů](across-process-income-documents.md).
+Products can be both inventory items and services. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
-Produkty mohou být skladové položky i služby. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
+For all purchase processes, you can incorporate an approval workflow, for example, to require that large purchases are approved by the accounting manager. For more information, see [Using Approval Workflows](across-how-use-approval-workflows.md).
 
-Do všech nákupních procesů můžete zahrnout Workflow pro schvalování, které například vyžaduje, aby byl velký nákup schválen finančním manažerem. Pro více informací navštivte [Použití Workflow schvalování](across-how-use-approval-workflows.md).
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-Následující tabulka popisuje přehled úloh s odkazy na témata, které je popisují.
-
-| Funkce | Odkaz |
+| To | See |
 | --- | --- |
-|Vytvořte kartu dodavatele pro každého dodavatele, od kterého nakupujete.|[Evidence nových dodavatelů](purchasing-how-register-new-vendors.md)|
-|Vytvořte nákupní poptávku, která bude odrážet požadavek na nabídku od Vašeho dodavatele, kterou můžete později převést na nákupní objednávku.|[Vytvoření nákupní poptávky](purchasing-how-request-quotes.md)|
-|Vytvořte nákupní fakturu za účelem zaznamenání smlouvy s dodavatelem za účelem zakoupení produktů s určitými dodacími a platebními podmínkami.|[Evidence nákupu](purchasing-how-record-purchases.md) |
-|Vytvořte nákupní fakturu pro všechny nebo vybrané řádky na prodejní faktuře.|[Nákup zboží pro prodej](purchasing-how-purchase-products-sale.md) |
-|Pochopte, co se stane, když zaúčtujete nákupní doklady.|[Účtování účtování](ui-post-purchases.md) |
-|Proveďte akce u nezaplacené zaúčtované nákupní faktury pro automatické vytvoření dobropisu a stornování nákupní faktury nebo jejího opětovné vytvoření, aby bylo možné provést opravy.|[Opravit nebo zrušit nezaplacené nákupní faktury](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)|
-|Vytvořte nákupní dobropis pro vrácení určité zaúčtované nákupní faktury, který odráží produkty vracející se dodavateli a částku platby, kterou chcete vrátit.|[Zpracování nákupní vratky nebo storna](purchasing-how-register-new-vendors.md) |
-|Spravujte svůj závazek vůči dodavateli nakupovat velké množství dodávané v několika zásilkách v průběhu času.|[Práce s hromadnými nákupními objednávkami](purchasing-how-to-create-blanket-purchase-orders.md)|
-|Připravte fakturaci více příjmů od stejného dodavatele  kombinací příjemek do jedné faktury.|[Kombinování příjmů do jedné faktury](purchasing-how-to-combine-receipts.md)|
-|Převeďte, např. elektronickou fakturu od dodavatele na nákupní fakturu v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)].|[Příjem a převod elektronických dokumentů](purchasing-how-to-receive-and-convert-electronic-documents.md)|
-|Naučte se, jak [!INCLUDE[d365fin](includes/d365fin_md.md)] počítá, kdy musíte objednat zboží, aby se bylo přijato k určitému datu.|[Výpočet dat pro nákupy](purchasing-date-calculation-for-purchases.md)|
-|Vyřešte konflikt, pokud existují dva nebo více záznamů pro stejného dodavatele.|[Sloučit duplicitní záznamy](sales-how-merge-duplicate-records.md)|
+| Create a purchase invoice to record your agreement with a vendor to purchase products on certain delivery and payment terms. |[Record Purchases](purchasing-how-record-purchases.md) |
+|Create a purchase quote to reflect a request for quote from your vendor, which you can later convert to a purchase order.|[Request Quotes](purchasing-how-request-quotes.md)|
+| Create a purchase invoice for all or selected lines on a sales invoice. |[Purchase Items for a Sale](purchasing-how-purchase-products-sale.md) |
+|Understand what happens when you post purchase documents.|[Posting Purchases](ui-post-purchases.md)|
+| Perform an action on an unpaid posted purchase invoice to automatically create a credit memo and either cancel the purchase invoice or recreate it so you can make corrections. |[Correct or Cancel Unpaid Sales Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md) |
+| Create a purchase credit memo to revert a specific posted purchase invoice to reflect which products you are returning to the vendor and which payment amount you will collect. |[Process Purchase Returns or Cancellations](purchasing-how-register-new-vendors.md) |
+|Prepare to invoice multiple receipts from the same vendor once by combining the receipts on one invoice.|[Combine Receipts on a Single Invoice](purchasing-how-to-combine-receipts.md)|
+|Convert, for example, electronic invoices from your vendors to purchase invoices inside Business Central.|[Receive and Convert Electronic Documents](purchasing-how-to-receive-and-convert-electronic-documents.md)|
+| Learn how [!INCLUDE[prod_short](includes/prod_short.md)] calculates when you must order an item to receive it on a certain date.|[Date Calculation for Purchases](purchasing-date-calculation-for-purchases.md)|
+|Resolve confusion when two or more records exist for the same vendor.|[Merge Duplicate Records](sales-how-merge-duplicate-records.md)|
+|Manage your commitment to a vendor to purchase large quantities delivered in several shipments over time.|[Work With Blanket Purchase Orders](sales-how-to-create-blanket-sales-orders.md)|
 
-## Navštivte související školení na [Microsoft Learn](/learn/paths/sell-items-services-dynamics-365-business-central/)
+## See Related Training at [Microsoft Learn](/learn/paths/purchase-items-services-dynamics-365-business-central/)
 
-## Viz také
+## See Also
+[Setting Up Purchasing](purchasing-setup-purchasing.md)  
+[Register New Vendors](purchasing-how-register-new-vendors.md)  
+[Managing Payables](payables-manage-payables.md)  
+[Managing Projects](projects-manage-projects.md)    
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
-[Nastavení nákupu](purchasing-setup-purchasing.md)  
-[Evidence nových dodavatelům](purchasing-how-register-new-vendors.md)  
-[Správa pohledávek](receivables-manage-receivables.md)  
-[Správa závazků](payables-manage-payables.md)  
-[Správa projektů](projects-manage-projects.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]  
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -4,67 +4,70 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Mapování polí při exportu platebních souborů pomocí rozšíření AMC Banking 365 Fundamentals
-Když exportujete platební soubory pomocí rozšíření AMC Banking 365 Fundamentals, data, která exportujete, jsou vystavena poskytovateli služeb. Za ochranu osobních údajů je zodpovědný poskytovatel služeb. Další informace o rozšíření AMC Banking 365 Fundamentals naleznete v části [Používání rozšíření AMC Banking 365 Fundamentals](ui-extensions-amc-banking.md).
+# Field Mapping When Exporting Payment Files Using the AMC Banking 365 Fundamentals extension
+When you export payment files using the AMC Banking 365 Fundamentals extension, the data that you export is exposed to the service provider. The service provider is responsible for the privacy of this data. For more information about the AMC Banking 365 Fundamentals extension, see [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md).  
 
-> [!CAUTION]
-> Při exportu platebních souborů pomocí rozšíření AMC Banking 365 Fundamentals, budou některá vaše obchodní data zpřístupněna poskytovateli služby. Za ochranu osobních údajů je zodpovědný poskytovatel služeb společnosti AMC Consult A/S. Pro více informací navštivte [Zásady ochrany osobních údajů AMC](https://go.microsoft.com/fwlink/?LinkId=510158).
+> [!CAUTION]  
+>  When you export payment files by using the AMC Banking 365 Fundamentals extension, some of your business data will be exposed to the provider of the service. The service provider, AMC Consult A/S, is responsible for the privacy of this data. For more information, see [AMC Privacy Policy](https://go.microsoft.com/fwlink/?LinkId=510158).  
 
-Následující tabulka obsahuje pole v [!INCLUDE[d365fin](includes/d365fin_md.md)], ze kterých lze exportovat data.
+The following table lists the fields in [!INCLUDE[prod_short](includes/prod_short.md)] from which you can export data.  
 
-| Připojené pole | Pole v tabulce | Tabulka | Popis |
+|Mapped Field|Field in Table|Table|Description|  
 |------------------|--------------------|-----------|---------------------------------------|  
-| Číslo kreditora | Číslo kreditora | Bankovní účet | Identifikátor pro výběr plateb přiřazený vaší firmě bankou |
-| Číslo bankovního účtu odesílatele | Č. bankovního účtu/IBAN | Bankovní účet | Číslo bankovního účtu vaší společnosti (IBAN nebo jiné), které je zadáno na kartě bankovního účtu |
-| Odesílatelův clearingový standard | Clearingový standard | Bankovní účet | Registr názvů národních bank používaný pro bankovní účet odesílatele |
-| Odesílatelův clearingový standard | Clearingový standard | Bankovní účet | Identifikátor banky odesílatele ve vztahu k použitému registru názvů banky |
-| BIC banky odesílatele | SWIFT kód | Bankovní účet | Identifikátor SWIFT bankovního účtu odesílatele |
-| Měna bankovního účtu odesílatele | Kód měny | Bankovní účet | Kód měny bankovního účtu odesílatele |
-| Číslo dokladu | Číslo dokladu | Řádek finančního deníku | Číslo dokladu na řádku platby |
-| Externí číslo vyrovnaného dokladu | Externí číslo vyrovnaného dokladu | Řádek finančního deníku | Číslo externího dokladu faktury nebo dobropisu, na který se platební řádek vztahuje |
-| ID příjemce | Číslo účtu | Řádek finančního deníku | Číslo zákazníka nebo dodavatele, které je uvedeno na řádku platby |
-| Způsob platby | Typ platby konver. bank. dat Typ | Způsob platby | Typ bankovního převodu, jako je tuzemský nebo mezinárodní |
-| Platební reference | Platební reference | Řádek finančního deníku | Platební reference řádku platby |
-| Adresa příjemce | Adresa | Zákazník/Dodavatel | Adresa příjemce uvedená na kartě zákazníka nebo dodavatele |
-| Město příjemce | Město | Zákazník/Dodavatel | Město příjemce, které je uvedeno na kartě zákazníka nebo dodavatele |
-| Jméno příjemce | Name | Zákazník/Dodavatel | Jméno příjemce, které je zadáno na kartě zákazníka nebo dodavatele |
-| Kód země/oblasti příjemce | Kód země/oblasti | Zákazník/Dodavatel | Kód země/oblasti příjemce, který je zadán na kartě zákazníka nebo dodavatele |
-| PSČ příjemce | PSČ | Zákazník/Dodavatel | Poštovní směrovací číslo příjemce, které je zadáno na kartě zákazníka nebo dodavatele |
-| Bankovní účet příjemce dokladu | Č. bankovního účtu/IBAN | Bankovní účet zákazníka/bankovní účet dodavatele | Číslo bankovního účtu příjemce (IBAN nebo jiné), které je uvedeno na kartě bankovního účtu zákazníka nebo dodavatele |
-| Clearingový kód banky příjemce | Clearingový standard | Bankovní účet zákazníka/bankovní účet dodavatele | Registr názvů národních bank použitý pro bankovní účet příjemce |
-| Clearingový kód banky příjemce | Clearingový standard | Bankovní účet zákazníka/bankovní účet dodavatele | Identifikátor bankovního účtu příjemce ve vztahu k používanému registru názvů bankovních účtů |
-| E-mailová adresa příjemce | E-mail | Zákazník/Dodavatel | E-mailová adresa příjemce |
-| Zpráva příjemci 1 | Zpráva příjemci | Řádek finančního deníku | Zpráva adresáta, která je určena na řádku platby |
-| Amount | Amount | Řádek finančního deníku | Částka na řádku platby |
-| Kód měny | Kód měny | Řádek finančního deníku | Kód měny na platebním řádku |
-| Datum převodu | Posting Date | Řádek finančního deníku | Zúčtovací datum řádku platby |
-| Částka faktury | Původní částka | Položka zákazníka/dodavatele | Částka položky, na kterou je platba vyrovnána |
-| Datum fakturace | Datum dokladu | Položka zákazníka/dodavatele | Datum faktury u položky, na kterou je platba vyrovnána |
-| Adresa banky příjemce | Adresa | Bankovní účet zákazníka/bankovní účet dodavatele | Adresa bankovního účtu příjemce, která je uvedena na kartě bankovního účtu zákazníka nebo dodavatele |
-| Adresa bankovního účtu příjemce, která je uvedena na kartě bankovního účtu zákazníka nebo dodavatele | Město | Bankovní účet zákazníka/bankovní účet dodavatele | Město bankovního účtu příjemce, které je uvedeno na kartě bankovního účtu zákazníka nebo dodavatele |
-| Název banky příjemce | Name | Bankovní účet zákazníka/bankovní účet dodavatele | Název bankovního účtu příjemce, který je uveden na kartě bankovního účtu zákazníka nebo dodavatele |
-| Země/oblast banky příjemce | Kód země/oblasti | Bankovní účet zákazníka/bankovní účet dodavatele | Země nebo oblast bankovního účtu příjemce, která je určena na kartě bankovního účtu zákazníka nebo dodavatele |
-| Poštovní směrovací číslo banky příjemce | PSČ | Bankovní účet zákazníka/bankovní účet dodavatele | Poštovní směrovací číslo bankovního účtu příjemce, které je uvedeno na kartě bankovního účtu zákazníka nebo dodavatele |
-| Adresa banky odesílatele | Adresa | Bankovní účet | Adresa bankovního účtu odesílatele, která je uvedena na kartě bankovního účtu |
-| Město banky odesílatele | Město | Bankovní účet | Město bankovního účtu odesílatele, které je zadáno na kartě bankovního účtu |
-| Název banky odesílatele | Name | Bankovní účet | Název bankovního účtu odesílatele, který je uveden na kartě bankovního účtu |
-| Země/oblast banky odesílatele | Kód země/oblasti | Bankovní účet | Země/oblast bankovního účtu odesílatele, který je uveden na kartě bankovního účtu |
-| PSČ banky odesílatele | PSČ | Bankovní účet | PSČ bankovního účtu odesílatele, které je zadáno na kartě bankovního účtu |
-| Šablona finančního deníku | Název šablony deníku | Řádek finančního deníku | Šablona finančního deníku, která se používá pro platební řádek |
-| Název listu finančního deníku | Název listu deníku | Řádek finančního deníku | Název listu finančního deníku, který se používá pro řádek platby |
-| Název banky odesílatele - konv. dat | Název banky – konver. dat | Bankovní účet | Název bankovního účtu odesílatele, který je požadován rozšířením AMC Banking 365 Fundamentals a je uveden na kartě bankovního účtu |
+|Creditor No.|Creditor No.|Bank Account|The identifier assigned to your company by your bank to collect payments|  
+|Sender Bank Account No.|Bank Account No./IBAN|Bank Account|Your company's bank account number (IBAN or other) that is specified on the bank account card|  
+|Sender Bank Clearing Standard|Bank Clearing Standard|Bank Account|The national bank names register used for the sender bank account|  
+|Sender Bank Clearing Code|Bank Clearing Code|Bank Account|The identifier of the sender's bank in relation to the bank names register used|  
+|Sender Bank BIC|SWIFT Code|Bank Account|The SWIFT identifier of the sender bank account|  
+|Sender Bank Account Currency|Currency Code|Bank Account|The sender bank account Currency Code|  
+|Document No.|Document No.|General Journal Line|The document number of the payment line|  
+|Applies-to Ext. Doc. No.|Applies-to Ext. Doc. No.|General Journal Line|The external document number of the invoice or credit memo that the payment line is applied to|  
+|Recipient ID|Account No.|General Journal Line|The customer or vendor number that is specified on the payment line|  
+|Payment Type|Bank Data Conversion Pmt. Type|Payment Method|The type of bank transfer, such as domestic or international|  
+|Payment Reference|Payment Reference|General Journal Line|The payment reference of the payment line|  
+|Recipient Address|Address|Customer/Vendor|The recipient address that is specified on the customer or vendor card|  
+|Recipient City|City|Customer/Vendor|The recipient city that is specified on the customer or vendor card|  
+|Recipient Name|Name|Customer/Vendor|The recipient name that is specified on the customer or vendor card|  
+|Recipient Country/Region Code|Country/Region Code|Customer/Vendor|The recipient country/region code that is specified on the customer or vendor card|  
+|Recipient Post Code|Post Code|Customer/Vendor|The recipient post code that is specified on the customer or vendor card|  
+|Recipient Bank Acc. No.|Bank Account No./IBAN|Customer Bank Account/Vendor Bank Account|The recipient bank account number (IBAN or other) that is specified on the customer or vendor bank account card|  
+|Recipient Bank Clearing Code|Bank Clearing Standard|Customer Bank Account/Vendor Bank Account|The national bank names register used for the recipient bank account|  
+|Recipient Bank Clearing Std.|Bank Clearing Code|Customer Bank Account/Vendor Bank Account|The identifier of the recipient bank account in relation to the bank names register that is used|  
+|Recipient Email Address|E-Mail|Customer/Vendor|The email address of the recipient|  
+|Message To Recipient 1|Message to Recipient|General Journal Line|The message to recipient that is specified on the payment line|  
+|Amount|Amount|General Journal Line|The amount on the payment line|  
+|Currency Code|Currency Code|General Journal Line|The currency code on the payment line|  
+|Transfer Date|Posting Date|General Journal Line|The posting date of the payment line|  
+|Invoice Amount|Original Amount|Customer/Vendor Ledger Entry|The amount on the entry that the payment is applied to|  
+|Invoice Date|Document Date|Customer/Vendor Ledger Entry|The invoice date on the entry that the payment is applied to|  
+|Recipient Bank Address|Address|Customer Bank Account/Vendor Bank Account|The recipient bank account address that is specified on the customer or vendor bank account card|  
+|The recipient bank account address that is specified on the customer or vendor bank account card|City|Customer Bank Account/Vendor Bank Account|The recipient bank account city that is specified on the customer or vendor bank account card|  
+|Recipient Bank Name|Name|Customer Bank Account/Vendor Bank Account|The recipient bank account name that is specified on the customer or vendor bank account card|  
+|Recipient Bank Country/Region|Country/Region Code|Customer Bank Account/Vendor Bank Account|The recipient bank account country/region that is specified on the customer or vendor bank account card|  
+|Recipient Bank Post Code|Post Code|Customer Bank Account/Vendor Bank Account|The recipient bank account post code that is specified on the customer or vendor bank account card|  
+|Sender Bank Address|Address|Bank Account|The sender bank account address that is specified on the bank account card|  
+|Sender Bank City|City|Bank Account|The sender bank account city that is specified on the bank account card|  
+|Sender Bank Name|Name|Bank Account|The sender bank account name that is specified on the bank account card|  
+|Sender Bank Country/Region|Country/Region Code|Bank Account|The sender bank account country/region that is specified on the bank account card|  
+|Sender Bank Post Code|Post Code|Bank Account|The sender bank account post code that is specified on the bank account card|  
+|General Journal Template|Journal Template Name|General Journal Line|The general journal template that is used for the payment line|  
+|General Journal Batch Name|Journal Batch Name|General Journal Line|The general journal batch name that is used for the payment line|  
+|Sender Bank Name - Data Conv.|Bank Name – Data Conv.|Bank Account|The sender bank account name that is requested by the AMC Banking 365 Fundamentals extension and specified on the bank account card|  
 
-## Viz také
-[Nastavení výměny dat](across-set-up-data-exchange.md)  
-[Elektronická výměna dat](across-data-exchange.md)  
-[Používání rozšíření AMC Banking 365 Fundamentals](ui-extensions-amc-banking.md)  
-[Provádění plateb pomocí služby převodu bankovních dat nebo převodem na SEPA](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md)
+## See Also  
+[Setting Up Data Exchange](across-set-up-data-exchange.md)  
+[Exchanging Data Electronically](across-data-exchange.md)
+[Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md)   
+[Make Payments with AMC Banking 365 Fundamentals extension or SEPA Credit Transfer](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md)   
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

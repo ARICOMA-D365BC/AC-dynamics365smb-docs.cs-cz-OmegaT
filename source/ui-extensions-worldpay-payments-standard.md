@@ -1,24 +1,29 @@
 ---
-title: WorldPay Payments Standard | Microsoft Docs
-description: Poskytuje informace o rozšíření WorldPay Payments Standard
+title: WorldPay Payments Standard| Microsoft Docs
+description: Provides information about the WorldPay Payments Standard extension
 services: project-madeira
 documentationcenter: ''
 author: bholtorf
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2018
+ms.date: 04/01/2021
 ms.author: bholtorf
+
 ---
-# <a name="the-worldpay-payments-standard-extension"></a>Rozšíření WorldPay Payments Standard
-Rozšíření WorldPay Payments Standard vám poskytuje možnost pohodlné alternativy pro zákazníky pro provádění plateb prostřednictvím bankovních převodů nebo kreditních karet. Nejenom to, platby provedené prostřednictvím platebních služeb přijdou obvykle na váš bankovní účet rychleji.
-Pokud rozšíření povolíte a odešlete prodejní fakturu nebo prodejní objednávku e-mailem, bude doklad obsahovat odkaz na platební službu v těle e-mailu a v přiloženém dokumentu PDF. Zákazník si může vybrat odkaz a poté provést platbu pomocí platební služby.
+# The WorldPay Payments Standard Extension
+The WorldPay Payments Standard extension lets you offer customers a convenient alternative to making payments through bank transfers or credit cards. Not only that, payments made through payment services will typically land in your bank account more quickly.
+If you enable the extension, and send a sales invoice or sales order by email, the document includes a link to the payment service in the email body and in the attached PDF document. A customer can choose the link, and then use the payment service to make the payment.
 
-Povolení rozšíření platebních služeb je zdarma, v [!INCLUDE[d365fin](includes/d365fin_md.md)], pro získání účtu však budete muset kontaktovat platební službu. Pro více informací navštivte [Povolení plateb zákazníkům prostřednictvím platebních služeb](sales-how-enable-payment-service-extensions.md).
+Enabling payment service extensions is free in [!INCLUDE[prod_short](includes/prod_short.md)], however, you will need to contact the payment service to get an account. For more information, see [Enable Customer Payment Through Payment Services](sales-how-enable-payment-service-extensions.md).
 
-## <a name="see-also"></a>Viz také
-[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření](ui-extensions.md)  
-[Nastavení Prodeje](sales-setup-sales.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
+[Setting Up Sales](sales-setup-sales.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

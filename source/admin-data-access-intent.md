@@ -3,53 +3,56 @@ title: Manage database access intent in Business Central | Microsoft Docs
 description: Change the database access intent for reports, API pages, and queries.
 author: jswymer
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 04/30/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Správa přístupu databáze
+# Managing Database Access Intent 
 
-Jako super uživatel nebo správce můžete změnit přístup k databázi například, k sestavám, stránkám typu API a databázovým dotazům, abyste zlepšili výkon služby.
+As a super user or administrator, you can change the database access intent on reports, pages of the type API, and queries to improve performance of the service.
 
-## Přehled
+## Overview
 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] lze nastavit tak, aby používaly repliky primární (číst-psát) databáze pouze pro čtení. Použití replikování databáze snižujete zatížení primární databáze. V některých případech to také zlepší výkon při prohlížení dat v klientovi. Repliky jsou výhodné pro objekty, jako jsou sestavy, dotazy a stránky rozhraní API, které se používají pouze pro zobrazení dat, nikoli pro úpravu dat.
+[!INCLUDE[prod_short](includes/prod_short.md)] can be set up to use read-only replicas of the primary (read-write) database. Using the database replica reduces the load on the primary database. In some cases, it will also improve the performance when viewing data in the client. Replicas are beneficial for objects, like reports, queries, and API pages, that are used for viewing data only, not modifying data.
 
-Při spuštění objektů určuje záměr přístupu k databázi, zda se použije replika pouze pro čtení, pokud je k dispozici, nebo se použije primární databáze. Sestavy, stránky API a databázové dotazy jsou vyvíjeny s předdefinovaným záměrem přístupu do databáze [vlastnostní DatabaseAccessIntent](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataaccessintent-property)).
+When objects run, the database access intent determines whether to use a read-only replica, if one is available, or the primary database. Reports, API pages, and queries are developed with a predefined database access intent (see [DatabaseAccessIntent property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataaccessintent-property)).
 
-Stránka **Seznam přístupu k databázi** umožňuje přepsat předdefinovaný záměr přístupu k databázi pro objekty při jejich spuštění.
+The **Database Access Intent List** page lets you override the predefined database access intent for objects when they're run.
 
-Z hlediska databáze je tato funkce běžně označována jako  *škálování čtení*. Další informace o možnostech škálování čtení a záměru přístupu k datům naleznete v [!INCLUDE[prodshort](includes/prodshort.md)], viz [využití škálování čtení pro lepší výkon](/dynamics365/business-central/dev-itpro/administration/database-read-scale-out-overview) v [!INCLUDE[prodshort](includes/prodshort.md)] Vývojařské a Administrátorské nápovědě.
+In database terms, this feature is commonly known as *read scale-out*. For more information about read-scale out and data access intent in [!INCLUDE[prod_short](includes/prod_short.md)], see [Utilizing Read Scale-Out for Better Performance](/dynamics365/business-central/dev-itpro/administration/database-read-scale-out-overview) in the [!INCLUDE[prod_short](includes/prod_short.md)] Developer and Administration help.
 
-## Změna přístupu k databázi
+## To change the database access intent
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Seznam přístupů k databázi** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Database Access Intent List**, and then choose the related link.
 
-   Na stránce jsou uvedeny všechny sestavy, stránky a dotazy. Sloupec **Záměr přístupu** obsahuje jednu z následujících hodnot:
+    The page lists all reports, pages, and queries. The **Access Intent** column includes one of the following values:
 
-   | **Nastavení** | **Popis** |
-   |------------|-------------|  
-   | **Výchozí** | Označuje, že objekt používá předdefinovaný záměr přístupu k databázi. |
-   | **Povolit zápis** | Nastaví objekt pro použití primární databáze, což umožňuje uživateli upravovat data. |
-   | **Jen pro čtení** | Nastaví objekt pro použití repliky databáze, což znamená, že uživatel může pouze zobrazit data, nikoli změnit data. |
+    |**Setting**|**Description**|  
+    |------------|-------------|  
+    |**Default**|Indicates that the object uses the predefined database access intent.|
+    |**Allow Write**|Sets the object to use the primary database, allowing the user to modify data.|
+    |**Read Only**|Sets the object to use the database replica, which means that the user can only view data, not change data.|
 
-2. Vyberte akci **Upravit seznam**.
+2. Choose the **Edit List** action.
 
-3. Na stránce **Upravit - Seznam záměru přístupu k databázi**, změňte pole **Záměr přístupu** pro objekt.
+3. On the **Edit - Database Access Intent List** page, change the **Access Intent** field for the objects.
 
-   > [!NOTE]
-   > Pokud je objekt, který lze upravovat, stejně jako zákaznická karta, nastaven na  **Jen pro čtení**, bude primární databáze stále používána, bez ohledu na záměr přístupu, který umožní uživatelům provádět změny obvyklým způsobem.
+    > [!NOTE]
+    > If an object that is editable, like the Customer Card, is set to **Read Only**, the primary database will still be used, regardless of the access intent, allowing users to make changes as normal.
 
-## Viz souvisejnící školení [Microsoft Learn](/learn/paths/deploy-configure-dynamics-365-business-central/)
+## See Related Training at [Microsoft Learn](/learn/paths/deploy-configure-dynamics-365-business-central/)
 
-## Viz také
-[Obchodní funkce](across-business-functionality.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Začínáme](product-get-started.md)
+## See Also
+[Business Functionality](across-business-functionality.md)  
+[General Business Functionality](ui-across-business-areas.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)    
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

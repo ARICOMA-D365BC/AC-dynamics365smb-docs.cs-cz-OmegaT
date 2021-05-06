@@ -1,47 +1,47 @@
 ---
-title: Zrušení Business Central | Microsoft Docs
-description: Popisuje, jak odebrat nebo odstranit prostředí Business Central.
-author: ZdenekBicek
+title: Unsubscribe or Remove Business Central
+description: Learn how to remove or delete your Business Central experience if you have a trial subscription, or if you have a paid subscription.
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: remove, delete
-ms.date: 01/10/2020
-ms.reviewer: v-zdbice
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Zrušení předplatného nebo odebrání [!INCLUDE[prodshort](includes/prodshort.md)]
+# Unsubscribe or Remove [!INCLUDE[prod_short](includes/prod_short.md)]
 
-Chcete-li přestat používat aplikaci [!INCLUDE[365fin](includes/d365fin_md.md)] můžete uzavřít svůj účet nebo odebrat licenci z Vašeho účtu. Kroky, které je třeba provést, se liší, pokud aktuálně používáte bezplatnou zkušební verzi nebo pokud máte předplatné.
+If you want to stop using [!INCLUDE[prod_short](includes/prod_short.md)], you can close your account or get the license removed from your account. The steps to take are different if you are currently using the free trial, or if you have a subscription.  
 
-## Ukončení bezplatné zkušební verze [!INCLUDE[d365fin](includes/d365fin_md.md)]
+## Closing your free trial of [!INCLUDE[prod_short](includes/prod_short.md)]
 
-Pokud jste se zaregistrovali do bezplatné zkušební verze a nechcete pokračovat s [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete svůj účet kdykoli zrušit. Před uzavřením účtu doporučujeme exportovat veškerá data.
+If you signed up for the free trial and do not want to continue with [!INCLUDE[prod_short](includes/prod_short.md)], you can close your account at any time. We recommend that you export any data before you close your account. 
 
-Musíte požádat správce Office 365, aby odebral předplatné zkušební verze z účtu vaší společnosti v [Microsoft 365 Admin Center](https://admin.microsoft.com/).
+You must ask your Microsoft 365 administrator to remove the trial subscription from your company's account in the [Microsoft 365 admin center](https://admin.microsoft.com/).  
 
-Pokud jste se zaregistrovali do účtu [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí obchodního účtu jiného než Office 365, nemáte správce Office 365. Místo toho se musíte zrušit předplatné tím, že se obrátíte na tým pro zrušení účtu [!INCLUDE[d365fin](includes/d365fin_md.md)], zasláním e-mailové zprávy na cancelbusinesscentra@microsoft.com. Do zprávy musíte zahrnout jméno Vašeho tenant účtu [!INCLUDE[d365fin](includes/d365fin_md.md)], abychom vás mohli identifikovat.Tyto informace najdete na stránce **Nápověda a podpora**. Další informace viz [Zdroje nápovědy a podpory](product-help-and-support.md).
+If you signed up for [!INCLUDE[prod_short](includes/prod_short.md)] using a non-Microsoft 365 business account, you do not have a Microsoft 365 administrator. Instead, you must unsubscribe by contacting the [!INCLUDE[prod_short](includes/prod_short.md)] Cancelation team by sending an email message at [cancelbusinesscentra@microsoft.com](mailto:cancelbusinesscentra@microsoft.com). You must include the name of your [!INCLUDE[prod_short](includes/prod_short.md)] tenant in the message so that we can identify you. You can find this information in the **Help and Support** page. For more information, see [Resources for Help and Support](product-help-and-support.md).  
 
-## Zrušení předplatného odebráním [!INCLUDE[d365fin](includes/d365fin_md.md)] z prostředí Office 365
+## Unsubscribing by removing [!INCLUDE[prod_short](includes/prod_short.md)] from your Microsoft 365 experience
 
-Pokud se vaše společnost přihlásila k předplatnému [!INCLUDE[d365fin](includes/d365fin_md.md)], ale vy jako uživatel již nepožadujete přístup, musíte požádat svého správce nebo svého obchodního partnera Dynamics 365, aby odstranil [!INCLUDE[d365fin](includes/d365fin_md.md)] licenci z vašeho uživatelského účtu Office 365. Pokud bude z vašeho uživatelského účtu odebrán [!INCLUDE[d365fin](includes/d365fin_md.md)] a vaše společnost bude pokračovat v předplatném, vaši spolupracovníci budou mít stále přístup k vašim sdíleným datům v [!INCLUDE[d365fin](includes/d365fin_md.md)] společnosti.
+If your company subscribes to [!INCLUDE[prod_short](includes/prod_short.md)] but you as a user no longer want access, you must ask your administrator or your Dynamics 365 reselling partner to remove the [!INCLUDE[prod_short](includes/prod_short.md)] license from your Microsoft 365 user account. If [!INCLUDE[prod_short](includes/prod_short.md)] is removed from your user account, and your company continues the subscription, your coworkers will still have access to your shared data in the [!INCLUDE[prod_short](includes/prod_short.md)] company.  
 
-Pokud chce vaše společnost zrušit předplatné [!INCLUDE[d365fin](includes/d365fin_md.md)], obchodní partner Dynamics 365 může odebrat placené předplatné z účtu společnosti. Další informace viz [Administrace Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration) v obsahu pro vývojáře a IT odborníky.
+If your company wants to unsubscribe from [!INCLUDE[prod_short](includes/prod_short.md)], the Dynamics 365 reselling partner can remove the paid subscription from the company's account. For more information, see [Administration of Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration) in the developer and IT-pro content.  
 
-Uživatelské účty a licence jsou spravovány v [Microsoft 365 admin center](https://admin.microsoft.com/). Pouze správci mohou odebrat licence [!INCLUDE[d365fin](includes/d365fin_md.md)] z uživatelských účtů nebo zrušit předplatné z Vašeho účtu společnosti.
+User accounts and licenses are managed in the [Microsoft 365 admin center](https://admin.microsoft.com/). Only administrators can remove [!INCLUDE[prod_short](includes/prod_short.md)] licenses from user accounts or remove the subscription from your company's account.  
 
-## Odebrání [!INCLUDE[d365fin](includes/d365fin_md.md)] z Vašeho spouštěče aplikací
+## Removing [!INCLUDE[prod_short](includes/prod_short.md)] from your app launcher
+If you want to hide [!INCLUDE[prod_short](includes/prod_short.md)] from your app launcher, you can quite simply unpin it. This does not remove any data, and it does not cancel your subscription.  
 
-Chcete-li skrýt [!INCLUDE[d365fin](includes/d365fin_md.md)] ze spouštěče aplikací, můžete jej jednoduše odebrat. Tím se neodstraní žádná data a nezruší se vaše předplatné.
+## See Also
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Creating New Companies](about-new-company.md)  
+[Exporting Your Business Data to Excel](about-export-data.md)  
+[Microsoft 365 admin center](https://admin.microsoft.com/)  
+[How long is the trial period and how do I cancel?](https://community.dynamics.com/business/b/financials/archive/2016/11/28/how-long-is-the-trial-period-and-how-do-i-cancel)  
 
-## Viz také
 
-[Začínáme](product-get-started.md)  
-[Vytváření nových společností](about-new-company.md)  
-[Export obchodních dat do aplikace Excel](about-export-data.md)  
-[Microsoft 365 Admin Center](https://admin.microsoft.com/)  
-[Jak dlouhé je zkušební období a jak jej zruším?](https://community.dynamics.com/business/b/financials/archive/2016/11/28/how-long-is-the-trial-period-and-how-do-i-cancel)  
+[!INCLUDE[footer-include](includes/footer-banner.md)]

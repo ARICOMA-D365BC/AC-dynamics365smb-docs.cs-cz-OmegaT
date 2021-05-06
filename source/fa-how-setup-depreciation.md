@@ -1,83 +1,90 @@
 ---
-title: Set Up FA Depreciation| Microsoft Docs
+title: Set Up FA Depreciation
 description: You specify in a depreciation book how you want fixed assets to be depreciated or written-down.
-author: SorenGP
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
 ms.search.keywords: write down
-ms.date: 04/01/2020
-ms.author: sgroespe
-
+ms.date: 04/01/2021
+ms.author: edupont
 ---
-# Nastavení odpisování dlouhodobého majetku
-Pro přípravu účetní závěrky a přiznání k dani z příjmu můžete použít různé metody odpisů. Mnoho velkých korporací používá ve svých účetních závěrkách lineární odpisy, protože to obecně umožňuje vykazovat vyšší zisky. Pro účely daně z příjmu však mnoho podniků používá metodu zrychleného odpisování, jako je odpis s klesajícím zůstatkem. Metodu odpisování majetku nastavíte v poli **Metoda odpisu** na stránce **Karta dlouhodobého majetku**. Další informace o různých metodách odepisování naleznete v [Metododách odpisu](fa-depreciation-methods.md).
 
-V knihách odpisů definujete různé způsoby, jak musí být odpisy kalkulovány pro váš dlouhodobý majetek. V každé knize můžete zadat jednotlivé podmínky odpisu. Můžete například určit, že v jedné knize se bude dlouhodobý majetek odepisovat po dobu tří a v druhé pěti let.
+# Set Up Fixed Asset Depreciation
 
-Po vytvoření příslušných odpisových knih musíte ke každému dlouhodobému majetku přiřadit právě jednu nebo více odpisových knih. Kniha odpisů, která je přiřazena dlouhodobému majetku, se označuje jako Kniha odpisů dlouhodobého majetku. Pro dlouhodobý majetek můžete nastavit neomezený počet knih odpisů.
+You can use various methods of depreciation for preparing financial statements and income tax returns. Many large corporations use straight-line depreciation in their financial statements because this generally permits reporting higher earnings. For income tax purposes, however, many businesses use an accelerated depreciation method, such as declining-balance depreciation. You define an asset's depreciation method with the **Depreciation Method** field on the **Fixed Asset Card** page. For more information about what the different methods do, see [Depreciation Methods](fa-depreciation-methods.md).
 
-## Vytvoření knihy odpisů
-V knize odpisů dlouhodobého majetku určíte způsob odpisování dlouhodobého majetku. Chcete-li vyhovět různým způsobům odpisování, můžete nastavit několik knih odpisů.
+You set up depreciation books where you define the different ways depreciation must be calculated for different types of fixed assets. Each depreciation book specifies individual depreciation terms. For example, you can specify that a fixed asset should be depreciated over a period of three years in one book and over a period of five years in another book.
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Knihy odpisů** související odkaz.
-2. Na stránce **Knihy odpisů**, vybrte tlačítko **Nový**.
-3. Na stránce **Karta knihy odpisů** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+When you have created the relevant depreciation books, you must assign one or more depreciation books to each fixed asset. A depreciation book that is assigned to a fixed asset is referred to as a fixed asset depreciation book. You can set up an unlimited number of depreciation books for a fixed asset.  
 
-   > [!NOTE]  
-   > Transakce s dlouhobým majetkem můžete evidovat na stránkách **Finanční deníky dlouhodobého majetku** nebo **Deník DM**, v závislosti na tom, zda jsou transakce určeny pro finanční výkazy nebo interní řízení. Dalším krokem definujte, který typ deníku se ve výchozím nastavení používá pro různé aktivity dlouhodobého majetku.
-4. V záložce **Integrace**, zaškrtněte políčko pro každou aktivitu dlouhodobého majetku, jejíž transakce chcete účtovat na stránce **Finanční deníky dlouhodobého majetku**.
-5. Opakujte kroky 2 až 4 pro každou metodu odpisování nebo metodu účtování, kterou chcete přiřadit dlouhodobému majetku jako odpisovou knihu.
+## To create a depreciation book
 
-## Přiřazení knihy odpisů k dlouhodobému majetku
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek** a vyberte související odkaz.
-2. Vyberte dlouhodobý majetek, pro který chcete nastavit knihu odpisů dlouhodobého majetku.
-3. V záložce **Kniha odpisů** vyplňte pole podle potřeby.
-4. Pokud potřebujete k dlouhodobému majetku přiřadit více než jednu knihu odpisů, zvolte tlačítko **Přidat další knihy odpisů.**
-5. Případně zvolte **Knihy odpisů** a určete jednu nebo více knih odpisů dlouhodobého majetku.
+In a fixed asset depreciation book, you specify how fixed assets are depreciated. To accommodate various methods of depreciation, you can set up multiple depreciation books.  
 
-   > [!NOTE]  
-   > Pokud používáte metodu ručního odpisování, musíte do deníku deníky dlouhodobého majetku zadávat odpisy ručně. Funkce **Vypočet odpisů** vynechává dlouhodobý majetek, který používá metodu ručního odpisování. Tuto metodu můžete použít pro majetek, který nepodléhá odpisům, například pozemky.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.
+2. On the **Depreciation Books List** page, choose the **New** action.
+3. On the **Depreciation Book Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## Přiřazení knihy odpisů k více DM pomocí dávkové úlohy
-Pokud chcete přiřadit knihu odpisů k několika dlouhodobým majetkům, můžete použít dávkovou úlohu **Vytvořit knihy odpisů DM** k vytvoření knih odpisů dlouhodobého majetku.
+    > [!NOTE]  
+    > You can record fixed asset transactions on the **Fixed Asset G/L Journal** page or on the **Fixed Asset Journal** page, depending on whether the transactions are for financial reporting or for internal management. Follow the next step to define which type of journal is used for the different fixed asset activities by default.
+4. On the **Integration** FastTab, select the check box for each fixed asset activity whose transactions you want to post using the **Fixed Asset G/L Journal** page.
+5. Repeat steps 2 through 4 for each depreciation method or posting method that you want to assign to fixed assets as a depreciation book.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek** a vyberte související odkaz.
-2. Vyberte dlouhodobý majetek, pro který chcete nastavit knihu odpisů, a poté vyberte akci **Upravit**.
-3. Na stránce **Karta knihy odpisů** vyberte funkci **Vytvořit knihy odpisů DM**.
-4. Na stránce **Vytvořit knihy odpisů DM**, vyplňte pole **Knihy odpisů**.
-5. Vyberte pole **Kopie z DM číslo:** a vyberte číslo dlouhodobého majetku, které chcete použít jako základ pro vytváření nových knih odpisů dlouhodobého majetku.
+> [!IMPORTANT]
+> Choose the **Use Rounding in Periodic Depr.** field to round the calculated periodic depreciation amounts to whole numbers. For example, if your company also uses invoice rounding to whole numbers in the **General Ledger Setup** page, rounding also depreciation amounts to whole numbers can help provide transparency.
 
-   Pokud toto pole vyplníte, budou pole odpisů v nových knihách odpisů dlouhodobého majetku obsahovat stejné informace jako odpovídající pole v knize odpisů dlouhodobého majetku, ze které kopírujete. Pokud chcete vytvořit nové knihy odpisů dlouhodobého majetku s prázdnými poli odpisů, ponechejte toto pole prázdné.
-6. Na záložce **Dlouhodobý majetek**, můžete nastavit filtr pro výběr majetku, pro který chcete vytvořit knihy odpisů dlouhodobého majetku.
-7. Vyberte tlačítko **OK**.
+For example, if you dispose of a fixed asset where the depreciation book does not specify rounding, but your company's general ledger setup requires rounding, then, when you dispose of the fixed asset, you will see an error message that an amount must be rounded on a ledger entry.  
 
-## Nastavení typů účtování odpisů
-Pro každou knihu odpisů je nutné nastavit požadované nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)] pro zpracování různých typů účtování. Například, zda by účtování mělo být debetní nebo kreditní a zda by typ účtování měl být zahrnut do odpisovatelného základu.
+## To assign a depreciation book to a fixed asset
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+2. Select the fixed asset that you want to set up a fixed asset depreciation book for.
+3. On the **Depreciation Book** FastTab, fill in the fields as necessary.
+4. If you need to assign more than one depreciation book to the fixed asset, choose the **Add More Depreciation Books** action.
+5. Alternatively, choose the **Depreciation Books** action to specify one or more fixed asset depreciation books.
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Knihy odpisů** související odkaz.
-2. Vyberte knihu odpisů, kterou chcete nastavit, a zvolte **Nastavení typu účtování DM**.
-3. Na stránce **Nast.typu účtování DM** vyplňte pole podle potřeby.
+    > [!NOTE]  
+    >   When you use the manual depreciation method, you must enter depreciation manually in the fixed asset G/L journal. The **Calculate Depreciation** function omits fixed assets that use the manual depreciation method. You can use this method for assets that are not subject to depreciation, such as land.
 
-   > [!NOTE]  
-   > Na stránce **Nast.typu účtování DM** nelze vkládat ani mazat řádky. Můžete upravit pouze existující řádky.
+## To assign a depreciation book to multiple fixed assets with a batch job
+If you want to assign a depreciation book to several fixed assets, you can use the **Create FA Depreciation Books** batch job to create fixed asset depreciation books.  
 
-Doporučujeme neměnit nastavení pro odpisy u položek, které již byly zaúčtovány. Změny neovlivní položky, které jsou již zaúčtovány, což by učinilo statistiky knihy odpisů zavádějícími.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+2. Select the fixed asset that you want to set up a assign a depreciation book to, and then choose the **Edit** action.
+3. On the **Depreciation Book Card** page, choose the **Create FA Depreciation Books** action.
+4. On the **Create FA Depreciation Books** page, fill in the **Depreciation Book** field.
+5. Choose the **Copy from FA No.** field, and then select the fixed asset number that you want to use as the basis for creating new fixed asset depreciation books.
 
-## Nastavení výchozích šablon a dávek pro odpisy dlouhodobého majetku
-Pro každou knihu odpisů definujete výchozí nastavení šablon a dávek. Tato výchozí nastavení použijete k duplikování řádků z jednoho deníku do druhého, k vytváření řádků deníku pomocí dávkových úloh **Výpočet odpisů** nebo **Indexace dlouhodobého majetku**, zdvojení pořizovacích nákladů v deníku pojištění .
+    If you fill in this field, the depreciation fields in the new fixed asset depreciation books will contain the same information as the corresponding fields in the fixed asset depreciation book that you copy from. Leave the field blank if you want to create new fixed asset depreciation books with empty depreciation fields.  
+6. On the **Fixed Asset** FastTab, you can set a filter to select the assets that you want to create the fixed asset depreciation books for.
+7. Choose the **OK** button.
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Knihy odpisů** související odkaz.
-2. Vyberte knihu odpisů, pro kterou chcete definovat výchozí deníky, a pak zvolte **Nastavení deníku DM**.
-3. Pokud chcete mít výchozí nastavení pro každého uživatele, vyberte pole **ID uživatele** ze stránky **Uživatelé**.
-4. V ostatních polích vyberte šablonu deníku nebo list deníku, který musí být použit ve výchozím nastavení.
+## To set up depreciation posting types
+For each depreciation book, you must set up how you want [!INCLUDE[prod_short](includes/prod_short.md)] to handle various posting types. For example, whether posting should be debit or credit and whether the posting type should be included in the depreciable basis.  
 
-## Viz také
-[Nastavení dlouhodobého majetku](fa-setup.md)  
-[Dlouhodobý majetek](fa-manage.md)  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.  
+2. Select the depreciation book that you want to set up, and them choose the **FA Posting Type Setup** action.
+3. On the **FA Posting Type Setup** page, fill in the fields as necessary.
+
+    > [!NOTE]  
+    >   You cannot insert or delete lines on the **FA Posting Type Setup** page. You can only modify the existing lines.
+
+We recommend that you do not change the setup for depreciation books for entries that have already been posted. Changes will not affect the entries that are already posted, which would make depreciation book statistics misleading.
+
+## To set up default templates and batches for fixed asset depreciation
+For each depreciation book, you define a default setup of templates and batches. You use these defaults to duplicate lines from one journal to another, create journal lines using the **Calculate Depreciation** or **Index Fixed Assets** batch jobs, duplicate acquisition costs in the insurance journal.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.  
+2. Select the depreciation book that you want to define default journals for, and then choose the **FA Journal Setup** action.  
+3. If you want to have a default setup for each user, choose the **User ID** field to select from the **Users** page.  
+4. In the other fields, select the journal template or journal batch that must be used by default.  
+
+## See Also
+[Setting Up Fixed Assets](fa-setup.md)  
+[Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,30 +1,32 @@
 ---
 title: "View Database Locks"
+description: Learn how you can view information about any database locks right from the client interface in Business Central.
 author: jswymer
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Prohlížení zámku databáze
+# Viewing Database Locks
 
-## O zámcích
+Database locking controls access by multiple users to the same data at the same time. To protect a transaction against other transactions modifying the same data, the first transaction puts a lock on the data. The lock remains until the transaction's done.
 
-Uzamykání databáze řídí přístup uživatelů ke stejným datům současně. Aby byly transakce chráněny před jinými transakcemi upravujícími stejná data, první transakce zamkne data. Zámek zůstává, dokud není transakce dokončena.
+Users may be blocked from completing transactions on the locked data. They'll typically get a message that indicates the lock condition.
 
-Uživatelé mohou být blokováni v provádění transakcí na uzamčených datech. Obvykle se jim zobrazí zpráva, která označuje stav uzamčení.
+## To view database locks
 
-## Zobrazení zámků databáze
+Choose the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Database Locks**, and then choose the related link.
 
-Zvolte ikonu ![Hledat stránku nebo sestavu](media/ui-search/search_small.png "ikona Hledat stránku nebo sestavu"), zadejte **Uzamčení databáze** a poté zvolte související odkaz.
+The **Database Locks** page gives snapshot of all current database locks.
 
-Stránka **Uzamčení databáze** poskytuje snímek všech aktuálních uzamčení databáze.
+For more information about database locking, see [Monitoring Database Locks](/dynamics365/business-central/dev-itpro/administration/monitor-database-locks) in the Business Central Developer and IT Pro help.
 
-Pro více informací o uzamčení databáze navštivte [Sledování zámků databáze](/dynamics365/business-central/dev-itpro/administration/monitor-database-locks) v Business Central Developer and IT Pro help.
+## See Also
 
-## Viz také
+[Monitor Database Locks](/dynamics365/business-central/dev-itpro/administration/monitor-database-locks) 
 
-[Sledování zámků databáze](/dynamics365/business-central/dev-itpro/administration/monitor-database-locks)
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

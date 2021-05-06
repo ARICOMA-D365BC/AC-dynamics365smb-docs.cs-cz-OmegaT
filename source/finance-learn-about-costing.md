@@ -4,36 +4,39 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Ocenění zásob
-Správa nákladů zásob se týká zaznamenávání a vykazování provozních nákladů podniku. Zahrnuje vykazování výrobních a skladových nákladů.
+# About Inventory Costing
+Managing inventory costs is concerned with recording and reporting business operating costs. It includes the reporting of manufacturing costs and inventory costs, that is, the value of items.  
 
-Základní principy, které je třeba pochopit, jsou, že metody ocenění definují způsob oceňování zboží při opuštění zásob, že úprava nákladů aktualizuje náklady na prodané zboží se souvisejícími nákupními náklady zaúčtovanými po prodeji a že hodnoty zásob musí být zaúčtovány na vyhrazené finanční účty v pravidelných intervalech.
+ Central principles to understand are that costing methods define how items are valued when they leave inventory, that cost adjustment updates the cost of goods sold with related purchase costs posted after the sale, and that inventory values must be posted to dedicated G/L accounts at regular intervals.  
 
-Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
+ The following table describes a sequence of tasks, with links to the topics that describe them.   
 
-| **K** | **Videní** |
+|**To**|**See**|  
 |------------|-------------|  
-| Rozlište pět různých metod oceňování a jejich vliv na toky nákladů. | [Detaily návrhu: Metody ocenění](design-details-costing-methods.md) |
-| Zjistěte, jak položky vyrovnání zboží dynamicky propojují snižování zásob se zvýšením, aby se udržela kontrola nákladových toků. | [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md) |
-| Naučte se, jak se jednotková cena zboží průběžně aktualizuje s náklady na její poslední transakci podle metody ocenění zboží. | [Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md) |
-| Naučte se, jak se průměrné náklady zboží dynamicky vypočítávají podle vybraného období průměrných nákladů. | [Detaily návrhu: Průměrné náklady](design-details-average-cost.md) |
-| Odlište očekávané náklady (dosud nevyfakturované) od skutečných nákladů a zjistěte, jak je to spravováno v hlavní knize. | [Detaily návrhu: Účtování očekávaných nákladů](design-details-expected-cost-posting.md) |
-| Seznamte se s mechanismem úpravy nákladů, který zajišťuje, že náklady jsou posunuty dopředu i v případě, že skladové transakce probíhají náhodným způsobem. | [Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md) |
-| Přečtěte si, proč standardní náklady často používají výrobní společnosti jako základ pro oceňování komponent a koncového zboží. | [Výpočet pevné pořizovací ceny](finance-about-calculating-standard-cost.md) |
-| Pochopte, jak se hodnota zásob odráží v hlavní knize. | [Vykazování nákladů a sladění s hlavní knihou](finance-report-costs-and-reconcile-with-the-general-ledger.md) |
-| Naučte se, jak poplatky za zboží, jako jsou náklady na dopravu a pojištění, mohou přiřadit další složky nákladů jednotkovým nákladům zboží. | [Použijte poplatky za zboží k účtování dalších obchodních nákladů](payables-how-assign-item-charges.md) |
-| Přečtěte si, jak období zásob pomáhají společnosti kontrolovat hodnotu zásob v průběhu času definováním kratších období, které lze uzavřít pro zaúčtování v průběhu fiskálního roku. | [Práce s obdobími zásob](finance-how-to-work-with-inventory-periods.md) |
-| Je vhodné porozumět všem mechanismům v modulu ocenění, včetně toho, co se stane, když odešlete montážní a výrobní transakce. | [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md) |
+|Distinguish the five different costing methods and their effect on cost flows.|[Design Details: Costing Methods](design-details-costing-methods.md)|  
+|Learn how item application entries dynamically link inventory decreases with increases to keep control of cost flows.|[Design Details: Item Application](design-details-item-application.md)|  
+|Learn how an item's unit cost is continuously updated with the cost of its latest transaction according to the item's costing method.|[Design Details: Cost Adjustment](design-details-cost-adjustment.md)|  
+|Learn how an item's average cost is dynamically calculated according to the selected average cost period.|[Design Details: Average Cost](design-details-average-cost.md)|  
+|Distinguish expected cost (not yet invoiced) from actual cost and learn how it is managed in the general ledger.|[Design Details: Expected Cost Posting](design-details-expected-cost-posting.md)|  
+|Understand the cost adjustment mechanism, which ensures that costs are brought forward even if inventory transactions happen in a random manner.|[Design Details: Cost Adjustment](design-details-cost-adjustment.md)|  
+|Read why standard costs are often used by manufacturing companies as a valuation base for components and end items.|[About Calculating Standard Cost](finance-about-calculating-standard-cost.md)|  
+|Understand how the value of inventory is reflected in the general ledger.|[Reconcile Inventory Costs with the General Ledger](finance-how-to-post-inventory-costs-to-the-general-ledger.md)|  
+|Learn how item charges, such as freight and insurance, can assign additional cost components to an item's unit cost.|[Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md)|  
+|Read how inventory periods help a company to control inventory value over time by defining shorter periods that can be closed for posting as the fiscal year progresses.|[Work with Inventory Periods](finance-how-to-work-with-inventory-periods.md)|  
+|Understand all mechanisms in the costing engine, including what happens when you post assembly and production transactions.|[Design Details: Inventory Costing](design-details-inventory-costing.md)|  
 
-## Viz také
-[Správa nákladů zásob](finance-manage-inventory-costs.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Managing Inventory Costs](finance-manage-inventory-costs.md)    
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

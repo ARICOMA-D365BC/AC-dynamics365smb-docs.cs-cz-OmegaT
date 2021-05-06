@@ -1,77 +1,112 @@
 ---
-title: Vytvoření karet zboží pro zboží a služby | Microsoft Docs
-description: 'Vytvoření karty zboží pro služby, které prodáváte v hodinách a pro fyzické produkty, jako je zboží, hotové výrobky, komponenty nebo suroviny, které prodáváte ze svých zásob.'
-documentationcenter: ''
+title: Create Item Cards for Goods or Services| Microsoft Docs
+description: You create item cards for services that you sell as hours and for physical products, such as assembly items, finished goods, components, or raw material, that you sell from your inventory.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'item, finished good, component, raw material, assembly item'
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.search.keywords: item, finished good, component, raw material, assembly item
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="register-new-items"></a>Evidence nového zboží
-Zboží, mimo jiné, je základem vašeho podnikání, výrobků nebo služeb, se kterými obchodujete. Každé zboží musí být evidováno jako karta zboží.
+# Register New Items
 
-Karty zboží obsahují informace, které jsou nutné k nákupu, skladování, prodeji, doručení a účtu zboží.
+Items, among other products, are the basis of your business, the goods or services that you trade in. Each item must be registered as an item card.
 
-Karta zboží může být typu **Zásoby**, **Služby** nebo **Neskladované** k určení, zda je zboží fyzickou skladovou jednotkou, jednotkou pracovní doby nebo fyzickou jednotkou, která není sledována ve skladě. Pro více informací navštivte [O typech zboží](inventory-about-item-types.md).
+Item cards hold the information that is required to buy, store, sell, deliver, and account for items.
 
-Zboží lze strukturovat jako nadřazené s podřízeným zbožím v kusovníku. V [!INCLUDE[d365fin](includes/d365fin_md.md)], může být kusovník buď kusovníkem montáže nebo výrobním kusovníkem v závislosti na jeho použití. Pro více informací navštivte [Práce s kusovníkem](inventory-how-work-BOMs.md).
+The item card can be of type **Inventory**, **Service**, or **Non-Inventory** to specify if the item is a physical inventory unit, a labor time unit, or a physical unit that is not tracked in inventory. For more information, see [About Item Types](inventory-about-item-types.md).
 
-Pokud zakoupíte stejné zboží od více než jednoho dodavatele, můžete ho připojit k dané kartě zboží. Dodavatelé se poté zobrazí na stránce **Katalog dodavatelů zboží**, takže můžete snadno vybrat alternativního dodavatele.
+An item can be structured as a parent item with underlying child items in a bill of materials (BOM). In [!INCLUDE[prod_short](includes/prod_short.md)], a bill of material can be either an assembly BOM or a production BOM, depending on its use. For more information, see [Work with Bills of Material](inventory-how-work-BOMs.md).
 
-Zboží, které nabízíte svým zákazníkům, ale nechcete ve svém systému spravovat, dokud je nezačnete prodávat, lze nastavit jako zboží v katalogu. Zboží v katalogu se nesmí zaměňovat s běžným zbožím typu **Neskladované**. Pro více informací navštivte [Práce s katalogovým zbožím](inventory-how-work-nonstock-items.md).  
+If you purchase the same item from more than one vendor, you can connect those vendors to the item card. The vendors will then appear on the **Item Vendor Catalog** page, so that you can easily select an alternate vendor.
+
+Items that you offer to your customers but you do not want manage in your system until you start selling them can be set up as catalog items. Catalog items are not to be mistaken with regular items of type **Non-Inventory**. For more information, see [Work with Catalog Items](inventory-how-work-nonstock-items.md).  
 
 > [!NOTE]  
-> Pokud existují šablony zboží pro různé typy zboží, objeví se stránka, když vytvoříte novou kartu zboží, odkud můžete vybrat vhodnou šablonu. Pokud existuje pouze jedna šablona zboží, pak nové karty zboží používají vždy tuto šablonu.
+> If item templates exist for different item types, then a page appears when you create a new item card from where you can select an appropriate template. If only one item template exists, then new item cards always use that template.
 
-## <a name="to-create-a-new-item-card"></a>Vytvoření nové karty zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.  
-2. Na stránce **Zboží** vyberte akci **Nový**.
+The following procedure explains how to create an item card from scratch. You can also create new item cards by copying existing ones. For more information, see [Copy Existing Items to Create New Items](inventory-how-copy-items.md).  
 
-    Pokud existuje pouze jedna šablona zboží, otevře se nová karta zboží s několika poli vyplněnými informacemi ze šablony.
-3. Na stránce **Vybrat šablonu pro nové zboží** vyberte šablonu, kterou chcete použít pro novou kartu zboží.
-4. Zvolte tlačítko **OK**. Otevře se nová karta zboží s některými poli vyplněnými informacemi ze šablony.
-5. Postupujte podle potřeby tak, že vyplníte nebo změníte pole na kartě zboží. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+> [!Video https://www.microsoft.com/videoplayer/embed/RE47eLx?rel=0]
+
+## To create a new item card
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
+2. On the **Items** page, choose the **New** action.
+
+    If only one item template exists, then a new item card opens with some fields filled with information from the template.
+3. On the **Select a template for a new item** page, choose the template that you want to use for the new item card.
+4. Choose the **OK** button. A new item card opens with some fields filled with information from the template.
+5. Proceed to fill or change fields on the item card as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!NOTE]
-> V poli **Metoda ocenění** stanovíte, jak se vypočítají jednotkové náklady zboží, a to tak, že budete předpokládat tok fyzického zboží vaší společností. V závislosti na type zboží je k dispozici pět metod ocenění. Pro více informací navštivte [Podrobnosti o designu: Metody ocenění](design-details-costing-methods.md).
+> In the **Costing Method** field, you set up how the item's unit cost is calculated by making assumptions about the flow of physical items through your company. Five costing methods are available, depending on the type of item. For more information, see [Design Details: Costing Methods](design-details-costing-methods.md).
 >
-> Pokud vyberete **Průměr**, pak se jednotková cena zboží vypočítá jako průměrná jednotková cena v každém okamžiku po nákupu. Zásoby se oceňují s předpokladem, že všechny zásoby se prodávají současně. S tímto nastavením můžete vybrat pole **Pořizovací ceny** pro zobrazení historie transakcí, z nichž se vypočítávají průměrné náklady, na stránce **Přehled výpočtu průměrné  pořizovací ceny**.
+> If you select **Average**, then the item's unit cost is calculated as the average unit cost at each point in time after a purchase. Inventory is valuated with the assumption that all inventories are sold simultaneously. With this setting, you can choose the **Unit Cost** field to view, on the **Average Cost Calc. Overview** page, the history of transactions that the average cost is calculated from.
 
-Na záložce **Cena a účtování** můžete zobrazit zvláštní ceny nebo slevy, které udělujete za dané zboží, pokud jsou splněna určitá kritéria, jako je zákazník, minimální objednávkové množství nebo datum ukončení. Každý řádek představuje zvláštní cenu nebo řádkovou slevu. Každý sloupec představuje kritérium, které musí platit, aby se zaručila zvláštní cena, kterou zadáte do pole **Jednotková cena**, nebo řádková sleva, kterou zadáte do pole **Řádková sleva %**. Pro více informací navštivte [Zaznamenat prodejní cenu, slevu a platební smlouvy](sales-how-record-sales-price-discount-payment-agreements.md).
+You can view or edit special prices or discounts that you grant, or that your vendor grants you, for the item if certain criteria are met, such as customer, minimum order quantity, or ending date. You do this by choosing the **Set Special Prices** or **Set Special Discounts** actions. Each row on, for example, the **Sales Prices** page represents a special price. Each column represents a criterion that must apply to grant a customer the special price that you enter in the **Unit Price** field on the **Sales Prices** page. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md) or [Record Special Purchase Prices and Discounts](purchasing-how-record-purchase-price-discount-payment-agreements.md).
 
-Položka je nyní evidovaná a karta zboží je připravena k použití v nákupních a prodejních dokladech.
+The item is now registered, and the item card is ready to be used on purchase and sales documents.
 
-Chcete-li tuto kartu zboží použít jako šablonu při vytváření nových karet zboží, můžete ji uložit jako šablonu. Pro další informace se podívejte na následující sekci.
+If you want to use this item card as a template when you create new item cards, you can save it as a template. For more information, see the following section.  
 
-## <a name="to-save-the-item-card-as-a-template"></a>Uložení karty zboží jako šablony
-1. Na stránce **Karta zboží**, vyberte akci **Uložit jako šablonu**. Stránka **Šablona zboží** otevírá kartu zboží jako šablonu.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Chcete-li znovu použít dimenze v šablonách, zvolte akci **Dimenze**. Stránka **Šablony dimenzí** otevírá jakékoli kódy dimenzí, které jsou pro dané zboží nastaveny.
-4. Upravte nebo zadejte kódy dimenzí, které se budou vztahovat na nové karty zboží vytvořené pomocí šablony.
-5. Po dokončení nové šablony zboží vyberte tlačítko **OK** .
+### To save the item card as a template
 
-Šablona zboží je přidána do seznamu šablon zboží, takže ji můžete použít k vytvoření nových karet zboží.
+1. On the **Item Card** page, choose the **Save as Template** action. The **Item Template** page opens showing the item card as a template.
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. To reuse dimensions in templates, choose the **Dimensions** action. The **Dimension Templates** page opens showing any dimension codes that are set up for the item.
+4. Edit or enter dimension codes that will apply to new item cards created by using the template.
+5. When you have completed the new item template, choose the **OK** button.
 
-## <a name="to-set-up-multiple-vendors-for-an-item"></a>Nastavení více dodavatelů pro zboží  
-Pokud zakoupíte stejné zboží od více než jednoho dodavatele, musíte zadat informace o každém dodavateli zboží, jako jsou ceny, dodací lhůta, slevy atd.  
+The item template is added to the list of item templates, so that you can use it to create new item cards.
 
-1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.  
-2.  Vyberte příslušné zboží a pak zvolte akci **Upravit**.  
-3.  Zvolte akci **Dodavatelé**.  
-4.  Vyberte pole **Číslo dodavatele** a poté vyberte dodavatele, kterého chcete pro zboží nastavit.  
-5.  Volitelně vyplňte zbývající pole.  
-6.  Opakujte kroky 2 až 5 pro každého dodavatele, od kterého chcete zboží koupit.
+### Items used in production orders
 
-Dodavatelé se nyní objeví na stránce **Katalog zboží dodavatele**, kterou otevřete z karty zboží, abyste si mohli snadno vybrat alternativního dodavatele.
+If you want to register items that are then used in production orders, you specify the replenishment system as *Prod. order* on the **Replenishment** FastTab. For more information, see [About Production Orders](production-about-production-orders.md).  
 
-## <a name="see-also"></a>Viz také
-[Vytváření číselné řady](ui-create-number-series.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Prodej](sales-manage-sales.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To set up multiple vendors for an item
+
+If you purchase the same item from more than one vendor, you must enter information about each vendor of the item, such as prices, lead time, discounts, and so on.  
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
+2. Select the relevant item, and then choose the **Edit** action.  
+3. Choose the **Vendors** action.  
+4. Choose the **Vendor No.** field, and then select the vendor that you want to set up for the item.  
+5. Optionally, fill in the remaining fields.  
+6. Repeat steps 2 through 5 for each vendor that you want to buy the item from.
+
+The vendors will now appear on the **Item Vendor Catalog** page, which you open from the item card, so that you can easily select an alternate vendor.
+
+## Categories, attributes, and variants
+
+[!INCLUDE[inventory_variant](includes/inventory_variant.md)]
+
+## Deleting item cards
+
+If you have posted a transaction for an item, you cannot delete the card because the ledger entries may be needed for inventory valuation or auditing. To delete item cards with ledger entries, contact to Microsoft partner to do so through code.  
+
+## Manage inventory in warehouses
+
+When you register a new item, you will see fields that are related to warehouse management, especially on the **Warehouse** FastTab. If your organization does not use the warehouse management capabilities in [!INCLUDE [prod_short](includes/prod_short.md)], then you can ignore those fields.  
+
+If your organization later sets up warehouse management, in most cases, you must then go back to each existing item to make sure that it has the right information in the various fields, so that the warehouse processes can run as expected. This information can includes fields such as **Warehouse Class Code** or **Put-away Template Code**. For more information, see [Design Details: Warehouse Setup](design-details-warehouse-setup.md).  
+
+## See Also
+
+[Inventory](inventory-manage-inventory.md)  
+[Set Up Units of Measure](inventory-how-setup-units-of-measure.md)  
+[Tariff numbers](finance-how-setup-report-intrastat.md#tariff-numbers)  
+[Reconcile Inventory Costs with the General Ledger](finance-how-to-post-inventory-costs-to-the-general-ledger.md)  
+[Create Number Series](ui-create-number-series.md)  
+[Setting Up Posting Groups](finance-posting-groups.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Sales](sales-manage-sales.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

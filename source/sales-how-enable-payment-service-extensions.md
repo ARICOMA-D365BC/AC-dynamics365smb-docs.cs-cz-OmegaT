@@ -1,41 +1,46 @@
 ---
-title: Povolení plateb zákazníků prostřednictvím platebních služeb | Microsoft Docs
-description: Usnadníte zákazníkům zaplacení faktur povolením platebních služeb.
+title: Enable Customer Payments Through Payment Services| Microsoft Docs
+description: Make it easier for customers to pay their invoices by enabling payment services.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: online payment
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="enable-customer-payments-through-payment-services"></a>Povolení platby zákazníků prostřednictvím platebních služeb
-Jako alternativu k vybírání plateb prostřednictvím bankovních převodů nebo kreditních karet vám vaši zákazníci mohou zaplatit prostřednictvím svého účtu u platebních služeb, jako je například Microsoft Pay, PayPal nebo WorldPay.  
+# Enable Customer Payments Through Payment Services
+As an alternative to collecting payments through bank transfer or credit cards, your customers can pay you through their account with payment services, such as Microsoft Pay, PayPal, or WorldPay.  
 
-Po povolení platebních služeb v [!INCLUDE[d365fin](includes/d365fin_md.md)], je k dispozici odkaz na tuto službu v prodejních dokladech, které odesíláte e-mailem vašim zákazníkům. Zákazníci mohou pomocí tohoto odkazu přejít na platební službu a zaplatit účet přímo z prodejního dokladu. Pokud nechcete zahrnout odkaz, například pokud zákazník zaplatí hotovostí, můžete před zaúčtováním odebrat platební službu z faktury.  
+After you enable a payment service in [!INCLUDE[prod_short](includes/prod_short.md)], a link to the service is available on sales documents that you send by email to your customers. Customers can use the link to go to the payment service and pay the bill, directly from the sales document. If you don't want to include the link, for example, if a customer will pay with cash, you can remove the payment service from the invoice before posting.  
 
-V [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou instalovány standardní rozšíření Microsoft Pay, PayPal Payments Standard a WorldPay Payments a jsou připraveny k povolení.  
+The Microsoft Pay, PayPal Payments Standard, and WorldPay Payments Standard extensions are installed in [!INCLUDE[prod_short](includes/prod_short.md)], and are ready for you to enable.  
 
-## <a name="to-enable-a-payment-service-in-included365finincludesd365fin_mdmd"></a>Povolení platební služby v [!INCLUDE[d365fin](includes/d365fin_md.md)]
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Služby pro platby** a poté vyberte související odkaz.  
-2. Na stránce **Služby pro platby**, vyberte akci **Nové**.  
-3. Vyberte platební službu a poté zavřete stránku.  
-4. Na stránce **Služby pro platby**, vyberte akci **Instalace**.  
-5. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
-6. Zavřete stránku.  
+## To enable a payment service in [!INCLUDE[prod_short](includes/prod_short.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Services**, and then choose the related link.  
+2. On the **Payment Services** page, choose the **New** action.  
+3. Select the payment service, and then close the page.  
+4. On the **Payment Services** page, choose the **Setup** action.  
+5. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+6. Close the page.  
 
-## <a name="to-select-a-payment-service-on-a-sales-invoice"></a>Pro výběr platební služby na prodejní faktuře
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní faktury** a poté vyberte související odkaz.  
-2. Otevřete prodejní fakturu, kterou chcete uhradit pomocí platební služby.  
-3. Na poli **Služby pro platby**, vyberte platební službu.  
+## To select a payment service on a sales invoice
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.  
+2. Open the sales invoice that you want to pay by using the payment service.  
+3. In the **Payment Service** field, choose the payment service.  
 
     > [!NOTE]  
-    > Pole **Služby pro platby** je k dispozici pouze v případě, že jste povolili platební službu.  
+    > The **Payment Service** field is available only if you've enabled the payment service.  
 
-## <a name="see-also"></a>Viz také  
-[Nastavení Prodeje](sales-setup-sales.md)  
-[Prodej](sales-manage-sales.md)  
-[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření](ui-extensions.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+## See Also  
+[Setting Up Sales](sales-setup-sales.md)  
+[Sales](sales-manage-sales.md)  
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

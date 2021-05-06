@@ -1,32 +1,33 @@
 ---
-title: "Jak na to" Videa k používání Business Central | Microsoft Docs
-description: Poskytuje přístup k úvodním videím, která ilustrují, jak provádět běžné úkoly.
-services: project-madeira
-documentationcenter: ''
-author: ZdenekBicek
+title: How Do I Videos on Using Business Central | Microsoft Docs
+description: Provides access to getting-started videos that illustrate how to do common tasks.
+author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: video, library, how to
-ms.date: 01/10/2020
-ms:reviewer: v-zdbice
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Navštivte naši video knihovnu
+# Visit Our Video Library
 
-Víme, že někteří lidé raději vidí obsah než jej čtou. Za tímto účelem vytváříme krátká, snadno stravitelná videa, která jsou buď samostatná, nebo doplňují naši uživatelskou pomoc.
+We know that some people prefer to watch content rather than read it. To that end, we're producing short, easily digestible videos that either stand alone, or supplement our user assistance.  
 
-K videím máte přístup několika způsoby. Když spustíte [!INCLUDE[d365fin](includes/d365fin_md.md)] poprvé, můžete spustit videa z uvítací stránky, která se zobrazí. Pokud již pracujete v [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete se do knihovny dostat z rolí **Obchodní ředitel** a **Účtárna** pomocí  dlaždice **Videa o produktech**.
+If you are new to [!INCLUDE[prod_short](includes/prod_short.md)], you can launch the introduction videos from the welcome page that displays. If you're already working in [!INCLUDE[prod_short](includes/prod_short.md)], you can get to the library from the **Business Manager** and **Accountant** Role Centers by choosing the **Product Videos** tile.  
 
-Na kanálu YouTube, který jsme vytvořili pro [!INCLUDE[d365fin](includes/d365fin_md.md)], si můžete také prohlédnout naše videa „Jak na to“ a spoustu dalšího obsahu. Chcete-li kanál nyní navštívit, [klikněte zde](https://go.microsoft.com/fwlink/?linkid=851533).
+You can also view our "how to" videos, plus a lot of other content, on the YouTube playlist that we created for [!INCLUDE[prod_short](includes/prod_short.md)]. To visit the videos now, [click here](https://go.microsoft.com/fwlink/?linkid=851533).
 
 > [!Tip]  
-> Videa v knihovně se zobrazují v rámečku, který se může zdát trochu malý. Chcete-li rámeček zvětšit, zvolte v pravém horním rohu ikonu s dvojitou šipkou. Poté se videa zobrazí ve větším rámečku, dokud jej znovu nezmenšíte.
+> Videos in the library display in a frame that might seem a little small. To make the frame larger, choose the double-ended arrow icon in the upper-right corner. Afterward, videos will display in the larger frame until you make it small again.
 
-## Viz také
+## See Also
 
-[Začínáme](product-get-started.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Dynamics 365 channel on YouTube](https://www.youtube.com/channel/UCJGCg4rB3QSs8y_1FquelBQ)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

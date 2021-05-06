@@ -1,131 +1,147 @@
 ---
-title: Set Up Intercompany Transaction Posting| Microsoft Docs
+title: Set Up Intercompany Transaction Posting
 description: Create your intercompany vendors and customers as so-called intercompany partners, and set up an intercompany chart of accounts.
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: IC, group, consolidation, affiliate, subsidiary
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Nastavení vnitropodniku
-Chcete-li odeslat transakci (například řádek deníku prodeje) z jedné společnosti a mít odpovídající transakci (například řádek deníku nákupu) automaticky vytvořenou v partnerské společnosti, zúčastněné společnosti se musí dohodnout na společné účetní osnově a sadě dimenzí pro použití na vnitropodnikových transakcích. Vnitropodniková účetní osnova může být například zjednodušená verze účetní osnovy mateřské společnosti. Každá společnost mapuje svou úplnou účetní osnovu do sdílené vnitropodnikové účetní osnovy a každá společnost mapuje své dimenze na vnitropodnikové dimenze.
+# Set Up Intercompany Transaction Posting
 
-Pro každou partnerskou společnost musíte také nastavit kód vnitropodnikového partnera, na kterém se shodnou všechny společnosti, a poté je přiřadit do karet zákazníků a dodavatelů vyplněním pole **Kód vnitropodnikového partnera**.
+To send a transaction (such as a sales journal line) from one company and have the corresponding transaction (such as a purchase journal line) automatically created in the partner company, the companies involved must agree on a common chart of accounts and set of dimensions for use on intercompany transactions. The intercompany chart of accounts can be, for example, a simplified version of the parent company's chart of accounts. Each company maps their full chart of accounts to the shared intercompany chart of accounts, and each company maps their dimensions to the intercompany dimensions.  
 
-Pokud vytváříte nebo přijímáte vnitropodnikové řádky se zbožím, můžete použít buď vlastní čísla zboží, nebo můžete nastavit čísla zboží partnera pro každé relevantní zboží, buď v poli **Číslo zboží dodavatele** nebo v poli **Obecné číslo zboží** na kartě zboží. Můžete také použít funkci **Křížový odkaz zboží**: Chcete-li namapovat čísla svého zboží na popisy zboží vnitropodnikových partnerů, otevřete kartu každého zboží a poté vyberte akci **Křížové odkazy** k nastavení křížových odkazů mezi popisy vašeho zboží a popisy zboží vnitropodnikového partnera.
+You must also set up an intercompany partner code for each partner company, which is agreed upon by all of the companies, and then assign them to customer and vendor cards respectively by filling in the **Intercompany Partner Code** field.  
 
-Pokud provedete vnitropodnikové prodejní transakce, které zahrnují zdroje, musíte vyplnit pole **Číslo účtu  nákupu vnitrop. partn.** na kartě zdrojů pro každý relevantní zdroj. Toto je číslo vnitropodnikového účtu hlavní knihy, na který bude částka pro tento zdroj zaúčtována ve společnosti vašeho partnera. Pro více informací navštivte [Nastavení zdrojů](projects-how-setup-resources.md).
+If you create or receive intercompany lines with items, you can either use your own item numbers, or you can set up your partner's item numbers for each relevant item, either in the **Vendor Item No.** field or in the **Common Item No.** field on the item card. You can also use the **Item Cross Reference** function to map your items' numbers to your intercompany partners descriptions of the items, open the card of each item, and then choose the **Cross References** action to set up cross-references between your item descriptions and those of the intercompany partner. For more information, see [Use Item Cross References](inventory-how-use-item-cross-refs.md). 
 
-## Nastavení společností pro vnitropodnikové transakce
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Informace o společnosti** a poté vyberte související odkaz.
-2. Na stránce **Informace o společnosti** vyplňte pole **Kód vnitropod. partnera**, **Typ vnitropodnik. doručené pošty**. a **Detaily vnitropod.doručené pošty**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+If you will make intercompany sales transactions that include resources, you must fill in the **IC Partner Purch. G/L Acc. No.** field on the resource card for each relevant resource. This is the number of the intercompany general ledger account that the amount for this resource will be posted to in your partner's company. For more information, see [Set Up Resources](projects-how-setup-resources.md).
 
-## Nastavení vnitropodnikových partnerů
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodnikoví partneři** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
-3. Na stránce **Vnitropodnikového partnera** vyplňte pole podle potřeby.
+## To set up companies for intercompany transactions
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.  
+2. On the **Company Information** page, fill in the **Intercompany Partner Code**, **Intercompany Inbox Type**. and **Intercompany Inbox Details** fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## Nastavení vnitropodnikových dodavatelů a vnitropodnikových zákazníků
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
-2. Případně přistupte k dodavateli z pole **Číslo dodavatele** na stránce **Vnitropodnikový partner**.
-3. Otevřete kartu pro dodavatele, který je vnitropodnikovým partnerem. Pro více informací navštivte [Registrace nových dodavatelů](purchasing-how-register-new-vendors.md).
-4. V polie **Kód vnitropodnikového partnera** vyberte příslušný kód partnera v rámci společnosti.
-5. Opakujte kroky 1 až 4 pro zákazníky.
+## To set intercompany partners
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Partners**, and then choose the related link.
+2. Choose the **New** action.
+3. On the **Intercompany Partner** page, fill in the fields as necessary.[!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## Nastavení vnitropodnikových účetních osnov
-Aby skupina společností mohla provádět vnitropodnikové transakce, musí se dohodnout na účetní osnově, kterou použijí jako společný odkaz. Musíte souhlasit se svými partnerskými společnostmi na číslech účtů, které budete všichni používat při vytváření vnitropodnikových transakcí. Například mateřská společnost skupiny vytvoří zjednodušenou verzi své vlastní účetní osnovy, exportuje tuto vnitropodnikovou tabulku účtů ze své databáze do souboru XML a distribuuje ji každé ze společností ve skupině.
+> [!NOTE]
+> In [!INCLUDE[prod_short](includes/prod_short.md)] online, you cannot use file locations to transfer transactions to your partners because [!INCLUDE[prod_short](includes/prod_short.md)] does not have access to your local network. Therefore, if you choose **File Location** in the **Transfer Type** field, the **Folder Path** field is not available. Instead, the file will be downloaded to the Downloads folder on your computer. You then send the file to someone in the partner company, for example, by email. For a more direct process, we recommend that you choose **Email** instead.
 
-Pokud je vaše společnost mateřskou společností a má definující vnitropodnikovou tabulku účtů, kterou bude vaše skupina používat jako běžný odkaz, postupujte podle postupu [Nastavení definující vnitropodnikové účetní osnovy](intercompany-how-setup.md#to-set-up-the-defining-intercompany-chart-of-accounts).
+## To set up intercompany vendors and intercompany customers
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
+2. Alternatively, access the vendor from the **Vendor No.** field on the **Intercompany Partner** page.
+3. Open the card for a vendor that is an intercompany partner. For more information, see [Register New Vendors](purchasing-how-register-new-vendors.md).
+4. In the **Intercompany Partner Code** field, select the relevant intercompany partner code.
+5. Repeat steps 1 through 4 for customers.
 
-Pokud je vaše společnost dceřinou společností a obdržíte soubor XML obsahující společnou vnitropodnikovou tabulku účtů, postupujte podle postupu [Import vnitropodnikové účetní osnovy](intercompany-how-setup.md#to-import-the-intercompany-chart-of-accounts).
+## To set up intercompany charts of accounts
+In order for a group of companies to make intercompany transactions, they must agree on a chart of accounts to use as a common reference. You must agree with your partner companies on the account numbers that all of you will use when you create intercompany transactions. For example, the parent company of the group creates a simplified version of their own chart of accounts, exports this intercompany chart of accounts from their database into an XML file and distributes it to each of the companies in the group.  
 
-### Nastavení definující vnitropodnikové účetní osnovy
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodniková účtová osnova** a poté vyberte související odkaz.
-2. Na stránce **Vnitropodniková účtová osnova** zadejte každý účet na řádek na stránce.
-3. Pokud bude vaše vnitropodniková účetní osnova stejná nebo podobná běžné účetní osnově, můžete stránku vyplnit automaticky výběrem akce **Kopírovat z účetní osnovy**. Nové řádky můžete podle potřeby upravit.
+If your company is the parent company and has the defining intercompany chart of accounts that your group will use as a common reference, follow the [To set up the defining intercompany chart of accounts](intercompany-how-setup.md#to-set-up-the-defining-intercompany-chart-of-accounts) procedure.  
 
-### Export vnitropodnikové účetní osnovy
-Chcete-li umožnit svým vnitropodnikovým partnerům importovat definující účetní osnovu, musíte ji exportovat do souboru.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodniková účtová osnova** a poté vyberte související odkaz.
-2. Na stránce **Vnitropodniková účtová osnova** vyberte akci **Export** a poté vyberte tlačítko **Uložit**.
-3. Zadejte název souboru a umístění, do kterého chcete soubor XML uložit, a poté vyberte tlačítko **Uložit**.
+If your company is a subsidiary company and you receive an XML file containing the common intercompany chart of accounts, follow the [To Import the intercompany chart of accounts](intercompany-how-setup.md#to-import-the-intercompany-chart-of-accounts) procedure.  
 
-### Import vnitropodnikové účetní osnovy
-Pokud existuje soubor pro definování vnitropodnikové účtové osnovy, mohou ho vnitropodnikoví partneři importovat a ujistit se, že mají stejné účty.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodniková účtová osnova** a poté vyberte související odkaz.
-2. Na stránce **Vnitropodniková účtová osnova** vyberte akci **Importovat**.
-3. Vyberte název souboru a umístění souboru XML a poté zvolte tlačítko **Otevřít**.
+### To set up the defining intercompany chart of accounts
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Chart of Accounts**, and then choose the related link.
+2. On the **Intercompany Chart of Accounts** page, enter each account on a line on the page.  
+3. If your intercompany chart of accounts will be identical or similar to your regular chart of accounts, you can fill on the page automatically by choosing the **Copy from Chart of Accounts** action. You can edit the new lines as needed.
 
-Stránka **Vnitropodniková účetní osnova** je vyplněna novými nebo upravenými řádky finančního účtu podle vnitropodnikové účetní osnovy v souboru. Všechny existující nesouvisející řádky na stránce zůstanou nezměněny.
+### To export an intercompany chart of accounts
+To allow your intercompany partners to import the defining chart of accounts, you must export it to a file.      
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Chart of Accounts**, and then choose the related link.
+2. On the **Intercompany Chart of Accounts** page, choose the **Export** action, and then choose the **Save** button.
+3. Specify the file name and the location where you want to save the XML file, and then choose the **Save** button.  
 
-### Mapování vnitropodnikové účetní osnovy na účetní osnovu vaší společnosti
-Pokud jste definovali nebo importovali vnitropodnikovou účetní osnovu, s kterou jste vy a vaši vnitropodnikoví partneři souhlasili, musíte každý z vnitropodnikových účtů spojovat k jednomu z účtů vaší společnosti. Na stránce **Vnitropodniková účetní osnova** určete, jak budou vnitropodnikové účty hlavní knihy při příchozích transakcích převáděny na účty hlavní knihy z účetní osnovy vaší společnosti.
+### To import the intercompany chart of accounts  
+When a file exists for the defining intercompany chart of accounts, intercompany partners can import it to make sure they have the same accounts.  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Chart of Accounts**, and then choose the related link.  
+2. On the **Intercompany Chart of Accounts** page, choose the **Import** action.  
+3. Select the file name and location of the XML file, and then choose the **Open** button.  
 
-Pokud mají účty ve vnitropodnikové účetní osnově stejná čísla jako odpovídající účty v účetní osnově, můžete účty automaticky mapovat.
+The **IC Chart of Accounts** page is filled with new or edited G/L account lines according to the intercompany chart of accounts in the file. Any existing, unrelated lines on the page remain unchanged.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodniková účtová osnova** a poté vyberte související odkaz.
-2. Vyberte řádky, které chcete automaticky mapovat, a poté vyberte akci **Propojit s účtem se  stejným číslem**.
-3. Pro každý účet hlavní knihy v rámci společnosti, který nebyl mapován automaticky, vyplňte pole **Propojeno s číslem  fin. účtu**.
+### To map the intercompany chart of accounts to your company's chart of accounts  
+When you have defined or imported the intercompany chart of accounts that you and your intercompany partners have agreed to use, you must associate each of the intercompany G/L accounts with one of your company's G/L accounts. On the **IC Chart of Accounts** page, you specify how intercompany G/L accounts on incoming transactions will be translated into G/L accounts from your company's chart of accounts.
 
-## Nastavení výchozích účtů hlavní knihy vnitropodnikového partnera
-Když vytvoříte vnitropodnikový prodejní nebo nákupní řádek, který bude odeslán jako odchozí transakce, zadáte účet z vnitropodnikové účetní osnovy jako výchozí, pro který účet ve společnosti vašeho partnera je částka zaúčtována. Na stránce **Účetní osnova** u účtů, které často používáte na odchozích vnitropodnikových prodejních nebo nákupních řádcích, můžete určit výchozí účet hlavní knihy vnitropodnikových partnerů. Například pro vaše účty pohledávek můžete zadat odpovídající závazkové účty z vnitropodnikové účetní osnovy.
+If the accounts in the intercompany chart of accounts have the same numbers as the corresponding accounts in the chart of accounts, you can map the accounts automatically.
 
-Poté, když zadáte účet hlavní knihy v poli **Číslo  protiúčtu** na vnitropodnikovém řádku **Vnitropodnikový partner** v poli **Typ účtu** pole **Finanční účet vnitropodnikového partnera** je automaticky vyplněno.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Chart of Accounts**, and then choose the related link.  
+2. Select the lines that you want to map automatically, and then choose the **Map to Acc. with Same No** action.  
+3. For each intercompany general ledger account that was not mapped automatically, fill in the **Map-to G/L Acc. No.** field.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
-2. V řádku pro účet hlavní knihy, který se používá pro vnitropodnikové transakce, zadejte do pole **Výchozí finanční účet vnitropodnikového partnera** účet hlavní knihy vnitropodnikové společnosti, na který bude váš partner účtovat při účtování na účet hlavní knihy na řádku.
-3. Opakujte krok 2 pro každý účet, který často zadáváte v poli **Číslo  protiúčtu** na řádku ve vnitropodnikovém deníku nebo dokumentu.
+## To set up default intercompany partner general ledger accounts  
+When you create an intercompany sales or purchase line to send as an outgoing transaction, you enter an account from the intercompany chart of accounts as a default for which account in your partner's company the amount is posted to. On the **Chart of Accounts** page, for accounts that you often use on outgoing intercompany sales or purchase lines, you can specify a default intercompany partner general ledger account. For example, for your receivables accounts, you can enter the corresponding payables accounts from the intercompany chart of accounts.  
 
-## Nastavení vnitropodnikových dimenzí
-Pokud vy a vaši vnitropodnikoví partneři chcete mít možnost vyměňovat si transakce s dimenzemi s nimi spojenými, musíte se dohodnout na dimenzích, které všichni budete používat. Například mateřská společnost skupiny vytvoří zjednodušenou verzi své vlastní sady dimenzí, exportuje tyto vnitropodnikové dimenze do souboru XML a distribuuje je každé ze společností ve skupině. Každá z dceřiných společností pak importuje soubor XML na stránku **Vnitropodnikové dimenze** a mapuje vnitropodnikové dimenze na stránce **Dimenze**.
+Then, when you enter a general ledger account in the **Bal. Account No.** field on an intercompany line with **Intercompany Partner** in the **Account Type** field, the **IC Partner G/L Account** field is automatically filled in.  
 
-Pokud je vaše společnost mateřskou společností a má definující sadu vnitropodnikových dimenzí, které bude vaše skupina používat jako společný odkaz, postupujte podle postupu [Definování vnitropodnikových dimenzí](intercompany-how-setup.md#to-define-the-intercompany-dimensions).
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
+2. On the line for a G/L account that is used for intercompany transactions, in the **Default IC Partner G/L Account** field, enter the intercompany general ledger account that your partner will post to when you post to the general ledger account on the line.  
+3. Repeat step 2 for each account that you often enter in the **Bal. Account No.** field on a line in an intercompany journal or document.
 
-Pokud je vaše společnost dceřinou společností a obdržíte soubor XML obsahující vnitropodnikové dimenze, které bude vaše skupina používat jako běžný odkaz, postupujte podle postupu [Import vnitropodnikových dimenzí](intercompany-how-setup.md#to-import-the-intercompany-dimensions).
+## To set up intercompany dimensions
 
-### Definování vnitropodnikových dimenzí
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodnikové dimenze** a poté vyberte související odkaz.
-2. Na stránce **Vnitropodnikové dimenze** zadejte každou dimenzi do řádku na stránce.
+If you and your intercompany partners want to be able to exchange transactions with dimensions linked to them, then you must agree on the dimensions that all of you will use. For example, the parent company of the group creates a simplified version of their own set of dimensions, exports these intercompany dimensions into an XML file and distributes it to each of the companies in the group. Each of the subsidiaries then imports the XML file into the **Intercompany Dimensions** page and maps the intercompany dimensions to the dimensions in their own **Dimensions** page.  
 
-   Pokud budou vaše vnitropodnikové dimenze podobné nebo stejné jako vaše firemní dimenze, můžete stránku vyplnit automaticky pomocí funkce **Kopírovat z dimenzí** a pak můžete upravit výsledné řádky.
-3. Chcete-li exportovat vnitropodnikové dimenze do souboru XML pro distribuci partnerským společnostem, vyberte akci **Exportovat**.
-4. Zadejte název souboru a umístění, do kterého chcete soubor XML uložit, a poté vyberte tlačítko **Uložit**.
+> [!NOTE]
+> Each company in [!INCLUDE [prod_short](includes/prod_short.md)] must map dimensions to intercompany dimensions for outgoing documents, and map intercompany dimensions to their own dimensions for incoming documents. This mapping helps assure consistency across the companies. For more information, see the [To map intercompany dimensions to your company's dimensions](#to-map-intercompany-dimensions-to-your-companys-dimensions) section.
 
-### Import vnitropodnikových dimenzí
-Pokud soubor existuje pro definování vnitropodnikových dimenzí, mohou jej vnitropodnikoví partneři importovat, aby se ujistili, že mají stejné dimenze.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodnikové dimenze** a poté vyberte související odkaz.
-2. Na stránce **Vnitropodnikové dimenze** vyberte akci **Importovat**.
-3. Zadejte název souboru a umístění souboru XML a poté vyberte tlačítko **Otevřít**.
+If your company is the parent company and has the defining set of intercompany dimensions that your group will use as a common reference, follow the [To define the intercompany dimensions](intercompany-how-setup.md#to-define-the-intercompany-dimensions) procedure.
 
-Řádky na stránce **Vnitropodnikové dimenze** a **Hodnoty vnitropodnikových dimenzí** se importují.
+If your company is a subsidiary company and you receive an XML file containing the intercompany dimensions that your group will use as a common reference, follow the [To import intercompany dimensions](intercompany-how-setup.md#to-import-the-intercompany-dimensions) procedure.
 
-### Mapování vnitropodnikových dimenzí na dimenze vaší společnosti
-Pokud jste definovali nebo importovali dimenze, které jste se dohodli používat se svými partnery v rámci vnitropodniku, musíte přiřadit každou z vnitropodnikových dimenzí k jedné z dimenzí vaší společnosti a naopak. Na stránce **Vnitropodnikové dimenze** určete, jak budou vnitropodnikové dimenze při příchozích transakcích převedeny do dimenzí ze seznamu dimenzí vaší společnosti. Na strínce **Dimenze** určete, jak budou vaše dimenze převedeny na vnitropodnikové dimenze u odchozích transakcí.
+### To define the intercompany dimensions
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Dimensions**, and then choose the related link.  
+2. On the **Intercompany Dimensions** page, enter each dimension on a line on the page.
 
-Pokud má některá z vnitropodnikových dimenzí stejný kód jako odpovídající dimenze v seznamu dimenzí vaší společnosti, můžete nechat aplikaci mapovat dimenze automaticky.
+    If your intercompany dimensions will be similar or identical to your company dimensions, you can fill on the page automatically by using the **Copy from Dimensions** function, and then you can edit the resulting lines.  
+3. To export the intercompany dimensions to an XML file for distribution to your partner companies, choose the **Export** action.  
+4. Specify the file name and the location where you want to save the XML file, and then choose the **Save** button.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodnikové dimenze** a poté vyberte související odkaz.
-2. Na stránce **Vnitropodnikové dimenze** vyberte řádky, které chcete automaticky mapovat, a poté vyberte akci **Propojit s dimenzí  se stejným kódem**.
-3. Pro každou vnitropodnikovou dimenzi, která není automaticky mapována, vyplňte pole **Propojeno s kódem dimenze**.
-4. Vyberte akci **Hodnoty vnitropodnikové dimenze**.
-5. Na stránce **Hodnoty vnitropodnikové dimenze** vyplňte pole **Propojeno s kódem hodn.dimenze**.
+### To import the intercompany dimensions  
+When a file exists for the defining intercompany dimensions, intercompany partners can import it to make sure they have the same dimensions.  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Dimensions**, and then choose the related link.  
+2. On the **Intercompany Dimensions** page, choose the **Import** action.  
+3. Specify the file name and location of the XML file, and then choose the **Open** button.  
 
-   Pokračujte v mapování dimenzí na vnitropodnikové dimenze provedením podobných kroků.
-6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dimenze** poté vyberte související odkaz.
-7. Na stránce **Dimenze** vyberte řádky, které chcete automaticky mapovat, a poté vyberte akci **Propojit s vnitropodnikovou dimenzí  se stejným kódem**.
-8. Pro každou vnitropodnikovou dimenzi, která není automaticky mapována, vyplňte pole **Propojeno s kód.hod.vnitrop.dim.**
-9. Vyberte akci **Hodnoty dimenzí**.
-10. Na stránce **Hodnoty dimenzí** vyplňte pole **Propojeno s kód.hod.vnitrop.dim.**
+The lines on the **Intercompany Dimensions** page and the **Intercompany Dimension Values** page are imported.  
 
-## Viz také
-[Správa vnitropodnikových transakcí](intercompany-manage.md)  
+### To map intercompany dimensions to your company's dimensions
+When you have defined or imported the dimensions that you and your intercompany partners have agreed to use, you must associate each of the intercompany dimensions with one of your company's dimensions, and vice versa. On the **Intercompany Dimensions** page, you specify how intercompany dimensions on *incoming transactions* will be translated into dimensions from your company's list of dimensions. On the **Dimensions** page, you specify how your dimensions will be translated into intercompany dimensions on *outgoing transactions*.
+
+If any of the intercompany dimensions have the same code as the corresponding dimensions in your company's list of dimensions, then you can have application automatically map the dimensions, then you can map the accounts automatically.  
+
+In the following steps, you first map intercompany dimensions to dimensions for incoming documents in the **Intercompany Dimensions** page. Then, you map dimensions to intercompany dimensions for outgoing documents in the **Dimensions** page.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Dimensions**, and then choose the related link.
+2. On the **Intercompany Dimensions** page, select the lines that you want to automatically map, and then choose the **Map to Dim. with Same Code** action.'
+3. For each intercompany dimension that is not mapped automatically, fill in the **Map-to Dimension Code** field.
+
+    You may have to add the field to your view. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+4. Choose the **Intercompany Dimension Values** action.
+5. On the **Intercompany Dimension Values** page, fill in the **Map-to Dimension Value Code** field.
+
+    Proceed to map dimensions to intercompany dimensions by performing similar steps.
+6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Dimensions**, and then choose the related link.
+7. On the **Dimensions** page, select the lines that you want to automatically map, and then choose the **Map to IC Dim. with Same Code** action.
+8. For each intercompany dimension that is not mapped automatically, fill in the **Map-to IC Dimension Value Code** field.
+9. Choose the **Dimension Values** action.
+10. On the **Dimension Values** page, fill in the **Map-to IC Dimension Value Code** field.
+
+## See Also
+
+[Managing Intercompany Transactions](intercompany-manage.md)  
 [Finance](finance.md)  
-[Nastavení financí](finance-setup-finance.md)  
-[Práce s finančními deníky](ui-work-general-journals.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Setting Up Finance](finance-setup-finance.md)  
+[Working with General Journals](ui-work-general-journals.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

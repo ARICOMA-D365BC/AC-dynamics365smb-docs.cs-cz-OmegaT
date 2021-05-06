@@ -1,100 +1,120 @@
 ---
-title: Vytvoření a úprava vlastních rozvržení pro sestavy a doklady | Microsoft Docs
-description: 'Naučte se, jak vytvořit vlastní přizpůsobená rozvržení a přizpůsobit vzhled sestavy při prohlížení, tisku nebo uložení.'
-services: project-madeira
-documentationcenter: ''
-author: jswymer
+title: Create and Modify Custom Layouts for Reports and Documents | Microsoft Docs
+description: Learn how to create your own customized layouts to personalize the appearance of a report when it is viewed, printed, or saved.
+author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'customized report, document layout, logo, personalize'
-ms.date: 10/01/2018
-ms.author: jswymer
+ms.search.keywords: customized report, document layout, logo, personalize
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="create-and-modify-a-custom-report-or-document-layout"></a>Vytvoření a úprava vlastního rozvržení sestavy nebo dokladu
-Ve výchozím nastavení bude mít sestava vestavěné rozvržení sestavy, které může být rozvržení sestavy RDLC nebo rozvržení sestavy Word, nebo obojí. Vestavěné rozvržení nelze upravovat. Můžete si však vytvořit vlastní rozvržení, která vám umožní změnit vzhled sestavy při prohlížení, tisku nebo uložení. Pro stejnou sestavu můžete vytvořit více vlastních rozvržení přehledů a poté podle potřeby přepnout rozvržení používané sestavou.
+# Create and Modify Custom Report Layouts
+
+By default, a report will have a built-in report layout, which can be either an RDLC report layout or Word report layout, or both. You cannot modify built-in layouts. However, you can create your own custom layouts that enable you to change the appearance of report when it is viewed, printed or saved. You can create multiple custom report layouts for the same report, and then switch the layout that is used by a report as needed.
 
 > [!NOTE]  
->   V [!INCLUDE[d365fin](includes/d365fin_md.md)], termín „sestava“ také zahrnuje externí doklady, jako jsou prodejní faktury a potvrzení objednávky, které posíláte zákazníkům jako soubory PDF.
+> In [!INCLUDE[prod_short](includes/prod_short.md)], the term "report" also covers externally-facing documents, such as sales invoices and order confirmations that you send to customers as PDF files.
 
-Chcete-li vytvořit vlastní rozvržení, můžete vytvořit kopii existujícího vlastního rozvržení nebo přidat nové vlastní rozvržení, které je ve většině případů založeno na vestavěném rozvržení. Když přidáte nové vlastní rozvržení, můžete zvolit přidání typu rozvržení sestavy RDLC, typu rozvržení sestavy Word nebo obou. Nové vlastní rozvržení bude automaticky založeno na vestavěném rozvržení pro sestavu, pokud je k dispozici. Pokud pro daný typ neexistuje vestavěné rozvržení, vytvoří se nové prázdné rozvržení, které budete muset upravit a navrhnout od nuly. Pro více informací o rozvržení sestav RDLC a Word, vestavěných a vlastních sestavách viz [Správa Rozvržení Sestav](ui-manage-report-layouts.md).  
+To create a custom layout, you can either make a copy of an existing custom layout or add a new custom layout, which in most cases is based on a built-in layout. When you add a new custom layout, you can choose to add an RDLC report layout type, Word report layout type, or both. The new custom layout will automatically be based on the built-in layout for the report if one is available. If there is no built-in layout for the type, then a new blank layout is a created, which you will have to modify and design from scratch. For more information about RDLC and Word report layouts, built-in and custom layouts, and more, see [Manage Report Layouts](ui-manage-report-layouts.md).  
 
-## <a name="to-create-a-custom-layout"></a>Vytvoření vlastního rozvržení
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výběr rozvržení sestav** a poté vyberte související odkaz.
+> [!TIP]
+> Use account schedules to get insight into the financial data stored in your chart of accounts. For more information, see [Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md).
 
-    Na stránce **Výběr rozvržení sestav** jsou uvedeny všechny přehledy, které jsou k dispozici ve společnosti specifikované v poli **Společnost** v horní části stránky.
-2. Nastavte pole **Společnost** na společnost, ve které chcete vytvořit rozvržení sestavy.
-3. Vyberte řádek sestavy, pro kterou chcete rozvržení vytvořit, a poté vyberte akci **Vlastní rozvržení**.  
-   Zobrazí se stránka **Vlastní rozvržení sestav** a zobrazí se všechna vlastní rozvržení, která jsou k dispozici pro vybranou sestavu.
-4. Pokud chcete vytvořit kopii existujícího vlastního rozvržení, vyberte existující vlastní rozvržení v seznamu a poté vyberte akci **Kopírovat**.  
-   Kopie vlastního rozvržení se zobrazí na stránce **Vlastní rozvržení sestav** a v poli **Popis** obsahuje slova *Kopírovat z*.
-5. Pokud chcete přidat nové vlastní rozvržení založené na vestavěném rozvržení, postupujte takto:  
-   1. Zvolte akci **Nový**. Zobrazí se stránka **Vložit rozvržení sestavy**. Pole **ID** a **Název** jsou automaticky vyplněny.
-   2. Chcete-li přidat vlastní typ rozvržení sestavy aplikace Word, zaškrtněte políčko **Vložit rozvržení Wordu**.
-   3. Chcete-li přidat vlastní typ rozvržení sestavy aplikace RDLC, zaškrtněte políčko **Vložit RDLC rozvržení**.
-   4. Zvolte tlačítko **OK**.  
-      Nové vlastní rozvržení se zobrazí na stránce **Vlastní rozvržení sestav**. Pokud je nové rozvržení založeno na vestavěném rozvržení, bude v poli **Popis** uvedeno **Kopírovat z vestavěného rozvržení**. Pokud pro sestavu nebylo žádné vestavěné rozvržení, má nové rozvržení v poli **Popis** slova **Nové rozvržení**, což znamená, že vlastní rozvržení je prázdné.
-6. Ve výchozím nastavení je pole **Název společnosti** prázdné, což znamená, že vlastní rozvržení bude k dispozici pro sestavu ve všech společnostech. Chcete-li zpřístupnit vlastní rozvržení pouze v určité společnosti, zvolte **Upravit** a poté nastavte pole **Název společnosti** na požadovanou společnost.
+When custom report layouts are defined, you can select them from customer and vendor cards to specify that the selected layouts will be used for documents that you crate for the customer or vendor in question. For more information, see [Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md).
 
-Vlastní rozvržení bylo vytvořeno. Nyní můžete upravit vlastní rozvržení podle potřeby.
+## To create a custom layout
 
-## <a name="ModifyCustomLayout"></a>Úprava vlastního rozvržení
-Chcete-li upravit rozvržení sestavy, musíte nejprve rozvržení sestavy exportovat jako soubor do umístění v počítači nebo síti a poté otevřít exportovaný dokument a provést změny. Po dokončení změn importujete rozvržení sestavy.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Layout Selection**, and then choose the related link.
 
-### <a name="to-modify-a-custom-layout"></a>Úprava vlastního rozvržení
-1.  Vlastní rozvržení exportujete ze stránky **Vlastní rozvržení sestav**. Pokud tato stránka ještě není otevřená, vyhledejte a otevřete stránku **Výběr rozvržení sestav**, vyberte sestavu, která má rozvržení, které chcete upravit, a poté vyberte akci **Vlastní rozvržení**.  
-2.  Na stránce **Vlastní rozvržení sestav** vyberte rozvržení, které chcete upravit, vyberte akci **Exportovat rozvržení** a poté zvolte **Uložit** nebo **Uložit jako**, chcete-li dokument rozvržení sestavy uložit do umístění v počítači nebo síti.  
+    The **Report Layout Selection** page lists all the reports that are available in the company that is specified in the **Company Name** field at the top of the page.
+2. Set the **Company** field to the company in which you want to create the report layout.
+3. Select the row for the report that you want to create the layout for, and then choose the **Custom Layouts** action.  
 
-3.  Otevřete dokument rozvržení sestavy, který jste právě uložili, a proveďte změny.
+   The **Custom Report Layouts** page appears and lists all the custom layouts that are available for the selected report.
+4. If you want to create a copy of an existing custom layout, select the existing custom layout in the list, and then choose the **Copy** action.  
 
-      Pokud měníte rozvržení aplikace Word, otevřete dokument rozvržení v aplikaci Word. Podrobnosti o úpravách naleznete v další části [Provádění změn v rozvržení sestavy](ui-how-create-custom-report-layout.md#MakeChangesToLayout).
+   The copy of the custom layout appears on the **Custom Report Layouts** page and has the words *Copy of* in the **Description** field.
+5. If you want to add a new custom layout that is based on a built-in layout, do the following:  
+   1. Choose the **New** action. The **Insert Built-in Layout for a Report** page appears. The **ID** and **Name** fields are automatically filled in.
+   2. To add a custom Word report layout type, select the **Insert Word Layout** check box.
+   3. To add a custom RDLC report layout type, select the **Insert RDLC Layout** check box.
+   4. Choose the **OK** button.  
 
-      Rozložení sestavy RDLC je pokročilejší než rozložení sestavy Word. Další informace o úpravě rozvržení sestavy RDLC naleznete v tématu [Navrhování rozvržení sestav RDLC](/dynamics-nav/Designing-RDLC-Report-Layouts).
+    The new custom layout now appear on the **Custom Report Layouts** page. If a new layout is based on a built-in layout, then it has the words **Copy of a Built-in Layout** in the **Description** field. If there was no built-in layout for the report, then the new layout has the words **New Layout** in the **Description** field, which indicates that custom layout is blank.
+6. By default, the **Company Name** field is blank, which means that the custom layout will be available for the report in all companies. To make the custom layout available in a specific company only, choose **Edit**, and then set the **Company Name** field to the company that you want.
 
-      Po dokončení nezapomeňte uložit změny.
+The custom layout has been created. You can now modify the custom layout as needed.
 
-4.  Vraťte se na stránku **Vlastní rozvržení sestav**, vyberte rozvržení sestavy, které jste exportovali a upravili, a poté vyberte akci **Importovat rozvržení**.  
+## <a name="ModifyCustomLayout"></a>Modifying a custom layout
 
-5. V dialogovém okně **Import** zvolte **Vybrat** aby jste našli a vybrali dokument, který definuje rozvržení sestavy a poté zvolte **Otevřít**.
+To modify a report layout, you must first export the report layout as a file to a location on your computer or network, and then open the exported document and make the changes. When you are finished making the changes, you import the report layout.
 
-##  <a name="MakeChangesToLayout"></a> Provádění změn v rozvržení sestavy aplikace Word  
-Chcete-li provádět obecné změny formátování a rozvržení, jako je například změna textového písma, přidání a úprava tabulky nebo odstranění datového pole, stačí použít základní editační funkce aplikace Word, jako to děláte u jakéhokoli dokumentu Word.
+### To modify a custom layout
 
-Pokud navrhujete rozvržení sestavy aplikace Word od začátku nebo přidáváte nová datová pole, začněte přidáním tabulky, která obsahuje řádky a sloupce, které budou nakonec obsahovat datová pole.
+1.  You export a custom layout from the **Custom Report Layouts** page. If this page is not already open, search for and open the **Report Layout Selection** page, select the report that has the layout that you want to modify, and then choose the **Custom Layouts** action.  
+2.  On the **Custom Report Layouts** page, select the layout that you want to modify, choose the **Export Layout** action, and then choose **Save** or **Save As** to save the report layout document to a location on your computer or network.  
+
+3.  Open the report layout document that you just saved, and then make changes.
+
+      If you are changing a Word layout, open the layout document in Word. For editing details, see the next section [Making Changes to the Report Layout](ui-how-create-custom-report-layout.md#MakeChangesToLayout).
+
+      RDLC report layouts are more advanced than Word report layouts. For more information about modifying an RDLC report layout, see [Designing RDLC Report Layouts](/dynamics-nav/Designing-RDLC-Report-Layouts).
+
+      Remember to save you changes when done.
+
+4.  Return to the **Custom Report Layouts** page, select the report layout that you exported and modified, and then choose the **Import Layout** action.  
+
+5. In the **Import** dialog box, select **Choose** to find and select the report layout document, and then choose **Open**.
+
+##  <a name="MakeChangesToLayout"></a> Create and Modify Custom Report Layouts
+
+To make general formatting and layout changes, such as changing text font, adding and modifying a table, or removing a data field, just use the basic editing features of Word, like you do with any Word document.
+
+If you are designing a Word report layout from scratch or adding new data fields, then start by adding a table that includes rows and columns that will eventually hold the data fields.
 
 > [!TIP]  
->  Zobrazte mřížky tabulky tak, abyste viděli hranice buněk tabulky. Po dokončení úprav nezapomeňte skrýt mřížky. Chcete-li zobrazit nebo skrýt mřížky tabulky, vyberte tabulku a v části **Rozvržení** na kartě **Tabulka** zvolte **Zobrazit mřížky**.
+> Show the table gridlines so that you see the boundaries of table cells. Remember to hide the gridlines when you are done editing. To show or hide table gridlines, select the table, and then under **Layout** on the **Table** tab, choose **View Gridlines**.
 
-### <a name="embedding-fonts-in-word-layouts-for-consistency"></a>Vkládání písem do aplikace Word z důvodu konzistence
+### Embedding Fonts in Word Layouts for Consistency
 
-Chcete-li zajistit, aby se sestavy vždy zobrazovaly a tiskly s zamýšlenými písmy, bez ohledu na to, kde uživatelé otevírají nebo tisknou sestavy, můžete písma vložit do dokumentu Word. Mějte však na paměti, že vkládání písem může výrazně zvětšit velikost souborů aplikace Word. Další informace o vkládání písem do aplikace Word naleznete v tématu [Vkládání písem do aplikací Word, PowerPoint nebo Excel](https://support.office.com/en-us/article/Embed-fonts-in-Word-PowerPoint-or-Excel-cb3982aa-ea76-4323-b008-86670f222dbc).
+To ensure that reports always display and print with the intended fonts, regardless of where users open or print the reports, you can embed the fonts in the Word document. However, be aware that embedding fonts can significantly increase the size of the Word files. For more information about embedding fonts in Word, see [Embed fonts in Word, PowerPoint, or Excel](https://support.office.com/article/Embed-fonts-in-Word-PowerPoint-or-Excel-cb3982aa-ea76-4323-b008-86670f222dbc).
 
-###  <a name="RemoveField"></a> Odstranění popiskových a datových polí v rozvržení Word  
- Popisky a datová pole sestavy jsou obsaženy v ovládacích prvcích obsahu v aplikaci Word. Následující obrázek znázorňuje ovládací prvek obsahu, když je vybrán v dokumentu Word.  
+###  <a name="RemoveField"></a> Removing Label and Data Fields in Word Layouts
 
- ![Řízení obsahu pole v rozvržení sestavy aplikace Word](media/nav_wordreportlayouts_contentcontrol.png "NAV_WordReportLayouts_ContentControl")  
+ Label and data fields of a report are contained in content controls in Word. The following figure illustrates a content control when it is selected in the Word document.  
 
- Název popisku nebo datového pole se zobrazí v ovládacím prvku obsahu. V příkladu je název pole SpolečnostAddr1.  
+ ![Content control for field in Word report layout](media/nav_wordreportlayouts_contentcontrol.png "NAV_WordReportLayouts_ContentControl")  
 
-### <a name="to-remove-a-label-or-data-field"></a>Odstranění popisku nebo datového pole  
+ The name of the label or data field name displays in the content control. In the example, the field name is CompanyAddr1.  
 
-1.  Klepněte pravým tlačítkem myši na pole, které chcete odstranit, a pak zvolte **Odstranit kontrolu obsahu**.  
+### To remove a label or data field  
 
-     Ovládací prvek obsahu je odebrán, ale název pole zůstává jako text.  
+1. Right-click the field that you want to delete, and then choose **Remove Content Control**.  
 
-2.  Odstraňte zbývající text podle potřeby.  
+     The content control is removed, but the field name remains as text.  
 
-### <a name="adding-data-fields"></a>Přidání datových polí
-Přidání datových polí z datového souboru sestavy je pokročilejší a vyžaduje určitou znalost datového souboru sestavy. Informace o přidávání polí pro data, štítky a obrázky naleznete v části [Přidání polí do rozvržení sestavy aplikace Word](ui-how-add-fields-word-report-layout.md).  
+2. Delete the remaining text as needed.  
 
-###
+### Adding data fields
+
+Adding data fields from a report dataset is a more advanced and requires some knowledge of the report dataset. For information about adding fields for data, labels, data, and images, see [Add Fields to a Word Report Layout](ui-how-add-fields-word-report-layout.md).  
+
+## See Related Training at [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+
+## See Also
+
+[Managing Report Layouts](ui-manage-report-layouts.md)  
+[Change the Current Report Layout](ui-how-change-layout-currently-used-report.md)  
+[Import and Export a Custom Report or Document Layout](ui-how-import-and-export-report-layout.md)  
+[Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
+[Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md) 
+[Business Intelligence](bi.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
-## <a name="see-also"></a>Viz také
-[Správa rozvržení sestav](ui-manage-report-layouts.md)  
-[Změna rozvržení, které se v sestavě aktuálně používá](ui-how-change-layout-currently-used-report.md)  
-[Import a export vlastní sestavy nebo rozvržení dokumentu](ui-how-import-and-export-report-layout.md)  
-[Práce se sestavami a dávkovými úlohami](ui-work-report.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[!INCLUDE[footer-include](includes/footer-banner.md)]

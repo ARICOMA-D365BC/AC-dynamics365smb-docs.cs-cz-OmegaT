@@ -1,54 +1,56 @@
 ---
 title: Overview of the Tasks for Closing the Books | Microsoft Docs
 description: Learn about the process of closing the books for a fiscal year or period, and what happens after you close at the end of a year.
-services: project-madeira
-documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, bank account detailed trial balance
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
-# Uzavírání knih
-Poté, co se ujistíte, že všechny vaše účty jsou aktuální a náklady a příjmy jsou přideleny, můžete knihy uzavřít na fiskální rok nebo období.
+# Closing the Books
+After you ensure that all your accounts are up-to-date, and you allocate costs and income, then you can close the books for a fiscal year or period.
 
-Nejste povinni uzavřít rok, ale díky tomu bude práce v systému pro vás snazší, protože budete moci využít výhodných dostupných možností filtrování. Také se nemusíte starat o ztrátu podrobností o transakcích při uzavření, protože všechny podrobnosti jsou zachovány, a to i po uzavření roku.
+You are not required to close a year, but doing so will make working in the system easier for you because you will be able to take advantage of the convenient filtering options provided. You also do not have to worry about losing details of transactions when you close because all details are retained, even after you close the year.
 
-## Proces uzavírání knih
-Proces uzavření knihy zahrnuje tyto hlavní úkoly:
+## Closing Book Process
+The process for closing the book includes these main tasks:
 
-1. Uzavření účetního období
+1. Closing the accounting period.
 
-   Fiskální rok je definován jako jedno nebo více otevřených období, jak je definováno na stránce **Účetní období**. Typický fiskální rok obsahuje 12 období po jednom měsíci, ale můžete také zvolit jinou metodu definování roku.
+    A fiscal year is defined as one or more open periods as defined on the **Accounting Periods** page. A typical fiscal year contains 12 periods of one month each, but you can also choose another method of defining a year.
 
-   Pro více informací navštivte [Uzavírání účetního období](year-close-account-periods.md).
-2. Registrace položek z předchozího roku.
+    For more information, see [Close Accounting Periods](year-close-account-periods.md).
+2. Registering prior-year entries.
 
-   Při uzavření fiskálního roku je nutné zadat počet administrativních transakcí (například předplacené a časově rozlišené položky). Tyto transakce se nazývají úprava položek. Neexistují žádná zvláštní pravidla pro zaúčtování těchto položek a obsahují (stejně jako ostatní položky) zaškrtávací políčko v poli **Položka předchozího roku**, pokud jsou zaúčtovány k datu v uzavřeném fiskálním roce. Přestože byl fiskální rok uzavřen, můžete do něj stále zaúčtovat položky hlavní knihy.
-3. Převod zůstatků z účtů výsledovky do rozvahy.
+    When you close a fiscal year, you must enter a number of administrative transactions (such as prepaid and accrued items). These transactions are called adjusting entries. There are no special rules for posting these entries, and they (like other entries) contain a check mark in the **Prior-Year Entry** field if they are posted on a date in a closed fiscal year. Even though a fiscal year has been closed, you can still post general ledger entries to it.
+3. Transferring balances from the income statement accounts to the balance sheet.
 
-   Po uzavření fiskálního roku a zaúčtování všech záznamů za předchozí rok musí být účty výsledovky uzavřeny a čistý zisk za rok musí být převeden na účet pod vlastním kapitálem v rozvaze. K tomuto účelu použijte dávkovou úlohu Uzavření výsledovky. Dávková úloha zpracuje všechny účty hlavní knihy typu Výsledovka a vytvoří položky, které obrátí jejich zůstatky. Tyto položky jsou umístěny v deníku, ze kterého mohou být zveřejněny. Dávková úloha je nezveřejňuje automaticky, kromě případů, kdy je použita další měna vykazování. Při použití další měny pro hlášení se dávková úloha účtuje přímo do hlavní knihy.
+    After a fiscal year has been closed and all prior-year entries have been posted, the income statement accounts must be closed and the net income for the year must be transferred to an account under owners' equity on the balance sheet. Use the Close Income Statement batch job for this purpose. The batch job processes all general ledger accounts of the type Income Statement and creates entries that reverse their balances. These entries are placed in a journal from which they can be posted. The batch job does not post them automatically, except when an additional reporting currency is used. When an additional reporting currency is used, the batch job posts directly to the general ledger.
 
-   Pro více informací navštivte [Uzavření výsledovky](year-close-income-statement.md).
-4. Zaúčtování položky roční uzávěrky spolu s vyrovnáním položek kapitálového účtu.
+    For more information, see [Close Income Statement](year-close-income-statement.md).
+4. Posting the year-end closing entry along with the offsetting equity account entries.
 
-   Po dokončení dávkové úlohy Uzavření výsledovky zaúčtujte položky generované touto úlohou. Pokud jste v dávkové úloze nezadali účet nerozděleného zisku, zadejte jeden řádek s vyrovnávací položkou, která zaúčtuje čistý příjem na správný účet hlavní knihy pod vlastním kapitálem v rozvaze. Nakonec zaúčtujte deník.
+    When the Close Income Statement batch job is finished, you post the entries generated by the job. If you did not specify a retained earnings account in the batch job, then enter one line with a balancing entry that posts the net income to the correct general ledger account under owners' equity on the balance sheet. Finally, post the journal.
 
-   Pro více informací navštivte [Účtování položky konce roku](year-how-post-year-end-close-entry.md).
+    For more information, see [Post Year-End Closing Entry](year-how-post-year-end-close-entry.md).
 
-## Co se stane při uzávěrke
-Když provedete uzávěrku na konci roku, systém přesune vaše příjmy z vypočtených příjmů na účet nerozděleného zisku. Systém také označí fiskální rok jako „uzavřený“ a všechny následné položky za uzavřený rok označí jako „záznamy předchozího roku“.
+## What Happens When You Close
+When you close at the end of the year, the system moves your earnings from calculated earnings to the Retained Earnings account. The system also marks the fiscal year as "closed," and marks all subsequent entries for the closed year as "prior year entries."
 
-Systém poté vygeneruje závěrečný záznam, ale nezaúčtuje jej automaticky. Máte příležitost provést zápis nebo záznamy o započítání vlastního kapitálu, což vám umožní rozhodnout se, jak přiřadit svůj závěrečný záznam. Například, pokud má vaše společnost několik divizí, můžete nechat systém vygenerovat jediný uzavírací záznam pro všechny divize a pak můžete provést vyrovnávací zápis pro majetkový účet každé divize.
+The system then generates a closing entry, but it does not post the entry automatically. You are given the opportunity to make the offsetting equity account entry or entries, which allows you to decide how to allocate your closing entry. For example, if your company has several divisions, you can let the system generate a single closing entry for all the divisions, and you can then make an offsetting entry for each division's equity account.
 
-Můžete zaúčtovat v předchozím fiskálním roce, a to i po uzavření účtů výsledovky, pokud potom znovu spustíte dávkovou úlohu Uzavření výsledovky.
+You can post in a previous fiscal year, even after the income statement accounts have been closed, if you run the Close Income Statement batch job again afterward.
 
-## Viz také
-[Otevření nového fiskálního roku](finance-how-open-new-fiscal-year.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+
+[Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

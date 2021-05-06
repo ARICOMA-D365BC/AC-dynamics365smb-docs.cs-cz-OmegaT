@@ -4,52 +4,55 @@ description: Describes how to record payments that you make to vendors and refun
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment journal, print check, vendor payment, customer refund, creditor, debt, balance due, AP
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Platby záznamů a refundace v deníku plateb
+# Record Payments and Refunds in the Payment Journal
 
-Na stránce **Deníky plateb** se zaznamenávají platby, které provedete dodavatelům a refundace, které provedete zákazníkům. Když zaúčtujete řádek platebního deníku, zaplacená částka se zaznamená na určený systémový bankovní účet. Poté musíte podniknout kroky k provedení skutečného převodu peněz z příslušného bankovního účtu.
+On the **Payment Journal** page, you record payments that you make to vendors and refunds that you make to customers. When you post a payment journal line, the paid amount is recorded on the specified system bank account. You must then take steps to perform the actual money transfer from the related bank account.  
 
-Deník plateb je finanční deník, který je optimalizován pro provádění plateb. Řádky můžete rychle přidat ručně, můžete nechat [!INCLUDE[d365fin](includes/d365fin_md.md)] navrhnout platby dodavatelům a platbu můžete použít na zaúčtované dokumenty. I když provádíte platby, do pole **Částka dokumentu** zadejte kladnou částku. V závislosti na typu dokladu pro řádek deníku je tato částka převedena na zápornou částku v podkladových transakcích. Tímto způsobem je rychlejší přidávat řádky deníku ručně. Pokud dáváte přednost zadání záporných částek, můžete personalizovat platební deník tak, aby místo toho zobrazoval pole **Částka**.
+The payment journal is a general journal that is optimized for making payments. You can quickly add lines manually, you can let [!INCLUDE[prod_short](includes/prod_short.md)] suggest vendor payments, and you can apply the payment to posted documents. Even though you are making payments, you enter a positive amount in the **Document Amount** field. Depending on the document type for the journal line, this amount is then converted to a negative amount in the underlying transactions. This way, it's faster for you to add journal lines manually. If you prefer to enter negative amounts, you can personalize the payment journal to show the **Amount** field instead.  
 
-- Použití plateb na faktury nebo dobropisy
+- Applying payments to invoices or credit memos
 
-   Pokud vyplníte pole **Číslo vyrovnání  dokladu** s fakturou nebo dobropisem, které musí být zaplaceno nebo vráceno, pak je daný dokument nastaven na zaplacený při zveřejnění deníku. Tento postup se označuje jako "aplikovaný". Jako alternativu k použití během účtování platby můžete použít stránky **Vyrovnané položky dodavatele** a **Vyrovnané položky zákazníků** poté, co jste provedli účtování plateb. Pro více informací navštivte například [Odsouhlasení platby dodavatele s deníkem plateb nebo z položek účetní knihy](payables-how-apply-purchase-transactions-manually.md).
+    If you fill in the **Applies-to Doc. No.** field with the invoice or credit memo that must be paid or refunded, then the document in question is set to paid when you post the journal. This is referred to as "applied". As an alternative to applying during payment posting, you can use the **Apply Vendor Entries** and **Apply Customer Entries** page after you have made the payment posting. For more information, see, for example, [Reconcile Vendor Payments with the Payment Journal or from Vendor Ledger Entries](payables-how-apply-purchase-transactions-manually.md).  
 
-- Získání navrhovaných plateb dodavatelům nebo zaměstnancům
+- Get suggested payments to vendors or employees
 
-   Funkce **Navrhnout platby dodavateli** a **Navrhnout platby zaměstnanci** mohou pomoci automaticky vyplnit řádky deníku plateb podle priority dodavatele a termínu splnění. Pro více informací navštivte [Návrh platby dodavateli](payables-how-suggest-vendor-payments.md). S touto funkcí je pole **Číslo vyrovnání  dokladu** vždy vyplněno.
+    The **Suggest Vendor Payments** and **Suggest Employee Payments** functions can help you fill payment journal lines automatically according to vendor prioritization and due dates. For more information, see [Suggest Vendor Payments](payables-how-suggest-vendor-payments.md). With this function, the **Applies-to Doc. No.** field is always filled in.  
 
-- Tisk šeků a předkládaní elektronické platby vaší bance
+- Print checks and submit payments electronically to your bank
 
-   Kromě záznamu o provedení platby můžete také použít stránku **Deníky plateb** k odeslání platby pro další zpracování vaší bankou. Pro více informací navštivte [Provádění platby šekem](payables-how-work-checks.md) a [Provádění elektronické platby](payables-how-export-payments-bank-file.md).
+    In addition to recording that the payment is made, you can also use the **Payment Journal** page to output the payment for further processing by your bank. For more information, see [Make Check Payments](payables-how-work-checks.md) and [Make Electronic Payments](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file).  
 
-## Provádění platby v deníku plateb
+## To make payments in the payment journal
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Deníky plateb** a poté vyberte související odkaz.
-2. Otevřete list deníku, který je vyhrazen pro platby.
-3. Pokud víte, kdo má zaplatit nebo vrátit peníze, vyplňte pole ručně. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Chcete-li také použít platbu na související fakturu nebo dobropis, vyberte pole **Číslo vyrovnání dokladu** na stránce **Vyrovnat položky dodavatele** a vyberte příslušnou fakturu nebo dobropis, pak klepněte na tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.
+2. Open the journal batch that is dedicated to payments.
+3. If you know who to pay or refund, fill in the fields manually. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. To also apply the payment to the related invoice or credit memo, choose the **Applies-to Doc No.** field, on the **Apply Vendor Entries** page, select the relevant invoice or credit memo, and then choose the **OK** button.
 
-   Mnoho polí, například **Částka dokumentu** a **Termín splnění**, je nyní vyplněno informacemi z vybraného dokumentu.
-5. Případně použijte funkci **Navrhnout platby dodavateli**. Všechny řádky týkající se informací a částek jsou poté zapsány do řádků deníku. Pro více informací navštivte [Navrhnout platby dodavateli](payables-how-suggest-vendor-payments.md).
+    Many fields, such as the **Document Amount** and **Due Date** fields, are now filled in with information from the selected document.
+5. Alternatively, use the **Suggest Vendor Payments** function. All the applies-to information and amounts are then also entered on the journal lines. For more information, see [Suggest Vendor Payments](payables-how-suggest-vendor-payments.md).
 
-   Zprávy vás provedou správným vyplněním požadovaných polí.
-6. Po dokončení všech řádků platebního deníku vyberte akci **Účtovat**.
+    Messages will guide you to fill in the required fields correctly.
+6.  When all payment journal lines are completed, choose the **Post** action.
 
-## Viz také
-[Provádění platby šekem](payables-how-work-checks.md)  
-[Provádění elektronické platby](payables-how-export-payments-bank-file.md)  
-[Správa závazků](payables-manage-payables.md)  
-[Nastavení bankovnictví](bank-setup-banking.md)  
-[Export souboru kladných plateb](finance-how-positive-pay.md)  
-[Práce s finančním deníkem](ui-work-general-journals.md)  
-[Přizpůsobení pracovního prostoru](ui-personalization-user.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Make Check Payments](payables-how-work-checks.md)  
+[Make Electronic Payments](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)  
+[Managing Payables](payables-manage-payables.md)  
+[Setting Up Banking](bank-setup-banking.md)  
+[Export a Positive Pay file](finance-how-positive-pay.md)  
+[Working with General Journals](ui-work-general-journals.md)  
+[Personalize Your Workspace](ui-personalization-user.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

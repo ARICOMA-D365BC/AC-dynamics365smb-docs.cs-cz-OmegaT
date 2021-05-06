@@ -5,32 +5,35 @@
     author: bholtorf
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
-# Blokace dodavatelů
-Dodavatele můžete zablokovat, například z důvodu platební neschopnosti, aby nemohl být přidán do nákupních dokladů, nebo aby za něj nemohly být účtovány žádné platby.
+# Block Vendors
+You can block a vendor, for example because of insolvency, so that the vendor cannot be added to purchase documents or so that no payments can be posted for the vendor.
 
-Následující tabulka popisuje možnosti blokování dodavatelů.
+The following table describes the options for blocking vendors.  
 
-| Možnost | Popis |
+|Option|Description|  
 |--------------------|------------|  
-| **Prázdný** | Transakce jsou pro tohoto dodavatele povoleny. |
-| **Platba** | Pro tohoto dodavatele nelze vytvořit nové platby. |
-| **Vše** | Pro tohoto dodavatele nejsou povoleny žádné transakce. |
+|**Blank**|Transactions are allowed for this vendor.|
+|**Payment**|New payments cannot be created for this vendor.|  
+|**All**|No transactions are allowed for this vendor.|  
 
-## Zablokování dodavatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
-2. Vyberte dodavatele, kterého chcete blokovat.
-3. V poli **Uzavřeno** a vyberte jednu z možností pro blokaci.
+## To block a vendor  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
+2. Select the vendor that you want to block.
+3. In the **Blocked** field, choose one of the options for blocking.
 
-## Viz také
-[Evidence nových dodavatelů](purchasing-how-register-new-vendors.md)  
-[Provádění plateb](payables-make-payments.md)  
-[Správa závazků](payables-manage-payables.md)
+## See Also  
+[Register New Vendors](purchasing-how-register-new-vendors.md)  
+[Making Payments](payables-make-payments.md)  
+[Managing Payables](payables-manage-payables.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

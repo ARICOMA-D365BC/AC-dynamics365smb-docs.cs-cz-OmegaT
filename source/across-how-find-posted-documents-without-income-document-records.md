@@ -1,38 +1,43 @@
 ---
-title: Vyhledávání dokumentů bez příloh | Microsoft Docs
-Description: 'You can search for general ledger entries for posted purchase and sales documents that do not have incoming electronic documents, such as imported invoices.'
+title: Search for Documents without Attachments| Microsoft Docs
+Description: You can search for general ledger entries for posted purchase and sales documents that do not have incoming electronic documents, such as imported invoices.
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice'
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="find-posted-documents-without-incoming-document-records"></a>Vyhledání zaúčtovaných dokumentů bez záznamů příchozího dokumentu
-Ze stránky **Účtová osnova** a **Položek hlavní knihy** můžete pomocí vyhledávací funkce vyhledat položky hlavní knihy pro zaúčtované nákupní a prodejní dokumenty, které nemají záznamy příchozího dokumentu a poté centrálně odkazovat na existující záznamy nebo vytvářet nové dokumenty s přiloženými soubory.
+# Find Posted Documents without Incoming Document Records
+From the **Chart of Accounts** and **General Ledger Entries** pages, you can use a search function to find general ledger entries for posted purchase and sales documents that do not have incoming document records and then centrally link to existing records or create new ones with attached document files.
 
-## <a name="to-find-posted-documents-without-incoming-document-records"></a>Vyhledání zaúčtovaných dokumentů bez záznamů příchozího dokumentu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtovní osnova** a poté vyberte související odkaz.
-2. Vyberte řádek pro finanční účet, kde jsou položky hlavní knihy, které chcete zaúčtovat jako nákupní a prodejní dokumenty bez záznamů příchozího dokumentu a pak zvolte akci **Zaúčtovat dokumenty bez příchozího dokumentu**.
-3. Alternativně zvolte akci **Položky knihy**.
-4. Na stránce **Položky hlavní knihy** zvolte akci **Zaúčtovat dokumenty bez došlého dokumentu**.
+## To find posted documents without incoming document records
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+2. Select a line for a G/L account for whose general ledger entries you want to see posted purchase and sales documents without incoming document records, and then choose the **Posted Documents without Incoming Document** action.
+3. Alternatively, choose the **Ledger Entries** action.
+4. On the **General Ledger Entries** page, choose the **Posted Documents without Incoming Documents** action.
 
-Okno **Zaúčtované dokumenty bez došlého dokumentu** otevře zaúčtované nákupní a prodejní dokumenty bez záznamů příchozího dokumentu reprezentovány položkami hlavní knihy ve finančním účtu, který pro toto okno otevřete. Stránka může ukázat maximálně 1000 řádků. Ve výchozím nastavení pole **Filtr data** omezuje řádky na položky s daty zveřejnění od začátku účetního období do data práce.
+The **Posted Documents without Incoming Document** page opens showing posted purchase and sales documents without incoming document records represented by general ledger entries on the G/L account that you opened the page for. The page can show a maximum of 1000 lines. By default, the **Date Filter** field therefore contains a filter that limits the lines to entries with posting dates from the beginning of the accounting period to the work date.
 
-## <a name="to-connect-found-documents-to-existing-incoming-document-records"></a>Připojení nalezených dokumentů k existujícím záznamům příchozího dokumentu
-1. Na stránce **Zaúčtované dokumenty bez příchozího dokumentu** vyberte řádek pro zaúčtovaný dokument, který chcete připojit k existujícímu záznamu příchozího dokumentu a pak zvolte akci **Vybrat došlý dokument**.
-2. Na stránce **Došlé dokumenty** vyberte záznam došlého dokumentu, který chcete připojit k zaúčtovanému dokumentu a pak zvolte tlačítko **OK**.
-3. V okně **Zaúčtované dokumenty bez došlého dokumentu** vyberte záznam příchozího dokument, který je nyní připojen k zaúčtovanému dokumentu, jak můžete vidět v okně s fakty **Soubory došlého dokumentu**.
+## To connect found documents to existing incoming document records
+1. On the **Posted Documents without Incoming Document** page, select the line for a posted document that you want to connect to an existing incoming document record, and then choose the **Select Incoming Document** action.
+2. On the **Incoming Documents** page, select the incoming document record that you want to connect to posted document found, and then choose the **OK** button.
+3. On the **Posted Documents without Incoming Document** page, the selected incoming document record is now connected to the posted document, as you can see in the **Incoming Document Files** FactBox.
 
-Pokud na stránce **Došlé doklady** neexistuje příslušný záznam příchozího dokumentu, můžete jej vytvořit. Další informace naleznete v části [Vytvořit záznam došlého dokumentu](across-how-create-income-document-records.md) Záznam.
+If a relevant incoming document record does not exist on the **Incoming Documents** page, then you can create it. For more information, see [Create Incoming Document Records](across-how-create-income-document-records.md).
 
-## <a name="see-also"></a>Viz také
-[Proces Došlého dokumentu](across-process-income-documents.md)  
-[Došlé doklady](across-income-documents.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Process Incoming Documents](across-process-income-documents.md)  
+[Incoming Documents](across-income-documents.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

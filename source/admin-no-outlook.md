@@ -1,7 +1,6 @@
 ---
-title: Using Business Central without Outlook | Microsoft Docs
-description: You can use Business Central as your business inbox in Outlook because it is integrated with Office 365, however, you can also work without Outlook in a browser or on your mobile device.
-documentationcenter: ''
+title: Using Business Central without Outlook
+description: If you don't have Outlook, you cannot use Business Central as your business inbox in Outlook, but you can work in a browser or on your mobile device.
 author: edupont04
 
 ms.service: dynamics365-business-central
@@ -9,20 +8,23 @@ ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: SMTP, mail, Office 365
-ms.date: 04/01/2019
+ms.search.keywords: SMTP, mail, Microsoft 365
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Použití Business Central bez aplikace Outlook
-[!INCLUDE[d365fin](includes/d365fin_md.md)] má hlubokou integraci s Office 365. Můžete použít aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] jako schránku doručené pošty v aplikaci Outlook. Pokud však aplikaci Outlook nemáte, můžete pracovat s aplikací [! INCLUDE[d365fin](includes/d365fin_md.md)] v prohlížeči nebo v mobilním zařízení.
+# Using Business Central without Outlook
+[!INCLUDE[prod_short](includes/prod_short.md)] has deep integration with Microsoft 365, and you can use [!INCLUDE[prod_short](includes/prod_short.md)] as your business inbox in Outlook. But if you do not have Outlook, you can work with [!INCLUDE[prod_short](includes/prod_short.md)] in the browser or on your mobile device.  
 
-## Odesílání e-mailů
-Pomocí vaší firemní e-mailové adresy můžete odesílat doklady, jako jsou faktury. Z Centra rolí získáte přístup k průvodci nastavením, který vám pomůže nastavit e-mail. Pokud nepoužíváte e-mailový účet Office 365, musíte zadat technické informace o poštovním serveru. Pokud tyto informace nemáte k dispozici, obraťte se na pracovníky podpory IT.
+## Sending Email
+You can send documents such as invoices as email using your business email address. From your Role Center, you can access an assisted setup guide that helps you set up email. If you do not use a Microsoft 365 email account, you must specify technical information about your mail server. If you do not have this information available, please contact your IT support staff.  
 
 
-## Viz také
-[Začínáme](product-get-started.md)  
-[Použití aplikace Business Central jako složky Doručená pošta v aplikaci Outlook](admin-outlook.md)  
-[Získání Business Cental na mobilní zařízení](install-mobile-app.md)  
-[Odesílání dokladů e-mailem](ui-how-send-documents-email.md)
+## See Also
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Using Business Central as your Business Inbox in Outlook](admin-outlook.md)  
+[Getting Business Central on my Mobile Device](install-mobile-app.md)  
+[Send Documents by Email](ui-how-send-documents-email.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

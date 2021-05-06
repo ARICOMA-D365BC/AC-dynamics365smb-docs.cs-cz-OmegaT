@@ -6,115 +6,118 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Přecenění dlouhodobého majetku
-Přecenění dlouhodobého majetku se může skládat ze zhodnocení, snížení hodnoty nebo obecných úprav hodnot.
+# Revalue Fixed Assets
+Revaluation of fixed assets can consist of appreciations, write-downs, or general value adjustments.
 
-Když se hodnota dlouhodobého majetku zvýší, zaúčtujte do knihy odpisů řádek deníku s vyšší částkou, zhodnocením. Nová částka se zaznamená jako zhodnocení podle nastavení účtování dlouhodobého majetku.
+When the value of a fixed asset has increased, you post a journal line with a higher amount, an appreciation, to the depreciation book. The new amount is recorded as an appreciation according to the fixed asset posting setup.
 
-Pokud se hodnota dlouhodobého majetku snížila, zaúčtujte do knihy odpisů řádek deníku s nižší částkou, znehodnocením. Nová částka se zaznamená jako znehodnocení podle nastavení účtování dlouhodobého majetku.
+When the value of a fixed asset has decreased, you post a journal line with a lower amount, a write-down, to the depreciation book. The new amount is recorded as a write-down according to the fixed asset posting setup.
 
-Indexace se používá k úpravě více hodnot dlouhodobého majetku, například podle obecných změn cen. Dávkovou úlohu **Indexace dlouhodobého majetku** lze použít ke změně různých částek, například částek znehodnocení a zhodnocení.
+Indexation is used to adjust multiple fixed asset values, for example per general price changes. The **Index Fixed Assets** batch job can be used to change various amounts, such as write-down and appreciation amounts.
 
-## Zaúčtování zhodnocení z finančního deníku dlouhodobého majetku
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky dlouhodobého majetku** a poté vyberte související odkaz.
-2. Vytvořte počáteční řádek deníku a vyplňte pole podle potřeby.
-3. V poli **Typ účtování DM** vyberte **Přecenění**.
-4. Vyberte akci **Vložit protiúčet  DM**. Druhý řádek deníku je vytvořen pro protiúčet, který je nastaven pro účtování zhodnocení.
+## To post an appreciation from the fixed asset G/L journal
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.  
+2. Create an initial journal line and fill in the fields as necessary.
+3. In the **FA Posting Type** field, select **Revaluation**.
+4. Choose the **Insert FA Bal. Account** action. A second journal line is created for the balancing account that is set up for appreciation posting.
 
-   > [!NOTE]
-   > Krok 4 funguje pouze v případě, že jste nastavili následující: Na stránce **Karta účto skupiny DM** je potřeba pro účto skupinu dlouhodobého majetku nastavit pole **Účet zhodnocení**, které musí obsahovat MD účet věcných položek a pole **Protiúčet  zhodnocení** musí obsahovat účet hlavní knihy, na který chcete zaúčtovat vyrovnávací položky. Pro více informací navštivte [Nastavení účto skupin dlouhodobého majetku](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
-5. Vyberte akci **Účtovat**.
+    > [!NOTE]  
+    >   Step 4 only works if you have set up the following: On the **FA Posting Group Card** page for the posting group of the fixed asset, the **Appreciation Account** field contains the general ledger debit account and the **Appreciation Bal. Account** field contains the general ledger account to which you want to post balancing entries for appreciation. For more information, see [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).  
+5. Choose the **Post** action.
 
-## Učtování znehodnocení z finančního deníku dlouhodobého majetku
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky dlouhodobého majetku** a poté vyberte související odkaz.
-2. Vytvořte počáteční řádek deníku a podle potřeby vyplňte pole.
-3. V poli **Typ účtování DM** vyberte **Znehodnocení**.
-4. Vyberte akci **Vložit protiúčet  DM**. Druhý řádek deníku je vytvořen pro protiúčet, který je nastaven pro zaúčtování znehodnocení.
+## To post a write-down from the fixed asset G/L journal
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.  
+2. Create an initial journal line, and fill in the fields as necessary.
+3. In the **FA Posting Type** field, select **Write-Down**.
+4. Choose the **Insert FA Bal. Account** action. A second journal line is created for the balancing account that is set up for write-down posting.
 
-   > [!NOTE]
-   > Krok 4 funguje pouze v případě, že jste nastavili následující: Na stránce **Karta účto skupiny DM** je potřeba pro účto skupinu dlouhodobého majetku nastavit pole **Účet znehodnocení**, které musí obsahovat Dal účet věcných položek a pole **Účet nákladů znehodnocení** musí obsahovat MD účet věcných položek, na který chcete zaúčtovat vyrovnávací položky. Pro více informací navštivte [Nastavení účto skupin dlouhodobého majetku](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
-5. Vyberte akci **Účtovat**.
+    > [!NOTE]  
+    >   Step 4 only works if you have set up the following: On the **FA Posting Group Card** page for the posting group of the fixed asset, the **Write-Down Account** field contains the general ledger credit account and the **Write-Down Expense Account** field contains the general ledger debit account to which you want to post balancing entries for write-downs. For more information, see [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
+5. Choose the **Post** action.
 
-## Provádění všeobecného přecenění dlouhodobého majetku
-Indexace se používá k úpravě více hodnot dlouhodobého majetku, například podle obecných změn cen. Dávkovou úlohu **Indexace dlouhodobého majetku** lze použít ke změně různých částek, například částek znehodnocení a zhodnocení. Na stránce **Kniha odpisů** musí být zaškrtnuto políčko **Povolit indexaci**.
+## To perform general revaluation of fixed assets
+Indexation is used to adjust multiple fixed asset values, for example per general price changes. The **Index Fixed Assets** batch job can be used to change various amounts, such as write-down and appreciation amounts. The **Allow Indexation** check box on the **Depreciation Book** page must be selected.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Indexace dlouhodobého majetku** a poté vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
-3. Vyberte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Index Fixed Assets**, and then choose the related link.  
+2. Fill in the fields as necessary.
+3. Choose the **OK** button.
 
-   Řádky přecenění jsou vytvořeny podle nastavení v kroku 2. Řádky jsou vytvořeny v deníku dlouhodobého majetku nebo v deníku dlouhodobého majetku v závislosti na šabloně a v dávkovém nastavení na stránce **Nastavení deníku DM**. Pro více informací navštivte [Nastavení obecných informací o dlouhodobém majetku](fa-how-setup-general.md).
-4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky dlouhodobého majetku** a poté vyberte související odkaz.
-5. Vyberte deník s dlouhodobým majetkem, který chcete přecenit, a pak zvolte akci **Položky**.
-6. Zaškrtněte vytvořené položky a pak zvolte akci **Účtovat** pro zaúčtování deníku.
+    Revaluation lines are created per your settings in step 2. The lines are created in either the fixed asset journal or the fixed asset G/L journal, depending on your template and batch setup on the **FA Journal Setup** page. For more information, see [Set Up General Fixed Asset Information](fa-how-setup-general.md).
+4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.  
+5. Select the journal with the fixed assets that you want to revalue, and then choose the **Ledger Entries** action.  
+6. Check the created entries, and then choose the **Post** action to post the journal.
 
-   > [!TIP]
-   > Pokud jsou hodnoty indexu pouze pro účely simulace, můžete vytvořit speciální knihu odpisů pro jejich uložení. Tyto položky pak nebudou mít žádný vliv na ostatní odpisy.
+    > [!TIP]  
+    >   If the index figures are for simulation purposes only, you can create a special depreciation book to store them in. Then these entries will not affect any of the other depreciation books.
 
-## Zaúčtování dodatečných pořizovacích nákladů
-Dodatečné pořizovací náklady na dlouhodobý majetek zaúčtujete stejným způsobem jako původní pořizovací cenu: z nákupní faktury nebo z deníku dlouhodobého majetku. Pro více informací navštivte [Pořízení dlouhodobého majetku](fa-how-acquire.md).
+## To post additional acquisition costs
+You post additional acquisition cost for a fixed asset in the same way as you post the original acquisition cost: from a purchase invoice or from a fixed asset journal. For more information, see [Acquire Fixed Assets](fa-how-acquire.md).  
 
-Pokud již byl odpis pro dlouhodobý majetek vypočten, zaškrtněte políčko **Odpis  nákladů pořízení**, které umožňuje, aby se dodatečné pořizovací náklady snížené o zůstatkovou hodnotu odpisovaly v poměru k částce, o kterou již byl dříve pořízený dlouhodobý majetek odepsán. Tím je zajištěno, že doba odpisu se nezmění.
+If depreciation has already been calculated for the fixed asset, select the **Depr. Acquisition Cost** check box to have the additional acquisition cost less the salvage value depreciated in proportion to the amount by which the previously acquired fixed asset has already been depreciated. This ensures that the depreciation period is not changed.  
 
-Procento odpisů se vypočítá takto:
+The depreciation percentage is calculated as:  
 
-*P = (Odpisovaná částka celkem x 100) / Odpisovatelný základ*
+*P = (total depreciation x 100) / depreciable basis*
 
-*Odpisovaná částka = (P/100) x (Extra náklady na pořízení - Hodnota při vyřazení)*
+*Depreciation amount = (P/100) x (extra acquisition cost - salvage value)*  
 
-Nezapomeňte zaškrtnout políčko **Odpisy  od zúčt.data DM** na faktuře, ve finančním deníku dlouhodobého majetku nebo v řádcích deníku dlouhodého majetku, aby se zajistilo, že se odpisy počítají od posledního data účtování dlouhodobého majetku do data účtování dodatečných pořizovacích nákladů.
+Remember to select the **Depr. until FA Posting Date** check box on the invoice, the fixed asset G/L journal, or the fixed asset journal lines to ensure that depreciation is calculated from the last fixed asset posting date to the posting date of the additional acquisition cost.
 
-### Příklad - účtování dodatečných nákladů na pořízení
-Stroj je zakoupen 1. srpna 2000. Pořizovací cena je 4 800. Metoda odpisování je rovnoměrná po dobu čtyř let.
+### Example - Posting Additional Acquisition Costs
+A machine is purchased on August 1, 2000. The acquisition cost is 4,800. The depreciation method is straight-line over four years.
 
-31. srpna 2000 je spuštěna dávková úloha **Výpočet odpisů**. Odpisy se počítají takto:
+On August 31, 2000, the **Calculate Depreciation** batch job is run. Depreciation is calculated as:
 
-*Účetní hodnota x počet dní odpisu / celkový počet dnů odpisu = 4800 x 30 / 1440 = 100*
+*book value x number of depreciation days / total number of depreciation days = 4800 x 30 / 1440 = 100*  
 
-15. září 2000 je zaúčtována faktura za malování stroje. Částka faktury je 480.
+On September 15, 2000, an invoice is posted for painting the machine. The invoice amount is 480.
 
-Pokud jste vybrali zašrtávací políčko **Odpis  od zúčt.data DM** na faktuře před účtováním se provede následující výpočet:
+If you selected the **Depr. until FA Posting Date** check box on the invoice before posting, the following calculation is made:  
 
-15 dnů odpisů (od 01.09.2000 do 15.9.2000) se počítá takto:
+15 days of depreciation (from 09/01/00 to 09/15/00) is calculated as:
 
-*Účetní hodnota x počet dní odpisu / zbývající počet dnů odpisu = (4800 - 100) x 15 / 1410 = 50*
+*book value x number of depreciation days / remaining number of depreciation days = (4800 - 100) x 15 / 1410 = 50*
 
-Pokud jste vybrali zašrtávací políčko **Odpis  nákladů pořízení** na faktuře před zaúčtováním, je proveden následující výpočet:
+If you selected the **Depr. Acquisition Cost** check box on the invoice before posting, the following calculation is made:  
 
-*Dodatečné pořizovací náklady jsou odepisovány ((150 x 100) / 4800) / 100 x 480 = 15*
+*The additional acquisition cost is depreciated by ((150 x 100) / 4800) / 100 x 480 = 15*
 
-Odpisovatelný základ je nyní *5280 = (4800 + 480)* a kumulovaný odpis je *165 = (100 + 50 + 15)*, což odpovídá 45 dnům odpisu celkových pořizovacích nákladů. To znamená, že aktivum bude zcela odepsáno během odhadované životnosti čtyř let.
+The depreciable basis is now *5280 = (4800 + 480)*, and the accumulated depreciation is *165 = (100 + 50 + 15)*, corresponding to 45 days of depreciation of the total acquisition cost. This means that the asset will be totally depreciated within the estimated lifetime of four years.  
 
-Při spuštění dávkové úlohy **Výpočet odpisů** se 30.09.2000 provádí následující výpočet:
+When the **Calculate Depreciation** batch job is run on 09/30/00, the following calculation is made:  
 
-*Zbývající životnost, kterou lze odpisovat, jsou 3 roky, 10 měsíců a 15 dní = 1395 dní*
+*Remaining depreciable life is 3 years, 10 months and 15 days = 1395 days*  
 
-*Účetní hodnota je  (5280 - 165) = 5115*
+*Book value is (5280 - 165) = 5115*  
 
-*Odpisy za září 2000: 5115 x 15 / 1395 = 55.00*
+*Depreciation amount for September 2000: 5115 x 15 / 1395 = 55.00*  
 
-*Celkový odpis = 165 + 55 = 220*
+*Total of depreciation = 165 + 55 = 220*  
 
-Pokud jste nevybrali zaškrtávací políčko **Odpisy  od zúčt.data DM** majetek by  ztratil 15 dní odpisů, protože dávková úloha **Výpočet odpisů** spuštěná 30.09.2000 by vypočítala odpisy od 15.09.2000 do 30.09.2000. To znamená, že při spuštění dávkové úlohy **Výpočet odpisů** 30.09.2000 je výpočet následující:
+If you did not select the **Depr. until FA Posting Date** check box, the asset would lose 15 days of depreciation because the **Calculate Depreciation** batch job run on 09/30/00 would calculate depreciation from 09/15/00 to 09/30/00. This means that when the **Calculate Depreciation** batch job is run on 09/30/00, the calculation is as follows:  
 
-*Zbývající životnost je 3 roky, 10 měsíců a 15 dní = 1395 dní*
+*Remaining life time is 3 years, 10 months and 15 days = 1395 days*  
 
-*Účetní hodnota je (4800 + 480 - 100 - 15) = 5165*
+*Book value is (4800 + 480 - 100 - 15) = 5165*
 
-*Částka odpisu za září 2000: 5165 x 15 / 1395 = 55.54*
+*Depreciation amount for September 2000: 5165 x 15 / 1395 = 55.54*  
 
-*Celkový odpis = 100 + 15 + 55.54 = 170.54*
+*Total of depreciation = 100 + 15 + 55.54 = 170.54*
 
-## Viz také
-[Dlouhodobý majetek](fa-manage.md)  
-[Nastavení dlouhodobého majetku](fa-setup.md)  
+## See Also
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -4,225 +4,231 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, replenishment, reordering
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Detaily návrhu: Rezervace, sledování zásilky a zasílání zpráv
-Rezervační systém je komplexní a zahrnuje vzájemně propojené a paralelní funkce sledování zakázky a zasílání zpráv o akci.
+# Design Details: Reservation, Order Tracking, and Action Messaging
+The reservations system is comprehensive and includes the interrelated and parallel features of Order Tracking and Action Messaging.  
 
-Jádrem rezervačního systému je propojení položky poptávky a odpovídající položky dodávky, a to buď prostřednictvím rezervace nebo pomocí sledování zakázky. Rezervace je odkaz vygenerovaný uživatelem a záznam sledování objednávky je odkaz vygenerovaný systémem. Množství položky, které je zadáno v rezervačním systému, je buď rezervováno, nebo sledováno, ale ne obojí současně. Způsob, jakým systémy zpracovávají položku závisí na tom, jak je položka nastavena.
+ At the core of the reservation system is the linking of a demand entry and a corresponding supply entry, either through reservation or order tracking. A reservation is a user-generated link, and an order tracking record is a system-generated link. An item quantity that is entered in the reservation system is either reserved or order tracked, but not both at the same time. How the systems handle an item depends on how the item is set up.  
 
-Rezervační systém spolupracuje se systémem plánování vytvořením zpráv o akcích na plánovacích řádcích během spuštění plánování. Zprávu akce lze považovat za přílohu záznamu sledování objednávky. Zprávy o akci, ať už jsou vytvořeny dynamicky při plánování objednávek nebo během plánování, poskytují pohodlný nástroj pro efektivní plánování zásobování.
+ The reservation system interacts with the planning system by creating action messages on planning lines during planning runs. An action message can be considered an appendage to an order tracking record. Action messages, whether created dynamically in order tracking or during the planning run, provide a convenient tool for efficient supply planning.  
+
+> [!NOTE]  
+>  Reserved quantities are ignored by the planning system, that is, the hard link that is made between supply and demand cannot be changed through planning.  
+
+ The reservations system also forms the structural foundation for the item tracking system. For more information, see [Design Details: Item Tracking](design-details-item-tracking.md).  
+
+ <!--For more detailed information about how the reservation system works, see the _Reservation Entry Table_ white paper on [PartnerSource](https://go.microsoft.com/fwlink/?LinkId=258348).  -->
 
 > [!NOTE]
-> Rezervovaná množství jsou plánovacím systémem ignorována, to znamená, že pevné propojení mezi nabídkou a poptávkou nelze plánováním změnit.
+> [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
-Rezervační systém také tvoří strukturální základ pro systém sledování zboží. Pro více informací navštivte [Detaily návrhu: Sledování zboží](design-details-item-tracking.md).
+## Reservation  
+ A reservation is a firm link that connects a specific demand and a specific supply to each other. This link directly affects the subsequent inventory transaction and ensures the proper application of item entries for costing purposes. A reservation overrides the default costing method of an item. For more information, see [Design Details: Item Tracking](design-details-item-tracking.md).  
 
-Pro bližší informace o tom, jak funguje rezervační systém, navštivte dokument "Tabulka položky rezervace" na [PartnerSource](https://go.microsoft.com/fwlink/?LinkId=258348).
+ The **Reservation** page is accessible from all order lines of both demand and supply type. In this page, the user can specify which demand or supply entry to create a reservation link to. The reservation consists of a pair of records that share the same entry number. One record has a negative sign and points to the demand. The other record has a positive sign and points to the supply. These records are stored in the **Reservation Entry** table with status value **Reservation**. The user can view all reservations on the **Reservation Entries** page.  
 
-## Rezervace
-Rezervace je pevné spojení, které mezi sebou propojuje konkrétní požadavek a konkrétní nabídku. Toto propojení přímo ovlivňuje následnou skladovou transakci a zajišťuje správné vyrovnání položek zboží za účelem výpočtu nákladů. Rezervace přepíše výchozí způsob kalkulace položky. Další informace naleznete v části “Detaily návrhu: Metody ocenění”.
+### Offsetting in Reservations  
+ Reservations are made against available item quantities. Item availability is calculated in basic terms as follows:  
 
-Stránka **Rezervace** je přístupná ze všech řádků objednávky typu poptávky i typu dodávky. Na této stránce může uživatel určit, kterou položku poptávky nebo dodávky chcete propojit pomocí rezervace. Rezervace se skládá z dvojice záznamů, které sdílejí stejné číslo položky. Jeden záznam má záporné znaménko a ukazuje na poptávku. Druhý záznam má pozitivní znaménko a ukazuje na nabídku. Tyto záznamy jsou uloženy v tabulce **Položka rezervace** s hodnotou stavu **Rezervace**. Uživatel může zobrazit všechny rezervace na stránce **Položky rezervace**.
+ available quantity = inventory + scheduled receipts - gross requirements  
 
-### Zásobník v rezervacích
-Rezervace jsou prováděny proti dostupným množstvím položek. Dostupnost zboží se počítá v základních termínech takto:
+ The following table shows the details of the order network entities that are part of the availability calculation.  
 
-dostupné množství = zásoba + naplánované příjmy - hrubé požadavky
+||Field in T27|Source table|Table filter|Source field|  
+|-|------------------|------------------|------------------|------------------|  
+|**Inventory**|Inventory|Item Ledger Entry|N/A|Quantity|  
+|**Scheduled receipts**|FP Order Receipt (Qty.)|Prod. Order Line|=Firm Planned|Remaining Qty. (Base)|  
+|**Scheduled receipts**|Rel. Order Receipt (Qty.)|Prod. Order Line|=Released|Remaining Qty. (Base)|  
+|**Scheduled receipts**|Qty. on Assembly Order|Assembly Header|=Order|Remaining Qty. (Base)|  
+|**Scheduled receipts**|Qty. on Purch. Order|Purchase Line|=Order|Outstanding Qty. (Base)|  
+|**Scheduled receipts**|Trans. Ord. Receipt (Qty.)|Transfer Line|N/A|Outstanding Quantity|  
+|**Gross requirements**|Qty. On Sales Order|Sales Line|=Order|Outstanding Qty. (Base)|  
+|**Gross requirements**|Scheduled Need (Qty.)|Prod. Order Component|<>Simulated|Remaining Qty. (Base)|  
+|**Gross requirements**|Qty. on Asm. Component|Assembly Line|=Order|Remaining Qty. (Base)|  
+|**Gross requirements**|Trans. Ord. Shipment (Qty.)|Transfer Line|N/A|Outstanding Quantity|  
 
-V následující tabulce jsou uvedeny podrobnosti o entitách sítě objednávek, které jsou součástí výpočtu dostupnosti.
+ For more information, see [Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md).  
 
-||Pole v T27|Zdrojová tabulka|Filtr tabulky|Zdrojové pole|
-|-|------------------|------------------|------------------|------------------|
-|**Zásoby**|Zásoby|Položka zboží|N/A|Množství|
-|**Naplánované příjmy**|Příjem pevně plán.zak.(množ.)|Řádek výrobní zakázky|=Pevně plánováno|Zůstatkové množ. (základ)|
-|**Naplánované příjmy**|Příjem  vydané zakázky (množ.)|Řádek výrobní zakázky|=Uvolněno|Zůstatkové množ. (základ)|
-|**Naplánované příjmy**|Množství v montážní zakázce|Hlavička montáže|=Objednávka|Zůstatkové množ. (základ)|
-|**Naplánované příjmy**|Množ. na nák. objednávce|Řádek nákupu|=Objednávka|Zbýv.množství (základ)|
-|**Naplánované příjmy**|Příjemka  obj. transf.(množ.)|Řádek transferu|N/A|Zbývající množství|
-|**Celkové požadavky**|Množ. na prod.objednávce|Prodejní řádek|=Objednávka|Zbýv.množství (základ)|
-|**Hrubé požadavky**|Plánovaná potřeba (množ.)|Komponenta výrobní zakázky|<>Stimulováno|Zůstatkové množ. (základ)|
-|**Hrubé požadavky**|Množství  v montážní zakázce|Řádek montáže|=Objednávka|Zůstatkové množ. (základ)|
-|**Hrubé požadavky**|Dodávka obj. transf.(množ.)|Řádek transferu|N/A|Zbývající množství|
+### Manual Reservation  
+ When a user intentionally creates a reservation, the user gains full ownership of and responsibility for these items. This means that the user must also manually change or cancel a reservation. Such manual changes may cause automatic modification of the involved reservations.  
 
-Pro více informací navštivte [Detaily návrhu: Dostupnost ve skladu](design-details-availability-in-the-warehouse.md).
+ The following table shows when and which modifications may occur:  
 
-### Ruční rezervace
-Když uživatel záměrně vytvoří rezervaci, získá plné vlastnictví a odpovědnost za tyto položky. To znamená, že uživatel musí také ručně změnit nebo zrušit rezervaci. Tyto ruční změny mohou způsobit automatickou úpravu souvisejících rezervací.
-
-Následující tabulka ukazuje, kdy a jaké změny mohou nastat:
-
-| Uživatelská akce | Reakce systému |
+|User Action|System Reaction|  
 |-----------------|---------------------|  
-| Snížení rezervovaného množství | Související pole množství jsou aktualizována. |
-| Změna datových polí | Související datová jsou aktualizována.<br /><br /> **Note:** Pokud se datum splatnosti na požádání změní tak, aby předcházelo datu dodávky nebo datu splatnosti dodávky, rezervace je zrušena. |
-| Odstranění objednávky | Rezervace je zrušena. |
-| Změna umístění, přihrádky, varianty, sériového čísla nebo čísla šarže | Rezervace je zrušena. |
+|Decreasing the reserved quantity|The related quantity fields are updated.|  
+|Changing date fields|The related date fields are updated.<br /><br /> **Note:** If the due date on a demand is changed to precede the shipment date or due date of the supply, then the reservation is canceled.|  
+|Deleting the order|The reservation is canceled.|  
+|Changing location, bin, variant, serial number, or lot number|The reservation is canceled.|  
 
-> [!NOTE]
-> Funkce Pozdní vazba může také změnit rezervace, aniž by o tom informovala uživatele, přeskupením nespecifických rezervací sériových čísel nebo čísel šarží. Pro více informací navštivte “Detaily návrhu: Sledování a rezervace zboží”.
+> [!NOTE]  
+>  The Late Binding functionality may also change reservations without informing the user, by reshuffling nonspecific reservations of serial or lot numbers. For more information, see "Design Details: Item Tracking and Reservations".  
 
-### Automatické rezervace
-Kartu zboží lze nastavit tak, aby byla vždy automaticky rezervována z poptávky, například z prodejních objednávek. V takovém případě se provádí rezervace na zásoby, nákupní objednávky, objednávky sestavení a výrobní zakázky. Upozornění je vydáno, pokud je dodávka nedostatečná.
+### Automatic Reservations  
+ The item card can be set up to always be reserved automatically from demand, such as sales orders. In that case, reservation is made against inventory, purchase orders, assembly orders, and production orders. A warning is issued if supply is insufficient.  
 
-Kromě toho jsou položky automaticky rezervovány různými funkcemi plánování, aby byla poptávka spojena s konkrétní dodávkou. Položky sledování objednávky pro tyto odkazy plánování obsahují  **Rezervaci** v poli **Stav rezervace** v tabulce **Položka rezervace**. Automatické rezervace jsou vytvářeny v následujících situacích:
+ In addition, items are automatically reserved by various planning functions to keep a demand linked to a specific supply. The order tracking entries for such planning links contain **Reservation** in the **Reservation Status** field in the **Reservation Entry** table. Automatic reservations are created in the following situations:  
 
-- Víceúrovňová výrobní zakázka, kde je pole **Způsob výroby** zapojených nadřazených a podřízených položek nastaveno na **Zhotovit na objednávku**. Systém plánování vytváří rezervace mezi nadřazenou výrobní zakázkou a podkladovými výrobní zakázky, aby bylo zajištěno, že jsou zpracovány společně. Taková vazba rezervace přepíše výchozí způsob výpočtu nákladů a způsob aplikace.
+-   A multilevel production order where the **Manufacturing Policy** field of the involved parent and child items is set to **Make-to-Order**. The planning system creates reservations between the parent production order and the underlying production orders to ensure that they are processed together. Such a reservation binding overrides the item's default costing and application method.  
 
-- Výrobní, montážní nebo nákupní objednávka, kde je pole **Způsob přiobjednání** příslušné položky nastaveno na **Objednávka**. Plánovací systém vytváří rezervace mezi poptávkou a plánovanou dodávkou, aby bylo zajištěno vytvoření konkrétní dodávky. Pro více informací navštivte [Objednávka](design-details-handling-reordering-policies.md#order).
+-   A production, assembly, or purchase order where the **Reordering Policy** field of the involved item is set to **Order**. The planning system creates reservations between the demand and the planned supply to ensure that the specific supply is created. For more information, see [Order](design-details-handling-reordering-policies.md#order).  
 
-- Výrobní zakázka vytvořená z prodejní objednávky s funkcí **Plánování prod.objednávky** je propojena s prodejní objednávkou s automatickou rezervací.
+-   A production order created from a sales order with the **Sales Order Planning** function is linked to the sales order with an automatic reservation.  
 
-- Objednávka sestavy vytvořená automaticky pro řádek prodejní objednávky, aby se splnilo množství v poli **($ T_37_900 Qty. to Assemble to Order $)**. Tato automatická rezervace propojí prodejní poptávku a dodávku sestavy tak, aby procesory prodejních objednávek mohly přizpůsobit a slíbit položku sestavy přímo zákazníkovi. Kromě toho rezervace propojí výstup sestavy s řádkem prodejní objednávky s přepravní aktivitou, která splňuje objednávku zákazníka.
+-   An assembly order created automatically for a sales order line to fulfill the quantity in the **($ T_37_900 Qty. to Assemble to Order $)** field. This automatic reservation links the sales demand and the assembly supply so that sales order processors can customize and promise the assembly item to the customer directly. In addition, the reservation links the assembly output to the sales order line through to the shipping activity that fulfills the customer order.  
 
-V případě nepřidělené nabídky nebo poptávky přidělí plánovací systém automaticky stav rezervace typu  **Přebytek**. To může způsobit poptávka, která je vytvořena díky předpokládanému množství nebo parametrem plánování zadaných uživatelem. Jedná se o legitimní přebytek, který systém uznává, a nevede k přijetí zpráv o akci. Přebytek by také mohl být skutečný, převis nabídky nebo poptávky, který zůstává nesledován. To je známka nerovnováhy v objednávkové síti, která způsobí, že systém vydává akční zprávy. Všimněte si, že zpráva akce, která naznačuje změnu množství, vždy odkazuje na typ **Přebytek**. Pro více informací navštivte v tomto tématu sekci “Příklad: Sledování zásilky v prodeji, výrobě a transferu".
+ In the case of supply or demand that is not allocated, the planning system automatically assigns a reservation status of type **Surplus**. This could result from demand that is due to forecasted quantities or user-entered planning parameters. This is legitimate surplus, which the system recognizes, and it does not give rise to action messages. Surplus could also be genuine, excess supply or demand that remains untracked. This is an indication of an imbalance in the order network, which causes the system to issue action messages. Note that an action message that suggests a change in quantity always refers to type **Surplus**. For more information, see the "Example: Order Tracking in Sales, Production, and Transfers" section in this topic.  
 
-Automatické rezervace, které jsou vytvořeny během plánování, jsou zpracovány následujícími způsoby:
+ Automatic reservations that are created during the planning run are handled in the following ways:  
 
-- Jsou použity pro množství položek, které jsou součástí výpočtu dostupnosti, stejně jako ruční rezervace. Pro více informací navštivte v tomto tématu sekci "Zásobník v rezervacích”.
+-   They are applied against item quantities that are part of the availability calculation, as are manual reservations. For more information, see the "Offsetting in Reservations" section in this topic.  
 
-- Na rozdíl od ručně rezervovaného zboží jsou zahrnuty a případně změněny v následných plánovacích cyklech.
+-   They are included and potentially changed in subsequent planning runs, as opposed to manually reserved items.  
 
-## Sledování zakázky
-Sledování zakázky pomáhá plánovači udržovat platný plán dodávek tím, že poskytuje přehled o vyrovnání mezi poptávkou a dodávkou v síti objednávek. Záznamy sledování zakázek slouží jako základ pro vytváření dynamických akčních zpráv a řádků plánování během běh plánování.
+## Order Tracking  
+ Order Tracking helps the planner maintain a valid supply plan by providing an overview of the offsetting between demand and supply in the order network. The order tracking records serve as the foundation for creating dynamic action messages and planning line suggestions during planning runs.  
 
-> [!NOTE]
-> Systém sledování zakázek odsadí dostupné zásob, jakmile jsou objednávky zadány do sítě objednávek. To znamená, že systém neupřednostňuje objednávky, které mohou být naléhavější z hlediska jejich data splatnosti. Je tedy na logice plánovacího systému nebo moudrosti plánovače, aby tyto priority smysluplně uspořádali.
+> [!NOTE]  
+>  The order tracking system offsets available stock as orders are entered into the order network. This implies that the system does not prioritize orders that may be more urgent in terms of their due date. It is therefore up to the logic of the planning system or the wisdom of the planner to rearrange these priorities in a meaningful way.  
 
-> [!NOTE]
-> Zásady sledování objednávek a funkce Získat hlášení akcí nejsou integrovány do úloh. To znamená, že poptávka související s úlohou není automaticky sledována. Vzhledem k tomu, že není sledována, může způsobit, že použití existujícího doplňování s informacemi o úloze bude sledováno k jiné poptávce, například k prodejní objednávce. V důsledku toho se můžete setkat se situací, ve které jsou vaše informace o dostupných zásobách nesynchronizované.
+> [!NOTE]  
+>  Order tracking policy and the Get Action Messages function are not integrated with Jobs. That means that demand related to a job is not automatically tracked. Because it is not tracked, it could cause the use of an existing replenishment with job information to be tracked to another demand, for example, a sales order. Consequently, you may encounter the situation in which your information about available inventory is out of sync.  
 
-### Síť objednávek
-Systém sledování objednávek je založen na principu, že síť objednávek musí být vždy ve stavu rovnováhy, ve kterém je každá poptávka, která vstupuje do systému, kompenzována odpovídající nabídkou a naopak. Tohle systém poskytuje pomocí identifikace logických vazeb mezi všemi položkami poptávky a nabídky v objednávkové síti.
+### The Order Network  
+ The order tracking system is based on the principle that the order network must always be in a state of balance, in which every demand that enters the system is offset by a corresponding supply and vice versa. The system provides this by identifying logical links between all demand and supply entries in the order network.  
 
-Z této zásady vyplývá, že změna poptávky vede k odpovídající nerovnováze na straně nabídky v síti objednávek. Naopak změna nabídky vede k odpovídající nerovnováze na straně poptávky v síti objednávek. Ve skutečnosti je síť objednávek ve stavu konstantního toku, protože uživatelé zadávají, mění a odstraňují objednávky. Sledování zakázky zpracovává zakázky dynamicky a reaguje na každou změnu v okamžiku, kdy vstupuje do systému a stává se součástí sítě objednávek. Jakmile jsou vytvořeny nové záznamy sledování objednávek, je síť objednávek v rovnováze, ale pouze do doby, než dojde k další změně.
+ This principle implies that a change in demand results in a corresponding imbalance on the supply side of the order network. Conversely, a change in supply results in a corresponding imbalance on the demand side of the order network. In reality, the order network is in a state of constant flux as users enter, amend, and delete orders. Order Tracking processes orders dynamically, reacting to each change at the time that it enters the system and becomes a part of the order network. As soon as new order tracking records are created, the order network is in balance, but only until the next change occurs.  
 
-Aby se zvýšila transparentnost výpočtů v plánovacím systému, stránka **Nesledované prvky plánování** zobrazuje nesledované množství, které představuje rozdíl v množství mezi známou poptávkou a doporučenou nabídkou. Každý řádek na stránce odkazuje na příčinu nadměrného množství, například  **Hromadná objednávka**, **Úroveň pojistných zásob**, **Pevné přiobj.množ.**, **Minimální obj.množství**, **Zaokrouhlení**, nebo **Prodleva**.
+ To increase the transparency of calculations in the planning system, the **Untracking Planning Elements** page displays untracked quantities, which represent the difference in quantity between known demand and suggested supply. Each line on the page refers to the cause of the excess quantity, such as **Blanket Order**, **Safety Stock Level**, **Fixed Reorder Quantity**, **Minimum Order Qty.**, **Rounding**, or **Dampener**.  
 
-### Posunování při sledování zakázky
-Na rozdíl od rezervací, které lze provést pouze proti dostupným množstvím položek, je sledování objednávek možné u všech entit sítě objednávek, které jsou součástí výpočtu čistých požadavků plánovacího systému. Čisté požadavky se vypočítají takto:
+### Offsetting in Order Tracking  
+ In contrast to reservations, which can only be made against available item quantities, order tracking is possible against all order network entities that are part of  the net requirements calculation of the planning system. The net requirements are calculated as follows:  
 
-čisté požadavky = hrubé požadavky + bod přiobjednání - naplánované příjmy - plánované příjmy - předpokládané dost.množ.
+ net requirements = gross requirements + reorder point - scheduled receipts - planned receipts - projected available balance  
 
-> [!NOTE]
-> Poptávka související s prognózami nebo parametry plánování není sledována podle pořadí.
+> [!NOTE]  
+>  Demand that is related to forecasts or planning parameters is not order tracked.  
 
-### Příklad: Sledování zásilky v prodeji, výrobě a transferu
-Následující scénář ukazuje, které položky sledování objednávek jsou v tabulce  **Položka rezervace** vytvořeny jako výsledky různých změn sítě objednávek.
+### Example: Order Tracking in Sales, Production, and Transfers  
+ The following scenario shows which order tracking entries are created in the **Reservation Entry** table as results of various order network changes.  
 
-Předpokládejme následující data pro dvě zboží, které jsou nastaveny pro sledování objednávky.
+ Assume the following data for two items that are set up for order tracking.  
 
-|Zboží 1|Název|“Komponenta”|
+|Item 1|Name|"Component"|
 |-|-|-|
-||Dostupnost|100 jednotek v lokaci ČERVENÝ<br /><br />- 30 jednotek LOTA<br />- 70 jednotek LOTB|
-|Zboží 2|Název|“Vyrobené zboží”|
-||Výrobní kusovník|1 množ. za “komponentu”|
-||Poptávka|Prodej za 100 jednotek na lokaci MODRÁ|
-||Dodávka|Vydaná výrobní zakázka (generovaná s funkcí **Plánování prod.objednávky**  pro prodej 100 jednotek)|
+||Availability|100 units in WEST location<br /><br />- 30 units of LOTA<br />- 70 units of LOTB|  
+|Item 2|Name|"Produced Item"|
+||Production BOM|1 qty. per of "Component"|  
+||Demand|Sale for 100 units at EAST location|  
+||Supply|Released production order (generated with the **Sales Order Planning** function for the sale of 100 units)|  
 
-Na stránce **Nastavení výroby**, pole **Komponenty na lokaci** je nastaveno na **ČERVENÁ**.
+On the **Manufacturing Setup** page, the **Components at Location** field is set to **RED**.
 
-Následující položky sledování objednávky existují v tabulce **Položka rezervace** na základě dat v tabulce.
+ The following order tracking entries exist in the **Reservation Entry** table based on the data in the table.  
 
-![Položky sledování objednávek v tabulce Položka rezervace](media/supply_planning_RTAM_1.png "supply_planning_RTAM_1")
+ ![First example of order tracking entries in Reservation Entry table](media/supply_planning_RTAM_1.png "supply_planning_RTAM_1")  
 
-### Vstupní čísla 8 a 9
-Pro potřebu komponent pro LOTA a LOTB jsou vytvořeny odkazy sledování objednávek z poptávky v tabulce 5407, **Komponenta výrobní zakázky**, k dodání v tabulce 32, **Položka zboží**. Pole **Stav rezervace** obsahuje **Sledování**, které označuje, že tyto položky jsou dynamickými odkazy na sledování objednávek mezi nabídkou a poptávkou.
+### Entry Numbers 8 and 9  
+ For the component need for LOTA and LOTB respectively, order tracking links are created from the demand in table 5407, **Prod. Order Component**, to the supply in table 32, **Item Ledger Entry**. The **Reservation Status** field contains **Tracking** to indicate that these entries are dynamic order tracking links between supply and demand.  
 
-> [!NOTE]
-> Pole **Číslo šarže** je na řádcích poptávky prázdné, protože čísla šarží nejsou specifikována na řádcích komponent vydané výrobní zakázky.
+> [!NOTE]  
+>  The **Lot No.** field is empty on the demand lines, because the lot numbers are not specified on the component lines of the released production order.  
 
-### Vstupní čísla 10
-Z prodejní poptávky v tabulce 37, **Prodejní řádek**, je vytvořen odkaz sledování objednávek v tabulce 5406, **Řádek výrobní zakázky**. Pole **Stav rezervace** obsahuje **Rezervace**, a pole **Vazba** obsahuje **Zakázka-na-zakázku**. Je tomu tak proto, že uvolněná výrobní objednávka byla vytvořena speciálně pro prodejní objednávku a musí zůstat propojená na rozdíl od odkazů na sledování zakázek se stavem rezervace **Sledování**, které jsou vytvářeny a měněny dynamicky. Další informace naleznete v tomto tématu v části “Automatické rezervace”.
+### Entry Numbers 10  
+ From the sales demand in table 37, **Sales Line**, an order tracking link is created to the supply in table 5406, **Prod. Order Line**. The **Reservation Status** field contains **Reservation**, and the **Binding** field contains **Order-to-Order**. This is because the released production order was generated specifically for the sales order and must remain linked unlike order tracking links with a reservation status of **Tracking**, which are created and changed dynamically. For more information, see the "Automatic Reservations" section in this topic.  
 
-V tomto bodě scénáře je 100 jednotek LOTA a LOTB převedeno na lokaci MODRÝ převodním příkazem.
+ At this point in the scenario, the 100 units of LOTA and LOTB are transferred to EAST location by a transfer order.  
 
-> [!NOTE]
-> V tomto okamžiku se zaúčtuje pouze zásilka objednávky převodu, nikoli potvrzení.
+> [!NOTE]  
+>  Only the transfer order shipment is posted at this point, not the receipt.  
 
-Nyní existují následující položky sledování objednávky v tabulce **Položka rezervace**.
+ Now the following order tracking entries exist in the **Reservation Entry** table.  
 
-![Položka sledování objednávky v tabulce Položky rezervace](media/supply_planning_RTAM_2.png "supply_planning_RTAM_2")
+ ![Second example of order tracking entries in Reservation Entry table](media/supply_planning_RTAM_2.png "supply_planning_RTAM_2")  
 
-### Vstupní čísla 8 a 9
-Položky sledování objednávek pro dvě šarže komponentů odrážející poptávku v tabulce 5407  se změní ze stavu rezervace **Sledování** na **Přebytek**. Důvodem je, že dodávky, se kterými byly dříve spojeny, byly v tabulce 32 použity zásilkou převodního příkazu.
+### Entry Numbers 8 and 9  
+ Order tracking entries for the two lots of the component reflecting demand in table 5407 are changed from a reservation status of **Tracking** to **Surplus**. The reason is that the supplies that they were linked to before, in table 32, have been used by the shipment of the transfer order.  
 
-Skutečný přebytek, jako v tomto případě, odráží nadbytečnou nabídku nebo poptávku, která zůstává nevyřešena. Jedná se o známku nerovnováhy v síti objednávek, která vygeneruje zprávu o akci systémem plánování, pokud nebude dynamicky vyřešena.
+ Genuine surplus, as in this case, reflects excess supply or demand that remains untracked. It is an indication of imbalance in the order network, which will generate an action message by the planning system unless it is resolved dynamically.  
 
-### Vstupní čísla 12 až 16
-Vzhledem k tomu, že dvě části komponenty jsou zaúčtovány na převodní příkaz jako dodané, ale ne přijaté, jsou všechny související položky sledování kladné objednávky typu rezervace **Nadbytek**, což znamená, že nejsou přiřazeny k žádným požadavkům. Pro každé číslo šarže se jeden záznam týká tabulky 5741, **Řádek transferu**, a jeden záznam se týká položky zboží v lokaci na cestě, kde nyní zboží existuje.
+### Entry Numbers 12 to 16  
+ Because the two lots of the component are posted on the transfer order as shipped but not received, all related positive order tracking entries are of reservation type **Surplus**, indicating that they are not allocated to any demands. For each lot number, one entry relates to table 5741, **Transfer Line**, and one entry relates to the item ledger entry at the in-transit location where the items now exist.  
 
-V tomto okamžiku ve scénáři je zaúčtováno pořadí převodu komponent z umístění MODRÝ do ČERVENÝ jako přijaté.
+ At this point in the scenario, the transfer order of the components from EAST to WEST location is posted as received.  
 
-Nyní existují následující položky sledování objednávky v tabulce **Položka rezervace**.
+ Now the following order tracking entries exist in the **Reservation Entry** table.  
 
-![Položky sledování objednávek v tabulce Položka rezervace](media/supply_planning_RTAM_3.png "supply_planning_RTAM_3")
+ ![Third example of order tracking entries in Reservation Entry table](media/supply_planning_RTAM_3.png "supply_planning_RTAM_3")  
 
-Položky pro sledování objednávek jsou nyní podobné prvnímu bodu ve scénáři, než byla objednávka přenosu zaúčtována pouze jako dodaná, kromě položek pro komponentu je nyní stav rezervace **Přebytek**. Je to proto, že potřeba komponenty je stále na lokaci ČERVENÝ, což odráží, že pole **Kód lokace** na řádku komponenty výrobní zakázky obsahuje **ČERVENÝ** jak je nastaveno na poli **Komponenty na lokaci**. Nabídka, která byla k této poptávce přidělena dříve, byla přenesena do lokace MODRÝ a nyní ji nelze plně sledovat, dokud nejsou změněny potřebné komponenty na řádku výrobní zakázky změnit na lokaci MODRÝ.
+ The order tracking entries are now similar to the first point in the scenario, before the transfer order was posted as shipped only, except entries for the component are now of reservation status **Surplus**. This is because the component need is still at WEST location, reflecting that the **Location Code** field on the production order component line contains **WEST** as set up in the **Components at Location** setup field. The supply that was allocated to this demand before has been transferred to EAST location and cannot now be fully tracked unless the component need on the production order line is changed to EAST location.  
 
-V tomto bodě scénáře je **Kód lokace** na řádku výrobní zakázky nastaven na **MODRÝ**. Kromě toho je na stránce **Řádky sledování zboží**, přiřazeno 30 jednotek LOTA a 70 jednotek LOTB k řádku výrobní zakázky.
+ At this point in the scenario, the **Location Code** on the production order line is set to **EAST**. In addition, on the **Item Tracking Lines** page, the 30 units of LOTA and the 70 units of LOTB are assigned to the production order line.  
 
-Nyní existují následující položky sledování objednávky v tabulce **Položka rezervace**.
+ Now the following order tracking entries exist in the **Reservation Entry** table.  
 
-![Položky sledování objednávek v tabulce Položka rezervace](media/supply_planning_RTAM_4.png "supply_planning_RTAM_4")
+ ![Fourth example of order tracking entries in Reservation Entry table](media/supply_planning_RTAM_4.png "supply_planning_RTAM_4")  
 
-### Vstupní čísla 21 a 22
-Vzhledem k tomu, že potřebné komponenty byly změněny na lokaci MODRÝ a dodávka je k dispozici jako položka sledování zboží v lokaci BLUE, jsou všechny položky sledování objednávek pro dvě čísla šarží nyní plně sledovány, což je označeno stavem rezervace **Sledování**.
+### Entry Numbers 21 and 22  
+ Since the component need has been changed to EAST location, and the supply is available as item ledger entries at EAST location, all order tracking entries for the two lot numbers are now fully tracked, indicated by the reservation status of **Tracking**.  
 
-Pole **Číslo šarže** je nyní vyplněno v položce sledování objednávky pro tabulku 5407, protože čísla šarží byla přiřazena řádkům komponent výrobní zakázky.
+ The **Lot No.** field is now filled in the order tracking entry for table 5407, because the lot numbers were assigned to the production order component lines.  
 
-Pro více příkladů o Položkách sledování objednávky v tabulce **Položka rezervace**, navštivte dokument “Tabulka položky rezervace” na [PartnerSource](https://go.microsoft.com/fwlink/?LinkId=258348) (vyžaduje přihlášení).
+ For more examples of order tracking entries in the **Reservation Entry** table, see the "Reservation Entry Table" white paper on [PartnerSource](https://go.microsoft.com/fwlink/?LinkId=258348) (requires login).
 
-## Zprávy o akcích
-Když systém sledování objednávek zjistí nerovnováhu v síti objednávek, automaticky vytvoří zprávu akce, která uživatele upozorní. Zprávy o akcích jsou systémem generované výzvy pro akce uživatele, které určují podrobnosti nerovnováhy a návrhy, jak obnovit rovnováhu v síti objednávek. Jsou zobrazeny jako plánovací řádky na stránce **Sešity plánování** když zvolíte **Získat hlášení akcí**. Kromě toho jsou zprávy o akcích zobrazeny na řádcích plánování, které jsou generovány spuštěním plánování, aby odrážely návrhy systému plánování, jak obnovit rovnováhu v síti objednávek. V obou případech se návrhy spustí v síti objednávek, když vyberete **Provést hlášené akce**.
+## Action Messaging  
+ When the order tracking system detects an imbalance in the order network, it automatically creates an action message to notify the user. Action messages are system-generated calls for user action that specify the details of the imbalance and the suggestions about how to restore balance to the order network. They are displayed as planning lines on the **Planning Worksheet** page when you choose **Get Action Messages**. In addition, action messages are displayed on planning lines that are generated by the planning run to reflect the planning system's suggestions about how to restore balance to the order network. In both cases, the suggestions are run on the order network, when you choose **Carry Out Action Messages**.  
 
-Zpráva o akci adresuje vždy jednu úroveň kusovníku. Pokud uživatel přijme zprávu akce, může to vést k dalším zprávám akce na další úrovni kusovníku.
+ An action message addresses one BOM level at a time. If the user accepts the action message, this may give rise to additional action messages at the next BOM level.  
 
-V následující tabulce jsou uvedeny existující zprávy akcí.
+ The following table shows the action messages that exist.  
 
-| Akční zpráva | Popis |
+|Action message|Description|  
 |--------------------|---------------------------------------|  
-| **Změnit množství** | Změní množství na existující objednávce dodávky tak, aby pokrylo změněnou nebo novou poptávku. |
-| **Přeplánování** | Přeplánuje datum splatnosti u stávající objednávky. |
-| **Přeplán. změna množ.** | Přeplánuje termín splatnosti a změní množství u stávající objednávky. |
-| **Nový** | Vytvoří novou objednávku, pokud poptávku nelze splnit některou z předchozích zpráv akce. |
-| **Zrušit** | Zruší existující objednávku. |
+|**Change Qty.**|Changes the quantity on an existing supply order to cover a changed or new demand.|  
+|**Reschedule**|Reschedules the due date on an existing order.|  
+|**Resched. & Chg. Qty.**|Reschedules the due date and changes the quantity on an existing order.|  
+|**New**|Creates a new order if demand cannot be fulfilled by either of the previous action messages.|  
+|**Cancel**|Cancels an existing order.|  
 
-Systém sledování objednávek se vždy pokouší vyřešit nerovnováhu ve stávající síti objednávek. Pokud to není možné, vydá akční zprávu k vytvoření nové objednávky. Následuje seznam priorit, který systém sledování objednávek používá, když určuje, jak obnovit rovnováhu. Pokud do sítě objednávek vstoupila další poptávka, systém se snaží sledovat objednávku pomocí následujících kontrol:
+ The order tracking system always attempts to resolve an imbalance in the existing order network. If this is not possible, it issues an action message to create a new order. Following is the prioritized list that the order tracking system uses when it determines how to restore balance. If an additional demand has entered the order network, the system seeks to order track through the following checks:  
 
-1. Zkontrolujte nadbytečnou nabídku ve stávajícím záznamu sledování objednávky pro tuto poptávku.
-2. Zkontrolujte plánované a naplánované příjmy v pořadí podle data přijetí. Je vybráno poslední možné datum.
-3. Kontrola dostupných zásoby.
-4. Zkontrolujte, zda v aktuálním záznamu sledování objednávky existuje záznam sledování. Pokud ano, systém vydá zprávu akce typu **Změna** aby se zvýšila objednávka.
-5. Zkontrolujte, zda v aktuálním záznamu sledování objednávky neexistuje žádná objednávka dodávky. Pokud ano, systém vydá zprávu akce typu **Nový** a vytvoří novou objednávku.
+1.  Check for any excess supply in the existing order tracking record for this demand.  
+2.  Check for planned and scheduled receipts in order of receipt date. The latest possible date is selected.  
+3.  Check for available stock.  
+4.  Check if a supply order exists in the current order tracking record. If so, the system issues an action message of type **Change** to increase the order.  
+5.  Check that no supply order exists in the current order tracking record. If so, the system issues an action message of type **New** to create a new order.  
 
-Otevřený požadavek prochází seznamem a odsune dostupnou dodávku v každém bodě. Všechny zbývající požadavky jsou vždy pokryty kontrolou 4 nebo kontrolou 5.
+ An open demand passes through the list and offsets the available supply at each point. Any remaining demand is always covered by check 4 or check 5.  
 
-Pokud dojde ke snížení množství poptávky, systém sledování objednávek se pokusí vyřešit nerovnováhu provedením předchozích kontrol v opačném pořadí. To znamená, že existující zprávy akcí mohou být v případě potřeby změněny nebo dokonce odstraněny. Systém sledování objednávek uživateli vždy předkládá čistý výsledek jeho výpočtů.
+ If a decrease in demand quantity occurs, the order tracking system attempts to resolve the imbalance by performing the previous checks in reverse order. This means that existing action messages could be modified or even deleted, if necessary. The order tracking system always presents the net result of its calculations to the user.  
 
-## Sledování a plánování objednávek
-Po spuštění systému plánování, odstraní všechny existující záznamy sledování objednávek a položky zpráv akcí a znovu je vytvoří jako návrhy řádků plánování podle párů nabídky a poptávky a priorit. Po dokončení plánovacího běhu je síť objednávek v rovnováze.
+## Order Tracking and Planning  
+ When the planning system runs, it deletes all existing order tracking records and action message entries and recreates them as planning line suggestions according to supply/demand pairs and priorities. When the planning run has finished, the order network is in balance.  
 
-### Systém plánování versus Plánování objednávek a Zasílání zpráv o akci
-Následující porovnání ukazuje rozdíly mezi metodami, které systém plánování používá k vytváření návrhů řádků plánování, a metodami, které systém sledování objednávek používá k vytváření záznamů sledování objednávek a zpráv akcí.
+### Planning System versus Order Tracking and Action Messaging  
+ The following comparison shows the differences between the methods that are used by the planning system to create planning line suggestions and the methods that are used by the order tracking system to create order tracking records and action messages.  
 
-- Systém plánování se zabývá celým vzorem nabídky a poptávky konkrétní položky, zatímco sledování objednávek se zabývá objednávkou, která ji aktivovala.
+-   The planning system deals with the entire supply and demand pattern of a particular item, whereas order tracking deals with the order that activated it.  
 
-- Systém plánování se zabývá všemi úrovněmi hierarchie kusovníku, zatímco sledování objednávek se zabývá vždy jednou úrovní kusovníku.
+-   The planning system deals with all levels of the BOM hierarchy, whereas order tracking deals with one BOM level at a time.  
 
-- Systém plánování vytváří vazby mezi poptávkou a nabídkou podle prioritního termínu splatnosti. Sledování objednávky vytváří vazby mezi poptávkou a nabídkou podle posloupnosti zadávání objednávek.
+-   The planning system establishes links between demand and supply according to the prioritized due date. Order tracking establishes links between demand and supply according to the order entry sequence.  
 
-- Systém plánování bere v úvahu parametry plánování, zatímco sledování objednávek nikoli.
+-   The planning system takes planning parameters into account, whereas order tracking does not.  
 
-- Plánovací systém vytváří propojení v dávkovém režimu aktivovaném uživatelem, když vyrovnává poptávku a nabídku, zatímco sledování objednávek vytváří odkazy automaticky a dynamicky, když uživatel zadává objednávky.
+-   The planning system creates links in a user-activated batch mode when it balances demand and supply, whereas order tracking creates the links automatically and dynamically as the user enters orders.  
 
-## Viz také
-[Detaily návrhu: Centrální koncepce plánovacího systému](design-details-central-concepts-of-the-planning-system.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)
+## See Also  
+[Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)   
+[Design Details: Supply Planning](design-details-supply-planning.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -11,31 +11,31 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: costing, inventory cost, value entries
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Přecenění zásob
-Chcete-li ocenit nebo odepsat zboží nebo specifickou položku zboží, musíte použít deník přecenění.
+# Revalue Inventory
+If you want to appreciate or depreciate an item or a specific item ledger entry, you must use the revaluation journal.
 
-## Přecenění zásob
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky Přecenění** a vyberte související odkaz.
-2. Vyberte akci **Vypočítat hodnotu zásob**.
-3. Na stránce **Vypočítat hodnotu zásob** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Vyberte tlačítko **OK**.
-5. Na každém řádku na stránce **Deníku přecenění** v poli **Pořizovací cena (přeceněná)** zadejte novou pořizovací cenu. Případně zadejte novou celkovou částku do pole **Hodnota zásob (přeceněno)**.
+## To revalue inventory
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Revaluation Journal**, and then choose the related link.
+2. Choose the **Calculate Inventory Value** action.
+3. On the **Calculate Inventory Value** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Choose the **OK** button.
+5. On each line on the **Revaluation Journal** page, in the **Unit Cost (Revalued)** field, enter the new unit cost. Alternatively, enter the new total amount in the **Inventory Value (Revalued)** field.
 
-   Příslušná pole jsou automaticky aktualizována. Všimněte si, že pole **Částka** zobrazuje skutečnou změnu hodnoty zásob pro vybranou položku zboží. Vypočítá rozdíl mezi polem **Hodnota zásob (vypočítaná)** a **Hodnota zásob (přeceněná)**.
-6. Jakmile dokončíte všechny řádky v deníku přecenění, vyberte akci **Zaúčtovat**.
+    The relevant fields are automatically updated. Note that the **Amount** field shows the actual change in inventory value for the selected item ledger entry. It calculates the difference between the **Inventory Value (Calculated)** field and the **Inventory Value (Revalued)** field.
+6. When you have completed all lines in the revaluation journal, choose the **Post** action.
 
-Nové položky přecenění jsou nyní vytvořeny tak, aby odrážely přecenění, která jste zaúčtovali. Nové hodnoty můžete vidět na příslušných kartách zboží.
+New value entries are now created to reflect the revaluations that you have posted. You can see the new values on the respective item cards.
 
-## Viz také
-[Detaily návrhu: Přecenění](design-details-revaluation.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Prodej](sales-manage-sales.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## See Also
+[Design Details: Revaluation](design-details-revaluation.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Sales](sales-manage-sales.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

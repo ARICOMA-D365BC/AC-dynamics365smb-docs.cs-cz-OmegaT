@@ -4,46 +4,49 @@ description: Workaround for accessing Microsoft Invoicing when you have signed u
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: Invoicing, Office 365
-ms.date: 04/30/2020
+ms.search.keywords: Invoicing, Microsoft 365
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Použití stejného účtu sady Office 365 v [!INCLUDE[d365fin](includes/d365fin_long_md.md)] a Microsoft Invoicing
-Když si zaregistrujete na zkoušku [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete přejít na 30-denní zkušební dobu, a poté můžete zahájit předplatné nebo můžete přestat používat [!INCLUDE[d365fin](includes/d365fin_md.md)]. Ve všech případech jste někdy mohli vidět něco, co se nazývá **Microsoft Invoicing** a kliknout na něj. Jednalo se o aplikaci, která byla součástí toho, co je nyní Microsoft 365 Business Standard, dříve známý jako Předplatné Office 365 Business Premium, proto ne každý uvidí dlaždici v jejich Office 365 prostředí.
+# Using the same Microsoft 365 Account in [!INCLUDE[prod_short](includes/prod_long.md)] and Microsoft Invoicing
+When you sign up for a trial with [!INCLUDE[prod_short](includes/prod_short.md)], you can move to a 30-day evaluation phase, you can start a subscription, or you can stop using [!INCLUDE[prod_short](includes/prod_short.md)]. In all cases, you may at some point have seen something called **Microsoft Invoicing** and clicked it. This was an app that was part of what is now Microsoft 365 Business Standard and was formerly known as Microsoft 365 Business Premium subscription, so not everyone will have seen that tile in their Microsoft 365 experience.  
 
-Microsoft Invoicing již není k dispozici, ale pokud se chcete přihlásit k Invoicing pro načtení dat, může se zobrazit zpráva, že nemáte přístup k Microsoft Invoicing, protože Váš účet je použit v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+Microsoft Invoicing is no longer available, but if you need to sign into Invoicing to retrieve your data, you might see a message that you cannot access Microsoft Invoicing because your account is used in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Podobnou zprávu uvidíte pokud nainstalujete mobilní aplikaci Invoicing.
+You see a similar message if you install the mobile app for Invoicing.  
 
-## Řešení
-Invoicing a [!INCLUDE[d365fin](includes/d365fin_md.md)] sdílejí stejnou platformu. To znamená, že jste rozpoznáni jako stávající uživatel [!INCLUDE[d365fin](includes/d365fin_md.md)] když kliknete na Microsoft 365 centrum pro správu. Důvodem je, že Invoicing nemůže používat stejnou společnost jako [!INCLUDE[d365fin](includes/d365fin_md.md)].
+## Workaround
+Invoicing and [!INCLUDE[prod_short](includes/prod_short.md)] have a shared platform. That means that you are recognized as an existing user of [!INCLUDE[prod_short](includes/prod_short.md)] when you click Invoicing in the Microsoft 365 admin center. The reason is that Invoicing cannot use the same company as [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Budete se tedy muset přihlásit do [!INCLUDE[d365fin](includes/d365fin_md.md)] a přejmenovat svou stávající společnost a poté vytvořit novou společnost, kterou pak můžete použít ve Invoicing. Během tohoto zástupného řešení nejsou přesunuta ani přepsána žádná data.
+So you will have to sign in to [!INCLUDE[prod_short](includes/prod_short.md)] and rename your existing company, and then create a new company that you can then use in Invoicing. No data is moved or overwritten during this workaround.
 
-### Přejmenování společnosti
-1. Přihlašte se do [!INCLUDE[d365fin](includes/d365fin_md.md)].
-2. V pravém horním rohu zvolte **Nastavení** ikonu ![Nastavení](media/ui-experience/settings_icon_small.png "Nastavení pro Centrum rolí") a pak zvolte Moje nastavení .
-3. V poli **Společnost**, vyberte jinou společnost.
-4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Společnosti** a vyberte související odkaz.
-5. Na stránce **Společnosti**, zvolte **Upravit seznam**.
-6. Změňte název *Má společnost* na něco jiného.
+### To rename your company
+1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)].
+2. In the top right corner, choose the **Settings** icon ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center"), and then choose **My Settings**.
+3. In the **Company** field, choose a different company.
+4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Companies**, and then choose the related link.  
+5. On the **Companies** page, choose **Edit List**.  
+6. Change the name of the *My Company* entry to something else.  
 
-   Počkejte několik minut V základní databázi provedeme řadu změn a to chvíli potrvá.
-7. Až bude systém opět připraven, zvolte **vytvořit novou společnost**.
-8. V dialogovém okně, které se zobrazí, zadejte název jako *Moje společnost*, a zvolte **Výroba – pouze nastavení dat**.
+    Wait a number of minutes. We’ll be making a number of changes in the underlying database, and that takes a while.
+7.	When the system is ready again, choose the **Create New Company** button.  
+8.  In the dialog that appears, specify the name as *My Company*, and choose the **Production – Setup Data Only** option.  
 
-To opět trvá několik minut. Po dokončení procesu budete mít přístup k Invoicing jako součást prostředí Microsoft 365 Business Standard. ale pouze pro export dat, protože aplikace Invoicing je zastaralá.
+This again takes a number of minutes. When the process completes, you will be able to access Invoicing as part of your Microsoft 365 Business Standard experience. but only to export data since the Invoicing app is deprecated.  
 
-### A co moje data?
-Při přejmenování původní Mé společnosti, databázové tabulky, které ukládají Vaše stávající data v [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou přejmenována, ale samotných dat se nedotknete.
+### What about my data?
+When you rename the original My Company, the database tables that store your existing [!INCLUDE[prod_short](includes/prod_short.md)] data are renamed, but the data itself is not touched.  
 
-Pokud používate oboje Invoicing a [!INCLUDE[d365fin](includes/d365fin_md.md)], data jsou uložen na dvou místech (dvě společnosti). Nic není sdíleno, takže budete muset spravovat zákazníky a zboží v obou společnostech.
+If you use both Invoicing and [!INCLUDE[prod_short](includes/prod_short.md)], the data is stored in two different containers (the two companies). Nothing is shared, so you'll have to manage customers and items in both companies.  
 
-## Viz také
-[Často kladené otázky](across-faq.md)  
-[Administrace](admin-setup-and-administration.md)
+## See Also
+[Frequently Asked Questions](across-faq.md)  
+[Administration](admin-setup-and-administration.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

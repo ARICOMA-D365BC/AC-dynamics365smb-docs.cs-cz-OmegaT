@@ -1,39 +1,49 @@
 ---
-title: Assigning and managing tasks| Microsoft Docs
-description: Learn how to assign tasks to users, including your accountant, in Business Central
+title: Assigning and managing tasks
+description: Learn how to assign tasks to users, including your accountant, in Business Central, and how you pick up and complete tasks.
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: tasks, work
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Definice uživatelských úloh
-V [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete vytvořit úlohy, které vám připomenou práci, kterou máte provést. Úlohy si můžete vytvořit sami, ale můžete je také přiřadit ostatním, nebo jim může úkol přiřadit někdo jiný ve vaší firmě.
+# Define User Tasks
 
-## Správa úloh uživatele
-Na stránce **Úlohy uživatele** jsou zobrazeny všechny úlohy a lze snadno vytvářet a přiřazovat nové. Když vytvoříte úlohu, můžete určit počáteční datum a datum splatnosti a také můžete přidat odkaz na stránku v [!INCLUDE[d365fin](includes/d365fin_md.md)], kde uživatel musí provést daný úkon.
+In [!INCLUDE[prod_short](includes/prod_short.md)], you can create tasks to remind you of work to be done. You can create tasks for yourself, but you can also assign tasks to others or be assigned a task by someone else in your organization.  
 
-Můžete například vytvořit úlohu pro zobrazení všech zaúčtovaných prodejních faktur. V takovém případě se úloha propojí se stránkou 143, účtované prodejní faktury.
+## Managing User Tasks
 
-![Příklad uživatelské úlohy](media/across-user-tasks/sample-user-task.png "Příklad uživatelského úkolu")
+The **User Tasks** page shows all tasks, and you can easily create and assign new tasks. When you create a task, you can specify the start date and due date, and you can add a link to the page or report in [!INCLUDE[prod_short](includes/prod_short.md)] where the user must do the work.  
+
+For example, you can create a task for yourself or a coworker to view all posted sales invoices. In that case, you link the task to page 143, **Posted Sales Invoices**. In the following screenshot, someone is creating a task for MeganB to review the posted sales invoices.  
+
+:::image type="content" source="media/across-user-tasks/sample-user-task.png" alt-text="Example of a user task":::
 
 > [!TIP]  
-> Použijte vyhledávání v poli **Stránka** a poté pomocí **Vyhledat stránku nebo sestavu** najděte stránku, kterou chcete. Pro více informací navštivte [Vyhledávání stránek nebo sestav](ui-search.md).
+> Use the look-up in the **Page** field and then use the **Search** field to find the page that you want.  
+>
+> You can link to any page, but you cannot link to individual entries, so make the description as explicit as possible, such as writing "Please take a look at customer no. 10000 and make sure they don't have overdue payments.".
 
-### Vybírání uživatelských úloh
-V centru rolí - obchodní manažer, účetní a hlavní účetní jsou zobrazeny nevyřízené úlohy přiřazené vybranému uživateli. Chcete-li úlohu vybrat, jednoduše ji vyberte ze seznamu čekajících uživatelských úloh. Na pásu karet odkaz **Přejít na položku úlohy** otevře stránku, kde můžete provést práci.
+### Picking Up User Tasks
 
-Po dokončení úlohy ji jednoduše označte jako dokončenou.
+In the Business Manager, Bookkeeper, and Accountant Role Centers, a tile shows pending tasks that are assigned to that user. To pick up a task, simply choose it from the list of pending user tasks. In the ribbon, the link **Go to Task Item** opens the page where you can do the work.  
 
-### Odstranění uživatelských úloh
-Pokud chcete hromadně odstranit všechny nebo některé uživatelské úkoly, můžete použít sestavu **Odstranit uživatelské úlohy**. Na stránce požadavku můžete nastavit filtry, abyste určili, které úkoly je třeba odstranit.
+When you have completed a task, simply mark it as completed.  
 
-## Viz také
-[Vyhledávání stránek nebo sestav](ui-search.md)  
-[Accountant Experiences in [!INCLUDE[d365fin](includes/d365fin_md.md)]](finance-accounting.md)
+### Deleting User Tasks
+
+If you want to bulk delete all or some user tasks, you can use the **Delete User Tasks** report. In the request page, you can set filters to determine which tasks must be deleted.  
+
+## See Also
+
+[Searching for a Page or Report](ui-search.md)  
+[Accountant Experiences in [!INCLUDE[prod_short](includes/prod_short.md)]](finance-accounting.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -4,79 +4,82 @@ description: Learn how to add a link to your Role Center.
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 02/12/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 ---
 
-# Záložka stránky nebo sestavy v Centru rolí
-Pomocí ikony záložky můžete přidat akci, která otevře stránku nebo sestavu z navigační nabídky Centra rolí. To vám umožní rychle dosáhnout vašeho oblíbeného obsahu nebo obchodních úkolů. Záložku přidáte z cílové stránky nebo sestavy, což znamená obrazovku, která se má otevřít z odkazu v Centru rolí.
+# Bookmark a Page or Report on Your Role Center
+Using the bookmark icon, you can add an action that opens a page or report from the navigation menu of your Role Center. This allows you to quickly reach your favorite content or business tasks. You add the bookmark from the target page or report, meaning the screen that you want the link on the Role Center to open.
 
-Ikona záložky se zobrazí v pravém horním rohu stránky a také v okně **Řekněte mi**, kde můžete efektivně přidat do záložek více stránek nebo sestav. Pokud záložka již pro stránku existuje, ikona je tmavá a popis s nápisem "Uloženo jako záložka".
+The bookmark icon is shown in the top right corner of a page and also in the **Tell Me** window where you can efficiently bookmark multiple pages or reports. If a bookmark already exists for the page, then the icon is dark, and the tooltip says "Bookmarked".
 
-## Uložení cílové stránky jako záložky
-1. Otevřete jakoukoli stránku, na kterou chcete odkaz ve svém Centru rolí.
-2. Zvolte ikonu ![Záložky](media/ui_bookmark_icon.png "Přidat záložku do svého centra rolí") .
+## To bookmark the target page
+1. Open any page that you want a link for on your Role Center.
+2. Choose the ![Bookmark](media/ui_bookmark_icon.png "Bookmark") icon.
 
-Akce pojmenovaná po stránce je nyní přidána do navigační nabídky v Centru rolí.
+An action named after the page is now added to the navigation menu on your Role Center.
 
-## Uložení vybrané sestavy jako záložky
-1. Otevřete libovolnou stránku před spuštěním sestavy, kterou chcete v Centru rolí odkazovat.
-2. Zvolte ikonu ![Záložky](media/ui_bookmark_icon.png "Přidat záložku do svého centra rolí") .
+## To bookmark the target report
+1. Open any report request page that you want a link for on your Role Center.
+2. Choose the ![Bookmark](media/ui_bookmark_icon.png "Bookmark") icon.
 
-Akce pojmenovaná po sestavě je nyní přidána do navigační nabídky v Centru rolí.
+An action named after the report is now added to the navigation menu on your Role Center.
 
-## Vytvoření záložky stránky nebo sestavy z okna Řekněte mi
-1. Otevřete okno **Řekněte mi** a vložte například **Prodejní objednávky**.
-2. Najeďte myší na výsledek vyhledávání pro stránku nebo sestavu **Prodejní objednávky** a poté zvolte ikonu ![Záložky](media/ui_bookmark_icon.png "Přidat záložku do svého centra rolí") icon.
+## To bookmark a page or report from the Tell Me window
+1. Open the **Tell Me** window and enter, for example, **Sales Orders**.
+2. Hover over the search result for the **Sales Orders** page or report, and then choose the ![Bookmark](media/ui_bookmark_icon.png "Bookmark") icon.
 
-Akce pojmenovaná po stránce nebo sestavě je nyní přidána do navigační nabídky v Centru rolí.
+An action named after the page or report is now added to the navigation menu on your Role Center.
 
 
-## Často kladené otázky
+## Frequently Asked Questions  
 
-- **Můžu přeskládávat svoje záložky?**  
-   Ano. Můžete přizpůsobit své Centrum rolí a přesunout akce do optimálnější sekce nebo je přesunout do stávajících skupin nebo podskupin.  
-   Naučte se jak [Úprava Vašeho pracovního prostředí](ui-personalization-user.md).
+- **Can I reorganize my bookmarks?**  
+Yes. You can personalize your Role Center and move actions into a more optimal sequence or move them into existing groups or subgroups.  
+Learn how to [Personalize Your Workspace](ui-personalization-user.md).
 
-- **Jak odstraním záložku?**  
-   Na cílové stránce nebo přehledu znovu vyberte ikonu záložky a odeberte příslušnou akci z Centra rolí. Centrum rolí můžete také přizpůsobit a dočasně skrýt akce, aniž byste je zcela odstranili.
+- **How do I remove a bookmark?**  
+On the target page or report, choose the bookmark icon again to remove the involved action from your Role Center. You can also personalize your Role Center and temporarily hide actions without fully removing them.
 
-- **Kde najdu svoje záložky?**  
-   Při přidávání záložky na stránku nebo sestavu se nová akce přidá do horní navigační nabídky na aktuální domovské obrazovce (Centrum rolí). Pokud máte mnoho akcí, možná budete muset zmáčknout tlačítko **Více**, abyste je zobrazili, protože nová akce je vždy přidána na konci těchto akcí.
+- **Where do I find my bookmarks?**  
+When adding a bookmark to a page or report, the new action is added to the top navigation menu on your current home screen (Role Center). If you happen to have many actions, you may need to activate the **More** button to display all of them because the new action is always appended at the end of those actions.
 <!-- Should we add a screenshot here? -->
 
-- **Nemám ikonu záložky. Je něco špatně?**  
-   Možnost označit stránku nebo sestavu záložkou je jednou z mnoha funkcí personalizace uživatelů v Business Central. Pokud není ikona záložky zobrazena je pravděpodobné, že správce zakázal přizpůsobení.
+- **I don't have a bookmark icon. Is something wrong?**  
+The ability to bookmark a page or report is one of many user personalization features in Business Central. If the bookmark icon is not displayed, it is likely that your administrator has disabled personalization.
 
-- **Proč nemůžu záložkovat vybranou stránku nebo sestavu?**  
-   Ne všechny stránky a sestavy mohou být záložkovány. Pokud je stránka nebo sestava spuštěna v nějakém zvláštním kontextu, která se řídí obchodní aplikací, ikona záložky se nezobrazí. Například stránky, které nelze nalézt v okně **Řekněte mi**, ale jsou spuštěny odjinud, nezobrazí ikonu záložky. Podobně stránky návrhu sestavy, které se používají pouze ke shromažďování filtrů bez spuštění sestavy, nezobrazí ikonu záložky.
+- **Why can't I bookmark certain pages or reports?**  
+Not all pages and reports can be bookmarked. When a page or report is run within some special context governed by the business application, the bookmark icon is not displayed. For example, pages that cannot be found in the **Tell Me** window but are launched from elsewhere will not display a bookmark icon. Similarly, report request pages that are only used to collect filters without running the report will not display a bookmark icon.
 
-Viz technické podrobnosti o [RunRequestPage](https://docs.microsoft.com/dynamics365/business-central/dev-itpro/developer/methods-auto/report/reportinstance-runrequestpage-method) a [FilterPageBuilder](https://docs.microsoft.com/dynamics365/business-central/dev-itpro/developer/methods-auto/filterpagebuilder/filterpagebuilder-data-type).
+See technical details about [RunRequestPage](/dynamics365/business-central/dev-itpro/developer/methods-auto/report/reportinstance-runrequestpage-method) and [FilterPageBuilder](/dynamics365/business-central/dev-itpro/developer/methods-auto/filterpagebuilder/filterpagebuilder-data-type).
 
-- **Budou vymazány moje záložky při mazání perzonalizace?**  
-   Ano. Záložky jsou umístěny v navigační nabídce. Pokud odstraníte změny v navigační nabídce na jakékoli stránce nebo zrušíte veškerou personalizaci v Centru rolí, budou všechny vaše záložky trvale odstraněny.
+- **When clearing my personalization, will my bookmarks also be cleared?**  
+Yes. Bookmarks reside in the navigation menu. If you clear changes to the navigation menu from any page, or clear all personalization on the Role Center, all your new actions will be permanently removed.
 
-- **Proč ikona záložky stále označuje, že stále není označena záložkou?**  
-   Když přidáte záložku, nová akce bude přidána do navigační nabídky v Centru rolí a při následné návštěvě stránky nebo přehledu bude ikona záložky tmavá. Pokud centrum rolí přizpůsobíte a změníte uspořádání akcí přesunutím do skupin, ikona záložky už nebude tmavá a na stejnou stránku nebo sestavu můžete přidat další záložku. To umožňuje přidat více akcí na stejnou stránku nebo sestavu a kategorizovat je do různých skupin.
+- **Why does the bookmark icon continue to indicate it is still not bookmarked?**  
+When you add a bookmark, the new action is added to the navigation menu on the Role Center and subsequent visits to the page or report show a dark bookmark icon. If you personalize your Role Center and reorganize your actions by moving them into groups, the bookmark icon will no longer be dark and you can add another bookmark to that same page or report. This allows you add multiple actions to the same page or report and categorize them into different groups.
 
-- **Proč se v mém odkazu na sestava zobrazuje jiná sestava?**  
-   Po použití rozšíření na Business Central mohou být některé sestavy nahrazeny jinými. Dojde-li k nahrazení, text nové akce není aktualizován a bude nadále zobrazovat název původní sestavy, ale přejde do novější sestavy. Chcete-li opravit text nové akce, můžete novou akci odebrat a přidat ji znovu.
+- **Why does my link to a report display a different report?**  
+Some reports may be substituted by other reports after applying an extension to Business Central. When substitution occurs, the text of the new action is not updated and will continue to display the name of the original report, but navigate to the newer report. To correct the text of the new action, you can remove the new action and add it again.
 <!-- For more information on report substitution, see this link UNAVAILABLE AT THIS TIME -->
 
-- **Je záložka dostupná pro XMLporty?**  
-   Ne. V současné době není z uživatelského rozhraní možné přidávat akce k otevření XMLportů.
+- **Is bookmarking available for XMLports?**  
+No. At this time, adding actions to open XMLports is not possible from the user interface.
 
-- **Budou mé záložky přeloženy, když změním jazyk v Business Central?**  
-   Když přidáte novou akci, použije se při vytváření záložek jakýkoli přeložený text, který byl v té době k dispozici. Pokud je později přidán nový přeložený text, nová akce nebude obsahovat novější překlady.
+- **Will my bookmarks be translated when I change my language in Business Central?**  
+When you add a new action, any translated text that was available at the time is used when bookmarking. If new translated text is added later, then the new action will not include the newer translations.
 
 
-## Viz také
-[Úprava Vašeho pracovního prostředí](ui-personalization-user.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Změna záklandího nastavení](ui-change-basic-settings.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)
+## See Also
+[Personalize Your Workspace](ui-personalization-user.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Basic Settings](ui-change-basic-settings.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

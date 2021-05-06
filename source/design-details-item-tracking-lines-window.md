@@ -9,24 +9,24 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, inventory, item, tracking, serial number, lot number
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Stránka Řádky sledování zboží
-Záznamy sledování zboží a záznamy rezervací jsou vytvářeny v rezervačním systému a jejich dostupnost se vypočítává dynamicky. Data zadaná na stránce **Řádky sledování zboží** je řízena pomocí dočasné tabulky **Specifikace sledování**. Po zavření stránky jsou aktivní data zapsána do tabulky **Položky rezervace** a stará data jsou zapsána do tabulky **Specifikace sledování**. Pro více informací navštivte [Detaily návrhu: Aktivní versus Historické položky sledování zboží](design-details-active-versus-historic-item-tracking-entries.md).
-
-Náhled z polí **Sériové číslo** a **Číslo šarže** zobrazují dostnunost na základě tabulky **Položky zboží** a tabulky **Položky rezervace** bez filtru na datum. Matice polí množství v záhlaví stránky **Řádky sledování zboží** dynamicky rozbrazuje množství a součty čísel sledování položek, které jsou zadávány na řádcích stránky. Množství musí odpovídat množství řádku dokladu, který je označen hodnotou **0** v poli **Nedefinováno** v hlavičce stránky.
-
-Chcete-li koordinovat tok sériových čísel a čísel šarží prostřednictvím zásob, existují následující pravidla pro zadávání dat na stránce **Řádky sledování zboží**:
-
-* U vstupních i výstupních řádků sledování zboží nelze zadat sériové číslo s číslem šarže nebo bez více než jednou ve stejné instanci stránky **Řádky sledování zboží**. Pokud se pokusíte zadat libovolnou kombinaci sériových čísel nebo čísel šarží, která jsou již na stránce, chybová hláška zablokuje zadávání dat.
-* Pro vstupní řádky sledování zboží, nelze zaúčtovat související doklad, pokud je zboží stejné varianty a se stejným sériovým číslem již na skladě. Pokud se pokusíte zaúčtovat kladný řádek pro skladové zboží se stejnou variantou a sériovým číslem, chybová hláška zablokuje účtování. Pokud máte u vstupních i výstupních řádků sledování zboží na otevřených dokladech stejné kombinace sériových čísel a čísel šarže, které se vztahují k různým řádkům zdrojového dokladu, tj, existují v různých případech na stránce **Řádky sledování zboží** dokud nebude zaúčtován související dokument.
-* Pokud je zboží nastaveno pro sledování specifického sériového čísla nebo sledování specifického číslo šarže, nelze zaúčtovat řádek výstupního dokladu, pokud ve skladu neexistuje zboží s definovaným sériovým číslem nebo číslem šarže. Pokud se pokusíte zaúčtovat řádek výstupního dokladu se zbožím se sériovým číslem nebo číslem šarže, které není ve skladu, chybová zpráva zablokuje účtování.
-
-Pravidla pro zadávání dat na stránce **Řádky sledování zboží** také podporují zásady spojování, které upravují sledování, plánování a rezervaci objednávek. Pro více informací navštivte [Detaily návrhu: Sledování zboží a plánování](design-details-item-tracking-and-planning.md).
-
-## Viz také
-[Detaily návrhu: Sledování zboží](design-details-item-tracking.md)
+# Design Details: Item Tracking Lines Page
+Item tracking records and reservation records are created in the reservation system, and their availability is calculated dynamically. Data that is entered on the **Item Tracking Lines** page is managed in a temporary version of the **Tracking Specification** table. When the page is closed, the active data is committed to the **Reservation Entry** table and the historic data is committed to the **Tracking Specification** table. For more information, see [Design Details: Active versus Historic Item Tracking Entries](design-details-active-versus-historic-item-tracking-entries.md).  
+  
+Lookups from the **Serial No.** and **Lot No.** fields show availability based on both the **Item Ledger Entry** table and the **Reservation Entry** table, with no date filter. The matrix of quantity fields on the header of the **Item Tracking Lines** page dynamically displays the quantities and sums of item tracking numbers that are being entered on the lines of the page. The quantities must correspond to those of the document line, which is indicated by **0** in the **Undefined** fields in the header of the page.  
+  
+To coordinate the flow of serial and lot numbers through inventory, the following rules exist for entering data on the **Item Tracking Lines** page:  
+  
+* For both inbound and outbound item tracking lines, you cannot enter a serial number, with or without a lot number, more than once in the same instance of the **Item Tracking Lines** page. If you try to enter any combination of serial or lot numbers that is already present on the page, then an error message blocks the data entry.  
+* For inbound item tracking lines, you cannot post the related document if an item of the same variant and with the same serial number is already in inventory. If you try to post a positive line for an inventory item with the same variant and serial number, then an error message blocks the posting. However, for both inbound and outbound item tracking lines on open documents, you can have the same combination of serial or lot numbers that relate to different source document lines, that is, existing in different instances of the **Item Tracking Lines** page until the related document is posted.  
+* If the item is set up for serial number-specific tracking or lot number- specific tracking, then you cannot post an outbound document line unless an item with the defined serial or lot number exists in inventory. If you try to post an outbound document line for an item with a serial lot number that is not in inventory, then an error message blocks the posting.  
+  
+The rules for entering data on the **Item Tracking Lines** page also support the coupling principles that govern order tracking, planning, and reservation. For more information, see [Design Details: Item Tracking and Planning](design-details-item-tracking-and-planning.md).  
+  
+## See Also  
+[Design Details: Item Tracking](design-details-item-tracking.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

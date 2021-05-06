@@ -1,97 +1,100 @@
 ---
-title: Jak rezervovat zboží | Microsoft Docs
-description: 'Můžete si rezervovat zboží pro prodejní, nákupní a výrobní objednávky. Zboží můžete rezervovat ve skladu nebo jako vstup na otevřených řádcích dokladů.'
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 03/01/2019
-ms.author: sgroespe
+    title: How to Reserve Items | Microsoft Docs
+    description: You can reserve items for sales orders, purchase orders, and production orders. You can reserve items on inventory or inbound on open document lines.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
-# <a name="reserve-items"></a>Reservace zboží
-Můžete si rezervovat zboží pro prodejní, nákupní, servisní, montážní a výrobní objednávky. Zboží můžete rezervovat ve skladu nebo jako vstup na otevřených řádcích dokladů nebo deníků. Práce provádíte na stránce **Rezervace**.
+# Reserve Items
+You can reserve items for sales orders, purchase orders, service orders, assembly orders, and production orders. You can reserve items on inventory or inbound on open document or journal lines. You perform the work on the **Reservation** page.
 
-Každý řádek na stránce **Rezervace**, který si otevřete pro rezervování zboží, zobrazuje informace o jednom typu řádku (prodej, nákup, deník) nebo položky skladu. Řádky popisují, kolik zboží je možné rezervovat z každého typu řádku nebo položky.
+Each line on the **Reservation** page, which you open to reserve items, displays information about one type of line (sales, purchase, journal) or inventory entry. The lines describe how many items are available to be reserved from each type of line or entry.
 
-## <a name="to-reserve-items-for-sales"></a>Rezervace zboží k prodeji
-Následující text popisuje, jak rezervovat zboží z prodejní objednávky. Kroky jsou podobné při objednávkách nákupu, servisu i montáže.  
-1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.  
-2.  Na prodejní objednávce vyberte na záložce **Řádky** funkci **Rezervovat**. Otevře se stránka **Rezervace**.  
-3. Vyberte řádek, ze kterého chcete zboží rezervovat.  
-4. Vyberte jednu z následujících akcí.  
+## To reserve items for sales
+The following describes how to reserve items from a sales order. The steps are similar for purchase, service, and assembly orders.  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
+2.  On a sales order, on the **Lines** FastTab, choose the **Reserve** action. The **Reservation** page opens.  
+3. Select the line that you want to reserve the items from.  
+4. Choose one of the following actions.  
 
-    |**Funkce**|**Popis**|
+    |**Function**|**Description**|
     |------------------|---------------------|  
-    |**Auto rezervace**|Automatická rezervace zboží na stránce **Rezervace**.|  
-    |**Rezerva z aktuálního řádku**|Chcete-li rezervovat zboží z dokladu na vybraném řádku.|  
-    |**Zrušení rezervace z aktuálního řádku**|Chcete-li zrušit rezervaci zboží z dokladu na vybraném řádku.|
+    |**Auto Reserve**|To automatically reserve items on the **Reservation** page.|  
+    |**Reserve from Current Line**|To reserve the items from the document on the line you have selected.|  
+    |**Cancel Reservation from Current Line**|To cancel reservation of the items from the document on the line you have selected.|
 
 > [!NOTE]  
->  Pokud existují řádky sledovaného zboží pro prodejní objednávku, rezervační systém vás provede zvláštními kroky. Pro více informací navštivte [Rezervace konkrétního sériového čísla nebo čísla šarže](inventory-how-to-reserve-items.md#to-reserve-a-specific-serial-or-lot-number).  
+>  If item tracking lines exist for the sales order, the reservation system will take you through special steps. For more information, see [To reserve a specific serial or lot number](inventory-how-to-reserve-items.md#to-reserve-a-specific-serial-or-lot-number).  
 
-## <a name="to-reserve-an-item-for-a-production-order-line"></a>Rezervace zboží pro řádek výrobní zakázky  
-Můžete si objednat zboží pro výrobní zakázky. Musíte rozlišovat mezi řádky výrobní zakázky, což znamená nadřazeným zbožím, a komponenty výrobní zakázky.
+## To reserve an item for a production order line  
+You can reserve items for production orders. You have to distinguish between production order lines, meaning the parent item, and production order components.
 
-V následujícím postupu je použita pevně plánovaná výrobní zakázka.   
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr.zakázka** a poté vyberte související odkaz.  
-2. Otevřete pevně plánovanou výrobní zakázku, pro kterou chcete rezervovat nadřazené zboží.  
-3. Vyberte příslušný řádek výrobní zakázky.  
-4. Na záložce **Řádky** vyberte funkci **Rezervace**.
-5. Na stránce **Rezervace** vyberte řádek **Prodejní řádek, Objednávka** a poté vyberte akci **Rezervace z akt.řádku**.  
+In the following procedure, a firm planned production order is used.   
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Order**, and then choose the related link.  
+2. Open the firm planned production order you want to reserve parent items for.  
+3. Select the relevant production order line.  
+4. On the **Lines** FastTab, choose the **Reserve** action.
+5. On the **Reservation** page, select the **Sales Line, Order** line, and then choose the **Reserve from Current Line** action.  
 
-Množství, které jste zadali do řádku pevně plánované výrobní zakázky, je nyní rezervováno.
+The quantity you entered in the firm planned production order line is now reserved.
 
-## <a name="to-reserve-items-for-production-order-components"></a>Rezervace zboží pro komponenty výrobní zakázky  
-Můžete si objednat zboží pro výrobní zakázky. Musíte rozlišovat mezi řádky výrobní zakázky, což znamená nadřazeným zbožím, a komponenty výrobní zakázky.
+## To reserve items for production order components  
+You can reserve items for production orders. You have to distinguish between production order lines, meaning the parent item, and production order components.
 
-V následujícím postupu je použita pevně plánovaná výrobní zakázka.    
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr.zakázka** a poté vyberte související odkaz.  
-2. Otevřete pevně plánovanou výrobní zakázku, pro kterou chcete rezervovat komponenty zboží.  
-3. Vyberte příslušný řádek výrobní zakázky.  
-4. Na záložce **Řádky** vyberte **Řádek** a pak vyberte **Komponenty**.  
-5. Vyberte příslušný řádek komponenty.  
-6. Na záložce **Řádky** vyberte funkci **Rezervace**.  
-7. Na stránce **Rezervace** vyberte řádek a poté vyberte akci **Rezervace z akt.řádku**.  
+In the following procedure, a firm planned production order is used.    
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Order**, and then choose the related link.  
+2. Open the firm planned production order you want to reserve component items for.  
+3. Select the relevant production order line.  
+4. On the **Lines** FastTab, choose **Line**, and then choose **Components**.  
+5. Select the relevant component line.  
+6. Choose On the **Lines** FastTab, choose the **Reserve** action.  
+7. On the **Reservation** page, select a line, and then choose the **Reserve from Current Line** action.  
 
-Množství, které jste zadali do řádku pevně plánované výrobní komponenty, je nyní rezervováno.
+The quantity you entered in the firm planned production component line is now reserved.
 
-## <a name="to-change-a-reservation"></a>Změna rezervace  
-Někdy můžete chtít změnit rezervaci zboží.   
-1. Z řádku dokladu, ze kterého jste si rezervovali zboží, vyberte na záložce **Řádky** akci **Rezervovat**.  
-2. Na stránce **Rezervace** vyberte akci **Položky rezervace**.
-3. Na stránce **Položky rezervace** aktualizujte pole **Množství** na řádku, který chcete změnit.
-4. Potvrďte následnou zprávu stisknutím tlačítka **OK**.
+## To change a reservation  
+Sometimes, you may want to change an item reservation.   
+1. From the document line that you have reserved from, on the **Lines** FastTab, choose the **Reserve** action.  
+2. On the **Reservation** page, choose the **Reservation Entries** action.
+3. The **Reservation Entries** page, update the **Quantity** field on the line you want to change.
+4. Confirm the subsequent message, by choosing the **OK** button.
 
-## <a name="to-cancel-a-reservation"></a>Zrušení rezervace  
-Někdy můžete chtít zrušit rezervaci zboží.   
-1. Z řádku dokumentu, ze kterého chcete zrušit rezervaci, vyberte na záložce **Řádky** akci **Rezervace**.  
-2. Na stránce **Rezervace** vyberte akci **Položky rezervace**.  
-3.  Na stránce **Položky rezervace** vyberte akci **Zrušení rezervace**.  
-4.  Potvrďte následnou zprávu stisknutím tlačítka **OK**.  
+## To cancel a reservation  
+Sometimes, you may want to cancel an item reservation.   
+1. From the document line that you want to cancel a reservation from, on the **Lines** FastTab, choose the **Reserve** action.  
+2. On the **Reservation** page, choose **Reservation Entries** action.  
+3.  On the **Reservation Entries** page, choose the **Cancel Reservation** action.  
+4.  Confirm the subsequent message, by choosing the **OK** button.  
 
-## <a name="to-reserve-a-specific-serial-or-lot-number"></a>Rezervace konkrétního sériového čísla nebo čísla šarže  
-Z odchozích dokladů pro sledované zboží, jako jsou prodejní objednávky nebo seznamy produkčních komponent, si můžete vyhradit konkrétní sériová čísla nebo čísla šarže. To může být relevantní, například, pokud potřebujete výrobní komponenty z konkrétní šarže, aby byla zajištěna konzistence s dřívějšími výrobními šaržemi, nebo protože zákazník požádal o specifické sériové číslo. Pro více informací navštivte [Práce se sériovými čísly a čísly šarže](inventory-how-work-item-tracking.md).
+## To reserve a specific serial or lot number  
+From outbound documents for item-tracked items, such as sales orders or production component lists, you can reserve specific serial or lot numbers. This may be relevant, for example, if you need production components from a specific lot to ensure consistency with earlier production batches, or because a customer has requested a specific serial number. For more information, see [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md).
 
-Toto je označováno jako konkrétní rezervace, protože si rezervujete z množství zboží X, které patří do šarže X. Pokud jednoduše rezervujete z množství zboží X, pak je to normální, nespecifická rezervace. Pro více informací navštivte [Podrobnosti návrhu - Sledování a rezervace zboží](design-details-item-tracking-and-reservations.md).
+This is referred to as a specific reservation, because you reserve from the quantity of  Item X that belongs to Lot X. If you simply reserve from quantities of Item X, then it is a normal, non-specific, reservation. For more information, see [Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md).
 
-Následující postup je založen na prodejní objednávce.    
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.  
-2. Vytvořte řádek prodejní objednávky pro sledované zboží.  
-3. Přiřaďte sériové číslo a číslo šarže k řádku prodejní objednávky. Pro více informací navštivte [Práce se sériovými čísly a čísly šarže](inventory-how-work-item-tracking.md).
-4. Na řádku prodejní objednávky vyberte funkci **Rezervace**.  
-5. Chcete-li rezervovat konkrétní sériová čísla nebo čísla šarže, zvolte tlačítko **Ano**.  
-6. Na stránce **Přehled sledování zboží** vyberte kombinaci sériového čísla a čísla šarže, kterou jste právě přiřadili.  
-7. Klepnutím na tlačítko **OK** otevřete stránku **Rezervace**, kde je uvedena pouze dodávka se sledovaným číslem zboží. Pokud existují nějaké nespecifické rezervace na kterémkoli z čísel sledovaných zboží, které jste pro tento řádek zadali, budete informováni o množství, které již bylo rezervováno.  
-8. Vyberte akci **Auto rezervace** nebo **Rezervace z akt.řádku** a vytvořte rezervaci na konkrétních číslech sledovaného zboží.
+The following procedure is based on a sales order.    
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then select the related link.  
+2. Create a sales order line for an item-tracked item.  
+3. Assign serial and lot numbers to the sales order line. For more information, see [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md).
+4. On the sales order line, choose the **Reserve** action.  
+5. Choose the **Yes** button to reserve specific serial or lot numbers.  
+6. In the   **Item Tracking List** page, select the serial and lot number combination that you have just assigned.  
+7. Choose the **OK** button to open the **Reservation** page showing only supply with the specified item tracking number. If there are any non-specific reservations on any of the item tracking numbers that you have specified for this line, you are informed of the quantity that has already been reserved.  
+8. Choose either the **Auto Reserve** or the **Reserve from Current Line** action to create the reservation on the specific item tracking numbers.
 
-## <a name="see-also"></a>Viz také
-[Zásoby](inventory-manage-inventory.md)  
-[Podrobnosti o designu: Rezervace, sledování objednávek a správy akcí](design-details-reservation-order-tracking-and-action-messaging.md)  
-[Podrobnosti návrhu - Trasování zboží a rezervace](design-details-item-tracking-and-reservations.md)  
-[Práce se sériovými čísly a čísly šarží](inventory-how-work-item-tracking.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Inventory](inventory-manage-inventory.md)  
+[Design Details: Reservation, Order Tracking, and Action Messaging](design-details-reservation-order-tracking-and-action-messaging.md)  
+[Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)  
+[Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

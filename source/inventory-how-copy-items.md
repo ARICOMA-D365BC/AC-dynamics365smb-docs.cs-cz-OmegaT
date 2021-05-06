@@ -4,28 +4,37 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Kopírování existujícího zboží pro vytvoření nového zboží
-Chcete-li ušetřit čas při vytváření nového zboží, můžete použít funkci **Kopírovat zboží** ke kopírování existujícího zboží a použít ho jako šablonu pro nové zboží.
+# Copy Existing Items to Create New Items
 
-## Kopírování existujícího zboží do nového
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a vyberte související odkaz.
-2. Vyberte zboží, které chcete zkopírovat, a pak zvolte tlačítko **Kopírovat zboží**.
-3. Na stránce **Kopírovat zboží**, vyplňte políčka. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+When you add a new item, to save time, you can use the **Copy Item** function to copy an existing item to use as a template for a new item.  
 
-   > [!NOTE]  
-   > Můžete zadat specifické číslo zboží do pole **Cílové číslo zboží** pro nové zboží. Případně můžete vybrat existující číselnou řadu v poli **Číselní řada cílového zboží**. Novému zboží bude přiřazeno další dostupné číslo v této číselné řadě.
+## To copy an existing item to a new item
 
-5. Chcete-li zkopírovat výběr do nového zboží, zvolte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
+2. Select the item that you want to copy, and then choose the **Copy Item** action.  
 
-## Viz také
-[Evidence nového zboží](inventory-how-register-new-items.md)  
-[Nastavení zásob](inventory-setup-inventory.md)
+    If you cannot find the **Copy Item** action, choose to view more options, and then find it under **Actions**, **Functions**.  
+
+3. On the **Copy Item** page, fill in the fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+
+    > [!NOTE]  
+    > You can enter a specific item number in the **Target Item No.** field that you want the new item to get. Alternatively, you can select an existing number series in the **Target No. Series** field. The new item will then be assigned the next available number in that number series.  
+
+4. To copy your selections to the new item, choose the **OK** button.  
+
+## See Also
+
+[Register New Items](inventory-how-register-new-items.md)  
+[Setting Up Inventory](inventory-setup-inventory.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

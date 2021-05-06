@@ -4,106 +4,110 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Spuštění úplného plánování, MPS nebo MRP
-Termíny "spuštění sešitu plánování" nebo "spuštění MRP" odkazují na výpočet hlavního výrobního plánu a požadavků na materiál na základě skutečné a předpokládané poptávky. Plánovací systém může na vyžádání vypočítat buď hlavní plán plánování (MPS) nebo plánování požadavků na materiál (MRP), může také vypočítat obojí současně.
+# Run Full Planning, MPS or MRP
+The terms "running the planning worksheet" or "running MRP" refer to the calculation of the master production schedule and material requirements based on actual and forecasted demand. The planning system can calculate either Master Planning Schedule (MPS) or Material Requirements Planning (MRP) on request, or it can calculate both at the same time.  
 
-- MPS je výpočet hlavního výrobního plánu na základě skutečné poptávky a prognózy poptávky. Výpočet MPS se používá pro koncové položky, které mají prognózu nebo řádek prodejní objednávky. Tyto položky se nazývají položky MPS a jsou dynamicky identifikovány při zahájení výpočtu.
-- MRP je výpočet materiálových požadavků založený na skutečné poptávce po komponentách a prognóze poptávky na úrovni komponent. MRP se počítá pouze pro položky, které nejsou položkami MPS. Účelem MRP je poskytnout časově uspořádané formální plány podle položek, dodávat příslušné zboží v příslušném čase, na příslušném místě, v odpovídajícím množství.
+-   MPS is the calculation of a master production schedule based on actual demand and the demand forecast. The MPS calculation is used for end items that have a forecast or a sales order line. These items are called MPS items and are identified dynamically when the calculation starts.  
+-   MRP is the calculation of material requirements based on actual demand for components and the demand forecast on the component level. MRP is calculated only for items that are not MPS items. The purpose of MRP is to provide time-phased formal plans, by item, to supply the appropriate item, at the appropriate time, in the appropriate location, in the appropriate quantity.  
 
-Algoritmy plánování používané pro MPS i MRP jsou identické. Algoritmy plánování se týkají určování čistých částek, opětovného použití stávajících objednávek doplňování a zpráv o akci. Proces plánovacího systému zkoumá, co je třeba nebo bude potřeba (poptávka) a co je po ruce nebo se očekává (nabídka). Když jsou tato množství vzájemně započtena, [!INCLUDE[d365fin](includes/d365fin_md.md)] poskytuje zprávy o akcích. Zprávy o akci jsou návrhy na vytvoření nové objednávky, změnu objednávky (množství nebo datum) nebo zrušení objednávky, která již byla na objednávce. Termín „objednávka“ zahrnuje objednávky, montážní objednávky, výrobní zakázky a převody.
+The planning algorithms used for both MPS and MRP are identical. The planning algorithms pertain to netting, reuse of existing replenishment orders, and action messages. The planning system process examines what is needed or will be needed (demand) and what is on-hand or expected (supply). When these quantities are netted against each other, [!INCLUDE[prod_short](includes/prod_short.md)] provides action messages. Action messages are suggestions to create a new order, change an order (quantity or date), or cancel an order already on order. The term "order" includes purchase orders, assembly orders, production orders, and transfer orders.
 
-Odkazy vytvořené plánovacím modulem mezi poptávkou a související nabídkou lze sledovat na stránce **Sledování objednávek**. Pro více informací navštivte [Sledování vztahů mezi poptávkou a dodávkou](production-how-track-demand-supply.md).
+Links created by the planning engine between demand and its related supply can be tracked on the **Order Tracking** page. For more information, see [Track Relations Between Demand and Supply](production-how-track-demand-supply.md).   
 
-Správné výsledky plánování závisí na nastavení provedeném na kartách zboží, kusovníky montáže, výrobní kusovníky a postupech.
+Proper planning results depend on the set up done on item cards, assembly BOMs, production BOMs, and routings.  
 
-## Metody generování plánu
+## Methods for Generating a Plan  
 
-- **Vypočítat regenerační plán:** Tato funkce zpracuje nebo obnoví materiálový plán. Tento proces začíná odstraněním všech plánovaných objednávek dodávek, které jsou aktuálně načteny. Všechny položky v databázi jsou znovu naplánovány.
-- **Vypočítat plánovaný pohyb**: Tato funkce zpracuje plánovaný pohyb. Zboží při plánování pohybu je bráno v úvahu ze dvou typů změn:
-   - **Poptávka / změny nabídky:** Patří mezi ně úpravy množství na prodejních objednávkách, prognózách poptávky, objednávkách sestavení, výrobních zakázkách nebo nákupních objednávkách. Neplánovaná změna úrovně zásob se také považuje za změnu množství.
-   - **Změna parametru:** Patří mezi ně změny v bezpečnostním skladu, bodu přiobjednání, technologickém postupu, kusovníku a změny výpočtu intervalu dostupnosti nebo výpočet doby realizace
-- **Získat hlášení akcí:** Tato funkce slouží jako nástroj krátkodobého plánování tím, že vydává zprávy o akcích, které uživatele upozorní na všechny změny provedené od výpočtu posledního regeneračního nebo čistého plánu změn.
+-   **Calculate Regenerative Plan:** This function processes or regenerates the material plan. This process starts by deleting all planned supply orders that are currently loaded. All items in the database are replanned.  
+-   **Calculate Net Change Plan**: This function processes a net change plan. Items are considered in net change planning from two types of changes:  
+    - **Demand/supply changes:** These include modifications to quantities on sales orders, demand forecasts, assembly orders, production orders, or purchase orders. An unplanned inventory level change is also considered a quantity change.  
+    - **Planning parameter changes:** These include changes in safety stock, reorder point, routing, bill of material, and changes to the time bucket or lead time calculation.  
+-   **Get Action Messages:** This function serves as a short-term planning tool by issuing action messages to alert the user of any modifications made since the last regenerative or net change plan was calculated.  
 
-S každou plánovanou metodou, [!INCLUDE[d365fin](includes/d365fin_md.md)] generuje položky v sešitu plánování za předpokladu nekonečné kapacity. Kapacita pracovního a strojního centra se při vývoji plánů nezvažuje.
+With each planned method, [!INCLUDE[prod_short](includes/prod_short.md)] generates worksheet entries assuming infinite capacity. Work center and machine center capacity is not considered when you develop schedules.  
 
-> [!IMPORTANT]
-> Funkce Vypočítat regenerační plán je nejběžnějším procesem. Avšak funkce Vypočítat plán a Provést hlášené akce, lze použít ke spuštění procesu Vypočítat plánovaný pohyb.
-> Funkce Získat plán hlášení akcí může být spuštěna mezi regeneračními a čistými změnami plánování, aby se získala okamžitý náhled na účinek změn plánu, ale není zamýšlen jako náhrada úplných plánů regenerativní nebo síťové změny.
-> 
-## Výpočet plánovacího listu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešity plánování** a poté vyberte související odkaz.
-2. Vyberte akci **Vypočítat regenerační plán** k otevření stránky **Vypočítat plán**.
-3. Na záložce s náhledem **Nastavení**, vyplňte pole, jak je popsáno v následující tabulce.
+> [!IMPORTANT]  
+>  The Calculate Regenerative Plan function is the most common process. The Calculate Plan and Carry out Action Messages functions, however, can be used to run the Calculate Net Change Plan process.  
+>   
+>  The Get Action Messages Plan function can be run between regenerative and net change planning runs to obtain an immediate view of the effect of schedule changes, but it is not intended as a replacement of full regenerative or net change planning processes.  
 
-   | Pole | Popis |
-   |---------------------------------|---------------------------------------|  
-   | **MPS** | Tuto možnost vyberte, chcete-li zahájit výpočet hlavního plánu výroby. V tomto spuštění jsou považovány za položky s otevřenými prodejními objednávkami nebo prognózami poptávky. |
-   | **MRP** | Vyberte, chcete-li zahájit výpočet plánování materiálových požadavků. V tomto spuštění jsou požadovány položky se závislými požadavky. Obvykle, jsou MPS and MRP spuštěny současně. Chcete-li současně spustit  MPS and MRP, pole **Kombinovaný výpočet MPS/MRP** musí být zvoleno na záložce s náhledem **Plánování** na stránce **Nastavení výroby**. |
-   | **Počáteční datum** | Toto datum se používá k vyhodnocení dostupnosti zásob. Pokud je množství na skladě položky pod bodem přiobjednání, systém dodá objednávku doplnění od tohoto data. Pokud je položka pod její pojistnou zásobou (k počátečnímu datu), systém vrátí zpět objednávku doplnění splatnou k počátečnímu datu plánování. |
-   | **Koncové datum** | Toto je koncové datum horizontu plánování. Po tomto datu není uvažována ani poptávka, ani nabídka. Pokud cyklus přiobjednání zboží přesahuje koncové datum, efektivní horizont plánování pro toto zboží se rovná datu objednávky + cyklus přiobjednávky. <br /><br /> Horizont plánování je čas, na který je plán prodloužen. Pokud je horizont příliš krátký, položky s delší dobou realizace nejsou včas objednány. Pokud je horizont příliš dlouhý, strávíte příliš mnoho času kontrolou a zpracováváním informací, které se pravděpodobně změní dříve, než budou potřeba. Je možné nastavit jeden plánovací horizont pro výrobu a delší pro nákupy, i když to není nutné. Plánovací horizont nákupů a výroby by měl být nastaven tak, aby pokrýval kumulativní dobu realizace součástí. |
-   | **Zastavit a zobrazit první chybu** | Tuto možnost vyberte, pokud chcete, aby se spuštění plánování zastavilo, jakmile dojde k chybě. Současně se zobrazí zpráva s informacemi o první chybě. Pokud dojde k chybě, budou v plánovacím sešitu zobrazeny pouze úspěšné řádky plánování provedené před výskytem chyby. Pokud toto pole nevyberete, bude dávková úloha **Vypočítat plán** pokračovat, dokud nebude dokončena, to znamená, že dávky nepřeruší dávkovou úlohu. Pokud existuje jedna nebo více chyb, zobrazí se po dokončení zpráva s informacemi o tom, kolik položek je ovlivněno. Stránka **Protokol chyb plánování**, která poskytne další podrobnosti o chybě a odkazy na ovlivněné karty položek. |
-   | **Použít prognózu** | Vyberte prognózu, která by měla být zahrnuta jako poptávka při spuštění dávkové úlohy plánování. Výchozí předpověď je nastavena na záložku s náhledem **Plánování** na stránce **Nastavení výroby**. |
-   | **Vyloučit prognózu před** | Definujte, kolik z vybrané prognózy chcete zahrnout do plánovacího běhu zadáním data, do kterého není zahrnuta poptávka po prognóze, což vám umožní vyloučit staré informace. |
-   | **Respektování parametrů plánování pro varování výjimek** | Ve výchozím nastavení je toto pole vybráno.<br /><br /> Dodávky na plánovacích řádcích s varováním se obvykle nemění podle parametrů plánování. Místo toho plánovací systém pouze navrhuje dodávku, která pokryje přesné množství poptávky. Můžete však definovat určité parametry plánování pro řádky plánování, které mají být dodrženy s určitými upozorněními.<br /><br /> |
+## To calculate the planning worksheet  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheets**, and then choose the related link.  
+2.  Choose the **Calculate Regenerative Plan** action to open the **Calculate Plan** page.  
+3.  On the **Options** FastTab, fill in the fields as described in the following table.  
 
-4. Na záložce s náhledem **Zboží**, nastavte filtry pro spuštění plánování na základě položky, popisu položky nebo umístění.
-5. Zvolte tlačítko **OK**. Dávková úloha se spustí a sešit plánování se naplní řádky plánování.
+    |Field|Description|  
+    |---------------------------------|---------------------------------------|  
+    |**MPS**|Select to initiate the calculation of a master production schedule. Items with open sales orders or demand forecasts are considered in this run.|  
+    |**MRP**|Select to initiate the calculation of material requirements planning. Items with dependent requirements are considered in this run. Typically,  MPS and MRP are run at the same time. To run MPS and MRP at the same time, the **Combined MPS/MRP Calculation** field must be selected on the **Planning** FastTab on the **Manufacturing Setup** page.|  
+    |**Starting Date**|This date is used to evaluate inventory availability. If an item's on-hand quantity is below the reorder point, the system forward-schedules a replenishment order from this date. If an item is below its safety stock (as of the starting date), the system back-schedules a replenishment order due on the planning starting date.|  
+    |**Ending Date**|This is the ending date of the planning horizon. Neither demand nor supply is considered after this date. If the reorder cycle for an item extends beyond the ending date, the effective planning horizon for that item is equal to the order date + reorder cycle.<br /><br /> The planning horizon is the time that the plan is extended to. If the horizon is too short, items with a longer lead time are not ordered on time. If the horizon is too long, too much time is spent reviewing and processing information that likely changes before it is needed. It is possible to set one planning horizon for production and a longer one for purchases, although it is not required. A planning horizon for purchases and production should be set to cover the cumulative lead time for components.|  
+    |**Stop and Show First Error**|Select if you want the planning run to stop as soon as it encounters an error. At the same time, a message is displayed with information about the first error. If an error exists, only the successful planning lines made before the error was encountered will be presented in the planning worksheet. If you do not select this field, the **Calculate Plan** batch job will continue until it has completed, that is, errors will not interrupt the batch job. If one or more errors exist, a message will display after completion with information about how many items are affected. The **Planning Error Log** page will then open to provide more details about the error and links to the affected item cards.|  
+    |**Use Forecast**|Select a forecast that should be included as demand when you run the planning batch job. The default forecast is set up on the **Planning** FastTab on the **Manufacturing Setup** page.|  
+    |**Exclude Forecast Before**|Define how much of the selected forecast to include in the planning run by entering a date before which forecast demand is not included, thus allowing you to exclude old information.|  
+    |**Respect Planning Parameters for Exception Warnings**|By default, this field is selected.<br /><br /> Supply on planning lines with warnings is normally not modified according to planning parameters. Instead, the planning system only suggests a supply to cover the exact demand quantity. However, you can define certain planning parameters for planning lines to be respected with certain warnings.<br /><br />|  
 
-## Provádění akčních zpráv
-1. Na stránce **Sešity plánování**, zvolte akci **Provést hlášené akce**.
-2. Na záložce s náhledem **Nastavení**, určete způsob vytvoření spotřebního materiálu. Vyplňte pole podle popisu v následující tabulce.
+4.  On the **Item** FastTab, set filters to run the planning based on item, item description, or location.  
+5.  Choose the **OK** button. The batch job runs and then the planning worksheet is populated with the planning lines.  
 
-   | Pole | Popis |
-   |---------------------------------|---------------------------------------|  
-   | **Výrobní zakázka** | Určete způsob vytvoření výrobních zakázek. Můžete to provést přímo z návrhů řádků plánování. Můžete vytvořit plánované nebo pevně plánované výrobní zakázky. |
-   | **Montážní zakázky** | Určete, jak chcete vytvořit montážní zakázky. Můžete to provést přímo z návrhů řádků plánování. |
-   | **Nákupní objednávky** | Určete, jak chcete vytvářet nákupní objednávky. Můžete to provést přímo z návrhů řádků plánování.<br /><br /> Pokud jste se rozhodli zkopírovat návrhy řádků plánování pro nákupní objednávky do sešitu požadavků, vyberte šablonu a název listu. |
-   | **Objednávka transferu** | Určete, jak chcete vytvořit příkazy k převodu. Můžete to provést přímo z návrhů řádků plánování.<br /><br /> Pokud jste se rozhodli zkopírovat návrhy řádků plánování pro převodní příkazy do sešitu požadavků, vyberte šablonu a název listu. |
-   | **Kombinovat objednávky transferu** | Vyberte, zda chcete kombinovat příkazy k převodu. |
-   | **Zastavit a zobrazit první chybu** | Vyberte, pokud chcete, aby dávková úloha **Provést hlášení akce - plán.** se zastavila, jakmile narazí na chybu. Současně se zobrazí zpráva s informacemi o první chybě. Pokud dojde k chybě, vytvoří se objednávky dodávky pouze ze řádků plánování zpracovaných před výskytem chyby. |
+## To perform action messages  
+1.  On the **Planning Worksheet** page, choose the **Carry Out Action Message** action.  
+2.  On the **Options** FastTab, specify how to create the supplies. Fill in the fields as described in the following table.  
 
-3. Na záložce **Řádek plánování**, můžete nastavit filtry, které omezí zprávy o akcích provádění.
-4. Zvolte tlačítko **OK**.
+    |Field|Description|  
+    |---------------------------------|---------------------------------------|  
+    |**Production Order**|Specify how you want to create production orders. You can do this directly from the planning line proposals. You can create either planned or firm planned production orders.|  
+    |**Assembly Order**|Specify how you want to create assembly orders. You can do this directly from the planning line proposals.|  
+    |**Purchase Order**|Specify how you want to create purchase orders. You can do this directly from the planning line proposals.<br /><br /> If you chose to copy the planning line proposals for purchase orders to the requisition worksheet, select the template and worksheet name.|  
+    |**Transfer Order**|Specify how you want to create transfer orders. You can do this directly from the planning line proposals.<br /><br /> If you chose to copy the planning line proposals for transfer orders to the requisition worksheet, select the template and worksheet name.|  
+    |**Combine Transfer Orders**|Select if you want to combine transfer orders.|  
+    |**Stop and Show First Error**|Select if you want the **Carry Out Action Msg. - Plan.** batch job to stop as soon as it encounters an error. At the same time, a message is displayed with information about the firsterror. If an error exists, only the planning lines processed before the error was encountered will create supply orders.|  
 
-Dávková úloha odstraní řádky v plánovacím sešitu po provedení zprávy akce. Ostatní řádky zůstanou v plánovacím sešitu, dokud nebudou přijaty později, nebo odstraněny. Řádky můžete také odstranit ručně.
+3.  On the **Planning Line** FastTab, you can set filters to limit the perform action messages.  
+4.  Choose the **OK** button.  
 
-## Akční zprávy
-Zprávy akcí jsou vydávány systémem sledování objednávek, pokud je zůstatek v existující síti objednávek nedosažitelný. To lze je považovat za návrh, jak zpracovat změny, které obnoví rovnováhu mezi nabídkou a poptávkou.
+The batch job deletes the lines in the planning worksheet after it has performed the action message. The other lines remain in the planning worksheet until they are either accepted at a later date or else deleted. You can also delete the lines manually.  
 
-Generování akčních zpráv dochází vždy současně pro jednu úroveň, pro každý kód nižší úrovně položky. Tím je zajištěno, že se berou v úvahu všechny položky, které zažijí nebo zažívají změny v nabídce nebo poptávce.
+## Action Messages  
+Action messages are issued by the order tracking system when balance is unattainable in the existing order network. They can be viewed as a suggestion for you to process changes that reestablish equilibrium between supply and demand.  
 
-Aby se předešlo malým, zbytečným nebo nedůležité akčním zprávám, může uživatel zřídit prodlevu, která slouží k omezení generování akčních zpráv pouze na ty změny, které přesahují definované množství nebo počet dní.
+The generation of action messages occurs one level at a time, for each item's low-level code. This makes sure that all items that experience or will experience changes in supply or demand are considered.  
 
-Poté, co jste zkontrolovali akční zprávy a určili, zda chcete přijmout některé nebo všechny navrhované změny, vyberte pole **Přijmout hlášené akce**, a pak jste připraveni odpovídajícím způsobem aktualizovat plány.
+To avoid small, superfluous, or unimportant action messages, the user can establish dampeners, which serve to restrict the generation of action messages to only those changes that exceed the defined quantity or number of days.  
 
-> [!NOTE]
-Akční zpráva je návrhem na vytvoření nové objednávky, zrušení objednávky nebo změnu množství nebo data objednávky. Objednávka je nákupní objednávka, objednávka transferu nebo výrobní zakázka.
+After you have reviewed the action messages and determined whether to accept some or all of the suggested changes, select the **Accept Action Message** field, and then you are ready to update the schedules accordingly.  
 
-V reakci na jakékoli nerovnováhy mezi nabídkou a poptávkou se generují následující zprávy o činnosti:
+> [!NOTE]  
+>  An action message is a suggestion to create a new order, cancel an order, or change the quantity or date of an order. An order is a purchase order, transfer order, or production order.  
 
-| Zpráva akce | Popis |
+In response to any supply/demand imbalances, the following action messages are generated.  
+
+|Action Message|Description|  
 |--------------------|---------------------------------------|  
-| **Nový** | Pokud poptávka nemůže být vyplněna a pomocí navrhováním akčních zpráv, které mají vést k **Změna množ.**, **Přeplánování**, nebo **Přeplánování a Změna množ..** a stávajících objednávkách , je vygenerována akční zpráva **Nový**, která navrhne novou objednávku. Kromě toho, je zpráva **Nový** vygenerována, pokud neexistují objednávky dodávek v cyklu změny pořadí dotyčné položky. Tento parametr určuje počet období vpřed a vzad v profilech dostupnosti při hledání objednávky k přeplánování. |
-| **Změnit množství** | Pokud dojde ke změně množství poptávky, která je sledována na objednávce dodávky, je generována zpráva **Změna množství**, která naznačuje, že související nabídka by měla být změněna vzhledem ke změně poptávky. Pokud se objeví nová poptávka, [!INCLUDE[d365fin](includes/d365fin_md.md)] vyhledá nejbližší existující neobsazené pořadí objednávek dodávky v cyklu přiobjednání a vydá změnu zprávy akce pro tuto objednávku. |
-| **Přeplánování** | Když dojde k objednávce dodávky nebo požadavku na změnu data způsobující nerovnováhu v síti objednávek, je vygenerována zpráva akce **Přeplánovat**. Pokud existuje vztah 1:1 mezi poptávkou a nabídkou, je generována zpráva akce, která naznačuje, že objednávka dodávky byla odpovídajícím způsobem přesunuta. Pokud objednávka dodávky pokrývá poptávku z více než jedné prodejní objednávky, je objednávka dodávky přeplánována tak, aby byla rovna datu první poptávky. |
-| **Přeplán. změna množ.** | Pokud byly jak data, tak množství objednávky změněny, musíte změnit plány s ohledem na obě okolnosti. Zprávy o akci shromažďují obě akce v jedné zprávě, **Přeplán. změna  množ.**, aby se zajistilo, že se síť objednávek vrátí do rovnováhy. |
-| **Zrušit** | Pokud je poptávka, která byla pokryta na základě zakázky-na-zakázku, je odstraněna, je zpráva vygenerována zpráva o akci, která zruší související objednávku na dodávku. Pokud vztah není typu zakázka-na-zakázku, an action message is generated to change in order to reduce the supply. Pokud prostřednictvím jiných faktorů, například úprav zásob, není vyžadována objednávka dodávky v okamžiku, kdy uživatel generuje zprávy akcí, [!INCLUDE[d365fin](includes/d365fin_md.md)] navrhne v listu zprávu akcí s **Zrušit**. |
+|**New**|If a demand cannot be fulfilled by suggesting action messages to **Change Qty.**, **Reschedule**, or **Reschedule & Change Qty.** on existing orders, the action message **New** is generated, which suggests a new order. In addition, the message **New** is generated if there are no existing supply orders in the reorder cycle of the item in question. This parameter determines the number of periods forward and backward in the availability profile when it searches for an order to reschedule.|  
+|**Change Quantity**|When demand that is tracked to a supply order experiences a quantity change, the action message **Change Qty.** is generated, which indicates that the related supply should be changed relative to the change in demand. If a new demand emerges, [!INCLUDE[prod_short](includes/prod_short.md)] searches for the nearest existing unreserved supply order in the reorder cycle, and issues a change of action message for that order.|  
+|**Reschedule**|When a supply or demand order experiences a date modification causing an imbalance in the order network, the action message **Reschedule** is generated. If there is a one-to-one relationship between demand and supply, an action message is generated suggesting that the supply order be moved accordingly. If the supply-order covers demand from more than one sales order, the supply order is re-scheduled equal to the date of the first demand.|  
+|**Resch. & Chg. Qty.**|If both the dates and quantities of an order have been modified, you must change plans with regard to both circumstances. Action messaging gathers both actions in one message, **Resched. and Chg. Qty.**, to ensure that the order network returns to balance.|  
+|**Cancel**|If a demand, which has been covered on an order-to-order basis, is deleted, an action message is generated to cancel the related supply order. If the relationship is not order-to-order, an action message is generated to change in order to reduce the supply. If through other factors, such as inventory adjustments, a supply order is not required at the time the action messages are generated by the user, [!INCLUDE[prod_short](includes/prod_short.md)] suggests an action message of **Cancel** in the worksheet.|  
 
-## Viz také
-[Plánování](production-planning.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
-[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Planning](production-planning.md)  
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

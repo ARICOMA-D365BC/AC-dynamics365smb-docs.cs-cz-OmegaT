@@ -1,33 +1,36 @@
 ---
-title: Použítí osvědčených postupů při nastavení komplexních oblasti aplikace | Microsoft Docs
-description: Zadání správných hodnot nastavení již od začátku je důležité pro úspěch jakéhokoli nového obchodního softwaru.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 10/01/2018
-ms.author: sgroespe
+    title: Set Up Complex Application Areas Using Best Practices | Microsoft Docs
+    description: Entering the correct setup values from the start is important to the success of any new business software.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
-# <a name="set-up-complex-application-areas-using-best-practices"></a>Osvědčené postupy při nastavení komplexních oblasti aplikace
-Zadání správných hodnot nastavení již na začátku je důležité pro úspěch jakéhokoli nového obchodního softwaru.  
+# Set Up Complex Application Areas Using Best Practices
+Entering the correct setup values from the start is important to the success of any new business software.  
 
- Ať už používáte služby RapidStart k implementaci hodnot nastavení nebo je zadáváte ručně v nové společnosti, můžete svá rozhodnutí o nastavení podpořit některými obecnými doporučeními pro vybraná pole nastavení, o kterých je známo, že pokud budou nesprávně definovány, může být řešení neefektivní.  
+ Whether you use Rapid Start to implement setup values or you manually enter them in the new company, you can support your setup decisions with some general recommendations for selected setup fields that are known to potentially cause the solution to be inefficient if defined incorrectly.  
 
- Nápověda v [!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje informace o osvědčených postupech, jak nastavit klíčová pole v následujících oblastech aplikace:  
+ Help in [!INCLUDE[prod_short](includes/prod_short.md)] includes best-practice information about how to set up key fields in the following application areas:  
 
--   [Nastavení osvědčených postupů: Plánovač dodávek](setup-best-practices-supply-planning.md)  
+-   [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
 
--   [Nastavení osvědčených postupů: Metody ocenění](setup-best-practices-costing-method.md)  
+-   [Setup Best Practices: Costing Method](setup-best-practices-costing-method.md)  
 
-## <a name="see-also"></a>Viz také  
-[Podrobnosti návrhu: Plánovač dodávek](design-details-supply-planning.md)   
-[Podrobnosti návrhu: Metody ocenění](design-details-costing-methods.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Design Details: Costing Methods](design-details-costing-methods.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]  
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

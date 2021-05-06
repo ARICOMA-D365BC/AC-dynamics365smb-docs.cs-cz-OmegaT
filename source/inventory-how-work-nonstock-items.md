@@ -1,69 +1,74 @@
 ---
-title: Vytváření a správa katalogu zboží | Microsoft Docs
-description: 'Popisuje, jak obchodovat se zbožím, které je v seznamu zboží vašich dodavatelů, ale nikoli ve vašem vlastním seznamu zboží.'
+title: Create and Manage Catalog Items| Microsoft Docs
+description: Describes how to trade in items that are in your vendors list of items but not in your own list of items.
 documentationcenter: ''
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: non-inventoriable
-ms.date: 03/12/2019
-ms.author: sgroespe
----
-# <a name="work-with-catalog-items"></a>Práce s katalogem zboží
-Můžete nabídnout svým zákazníkům určité zboží pro jejich pohodlí, které nechcete spravovat ve svém systému, dokud je nezačnete prodávat. Pokud chcete začít spravovat takové zboží ve vašem systému, můžete je převést na karty normálního zboží dvěma způsoby.
+ms.date: 04/01/2021
+ms.author: edupont
 
-* Z karty katalogu zboží vytvořte novou kartu zboží založenou na šabloně.
-* Z řádku prodejní objednávky typu **Zboží** s prázdným polem **Číslo** vyberte katalog zboží. Karta zboží je pak automaticky vytvořena pro zboží katalogu.
+---
+# Work with Catalog Items
+You can offer certain items to your customers for their convenience, which you do not want to manage in your system until you start selling them. When you want to start managing such items in your system, you can convert them to normal item cards in two ways.
+
+* From a catalog item card, create a new item card based on a template.
+* From a sales order line of type **Item** with an empty **No** field, select a catalog item. An item card is then automatically created for the catalog item.
 
 > [!NOTE]  
-> Nemůžete vybrat katalog zboží ze stránky **Prodejní faktura**.<br /><br />
-> Zboží katalogu můžete vybrat na stránce **prodejní nabídka**, ale zboží katalogu se při použití funkce **Vytvořit zakázku** nepřevede na normální zboží.
+> You cannot select a catalog item from the **Sales Invoice** page.<br /><br />
+> You can select a catalog item from the **Sales Quote** page, but the catalog item will not be converted to a normal item when you use the **Make Order** function.
 
-Zboží katalogu má typicky číslo zboží dodavatele, který jej nabízí. Chcete-li povolit konverzi karty zboží katalogu na normální kartu zboží, musíte nejprve nastavit, jak bude převedeno číslování zboží dodavatele na vaše číslování zboží.   
+A catalog item typically has the item number of the vendor who supplies it. To enable conversion of a catalog item card to a normal item card, you must first set up how vendor item numbering is converted to your own item numbering.   
 
 > [!Important]
-> Zboží katalogu by se nemělo zaměňovat se zbožím mimo zásob, což je běžné zboží, které dostává typ **Mimo zásob**, aby je např. udržovaly mimo výpočty dostupnosti a kalkulace, protože se používají pouze interně a mají nízké náklady. Pro více informací navštivte [O typech zboží](inventory-about-item-types.md).
+> Catalog items are not to be mistaken with non-inventory items, which are regular items that are given the type **Non-Inventory** to keep them out of availability and costing calculations, for example, because they are only used internally and have a low cost. For more information, see [About Item Types](inventory-about-item-types.md).
 
-## <a name="to-create-a-catalog-item"></a>Vytvoření zboží z katalogu
-Karty zboží z katalogu mají mnohem méně informací než karty normálního zboží, protože je používáte pouze v nabídkách a jinými způsoby. Z tohoto důvodu je třeba je převést na normální kartu, než budete moci za ně zaúčtovat prodejní transakce.
+## To create a catalog item
+Catalog item cards have much less information than normal item cards because you only use them to offer on quotes and in other ways. For that reason, they must be converted to normal item cards before you can post sales transactions for them.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží katalogu** a poté vyberte související odkaz.
-2. Zvolte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Catalog Items**, and then choose the related link.
+2. Choose the **New** action.
+3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## <a name="to-set-up-how-catalog-item-numbers-are-converted-to-your-own-numbering"></a>Nastavení převodu čísla zboží katalogu na vlastní číslování
-Chcete-li povolit konverzi karty zboží katalogu na kartu normálního zboží, musíte nejprve nastavit, jak bude číslování zboží dodavatele převedeno na váš vlastní formát čísla zboží.
+## To set up how catalog item numbers are converted to your own numbering
+To enable conversion of a catalog item card to a normal item card, you must first set up how the vendor's item numbering is converted to your own item number format.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží katalogu** a poté vyberte související odkaz.
-2. Vyplňte pole podle potřeby.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Catalog Item Setup**, and then choose the related link.
+2. Fill in the fields as necessary.
 
-## <a name="to-convert-a-catalog-item-to-a-normal-item"></a>Převod zboží katalogu na normální zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží katalogu** a poté vyberte související odkaz.
-2. Otevřete kartu pro zboží katalogu, které chcete převést na normální.
-3. Na stránce **Karta katalogu zboží** vyberte akci **Vytvořit zboží**.
+## To convert a catalog item to a normal item
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Catalog Items**, and then choose the related link.
+2. Open the card for a catalog item that you want to convert to a normal item.
+3. On the **Catalog Item Card** page, choose the **Create Item** action.
 
-Vytvoří se nová karta zboží, která je předem vyplněna informacemi ze zboží katalogu a příslušné šablony zboží. Můžete vyplnit nebo upravit pole na nové kartě zboží podle potřeby. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
+A new item card prefilled with information from the catalog item and a relevant item template is created. You can then fill or edit fields on the new item card as necessary. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
-## <a name="to-sell-a-catalog-item-and-convert-it-to-a-normal-item"></a>Prodej zboží katalogu a převod na normální zboží
-1. Vyberte ![Žárovku, která otevře funkci Řekněte Mi], ikonu (media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Zvolte akci **Nový**. Vyplňte pole na záložce **Obecné** jako u každé prodejní objednávky. Pro více informací navštivte [Prodej produktů](sales-how-sell-products.md).
-3. Na novém prodejním řádku v poli **Typ** vyberte **Zboží**, ale pole **Číslo** ponechte prázdné.
-4. Vyberte akci **Řádek** a poté vyberte akci **Vybrat zboží katalogu**.
+## To sell a catalog item, and convert it to a normal item
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+2. Choose the **New** action. Fill in the fields on the **General** FastTab as for any sales order. For more information, see [Sell Products](sales-how-sell-products.md).
+3. On a new sales line, in the **Type** field, select **Item**, but leave the **No.** field empty.
+4. Choose the **Line** action, and then choose the **Select Catalog Items** action.
 
-    Zboží katalogu je převedeno na normální zboží. Vytvoří se nová karta zboží, která je předem vyplněna informacemi ze zboží katalogu a příslušné šablony zboží.
-5. V okně **Zboží katalogu** vyberte zboží katalogu, které chcete prodat a potom vyberte tlačítko **OK**.
-6. Po dokončení prodejní objednávky zvolte akci **Zaúčtovat**.
+    The catalog item is converted to a normal item. A new item card prefilled with information from the catalog item and a relevant item template is created.
+5. On the **Catalog Items** page, select the catalog item that you want to sell, and then choose the **OK** button.
+6. When the sales order is complete, choose the **Post** action.
 
-Můžete vyplnit nebo upravit pole na nové kartě zboží podle potřeby. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
+You can then fill or edit fields on the new item card as necessary. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
 > [!NOTE]  
->   Záznam křížového odkazu zboží je automaticky vytvořen pro dodavatele zboží mezi číslem zboží dodavatele a novým číslem zboží. Pro více informací navštivte [ Křížové odkazy sledovaného zboží](inventory-how-use-item-cross-refs.md).
+>   An Item cross reference record is automatically created for the vendor of the item between the vendor's item number and your new item number. For more information, see [Use Item Cross References](inventory-how-use-item-cross-refs.md).
 
-## <a name="see-also"></a>Viz také
-[Evidence nového zboží](inventory-how-register-new-items.md)  
-[Vytvoření speciálních objednávek](sales-how-to-create-special-orders.md)|  
-[Zásoby](inventory-manage-inventory.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Register New Items](inventory-how-register-new-items.md)  
+[Create Special Orders](sales-how-to-create-special-orders.md)|  
+[Inventory](inventory-manage-inventory.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

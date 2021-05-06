@@ -4,73 +4,82 @@ description: Describes how to issue checks using the payment journal, print chec
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment journal, print check, vendor payment, creditor, debt, balance due, AP
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Provádění plateb šekem
-Elektronické a ruční šeky můžete vydat v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Obě metody používají deník plateb k vydávání šeků dodavatelům. Můžete také šeky zrušit a zobrazit jejich položky.
+# Make Check Payments
 
-Následující postup ukazuje, jak zaplatit dodavateli počítačovým šekem pomocí platby na příslušnou fakturu dodavatele, vytisknutím šeku a následným zaúčtováním platby jako zaplacené. Výsledkem je kladná položka dodavatele, která se aplikuje na záporné položky bankovního účtu, a fyzické šeky pro zpracování v bance.
+You can issue electronic and manual checks in [!INCLUDE[prod_short](includes/prod_short.md)]. Both methods use the payment journal to issue checks to vendors. You can also void checks and view check ledger entries.
 
-Můžete platit dvěma typy šeků. Pro oba typy, musí pole **Typ  protiúčtu** nebo **Typ účtu** obsahovat **Bankovní účet**.
+The following procedure shows how to pay a vendor with a computer checks by applying the payment to the relevant vendor invoice, printing the check, and then posting the payment as paid. This results in positive vendor ledger entries, applied to negative bank ledger entries, and physical checks for processing in the bank.
 
-- **Počítačový šek**: Tuto možnost vyberte, pokud chcete vytisknout částku šeku na řádku deníku plateb. Šeky musíte vytisknout dříve, než budete moci zaúčtovat řádky deníku.
-- **Ruční šek**: Tuto možnost vyberte, pokud jste vytvořili šek ručně a chcete pro tuto částku vytvořit odpovídající položku šeku. Pomocí této možnosti nelze šek vytisknout.
+You can pay with two types of checks. For both types, the **Bal. Account Type** or the **Account Type** field must contain **Bank Account**.
 
-> [!NOTE]
-> Abyste zajistili, že vaše banka smaže pouze ověřené šeky a částky, můžete jim odeslat soubor, který obsahuje informace o dodavateli, šeku a platbě. Pro více informací navštivte [Export souboru kladných plateb](finance-how-positive-pay.md).
+- **Computer Check**: Select this option if you want to print a check for the amount on the payment journal line. You must print the checks before you can post the journal lines.
+- **Manual Check**: Select this option if you have created a check manually and want to create a corresponding check ledger entry for this amount. By using this option, you cannot print the check.
 
-Tiskárna musí být správně nastavena pomocí šekových formulářů a musíte definovat, které rozvržení šeku se má použít. Pro více informací navštivte [Výběr rozvržení šeku](finance-how-define-check-layouts.md)
+> [!NOTE]  
+> To make sure that your bank only clears validated checks and amounts, you can send them a file that contains vendor, check, and payment information. For more information, see [Export a Positive Pay file](finance-how-positive-pay.md).
 
-Pro kontrolní kód můžete vytisknout až 10 faktur na stránce. Pokud se šek vztahuje na více než 10 faktur, při tisku zrušíme šek na první stránce a na šek vytiskneme slovo ZRUŠENO. Potom vytiskneme zbytek faktur a celkovou částku šeku na druhé stránce.
+> [!IMPORTANT]
+> Your printer must be correctly set up with the check forms, and you must define which check layout to use. For more information, see [Select a Check Layout](finance-how-define-check-layouts.md). Alternatively, you can send the check as a PDF file, for example.  
 
-## Platba faktury dodavatele pomocí počítačového šeku
-Následující text popisuje, jak zaplatit dodavateli šekem. Postup je podobný jako refundace šekem u zákazníka.
+You can print up to 10 invoices on a page for a check stub. If a check applies to more than 10 invoices, when you print the stub we void the check on the first page and print the word VOID on the check. We then print the remainder of the invoices and the total check amount on the second page.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Deníky plateb** a poté vyberte související odkaz.
-2. Vyplňte řádky deníku plateb. Pro více informací navštivte [Evidence plateb a náhrad](payables-how-post-payments-refunds.md).
-3. V poli **Kód způsobu platby** vyberte **Šek**.
-4. V poli **Typ platby v bance** vyberte **Počítačový šek**.
-5. Vyberte akci **Tisk šeku**.
-6. Na stránce **Šek** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-7. Zvolte tlačítko **Odeslat do**, vyberte možnost **Dokument PDF** a poté zvolte tlačítko **OK**.
+## To pay a vendor invoice with a computer check
+The following describes how to pay a vendor by check. The steps are similar to refund a customer by check.
 
-   Fyzické šeky lze nyní přenést do banky ke zpracování. Pokračujte v účtování platby, jak byla použita u dodavatele, a tím ji zaplaťte v systému.
-8. Vyberte akci **Účtovat**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.
+2. Fill in the payment journal lines. For more information, see [Record Payments and Refunds](payables-how-post-payments-refunds.md).
+3. In the **Payment Method Code** field, select **Check**.
+4. In the **Bank Payment Type** field, select **Computer Check**.
+5. Choose the **Print Check** action.
+6. On the **Check** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+7. If your printer is set up to print checks, choose the **Print** button. Otherwise, choose the **Send to** button, select the **PDF Document** option, choose the **OK** button, and then print the PDF document.
 
-Jsou vytvářeny plně vyrovnány položky dodavatele a položky banky.
+    The physical checks can now be sent to the vendors for processing. Proceed to post the payment as applied to the vendor and thereby paid in the system.
+8. Choose the **Post** action.
 
-> [!NOTE]
-> Pokud chcete tisknout a platit šeky ve více než jedné měně z různých bankovních účtů, musíte pro každou měnu spustit samostatnou dávkovou úlohu **Tisk šeku** a zadat příslušný bankovní účet.
+Fully applied vendor ledger entries and bank ledger entries are created.
 
-## Zrušení tištěných šeků, které nejsou zaúčtovány
-Nezaúčtované šeky můžete zrušit po vytištění pomocí akce **Zrušit šek** na stránce **Deníky plateb**.
+> [!NOTE]  
+> If you want to print and pay checks in more than one currency from different bank accounts, you must run the **Print Check** batch job separately for each currency and specify the appropriate bank account.
 
-1. Na stránce **Deníky plateb** vyberte **Zrušit šek** poté vyberte, které šeky chcete zrušit.
+## To cancel printed checks that are not posted
+You can cancel non-posted checks after they have been printed by using the **Void Check** action on the **Payment Journal** page.
 
-## Zrušení šeků
-Po zaúčtování platby šekem můžete zrušit (neplatné) šeky pouze z výsledných položek banky.
+1. On the **Payment Journal** page, choose the **Void Check**, and then choose which checks to cancel.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.
-2. Vyberte příslušný bankovní účet, vyberte akci **Upravit** a poté vyberte akci **Položky šeků**.
-3. Na stránce **Položky šeků** vyberte akci **Zrušit šek**.
-4. Zaškrtněte políčko **Pouze zrušit šek**.
-5. Vyberte tlačítko **OK**.
+## To void checks
 
-## Zobrazení souhrnu zaúčtovaných šeků
-Pokud chcete zkontrolovat zaúčtované šeky, například pro ověření více šeků zaplacených jednomu dodavateli, můžete použít sestavu **Bankovní účet-detaily šeku**.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účet-detaily šeku** a poté vyberte související odkaz.
-2. Nastavte filtry jako relevantní a poté zvolte tlačítko **Náhled**.
+When check payment have been posted, you can only cancel (void) checks from the resulting bank ledger entries.
 
-## Viz také
-[Provádění plateb](payables-make-payments.md)  
-[Správa závazků](payables-manage-payables.md)  
-[Nastavení bankovnictví](bank-setup-banking.md)  
-[Export souboru kladných plateb](finance-how-positive-pay.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+> [!IMPORTANT]
+> If the check is applied to an invoice, unapply the check first so that the invoice can be repaid, and then void the check. If the check was printed and did not pay an invoice, then choose **Void Check Only** as described in this section.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
+2. Select the relevant bank account, choose the **Edit** action, and then choose the **Check Ledger Entries** action.
+3. On the **Check Ledger Entries** page, choose the **Void Check** action.
+4. Select the **Void Check Only** check box.
+5. Choose the **OK** button.
+
+## To view a summary of posted checks
+If you want to review posted checks, for example to verify multiple checks paid to one vendor, you can use the **Bank Account - Check Details** report.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Account - Check Details**, and then choose the related link.
+2. Set filters as relevant, and then choose the **Preview** button.
+
+## See Also
+[Making Payments](payables-make-payments.md)  
+[Managing Payables](payables-manage-payables.md)  
+[Setting Up Banking](bank-setup-banking.md)  
+[Export a Positive Pay file](finance-how-positive-pay.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

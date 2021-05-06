@@ -6,30 +6,33 @@ documentationcenter: ''
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: contract, agreement, configure
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Plnění servisních smluv
-Jedním ze způsobů, jak nastavit podnikání v rámci správy servisu je mít standardní smluvní ujednání mezi vámi a vašimi zákazníky, která popisují úroveň servisu a očekáváný servis. Můžete vytvořit šablony smluv, které obsahují nezbytné informace, jako je zákazník, datum zahájení smlouvy a fakturační období.
+# Fulfilling Service Contracts 
+One way to set up a service management business is to have standard contractual agreements between you and your customers that describe the level of service and the service expectations. You can create contract templates that include necessary information, such as customer, start date of contract, and invoice period.  
+  
+After you set up the template, you can customize the resulting contract to keep track of service hours, or other items that may vary from customer to customer. You can also set up a contract manually from a service contract quote. Finally, you can adjust your service pricing to keep track of discounts that a specific customer qualifies for, by specifying the discount amount on the **Service Contract** page.  
 
-Po nastavení šablony můžete výslednou smlouvu přizpůsobit tak, aby zaznamenávala servisní hodiny, nebo jiné položky, které se mohou u jednotlivých zákazníků lišit. Smlouvu můžete také nastavit ručně z nabídky servisních smluv. Nakonec můžete upravit ceny vašeho servisu tak, abyste zaznamenali slevy, na které se konkrétní zákazník kvalifikuje, zadáním výše slevy na stránce **Serviní smlouvy**.
-
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
-
-| **Pro** | Navštivte |
+The following table describes a sequence of tasks, with links to the topics that describe them.   
+  
+|**To**|**See**|  
 |------------|-------------|  
-| Zpracování předmětu servisu v rámci více smluv. | [Vícenásobné smlouvy](service-multiple-contracts.md) |
-| Vytvářejte servisní smlouvy buď ručně, nebo z nabídky servisních smluv. | [Vytváření servisní smlouvy a nabídky servisních smluv](service-how-to-create-service-contracts-and-service-contract-quotes.md) |
-| Upravte roční částku servisní smlouvy nebo nabídky tak, že nezapomenete fakturovat správnou částku. | [Změňte roční částku na servisní smlouvy a nabídku smluv.](service-how-to-change-the-annual-amount-on-service-contracts-or-contract-quotes.md) |
+|Handle a service item under multiple contracts. | [Multiple Contracts](service-multiple-contracts.md)|  
+|Create service contracts either manually, or from a service contract quote.| [Create Service Contracts and Service Contract Quotes](service-how-to-create-service-contracts-and-service-contract-quotes.md)|
+|Adjust the annual amount of a service contract or contract quote, so make sure that you invoice the right amount.|[Change the Annual Amount on Service Contracts or Contract Quotes](service-how-to-change-the-annual-amount-on-service-contracts-or-contract-quotes.md)|
 
-## Viz také
-[Plánování servisu](service-plan-service.md)<x2/>
-[Poskytování servisu](service-deliver-service.md)<x4/>
-[Nastavení Správy servisu](service-setup-service.md)<x6/>
-[Vytváření servisních smluv a nabídky servisních smluv](service-how-to-create-service-contracts-and-service-contract-quotes.md)
+## See also
+[Planning Service](service-plan-service.md)  
+[Delivering Service](service-deliver-service.md)  
+[Setting Up Service Management](service-setup-service.md)  
+[Create Service Contracts and Service Contract Quotes](service-how-to-create-service-contracts-and-service-contract-quotes.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

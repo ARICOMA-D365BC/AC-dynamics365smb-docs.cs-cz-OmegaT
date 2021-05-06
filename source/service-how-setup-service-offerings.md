@@ -1,28 +1,30 @@
 ---
-title: Nastavení Nabídky servisu | Microsoft Docs
-description: 'Naučte se, jak nastavit servis, který nabízíte svým zákazníkům.'
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: 'components, service item, service'
-ms.date: 10/01/2018
-ms.author: sgroespe
+    title: Set Up Service Offerings | Microsoft Docs
+    description: Learn how to set up the services that you offer to your customers.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords: components, service item, service
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
 
-# <a name="set-up-service-offerings"></a>Nastavení Nabídky servisu
-Při nastavování správy servisu se musíte rozhodnout, jaký servis nabídnout zákazníkům a plán tohoto servisu. Servis je druh práce prováděné jedním nebo více zdroji a poskytované zákazníkovi. Například servisem může být typ opravy počítače. Předmět servisu je zařízení nebo zboží, které potřebuje servis, například počítač, který potřebuje opravu, nainstalován u konkrétního zákazníka. Servis můžete nastavit jako součást skupiny souvisejícího zboží opravy nebo údržby.  
+# Set Up Service Offerings
+When you set up service management, you must decide what services to offer customers and the schedule for those services. A service is a type of work performed by one or more resources and provided to a customer. For example, a service could be a type of computer repair. A service item is the equipment or item that needs servicing, for example, the computer that needs repair, installed at a specific customer. You can set up services as part of a group of related repair or maineenance items.  
   
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.  
+The following table describes a sequence of tasks, with links to the topics that describe them.  
   
-|**Pro**|**Viz**|  
+|**To**|**See**|  
 |------------|-------------|  
-|Zadejte informace o předmětech servisu, které vaše servisní organizace sleduje.|[Vytvořte předměty servisu](service-how-to-create-service-items.md)|  
-|Vytvořte pracovní postup pro servis, když předměty servisu sestávají z několika součástí. Seznam komponent je vždy spojen s předmětem servisu, ale tyto komponenty mohou být také založeny na kusovníku.|[Nastavení Předmětů servisu a Komponent předmětu servisu](service-how-setup-service-items.md)|  
+|Enter information about the service items that your service organization is tracking.|[Create Service Items](service-how-to-create-service-items.md)|  
+|Establish a workflow for service when the service items consists of several components. The component list is always connected to a service item, but these components can also be based on bill of materials (BOMs).|[Set Up Service Items and Service Item Components](service-how-setup-service-items.md)|  
   
-## <a name="see-also"></a>Viz také  
-[Nastavení Správy servisu](service-setup-service.md)   
+## See Also  
+[Setting Up Service Management](service-setup-service.md)   
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

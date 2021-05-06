@@ -1,6 +1,6 @@
 ---
-title: Ruční úprava nákladů zboží| Microsoft Docs
-description: 'Ocenění zboží můžete upravit pomocí metod FIFO nebo průměrné kalkulace, například když se náklady zboží změní z jiných důvodů, než jsou transakce.'
+title: Manually Adjust the Costs of Items| Microsoft Docs
+description: You can adjust the inventory valuation of an item using the FIFO or Average costing methods, for example, when item costs change for reasons other than transactions.
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
@@ -11,77 +11,77 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cost adjustment, cost forwarding, costing method, inventory valuation, costing
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Upravit cenu položky
-Náklady na položku (hodnotu zásob), kterou si koupíte a později prodáváte, se mohou během své životnosti měnit, například proto, že náklady na dopravu jsou po prodeji položky přidány k nákupním nákladům. Úprava nákladů je zvláště důležitá v situacích, kdy zboží prodáváte před fakturací nákupu tohoto zboží. Aby byla vždy známá správná hodnota inventáře, je třeba pravidelně upravovat náklady na položky. To zajišťuje, že statistiky prodeje a zisku jsou aktuální a že finanční ukazatele KPI jsou správné. Pro více informací navštivte [Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md).
+# Adjust Item Costs
+The cost of an item (inventory value) that you purchase and later sell may change during its lifetime, for example because a freight cost is added to its purchase cost after you have sold the item. Cost adjustment is especially relevant in situations where you sell goods before you invoice the purchase of those goods. To always know the correct inventory value, item costs must therefore regularly be adjusted. This ensures that sales and profit statistics are up to date and that financial KPIs are correct. For more information, see [Design Details: Cost Adjustment](design-details-cost-adjustment.md).
 
-Hodnota v poli **Pořizovací cena** na kartě zboží je zpravidla založena na pevné pořizovací ceně, která je pro zboží standardem metody ocenění. Kalkulace zboží se všemi ostatními metodami je založena na výpočtu dostupných zásob (fakturované náklady a očekávané náklady) děleno množstvím na skladě. Pro více informací navštivte [Pochopení výpočtu pořizovací ceny](inventory-how-adjust-item-costs.md#understanding-unit-cost-calculation).
+As a rule, the value in the **Unit Cost** field on the item card is based on the standard cost for items with costing method standard. For items with all other costing methods, it is based on the calculation of the inventory available (invoiced costs and expected costs) divided by the quantity on hand. For more information, see [Understanding Unit Cost Calculation](inventory-how-adjust-item-costs.md#understanding-unit-cost-calculation).
 
-V [!INCLUDE[prod_short](includes/prod_short.md)], se náklady na zboží automaticky upravují pokaždé, když dojde k transakci se zásobami, například při účtování nákupní faktury za zboží.
+In [!INCLUDE[prod_short](includes/prod_short.md)], item costs are automatically adjusted every time that an inventory transaction occurs, such as when posting a purchase invoice for an item.
 
-Pomocí funkce můžete také manuálně upravit náklady na jedno nebo více zboží. To je užitečné například tehdy, když víte, že náklady na zboží se změnilo z jiných důvodů než standardní transakcí se zbožím.
+You can also use a function to manually adjust the costs of one or more items. This is useful, for example, when you know that item costs have changed for other reasons than item transactions.
 
-Náklady na zboží se upravují metodou FIFO nebo metodou průměrné kalkulace, v závislosti na vašem výběru v asistovaném nastavení **Nastavení mé společnosti** nebo v poli **Metoda ocenění** na kartě zboží. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
+Item costs are adjusted by the FIFO or the Average costing method, depending on your selection in the **Set Up My Company** assisted setup guide or in the **Costing Method** field on the item card. For more information, see [Register New Items](inventory-how-register-new-items.md).  
 
-Pokud používáte metodu ocenění FIFO, pak pořizovací cena zboží je skutečná hodnota jakéhokoli přijetí zboží. Zásoby se oceňují za předpokladu, že první zboží uložené v zásobách je prodáváno jako první.
+If you use the FIFO costing method, then an item’s unit cost is the actual value of any receipt of the item. Inventory is valuated with the assumption that the first items placed in inventory are sold first.
 
-Pokud použijete metodu průměrného ceny, pořizovací cena zboží se vypočte jako průměrná pořizovací cena v každém okamžiku po nákupu. Zásoby se oceňují s předpokladem, že všechny zásoby se prodávají současně. U zboží, které používá tuto metodu ocenění, můžete vybrat pole **Pořizovací cena** na kartě zboží a zobrazit historii transakcí, z nichž se vypočítá průměrná cena.
+If you use the Average costing method, then an item’s unit cost is calculated as the average unit cost at each point in time after a purchase. Inventory is valuated with the assumption that all inventories are sold simultaneously. For items that use this costing method, you can choose the **Unit Cost** field on the item card to view the history of transactions that the average cost is calculated from
 
-Funkce úpravy nákladů zpracovává pouze hodnoty, které ještě nebyly upraveny. Pokud se funkce setká s situací, kdy je třeba přenést změněné příchozí náklady do přidružených odchozích položek, vytvoří se nové upravené položky, které jsou založeny na informacích v položkách původní hodnoty, ale obsahují upravenou částku. Funkce úpravy nákladů používá datum zaúčtování položky původní hodnoty do upravené položky, pokud se tento datum nenachází v uzavřeném období zásob. V takovém případě program používá datum zahájení dalšího otevřeného období zásob. Pokud se nepoužije doba zásob, pak bude v poli **Povolit odesílání z** na stránce **Nastavení financí** definováno, kdy bude zaúčtována upravená položka.
+The cost adjustment function processes only value entries that have not yet been adjusted. If the function encounters a situation where changed inbound costs need to be forwarded to associated outbound entries, then new adjustment value entries are created, which are based on the information in the original value entries but contain the adjustment amount. The cost adjustment function uses the posting date of the original value entry in the adjustment entry, unless that date is in a closed inventory period. In that case, application uses the starting date of the next open inventory period. If inventory periods are not used, then the date in the **Allow Posting From** field on the **General Ledger Setup** page will define when the adjustment entry is posted.
 
-## Ruční úpravy nákladů zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte  **Adjustace nákladů-položky zboží** a poté vyberte související odkaz.
-2. V stránka **Adjustace nákladů - položky zboží** zadejte, pro které zboží chcete upravit náklady.
-3. Zvolte tlačítko **OK**.
+## To adjust item costs manually
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Adjust Cost - Item Entries**, and then choose the related link.
+2. On the **Adjust Cost - Item Entries** page, specify which items to adjust costs for.
+3. Choose the **OK** button.
 
-## Provádění změn v přímé pořizovací ceně
-Pokud potřebujete změnit přímou pořizovací cenu pro zboží, můžete použít dávkovou úlohu **Upravit náklady/ceny zboží**.
+## To make general changes in the direct unit cost
+If you need to change the direct unit cost for several items, you can use the **Adjust Item Costs/Prices** batch job.  
 
-Dávková úloha mění obsah v poli **Jednotková cena** na kartě zboží. Dávková úloha mění obsah pole stejným způsobem pro všechno zboží nebo jen pro vybrané zboží. Dávková úloha násobí hodnotu v poli pomocí faktoru úpravy, který zadáte.
+ The batch job changes the contents in the **Unit Price** field on the item card. The batch job changes the content of the field in the same way for all items or selected items. The batch job multiplies the value in the field by an adjustment factor that you specify.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Upravit náklady/ceny zboží** a poté vyberte související odkaz.
-2. V poli **Upravit pole** zadejte, které zboží nebo pole karty SKJ chcete upravit.
-3. V poli **Faktor úpravy** zadejte faktor, podle kterého bude hodnota upravena. Například zadejte **1,5** pro zvýšení hodnoty o 50%.
-4. Na záložce **Zboží** nastavte filtry, aby určily například, které zboží se má zpracovávat dávkovou úlohou.
-5. Zvolte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Adjust Item Costs/Prices**, and then choose the related link.  
+2. In the **Adjust Field** field, specify which item or SKU card field you want to adjust.  
+3. In the **Adjustment Factor** field, specify the factor by which the value will be adjusted. For example, enter **1.5** to increase the value by 50%.  
+4. On the **Item** FastTab, set filters to specify, for example, which items to process with the batch job.  
+5. Choose the **OK** button.  
 
-## Porozumění výpočtu pořizovací ceny
-Hodnota v poli **Pořizovací cena** na kartě zboží je zpravidla založena na pevné pořizovací ceně, která je pro zboží standardem metody ocenění. Kalkulace zboží se všemi ostatními metodami je založena na výpočtu dostupných zásob (fakturované náklady a očekávané náklady) děleno množstvím na skladě.
+## Understanding Unit Cost Calculation
+As a rule, the value in the **Unit Cost** field on the item card is based on the standard cost for items with costing method standard. For items with all other costing methods, it is based on the calculation of the inventory available (invoiced costs and expected costs) divided by the quantity on hand.  
 
-V následujících částech je podrobněji popsáno, jak obsah pole **Metoda ocenění** ovlivňuje výpočet pořizovací ceny na nákupy a prodeje.
+ How the contents of the **Costing Method** field influence the unit cost calculation for purchases and sales is described in more detail in the following sections.  
 
-## Výpočet pořizovací ceny nákupu
-Při nákupu zboží se hodnota v poli **Poslední pořizovací cena** na kartě zboží zkopíruje do pole **Nákupní cena** na nákupním řádku nebo na řádku jednotkové ceny na řádku deníku zboží.
+## Unit Cost Calculation for Purchases  
+ When you purchase items, the value in the **Last Direct Cost** field on the item card is copied to the **Direct Unit Cost** field on a purchase line or to the Unit Amount line on an item journal line.  
 
-To, co vyberete v poli **Metoda ocenění**, ovlivňuje jak [!INCLUDE[prod_short](includes/prod_short.md)] vypočítá obsah pole **Pořizovací cena** na řádcích.
+ What you select in the **Costing Method** field influences how [!INCLUDE[prod_short](includes/prod_short.md)] calculates the contents of the **Unit Cost** field on the lines.  
 
-### Metoda ocenění FIFO, LIFO, specifická nebo průměrná
-[!INCLUDE[prod_short](includes/prod_short.md)] vypočítá obsah pole **Pořizovací cena (LM)** na nákupním řádku nebo obsah pole **Pořizovací cena** na řádku deníku zboží podle následujícího vzorce:
+### Costing Method FIFO, LIFO, Specific, or Average  
+ [!INCLUDE[prod_short](includes/prod_short.md)] calculates the contents of the **Unit Cost (LCY)** field on the purchase line or the contents of the **Unit Cost** field on the item journal line according to the following formula:  
 
-Pořizovací cena (LM) = (Nákupní cena – (Částka slevy / Množství)) x (1 + Nepřímé náklady % / 100) + Režijní náklady
+ Unit Cost (LCY) = (Direct Unit Cost – (Discount Amount / Quantity)) x (1 + Indirect Cost % / 100) + Overhead Rate  
 
-### Standardní metoda ocenění
-Pole **Pořizovací cena (LM)** na nákupním řádku nebo pole **Pořizovací ceny** je vyplněno na řádku deníku zboží zkopírováním hodnoty do pole **Pořizovací ceny** na kartě zboží. Při použití metody ocenění nastavené jako standardní je vždy založena na pevné pořizovací ceně.
+### Costing Method Standard  
+ The **Unit Cost (LCY)** field on the purchase line or the **Unit Cost** field is filled on the item journal line by copying the value in the **Unit Cost** field on the item card. By using costing method set as Standard, this is always based on the standard cost.  
 
-Když zaúčtujete nákup, pořizovací cena z řádku nákupu nebo řádku deníku zboží se zkopíruje do položky nákupní faktury za zboží a lze ji zobrazit v seznamu položek pro zboží.
+ When you post the purchase, the unit cost from the purchase line or item journal line is copied to the purchase item invoice entry, and it can be seen on the entry list for the item.  
 
-### Všechny metody ocenění
-Pořizovací cena z řádku zdrojového dokladu se používá k výpočtu obsahu pole **Částka nákladů (skutečná)** nebo případně pole **Částka nákladů (očekávaná)**, která se vztahuje k této položce zboží, bez ohledu na způsob ocenění zboží.
+### All Costing Methods  
+ The unit cost from the source document line is used to calculate the contents of the **Cost Amount (Actual)** field, or if applicable, the **Cost Amount (Expected)** field that relates to this item entry, regardless of the costing method of the item.  
 
-## Výpočet pořizovací ceny pro prodej
-Když prodáváte zboží, pořizovací cena se zkopíruje z pole Pořizovací cena na kartě zboží na prodejní řádek nebo na řádek deníku zboží.
+## Unit Cost Calculation for Sales  
+ When you sell items, the unit cost is copied from the Unit Cost field on the item card to the sales line or the item journal line.  
 
-Když zaúčtujete, pořizovací cena z řádku nákupu nebo řádku deníku zboží se zkopírují do položky nákupní faktury za zboží a lze ji zobrazit v seznamu položek zboží. [!INCLUDE[prod_short](includes/prod_short.md)] používá Pořizovací cenu z řádku zdrojového dokladu k výpočtu obsahu pole **Částka nákladů (skutečná)** nebo případně pole **Částka nákladů (očekávaná)** v položce ocenění vztahující se k této položce zboží.
+ When you post, the unit cost is copied to the sales invoice item entry, and it can be seen on the entry list for the item. [!INCLUDE[prod_short](includes/prod_short.md)] uses the unit cost from the source document line to calculate the contents of the **Cost Amount (Actual)** field, or if applicable, the **Cost Amount (Expected)** field in the value entry related to this item entry.  
 
-## Viz také
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Prodej](sales-manage-sales.md)    
-[Nakupování](purchasing-manage-purchasing.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md))
+## See Also
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Sales](sales-manage-sales.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

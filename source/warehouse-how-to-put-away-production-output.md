@@ -1,76 +1,73 @@
 ---
-    title: How to Put Away Production Output | Microsoft Docs
+    title: Put Away Production Output
     description: How you put away your output from production depends on how your warehouse is set up as a location.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Zaskladnění výroby nebo výstupu montáže
-Způsob zaskladnění výstupu z výroby závisí na tom, jak je sklad nastaven jako lokace. Pro více informací navštivte [Nastavení správy skladů](warehouse-setup-warehouse.md).
+# Put Away Production or Assembly Output
 
-V základních konfiguracích skladu, kde lokace vyžaduje zpracování zaskladnění, ale ne zpracování příjmu, použijete doklad **Zaskladnění zásob** k uspořádání a zaznamenání zaskladněného výstupu.
+How you put away your output from production depends on how your warehouse is set up as a location. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).  
 
-V pokročilých konfiguracích skladu, kde lokace vyžaduje zpracování zaskladnění i příjmu, vytvoříte buď interní doklad zaskladnění, nebo doklad přesunu, který zaskladní výstup.
+In basic warehouse configurations where the location requires put-away processing, you use the **Inventory Put-away** document to post production output and record the put-away of output.  
 
-Prvním krokem při vytváření zaskladnění výstupu je vytvoření požadavku na vstupní sklad. Tento požadavek informuje sklad, že výstup výrobní nebo montážní zakázky je připraven k zaskladnění.
+> [!NOTE]  
+> Inventory put-away is not supported for assembly processes. You post an assembly order to register output. If you use bins, you can move items between bins later. For more information, see [Move Items Ad Hoc in Basic Warehouse Configurations](warehouse-how-to-move-items-ad-hoc-in-basic-warehousing.md).  
 
-## Vytvoření požadavku na vstupní sklad
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vydaná výrobní zakázka** a poté vyberte související odkaz.
-2. Ve výrobní zakázce, která je připravena k zaskladnění, zvolte akci **Vytvořit vstupní požadavek  skl.**.
+In advanced warehouse configurations where the location requires both put-away and receive processing, you create either an internal put-away document or a movement document to put away the output.  
 
-> [!NOTE]
-> Požadavek na vstupní sklad můžete také vytvořit zaškrtnutím políčka **Vytvořit vstupní požadavek** při aktualizaci výrobní zakázky. Pro více informací navštivte [Přeplánování nebo přímá aktualizace výrobních zakázek](production-how-to-replan-refresh-production-orders.md).
+## To put away production output with an inventory put-away
 
-## Zaskladnění výstupu pomocí zaskladnění zásob
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění zásob** a poté vyberte související odkaz.
-2. Vytvořte nové zaskladnění zásob. Pro více informací navštivte [Zaskladnění zboží pomocí zaskladnění zásob](warehouse-how-to-put-items-away-with-inventory-put-aways.md).
-3. Chcete-li získat přístup k výstupu výrobní zakázky, zvolte akci **Kopie pův.dokladů** a pak vyberte vydanou výrobní zakázku.
-4. Podle potřeby vyplňte řádky zaskladnění.
-5. Až budou řádky připraveny k zaúčtování, zvolte akci **Účtovat**. Účtování vytvoří potřebné položky skladu a zaúčtuje výstup zboží.
+The first step in creating putting output away is to create the inbound warehouse request. This request informs the warehouse that the production or assembly order output is ready to be put away.
 
-Můžete také vytvořit **Zaskladnění zásob** přímo z vydané výrobní zakázky. Pro více informací navštivte [Zaskladnění zboží pomocí zaskladnění zásob](warehouse-how-to-put-items-away-with-inventory-put-aways.md).
+### To create the inbound warehouse request  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Production Order**, and then choose the related link.  
+2.  On the production order that is ready for put-away, choose the **Create Inbound Whse. Request** action.  
 
-Při zaúčtování zaskladnění zásob se předpokládá, že všechny operace jsou zaúčtovány podle standardního postupu, to znamená, že výstupní množství je zaúčtováno podle poslední operace. Deník výstupu můžete použít k zaúčtování odchylek ve výstupním množství a časech nastavení a spuštění. Pokud je nutné zaúčtovat množství částečně po vytvoření zaskladnění zásob, můžete tak učinit v době nastavení a množství pro všechny operace kromě poslední. V takovém případě je poslední operace řízena zaskladněním zásob.
+> [!NOTE]  
+> You can also create the inbound warehouse request by choosing the **Create Inbound Request** field when you refresh the production order. For more information, see [Refresh or Replan Production Orders](production-how-to-replan-refresh-production-orders.md).  
 
-Pokud potřebujete pouze zaúčtovat nastavení nebo dobu běhu při poslední operaci, nastavte výstupní množství v poslední operaci na hodnotu 0. Případně se můžete rozhodnout, že poslední řádek nezaúčtujete, a to jeho pouhým odstraněním.
+### To put output away with an inventory put-away  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Put-away**, and then choose the related link.  
+2.  Create a new inventory put-away. For more information, see [Put Items Away with Inventory Put-aways](warehouse-how-to-put-items-away-with-inventory-put-aways.md).
+3.  To access the production order output, choose the **Get Source Documents** action, and then select the released production order.  
+4.  Fill in the put-away lines as appropriate.
+5.  When the lines are ready for posting, choose the **Post** action. The posting will create the necessary warehouse entries and post the output of the items.  
 
-## Zaskladnění výstupu pomocí interního zaskladnění
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník  zaskladnění** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
-3. Vyplňte záhlaví nového interního zaskladnění alespoň s hodnotou v poli **Kód lokace**.
-4. Vyplňte řádek pro každé zboží, které chcete přesunout do skladu. Musíte pouze vyplnit pole **Číslo zboží** a **Množství**.
+You can also create an **Inventory Put-away** directly from the released production order. For more information, see [Put Items Away with Inventory Put-aways](warehouse-how-to-put-items-away-with-inventory-put-aways.md).  
 
-   > [!NOTE]
-   > Když vyberete pole **Číslo zboží**, otevře se místo seznamu **Přehled obsahů přihrádek** seznam **Přehled zboží**. Důvodem je, že chcete zaskladnit zboží, které je v určité přihrádce – obsah přihrádky – nejen zboží, a již víte, z jaké přihrádky by mělo být zboží odebráno.
+When you post an inventory put-away, it is assumed that all the operations are posted according to the standard routing, that is, output quantity is posted according to the last operation. You can use the output journal to post variances in output quantity and the setup and run times. If it is required to post partially after you have created the inventory put-away, you can do so on setup times and quantities for all operations except the last one. In that case, the last operation is controlled by the inventory put-away.  
 
-4. Chcete-li vyplnit řádky listu celým obsahem přihrádky nebo filtrovaným obsahem přihrádek v lokaci, zvolte akci **Načíst obsah přihrádky**.
-5. Vyberte akci **Vytvořit vyskladnění** a zboží, které chcete přesunout z výroby, je nyní v pokynech k zaskladnění čekajících na uložení ve skladu.
+If you only need to post setup or run time on the last operation, then set the output quantity on the last operation to 0. Alternatively, you can choose not to post the last line at all by simply deleting it  
 
-> [!NOTE]
-> Když je vaše lokace skladu nastavena na použití řízeného zaskladnění a vyskladnění, je sklad propojen s výrobním zařízením prostřednictvím výrobních přihrádek: vstupní a výstupní přihrádky a přihrádka otevřeného obchodu, definujte na záložce **Přihrádky** na kartě lokace. Když účtujete výstup výrobní zakázky, výstup je umístěn do **Výstupní výrobní přihrádky**. Stejným postupem, jaký je popsán výše, zaskladněte produkční výstup, s tím rozdílem, že namísto použití výchozí přihrádky zboží přesunete nebo zaskladníte zboží z **Výstupní výrobní přihrádky** do výchozí přihrádky zboží.
+## To put assembly and production output away in advanced warehouse configurations
+When you post the output of production or assembly order in the  warehouse that is set up to use directed put-away and pick, the output is placed in the bin defined in the production or assembly order. 
 
-## Ruční zadání přihrádky pro ukládání zboží z výrobního výstupu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit přesunu** a poté vyberte související odkaz.
-2. Vyplňte záhlaví a vytvořte řádek pro každé zboží, které chcete přesunout do skladu.
-3. Vyplňte pole **Z kódu přihrádky** a **Do kódu přihrádky** a zadejte množství do pole **Množství**.
-4. Chcete-li vyplnit řádky listu celým obsahem přihrádky nebo filtrovaným obsahem přihrádek v lokaci, zvolte akci **Načíst obsah přihrádky**.
-5. Vyberte akci **Vytvořit přesun**. Pokyny k přesunu skladu jsou vytvořeny pomocí řádků Vzít a Vložit, aby je zaměstnanci skladu provedli.
+The following table describes different ways of moving items within the warehouse with advanced configurations where all warehouse activities must be performed in a directed workflow. 
 
-> [!NOTE]
-> Nelze zadat číslo původního dokladu, například číslo výrobní zakázky, do dokladů o zaskladnění, interním zaskladnění nebo přesunu pro žádný z těchto postupů.
+|**To**|**See**|  
+|------------|-------------|  
+|Move items with the warehouse movement worksheet.|[Move Items in Advanced Warehouse Configurations](warehouse-how-to-move-items-in-advanced-warehousing.md#to-move-items-with-the-warehouse-movement-worksheet)|  
+|Create an internal put-away to put produced or assembled items away in an advanced warehouse configuration.|[Create an internal put-away](warehouse-how-to-create-put-aways-from-internal-put-aways.md#to-create-an-internal-put-away)|
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)  
-[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+> [!NOTE]  
+> You cannot enter the source document number, such as the Production Order No., in the internal put-away, put-away, or movement documents for either of these procedures.  
+
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

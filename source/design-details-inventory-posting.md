@@ -9,129 +9,129 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Účtování zásob
+# Design Details: Inventory Posting
 
-Každou skladovou transakcí, například nákupní příjemkou nebo prodejní dodávkou se zaúčtují dvě položky různých typů
+Each inventory transaction, such as a purchase receipt or a sales shipment, posts two entries of different types.  
 
-| Druh položky | Popis |
+|Entry type|Description|  
 |----------|-----------|  
-| Množství | Odráží změnu množství v zásobách Tyto informace jsou uloženy v položkách zboží.<br /><br /> Společně s položkami vyrovnání zboží. |
-| Hodnota | Odráží změnu hodnoty zásob. Tyto informace jsou uloženy v položkách ocenění. <br /><br /> Pro každou položku zboží nebo položku zdroje může existovat jedna nebo více položek ocenění.<br /><br /> Informace o položkách hodnoty zdroje souvisejících s použitím výrobních zdrojů nebo zdrojů sestav naleznete v tématu: [Detaily návrhu: Účování výrobní zakázky](design-details-production-order-posting.md). |
+|Quantity|Reflects the change of quantity in inventory. This information is stored in item ledger entries.<br /><br /> Accompanied by item application entries.|  
+|Value|Reflects the change of inventory value. This information is stored in value entries.<br /><br /> One or more value entries can exist for each item ledger entry or capacity ledger entry.<br /><br /> For information about capacity value entries related to the use of production or assembly resources, see [Design Details: Production Order Posting](design-details-production-order-posting.md).|  
 
-V souvislosti se zaúčtováním množství existují položky vyrovnání zboží, které spojují zvýšení zásob se snížením zásob. To umožňuje nákladovému enginu systému předávání nákladů od zvýšení k souvisejícímu snížení a naopak. Pro více informací navštivte [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md).
+ In relation to quantity postings, item application entries exist to link inventory increase with inventory decrease. This enables the costing engine to forward costs from increases to the related decreases and vice versa. For more information, see [Design Details: Item Application](design-details-item-application.md).  
 
-Položky zboží, položky ocenení a položky vyrovnání zboží jsou vytvořeny jako výsledek zaúčtování řádku deníku zboží, a to buď nepřímo zaúčtováním řádku objednávky, nebo přímo na stránce Deníku zboží.
+ Item ledger entries, value entries, and item application entries are created as a result of posting an item journal line, either indirectly by posting an order line or directly in the Item Journal page.  
 
-V pravidelných intervalech jsou položky ocenění vytvořené v položkách zásob zaúčtovány do hlavní knihy, aby se obě hlavní knihy vyrovnaly z důvodů finanční kontroly. Pro více informací navštivte [Detaily návrhu: Odsouhlasení hlavní účetní knihy](design-details-reconciliation-with-the-general-ledger.md).
+ At regular intervals, value entries that are created in the inventory ledger are posted to the general ledger to reconcile the two ledgers for financial control reasons. For more information, see [Design Details: Reconciliation with the General Ledger](design-details-reconciliation-with-the-general-ledger.md).  
 
-![Tok položky pří odsouhlasní zásob s hlavní účetní knihou](media/design_details_inventory_costing_1_entry_flow.png "Tok položky pří odsouhlasní zásob s hlavní účetní knihou")
+ ![Entry flow when reconciling inventory with G/L](media/design_details_inventory_costing_1_entry_flow.png "Entry flow when reconciling inventory with G/L")  
 
-## Příklad
+## Example
 
-Následující příklad ukazuje, jak položky zboží, položky ocenění a položky vyrovnání zboží vedou k věcným položkám.
+The following example shows how item ledger entries, value entries, and item application entries result in general ledger entries.  
 
-Zaúčtujete nákupní objednávku, která je přijatá a fakturovaná na 10 položek s přímou jednotkovou cenou 7 LM a režijní sazbou 1 LM. Zúčtovaíc datum je 01.01.20. Vytvoří se následující položky.
+ You post a purchase order as received and invoiced for 10 items with a direct unit cost of LCY 7 and an overhead rate of LCY 1. The posting date is 01-01-20. The following entries are created.  
 
-### Položky zboží (1)
+### Item Ledger Entries (1)
 
-| Zúčtovací datum | Typ položky | Částka nákladů (skutečná) | Množství | Číslo položky |
+|Posting Date|Entry Type|Cost Amount (Actual)|Quantity|Entry No.|  
 |------------|----------|--------------------|--------|---------|  
-| 01.01.20 | Nákup | 80.00 | 10 | 1 |
+|01-01-20|Purchase|80.00|10|1|  
 
-### Položky oenení (1)
+### Value Entries (1)
 
-| Zúčtovací datum | Typ položky | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
+|Posting Date|Entry Type|Cost Amount (Actual)|Item Ledger Entry No.|Entry No.|  
 |------------|----------|--------------------|---------------------|---------|  
-| 01.01.20 | Přímé náklady | 70.00 | 1 | 1 |
-| 01.01.20 | Nepřímé náklady | 10.00 | 1 | 2 |
+|01-01-20|Direct Cost|70.00|1|1|  
+|01-01-20|Indirect Cost|10.00|1|2|  
 
-### Položky vyrovnání zboží (1)
+### Item Application Entries (1)
 
-| Číslo položky | Číslo položky zboží | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství |
+|Entry No.|Item Ledger Entry No.|Inbound Item Entry No.|Outbound Item Entry No.|Quantity|  
 |---------|---------------------|----------------------|-----------------------|--------|  
-| 1 | 1 | 1 | 0 | 10 |
+|1|1|1|0|10|  
 
-Dále zaúčtujete prodej 10 jednotek zboží se zúčtovacím datem 15.01.20.
+ Next, you post a sale of 10 units of the item with a posting date of 01-15-20.  
 
-### Položky zboží (2)
+### Item Ledger Entries (2)
 
-| Zúčtovací datum | Typ položky | Částka nákladů (skutečná) | Množství | Číslo položky |
+|Posting Date|Entry Type|Cost Amount (Actual)|Quantity|Entry No.|  
 |------------|----------|--------------------|--------|---------|  
-| 15.01.20 | Prodej | -80.00 | -10 | 2 |
+|01-15-20|Sale|-80.00|-10|2|  
 
-### Položky ocenění (2)
+### Value Entries (2)
 
-| Zúčtovací datum | Typ položky | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
+|Posting Date|Entry Type|Cost Amount (Actual)|Item Ledger Entry No.|Entry No.|  
 |------------|----------|--------------------|---------------------|---------|  
-| 15.01.20 | Přímé náklady | -80.00 | 2 | 3 |
+|01-15-20|Direct Cost|-80.00|2|3|  
 
-### Položky vyrování zboží (2)
+### Item Application Entries (2)
 
-| Číslo položky | Číslo položky zboží | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství |
+|Entry No.|Item Ledger Entry No.|Inbound Item Entry No.|Outbound Item Entry No.|Quantity|  
 |---------|---------------------|----------------------|-----------------------|--------|  
-| 2 | 2 | 1 | 2 | -10 |
+|2|2|1|2|-10|  
 
-Na konci účetního období spusťte dávkovou úlohu **Účtování nákladů na zboží**, abyste tyto skladové transakce vyrovnali s hlavní účetní knihou.
+At the end of the accounting period, you run the **Post Inventory Cost to G/L** batch job to reconcile these inventory transactions with the general ledger.  
 
-Pro více informací navštivte [Detaily návrhu: Účty hlavní knihy](design-details-accounts-in-the-general-ledger.md).
+ For more information, see [Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md).  
 
-Následující tabulky ukazují výsledek vyrovnání transakcí zásob v tomto příkladu s hlavní účetní knihou.
+ The following tables show the result of reconciling the inventory transactions in this example with the general ledger.  
 
-### Položky ocenění (3)
+### Value Entries (3)  
 
-| Zúčtovací datum | Typ položky | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Číslo položky zboží | Číslo položky |
+|Posting Date|Entry Type|Cost Amount (Actual)|Cost Posted to G/L|Item Ledger Entry No.|Entry No.|  
 |------------|----------|--------------------|------------------|---------------------|---------|  
-| 01.01.20 | Přímé náklady | 70.00 | 70.00 | 1 | 1 |
-| 01.01.20 | Nepřímé náklady | 10.00 | 10.00 | 1 | 2 |
-| 15.01.20 | Přímé náklady | -80.00 | -80.00 | 2 | 3 |
+|01-01-20|Direct Cost|70.00|70.00|1|1|  
+|01-01-20|Indirect Cost|10.00|10.00|1|2|  
+|01-15-20|Direct Cost|-80.00|-80.00|2|3|  
 
-### Věcné položky (3)
+### General Ledger Entries (3)
 
-| Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
+|Posting Date|G/L Account|Account No. (En-US Demo)|Amount|Entry No.|  
 |------------|-----------|------------------------|------|---------|  
-| 01.01.20 | [Účet zásob] | 2130 | 70.00 | 1 |
-| 01.01.20 | [Účet vyrovnaných přímých nákladů] | 7291 | -70.00 | 2 |
-| 01.01.20 | [Účet zásob] | 2130 | 10.00 | 3 |
-| 01-01-07 | [Účet režijních nákladů] | 7292 | -10.00 | 4 |
-| 15.01.20 | [Účet zásob] | 2130 | -80.00 | 5 |
-| 15.01.20 | [Účet COGS] | 7290 | 80.00 | 6 |
+|01-01-20|[Inventory Account]|2130|70.00|1|  
+|01-01-20|[Direct Cost Applied Account]|7291|-70.00|2|  
+|01-01-20|[Inventory Account]|2130|10.00|3|  
+|01-01-07|[Overhead Applied Account]|7292|-10.00|4|  
+|01-15-20|[Inventory Account]|2130|-80.00|5|  
+|01-15-20|[COGS Account]|7290|80.00|6|  
 
 > [!NOTE]  
-> Datum zaúčtování položek hlavní knihy je stejné jako u souvisejících položek ocenění.
->
-> Pole **Zaúčtované náklady** v tabulce **Položek ocenění** je vyplněno.
+> The posting date of the general ledger entries is the same as for the related value entries.  
+> 
+> The **Cost Posted to G/L** field in the **Value Entry** table is filled.  
 
-Vztah mezi položkami ocenění a věcnými položkami je uložen v tabulce **Vazba věcná pol. - pol. zboží**.
+ The relation between value entries and general ledger entries is stored in the **G/L - Item Ledger Relation** table.  
 
-### Vzah položke v tabulce Vazba věcná pol. - pol. zboží (3)
+### Relation Entries in the G/L – Item Ledger Relation table (3)
 
-| Číslo věcné položky. | Číslo položky ocenění. | Číslo finančního žurnálu. |
+|G/L Entry No.|Value Entry No.|G/L Register No.|  
 |-------------|---------------|----------------|  
-| 1 | 1 | 1 |
-| 2 | 1 | 1 |
-| 3 | 2 | 1 |
-| 4 | 2 | 1 |
-| 5 | 3 | 1 |
-| 6 | 3 | 1 |
+|1|1|1|  
+|2|1|1|  
+|3|2|1|  
+|4|2|1|  
+|5|3|1|  
+|6|3|1|  
 
-## Zaúčtování montáže a výroby
+## Assembly and Production Posting
 
-Položky kapacity a zdrojů představují čas, který je zaúčtován jako spotřebovaný ve výrobě nebo montáži. Tyto procesní náklady jsou zaúčtovány jako položky ocenění do hlavní knihy spolu s souvisejícími náklady na materiál v podobné struktuře, jak je popsáno pro položky zboží v tomto tématu.
+Capacity and resource ledger entries represent the time that is posted as consumed in production or assembly. These process costs are posted as value entries to the general ledger along with the involved material costs in a similar structure as described for item ledger entries in this topic.  
 
-Pro více informací navštivte [Detaily návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md).
+For more information, see [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md).  
 
-## Viz také
+## See Also
 
-[Detaily návrhu: Účtování zásob](design-details-inventory-costing.md)  
-[Detaily návrhu: Účty v hlavní finanční knize](design-details-accounts-in-the-general-ledger.md)  
-[Detaily návrhu: Komponenty nákladů](design-details-cost-components.md)
-[Správa zásob a ocenění](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Design Details: Inventory Costing](design-details-inventory-costing.md)  
+ [Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md)  
+ [Design Details: Cost Components](design-details-cost-components.md)
+ [Managing Inventory Costs](finance-manage-inventory-costs.md)  
+ [Finance](finance.md)  
+ [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

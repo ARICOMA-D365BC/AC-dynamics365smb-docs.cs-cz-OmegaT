@@ -1,74 +1,78 @@
 ---
-    title: How to Move Components to an Operation Area in Basic Warehouse Configurations | Microsoft Docs
-    description: If item processing operations occur at your warehouse location, then you may have to move items between internal bins to respond to internal source documents, such as production, assembly, or service orders at the location.
+    title: Move Components to an Operation Area in Basic Warehouse Configurations
+    description: If item processing operations occur at your warehouse location, then you may have to move items between internal bins to respond to internal source documents.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Přesouvání komponent do provozní oblasti v základních konfiguracích skladu
-Pokud v lokaci skladu dochází k operacím zpracování zboží, budete pravděpodobně muset přesunout zboží mezi interními přihrádky, abyste mohli reagovat na interní zdrojové doklady, jako jsou výrobní, montážní nebo servisní zakázky v lokaci.
+# Move Components to an Operation Area in Basic Warehouse Configurations
+If item processing operations occur at your warehouse location, then you may have to move items between internal bins to respond to internal source documents, such as production, assembly, or service orders at the location.  
 
-> [!NOTE]
-> Pro informace o přesouvání zboží mezi přihrádky bez zdrojových dokladů viz Interní přesuny.
+> [!NOTE]  
+>  For information about moving items between bins without source documents, see Internal Movement.  
 
-V pokročilých konfiguracích skladu, což jsou lokace, která používají nastavení pole **Řízené zaskladnění/vyskladnění**, můžete použít stránku **Sešit přesunu** k přesunutí zboží mezi přihrádky. Pro více informací navštivte [Přesun zboží v rozšířených konfiguracích skladu](warehouse-how-to-move-items-in-advanced-warehousing.md).
+In advanced warehouse configurations, which are locations that use the **Directed Put-away and Pick** setup field, you can use the **Movement Worksheet** page to move items between bins. For more information, see [Move Items in Advanced warehouse Configurations](warehouse-how-to-move-items-in-advanced-warehousing.md).  
 
-V základních konfiguracích skladu, což jsou lokace, která používají nastavení polí **Přihrádka nutná** a **Vyžadovat vyskladnění**, můžete zapsat přesun zboží do interních oblastí operací na základě interních zdrojových dokladů následujícími způsoby:
+In basic warehouse configurations, which are locations that use the **Bin Mandatory** setup field and the **Require Pick** setup field, you can register movement of items to internal operation areas based on internal source documents in the following ways:  
 
-- Pomocí stránky **Přesun zásob**.
-- Pomocí stránky **Vyskladnění zásob**.
+-   With the **Inventory Movement** page.  
+-   With the **Inventory Pick** page.  
 
-> [!NOTE]
-> Vyskladnění zásob účtuje také záporné položky zboží jako spotřebu a je podporováno pouze pro komponenty výroby. Pro více informací navštivte stránku Vyskladnění zásob.
+> [!NOTE]  
+>  Inventory picks also post negative item ledger entries as consumption and are only supported for production components. For more information, see the Inventory Pick page.  
 
-Podrobné informace o přesouvání zásob naleznete na stránce Přesun zásob.
+For detailed information about inventory movements, see the Inventory Movement page.  
 
-Počáteční přesun zásob mohou vytvořit dvě různé role. Pracovník montáže jej například může vytvořit z vydané montážní zakázky tak, aby se zobrazil v seznamu prací prováděných pracovníkem skladu. Chcete-li vytvořit přesun zásob pro řádky montážní zakázky, které jsou připraveny k přesunutí komponent do určených přihrádek, použije pracovník montáže funkci **Vytvořit přesun zásob**.
+Two different roles can create the initial inventory movement. An assembly worker, for example, can create it from a released assembly order so that it shows up in the warehouse worker's list of work to do. To create an inventory movement for assembly order lines that are ready to have components moved to their specified bins, the assembly worker uses the **Create Inventory Movement** function.  
 
-Alternativně ji pracovník skladu může vytvořit tak, že odkazuje na příslušnou vydanou montážní zakázku. To je popsáno v následujícím postupu.
+Alternatively, a warehouse worker can create it by pointing to the released assembly order in question. This is described in the following procedure.  
 
-> [!NOTE]
-> Pokud jde o přesun pro montážní zakázky, kde je zboží sestaveno do prodejní objednávky, pak můžete definovat, že doklad přesunu skladu se automaticky vytvoří, když vytvoříte doklad o vyskladnění zásob, který vezme hotové zboží montáže a zaúčtuje dodávku. Chcete-li toto nastavení nastavit, vyberte na stránce **Nastavení montáže** pole **Vytvořit pohyby automaticky**.
-> Pro více informací o montážních zakázkách a základních konfiguracích skladu navštivte [Zpracování zboží montáže na zakázku s vyskladněním zásob](warehouse-how-to-pick-for-production.md#handling-assemble-to-order-items-with-inventory-picks).
-> 
-Tento postup ukazuje, jak vytvořit přesun zásob ze stránky **Přesun zásob** pomocí odkazu na vydanou montážní zakázku jako na zdrojový doklad. Postup je stejný, když přesouváte komponenty pro výrobní zakázky a servisní zakázky.
+> [!NOTE]  
+>  If the movement is for an assembly order where the item is assembled to a sales order, then you can define that the inventory movement document is automatically created when you create the inventory pick document that takes the finished assembly item and posts the shipment. To set this up, select the **Create Movements Automatically** field on the **Assembly Setup** page  
+>   
+>  For more information about assembly orders and basic warehouse configurations, see [Handling Assemble-to-Order Items with Inventory Picks](warehouse-how-to-pick-for-production.md#handling-assemble-to-order-items-with-inventory-picks).  
 
-## Přesun komponent do provozní oblasti v základních konfiguracích skladu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Přesun zásob** a poté vyberte související odkaz.
-2. Na záložce **Obecné** vyplňte pole **Číslo**. Můžete vybrat z číselné řady stisknutím klávesy Enter.
-3. Do pole **Kód lokace** zadejte lokaci, kde k přesunu dochází.
-4. Vyberte akci **Kopie pův.dokladů**. Případně vyplňte pole **Původní doklad** a poté v poli **Číslo původu** vyberte tlačítko **AssistEdit**.
-5. Na stránce **Původní doklady** vyberte montážní zakázku, pro kterou chcete součásti přesunout, a pak zvolte tlačítko **OK**.
+This procedure shows how to create an inventory movement from the **Inventory Movement** page by referencing a released assembly order as a source document. The procedure is the same when you move components for production orders and service orders.  
 
-   Pro každou potřebnou komponentu, kterou lze přesunout, se na stránce **Skladové přesuny** vygeneruje jeden řádek Vzít a jeden řádek Vložit. Všechna pole kromě **Množ. ke zpracování** jsou předvyplněny podle řádků původního dokladu. Pole **Mn.  ke zpracování** je nastaveno na nulu, dokud nezadáte množství, které jste skutečně přesunuli.
+## To move components to an operation area in basic warehouse configurations  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Movement**, and choose the relevant link.  
+2.  On the **General** FastTab, fill in the **No.** field. You can press the Enter key  to select from the number series.  
+3.  In the **Location Code** field, enter the location where the movement occurs.  
+4.  Choose the **Get Source Documents** action. Alternatively, fill in the **Source Document** field, and then choose the **AssistEdit** button in the **Source No.** field.  
+5.  On the **Source Documents** page, select the assembly order that you want to move components for, and then choose the **OK** button.  
 
-   Kód přihrádky můžete změnit na řádku Vzít, ale pouze podle dostupnosti. Pokud zvolíte tlačítko **AssistEdit** v poli **Kód přihrádky** na řádku Vzít, otevře se stránka **Obsah přihrádky** a ta zobrazí pouze přihrádky kde je komponenta k dispozici.
+    For each needed component that can be moved, one Take line and one Place line are generated on the **Inventory Movements** page. All fields except the **Qty. to Handle** field are prefilled according to the source document lines. The **Qty. to Handle** field is set to zero until you enter the quantity that you have actually moved.  
 
-   Kód přihrádky na řádku Vložit nelze změnit. Akceptován je pouze kód přihrádky, který je definován na řádku komponenty původního dokladu. To podporuje princip, že role (v tomto postupu je to pracovník montáže), která požaduje komponentu, ví, kde musí být komponenta umístěna. Pokud chcete komponenty umístit do jiné přihrádky, musíte nejprve změnit kód přihrádky na řádku komponenty a poté znovu vytvořit řádky přesunu zásob.
-6. Do pole **Množ. ke zpracování** zadejte úplné nebo částečné množství, které jste skutečně přesunuli. Hodnota na řádcích Vzít a Vložit musí být stejná. Jinak nemůžete přesun zapsat.
+    You can change the bin code on a Take line but only according to availability. If you choose the **AssistEdit** button in the **Bin Code** field on a Take line, then the **Bin Contents** page opens and only shows bins where the component is available.  
 
-   > [!NOTE]
-Stejně jako v jiných činnostech ve skladu můžete řádek Vložit rozdělit výběrem akce **Akce** a následným výběrem akce **Rozdělit řádek**. V takovém případě se součet dvou rozdělených řádků musí rovnat množství na řádku Vzít.
+    You cannot change the bin code on a Place line. Only the bin code that is defined on the component line of the source document is accepted. This supports the principle that the role who requests a component, which is an assembly worker in this procedure, knows where the component must be placed. If you want to place the components in a different bin, then you must first change the bin code on the component line and then re-create the inventory movement lines.  
+6.  In the **Qty. to Handle** field, enter the full or partial quantity that you have actually moved. The value on the Take and the Place lines must be the same. Otherwise, you cannot register the movement.  
 
-7. Až budete připraveni zapsat přesuny, které jste provedli, zvolte akci **Zaznamenat  skladový přesun**.
+    > [!NOTE]  
+    >  As in other warehouse activities, you can split the Place line by selecting the **Actions** action and then choosing the **Split Line** action. In that case, the sum of the two split Place lines must equal the quantity on the Take line.  
 
-   Položky skladu jsou vytvořeny tak, že komponenty nyní existují v přihrádkách určených na řádcích montážní zakázky.
+7.  When you are ready to register the movements that you have performed, choose the **Register Invt. Movement** action.  
 
-   > [!NOTE]
-Na rozdíl od toho, kdy přesunete komponenty pomocí vyskladnění zásob, spotřeba nebude zaúčtována, když zaregistrujete přesun zásob. Tento krok musí být proveden samostatně zaúčtováním výstupu a spotřeby montážní objednávky. Pro více informací navštivte Montážní zakázka.
+    Warehouse entries are created reflecting that the components now exist in the bins specified on the assembly order lines.  
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)  
-[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+    > [!NOTE]  
+    >  Unlike when you move components with an inventory pick, consumption is not posted when you register an inventory movement. That step must be performed separately by posting the assembly order output and consumption. For more information, see Assembly Order.  
+
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,56 +1,59 @@
 ---
-title: Nastavení Pracovní doby a Servisních hodin | Microsoft Docs
-description: 'Můžete určit obvyklou pracovní dobu ve vaší společnosti. Tyto servisní hodiny se používají k výpočtu data a času odezvy u servisních zakázek a nabídek, a k odeslání varování o času odezvy.'
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 10/01/2018
-ms.author: sgroespe
----
-# <a name="set-up-work-hours-and-service-hours"></a>Nastavení Pracovní doby a Servisních hodin
-Systém správy servisu obvykle sleduje hodiny zdrojů a stav servisní zakázky, aby předpovídal pracovní zatížení a potřeby servisu. [!INCLUDE[d365fin](includes/d365fin_md.md)] má vestavěné nástroje, které můžete přizpůsobit pro zaznamenávání tohoto druhu informací.  
-  
-Po nastavení výchozích servisních hodin vaší společnosti můžete vypočítat čas odezvy u servisních zakázek, nebo poslat varování nebo upozornění, když se objeví servisní volání. Funkce upozornění je implementována společně s plánovačem úloh.   
-  
-Při práci na servisní zakázce budete chtít aktualizovat její stav, abyste mohli sledovat pokrok. Stav servisní objednávky odráží stav opravy všech předmětů servisu v servisní zakázce. Pro více informací navštivte sekci [Porozumění stavu servisní zakázky a stavu opravy](service-order-repair-status.md). 
+    title: How to Set Up Work Hours and Service Hours | Microsoft Docs
+    description: You can specify the usual service working hours in your company. These service hours are used to calculate the response date and time for service orders and quotes, and to send response time warnings.
+    author: SorenGP
 
-## <a name="to-set-up-default-service-hours"></a>Nastavení výchozích servisních hodin  
-Použijte stránku **Výchozí servisní hodiny** pro nastavení obvyklé pracovní doby ve vaší společnosti. Tyto servisní hodiny se používají k výpočtu data a času odezvy u servisních zakázek a nabídek, a k odeslání varování o času odezvy. Výchozí servisní hodiny se používají pro servisní smlouvy, pokud pro smlouvu nestanovíte zvláštní servisní hodiny.  
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
+---
+# Set Up Work Hours and Service Hours
+Typically, a service management system tracks resource hours and service order status in order to forecast workloads and service needs. [!INCLUDE[prod_short](includes/prod_short.md)] has built-in tools that you can customize to record this kind of information.  
   
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výchozí servisní hodiny** a poté vyberte související odkaz.  
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+After you set the default service hours of your company, you can calculate response times for service orders or send warnings or alerts when service calls come in. The alert feature is implemented together with the job scheduler.   
+  
+As you work on a service order, you will want to update it's status so that you can monitor progress. The service order status reflects the repair status of all the service items in the service order. For more information, see [Understanding Service Order and Repair Status](service-order-repair-status.md). 
+
+## To set up default service hours  
+You use the **Default Service Hours** page to set up the usual service working hours in your company. These service hours are used to calculate the response date and time for service orders and quotes and to send response time warnings. The default service hours are used for service contracts unless you specify special service hours for a contract.  
+  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Default Service Hours**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
   
 > [!IMPORTANT]  
->  Pokud ponecháte řádky na stránce **Výchozí servisní hodiny** prázdné, výchozí hodnota je 24 hodin; toto platí pouze pro kalendářní pracovní dny.  
+>  If you leave the lines on the **Default Service Hours** page empty, the default value is 24 hours, valid only for calendar working days.  
   
-## <a name="to-set-up-work-hour-templates"></a>Nastavení šablon pracovní doby
-Na stránce **Šablona pracovní doby** můžete nastavit šablony, které obsahují typickou pracovní dobu ve vaší společnosti. Můžete například vytvořit šablony pro techniky na plný úvazek a pro techniky na částečný úvazek. Šablony pracovní doby můžete použít, když přidáte kapacitu ke zdrojům.  
+## To set up work-hour templates
+You can use the **Work-Hour Template** page to set up templates that contain the typical working hours in your company. For example, you can create templates for full time technicians and part time technicians. You can use work-hour templates when you add capacity to resources.  
   
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Šablony pracovní doby** a poté vyberte související odkaz.  
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Work Hour Templates**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
   
 > [!Note]
-> Po zadání pracovních hodin pro každý den se automaticky vypočítá hodnota v poli **Celkem za týden**.  
+> After you enter work hours for each day, the value in the **Total per Week** field is calculated automatically.  
 
-## <a name="to-set-up-contract-specific-service-hours"></a>Nastavení servisních hodin specifických pro smlouvu  
-Na stránce **Servisní hodiny** můžete nastavit konkrétní servisní hodiny pro zákazníka, který vlastní servisní smlouvu. Servisní hodiny se používají k výpočtu data a času odezvy u servisních zakázek a nabídek, které patří do servisní smlouvy.  
+## To set up contract specific service hours  
+You can use the **Service Hours** page to set up specific service hours for the customer that owns the service contract. Service hours are used to calculate the response date and time for service orders and quotes that belong to the service contract.  
   
-Pokud pro servisní smlouvu nestanovíte konkrétní servisní hodiny, použijí se výchozí servisní hodiny pro servisní smlouvy.  
+If you do not set up specific service hours for the service contract, the default service hours for service contracts are used.  
   
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Servisní smlouvy** a poté vyberte související odkaz.  
-2. Otevřete servisní smlouvu, pro kterou chcete nastavit konkrétní servisní hodiny, a zvolte **Servisní hodiny**.  
-4. Chcete-li nastavit servisní hodiny na základě výchozích servisních hodin, vyberte akci **Kopírovat výchozí servisní hodiny**.  
-5. Upravte pole v položkách servisních hodin. Vložením nebo odstraněním položek nastavíte servisní hodiny smlouvy. Všimněte si, že pro každý řádek jsou vyžadována pole **Den**, **Čas zahájení** a **Čas ukončení**.  
-6. Pokud chcete, aby servisní hodiny byly platné od určitého data, vyplňte pole **Datum zahájení**.  
-7. Pokud chcete, aby servisní hodiny byly platné o svátcích, zaškrtněte políčko v poli **Platí během volna**.  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts**, and then choose the related link.  
+2. Open the service contract you want to set up specific service hours for, and choose **Service Hours**.  
+4. To set up service hours based on default service hours, choose the **Copy Default Service Hours** action.  
+5. Edit the fields in the service hours entries. Insert or delete entries to set up the service hours for the contract. Note that the fields **Day**, **Starting Time** and **Ending Time** are required for each line.  
+6. If you want the service hours to be valid from a specific date, fill in the **Starting Date** field.  
+7. If you want the service hours to be valid on holidays, select the check box in the **Valid on Holidays** field.  
 
-## <a name="see-also"></a>Viz také  
-[Porozumění stavu přidělení a stavu opravy](service-allocation-status-and-repair-status.md)  
-[Nastavení Správy servisu](service-setup-service.md)  
-[Porozumění servisní zakázce a stavu opravy](service-order-repair-status.md)  
+## See Also  
+[Understanding Allocation Status and Repair Status](service-allocation-status-and-repair-status.md)  
+[Setting Up Service Management](service-setup-service.md)  
+[Understanding Service Order and Repair Status](service-order-repair-status.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

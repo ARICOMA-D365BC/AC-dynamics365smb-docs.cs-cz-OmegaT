@@ -4,43 +4,46 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Plánování projektové objednávky
-Tato plánovací úloha začíná od prodejní objednávky a používá stránku **Plánování prod.objednávky**. Po vytvoření výrobní zakázky projektu ji můžete dále naplánovat pomocí stránky **Plánování objednávek**.
+# Plan Project Orders
+This planning task starts from a sales order and uses the **Sales Order Planning** page. Once you have created a project production order, you can plan it further by using the **Order Planning** page.  
 
-## Vytvoření výrobní zakázky projektu
+## To create a project production order  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Vyberte prodejní objednávku, která představuje výrobní projekt, a pak zvolte akci **Plánování**.
-4. Na stránce **Plánování prod.objednávky**, vyberte akci **Vytvořit výr. zakázku**.
-5. Na stránce **Vytvořit výrobní zakázku z prodejní objednávky**, na poli **Typ objednávky**, vyberte **Projektové objednávky**.
-6. Vyberte tlačítko **Ano**.
-7. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-8. Otevřete právě vytvořenou výrobní zakázku.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
+2.  Select the sales order that represents the production project, and then choose the **Planning** action.  
+4.  On the **Sales Order Planning** page, choose  the **Create Prod. Order** action.  
+5.  On the **Create Order from Sales** page, in the **Order Type** field, select **Project Order**.  
+6.  Choose the **Yes** button.  
+7.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Production Orders**, and then choose the related link.
+8. Open the production order just created.  
 
-   Všimněte si, že pole výrobní zakázky **Typ zdroje** obsahuje **Prodejní hlavičku** a objednávka má více řádků, jeden pro každou prodejní řádkovou položku, která musí být vyrobena.
-9. Vyberte akci **Plánování**.
-10. Na stránce **Plánování objednávek**, vyberte akci **Obnovit**  pro výpočet to nové poptávky.
+    Notice that the **Source Type** field of the production order contains **Sales Header** and the order has multiple lines, one for each sales line item that must be produced.  
+9. Choose the **Planning** action.
+10. On the **Order Planning** page, choose the **Refresh** action to calculate new demand.  
 
-Řádek záhlaví objednávky pro projektovou objednávku se zobrazí se všemi nevyplněnými řádky poptávky rozbalenými pod ním. Přestože výrobní zakázka obsahuje řádky pro několik vyrobených položek, celková poptávka pro všechny řádky výrobní zakázky je uvedena pod jedním řádkem hlavičky objednávky na stránce **Plánování objednávek**, a je zobrazeno původní jméno zákazníka. Nyní můžete pokračovat v plánování poptávky, jak je popsáno v [Plán nové poptávky podle objednávky](production-how-to-plan-for-new-demand.md).
+The order header line for the project order is displayed with all unfulfilled demand lines expanded under it. Although the production order contains lines for several produced items, the total demand for all production order lines is listed under one order header line on the **Order Planning** page, and the original customer name is displayed. You can now proceed to plan for the demand as described in [Plan for New Demand Order by Order](production-how-to-plan-for-new-demand.md).  
 
-> [!NOTE]
-> Řádky výrobní zakázky ve výrobní zakázce, které mají **Výrobní zakázku** v jejich poli **Systém doplnění** představují základní výrobní zakázky. Po vygenerování těchto výrobních objednávek musíte znovu vypočítat plán na stránce **Plánování objednávek** abyste identifikovali případnou nevyplněnou poptávku po nich. V takovém případě se zobrazí jako řádky poptávky pod řádkem záhlaví normální výrobní zakázky, což znamená, že na stránce již není viditelný vztah projektu. Pokud však používáte funkci Sledování objednávek, můžete se podívat tam i zpět na všechny objednávky dodávek provedené v rámci původní prodejní objednávky.
+> [!NOTE]  
+>  Demand lines in the project production order that have **Prod. Order** in their **Replenishment System** field represent underlying production orders. After you have generated these production orders, you must again calculate a plan on the **Order Planning** page to identify any unfulfilled component demand for them. In that case, they are displayed as demand lines under a normal production order header line, meaning, the project relation is no longer visible on the page. However, if you are using the Order Tracking feature, then you can look back and forth to all supply orders made under the original sales order.  
 
-## Viz také
-[Plánování](production-planning.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
-[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Planning](production-planning.md)   
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

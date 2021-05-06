@@ -4,32 +4,35 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Účtování odpadu
-Pokud během zpracování vznikne odpad, lze jej zadat do deníku výstupu.
+# Post Scrap Manually
+If scrap is produced during processing, it can be entered in the output journal. 
 
 > [!NOTE]
-> Množství odpadu nezvyšuje množství výstupu.
+> The scrap quantity does not increase the output quantity.  
 
-## Ruční zaúčtování odpadu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník výstupu** a poté vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Do pole **Množství odpadu** zadejte množství odpadu.
-4. Do pole **Kód zmetků** zadejte kód odpadu.
-5. Vyberte akci **Účtovat** a zaúčtujte určený odpad na operaci.
+## To post scrap manually  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Output Journal**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+3. In the **Scrapped Quantity** field, enter the scrap quantity.  
+4. In the **Scrap Code** field, enter the scrap code.  
+5. Choose the **Post** action to post the specified scrap per operation.  
 
-## Viz také
-[Výroba](production-manage-manufacturing.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Plánování](production-planning.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Manufacturing](production-manage-manufacturing.md)    
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Planning](production-planning.md)      
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

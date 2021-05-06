@@ -4,112 +4,115 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Nastavení základních kalendářů
-Společnosti a jejím obchodním partnerům, jako jsou zákazníci, dodavatelé nebo lokace, můžete přiřadit základní kalendář. Data dodání a příjmu na budoucí prodejní objednávce, nákupní objednávce, objednávce transferu a řádcích výrobní zakázky se počítají podle určených pracovních dnů kalendáře. Hlavním úkolem při nastavování nového základního kalendáře je určení a definování nepracovních dnů, které chcete použít.
+# Set Up Base Calendars
+You can assign a base calendar to your company and its business partners, such as customers, vendors, or locations. Delivery and receipt dates on future sales order, purchase order, transfer order, and production order lines are calculated according to the calendar’s specified working days. The main task in setting up a new base calendar is to specify and define the non-working days that you want to apply.  
 
-## Nastavení základního kalendáře
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Základní kalendáře** a poté vyberte související odkaz.
-2. Zvolte tlačítko **Nový**.
-3. Vyplňte pole **Kód** field.
+## To set up a base calendar  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Base Calendar**, and then choose the related link.  
+2.  Choose the **New** action.  
+3.  Fill in the **Code** field.  
 4. Choose the **Maintain Base Calendar Changes** action.
-5. Na stránce **Změny základního kalendáře**, použijte **Systém periody** k označení určitého data nebo den opakující se jako nepracovní den. Můžete si vybrat mezi **Roční periodou** nebo **Týdenní periodou**.
+5. On the **Base Calendar Changes** page, use the **Recurring System** field to mark a particular date or day as a recurring nonworking day. You can select either the **Annual Recurring** or **Weekly Recurring** option.  
 
-   Pokud vyberete **Roční opakování**, musíte také zadat příslušné datum do pole **Datum**.
+    If you select **Annual Recurring**, you must also enter the relevant date in the **Date** field.  
 
-   Pokud vyberete **Týdenní opakování**, musíte také vybrat příslušný den v týdnu v poli **Den**. Pokud pole ponecháte prázdné, musíte vyplnit pole **Datum** . Pole **Den** je vyplněno automaticky.
+    If you select **Weekly Recurring**, you must also select the relevant day of the week in the **Day** field. If you leave the field empty, you must fill in the **Date** field. The **Day** field is filled in automatically.  
 
-Po vytoření položky je vybráno pole **Nepracovní**. Můžete se rozhodnout zrušit zaškrtnutí, aby se z něj stal pracovní den.  
-Když se vrátíte na kartu základního kalendáře, zjistíte, že provedené záznamy nepracovního dne byly aktualizovány. Tyto položky se nyní zobrazují červeně a je vybráno pole **Nefungující**.
+When you make an entry, the **Nonworking** field is selected. You can choose to clear the check mark to make it a working day.  
+ When you return to the base calendar card, you will observe that the nonworking day entries that you made have been updated. These entries now appear in red and the **Nonworking** field is selected.  
 
 > [!NOTE]  
-> Při nastavování nového základního kalendáře můžete vybírat a kopírovat řádky z existujícího kalendáře. To můžete provést na příslušné stránce **Změny základního kalendáře**.
+>  When setting up a new base calendar, you can select and copy lines from an existing calendar. You do this in the relevant **Base Calendar Changes** page.  
 
 > [!IMPORTANT]  
-> Jakýkoli základní kalendář definovaný pro dodavatele nebo lokaci ovlivňuje způsob výpočtu dat a zaokrouhlování na pracovní dny.
-> Určuje vzorec data pro čas potřebný k doplnění zboží. Používá se k výpočtu **Plánované datum příjmu**, pokud počítáte dopředu a pole **Datum objednávky**, pokud počítáte zpětně. Viz [Výpočet průběžné doby](across-how-to-assign-base-calendars.md#lead-time-calculation).
+>  Any base calendar defined for the vendor or the location affects how the dates are calculated and rounded to working days.
+Specifies a date formula for the time that it takes to replenish the item. It is used to calculate the **Planned Receipt Date** field, if calculating forward, and **Order Date** field, if calculating backwards. See [Lead Time Calculation](across-how-to-assign-base-calendars.md#lead-time-calculation).
 
-## Výpočet průběžné doby
-Jakýkoli základní kalendář definovaný pro dodavatele nebo místo ovlivňuje způsob výpočtu dat a zaokrouhlování na pracovní dny. Proto jsou dvě pole data na řádcích nákupní objednávky vypočtena následujícím způsobem za různých podmínek.
+## Lead Time Calculation
+Any base calendar defined for the vendor or the location affects how the dates are calculated and rounded to working days. Accordingly, the two date fields on purchase order lines are calculated as follows under different conditions.
 
-| Směr výpočtu | Kalendář dodavatele definován | Kalendář dodavatele není definován |
+|Calculation Direction|Vendor Calendar Defined|Vendor Calendar Not Defined|
 |---------------------|-----------------------|---------------------------|
-| Dopředu | plánované datum přijetí = datum objednávky + dodací lhůta dodavatele (podle kalendáře dodavatele a zaokrouhleno na další pracovní den nejprve v kalendáři dodavatele a poté v kalendáři lokace) | plánované datum přijetí = datum objednávky + dodací lhůta dodavatele (podle místního kalendáře) |
-| Zpětně | datum objednávky = plánované datum přijetí - dodací lhůta dodavatele (podle kalendáře dodavatele a zaokrouhlena na předchozí pracovní den nejprve v kalendáři dodavatele a poté v kalendáři lokace) | datum objednávky = plánované datum přijetí - dodací lhůta dodavatele (podle místního kalendáře) |
+|Forward|planned receipt date = order date + vendor lead time (per the vendor calendar and rounded to the next working day in first the vendor calendar and then the location calendar)|planned receipt date = order date + vendor lead time (per the location calendar)|
+|Backward|order date = planned receipt date - vendor lead time (per the vendor calendar and rounded to the previous working day in first the vendor calendar and then the location calendar)|order date = planned receipt date - vendor lead time (per the location calendar)|
 
 > [!NOTE]
-> Kromě výpočtu dodací lhůty, která ovlivňuje plánované datum přijetí a datum objednávky, jak je uvedeno ve výše uvedené tabulce, mohou být do vzorců přidány časy manipulace se skladem a bezpečnostní dodací čas, aby se hodnota v  **Plánované dotum příjmu** takto : Plánované datum příjmu + Bezpečná průběžná doba + doba zaskladnění = očekávané datum příjmu.
+> In addition to the lead time calculation that affects the planned receipt date and order date, as shown in the above table, warehouse handling time and safety lead time may be added to the formulas to make up the value in the **Expected Receipt Date** field, as follows: Planned Receipt Date + Safety Lead Time + Inbound Warehouse Handling Time = Expected Receipt Date.
 
 > [!Important]
-> Pokud vaše lokace používá výrazně odlišný kalendář než vaši dodavatelé, je důležité pro tyto dodavatele nastavit konkrétní kalendáře, abyste mohli vypočítat optimální dodací lhůty dodavatele. Další informace o nastavení kalendářů dodavatelů naleznete v [Přiřazení základního kalendáře](across-how-to-assign-base-calendars.md#to-assign-a-base-calendar).
+> If your location uses a significantly different calendar than your vendors do, then it is important that you set up specific calendars for those vendors, to calculate optimal vendor lead times. For information about how to set up vendor calendars, see [To assign a base calendar](across-how-to-assign-base-calendars.md#to-assign-a-base-calendar).
 
-Obsah pole **Výpočet průběžné doby** je zkopírován z karty zboží nebo z karty skladového zboží, pokud je pro zboží definována průběžná doba nebo na stránce **Katalog zboží dodavatele** pokud je průběžná doba definována pro dodavatele.
+The contents of the **Lead Time Calculation** field is copied from either the item card or the SKU card, if the lead time is defined for the item, or on the **Item Vendor Catalog** page, if the lead time is defined for the vendor.
 
-## Přizpůsobení kalendáře
-Hlavním úkolem při přizpůsobení základního kalendáře pro vaši společnost nebo jednoho z jejích obchodních partnerů je zadání změn stavu pracovního a nepracovního dne.
+## To customize a calendar
+The main task in customizing a base calendar for your company, or one of its business partners, is to enter any changes to working and nonworking day status.
 
-Zatímco například základní kalendář obvykle uvádí všechny soboty jako nepracovní dny, přizpůsobený kalendář pro určité umístění může uvádět všechny soboty v měsících listopadu a prosinci, které se zadjí být jako prázninové, tak mohou být jako pracovní dny.
+For example, while a base calendar would typically list all Saturdays as non-working days, the customized calendar for a particular location may list all Saturdays during the months of November and December, and leading up to the holiday season, as working days.
 
-Následující postup používá případ lokace jako příklad. Všimněte si, že v tomto okamžiku jste již k lokaci přiřadili základní kalendář.
+The following procedure uses the case of the location as an example. Note that at this point, you have already assigned a base calendar to the location.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
-2. Otevřete kartu lokace, které chcete aktualizovat, a poté vyberte pole **Upravený kalendář**. V poli **Kód základního kalendáře** musí být vybrán kalendář.
-3. Na stránce se otevřou **Položky upraveného kalendáře**, vyberte **Udržovat změny upraveného kalendáře** action.
-4. V **Uživatelské změny kalendáře** přidejte řádek upravených položek kalendáře.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+2. Open the location that you want to update, and then select the **Customized Calendar** field. Note that a calendar must be selected in the **Base Calendar Code** field.
+3. On the **Customized Calendar Entries** page opens, choose the **Maintain Customized Calendar Changes** action.
+4. In the **Customized Calendar Changes**, add lines for customized calendar entries.
 
-   Když zadáte řádek, je zaškrtnuto políčko **Nepracovní**. Pokud chcete změnit stav na pracovní den, můžete toto políčko zrušit.
+    When you enter a line, the **Nonworking** check box is selected. You can clear the check box if you want to change the status to a working day.
 
-   Můžete použít pote **Systém periody** k nastavení určitého data nebo dne jako opakovaného nepracovního dne. Můžete vybrat možnost **Roční opakování** nebo **Týdenní opakování**.
+    You can use the **Recurring System** field to set a particular date or day as a recurring nonworking day. You can select either the **Annual Recurring** or **Weekly Recurring** option.
 
-   Pokud vyberete **Roční opakování**, musíte také zadat příslušné datum do pole **Datum**. Pokud vyberete **Týdenní opakování**, musíte také vybrat příslušný den v týdnu v poli **Den**. Pokud pole necháte prázdné, musíte vyplnit pole **Datum**. Pole **Den** je poté vyplněno automaticky. To může být užitečné, pokud chcete označit jednotlivé datum jako nepracovní nebo pracovní den.
+    If you select **Annual Recurring**, you must also enter the relevant date in the **Date** field. If you select **Weekly Recurring**, you must also select the relevant day of the week in the **Day** field. If you leave the field empty, you must fill in the **Date** field. The **Day** field is then filled in automatically. This could be useful if you want to mark an individual date as a nonworking or working day.
 
-5. Vyberte tlačítko **OK**.
+5. Choose the **OK** button.
 
-Na stránce **Položky upraveného kalendáře** zjistíte, že položky data jsou aktualizovány provedenými změnami.
+On the **Customized Calendar Entries** page, you will observe that the date entries are updated with the changes that you made.
 
-Na kartě zboží zjistíte, že pole **Upravený kalendář** obsahuje **Ano**, což znamená, že byl nastaven vlastní kalendář.
+On the Location card, you will observe that the **Customized Calendar** field contains **Yes**, indicating that a customized calendar has been set up.
 
 > [!Important]
-> Pokud nevyplníte na řádku objednávky **Kód lokace**je použit kalendář Vaší společnosti.
+> If you do not fill in the **Location Code** field on an order line, your company’s calendar is used.
 
 
-Pokud nevyplníte pole **Kód přepravce** na řádku objednávky, je použit kalendář Vaší společnosti.
-
-> [!NOTE]  
-> Pokud provedete změny základního kalendáře, pro který existují přizpůsobené změny kalendáře, automaticky se aktualizují všechny existující přizpůsobené kalendáře.
-
-## Přiřazení základního kalendáře
-Následující postup ukáže příklad jak naplánovat datum dodání na řádcích prodejních objednávek pro určitého zákazníka.
-
-Základní kalendáře jsou přiřazeny k vaší vlastní společnosti, zákazníkům, prodejcům, lokacím a přepravcům takto:
-
-- Na kartě **Informace o společnosti** a **Zákazníka**, je základní kalendář umístěn na záložce **Dodávka**.
-- Na kartě **Dodavatele**, je umístěn základní kalendář na záložce **Příjem**.
-- Na kartě **Lokace**je základní kalendář umístěn na záložce **Sklad**.
-- Na stránce **Přepravci** je základní kalendář umístěn na stránce **Služby přepravce**.
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Otevřete kartu **Zákazníka**, pro kterého chcete přiřadit základní kalendář.
-3. Na záložce **Dodávka** v poli **Kód záklandího kalendáře**, vyberte základní kalendář, který chcete přiřadit.
-
-> [!IMPORTANT]
-> - Pokud společnosti nepřiřadíte základní kalendář, všechna data se počítají jako pracovní dny.
-> - Pokud na řádku objednávky zadáte prázdné místo, všechna data se počítají jako pracovní dny.
-> - Jakýkoli základní kalendář definovaný pro dodavatele nebo místo ovlivňuje způsob výpočtu dat a zaokrouhlování na pracovní dny.
+If you do not fill in the **Shipping Agent Code** field on the order line, your company’s calendar is used.
 
 > [!NOTE]  
-> Předím než upravíte položky kalendáře, musíte nejdříve přiřadit základní kalendář společnosti.
+> If you make changes to a base calendar for which customized calendar changes exist, all existing customized calendars are updated automatically.
 
-## Viz také
-[Nakupování](purchasing-manage-purchasing.md)  
-[Výroba](production-manage-manufacturing.md)    
-[Zásoby](inventory-manage-inventory.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To assign a base calendar  
+The following procedure schedules delivery dates on sales order lines for a customer as an example.
+
+Base calendars are assigned to your own company, customers, vendors, locations, and shipping agents as follows:  
+
+-   On the **Company Information** and **Customer** cards, the base calendar is assigned on the **Shipping** FastTab.  
+-   On the **Vendor** card, the base calendar is assigned on the **Receiving** FastTab.  
+-   On the **Location** card, the base calendar is assigned on the **Warehouse** FastTab.  
+-   On the **Shipping Agents** page, the base calendar is assigned on the **Shipping Agent Services** page.  
+
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.  
+2.  Open the **Customer** card for whom you will assign a base calendar.  
+3.  On the **Shipping** FastTab, in the **Base Calendar Code** field, select the base calendar that you want to assign.  
+
+> [!IMPORTANT]  
+>  -   If you do not assign a base calendar to a company, all dates are calculated as working days.  
+> -   If you enter a blank location on an order line, all dates are calculated as working days.  
+> -   Any base calendar defined for the vendor or the location affects how the dates are calculated and rounded to working days.
+
+> [!NOTE]  
+>  Before you can make customized calendar entries, you must first assign a base calendar to the company.  
+
+## See Also
+[Purchasing](purchasing-manage-purchasing.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

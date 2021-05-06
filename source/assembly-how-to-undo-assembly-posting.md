@@ -4,56 +4,59 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: kit, kitting
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Zrušení účtování montáže
-Někdy může být nutné vrátit zpět zaúčtované montážní zakázky, například když byla zakázka zaúčtována s chybami, které musí být opraveny, nebo protože neměla být zaúčtována na prvním místě a musí být vrácena zpět.
+# Undo Assembly Posting
+Sometimes you may need to undo a posted assembly order, for example when the order was posted with mistakes that must be corrected, or because it should not have been posted in the first place and must be rolled back.
 
-Když zrušíte zaúčtovanou montážní zakázku, vytvoří se sada opravných položek zboží pro stornování původních položek. Každá kladná výstupní položka pro zboží montáže je stornována zápornou výstupní položkou. Každá záporná položka spotřeby pro komponentu montáže je stornována kladnou položkou spotřeby. Pevné vyrovnání nákladů je automaticky vytvořeno mezi opravnými a původními položkami k zajištění stornování přesných nákladů.
+When you undo a posted assembly order, a set of corrective item ledger entries is created to reverse the original entries. Each positive output entry for the assembly item is reversed by a negative output entry. Each negative consumption entry for an assembly component is reversed by a positive consumption entry. Fixed cost application is automatically created between the corrective and original entries to ensure exact cost reversal.  
 
-Když vrátíte zpět plně zaúčtovanou montážní zakázku, můžete ji znovu vytvořit v původním stavu, například provést opravy před jejím opětovným zaúčtováním. Alternativně se můžete rozhodnout, že montážní zakázku znovu nevytvoříte.
+When you undo a fully posted assembly order, then you can choose to recreate the assembly order to its original state, for example to make corrections before reposting it. Alternatively, you can choose to not recreate the assembly order.  
 
-Pokud zrušíte částečně zaúčtovanou montážní zakázku, budou všechna ovlivněná pole množství, například **Smontované možství**, **Spotřebované množství** a **Zbývající množství** obnoveny na hodnoty, které měli před dotyčným účtováním.
+When you undo a partially posted assembly order, then all affected quantity fields, such as the **Assembled Quantity**, **Consumed Quantity**, and **Remaining Quantity** fields are restored to the values they had before the posting in question.  
 
-Chcete-li znovu vytvořit nebo obnovit montážní zakázku, musí být pro zboží montáže, které bylo výstupem v původním účtování, splněny následující podmínky:
+To recreate or restore assembly orders, the following conditions must apply to the assembly item that was output in the original posting:  
 
-- Musí být stále ve skladu, to znamená, že není prodáno nebo jinak spotřebováno pomocí odchozích transakcí.
-- Nesmí být rezervováno.
-- Musí existovat v přihrádce, do které bylo odesláno.
+-   It must still be in inventory, that is, it is not sold or otherwise consumed by outbound transactions.  
+-   It must not be reserved.  
+-   It must exist in the bin that it was output to.  
 
-Kromě toho lze stávající příkazy sestavení obnovit pouze tehdy, pokud se nezmění počet řádků a pořadí řádků v původní montážní zakázce.
+In addition, existing assembly orders can only be restored if the number of lines and the sequence of lines on the original assembly order are not changed.  
 
-> [!TIP]
-> Chcete-li vyřešit konflikty způsobené změnami řádků, můžete ručně zrušit změny na dotyčných řádcích před zrušením související zaúčtované montážní zakázky. Případně můžete montážní zakázku zaúčtovat v plném rozsahu a poté vybrat opětovné vytvoření při jejím zrušení.
+> [!TIP]  
+>  To solve conflicts due to line changes, you can manually revert the changes on the lines in question before undoing the related posted assembly order. Alternatively, you can post the assembly order fully and then select to recreate it when undoing the posting.  
 
-Následující postup popisuje, jak zrušit zaúčtované montážní zakázky, kde bylo zboží sestaveno do skladu. Pokud chcete vrátit zpět zaúčtované montážní zakázky, kde bylo zboží sestaveno do prodejní objednávky, musíte použít funkci **Vrátit dodávku** na zaúčtované dodávce, která se vztahuje k zaúčtované montážní zakázkce. Pro více informací navštivte [Stornování účtování a vrácení příjemky/dodávky](finance-how-reverse-journal-posting.md). Zrušení zaúčtované montážní zakázky se pak stane automaticky stejným způsobem, jak je popsáno v tomto tématu.
+The following procedure describes how to undo posted assembly orders where the items were assembled to stock. If you want to undo posted assembly orders where the items were assembled to a sales order, then you must use the **Undo Shipment** function on the posted shipment that relates to the posted assembly order. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md). The undoing of the posted assembly order then happens automatically in the same way as described in this topic.  
 
-## Zrušení zaúčtování montážní zakázky
-1. Chcete-li vrátit zpět zcela nebo částečně zaúčtované montážní zakázky, vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované montážní zakázky** a poté vyberte související odkaz.
+## To undo posting of an assembly order  
+1.  To undo a fully or partially posted assembly order, Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Assembly Orders**, and choose the related link.  
 
-   Otevře se stránka **Účtované montážní zakázky** která zobrazuje jednu nebo více zaúčtovaných montážních zakázek, které jsou zaúčtovány z příslušné montážní zakázky. Každé dílčí účtování vytvoří samostatnou zaúčtovanou montážní zakázku.
-2. Otevřete zaúčtovanou montážní zakázku, kterou chcete vrátit zpět, a poté vyberte akci **Zrušit montáž**.
+    The **Posted Assembly Orders** page opens showing one or more posted assembly orders that are posted from the assembly order in question. Each partial posting creates a separate posted assembly order.  
+2.  Open the posted assembly order that you want to undo, and then choose the **Undo Assembly** action.  
 
-   Pokud zaúčtovaná montážní zakázka, kterou chcete vrátit zpět, souvisí s plně zaúčtovanou zakázkou, která je nyní odstraněna, máte možnost ji znovu vytvořit, obvykle proto, že ji chcete znovu zpracovat.
-3. Pokud chcete znovu vytvořit montážní zakázku, zvolte tlačítko **Ano**. Chcete-li zrušit zaúčtování bez opětovného vytvoření související zakázky, zvolte tlačítko **Ne**.
+    If the posted assembly order that you want to undo relates to a fully posted assembly order that is now deleted, then you have the option to recreate it, typically because you want to reprocess it.  
+3.  If you want to recreate the assembly order, choose the **Yes** button. To undo the posting without recreating the related assembly order, choose the **No** button.  
 
-Pole **Stornováno** v záhlaví omontážní zakázky se změní na **Ano**. Zaúčtování montážní zakázky je nyní stornováno a vy můžete pokračovat ve zpracování celé montážní zakázky, pokud jste se ji rozhodli znovu vytvořit nebo spracovat otevřenou montážní zakázku, kterou jste obnovili do původního stavu.
+The **Reversed** field on the assembly order header changes to **Yes**. The assembly order posting is now reversed, and you can proceed to process the entire assembly order if you chose to recreate it or the open assembly order that you have restored to its original state.  
 
-> [!NOTE]
-> Chcete-li obnovit množství z více dílčích účtování v montážní zakázce, musíte zrušit všechny dotyčné zaúčtované montážní zakázky podle kroků 1 až 3 výše pro každou zaúčtovanou montážní zakázku.
+> [!NOTE]  
+>  To restore quantities from multiple partial postings in an assembly order, you must undo all the posted assembly orders in question by following steps 1 through 3 above for each posted assembly order.  
 
-## Viz také
-[Správa montáže](assembly-assemble-items.md)  
-[Stornování účtování a vrácení příjemky/dodávky](finance-how-reverse-journal-posting.md)  
-[Zpracování prodejní vratky nebo stornování](sales-how-process-sales-returns-cancellations.md)  
-[Práce s kusovníky](inventory-how-work-BOMs.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Assembly Management](assembly-assemble-items.md)  
+[Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md)  
+[Process Sales Returns or Cancellations](sales-how-process-sales-returns-cancellations.md)    
+[Work with Bills of Material](inventory-how-work-BOMs.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

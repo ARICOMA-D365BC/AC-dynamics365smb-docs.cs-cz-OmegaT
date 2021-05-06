@@ -10,46 +10,46 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, reconcile payment, expenses, cash receipts
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Ruční kontrola nebo vyrovnání plateb po automatickém vyrovnání
-U každého řádku deníku představujícího platbu na stránce **Deníky odsouhlasení plateb** můžete otevřít stránku **Vyrovnání plateb** a zobrazit všechny kandidátní otevřené položky pro platbu a zobrazit detailní informace o každé položce o spolehlivosti párování, na které je založeno vyrovnání platby. Zde můžete ručně vyrovnat platby nebo znovu vyrovnat platby, které byly automaticky vyrovnány na nesprávnou položku. Další informace o automatickém vyrovnání nalezenete na [Odsouhlasení plateb pomocí automatického vyrovnání](receivables-how-reconcile-payments-auto-application.md).
+# Review and Apply Payments Manually After Automatic Application
+For each journal line representing a payment on the **Payment Reconciliation Journal** page, you can open the **Payment Application** page to see all candidate open entries for the payment and view detailed information for each entry about the data matching that a payment application is based on. Here, you can manually apply payments or reapply payments that were applied automatically to a wrong entry. For more information about automatic application, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
 
 > [!IMPORTANT]  
-> Pokud je bankovní účet, který odsouhlasujete nastaven na lokální měnu, poté stránka **Vyrovnání plateb** bude zobrazovat všechny otevřeně položky v lokální měně, včetně otevřených položek dokladů, které byly původně fakturovány v měně cizí. Platby vyrovavné na položky s převedenou měnou proto mohou být účtovány s jinou částkou než na původním dokladu z důvodu potenciálně různýh směnných kurzů používaných bankou a [!INCLUDE[prod_short](includes/prod_short.md)].
+>   When the bank account that you are reconciling payments for is set up for the local currency, then the **Payment Application** page will show all open entries in the local currency, including open entries for documents that were originally invoiced in foreign currencies. Payments applied to entries with converted currencies may therefore be posted with different amounts than on the original document because of the potentially different exchange rates used by the bank and [!INCLUDE[prod_short](includes/prod_short.md)] respectively.
 
-Proto doporučujeme hledat kódy cizích měn v poli **Kód měny** na stránce **Vyrovnání plateb** a zkontrolovat, zda jsou vyrovnání založeny na převedených měnách. Chcete-li zkontrolovat původní částku dokladu v cizí měně a zobrazit použitý směnný kurz, vyberte pole **Vyrovnává položku číslo** a poté v místní nabídce kliknutím na tlačítko, které rozbalí nabídku otevřete stránky **Položky zákazníka** nebo **Položky dodavatele**.
+Therefore, we recommend that you look for foreign currency codes in the **Currency Code** field on the **Payment Application** page to check if applications are based on converted currencies. To review the original document amount in the foreign currency and to see the exchange rate used, choose the **Applies-to Entry No.** field, and then, on the shortcut menu, choose the drilldown button to open the **Customer Ledger Entries** or **Vendor Ledger Entries** page.
 
-Jakákoli úprava zisků či ztrát požadovaná v důsledku převodů měny není zpracována automaticky pomocí [!INCLUDE[prod_short](includes/prod_short.md)].
+Any gains-and-loss adjustment required due to currency conversions is not handled automatically by [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!NOTE]  
-> Nelze vyrovnat položky s rozdílným známénkem, než je na na platbě. Chcete-li například uzavřít dobropis se záporným znaménkem a související fakturu s kladným, musíte nejprve vyrovnat dobropis na fakturu a poté vyrovnat platbu na fakturu se sníženou zbývající částkou.
+>   You cannot apply entries with a different sign than the sign on the payment. For example, to close both a negative-sign credit memo and its related positive-sign invoice, you must first apply the credit memo to the invoice, and then apply the payment to the invoice with the reduced remaining amount.
 
 > [!WARNING]  
-> Pokud používáte platební slevy a datum platby je před datem splatnosti, potom pole **Zůstat. částka včetně skonta** na stránce **Vyrovnání platby** bude použito pro párování. V opačném případě bude použito pole **Zůstatek**. Pokud byla platba provedena se zlevněnou částkou po datu splatnosti platby nebo byla vyplacena celá částka, ale byla poskytnuta sleva, částka nebude spárována.
+>   If you use payment discounts, and if the payment date is before the payment due date, then the **Remaining Amt. Incl. Discount** field on the **Payment Application** page will be used for matching. Otherwise, the value in the **Remaining Amount** field will be used. If the payment was made with a discounted amount after the payment due date, or the full amount was paid but a discount was granted, then the amount will not be matched.
 
 > [!NOTE]  
-> Platbu můžete vyrovnat pouze na jeden účet. Pokud chcete vyrovnání rozdělit na více otevřených položek, například chcete-li vyrovnat jednorázovou platbu, musí být otevřená položka pro stejný účet. Pro více informací se podívejte na kroky 7 a 8 v postupu tohoto tématu.
+>   You can only apply a payment to one account. If you want to split the application on multiple open entries, for example to apply a lump-sum payment, then the open entries must be for the same account. For more information, see steps 7 and 8 in the procedure in this topic.
 
-## Kontrola nebo vyrovnání plateb po automatickém vyrovnání
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Deníky odsouhlasení plateb** a poté vyberte související odkaz.
-2. Otevřete deník odsouhlasení plateb pro bankovní účet, pro který chcete odsouhlasit platby. Pro více informací navštivte [Automatické odsouhlasení plateb](receivables-how-reconcile-payments-auto-application.md).
-3. Na stránce **Deník odsouhlasení plateb**, vyberte platbu, kterou chcete zkontrolovat nebo ručně vyrovnat k jedné nebo více otevřeným položkám a zvolte akci **Vyrovnat ručně**
-4. Vyberte políčko **Vyrovnané** na řádku u otevřené položky, na kterou chcete platbu vyrovnat.
-5. Částka platby, která je také zobrazena v poli **Částka transakce** na stránce **Vyrovnání platby** je vložena do pole **Vyrovnaná částka**, ale můžete toto pole upravit, například pokud chcete vyrovnat částku na několik otevřených položek.
-6. Chcete-li část zaplacené částky vyrovnat na jinou otevřenou položku pro účet, apříklad k uplatnění paušální platby, zaškrtněte u řádku políčko **Vyrovnáno**. Vyrovnaná částka se automaticky odečte od částky transakcí, aby odrážela rozdělení na dvě otevřené položky.
-7. Chcete-li část platby vyrovnat na jednu nebo více otevřených položek, které v databázi neexistují, vytvořte nový řádek pod řádkem pro stejný účet. V poli **Vyrovnaná částka**, zadejte částku, která se má vyrovnat na nový řádek, a poté upravte pole **Vyrovnaná částka** na existujícím řádku.
-8. Opakujte kroky 5, 6, nebo 7 pro další otevřené položky, u které chcete vyronat celou nebo část částky platby.
-9. Pokud jste zkontrolovali platební vyrovnání nebo ručně vyrovnali jednu nebo více otevřených položek, zvolte **Akceptovat vyrovnání** action.
+## To review or apply payments after automatic application
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.
+2. Open the payment reconciliation journal for a bank account that you want to reconcile payments for. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
+3. On the **Payment Reconciliation Journal** page, select a payment that you want to review or manually apply to one or more open entries, and then choose the **Apply Manually** action.
+4. Select the **Applied** check box on the line for the open entry that you want to apply the payment to.
+5. The payment amount, which is also shown in the **Transaction Amount** field on the **Payment Application** page, is inserted in the **Applied Amount** field, but you can modify the field, for example if you want to apply the amount to several open entries.
+6. To apply a part of the paid amount to another open entry for the account, for example to apply a lump-sum payment, select the **Applied** check box for the line. The applied amount is automatically deducted from the transactions amount to reflect the distribution on the two open entries.
+7. To apply a part of a payment to one or more open entries that does not exist in the database, create a new line under the line for the same account. In the **Applied Amount** field, enter the amount to apply on the new line, and then adjust the **Applied Amount** field on the existing line.
+8. Repeat steps 5, 6, or 7 for other open entries that you want to apply a full or partial payment amount to.
+9. When you have reviewed a payment application or manually applied to one or more open entries, choose the **Accept Application** action.
 
-Stránka **Vyrovnání platby** se zavře a na stánce **Deníky odsouhlasení plateb** se hodnota v poli **Spolehlivost párování** změní na **Akceptováno** což znaměná, že jste zkontrolovali nebo ručně vyrovnali platbu.
+The **Payment Application** page  closes, and on the **Payment Reconciliation Journal** page, the value in the **Match Confidence** field is changed to **Accepted** to indicate to you that you have reviewed or manually applied the payment.
 
-## Viz také
-[Správa pohledávek](receivables-manage-receivables.md)  
-[Prodej](sales-manage-sales.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## See Also
+[Managing Receivables](receivables-manage-receivables.md)  
+[Sales](sales-manage-sales.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

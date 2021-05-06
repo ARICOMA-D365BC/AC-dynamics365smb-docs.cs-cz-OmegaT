@@ -1,49 +1,50 @@
 ---
     title: How to Convert Existing Locations to Warehouse Locations | Microsoft Docs
     description: You can enable an existing inventory location to use zones and bins and to operate as a warehouse location.
-    services: project-madeira
-    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Převod existujících lokací na lokace skladu
-Existujícímu skladovému místu můžete povolit použití zón a přihrádek a pro provoz jako na skladu.
+# Convert Existing Locations to Warehouse Locations
+You can enable an existing inventory location to use zones and bins and to operate as a warehouse location.  
 
-Dávková úloha, která povolí skladové místo pro skladové operace, vytvoří počáteční stavy skladu pro adjustační přihrádku skladu pro všechno zboží, které mají v lokaci zásoby. Tyto počáteční stavy budou vyrovnané po zadání zboží fyzické inventury skladu po spuštění dávkové úlohy.
+The batch job to enable a location for warehouse operation creates initial warehouse entries for the warehouse adjustment bin for all items that have inventory in the location. These initial entries will be balanced when warehouse physical inventory entries are entered after the batch job is run.  
 
-Zóny a přihrádky můžete vytvořit před nebo po převodu. Jediná přihrádka, kterou musíte vytvořit před převodem, je ta, která má být použita jako budoucí adjustační přihrádka.
+You can create zones and bins either before or after the conversion. The only bin that you must create before the conversion is the one that is to be used as the future adjustment bin.  
 
-> [!IMPORTANT]
-> Chcete-li před převedením umístění pro manipulaci se skladem vymazat všechny záporné zásoby a všechny otevřené skladové doklady, spusťte sestavu a identifikujte položky se zápornými zásobami a otevřené skladové doklady pro dané umístění. Pro více informací navštivte Kontrola záporného stavu zásob.
+> [!IMPORTANT]  
+>  To clear all negative inventory and any open warehouse documents before you convert the location for warehouse handling, run a report to identify the items with negative inventory and open warehouse documents for the location. For more information, see Check on Negative Inventory.  
 
-## Povolení fungování existujícího umístění jako lokace skladu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vytvořit lokaci ve skladu** a poté vyberte související odkaz.
-2. V poli **Kód lokace** zadejte umístění, které chcete povolit pro zpracování skladu.
-3. Do pole **Kód adjustační přihrádky** zadejte přihrádku v místě, kde jsou uloženy nesynchronizované položky skladu. Pro více informací navštivte [Synchronizace upravených položek skladu se souvisejícími položkami zboží](inventory-how-count-adjust-reclassify.md#to-synchronize-the-adjusted-warehouse-entries-with-the-related-item-ledger-entries)
+## To enable an existing location to operate as a warehouse location  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Create Warehouse Location**, and then choose the related link.  
+2.  In the **Location Code** field, specify the location that you want to enable for warehouse processing.  
+3.  In the **Adjustment Bin Code** field, specify the bin at the location where unsynchronized warehouse entries are stored. For more information, see the [To synchronize the adjusted warehouse entries with the related item ledger entries](inventory-how-count-adjust-reclassify.md#to-synchronize-the-adjusted-warehouse-entries-with-the-related-item-ledger-entries).  
 
-   Při použití otevřených položek zboží pro zadané skladové místo jsou vytvořeny řádky deníku skladu, které tvoří součet všech kombinací čísel zboží, kód variant, kód měrné jednotky a v případě potřeby číslo šarže  a sériové číslo  v položkách zboží. Řádky deníku skladu jsou poté zaúčtovány. Toto zaúčtování vytvoří položky skladu, které umístí zásoby do adjustační přihrádky skladu. Nastaví se také **Kód adjustační přihrádky** na kartě lokace.
+    Using the open item ledger entries for the specified location, warehouse journal lines are created that sum up every combination of Item No., Variant Code, Unit of Measure Code, and, if necessary, Lot No. and Serial No. in the item ledger entries. The warehouse journal lines are then posted. This posting creates warehouse entries that place the inventory in the warehouse adjustment bin. The **Adjustment Bin Code** on the location card is also set.  
 
-4. Chcete-li zjistit, které položky byly během dávkové úlohy přidány do adjustační přihrádky, spusťte sestavu **Adjustační přihrádka skladu** .
-5. Po dokončení dávkové úlohy **Vytvořit lokaci ve skladu** provedete a zaúčtujete fyzickou inventuru skladu. Pro více informací navštivte [Počítání, adjustace a přeřazení zboží](inventory-how-count-adjust-reclassify.md).
+4.  To see which items were added to the adjustment bin during the batch job, run the **Warehouse Adjustment Bin** report.  
+5.  When the **Create Warehouse Location** batch job has completed, perform and post a warehouse physical inventory. For more information, see [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md).  
 
-> [!NOTE]
-> Doporučujeme spustit dávkovou úlohu **Vytvořit lokaci ve skladu** v době, kdy to neovlivní každodenní práci v systému. Tato úloha zpracuje každou položku v tabulce **Položka zboží** a pokud existuje velký počet položek zboží, může úloha trvat několik hodin.
+> [!NOTE]  
+>  It is recommended that you run the **Create Warehouse Location** batch job at a time when it will not impact the daily work in the system. This job processes each entry in the **Item Ledger Entry** table, and if there are a large number of item ledger entries, the job can last several hours.  
 
-Pro skladová místa, která před převodem nepoužívaly doklady správy skladu, je nutné znovu otevřít a uvolnit všechny původní doklady, které byly částečně přijaty nebo částečně dodány před převodem.
+ For those locations that did not use warehouse management documents before the conversion, you must re-open and release any source documents that were partially received or partially shipped before the conversion.  
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení sprívy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

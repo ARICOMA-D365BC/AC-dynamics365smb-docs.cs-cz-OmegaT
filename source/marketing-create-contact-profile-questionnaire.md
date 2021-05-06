@@ -4,48 +4,48 @@ description: 'Set up profile questionnaires to help classify your business conta
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: contacts, profiles
 ms.author: edupont
-ms.date: 04/01/2020
+ms.date: 04/01/2021
 ---
 
-# Použití profilových dotazníků pro klasifikaci obchodních kontaktů
-Můžete nastavit dotazníky profilů, které chcete použít při zadávání informací o profilech kontaktů. V každém dotazníku můžete nastavit různé otázky, které chcete položit svým kontaktům.
+# Use Profile Questionnaires to Classify Business Contacts
+You can set up profile questionnaires that you want to use when entering information about your contacts' profiles. Within each questionnaire, you can set up the different questions you intend to ask your contacts.  
 
-Dotazník můžete také spustit a automaticky odpovědět na některé otázky na základě údajů o kontaktech, zákaznících nebo dodavatelích.
+You can also run the questionnaire to answer some of the questions based on contact, customer, or vendor data automatically.  
 
-## Přidání dotazníku profilu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení dotazníku** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## To add a profile questionnaire
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Questionnaire Setup**, and then choose the related link.  
+2.  Choose the **New** Action.  
+3.  Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-## Přidání otázek do dotazníku profilu
-1. Vyberte příslušný dotazník profilu a poté vyberte akci **Upravit nastavení dotazníku**.
-2. Na prvním prázdném řádku v poli **Typ** vyberte **Otázka** a zadejte svou otázku do pole **Popis**. Vyplňte ostatní pole v tomto řádku.
-3. Na dalším prázdném řádku v poli **Typ** vyberte **Odpověď** a zadejte svou odpověď do pole **Popis**.
-4. V poli **Priorita** vyberte prioritu. V polích **Od hodnoty** a **Do hodnoty** definujte bodový rozsah. Odpověď obdrží kontakty, které získají body v definovaném rozsahu.
+## To add questions to a profile questionnaire
+1.  Choose the relevant profile questionnaire, and then choose the **Edit Questionnaire Setup** action.  
+2.  On the first empty line, in the **Type** field, choose **Question** and type your question in the **Description** field. Fill in the other fields on this line.  
+3.  On the next empty line, in the **Type** field, choose **Answer** and type your answer in the **Description** field.  
+4.  In the **Priority** field, select the priority. In the **From Value** and **To Value** fields, define a point range. Contacts that receive points within the defined range will get the answer.  
 
-Tyto kroky opakujte a zadejte všechny otázky a odpovědi do dotazníku profilu.
+Repeat these steps to enter all the questions and answers within the profile questionnaire.
 
-Po vytvoření dotazníku musíte vytvořit hodnocení kontaktů, abyste své kontakty klasifikovali. Můžete také nastavit otázky, které jsou hodnoceny automaticky na základě informací na kartě kontaktu.
-
-> [!NOTE]
-> Pokud zadáte otázku, která je automaticky zodpovězena, zvolte <STRONG>Řádek</STRONG> a poté zvolte <STRONG>Detaily otázky</STRONG> aby jste zadali kritéria pro automatickou odpověď na otázku.
-
-## Automatická klasifikace kontaktů
-Kontakty můžete automaticky klasifikovat podle informací o zákazníkovi, dodavateli a kontaktních údajích nastavením automaticky zodpovězených profilových otázek na stránce **Nastavení dotazníku profilu**.
+After you have created a questionnaire, you must create contact ratings to classify your contacts. You can also set up questions that are rated automatically based on information in the contact card.  
 
 > [!NOTE]
-> Pouze kontakty, které jsou zaznamenány jako zákazníci, mohou být klasifikovány na základě údajů o zákaznících a pouze kontaktům, které jsou zaznamenány jako dodavatelé, může být přiřazena klasifikace na základě údajů o dodavatelích. Automatická klasifikace není automaticky aktualizována. V důsledku toho můžete chtít aktualizovat dotazníky profilu po aktualizaci údajů o zákazníkovi, dodavateli nebo kontaktech, na kterých jsou založeny.
+> If you enter a question that is automatically answered, choose <STRONG>Line</STRONG>, and then choose <STRONG>Question Details</STRONG>, to enter the criteria to automatically answer the question.
 
-Po nastavení automaticky zodpovězených otázek profilu, pokud přiřadíte dotazník profilu obsahující tyto otázky kontaktu, [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky přiřadí správné odpovědi kontaktu.
+## The Automatic Classification of Contacts
+You can automatically classify your contacts according to customer, vendor, and contact information, by setting up automatically answered profile questions on the **Profile Questionnaire Setup** page.  
 
-## Příklad
-Kontakty můžete klasifikovat podle toho, kolik od vás koupily:
+> [!NOTE]
+> Only contacts that are recorded as customers can be assigned a classification based on customer data and only contacts that are recorded as vendors can be assigned a classification based on vendor data. The automatic classification is not updated automatically. Consequently, you may want to update the profile questionnaires, after you have updated the customer, vendor or contact data they are based on.  
+
+After you have set up automatically answered profile questions, if you assign the profile questionnaire containing these questions to a contact, [!INCLUDE[prod_short](includes/prod_short.md)] will automatically assign the right answers for the contact.  
+
+## Example
+You can classify your contacts according to how much they bought from you:
 
 <table>
 <colgroup>
@@ -54,27 +54,27 @@ Kontakty můžete klasifikovat podle toho, kolik od vás koupily:
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Odpověď</strong></th>
-<th><strong>Platí pro</strong></th>
+<th><strong>Answer</strong></th>
+<th><strong>Applies to</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>A</p></td>
-<td><p>kontakty, které koupily za 500 000 LM nebo více</p></td>
+<td><p>contacts who bought for 500,000 LCY or more</p></td>
 </tr>
 <tr class="even">
 <td><p>B</p></td>
-<td><p>kontakty, které nakupovaly za 100 000 až 499 999 LM</p></td>
+<td><p>contacts who bought for 100,000 up to 499,999 LCY</p></td>
 </tr>
 <tr class="odd">
 <td><p>C</p></td>
-<td><p>kontakty, kteří si koupili za 99 999 LM nebo méně</p></td>
+<td><p>contacts who bought for 99,999 LCY or less</p></td>
 </tr>
 </tbody>
 </table>
 
-Chcete-li to provést, vyplňte stránku **Nastavení dotazníku profilu** takto:
+To do this, fill on the **Profile Questionnaire Setup** page as follows:
 
 
 <table>
@@ -87,37 +87,37 @@ Chcete-li to provést, vyplňte stránku **Nastavení dotazníku profilu** takto
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Typ</strong></th>
-<th><strong>Popis</strong></th>
-<th><strong>Automatická klasifikace</strong></th>
-<th><strong>Od hodnoty</strong></th>
-<th><strong>Do hodnoty</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Automatic Classification</strong></th>
+<th><strong>From Value</strong></th>
+<th><strong>To Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>Otázka</p></td>
-<td><p>Klasifikace ABC</p></td>
-<td><p>Klepnutím vložíte zaškrtnutí</p></td>
+<td><p>Question</p></td>
+<td><p>ABC Classification</p></td>
+<td><p>Click to insert a check mark</p></td>
 <td><p> </p></td>
 <td><p> </p></td>
 </tr>
 <tr class="even">
-<td><p>Odpověď</p></td>
+<td><p>Answer</p></td>
 <td><p>A</p></td>
 <td><p> </p></td>
 <td><p>500,000</p></td>
 <td><p> </p></td>
 </tr>
 <tr class="odd">
-<td><p>Odpověď</p></td>
+<td><p>Answer</p></td>
 <td><p>B</p></td>
 <td><p> </p></td>
 <td><p>100,000</p></td>
 <td><p>499,999</p></td>
 </tr>
 <tr class="even">
-<td><p>Odpověď</p></td>
+<td><p>Answer</p></td>
 <td><p>C</p></td>
 <td><p> </p></td>
 <td><p> </p></td>
@@ -126,7 +126,7 @@ Chcete-li to provést, vyplňte stránku **Nastavení dotazníku profilu** takto
 </tbody>
 </table>
 
-Poté vyplňte stránku **Detaily profilové otázky** takto:
+Then fill on the **Profile Question Details** page as follows:
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -134,23 +134,26 @@ Poté vyplňte stránku **Detaily profilové otázky** takto:
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Pole</strong></th>
-<th><strong>Hodnota</strong></th>
+<th><strong>Field</strong></th>
+<th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Pole klasifikace zákazníka</strong></td>
-<td><emphasis>Prodej (LM)</emphasis></td>
+<td><strong>Customer Classification Field</strong></td>
+<td><emphasis>Sales (LCY)</emphasis></td>
 </tr>
 <tr>
-<td><strong>Metoda klasifikace</strong></td>
-<td><emphasis>Definovaná hodnota</emphasis></td>
+<td><strong>Classification Method</strong></td>
+<td><emphasis>Defined Value</emphasis></td>
 </tr>
 </tbody>
 </table>
 
-Když přiřadíte dotazníku profil obsahující tuto otázku kontaktu, aplikace automaticky vloží příslušnou odpověď pro tento kontakt do profilových řádků karty kontaktu.
+When you assign the profile questionnaire containing this question to a contact, application automatically enters the relevant answer for this contact on the profile lines of the contact card.
 
-## Viz také
-[Vytváření kontaktů](marketing-create-contact-companies.md)
+## See Also
+[Creating Contacts](marketing-create-contact-companies.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

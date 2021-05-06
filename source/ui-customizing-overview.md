@@ -5,31 +5,34 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: personalize, add-in, extend, customize
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Přizpůsobení Business Central
-Existují různé způsoby, jak přizpůsobit aplikaci tak, aby vám a vašim kolegům umožnila přístup k vlastnostem, funkcím a datům, které potřebujete nejvíce, a to způsobem, který nejlépe vyhovuje vaší každodenní práci. Ti, kteří vidí změny, budou záviset na vašich akcích, jak popisuje tato tabulka.
+# Customize Business Central
+There are different ways to customize the application to give you and your colleagues access to the features, functionality, and data that you need most, in a manner that bests suits your daily work. Those who see the changes will depend on what you do, as described in this table.
 
 > [!NOTE]
-> Kromě toho, co mohou přizpůsobit administrátoři, mohou uživatelé přizpůsobit své stránky přidáním, přesunem nebo odebráním polí, ukotvením podoken, dílů a dalších. Pro více informací navštivte [Přizpůsobení Vašeho pracovního prostoru](ui-personalization-user.md).
+> In addition to what administrators can customize, users can personalize their pages by adding, moving, or removing fields, freeze panes, parts, and more. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
 
-| Co můžete udělat | Popis | Kdo vidí změny | Více informací |
+| What you can do    |  Description  |  Who sees the changes  |  More information  |
 |-----|---------------|---------|-------|
-| Změna pracovního prostoru uživatelů přizpůsobením přiřazené role. | Změňte uživatelské rozhraní profilu (role) tak, aby všichni uživatelé této role viděli přizpůsobený pracovní prostor. Řiďte a spravujte personalizaci uživatelů tím, že deaktivujete možnost personalizace stránek a vymazáním jakékoli personalizace stránek. | Všichni uživatelé v konkrétní společnosti. | [Přizpůsobení stránek a profilů](ui-personalization-manage.md) |
-| Změňte, které prvky uživatelského rozhraní jsou viditelné. | Nastavení **Experience** určuje, kolik funkcí se zobrazí v uživatelském rozhraní. Vyberte si mezi Essential a Premium. | Všichni uživatelé v konkrétní společnosti. | [Změna zobrazovaných funkcí](ui-experiences.md) |
-| Pro signalizace důležitosti povolte barvy v centru rolí. | Nastavte hromádky, které se objevují v uživatelských Centrech rolí tak, aby obsahovaly indikátor, který mění barvu na základě hodnot v hromádkách. | Všichni uživatelé v konkrétní společnosti. | [Nastavení barevného indikátoru hromádek](admin-how-set-up-colored-indicator-on-cues.md) |
-| Instalace rozšíření | Rozšíření jsou jako malé aplikace, které přidávají funkce, mění chování, poskytují přístup k novým online službám a další. Společnost Microsoft například poskytuje rozšíření, které zajišťuje integraci s PayPal Payments Standard. | Všichni uživatelé ve všech společnostech. | [Přizpůsobení pomocí rozšíření](ui-extensions.md) |
+|Change users' workspace by customizing their assigned role.|Change the user interface for a profile (role) so that all users of that role see a customized workspace. Control and manage users' personalization by disabling the ability to personalize pages and clearing any page personalization.|All users in a specific company.|[Customize Pages for Profiles](ui-personalization-manage.md)|
+|Change which UI elements are visible.|The **Experience** setting determines how much of the functionality is displayed in the user interface. Choose between Essential and Premium.|All users in a specific company.|[Change Which Features are Displayed](ui-experiences.md)|
+|Enable colors on Role Centers to signal importance.|Set up Cues that appear on users' Role Centers to include an indicator that changes color based on the values in the Cues.|All users in a specific company.|[Set Up a Colored Indicator on Cues](admin-how-set-up-colored-indicator-on-cues.md)|
+|Install an extension|Extensions are like small applications that add functionality, change behavior, provide access to new online services, and more. For example, Microsoft provides an extension that provides integration with PayPal Payments Standard.|All users in all companies.|[Customizing Using Extensions](ui-extensions.md)|
 > [!NOTE]
-> Všechny popisy funkcí v uživatelské dokumentaci pro [!INCLUDE[d365fin](includes/d365fin_md.md)] předpokládají **Premium** experience, což znamená, že popisy pokrývají celý rozsah prvků uživatelského rozhraní. Uživatelé s **Essential** experience proto mohou v některých tématech číst o funkcích a prvcích uživatelského rozhraní, které nejsou viditelné v jejich uživatelském rozhraní. Pro více informací navštivte sekci
+> All feature descriptions in user documentation for [!INCLUDE[prod_short](includes/prod_short.md)] assume the **Premium** experience, meaning the descriptions cover the full scope of UI elements. Therefore, users with the **Essential** experience may in some topics read about functionality and UI elements that are not visible in their user interface. For more information, see [Change Which Features are Displayed](ui-experiences.md).
 
-## Viz také
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

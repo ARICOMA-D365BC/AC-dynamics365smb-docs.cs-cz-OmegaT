@@ -4,139 +4,142 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Plánování s lokacemi nebo bez nich
-Pokud jde o plánování s a bez kódu lokací na řádcích poptávky, systém plánování pracuje přímým způsobem, když:
+# Planning With or Without Locations
+Concerning planning with or without location codes on demand lines, the planning system operates in a straight forward way when:  
 
-- Řádky poptávky vždy nesou kódy lokace a systém plně používá skladové jednotky, včetně příslušného nastavení skladového místa.
-- Linky poptávky nikdy nenesou kódy lokace a systém nepoužívá SKJ ani žádné umístění (viz poslední scénář níže).
+-   demand lines always carry location codes and the system fully uses stockkeeping units, including the relevant location setup.  
+-   demand lines never carry location codes and the system does not use SKUs or any location setup (see last scenario below).  
 
-Pokud však řádky poptávky někdy obsahují kódy lokací a jindy ne, bude systém plánování dodržovat určitá pravidla v závislosti na nastavení.
+However, if demand lines sometimes have location codes and other times do not, the planning system will follow certain rules depending on setup.  
 
-## Poptávka v lokaci
-Když plánovací systém detekuje poptávku v lokaci (řádek s kódem lokace), bude se chovat různými způsoby v závislosti na 3 kritických hodnotách nastavení.
+## Demand at Location  
+When the planning system detects demand at a location (a line with a location code), it will behave in different ways depending on 3 critical setup values.  
 
-Během plánovacího běhu systém kontroluje postupně 3 hodnoty nastavení a podle toho plánuje:
+During a planning run, the system checks for the 3 setup values in sequence and plans accordingly:  
 
-1. Je zaškrtnuto políčko **Lokace nutná**?
+1.  Is there a check mark in the **Location Mandatory** field?  
 
-   Pokud ano, pak:
+    If yes, then:  
 
-2. Existuje pro položku skladová položka?
+2.  Does SKU exist for the item?  
 
-   Pokud ano, pak:
+    If yes, then:  
 
-   Položka je naplánována podle parametrů plánování na kartě SKJ.
+    The item is planned according to planning parameters on the SKU card.  
 
-   Pokud ne, pak:
+    If no, then:  
 
-3. Obsahuje pole **Komponenty na lokaci** požadovaný kód lokace?
+3.  Does the **Components at Location** field contain the demanded location code?  
 
-   Pokud ano, pak:
+    If yes, then:  
 
-   Položka je plánována podle parametrů plánování na kartě zboží.
+    The item is planned according to planning parameters on the item card.  
 
-   Pokud ne, pak:
+    If no, then:  
 
-   Položka je plánována podle: Způsobu přiobjednání =  *Dávka pro dávku*, Včetně zásob =  *Ano*, všechny ostatní parametry plánování = Prázdné (Položky používající zásady  *Objednávky* budou nadále používat  *Objednávku*, jakož i další nastavení.)
+    The item is planned according to: Reordering Policy =  *Lot-for-Lot*, Include Inventory =  *Yes*, all other planning parameters = Empty. (Items using reordering policy  *Order* remain using  *Order* as well as the other settings.)  
 
-> [!NOTE]
-> Tato minimální alternativa pokrývá pouze přesnou poptávku. Všechny definované parametry plánování jsou ignorovány.
+> [!NOTE]  
+>  This minimal alternative only covers the exact demand. Any planning parameters defined are ignored.  
 
-Podívejte se na varianty v níže uvedených scénářích.
+See variations in the scenarios below.  
 
-## Poptávka na "prázdné skladové místo"
-I když je zaškrtnuto políčko **Lokace nutná**, systém umožní vytvoření řádků poptávky bez kódu lokace – označované také jako *Prázdné* umístění. Jedná se o odchylku pro systém, protože má různé hodnoty nastavení vyladěné na práci s lokacemi (viz výše) a v důsledku toho plánovací modul nevytvoří řádek plánování pro takový řádek poptávky. Pokud není vyplněno pole **Lokace nutná**, ale existuje některá z hodnot nastavení lokace, pak je to také považováno za odchylku a plánovací systém bude reagovat výstupem "minimální alternativy":
-Položka je naplánována podle: Způsob přiobjednání =  *Dávka pro dávku* ( *Objednávka* zůstává *Objednávkou)*, Včetně zásob =  *Ano*, pro všechny ostatní parametry = Prázdné.
+## Demand at "Blank Location"  
+Even if the **Location Mandatory** check box is selected, the system will allow demand lines to be created without a location code – also referred to as *BLANK* location. This is a deviation for the system because it has various setup values tuned to dealing with locations (see above) and as a result, the planning engine will not create a planning line for such a demand line. If the **Location Mandatory** field is not selected but any of the location setup values exist, then that is also considered a deviation and the planning system will react by outputting the "minimal alternative":   
+The item is planned according to: Reordering Policy =  *Lot-for-Lot* ( *Order* remains *Order)*, Include Inventory =  *Yes*, all other planning parameters = Empty.  
 
-Podívejte se na varianty ve scénářích nastavení níže.
+See variations in the setup scenarios below.  
 
-### Nastavení 1:
+### Setup 1:  
 
-- Lokace nutná = *Ano*
-- SKJ je nastavena pro  *ČERVENÝ*
-- Komponenta v lokaci =  *MODRÝ*
+-   Location Mandatory = *Yes*  
+-   SKU is set up for  *RED*  
+-   Component at Location =  *BLUE*  
 
-#### Případ 1.1: Poptávka je v lokaci  *ČERVENÝ*
+#### Case 1.1: Demand is at  *RED* location  
 
-Položka je plánována podle parametrů plánování na kartě SKJ (včetně možného převodu).
+The item is planned according to planning parameters on the SKU card (including possible transfer).  
 
-#### Případ 1.2: Poptávka je v lokaci  *MODRÝ*
+#### Case 1.2: Demand is at  *BLUE* location  
 
-Položka je plánována podle parametrů plánování na kartě zboží.
+The item is planned according to planning parameters on the item card.  
 
-#### Případ 1.3: Poptávka je v lokaci *ZELENÝ*
+#### Case 1.3: Demand is at  *GREEN* location  
 
-Položka je plánována podle: Zásady přiobjednání =  *Dávka pro dávku* (*Objednávka* zůstává  *Objednávkou*), Včetně zásob =  *Ano*, všechny ostatní parametry plánování = Prázdné.
+The item is planned according to: Reordering Policy =  *Lot-for-Lot* ( *Order* remains  *Order*), Include Inventory =  *Yes*, all other planning parameters = Empty.  
 
-#### Případ 1.4: Poptávka je v lokaci  *PRÁZDNÝ*
+#### Case 1.4: Demand is at  *BLANK* location  
 
-Položka není naplánována, protože na řádku poptávky není definováno žádné místo.
+The item is not planned because no location is defined on the demand line.  
 
-### Nastavení 2:
+### Setup 2:  
 
-- Lokace nutná = *Ano*
-- Neexistuje žádná SKJ
-- Komponenta v lokaci =  *MODRÝ*
+-   Location Mandatory = *Yes*  
+-   No SKU exists  
+-   Component at Location =  *BLUE*  
 
-#### Případ 2.1: Poptávka je v lokaci  *ČERVENÁ* 
+#### Case 2.1: Demand is at  *RED* location  
 
-Položka je plánována podle: Zásady přiobjednání =  *Dávka pro dávku* (*Objednávka* zůstává  *Objednávkou*), Včetně zásob =  *Ano*, všechny ostatní parametry plánování = Prázdné.
+The item is planned according to: Reordering Policy =  *Lot-for-Lot* ( *Order* remains  *Order*), Include Inventory =  *Yes*, all other planning parameters = Empty.  
 
-#### Případ 2.2: Poptávka je v lokaci  *MODRÁ*
+#### Case 2.2: Demand is at  *BLUE* location  
 
-Položka je plánována podle parametrů plánování na kartě zboží.
+The item is planned according to planning parameters on the item card.  
 
-### Nastavení 3:
+### Setup 3:  
 
-- Lokace nutná = *Ne*
-- Neexistuje žádná SKJ
-- Komponenta v lokaci =  *MODRÝ*
+-   Location Mandatory = *No*  
+-   No SKU exists  
+-   Component at Location =  *BLUE*  
 
-#### Případ 3.1: Poptávka je v lokaci  *ČERVENÁ* 
+#### Case 3.1: Demand is at  *RED* location  
 
-Položka je plánována podle: Zásady přiobjednání =  *Dávka pro dávku* (*Objednávka* zůstává  *Objednávkou*), Včetně zásob =  *Ano*, všechny ostatní parametry plánování = Prázdné.
+The item is planned according to: Reordering Policy =  *Lot-for-Lot* ( *Order* remains  *Order*), Include Inventory =  *Yes*, all other planning parameters = Empty.  
 
-#### Případ 3.2: Poptávka je v lokaci  *MODRÁ* 
+#### Case 3.2: Demand is at  *BLUE* location  
 
-Položka je plánována podle parametrů plánování na kartě zboží.
+The item is planned according to planning parameters on the item card.  
 
-#### Případ 3.3: Poptávka je v lokaci  *BLANK*
+#### Case 3.3: Demand is at  *BLANK* location  
 
-Položka je plánována podle: Zásady přiobjednání =  *Dávka pro dávku* (*Objednávka* zůstává  *Objednávkou*), Včetně zásob =  *Ano*, všechny ostatní parametry plánování = Prázdné.
+The item is planned according to: Reordering Policy =  *Lot-for-Lot* ( *Order* remains  *Order*), Include Inventory =  *Yes*, all other planning parameters = Empty.  
 
-### Nastavení 4:
+### Setup 4:  
 
-- Lokace nutná = *Ne*
-- Neexistuje žádná SKJ
-- Komponenta v umístění =  *PRÁZDNÉ*
+-   Location Mandatory = *No*  
+-   No SKU exists  
+-   Component at Location =  *BLANK*  
 
-#### Případ 4.1: Poptávka je v lokaci  *MODRÝ* 
+#### Case 4.1: Demand is at  *BLUE* location  
 
-Položka je plánována podle: Zásady přiobjednání =  *Dávka pro dávku* (*Objednávka* zůstává  *Objednávkou*), Včetně zásob =  *Ano*, všechny ostatní parametry plánování = Prázdné.
+The item is planned according to: Reordering Policy =  *Lot-for-Lot* ( *Order* remains  *Order*), Include Inventory =  *Yes*, all other planning parameters = Empty.  
 
-#### Případ 4.2: Poptávka je na lokaci  *PRÁZDNÉ* 
+#### Case 4.2: Demand is at  *BLANK* location  
 
-Položka je plánována podle parametrů plánování na kartě zboží.
+The item is planned according to planning parameters on the item card.  
 
-Jak můžete vidět z posledního scénáře, jediným způsobem, jak získat správný výsledek pro řádek poptávky bez kódu lokace, je zakázat všechny hodnoty nastavení týkající se umístění. Podobně jediným způsobem, jak získat stabilní výsledky plánování pro poptávku v lokalitách, je použití skladových jednotek.
+As you can see from the last scenario, the only way to get a correct result for a demand line without a location code is to disable all setup values relating to locations. Similarly, the only way to get stable planning results for demand at locations is to use stockkeeping units.  
 
-Proto pokud často plánujete poptávku v lokalitách, důrazně se doporučuje používat funkci Skladové jednotky.
+Therefore, if you often plan for demand at locations, it is strongly advised to use the Stockkeeping Units feature.  
 
-## Viz také
-[Plánování](production-planning.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
-[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Planning](production-planning.md)    
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Manufacturing](production-manage-manufacturing.md)    
+[Inventory](inventory-manage-inventory.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

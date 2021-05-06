@@ -4,39 +4,42 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Výměna dat
-Můžete vyměňovat data mezi [!INCLUDE[d365fin](includes/d365fin_md.md)]  a externími soubory nebo datovými toky v souvislosti s běžnými obchodními úkoly, jako je odesílání a přijímání elektronických dokladů nebo import a export bankovních souborů.
+# Exchanging Data
+You can exchange data between [!INCLUDE[prod_short](includes/prod_short.md)] and external files or streams in connection with common business tasks, such as sending and receiving electronic documents and importing and exporting bank files.  
 
-Než budete moci odesílat a přijímat elektronické doklady nebo importovat a exportovat bankovní soubory, musíte nastavit rámec pro výměnu dat pro zpracování datových souborů nebo datových toků. Kromě toho je nutné nastavit související oblasti, jako například zákazníky, kterým odesíláte elektronické faktury a rozšíření AMC Banking 365 Fundamentals, pokud rozesíláte převody bankovních souborů externímu poskytovateli služeb. Pro více informaci navštivte [Nastavení výměny dat](across-set-up-data-exchange.md).
+Before you can send and receive electronic documents or import and export bank files, you must set up the data exchange framework to process the data files or streams. In addition, you must set up related areas, such as the customers that you send electronic invoices to, and the AMC Banking 365 Fundamentals extension if you distribute bank file conversions to an external service provider. For more information, see [Setting Up Data Exchange](across-set-up-data-exchange.md).  
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
+ The following table describes a sequence of tasks, with links to the topics that describe them.  
 
-| **Viz** | **Také** |
+|**To**|**See**|  
 |------------|-------------|  
-| Převedení záznamů prodejních dokladů v [!INCLUDE[d365fin](includes/d365fin_md.md)] do standardizovaného formátu a jejich odeslání jako elektronické doklady, které mohou zákazníci nahrát do svého systému. | [Posílání elektronických dokladů](sales-how-to-send-electronic-documents.md) |
-| Odesílání obrázkových a PDF souborů poskytovateli služeb OCR a jejich přijímání zpět jako elektronické doklady, které v [!INCLUDE[d365fin](includes/d365fin_md.md)] lze převést na záznamy dokladů. | [Použití funkce OCR k převedení souborů PDF a obrázkových souborů do elektronických dokumentů](across-how-use-ocr-pdf-images-files.md) |
-| Příjem elektronických dokladů, buď od služby OCR, nebo od služby výměny dokladů ve standardizovaném formátu, který převedete v [!INCLUDE[d365fin](includes/d365fin_md.md)] na příslušné záznamy dokladů. | [Příjem a převod elektronických dokladů](purchasing-how-to-receive-and-convert-electronic-documents.md) |
-| Připravení na import souboru s výpisem z účtu na stránku **Deník odsouhlasení plateb**, jako první krok při vyrovnávání plateb, nebo na stránku **Odsouhlasení bankovního účtu**, jako první krok při vyrovnávání bankovních účtů. | [Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md) |
-| Export plateb z **Deníku plateb** do bankovních souborů, které můžete nahrát do vaší banky pro zpracování. | [Export plateb do bankovního souboru](payables-how-export-payments-bank-file.md) |
-| Vytváření elektronických plateb podle standardu EU nebo SEPA Převedení kreditu. | [Provádění plateb pomocí služby převodu bankovních dat nebo převodem na SEPA Převedení kreditu](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md) |
-| Podle nastavení přímý debet SEPA pověřte svou banku, aby převáděla částky plateb z bankovních účtů vašich zákazníků na firemní účet. | [Vytvoření přímého inkasa SEPA a jeho exportace do bankovního souboru](finance-how-create-sepa-direct-debit-collection-entries-export-bank-file.md) |
-| Aktualizaci stránky **Měny** pomocí poskytovatele směnných kurzů. | [Aktualizace směnných kurzů](finance-how-update-currencies.md) |
-| Zobrazení prvků souborů, které jsou mapovány do polí v [!INCLUDE[d365fin](includes/d365fin_md.md)] při importu souborů výpisů SEPA CAMT. | [Mapování polí při importu souborů SEPA CAMT](across-field-mapping-when-importing-sepa-camt-files.md) |
-| Zobrazení polí v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)], která jsou mapovány na prvky souboru při exportu platebních souborů pomocí rozšíření AMC Banking 365 Fundamentals. | [Mapování polí při exportu platebních souborů pomocí rozšíření AMC Banking 365 Fundamentals ](across-field-mapping-when-exporting-payment-files-using-bank-data-conversion-service.md) |
+|Convert sales document records in [!INCLUDE[prod_short](includes/prod_short.md)] to a standardized format and send them as electronic documents that your customers can receive into their system.|[Send Electronic Documents](sales-how-to-send-electronic-documents.md)|  
+|Send PDF or image files to a provider of OCR services, and receive them back as electronic documents that can be converted to document records in [!INCLUDE[prod_short](includes/prod_short.md)].|[Use OCR to Turn PDF and Image Files into Electronic Documents](across-how-use-ocr-pdf-images-files.md)|  
+|Receive electronic documents, either from the OCR service or the document exchange service, in a standardized format that you convert to the relevant document records in [!INCLUDE[prod_short](includes/prod_short.md)].|[Receive and Convert Electronic Documents](purchasing-how-to-receive-and-convert-electronic-documents.md)|  
+|Prepare to import a bank statement file into the **Payment Reconciliation Journal** page as the first step in reconciling payments or into the **Bank Acc. Reconciliation** page as the first step in reconciling bank accounts.|[Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)|  
+|Export payments from the **Payment Journal** page to a bank file that you upload to your electronic bank account for processing.|[Export Payments to a Bank File](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)|
+|Make electronic payments according to the EU SEPA Credit Transfer standard.|[Making Payments with AMC Banking 365 Fundamentals extension or SEPA Credit Transfer](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md)|  
+|Instruct your bank to transfer payment amounts from your customers’ bank accounts to your company’s account according to your setup of SEPA direct debit.|[Create SEPA Direct Debit Collection Entries and Export to a Bank File](finance-collect-payments-with-sepa-direct-debit.md#creating-sepa-direct-debit-collection-entries-and-export-to-a-bank-file)|  
+|Use a service provider of currency exchange rates to update the **Currencies** page.|[Update Currency Exchange Rates](finance-how-update-currencies.md)|  
+|View which file elements are mapped to fields in [!INCLUDE[prod_short](includes/prod_short.md)] when importing SEPA CAMT statement files.|[Field Mapping When Importing SEPA CAMT Files](across-field-mapping-when-importing-sepa-camt-files.md)|  
+|View which fields in [!INCLUDE[prod_short](includes/prod_short.md)] are mapped to file elements when exporting payment files by using the AMC Banking 365 Fundamentals extension.|[Field Mapping When Exporting Payment Files Using the AMC Banking 365 Fundamentals extension](across-field-mapping-when-exporting-payment-files-using-bank-data-conversion-service.md)|  
 
-## Viz také
-[Nastavení výměny dat](across-set-up-data-exchange.md)  
-[Elektronická výměna dat](across-data-exchange.md)  
-[Fakturace prodeje](sales-how-invoice-sales.md)  
-[Záznam nákupu](purchasing-how-record-purchases.md)  
-[Došlé doklady](across-income-documents.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)
+## See Also  
+[Setting Up Data Exchange](across-set-up-data-exchange.md)  
+[Exchanging Data Electronically](across-data-exchange.md)  
+[Invoice Sales](sales-how-invoice-sales.md)   
+[Record Purchases](purchasing-how-record-purchases.md)  
+[Incoming Documents](across-income-documents.md)  
+[General Business Functionality](ui-across-business-areas.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

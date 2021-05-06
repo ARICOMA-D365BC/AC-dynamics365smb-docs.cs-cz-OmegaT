@@ -1,62 +1,73 @@
 ---
-title: Použití rozšíření QuickBooks Migration | Microsoft Docs
-description: 'Popisuje, jak používat rozšíření k migraci zákazníků, dodavatelů, zboží a účtů z QuickBooks Online do Business Central.'
+title: QuickBooks Online Migration Extension | Microsoft Docs
+description: Describes how to use the extension to migrate customers, vendors, items, and accounts from QuickBooks Online to Business Central.
 author: bholtorf
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms. search.keywords: 'extension, migrate, data, QuickBooks, import'
-ms.date: 10/01/2018
+ms. search.keywords: extension, migrate, data, QuickBooks, import
+ms.date: 04/01/2021
 ms.author: bholtorf
+
 ---
 
-# <a name="the-quickbooks-online-data-migration-extension"></a>Rozšíření QuickBooks Online Data Migration
-Toto rozšíření je zahrnuto v Průvodci asistovaného nastavení **migrace dat**, který vám pomůže při migraci důležitých obchodních dat z QuickBooks Online do [!INCLUDE[d365fin](includes/d365fin_md.md)]. To je užitečné například v době, kdy vaše firma roste, a tak jste se rozhodli upgradovat aplikaci pro správu firmy a začali jste používat [!INCLUDE[d365fin](includes/d365fin_md.md)].
+# The QuickBooks Online Data Migration Extension
 
-## <a name="what-data-can-i-import-from-quickbooks-online"></a>Jaké data mohu importovat z QuickBooks Online?
-Z QuickBooks Online můžete do [!INCLUDE[d365fin](includes/d365fin_md.md)]importovat následující data:  
+This extension is included in the **Data Migration** assisted setup guide to help you migrate important business data from QuickBooks Online to [!INCLUDE[prod_short](includes/prod_short.md)]. For example, this is useful when your business is growing, and you've decided to upgrade your business management app by starting to use [!INCLUDE[prod_short](includes/prod_short.md)].
 
-* Zákazníci
-* Dodavatelé
-* Zboží
-* Účetní osnova
-* Počáteční zůstatky v hlavní knize
-* Dostupné množství skladových položek
-* Otevřené dokumenty pro zákazníky a dodavatele, jako faktury, dobropisy a platby
+## What data can I import from QuickBooks Online?
 
-Migrujeme pouze plnou částku v prodejních a nákupních fakturách. Neaktualizujeme částečně zaplacené částky. Například, jestliže zákazník zaplatil 300, z celkových 500 korun na prodejní faktuře, migrujeme celých 500. Jestli jste obdrželi částečnou platbu, tak ji musíte aktualizovat manuálně, buď před, nebo po migraci dat. Doporučujeme abyste před migrací použili neuhrazené transakce, aby bylo možné později věci zjednodušit.
+You can import the following data from QuickBooks Online to [!INCLUDE[prod_short](includes/prod_short.md)]:  
+
+* Customers
+* Vendors
+* Items
+* Chart of accounts
+* Beginning balance transaction in the general ledger
+* On-hand quantities for inventory items
+* Open documents for customers and vendors, such as invoices, credit memos, and payments
+
+We migrate only full amounts on sales and purchase documents. We do not update partially paid amounts. For example, if a customer has paid 300 of a total of 500 dollars on a sales invoice, we migrate the full 500. If you have received partial payments, you must update these manually, either before or after you migrate data. We recommend that you apply outstanding transactions before you migrate, just to make things easier afterward.
 
 > [!NOTE]  
->   Nemigrujeme nákupní a prodejní objednávky.
+> We do not migrate purchase orders or sales orders.
 
-## <a name="before-you-start"></a>Než začnete
-Důležitá část migračního procesu je specifikovat účty, do kterých budou transakce migrovat. Je dobrý nápad si toto mapování naplánovat před migrací dat. Například účty, ve kterých zúčtujete transakce pro:  
+## Before you start
 
-* Prodej zboží a služeb odběratelům
-* Nákup zboží a služeb od dodavatelů  
-* Opravné položky v hlavní knize  
+An important part of the migration process is to specify the accounts to migrate transactions to. It's a good idea to plan this mapping before you migrate data. For example, the accounts where you post transactions for:  
 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] vyžaduje, aby měly účty v hlavní knize přiřazené čísla účtů. Ujistěte se, že čísla účtů jsou přiřazená k vašemu účtu v QuickBooks.
+* The sale of items or services to customers.
+* The purchase of items or services from vendors.  
+* Adjustments in the general ledger.  
 
-Pokud mají transakce v aplikaci QuickBooks Online daňové částky, musíte před zaúčtováním transakcí vytvořit daňový účet pro vaše daňové kompetence v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)].
+[!INCLUDE[prod_short](includes/prod_short.md)] requires that general ledger accounts have account numbers assigned to them. Make sure that account numbers are assigned to your accounts in QuickBooks Online.
 
-## <a name="how-do-i-start-using-the-extension"></a>Jak začnu používat rozšíření?
-Začít je snadné. Stačí spustit Průvodce asistovaného nastavení **migrace dat**. Zde je návod:
+If transactions in QuickBooks Online have tax amounts, you must set up a tax account for your tax jurisdictions in [!INCLUDE[prod_short](includes/prod_short.md)] before you can post transactions.
 
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte ** Asistovaná nastavení ** a poté vyberte **Migrovat obchodní data**.
-2. Postupujte podle instrukcí k jednotlivým krokům v asistovaném průvodci nastavením.
+## How do I start using the extension?
 
-## <a name="what-do-i-do-after-i-migrate-data"></a>Co mám dělat po migraci dat?
-Po migraci dat mají transakce stav **Nezveřejněno**, takže je můžete zkontrolovat a provést úpravy. Pokud chcete transakce zkontrolovat, přejděte na stránku, kde je obvykle najdete. Chcete-li například zkontrolovat nezveřejněné prodejní faktury, přejděte na stránku **Prodejní faktury**. Jestli chcete zkontrolovat deníky plateb, přejděte na stránku **Deníky plateb**.   
+Getting started is easy. All you need to do is run the **Data Migration** assisted setup guide. Here's how:
 
-Je zde několik věcí, které by jste měli zejména udělat:
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assisted Setup**, and then choose **Migrate business data**.
+2. Follow the instructions on each step in the assisted setup guide.
 
-* Pokud transakce v aplikaci QuickBooks Online měly přirážku, nebo slevu, musíte je před zaúčtováním manuálně přidat do souvisejících transakcí v [!INCLUDE[d365fin](includes/d365fin_md.md)].
-* Pokud jste plátci DPH, budete možná muset do nastavení účtování přidat Obchodní účetní skupinu a Účetní skupinu zboží, abyste mohli účtovat DPH.
-* Ověřte počáteční stavy pro účty v hlavní knize. QuickBooks Online neukládá aktuální stavy všech účtů, takže budete pravděpodobně muset opravit počáteční stavy.
+## What do I do after I migrate data?
 
-## <a name="see-also"></a>Viz také
-[Import obchodních dat z jiných finančních systémů.](across-import-data-configuration-packages.md)  
-[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření](ui-extensions.md)  
+After you migrate data, transactions have the status **Unposted**, so you can review them and make adjustments. To review the transactions, go to the page where you would normally find them. For example, to review unposted sales invoices, go to the **Sales Invoices** page. To review payment journals, go to the **Payment Journals** page.  
+
+There are a few things in particular that you should do:
+
+* If the transactions in QuickBooks Online had markup or discount amounts, you must manually add the amounts to the related transactions in [!INCLUDE[prod_short](includes/prod_short.md)] before you post them.
+* If you are using value added tax (VAT), you may need to add a business posting group and a product posting group to the posting setup so that you can post VAT amounts.
+* Verify the beginning balances for accounts in the general ledger. QuickBooks Online does not store the current balance for all accounts, so you might need to correct beginning balances.
+
+## See Also
+
+[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

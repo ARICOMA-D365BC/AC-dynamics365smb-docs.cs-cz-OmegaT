@@ -1,35 +1,38 @@
 ---
-title: Nastavení procesů Správy servisu | Microsoft Docs
-description: 'Naučte se, jak nastavit procesy, které pomáhají zajistit, aby vaši zákazníci byli spokojeni s vaším zákaznickým servisem.'
-services: project-madeira
-documentationcenter: ''
-author: bholtorf
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: 'service, number sequences, setup, warnings, fee, contracts, warranties'
-ms.date: 10/01/2018
-ms.author: bholtorf
+    title: Set Up Service Management Processes | Microsoft Docs
+    description: Learn how to set up processes that help ensure your customers are satisfied with your customer service.
+    author: bholtorf
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords: service, number sequences, setup, warnings, fee, contracts, warranties
+    ms.date: 04/01/2021
+    ms.author: bholtorf
+
 ---
-# <a name="configure-service-processes"></a>Konfigurace procesů servisu
-Následuje několik příkladů nastavení, která můžete použít pro procesy správy servisu:  
+# Configure Service Processes
+The following are some examples of the settings that you can apply to service management processes:  
   
-* Některá celková nastavení pro různé procesy, jako jsou varování, další výpočty servisu pro předměty servisu, počáteční poplatek k vyhodnocení; úroveň hlášení poruchy, která se má použít,  atd.  
-* Typy informací, které musí technik uvést v servisních dokladech. Můžete například požadovat, aby byl určen typ zakázky, datum zahájení a/nebo ukončení práce a typ provedené práce.  
-* Některá výchozí nastavení pro čas odezvy a záruky. Patří mezi ně výchozí doba odezvy pro zahájení servisu, procento záruční slevy pro díly a práci, a doba platnosti záruk.  
-* Nastavení smluv, například maximální počet dní, který můžete použít pro objednávky servisní smlouvy, zda použít kódy příčiny při zrušení smlouvy, standardní texty pro popisy smluv a hodnoty smlouvy.  
-* Číselné řady, které se mají použít pro doklady a zboží související se službami.  
+* Some overall settings for various processes, such as warnings, next service calculations for service items, the starting fee to assess, the fault reporting level to use, and so on.  
+* The types if information that a technician must enter on service documents. For example, you can require them to specify the type of order, the start and/or end dates for the work, and the type of work that was done.  
+* Some default settings for response times and warranties. These include a default response time for starting service, warranty discount percentages for parts and labor, and how long warranties are valid for.  
+* Settings for contracts, such as the maximum number of days that you can use for contract service orders, whether to use reason codes when a contract is canceled, standard texts for contract descriptions, and contract values.  
+* The number sequences to use for service-related documents and items.  
 
-## <a name="to-enter-general-and-mandatory-settings"></a>Zadání obecných a povinných nastavení
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení servisu** a poté vyberte související odkaz.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+## To enter general and mandatory settings
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Management Setup**, and then choose the related link.
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-## <a name="see-also"></a>Viz také  
-[Nastavení hlášení poruch](service-how-setup-fault-reporting.md)  
-[Nastavení přidělení zdrojů](service-how-setup-resource-allocation.md)  
-[Nastavení kódů standardního servisu](service-how-setup-service-coding.md)  
-[Nastavení dodatečných nákladů za servis](service-how-setup-service-costs-pricing.md)  
-[Nastavení Poradce při potížích](service-how-setup-troubleshooting.md)  
-[Správa servisu](service-service.md)  
+## See Also  
+[Set Up Fault Reporting](service-how-setup-fault-reporting.md)  
+[Set Up Resource Allocation](service-how-setup-resource-allocation.md)  
+[Set Up Codes for Standard Services](service-how-setup-service-coding.md)  
+[Set Up Additional Costs for Services](service-how-setup-service-costs-pricing.md)  
+[Set Up Troubleshooting](service-how-setup-troubleshooting.md)  
+[Service Management](service-service.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

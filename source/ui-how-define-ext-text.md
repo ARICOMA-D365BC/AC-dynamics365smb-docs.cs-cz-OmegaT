@@ -1,34 +1,45 @@
 ---
-title: Přidání Dalších Řádků k Definování Rozšířeného Popisu Zboží| Microsoft Docs
-description: 'Chcete-li rozšířit standardní text, který popisuje zboží, můžete přidat další řádky.'
-services: project-madeira
-documentationcenter: ''
+title: Add Extra Lines to Define Extended Descriptions
+description: You can add extra lines to extend the standard text that describes an item, a G/L account, and other data.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/26/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="add-extended-item-text"></a>Přidání rozšířeného textu zboží
-Můžete rozšířit standardní text pro zboží přidáním dalších řádků a můžete nastavit podmínky pro použití těchto řádků. Uděláte to z karet zboží.
+# Add Extended Text
 
-## <a name="to-define-extended-text-for-an-item-description"></a>Chcete-li definovat rozšířený text pro popis zboží
-1. Otevřete kartu u zboží, do kterého chcete přidat rozšířený text, a poté vyberte akci **Rozšířený text**.
-2. Vyplňte pole **Kód** a **Popis**.
-3. Zvolte **Nový**.
-4. Vyplňte pole **Kód jazyka** nebo zaškrtněte políčko **Kódy všech jazyků**, pokud používáte kódy jazyka.
-5. Pokud chcete omezit data, na která se použije rozšířený text, vyplňte pole **Počáteční datum** a **Datum dokončení**.
-6. Do pole **Text** napište rozšířený text.
-7. Zaškrtněte příslušná políčka pro typy dokladů, ve kterých chcete rozšířený text vytisknout.
-8. Zavřete stránku.
+You can extend the description for items, stock-keeping units, general ledger accounts, and resources by adding extra lines as extended text. You can also set up conditions for use of the extra lines.  
 
-## <a name="to-add-an-extended-item-text-on-a-sales-order-line"></a>Chcete-li přidat rozšířený text zboží na řádek prodejní objednávky
-1. Otevřete prodejní objednávku s řádkem prodeje pro zboží, u kterého je definovaný rozšířený text. Pro více informací navštivte [Prodej produktů](sales-how-sell-products.md).
-2. Vyberte dotyčný řádek a poté vyberte akci **Vložit rozšířené texty**.
+The following section describes how to add extended text to a description of an item. But the same steps apply to stock-keeping units, general ledger accounts, and resources.  
 
-## <a name="see-also"></a>Viz také
-[Nastavení Zásob](inventory-setup-inventory.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To define extended text for an description
+
+1. Open the card for an item that you want to add extended text to, and then choose the **Extended Text** action.
+2. Fill in the **Code** and **Description** fields.
+3. Choose the **New**.
+4. Fill in the **Language Code** field or select the **All Language Codes** check box if you use language codes.
+5. Fill in the **Starting Date** and **Ending Date** fields if you want to limit the dates on which the extended text is used.
+6. In the **Text** field, write the extended text.
+7. Select relevant check boxes for the document types where you want the extended text printed.
+8. Close the page.
+
+You can now add this extended text to documents. The following procedure explains how to add extended text to a sales order, but the same steps apply to any other document that you specified for the extended text.  
+
+## To add an extended item text on a sales order line
+
+1. Open a sales order with a sales line for an item that has extended text defined. For more information, see [Sell Products](sales-how-sell-products.md).
+2. Select the line in question, and then choose the **Insert Ext. Text** action.
+
+## See Also
+
+[Setting Up Inventory](inventory-setup-inventory.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

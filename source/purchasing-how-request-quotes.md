@@ -5,32 +5,35 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: rfq
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Požadavky nabídky
-Nabídka nákupu může být použita jako předběžný koncept pro objednávku a objednávka může být poté převedena na nákupní fakturu nebo objednávku.
+# Request Quotes
+A purchase quote can be used as a preliminary draft for a purchase order, and the order can then be converted to a purchase invoice or an order.
 
 
-## Vytvoření nákupní poptávky
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte  **Nákupní poptávky** a poté vyberte související odkaz.
-2. Vytvořte nový doklad stejným způsobem jako při objednávce. Pro více informací navštivte [Záznam nákupů](purchasing-how-record-purchases.md).
+## To create a purchase quote
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Quotes**, and then choose the related link.
+2. Create a new document, in the same way as you make a purchase order. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 
-## Převod nákupní poptávky na nákupní objednávku
-Jakmile nabídku dodavatele přijmete, můžete ji převést na nákupní fakturu nebo objednávku a zpracovat nákup.
+## To convert a purchase quote to a purchase order
+When you have accepted the vendor's quote, you can convert it to a purchase invoice or order to process the purchase.
 
-1. Otevřete nákupní nabídku, která je připravena ke konverzi, a poté vyberte akci **Vytvořit objednávku**.
+1. Open a purchase quote that is ready to convert, and then choose the **Make Order** action.
 
-Nákupní nabídka je odebrána z databáze. Nákupní faktura nebo nákupní objednávka je vytvořena na základě informací v nákupní nabídce, ve které můžete nákup zpracovat. V poli **Číslo nabídky** na nákupní faktuře nebo objednávce můžete vidět číslo nákupní nabídky, ze které bylo vyrobeno.
+The purchase quote is removed from the database. A purchase invoice or a purchase order is created based on the information in the purchase quote in which you can process the purchase. In the **Quote No.** field on the purchase invoice or purchase order, you can see the number of the purchase quote that it was made from.
 
-## Viz také
-[Nákup](purchasing-manage-purchasing.md)  
-[Nastavení nákupu](purchasing-setup-purchasing.md)  
-[Odesílání dokladů e-mailem](ui-how-send-documents-email.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Purchasing](purchasing-manage-purchasing.md)  
+[Setting Up Purchasing](purchasing-setup-purchasing.md)  
+[Send Documents by Email](ui-how-send-documents-email.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

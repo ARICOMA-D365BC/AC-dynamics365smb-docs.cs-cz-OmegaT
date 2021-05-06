@@ -1,286 +1,307 @@
 ---
-title: 'Řazení, vyhledávání a filtrování seznamů | Microsoft Docs'
-description: 'Pracujte efektivně v seznamech tím, že prohledáváte data, řadíte sloupce a zpřesňujete výsledky pomocí výkonných symbolů filtru a klávesových zkratek.'
-author: ZdenekBicek
-
+title: Sorting, Searching, and Filtering Lists | Microsoft Docs
+description: Work efficiently in lists by searching across your data, sorting columns, and refining results using filter symbols and keyboard shortcuts.
+author: jswymer
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'delimit, FlowFilter, totals, limit, advanced'
-ms.date: 01/09/2020
-ms.reviewer: v-zdbice
+ms.search.keywords: delimit, FlowFilter, totals, limit, advanced
+ms.date: 04/01/2021
 ms.author: jswymer
+
 ---
+# Sorting, Searching, and Filtering
 
-# Řazení, vyhledávání a filtrování
+There are a few things that you can do that will help you scan, find, and limit records on a list or in a report or XMLport. These include sorting, searching, and filtering. You can apply some or all of these simultaneously to quickly find or analyze your data.
 
-Existuje několik věcí, které můžete udělat, aby vám pomohly prohlížet, najít a omezit záznamy v seznamu nebo v sestavě či XML portu. Patří sem řazení, vyhledávání a filtrování. Některé nebo všechny z nich můžete použít současně pro rychlé nalezení nebo analýzu vašich dat.
-
-U sestav a XML portů můžete nastavit filtry jako v seznamech, aby bylo možné určit, která data mají být zahrnuta do sestavy nebo XML portu, ale nemůžete data řadit a prohledávat.
+For reports and XMLports, as on lists, you can set filters to delimit which data to include in the report or XMLport, but you can't sort and search.
 
 > [!TIP]
-> Při prohlížení dat jako dlaždic můžete vyhledávat a používat základní filtrování. Chcete-li použít kompletní řadu výkonných funkcí pro třídění, vyhledávání a filtrování, vyberte ikonu ![Zobrazit jako seznam](media/ui_show_as_list_icon.png "Zobrazit jako seznam") pro zobrazení dat jako seznamu.
+> When viewing your data as tiles, you can search and use filtering. To use the full set of powerful features for sorting, searching, and filtering, choose the ![Show as list](media/ui_show_as_list_icon.png "Show as list arrow left") icon to view the records as a list.
 
 <!--
-When you want to search for data, such as customer names, addresses, or product groups, you enter criteria. In search criteria you can use all the numbers and letters that you normally use in the specific field. In addition, you can use special symbols to further filter the results. There are two ways to search: using the Quick Filter or column filters.
+When you want to search for data, such as customer names, addresses, or product groups, you enter criteria. In search criteria, you can use all the numbers and letters that you normally use in the specific field. In addition, you can use special symbols to further filter the results. There are two ways to search: using the Quick Filter or column filters.
 -->
 
-## Řazení
+## Sorting
 
-Řazení vám usnadňuje dostat rychlý přehled o vašich datech. Máte-li například mnoho zákazníků, můžete je řadit podle **Čísla zákazníka**, **Účto skupiny zákazníka**, **Kódu měny**, **Kódu zěmě/oblasti** nebo **DIČ**, abyste dostali přehled, který potřebujete.
+Sorting makes it easy for you to get a quick overview of your data. For example, if you have many customers,  you could sort them by **Customer No.**, **Currency Code**, or **Country Region Code** to get the overview you need.
 
-Chcete-li seřadit seznam, můžete buď zvolit text záhlaví sloupce pro přepínání mezi vzestupným a sestupným pořadí, nebo zvolit malou šipku dolů v záhlaví sloupce a poté zvolit **Vzestupně** nebo **Sestupně**.  
+To sort a list, you can either:
+
+- Choose a column heading text to toggle between ascending and descending order, or
+- Choose the drop-down arrow in the column heading, then choose the **Ascending** or **Descending** action.  
 
 > [!NOTE]  
-> Řazení není podporováno pro obrázky, pole typu BLOB, dynamické filtry (FlowFilters) a pole, která nepatří do tabulky.  
+> Sorting isn't supported on images, BLOB fields, FlowFilters, and fields that do not belong to a table.  
 
-## Vyhledávání
+## Searching
 
 <!--## Searching by using the Quick Filter -->
+At the top of each list page, there's a ![Search list](media/ui-search/search-list.png "Search list icon") **Search** action that provides a quick and easy way to reduce the records in a list and display only those records that contain the data that you're interested in seeing.
 
-V horní části každé stránky seznamu je ikona ![Prohledat seznam](media/ui-search/search-list.png "Prohledat seznam") **Hledat**, která poskytuje rychlý a snadný způsob, jak redukovat záznamy v seznamu a zobrazit pouze ty záznamy, které obsahují data, která chcete vidět.
+To search, just choose the **Search** action, and then in the box, type the text that you're looking for. You can enter letters, numbers, and other symbols.
 
-Chcete-li hledat, jednoduše vyberte ikonu vyhledávání a potom do pole zadejte hledaný text. Můžete zadat písmena, čísla a další symboly.
-
-### Doladění vyhledávání
-
-Obecně se vyhledávání pokusí vyhledat text ve všech polích. Nerozlišuje mezi malými a velkými písmeny (case insensitive) a bude vyhledávat text umístěný kdekoli v poli (na začátku, na konci nebo uprostřed).
-
-Přesnější vyhledávání však můžete provést pomocí následujících speciálních znaků:
-
-- Chcete-li najít pouze hodnoty polí, které přesně odpovídají celému textu a velikosti písmen, umístěte hledaný text mezi jednoduché uvozovky `''` (například `'man'`).
-
-- Chcete-li najít hodnoty polí, které začínají určitým textem a odpovídají velikosti písmen, umístěte `*` za hledaný text (například `man*`).
-
-- Chcete-li najít hodnoty polí, které končí určitým textem a odpovídají velikosti písmen, umístěte `*` před hledaný text (například `*man`).
-
-- Při použití `''` nebo `*` se při vyhledávání rozlišují malá a velká písmena. Pokud chcete, aby vyhledávání nerozlišovalo malá a velká písmena, umístěte `@` před hledaný text (například `@man*`).
-
-V následující tabulce jsou uvedeny některé příklady, které vysvětlují, jak můžete vyhledávání použít.
-
-|Kritéria vyhledávání|Najde...|
-|--------------------|------- |
-|`man`<br />nebo <br />`Man`|Všechny záznamy s poli, které obsahují text **man** bez ohledu na malá a velká písmena. Například **Manchester**, **manual** nebo **Sportsman**.|
-|`'Man'`|Všechny záznamy s poli, které obsahují text **Man** s ohledem na malá a velká písmena.|
-|`Man*`|Všechny záznamy s poli, které začínají textem <b>Man</b> s ohledem na malá a velká písmena. Například **Manchester**, ale ne **manual** nebo **Sportsman**.|
-|`@Man*`|Všechny záznamy s poli, které začínají na **man** bez ohledu na malá a velká písmena. Například **Manchester**, **manual**, ale ne **Sportsman**.|
-|`@*man`|Všechny záznamy, které končí na **man** bez ohledu na malá a velká písmena. Například  **Sportsman**, ale ne **Manchester** nebo **manual**.|
+In general, search will attempt to match text across all fields. It doesn't distinguish between uppercase and lowercase characters (case insensitive) and will match text placed anywhere in the field, at the beginning, end, or in the middle.
 
 > [!TIP]
-> Stisknutím F3 můžete aktivovat nebo deaktivovat vyhledávací pole. Další informace naleznete v [Klávesové zkratky](keyboard-shortcuts.md#KeyboardFilter).
+> You can press **F3** to activate and deactivate the search box. For more information, see [Keyboard Shortcuts](keyboard-shortcuts.md#KeyboardFilter).
 
-## <a name="filtering"> </a>Filtrování
+> [!NOTE]  
+> Search won't match values in images, BLOB fields, FlowFilters, FlowFields, and other fields that aren't part of a table.
 
-Filtrování poskytuje pokročilejší a všestrannější způsob řízení, které záznamy se zobrazují v seznamu nebo jsou zahrnuty do sestavy či XML portu. Mezi vyhledáváním a filtrováním existují dva hlavní rozdíly, jak je popsáno v následující tabulce.
 
-||**Vyhledávání**|**Filtrování**|
-|--|------------|------------|
-|**Použitelná pole**|Prohledává všechna pole, která jsou viditelná na stránce.|Filtruje jedno nebo více polí jednotlivě a vybírá z kteréhokoli pole v tabulce, včetně polí, která nejsou na stránce viditelná.|
-|**Shoda**|Zobrazuje záznamy s poli, která odpovídají hledanému textu, bez ohledu na malá a velká písmena nebo umístění tohoto textu.|Zobrazuje záznamy, kde pole přesně odpovídá filtru a rozlišuje velká a malá písmena, pokud nejsou zadány speciální symboly filtru.|
+### Fine-tuning the Search with Filter criteria
 
-Filtrování umožňuje zobrazit záznamy pro konkrétní účty nebo zákazníky, data, částky a další informace zadáním kritérií filtru. Zobrazí se pouze záznamy, které odpovídají kritériím, se zobrazí v seznamu nebo jsou zahrnuty do sestavy, dávkové úlohy či XML portu. Pokud zadáte kritéria pro více polí, zobrazí se pouze záznamy, které odpovídají všem kritériím.
+You can make a more exact search by using filter operators, expressions, and filter tokens. Unlike filtering, these are applied across all fields when used in the search box, making them less efficient than filtering.
 
-U seznamů jsou filtry zobrazeny na podokně filtrů, který se po aktivaci zobrazí na levé straně seznamu. U sestav, dávkových úloh a XML portů jsou filtry viditelné přímo na stránce dialogu.
+- To find only field values that match the entire text and case exactly, place the search text between single quotes `''` (for example, `'man'`).
 
-### Filtrování pomocí polí typu Volba (Option)
+- To find field values that start with a certain text and match the case, place `*` after the search text (for example `man*`).
 
-U „běžných“ polí, která obsahují data, datum nastavení nebo obchodní data, můžete nastavit filtry výběrem dat i zadáním hodnot filtru a pomocí symbolů můžete definovat pokročilá kritéria pro filtrování. Další informace naleznete v části [Zadávání kritérií filtru](ui-enter-criteria-filters.md#entering-filter-criteria).
+- To find field values that end with a certain text and match the case, place `*` before the search text (for example `*man`).
 
-Pro pole typu **Option** však můžete nastavit filtr pouze výběrem jedné nebo více možností z rozevíracího seznamu dostupných voleb. Příkladem pole typu Volba (Option) je pole **Stav** na stránce **Prodejní objednávky**.
+- When using  `''` or `*`, the search is case-sensitive. If you want to make the search case insensitive, place `@` before the search text (for example `@man*`).
 
-### Nastavení filtrů v seznamech
+The following table provides some examples to explain how you can use the search.
 
-V seznamech nastavujete filtry pomocí podokna filtrů. Chcete-li zobrazit podokno filtru pro seznam, vyberte rozevírací šipku vedle názvu stránky a poté vyberte akci **Zobrazit podokno filtru**. Případně stiskněte **Shift+F3**.
+|Search Criteria|Finds...|
+|---------------|----------|
+|`man`<br />or <br />`Man`|All records with fields that contain the text **man**, regardless of the case. For example, **Manchester**, **manual**, or **Sportsman**. |
+|`'Man'`|All records with fields that contain only **Man**, matching the case.|
+|`Man*`|All records with fields that start with the text <b>Man</b>, matching the case. For example, **Manchester** but not **manual** or **Sportsman**.|
+|`@Man*`|All records with fields that start with **man**, regardless of the case. For example, **Manchester** and **manual**, but not **Sportsman**.|
+|`@*man`|All records that end with **man**, regardless of the case. For example **Sportsman**, but not **Manchester** or **manual**.|
 
-Chcete-li zobrazit podokno filtru pro sloupec v seznamu, vyberte rozevírací šipku a poté vyberte akci **Filtr**. Případně stiskněte **Shift+F3**. Otevře se podokno filtru s vybraným sloupcem zobrazeným jako pole filtru v sekci **Seznam filtrů podle**.
 
-Podokno filtru zobrazuje aktuální filtry seznamu a umožňuje vybrat vlastní filtry do jednoho nebo více polí výběrem akce **+ Filtr**.
+## <a name="filtering"></a>Filtering
 
-Podokno filtru je rozděleno do tří částí: **Pohledy**, **Filtrovat seznam** a **Filtrovat součty**:
+Filtering provides a more advanced and versatile way to control which records are included in a list, report, or XMLport. There are two major differences between searching and filtering, as described in the table below.
 
-- **Pohledy**
+|| **Searching** | **Filtering** |
+|--|----------|------------|
+| **Applicable Fields** | Searches across all fields that are visible on the page. | Filters one or more fields individually, selecting from any field on the table, including fields that aren't visible on the page. |
+| **Matching** | Displays records with fields that match the search text, no matter the text's case or placement in the field. | Displays records where the field exactly matches the filter, including the text's case, unless special filter symbols are entered.
 
-  Některé seznamy obsahují sekci **Pohledy**. Pohledy jsou varianty seznamu, které byly předkonfigurovány pomocí filtrů. V seznamu můžete definovat a uložit tolik pohledů, kolik chcete, a tato zobrazení budou k dispozici na jakémkoli zařízení, ke kterému se přihlásíte. Další informace viz [Ukládaní a přizpůsobení zobrazení seznamů](ui-views.md).
+Filtering enables you to display records for specific accounts or customers, dates, amounts, and other information by specifying filter criteria. Only records that match the criteria are displayed on the list or included in the report, batch job, or XMLport. If you specify criteria for multiple fields, then only records that match all criteria will be displayed.
 
-- **Filtrovat seznam dle**
+For lists, the filters are displayed on a filter pane that appears to the left of the list when you activate it. For reports, batch jobs, and XMLports, the filters are visible directly on the request page.
 
-   Zde přidáte filtry na konkrétní pole, abyste snížili počet zobrazených záznamů. Chcete-li přidat filtr, vyberte akci **+ Filtr**, zadejte název pole, podle kterého chcete seznam filtrovat, nebo vyberte pole z rozevíracího seznamu.
+### Filtering with Option Fields
 
-- **Filtrovat součty dle**
+For "ordinary" fields that hold data, setup date, or business data, you can set filters both by selecting data and by typing filter values, and you can use symbols to define advanced filter criteria. For more information, see [Entering Filter Criteria](ui-enter-criteria-filters.md#entering-filter-criteria).
 
-  Některé seznamy, které zobrazují vypočtená pole, například částky a množství, budou zahrnovat sekci **Filtrovat součty dle**, kde můžete upravit různé dimenze, které ovlivňují výpočty. Chcete-li přidat filtr, vyberte akci **+ Filtr**, zadejte název pole, podle kterého chcete seznam filtrovat, nebo vyberte pole z rozevíracího seznamu.
-
- > [!NOTE]
- > Filtry v sekci **Filtrovat součty dle** jsou řízeny pomocí FlowFilters při návrhu stránky. Technické informace viz [FlowFilters](/dynamics365/business-central/dev-itpro/developer/devenv-flowfilter-overview).
-
-Jednoduchý filtr můžete nastavit přímo v seznamu pomocí podokna filtrů, konkrétně filtru, který zobrazuje pouze záznamy se stejnou hodnotou jako ve vybrané buňce. Vyberte buňku v seznamu, vyberte rozevírací šipku a poté vyberte akci **Filtr na tuto hodnotu**. Případně stiskněte **Alt+F3**.
-
-### Nastavení filtrů v sestavách, dávkových úlohách a XML portech
-
-U sestav a XML portů jsou filtry viditelné přímo na stránce dialogu. Na stránce dialogu se zobrazí poslední použité filtry podle vašeho výběru v poli **Použít výchozí hodnoty z**. Další informace naleznete v části [Používání uložených nastavení](ui-work-report.md#SavedSettings).
-
-Hlavní část **Filtr** zobrazuje výchozí pole filtru, která používáte k vymezení záznamů, které mají být zahrnuty do sestavy nebo XML portu. Chcete-li přidat filtr, vyberte akci **+ Filtr**, zadejte název pole, podle kterého chcete filtrovat, nebo vyberte pole z rozevíracího seznamu.
-
-V sekci **Filtrovat součty dle** můžete upravit různé dimenze, které ovlivňují výpočty v sestavě nebo XML portu. Chcete-li přidat filtr, vyberte akci **+ Filtr**, zadejte název pole, podle kterého chcete filtrovat, nebo vyberte pole z rozevíracího seznamu.
-
-## <a name="entering-filter-criteria"> </a>Zadávání kritérií filtru
-
-V podokně filtru i na stránce dialogu zadáte kritéria filtru do pole pod filtrovaným polem.
-
-Typ filtrovacího pole určuje, která kritéria můžete zadat. Například filtrování pole s pevnými hodnotami vám umožní pouze vybrat z těchto hodnot. Další informace o speciálních symbolech filtrů naleznete v části [Kritéria filtrů](#FilterCriteria) a [Tokeny filtrů](#FilterTokens).
-
-Sloupce, které již mají filtry, jsou v záhlaví sloupce označeny ikonou ![Filter icon](media/ui-search/filter-icon.png "Ikona filtru"). Chcete-li odebrat filtr, vyberte rozevírací šipku a poté vyberte akci **Vymazat filtr**.
-
-> [!TIP]
-> Zrychlete vyhledávání a analýzu dat pomocí kombinací klávesových zkratek. Například vyberte pole, použijte **Shift+Alt+F3** k přidání tohoto pole do podokna filtru, zadejte kritéria filtru, použijte **Ctrl+Enter** pro návrat do řádků, vyberte jiné pole a použijte k tomu filtru **Alt+F3**. Další informace viz [Klávesové zkratky](keyboard-shortcuts.md#KeyboardFilter).
-
-### <a name="FilterCriteria"> </a>Kritéria a symboly filtrů
-
-Při zadávání kritérií můžete použít všechna čísla a písmena, která můžete v poli normálně použít. Kromě toho můžete k dalšímu filtrování výsledků použít speciální symboly (nebo operátory). Následující tabulky ukazují symboly, které lze použít ve filtrech. Další informace o datech a časech naleznete také v části [Práce s kalendářními daty a časy](ui-enter-date-ranges.md) for more detailed information.
-
-> [!IMPORTANT]  
-> Mohou nastat případy, kdy hodnoty polí obsahují tyto symboly a chcete je filtrovat. Chcete-li to provést, musíte do uvozovek ('') zahrnout vzorec filtru, který obsahuje symbol. Pokud například chcete filtrovat záznamy, které začínají textem *S&R*, je vzorec filtru `'S&R*'`.
-
-Následující oddíly popisují, jak používat různé operátory.
+For fields of type **Option**, however, you can only set a filter by selecting one or more options from a drop-down list of the available options. An example of an option field is the **Status** field on the **Sales Orders** page.
 
 > [!NOTE]
-> Pokud je v jednom filtru více než 200 operátorů, systém za účelem zpracování automaticky seskupí některé vzorce v závorkách `()`. To nemá žádný vliv na filtr ani na výsledky.
+> When you select multiple options as a filter value, the relationship between the options is defined as *OR*. For example, if you select both the **Open** and the **Released** check box in the **Status** filter field on the **Sales Orders** page, it means that sales orders that are either open or released are displayed.
+
+### Setting Filters on Lists
+
+On lists, you set filters by using the filter pane. To display the filter pane for a list, choose the drop-down arrow next to the name of the page, and then choose the **Show filter pane** action. Alternatively, press **Shift+F3**.
+
+To display the filter pane for a column on a list, choose the drop-down arrow, and then choose the **Filter** action. Alternatively, press **Shift+F3**. The filter pane opens with the selected column shown as a filter field in the **Filter list by** section.
+
+The filter pane displays the current filters for a list, and enables you to set your own custom filters on one or more fields by choosing the **+ Filter** action.
+
+ A filter pane is divided in three sections: **Views**, **Filter list by**, and **Filter totals by**:
+
+- **Views**
+
+  Some lists include the **Views** section. Views are variations of the list that have been preconfigured with filters. You can define and save as many views as you want per list. The views will be available to you on any device you sign into. For more information, see [Save and Personalize List Views](ui-views.md).
+
+- **Filter list by**
+
+  This section is where you add filters on specific fields to reduce the number of displayed records. To add a filter, choose the **+ Filter** action. Then, type the name of the field that you want to filter the list by or pick a field from the drop-down list.
+
+- **Filter totals by**
+
+  Some lists that display calculated fields, such as amounts and quantities, will include the **Filter totals by** section where you can adjust various dimensions that influence calculations. To add a filter, choose the **+ Filter** action. Then, type the name of the field that you want to filter the list by or pick a field from the drop-down list.
+
+  > [!NOTE]
+  > Filters in the **Filter totals by** section are controlled by FlowFilters on the page design. For technical information, see [FlowFilters](/dynamics365/business-central/dev-itpro/developer/devenv-flowfilter-overview).
+
+You can set a simple filter directly on a list within using the filter pane, namely a filter that displays only records with the same value as in the selected cell. Select a cell on the list, choose the drop-down arrow, and then choose the **Filter to This Value** action. Alternatively, press **Alt+F3**.
+
+### Setting Filters in Reports, Batch Jobs, and XMLports
+
+For reports and XMLports, the filters are visible directly on the request page. The request page displays the last used filters according to your selection in the **Use default values from** field. For more information, see [Using Saved Settings](ui-work-report.md#SavedSettings).
+
+The main **Filter** section shows the default filter fields that you use to delimit which records to include in the report or XMLport. To add a filter, choose the **+ Filter** action. Then, type the name of the field that you want to filter by, or pick a field from the drop-down list.
+
+In the **Filter totals by** section, you can adjust various dimensions that influence calculations in the report or XMLport. To add a filter, choose the **+ Filter** action. Then, type the name of the field that you want to filter by, or pick a field from the drop-down list.
+
+## Entering Filter Criteria
+
+Both in the filter pane and on a request page, you enter your filter criteria in the box under the filter field.
+
+The type of the filter field determines which criteria you can enter. For example, filtering a field that has fixed values will only let you choose from those values. For more information about special filter symbols, see [Filter criteria](#FilterCriteria) and [Filter tokens](#FilterTokens).
+
+Columns that already have filters are indicated by the ![Filter icon](media/ui-search/filter-icon.png "Filter icon") icon in the column heading. To remove a filter, choose the drop-down arrow, and then choose the **Clear Filter** action.
+
+> [!TIP]
+> Accelerate finding and analyzing your data by using combinations of keyboard shortcuts. For example, select a field, use **Shift+Alt+F3** to add that field to the filter pane, type the filter criteria, use **Ctrl+Enter** to return to the rows, select another field, and use **Alt+F3** to filter to that value. For more information, see [Keyboard Shortcuts](keyboard-shortcuts.md#KeyboardFilter).
+
+### <a name="FilterCriteria"> </a>Filter Criteria and Operators
+
+When you enter criteria, you can use all the numbers and letters that you normally use in the field. But there's also a set of special symbols that you can use as operators to further filter the results. The following sections describe these symbols and how to use them as operators in filters.
+
+> [!TIP]
+> For more information about filtering dates and times, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
+
+> [!IMPORTANT]
+> - There may be situations where the value that you want to filter on contains a symbol that's an operator. For more information about handling these situtions, see [Filtering on Values That Contain Symbols](#symbols) for more instructions about handling this situation.
+>
+> - If there are more than 200 operators in a single filter, the system will automatically group some expressions in parentheses `()` for the purpose of processing. This has no effect on the filter or the results.  
 
 #### (..) Interval
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-----------------------|-----------------------|
-|`1100..2100`|Čísla 1100 až 2100|
-|`..2500`|Do 2500 včetně|
-|`..31 12 00`|Data do 31.12.00 včetně|
-|`P8..`|Informace pro účetní období 8 a následující|
-|`..23`|Od začátku do 23. aktuálního měsíce v aktuálním roce 23:59:59|
-|`23..`|Od 23. aktuálního měsíce aktuálního roku 0:00:00 do konce času|
-|`22..23`|Od 22. aktuálního měsíce aktuálního roku 0:00:00 do 23. aktuálního měsíce aktuálního roku 23:59:59|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`1100..2100`|Numbers 1100 through 2100|  
+|`..2500`|Up to and including 2500|  
+|`..12 31 00`|Dates up to and including 12 31 00|  
+|`P8..`|Information for accounting period 8 and after|  
+|`..23`|From the beginning date until 23-current month-current year 23:59:59|  
+|`23..`|From 23-current month-current year 0:00:00 until the end of time|  
+|`22..23`|From 22-current month-current year 0:00:00 until 23-current month-current year 23:59:59|  
 
-#### (&#124;) Buď a nebo
+#### (&#124;) Either/or
 
-|Ukázka vzorce |Zobrazené záznamy|
-|-----------------------|-----------------------|
-|`1200|1300`|Čísla 1200 nebo 1300|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`1200|1300`|Numbers with 1200 or 1300|  
 
-#### (<>) Není rovno
+#### (<>) Not equal to  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-----------------------|-----------------------|
-|`<>0`|Všechna čísla kromě 0 <br /><br /> Volba SQL serveru umožňuje kombinovat tento symbol s vzorceem zástupných znaků. Například <>A* znamená, že se nerovná žádnému textu, který začíná na A.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`<>0`|All numbers except 0<br /><br /> The SQL Server Option allows you to combine this symbol with a wild-card expression. For example, <>A* meaning not equal to any text that starts with A.|  
 
-#### (>) Větší než
+#### (>) Greater than  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-----------------------|-----------------------|
-|`> 1200`|Čísla větší než 1200|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`>1200`|Numbers greater than 1200|  
 
-#### (> =) Větší než nebo rovno
+#### (>=) Greater than or equal to  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-----------------------|-----------------------|
-|`>=1200`|Čísla větší nebo rovnající se 1200|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`>=1200`|Numbers greater than or equal to 1200|  
 
-#### (<) Menší než
+#### (<) Less than  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|--------------|--------------------|
-|`<1200`|Čísla menší než 1200|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`<1200`|Numbers less than 1200|  
 
-#### (?=) Menší než nebo rovno
+#### (<=) Less than or equal to  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|--------------|-------------------------------|
-|`<=1200`|Čísla menší než nebo rovno 1200|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`<=1200`|Numbers less than or equal to 1200|  
 
-#### (&) A
+#### (&) And  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|--------------|---------------------------------|
-|`>200&<1200`|Čísla větší než 200 a zároveň menší než 1200|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`>200&<1200`|Numbers greater than 200 and less than 1200|  
 
-#### ('') Přesná shoda znaků
+#### ('') An exact character match  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|-------------------------------- |
-|`'man'|Text, který přesně odpovídá vzorce man a rozlišuje velká a malá písmena.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`'man'`|Text that matches **man** exactly and is case-sensitive.|  
 
-#### (@) Nerozlišující malá a velká písmena
+#### (@) Case insensitive  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|-----------------|
-|`@man*`|Text, který začíná man a nerozlišuje velká a malá písmena.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`@man*`|Text that starts with **man** and is case insensitive.|  
 
-#### (*) Neomezený počet neznámých znaků
+#### (*) An indefinite number of unknown characters
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|---------------------------------- |
-|`*Co*`|Text, který obsahuje “Co“ a rozlišuje malá a velká písmena.|
-|`*Co`|Text, který končí na “Co“ a rozlišuje malá a velká písmena.|
-|`Co*`|Text, který začíná na “Co“ a rozlišuje malá a velká písmena.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`*Co*`|Text that contains **Co** and is case-sensitive.|  
+|`*Co`|Text that ends with **Co"** and is case-sensitive.|  
+|`Co*`|Text that begins with **Co** and is case-sensitive.|  
 
-> [!NOTE]  
-> Nemůžete použít `*` při filtrování pole Volba (Option), například pole **Stav** na prodejních objednávkách. Chcete-li zadat filtr pro tento typ pole, můžete zadat číselnou hodnotu jako parametr filtrování. Například v poli **Stav** na prodejní objednávce, která má hodnoty **Otevřeno**, **Vydáno**, **Čeká na schválení** a **Čeká na zálohu** použijte hodnoty `0`, `1`, `2` a `3` k filtrování těchto možností.
+#### (?) One unknown character  
 
-#### (?) Jeden neznámý znak
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`Hans?n`|Text such as **Hansen** or **Hanson**|  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|----------------------------|
-|`Hans?n`|Text jako Hansen nebo Hanson|
+#### Combined Format Expressions  
 
-#### Vzorce v kombinovaném formátu
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`5999|8100..8490`|Include any records with the number 5999 or a number from the interval 8100 through 8490.|  
+|`..1299|1400..`|Include records with a number less than or equal to 1299 or a number equal to 1400 or greater (all numbers except 1300 through 1399).|  
+|`>50&<100`|Include records with numbers that are greater than 50 and less than 100 (numbers 51 through 99).|  
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|------------------------------- |
-|`5999|8100..8490`|Obsahuje všechny záznamy s číslem 5999 nebo číslem z intervalu 8100 až 8490.|
-|`..1299|1400..`|Obsahuje záznamy s číslem menším nebo rovným 1299 nebo číslem rovnajícím se 1400 nebo větším (všechna čísla kromě 1300 až 1399).|
-|`>50&<100`|Obsahuje záznamy s čísly, které jsou větší než 50 a menší než 100 (čísla 51 až 99).|
+### <a name="symbols"></a>Filtering on Values That Contain Symbols
 
-### <a name="FilterTokens"> </a>Tokeny filtru
+There may be cases where field values contain the one of the following symbols:
 
-Při zadávání kritérií filtru můžete také psát slova se zvláštním významem, která se nazývají tokeny filtru. Po zadání tokenového slova je slovo nahrazeno hodnotou nebo hodnotami, které představuje. Usnadňuje se tím filtrování snížením potřeby přejít na jiné stránky a vyhledat hodnoty, které chcete do filtru přidat. Níže uvedené tabulky popisují některé tokeny, které můžete zadat jako kritéria filtru.
+- &
+- (
+- )
+- =
+- &#124;
+
+If you want to filter on any of these symbols, place the filter expression in quotation marks (''). For example, if you wanted to filter on records that start with the text *J & V*, the filter expression would be `'J & V*'`.
+
+This requirement isn't necessary for other symbols.
+
+### <a name="FilterTokens"> </a>Filter Tokens
+
+When entering filter criteria, you can also type words that have special meaning, called filter tokens. After entering the token word, the word is replaced by the value or values that it represents. Filter tokens make filtering easier by reducing the need to navigate to other pages to look up values you want to add to your filter. The tables below describe some of the tokens you can type as filter criteria.
 
 > [!TIP]
-> Vaše organizace může používat vlastní tokeny. Chcete-li se dozvědět více o kompletní sadě tokenů, které máte k dispozici, nebo přidat další vlastní tokeny, obraťte se na svého správce. Pro více informací navštivte [Přidání tokenů filtru](/dynamics365/business-central/dev-itpro/developer/devenv-adding-filter-tokens).
+> Your organization may use custom tokens. To learn about the complete set of tokens available to you or to add more custom tokens, talk to your administrator. For technical information see [Adding Filter Tokens](/dynamics365/business-central/dev-itpro/developer/devenv-adding-filter-tokens).
 
-#### (%me nebo %userid) Záznamy, které jsou přiřazeny vám
+#### (%me or %userid) Records Assigned to You
 
-Použijte `%me` nebo `%userid` při filtrování polí, která obsahují ID uživatele, například pole **Přiřazené ID uživatele**, pro zobrazení všech záznamů, které jsou vám přiřazeny.
+Use `%me` or `%userid` when filtering fields that contain the user ID, such as **Assigned to User ID** field, to display all records that are assigned to you.
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------------|---------------------------------|
-|`%me`<br />nebo<br />`%userid`|Záznamy, které jsou přiřazeny k vašemu uživatelskému účtu.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`%me`<br />or<br />`%userid`|Records that are assigned to your user account. |  
 
-#### (%mycustomers) Zákazníci v Mí zákazníci
+#### (%mycustomers) Customers in My Customers
 
-Pomocí `%mycustomers` v poli **Číslo zákazníka** zobrazíte všechny záznamy pro zákazníky, kteří jsou zahrnuti do seznamu **Mí zákazníci** v centru rolí.
+Use `%mycustomers` in the customer **No** field to display all records for customers that are included in the **My Customers** list on your Role Center.
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|------------------------------------|
-|`%mycustomers`|Zákazníci v **Mí zákazníci** ve vašem centru rolí.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`%mycustomers`|Customers in the **My Customers** on your Role Center. |  
 
-#### (%myitems) Zboží v Mé zboží
+#### (%myitems) Items in My Items
 
-Pomocí `%myitems` v poli **Číslo zboží** zobrazíte všechny záznamy pro zboží, které jsou zahrnuty do seznamu **Mé zboží** v centru rolí.
+Use `%myitems` in the item **No** field to display all records for items that are included in the **My Items** list on your Role Center.
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|---------------------------------------|
-|`%myitems`|Zboží v **Mé zboží** ve vašem centru rolí.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`%myitems`|Items in the **My Items** on your Role Center. |  
 
-#### (%myvendors) Dodavatelé v Mí dodavatelé
+#### (%myvendors) Vendors in My Vendors
 
-Pomocí `%myvendors` v poli **Číslo dodavatele** zobrazíte všechny záznamy pro dodavatele, které jsou zahrnuty do seznamu **Mí dodavatelé** v centru rolí.
+Use `%myvendors` in the vendor **No** field to display all records for vendors that are included in the **My Vendors** list on your Role Center.
 
-|Ukázka vzorce|Zobrazené záznamy|
-|-------------|------------------------------------ |
-|`%myvendors`|Dodavatelé v **Mí dodavatelé** ve vašem centru rolí.|
+|Sample Expression|Records Displayed|  
+|-----------------------|-----------------------|  
+|`%myvendors`|Vendors in the **My Vendors** on your Role Center. |  
 
-## Viz také
+## See Also
 
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Ukládaní a přizpůsobení zobrazení seznamů](ui-views.md)  
-[Časté dotazy týkající se vyhledávání a filtrování](ui-search-filter-faq.md)
-v
+[Searching and Filtering FAQ](ui-search-filter-faq.md)  
+[Save and Personalize List Views](ui-views.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

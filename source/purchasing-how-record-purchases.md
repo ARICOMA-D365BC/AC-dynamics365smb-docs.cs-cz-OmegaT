@@ -1,98 +1,115 @@
 ---
-title: Create a Purchase Invoice and Record Purchases | Microsoft Docs
+title: Record Purchases with Purchase Invoices 
 description: Describes how to purchase inventory, non-inventory items, or resources by creating and posting purchase invoices or orders.
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Záznam nákupu
-Můžete vytvořit nákupní fakturu nebo objednávku, abyste zaznamenali náklady na nákup a sledovali závazky. Pokud potřebujete kontrolovat zásoby, nákupní faktury a objednávky, můžete použít také dynamickou aktualizaci úrovní zásob, abyste mohli minimalizovat náklady na zásoby a poskytovat lepší služby zákazníkům. Nákupní náklady, včetně nákladů na služby a hodnoty zásob, které vyplývají z účtování nákupních faktur nebo objednávek, přispívají k údajům o zisku a dalším finančním KPI ve vašem centru rolí.
+# Record Purchases with Purchase Invoices
 
-Kromě nákupu fyzického zboží  (typ zboží **Zásoby**), které ovlivňují oceňování zásob, můžete nakupovat služby reprezentované časovými jednotkami. To lze provést buď s typem zboží **Služba** nebo s typem řádku **Zdroj**.
+You create a purchase invoice or purchase order to record the cost of purchases and to track accounts payable. If you need to control an inventory, purchase invoices and purchase orders are also used to dynamically update inventory levels so that you can minimize your inventory costs and provide better customer service. The purchasing costs, including service expenses, and inventory values that result from posting purchase invoices or orders contribute to profit figures and other financial KPIs on your Role Center.
+
+## Create purchase invoices
+
+In addition to buying physical items (**Inventory** item type), which affect inventory valuation, you can purchase services represented by time units. You can do this either with the **Service** item type or with the **Resource** line type.
+
+> [!NOTE]  
+> You must use purchase orders if your purchasing process requires that you record partial receipts of an order quantity, for example, because the full quantity was not available at the vendor. If you sell items by delivering directly from your vendor to your customer, as a drop shipment, then you must also use purchase orders. For more information, see [Make Drop Shipments](sales-how-drop-shipment.md). In all other aspects, purchase orders work the same way as purchase invoices. The following procedure is based on a purchase invoice. The steps are similar for a purchase order.
+
+When you receive the inventory items or when the purchased service is completed, you post the purchase invoice or order to update inventory and financial records and to activate payment to the vendor according to the payment terms. For more information, see [Posting Purchases](ui-post-purchases.md) and [Making Payments](payables-make-payments.md).
+
+> [!CAUTION]  
+> Do not post a purchase invoice for physical items until you receive the items and know the final cost of the purchase, including any additional charges. Otherwise, your inventory value and profit figures may be skewed.
+
+The item card can be of type **Inventory**, **Service**, and **Non-Inventory** to specify if the item is a physical inventory unit, a labor time unit, or a physical unit that is not kept on inventory. For more information, see [Register New Items](inventory-how-register-new-items.md). The purchase invoice process is the same for all three item types.
 
 > [!NOTE]
-> Musíte použít nákupní objednávky, pokud váš nákupní proces vyžaduje, abyste zaznamenali částečné příjmy z množství objednávky, například protože celé množství nebylo u dodavatele k dispozici. Pokud prodáváte zboží doručováním přímo od vašeho dodavatele k zákazníkovi, jako zásilku, musíte použít také nákupní objednávky. Pro více informací navštivte [Provedení přímé dodávky](sales-how-drop-shipment.md). Ve všech ostatních aspektech fungují objednávky stejně jako nákupní faktury. Následující postup je založen na nákupní faktuře. Kroky jsou podobné pro objednávku.
+> With the **Resource** purchase line type, you can also purchase external resources, for example, to invoice a vendor for work delivered. For more information, see [Set Up Resources](projects-how-setup-resources.md).
+>
+> To use a purchased resource, you may need to set the resource's capacity and manually assign it to a job. Purchasing a resource will create a resource ledger entry, however, resource ledger entries are not tracked for quantity and value as, for example, items are. If quantity and value tracking is required, then consider using other line item types.
 
-Když obdržíte skladové položky nebo po dokončení nakoupené služby, zaúčtujte nákupní fakturu nebo objednávku za účelem aktualizace zásob, finančních záznamů a aktivace platby dodavateli podle platebních podmínek. Pro více informací navštivte [Účtování nákupu](ui-post-purchases.md) a [Provádění plateb](payables-make-payments.md).
-
-> [!CAUTION]
-> Neúčtujte fyzické zboží nákupní faktury, dokud toto zboží neobdržíte a neznáte konečné náklady na nákup, včetně jakýchkoli dalších poplatků. V opačném případě může dojít ke zkreslení hodnoty zásob a zisku.
-
-Před zaplacením dodavateli můžete snadno opravit nebo zrušit zaúčtovanou nákupní fakturu. To je užitečné, pokud chcete opravit chybu při psaní nebo pokud chcete změnit nákup v rané fázi procesu objednávky. Pro více informací navštivte [Opravit nebo zrušit neuhrazené faktury za nákup](purchasing-how-correct-cancel-unpaid-purchase-invoices.md). Pokud jste již za zboží nebo služby na zaúčtované nákupní faktuře zaplatili, musíte ke zrušení nákupu vytvořit nákupní dobropis. Pro více informací navštivte [Zpracování nebo zrušení nákupní vratky](purchasing-how-process-purchase-returns-cancellations.md).
-
-Karta zboží může být typu **Zásoby**, **Služba** a **Neskladované**, který určuje, zda se jedná o fyzické zásoby, jednotku pracovní doby nebo fyzickou jednotku, která není vedena na skladě. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md). Proces nákupní faktury je stejný pro všechny tři typy zboží.
-
-> [!NOTE]
-> S typem nákupního řádku **Zdroj** můžete také zakoupit externí zdroje, například za účelem fakturace dodavatele za dodanou práci. Pro více informací navštivte [Nastavení zdrojů](projects-how-setup-resources.md).<br /><br />
-> Chcete-li použít zakoupený zdroj, možná budete muset nastavit kapacitu zdroje a ručně ji přiřadit k úloze. Zakoupením zdroje vytvoříte položku zdroje ale tyto položky nejsou sledovány z hlediska množství a hodnoty, jako je například zboží. Pokud je vyžadováno sledování množství a hodnot, zvažte použití jiných typů zboží na řádku.
-
-Políčka dodavatele na nákupní faktuře můžete vyplnit dvěma způsoby, podle toho, zda je dodavatel již zaregistrován.
-<br><br>
+You can fill vendor fields on the purchase invoice in two ways depending on whether the vendor is already registered.
+<br><br>  
 
 > [!Video https://www.microsoft.com/videoplayer/embed/RE4b3tt?rel=0]
 
-## Vytvoření nákupní faktury
-Následující text popisuje, jak vytvořit nákupní fakturu. Kroky jsou podobné pro objednávku. Hlavní rozdíl spočívá v tom, že objednávky mají další pole a akce pro fyzickou manipulaci se zbožím.
+### To create a purchase invoice
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
-2. Do pole **Dodavatel** zadejte název existujícího dodavatele.
+The following describes how to create a purchase invoice. The steps are similar for a purchase order. The main difference is that purchase orders have additional fields and actions for physical handling of items.
 
-   Ostatní pole na stránce **Nákupní faktury** jsou nyní vyplněna standardními informacemi vybraného dodavatele. Pokud dodavatel není registrován, postupujte takto:
-3. Do pole **Dodavatel** zadejte název nového dodavatele.
-4. V dialogovém okně o registraci nového dodavatele vyberte tlačítko **Ano**.
-5. Na stránce **Vybrat šablonu pro nového dodavatele** vyberte šablonu, na které bude založena nová karta dodavatele, a poté zvolte tlačítko **OK**.
-6. Otevře se nová karta dodavatele, která je předem vyplněna informacemi o vybrané šabloně dodavatele. Do pole **Název** je předvyplněno jméno nového dodavatele, které jste zadali na nákupní faktuře.
-7. Pokračujte ve vyplňování zbývajících polí na kartě dodavatele. Pro více informací navštivte [Evidence nových dodavatelů](purchasing-how-register-new-vendors.md).
-8. Po dokončení karty dodavatele zvolte tlačítko **OK** a vraťte se na stránku **Nákupní faktura**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.  
+2. In the **Vendor** field, enter the name of an existing vendor.
 
-   Několik polí na stránce **Nákupní faktura** je vyplněno informacemi, které jste zadali na nové kartě dodavatele.
-9. Podle potřeby vyplňte zbývající pole na stránce **Nákupní faktura**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+    Other fields on the **Purchase Invoice** page are now filled with the standard information of the selected vendor. If the vendor is not registered, then follow these steps:
 
-   Nyní jste připraveni vyplnit řádky nákupní faktury zbožím nebo zdroji, které jste zakoupili od dodavatele.
+    1. In the **Vendor** field, enter the name of the new vendor.
+    2. In the dialog box about registering the new vendor, choose the **Yes** button.
+    3. On the **Select a template for a new vendor** page, choose a template to base the new vendor card on, and then choose the **OK** button.
+    4. A new vendor card opens, prefilled with the information on the selected vendor template. The **Name** field is prefilled with the new vendor's name that you entered on the purchase invoice.
+    5. Proceed to fill in the remaining fields on the vendor card. For more information, see [Register New Vendors](purchasing-how-register-new-vendors.md).  
+    6. When you have completed the vendor card, choose the **OK** button to return to the **Purchase Invoice** page.
 
-   > [!NOTE]
-   > Pokud jste pro dodavatele nastavili opakující se nákupní řádky, například měsíční objednávku doplnění, můžete tyto řádky vložit do faktury výběrem akce **Získat periodické nákupní řádky**.
-10. Na záložce **Řádky** v poli **Číslo zboží** zadejte číslo skladového zboží nebo servisu.
-11. Do pole **Množství** zadejte množství zboží, které chcete zakoupit.
+    Several fields on the **Purchase Invoice** page are filled with information that you specified on the new vendor card.
+3. Fill in the remaining fields on the **Purchase Invoice** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-   > [!NOTE]
-   > Pro zboží typu **Služby** a pro řádky typu **Zdroj** je množství časovou jednotkou, například hodinami, jak je uvedeno na řádku v poli **Kód měrné jednotky**.
+    You are now ready to fill in the purchase invoice lines with items or resources that you have purchased from the vendor.
 
-   Pole **Částka na řádku** se aktualizuje tak, aby se v poli **Nákupní cena** zobrazovala hodnota vynásobená hodnotou v poli **Množství**.
+    > [!NOTE]  
+    > If you have set up recurring purchase lines for the vendor, such as a monthly replenishment order, then you can insert these lines on the invoice by choosing the **Get Recurring Purchase Lines** action.
+4. On the **Lines** FastTab, in the **Item No.** field, enter the number of an inventory item or service.
+5. In the **Quantity** field, enter the number of items to be purchased.
 
-   Cena a částka na řádku se zobrazí s nebo bez daně z obratu v závislosti na tom, co jste vybrali v poli **Ceny včetně daně** na kartě dodavatele.
+    > [!NOTE]  
+    > For items of type **Service** and for lines of type **Resource**, the quantity is a time unit, such as hours, as indicated in the **Unit of Measure Code** field on the line.
 
-   Pole součtů pod řádky jsou automaticky aktualizována při vytváření nebo úpravě řádků tak, aby zobrazovali částky, které budou zaúčtovány do účetních knih.
+    The **Line Amount** field is updated to show the value in the **Direct Unit Cost** field multiplied by the value in the **Quantity** field.
 
-   > [!NOTE]
-   > Ve vzácných případech se zaúčtované částky mohou lišit od toho, co je zobrazeno v polích součtů. To je obvykle způsobeno výpočty zaokrouhlování ve vztahu k DPH nebo dani z příjmu.<br /><br />Ke kontrole částek, které budou skutečně zaúčtovány, můžete použít stránku **Statistika** která obsahuje výpočty zaokrouhlování. Pokud také zvolíte akci **Vydat**, budou součty aktualizovány tak, aby zahrnovaly výpočty zaokrouhlování.
+    The price and line amount are shown with or without sales tax depending on what you selected in the **Prices Including Tax** field on the vendor card.
 
-12. Do pole **Částka fakturační slevy** zadejte částku, která by měla být odečtena z hodnoty uvedené v poli **Celkem včetně  DPH** ve spodní části faktury.
+    The totals fields under the lines are automatically updated as you create or modify lines to display the amounts that will be posted to the ledgers.
 
-   > [!NOTE]
-   > Pokud jste pro dodavatele nastavili slevy na faktuře, zadaná procentuální hodnota, pokud jsou kritéria splněna, se automaticky vloží do pole **Sleva faktury dodavatele %** a příslušná částka se vloží do pole **Částka fakturační slevy**.
-13. Když obdržíte zakoupené zboží nebo služby, vyberte **Účtovat**.
+    > [!NOTE]
+    > In rare cases, the posted amounts may deviate from what is displayed in the totals fields. This is typically due to rounding calculations in relation to VAT or sales tax.
+    >
+    > To check the amounts that will actually be posted, you can use the **Statistics** page, which takes into account the rounding calculations. Also, if you choose the **Release** action, the totals fields will be updated to include rounding calculations.
 
-Nákup se nyní projeví v zásobách, položkách zdrojů a finančních záznamech a aktivuje se platba dodavatele. Nákupní faktura je odstraněna ze seznamu nákupních faktur a nahrazena novým dokladem v seznamu zaúčtovaných faktur.
+6. In the **Invoice Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field at the bottom of the invoice.
 
-## Viz související školení na [Microsoft Learn](/learn/modules/processing-invoices-dynamics-365-business-central/index)
+    > [!NOTE]  
+    > If you have set up invoice discounts for the vendor, then the specified percentage value is automatically inserted in the **Vendor Invoice Discount %** field if the criteria are met, and the related amount is inserted in the **Invoice Discount Amount** field.
+7. When you receive the purchased items or services, choose **Post**.
 
-## Viz také
-[Nákup](purchasing-manage-purchasing.md)  
-[Nastavení nákupu](purchasing-setup-purchasing.md)  
-[Nastavení zdrojů](projects-how-setup-resources.md)  
-[Účtování nákupu](ui-post-purchases.md)  
-[Požadavky nabádky](purchasing-how-request-quotes.md)  
-[Nákup zboží pro prodej](purchasing-how-purchase-products-sale.md)  
-[Evidence nových dodavatelů](purchasing-how-register-new-vendors.md)  
-[Vytvoření přímé dodávky](sales-how-drop-shipment.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+The purchase is now reflected in inventory, resource ledgers, and financial records, and the vendor payment is activated. The purchase invoice is removed from the list of purchase invoices and replaced with a new document in the list of posted purchase invoices.  
+
+## Posted invoices
+
+[!INCLUDE [posted-invoices](includes/posted-invoices.md)]
+
+You can easily correct or cancel a posted purchase invoice before you pay the vendor. This is useful if you want to correct a typing mistake or if you want to change the purchase early in the order process. For more information, see [Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md). If you have already paid for items or services on the posted purchase invoice, then you must create a purchase credit memo to reverse the purchase. For more information, see [Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md).
+
+[Open the **Posted Purchase Invoices** list](https://businesscentral.dynamics.com/?page=146) in [!INCLUDE [prod_short](includes/prod_short.md)].
+
+## See Related Training at [Microsoft Learn](/learn/modules/processing-invoices-dynamics-365-business-central/index)
+
+## See Also
+
+[Purchasing](purchasing-manage-purchasing.md)  
+[Setting Up Purchasing](purchasing-setup-purchasing.md)  
+[Set Up Resources](projects-how-setup-resources.md)  
+[Posting Purchases](ui-post-purchases.md)  
+[Request Quotes](purchasing-how-request-quotes.md)  
+[Purchase Items for a Sale](purchasing-how-purchase-products-sale.md)  
+[Register New Vendors](purchasing-how-register-new-vendors.md)  
+[Prepare Drop Shipments](sales-how-drop-shipment.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

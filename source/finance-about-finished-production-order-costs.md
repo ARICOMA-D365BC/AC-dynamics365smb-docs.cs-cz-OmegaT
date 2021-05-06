@@ -4,19 +4,22 @@ description: Finishing the production order is an important task in completing t
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.search.keywords:
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Náklady na dokončenou výrobní zakázku
-Dokončení výrobní zakázky je důležitým úkolem při dokončení životního cyklu nákladů vyráběného zboží. Konečné náklady, včetně odchylek v prostředí standardních nákladů, skutečné hodnoty v nákladovém prostředí FIFO, Průměr nebo LIFO, se vypočítají pomocí dávkové úlohy **Úprava nákladů - položky zboží**, která umožňuje finanční odsouhlasení nákladů na výrobu zboží. Aby se výrobní zakázka považovala za úpravu nákladů, musí být stav nastaven na **Dokončeno**. Je proto důležité, aby se po dokončení stav výrobní zakázky změnil na **Dokončeno**.
+# About Finished Production Order Costs
+Finishing the production order is an important task in completing the costing lifecycle of the item that is being produced. Final costs, including variances in a standard cost environment, actuals in a FIFO, Average, or LIFO cost environment, are calculated using the **Adjust Cost - Item Entries** batch job, which allows for financial reconciliation of the costs of item production. For a production order to be considered for cost adjustment, the status must be **Finished**. It is therefore critical that upon completion, the status of a production order is changed to **Finished**.  
 
-## Příklad
-V prostředí standardních nákladů, když spotřebováváte materiál k výrobě zboží, jednoduše řečeno, náklady na zboží plus práce a režie, jdou do nedokončené výroby. Při výrobě zboží se NV sníží o částku standardních nákladů na zboží. Obvykle tyto náklady nejsou nulové. Aby tyto náklady mohly být nulové, musíte spustit dávkovou úlohu **Úprava nákladů - položky zboží** s tím, že pro úpravu budou považovány pouze výrobní zakázky se stavem **Dokončeno**.
+## Example  
+ In a standard cost environment, when you consume material to produce an item, stated simply, the cost of the item plus labor and overhead go into WIP. When the item is produced, WIP is reduced by the amount of the standard cost of the item. Typically, these costs do not net to zero. So that these costs can net to zero, you must run the **Adjust Cost - Item Entries** batch job, noting that only production orders with the status of **Finished** will be considered for adjustment.  
 
-## Viz také
-[Správa nákladů zásob](finance-manage-inventory-costs.md)  
-[Výroba](production-manage-manufacturing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Manufacturing](production-manage-manufacturing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

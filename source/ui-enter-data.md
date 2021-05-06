@@ -1,301 +1,271 @@
 ---
-title: Jak zadávat data do polí v Business Central | Microsoft Docs
-description: Informace o obecných funkcích, které vám pomohou zadávat data do polí.
-author: ZdenekBicek
+title: How to Enter Data in Business Central| Microsoft Docs
+description: Learn about general features that help you enter data in fields.
+author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 
-ms.date: 01/14/2020
-ms.reviewer: v-zdbice
-ms.author: sgroespe
+ms.search.keywords:
+ms.date: 04/01/2021
+ms.author: edupont
 ---
 
-# Zadávání dat
+# Entering Data
 
-Existuje mnoho obecných funkcí, které vám pomohou rychle a snadno zadávat data. V tomto textu jsou popsány obecné funkce pro zadávání dat.  
+There are many general features that help you enter data easier, faster, and more precise. The basic principles and advanced features for entering data are described in this article.  
 
-Příklady v tomto článku používají demonstrační data.
+The examples in this article use the demonstration data.
 
-## Klávesové zkratky
+## Working with editable fields
+Fields in [!INCLUDE[prod_short](includes/prod_short.md)] may contain different editable data, such as text or currency amounts. Editable fields typically display an input box where you can type or choose a value. Non-editable fields are typically displayed with a gray background.   
 
-Existuje několik klávesových zkratek, které vám umožní pracovat „bez myši“ a urychlit zadávání dat, zejména s velkým množstvím položek a úkoly s opakovanými zadáváním.
+Some editable fields provide a picker to help you specify a value.  
 
-Další informace o klávesových zkratkách naleznete v části [Klávesové zkratky](keyboard-shortcuts.md). V tomto článku je několik zkratek popsáno.
+<!-- TODO: Add illustrations or images of each picker -->
+|**Picker**        |**How it helps you specify a value**|
+|------------------|------------------------------------|
+|Date picker       |This picker displays a calendar that is based on your current regional settings. It helps you choose a single date.|
+|Dropdown          |Dropdowns provide a choice of fixed values or reference records from another table|
+|Switch or Checkbox|Some fields provide a simple choice of *Yes* or *No* values. The switch is used to specify this value, and is always displayed as a checkbox in lists|
+|Assist edit       |Some fields provide custom pickers that are suited to looking up and choosing the best value for that field, such as popup window|
 
-## <a name="QuickEntry"></a>Zrychlení zadávání dat pomocí rychlého vstupu
 
-**Rychlý vstup** je funkce určená pro zadávání dat při používání klávesnice. **Rychlý vstup** funguje na polích (jako na stránkách karet) a v seznamech (řádky a sloupce). Je výhodný, když provádíte úkoly s opakované zadávání, které vyžadují postupné vytváření více záznamů, například šarže na prodejní objednávce nebo registraci nového zboží.
+### Modifying a field value
 
-Možná jste už obeznámeni s použitím klávesy **Tab** pro posun z jednoho pole na stránce do dalšího editovatelného pole. Nevýhodou použití **Tab** je to, že vždy jde postupně do dalšího pole. <!-- i v případě, že pole není možné upravovat nebo se vyplňuje jen zřídka.--> **Rychlý vstup** umožňuje tuto cestu změnit. Pomocí **Rychlého vstup** můžete pomocí klávesy **Enter** procházet pouze ta pole, která vás zajímají, přeskakovat needitovatelná pole a pole, která obvykle nevyplňujete. Tohoto chování jste si již možná všimli na některých stránkách. Důvodem je, že aplikace již určuje, která pole mají být zahrnuta při stisknutí **Enter** a která přeskočit. **Rychlý vstup** můžete upravit přizpůsobením pracovního prostoru a optimalizovat tak způsob zadávání dat pro každou stránku.
+To modify the value of a field, you must first set focus to that field. You set focus by doing the following actions:
 
-### Jak funguje rychlý vstup
+- Use the **Tab** key. The action selects the entire value.
+- Left-click your mouse or similar input device. This action will only select the entire field value if the field is in a list.  
 
-Každé pole lze označit buď jako *zahrnuté do Rychlého vstupu* nebo *vyjmuté z Rychlého vstupu*. Pole, která jsou zahrnuta v **Rychlém vstupu**, budou zahrnuta do cesty, když stisknete **Enter** a pole, která jsou vyloučena z **Rychlého vstupu**, nebudou.
+When you interact with fields in the user interface, [!INCLUDE[prod_short](includes/prod_short.md)] typically favors selecting the entire field value to make it easier for you to replace that value.
 
-Když dokončíte zadávání dat do pole, stačí stisknout **Enter** pro potvrzení změn a přejít na další pole. Pokud chcete změnit směr a přejít na předchozí pole, stiskněte **Shift+Enter**. Další informace o klávesových zkratkách naleznete v části [Klávesové zkratky](keyboard-shortcuts.md#QuickEntry).
+When the entire field value is selected:
+- Replace the value by just typing to specify a new value. If the field offers a picker, you can activate it using the **Alt+Arrow-down** keyboard shortcut.
+- Use the **Delete** or **Backspace** key to clear the value.
 
-#### Tipy a triky
+Press the **F2** key to toggle between selecting the entire field value or placing the cursor after the field's value. Placing the cursor at the end of the value makes it easier for you to append to the existing value.
 
-Následující část obsahuje několik užitečných informací o používání funkce **Rychlý vstup**.
-
-- Je k dispozici pro všechna editovatelná pole.
-- Funguje také ve sloupcích a řádcích.
-- Nebrání v přístupu k jiným prvkům stránky, jako jsou akce. Ty jsou stále přístupné pomocí **Tab** a **Shift+Tab**.
-- Záložky nemusí být rozbaleny, aby funkce **Rychlý vstup** fungovala. Pokud je další pole rychlého vstupu umístěno ve sbalené záložce, záložka se automaticky rozbalí a nastaví na určené pole.
-- **Rychlý vstup** funguje bez ohledu na to, zda jsou pole povinná. Je tedy dobré zajistit, aby byla do rychlého vstupu zahrnuta povinná pole.
-- Ve výchozím nastavení je většina polí automaticky zahrnuta do rychlého vstupu. Zpočátku bude vaším úkolem pravděpodobně vyloučit pole z **Rychlého vstupu**.
-
-### Změna polí rychlého zadání
-
-Chcete-li změnit pole, která jsou zahrnuta nebo vyloučena z rychlého vstupu na stránce, použijete přizpůsobení.
-
-1. Zahajte přizpůsobení výběrem ikony ![Nastavení](media/ui-experience/settings_icon_small.png "Ikona nastavení pro centrum rolí") a poté akci **Přizpůsobit**.
-2. Vyberte pole, které chcete změnit, nebo v seznamech vyberte odpovídající záhlaví sloupce a poté vyberte buď **Zahrnout do rychlého vstupu** nebo **Vyjmout z rychlého vstupu**.
-
-Další informace o přizpůsobení naleznete v části [Přizpůsobení pracovního prostoru](ui-personalization-user.md).
-
-## <a name="mandatory-fields"></a>Povinná pole
-
-Při zadávání dat na stránkách jsou některá pole označena červenou hvězdičkou. Červená hvězdička znamená, že pole musí být vyplněno, aby se dokončil určitý proces, který pole používá, jako je účtování transakce, která používá hodnotu v poli.  
-
-Přestože pole obsahuje červenou hvězdičku, nejste nuceni vyplnit pole dříve, než budete pokračovat do jiných polí nebo zavřete stránku. Červená hvězdička slouží pouze jako připomenutí, že vám bude zablokováno dokončení určitého procesu.  
-
-## <a name="finding-data-as-you-type"></a>Hledání dat při psaní
-
- Když začnete psát znaky do pole, zobrazí se rozevírací seznam a zobrazuje možné hodnoty pole. Seznam se při psaní více znaků mění a při zobrazení můžete vybrat správnou hodnotu.  
-
- Mnoho polí má tlačítko se šipkou dolů, které můžete zvolit. Pomocí šipky získáte seznam dat, která jsou k dispozici pro zadávání do pole. Tlačítko má dvě funkce v závislosti na typu pole:  
-
-- Vyhledat - Zobrazí informace z jiné tabulky, které můžete zadat do pole. Můžete vybrat jen jeden záznam dat.  
-
-- Rozevírací nabídka - Zobrazí sadu možností, které pro dané pole existují. Můžete vybrat pouze jednu z možností.  
-
-## Kopírování a vkládání polí a řádků - Nejčastější dotazy
-
-Můžete zkopírovat jeden nebo více řádků ze seznamu nebo jedno pole na stránce a potom vložit, co jste zkopírovali, na stejnou stránku, jinou stránku nebo externí dokument (například Microsoft Excel a e-mail Outlook). Stručně řečeno, chcete-li kopírovat, stiskněte klávesy **CTRL+C** (cmd+C v MacOS) na klávesnici. Chcete-li vložit, stiskněte klávesy **CTRL+V** (cmd+V v systému MacOS).
-
-V seznamu zkopírujete pole ve stejném sloupci řádku výše a vložíte jej do aktuálního řádku stisknutím klávesy **F8**.
-
-Další informace naleznete v části [Nejčastější dotazy týkající se kopírování a vkládání](ui-copy-paste.md).
-
-## Filtrování řádkových záznamů
-
-Chcete-li zahájit filtrování, vyberte v horní části seznamu ikonu ![Filter pane icon](media/open-filter-pane-icon.png "Ikona podokna filtru") nebo stiskněte **Shift+F3** a otevřete podokno filtru. S podoknem filtru pracujete stejně jako v kterémkoli jiném seznamu. Další informace viz [Řazení, vyhledávání a filtrování](ui-enter-criteria-filters.md#Filtering).
-
-Filtrování je zvláště užitečné při prohlížení a analýze delších dokumentů. Představte si například, že otevřete zaúčtovanou prodejní fakturu a filtrujete řádkové záznamy tak, aby se zobrazovaly všechny řádkové záznamy, které mají individuální slevu vyšší než 5%, nebo filtrujete, aby se zobrazovaly pouze příslušenství pro kola s názvem „pro“ v popisu.
-
-## <a name="Focus"></a>Režim detailu pro řádkové záznamy
-
-Při práci na dokumentech, které obsahují část s řádky, například na stránce prodejní objednávky nebo faktury, můžete přepnout zobrazení tak, aby se zaměřovalo pouze na řádkové záznamy. Část řádkových záznamů se poté rozbalí, takže zabírá téměř celý pracovní prostor a skrývá další části stránky kromě oblasti akcí v horní části. To vám dává lepší přehled o řádkových záznamech a poskytuje více prostoru pro práci s nimi.
-
-To je zvláště výhodné při práci s velkými seznamy řádkových záznamů a při rychlém zadávání dat. Další výhodou je, že poskytuje také pokročilé možnosti filtrování, jako v jiných seznamech, takže procházení a vyhledávání v řádkových záznamech je ještě snazší.
-
-### Zapnutí a vypnutí režimu detailu
-
-Chcete-li zapnout režim detailu na řádkové záznamy, klepněte kdekoli v části řádkové položky a poté v pravém horním rohu vyberte ![Ikona režimu detailu](media/focus-mode.png "Ikona režimu detailu") nebo stiskněte **Ctrl+Shift+F12**.
-
-Chcete-li přepnout zpět do normálního zobrazení, zvolte ![Ikona režimu detailu](media/focus-mode.png "Ikona režimu detailu") nebo stiskněte znovu **Ctrl+Shift+F12**.
-
-## Multitasking na více stránkách
-
-Při práci na více úkolech najednou nebo při přerušení aktuální úlohy, například při příchozím hovoru, můžete otevřít kartu nebo stránku dokumentu v novém okně. To vám umožní ponechat otevřené okno pro probíhající úlohu, zatímco v jednom nebo více dalších oknech spustíte nebo dokončíte další úkol.
-
-Chcete-li otevřít aktuální kartu nebo dokument v novém okně, zvolte ![Otevřít nové okno](media/open-new-window-icon.png "Ikona Otevřít nové okno") v pravém horním rohu, nebo stiskněte **Alt+Shift+W**.
+When the cursor is shown at the end of the field value:
+- Add to the value by just typing.
+- Use the **Home**, **End**, **Left-arrow**, and **Right-arrow** keys to move the cursor within the value. If you're editing a field in a list, pressing the **Left-arrow** key again when the cursor is at the beginning of the value will set focus to the previous field. Similarly, pressing the **Right-arrow** key again when the cursor is at the end of the value will set focus to the next field.
 
 > [!NOTE]
-> Když otevřete další stránky z karty nebo dokumentu, který je otevřen v novém okně, tyto stránky se otevřou v novém okně, i když nezvolíte ![Otevřít nové okno](media/open-new-window-icon.png "Ikona Otevřít nové okno").
+> After you specify a value, Business Central will only check that it's valid after you click outside the field or set focus to another element, such as the next field.  
+
+
+## Keyboard Shortcuts
+
+There are several keyboard shortcuts that let you work "mouse-free" and speed up your data entry. These keyboard shortcuts are especially useful with large-scale entries and repetitive typing tasks.
+
+For more information about shortcuts, see [Keyboard Shortcuts](keyboard-shortcuts.md). A few of the keyboard shortcuts are discussed in this article.
+
+## <a name="QuickEntry"></a>Accelerating Data Entry Using Quick Entry
+
+Quick Entry is a feature designed for data entry when using the keyboard. Quick Entry works on fields (like on card pages) and in lists (rows and columns). It's beneficial when doing repetitive typing tasks that require creating multiple records in sequence. Examples include a batch of sales orders or registering new items.
+
+You can use the Tab key to navigate from one field on a page to the next editable field. A disadvantage of using Tab is that it always goes sequentially to the next field. <!-- even if the field is non-editable or seldom filled it in.-->Quick Entry lets you change this path. With Quick Entry, you use the Enter key to navigate through only those fields that you're interested in. Quick Entry skips non-editable fields and fields that you typically don't fill in. You might have already noticed this behavior on some pages. This behavior is because the fields to include when pressing Enter and which ones to skip have been predefined. You can customize Quick Entry by personalizing your workspace and optimizing how you enter data on each page.
+
+### How Quick Entry Works
+
+Every field can be marked as either *included in Quick Entry* or *excluded from Quick Entry*. Fields that are included in Quick Entry will be included in the path when you press Enter. Fields that are excluded from Quick Entry won't.
+
+When you're finished entering data in a field, you simply press Enter to confirm the changes and go to the next field. If you want to reverse direction, and go the previous field, press Shift+Enter. For more information about shortcuts, see [Quick Entry Shortcuts for Fields](keyboard-shortcuts.md#QuickEntry).
+
+#### Tips and Tricks
+
+The following list provides some useful information about using Quick Entry.
+
+- It's available for any editable fields.
+- It also works across columns and rows.
+- It doesn't prevent accessing other elements of a page, such as actions. These elements are still accessible by using Tab and Shift+Tab.  
+- It's not required that FastTabs are expanded for Quick Entry to work. If the next Quick Entry field is located in a collapsed FastTab, that FastTab will automatically expand and focus on the chosen field. [!INCLUDE[prod_short](includes/prod_short.md)] will remember that the FastTab should be expanded next time you visit the page.  
+- Quick Entry works no matter whether fields are mandatory. So it's a good idea to ensure that mandatory fields are included in Quick Entry.
+- By default, most fields are automatically included in Quick Entry. So initially your task will most likely be excluding fields from Quick Entry.
+
+### To change Quick Entry fields
+
+To set up Quick Entry on fields, you use personalization.
+
+1. Start personalization by selecting the ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center") icon, and then the **Personalize** action.
+2. Select a field that you want change. In lists, select the corresponding column heading. Then, choose either **Include in Quick Entry** or **Exclude from Quick Entry**.
+
+For more information about personalization, see [Personalize Your Workspace](ui-personalization-user.md).
+
+## Mandatory Fields
+
+When you enter data on pages, certain fields are marked with a red asterisk. The red asterisk means that the field must be filled to complete a certain process. An example is when you post a transaction that uses the value in the field.  
+
+Although a field is mandatory, you aren't forced to fill the field before you continue to other fields or close the page. The red asterisk only serves as a reminder that you'll be blocked from completing a certain process.  
+
+## Finding Data As You Type
+
+ When you start to type characters in a field, a drop-down list is displayed and shows possible field values. The list changes as you type more characters, and you can select the correct value when it's displayed.  
+
+ Many fields have a down arrow button that you can choose. You choose the arrow to get a list of data that is available to enter in the field. The button has two functions depending on the type of field:  
+
+-   Lookup - Displays information from another table that you can enter in the field. You can select one piece of data at a time.  
+
+-   Drop-down - Displays the set of options that exist for the field. You can select only one of the options.  
+
+## Copying and Pasting FAQ Fields and Lines
+
+You can copy one or more rows from a list or a single field on a page. Then paste what you copied into the same page, another page, or an external document. You could, for example, paste to Microsoft Excel or Outlook email. In short, to copy, press CTRL+C (cmd+C in macOS) on your keyboard. To paste, press CTRL+V or cmd+V in macOS.
+
+In a list, to copy the field in the same column of the row above, and paste it into the current row, just press F8.
+
+For more information, see [Copying and Pasting FAQ](faq-copy-paste.yml).
+
+## Filtering Line Items
+
+To start filtering, select ![Filter pane icon](media/open-filter-pane-icon.png "Filter pane icon") at the top of the list or press Shift+F3 to open the filter pane. You work with the filter pane as you do on any other list. For more information, see [Filtering](ui-enter-criteria-filters.md#filtering).
+
+Filtering is especially helpful when viewing and analyzing longer documents. Imagine you open a posted sales invoice. Then, you filter the line items to display all line items that have an individual discount above 5%. Or, you filter to display only bike accessories with 'pro' in the name.
+
+## <a name="Focus"></a>Focusing on Line Items
+
+When working on documents that include a line items part, you can switch your view to focus only on the line items. Example documents are sales order or invoice page. The line items part expands so that it occupies almost the entire workspace. It hides other parts of the page except the actions area at the top. This layout gives you a better overview of the lines items, and provides more room to work on them.
+
+You'll benefit particularly when you work with large line item lists and you want to enter data fast. This feature also provides advanced filtering capability. Like on other lists, browsing and searching through line items becomes even easier.
+
+### Switching the Focus On and Off
+
+To focus on lines items, select anywhere in the line item part, and then choose ![Focus Mode icon](media/focus-mode.png "Focus mode icon") in the upper right corner, or press Ctrl+Shift+F12.
+
+To switch back to the normal view, choose ![Focus Mode icon](media/focus-mode.png "Focus mode icon") or press Ctrl+Shift+F12 again.
+
+## Multitasking Across Multiple Pages
+
+You can open a card or document page in a new window. Opening a new window lets you:
+
+- Work on multiple tasks at the same time
+- Manage interruptions to the current task, such as taking an incoming call.
+- Keep a window open for an ongoing task while you start or complete another task in windows.
+
+To open the current card or document in a new window, choose ![Open New Window](media/open-new-window-icon.png "Open new window icon") in the upper right corner, or press Alt+Shift+W.
+
+<!--
+When working on multiple tasks at a time or when managing interruptions to the current task, such as taking an incoming call, you can open a card or document page in a new window. This allows you to keep a window open for an ongoing task while you start or complete another task in one or more other windows.
+-->
+To open the current card or document in a new window, choose ![Open New Window](media/open-new-window-icon.png "Open new window icon") in the upper right corner, or press Alt+Shift+W.
 
 > [!NOTE]
-> Pokud pracujete v prohlížeči Safari, blokování automaticky otevíraných oken může způsobit, že se nové okno neotevře. V takovém případě zadejte URL produktu jako povolený web. Další informace naleznete v části [Změnit předvolby v prohlížeči Safari](https://go.microsoft.com/fwlink/?LinkId=2102965).
+> When you open other pages from a card or document that is opened in a new window, those pages will open in a new window even though you don't choose ![Open New Window](media/open-new-window-icon.png "Open new window icon").
 
-## <a name="entering-quantities-by-calculation"></a>Zadávání množství výpočtem
+> [!NOTE]
+> If you work in the Safari browser, a pop-up blocker may cause the new window to not open. If this is the case, specify the product URL as an allowed website. For information see, [Change preferences in Safari](https://go.microsoft.com/fwlink/?LinkId=2102965).<br /><br />
+> The same may happen in other browsers, such as Firefox. For more information, see [Pop-up blocker settings in Firefox](https://go.microsoft.com/fwlink/?LinkId=2116400).  
 
- Při zadávání čísel do polí množství, například do pole **Množství** na řádku deníku zboží, můžete místo součtu množství zadat vzorec.  
+Another way to multitask, is to open [!INCLUDE[prod_short](includes/prod_short.md)] on two or more browser tabs. When you do it this way, you should create a new tab and then copy/paste the URL of the original tab into the new tab. This way creates a new session.   
 
-## Příklady:  
+> [!NOTE]
+> Don't use the **Duplicate** function of the browser to create the new tab as this may cause actions on one tab to block actions on other tabs because they are part of the same session.
 
-- Pokud zadáte 19+19, pole se vypočítá na hodnotu 38.  
+## Entering Quantities by Calculation
 
-- Pokud zadáte 41-9, pole se vypočítá na hodnotu 32.  
+When entering numbers into quantity fields, such as the **Quantity** field on an item journal line, you can enter the formula instead of the sum quantity.  
 
-- Pokud zadáte 12*4, pole se vypočítá na hodnotu 48.  
+### Examples  
 
-- Pokud zadáte 12/4, pole se vypočítá na hodnotu 3.  
+-   If you enter 19+19, the field is calculated to 38.  
 
-## <a name="entering-negative-numbers"></a>Zadávání záporných čísel
+-   If you enter 41-9, the field is calculated to 32.  
 
-Záporná čísla můžete zadat dvěma způsoby. Číslo -20,5 lze zadat jako:  
+-   If you enter 12*4, the field is calculated to 48.  
 
-- -20,5  
+-   If you enter 12/4, the field is calculated to 3.  
 
-    nebo
-- 20,5-  
+## Entering Negative Numbers
 
- V obou případech bude částka zaznamenána jako -20,5.  
+You can enter negative numbers in two ways. The number -20.5 can be entered as:  
 
- Pokud je poslední znak výrazu **+** nebo **-**, bude celý výraz zaznamenán s tímto znaménkem. Příklad: **10-20+** bude mít výsledek 10 a ne -10.  
+-   -20.5  
 
-## <a name="entering-dates-and-times"></a>Zadávání dat a časů
+    or
+-   20.5-  
 
-Můžete zadat data a časy do všech polí, která jsou určena pro data (datová pole). Můžete zadat data s oddělovači nebo bez nich.
+ In both cases, the amount will be recorded in as -20.5.  
+
+ If the last character of the expression is a **+** or a **-**, the entire expression will be recorded with that sign. An example, **10-20+** will result in 10 and not -10.  
+
+## Entering Dates and Times
+
+You can enter dates and times in all the fields that are assigned to dates (date fields). You can enter dates with or without separators.
 
 > [!NOTE]  
-> Způsob zadání data a času závisí na nastavení **Oblasti**. Pro další informace navštivte [Změna základního nastavení](ui-change-basic-settings.md).  
+> How you enter dates and times depends on your **Region** settings. For more information, see [Change Basic Settings](ui-change-basic-settings.md).  
 
-### <a name="entering-dates"></a>Vkládání data  
+### Entering Dates
 
- Do datového pole můžete zadat dvě, čtyři, šest nebo osm číslic:  
+You can either use the data picker to select a date from a calendar, or you can enter dates manually. This section provides a brief overview of how to enter dates. For more information, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
 
-- Pokud zadáte pouze dvě číslice, bude to interpretováno jako den a přidá se měsíc a rok pracovního dne.
+For manually date entry, you can enter two, four, six, or eight digits:  
 
-- Pokud zadáte čtyři číslice, bude to interpretováno jako den a měsíc a přidá se pouze rok daného pracovního roku.  
+-   Two digits are interpreted as the day. It will add the month and the year of the work date.  
 
-- Pokud je datum, které chcete zadat, v rozsahu 01.01.1930 až 31.12.2029, můžete zadat rok dvěma číslicemi, jinak zadejte rok čtyřmi číslicemi.  
+-   Four digits are interpreted as the day and the month. It will add the year of the work date.  
 
-Můžete také zadat datum jako pracovní den následovaný číslem týdne a volitelně rokem (například po25 znamená pondělí v týdnu 25).  
+-   If the date you want is in the range 01/01/1930 through 12/31/2029, enter the year with two digits. Otherwise, enter the year with four digits.  
 
-Místo zadání konkrétního data můžete zadat jeden ze dvou kódů.  
+You can also enter a date as a weekday followed by a week number. Or, you can enter a year. For example, Mon25 or mon25 means Monday in week 25.  
 
-|Kód|Výsledek|  
+Instead of entering a specific date, you can enter one of these codes.  
+
+|Code|Result|  
 |--------------|----------------|  
-|d|Toto je dnešní datum (systémové datum pro počítač).|
-|o|Toto určuje účetní období, kde o znamená první účetní období, o2 znamená druhé účetní období atd.|
-|p|Toto je pracovní datum nastavený v aplikaci. Chcete-li změnit pracovní datum, viz [Změna základních nastavení](ui-change-basic-settings.md). Možná budete chtít použít pracovní datum, pokud máte mnoho transakcí s jiným než dnešním datem.|
-|u|Určuje, že datum po u je uzávěrkové datum, například u311201|
+|t|Specifies today's date (the system date for the computer).|  
+|p|Specifies an accounting period, where p means the first accounting period, p2 means the second accounting period, and so on. |
+|w|Specifies the work date that is set up in the application. To change the work date, see [Changing Basic Settings](ui-change-basic-settings.md). You may want to use a work date if you have many transactions with a date other than today's date.|
+|c|Specifies that the date after c is a closing date, for example C123101.|  
 
-### <a name="entering-times"></a>Zadávání časů
+## Entering Times
 
- Když zadáte časy, můžete mezi jednotlivé části vložit libovolný znak oddělovače, který však není nutný. Nemusíte psát minuty, sekundy nebo AM/PM.  
+When you enter times, you can insert any separator sign that you want between the units, but it isn't required. You don't have to write minutes, seconds, or AM/PM.  
 
- V následující tabulce jsou uvedeny různé způsoby zadávání časů a jejich interpretace.  
+The following table lists the various ways in which times can be entered and how they're interpreted.  
 
-|Vstup|Interpretace|  
+|Entry|Interpretation|  
 |---------------|------------------------|  
 |5|05:00:00|  
-|5:30|5:30:00|  
-|0530|5:30:00|  
-|05:30:5|5:30:05|  
-|053005|5:30:05|  
-|05:30:5,50|05:30:05.5|  
+|5:30|05:30:00|  
+|0530|05:30:00|  
+|5:30:5|05:30:05|  
+|053005|05:30:05|  
+|5:30:5,50|05:30:05.5|  
 |053005050|05:30:05.05|  
 
- Pokud nezadáte oddělovač, musíte pro každou jednotku času zadat dvě číslice.  
+ You enter two digits for each unit of time if you don't enter a separator.  
 
-### <a name="entering-datetimes"></a>Zadávání dat a časů
+## Entering Combined Datetimes
 
-Při zadávání dat a časů je nutné zadat mezeru mezi datem a časem.  
+[!INCLUDE [datetimes](includes/datetimes.md)]
 
-Následující tabulka uvádí různé způsoby, jak můžete zadat data a časy a jak jsou interpretovány.  
+## Entering Duration
 
-|Vstup|Interpretace|  
-|---------------|------------------------|  
-|131202 132455|13-12-02 13:24:55|  
-|1-12-02 10|01-12-02 10:00:00|  
-|1.12.02 5|01-12-02 5:00:00|  
-|1.12.02|01-12-02 0:00:00|  
-|11 12|11-aktuální měsíc-aktuální rok 12:00:00|  
-|1112 12|11-12 - aktuální rok 12:00:00|  
-|d nebo dnes|dnešní datum 00:00:00|  
-|d čas|dnešní aktuální datum a čas|  
-|d 10:30|dnešní datum 10:30:00|  
-|d 3:3:3|dnešní datum 3:03:03|  
-|p nebo pracovní|pracovní datum 00:00:00|  
-|po nebo pondělí|Pondělí aktuálního týdne 00:00:00|  
-|út nebo úterý|Úterý aktuálního týdne 00:00:00|  
-|st nebo středa|Středa aktuálního týdne 00:00:00|  
-|čt nebo čtvrtek|Čtvrtek aktuálního týdne 00:00:00|  
-|pá nebo pátek|Pátek aktuálního týdne 00:00:00|  
-|so nebo sobota|Sobota aktuálního týdne 00:00:00|  
-|ne nebo neděle|Neděle aktuálního týdne 00:00:00|  
-|út 10:30|Úterý aktuálního týdne 10:30:00|  
-|út 3:3:3|Úterý aktuálního týdne 3:03:03|  
+You enter a duration as a number followed by its unit of measure.  
 
-## <a name="entering-duration"></a>Zadávání doby trvání  
+Here are some examples.  
 
-Trvání zadáte jako číslo následované jeho měrnou jednotkou.  
-
-Zde jsou nějaké příklady.  
-
-|Doba trvání|Měrná jednotka|  
+|Duration|Unit of measure**|  
 |------------------|-------------------------|  
-|2h|2 hod|  
-|6h 30m|6 hod 30 min|  
-|6.5h|6 hod 30 min|  
-|90m|1 hod 30 min|  
-|2d 6h 30m|2 dny 6 hod 30 min|  
-|2d 6h 30m 56s 600ms|2 dny 6 hod 30 min 56 sec 600 msec|  
+|2h|2 hrs|  
+|6h 30 m|6 hrs 30 mins|  
+|6.5h|6 hrs 30 mins|  
+|90m|1 hr 30 mins|  
+|2d 6h 30m|2 days 6 hrs 30 mins|  
+|2d 6h 30m 56s 600ms|2 days 6 hrs 30 mins 56 secs 600 msecs|  
 
-Můžete také zadat číslo a ono se automaticky převede na dobu trvání. Zadané číslo se převede podle výchozí měrné jednotky, která byla zadána pro pole trvání.  
+ You can also enter a number and it's automatically converted to a duration. The number you enter is converted according to the default unit of measure that has been specified for the duration field.  
 
-Chcete-li vidět, jaká měrná jednotka se používá v poli trvání, zadejte číslo a podívejte se, na kterou měrnou jednotku se převede.  
+ To see the unit of measure used in a duration field, enter a number and see which unit of measure it's converted to.  
 
-Číslo 5 se převede na 5 hodin, pokud je měrnou jednotkou hodina.  
+ The number 5 is converted to 5 hrs, if the unit of measure is hours.  
 
-## <a name="using-date-formulas"></a>Použití vzorců dat  
- Vzorec data je krátká, zkrácená kombinace písmen a číslic, která určuje, jak vypočítat data. Vzorce data můžete zadat do různých polí pro výpočet data a do opakujících se frekvenčních polí v opakujících se denících.  
+## See Also  
+ [Sorting, Searching, and Filtering Lists](ui-enter-criteria-filters.md)  
+ [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
-> [!NOTE]  
-> Ve všech polích vzorců dat je jeden den automaticky zahrnut jako den, kdy začíná období. Pokud tedy například zadáte 1T, pak je tato doba ve skutečnosti osm dní, protože je zahrnuta i dnes. Chcete-li určit období sedmi dnů (jeden skutečný týden) včetně data začátku období, musíte zadat 6D nebo 1T-1D.  
 
- Zde je několik příkladů, jak lze použít vzorce:  
-
-- Vzorec data v poli Frekvence periody v periodických denících určuje, jak často bude položka na řádku deníku zaúčtována.  
-
-- Vzorec data v poli Lhůta odkladu pro určenou úroveň připomenutí určuje časové období, které musí uplynout od data splatnosti (nebo od data předchozího připomenutí) před vytvořením připomenutí.  
-
-- Vzorec data v poli Výpočet splatnosti určuje, jak vypočítat datum splatnosti pro připomenutí.  
-
- Vzorec pro výpočet data může obsahovat maximálně 20 znaků, číslic i písmen. Pro specifikaci času můžete použít následující písmena, které jsou zkratkami.  
-
-|||  
-|-|-|  
-|B|Aktuální|  
-|D|Den (dny)|  
-|T|Týden (týdny)|  
-|M|Měsíc (měsíce)|  
-|K|Čtvrtletí|  
-|R|Rok (roky)|  
-
-Vzorec data můžete vytvořit třemi způsoby.  
-
-Následující příklad ukazuje, jak se dá vytvořit datum pomocí B-aktuální a časové jednotky.  
-
-|||  
-|-|-|  
-|BT|Aktuální týden|  
-|BM|Aktuální měsíc|  
-
-Následující příklad ukazuje, jak se dá vytvořit datum pomocí B-aktuální a časové jednotky. Číslo nesmí být větší než 9999.  
-
-|||  
-|-|-|  
-|10D|10 dnů od dnešního dne|  
-|2T|2 týdny od dnešního dne|  
-
-Následující příklad ukazuje, jak se dá vytvořit datum pomocí časové jednotky a čísla.  
-
-|||  
-|-|-|  
-|D10|Dalšího 10. dne v měsíci|  
-|TD4|Další 4. den v týdnu (čtvrtek)|  
-
-Následující příklad ukazuje, jak můžete tyto tři formy kombinovat podle potřeby.  
-
-|||  
-|-|-|  
-|BM+10D|Aktuální měsíc + 10 dní|  
-
-Následující příklad ukazuje, jak můžete použít znaménko mínus k označení data v minulosti.  
-
-|||  
-|-|-|  
-|-1R|Před 1 rokem od dnešního dne|  
-
-## Viz také
-
- [Řazení, vyhledávání a filtrování](ui-enter-criteria-filters.md)  
- [Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[!INCLUDE[footer-include](includes/footer-banner.md)]

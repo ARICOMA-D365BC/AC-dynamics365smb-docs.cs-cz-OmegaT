@@ -1,87 +1,90 @@
 ---
     title: Understanding Assemble to Order and Assemble to Stock | Microsoft Docs
     description: Assembly items can be supplied either by assembling them when they are ordered or by assembling them to be kept in inventory until they are need on a sales order.
-    author: SorenGP
+    author: bholtorf
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: kit, kitting
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: bholtorf
 
 ---
-# Princip montáže na zakázku a montáže na sklad
-Zboží montáže může být dodáno v následujících dvou procesech:
+# Understanding Assemble to Order and Assemble to Stock
+Assembly items can be supplied in the following two processes:  
 
-- Montáž na zakázku.
-- Montáž na sklad.
+-   Assemble to order.  
+-   Assemble to stock.  
 
-## Montáž na zakázku
-Obvykle používáte *montáž na zakázku* pro zboží, které nechcete skladovat, protože očekáváte, že je přizpůsobíte požadavkům zákazníků nebo protože chcete minimalizovat finanční pokrytí skl. nákladů. Mezi podpůrné funkce patří:
+## Assemble to Order  
+You typically use *assemble to order* for items that you do not want to stock because you expect to customize them to customer requests or because you want to minimize the inventory carrying cost. The supporting functionality includes:  
 
-- Schopnost přizpůsobit zboží montáže při převzetí prodejní objednávky.
-- Přehled dostupnosti zboží montáže a jejích komponent.
-- Možnost okamžité rezervace komponent montáže pro zajištění splnění objednávky.
-- Funkce pro určení ziskovosti přizpůsobené objednávky zpracováním ceny a nákladů.
-- Integrace do skladu usnadňuje montáž a přepravu.
-- Možnost montáže na zakázku v okamžiku vytvoření prodejní nabídky nebo hromadné prodejní objednávky.
-- Schopnost kombinovat množství zásob s množstvím montáže na zakázku.
+-   Ability to customize assembly items when taking a sales order.  
+-   Overview of availability of the assembly item and its components.  
+-   Ability to reserve assembly components immediately to guarantee order fulfillment.  
+-   Function to determine profitability of the customized order by rolling up price and cost.  
+-   Integration to the warehouse to make assembly and shipping easier.  
+-   Ability to assemble to order at the point of making a sales quote or a blanket sales order.  
+-   Ability to combine inventory quantities with assemble-to-order quantities.  
 
-V procesu montáže na zakázku se zboží sestavuje jako odpověď na prodejní objednávku a s přímým spojením mezi montážní objednávkou a prodejní objednávkou.
+In the assemble-to-order process, the item is assembled in response to a sales order and with a one-to-one link between the assembly order and the sales order.  
 
-Při zadávání zboží montáže na zakázku na prodejní řádek se automaticky vytvoří montážní zakázka s hlavičkou založenou na prodejním řádku a s řádky založenými na kusovníku montáže zboží vynásobeným množstvím objednávky. Na stránce **Řádky montáže na zakázku** můžete zobrazit propojené řádky montážní objednávky, které vás podporují při přizpůsobování zboží montáže, a datum dodání, které je založeno na informacích o dostupnosti komponent. Pro více informací navštivte [Prodej zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md).
+When you enter an assemble-to-order item on a sales line, an assembly order is automatically created with a header that is based on the sales line and with lines that are based on the item's assembly BOM multiplied by the order quantity. You can use the **Assemble-to-Order Lines** page to see the linked assembly order lines to support you in customizing the assembly item and in a delivery date that is based on component availability information. For more information, see [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md).  
 
-> [!NOTE]
-> Ačkoli to není součástí výchozího procesu, můžete prodat množství zásob s množstvím montáže na zakázku. Pro více informací navštivte [Prodej skladového zboží podle montáže na zakázku](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md).
+> [!NOTE]  
+>  Although it is not part of the default process, you can sell inventory quantities with the assemble-to-order quantities. For more information, see [Sell Inventory Items in Assemble-to-Order Flows](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md).  
 
-Chcete-li tento proces povolit, musí být pole **Způsob montáže** na kartě zboží nastaveno na **Montáž-na-zakázku**.
+ To enable this process, the **Assembly Policy** field on the item card must be **Assemble-to-Order**.  
 
-## Montáž na sklad
-Obvykle používáte *montáž na sklad* u zboží, které chcete sestavit před prodejem, například na přípravu na kampaň a skladovat na skladě, dokud toto zboží nebude objednáno. Toto zboží je obvykle standardní, jako jsou zabalené sady, které nenabízíte k přizpůsobení požadavkům zákazníků.
+## Assemble to Stock  
+ You typically use *assemble to stock* for items that you want to assemble ahead of sales, such as to prepare for a kit campaign, and keep in stock until they are ordered. These items are usually standard items such as packaged kits that you do not offer to customize to customer requests.  
 
-V procesu montáže na sklad je zboží sestaveno bez okamžité prodejní poptávky a je skladováno ve skladu jako skladová položka pro pozdější prodej nebo pro spotřebu jako polotovar. Pro více informací navštivte [Správa montáže](assembly-how-to-assemble-items.md). Od tohoto okamžiku je zboží vyskladněno a zpracováno jako jedno zboží a je považováno za dokončené výrobní zboží.
+ In the assemble-to-stock process, the item is assembled without an immediate sales demand and is stocked in the warehouse as an inventory item for later sale or consumption as a subassembly. For more information, see [Assemble Items](assembly-how-to-assemble-items.md). From this point, the item is picked and processed as a single item and is treated like a finished production item.  
 
-Když zadáte zboží montáže na sklad na prodejním řádku, zboží je považováno za jakékoli jiné zboží prodané ze skladu. Například dostupnost je kontrolována pouze pro zboží montáže.
+ When you enter an assemble-to-stock item on a sales line, the line like any other item sold from inventory. For example, availability is checked for the assembly item only.  
 
-> [!NOTE]
-> Ačkoli to není součástí výchozího procesu, můžete sestavit zboží na objednávku, i když je nastavena na montáž na sklad. Pro více informací navštivte [Prodej zboží montáže na zakázku a skladového zboží dohromady](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md).
+> [!NOTE]  
+>  Although it is not part of the default process, you can assemble an item to order even if it is set up to be assembled to stock. For more information, see [Sell Assemble-to-Order Items and Inventory Items Together](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md).  
 
-Chcete-li tento proces povolit, musí být pole **Způsob montáže** na kartě zboží nastaveno na hodnotu **Montáž-na-sklad**.
+ To enable this process, the **Assembly Policy** field on the item card must be **Assemble-to-Stock**.  
 
-## Kombinované scénáře
-Obecným principem v montážním managementu je to, že při kombinaci na řádku prodejní objednávky musí být množství montáže na zakázku dodáno před množstvím zásob.
+## Combination Scenarios  
+ A general principle in Assembly Management is that when combined on a sales order line, assemble-to-order quantities must be shipped before inventory quantities.  
 
-Pokud je montážní zakázka propojena s řádkem prodejní objednávky, pak se hodnota v poli **Mn. k montáži na zakázku** na řádku prodejní objednávky zkopíruje do pole **Množství k montáži** prostřednictvím pole **Množství** v záhlaví montážní zakázky. Pro více informací navštivte [Prodej zboží montáže na obejdnávku](assembly-how-to-sell-items-assembled-to-order.md).
+ If an assembly order is linked to a sales order line, then the value in the **Qty. to Assemble to Order** field on the sales order line is copied to the **Quantity to Assemble** field, via the **Quantity** field on the assembly order header. For more information, see [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md).  
 
-Kromě toho se hodnota v poli **Množství k montáži** vztahuje k  poli **K  dodání** na řádku prodejní objednávky a tento vztah řídí přepravu množství montáže na zakázku, a to jak částečně, tak úplně. To platí jak při montáži celého množství prodejního řádku na zakázku, tak v kombinovaných scénářích, kdy je jedna část množství prodejního řádku sestavena na zakázku a další díl je dodáván ze skladu. V kombinovaném scénáři však máte větší flexibilitu při částečném dodání v tom, že můžete upravit pole **Množství k montáži** v rámci předdefinovaných pravidel, abyste určili, kolik jednotek se má částečně dodat ze skladu a kolik částečně dodat montáží na zakázku.
+ In addition, the value in the **Quantity to Assemble** field is related to the **Qty. to Ship** field on the sales order line, and this relation manages the shipping of assemble-to-order quantities, both partially and completely. This is true both when the full sales line quantity is assembled to order and in combination scenarios where one part of the sales line quantity is assembled to order and another part is shipped from inventory. However, in the combination scenario, you have additional flexibility when shipping partially in that you can modify the **Quantity to Assemble** field, within predefined rules, to specify how many units to ship partially from inventory and how many to ship partially by assembling to order.  
 
-Pokud musí být celé množství prodejního řádku sestaveno na objednávku a dodáno, pak se hodnota v poli **K  dodání** zkopíruje do pole **Množství k montáži** v propojené montážní zakázke, když změníte množství k dodání. Tím je zajištěno, že expedované množství je plně dodáno množstvím montáže na zakázku.
+ If the full sales line quantity must be assembled to order and shipped, then the value in the **Qty. to Ship** field is copied to **Quantity to Assemble** field on the linked assembly order when you change the quantity to ship. This ensures that the quantity being shipped is fully supplied by the assemble-to-order quantity.  
 
-V kombinovaných scénářích není však plná hodnota v poli **K  dodání** zkopírována do pole **Množství k montáži** v záhlaví montážní zakázky. Místo toho je do pole **Množství k montáži** vložena výchozí hodnota, která je vypočtena z pole **K  dodání** podle předdefinovaného pravidla, které zajišťuje, že nejprve se přepravuje množství montáže na zakázku.
+ However, in combination scenarios, the full value in the **Qty. to Ship** is not copied to the **Quantity to Assemble** field on the assembly order header. Instead, a default value is inserted in the **Quantity to Assemble** field that is calculated from the **Qty. to Ship** field according to a predefined rule that ensures shipment of assemble-to-order quantities first.  
 
-Pokud se chcete odchýlit od tohoto výchozího nastavení, například proto, že chcete sestavit pouze více či méně množství v poli **K  dodání**, pak můžete upravit pole **Množství k montáži**, ale pouze v rámci předdefinovaných pravidel, jak je znázorněno níže.
+ If you want to deviate from this default, for example because you only want to assemble more or less of the quantity in the **Qty. to Ship** field, then you can modify the **Quantity to Assemble** field, but only within predefined rules, as illustrated below.  
 
-Příkladem, proč byste chtěli upravit množství, které chcete sestavit, je to, že chcete částečně odeslat dodávku množství zásob, než bude možné odeslat výstup montáže.
+ An example of why you would want to modify the quantity to assemble is that you want to partially post shipment of inventory quantities before the assembly output can be shipped.  
 
-Následující text vysvětluje pravidla, která definují minimální a maximální hodnoty, které můžete ručně zadat do pole **Množství k montáži** a odchýlit se od výchozí hodnoty v kombinovaném scénáři. Tabulka ukazuje kombinovaný scénář, kde se pole **K  dodání** na propojeném řádku prodejní objednávky změnilo ze 7 na 4, a proto je výchozí hodnota pole **Množství k montáži** nastavena na 4.
+ The following table explains the rules that define the minimum and maximum values that you can enter in the **Quantity to Assemble** field to deviate from the default value in a combination scenario. The table shows a combination scenario where the **Qty. to Ship** field on the linked sales order line is changed from 7 to 4, and the **Quantity to Assemble** is therefore defaulted to 4.  
 
-||Řádek prod.objednávky|Hlavička montážní zakázky|
-|-|----------------------|---------------------------|
-||**Množství**|**K  dodání**|**Mn.  k montáži na zakázku**|**Dodané množství**|**Množství**|**Množství k montáži**|**Smontované možství**|**Zůstatek (množství)**|
-|Počáteční|10|7|7|0|7|7|0|7|
-|Změna||4||||4 (vložené ve výchozím nastavení)|||
+|-|Sales Order Line|Assembly Order Header|||||||  
+|-|----------------------|---------------------------|-|-|-|-|-|-|  
+||**Quantity**|**Qty. to Ship**|**Qty. to Assemble to Order**|**Quantity Shipped**|**Quantity**|**Quantity to Assemble**|**Assembled Quantity**|**Remaining Quantity**|  
+|Initial|10|7|7|0|7|7|0|7|  
+|Change||4||||4 (inserted by default)|||  
 
-Na základě výše uvedené situace můžete pole **Množství k montáži** upravit pouze následovně:
+ Based on the above situation, you can only modify the **Quantity to Assemble** field as follows:  
 
-- Minimální množství, které můžete zadat, je 1. Důvodem je to, že k tomu, abyste mohli tyto čtyři jednotky prodat, musíte sestavit alespoň jednu jednotku za předpokladu, že zbývající tři jednotky jsou k dispozici ve skladu.
-- Maximální množství, které můžete zadat, je 4. Tím je zajištěno, že nesestavujete více tohoto zboží montáže na zakázku, než co je potřeba k prodeji.
+-   The minimum quantity that you can enter is 1. This is because you must at least assemble one unit to be able to sell the four units, assuming that the remaining three are available in the inventory.  
+-   The maximum quantity that you can enter is 4. This is to ensure that you do not assemble more of this assemble-to-order item than what is needed on the sale.  
 
-## Viz také
-[Správa montáže](assembly-assemble-items.md)  
-[Práce s kusovníky](inventory-how-work-BOMs.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+[Assembly Management](assembly-assemble-items.md)  
+[Work with Bills of Material](inventory-how-work-BOMs.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

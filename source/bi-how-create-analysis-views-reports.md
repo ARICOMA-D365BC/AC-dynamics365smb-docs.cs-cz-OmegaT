@@ -4,101 +4,104 @@ description: Describes how to create new analysis reports for sales, purchases, 
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Vytvoření sestav analýzy
-Manažeři prodeje musí pravidelně analyzovat obrat, hrubý zisk a další klíčové ukazatele výkonnosti prodeje. Kupující se více zajímají o dynamiku nákupních objemů, výkonnost dodavatelů a nákupní ceny. Zatímco vedoucí logistiky/zásob potřebují informace o obratu zásob, analýze pohybu zásob a statistice hodnoty zásob.
+#  Create Analysis Reports
+Sales managers need to analyze turnover, gross profit and other key sales performance indicators on a regular basis. Purchasers, are more interested in the dynamics of purchase volumes, vendors' performance and purchase prices. Whereas logistics/inventory managers need information on inventory turnover, analysis of inventory movement, and statistics on inventory value.  
 
-Analytické zprávy můžete použít k vytvoření přizpůsobených sestav založených na záznamech vašich zaúčtovaných transakcí, například prodeje, nákupy, převody a úpravy zásob. V přizpůsobitelné sestavě lze zdrojová data, která jsou odvozena z položek zboží (s přidruženými položkami hodnot), kombinovat, porovnávat a prezentovat smysluplnými způsoby definovanými uživatelem. V tomto smyslu je zpráva o analýze velmi podobná sestavě kontingenční tabulky v aplikaci Microsoft Excel.
+You can use analysis reports to create customized reports based on records of your posted transactions, for example, sales, purchases, transfers and inventory adjustments. In a customizable report, the source data, which is derived from the item ledger (with associated value entries), can be combined, compared and presented in meaningful user-defined ways. In this sense, the analysis report is very similar to a PivotTable report in Microsoft Excel.  
 
-Můžete si vytvořit svoji osobní sestavu, která se zaměřuje na vaše klíčové účty z hlediska celkového obratu v množství i množství prodaného, ​​hrubého zisku a procentuálního podílu hrubého zisku během aktuálního měsíce, a nechat porovnat tyto údaje s výsledky z předchozích měsíců nebo ve stejném měsíci loňského roku a vypočítat odchylky. To vše lze provést v jednom a stejném zobrazení, s možností přejít na příčinu identifikovaných problémových oblastí výběrem rozbalovacího tlačítka pro přístup k podrobnostem o úrovni jednotlivých transakcí.
+You can create your personalized report that focuses on your key accounts in terms of total turnover both in amounts and quantities sold, gross profit and gross profit percentage during the current month, and have it compare those figures with the results from previous months or the same month last year, and calculate deviations. All this can be done in one and the same view, with the possibility to navigate to the cause of identified problem areas by choosing the drop-down button to access details on the level of individual transactions.  
 
-Sestava analýzy se skládá z objektů, které chcete analyzovat, jako jsou zákazníci, skupiny zákazníků, prodejci a tak dále, reprezentované jako řádky a parametry analýzy, to znamená způsob, jakým chcete analyzovat objekt, reprezentovaný jako sloupce, jako jsou výpočty zisku, periodické porovnání prodejních částek a objemů nebo periodická porovnání skutečných údajů a údajů rozpočtů.
+The analysis report consists of the objects that you want to analyze, such as customers, customer groups, sales people and so on, represented as lines, and the analysis parameters, that is, the way you want to analyze the object, represented as columns, such as profit calculations, periodic comparisons of sales amounts and volumes or periodic comparisons of actual and budgeted figures.
 
-Kromě sestav analýzy můžete vytvářet a zobrazovat podobné informace v zobrazeních analýzy, které jsou založeny na dimenzích. Pro více informací navštivte [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md).
+In addition to analysis reports, you can create and view similar information in analysis views, which are based on dimensions. For more information, see [Analyze Data by Dimensions](bi-how-analyze-data-dimension.md).
 
-## Příklad
-Můžete nastavit následující řádky:
-- Počítače
-- Zobrazí se
-- Náhradní díly
+## Example  
+You can set up lines like these:  
+- Computers  
+- Displays  
+- Spare Parts  
 
-Pak můžete nastavit sloupce, jako jsou tyto:
+Then you can set up columns like these:  
 
-- Aktuální měsíc prodeje
-- Prodej za minulý měsíc
-- Prodej za minulý měsíc v procentech
+- Sales Current Month  
+- Sales Last Month  
+- Sales in Pct. of last Month  
 
-## Nastavení rozvržení řádků a sloupců
-Na stránce **Sestava analýzy** můžete zobrazit různá rozvržení řádků a sloupců podle toho, co jste nastavili. Řádky nebo šablony řádků nastavíte na stránce **Šablony řádků analýzy**. Na této stránce můžete definovat název sestavy a objekty, které chcete zobrazit v řádcích sestavy. Sloupce nastavíte na stránce **Šablony sloupců analýzy**. Na této stránce můžete definovat název šablony sloupce a parametry analýzy, které chcete v sestavě zobrazit jako sloupce. Na stránce **Šablony sloupců analýzy** představuje každý řádek sloupec v sestavě. Všimněte si, že řádky analýzy a sloupce analýzy jsou na sobě nezávislé.
+## Setting Up Line and Column Layouts  
+ On the **Analysis Report** page, you can view different line and column layouts according to the lines or line templates that you set up on the **Analysis Line Templates** page. You can define the name of the report and the objects you want to show in the lines of your report. You set up your columns on the **Analysis Column Templates** page. You can define the name of the column template and the analysis parameters that you want to show in the report as columns. On the **Analysis Column Templates** page, each line represents a column in your report. Note that analysis lines and analysis columns are independent from each other.  
 
-Na základě řádků a sloupců, které jste nastavili, bude aplikace agregovat výsledek sestavy na stránce matice **Sestava analýzy**, například v tomto příkladu:
+Based on the lines and columns you have set up, [!INCLUDE[prod_short](includes/prod_short.md)] will aggregate the result of your report in the **Analysis Report** page, as shown in the following table.  
 
-| |Aktuální měsíc prodeje|Prodej za poslední měsíc|Prodej za poslední měsíc %|
-|-|-|-|-|
-|Počítače| | | |
-|Zobrazí se| | | |
-|Náhradní díly| | | |
-|Celkem| | | |
+|- |Sales Current Month|Sales Last Month|Sales Last Month %|  
+|-|-|-|-|  
+|Computers| | | |  
+|Displays| | | |  
+|Spare parts| | | |  
+|Total| | | |  
 
-Můžete například nastavit jednu sadu řádků a několik sad rozvržení sloupců, aby se zobrazovaly měsíční a výroční zprávy.
+ You can, for example, set up one set of lines and several sets of column layouts to show monthly and annual reports respectively.
 
-## Nastavení šablon sloupců analýzy
-Následující postup je založen na analytických pohledech na prodej. Kroky jsou podobné pro zobrazení nákupu a analýzy zásob.
+ ## To set up analysis column templates
+The following procedure is based on analysis views for sales. The steps are similar for purchase and inventory analysis views.
 
-V sestavě analýzy jsou parametry analýzy zobrazeny jako sloupce. Sloupce, které chcete zahrnout do sestavy analýzy, můžete definovat nastavením šablon sloupců analýzy.
+In an analysis report, your analysis parameters are shown as columns. You can define the columns that you want to include in your analysis report by setting up analysis column templates.  
 
-Šablona obsahuje sadu řádků, z nichž každý představuje sloupec analýzy, který se zobrazí v sestavě analýzy. Chcete-li definovat sloupec, musíte řádku přiřadit typ kódu analýzy. Tento typ kódu analýzy určuje typ zdrojových dat v položkách zboží, na nichž bude analýza založena. Zdrojová data zahrnují cenu, částku prodeje nebo množství a související položky ocenění. Můžete nastavit libovolný počet šablon sloupců a pak je použít k vytvoření nových sestav analýzy.
+A template contains a set of lines each representing the analysis columns that you see in the analysis report. To define a column you must assign an analysis type code to a line. This analysis type code determines the type of source data in the item ledger entries that the analysis will be based on. Source data includes cost, sales amount, or quantity, and their associated value entries. You can set up as many column templates as you like, and then use them to create new analysis reports.    
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Šablony sloupců prodeje** a poté vyberte související odkaz.
-2. Vyberte první prázdný řádek a podle potřeby vyplňte pole.
-3. Vyberte akci **Sloupce**.
-4. Na stránce **Sloupce analýzy** vyplňte pole a určete sloupce, které chcete zahrnout do sestavy analýzy.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Column Templates**, and then choose the related link.  
+2. Select the first empty line, and then fill in the fields as necessary.
+3. Choose the **Columns** action.  
+4. On the **Analysis Columns** page, fill in the fields to specify the columns that you want to include in your analysis report.  
 
-   > [!NOTE]
-   > Chcete-li definovat sloupec, musíte vyplnit pole **Kódy typu analýzy** pro všechny typy sloupců kromě **Vzorce**. Na stránce **Typy analýz** nastavte kódy typu analýzy.
-Také v poli **Typ souvis.položky** vyberete-li **Položky zboží**, budou zkopírovány skutečné údaje z položky zboží. Pokud vyberete **Položky rozpočtu zboží**, zkopírují se částky rozpočtu z daného rozpočtu.
-5. Stisknutím tlačítka **OK** uložte změny.
+    > [!NOTE]  
+    >   To define a column, you must fill in the **Analysis Type Codes** field for all column types except **Formula**. Set up the analysis type codes on the **Analysis Types** page.  
+    Also, in the **Ledger Entry Type** field, if you select **Item Entries**, the actual figures from the item ledger entry are copied. If you select **Item Budget Entries**, the budgeted figures from the budget are copied.  
+5.  Choose the **OK** button to save your changes.  
 
-## Nastavení šablon řádků analýzy
-Následující postup je založen na analytických sestavách pro prodej. Kroky jsou podobné pro sestavy analýzy nákupu a zásob.
+## To set up analysis line templates  
+The following procedure is based on analysis reports for sales. The steps are similar for purchase and inventory analysis reports.
 
-V sestavě analýzy jsou objekty analýzy zobrazeny na řádcích. Řádky, které chcete zahrnout do sestavy analýzy, můžete definovat nastavením šablon řádků analýzy.
+In an analysis report your analysis objects are shown on the lines. You can define the lines that you want to include in your analysis report by setting up analysis line templates.  
 
-Šablona obsahuje sadu řádků představujících analytické řádky, které vidíte v analytické sestavě. Řádek může určit jedno nebo více zboží, odběratelů, dodavatelů nebo skupin. Rovněž můžete vytvořit vzorec v řádku a sčítat ostatní řádky. Můžete nastavit libovolný počet šablon řádků a poté je použít k vytvoření nových analytických sestav.
+A template contains a set of lines representing the analysis lines that you see in the analysis report. A line can specify one or a range of items, customers, vendors, or groups. You can also create a formula in a line to sum up the other lines. You can set up as many line templates as you like, and then use them to create new analysis reports.    
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Šablony řádků prodeje** a poté vyberte související odkaz.
-2. Vyberte první prázdný řádek a podle potřeby vyplňte pole.
-3. Vyberte akci **Řádky**.
-4. Na stránce **Řádky analýzy** vytvořte řádky pro položky, zákazníky, dodavatele nebo prodejce, pro které chcete zobrazit čísla ve své analýze. Musíte vyplnit pole **Typ**, **Rozsah** a **Popis**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Line Templates**, and then choose the related link.  
+2. Select the first empty line, and then fill in the fields as necessary.
+3. Choose the **Lines** action.  
+4. On the **Analysis Lines** page, create lines for the items, customers, vendors, or salespeople you want to view figures for in your analysis report. You must fill in the **Type**, **Range**, and the **Description** fields.  
 
-> [!NOTE]
-> Alternativně, pokud chcete pro každou položku, zákazníka atd. vytvořit mnoho samostatných řádků, můžete vybrat příslušnou možnost vložení a vyplnit všechna příslušná pole na řádku. V případě potřeby můžete řádky upravit ručně. Chcete-li vložit řádky, vyberte akci **Vložit zboží** nebo **Vložit skupiny zboží**.
+> [!NOTE]  
+>   Alternatively, when you want to create many individual lines for each item, customer, and so on, you can select the appropriate insert option to fill in all the relevant fields on the line. If you need to, you can then edit the lines manually. To insert lines, choose the **Insert Items** action or the **Insert Item Groups** action.  
 
-## Vytvoření nové sestavy analýzy prodeje
-Následující postup je založen na analytických sestavách pro prodej. Kroky jsou podobné pro sestavy analýzy nákupu a zásob.
+## To create a new sales analysis report
+The following procedure is based on analysis reports for sales. The steps are similar for purchase and inventory analysis reports.
 
-Sestavy analýzy slouží k analýze dynamiky prodeje podle klíčových ukazatelů výkonnosti prodeje, které vyberete, například obrat u obratu prodeje v částkách a množstvích, příspěvkové marže nebo průběh skutečného prodeje vůči rozpočtu. Sestavu můžete také použít k analýze průměrných prodejních cen a k vyhodnocení prodejní výkonnosti.
+You use analysis reports to analyze the dynamics of your sales according to key sales performance indicators that you select, for example, sales turnover in both amounts and quantities, contribution margin, or progress of actual sales against the budget. You can also use the report to analyze your average sales prices and evaluate the sales performance of your sales force.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sestavy analýzy prodeje** a poté vyberte související odkaz.
-2. Na stránce **Sestava analýzy – prodej** vyberte akci **Nový**.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Vyberte akci **Upravit sestavu analýzy**.
-5. Na stránce **Sestava analýzy prodeje** vyberte akci **Zobrazit matici**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Analysis Reports**, and then choose the related link.  
+2. On the **Analysis Report Sale** page, choose the **New** action.
+3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Choose the **Edit Analysis Report** action.
+5. On the **Sales Analysis Report** page, choose the **Show Matrix** action  
 
-> [!NOTE]
-> Vytváření kombinací šablon řádků a sloupců pro vytváření sestav a přiřazování jedinečných jmen je volitelné. Pokud tak učiníte, výběr názvu sestavy znamená, že nebudete muset vybrat šablony řádků a sloupců na stránce **Sestava analýzy prodeje**. Jakmile vyberete název sestavy, můžete samostatně změnit šablony řádků a sloupců a později znovu vybrat název sestavy a obnovit původní kombinaci.
+> [!NOTE]  
+>   Building combinations of line and column templates to create reports and assigning them unique names is optional. If you do this, selecting a report name means that you will not need to select line and column templates on the **Sales Analysis Report** page. After you have chosen a report name, you can change line and column templates independently and then later select the report name again to restore the original combination.
 
-## Viz také
+## See Also
 [Business Intelligence](bi.md)  
 [Finance](finance.md)  
-[Nastavení financí](finance-setup-finance.md)  
-[Položky zboží a účetní osnova](finance-general-ledger.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Setting Up Finance](finance-setup-finance.md)  
+[The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

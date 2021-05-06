@@ -6,44 +6,47 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Vytváření došlých dokladů přímo z dokladů a položek
-Externí obchodní dokumenty můžete uložit v  [!INCLUDE[d365fin](includes/d365fin_md.md)] připojením souborů dokumentů k souvisejícím příchozím dokladům. Pokud doklad, například nákupní faktura, nezačíná svou existenci jako záznam došlého dokladu, můžete k němu později vytvořit a připojit záznam příchozího dokladu. Soubory došlých dokladů můžete také připojit k zaúčtovaným nákupním a prodejním dokladům a k položkám dodavatele, zákazníka a hlavní knihy pomocí FactBoxu **Připojené doklady**, například, the **Účtované nákupní faktury** a **Položka dodavatele**.
+# Create Incoming Document Records Directly from Documents and Entries
+You can store external business documents in [!INCLUDE[prod_short](includes/prod_short.md)] by attaching the document files to the related incoming document records. If the document, such as a purchase invoice, did not start its existence as an incoming document record, you can still create and connect an incoming document record to it later. You can also attach incoming document files to posted purchase and sales documents and to vendor, customer, and general ledger entries by using the **Incoming Document Files** FactBox in, for example, the **Posted Purchase Invoices** and **Vendor Ledger Entries** pages.
 
-Na stránkách **Účetní osnova** a **Věcné položky**, můžete pomocí vyhledávací funkce najít položky hlavní knihy pro zaúčtované nákupní a prodejní doklady, které nemají došlý doklad a poté centrálně propojit existující záznamy nebo vytvořit nové s připojenými soubory dokladů. Pro více informací bežte [Vyhledávání účtovaných dokladů bez došlých dokladů](across-how-find-posted-documents-without-income-document-records.md).
+From the **Chart of Accounts** and **General Ledger Entries** pages, you can use a search function to find general ledger entries for posted purchase and sales documents that do not have incoming document records and then centrally link to existing records or create new ones with attached document files. For more information, see [Find Posted Documents without Incoming Document Records](across-how-find-posted-documents-without-income-document-records.md).
 
-Následující postupy ukazují, jak připojit soubor k existující nákupní faktuře, která nebyla vytvořena z došlého dokladu a jak připojit soubor k položce dodavatele. Připojení souboru k zaúčtovaným nákupním nebo prodejním dokladům funguje podobným způsobem.
+The following procedures show how to attach a file to an existing purchase invoice that was not created from an incoming document record and how to attach a file to a vendor ledger entry. Attaching a file to posted purchase or sales documents works in a similar way.
 
-## Vytvoření a připojení záznamu došlého dokladu k nákupní faktuře
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
-2. Vyberte řádek nákupní faktury, ke kterému chcete připojit soubor, a pak zvolte funkci **Soubory došlého dokladu**.
-3. Případně vyberte řádek nákupní faktury, ke které chcete připojit soubor, a poté vyberte akci **Připojit soubor**.
-4. Na stránce **Vložit soubor** vyberte soubor, který představuje daný došlý doklad a pak zvolte **Otevřít**.
+## To create and connect an incoming document record from a purchase invoice
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+2. Select the line for a purchase invoice that you want to attach a file to, and then choose the **Create Incoming Document from File** action.
+3. Alternatively, select the line for a purchase invoice that you want to attach a file to, and then choose the **Attach File** action.
+4. On the **Insert File** page, select the file that represents the incoming document in question, and then choose the **Open** button.
 
-## Vytvoření a připojení záznamu došlého dokladu z položky dodavatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Položky dodavatele** a poté vyberte související odkaz.
-2. Vyberte řádek pro položku dodavatele, ke které chcete připojit soubor a pak zvolte akci **Vytvořit došlý doklad ze souboru**.
-3. Alternativně, vyberte řádek pro položku dodavatele, ke které chcete připojit souboru a pak zvolte akci **Připojit soubor**.
-4. Na stránce **Vložit soubor** vyberte soubor, který představuje daný došlý doklad a pak zvolte **Otevřít**.
+## To create and connect an incoming document record from a vendor ledger entry
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendor Ledger Entries**, and then choose the related link.
+2. Select a line for a vendor ledger entry that you want to attach a file to, and then choose the **Create Incoming Document from File** action.
+3. Alternatively, select a line for a vendor ledger entry that you want to attach a file to, and then choose the **Attach File** action.
+4. On the **Insert File** page, select the file that represents the incoming document in question, and then choose the **Open** button.
 
-## Odebrání propojení záznamu došlého dokladu s zaúčtovaným dokladem
-Přílohy souborů z nezaúčtovaných dokladů můžete kdykoli odebrat odstraněním souvisejícího záznamu došlého dokladu. Pokud je doklad zaúčtován, musíte nejprve odebrat propojení z souboru došlého dokladu.
+## To remove a connection from an incoming document record to a posted document
+You can remove file attachments from non-posted documents at any time by deleting the related incoming document record. If the document is posted, then you must first remove the connection from the incoming document record.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Došlé doklady** a poté vyberte související odkaz.
-2. Vyberte řádek souboru došlého dokladu připojeného k zaúčtovanému dokladu, který chcete odebrat, a pak zvolte akci **Odebrat odkaz na záznam**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
+2. Select the line for an incoming document record connected to a posted document that you want to remove, and then choose the **Remove Reference to Record** action.
 
-Připojení k zaúčtovanému dokladu bude odebráno. Nyní můžete přistoupit k připojení dalšího souboru došlého dokladu k zaúčtovanému dokladu, tak jak je popsáno v tomto tématu.
+The connection to the posted document is removed. You can now proceed to connect another incoming document record to the posted document as described in this topic.
 
-## Viz také
-[Proces došlých dokladů](across-process-income-documents.md)  
-[Došlé doklady](across-income-documents.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Process Incoming Documents](across-process-income-documents.md)  
+[Incoming Documents](across-income-documents.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

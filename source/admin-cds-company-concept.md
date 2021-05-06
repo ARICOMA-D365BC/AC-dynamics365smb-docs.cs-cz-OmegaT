@@ -4,69 +4,70 @@ description: Companies are both a legal and business constructs, and they are us
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: CDS, Common Data Service, integration, sync
-ms.date: 01/17/2020
+ms.search.keywords: CDS, , integration, sync
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
 
-# Modely vlastnictví dat
-[!INCLUDE[d365fin](includes/cds_long_md.md)] vyžaduje, abyste pro data, která ukládáte, určili vlastníka. Pro více informací navštivte [Vlastnictví entity](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-entities#entity-ownership) v dokumentanci Power Apps. Při nastavování integrace mezi [!INCLUDE[d365fin](includes/cds_long_md.md)] a [!INCLUDE[d365fin](includes/d365fin_md.md)] musíte pro synchronizované záznamy zvolit jeden ze dvou modelů vlastnictví:
+# Data Ownership Models
+[!INCLUDE[prod_short](includes/cc_data_platform_banner.md)]
 
-* Týmy
-* Osoba (uživatel)
+[!INCLUDE[prod_short](includes/cds_long_md.md)] requires that you specify an owner for the data you store. For more information, see [Types of tables](/powerapps/maker/data-platform/types-of-entities) in the Power Apps documentation. When you set up integration between [!INCLUDE[prod_short](includes/cds_long_md.md)] and [!INCLUDE[prod_short](includes/prod_short.md)] you must choose the **User or team** ownership for records that are synchronized. Actions that can be performed on these records can be controlled on a user level. <!--We recommend the Team ownership model because it makes it easier to manage ownership for multiple people.NO LONGER TRUE IN DATAVERSE-->
 
-Akce, které lze u těchto záznamů provádět, lze řídit na úrovni uživatele. Pro více informací navštivte [Uživatelské a týmové entity](https://docs.microsoft.com/powerapps/developer/common-data-service/user-team-entities). Doporučujeme model vlastnictví týmu, protože usnadňuje správu vlastnictví pro více lidí.
+## Team Ownership
+In [!INCLUDE[prod_short](includes/prod_short.md)], a company is a legal and business table that offers ways to secure and visualize business data. Users always work in the context of a company. The closest that [!INCLUDE[prod_short](includes/cds_long_md.md)] comes to this concept is the business unit table, which does not have legal or business implications.
 
-## Vlastnictví týmu
-V [!INCLUDE[d365fin](includes/d365fin_md.md)], je společnost právnickou a obchodní entitou, která nabízí způsoby, jak zabezpečit a vizualizovat obchodní data. Uživatelé vždy pracují v kontextu společnosti. Nejblíže tomu, co k tomuto konceptu přichází [!INCLUDE[d365fin](includes/cds_long_md.md)] je entita obchodní jednotky, která nemá právní nebo obchodní důsledky.
+Because business units lack legal and business implications, you cannot force a one-to-one (1:1) mapping to synchronize data between a company and a business unit, either one-way or bi-directional. To make synchronization possible, when you enable synchronization for a company in [!INCLUDE[prod_short](includes/prod_short.md)], the following happens in [!INCLUDE[prod_short](includes/cds_long_md.md)]:
 
-Vzhledem k tomu, že organizační jednotky postrádají právní a obchodní důsledky, nelze vynutit mapování 1:1 (1:1) k synchronizaci dat mezi společností a organizační jednotkou, a to buď jednosměrnou, nebo obousměrnou. Aby byla synchronizace možná, povolte synchronizaci pro společnost v [!INCLUDE[d365fin](includes/d365fin_md.md)] a následující se stane v [!INCLUDE[d365fin](includes/cds_long_md.md)]:
-
-* Vytvoříme subjekt společnosti, který je ekvivalentní subjektu společnosti v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Název společnosti je doplněn "BC Company ID." Například Společnost Cronus International Ltd. (93555b1a-af3e-ea11-bb35-000d3a492db1).
-* Vytvoříme výchozí organizační jednotku, která má stejný název jako společnost. Například Společnost Cronus International Ltd. (93555b1a-af3e-ea11-bb35-000d3a492db1).
-* Vytvoříme samostatný tým vlastníků se stejným názvem jako společnost a přidružíme jej k organizační jednotce. Název týmu je předponou "BCI -." Například BCI - Cronus International Ltd. (93555b1a-af3e-ea11-bb35-000d3a492db1).
-* Záznamy, které jsou vytvořeny a synchronizovány s [!INCLUDE[d365fin](includes/cds_long_md.md)] jsou přiřazeny týmu "BCI Owner", který je propojen s obchodní jednotkou.
+* We create a company table that is equivalent to the company table in [!INCLUDE[prod_short](includes/prod_short.md)]. The name of the company is suffixed with "BC Company ID." For example, Cronus International Ltd. (93555b1a-af3e-ea11-bb35-000d3a492db1).
+* We create a default business unit that has the same name as the company. For example, Cronus International Ltd. (93555b1a-af3e-ea11-bb35-000d3a492db1).
+* We create separate owner team with the same name as the company and associate it with the business unit. The name of the team is prefixed with "BCI -." For example, BCI - Cronus International Ltd. (93555b1a-af3e-ea11-bb35-000d3a492db1).
+* Records that are created and synchronized to [!INCLUDE[prod_short](includes/cds_long_md.md)] are assigned to the "BCI Owner" team that is linked to the business unit.
 
 > [!NOTE]
-> Pokud přejmenujete společnost v [!INCLUDE[d365fin](includes/d365fin_md.md)], názvy společností, podniků a týmů, které vytváříme automaticky v [!INCLUDE[d365fin](includes/cds_long_md.md)] nejsou aktualizovány. Vzhledem k tomu, že pro integraci se používá pouze ID společnosti, nemá to vliv na synchronizaci. Pokud chcete, aby se názvy shodovaly, musíte aktualizovat společnost, organizační jednotku a tým v [!INCLUDE[d365fin](includes/cds_long_md.md)].
+> If you rename a company in [!INCLUDE[prod_short](includes/prod_short.md)], the names of the company, business, and team that we create automatically in [!INCLUDE[prod_short](includes/cds_long_md.md)] are not updated. Because only the company ID is used for integration, this does not affect synchronization. If you want the names to match you must update the company, business unit, and team in [!INCLUDE[prod_short](includes/cds_long_md.md)].
 
-Následující obrázek ukazuje příklad tohoto nastavení dat v [!INCLUDE[d365fin](includes/cds_long_md.md)].
+The following image shows an example of this data setup in [!INCLUDE[prod_short](includes/cds_long_md.md)].
 
-![Kořenová organizační jednotka je nahoře, týmy jsou uprostřed a pak jsou společnosti dole.](media/cds_bu_team_company.png)
+![The root business unit is on top, the teams are in the center, and then the companies are at the bottom.](media/cds_bu_team_company.png)
 
-V této konfiguraci budou záznamy, které souvisejí se společností Cronus US, vlastněny týmem, který je propojen s cronus US <ID> obchodní jednotkou v [!INCLUDE[d365fin](includes/cds_long_md.md)]. Uživatelé, kteří mají přístup k této organizační jednotce prostřednictvím role zabezpečení, která je nastavena na viditelnost na úrovni organizační jednotky v [!INCLUDE[d365fin](includes/cds_long_md.md)] mohou nyní tyto záznamy vidět. Následující příklad ukazuje, jak pomocí týmů poskytnout přístup k těmto záznamům.
+In this configuration, records that are related to the Cronus US company will be owned by a team that is linked to the Cronus US <ID> business unit in [!INCLUDE[prod_short](includes/cds_long_md.md)]. Users who can access that business unit through a security role that is set to business unit–level visibility in [!INCLUDE[prod_short](includes/cds_long_md.md)] can now see those records. The following example shows how to use teams to provide access to those records.
 
-* Role Manažera prodeje je přiřazena členům amerického prodejního týmu Cronus.
-* Uživatelé, kteří mají roli Správce prodeje, mají přístup k záznamům účtů pro členy stejné organizační jednotky.
-* Tým prodeje společnosti Cronus v USA je propojen s obchodní jednotkou Cronus v USA, která byla zmíněna výše. Členové amerického prodejního týmu Cronus mohou vidět jakýkoli účet, který je vlastněn společností Cronus US, <ID> který by pocházel z amerického subjektu Cronus v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+* The Sales Manager role is assigned to members of the Cronus US Sales team.
+* Users who have the Sales Manager role can access account records for members of the same business unit.
+* The Cronus US Sales team is linked to the Cronus US business unit that was mentioned earlier. Members of the Cronus US Sales team can see any account that is owned by the Cronus US <ID> user, which would have come from the Cronus US company table in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-Mapování 1:1 mezi organizační jednotkou, společností a týmem je však pouze výchozím bodem, jak je znázorněno na následujícím obrázku.
+However, the 1:1 mapping between business unit, company, and team is just a starting point, as shown in the following image.
 
-![Role zabezpečení řídí viditelnost dat.](media/cds_bu_team_company_2.png)
+![The security role controls data visibility.](media/cds_bu_team_company_2.png)
 
-V tomto příkladu je vytvořena nová kořenová organizační jednotka EUR (Evropa) v [!INCLUDE[d365fin](includes/cds_long_md.md)] jako rodič jak pro Cronus DE (Gernamy) tak Cronus ES (Španělsko). Obchodní jednotka EUR nesouvisí se synchronizací. Členům týmu EUR Sales však může poskytnout přístup k datům účtu v Cronus DE i Cronus ES nastavením viditelnosti dat na **Nadřazenou/Podřízenou BU** o přidružené roli zabezpečení v [!INCLUDE[d365fin](includes/cds_long_md.md)].
+In this example, a new EUR (Europe) root business unit is created in [!INCLUDE[prod_short](includes/cds_long_md.md)] as the parent for both Cronus DE (Gernamy) and Cronus ES (Spain). The EUR business unit is not related to synchronization. However, it can give members of the EUR Sales team access to account data in both Cronus DE and Cronus ES by setting the data visibility to **Parent/Child BU** on the associated security role in [!INCLUDE[prod_short](includes/cds_long_md.md)].
 
-Synchronizace určuje, který tým má vlastnit záznamy. Toto je řízeno polem **Výchozí vlastnický tým** na záznamu - <ID> BCI. Když BCI - <ID> záznam je povolen pro synchronizaci automaticky vytvoříme přidruženou organizační jednotku a tým vlastníků (pokud ještě neexistuje) a nastavíme pole **Výchozí vlastník tým**. Pokud je synchronizace povolena pro entitu, správci mohou změnit vlastnící tým, ale tým musí být vždy přiřazen.
+Synchronization determines which team should own records. This is controlled by the **Default owning team** field on the BCI - <ID> row. When a BCI - <ID> record is enabled for synchronization we automatically create the associated business unit and owner team (if it doesn't already exist), and set the **Default owning team** field. When synchronization is enabled for an table, administrators can change the owning team, but a team must always be assigned.
 
 > [!NOTE]
-> Po přidání a uložení společnosti se záznamy stávají jen pro čtení, proto si vyberte správnou společnost.
+> Records become read-only after a company is added and saved, so be sure to choose the correct company.
 
-## Výběr jiné obchodní jednotky
-Výběr obchodní jednotky můžete změnit, pokud používáte model vlastnictví Týmů. Pokud používáte model vlastnictví osoby, je vždy vybrána výchozí obchodní jednotka.
+## Choosing a different business unit
+You can change the business unit selection if you are using the Teams ownership model. If you use the Person ownership model, the default business unit is always selected. 
 
-Pokud zvolíte například jinou organizační jednotku, kterou jste vytvořili dříve v [!INCLUDE[d365fin](includes/cds_long_md.md)], zachová si svůj původní název. To znamená, že nebude příponou s ID společnosti. Vytvoříme tým, který používá konvenci pojmenování.
+If you choose another business unit, for example, one that you created earlier in [!INCLUDE[prod_short](includes/cds_long_md.md)], it will keep its original name. That is, it will not be suffixed with the company ID. We will create a team that does use the naming convention.
 
-Při změně obchodní jednotky si můžete vybrat pouze obchodní jednotky, které jsou o jednu úroveň pod kořenovou obchodní jednotkou.
+When changing a business unit, you can choose only the business units that are one level below the root business unit.
 
-## Vlastnictví osoby
-Pokud zvolíte model vlastnictví osoby, musíte zadat každého prodejce, který bude vlastnit nové záznamy. Organizační jednotka a tým jsou vytvořeny tak, jak je popsáno v sekci [Vlastnictví týmu](admin-cds-company-concept.md#team-ownership).
+## Person Ownership
+If you choose the Person ownership model you must specify each salesperson who will own new records. The business unit and team are created as described in the [Team Ownership](admin-cds-company-concept.md#team-ownership) section.
 
-Výchozí organizační jednotka se používá, když je vybrán model vlastnictví osoby, a nemůžete zvolit jinou organizační jednotku. Tým, který je přidružen k výchozí obchodní jednotce, bude vlastnit záznamy o společných entitách, jako je entita produktu, které se netýkají konkrétních prodejců.
+The default business unit is used when the Person ownership model is chosen, and you cannot choose another business unit. The team that is associated with the default business unit will own records for common tables, such as the Product table, that are not related to specific salespersons.
 
-## Viz také
-[O [!INCLUDE[d365fin](includes/cds_long_md.md)]](admin-common-data-service.md)
+When you couple salespersons in [!INCLUDE[prod_short](includes/prod_short.md)] to users in [!INCLUDE[prod_short](includes/cds_long_md.md)], [!INCLUDE[prod_short](includes/prod_short.md)] will add the user to the default team in [!INCLUDE[prod_short](includes/cds_long_md.md)]. You can verify that users are added by looking at the **Default Team Member** column on the **Users - Common Data Service** page. If the user is not added, you can add them manually by using the **Add Coupled Users to Team** action. For more information, see [Synchronizing Data in Business Central with Dataverse](admin-synchronizing-business-central-and-sales.md).
+
+## See Also
+[About [!INCLUDE[prod_short](includes/cds_long_md.md)]](admin-common-data-service.md)
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

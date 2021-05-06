@@ -1,41 +1,52 @@
 ---
-title: Jak vytvořit počáteční zůstatky deníku | Microsoft Docs
-description: 'Business Central obsahuje několik dávkových úloh, které jsou poskytovány jako pomoc při převodu zůstatků starších účtů na nově nakonfigurovanou společnost. Tato data můžete snadno přenést pomocí zaúčtování deníků.'
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: null
-ms.date: 10/01/2018
-ms.author: sgroespe
+    title: How to Create Journal Opening Balances | Microsoft Docs
+    description: Business Central includes several batch jobs that are provided to help in the transfer of legacy account balances to a newly configured company. You can easily transfer this data with journals postings.
+    author: SorenGP
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 04/01/2021
+    ms.author: edupont
+
 ---
-# <a name="create-journal-opening-balances"></a>Vytvoření počátečních zůstatků deníku
-[!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje několik dávkových úloh, které jsou poskytovány jako pomoc při převodu zůstatků starších účtů na nově nakonfigurovanou společnost. Tato data můžete snadno přenést do deníku odběratele, deníku dodavatele, deníku zboží nebo finančního deníku.
+# Create Journal Opening Balances
 
-Prvním krokem je vytvoření konfiguračního balíčku, který obsahuje tabulky nastavení pro tyto deníky. Následující postup předpokládá, že tento krok je dokončen. Pro více informací navštivte [Nastavení konfigurace společnosti](admin-set-up-company-configuration.md). Tento postup popisuje následující kroky, které zahrnují použití balíčku poskytovaného partnerem.  
+[!INCLUDE[prod_short](includes/prod_short.md)] includes several batch jobs that are provided to help in the transfer of legacy account balances to a newly configured company. You can easily transfer this data with the customer journal, the vendor journal, the item journal, or the G/L journal.
 
-Než začnete, ujistěte se, že jste na stránce Centra rolí Implementátor služeb RapidStart, protože tato role poskytuje správný kontext pro vaši konfigurační práci. Pro více informací navštivte [Změna základního nastavení](ui-change-basic-settings.md).
+The first step is to create a configuration package that includes the setup tables for those journals. The following procedure assumes that this step is completed. For more information, see [Set Up Company Configuration](admin-set-up-company-configuration.md). This procedure describes the subsequent steps, which include applying the package that is provided by a partner.  
 
-## <a name="to-apply-the-entries-in-a-journal-to-a-new-company"></a>Aplikace položek v deníku na novou společnost  
-1. Nakonfigurujte novou společnost a použijte na ni konfigurační balíček. Pro více informací navštivte [Konfigurace společnosti s průvodcem RapidStart](admin-how-to-configure-a-company-with-the-rapidstart-wizard.md).  
+Before you start, make sure that you are using the Administration Role Center page because it provides the correct context for your configuration work. For more information, see [Change Basic Settings](ui-change-basic-settings.md).
 
-    Nová společnost neobsahuje informace o počátečních zůstatcích deníků.  
+## To apply the entries in a journal to a new company
 
-2. Otevřete konfigurační sešit a importujte existující data o odběratelích, zboží, prodejcích a hlavní knize. Pro více informací navštivte [Migrace zákaznických dat](admin-migrate-customer-data.md).  
-3. Vyberte například akci **Vytvořit řádky finančního deníku**.  
-4. Podle potřeby vyplňte pevnou záložku **Možnosti** a nastavte filtry tak, jak potřebujete. Například do pole **Šablona deníku** zadejte název.  
-5. Zvolte tlačítko **OK**. Záznamy jsou nyní v deníku, ale částky jsou prázdné.  
-6. Exportujte tabulku deníku do Excelu a ručně zadejte informace o účtu pro zaúčtování a vyrovnávacím účtu z původních dat.
-7. Importujte a aplikujte informace tabulky do nové společnosti. Řádky deníku jsou připraveny k zaúčtování.  
-8. V konfiguračním sešitu vyberte řádkovou tabulku deníku a poté zvolte akci **Data databáze**.  
-9. Zkontrolujte si informace a poté vyberte akci **Zaúčtovat**.  
-10. Opakujte kroky k importu a zaúčtování dalších počátečních zůstatků.  
+1. Configure a new company and apply a configuration package to it. For more information, see [Configure a Company with the RapidStart Wizard](admin-how-to-configure-a-company-with-the-rapidstart-wizard.md).  
 
-## <a name="see-also"></a>Viz také  
-[Aplikování konfigurace pro nové společnosti](admin-apply-configuration-to-new-companies.md)  
-[Založení společnosti pomocí služeb RapidStart](admin-set-up-a-company-with-rapidstart.md)  
-[Správa](admin-setup-and-administration.md)
+    The new company does not contain information about journal opening balances.  
+
+2. Open the configuration worksheet and import existing data about customers, items, vendors, and the general ledger. For more information, see [Migrate Customer Data](admin-migrate-customer-data.md).  
+
+    Now you have master data in place. Next, you add the opening balances. The following steps describe how to create journal lines for G/L accounts, but the same apply to creating journal lines for customers, vendors, and items.  
+3. Choose the **Create G/L Acct. Journal Lines** action.  
+4. Fill in the **Options** FastTab as appropriate, and set filters as needed. For example, in the **Journal Template** field, enter a name.  
+5. Choose the **OK** button. The records are now in the journal, but the amounts are empty.  
+6. Export the journal table to Excel and manually enter the posting and balancing account information from the legacy data.
+7. Import and apply the table information into the new company. The journal lines are ready for posting.  
+8. In the configuration worksheet, select the journal line table, and then choose the **Database Data** action.  
+9. Review the information, and then choose the **Post** action.  
+10. Repeat the steps to import and post any other opening balances.  
+
+> [!TIP]
+> You can use the same batch jobs to add opening balances whenever you register a new customer or vendor that you have done business with before but not registered in [!INCLUDE [prod_short](includes/prod_short.md)]. Just search for the relevant task, and then choose the relevant link.
+
+## See Also
+
+[Apply Configurations to New Companies](admin-apply-configuration-to-new-companies.md)  
+[Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  
+[Administration](admin-setup-and-administration.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

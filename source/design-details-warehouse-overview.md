@@ -1,79 +1,80 @@
 ---
     title: Design Details - Warehouse Overview | Microsoft Docs
     description: To support the physical handling of items on the zone and bin level, all information must be traced for each transaction or movement in the warehouse. This is managed in the **Warehouse Entry** table. Each transaction is stored in a warehouse register.
-    services: project-madeira
-    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Detaily návrhu: Přehled skladu
-Pro podporu fyzického zpracování zboží v zónách a úrovních přihrádek musí být všechny informace sledovány pro každou transakci nebo přesun ve skladu. To jsou údaje spravovány v tabulce **Položky skladu**. Každá transakce je uložena v žurnálech skladu.
+# Design Details: Warehouse Overview
+To support the physical handling of items on the zone and bin level, all information must be traced for each transaction or movement in the warehouse. This is managed in the **Warehouse Entry** table. Each transaction is stored in a warehouse register.  
 
-Skladové doklady a deník skladu se používají k evidenci pohybů zboží ve skladu. Pokaždé, když je zboží ve skladu přesunuto, přijato, zaskladněno, vyskladněno, dodáno nebo upraveno, jsou záznamy ve skladu evidovány pro fyzické uložení informací o zóně, přihrádce a množství.
+Warehouse documents and a warehouse journal are used to register item movements in the warehouse. Every time that an item in the warehouse is moved, received, put away, picked, shipped, or adjusted, warehouse entries are registered to store the physical information about zone, bin, and quantity.
 
-Tabulka **Obsah přihrádky** se používá ke zpracování všech různých dimenzí obsahu přihrádky zboží, jako je měrná jednotka, maximální množství a minimální množství. Tabulka **Obsah přihrádky** také obsahuje počítatelné pole pro položky skladu, pokyny skladu a řádky deníku skladu, což zajišťuje, že dostupnost zboží na přihrádce a přihrádku pro zboží lze rychle vypočítat. Pro více informací navštivte [Detaily návrhu: Dostupnost ve skladu](design-details-availability-in-the-warehouse.md).
+The **Bin Content** table is used to handle all the different dimensions of the contents of a bin per item, such as unit of measure, maximum quantity, and minimum quantity. The **Bin Content** table also contains flow fields to the warehouse entries, warehouse instructions, and warehouse journal lines, which ensures that the availability of an item per bin and a bin for an item can be calculated quickly. For more information, see [Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md).  
 
-Pokud se zaúčtování položky vyskytne mimo modul skladu, použije se pro synchronizaci položek skladu se skladovým zbožím výchozí adjustační přihrádka na lokaci. Během fyzické inventury skladu jsou rozdíly mezi vypočteným a spočítanými množstvími zaznamenány do adjustační přihrádky a pak zaúčtovány jako opravné položky zboží. Pro více informací navštivte [Detaily návrhu: Integrace se zásobami](design-details-integration-with-inventory.md).
+When item postings occur outside the warehouse module, a default adjustment bin per location is used to synchronize warehouse entries with inventory entries. During physical inventory of the warehouse, any differences between the calculated and counted quantities are recorded in the adjustment bin and then posted as correcting item ledger entries. For more information, see [Design Details: Integration with Inventory](design-details-integration-with-inventory.md).  
 
-Následující obrázek nastiňuje typické procesy skladu.
+The following illustration outlines typical warehouse flows.  
 
-![Přehled skladových prcesů](media/design_details_warehouse_management_overview.png "Přehled skladových procesů")
+![Overview of warehouse processes](media/design_details_warehouse_management_overview.png "Overview of warehouse processes")  
 
-## Základní nebo rozšířené skladování
-Funkce skladu v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] lze implementovat v různých úrovních složitosti v závislosti na procesech a objemu objednávek společnosti. Hlavní rozdíl spočívá v tom, že činnosti se provádějí v základním skladu, v případě, že jsou konsolidovány pro více objednávek v rozšířeném skladu.
+## Basic or Advanced Warehousing  
+Warehouse functionality in [!INCLUDE[prod_short](includes/prod_short.md)] can be implemented in different complexity levels, depending on a company’s processes and order volume. The main difference is that activities are performed order-by-order in basic warehousing when they are consolidated for multiple orders in advanced warehousing.  
 
-Pro rozlišení mezi různými úrovněmi složitosti se tato dokumentace týká dvou obecných označení, základního a rozšířeného skladování. Toto jednoduché rozlišení zahrnuje několik různých úrovní složitosti, jak je definováno v granulích produktu a v nastavení umístění, které jsou podporovány různými UI dokumenty. Pro více informací navštivte [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md).
+ To differentiate between the different complexity levels, this documentation refers to two general denominations, Basic and Advanced Warehousing. This simple differentiation covers several different complexity levels as defined by product granules and location setup, each supported by different UI documents. For more information, see [Design Details: Warehouse Setup](design-details-warehouse-setup.md).  
 
-> [!NOTE]
-> Nejpokročilejší úroveň skladování je odkazována v dokumentaci jako “Instalace WMS”, protože tato úroveň vyžaduje nejpokročilejší systémy Warehouse Management Systems.
+> [!NOTE]  
+>  The most advanced level of warehousing is referred to as “WMS installations” in this documentation, since this level requires the most advanced granule, Warehouse Management Systems.  
 
-V základním a rozšířeném skladu se používají následující různé dokumenty uživatelského rozhraní.
+ The following different UI documents are used in basic and advanced warehousing.  
 
-## Základní doklady uživatelského rozhraní
+## Basic UI Documents  
 
-- **Zaskladnění zásob**
-- **Vyskladnění zásob**
-- **Přesun zásob**
-- **Deník zboží**
-- **Deník přeřazení zboží**
-- (Různé sestavy)
+-   **Inventory Put-away**  
+-   **Inventory Pick**  
+-   **Inventory Movement**  
+-   **Item Journal**  
+-   **Item Reclassification Journal**  
+-   (Various reports)  
 
-## Pokročilé doklady uživatelského rozhraní
+## Advanced UI Documents  
 
-- **Skladová příjemka**
-- **Sešit zaskladnění**
-- **Sešit vyskladnění**
-- **Sešit vyskladnění**
-- **Sešit zaskladnění**
-- **Sešit přesunu**
-- **Skladový přesun**
-- **Interní  vyskladnění**
-- **Interní  zaskladnění**
-- **Sešit vytvoření přihrádky**
-- **Sešit vytvoření obsahu přihrádky**
-- **Deník  zboží skladu**
-- **Deník  přeřazení  skladu**
-- (Různé sestavy)
+-   **Warehouse Receipt**  
+-   **Put-away Worksheet**  
+-   **Warehouse Put-away**  
+-   **Pick Worksheet**  
+-   **Warehouse Pick**  
+-   **Movement Worksheet**  
+-   **Warehouse Movement**  
+-   **Internal Whse. Pick**  
+-   **Internal Whse. Put-away**  
+-   **Bin Creation Worksheet**  
+-   **Bin Content Creation Worksheet**  
+-   **Whse. Item Journal**  
+-   **Whse. Item Reclass. Journal**  
+-   (Various reports)  
 
-Další informace o jednotlivých dokumentech naleznete v příslušných tématech na stránce.
+For more information about each document, see the respective page topics.  
 
-### Terminologie
-V souladu s finančními koncepty nákupů a prodejů odkazuje dokumentace skladu [!INCLUDE[d365fin](includes/d365fin_md.md)] na následující toky zboží ve skladu.
+### Terminology  
+To align with the financial concepts of purchases and sales, [!INCLUDE[prod_short](includes/prod_short.md)] warehouse documentation refers to the following terms for item flow in the warehouse.  
 
-| Termín | Popis |
+|Term|Description|  
 |----------|---------------------------------------|  
-| Vstupní tok | Položky pohybující se do umístění skladu, jako jsou nákupy a příchozí transfery. |
-| Vnitřní tok | Položky pohybující se uvnitř skladu, například výrobní komponenty a výstup. |
-| Odchozí tok | Položky pohybující se mimo umístění skladu, například prodej a odchozí transfery. |
+|Inbound flow|Items moving into the warehouse location, such as purchases and inbound transfers.|  
+|Internal flow|Items moving inside the warehouse location, such as production components and output.|  
+|Outbound flow|Items moving out of the warehouse location, such as sales and outbound transfers.|  
 
-## Viz také
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)
+## See Also  
+ [Design Details: Warehouse Management](design-details-warehouse-management.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

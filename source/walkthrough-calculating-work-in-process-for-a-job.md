@@ -9,157 +9,157 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Návod: Výpočet nedokončené výroby projektu
+# Walkthrough: Calculating Work in Process for a Job
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]  
 
-Pomocí projektů můžete naplánovat využití zdrojů vaší společnosti a sledovat různé náklady spojené s využitím zdrojů na konkrétním projektu. Projekty zahrnují spotřebu hodin zaměstnanců, hodin strojů, inventárních položek a dalších typů využití, které je třeba sledovat při postupu projektu. Pokud projekt běží delší dobu, možná budete chtít tyto náklady převést na účet Nedokončené výroby (NV) v rozvaze, zatímco se projekt dokončuje. Pokud je to vhodné, můžete na svých účtech ve výkazu zisku a ztráty uznat náklady a tržby.
+With jobs, you can schedule the usage of your company's resources and keep track of the various costs associated with the usage of resources on a specific project. Jobs involve the consumption of employee hours, machine hours, inventory items, and other types of usage that have to be tracked as a job progresses. If a job runs over a long period, you may want to transfer these costs to a Work in Process (WIP) account on the balance sheet while the job is being completed. You can then recognize the costs and sales in your income statement accounts when it is appropriate.  
 
-## Návod
-Tento návod ilustruje následující úkoly:
+## About This Walkthrough  
+ This walkthrough illustrates the following tasks:  
 
-- Výpočet NV.
-- Výběr metody výpočtu NV.
-- Vyloučení části projektu nedokončené výroby.
-- Zaúčtování NV do věcných položek.
-- Vratné účtování NV.
+-   Calculating WIP.  
+-   Selecting a WIP calculation method.  
+-   Excluding part of a job from the WIP.  
+-   Posting the WIP to the general ledger.  
+-   Reversing a WIP posting.  
 
-Každý krok procesu vypočítá hodnotu a přesune transakce projektu do věcných položek. Kroky výpočtu a zaúčtování jsou odděleny, aby vám pomohly zkontrolovat vaše data a provést úpravy před zaúčtováním do věcných položek. Proto byste se měli ujistit, že jsou všechny informace správné po spuštění dávkových úloh výpočtu a před spuštěním dávkových úloh účtování.
+ Each step of the process calculates the value and moves the job transactions to the general ledger. The calculation and posting steps are separated to help you review your data and to make modifications before posting to the general ledger. Therefore, you should make sure that all information is correct after you run the calculation batch jobs and before you run the posting batch jobs.  
 
-## Role
-Tento návod používá jako osobu člena projektového týmu (Tricia).
+## Roles  
+ This walkthrough uses the project team member (Tricia) as the persona.  
 
-## Předpoklady
-Než budete moci provést úkoly v tomto návodu, musí být ve vašem počítači nainstalován [!INCLUDE[prod_short](includes/prod_short.md)].
+## Prerequisites  
+ Before you can perform the tasks in the walkthrough, the [!INCLUDE[prod_short](includes/prod_short.md)] must be installed on your computer.  
 
-## Příběh
-Tento návod se zaměřuje na CRONUS International Ltd., projekční a poradenskou firmu, která navrhuje a upravuje nové infrastruktury, jako jsou konferenční sály a kanceláře s nábytkem, doplňky a skladovací jednotky. Většina práce v CRONUS je zaměřena na projekt a Tricia, členka projektového týmu, používá úlohy k získání přehledu o každém probíhajícím projektu, který CRONUS zahájil, a také o dokončených projektech. Některé z těchto prací mohou být velmi zdlouhavé a mohou trvat měsíce. Tricia může použít účet NV k zaznamenání nedokončené výroby a ke sledování nákladů v rámci projektu.
+## Story  
+ This walkthrough focuses on CRONUS International Ltd., a design and consultancy firm that designs and fits new infrastructures, such as conference halls and offices, with furniture, accessories, and storage units. Most of the work at CRONUS is project-oriented and Tricia, a project team member, uses jobs to have an overview of each ongoing job that CRONUS has started and also the jobs that are completed. Some of the jobs can be very lengthy and can run over months. Tricia can use a WIP account to record the work in process and to track the costs throughout the job.  
 
-## Výpočet NV
-CRONUS přijal zdlouhavý projekt, který se nyní rozšířil na sledovaná období. Tricia, členka projektového týmu, vypočítává nedokončenou výrobu (NV), aby se ujistila, že finanční výkaz společnosti bude přesný.
+## Calculating WIP  
+ CRONUS has taken on a lengthy project that has now extended across reporting periods. Tricia, a project team member, calculates the work in process (WIP) to make sure that the financial statement of the company will be accurate.  
 
-Během tohoto postupu vybere Tricia konkrétní skupinu úkolů, které budou zahrnuty do výpočtu NV. Na stránce **Řádky úlohy projektu** může tyto řádky zadat ve sloupci **Celkem NV**.
+ During this procedure, Tricia will select a specific group of tasks that will be included in the WIP calculation. On the **Job Task Lines** page, she can specify these lines in the **WIP-Total** column.  
 
-Následující tabulka popisuje tři možnosti.
+ The following table describes the three options.  
 
-| Pole | Popis |
+|Field|Description|  
 |-------------------------------------|---------------------------------------|  
-| **<blank>** | Ponechejte prázdné, pokud je úkol projektu součástí skupiny úkolů. |
-| **Celkem** | Definuje rozsah nebo skupinu úkolů, které jsou zahrnuty do výpočtu NV a deaktivace. Ve skupině bude jakýkoli úkol projektu s **Typ úlohy projektu** nastavený na **Účtování** zahrnut do Celkem NV, pokud není pole **Celkem NV** nastaveno na **Kromě**. |
-| **Kromě** | Platí pouze pro úkol s  **Typem úlohy projektu** **Účtování**. Úkol není zahrnut při výpočtu nedokončené výroby a deaktivaci. |
+|**<blank>**|Leave blank if the job task is a part of a group of tasks.|  
+|**Total**|Defines the range or group of tasks that are included in the WIP and recognition calculation. Within the group, any job task with **Job Task Type** set to **Posting** will be included in the WIP Total, unless its **WIP-Total** field is set to **Excluded**.|  
+|**Excluded**|Applies only to a task with **Job Task Type** of **Posting**. The task is not included when WIP and recognition are calculated.|  
 
-V následujícím návodu Tricia použije metodu Hodnota nákladů, její firemní standard, k výpočtu nedokončené výroby. Určuje, která část projektu bude zahrnuta do výpočtu NV přiřazením hodnot Celkem NV různým řádkům projektu.
+ In the following walkthrough, Tricia applies the Cost Value method, her company standard, to calculate WIP. She specifies what part of the job will be included in the WIP calculation by assigning WIP-Total values to various job task lines.  
 
-### Výpočet NV
+### To calculate WIP  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
-2. V seznamu **Projekty** vyberte projekt **Domov** a poté vyberte akci **Upravit**. Tím se karta projektu otevře v režimu úprav.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.  
+2.  In the **Jobs** list, select the **Deerfield** job, and then choose the **Edit** action. This will open the job card in edit mode.  
 
-   NV lze vypočítat na základě hodnoty nákladů, hodnoty prodeje, nákladů na prodej, procenta dokončení nebo dokončené smlouvy. V tomto příkladu používá CRONUS metodu Hodnota nákladů.
+     WIP can be calculated based on Cost Value, Sales Value, Cost of Sales, Percentage of Completion, or Completed Contract. In this example, CRONUS uses the Cost Value method.  
 
-3. Na záložce **Účtování** vyberte pole **Metoda NV** a poté vyberte **Hodnota nákladů**.
-4. Vyberte akci **Řádky úlohy projektu** a v poli **Celkem NV** nastavte následující hodnoty.
+3.  On the **Posting** FastTab, choose the **WIP Method** field, and then select **Cost Value**.  
+4.  Choose the **Job Task Lines** action and set the following values in the **WIP-Total** field.  
 
-   Následující tabulka popisuje hodnoty.
+     The following table describes the values.  
 
-   | Číslo úlohy projektu | Pole Celkem NV |
-   |------------------|----------------------|  
-   | 1130 | Kromě |
-   | 1190 | Celkem |
-   | 1210 | Kromě |
-   | 1310 | Kromě |
+    |Job Task No.|WIP-Total Field|  
+    |------------------|----------------------|  
+    |1130|Excluded|  
+    |1190|Total|  
+    |1210|Excluded|  
+    |1310|Excluded|  
 
-5. Vyberte akci **NV** a poté vyberte akci **Vypočítat NV**.
-6. Na stránce **Vypočítat NV projektu** můžete vybrat projekt, pro který chcete vypočítat NV. Na záložce **Projekt** vyberte **Domov** v poli **Číslo**.
-7. V poli **Zúčtovací datum** zadejte datum, který je pozdější než pracovní datum.
-8. Do pole **Číslo dokladu** zadejte **1**. Tím se vytvoří dokument, na který se můžete později odvolat kvůli sledovatelnosti.
-9. Zvolte tlačítko **OK** pro spuštění dávkové úlohy. Zobrazí se zpráva. Pokračujte kliknutím na tlačítko **OK**. Zavžete stránku **Řádky úlohy projektu**.
+5.  Choose the **WIP** action, and then choose the **Calculate WIP** action.  
+6.  On the **Job Calculate WIP** page, you can select a job that you want to calculate WIP. On the **Job** FastTab, select **Deerfield** in the **No.** field.  
+7.  In the **Posting Date** field, enter a date that is later than the work date.
+8.  In the **Document No.** field, enter **1**. This creates a document that you can refer to later for traceability.  
+9. Choose the **OK** button to run the batch job. A message is displayed. Choose the **OK** button to continue. Close the **Job Task Lines** page.  
 
-   > [!NOTE]  
-   > Zpráva uvádí, že s výpočtem NV jsou spojena varování. Upozornění si projdete v dalším postupu.
+    > [!NOTE]  
+    >  The message states that there are warnings associated with the WIP calculation. You will review the warnings in the next procedure.  
 
-10. Na karte **Projekt** rozbalte záložku **NV a deaktivace** abyste zhodnotili vypočtené hodnoty. Můžete také zobrazit **Zúčtovací datum NV** a hodnoty, které byly zaúčtovány do věcných položek, pokud existují.
+10. On the **Job** card, expand the **WIP and Recognition** FastTab to see the calculated values. You can also see the **WIP Posting Date** and the values that have been posted to the general ledger, if any.  
 
-Všimněte si, že hodnota pro **Uzn.  částka nákladů** je 215,60 ve sloupci **K zaúčtování**. To odráží celkové náklady dvou zboží ve skupině pracovních úkolů 1110 – 1130. Třetí zboží bylo nastaveno na **Kromě**, a proto není zahrnuto do výpočtu NV.
+ Notice that the value for **Recog. Costs Amount** is 215.60 in the **To Post** column. This reflects the total costs of two of the items in the group of job tasks 1110 – 1130. The third item was set to **Excluded**, and therefore is not included in the WIP calculation.  
 
-### Kontrola upozornění NV
+### To review WIP warnings  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vypočítat NV projektu** a poté vyberte související odkaz.
-2. Vyberte projekt **Domov** a poté vyberte akci **Zobrazit upozornění**.
-3. Na stránce **Upozornění NV projektu** zkontrolujte varování spojené s projektem.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Cockpit**, and then choose the related link.  
+2.  Select the **Deerfield** job, and then choose the **Show Warnings** action.  
+3.  On the **Job WIP Warnings** page, review the warning associated with the job.  
 
-Po skončení účetního období musí Tricia přepočítat NV, aby do tohoto bodu zahrnovala dokončenou práci.
+ After the accounting period ends, Tricia has to recalculate the WIP to include completed work to this point.  
 
-### Přepočítání NV
+### To recalculate WIP  
 
-1. Na karte **Projekt** vyberte akci **Položky NV** a zobrazte výpočet NV.
+1.  On the **Job** card, choose the **WIP Entries** action to view the WIP calculation.  
 
-   Stránka **Položky NV projektu** zobrazuje položky NV, které byly naposledy vypočítány pro projekt, i když NV ještě nebyl zaúčtován do věcných položek.
+     The **Job WIP Entries** page shows the WIP entries that were last calculated on a job, even if WIP has not yet been posted to the general ledger.  
 
-2. Můžete postupovat podle pokynů v postupu, který vysvětluje, jak vypočítat a přepočítat NV. Pokaždé, když se vypočítá NV, vytvoří se záznam na stránce **Položky NV projektu**.
-3. Zavřete stránku.
+2.  You can follow the steps in the procedure that explains how to calculate WIP to recalculate WIP. Every time WIP is calculated, an entry is created on the **Job WIP Entries** page.  
+3.  Close the page.  
 
 > [!NOTE]  
-> Nedokončená výroba a Deaktivace se pouze počítá. Není zaúčtováno do věcných položek. Chcete-li tak učinit, musíte po výpočtu Nedokončené výroby a Deaktivace spustit dávkovou úlohu **Zaúčtovat NV**.
+>  Work in Process and Recognition is only calculated. It is not posted to the general ledger. To do so, you must run **Post WIP to G/L** batch job after you have calculated the WIP and Recognition.
 
-## Zaúčtování NV do věcných položek
-Nyní, když Tricia pro tuto práci vypočítala NV, může ji zaúčtovat do věcných položek.
+## Posting WIP to General Ledger  
+ Now that Tricia has calculated WIP for this job, she can post it to the general ledger.  
 
-### Zaúčtování NV do věcných položek
+### To post WIP to general ledger  
 
-1. Ze seznamu **Projekty** vyberte projekt **Domov**.
-2. Vyberte akci **NV** a poté vyberte akci **Zaúčtovat NV**.
-3. Na stránce **Zaúčtovat NV projektu** na záložce **Projekt**, vyberte **Domov** v poli **Číslo**.
-4. Na záložce **Možnosti** v poli **Číslo dokladu storna** vložte hodnotu **1**.
-5. Kliknutím na tlačítko **OK** odešlete NV do věcných položek.
-6. Kliknutím na tlačítko **OK** zavřete stránku pro potvrzení.
+1.  From the **Jobs** list, select the **Deerfield** job.  
+2.  Choose the **WIP** action, and then choose the **Post WIP to G/L** action.  
+3.  On the **Job Post WIP to G/L** page, on the **Job** FastTab, select **Deerfield** in the **No.** field.  
+4.  On the **Options** FastTab, in the **Reversal Document No.** field, enter **1**.  
+5.  Choose the **OK** button to post WIP to the general ledger.  
+6.  Choose the **OK** button to close the confirmation page.  
 
-   Po dokončení odeslání můžete zobrazit informace o odeslání na stránce **Věcné položky NV**.
+     After you have completed the posting, you can view the posting information on the **WIP G/L Entries** page.  
 
-7. V seznamu **Projekty** vyberte projekt **Domov** a poté vyberte akci **Věcné položky NV**.
+7.  In the **Jobs** list, select the **Deerfield** job, and then choose the **WIP G/L Entries** action.  
 
-   Na stránce **Věcné položky NV projektu** ověřte, zda byla NV zaúčtována do věcných položek.
+     On the **Job WIP G/L Entries** page, verify that the WIP has been posted to the general ledger.  
 
-8. Zavřete stránku.
-9. Otevřete kartu **Projektu** pro projekt **Domov**.
-10. Na záložce **NV a deaktivace** si všimněte, že ve sloupci **Účtováno** je nyní pole **Uzn.  fin. částka nákladů** vyplňeno, což znamená, že NV byla úspěšně zaúčtována do věcných položek.
-11. Kartu zavřete kliknutím na tlačítko **OK**.
+8.  Close the page.  
+9. Open the **Job** card for the **Deerfield** job.  
+10. On the **WIP and Recognition** FastTab, notice that in the **Posted** column, the **Recog. Costs G/L Amount** field is now filled in, which indicates that WIP was posted to the general ledger successfully.  
+11. Choose the **OK** button to close the card.  
 
-## Vratné účtování NV
-Tricia určuje, že projektoví úkoly, které byly vyloučeny z výpočtu NV, měly být vypočítány v NV. Může stornovat nesprávné účtování, aniž by musela účtovat nová účtování nedokončené výroby.
+## Reversing a WIP Posting  
+ Tricia determines that the job tasks that were excluded from the calculation of WIP should have been calculated in WIP. She can reverse the incorrect postings without having to post new WIP postings.  
 
-### Vratné účtování NV
+### To reverse a WIP posting  
 
-1. Ze seznamu **Projekty** vyberte projekt **Domov**.
-2. Vyberte akci **NV** a poté vyberte akci **Zaúčtovat NV**.
-3. Na stránce **Zaúčtovat NV projektu** na záložce **Projekt**, vyberte **Domov** v poli **Číslo**.
-4. Na záložce **Možnosti** v poli **Číslo dokladu storna** vložte hodnotu **1**.
-5. V poli **Zúčtovací datum storna** zadejte původní zúčtovací datum. Mělo by to být stejné datum, které jste použili k prvnímu výpočtu NV.
-6. Zaškrtněte políčko **Pouze stornovat**. Tím se stornuje dříve zaúčtovaná nedokončená výroba, ale do věcných položek se účtuje nová nedokončená výroba.
-7. Kliknutím na tlačítko **OK** spustíte dávkovou úlohu a kliknutím na tlačítko **OK** zavřete stránku pro potvrzení.
-8. Otevřete kartu **Projekt** pro **Domov**.
-9. Na záložce **NV a deaktivace** ověřte, že neexistují žádné zaúčtované položky NV.
-10. Zavřete tuto stránku.
-11. V seznamu **Projekty** vyberte projekt **Domov**, zvolte akci **NV** a poté zvolte akci **Věcné položky NV**. U položek NV je zaškrtnuto políčko **Stornováno**.
-12. Zavřete tuto stránku.
-13. Pro projekt otevřete **Řádky úlohy projektu**, zahrňte části projektu, které by měly být ve výpočtu NV, a poté přepočítejte a zaúčtujte novou hodnotu do věcných položek.
+1.  From the **Jobs** list, select the **Deerfield** job.  
+2.  Choose the **WIP** action, and then choose the **Post WIP to G/L** action.  
+3.  On the **Job Post to WIP to G/L** page, on the **Job** FastTab, select **Deerfield** in the **No.** field.  
+4.  On the **Options** FastTab, in the **Reversal Document No.** field, enter **1**.  
+5.  In the **Reversal Posting Date** field, enter the original posting date. It should be the same date that you used to calculate WIP the first time.  
+6.  Select the **Reverse Only** check box. This will reverse previously posted WIP, but does post new WIP to the general ledger.  
+7.  Choose the **OK** button to run the batch job, and choose the **OK** button to close the confirmation page.  
+8.  Open the **Job** card for **Deerfield**.  
+9. On the **WIP and Recognition** FastTab, verify that there are no posted WIP entries.  
+10. Close this page.  
+11. In the **Jobs** list, select the **Deerfield** job, choose the **WIP** action, and then choose the **WIP G/L Entries** action. The WIP entries have the **Reversed** check box selected.  
+12. Close this page.  
+13. Open **Job Task Lines** for the job, include the parts of the job that should be in the WIP calculation, and then recalculate and post the new value to the general ledger.  
 
-   > [!NOTE]  
-   > Předpokládejme, že Tricia vypočítá a zaúčtuje NV pro úlohu s nesprávnými daty. Podle metody, která byla popsána dříve, může stornovat nesprávné účtování, opravovat data a znovu zaúčtovat do věcných položek.
+    > [!NOTE]  
+    >  Suppose Tricia calculated and posted WIP for a job with incorrect dates. Following the method that was discussed earlier, she can reverse the incorrect postings, correct the dates, and repost to the general ledger.  
 
-## Další kroky
-Tento návod vás provedl kroky výpočtu NV v [!INCLUDE[prod_short](includes/prod_short.md)]. U větších úloh může být užitečné pravidelně převádět náklady na účet NV, zatímco se úloha dokončuje. Tento návod ukázal, jak vyloučit řádky úkolu z výpočtu. To také ukazuje, kdy budete muset přepočítat. A nakonec tento návod ukazuje, jak zaúčtovat NV do věcných položek. Součástí je také příklad, jak stornovat zaúčtování nedokončené výroby do věcných položek.
+## Next Steps  
+ This walkthrough has taken you through the steps of calculating WIP in [!INCLUDE[prod_short](includes/prod_short.md)]. In larger jobs, it may be useful to transfer the costs to a WIP account periodically while the job is being completed. This walkthrough has shown you how to exclude task lines from a calculation. It also shows you when you would have to recalculate. And finally, this walkthrough demonstrates how to post the WIP to the general ledger. An example of how to reverse a WIP posting to the general ledger is also included.  
 
-## Viz také
-[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)    
-[Návod: Správa projektů pomocí úloh](walkthrough-managing-projects-with-jobs.md)     
-[Metody nedokončené výroby](projects-understanding-wip.md)     
-[Sledování průběhu a výkonu projektu](projects-how-monitor-progress-performance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## See Also  
+ [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
+ [Walkthrough: Managing Projects with Jobs](walkthrough-managing-projects-with-jobs.md)   
+ [Understanding WIP Methods](projects-understanding-wip.md)   
+ [Monitor Progress and Performance](projects-how-monitor-progress-performance.md)  
+ [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

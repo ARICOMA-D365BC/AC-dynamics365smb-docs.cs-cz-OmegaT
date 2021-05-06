@@ -4,82 +4,91 @@ description: You can design and print your checks in different formats to confor
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: print check, customize
-ms.date: 02/20/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Výběr rozvržení šeku
-Šeky můžete navrhnout tak, aby odpovídaly normám stanoveným místními úřady. Šeky lze vytisknout v angličtině, francouzštině nebo španělštině.
+# Select a Check Layout
+You can design your checks to conform with the standards set by the local authorities. Check images can be printed in English, French, or Spanish.
 
-Šeky jsou určeny k tisku ve formátu pro Spojené státy i Kanadu ve formátu check-stub-check nebo ve formátu stub-stub-check.
+Checks are designed to print in both the United States and Canadian check image formats in either a check-stub-check format or a stub-stub-check format.
 
-## Výběr rozvržení šeku
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Výběry sestav bankovního účtu** a vyberte související odkaz.
-2. Na stránce **Výběr sestav - bankovní účet** v poli **Použití** vyberte **Šek**.
-3. Vyberte jedno z následujících ID sestavy.
+## To select a check layout
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Selections Bank Account**, and then choose the related link.
+2. On the **Report Selection - Bank Acc.** page, in the **Usage** field, select **Check**.
+3. Select one of the following report IDs.
 
-| ID Sestavy | Titulek Sestavy | Popis |
+| Report ID | Report Name | Description |
 | --- | --- | --- |
-| 1401 | Šek | Toto je výchozí sestava. |
-| 10411 | Šek (Stub/Stub/Check) | Tato sestava je ve formátu stub/stub/check. |
-| 10412 | Šek (Stub/Check/Stub) | Tato sestava je ve formátu stub/check/stub. |
-| 10413 | Tři šeky na stránku | Tato sestava je určena k tisku tří šeků na každé stránce. |
+| 1401 |Check |This is the default report. |
+| 10411 |Check (Stub/Stub/Check) |This report is designed to print checks in a stub/stub/check format. |
+| 10412 |Check (Stub/Check/Stub) |This report is designed to print checks in a stub/check/stub format. |
+| 10413 |Three Checks per Page |This report is designed to print three checks on each page. |
 
-Po nastavení rozvržení šeků můžete šeky vytisknout na stránce **Deník plateb**. Pro více informací navštivte [Práce s šeky](payables-how-work-checks.md)
+When you have set up check layouts, you can print checks from the **Payment Journal** page. For more information, see [Work with Checks](payables-how-work-checks.md).
 
-Chcete-li změnit jedno z těchto výchozích rozvržení šeků, použijte k tomu integraci Word nebo RDLC. Pro více informací navštivte [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md).
+To change one of these default check layouts, use either the Word or the RDLC integration to do so. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
 
-## Použití MICR a bezpečtnostního písma
-Online verze [!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje předinstalované fonty na serverech, které mohou být použity při sestavování šeku. Následující přehled popisuje, které fonty jsou k dispozici, a obsahuje odkazy na podrobné informace od dodavatelů fontů třetích stran.
+## Using MICR and Security Fonts
+The online version of [!INCLUDE[prod_short](includes/prod_short.md)] contains pre-installed fonts on the servers that can be used when defining check layouts. The following outlines which fonts are available and has links to detailed information by the 3rd-party suppliers of the fonts.
 
 > [!Important]
-> MICR a bezpečnostní fonty v Microsoft Dynamics[!INCLUDE[d365fin](includes/d365fin_md.md)] jsou licencovány v balíčku písem od IDAutomation.com, Inc. Tyto produkty mohou být používány pouze jako součást a v souvislosti s aplikací Microsoft Dynamics [!INCLUDE[d365fin](includes/d365fin_md.md)].
+> MICR and check security fonts in Microsoft Dynamics [!INCLUDE[prod_short](includes/prod_short.md)] are licensed in a font package from IDAutomation.com, Inc. These products may only be used as part of and in connection with Microsoft Dynamics [!INCLUDE[prod_short](includes/prod_short.md)].
 
-V aktualizaci 15.3 a novější jsou nainstalovány a dostupné fonty Magnetic Ink Character Recognition (MICR).. Jsou podporovány jak standardy E-13B, tak CMC-7. Kromě písem MICR jsou k dispozici speciální bezpečnostní fotny pro generování textu, jmen, částek a měnových symbolů dolaru, eura, libry a jenu, s nimiž lze po vytištění šeku těžko manipulovat.
+In update 15.3 and newer, Magnetic Ink Character Recognition (MICR) fonts are installed and available to use. Both the E-13B and the CMC-7 standards are supported. In addition to MICR fonts, special security fonts are available to generate text, names, amounts, and the currency symbols Dollar, Euro, Pound, and Yen, which are hard to tamper with once a check has been printed.
 
 > [!NOTE]
-> Z bezpečnostních a právních důvodů nemůžete nahrát vlastní fonty do prostředí [!INCLUDE[d365fin](includes/d365fin_md.md)].
+> For security and legal reasons, you cannot upload custom fonts to the [!INCLUDE[prod_short](includes/prod_short.md)] environment.
 
-### Specifikace MICR E-13B
-Následující souhrny specifikací pro fonty MICR E-13B, které mohou být užitečné při kalibraci fontů a také rozložení šeku s konkrétními tiskárnami MICR.
+### MICR E-13B Specifications
+The following summarizes specifications for the MICR E-13B fonts that may be useful when calibrating fonts to be on check layouts with specific MICR printers.
 
-![MICR E-13B Specifikace](media/font_MICR_E-13B_Specifications.png "MICR E-13B Specifikace")
+![MICR E-13B Specifications](media/font_MICR_E-13B_Specifications.png "MICR E-13B Specifications")
 
-Úplnou specifikaci fontů MICR E-13B naleznete v dokumentaci dodavatele zde: (https://www.idautomation.com/micr-fonts/e13b/).
+### Delimiter characters
+![Delimiter characters](media/font-micr-letters.png "Delimiter characters")
 
-### Specifikace MICR CMC-7
-Následující fotny CMC-7 jsou k dispozici v [!INCLUDE[d365fin](includes/d365fin_md.md)] online:
+The full specification of MICR E-13B fonts can be found in the supplier's documentation here: (https://www.idautomation.com/micr-fonts/e13b/).
+
+### MICR CMC-7 Specifications
+The following CMC-7 fonts are available in [!INCLUDE[prod_short](includes/prod_short.md)] online:
 
 - IDAutomationCMC7
 - IDAutomationCMC7n10
 - IDAutomationCMC7n25
-- IDAutomationCMC7n40
+-	IDAutomationCMC7n40
 
-Následující souhrny specifikací pro fonty MICR CMC-7, které mohou být užitečné při kalibraci fontů a na  rozložení šeků s konkrétními tiskárnami MICR.
+The following summarizes specifications for the MICR CMC-7 fonts that may be useful when calibrating fonts to be on check layouts with specific MICR printers.
 
-![MICR CMC-7 Specifikace](media/font_MICR_CMC-7_Specifications.png "MICR CMC-7 Specifikace")
+![MICR CMC-7 Specifications](media/font_MICR_CMC-7_Specifications.png "MICR CMC-7 Specifications")
 
-Úplnou specifikaci fontů MICR CMC-7 naleznete v dokumentaci dodavatele zde: (http://www.idautomation.com/micr-fonts/cmc7/).
+### Delimiter characters
+![Delimiter characters](media/font-cmc7-letters.png "Delimiter characters")
 
-### Specifikace bezpečnostního fontu
-Následující souhrny shrnují specifikace pro bezpečnostní fonty šeků, které mohou být užitečné při kalibraci fontů a na rozložení šeku s konkrétními tiskárnami MICR.
+The full specification of MICR CMC-7 fonts can be found in the supplier's documentation here: (http://www.idautomation.com/micr-fonts/cmc7/).
 
-![Check Security Font Specifikace](media/font_check-security-font_Specifications.png "Check Security Font Specifikace")
+### Secure Font Specifications
+The following summarizes specifications for check security fonts that may be useful when calibrating fonts to be on check layouts with specific MICR printers.
 
-Úplnou specifikaci bezpečnostních fontů naleznete v dokumentaci dodavatele zde: (https://www.idautomation.com/security-fonts/).
+![Check Security Font Specifications](media/font_check-security-font_Specifications.png "Check Security Font Specifications")
 
-Fonty pro jiné účely jsou také k dispozici v [!INCLUDE[prodshort](includes/prodshort.md)]. Pro více informací navštivte [Dostupné Fonty](ui-fonts.md).
+The full specification of check security fonts can be found in the supplier's documentation here: (https://www.idautomation.com/security-fonts/).
 
-## Viz také
-[Vytvoření a editace vlastních rozvržení sestav](ui-how-create-custom-report-layout.md)  
-[Fonty v Business Central](ui-fonts.md)  
-[Správa pohledávek](payables-manage-payables.md)  
-[Odsouhlasení bankovních účtů](bank-manage-bank-accounts.md)   
-[Dokončení procesů na konci období](year-how-complete-period-end-processes.md)  
-[Práce s [!INCLUDE[prodshort](includes/prodshort.md)]](ui-work-product.md)  
-[Obecné obchodní Funkcionality](ui-across-business-areas.md)
+Fonts for other purposes are also available in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Available Fonts](ui-fonts.md)
+
+## See Also
+[Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)  
+[Fonts in Business Central](ui-fonts.md)  
+[Managing Payables](payables-manage-payables.md)  
+[Reconciling Bank Accounts](bank-manage-bank-accounts.md)   
+[Completing Period-End Processes](year-how-complete-period-end-processes.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[General Business Functionality](ui-across-business-areas.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

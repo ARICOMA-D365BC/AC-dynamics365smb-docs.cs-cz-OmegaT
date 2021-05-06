@@ -1,82 +1,85 @@
 ---
-title: Nastavení přidělení zdrojů | Microsoft Docs
-description: 'Naučte se, jak vám systém může pomoci zajistit přiřazení osoby, která má odbornost potřebnou pro poskytování servisu.'
-services: project-madeira
-documentationcenter: ''
-author: bholtorf
-ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: 'resource, skill, service, zones'
-ms.date: 10/01/2018
-ms.author: bholtorf
+    title: Set Up Resource Allocation | Microsoft Docs
+    description: Learn how the system can help ensure that you assign someone who has the skills required to provide a service.
+    author: bholtorf
+
+    ms.service: dynamics365-business-central
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords: resource, skill, service, zones
+    ms.date: 04/01/2021
+    ms.author: bholtorf
+
 ---
 
-# <a name="set-up-resource-allocation"></a>Nastavení přidělení zdrojů
-Aby bylo zajištěno, že servisní úloha bude vykonána dobře, je důležité najít zdroj, který je kvalifikovaný pro požadovanou práci. [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete nastavit tak, aby bylo snadné alokovat někoho, kdo má pro danou práci správnou odbornost. V [!INCLUDE[d365fin](includes/d365fin_md.md)] se toto nazývá _přidělení zdrojů_. Zdroje můžete přidělit na základě jejich odbornosti, dostupnosti nebo toho, zda jsou ve stejné zóně servisu jako zákazník. 
+# Set Up Resource Allocation
+To ensure that a service task is performed well, it's important to find a resource who is qualified to do the work. You can set up [!INCLUDE[prod_short](includes/prod_short.md)] so that it's easy to allocate someone who has the right skills for the job. In [!INCLUDE[prod_short](includes/prod_short.md)], we call this _resource allocation_. You can allocate resources based on their skill, availability, or whether they are in the same service zone as the customer. 
 
-Chcete-li použít přidělení zdrojů, musíte nastavit:  
+To use resource allocation, you must set up:  
   
-* Odbornost potřebnou k opravě a údržbě předmětů servisu. Přiřadíte ji předmětům servisu a prostředkům.  
-* Geografické oblasti zvané zóny, které definujete pro svůj trh. Například Východní, Západní, Centrální a tak dále. Přiřadíte je zákazníkům a prostředkům.  
-* Zda se má zobrazovat odbornost a zóny zdrojů a zda se má zobrazit varování, pokud si někdo vybere nekvalifikovaný zdroj, nebo zdroj který není v zákaznické zóně.  
+* The skills required to repair and maintain service items. You assign these to service items and resources.  
+* Geographic regions, called zones, that you define for your market. For example, East, West, Central, and so on. You assign these to customers and resources.  
+* Whether to display resource skills and zones, and whether to display a warning if someone chooses unqualified resource, or a resource that is not in the customer zone.  
 
-## <a name="to-set-up-skills"></a>Nastavení odbornosti
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Odbornosti**, a poté vyberte související odkaz.  
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+## To set up skills
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Skills**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-## <a name="to-assign-skills-to-service-items-and-resources"></a>Přiřazení odbornosti předmětům servisu a zdrojům
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Předměty servisu** nebo **Zdroje**, a poté vyberte související odkaz.  
-2. Otevřete kartu pro předmět servisu nebo zdroj a poté vyberte jednu z následujících možností:  
+## To assign skills to service items and resources
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Items** or **Resources**, and then choose the related link.  
+2. Open the card for the service item or resource, and then choose one of the following:  
   
-    * U předmětů servisu zvolte **Odbornosti zdroje**.  
-    * U zdroje zvolte **Odbornost**.  
+    * For service items, choose **Resource Skills**.  
+    * For resources, choose **Skills**.  
 
-## <a name="to-set-up-zones"></a>Nastavení zón
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zóny**, a poté vyberte související odkaz.  
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+## To set up zones
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Zones**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-## <a name="to-assign-zones-to-customers-and-resources"></a>Pro přiřazení zón zákazníkům a zdrojům 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** nebo **Zdroje**, a poté vyberte související odkaz.  
-2. Otevřete kartu pro předmět servisu nebo zdroj a poté vyberte jednu z následujících možností:  
+## To assign zones to customers and resources 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers** or **Resources**, and then choose the related link.  
+2. Open the card for the service item or resource, and then choose one of the following:  
   
-    * Pro zákazníky vyberte zónu v poli **Kód zóny servisu**.  
-    * Pro zdroje vyberte akci **Zóny servisu**.  
+    * For customers, choose a zone in the **Service Zone Code** field.  
+    * For resources, choose the **Service Zones** action.  
 
-## <a name="to-specify-what-to-show-when-a-resource-is-chosen"></a>Chcete-li určit, co se má zobrazit, když je vybrán zdroj
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení servisu** a poté vyberte související odkaz. 
-2. V poli **Volba odbornosti zdroje** vyberte jednu z možností popsaných v následující tabulce.  
+## To specify what to show when a resource is chosen
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Management Setup**, and then choose the related link. 
+2. In the **Resource Skills Option** field, choose one of the options described in the following table.  
   
-    |**Možnost**|**Popis**|  
+    |**Option**|**Description**|  
     |------------|-------------|  
-    |Zobrazen kód | Zobrazí pouze kód.|  
-    |Zobrazeno varování | Zobrazí informace a zobrazí varování, pokud zvolíte zdroj, který není kvalifikovaný.|  
-    |Nepoužito | Nezobrazuje tyto informace.|  
+    |Code Shown | Displays the code only.|  
+    |Warning Displayed | Shows the information and displays a warning if you choose a resource that is not qualified.|  
+    |Not Used | Does not show this information.|  
 
-## <a name="to-update-resource-capacity"></a>Aktualizace kapacity zdroje  
-Možná budete muset změnit kapacitu zdrojů.  
+## To update resource capacity  
+You may need to change the capacity of resources.  
   
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kapacita zdroje**, a poté vyberte související odkaz.  
-2. Zvolte zdroj a poté zvolte akci **Nastavit kapacitu**.  
-3. Proveďte změny a poté zvolte **Aktualizovat kapacitu**.  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resource Capacity**, and then choose the related link.  
+2. Choose the resource, and then choose the **Set Capacity** action.  
+3. Make the changes, and then choose **Update Capacity**.  
 
-## <a name="to-update-skills-for-items-service-items-or-service-item-groups"></a>Chcete-li aktualizovat odbornost pro zboží, předměty servisu nebo skupiny předmětů servisu
-Pokud chcete změnit kódy odbornosti přiřazené k položkám, například z **PC** na **PCS**, můžete tak učinit buď pro zboží, předmět servisu, nebo pro všechny předměty ve skupině předmětů servisu.  
+## To update skills for items, service items, or service item groups
+If you want to change the skill codes assigned to items, for example from **PC** to **PCS**, you can do so either for an item, service item, or for all items in a service item group.  
   
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Položky**, **Předmět servisu**, nebo **Skupiny předmětů servisu**,  a poté vyberte související odkaz.  
-2. Vyberte entitu, kterou chcete aktualizovat, a poté vyberte akci **Odbornosti zdroje**.  
-3. Na řádku s kódem, který chcete změnit, vyberte v poli **Kód odbornosti** příslušný kód odbornosti.  
-4.  Pokud má položka přidružené předměty servisu, otevře se dialogové okno s následujícími dvěma možnostmi:  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items** or **Service Item**, or **Service Item Group**, and then choose the related link.  
+2. Choose the entity to update, and then choose the **Resource Skills** action.  
+3. On the line with the code to be changed, in the **Skill Code** field, choose the relevant skill code.  
+4.  If the item has associated service items, a dialog box opens with the following two options:  
   
-    * Změňte kódy na vybranou hodnotu: Tuto možnost vyberte, pokud chcete nahradit starý kód odbornosti novým kódem u všech souvisejících servisních předmětů.  
-    * Odstraňte kódy odbornosti nebo aktualizujte jejich vztah: Tuto možnost vyberte, pokud chcete změnit kód odbornosti pouze u této položky. Kód odbornosti u souvisejících předmětů servisu bude znovu přiřazen. To znamená, že pole **Přiděleno od** bude aktualizováno.  
+    * Change the skill codes to the selected value: Select this option if you want to replace the old skill code with the new one on all the related service items.  
+    * Delete the skill codes or update their relation: Select this option if you want to change the skill code on this item only. The skill code on the related service items will be reassigned, that is, the **Assigned From** field will be updated.  
   
-## <a name="see-also"></a>Viz také
-[Přidělení zdrojů](service-how-to-allocate-resources.md)  
-[Nastavení Pracovní doby a Servisních hodin](service-how-setup-work-service-hours.md)  
-[Nastavení hlášení poruch](service-how-setup-fault-reporting.md)  
-[Nastavení kódů standardního servisu](service-how-setup-service-coding.md)  
+## See Also
+[Allocate Resources](service-how-to-allocate-resources.md)  
+[Set Up Work Hours and Service Hours](service-how-setup-work-service-hours.md)  
+[Set Up Fault Reporting](service-how-setup-fault-reporting.md)  
+[Set Up Codes for Standard Services](service-how-setup-service-coding.md)  
  
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

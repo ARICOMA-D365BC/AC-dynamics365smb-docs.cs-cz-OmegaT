@@ -1,39 +1,44 @@
 ---
-title: Fakturace Vašich rezervací Business Central | Microsoft Docs
-description: 'Naučte se, jak můžete provádět hromadnou fakturaci z Microsoft Bookings v Business Central'
+title: Invoice your bookings in Business Central | Microsoft Docs
+description: 'Learn how you can do bulk invoicing from Microsoft Bookings in Business Central .'
 author: edupont04
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'invoicing, bookings'
-ms.date: 01/07/2019
+ms.search.keywords: invoicing, bookings
+ms.date: 04/01/2021
 ms.author: edupont
+
 ---
-# <a name="bulk-invoicing-for-microsoft-bookings-in-included365finincludesd365fin_mdmd"></a>Hromadná fakturace v Microsoft Bookings v  [!INCLUDE[d365fin](includes/d365fin_md.md)]
-Pokud vaše společnost používá aplikaci Bookings v Office 365, můžete provést hromadnou fakturaci. Stránka **Booking Nevyfakturované položky** v [!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje seznam dokončených rezervací společnosti. Na této stránce můžete rychle vybrat události, které chcete fakturovat, a vytvořit návrhy faktury za poskytované služby.  
+# Bulk Invoicing for Microsoft Bookings in [!INCLUDE[prod_short](includes/prod_short.md)]
+If your company uses the Bookings app in Microsoft 365, you can do bulk invoicing for appointments. The **Uninvoiced Bookings** page in [!INCLUDE[prod_short](includes/prod_short.md)] provides a list of the company's completed bookings. In this page you can quickly select the appointments that you want to invoice and create draft invoices for the services provided.  
 
-## <a name="connect-to-bookings"></a>Připojení k Bookings
-Chcete-li se spojit v [!INCLUDE[d365fin](includes/d365fin_md.md)] s Bookings, musíte určit Účetní společnost, co synchronizovat s Bookings, jak často synchronizovat a jaké šablony použít. Tyto položky můžete nastavit v **Booking Nastavení  synchronizace**, které můžete spustit z **Nastavení synchronizace  Exchange**, které můžete najít skrz [Vyhledat](ui-search.md)  
+## Connect to Bookings
+To connect your [!INCLUDE[prod_short](includes/prod_short.md)] with Bookings, you must specify your Bookings company, what to synchronize with Bookings, how often to synchronize, and which templates to use. You set up this information on the **Booking Sync. Setup** page, which you can launch from the **Exchange Sync. Setup** page, which you can find through [Search](ui-search.md).  
 
-Pokud například chcete synchronizovat zákazníky mezi Bookings a [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte určit výchozí šablonu, pomocí které se budou přidávat noví zákazníci v [!INCLUDE[d365fin](includes/d365fin_md.md)] na základě zákazníků ve vaší účetní společnosti.  
-
-> [!NOTE]
-> Aplikace Bookings je určena k rezervování schůzek pro jednotlivé zákazníky, než pro společnosti. Synchronizace s [!INCLUDE[d365fin](includes/d365fin_md.md)] bude tedy pouze synchronizovat kontakty se zákazníkem s typem „Osoba“. Pro synchronizaci je potřeba zadat také e-mailovovou adresu.  
-
-Podobně, jako když chcete synchronizovat předměty servisu mezi Bookings a [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte určit výchozí šablonu, pomocí které se budou přidávat nové předměty servisu v [!INCLUDE[d365fin](includes/d365fin_md.md)] na základě služeb ve vaší Účetní společnosti.  
+For example, if you want to synchronize customers between Bookings and [!INCLUDE[prod_short](includes/prod_short.md)], you must specify the default template to use to add new customers in [!INCLUDE[prod_short](includes/prod_short.md)] based on the customers in your Bookings company.  
 
 > [!NOTE]
-> Pouze položky typu *Služby* se budou synchronizovat mezi Bookings a [!INCLUDE[d365fin](includes/d365fin_md.md)]. Šablona, kterou jste nastavili na stránce **Konfigurační šablony**, aby mohla být použita pro synchronizaci položky, musí být definována jako *Služba*.
+> The Bookings app is designed to book appointments for individual customers rather than companies. The synchronization with [!INCLUDE[prod_short](includes/prod_short.md)] will, therefore, only synchronize customer contacts with a Type of "Person". An email address is also required for the contact to synchronize.  
 
-## <a name="invoice-appointments"></a>Fakturační události
-Když je čas poslat faktury za dokončené rezervace, běžte na stránku **Nefakturované rezervace**. V závislosti na tom, jak často jsou informace synchronizovány, je seznam dlouhý nebo krátký. Můžete vytvářet faktury pro všechny rezervace v seznamu nebo jednu rezervaci najednou. V seznamu můžete vybrat jednu nebo více položek a fakturovat je pouze je.  
+Similarly, if you want to synchronize service items between Bookings and [!INCLUDE[prod_short](includes/prod_short.md)], you must specify the default template to use to add new service items in [!INCLUDE[prod_short](includes/prod_short.md)] based on the services in our Bookings company.  
 
-Podpora Fakturační události z Bookings je jednodušší než workflow práce s prodejními nabídkami, prodejními objednávkami a prodejními fakturami. Další informace naleznete v [Prodejní faktury](sales-how-invoice-sales.md). Můžete si vybrat, zda chcete své služby prodat pomocí [!INCLUDE[d365fin](includes/d365fin_md.md)], nebo si vybrat, zda chcete rezervovat Bookings, v závislosti na vašich obchodních potřebách.  
+> [!NOTE]
+> Only items of type *Service* will synchronize between Bookings and [!INCLUDE[prod_short](includes/prod_short.md)]. The template that you set up in the **Configuration Templates** page so it can be used for the item synchronization must define the type as *Service*.
 
-## <a name="see-also"></a>Viz také
+## Invoice Appointments
+When it is time to send invoices for the completed bookings, you go to the **Uninvoiced Bookings** page. Depending on how often the information is synchronized, the list is long or short. You can create invoices for all bookings in the list or one booking at a time. You can select one or more entries in the list and invoice those only.  
+
+The support for invoicing appointments from Bookings is simpler than the fuller workflow of working with sales quotes, sales orders, and sales invoices. For more information, see [Invoice Sales](sales-how-invoice-sales.md). You can choose to sell your services using [!INCLUDE[prod_short](includes/prod_short.md)] or choose to use Bookings, depending on your business needs.  
+
+## See Also
 [Finance](finance.md)  
-[Prodejní faktury](sales-how-invoice-sales.md)  
-[Nastavení Prodeje](sales-setup-sales.md)  
-[Microsoft Bookings](https://products.office.com/en-us/business/scheduling-and-booking-app)  
+[Invoice Sales](sales-how-invoice-sales.md)  
+[Setting Up Sales](sales-setup-sales.md)  
+[Microsoft Bookings](https://products.office.com/business/scheduling-and-booking-app)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

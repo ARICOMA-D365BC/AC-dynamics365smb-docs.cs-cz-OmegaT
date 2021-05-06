@@ -9,39 +9,39 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily Návrhu: Komponenty nákladů
-Komponenty nákladů se skládájí z různých typy nákladů, které tvoří hodnotu zvýšení nebo snížení zásob.
+# Design Details: Cost Components
+Cost components are different types of costs that make up the value of an inventory increase or decrease.  
 
-V následující tabulce jsou uvedeny různé komponenty nákladů a všechny podřízené nákladové komponenty, z nichž se skládají.
+ The following table shows the different cost components and any subordinate cost components that they consist of.  
 
-| Komponenty nákladů | Podřízené komponenty nákladů | Popis |
+|Cost Component|Subordinate Cost Component|Description|  
 |--------------------|--------------------------------|---------------------------------------|  
-| Přímé náklady | Jednotková cena (přímá nákupní cena) | Náklady, které lze vysledovat k nákladovému objektu. |
-| Přímé náklady | Náklady na dopravu (poplatky za zboží) | Náklady, které lze vysledovat k nákladovému objektu. |
-| Přímé náklady | Náklady na pojištění (poplatky za zboží) | Náklady, které lze vysledovat k nákladovému objektu. |
-| Nepřímé náklady | Náklady, které nelze vysledovat k nákladovému objektu. |
-| Odchylka | Odchylka nákupu | Rozdíl mezi skutečnými a standardními náklady, který je zaúčtován pouze pro zboží pomocí metody **standardních** nákladů. |
-| Odchylka | Odchylka materiálu | Rozdíl mezi skutečnými a standardními náklady, který je zaúčtován pouze pro zboží pomocí metody **standardních** nákladů. |
-| Odchylka | Odchylka kapacity | Rozdíl mezi skutečnými a standardními náklady, který je zaúčtován pouze pro zboží pomocí metody **standardních** nákladů. |
-| Odchylka | Subdodavatelská odchylka | Rozdíl mezi skutečnými a standardními náklady, který je zaúčtován pouze pro zboží pomocí metody **standardních** nákladů. |
-| Odchylka | Odchylka režijních kapacit | Rozdíl mezi skutečnými a standardními náklady, který je zaúčtován pouze pro zboží pomocí metody **standardních** nákladů. |
-| Odchylka | Odchylka režijních nákladů výroby | Rozdíl mezi skutečnými a standardními náklady, který je zaúčtován pouze pro zboží pomocí metody **standardních** nákladů. |
-| Přecenění | Odpis nebo zhodnocení aktuální hodnoty zásob. |
-| Zaokrouhlení | zbytky způsobené způsobem výpočtu snížení hodnoty zásob. |
+|Direct cost|Unit cost (direct purchase price)|Cost that can be traced to a cost object.|  
+|Direct cost|Freight cost (item charge)|Cost that can be traced to a cost object.|  
+|Direct cost|Insurance cost (item charge)|Cost that can be traced to a cost object.|  
+|Indirect cost||Cost that cannot be traced to a cost object.|  
+|Variance|Purchase variance|The difference between actual and standard costs, which is only posted for items using the **Standard** costing method.|  
+|Variance|Material variance|The difference between actual and standard costs, which is only posted for items using the **Standard** costing method.|  
+|Variance|Capacity variance|The difference between actual and standard costs, which is only posted for items using the **Standard** costing method.|  
+|Variance|Subcontracted variance|The difference between actual and standard costs, which is only posted for items using the **Standard** costing method.|  
+|Variance|Capacity overhead variance|The difference between actual and standard costs, which is only posted for items using the **Standard** costing method.|  
+|Variance|Manufacturing overhead variance|The difference between actual and standard costs, which is only posted for items using the **Standard** costing method.|  
+|Revaluation||A depreciation or appreciation of the current inventory value.|  
+|Rounding||Residuals caused by the way in which valuation of inventory decreases are calculated.|  
 
 > [!NOTE]  
-> Náklady na dopravu a pojištění jsou poplatky za zboží, které lze kdykoli přidat k ceně zboží. Když spustíte dávkovou úlohu  **Adjustace nákladů položek zboží** hodnota všech souvisejících snížení zásob se odpovídajícím způsobem aktualizuje.
+>  Freight and insurance costs are item charges that can be added to an item’s cost at any time. When you run the **Adjust Cost - Item Entries** batch job, the value of any related inventory decreases are updated accordingly.  
 
-## Viz také
-[Detaily návrhu: Detaily: Náklady zásob](design-details-inventory-costing.md)   
-[Detaily návrhu: Odchylka](design-details-variance.md)
-[Správa nákladů zásob](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## See Also  
+ [Design Details: Inventory Costing](design-details-inventory-costing.md)   
+ [Design Details: Variance](design-details-variance.md)
+ [Managing Inventory Costs](finance-manage-inventory-costs.md)  
+ [Finance](finance.md)  
+ [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -6,48 +6,51 @@ documentationcenter: ''
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: money flow, expense and income, liquidity, cash receipts minus cash payments, Cartera
-ms.date: 01/13/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Analýza peněžních toků ve vaší společnosti
-  Grafy v Centru rolí pro účetní poskytují informace, které vám mohou pomoci při rozhodování o tom, co dělat s vaší hotovostí.
+# Analyzing Cash Flow in Your Company
+The charts on the Accountant Role Center provide insights that can help you make solid decisions about what to do with your cash.  
 
-| K zodpovězení otázek | Použijte tento graf |
+| To answer questions like these | Use this chart |
 | --- | --- |
-| Na jak dlouho mi prodejní proces sváže hotovost?</br> Měl bych zvýšit nebo snížit úroveň zásob? | Hotovostní cyklus |
-| Kdy se peníze přesunuly dovnitř a ven z mé společnosti?</br> Jsou některá období lepší než jiná? | Cash flow |
-| Zdají se čísla na určitou dobu vypnutá?</br> Měl bych to prozkoumat? | Příjem a výdaj |
-| Kdy by mohl vzniknout hotovostní přebytek nebo deficit? </br>Měl bych splatit dluh, nebo si půjčit na pokrytí nadcházejících výdajů? | Prognózy Cash flow |
+| How long does the sales process tie up my cash?</br> Should I increase or reduce inventory levels? |Cash Cycle |
+| When did cash move in and out of my company?</br> Are some periods better than others? |Cash Flow |
+| Do the numbers seem off for a period?</br> Should I investigate? |Income & Expense |
+| When might a cash surplus or deficit happen?</br> Should I pay down debt, or borrow to meet upcoming expenses? |Cash Flow Forecasts |
 
-V Centru rolí pro účetní v části **Finanční výkonnost** grafy **Hotovostní cyklus**, **Cash flow** a **Příjem a výdaj** nabízejí způsoby analýzy cash flow:
+On the Accountant Role Center, under **Finance Performance**, the **Cash Cycle**, **Cash Flow**, and **Income & Expense** charts offer ways to analyze cash flow:  
 
-* Pomocí posuvníku časové osy můžete zobrazit čísla za určité období.
-* Graf filtrujte výběrem zdroje v legendě.
-* Změňte délku období nebo přejděte na předchozí nebo další období výběrem možností v rozbalovací nabídce **Finanční výkonnost**.
-* Položky zobrazte výběrem bodu v grafu. Například bod na časové ose nebo sloupec segmentu. Pokud se čísla zdají být vypnutá, můžete provést úpravy.
+* See figures for a period by using the timeline slider.  
+* Filter the chart by choosing the source in the legend.  
+* Change the length of the period, or go to the previous or next period, by choosing options on the **Finance Performance** drop down.  
+* View the entries by choosing a point in the chart. For example, a point on the timeline or a column segment. If the numbers seem off, this is where you can make adjustments.  
 
-Graf **Prognóza Cash flow**  je podobý. Můžete zobrazit podrobnosti, filtrovat výsledky a měnit to, co se zobrazuje stejným způsobem. Pokud změníte nastavení, můžete prognózu aktualizovat tak, že zvolíte **Prognóza Cash flow** a poté **Přepočítat prognózy**.
+Although it's separate, the **Cash Flow Forecast** chart is similar. You view details, filter results, and change what is displayed in the same ways. If you change a setting, you can refresh the forecast by choosing **Cash Flow Forecast**, and then **Recalculate Forecast**.
 
-Pokud chcete prognózu prozkoumat, můžete se kromě položek prognózy podívat také na výkaz cash flow. Můžete například vidět, jak prognóza:
+If you want to examine the forecast, in addition to forecast entries, you can also look at the cash flow worksheet. For example, you can see how the forecast:
 
-* Zpracovává potvrzené prodeje a nákupy.
-* Odečte závazky a přidá pohledávky.
-* Přeskočí duplicitní prodejní a nákupní objednávky.
+* Handles confirmed sales and purchases.  
+* Subtracts payables and adds receivables.  
+* Skips duplicate sales orders and purchase orders.  
 
-## Zobrazení výkazu cash flow
-1. Vyhledejte **Prognóza Cash flow** a poté vyberte související odkaz.
-2. Vyberte prognózu cash flow a pak zvolte akci **Prognóza Cash flow**.
-3. Na stránce **Prognóza Cash flow** vyberte akci **Navrhnout řádky sešitu**.
+## To view a cash flow worksheet
+1. Search for **Cash Flow Forecasts**, and then choose the related link.  
+2. Choose a cash flow forecast, and then choose the **Cash Flow Worksheet** action.  
+3. On the **Cash Flow Worksheet** page, choose the **Suggest Worksheet Lines** action.  
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)
+## See Related Training at [Microsoft Learn](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)
 
-## Viz také
-[Nastavení financí](finance-setup-finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Nastavení analýzy peněžních toků](finance-setup-cash-flow-analyses.md)
+## See Also
+[Setting Up Finance](finance-setup-finance.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Setting Up Cash Flow Analysis](finance-setup-cash-flow-analyses.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

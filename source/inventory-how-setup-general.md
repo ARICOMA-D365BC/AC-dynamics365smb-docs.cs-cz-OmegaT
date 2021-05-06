@@ -1,6 +1,6 @@
 ---
-title: Definice hlavního nastavení zásob
-description: 'Popisuje, jak definovat hlavní nastavení zásob, například číselné řady a lokace, takže můžete například spravovat sklad a zásoby.'
+title: Define the General Inventory Setup
+description: Describes how to define the general inventory setup so that you can manage your warehouse and stock.
 author: bholtorf
 
 ms.service: dynamics365-business-central
@@ -9,33 +9,33 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Nastavení obecných informací o zásobách
+# Set Up General Inventory Information
 
-Obecné nastavení zásob nastavíte na stránce **Nastavení zásob**.
+You specify your general inventory setup on the **Inventory Setup** page.
 
-## Nastavení obecných informací o zásobách
+## To set up general inventory information
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení zásob** a poté vyberte související odkaz.
-2. Na stránce **Nastavení zásob** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Setup**, and then choose the related link.
+2. On the **Inventory Setup** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-Pro podrobné informace o polích ocenění, **Automatické účtování nákladů**, **Účtování oček.nákladů do fin.** a **Výchozí metoda ocenění** navštivte [Odsouhlasení nákladů na zboží s financemi](finance-how-to-post-inventory-costs-to-the-general-ledger.md), [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md) a [Detaily návrhu: Účtování očekávaných nákladů](design-details-expected-cost-posting.md). Pro více informací navštivte [Správa nákladů zásob](finance-manage-inventory-costs.md).
+For detailed information about the costing fields, **Automatic Cost Posting**, **Expected Cost Posting to G/L**, and **Default Costing Method**, see [Reconcile Inventory Costs with the General Ledger](finance-how-to-post-inventory-costs-to-the-general-ledger.md), [Design Details: Inventory Costing](design-details-inventory-costing.md), and [Design Details: Expected Cost Posting](design-details-expected-cost-posting.md). For more information about costing in general, see [Managing Inventory Costs](finance-manage-inventory-costs.md).  
 
-Pokud chcete zahrnout dobu zpracování ve skladu do kalkulace nadějné zakázky na nákupní řádek, můžete jej nastavit jako výchozí pro zásoby, na stránce **Nastavení zásob** a pro vaši lokaci. Pro více informací navštivte [Výpočet data přislíbení objednávky](sales-how-to-calculate-order-promising-dates.md).
+If you want to include warehouse handling time in the order promising calculation on the purchase line, you can set it up as a default for the inventory, on the **Inventory Setup** page, and for your location. For more information, see [Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md).  
 
 > [!NOTE]
-> Přepínač **Automatická adjustace nákladů** je ve výchozím nastavení zapnutý, aby se zajistilo, že hodnoty zásob jsou vždy ve věcných položkách správné, což zase udržuje aktuální statistiky prodeje a zisku. Změny nákladů z příchozích položek, například pro nákupy nebo výstup výroby, jsou přiřazeny k souvisejícím výstupním položkám, jako jsou prodeje nebo převody. To je užitečné pro nové zákazníky [!INCLUDE[prod_short](includes/prod_short.md)] a malé firmy s relativně nízkou úrovní skladových transakcí. S růstem firmy a zvyšováním úrovně zásob to však může zpomalit výkon systému. Chcete-li minimalizovat snížený výkon během účtování, vyberte možnost času, která definuje, jak daleko v čase od pracovního data může dojít k příchozí transakci, aby se potenciálně spustila úprava souvisejících položek výstupních hodnot. Případně můžete ručně upravit náklady v pravidelných intervalech pomocí dávkové úlohy Adjustace nákladů položek zboží.
+> The **Automatic Cost Adjustment** toggle is turned on by default to ensure that inventory values are always correct in the general ledger, which in turn keeps your sales and profit statistics up to date. Cost changes from inbound entries, such as those for purchases or production output, are assigned to the related outbound entries, such as sales or transfers. This is helpful for new [!INCLUDE[prod_short](includes/prod_short.md)] customers and small businesses with relatively low inventory transaction levels. However, as a business grows and inventory levels increase, this can slow down system performance. To minimize reduced performance during posting, select a time option to define how far back in time from the work date an inbound transaction can occur to potentially trigger adjustment of related outbound value entries. Alternatively, you can manually adjust costs at regular intervals with the Adjust Cost - Item Entries batch job.
 
-## Viz také
-[Nastavení zásob](inventory-setup-inventory.md)    
-[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)      
-[Zásoby](inventory-manage-inventory.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)    
-[Změňte, které funkce se zobrazí](ui-experiences.md)    
-[Přehled obchodních funkcionalit](ui-across-business-areas.md)
+## See Also
+[Set Up Inventory](inventory-setup-inventory.md)  
+[Design Details: Costing Methods](design-details-costing-methods.md)    
+[Manage Inventory](inventory-manage-inventory.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

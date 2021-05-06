@@ -6,47 +6,50 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 04/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
-# Vytváření interakcí s kontakty a na segmentech
-Můžete vytvořit interakce pro záznam všech interakcí a komunikací, které máte se svými kontakty a segmenty, například cílená pošta.
+# Create Interactions on Contacts and Segments
+You can create interactions to record all the interactions and communications you have with your contacts and segments, for example, direct mail.
 
-Před vytvořením interakcí musíte nastavit šablony interakcí. Pro více informací navštivte [Nastavení šablon interakce](marketing-interactions.md).
+Before you create interactions, you must set up interaction templates. For more information, see  [Set Up Interaction Templates](marketing-interactions.md).
 
-## Vytvoření interakce
-1. Otevřete položku protokolu kontaktu, prodejce nebo interakce.
-2. Vyberte akci **Vytvořit interakci**.
-3. Vyplňte pole a vyberte tlačítko **OK**.
+## To create an interaction
+1. Open the contact, salesperson, or interaction log entry.
+2. Choose the **Create Interaction** action.
+3. Fill in the fields, and then choose the **OK** button.
 
-> [!NOTE]
-> Pokud potřebujete před dokončením interakce provést další úkol, můžete zvolit **Storno** a dokončit interakci později. Tím se odloží interakce.
+> [!NOTE]  
+>   If you need to perform another task before finishing the interaction, you can choose **Cancel** and then finish the interaction at a later time. This postpones the interaction.
 
-## Dokončení a odstranění odložených interakcí
-1. Otevřete položku protokolu kontaktu, prodejce nebo interakce.
-2. Zvolte **Odložené interakce**.
-3. Vyberte interakci, kterou chcete dokončit, a pak zvolte akci **Pokračovat**.
+## To finish and delete postponed interactions
+1. Open the contact, salesperson, or interaction log entry.
+2. Choose **Postponed Interactions**.
+3. Select the interaction you want to finish, and then choose the **Resume** action.
 
-## Vytvoření interakce na segmentu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Segmenty** a poté vyberte související odkaz.
-2. Na stránce **Segment** v části **Interakce** vyplňte pole a určete, kterou interakci chcete segmentu přiřadit.
+## To create an interaction on a segment
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Segments**, and then choose the related link.
+2. In the **Segment page**, in the **Interaction** section, fill in the fields to specify which interaction you want to assign to the segment.
 
-   Po přiřazení interakce k segmentu můžete přizpůsobit interakci pro každý konkrétní kontakt v rámci segmentu, například výběrem jiné šablony interakce na řádcích na stránce **Segment**.
-3. Chcete-li zaznamenat segment a interakce, vyberte akci **Protokol**. Otevře se stránka **Protokolovat segment**.
-4. Pokud chcete vytvořit nový segment obsahující stejné kontakty, zaškrtněte políčko **Vytvořit segment sledování**. Chcete-li vytvořit segment sledování, musíte mít na stránce **Nastavení marketingu** zadanou číselnou řadu pro segmenty.
+    After you have assigned an interaction to the segment, you can personalize the interaction for each particular contact within the segment, for example, by selecting another interaction template on the lines on the **Segment** page.  
+3. To log the segment and interactions, choose the **Log** action. The **Log Segment** page opens.
+4. If you want to create a new segment containing the same contacts, select the **Create Follow-up Segment** check box. To create a follow-up segment, you must have specified number series for segments on the **Marketing Setup** page.
 
-Interakce se zaznamená pro každý kontakt v rámci segmentu v tabulce **Položka protokolu interakce** a segment se zaznamená do protokolu. Protokolované segmenty naleznete na stránce **Protokolovaný segment**.
+An interaction is recorded for each contact within the segment in the **Interaction Log Entry** table, and the segment is logged. Logged segments can be found on the **Logged Segment** page.
 
-Pokud jste zaškrtli políčko **Vytvořit segment sledování**, vytvoří se nový segment, který bude obsahovat stejné kontakty jako právě přihlášený segment.
+If you have selected the **Create Follow-up Segment** check box, a new segment is created that contains the same contacts as the segment you have just logged.
 
-## Viz také
-[Interakce záznamu](marketing-interactions.md)  
-[Správa kontaktů](marketing-contacts.md)  
-[Správa prodejních příležitostí](marketing-manage-sales-opportunities.md)  
-[Práce s Business Central](ui-work-product.md)
+## See Also
+[Recording Interactions](marketing-interactions.md)  
+[Managing Contacts](marketing-contacts.md)  
+[Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
+[Working with Business Central](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

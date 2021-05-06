@@ -4,25 +4,25 @@
     author: jswymer
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
     ROBOTS: NOINDEX,NOFOLLOW
-    ms.date: 04/01/2020
+    ms.date: 04/01/2021
     ms.author: jswymer
 
 ---
-# Přidávání oznámení k záznamům a jejich prohlížení
-Můžete <!--OnPrem and your colleagues -->přidávat oznámení k záznamům v aplikaci. Mnoho stránek, zejména ty, které zobrazují seznam záznamů, jako například stránka **Prodejní objednávky**, která obsahuje tlačtíko **Oznámení** v informačním okně **Oznámení**. <!--OnPrem Notes is where you can write notes about a record to yourself or others, and where you can view notes to you from others. For example, a note could be a general comment or processing instruction to your colleague, who can then respond to your note using their own **Notes**. Or, your colleague can add a note that gives you extra information about a sales order that is not covered by the information on the sales order. These notes and correspondences will follow the record as it is processed in the company.-->
+# Add and View Notes on Records
+ You <!--OnPrem and your colleagues -->can add notes to records in the application. Many pages, particularly those that display a list of records, such as the **Sales Orders** page, include the **Notes** action or the **Notes** FactBox. <!--OnPrem Notes is where you can write notes about a record to yourself or others, and where you can view notes to you from others. For example, a note could be a general comment or processing instruction to your colleague, who can then respond to your note using their own **Notes**. Or, your colleague can add a note that gives you extra information about a sales order that is not covered by the information on the sales order. These notes and correspondences will follow the record as it is processed in the company.-->
 
-> [!NOTE]  
-> Tato funkce není v současné době k dispozici..
+ > [!NOTE]  
+ >  This feature is currently not available.  
 
 <!--OnPrem
 > [!NOTE]  
->  You can only select one recipient of the note.-->
+>  You can only select one recipient of the note.-->  
 
 <!--OnPrem
 ## To work with notes on a record
@@ -43,5 +43,8 @@ Můžete <!--OnPrem and your colleagues -->přidávat oznámení k záznamům v 
      If **Notify** is selected, the note will be sent as a notification to the user's **My Notifications** on the Role Center.  -->
 <!--OnPrem
 3.  Choose the **OK** button.  -->
-## Viz také
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

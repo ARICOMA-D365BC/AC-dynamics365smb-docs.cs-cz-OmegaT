@@ -5,80 +5,83 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: reject, delegate, request
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Použití schvalování workflow
-Pokud musí být záznam, například nákupní doklad nebo karta zákazníka, schválen někým ve vaší organizaci, odešlete požadavek na schválení jako součást workflow. Na základě nastavení workflow je příslušná schvalující osoba informována o tom, že záznam vyžaduje schválení.
+# Use Approval Workflows
+When a record, such as a purchase document or a customer card, needs to be approved by someone in your organization, you send an approval request as part of a workflow. Based on how the workflow is set up, the appropriate approver is then notified that the record requires their approval.
 
-Schvalování workflow se nastavuje na stránce **Workflow**. Pro více informací navštivte [Nastavení workflow](across-set-up-workflows.md).
+You set up approval workflows on the **Workflow** page. For more information, see [Setting Up Workflows](across-set-up-workflows.md).
 
-Kromě schvalování workflow popsaného v tomto tématu můžete provádět různé další úkoly souvisejíci s workflow. Pro více informací navštivte [Použití workflow](across-use-workflows.md).
+In addition to approval workflows described in this topic, you can perform various other workflow tasks. For more information, [Using Workflows](across-use-workflows.md).
 
-Základní workflow schvalování nákupních a prodejních dokladů, deníků plateb, karet odběratele a karet zboží jsou připraveny ke spuštění jako průvodce. Pro více informací navštivte [Přehled](product-get-started.md).
+Core approval workflows for purchases documents, sales documents, payment journals, customer cards, and item cards are ready to start as guides. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
-## Požadavek na schválení záznamu
-Následující úloha je prováděna uživatelem schvalování.
+## To request approval of a record
+The following task is performed by an approval user.
 
-1. Na stránce, která představuje záznam, vyberte akci **Odeslat požadavek ke schvalování**.
-2. Chcete-li zobrazit všechny vaše žádosti o schválení, vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Položky požadavku ke schvalování** a poté vyberte související odkaz.
+1. on the page that presents the record, choose the **Send Approval Request** action.
+2. To see all your approval requests, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Approval Request Entries**, and then choose the related link.  
 
-Stav položky schvalování se aktualizuje z hodnoty **Vytvořené** na **Otevřeno**. Stav záznamu, například nákupní faktura, je aktualizována z **Otevřeno** na **Čeká na schválení** a zůstává uzamčena pro zpracování až do doby, než všichni schvalovatelé schválí záznam.
+The status of the approval entry is updated from **Created** to **Open**. The status of the record, for example a purchase invoice, is updated from **Open** to **Pending Approval** and remains locked for processing until all approvers have approved the record.
 
-Když schvalovatel schválil záznam, stav se změní na **Vydáno**. Poté můžete pokračovat v práci se záznamem.
+When the approver has approved the record, the status changes to **Released**. You can then continue your tasks with the record.
 
-## Zrušení žádosti o schválení
-Následující úloha je prováděna uživatelem schvalovaní s právy schvalovatele.
+## To cancel requests for approval
+The following task is performed by an approval user with approver rights.
 
-Zákazník může chtít po odeslání ke schválení změnit objednávku. V takovém případě můžete zrušit proces schvalování a provést potřebné změny objednávky, než požádáte o opětovné schválení.
+A customer may want to change an order after it has been submitted for approval. In this case, you can cancel the approval process and make the necessary changes to the order before you request approval again.
 
-- Na stránce, která představuje záznam, vyberte akci **Zrušit požadavek ke schvalování**.
+- on the page that displays the record, choose the **Cancel Approval Request** action.
 
-Pokud byla žádost o schválení zrušena, změní se stav příslušné položky schválení na **Zrušeno**. Stav záznamu je aktualizován z **Čeká na schválení** na **Otevřeno**. Schvalovací proces pak může začít znovu.
+When the approval request has been canceled, the status of the related approval entry is changed to **Canceled**. The status of the record is updated from **Pending Approval** to **Open**. The approval process can then start again.
 
-## Schválení nebo zamítnutí žádosti o schválení
-Následující úloha je prováděna uživatelem schvalovaní s právy schvalovatele.
+## To approve or reject requests for approval
+The following task is performed by an approval user with approver rights.
 
-Žádosti o schválení můžete zpravovat na stránce **Žádosti o schválení**, například za účelem schválení více žádostí najednou. Alternativně můžete zpracovat každý požadavek na souvisejícím záznamu stejně jako stránka **Nákupní faktura**, výběrem odkazu v obdržené notifikaci.
+You can process approval requests on the **Requests to Approve** page, for example to approve multiple requests at a time. Alternatively, you can process each request on the related record, such as the **Purchase Invoice** page, by choosing the link in the notification that you receive.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Požadavky na schválení** a poté vyberte související odkaz.
-2. Vyberte jeden nebo více řádků pro záznam nebo záznamy, které chcete schválit nebo odmítnout.
-3. Vyberte akci **Schválit**, **Zamítnout** nebo **Delegovat**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Requests to Approve**, and then choose the related link.
+2. Select one or more lines for the record or records that you want to approve or reject.
+3. Choose the **Approve**, **Reject**, or **Delegate** actions.
 
-Po schválení nebo odmítnutí záznamu se stav schválení v poli **Status** změní na **Schváleno** nebo **Zamítnuto**.
+When a record has been approved or rejected, the approval status in the **Status** field changes to **Approved** or **Rejected**.
 
-Je-li nastavena hierarchie schvalovatele, bude stav záznamu **Čeká na schválení** dokud záznam neschválí všichni schvalovatelé. Poté se stav záznamu změní na **Vydáno**.
+If an approver hierarchy is set up, the record status will be **Pending Approval** until all approvers have approved the record. Then the record status will change to **Released**.
 
-Současně se stav schválení změní z **Vytvořeno** na **Otevřeno**, jakmile bude vytvořena žádost o schválení pro záznam. Pokud je žádost zamítnuta, stav schválení se změní na **Zamítnuto**. Stav zůstane nastaven na **Otevřený** nebo **Zamítnuto** dokud žádost neschválí všichni schvalovatelé.
+At the same time, the approval status changes from **Created** to **Open** as soon as an approval request for the record is created. If the request is rejected, the approval status changes to **Rejected**. The status remains **Open** or **Rejected** until all approvers have approved the request.
 
-## Delegovat žádosti o schválení
-Následující úloha je prováděna uživatelem schvalovaní s právy schvalovatele.
+## To delegate requests for approval
+The following task is performed by an approval user with approver rights.
 
-Chcete-li zabránit tomu, aby se dokumenty shromažďovaly nebo jinak zablokovaly workflow, schvalovatel a správce schvalování mohou přenést žádost o schválení na náhradního schvalovatele. Náhradník může být buď určeným náhradníkem, přímým schvalovatelem nebo schvalovacím správcem v uvedeném pořadí priority. Tuto funkci obvykle používáte, pokud je schvalovatel mimo kancelář a není schopen schválit žádosti před datem splatnosti.
+To prevent documents from piling up or otherwise block the workflow, the approver and the approval administrator can delegate an approval request to a substitute approver. The substitute can either be a designated substitute, the direct approver, or the approval administrator, in that order of priority. You typically use this feature if an approver is out of office and is unable to approve requests before the due date.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Požadavky na schválení** a poté vyberte související odkaz.
-2. Vyberte jeden nebo více řádků pro žádosti o schválení, které chcete přenést na náhradního schvalovatele a potom vyberte akci **Delegovat**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Requests to Approve**, and then choose the related link.
+2. Select one or more lines for the approval requests that you want to delegate to a substitute approver, and then choose the **Delegate** action.
 
-Oznámení o schválení žádosti je odesláno schvalujícímu náhradníkovi.
+A notification to approve the request is sent to the substitute approver.
 
-## Správa žádostí o schválení po splatnosti
-Následující úloha je prováděna uživatelem schvalovaní s právy schvalovatele.
+## To manage overdue approval requests
+The following task is performed by an approval user with approver rights.
 
-V pravidelných intervalech musíte připomenout uživatelům schvalovacího workflow žádosti o schválení po splatnosti, na které musí reagovat. Na to použijete funkci **Odeslat upozornění na zpožděné pol.schvalování**.
+At regular intervals, you must remind approval workflow users of overdue approval requests that they must react on. You use the **Send Overdue Approval Notifications** function for this.
 
-Funkce **Odeslat upozornění na zpožděné pol.schvalování** kontroluje všechny otevřené žádosti o schválení, které jsou v současné době opožděné. Každý schvalovatel, který má alespoň jeden záznam o schválení po uplynutí doby platnosti, obdrží oznámení se seznamem všech žádostí o schválení po splatnosti. Oznámení se také zašle jejich schvalovatelům a všem žadatelům o schválení po splatnosti. Toto pomáhá, pokud musí být položka schválení po splatnosti delegována na náhradníka.
+The **Send Overdue Approval Notifications** function checks for all open approval requests that are currently overdue. Each approver that has at least one overdue approval entry receives a notification with the list of all their overdue approval requests. The notification is also sent to their approver and all the requesters of the overdue approvals. This helps if the overdue approval entry must be delegated to a substitute.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Odeslat upozornění na zpožděné pol.schvalování** a poté vyberte související odkaz.
-2. Na stránce **Upozornění na zpožděné pol.schvalování**, vyberte akci **Odeslat upozornění na zpožděné pol.schvalování**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Overdue Approval Requests**, and then choose the related link.
+2. On the **Overdue Approval Requests** page, choose the **Send Overdue Approval Notifications** action.
 
-## Viz také
-[Prodej](sales-manage-sales.md)  
-[Došlé doklady](across-income-documents.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Sales](sales-manage-sales.md)    
+[Incoming Documents](across-income-documents.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

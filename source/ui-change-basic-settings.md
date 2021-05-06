@@ -1,97 +1,111 @@
 ---
-title: Prohlížení a úpravy základních nastavení | Microsoft Docs
-description: 'Naučte se, jak změnit některá základní nastavení, například Centrum rolí, společnost nebo pracovní datum.'
-author: ZdenekBicek
+title: Change basic settings for the current user
+description: Learn how to change some basic settings, for example, your Role Center, company, or work date.
+author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: 'change Role Center, notification, change company, change work date'
-ms.date: 01/14/2020
-ms.reviewer: v-zdbice
-ms.author: sgroespe
+ms.search.keywords: change Role Center, notification, change company, change work date
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# Změna základního nastavení
+# Change Basic Settings
 
-Na stránce **Má nastavení**, můžete zobrazit a změnit základní nastavení pro [!INCLUDE[d365fin](includes/d365fin_md.md)]. Změny, které provedete, ovlivní pouze vaše pracovní prostředí a ne pracovní prostředí ostatních uživatelů.  
+On the **My Settings** page, you can see and change basic settings for your [!INCLUDE[prod_short](includes/prod_short.md)]. The changes that you make will only affect your workspace, not the workspaces of other users.  
 
-## <a name="role-center"></a> Centrum rolí
+## <a name="role-center"></a>Role
 
-Centrum rolí představuje domovskou stránku, úvodní obrazovku, která je navržena pro potřeby konkrétní role v organizaci. V závislosti na vaší roli vám Centrum rolí poskytuje přehled o firmě, vašem oddělení nebo vašich osobních úkolech. Pomáhá také navigovat k vašim každodenním úkolům a najít práci, která je vám přiřazena.
+The role determines the home page, a starting screen that is designed for the needs of a specific role in an organization. Depending on your role, the home page, or role center, gives you an overview of the business, your department, or your personal tasks. It also helps you navigate to your daily tasks and find work that is assigned to you.
 
-- Navigace v horní části umožňuje přepínat mezi zákazníky, dodavateli, zbožím a dalšími důležitými seznamy informací. Akce také umožňují iniciovat úlohy, například vytvořit novou prodejní fakturu, přímo z centra rolí.
+* At the top, the navigation allows you to switch between customers, vendors, items, and other important lists of information. Similarly, actions allow you to initiate tasks, such as create a new sales invoice, directly from the home page.
 
-- V centru rolí najdete **Aktivity**. Aktivity ukazují aktuální data a lze na ně kliknout nebo klepnout a zobrazit podrobnější informace. Klíčové ukazatele výkonu lze nastavit tak, aby zobrazovaly vybraný graf pro vizuální znázornění například peněžních toků nebo příjmů a výdajů. Na domovské stránce si také můžete vytvořit seznam oblíbených zákazníků, se kterými často obchodujete nebo kterým potřebujete věnovat zvláštní pozornost.
+* In the center, you find the **Activities** area, which shows current data and can be clicked or tapped to view more detailed information. Key performance indicators (KPIs) can be set up to display a selected chart for a visual representation of, for example, cash flow or income and expenses. You can also build up a list of favorite customers on the home page for business accounts that you do business with often or need to pay special attention to.
 
-### <a name="to-change-role-center"></a>Chcete-li změnit Centrum rolí
+### To change the role
 
-Výchozí Centrum rolí je **Obchodní ředitel**, ale můžete si vybrat jiné Centrum rolí, které lépe vyhovuje vašim potřebám.
+The default role is **Business Manager**, but you can select another role to use a role center that fits your needs better.  
 
-1. V pravém horním rohu vyberte ikonu **Nastavení** ![Settings](media/ui-experience/settings_icon_small.png "Ikona nastavení pro Centrum rolí"), a vyberte **Má nastavení**.
-2. Na stránce **Má nastavení**, v poli **Role**, vyberte Centrum rolí, které chcete nastavit jako standardní. Například vyberte **Účtárna**.
-3. Potvrďte výběr tlačítkem **OK**.
+1. In the top right corner, choose the **Settings** icon ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center"), and then choose the **My Settings** action.
+2. On the **My Settings** page, in the **Role** field, select the role that you want to use by default. For example, select **Accountant**.
+3. Choose the **OK** button.
 
-## <a name="company"></a>Společnost
+## <a name="company"></a>Company
 
-Společnost funguje jako úložiště pro data v [!INCLUDE[d365fin](includes/d365fin_md.md)]. V databázi může být více společností, ale vždy lze vybrat pouze jednu.
+A company functions as a container for data in [!INCLUDE[prod_short](includes/prod_short.md)]. There can be multiple companies in a database, but only one can be selected at a time.
 
-Výchozí společnost se nazývá CRONUS a obsahuje pouze demonstrační data.
+The default company is called CRONUS and contains demonstration data only. You can create a new company with custom data. For more information, see [Creating New Companies](about-new-company.md).
 
-## <a name="to-change-the-company-name"></a>Změna názvu společnosti
+### To change the company name
 
-Název společnosti je vždy zobrazen v levém horním rohu a funguje jako akce, kterou se můžete vrátit do centra rolí. Tento název můžete změnit na stránce **Informace o společnosti**.
+The company name is always displayed at the top left corner and works as an action that you can choose to go back to the Role Center. You can change this name on the **Company Information** page.
 
-1. Zvolte ikonu ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Informace o společnosti**, a vyberte odpovídající odkaz.
-2. Do pole **Název** zadejte nový název společnosti.
-3. Opusťte stránku. Systém se restartuje a zobrazí novou společnost v levém horním rohu.
+1. Choose the ![Sprocket icon to open the Settings menu](media/ui-experience/settings_icon_small.png) icon, and then choose the **Company Information** action.
+2. In the **Name** field, enter the new company name.
+3. Leave the page. The system restarts and displays the new company in the top-left corner.
 
-## Zobrazení značky společnosti pro rychlý přístup k informacím o společnosti
+### <a name="badge"></a>To display a company badge for quick access to company information
 
-V pravém horním rohu můžete přidat přizpůsobenou značku, při volbě které  se rychle zobrazí jméno společnosti a informace o tenantu v rozbalovacím poli.
+You can add a customized badge in the top-right corner, which you can choose to quickly view company name and tenant information in a pop-up box. The company badge is also useful when [!INCLUDE[prod_short](includes/prod_short.md)] is embedded in another application, like Microsoft Teams or in some other web application. In these cases, because the [!INCLUDE[web_client](includes/web_client.md)] displays less surrounding contextual information, the company badge serves as the only way to determine which company or environment a record belongs to.
 
-1. Zvolte ikonu ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Informace o společnosti**, a vyberte odpovídající odkaz.
-2. Na záložce **Značka společnosti** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.
+2. On the **Company Badge** FastTab, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
 
 > [!NOTE]
-> Pokud je definován odznak společnosti, nemůžete změnit název společnosti, jak je popsáno v [Chcete-li změnit název společnosti](ui-change-basic-settings.md#to-change-the-company-name)
+> If a company badge is defined, then you cannot change the company name as described in [To change the company name](ui-change-basic-settings.md#to-change-the-company-name)
 
-## <a name="work-date"></a>Pracovní datum
-
-Výchozí pracovní datum je obvykle dnešní datum. Možná budete muset dočasně změnit pracovní datum, abyste mohli provádět úkoly, jako je dokončení transakcí k datu, které není aktuálním datem.
+## <a name="work-date"></a>Work date
+The most commonly used work date is today's date. You may have to temporarily change the work date to be able to perform tasks, such as completing transactions for a date that is not today's date.
 
 > [!TIP]  
-> Do všech polí s daty zadejte **d** pro rychlé zadání dnešního data nebo zadejte **p** pro rychlé zadání pracovního data, což je hodnota pole **Pracovní datum** na stránce **Moje nastavení**.
+> In all date fields, type **t** to quickly enter today's date, and type **w** to quickly enter the work date, which is the value in the **Work Date** field on the **My Settings** page.
 
 > [!IMPORTANT]  
-> Po změně pracovního data, pokud se odhlásíte nebo přepnete na jinou společnost, se pracovní datum vrátí na výchozí pracovní datum. Takže při příštím přihlášení nebo přepnutí zpět na původní společnost bude nutné znovu nastavit pracovní datum.
+> After you change the work date, if you sign out or switch to another company, the work data reverts to the default work date. So the next time you sign in or switch back to the original company, you may have to set the work date again.
 
-### Indikace pracovního data
+### Work date indication
 
-Pokud není pracovní datum nastaveno na dnešní datum, objeví se na stránkách, které lze editovat, a kde je proto pracovní datum kritické, dva typy indikátorů:
+The work date is critical on pages that can be edited. Whenever the work date isn't set to today's date on an editable page, then two types of indicators appear on the page:
 
-- V horní části stránky se zobrazí upozornění, které vám řekne, jaké pracovní datum je nastaveno. Upozornění poskytuje přímý odkaz na nastavení pracovního data na stránce **Moje nastavení**, takže pokud chcete, můžete datum změnit. Z upozornění si můžete také zvolit zrušení upozornění pro zbytek vaší relace. Pokud pracovní datum nezměníte na "dnes", zobrazí se připomenutí při příštím přihlášení.
+* A reminder appears at the top of the page that tells you what the work date is set to. The reminder provides a direct link to the work date setting on the **My Settings** page so you change the date if you want. From the reminder, you can also choose to dismiss the reminder for the rest of your session. Unless you change the work date to "today", the reminder will appear the next time you sign in.
 
-- Pokud upozornění zrušíte, v názvu stránky se zobrazí pracovní datum.  
--->
-Pokud není pracovní datum nastaveno na aktuální den (dnes), pak se na všech stránkách, kde můžete upravovat datum, zobrazuje aktuální pracovní datum v levém horním rohu stránky.
+* If you dismiss the reminder, the work date will appear in the title of the page.  
 
-## <a name="region"></a> Oblast
+If the work date isn't set to the current day (today), then on all pages where you can edit data, the current work date appears in the upper-left corner.
 
-Nastavení **Oblast** určuje, jak jsou zobrazovány nebo formátovány data, časy, čísla a měny.
+## <a name="region"></a> Region
 
-## <a name="language"></a> Jazyk
+The **Region** setting determines how dates, times, numbers, and currencies are shown or formatted.
 
-Mění jazyk zobrazení. Toto pole se zobrazí, pouze pokud je k dispozici více než jeden jazyk.
+## <a name="language"></a> Language
 
-Počáteční jazyk je určen administrátorem nebo nastavením vašeho prohlížeče, když se registrujete pro [!INCLUDE[d365fin](includes/d365fin_md.md)]. Jazyk, který nastavíte, bude použit na všech zařízeních, ze kterých se přihlašujete, jako je telefon nebo tablet.
+Changes the display language. This field appears only when there's more than one language to choose from.
 
-## <a name="changing-when-i-receive-notifications"></a>Změnit, kdy se zobrazí upozornění
+The initial language is either determined by the administrator or by your browser settings when you sign up for [!INCLUDE[prod_short](includes/prod_short.md)]. The language that you set will be used on all devices that you sign in from, such as a phone or tablet.
 
-Tento odkaz vyberte, chcete-li zobrazit nebo změnit upozornění o určitých událostech nebo změnách stavu, například když se chystáte fakturovat zákazníkovi, který má saldo po lhůtě splatnosti nebo dostupné zásoby jsou nižší než množství, které se chystáte prodat. Další informace naleznete v části [Správa upozornění](ui-smart-notifications.md).
+Additional languages for [!INCLUDE[prod_short](includes/prod_short.md)] can be installed from AppSource. While all supported display languages are shown in the list, the administrator must install the relevant language app to the tenant before users can switch to the new language in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-## Viz také
+## Time zone
 
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)  
+Defines the time zone where you are located. When you first sign into [!INCLUDE [prod_short](includes/prod_short.md)], the time zone is set based on your company's address. Change it if it doesn't fit your physical location.  
+
+## Notifications
+
+Choose the *Change when I receive notifications* link to view or change the notifications that you get about certain events or changes in status, such as when you are about to invoice a customer who has an overdue balance, or the available inventory is lower than the quantity you are about to sell. For more information, see [Managing Notifications](ui-smart-notifications.md).
+
+## Teaching tips
+
+[!INCLUDE [ua-teachingtips](includes/ua-teachingtips.md)]
+
+## See Related Training at [Microsoft Learn](/learn/modules/personalize-ui-dynamics-365-business-central/index)
+
+## See Also
+
+[Creating New Companies](about-new-company.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

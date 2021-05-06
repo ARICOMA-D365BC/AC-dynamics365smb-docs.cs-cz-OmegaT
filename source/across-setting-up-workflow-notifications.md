@@ -1,43 +1,60 @@
 ---
-    title: Setting Up Workflow Notifications | Microsoft Docs
+    title: Workflow Notifications
     description: Many workflow responses are about notifying a user that an event has occurred that they must act on. For example, on one workflow step, the event can be that User 1 requests approval of a new record, and the response is that a notification is sent to User 2, the approver. On the next workflow step, the event can be that User 2 approves the record, and the response is that a notification is sent to User 3 to start a related processing of the approved record. For workflow steps that are about approval, each notification is tied to an approval entry.
-    services: project-madeira
-    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
-    ms.devlang: na
-    ms.tgt_pltfrm: na
+    ms.topic: conceptual
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Natavení upozornění workflow
-Mnoho odezev workflow se týká upozornění uživatele, že došlo k události, na kterou musí reagovat. Například u jednoho kroku workflow může být událost taková, že uživatel 1 požaduje schválení nového záznamu a odpověď je, že oznámení je odesláno uživateli 2, který je schvalovatel. V dalším kroku workflow může být událost, kterou uživatel 2 schválí, a odpověď je, že uživateli 3 je odesláno oznámení o zahájení souvisejícího zpracování schváleného záznamu. U kroků workflow, které se týkají schvalování, je každé oznámení vázáno na položku schválení. Pro více informací navštivte [Workflow](across-workflow.md).
+# Workflow Notifications
 
-> [!NOTE]
-> Obecná verze [!INCLUDE[d365fin](includes/d365fin_md.md)] podporuje oznámení jako e-mail a interní poznámky.
+Set up your workflows to automatically notify users when their attention is required for a step in that workflow. Many workflow responses are about notifying a user that an event has occurred that they must act on. For example, on one workflow step, the event can be that User 1 requests approval of a new record, and the response is that a notification is sent to User 2, the approver. On the next workflow step, the event can be that User 2 approves the record, and the response is that a notification is sent to User 3 to start a related processing of the approved record. For workflow steps that are about approval, each notification is tied to an approval entry. For more information, see [Workflow](across-workflow.md).  
 
-> [!IMPORTANT]
-> Všechna oznámení o krocích workflow se odesílají prostřednictvím fronty úloh. Ujistěte se, že fronta úloh ve vaší instalaci je nastavena na zpracování oznámení workflow a zda je zaškrtnuto políčko **Spustit automaticky ze serveru**. Pro více informací viz [Použití front úloh k plánování úkolů](admin-job-queues-schedule-tasks.md).
+> [!NOTE]  
+> The generic version of [!INCLUDE[prod_short](includes/prod_short.md)] supports notifications as email and as internal notes.  
 
-Různé aspekty oznámení workflow se nastavují na následujících místech:
+> [!IMPORTANT]  
+> All workflow notifications are sent through a job queue. Make sure that the job queue in your installation is set up to handle workflow notifications, and that the **Start Automatically From Server** check box is selected. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
 
-1. Pro workflow schválení nastavte příjemce oznámení workflow vyplněním řádku na stránce **Nastavení uživatelů schvalování** pro každého uživatele, který se účastní daného workflow. Pokud je například v řádku uživatele 1 zadána v poli **ID schvalovatele** uživatel 2, je oznámení požadavku na schválení odesláno uživateli 1. Pro více informací navštivte [Nastavení uživatelů schvalování](across-how-to-set-up-approval-users.md).
-2. Můžete nastavit, kdy a jak budou uživatelé dostávat oznámení workflow vyplněním stránky **Plán upozornění** pro každého uživatele workflow. Pro více informací navštivte [Určení, kdy a jak přijímat upozornění](across-how-to-specify-when-and-how-to-receive-notifications.md).
-3. Chcete-li, můžete upravit obsah oznámení e-mailem úpravou sestavy 1320, E-mail s oznámením. Pro více informací navštivte [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md).
-4. Při vytváření daného workflow se nastavuje specifický obsah a pravidla oznámení workflow. To lze provést výběrem možností na stránce **Možnosti odezvy workflow** pro odezvu workflow, která představuje oznámení. Pro více informací navštivte krok 9 ve [Vytvoření workflow](across-how-to-create-workflows.md).
+## Set up notifications
 
-## Viz také
-[Nastavení uživatelů schvalování](across-how-to-set-up-approval-users.md)  
-[Nastavení uživatelů workflow](across-how-to-set-up-workflow-users.md)  
-[Určení, kdy a jak přijímat upozornění](across-how-to-specify-when-and-how-to-receive-notifications.md)  
-[Vytvoření workflow](across-how-to-create-workflows.md)  
-[Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md)  
-[Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md)  
-[Nastavení e-mailu](admin-how-setup-email.md)  
-[Návod: Nastavení a použití workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
-[Workflow](across-workflow.md)
+You set up different aspects of workflow notifications in the following places:  
+
+* Approver notification
+
+    For approval workflows, you set up the recipients of workflow notifications by filling a line on the **Approval User Setup** page for each user that takes part in the workflow.  
+
+    For example, if User 2 is specified in the **Approver ID** field on the line for User 1, then the approval request notification is sent to User 1. For more information, see [Set Up Approval Users](across-how-to-set-up-approval-users.md).  
+* Notification schedules
+
+    You set up when and how users receive workflow notifications by filling the **Notification Schedule** page for each workflow user. For more information, see [Specify When and How to Receive Notifications](across-how-to-specify-when-and-how-to-receive-notifications.md).  
+* Customize the email notifications
+
+    If you want, you can customize the content of the email notification by modifying report 1320, Notification Email. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).  
+* Response options
+
+    You set up specific content and rules of a workflow notification when you create the workflow in question. You do this by selecting options on the **Workflow Response Options** page for the workflow response that represents the notification. For more information, see step 9 in [Create Workflows](across-how-to-create-workflows.md).  
+
+* Notify sender
+
+    For approval workflows, add a workflow response step to notify the sender when the request has been approved or rejected. For more information, see step 9 in [Create Workflows](across-how-to-create-workflows.md).  
+
+## See Also
+
+[Set Up Approval Users](across-how-to-set-up-approval-users.md)  
+[Set Up Workflow Users](across-how-to-set-up-workflow-users.md)  
+[Specify When and How to Receive Notifications](across-how-to-specify-when-and-how-to-receive-notifications.md)  
+[Create Workflows](across-how-to-create-workflows.md)  
+[Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)  
+[Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md)  
+[Set up Email](admin-how-setup-email.md)  
+[Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
+[Workflow](across-workflow.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

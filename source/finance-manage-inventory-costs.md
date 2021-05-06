@@ -4,39 +4,43 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Správa nákladů zásob
-Řízení nákladů, také označované jako „ocenění“, se týká zaznamenávání a vykazování provozních nákladů podniku. Zahrnuje vykazování výrobních a skladových nákladů.
+# Managing Inventory Costs
+Cost management, also referred to as “costing”, is concerned with recording and reporting business operating costs. It includes the reporting of manufacturing costs and inventory costs, that is, the value of items.   
 
-Základní principy, které je třeba pochopit, jsou, že metody ocenění definují způsob oceňování zboží při opuštění zásob, že úprava nákladů aktualizuje náklady na prodané zboží se souvisejícími nákupními náklady zaúčtovanými po prodeji a že hodnoty zásob musí být zaúčtovány na vyhrazené finanční účty v pravidelných intervalech.
+Central principles to understand are that costing methods define how items are valued when they leave inventory, that cost adjustment updates the cost of goods sold with related purchase costs posted after the sale, and that inventory values must be posted to dedicated G/L accounts at regular intervals.
 
-Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-| **K** | **Videní** |
+|**To**|**See**|  
 |------------|-------------|  
-| Přečtěte si různé koncepční informace, abyste porozuměli principům a definicím, kterými se řídí funkce účetnictví ocenění zásob v [!INCLUDE[d365fin](includes/d365fin_md.md)]. | [Ocenění zásob](finance-learn-about-costing.md) |
-| Zjistěte více o všech mechanismech v systému ocenění. | [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md) |
-| Přečtěte si, jak období zásob pomáhají společnosti kontrolovat hodnotu zásob v průběhu času definováním kratších období, které lze uzavřít pro zaúčtování v průběhu fiskálního roku. | [Práce s obdobími zásob](finance-how-to-work-with-inventory-periods.md) |
-| Přečtěte si, proč standardní náklady často používají výrobní společnosti jako základ pro oceňování komponent a koncového zboží. | [Výpočet pevné pořizovací ceny](finance-about-calculating-standard-cost.md) |
-| Nastavte období zásob, metody výpočtu nákladů a metody zaokrouhlení. | [Nastavení ocenění skladu](finance-set-up-inventory-valuation-and-costing.md) |
-| Oceňujte nebo odpisujte hodnotu jedného nebo více zboží v zásobách zaúčtovaním jejich aktuální vypočítané hodnoty. | [Přeceňování zásob](inventory-how-revalue-inventory.md) |
-| Upravte náklady zboží, a to automaticky nebo ručně, abyste přesměrovali změny nákladů z příchozích položek do souvisejících odchozích položek. | [Úprava nákladů](inventory-how-adjust-item-costs.md) |
-| Použití speciálních funkcí výpočtu nákladů pro každodenní transakce zboží v operacích zboží. | [Manipulace se zásobami a výrobními náklady](finance-handle-inventory-and-manufacturing-costs.md) |
-| Pravidelně aktualizujte standardní náklady na součásti v sestavách nebo výrobních kusovníkech a převádějte nové náklady do nadřazené položky. | [Aktualizovace standardních nákladů](finance-how-to-update-standard-costs.md) |
-| Zobrazení a ruční změna určitých položek vyrovnání zboží, které jsou vytvářeny automaticky během skladových transakcí. | [Odebrání a opětovné vyrovnání položek zboží](finance-how-to-remove-and-reapply-item-entries.md) |
-| Provádějte kontrolní a ohlašovací úkoly na konci období, jako je výpočet hodnoty zásob a účtování nákladů do hlavní knihy. | [Vykazování nákladů a sladění s hlavní knihou](finance-report-costs-and-reconcile-with-the-general-ledger.md) |
+|Read various conceptual information to understand the principles and definitions that govern the inventory costing accounting functionality in [!INCLUDE[prod_short](includes/prod_short.md)].|[About Inventory Costing](finance-learn-about-costing.md)|  
+|Ensure that you know the cost of shipped items by assigning added item costs, such as freight, physical handling, insurance, and transportation that you incur after selling.|[Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md)|
+|Learn about all mechanisms in the costing system.|[Design Details: Inventory Costing](design-details-inventory-costing.md)|
+|Read how inventory periods help a company to control inventory value over time by defining shorter periods that can be closed for posting as the fiscal year progresses.|[Work with Inventory Periods](finance-how-to-work-with-inventory-periods.md)|
+|Read why standard costs are often used by manufacturing companies as a valuation base for components and end items.|[About Calculating Standard Cost](finance-about-calculating-standard-cost.md)|
+|Set up inventory periods, costing methods, and rounding methods.|[Setting Up Inventory Valuation and Costing](finance-set-up-inventory-valuation-and-costing.md)|
+|Appreciate or depreciate the value of one or more items in inventory by posting their current, calculated value.|[Revalue Inventory](inventory-how-revalue-inventory.md)|
+|Adjust item costs, either automatically or manually, to forward cost changes from inbound entries to their related outbound entries.|[Adjust Item Costs](inventory-how-adjust-item-costs.md)|
+|Use special costing functions for every-day item transactions in the item operations.|[Handling Inventory and Manufacturing Costs](finance-handle-inventory-and-manufacturing-costs.md)|  
+|Periodically update the standard costs of components, in assembly or production BOMs, and roll the new costs up to the parent item.|[Update Standard Costs](finance-how-to-update-standard-costs.md)|
+|View and manually change certain item application entries that are created automatically during inventory transactions.|[Remove and Reapply Item Ledger Entries](finance-how-to-remove-and-reapply-item-entries.md)|
+|Perform period-end control and reporting tasks, such calculate the value of inventory and post costs to the general ledger.|[Reconcile Inventory Costs with the General Ledger](finance-how-to-post-inventory-costs-to-the-general-ledger.md)|
 
-## Viz také
-[Finance](finance.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Prodej](sales-manage-sales.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+ [Finance](finance.md)  
+ [Inventory](inventory-manage-inventory.md)   
+ [Sales](sales-manage-sales.md)   
+ [Purchasing](purchasing-manage-purchasing.md)  
+ [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

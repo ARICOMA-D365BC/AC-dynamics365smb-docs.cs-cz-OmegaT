@@ -1,46 +1,51 @@
 ---
-title: Klasifikace citlivosti dat
-description: 'Musíte určit, jaký typ údajů o lidech ukládáte, abyste mohli reagovat na požadavky subjektů.'
+title: "Classifying Data Sensitivity"
+description: You must specify which type of data you store about people so that you can respond to data subject requests.
 author: bholtorf
+
 ms.author: bholtorf
 ms.custom: na
 ms.reviewer: na
 ms.service: dynamics365-business-central
-ms.topic: article
-ms.date: 10/01/2018
+ms.topic: conceptual
+ms.date: 04/01/2021
 ---
 
-# <a name="classifying-data-sensitivity"></a>Klasifikace citlivosti dat
-Pro klasifikaci polí, která obsahují citlivá nebo osobní data, může partner společnosti Microsoft nastavit ```DataClassification``` vlastnost na polích. To vyžaduje přístup k databázovým tabulkám, buď prostřednictvím vývojového prostředí nebo spuštěním skriptu Windows PowerShell. Pro více informací navštivte [Klasifikace dat](https://docs.microsoft.com/en-us/dynamics-nav/classifying-data).  
+# Classifying Data Sensitivity
+To classify the fields that hold sensitive or personal data, a Microsoft partner can set the ```DataClassification``` property on fields. This requires access to the database tables, either through the development environment or by running a Windows PowerShell script. For more information, see [Classifying Data](/dynamics365/business-central/dev-itpro/developer/devenv-classifying-data).  
 
-Jako zákazník můžete přidat druhou úroveň klasifikace zadáním úrovní citlivosti pro data, která ukládáte ve standardních a vlastních polích. Klasifikace citlivosti údajů pomáhá zajistit, abyste věděli, kde ve svém systému uchováváte osobní údaje, a usnadňuje to reagovat na požadavky na údaje subjektů. Například, pokud vás kontakt nebo zákazník požádá o export svých osobních údajů. Pro více informací navštivte [Odpovědi na žádosti o osobní údaje](admin-responding-to-requests-about-personal-data.md)
+As a customer, you can add a second level of classification by specifying sensitivity levels for the data you store in standard and custom fields. Classifying data sensitivity helps ensure that you know where you keep personal data in your system, and makes it easier to respond to requests from data subjects. For example, if a contact or customer asks you to export their personal data. For more information, see [Responding to Requests About Personal Data](admin-responding-to-requests-about-personal-data.md).
 
 > [!Important]
-> Společnost Microsoft poskytuje funkci Klasifikace citlivosti dat pouze pro větší pohodlí. Je vaší odpovědností za patřičnou klasifikaci dat a dodržování všech zákonů a předpisů, které se na vás vztahují. Společnost Microsoft se zříká veškeré odpovědnosti za jakékoli nároky související s vaší klasifikací dat  
+> Microsoft is providing this Data Sensitivity Classification feature as a matter of convenience only. It's your responsibility to classify the data appropriately and comply with any laws and regulations that are applicable to you. Microsoft disclaims all responsibility towards any claims related to your classification of the data.  
 
-Následující tabulka popisuje úrovně citlivosti dat, které můžete přiřadit.
+The following table describes data sensitivity levels you can assign.
 
-|Citlivost|Popis|
+|Sensitivity|Description|
 |----|----|
-|Citlivá | Informace o rasovém nebo etnickém původu subjektu údajů, politických názorech, náboženských vyznáních, zapojení do odborů, fyzickém nebo duševním zdraví, sexualitě nebo podrobnosti o trestných činech. |
-|Osobní | Informace, které lze použít k identifikaci subjektu, buď přímo, nebo v kombinaci s jinými údaji nebo informacemi.|
-|Důvěrná pro společnost | Obchodní data, která používáte pro účetní nebo jiné obchodní účely a nechcete je vystavovat jiným subjektům. Může to například zahrnovat položky účetní knihy.|
-|Normální | Obecná data, která nepatří do žádné jiné kategorie.|
+|Sensitive | Information about a data subject's racial or ethnic origin, political opinions, religious beliefs, involvement with trade unions, physical or mental health, sexuality, or details about criminal offenses. |
+|Personal | Information that can be used to identify a data subject, either directly or in combination with other data or information.|
+|Confidential | Business data that you use for accounting or other business purposes, and do not want to expose to other entities. For example, this might include ledger entries.|
+|Normal | General data that does not belong to any other categories.|
 
-## <a name="how-do-i-classify-my-data"></a>Jak mohu klasifikovat svá data?
-Klasifikace citlivosti velkého počtu polí po jednom by vyžadovala dlouhou dobu. Abychom urychlili proces klasifikace, poskytujeme nástroje, které můžete použít k hromadné klasifikaci citlivosti polí, a poté můžete doladit detaily klasifikace pro konkrétní pole. Nástroje najít nástroj Klasifikace dat, který je k dispozici v centru rolí Administrace uživatelů, uživatelských skupin a oprávnění . Abyste mohli seznam používat, musíte být správce systému.
+## How Do I Classify My Data?
+Classifying the sensitivity of a large number of fields one-by-one would take a long time. To help speed up the process, we provide tools that you can use to bulk classify the sensitivity of fields, and then fine-tune classifications for specific fields. You can find tools on the Data Classification worksheet, which is available on the Administration of users, user groups, and permissions Role Center. You must be a system administrator to use the worksheet.
 
 > [!Important]
-> Při prvním otevření seznamu Klasifikace dat bude prázdný. Chcete-li vygenerovat seznam polí, musíte spustit Průvodce klasifikací dat. Chcete-li spustit průvodce, vyberte akci **Nastavit klasifikaci dat**.
+> When you open the Data Classification worksheet for the first time, it will be empty. You must run the Data Classification guide to generate the list of fields. To start the guide, choose the **Set Up Data Classifications** action.
 
-Například pracovního seznamu Klasifikace dat umožňuje provádět následující činnosti:  
+For example, the Data Classification worksheet lets you do things like:  
 
-* Pomocí Průvodce klasifikací dat exportujte svá pole do listu aplikace Excel, kde je můžete hromadně klasifikovat. Použití listu Excel je zvláště užitečné, pokud spolupracujete s partnerem společnosti Microsoft. Po aktualizaci listu můžete pomocí průvodce importovat a použít klasifikace. Průvodce můžete také použít k ruční klasifikaci polí.  
-* Vyberte pole a poté filtrujte seznam a vyhledejte podobná pole, která pravděpodobně patří do stejné klasifikace jako pole, na kterém jste založili vyhledávání.  
-* Prohlédněte si pole zobrazením jeho obsahu.  
+* Use the Data Classification guide to export your fields to an Excel worksheet where you can bulk classify them. Using the Excel worksheet is particularly useful if you are collaborating with a Microsoft partner. After you update the worksheet, you can use the guide to import and apply the classifications. You can also use the guide to classify fields manually.  
+* Choose a field and then filter the list to find similar fields that are likely to belong to the same classification as the field you based the search on.  
+* Investigate a field by viewing its contents.  
 
 > [!Tip]
-> Definovali jsme klasifikace vzorků citlivosti pro tabulky a pole v demonstrační společnosti Cronus. Klasifikaci však můžete použít jako inspiraci při klasifikaci vlastních tabulek a polí.
+> We have defined sample sensitivity classifications for the tables and fields in the Cronus demonstration company. You can use those classifications as inspiration when you classify your own tables and fields.
 
-## <a name="see-also"></a>Viz také
-[Klasifikace dat](https://docs.microsoft.com/en-us/dynamics-nav/classifying-data)  
+## See Also
+
+[Classifying Data](/dynamics365/business-central/dev-itpro/developer/devenv-classifying-data)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -4,30 +4,33 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Stornování účtování výstupu
-Jsou chvíle, kdy musí být zaúčtování výstupu stornováno. Příkladem toho by bylo, kdyby došlo k chybě zadávání dat a nesprávné množství výstupu by bylo zaúčtováno do výrobní zakázky.
+# Reverse Output Posting
+There are times when output posting must be reversed. An example of this would be if a data entry error occurred and an incorrect amount of output is posted to a production order.  
 
-## Stornování účtování výstupu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník výstupu** a poté vyberte související odkaz. Vyberte dávku.
-2. Podle potřeby vyplňte pole. Pro více informací navštivte [Dávkové zaúčtování výstupu a spuštění](production-how-to-post-output-quantity.md).
-3. V poli **Vyrovnává položku** vyberte přidruženou položku zboží. Tím se stornuje kapacita a položky zboží.
-4. Zaúčtujte stornování zaúčtováním deníku.
+## To reverse an output posting  
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Output Journal**, and then choose the related link. Select your batch.  
+2. Fill in the fields as necessary. For more information, see [Batch Post Output and Run Times](production-how-to-post-output-quantity.md).
+3.  In the **Applies-To Entry** field, select the associated item ledger entry. This reverses the capacity and item ledger entries.  
+4. Post the reversal by posting the journal.  
 
-Výstupy deníku jsou zaúčtovány do účetní knihy jako pozitivní úprava.
+The output journal entries are posted to the item ledger as a positive adjustment.  
 
-## Viz také
-[Výroba](production-manage-manufacturing.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Plánování](production-planning.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also  
+ [Manufacturing](production-manage-manufacturing.md)    
+ [Setting Up Manufacturing](production-configure-production-processes.md)  
+ [Planning](production-planning.md)      
+ [Inventory](inventory-manage-inventory.md)  
+ [Purchasing](purchasing-manage-purchasing.md)  
+ [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

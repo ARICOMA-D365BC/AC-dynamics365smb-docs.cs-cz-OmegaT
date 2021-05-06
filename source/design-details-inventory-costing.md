@@ -4,36 +4,39 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, inventory, costing
-    ms.date: 04/01/2019
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Detaily návrhu: Ocenění zásob
-Tato dokumentace poskytuje podrobný technický přehled o konceptech a principech, které se používají v rámci funkcí ocenění zásob v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)].
+# Design Details: Inventory Costing
+This documentation provides detailed technical insight to the concepts and principles that are used within the Inventory Costing features in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Ocenění zásob, také označované jako Správa nákladů, se týká zaznamenávání a vykazování provozních nákladů.
+Inventory costing, also referred to as cost management, is concerned with recording and reporting business operating costs.  
 
-## V této části
-[Detaily návrhu: Metody kalkukace](design-details-costing-methods.md)  
-[Detaily návrhu: Vytvonávání položek](design-details-item-application.md)  
-[Detaily návrhu: Známé problémy vyrovnávání položek](design-details-inventory-zero-level-open-item-ledger-entries.md)  
-[Detaily návrhu: Adjustace nákladů](design-details-cost-adjustment.md)  
-[Detaily návrhu: Datum zúčtování položky ajdustace](design-details-inventory-adjustment-value-entry-posting-date.md)  
-[Detaily návrhu: Očekáváné náklady](design-details-expected-cost-posting.md)  
-[Detaily návrhu: Průměrné náklady](design-details-average-cost.md)  
-[Detaily návrhu: Varianty](design-details-variance.md)  
-[Detaily návrhu: Zaokrouhlování](design-details-rounding.md)  
-[Detaily návrhu: Náklady komponentů](design-details-cost-components.md)  
-[Detaily návrhu: Období zásob](design-details-inventory-periods.md)  
-[Detaily návrhu: Účtování zásob](design-details-inventory-posting.md)  
-[Detaily návrhu: Účtování výrobní zakázky](design-details-production-order-posting.md)  
-[Detaily návrhu: Účtování montáže](design-details-assembly-order-posting.md)  
-[Detaily návrhu: Přecenění v hlavní knize](design-details-reconciliation-with-the-general-ledger.md)  
-[Detaily návrhu: Účty v hlavní knize](design-details-accounts-in-the-general-ledger.md)  
-[Detaily návrhu: Přecenění zásob](design-details-inventory-valuation.md)  
-[Detaily návrhu: Přecenění](design-details-revaluation.md)
+## In This Section  
+[Design Details: Costing Methods](design-details-costing-methods.md)  
+[Design Details: Item Application](design-details-item-application.md)  
+[Design Details: Known Item Application Issue](design-details-inventory-zero-level-open-item-ledger-entries.md)  
+[Design Details: Cost Adjustment](design-details-cost-adjustment.md)  
+[Design Details: Posting Date on Adjustment Value Entry](design-details-inventory-adjustment-value-entry-posting-date.md)  
+[Design Details: Expected Cost Posting](design-details-expected-cost-posting.md)  
+[Design Details: Average Cost](design-details-average-cost.md)  
+[Design Details: Variance](design-details-variance.md)  
+[Design Details: Rounding](design-details-rounding.md)  
+[Design Details: Cost Components](design-details-cost-components.md)  
+[Design Details: Inventory Periods](design-details-inventory-periods.md)  
+[Design Details: Inventory Posting](design-details-inventory-posting.md)  
+[Design Details: Production Order Posting](design-details-production-order-posting.md)  
+[Design Details: Assembly Order Posting](design-details-assembly-order-posting.md)  
+[Design Details: Reconciliation with the General Ledger](design-details-reconciliation-with-the-general-ledger.md)  
+[Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md)  
+[Design Details: Inventory Valuation](design-details-inventory-valuation.md)  
+[Design Details: Revaluation](design-details-revaluation.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

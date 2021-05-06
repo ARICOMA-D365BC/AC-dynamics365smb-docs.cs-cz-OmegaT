@@ -1,42 +1,51 @@
 ---
-title: Správa Bankovních účtů | Microsoft Docs
-description: Musíte pravidelně odsouhlasovat položky účetních položek se souvisejícími bankovními transakcemi na bankovních účtech.
-services: project-madeira
-documentationcenter: ''
+title: Manage Bank Accounts| Microsoft Docs
+description: You must regularly reconcile bank ledger entries with the related bank transactions in your bank accounts.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: reconcile
-ms.date: 10/01/2018
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="managing-bank-accounts"></a>Správa bankovních účtů
-V pravidelných intervalech musíte odsouhlasit bankovní položky v [!INCLUDE[d365fin](includes/d365fin_md.md)] se souvisejícími bankovními transakcemi na bankovních účtech u vaší banky a pak musíte zaúčtovat zůstatek na vašem bankovním účtu. Tuto úlohu můžete provést jako součást zpracování plateb uvedených v bankovním výpisu v **Deník odsouhlasení plateb**. Případně můžete úlohu provést odděleně od zpracování platby, na kartě **Odsouhlasení bank. Účtu**, na které v levém podokně porovnáváte řádky s bankovními výpisy s položkami interních položek bankovních účtů v pravém podokně. Na obou stránkách můžete vyplnit informace o bankovním výpisu importem souboru a můžete použít návrhy automatického párování.
+# Reconciling Bank Accounts
+
+A bank reconciliation should be completed at regular intervals for all your bank accounts to ensure that the company's cash records are correct. You do this by comparing and matching entries in your internal bank accounts with bank transactions at your bank, and then posting the balances to your internal bank accounts to make totals available to finance managers. Bank reconciliation is also a practical way to discover and resolve missing payments and bookkeeping errors.
+
+You can perform the task on the **Bank Acc. Reconciliation** page where you match (reconcile) bank statement lines in the left-hand pane with your internal bank account ledger entries in the right-hand pane. Alternatively, you can perform this task on the **Payment Reconciliation Journal** page as part of processing the payments that are represented on a bank statement. On both pages, you can fill in the bank statement information by importing a file or feed and you can use automatic matching suggestions.
 
 > [!NOTE]  
-> V severoamerických verzích můžete bankovní odsouhlasení provádět také na **Odsouhlasení bank. účtu**. Stránka výkazu, která je vhodnější pro šeky a vklady, ale nenabízí import souborů výpisu z účtu. Pokud chcete používat tuto stránku **Odsouhlasení bank. účtu**, vypněte **Automatické odsouhlasení bank. účtu** pole Shoda na stránce **Nastavení financí**. Další informace naleznete v části „Odsouhlasit bankovní účty“ v části lokální funkce Spojených států.
+> In the North American versions, you can also perform bank reconciliation on the **Bank Rec. Worksheet** page, which is better suited for checks and deposits but does not offer import of bank statement files. To use this page instead of the **Bank Acc. Reconciliation** page, deselect the **Bank Recon. with Auto. Match** field on the **General Ledger Setup** page. For more information, see [Reconcile Bank Accounts](LocalFunctionality/UnitedStates/how-to-reconcile-bank-accounts.md) under United States Local Functionality.
 
-Někdy je třeba převést částky mezi bankovním účtem v [!INCLUDE[d365fin](includes/d365fin_md.md)] tak, aby odrážely převody ve vaší bance. Tento úkol provedete na stránce **Finanční deník** různými způsoby v závislosti na měně finančních prostředků.
+Before you can manage your bank accounts within [!INCLUDE[prod_short](includes/prod_short.md)], you must set each bank account up as a bank account card. In addition, you must set up electronic services that you may use for bank statement import and payment file export. For more information, see [Setting Up Banking](bank-setup-banking.md).
 
-Než budete moci spravovat bankovní účty, musíte nastavit každý bankovní účet jako kartu bankovního účtu. Navíc musíte nastavit elektronické služby, které můžete použít pro import bankovních výpisů a export platebních souborů. Další informace naleznete v části [Nastavení bankovních účtů](bank-setup-banking.md).
+The following table describes a sequence of tasks, with links to the topics that describe them.
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, která je popisují.
-
-| Viz | Také |
+| To | See |
 | --- | --- |
-| Odsouhlasení bankovních účtů v souvislosti se zpracováním plateb v stránka **Deník odsouhlasení plateb**. |[Automatické aplikování plateb a odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md) |
-| Odsouhlaste bankovní účty, včetně položek v knize, jako samostatný úkol v stránka **Odsouhlasení bankovních účtů**. |[Odsouhlasení bankovních účtů zvlášť](bank-how-reconcile-bank-accounts-separately.md) |
-| Zaúčtování převodu mezi bankovními účty ve stejné měně nebo v různých měnách. |[Převod bankovních prostředků](bank-how-transfer-bank-funds.md) |
+| Reconcile bank accounts as a separate task on the **Bank Acc. Reconciliation** page. |[Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md) |
+| Reconcile bank accounts in connection with payment processing on the **Payment Reconciliation Journal** page. |[Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md) |
 
-## <a name="see-also"></a>Viz také
-[Nastavení bankovnictví](bank-setup-banking.md)  
-[Správa pohledávek](receivables-manage-receivables.md)  
-[Správa závazků](payables-manage-payables.md)    
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
-[Hlavní obchodní funkcionality](ui-across-business-areas.md)  
+> [!TIP]
+> Use bank reconciliation to help verify that your books are up-to-date, and do not post the reconciliation until you are satisfied with the reconciliation.
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]  
- 
+## See Related Training at [Microsoft Learn](/learn/paths/reconcile-bank-accounts-dynamics-365-business-central/)
+
+## See Also
+
+[Setting Up Banking](bank-setup-banking.md)  
+[Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md)  
+[Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md)  
+[Transfer Bank Funds](bank-how-transfer-bank-funds.md)  
+[Managing Receivables](receivables-manage-receivables.md)  
+[Managing Payables](payables-manage-payables.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[General Business Functionality](ui-across-business-areas.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

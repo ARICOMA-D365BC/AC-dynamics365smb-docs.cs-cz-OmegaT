@@ -1,76 +1,91 @@
 ---
-    title: How to Pick for Production in Basic Warehouse Configurations | Microsoft Docs
+    title: Pick for Production or Assembly in Basic Warehouse Configurations
     description: When your warehouse location requires pick processing but does not require shipment processing, use the **Inventory Pick** page to organize and record the picking of components.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Vyskladnění pro výrobu nebo montáž v základních konfiguracích skladu
-Způsob zaskladnění komponent pro výrobní nebo montážní zakázky závisí na tom, jak je sklad nastaven pro lokace. Pro více informací navštivte [Nastavení správy skladů](warehouse-setup-warehouse.md).
-
-V základních konfiguracích skladu, kde lokace vyžaduje zpracování vyskladnění, ale ne zpracování dodávky, použijete stránku **Vyskladnění zásob** k uspořádání a zaznamenání vyskladnění komponent.
-
-V základních konfiguracích skladu musíte vyskadnit zboží pro montážní zakázky pomocí stránky **Přesun zásob**. Pro více informací navštivte [Zpracování zboží montáže na objednávku pomocí vyskladnění zásob](warehouse-how-to-pick-for-production.md#handling-assemble-to-order-items-with-inventory-picks).
-
-V pokročilých konfiguracích skladu, kde lokace vyžadují vyskladnění i dodávky, použijete stránku **Vyskladnění** k uvedení komponent do výrobních nebo montážních zakázek. Pro více informací navštivte [Vyskladnění pro výrobu nebo montáž v pokročilých konfiguracích skladu](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md).
-
-> [!NOTE]
-> Mezi vyskladněním a přesunem zásob existují následující důležité rozdíly:
-> - Když zapíšete vyskladnění skladu pro interní operaci, například pro výrobu, bude současně zaúčtována spotřeba vybraných komponent. Při zapsání přesunu zásob pro interní operaci zaznamenáváte pouze fyzický přesun požadovaných komponent do přihrádky v oblasti operace bez zaúčtování spotřeby.
-> - Při použití vyskladnění zásob, je pole **Kód přihrádky** na řádku komponenty výrobní zakázky nastaveno jako typ přihrádky *Vzít*, ze které se komponenty při účtování spotřeby sníží. Při použití přesunů zásob, je pole **Kód přihrádky** na řádcích komponent výrobní zakázky nastaveno jako typ přihrádky *Vložit* v operační oblasti, kam musí pracovník skladu umístit komponenty.
+# Pick for Production or Assembly in Basic Warehouse Configurations
+How you put away your pick components for production or assembly orders depends on how your warehouse is set up as a location. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).
 
 
-Předpokladem systému pro výdej nebo přesunutí komponent pro původní doklady je, že existuje požadavek na výstupní sklad, který upozorňuje oblast skladu na potřebu komponenty. Požadavek na výstupní sklad je vytvořen při každé změně stavu výrobní zakázky na Vydáno nebo při vytvoření vydané výrobní zakázky.
+## Pick for Production in Basic Warehouse Configurations
+Flushishing method also affects the flow of components in production. For more information, see [Flush Components According to Operation Output](production-how-to-flush-components-according-to-operation-output.md).
 
-## Vyskladnění komponent v základních konfiguracích skladu
-V základních konfiguracích skladu, kde je lokace nastavena tak, aby používala pouze vyskladnění, můžete vyskladnit komponenty pro výrobní aktivity pomocí stránky **Vyskladnění zásob**. Pro více informací navštivte [Vyskladnění zboží pomocí vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md).
+In advanced warehouse configurations where locations require both picks and shipments, you must use the **Warehouse Pick** page to bring components with flushing method set to *Manual*, *Pick + Forward*, *Pick + Backward* to production orders. For more information, see [Pick for Production or Assembly in Advanced Warehouse Configurations](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění zásob** a poté vyberte související odkaz.
-2. Chcete-li získat přístup k komponentám výrobní zakázky, zvolte akci **Kopie pův.dokladů** a pak vyberte vydanou výrobní zakázku.
-3. Proveďte vyskladnění a zaznamenejte skutečné informace o vyskladnění do pole **Vyskladněné  množství**.
-4. Až budou řádky připraveny k zaúčtování, zvolte akci **Účtovat**. Účtování vytvoří potřebné položky skladu a zaúčtuje spotřebu zboží.
+In basic warehouse configurations where the location requires pick processing but not shipment processing, you can also use the **Inventory Pick** page to organize and record the picking of components with flushing method set to *Manual*. When you register an inventory pick for an internal operation, such as production, the consumption of the picked components is posted at the same time. Alternatively you can use **Inventory Movement** with reference to a source document to bring components with flushing method set to *Manual*, *Pick + Forward*, *Pick + Backward* to production orders.
 
-Můžete také vytvořit **Vyskladnění zásob** přímo z vydané výrobní zakázky. Vyberte akci **Vytvořit zaskl./vyskl.zásob** zaškrtněte políčko **Vytvořit vyskladnění  zásob** a pak vyberte tlačítko **OK**.
+When production operations are integrated with warehouse processes, either by bins or by directed put-aways and picks, the bin from which the components are consumed is the bin that is defined on each production order component line. All required components must be available in that bin. Otherwise, the manual or flushed consumption posting is stopped for that component.
 
-Případně můžete použít stránku **Přesun zásob** k ad hoc přesunu zboží mezi přihrádky, což znamená bez odkazu na původní doklad.
-Pro více informací navštivte [Přesouvání komponent do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+**Inventory Movement** with references to the source document and **Warehouse pick** cannot be used to pick components with flushing methods *Forward* and *Backward*. **Inventory Pick** cannot be used to pick components with any flushing method but *Manual*. To handle remaining components, use **Inventory Movement** without reference to a source document. For more information, see [Move Components to an Operation Area in Basic Warehouse Configurations](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
 
-### Zpracování zboží montáže na zakázku pomocí vyskladnění zásob
-Stránka **Vyskladnění zásob** se také používá k vyskladnění a dodání pro prodej, kde musí být zboží sestaveno před jejich odesláním. Pro více informací navštivte [Prodej zboží montáže na obejdnávku](assembly-how-to-sell-items-assembled-to-order.md).
+> [!NOTE]  
+>  The following important differences exist between inventory picks, inventory movements, and warehouse picks:  
+>   
+>  -   When you register an inventory pick for an internal operation, such as production, the consumption of the picked components is posted at the same time. When you register an inventory movement or warehouse pick for an internal operation, you only record the physical movement of the required components to a bin in the operation area without posting the consumption.  
+> -   When you use inventory picks, the **Bin Code** field on a production order component line defines the *take* bin from where components are decreased when posting consumption. When you use inventory movements or warehouse pick, the **Bin Code** field on production order component lines defines the *place* bin in the operation area where the warehouse worker must place the components.  
 
-Zboží, které má být dodáno, není fyzicky přítomno v přihrádce, dokud není sestaveno a zaúčtováno jako výstup do přihrádky v oblasti montáže. To znamená, že vyskladnění zboží montáže na zakázku k odeslání se řídí zvláštním postupem. Z přihrádky pracovníci skladu převezou zboží montáže do dodacího prostoru a poté zaúčtují vyskladnění zásob. Zaúčtovaná vyskladnění zásob pak zaúčtuje výstup sestavy, spotřebu komponenty a prodejní dodávku.
+A system precondition for picking, or moving, components for source documents is that an outbound warehouse request exists to notify the warehouse area of the component need. The outbound warehouse request is created whenever the production order status is changed to Released or when a released production order is created.  
 
-Můžete nastavit [!INCLUDE[d365fin](includes/d365fin_md.md)] pro automatické vytvoření přesunu zásob při vytvoření vyskladnění zásob pro zboží montáže. Chcete-li to povolit, musíte na stránce **Nastavení montáže** vybrat pole **Vytvořit pohyby automaticky**. Pro více informací navštivte [Přesouvání komponent do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+## To pick production components in basic warehouse configurations using Inventory Pick
+In basic warehouse configurations where the location is set up to use picking only, you can pick components for production activities with the **Inventory Pick** page. For more information, see [Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md).
 
-Řádky vyskladnění zásob pro prodejní zboží jsou vytvořeny různými způsoby v závislosti na tom, zda žádné, některé nebo všechna množství prodejního řádku jsou smontovány na zakázku.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Picks**, and then choose the related link.  
+2.  To access the production order components, choose the **Get Source Documents** action, and then select the released production order.  
+3.  Perform the pick, and then record the actual picking information in the **Qty. to Handle** field.  
+4.  When the lines are ready for posting, choose the **Post** action. The posting creates the necessary warehouse entries and posts the consumption of the items.  
 
-V běžném prodeji, kde používáte vyskladnění zásob k zaúčtování dodávky množství zásob, je pro každý řádek prodejní objednávky vytvořen jeden řádek vyskladnění zásob nebo několik položek, pokud je zboží umístěno do různých přihrádek. Tento řádek vyskladnění je založen na množství v poli **K  dodání**.
+You can also create an **Inventory Pick** directly from the released production order. Choose the **Create Inventory Put-away/Pick/Movement** action, select the **Create Invt. Pick** check box, and then choose the **OK** button.
 
-Při montáži na zakázku, kde je na zakázku sestaveno celé množství na objednávce, je pro toto množství vytvořen jeden řádek pro vyskladnění zásob. To znamená, že hodnota v poli Množství k montáži je stejná jako hodnota v poli **K  dodání**. Na řádku je vybráno pole **Montáž na zakázku**.
+Alternatively, you can use the **Inventory Movement** with reference to the source document to move items between bins. You will need to register consumption separately. For more information, see [Batch Post Production Consumption](production-how-to-post-consumption.md)
 
-Pokud je pro lokaci nastaven výstupní tok montáže, pak hodnota v poli **Kód dod. přihr. montáže-na-zák.** nebo hodnota v poli **Kód přihrádky z montáže**  v tomto pořadí je vložena do pole **Kód přihrádky** na řádku vyskladnění zásob.
+## Pick for Assembly in Basic Warehouse Configurations
+In advanced warehouse configurations where locations require both picks and shipments, you must use the **Warehouse Pick** page to bring components to assembly orders. For more information, see [Pick for Production or Assembly in Advanced Warehouse Configurations](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md).
 
-Pokud na řádku prodejní objednávky není zadán žádný kód přihrádky a pro lokaci není nastaven žádný výstupní tok montáže, je pole **Kód přihrádky** na řádku vyskladnění zásob prázdné. Pracovník skladu musí otevřít stránku **Obsah přihrádky** a vybrat přihrádku, ve které je sestaveno zboží montáže.
+In basic warehouse configurations, you can also pick for assembly orders with the **Inventory Movement** page. 
 
-V kombinovaných scénářích, kde musí být nejprve sestavena část množství a další musí být vyskladněna ze skladu, jsou vytvořeny minimálně dva řádky vyskladnění zásob. Jeden řádek vyskladnění je pro množství montáže na zakázku. Druhý řádek vyskladnění závisí na tom, které přihrádky mohou vyplnit zbývající množství ze skladu. Kódy přihrádek na dvou řádcích jsou vyplněny různými způsoby, jak je popsáno pro dva různé typy prodeje. Pro více informací navštivte sekci “Kombinované scénáře” v [Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md).
+In basic warehouse configurations where the location requires pick processing but not shipment processing, the **Inventory Pick** page is also used to pick, assemble, and ship for sales order where items must be assembled before they can be shipped. For more information, see [Handling Assemble-to-Order Item with Inventory Picks](warehouse-how-to-pick-for-production.md#handling-assemble-to-order-items-with-inventory-picks).  
 
-## Naplnění přihrádky spotřeby
-Tento vývojový diagram ukazuje, jak je pole **Kód přihrádky** na řádcích komponent výrobní zakázky vyplněno podle nastavení lokace.
+## Handling Assemble-to-Order Items with Inventory Picks
+The **Inventory Pick** page is also used to pick and ship for sales where items must be assembled before they can be shipped. For more information, see [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md).
 
-![Vývojový diagram přihrádky](media/binflow.png "BinFlow")
+Items to be shipped are not physically present in a bin until they are assembled and posted as output to a bin in the assembly area. This means that picking assemble-to-order items for shipment follows a special flow. From a bin, warehouse workers take the assembly items to the shipping dock and then post the inventory pick. The posted inventory pick then posts the assembly output, the component consumption, and the sales shipment.
 
-## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Správa montáže](assembly-assemble-items.md)  
-[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+You can set up [!INCLUDE[prod_short](includes/prod_short.md)] to automatically create an inventory movement when the inventory pick for the assembly item is created. To enable this, you must select the **Create Movements Automatically** field on the **Assembly Setup** page. For more information, see [Move Components to an Operation Area in Basic Warehousing](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+
+Inventory pick lines for sales items are created in different ways depending on whether none, some, or all of the sales line quantities are assembled to order.
+
+In regular sales where you use inventory picks to post shipment of inventory quantities, one inventory pick line, or several if the item is placed in different bins, is created for each sales order line. This pick line is based on the quantity in the **Qty. to Ship** field.
+
+In assemble-to-order sales where the full quantity on the sales order line is assembled to order, one inventory pick line is created for that quantity. This means that the value in the Quantity to Assemble field is the same as the value in the **Qty. to Ship** field. The **Assemble to Order** field is selected on the line.
+
+If an assembly output flow is set up for the location, then the value in the **Asm.-to-Order Shpt. Bin Code** field or the value in the **From-Assembly Bin Code** field, in that order, is inserted in the **Bin Code** field on the inventory pick line.
+
+If no bin code is specified on the sales order line, and no assembly output flow is set up for the location, then the **Bin Code** field on the inventory pick line is empty. The warehouse worker must open the **Bin Contents** page and select the bin where the assembly items are assembled.
+
+In combination scenarios, where a part of the quantity must first be assembled and another must be picked from inventory, a minimum of two inventory pick lines are created. One pick line is for the assemble-to-order quantity. The other pick line depends on which bins can fulfill the remaining quantity from inventory. Bin codes on the two lines are filled in different ways as described for the two different sales types respectively. For more information, see the “Combination Scenarios” section in [Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md).
+
+## Filling the Consumption Bin
+This flow chart shows how the **Bin Code** field on production order component lines is filled according to your location setup.
+
+![Bin flow chart](media/binflow.png "BinFlow")
+
+## See Also
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

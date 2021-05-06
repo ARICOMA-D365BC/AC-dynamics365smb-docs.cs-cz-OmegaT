@@ -4,44 +4,58 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Výpočet data pro nákupy
-[!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vypočítá datum, kdy musíte objednat zboží, aby bylo v zásobě k určitému datu. Toto je datum, kdy můžete očekávat, že zboží objednané k určitému datu bude k dispozici pro vyskladnění.
+# Date Calculation for Purchases
 
-Pokud v hlavičce nákupní objednávky zadáte požadované datum příjmu, je vypočtené datum objednávky, kdy musí být objednávka zadána, aby se mohlo přijmout zboží k datu, které jste požadovali. Poté se vypočítá datum, kdy je zboží k dispozici pro vyskladnění, a zadá se do pole **Očekávané datum příjmu**.
+[!INCLUDE[prod_short](includes/prod_short.md)] automatically calculates the date on which you must order an item to have it in inventory on a certain date. This is the date on which you can expect items ordered on a particular date to be available for picking.  
 
-Pokud nezadáte požadované datum příjmu, bude datum objednávky na řádku použito jako výchozí bod pro výpočet data, kdy můžete očekávat přijetí zboží, a data, kdy je zboží k dispozici pro výdej.
+If you specify a requested receipt date on a purchase order header, then the calculated order date is the date on which the order must be placed to receive the items on the date that you requested. Then, the date on which the items are available for picking is calculated and entered in the **Expected Receipt Date** field.  
 
-## Výpočet s požadovaným datem příjmu
-Pokud je na řádku nákupní objednávky požadované datum příjmu, použije se toto datum jako výchozí bod pro následující výpočty.
+If you do not specify a requested receipt date, then the order date on the line is used as the starting point for calculating the date on which you can expect to receive the items and the date on which the items are available for picking.  
 
-- Požadované datum příjmu - výpočet průběžné doby = datum objednávky
-- Požadované datum příjmu + doba  zaskladnění + bezpečná průběžná doba = očekávané datum příjmu
+## Calculating with a requested receipt date
 
-Pokud jste v hlavičce nákupní objednávky zadali požadované datum příjmu, bude toto datum zkopírováno do odpovídajícího pole na všech řádcích. Toto datum můžete změnit na libovolném řádku nebo můžete datum na řádku odebrat.
+If there is a requested receipt date on the purchase order line, then that date is used as the starting point for the following calculations.  
 
-> [!Note]
-> Pokud je váš proces založen na zpětném výpočtu, například pokud k získání data objednávky použijete požadované datum přijetí, doporučujeme použít vzorce data, které mají pevné trvání, například „5D“ po dobu pěti dnů nebo "1T" po dobu jednoho týdne. Vzorce data bez pevných dob trvání, například "SH" pro aktuální týden nebo BM pro aktuální měsíc, mohou vést k nesprávným výpočtům data. Pro více informací o vzorcích data navštivte [Práce s daty a časy kalendáře](ui-enter-date-ranges.md).
+- requested receipt date - lead time calculation = order date  
+- requested receipt date + inbound whse. handling time + safety lead time = expected receipt date  
 
-## Výpočet bez požadovaného data dodání
-Pokud zadáte řádek objednávky bez požadovaného data dodání, pole **Datum objednávky** na řádku se vyplní datem v poli **Datum objednávky** v hlavičce nákupní objednávky. Toto je buď datum, které jste zadali, nebo pracovní datum. Následující data jsou pak vypočtena pro řádek nákupní objednávky, přičemž počáteční bod je datum objednávky.
+If you entered a requested receipt date on the purchase order header, then that date is copied to the corresponding field on all the lines. You can change this date on any of the lines, or you can remove the date on the line.  
 
-- Datum objednávky + výpočet průběžné doby = plánované datum příjmu
-- Plánované datum příjmu + doba  zaskladnění + bezpečná průběžná doba = očekávané datum příjmu
+> [!NOTE]
+> If your process is based on backward calculation, for example, if you use the requested receipt date to get the order date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Date formulas without fixed durations, such as "CW" for current week or CM for current month, can result in incorrect date calculations. For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
 
-Pokud změníte datum objednávky na řádku, například když zboží není k dispozici u dodavatele až do pozdějšího data, budou příslušná data na řádku automaticky přepočítána.
+## Calculating without a requested delivery date
 
-Pokud změníte datum objednávky v záhlaví, zkopíruje se toto datum do pole **Datum objednávky** na všech řádcích a všechna související data se pak přepočítají.
+If you enter a purchase order line without a requested delivery date, then the **Order Date** field on the line is filled with the date in the **Order Date** field on the purchase order header. This is either the date that you entered or the work date. The following dates are then calculated for the purchase order line, with the order date as the starting point.  
 
-## Viz také
-[Výpočet data pro prodej](sales-date-calculation-for-sales.md)  
-[Výpočet data příslibu objednávek](sales-how-to-calculate-order-promising-dates.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+- order date + lead time calculation = planned receipt date  
+- planned receipt date + inbound whse. handling time + safety lead time = expected receipt date  
+
+If you change the order date on the line, such as when items are not available at your vendor until a later date, then the relevant dates on the line are automatically recalculated.  
+
+If you change the order date on the header, then that date is copied to the **Order Date** field on all the lines, and all the related date fields are then recalculated.  
+
+## Default values for lead time calculation
+
+[!INCLUDE[prod_short](includes/prod_short.md)] uses the value from the **Lead Time Calculation** field on the purchase order line to calculate the order and the expected receipt dates.  
+
+You can manually specify the value on the line or let the program use values that are defined on the vendor card, item card, stockkeeping unit card, or the item vendor catalog.
+However, the lead time value on the vendor card is used only if a lead time is not specified on the item card, stockkeeping unit card, or the item vendor catalog for the item. This is also the escalating order of priority for these values. If they are all provided, the lead time from the vendor card has the lowest priority, and the lead time from the item vendor catalog has the highest priority.  
+
+## See Also
+
+[Date Calculation for Sales](sales-date-calculation-for-sales.md)   
+[Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

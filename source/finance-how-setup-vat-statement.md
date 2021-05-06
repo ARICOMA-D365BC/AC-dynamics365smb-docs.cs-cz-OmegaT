@@ -3,46 +3,49 @@ title: Set Up a VAT Statement | Microsoft Docs
 description: Set Up a VAT Statement
 author: bholtorf
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: VAT, posting, tax, value-added tax
-ms.date: 04/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Nastavení výkazů DPH
+# Set Up a VAT Statement
 
-## Nastavení šablon výkazu DPH a názvů výkazu DPH
-Finanční úřady mohou změnit své požadavky na účtování DPH. Šablony výkazu DPH a názvy výkazu DPH vám mohou pomoci připravit se na nadcházející změny a zajistit hladký přechod na nové požadavky. Šablony výkazu DPH můžete použít k nastavení různých sestav při výběru tisku výkazu. Každá šablona výkazu DPH může mít více názvů výkazu DPH, které zase definují výpočty a při změně požadavků můžete vytvořit nový název výkazu DPH. Jeden název může například vypočítávat DPH pro tento rok na základě aktuálních požadavků a jiný může počítat DPH na základě požadavků pro příští rok. Názvy jsou také způsob, jak si například udržet historii formátů výkazů DPH, tím je možno nahlédnout zpět, jak jste vypočítali DPH v předchozích letech.
+## Setting up VAT Statement Templates and VAT Statement Names
+Tax authorities can, and do, change their requirements for posting VAT. VAT Statement templates and VAT statement names can help you prepare for upcoming changes and make a smooth transition to the new requirements. You can use VAT statement templates to setup different Reports when choosing to print the statement. Each VAT Statement Template can have multiple Vat Statement names which in turn define the calculations, and you can create a new VAT statement Name when requirements change. For example, one name might calculate VAT for this year based on the current requirements, and another might calculate VAT based on requirements for next year. Names are also a way to keep a history of VAT statement formats, for example, so that you can look back to see how you calculated VAT in previous years.
 
-## Definice výkazů DPH
-Výkazy DPH umožňují vypočítat částku vyrovnání DPH za určité období, například kvartálně.
+## To define a VAT statements
+VAT statements let you calculate your VAT settlement amount for a certain period, for example, a quarter.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Výkazy DPH** a vyberte související odkaz.
-2. Zvolte pole **Název** a poté vybete **Nový** na stránce **Názvy výkazů DPH**.
-3. Vyplňte požadovaná pole. Obvykle chcete mít nastavení pro každou DPH účto skupinu nebo  DPH účto skupinu zboží a jejich kombinace. Pro čísla řádků má smysl používat stejná čísla nebo kódy jako ve vašem oficiálním výkazu DPH [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Statements**, and then choose the related link.  
+2. Choose the **Name** field, and then choose **New** on the **VAT Statement Names** page.
+3. Fill in the required fields. Usually you want to have a setting for each VAT Bus. Posting Group / VAT Prod. Posting Group combination. For Row numbers it does make sense to use equvalent numbers or codes as in your official VAT Statement [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] 
 
 
 > [!Tip]
-> Informace, které výkaz obsahuje, můžete filtrovat podle toho, co vyberete v poli **Typ**. **Sčítání účtů** je užitečný, pokud chcete DPH z určitého účtu.
-> **Sčítání pol. DPH** získá DPH z účtů přiřazených k výběrům v **Typ. Obecného Účtování**, **DPH obchodní účto skupina**, a/nebo **DPH  účto skupina zboží**. **Sčítání řad**umožňuje zadat hodnotu nebo kritéria rychlého filtru do pole **Sčítání řad**. Pro více infortmací navštivte [Řazení, Vyhledávání a Seznam filtrování](ui-enter-criteria-filters.md). **Popis** se často používá k přidání poznámky k výkazu. Můžete jej například použít jako nadpis, když jste použili součet řádků.
+> You can filter the information that the statement will include, depending on what you choose in the **Type** field. **Account Totaling** is useful when you want the VAT from a specific account.
+**VAT Entry Totaling** gets VAT from the accounts assigned to the selections in the **Gen. Posting Type**, **VAT Bus. Posting Group**, and/or the **VAT Prod. Posting Group** fields. **Row Totaling** lets you enter a value or quick filter criteria in the **Row Totaling** field. For more information, see [Searching, filtering, and Sorting Data](ui-enter-criteria-filters.md). **Description** is often used to add a note to the statement. For example, you could use it as a heading when you've used row totaling.
 
-## Náhled výkazu DPH
-Po definování výkazu DPH můžete zobrazit jeho náhled a ujistit se, že vyhovuje vašim potřebám.
+## To preview the VAT statement
+After you define a VAT statement, you can preview it to make sure it meets your needs.
 > [!Tip]
-> Doporučuje se mít jednu část ve výkazu DPH s použitím **Typ** **Sčítání položek DPH** a další sekci níže pomocí **Typ** **Sčítání účtů** pro sladění částek založených na tabulce **DPH položky** ve srovnání s částkou na **účtech účetní osnovy**. K tomuto účelu můžete také použít sestavu **Fin. odsouhlasení DPH**.
+> It is best practice to have one section in the VAT Statement using **Type** **Vat Entry Totaling** and another section below using **Type** **Account Totaling** to reconcile the amounts based on the **VAT Entry** table compared to the amount on the **G/L Accounts**. You can also use the **G/L - VAT Reconciliation** Report for this purpose.
 
-1. Zvolte **Náhled**.
-2. Zadáním filtru data omezíte výpis na konkrétní období. Další informace o tom, jak přizpůsobit stránku tak, aby zobrazovala filtr data, naleznete v části [Řazení, Vyhledávání a Seznam filtrování](ui-enter-criteria-filters.md).
-3. Můžete vybrat různé možnosti a určit typ položek DPH, které mají být zahrnuty do výkazu.
-4. Na řádcích, kde pole **Typ** obsahuje **Sčítání položek DPH** můžete zobrazit seznam položek DPH výběrem částky v poli **Částka sloupce**.
-5. Pomocí personalizace můžete zobrazit další pole v řádcích. Například nerealizovaná základní částka a nerealizovaná částka DPH, pokud používáte nerealizovanou DPH.
+1. Choose **Preview**.
+2. Enter a date filter to limit the statement to a specific period. For more information about how to customize the page to show the date filter, see [Searching, filtering, and Sorting Data](ui-enter-criteria-filters.md).
+3. You can select various options to specify the type of VAT entries to include in the statement.
+4. On the lines where the **Type** field contains **VAT Entry Totaling** you can see a list of VAT entries by choosing the amount in the **Column Amount** field.
+5. You can use personalization to show more fields in the lines. For example the Unrealized Base Amount and Unrealized VAT Amount, if you are using unrealized VAT.
 
-## Viz také
-[Nastavení daně z přidané hodnoty ](finance-setup-vat.md)  
-[Nastavení nerealizované daně z přidané hodnoty](finance-setup-unrealized-vat.md)      
-[Reportování DPH finančímu úřadu](finance-how-report-vat.md)  
-[Práce s DPH v prodeji a nákupu](finance-work-with-vat.md)  
-[Lokální funkcionality v Business Central](about-localization.md)
+## See Also  
+[Set Up Value-Added Tax](finance-setup-vat.md)  
+[Setting Up Unrealized Value Added Tax](finance-setup-unrealized-vat.md)      
+[Report VAT to a Tax Authority](finance-how-report-vat.md)  
+[Work with VAT on Sales and Purchases](finance-work-with-vat.md)  
+[Local functionality in Business Central](about-localization.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

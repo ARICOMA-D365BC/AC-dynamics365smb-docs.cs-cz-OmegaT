@@ -1,54 +1,95 @@
 ---
-title: Vytvoření zákaznické karty pro záznam nových zákazníků | Microsoft Docs
-description: 'Popisuje, jak vytvořit zákaznickou kartu pro registraci informací o každém novém zákazníkovi nebo klientovi, kterému prodáváte.'
-services: project-madeira
-documentationcenter: ''
+title: Register New Customers by Creating a Customer Card
+description: Describes how to create a customer card to register information about each new customer or client that you sell to.
 author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: client
-ms.date: 10/01/2018
-ms.author: sgroespe
----
-# <a name="register-new-customers"></a>Registrace nového zákazníka
-Zákazníci jsou zdrojem vašich příjmů. Každého zákazníka, kterému prodáváte musíte registrovat, jako kartu zákazníka. Karty zákazníka obsahují informace, které jsou potřebné k prodeji produktů zákazníkovi. Pro více informací navštivte [Prodej faktur](sales-how-invoice-sales.md) a [Evidence nového zboží](inventory-how-register-new-items.md).  
+ms.search.keywords: client, customer, credit
+ms.date: 04/01/2021
+ms.author: edupont
 
-Než budete moci evidovat nové zákazníky, musíte nastavit různé prodejní kódy, ze kterých si můžete vybrat při vyplňování zákaznických karet. Další informace naleznete v části [Nastavení prodeje](sales-setup-sales.md).
+---
+# Register New Customers
+
+Customers are the source of your income. You must register each customer you sell to as a customer card. Customer cards hold the information that is required to sell products to the customer. For more information, see [Invoice Sales](sales-how-invoice-sales.md) and [Register New Items](inventory-how-register-new-items.md).  
+
+Before you can register new customers, you must set up various sales codes that you can select from when you fill in customer cards. For more information, see [Setting Up Sales](sales-setup-sales.md).
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3PZsM]
+
+## Adding new customers
+
+To register a new customer, you must fill in a customer card. You can establish templates for different customer profiles, or you can add customers without templates. You can also create a customer from a contact. For more information, see [To create a customer, vendor, employee, or bank account from a contact](marketing-create-contact-companies.md#to-create-a-customer-vendor-employee-or-bank-account-from-a-contact).  
 
 > [!NOTE]  
->   Pokud existují šablony zákazníka pro různé typy zákazníků, tak se při vytváření nové karty zákazníka objeví stránka, odkud můžete vybrat vhodnou šablonu. Pokud existuje pouze jedna šablona zákazníka, pak nové karty zákazníka používají vždy tuto šablonu.
+> If customer templates exist for different customer types, then a page appears when you create a new customer card from where you can select an appropriate template. If only one customer template exists, then new customer cards always use that template.  
 
-## <a name="to-create-a-new-customer-card"></a>Vytvoření nové karty zákazníka
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci**, a poté vyberte související odkaz.  
-2. Na stránce **Zákazníci** vyberte akci **Nový**.
+### To create a new customer card
 
-    Pokud existuje pouze jedna šablona zákazníka, otevře se nová karta zboží s několika poli s předvyplněnými informacemi ze šablony.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.  
+2. On the **Customers** page, choose the **New** action.
 
-    Pokud existuje více než jedna šablona zákazníka, otevře se stránka, ze které můžete vybrat požadovanou šablonu zákazníka. V takovém případě postupujte podle následujících dvou kroků.
-3. Na stránce **Vybrat šablonu pro nového zákazníka** vyberte šablonu, kterou chcete použít pro novou kartu zákazníka.
-4. Zvolte tlačítko **OK**. Otevře se nová karta zákazníka s některými předvyplněnými poli podle informací ze šablony.  
-5. Postupujte podle potřeby tak, že vyplníte nebo změníte pole na kartě zákazníka. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+    If only one customer template exists, then a new customer card opens with some fields filled with information from the template.
 
-Na záložce **Prodejní ceny** můžete zobrazit zvláštní ceny nebo slevy, které udělujete zadaným zákazníkům, pokud jsou splněna určitá kritéria, jako jsou položky, minimální objednávkové množství nebo datum ukončení. Každý řádek představuje zvláštní cenu nebo řádkovou slevu. Každý sloupec představuje kritérium, které musí platit, aby se zaručila zvláštní cena, kterou zadáte do pole **Jednotková cena**, nebo řádková sleva, kterou zadáte do pole **Řádková sleva %**. Pro více informací navštivte [Zaznamenat prodejní cenu, slevu a platební smlouvy](sales-how-record-sales-price-discount-payment-agreements.md).
+    If more than one customer template exists, then a page opens from which you can select a customer template. In that case, follow the next two steps.
+3. On the **Select a template for a new customer** page, choose the template that you want to use for the new customer card.
+4. Choose the **OK** button. A new customer card opens with some fields filled with information from the template.  
+5. Proceed to fill or change fields on the customer card as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-Zákazník je nyní zaregistrován a karta zákazníka je připravena k použití v prodejních fakturách.
+On the **Sales Prices** FastTab, you can view special prices or discounts that you grant for the customer if certain criteria are met, such as item, minimum order quantity, or ending date. Each row represents a special price or line discount. Each column represents a criterion that must apply to warrant the special price that you enter in the **Unit Price** field, or the line discount that you enter in the **Line Discount %** field. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
 
-Chcete-li tuto zákaznickou kartu použít jako šablonu při vytváření nových karet zboží, můžete ji uložit jako šablonu. Pro další informace se podívejte na následující sekci.
+The customer is now registered, and the customer card is ready to be used on sales documents.
 
-## <a name="to-save-the-customer-card-as-a-template"></a>K uložení karty zákazníka jako šablony
-1. Na stránce **Karta zákazníka**, vyberte akci **Uložit jako šablonu**. Stránka **Šablona zákazníka** otevírá kartu zákazníka jako šablonu.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Chcete-li znovu použít dimenze v šablonách, zvolte akci **Dimenze**. Stránka **Šablony dimenzí** otevírá jakékoli kódy dimenzí, které jsou pro daného zákazníka nastaveny.
-4. Upravte nebo zadejte kódy dimenzí, které se budou vztahovat na nové karty zákazníka vytvořeného pomocí šablony.  
-5. Po dokončení nové šablony zákazníka vyberte tlačítko **OK** .
+If you want to use this customer card as a template when you create new customer cards, you can save it as a template. For more information, see the following section.  
 
-Šablona zákazníka je přidána do seznamu šablon zákazníků, takže ji můžete použít k vytvoření nových karet zákazníků.
+### To save the customer card as a template
 
-## <a name="see-also"></a>Viz také
-[Vytváření Číselné řady](ui-create-number-series.md)  
-[Prodej](sales-manage-sales.md)    
-[Nastavení Prodeje](sales-setup-sales.md)    
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+1. On the **Customer Card** page, choose the **Save as Template** action. The **Customer Template** page opens showing the customer card as a template.
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. To reuse dimensions in templates, choose the **Dimensions** action. The **Dimension Templates** page opens showing any dimension codes that are set up for the customer.
+4. Edit or enter dimension codes that will apply to new customer cards created by using the template.  
+5. When you have completed the new customer template, choose the **OK** button.
+
+The customer template is added to the list of customer templates, so that you can use it to create new customer cards.
+
+## Deleting customer cards
+
+If you have posted a transaction for a customer, you cannot delete the card because the ledger entries may be needed for auditing. To delete customer cards with ledger entries, contact your Microsoft partner to do so through code.  
+
+## Managing credit limits
+
+Credit limits, balance amounts, and payment terms make it possible for [!INCLUDE [prod_short](includes/prod_short.md)] to issue a credit and an overdue balance warning when you enter a sales order.  Furthermore, reminder term and finance charge term facilities allow you to invoice interest and/or additional fees.  
+
+The **Credit Limit** field on a customer card specifies the maximum amount that you allow the customer to exceed the payment balance before warnings are issued. Then, when you enter information in journals, quotes, orders, and invoices, [!INCLUDE [prod_short](includes/prod_short.md)] tests the sales header and individual sales lines to see if the credit limit has been exceeded.
+
+You can post even though the credit limit has been exceeded. If the field is left blank, there will be no credit limit for this customer.  
+
+You can choose not to have warnings telling you that the customer's credit limit has been exceeded, and you can specify which types of warning you want to see.
+
+### To specify credit limit warnings
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+
+2. On the **General** FastTab, in the **Credit Warnings** field, choose the relevant option as described in the following table:
+
+    |Option| Description|
+    |------|------------|
+    |**Both Warnings**| Both the **Credit Limit** and the **Balance Due** fields on the customer's card are checked, and a warning is shown if the customer has exceeded its credit limit or if the customer has an overdue balance.|
+    |**Credit Limit**|The value in the **Credit Limit** field on the customer's card is compared with the customer's balance, and a warning is shown if the customer's balance exceeds this amount.|
+    |**Overdue Balance**|The **Balance Due** field on the customer's card is checked, and a warning is shown if the customer has an overdue balance.|
+    |**No Warning**|No warnings are shown about the customer's status.|
+
+## See Also
+
+[Defining Payment Methods](finance-payment-methods.md)  
+[Merge Duplicate Records](sales-how-merge-duplicate-records.md)  
+[Create Number Series](ui-create-number-series.md)  
+[Sales](sales-manage-sales.md)  
+[Setting Up Sales](sales-setup-sales.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

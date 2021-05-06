@@ -1,45 +1,54 @@
 ---
     title: How to Combine Receipts | Microsoft Docs
     description: If you want to invoice more than one purchase receipt at a time, you can use the Combine Receipts function.
-    services: project-madeira
-    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Kombinace příjmů na jedné faktuře
-Pokud chcete fakturovat více než jednu nákupní příjemku současně, můžete použít funkci **Kombinace příjmů**.
+# Combine Receipts on a Single Invoice
 
-Než budete moci vytvořit kombinovanou nákupní příjemku, musíte zaúčtovat více než jeden doklad od stejného dodavatele ve stejné měně. Jinými slovy, musíte vyplnit dvě nebo více nákupních objednávek a zaúčtovat je jako přijaté, ale nefakturované.
+If you want to invoice more than one purchase receipt at a time, you can use the **Combine Receipts** function.  
 
-Když jsou doklady o nákupu sloučeny do faktury a zaúčtovány, vytvoří se pro fakturované řádky zaúčtovaná nákupní faktura. Pole **Fakturované množství** v původní objednávce nebo v hromadní nákupní objednávce se aktualizuje na základě fakturovaného množství. Tento původní nákupní doklad se však neodstraní, a to ani v případě, že byl zcela přijat a fakturován, a proto je nutné jej odstranit.
+Before you can create a combined purchase receipt, more than one receipt from the same vendor in the same currency must be posted. In other words, you must have filled in two or more purchase orders and posted them as received, but not invoiced.  
 
-## Kombinace příjmů
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**. Pro více informací navštivte [Záznam nákupu](purchasing-how-record-purchases.md).
-3. Na záložce **Řádky** vyberte akci **Kopie řádků příjemky**.
-4. Vyberte více řádků příjmů, které chcete zahrnout do faktury.
+When purchase receipts are combined on an invoice and posted, then a posted purchase invoice is created for the invoiced lines. The **Quantity Invoiced** field on the originating purchase order, or blanket purchase order, is updated based on the invoiced quantity. However, this original purchase document is not deleted, even if it has been fully received and invoiced, and you must therefore delete the purchase document.  
 
-   Pokud byl vybrán nesprávný řádek příjmu nebo chcete začít znovu, stačí vymazat řádky na nákupní faktuře a poté znovu použít funkci **Kopie řádků příjemky**.
-5. Chcete-li fakturu zaúčtovat, vyberte akci **Účtovat**.
+> [!NOTE]
+> The resulting purchase invoice cannot later be corrected or canceled. If you want to modify a purchase invoice that is created in this way, you must use purchase credit memos. For more information, see [Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md).
 
-## Odebrání otevřených nákupních objednávek po kombinovaném zaúčtování příjmu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Odstranit fakt. nák. objednávky** a poté vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
-3. Vyberte tlačítko **OK**.
+## To combine receipts
 
-Případně můžete jednotlivé objednávky odstranit ručně.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.  
+2. Choose the **New** action. For more information, see [Record Purchases](purchasing-how-record-purchases.md).  
+3. On the **Lines** FastTab, choose the **Get Receipt Lines** action.  
+4. Select multiple receipt lines that you want to include in the invoice.  
 
-Opakujte kroky 1 až 3 pro všechny ostatní ovlivněné doklady, například hromadné nákupní objednávky.
+    If an incorrect receipt line was selected or you want to start over, you can just delete the lines on the purchase invoice and then use the **Get Receipt Lines** function again.  
+5. To post the invoice, choose the **Post** action.  
 
-## Viz také
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## To remove open purchase orders after combined receipt posting
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Delete Invoiced Purchase Orders**, and select the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
+3. Choose the **OK** button.  
+
+Alternatively, delete the individual orders manually.
+
+Repeat steps 1 through 3 for any other affected documents, such as blanket purchase orders.
+
+## See Also
+
+[Purchasing](purchasing-manage-purchasing.md)  
+[Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

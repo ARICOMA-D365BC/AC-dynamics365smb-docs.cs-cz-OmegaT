@@ -1,121 +1,122 @@
 ---
-title: Reconcile Vendor Payments with the Payment Journal or from Vendor Ledger Entries| Microsoft Docs
+title: Reconcile vendor payment receipts or refunds in the payment journal
 description: To process, match, or reconcile vendor payments or refunds manually, you apply the amount to one or more open vendor ledger entries.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment application, payment processing, match payments
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Odsouhlasení plateb dodavatele s deníkem plateb nebo z položek dodavatele
-Při odeslání platby nebo vrácení peněz od dodavatele se musíte rozhodnout, zda platbu nebo refundaci použijete na jednu nebo více otevřených položek. Můžete určit přesnou částku, kterou chcete použít na potvrzení o platbě nebo vrácení peněz, a poté jen částečně použít položky dodavatele. K získání správné statistiky dodavatelů nebo sestavy výpisů z účtu a finančních nákladů, je nutné vyrovnat všechny položky dodavatele.
+# Reconcile Vendor Payments with the Payment Journal or from Vendor Ledger Entries
+When you send a payment or receive a refund from a vendor, you must decide whether to apply the payment or refund to one or more open entries. You can specify the exact amount that you want to apply to the payment receipt or refund, and then only partially apply vendor ledger entries. You must apply all vendor ledger entries to obtain correct vendor statistics and reports of the account statements and finance charges.
 
-> [!NOTE]
-> Dodavatelé mohou někdy poskytnout vrácení platby namísto dobropisu, aby částku započetli proti budoucím fakturám a to se děje zejména když vrátíte položky, které jste již zaplatili, nebo když jste fakturu přeplatili.
+> [!NOTE]  
+>   Vendors may sometimes give a payment refund instead of a credit memo to offset against future invoices, especially when you return items that you have already paid for or when you have overpaid an invoice.
 
-Položky dodavatele můžete vyrovnat třemi různými způsoby:
+You can apply vendor ledger entries in three different ways:
 
-* Zadáním informací na vyhrazených stránkách, například na stránce **Deník plateb** a **Deník odsouhlasení plateb**.
-* Z nákupních dobropisu
-* Z položek dodavatele po zaúčtování nákupních dokladů, ale nejsou použity.
+* By entering information in dedicated pages, such as the **Payment Journal** page and the **Payment Reconciliation Journal** page.
+* From purchase credit memo documents.
+* From vendor ledger entries after purchase documents are posted but not applied.
 
-> [!NOTE]
-> Pokud pole **Metoda vyrovnání** na kartě dodavatele obsahuje **Vyrovnat nejstarší**, budou platby, pokud ručně nezadáte, který záznam se má vyrovnat, automaticky vyrovnány na nejstarší otevřený úvěr. Pokud je metoda vyrovnání zákazníka **Ručně**, tak musíte položky vyrovnat ručně.
+> [!NOTE]  
+>   If the **Application Method** field on the vendor card contains **Apply to Oldest**, then payments will automatically be applied to the oldest open credit entry if you do not manually specify which entry to apply to. If the application method for a customer is **Manual**, then you must apply entries manually.
 
-Platby dodavatele můžete vyrovnat ručně na související nákupní doklady při zaúčtování plateb na stránku **Deník plateb**. Pro více informací o vyplňování platebního deníku naleznete v části [Provádění plateb](payables-make-payments.md).
+You can apply vendor payments manually to their related purchase documents when you post the payments on the **Payment Journal** page. For information about filling the payment journal, see [Making Payments](payables-make-payments.md).
 
-Můžete také vyrovnat platby dodavatele a platby zákazníka poté, co se platby objeví ve vaší bance jako negativní bankovní transakce. Na stránce **Deník odsouhlasení plateb**, můžete použít funkce pro import bankovních výpisů, automatické vyrovnání a odsouhlasení bankovních účtů. Pro více informací navštivte [Automatické odsouhlasení plateb](receivables-how-reconcile-payments-auto-application.md).
+You can also apply vendor payments, and customer payments, after the payments appear as negative bank transactions in your bank. On the **Payment Reconciliation Journal** page, you can use functions for bank statement import, automatic application, and bank account reconciliation. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
 
-## Vyrovnání platby s jednou nebo více položkami dodavatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník plateb** a poté vyberte související odkaz.
-2. Na stránce **Deník plateb** zadejte na první řádek deníku příslušné informace o položce platby.
-3. Pro vyrovnání jedné položky dodavatele:
-   1. Na poli **Č. vyrovnání  dokladu**, vyberte pole pro otevření stránky **Vyrovnat položky dodavatele**.
-   2. Na stránce **Vyrovnat položky dodavatele**, vyberte položku, se kterou chcete platbu vyrovnat.
-   3. Na řádku v poli **Částka k vyrovnání**, zadejte částku, kterou chcete použít pro položku.
-4. Pro vyrovnání několika položek dodavatele:
+## To apply a payment to a single or multiple vendor ledger entries
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journal**, and then choose the related link.
+2. On the **Payment Journal** page, on the first journal line, enter the relevant information about the payment entry.
+3. To apply a single vendor ledger entry:
+   1. In the **Applies-to Doc. No.** field, choose the field to open the **Apply Vendor Entries** page.
+   2. On the **Apply Vendor Entries** page, select the entry to apply the payment to.
+   3. On the line in the **Amount to Apply** field, enter the amount to apply to the entry.
+4. Or, to apply multiple vendor ledger entries:
 
-   1. Vyberte akci **Vyrovnat položky**.
-   2. Na stránce **Vyrovnat položky dodavatele**, vyberte řádky s položkami, se kterými má být platba vyrovnána
-   3. Vyberte akci **Nastavit ID vyrovnání**.
-   4. Na každém řádku v poli **Částka k použití**, zadejte částku, která má být pro jednotlivé položky aplikována.
+   1. Choose the **Apply Entries** action.
+   2. On the **Apply Vendor Entries** page, select the lines with the entries to apply the payment to.
+   3. Choose the **Set Applies-to ID** action.  
+   4. On each line in the **Amount to Apply** field, enter the amount to apply to the individual entry.
 
-      Pokud částku nezadáte, bude automaticky vyrovnána maximální částka. Ve spodní části stránky **Vyrovnat položky dodavatele**, můžete vidět částku a to v poli Vyrovnaná částka a můžete také vidět vyrovnané zůstatky.
-5. Zvolte tlačítko **OK**.
-6. Pro zaúčtování deníku plateb zvolte akci **Účtovat**.
+      If you do not enter an amount, then the maximum amount is automatically applied. At the bottom of the **Apply Vendor Entries** page, you can see the amount in the Applied Amount field, and you can see whether the application balances.
+5. Choose the **OK** button.
+6. Choose the **Post** action to post the payment journal.
 
-## Vyrovnání dobropisu pro jednu nebo více položek dodavatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní dobropis** a poté vyberte související odkaz.
-2. Otevřete dobropis, který chcete použít.
-3. Do záhlaví zadejte příslušné informace.
-4. Vyrovnání jedné položky dodavatele na záložce **Vyrovnání** v poli **Č. vyrovnání  dokladu**, vyberte položku, se kterou chcete vyrovnat účet dal, a poté v poli **Částka k vyrovnání**, zadejte částku, která má být s položkou vyrovnána.
-5. Pro vyrovnání několika položek dodavatele:
+## To apply a credit memo to a single or multiple vendor ledger entries
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Credit Memo**, and then choose the related link.
+2. Open the credit memo that you want to apply.
+3. Enter the relevant information in the header.
+4. To apply a single vendor ledger entry, on the **Application** FastTab, in the **Applies-to Doc. No.** field, select the entry to apply the credit to, and then, in the **Amount to Apply** field, enter the amount to apply to the entry.
+5. Or, to apply multiple vendor ledger entries:
 
-   1. Vyberte akci **Vyrovnat položky**.
-   2. Vyberte řádky s položkami, se kterými má být dobropis vyrovnán.
-   3. Vyberte akci **Nastavit ID vyrovnání**.
-   4. Na každém řádku v poli **Částka k použití**, zadejte částku, která má být pro jednotlivé položky aplikována.
+   1. Choose the **Apply Entries** action.
+   2. Select the lines with the entries to apply the credit memo to.
+   3. Choose the **Set Applies-to ID** action.  
+   4. On each line in the **Amount to Apply** field, enter the amount to apply to the individual entry.
 
-      Pokud částku nezadáte, bude automaticky vyrovnána maximální částka. Ve spodní části stránky **Vyrovnat položky dodavatele**,  můžete vidět částku a to v poli Vyrovnaná částka a můžete také vidět vyrovnané zůstatky.
-6. Zvolte tlačítko **OK**.
-Stránka **Nákupní dobropis** zobrazuje položku, kterou jste vybrali na poli **Typ vyrovnání dokladu** a na poli **Číslo vyrovnání dokladu**. Na této stránce je také uvedena částka dobropisu, který má být zaúčtován, upravený o případné platební slevy.
-7. Zvolte tlačítko **Zaúčtovat** pro zaúčtování nákupního dobropisu.
+       If you do not enter an amount, then the maximum amount is automatically applied. At the bottom of the **Apply Vendor Entries** page, you can see the amount in the **Applied Amount** field, and you can see whether the application balances.
+6. Choose the **OK** button.  
+   The **Purchase Credit Memo** page shows the entry that you have selected in the **Applies-to Doc. Type** field and the **Applies-to Doc. No.** field. The page also shows the amount of the credit memo to be posted, adjusted for any payment discounts.
+7. Choose the **Post** button to post the purchase credit memo.
 
-## Vyrovnání zaúčtovaných položek dodavatele
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Otevřete příslušného dodavatele s položkami, které již byly zaúčtovány.
-3. Vyberte akci **Položky hlavní knihy**, a poté vyberte akci **Vyrovnat položky**.
-4. Na stránce **Vyrovnat položky dodavatele**, můžete vidět otevřené položky dodavatele.
-5. Vyberte řádek s položkou, která bude vyrovnána.
-6. Vyberte akci **Nastavit ID vyrovnání**.
+## To apply posted vendor ledger entries
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
+2. Open the relevant vendor with entries that have already been posted.
+3. Choose the **Ledger Entries** action, and then choose the **Apply Entries** action.
+4. On the **Apply Vendor Entries** page, you can see the open entries for the vendor.
+5. Select the line with the entry that will be applied.
+6. Choose the **Set Applies-to ID** action.
 
-   Pole **ID vyrovnání** zobrazuje tři hvězdičky, pokud pracujete v systému pro jednoho uživatele, nebo vaše ID uživatele, pokud pracujete ve víceuživatelském systému.
-7. Pro každý řádek v poli **Částka k vyrovnání** pole, zadejte částku, která má být pro jednotlivé položky použita.
+    The **Applies-to ID** field displays three asterisks if you work in a single-user system or your user ID if you work in a multiuser system.  
+7. For each line in the **Amount to Apply** field, enter the amount to apply to the individual entry.
 
-   Pokud částku nezadáte, bude automaticky vyrovnána maximální částka. Částku můžete zobrazit v poli **Vyrovnaná částka** v dolní části stránky **Vyrovnat položky dodavatele**.
-8. Vyberte akci **Účtovat vyrovnání**.
+    If you do not enter an amount, then the maximum amount is automatically applied. You can see the amount in the **Applied Amount** field at the bottom of the **Apply Vendor Entries** page.
+8. Choose the **Post Application** action.  
 
-   Stránka **Účtovat vyrovnání** se otevře s číslem dokladu vyrovnávané položky a se zúčtovacím datem položky s nejnovějším zúčtovacím datem.
-9. Vyberte tlačítko **OK** pro účtování vyrovnání.
+    The **Post Application** page opens with the document number of the applying entry and the posting date of the entry with the most recent posting date.
+9. Choose the **OK** button to post the application.
 
-## Vyrovnání položek dodavatele v různých měnách mezi sebou
-Pokud nakupujete od dodavatele v jedné měně a provádíte platbu v jiné měně, stále můžete platbu vyrovnat s fakturou.
+## To apply vendor ledger entries in different currencies to one another
+If you buy from a vendor in one currency and make payment in another currency, you can still apply the invoice to the payment.
 
-Pokud vyrovnáte položku (položka 1) v jedné měně s položkou (položka 2) v jiné měně, zúčtovací datum v položce 1 se použije k nalezení příslušného směnného kurzu pro převod částek v položce 2. Příslušný směnný kurz se nachází na stránce **Směnné kurzy**. V takovém případě musíte povolit vyrovnání položek dodavatele v různých měnách. Další informace naleznete v části [Povolit vyrovnání položek v různých měnách](finance-how-enable-application-ledger-entries-different-currencies.md)
+If you apply an entry (Entry 1) in one currency to an entry (Entry 2) in a different currency, the posting date on Entry 1 is used to find the relevant exchange rate to convert amounts on Entry 2. The relevant exchange rate is found on the **Currency Exchange Rates** page. In that case, you must enable application of vendor ledger entries in different currencies. For more information, see [Enable Application of Ledger Entries in Different Currencies](finance-how-enable-application-ledger-entries-different-currencies.md)
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník plateb** a poté vyberte související odkaz.
-2. Otevřete požadovaný deník a vyplňte první prázdný řádek deníku pomocí kódu měny.
-3. Vyberte akci **Vyrovnat položky**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journal**, and then choose the related link.
+2. Open the journal you want, and fill in the first empty journal line using a currency code.
+3. Choose the **Apply Entries** action.
 4. Select the line with the entry you want to apply to the entry in the payment journal, choose the **Set Applies-to ID** action, and then select the entry you want to apply to.
-5. Zvolte tlačítko **OK** a vraťte se tak do deníku plateb.
-6. Zaúčtování deník plateb
+5. Choose the **OK** button to return to the payment journal.
+6. Post the payment journal.
 
-> [!IMPORTANT]
-> Když použijete k sobě záznamy v různých měnách, položky se převedou na USD. I když jsou směnné kurzy pro obě příslušné měny pevné, například mezi USD a EUR, může existovat malá zbytková částka, pokud jsou tyto částky v cizí měně převedeny na USD. Tyto malé zbytkové částky jsou zaúčtovány jako zisky a ztráty na účet zadaný v polích **Účet realizovaných zisků** nebo **Účet realizovaných ztrát** na stránce **Měny**. Pole **Částka (USD)** je také upraveno pro příslušné položky dodavatele.
+> [!IMPORTANT]  
+>   When you apply entries in different currencies to one another, the entries are converted to USD. Even though the exchange rates for the two relevant currencies are fixed, for example between USD and EUR, there may be a small residual amount when these foreign-currency amounts are converted to USD. These small residual amounts are posted as gains and losses to the account specified in the **Realized Gains Account** or **Realized Losses Account** field on the **Currencies** page. The **Amount (USD)** field is also adjusted on the relevant vendor ledger entries.
 
-## Zrušení vyrovnání položek dodavatele
-Když nepoužijete chybné vyrovnání, vytvoří se a zaúčtují pro všechny položky, včetně všech účtování hlavní knihy odvozených z vyrovnání, jako je skonto a měnové zisky/ztráty, nové opravné položky, které jsou shodné s původní položkou, ale s opačným znaménkem v poli částky. Položky, které byly srovnány, jsou znovu otevřeny.
+## To unapply an application of vendor entries
+When you unapply an erroneous application, correcting entries that are identical to the original entry but with opposite sign in the amount field are created and posted for all entries, including all general ledger posting derived from the application, such as payment discount and currency gains/losses. The entries that were closed by the application are reopened.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Otevřete příslušnou kartu dodavatele.
-3. Vyberte akci **Položky hlavní knihy**.
-4. Vyberte příslušnou položku hlavní knihy a poté vyberte akci **Zrušit vyrovnání položek**.
-5. Alternativně zvolte akci **Detailní položky knihy** .
-6. Vyberte příslušnou položku vyrovnání a poté vyberte akci **Zrušit vyrovnání položek**.
-7. Vyplňte pole v záhlaví a poté vyberte akci **Zrušit vyrovnání**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
+2. Open the relevant vendor card.
+3. Choose the **Ledger Entries** action.
+4. Select the relevant ledger entry, and then choose the **Unapply Entries** action.
+5. Alternatively, choose the **Detailed Ledger Entry** action.
+6. Select the application entry, and then choose the **Unapply Entries** action.
+7. Fill in the fields in the header, and then choose the **Unapply** action.
 
-> [!IMPORTANT]
-> Pokud byla položka použita více než jednou položkou aplikace, musíte nejprve použít poslední položku aplikace.
+> [!IMPORTANT]  
+>   If an entry has been applied by more than one application entry, you must unapply the latest application entry first.
 
-## Viz také
-[Správa závazků](payables-manage-payables.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Payables](payables-manage-payables.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

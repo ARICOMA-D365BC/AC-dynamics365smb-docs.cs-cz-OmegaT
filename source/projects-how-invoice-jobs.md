@@ -1,77 +1,69 @@
 ---
 title: Create a Job Sales Invoice to Invoice a Job| Microsoft Docs
 description: Describes how to invoice customers for job expenses as a project progresses.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project invoice
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Fakturace projektů
-Během projektu se mohou hromadit náklady na projekt z využití zdrojů, materiálů a nákupů souvisejících s projektem. V průběhu projektu se tyto transakce zaúčtují do deníku projektů. Je důležité, aby byly všechny náklady zaznamenány do deníku projektů před fakturací odběratele.
-
-Celý projekt můžete fakturovat ze stránky **Řádky úlohy projektu** nebo pouze fakturovat vybrané fakturovatelné řádky ze stránky **Řádky plánování**. Fakturace může být provedena po dokončení úlohy nebo v určitých intervalech během postupu úlohy na základě harmonogramu fakturace.
+# Invoice Jobs
+During the project, job costs from resource usage, materials, and job-related purchases can accumulate. As the job progresses, these transactions get posted to the job journal. It is important that all costs get recorded in the job journal before you invoice the customer.
 
 > [!NOTE]
-> Pokud vyberete **Fakturovatelné** na poli **Typ řádku projektu** na nákupních dokladech pro nákupy související s projektem, pak jsou vytvořeny řádky plánování projektu, které jsou připraveny k fakturaci zákazníkovi. Pro více informací navštivte [Správa dodávek projektu](projects-how-manage-project-supplies.md).
+> You can also purchase external resources unrelated to a job, for example, to invoice a vendor for work delivered. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 
-## Vytvoření a zaúčtování prodejní faktury projektu
-Můžete vytvořit fakturu pro projekt, nebo pro jednu a více úloh projektu pro zákazníka, a to když je dokončena buď práce, která má být fakturována, nebo bylo dosaženo data fakturace podle fakturačního plánu.
+You can invoice the whole job from the **Job Task Lines** page or only invoice selected billable lines from the **Planning Lines** page. Invoicing can be done after the job is finished or at certain intervals during the job's progress based on an invoicing schedule.
 
-Ze stránky **Úlohy**, můžete fakturovat zákazníka výběrem úlohy a následným výběrem akce **Vytvořit prodejní fakturu projektu**. Následující postup ukazuje, jak pomocí dávkové úlohy fakturovat více projektů.
+> [!NOTE]  
+> If you select **Billable** in the **Job Line Type** field on the purchase documents for job-related purchases, then job planning lines that are ready to be invoiced to the customer are created. For more information, see [Manage Project Supplies](projects-how-manage-project-supplies.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vytvořit prodejní fakturu projektu** a poté vyberte související odkaz.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Nastavte filtry, pokud chcete omezit projekty, které bude dávková úloha zpracovávat.
-4. Zvolte tlačítko **OK** a začněte vytvářet faktury.
+## To create multiple job sales invoices
+You can create an invoice for a job or for one or more job tasks for a customer when either the work to be invoiced is complete or the date for invoicing based on an invoicing schedule has been reached.
 
-## Vytvoření více prodejních faktur projektu z řádků plánování projektu
-Můžete vytvořit fakturu z řádků plánování projektu a zároveň označit množství zboží, zdroje nebo finančního účtu, které chcete fakturovat.
+The following procedure shows how to use a batch job to invoice multiple jobs.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
-2. Otevřete příslušný projekt.
-3. Vyberte úlohu projektu, pro kterou pole **Typ úlohy projektu** obsahuje **Účtování**, a poté vyberte akci **Řádky plánování projektu**.
-4. Na řádku plánování projektu, v poli **Množství k transf. k fakturaci** zadejte množství zboží, zdroje, typu účtu hlavní knihy, které chcete fakturovat.
-5. Zvolte akci **Vytvořit prodejní fakturu**.
-6. Na stránce **Vytvořit prodejní fakturu projektu**, zadejte datum zúčtování a zda chcete vytvořit novou fakturu nebo připojit tuto fakturu k existující.
-7. Zvolte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Create Sales Invoice**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Set filters if you want to limit the jobs that the batch job will process.
+4. Choose the **OK** button to create the invoices.  
 
-   Na řádku plánování projektu, v poli **Množství k transf. k fakturaci**, můžete vidět množství.
-8. Na stránce **Řádky plánování projektu**, vyberte akci **Prodejní faktury/Dobropisy**.
-
-   Stránka **Prodejní faktura** při otevření, udává množství, které jste převedli na fakturu.
-9. Proveďte další změny a pak zvolte akci **Účtovat**.
+You can review and post created invoices in the **Sales Invoices** window.
 
 > [!NOTE]
-> Výše uvedený postup je podobný pro vytvoření, kontrolu a zaúčtování dobropisu z prodeje související s projektem.
+> Alternatively, invoice a customer by selecting the job, and then choosing the **Create Job Sales Invoice** action. 
 
-## Výpočet a zaúčtování položek dokončení projektu
-Po dokončení všech činností projektu, včetně účtování za použití a fakturace, musíte aktualizovat projekt tak, aby měl **Stav** **Dokončeno**. Potom je nutné stornovat všechny nedokončené výroby, které byly zaúčtovány do hlavní knihy.
+## To create and post job sales invoice from job planning lines
+You can create an invoice from a job planning lines, and indicate at that time the quantity of the item, resource, or general ledger account that you want to invoice.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
-2. Vyberte otevřený projekt a poté vyberte akci **Upravit**.
-3. V poli **Stav**, vyberte **Dokončeno**.
-4. Podle pomocných kroků můžete vypočítat a odeslat nedokončenou výrobu. Alternativně, postupujte podle kroků 5 a 6, abyste tak učinili ručně.
-5. Vyberte akci **Kalkulovat NV**.
-6. Na stránce **Vypočítat NV projektu**, vyplňte pole podle potřeby.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
+2. Open a relevant job.
+3. Select a job task for which the **Job Task Type** field contains **Posting**, and then choose the **Job Planning Lines** action.  
+4. On a job planning line, in the **Qty. To Transfer to Invoice** field, enter the quantity of the item, resource, general ledger account type that you want to invoice.  
+5. Choose the **Create Sales Invoice** action.
+6. On the **Job Create Sales Invoice** page, enter the posting date and whether you want to create a new invoice or append this invoice to an existing one.
+7. Choose the **OK** button.  
+8. On the **Job Planning Lines** page, choose the **Sales Invoices/Credit Memos** action.
 
-   Položky nedokončené výroby projektu vytvořené spuštěním dávkové úlohy budou mít zaškrtnuté políčko **Dokončený projekt** což znamená, že se jedná o položky dokončení.
-7. Vyberte akci **Zaúčtovat NV projektu**.
-8. Na stránce **Zaúčtovat NV projektu**, vyplňte pole podle potřeby.
+    The **Sales Invoice** page opens, showing the quantity that you have transferred to the invoice.
+9. Make any additional changes, and then choose the **Post** action.
 
-   Položky nedokončené výroby projektu vytvořené spuštěním dávkové úlohy budou mít zaškrtnuté políčko **Dokončený projekt** což znamená, že se jedná o položky dokončení.
+> [!NOTE]  
+>   The above procedure is similar for creating, reviewing, and posting a job-related sales credit memo.
 
-## Viz také
-[Správa projektů](projects-manage-projects.md)  
+
+## See Also
+[Managing Projects](projects-manage-projects.md)  
 [Finance](finance.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Prodej](sales-manage-sales.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Purchasing](purchasing-manage-purchasing.md)         
+[Sales](sales-manage-sales.md)      
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

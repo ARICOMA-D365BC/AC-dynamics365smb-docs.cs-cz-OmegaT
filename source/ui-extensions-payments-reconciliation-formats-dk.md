@@ -1,29 +1,30 @@
 ---
-title: Používání rozšíření Payments and Reconciliations (DK) | Microsoft Docs
-description: 'Toto rozšíření usnadňuje export souborů, které jsou předem naformátovány tak, aby splňovaly bankovní požadavky na elektronická podání.'
-services: project-madeira
-documentationcenter: ''
+title: Using the Payments and Reconciliations (DK) Extension | Microsoft Docs
+description: This extension makes it easy to export files that are pre-formatted to meet bank requirements for electronic submissions.
 author: bholtorf
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms. search.keywords: 'extension, bank, formats'
-ms.date: 10/01/2018
+ms. search.keywords: extension, bank, formats
+ms.date: 04/01/2021
 ms.author: bholtorf
+
 ---
 
-# <a name="the-payments-and-reconciliations-dk-extension"></a>Rozšíření Payments and Reconciliations (DK)
-Proveďte rychlé a bezchybné platby exportováním souborů, které jsou speciálně formátovány pro výměny s dodavatelem nebo bankou. Tyto soubory urychlují procesy platby a odsouhlasení a eliminují chyby, ke kterým může dojít, když ručně zadáváte informace na webové stránce banky.  
+# The Payments and Reconciliations (DK) Extension
 
-Toto rozšíření podporuje formáty souborů pro několik dánských bank. Při exportu platebních údajů do souboru toto rozšíření doplní data do formátu, který vaše banka vyžaduje. Formáty například zahrnují Bankdata-V3, BEC, SDC and FIK, které používá mnoho různých bank, a některé, které jsou více specializovány pro určité banky, například Danske Bank a Nordea. Toto rozšíření také zahrnuje některé formáty pro import a odsouhlasení bankovních výpisů.  
+Make fast, error-free payments by exporting files that are formatted specifically for exchanges with your vendor or bank. These files speed up the payment and reconciliation processes, and eliminate errors that can happen when you manually enter the information on a bank website.  
+
+This extension supports file formats for several Danish banks. When you export payment information to a file, the extension packages the data into the format that your bank requires. For example, the formats include Bankdata-V3, BEC, SDC, and FIK, which many different banks use, and some that are more specialized for certain banks, for example, Danske Bank and Nordea. The extension also includes some formats for importing and reconciling bank statements.  
 
 > [!Note]
-> Chcete-li toto rozšíření používat, musíte znát formát, který vaše banka nebo prodejce vyžaduje. Některé banky nebo prodejci poskytují tyto informace na svých webových stránkách, ale možná budete muset kontaktovat jejich zákaznický servis, abyste tyto informace získali.  
+> To use the extension, you must know the format that your bank or vendor requires. Some banks or vendors provide this information on their websites; however, you might need to contact their customer service to get the information.  
 
-## <a name="supported-bank-formats"></a>Podporované formáty bank
-Toto rozšíření může pro platební soubory použít následující formáty souborů:  
+## Supported Bank Formats
+This extension can apply the following file formats for payment files:  
 
 * BANKDATA-V3  
 * BEC-INDLAND  
@@ -36,67 +37,74 @@ Toto rozšíření může pro platební soubory použít následující formáty
 * NORDEA  
 * NORDEA-UNITEL-V3  
 * SDC  
-* SDC-CVS  
+* SDC-CSV  
 
-## <a name="to-set-up-the-extension"></a>Nastavení tohoto rozšíření
-Začněte několika kroky.  
+## To set up the extension
 
-* Povolte export platebních údajů. Toto není snadno dostupné z důvodu ochrany vašich dat.  
-* Nastavte nákup a závazky tak, abyste na fakturách nevyžadovali externí čísla dokumentů. V případě potřeby můžete použít referenční číslo pro odkaz na konkrétní fakturu.  
-* Zadejte způsob platby pro každého dodavatele. Způsoby plateb definují způsob, jakým platíte faktury od dodavatele. Například banka, hotovost, šek nebo účet.  
-* Určete typ formátu, který se použije pro každý z vašich bankovních účtů. Například NORDEA, DANSKEBANK, SDC atd.  
+There are a few steps to get started.  
 
-Kromě toho musíte přiřadit dodavatele k domácí **Obecné obch.účto** skupině a k **Účto skupině dodatavatele**. Nastavení země/oblasti pro dodavatele musí být Dánsko (DK). Pro další informace navštivte [Nastavení skupin účtování](finance-posting-groups.md).  
+* Allow payment data exports. To help protect your data, this is not readily available.  
+* Set up purchase and payables so that you do not require external document numbers on invoices. If needed, you can use the reference number to refer to a specific invoice.  
+* Specify the payment method for each vendor. Payment methods define how you pay invoices from the vendor. For example, Bank, Cash, Check, or Account.  
+* Specify the type of format to use for each of your bank accounts. For example, NORDEA, DANSKEBANK, SDC, and so on.  
 
-### <a name="to-allow-included365finincludesd365fin_mdmd-to-export-payment-data"></a>Umožnění [!INCLUDE[d365fin](includes/d365fin_md.md)] exportovat data platby
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Deník plateb** a poté vyberte související odkaz.  
-2. Na stránce **Upravit deník plateb** zvolte dávku **Banka**.  
-3. Zaškrtněte políčko **Povolen export úhrad**.  
+Additionally, you must assign vendors to a domestic **Gen. Bus. Posting Group** and a **Vendor Posting Group**. The Country/Region setting for the vendor must be Denmark (DK). For more information, see [Setting Up Posting Groups](finance-posting-groups.md).  
 
-### <a name="to-specify-a-payment-method-for-a-vendor"></a>Určení způsobu platby pro dodavatele
-Následující tabulka ukazuje kombinace platebních metod FIK a ŽIRO, které [!INCLUDE[d365fin](includes/d365fin_md.md)] podporuje.
+### To allow [!INCLUDE[prod_short](includes/prod_short.md)] to export payment data
 
-||Typ 01 | Typ 04 | Typ 71 | Typ 73 |
-|----|---|---|---|---|
-|Číslo žirového účtu nebo číslo FIK kreditora? | Číslo žirového účtu | Číslo žirového účtu | Číslo FIK kreditora | Číslo FIK kreditora|
-|Umožňuje zprávu příjemci? | Ano |Ne |Ne | Ano |
-|Obsahuje referenční číslo platby? | Ne | Ano, 16 číslic. | Ano, 15 číslic. | Ne|
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journal**, and then choose the related link.  
+2. On the **Edit Payment Journal** page, choose the **Bank** batch.  
+3. Choose the **Allow Payment Export** check box.  
 
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Dodavatelé** a poté vyberte související odkaz.  
-2. Otevřete kartu, rozbalte záložku **Platby** a v poli **Způsob platby** zvolte způsob platby.  
-3. V závislosti na vašem výběru musíte vyplnit další pole. Popis kombinací viz tabulka výše.  
+### To specify a payment method for a vendor
 
-### <a name="to-specify-the-format-to-use-for-a-bank-account"></a>Pro určení formátu, který se použije pro bankovní účet
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Bankovní účty** a poté vyberte související odkaz.  
-2. Otevřete kartu pro bankovní účet.  
-3. V poli **Formát exportu plateb**, zvolte formát vašeho exportovaného souboru.  
+The following table shows the combinations of FIK and GIRO payment methods that [!INCLUDE[prod_short](includes/prod_short.md)] supports.
 
-## <a name="choosing-the-fik-or-giro-payment-information-for-vendor-invoices"></a>Výběr platebních informací FIK nebo ŽIRO pro faktury dodavatele
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
-2. Vyberte dodavatele. Pamatujte, že se musí jednat o dánského prodejce s adresou v Dánsku.
-3. Vytvořte fakturu. Pole **Způsob platby** a **Číslo dodavatele** jsou vyplněna na základě nastavení v kartě dodavatele. Můžete je změnit, pokud chcete.
-4. Do pole **Platební reference** zadejte 15místné číslo z faktury dodavatele.  
+|Combination|Type 01 | Type 04 | Type 71 | Type 73 |
+|----|--------|---------|---------|---------|
+|Giro Account No. or FIK Creditor No.? | Giro Account No. | Giro Account No. | FIK Creditor No. | FIK Creditor No.|
+|Allows Message to Recipient? | Yes |No |No | Yes |
+|Contains Payment Reference number? | No | Yes, 16 digits. | Yes, 15 digits. | No|
 
-    > [!Tip]
-    > Musíte přidat pouze posledních 11 číslic tohoto čísla. [!INCLUDE[d365fin](includes/d365fin_md.md)] přidá čtyři nuly na začátek čísla.  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.  
+2. Open the card, expand the **Payments** tab, in the **Payment Method** field choose the payment method.  
+3. Depending on your selection, you must complete other fields. See the table above for a description of the combinations.  
 
-5. Zaúčtujte fakturu.
+### To specify the format to use for a bank account
 
-## <a name="to-use-the-extension-to-export-payment-data"></a>Použití tohoto rozšíření pro export dat platby
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Deník plateb** a poté vyberte související odkaz.  
-2. Vyberte akci **Navrhnout platební deníky dodavatele**.  
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.  
+2. Open the card for the bank account.  
+3. In the **Payment Export Format** field, choose the format for your export file.  
+
+## Choosing the FIK or Giro payment information for vendor invoices
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+2. Choose the vendor. Remember, this must be a Danish vendor with an address in Denmark.
+3. Create an invoice. The **Payment Method** and **Vendor Number** fields are filled in based on settings on the Vendor card. You can change them if you want.
+4. In the **Payment Reference** field, enter the 15-digit number from the vendor invoice.  
 
     > [!Tip]
-    > Pokud chcete exportovat pouze konkrétní platby, použijte možnosti filtrování dat.  
+    > You only have to add the last 11 digits of the number. [!INCLUDE[prod_short](includes/prod_short.md)] will add four zeros to the beginning of the number.  
 
-3. V případě potřeby můžete přidat filtry a exportovat pouze konkrétní platby.  
-4. V poli **Typ platby v bance** Zvolte **Elektronická platba**.  
-5. Zvolte akci **Exportovat**.  
+5. Post the invoice.
 
-## <a name="see-also"></a>Viz také
-[Přizpůsobení Business Central pro [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí rozšíření](ui-extensions.md)  
-[Vytvoření záznamu SEPA – příkaz k inkasu a jeho export do bankovního souboru](finance-how-create-sepa-direct-debit-collection-entries-export-bank-file.md)  
-[Nastavení SEPA – příkaz k inkasu](finance-how-to-set-up-sepa-direct-debit.md)  
-[Účtování přijaté platby SEPA – příkaz k inkasu](finance-how-to-post-sepa-direct-debit-payment-receipts.md)  
-[Sběr plateb pomocí SEPA – příkaz k inkasu](finance-collect-payments-with-sepa-direct-debit.md)  
-[Práce s finančními deníky](ui-work-general-journals.md)  
+## To use the extension to export payment data
+
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.  
+2. Choose the **Suggest Vendor Payment Journals** action.  
+
+    > [!Tip]
+    > If you want to export only specific payments, use the options for filtering the data.  
+
+3. If needed, you can add filters to export only specific payments.  
+4. In the **Bank Payment Type** field, choose **Electronic Payment**.  
+5. Choose the **Export** action.  
+
+## See also
+
+[Customizing Business Central for [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
+[Collect Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md)  
+[Working with General Journals](ui-work-general-journals.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -9,83 +9,84 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Sledování zboží a Rezervace
+# Design Details: Item Tracking and Reservations
 
-Současné použití rezervace a sledování konkrétního zboží je neobvyklé, protože oba vytvářejí spojení mezi nabídkou a poptávkou. S výjimkou situací, kdy zákazník nebo plánovač výroby požaduje určitou šarži, kdy má zřídka smysl rezervovat skladové položky, které nesou čísla sledování zboží pro konkrétní výběr. I když je možné rezervovat zboží, které vyžaduje konkrétní sledování zboží, je zapotřebí speciálních funkcí, aby se zabránilo konfliktům dostupnosti mezi zpracovateli objednávek, kteří požadují stejné zboží sledované položkou.
-
-Koncept "Pozdní vazby" zajišťuje, že nespecifická rezervace sériového čísla nebo čísla šarže zůstane volně spojena až do zaúčtování. V době zaúčtování může rezervační systém přemístil nespecifické rezervace, aby bylo zajištěno, že vyrovnání možné proti sériovému číslu nebo číslu šarže, které je skutečně vybráno. Mezitím je sériové číslo nebo číslo šarže k dispozici pro konkrétní rezervaci v jiných dokladech, které požadují toto konkrétní sériové číslo nebo číslo šarže.
-
-Nespecifická rezervace je rezervace, ve které se uživatel nestará o to, která konkrétní položka je vybrána, a konkrétní rezervace je rezervace, ve které se uživatel ví, kterou chce.
-
-> Funkce Pozdní vazba se týká pouze položek, které jsou nastaveny se sledováním konkrétního zboží a vztahuje se pouze na rezervace proti zísobám, nikoli proti příchozím objednávkám.
-
-Rezervace čísel sledování zboží spadá do dvou kategorií, jak je znázorněno v následující tabulce.
-
-| Rezervace | Popis |
-|-----------------|---------------------------------------|  
-| Specifikcé | Určité sériové číslo nebo číslo šarže vyberete při rezervaci skladové položky z poptávky, například v prodejní objednávce.<br /><br /> Jedná se o běžnou rezervace. Jedná se o pevnou vazbu mezi nabídkou a poptávkou, která nese sériová čísla i čísla šarží. **Poznámka:**  Poptávka nese sériová čísla nebo čísla šarží. <br /><br /> Příkladem je rezervace plechovky modré barvy ze šarže A, protože si o to zákazník požádá. Zákazníkovi je tedy dodána plechovka modré barvy ze šarže A. |
-| Nespecifické | Při rezervaci skladového zboží z poptávky, například v prodejní objednávce, nebudete muset vybírat určité sériové číslo nebo číslo šarže.<br /><br /> Jedná se o stav, který je uložen u položky rezervace pro sériová čísla nebo čísla šarží, která nejsou vybrána specificky. **Poznámka:**  Poptávka nenese sériová čísla ani čísla šarží. <br /><br /> Chcete například rezervovat plechovku modré barvy z libovolné šarže pro prodejní objednávku. Zákazníkovi je odeslána plechovka modré barvy s náhodným sériovým číselem nebo číslem šarže. |
-
-Hlavní rozdíl mezi specifickou a nespecifickou rezervací je definován existencí sériových čísel nebo čísel šarží na straně poptávky, jak je znázorněno v následující tabulce.
-
-| Typ | Dodávka | Poptávka |
-|-----------------|-----------------------|--------------------------|
-| **Specifické** | Sériové číslo nebo číslo šarže. | Sériové číslo nebo číslo šarže. |
-| **Nespicifické** | Sériové číslo nebo číslo šarže. | Žádné sériové číslo nebo číslo šarže. |
-
-Pokud rezervujete zásoby zboží z řádku výstupního dokladu, které má přiřazeno číslo sledování zboží a je nastaveno pro konkrétní sledování zboží, stránka **Rezervace** Vás vede různými pracovními postupy v závislosti na potřebě sériových čísel nebo čísel šarží.
-
-## Specifická rezervace
-Když zvolíte **Rezervovat** z řádku výstupního dokladu, zobrazí se dialogové okno s informacemi o tom, zda chcete rezervovat konkrétní sériová čísla nebo čísla šarží Pokud zvolíte **Ano**, zobrazí se seznam se všemi sériovými čísly nebo čísly šarží přiřazenými k řádku dokladu. Stránka **Rezervace** se otevře po výběru jednoho ze sériových čísel nebo čísel šarží a můžete si je rezervovat mezi vybranými sériovými čísly nebo čísly šarží typickým způsobem.
-
-Pokud jsou některá konkrétní čísla sledování zboží, která se pokoušíte rezervovat blokována v nespecifické rezervaci, pak vás zpráva v dolní části stránky **Rezervace** informuje, kolik z celkového rezervovaného množství je blokováno v nespecifické rezervaci a zda je stále k dispozici.
-
-## Nespecifická rezervace
-Pokud v zobrazeném dialogovém okně zvolíte **Ne** otevře se stránka **Rezervace** a umožní vám rezervovat mezi všemi sériovými čísly nebo čísly šarží v zásobách.
-
-Vzhledem ke struktuře rezervačního systému musí systém při umistování nespecifické rezervace zboží sledovaného zboží vybrat konkrétní položky zboží, proti které má být rezervováno. Protože položky zboží nesou i sledovací čísla zboží, rezervace si nepřímo vyhrazuje konkrétní sériová čísla nebo čísla šarží, i když jste to neměli v úmyslu. Aby se tato situace vyřešila, rezervační systém se před účtováním pokusí přesunout nespecifické položky rezervace.
-
-Systém ve skutečnosti stále rezervuje proti konkrétním položkám, ale pak používá mechanismus přessunutí, kdykoli je v nespecifické rezervaci specifická poptávka po šarži nebo sériovém čísle. To může být případ, kdy účtujete transakci poptávky, například prodejní objednávku, deník spotřeby nebo objednávku transferu pro sériové číslo nebo číslo šarže nebo při pokusu o konkrétní rezervaci sériového čísla nebo čísla šarže. Systém přesunuje rezervace tak, aby byla šarže nebo sériové číslo k dispozici poptávce nebo konkrétní rezervaci, čímž se do nespecifické rezervace umístí jiné číslo šarže nebo sériové číslo. Pokud zásoby mají nedostatečné množství, systém provede co největší přesunutí a zobrazí se chyba dostupnosti, pokud v době zaúčtování stále není dostatečné množství.
-
+Simultaneous use of reservation and specific item tracking is uncommon, because they both create a coupling between supply and demand. Except for situations where a customer or production planner requests a specific lot, it rarely makes sense to reserve inventory items that already carry item tracking numbers for specific application. Although it is possible to reserve items that require specific item tracking, special functionality is needed to avoid availability conflicts between order processors that request the same item-tracked items.  
+  
+The concept of Late Binding ensures that a nonspecific reservation of a serial number or a lot number remains loosely coupled until posting. At posting time, the reservation system can reshuffle nonspecific reservations to ensure that fixed application is possible against the serial or lot number that is actually picked. Meanwhile, the serial or lot number is made available for specific reservation in other documents that request that particular serial or lot number.  
+  
+A nonspecific reservation is one in which the user does not care which specific item is picked, and a specific reservation is one in which the user does care.  
+  
 > [!NOTE]  
-> U nespecifické rezervace jsou pole čísla šarže nebo sériového čísla prázdné v záznamu rezervace, který ukazuje na poptávku, jako je prodej.
+> The Late Binding functionality relates only to items that are set up with specific item tracking, and it applies only to reservations against inventory, not against inbound supply orders.  
+  
+Reservation of item tracking numbers falls into two categories, as shown in the following table.  
+  
+|Reservation|Description|  
+|-----------------|---------------------------------------|  
+|Specific|You select a specific serial or lot number when you reserve the inventory item from a demand, such as a sales order.<br /><br /> This is a regular reservation. It is a rigid link between supply and demand that both carry serial or lot numbers. **Note:**  The demand carries serial or lot numbers. <br /><br /> For example, you want to reserve a can of blue paint from Lot A, because the customer requests it. A can of blue paint from Lot A is shipped to the customer.|  
+|Nonspecific|You do not select a specific serial or lot number when you reserve the inventory item from a demand, such as a sales order.<br /><br /> This is a state that is imposed on a reservation entry for serial or lot numbers that are not selected specifically. **Note:**  The demand does not carry serial or lot numbers. <br /><br /> For example, you want to reserve a can of blue paint from any lot for your sales order. A can of blue paint from a random serial or lot number is shipped to the customer.|  
+  
+The main difference between specific and nonspecific reservation is defined by the existence of serial or lot numbers on the demand side, as shown in the following table.  
 
-## Přesunutí
-Když uživatel zaúčtuje odchozí doklad po výběru nesprávného sériového čísla nebo čísla šarže, ostatní nespecifické rezervace se přesunou tak, aby odrážely skutečné sériové číslo nebo číslo šarže, které je vyskladněno. To uspokojí účtovací modul pevným vyrovnání mezi nabídkou a poptávkou.
-
-U všech podporovaných obchodních scénářů je přemístíní možné pouze proti kladným položkám zboží, které nesou čísla rezervací, sériová čísla nebo šarže, ale bez definovaných sériových čísel nebo čísel šarží na straně poptávky.
-
-## Podporované obchodní scénáře
-Funkce Pozdní vazba podporuje následující obchodní scénáře:
-
-* Zadání určitého sériového čísla nebo čísla šarže do výstupního dokladu s nespecifickou rezervací nesprávného sériového čísla nebo čísla šarže.
-* Rezervace konkrétního sériového čísla nebo čísla šarže.
-* Účtování výstupního dokladu s nespecifickou rezervací sériového čísla nebo čísla šarže
-
-### Zadání sériových čísel nebo čísel šarží do výstupního dokladu se špatnou nespecifickou rezervací
-To je nejběžnější ze tří podporovaných scénářů. V tomto případě funkce Pozdní vazba zajišťuje, že uživatel může zadat sériové číslo nebo číslo šarže, které je skutečně vyskladněné do výstupního dokladu, který má nespecifické sledování jiného sériového čísla nebo čísla šarže.
-
-Potřeba nastává například v případě, že zpracovatel objednávky poprvé provedl nespecifickou rezervaci libovolného sériového čísla nebo čísla šarže. Později, když je zboží skutečně vyskladněné ze skladu, musí být vyskladněné sériové číslo nebo číslo šarže zadáno do objednávky před jeho účtováním. Nespecifická rezervace je v době zaúčtování přesunuta, aby bylo zajištěno, že vyskladněné sériové číslo nebo číslo šarže lze zadat bez ztráty rezervace a aby bylo zajištěno, že vyskladěné sériové číslo nebo číslo šarže může být plně použito a zaúčtováno.
-
-### Rezervace konkrétního sériových čísel nebo čísel šarže.
-V tomto obchodním scénáři funkce Pozdní vazba zajišťuje, že uživatel pokoušející se rezervovat určité sériové číslo nebo číslo šarže, které je aktuálně nespecificky rezervováno, tak může učinit. Nespecifická rezervace je v době rezervace přesunuta, aby se pro konkrétní požadavek uvolnilo sériové číslo nebo číslo šarže.
-
-K přesunutí dojde automaticky, ale vložená nápověda zobrazena ve spodní řástu stránky **Rezervace** zobrazí následující text:
-
-**XX z celkového rezervovaného množství je nespicifikováno a může být k dispozici**.
-
-Kromě toho pole **Nespecifické rezervované množství.** kazuje, kolik položek rezervace je nespecifických. Ve výchozím nastavení toto pole není viditelné pro uživatele.
-
-### Účtování výstupních dokladů s nespecifickou rezervací sériových čísel nebo čísel šarží
-Tento obchodní scénář je podporován funkcí Pozdní vazba, která umožňuje pevné vyrovnání a odchozí účtování toho, co je skutečně vyskladněno pomocí přesunutí na jinou nespecifickou rezervaci sériového čísla nebo čísla šarže. Pokud přesunutí není možné, zobrazí se při pokusu účtování dodávky následující standardní chybová zpráva:
-
-**Zboží XX nemůže být plně vyrovnána.**
-
-## Viz také
-[Detaily návrhu: Sledování zboží](design-details-item-tracking.md)
+| Type            | Supply                | Demand                   |
+|-----------------|-----------------------|--------------------------|
+| **Specific**    | Serial or lot number. | Serial or lot number.    |
+| **Nonspecific** | Serial or lot number. | No serial or lot number. |
+  
+When you reserve inventory quantities from an outbound document line for an item that has item tracking numbers assigned and is set up for specific item tracking, the **Reservation** page leads you through different workflows depending on your need for the serial or lot numbers.  
+  
+## Specific Reservation  
+When you choose **Reserve** from the outbound document line, a dialog box appears that asks you if you want to reserve specific serial or lot numbers. If you choose **Yes**, then a list is displayed with all the serial or lot numbers that are assigned to the document line. The **Reservation** page opens after you select one of the serial or lot numbers, and you can then reserve among the selected serial or lot numbers in a typical fashion.  
+  
+If some of the specific item tracking numbers that you are trying to reserve are held in nonspecific reservations, then a message at the bottom of the **Reservation** page informs you how many of the total reserved quantity are held in nonspecific reservations and whether they are still available.  
+  
+## Nonspecific Reservation  
+If you choose **No** in the dialog box that appears, the **Reservation** page opens and allows you to reserve among all serial or lot numbers in inventory.  
+  
+Because of the structure of the reservation system, when you place a nonspecific reservation on an item-tracked item, the system must select specific item ledger entries to reserve against. Because the item ledger entries carry the item tracking numbers, the reservation indirectly reserves specific serial or lot numbers, even though you did not intend to. To handle this situation, the reservation system tries to reshuffle nonspecific reservation entries before posting.  
+  
+The system actually still reserves against specific entries, but then it uses a reshuffling mechanism whenever there is specific demand for the lot or serial number in the nonspecific reservation. This can be the case when you post a demand transaction, such as a sales order, consumption journal, or transfer order, for the serial or lot number, or when you try to specifically reserve the serial or lot number. The system reshuffles the reservations to make the lot or serial number available to the demand or to the specific reservation, thereby placing a different lot or serial number in the nonspecific reservation. If there is insufficient quantity in inventory, the system reshuffles as much as possible, and you receive an availability error if there is still insufficient quantity at the time of posting.  
+  
+> [!NOTE]  
+>  On a nonspecific reservation the lot number or serial number field is blank in the reservation entry that points at the demand, such as the sale.  
+  
+## Reshuffle  
+When a user posts an outbound document after picking the wrong serial or lot number, other nonspecific reservations are reshuffled to reflect the actual serial or lot number that is picked. This satisfies the posting engine with a fixed application between supply and demand.  
+  
+For all supported business scenarios, reshuffling  is possible only against positive item ledger entries that carry reservation and serial or lot numbers but without defined serial or lot numbers on the demand side.  
+  
+## Supported Business Scenarios  
+The Late Binding functionality supports the following business scenarios:  
+  
+* Entering a specific serial or lot number on an outbound document with nonspecific reservation of a wrong serial or lot number.  
+* Reserving a specific serial or lot number.  
+* Posting an outbound document with nonspecific reservation of a serial or lot number.  
+  
+### Entering Serial or Lot Numbers on an Outbound Document with Wrong Nonspecific Reservation  
+This is the most common of the three supported scenarios. In this case, the Late Binding functionality ensures that a user can enter a serial or lot number, which is actually picked, on an outbound document that already has a nonspecific reservation of another serial or lot number.  
+  
+For example, the need arises when an order processor has first made a nonspecific reservation of any serial or lot number. Later when the item is actually picked from inventory, the picked serial or lot number must be entered on the order before it is posted. The nonspecific reservation is reshuffled at posting time to ensure that the picked serial or lot number can be entered without losing the reservation and to ensure that the picked serial or lot number can be fully applied and posted.  
+  
+### Reserve Specific Serial or Lot Numbers  
+In this business scenario, Late Binding functionality ensures that a user who is trying to reserve a particular serial or lot number that is currently nonspecifically reserved can do so. A nonspecific reservation is reshuffled at the time of reservation to free the serial or lot number for the specific request.  
+  
+The reshuffle happens automatically, but embedded Help is displayed at the bottom of the **Reservation** page and shows the following text:  
+  
+**XX of the Total Reserved Quantity are nonspecific and may be available.**  
+  
+In addition, the **Nonspecific Reserved Qty.** field shows how many reservation entries are nonspecific. By default, this field is not visible to users.  
+  
+### Posting an Outbound Document with Nonspecific Reservation of Serial or Lot Numbers  
+This business scenario is supported with Late Binding functionality that enables fixed application and outbound posting of what is actually picked by reshuffling another nonspecific reservation of a serial or lot number. If reshuffling is not possible, then the following standard error message appears when the user tries to post the shipment:  
+  
+**Item XX cannot be fully applied.**  
+  
+## See Also  
+[Design Details: Item Tracking](design-details-item-tracking.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

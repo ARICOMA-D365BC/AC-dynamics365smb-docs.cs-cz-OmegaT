@@ -1,6 +1,6 @@
 ---
-    title: Detaily návrhu | Microsoft Docs
-    description: Tento obsah obsahuje podrobné technické informace o funkcích komplexních aplikací v aplikaci Business Central.
+    title: Design Details | Microsoft Docs
+    description: This content contains detailed technical information about complex application features in Business Central.
     author: SorenGP
     documentationcenter: ''
 
@@ -10,32 +10,30 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Podrobnosti návrhu
-Tento obsah obsahuje podrobné technické informace o funkcích komplexních aplikací v aplikaci [!INCLUDE<g0>d365fin</g0>] .
+# Design Details
+This content contains detailed technical information about complex application features in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Detaily návrhu jsou zaměřeny na implementátory, vývojáře a superuživatele, kteří potřebují hlubší přehled o implementaci, přizpůsobení nebo nastavení příslušných funkcí.
+ Design details content is aimed at implementers, developers, and super users who need deeper insight to implement, customize, or set up the features in question.  
 
-| **Viz** | **také** |
+|**To**|**See**|  
 |------------|-------------|  
-| Zjistěte, jak systém plánování funguje a jak upravit algoritmy tak, aby splňovaly požadavky na plánování v různých prostředích. | [Detaily návrhu: Plánování dodávek](design-details-supply-planning.md) |
-| Pochopte mechanismy v nákladovém modulu, jako je metoda ocenění a úprava skutečných nákladů, a pro které účetní zásady jsou určeny. | [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md) |
-| Seznamte se s centrálními zásadami, které se nacházejí za pokročilými a základními funkcemi skladu a jak jsou integrovány s jinými funkcemi dodavatelského řetězce. | [Detaily návrhu: Správa skladu](design-details-warehouse-management.md) |
-| Získejte informace o historickém a aktuálním návrhu funkce sledování zboží a o tom, jak je integrována s rezervačním systémem, aby zahrnovala sériová čísla/číslo dávky ve výpočtech dostupnosti. | [Detaily návrhu: Sledování zboží](design-details-item-tracking.md) |
-| Informace o funkci účtování řádku finančního deníku včetně posledních zjednodušených postupů pro návrh codeunity 12. | [Detaily návrhu: Účtování řádku finančního deníku](design-details-general-journal-post-line.md) |
-| Přečtěte si o návrhu pro ukládání a účtování dimenzí, včetně příkladů kódu, jak migrovat a upgradovat kód dimenze. | [Detaily návrhu: Sady položek dimenzí](design-details-dimension-set-entries.md) |
+|Learn how the planning system works and how to adjust the algorithms to meet planning requirements in different environments.|[Design Details: Supply Planning](design-details-supply-planning.md)|  
+|Understand mechanisms in the costing engine, such as costing method and cost adjustment, and which accounting principles they are designed for.|[Design Details: Inventory Costing](design-details-inventory-costing.md)|  
+|Learn about central principles behind advanced and basic warehouse features and how they integrate with other supply chain features.|[Design Details: Warehouse Management](design-details-warehouse-management.md)|  
+|Learn about historic and the current design of item tracking functionality and how it integrates with the reservation system to include serial/lot numbers in availability calculations.|[Design Details: Item Tracking](design-details-item-tracking.md)|  
+|Learn about the General Journal Posting Line feature, including recent simplifications to the design of codeunit 12.|[Design Details: General Journal Post Line](design-details-general-journal-post-line.md)|
+|Learn about the design for storing and posting dimensions, including code examples on how to migrate and upgrade dimension code.|[Design Details: Dimension Set Entries](design-details-dimension-set-entries-overview.md)|
 
-## Viz také
-[Plánování](production-planning.md)     
-[Správa ocenenění zásob](finance-manage-inventory-costs.md)     
-[Správa skladů](warehouse-manage-warehouse.md)     
-[Nastavení složitých oblastí aplikace pomocí doporučených postupů](set-up-complex-application-areas-using-best-practices.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## See Also
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]
+[Planning](production-planning.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Setting Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  

@@ -4,43 +4,46 @@ description: For business activities that are not represented by a document in, 
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: direct posting, general ledger
-ms.date: 10/01/2019
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Zaúčtování transakcí přímo do hlavní knihy
+# Post Transactions Directly to the General Ledger
 
-Finanční deníky se používají k zaúčtování finančních transakcí přímo na účty hlavní knihy a na jiné účty, například na bankovní účty, účty zákazníků, dodavatelů a zaměstnanců.
+You use general journals to post financial transactions directly to general ledger accounts and other accounts, such as bank, customer, vendor, and employee accounts.  
 
-Typickým využitím finančního deníku je zaúčtování výdajů zaměstnanců z vlastních peněz během podnikatelské činnosti za účelem pozdější úhrady.  Pro více informací navštivte [Zaznamenávání a uhrazování výdajů zaměstnanců](finance-how-record-reimburse-employee-expenses.md).
+A typical use of the general journal is to post employees' expenditure of own money during business activities, for later reimbursement. For more information, see [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md).
 
-Finanční deníky zaúčtují finanční transakce přímo na účty hlavní knihy a další účty, například bankovní účty, účty zákazníků, dodavatelů a zaměstnanců. Účtování pomocí finančního deníku vždy vytváří položky na účtech hlavní knihy. To platí i v případě, že například zaúčtujete řádek deníku na účet zákazníka, protože položka je zaúčtována k finančímu účtu pohledávek prostřednictvím účto skupiny. Svou verzi finančního deníku si můžete přizpůsobit nastavením listu nebo šablony deníku. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
+General journals post financial transactions directly to general ledger accounts and other accounts, such as bank, customer, vendor, and employee accounts. Posting with a general journal always creates entries on general ledger accounts. This is true even when, for example, you post a journal line to a customer account, because an entry is posted to a general ledger receivables account through a posting group. You can personalize your version of a general journal by setting up a journal batch or template. For more information, see [Working with General Journals](ui-work-general-journals.md).
 
-Na rozdíl od položek, které jsou zaúčtovány s doklady, které vyžadují zpracování dobropisů, můžete správně obrátit položky, které jsou zaúčtovány ve finančním deníku. Pro více informací navštivte [Účtování deníku storna a vrácení příjemky/dodávky](finance-how-reverse-journal-posting.md).
+Unlike for entries that are posted with documents, which require a credit memo process, you can correctly reverse entries that are posted with the general journal. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
 
-## Zaúčtování transakce přímo na účet hlavní knihy
+## To post a transaction directly to a general ledger account
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky** a poté vyberte související odkaz.
-2. Otevřete příslušný list finančního deníku. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
-3. V novém řádku deníku vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link.
+2. Open the relevant general journal batch. For more information, see [Working with General Journals](ui-work-general-journals.md).
+3. On a new journal line, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]    
 
-   > [!NOTE]
-   > [!INCLUDE[journal-showhide-columns-inline-tip](includes/journal-showhide-columns-inline-tip.md)]
-4. Opakujte krok 3 pro všechny samostatné transakce, které chcete zaúčtovat.
+    > [!NOTE]
+    > [!INCLUDE[journal-showhide-columns-inline-tip](includes/journal-showhide-columns-inline-tip.md)]
+4. Repeat step 3 for all the separate transactions that you want to post.
 
-   > [!TIP]
-   > Pokud chcete zadat více řádků transakcí nad jedním řádkem zůstatkového účtu, například pro jeden bankovní účet, zaškrtněte políčko **Navrhnout vyrovnávací částku** na řádku pro vaši dávku na stránce **Listy finančního deníku**. Poté je pole **Částka** na řádku rozvahového účtu automaticky předvyplněno hodnotou, která je nutná k vyrovnání transakcí.
-5. Vyberte akci **Účtovat** a zaznamenejte transakce na určené finanční účty.
+    > [!TIP]  
+    > If you want to enter multiple transaction lines above one balance-account line, for example, for one bank account, then select the **Suggest Balancing Amount** check box on the line for your batch on the **General Journal Batches** page. Then the **Amount** field on the balance-account line is automatically prefilled with the value that is required to balance the transactions.
+5. Choose the **Post** action to record the transactions on the specified G/L accounts.
 
-## Viz také
+## See Also
 
-[Práce s finančními deníky](ui-work-general-journals.md)  
-[Evidence a uhrazení výdajů zaměstnance](finance-how-record-reimburse-employee-expenses.md)  
-[Účtování deníku storna a vrácení příjemky/dodávky](finance-how-reverse-journal-posting.md)  
+[Working with General Journals](ui-work-general-journals.md)  
+[Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md)  
+[Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

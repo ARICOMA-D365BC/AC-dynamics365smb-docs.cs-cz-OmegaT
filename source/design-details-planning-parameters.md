@@ -4,116 +4,118 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: planning, design
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Detaily návrhu: Parametry plánování
-Toto téma popisuje různé parametry plánování, které můžete použít v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+# Design Details: Planning Parameters
+This topic describes the different planning parameters that you can use in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Způsob, jakým plánovací systém řídí dodávku zboží, je určen různými nastaveními na kartě zboží nebo SKJ a nastavením ve výrobním nastavení. Následující tabulka ukazuje, jak se tyto parametry používají pro plánování.
+The way in which the planning system controls item supply is determined by various settings on the item card or SKU, and settings in manufacturing setup. The following table shows how these parameters are used for planning.  
 
-| Účel | Parametr |
+|Purpose|Parameter|  
 |-------------|---------------|  
-| Určete, zda má být položka naplánována | Způsob přiobjednání = Prázdné |
-| Definujte, kdy chcete změnit pořadí | Interval dostupnosti <br /><br />bod přiobjednání<br /><br />Bezpečná průběžná doba |
-| Definuje kolik se má přiobjednat | Minimální zásoby<br /><br /> Způsob přiobjednání:<br /><br /> -   Pevné přiobj.množ. plus Přiobjednané množství<br />-   Maximální množství plus Maximální zásoby<br />-   Pořadí<br />-   Dávka-pro-dávku |
-| Optimalizujte, kdy a kolik chcete doobjednat | Období přeplánování<br /><br /> Období kumulace dávky<br /><br /> Období prodlevy |
-| Upravte objednávky dodávek | Minimální množství objednávky<br /><br /> Maximální množství objednávky<br /><br /> Násobek objednávky |
-| Vymezení plánovaného zboží | Způsob výroby:<br /><br /> -   Vyrobit-na-sklad<br />-   Zhotovit na objednávku |
+|Define if the item is to be planned|Reordering Policy = Blank|  
+|Define when to reorder|Time Bucket<br /><br /> Reorder Point<br /><br /> Safety Lead Time|  
+|Define how much to reorder|Safety Stock Quantity<br /><br /> Reordering Policy:<br /><br /> -   Fixed Reorder Qty. plus Reorder Quantity<br />-   Maximum Qty. plus Maximum Inventory<br />-   Order<br />-   Lot-for-Lot|  
+|Optimize when and how much to reorder|Rescheduling Period<br /><br /> Lot Accumulation Period<br /><br /> Dampener Period|  
+|Modify the supply orders|Minimum Order Quantity<br /><br /> Maximum Order Quantity<br /><br /> Order Multiple|  
+|Delimit the planned item|Manufacturing Policy:<br /><br /> -   Make-to-Stock<br />-   Make-to-Order|  
 
-## Definujte, zda bude zboží plánované
-Chcete-li do procesu plánování zahrnout zboží / SKJ, musí mít způsob přiobjednání, jinak musí být naplánována ručně, například pomocí funkce Plánování objednávek.
+## Define If the Item Will Be Planned  
+To include an item/SKU in the planning process, it must have a reordering policy otherwise it must be planned manually, for example, with the Order Planning feature.  
 
-## Definujte, kdy přiobjednat
-Nabídky na opětovné objednání se obvykle uvolní pouze v případě, že předpokládané dostupné množství kleslo na nebo pod dané množství. Toto množství je definováno bodem přiobjednání. Jinak to bude nula. Nulu lze upravit zadáním množství pojistných zásob. Pokud uživatel definoval bezpečnou průběžnou dobu, způsobí to doručení návrhu v období před požadovaným datem splatnosti.
+## Define When to Reorder  
+Reorder proposals are generally released only when the projected available quantity has fallen to or below a given quantity. This quantity is defined by the reorder point. Otherwise, it will be zero. Zero can be adjusted by entering a safety stock quantity. If the user has defined a safety lead time, it will cause the proposal to be delivered in the period prior to the required due date.  
 
-Pole **Interval dostupnosti** je používáno bodem přiobjednání(**Pevné přiobj.množ.** a **Maximální množ.**), de se úroveň inventáře kontroluje pro každý interval dostupnosti.
- Poprvé segment začíná v den zahájení plánování.
+The **Time Bucket** field is used by reorder point policies (**Fixed Reorder Qty.** and **Maximum Qty.**), where the inventory level is checked after each time bucket. The first time bucket begins on the planning starting date.  
 
 > [!NOTE]  
-> Při výpočtu intervalů dostupnosti plánovací systém ignoruje všechny pracovní kalendáře, které jsou definovány v poli **Kód základního kalendáře** na stránkách **Informace o společnosti** a **Karta lokace**.
+>  When calculating time buckets, the planning system ignores any working calendars that are defined in the **Base Calendar Code** field in the **Company Information** and **Location Card** pages.  
 
-Výchozí Bezpečná průběžná doba na stránce **Nastavení výroby**, by měla být nastavena alespoň na jeden den. Datum splatnosti poptávky může být známo, ale ne termín splatnosti. Plány plánují pozpátku, aby uspokojily hrubou poptávku, a pokud není definována žádná bezpečná průběžná doba, může zboží dorazit příliš pozdě na to, aby uspokojila poptávku.
+The default safety lead time, on the **Manufacturing Setup** page, should be set to at least one day. The due date of the demand may be known, but not the due time. The planning schedules backward to meet gross demand, and, if no safety lead time is defined, the goods may arrive too late to meet the demand.  
 
-Při určování, kdy přiobjednat, hrají roli také tři další pole **Období přeplánování**, **Období kumulace dávky** a **Období prodlevy**. Pro více informací navštivte [Optimalizujte, kdy a kolik chcete doobjednat](design-details-planning-parameters.md#optimize-when-and-how-much-to-reorder).
+Three additional reorder period fields, **Rescheduling Period**, **Lot Accumulation Period**, and **Dampener Period**, also play a role in defining when to reorder. For more information, see [Optimize When and How Much to Reorder](design-details-planning-parameters.md#optimize-when-and-how-much-to-reorder).  
 
-## Definuje kolik se má přiobjednat
-Pokud plánovací systém zjistí potřebu přiobjednat, použije se zvolená způsob přiobjednání k určení, kdy a kolik je třeba objednat.
+## Define How Much to Reorder  
+If the planning system detects the need to reorder, the selected reordering policy is used to determine when and how much to order.  
 
-Nezávisle na zásadách přiobjednání se systém plánování obvykle řídí touto logikou:
+Independent of the reordering policy, the planning system usually follows this logic:  
 
-1. Množství návrhu objednávky se vypočítá tak, aby splňovalo zadanou minimální úroveň zásob zboží, obvykle množství pojistných zásob. Pokud není uvedeno nic, minimální úroveň zásob je nula.
-2. Pokud jsou předpokládané dostupné zásoby nižší než množství pojistných zásob, je navržena zpětně naplánovaná objednávka dodávky. Množství objednávky vyplní alespoň množství pojistných zásob a může být zvýšeno hrubou poptávkou v intervalu dostupnosti, způsoby přiobjednání a modifikátory objednávky.
-3. Pokud jsou předpokládané zásoby na nebo pod bodem přiobjednání (počítáno z agregovaných změn v intervalu dostupnosti) a nad množstvím pojistných zásob, je doporučeno dopředu naplánované pořadí výjimek. Množství objednávky určí jak hrubou poptávku, která má být splněna, tak zásadu přiobjednání. Na minimu bude množství objednávky splňovat bod přiobjednávky.
-4. Pokud je před konečným datem dopředu naplánovaného návrhu objednávky splatná větší hrubá poptávka a tato poptávka přináší aktuálně vypočítané předpokládané dostupné zásoby pod množství pojistných zásob, množství objednávky se zvýší, aby se vyrovnal schodek. Navrhovaná zakázka na dodávku je poté naplánována zpět od data splatnosti hrubé poptávky, která by porušila množství bezpečného zboží.
-5. Pokud není pole **Interval dostupnosti** bude přidána pouze hrubá poptávka ke stejnému datu splatnosti..
+1. The quantity of the order proposal is calculated to meet the specified minimum inventory level of the item, usually the safety stock quantity. If nothing is specified, the minimum inventory level is zero.  
+2. If the projected available inventory is below the safety stock quantity, a backward-scheduled supply order is suggested. The order quantity will at least fill the safety stock quantity, and can be increased by gross demand within the time bucket, by the reordering policy, and by the order modifiers.  
+3. If the projected inventory is on or below the reorder point (calculated from aggregated changes within the time bucket) and above the safety stock quantity, a forward-scheduled exception order is suggested. Both the gross demand to be met and the reordering policy will determine the order quantity. At minimum, the order quantity will meet the reorder point.  
+4. If there is more gross demand due before the ending date of the forward-scheduled order proposal, and this demand brings the currently calculated projected available inventory below the safety stock quantity, the order quantity is increased to make up the deficit. The suggested supply order is then scheduled backward from the due date of the gross demand that would have violated the safety stock quantity.  
+5. If the **Time Bucket** field is not filled in, only the gross demand on the same due date will be added.  
 
-   Následující pole bodu přiobjednání také hrají roli při definování, kolik má být přiobjednáno: **Období přeplánování**, **Období kumulace dávky**, a **Období prodlevy**. Pro více informací navštivte [Optimalizujte, kdy a kolik chcete doobjednat](design-details-planning-parameters.md#optimize-when-and-how-much-to-reorder).
+     The following reorder period fields also play a role in defining how much to reorder: **Rescheduling Period**, **Lot Accumulation Period**, and **Dampener Period**. For more information, see [Optimize When and How Much to Reorder](design-details-planning-parameters.md#optimize-when-and-how-much-to-reorder).  
 
-### Způsob přiobjednání
-Následující způsoby přiobjednání ovlivňují množství, které je přiobjednáno.
+### Reordering Policies  
+The following reordering policies affect the quantity that is being reordered.  
 
-| Způsob přiobjednání | Popis |
+|Reordering policy|Description|  
 |-----------------------|---------------------------------------|  
-| **Pevné přiobj.množ.** | Na minimu bude množství objednávky rovno množství přiobjednávky To lze zvýšit, aby vyhověla poptávce nebo požadované úrovni zásob. Tato zásada přiobjednání se obvykle používá s bodem přiobjednání. |
-| **Maximální množ.** | Množství objednávky bude vypočteno tak, aby splňovalo maximální zásoby. Pokud se použijí modifikátory množství, může dojít k překročení maximálního množství zásob. Nedoporučujeme používat interval dostupnosti spolu s maximálním množstvím. Interval dostupnosti bude obvykle zrušen. Tato zásada přiobjednání se obvykle používá s bodem přiobjednání. |
-| **Zakázka** | Množství objednávky bude vypočítáno tak, aby splňovalo každou jednotlivou poptávkovou událost a sada nabídky a poptávky zůstane propojená až do provedení. Nezvažují se žádné plánovací parametry. |
-| **Dávka-pro-dávku** | Množství se vypočítá tak, aby splňovalo součet poptávky, která je splatná v intervalu dostupnosti. |
+|**Fixed Reorder Qty.**|At a minimum, the order quantity will be equal to the reorder quantity. It can be increased to meet the demand or the desired inventory level. This reordering policy is usually used with a reorder point.|  
+|**Maximum Qty.**|The order quantity will be calculated to meet the maximum inventory. If quantity modifiers are used, then maximum inventory can be violated. We do not recommend that you use the time bucket together with maximum quantity. The time bucket will usually be overruled. This reordering policy is usually used with a reorder point.|  
+|**Order**|The order quantity will be calculated to meet each single demand event and the demand-supply set will remain linked until execution. No planning parameters are considered.|  
+|**Lot-for-Lot**|The quantity is calculated to meet the sum of the demand that comes due in the time bucket.|  
 
-## Optimalizujte, kdy a kolik je třeba přiobjednat
-Chcete-li získat racionální plán dodávek, plánovač doladí parametry plánování, aby omezil návrhy přeplánování, akumuloval poptávku (dynamické množství přiobjednávání) nebo aby se vyhnul nevýznamným plánovacím akcím. Následující pole období přiobjebnávání pomáhá optimalizovat, kdy a kolik chcete přiobjednávat.
+##  Optimize When and How Much to Reorder  
+To obtain a rational supply plan, a planner will fine-tune planning parameters to limit rescheduling suggestions, accumulate demand (dynamic reorder quantity), or to avoid insignificant planning actions. The following reorder period fields help optimize when and how much to reorder.  
 
-| Pole | Popis |
+|Field|Description|  
 |---------------------------------|---------------------------------------|  
-| **Období přeplánování** | Toto pole se používá k určení, zda má hlášení akce přeložit existující objednávku nebo ji zrušit a vytvořit novou objednávku. Stávající objednávka bude přeplánována v rámci jednoho období přeplánování před aktuální dodávkou a do jednoho období přeplánování po aktuálním dodání. |
-| **Období shromáždění šarží** | Se zásadou přiobjednání Šarže pro šarži se toto pole používá k akumulaci více potřeb dodávek do jedné objednávky dodávek. Od první plánované dodávky systém akumuluje všechny potřeby dodávek v následujícím období shromáždění šarže do jedné dodávky, která je umístěna v den první dodávky. Poptávka mimo období akumulace šarže není touto dodávkou kryta. |
-| **Období prodlevy** | Toto pole se používá, aby se zabránilo menším přeplánování stávající dodávky v čase. Změny od data dodávky do jednoho období tlumení od data dodání negenerují žádné akce hlášení. <br /><br /> Období prodlevy určuje dobu, po kterou nechcete, aby plánovací systém navrhl přeplánování stávajících objednávek dodávek dopředu. To omezuje počet nevýznamných přeplánování stávající nabídky na pozdější datum, pokud je přeplánované datum v období prodlevy.<br /><br /> Výsledkem je pozitivní delta mezi navrhovaným novým datem dodávky a původním datem dodávky bude vždy větší než období prodlevy. |
+|**Rescheduling Period**|This field is used to determine whether the action message should reschedule an existing order or cancel it and create a new order. The existing order will be rescheduled within one rescheduling period before the current supply and until one rescheduling period after the current supply.|  
+|**Lot Accumulation Period**|With the reordering policy Lot-for-Lot, this field is used to accumulate multiple supply needs into one supply order. From the first planned supply, the system accumulates all supply needs in the following lot accumulation period into one supply, which is placed on the date of the first supply. Demand outside the lot accumulation period is not covered by this supply.|  
+|**Dampener Period**|This field is used to avoid minor rescheduling of existing supply out in time. Changes from the supply date until one dampener period from the supply date will not generate any action messages.<br /><br /> The dampener period specifies a period of time during which you do not want the planning system to propose to reschedule existing supply orders forward. This limits the number of insignificant rescheduling of existing supply to a later date if the rescheduled date is within the dampener period.<br /><br /> As a result, a positive delta between the suggested new supply date and the original supply date will always be larger than the dampener period.|  
 > [!NOTE]
-> S způsobem přiobjednání Dávka-pro-dávku, hodnota pole **Období kumulace dávky** musí být rovna nebo větší než hodnota pole **Období prodlevy**. Jinak se během plánovací rutiny období prodlevy automaticky sníží, aby odpovídala době akumulace dávky.
+> With the reordering policy Lot-for-Lot, the value of the **Lot Accumulation Period** field must be equal to or larger than the value of the **Dampener Period** field. Otherwise, the dampener period will be automatically reduced during the planning routine to match the lot accumulation period.  
 
-Načasování období přeplánování, období prodlevy a období kumulace dávky je založeno na datu dodávky. Intervaly dostupnosti začínají datem zahájení plánování, jak je znázorněno na následujícím obrázku.
+The timing of rescheduling period, dampener period, and lot accumulation period is based on a supply date. The time bucket is based on the planning start date, as shown in the following illustration.  
 
-![Prvky intervalu dostupnosti](media/supply_planning_5_time_bucket_elements.png "Prvky intervalu dostupnosti")
+![Time bucket elements](media/supply_planning_5_time_bucket_elements.png "Time bucket elements")  
 
-V následujících příkladech představují černé šipky existující nabídku (nahoru) a poptávku (dolů). Červená, zelená a oranžová šipky jsou návrhy plánování.
+In the following examples, the black arrows represent existing supply (up) and demand (down). Red, green, and orange arrows are planning suggestions.  
 
-**Příklad 1**: Změněné datum je mimo období přeplánování, což způsobí zrušení stávající dodávky. Navrhuje se nová nabídka, která pokryje poptávku v období kumulace dávky.
+**Example 1**: The changed date is outside the rescheduling period, which causes the existing supply to be canceled. A new supply is suggested to cover the demand in the lot accumulation period.  
 
-![Období přeplánování a období kumulace dávky](media/supply_planning_5_recheduling_period_lot_accumulation_period.png "Období přeplánování a období kumulace dávky")
+![Rescheduling Period and Lot Accumulation Period](media/supply_planning_5_recheduling_period_lot_accumulation_period.png "Rescheduling Period and Lot Accumulation Period")  
 
-**Příklad 2**: Změněné datum je v období přeplánování, což způsobí, že existující dodávky mají být přeplánovány. Navrhuje se nová nabídka, která pokryje poptávku mimo období kumulace dávky.
+**Example 2**: The changed date is in the rescheduling period, which causes the existing supply to be rescheduled. A new supply is suggested to cover the demand outside the lot accumulation period.  
 
-![Období přeplánování, období kumulace dávky, and Přeplánování](media/supply_planning_5_recheduling_period_lot_accum_period_reschedule.png "Období přeplánování, období kumulace dávky, and Přeplánování")
+![Rescheduling Period, Lot Accumulation Period, and Reschedule](media/supply_planning_5_recheduling_period_lot_accum_period_reschedule.png "Rescheduling Period, Lot Accumulation Period, and Reschedule")  
 
-**Příklad 3**: V období prodlevy je poptávka a množství zásob v období kumulace dávky odpovídá množství nabídky. Další poptávka je odkryta a je navržena nová nabídka.
+**Example 3**: There is a demand in the dampener period and the supply quantity in the lot accumulation period matches the supply quantity. The next demand is uncovered and a new supply is suggested.  
 
-![Období prodlevy a Období kumulace dávky](media/supply_planning_5_dampener_period_lot_accumulation_period.png "Období prodlevy a Období kumulace dávky")
+![Dampener Period and Lot Accumulation Period](media/supply_planning_5_dampener_period_lot_accumulation_period.png "Dampener Period and Lot Accumulation Period")  
 
-**Příklad 4**: V období prodlevy je poptávka a nabídka zůstává ve stejném datu. Aktuální množství nabídky však nestačí k pokrytí poptávky v období kumulace dávky, proto se navrhuje akce změny množství pro stávající objednávku dodávky.
+**Example 4**: There is a demand in the dampener period and the supply remains on the same date. However, the current supply quantity is not enough to cover the demand in the lot accumulation period, so a change quantity action for the existing supply order is suggested.  
 
-![Období prodlevy, Období kumulace dávky, a Změnit množství](media/supply_planning_5_dampener_period_lot_accum_period_change_qty.png "Období prodlevy, Období kumulace dávky, a Změnit množství")
+![Dampener Period, Lot Accumulation Period, and Change Quantity](media/supply_planning_5_dampener_period_lot_accum_period_change_qty.png "Dampener Period, Lot Accumulation Period, and Change Quantity")  
 
-**Výchozí hodnoty:** Výchozí hodnota pole **Interval dostupnosti** a tři pole pro změnu pořadí období jsou prázdné. Pro všechna pole, kromě pole **Období prodlevy**, to znamená 0D (nula dní). Pokud pole **Období prodlevy** je prázdné, bude použita globální hodnota v poli **Výchozí období prodlevy** na stránce **Nastavení výroby**.
+**Default values:** The default value of the **Time Bucket** field and the three reorder period fields is blank. For all fields, except the **Dampener Period** field, this means 0D (zero days). If the **Dampener Period** field is blank, the global value in the **Default Dampener Period** field on the **Manufacturing Setup** page will be used.  
 
-## Upravte objednávky dodávek
-Když bylo vypočítáno množství návrhu objednávky, může jej upravit jeden nebo více modifikátorů objednávky. Například maximální množství objednávky je větší nebo rovno minimálnímu množství objednávky, které je větší nebo rovno násobku objednávky.
+## Modify the Supply Orders  
+When the quantity of the order proposal has been calculated, one or more of the order modifiers can adjust it. For example, the maximum order quantity is larger than or equal to the minimum order quantity, which is larger than or equal to the order multiple.  
 
-Množství je sníženo, pokud překročí maximální množství objednávky. Poté se zvýší, pokud je nižší než minimální množství objednávky. Nakonec je zaokrouhleno nahoru, takže odpovídá násobku zadané objednávky. Jakékoli zbývající množství používá stejné úpravy, dokud není celková poptávka převedena na návrhy objednávek.
+The quantity is decreased if it exceeds the maximum order quantity. Then, it is increased if it is below the minimum order quantity. Finally, it is rounded up so that it matches a specified order multiple. Any remaining quantity uses the same adjustments until the total demand has been converted into order proposals.  
 
-## Oddělte zboží
-Možnost **Způsob výroby** definuje, které další objednávky bude výpočet MRP navrhovat.
+## Delimit the Item  
+The **Manufacturing Policy** option defines which additional orders the MRP calculation will propose.  
 
-Pokud je použita možnost **Vyrobit na sklad** objednávky se týkají pouze dotyčného zboží.
+If the **Make-to-Stock** option is used, the orders concern only the item in question.  
 
-Pokud je použita možnost **Vyrobit na zakázku**, plánovací systém analyzuje výrobní kusovník zboží a vytvoří další propojené návrhy objednávek pro to zboží nižší úrovně, které je definováno jako vyrobit na zakázku. To pokračuje, dokud jsou v sestupných strukturách kusovníku zboží typu zhotovit na objednávku.
+If the **Make-to-Order** option is used, the planning system will analyze the production BOM of the item and create additional linked order proposals for those lower-level items that are also defined as make-to-order. This continues as long as there are make-to-order items in the descending BOM structures.  
 
-## Viz také
-[Detaily návrhu: Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md)   
-[Detaily návrhu: Vyvažování poptávky a nabídky](design-details-balancing-demand-and-supply.md)   
-[Detaily návrhu: Centrální koncepce plánovacího systému](design-details-central-concepts-of-the-planning-system.md)
+## See Also  
+[Design Details: Handling Reordering Policies](design-details-handling-reordering-policies.md)   
+[Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md)   
+[Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

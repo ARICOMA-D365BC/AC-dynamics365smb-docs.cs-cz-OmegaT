@@ -4,65 +4,68 @@ description: From a sales invoice, to purchase products, you can create a purcha
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: supply planning, sales demand, replenish
-ms.date: 04/01/2020
-ms.author: sgroespe
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Nákup zboží pro prodej
-Od prodejních objednávek a prodejních faktur můžete pomocí funkcí rychle vytvářet nákupní doklady pro chybějící množství zboží, které je vyžadováno prodejem. V závislosti na typu dokladu můžete použít dvě různé funkce.
+# Purchase Items for a Sale
+From sales orders and sales invoices, you can use functions to quickly create purchase documents for missing item quantities that are required by the sale. You can use two different functions depending on the document type.
 
 > [!Note]
-> Tato funkce slouží k doplnění položek prodeje do vašich vlastních zásob. Chcete-li zakoupit zboží pro přímé doručení od dodavatele zákazníkovi, musíte vytvořit přímou dodávku. Pro více informací navštivte [Provedení přímé dodávky](sales-how-drop-shipment.md).
+> This functionality is for replenishing sales items into your own inventory. To purchase items for direct delivery from your vendor to your customer, you must create a drop shipment. For more information, see [Make Drop Shipments](sales-how-drop-shipment.md).   
 
-| Funkce | Popis |
+|Function|Description|
 |--------|-----------|
-| **Vytvořit nákupní objednávky** | Z prodejní objednávky vytvoří tato funkce nákupní objednávku pro každého dodavatele zboží na prodejní objednávce. Před vytvořením objednávek můžete upravit množství nákupu. Doporučuje se pouze nedostupné množství prodeje. |
-| **Vytvořit nákupní fakturu** | Z prodejní objednávky a z prodejní faktury tato funkce vytvoří nákupní fakturu pro vybraného dodavatele pro všechny řádky nebo vybrané řádky v prodejním dokladu. Doporučuje se plné prodejní množství. |
+|**Create Purchase Orders**|From a sales order, this function creates a purchase order for each vendor of items on the sales order. You can edit the purchase quantity before you create the purchase orders. Only unavailable sales quantities are suggested.
+|**Create Purchase Invoice**|From a sales order and from a sales invoice, this function creates a purchase invoice for a selected vendor for all lines or selected lines on the sales document. The full sales quantity is suggested.|
 
-## Vytvoření jedné nebo více nákupních objednávek z prodejní objednávky
-Chcete-li vytvořit objednávku pro každé nedostupné množství zboží v prodejní objednávce, použijte funkci **Vytvořit nákupní objednávky**.
+## To create one or more purchase orders from a sales order
+To create a purchase order for each unavailable item quantity on the sales order, you use the **Create Purchase Orders** function.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Otevřete prodejní objednávku, pro kterou chcete zboží zakoupit.
-3. Vyberte akci **Vytvořit nákupní objednávky**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+2. Open a sales order that you want to purchase items for.
+3. Choose the **Create Purchase Orders** action.
 
-   Otevře se stránka **Vytvořit nákupní objednávky** a zobrazí se řádek pro každé jiné zboží v prodejní objednávce. Ve výchozím nastavení jsou zobrazeny řádky pro plně dostupná prodejní množství i nedostupná prodejní množství (šedá). Můžete vybrat akci **Zobrazit nedostupné** a zobrazit pouze řádky pro nedostupná množství prodeje.
+    The **Create Purchase Orders** page opens showing a line for each different item on the sales order. Lines for both fully available sales quantities and unavailable sales quantities (grayed) are shown by default. You can choose the **Show Unavailable** action to only see lines for unavailable sales quantities.
 
-   Pole **Množství k nákupu** obsahuje ve výchozím nastavení nedostupné množství prodeje.
-4. Chcete-li zakoupit jiné množství, než je nedostupné množství k prodeji, upravte hodnotu v poli **Množství k nákupu**.
+    The **Quantity to Purchase** field contains the unavailable sales quantity by default.
+4. To purchase another quantity than the unavailable sales quantity, edit the value in the **Quantity to Purchase** field.
 
-   > [!NOTE]
-   > Na šedých řádcích můžete také změnit pole **Množství k nákupu**, i když představují plně dostupná množství k prodeji.
-5. Vyberte tlačítko **OK**.
+    > [!NOTE]  
+    >   You can also change the **Quantity to Purchase** field on grayed lines even though they represent fully available sales quantities.
+5. Choose the **OK** button.
 
-   Objednávka se vytvoří pro každého dodavatele zboží v prodejní objednávce, včetně všech změn množství, které jste provedli na stránce **Vytvořit nákupní objednávky**.
-7. Pokračujte ve zpracování objednávky nebo objednávek, například úpravou nebo přidáním řádků objednávky. Pro více informací navštivte [Záznam nákupů](purchasing-how-record-purchases.md).
+    A purchase order is created for each vendor of items on the sales order, including any quantity changes that you made on the **Create Purchase Orders** page.
+7. Proceed to process the purchase order or orders, for example, by editing or adding purchase order lines. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 
 
-## Vytvoření nákupní faktury z prodejní objednávky nebo prodejní faktury
-Chcete-li vytvořit jednu nákupní fakturu pro jeden nebo více řádků v prodejním dokladu, nejprve vyberte dodavatele, od kterého chcete zboží koupit a následně použijte funkci **Vytvořit nákupní fakturu**.
+## To create a purchase invoice from a sales order or sales invoice
+To create a single purchase invoice for one or more lines on a sales document by first selecting which vendor to buy from, you use the **Create Purchase Invoice** function.
 
-> [!NOTE]
-> Tato funkce vytvoří nákupní fakturu za přesné množství zboží ve vybraném prodejním dokladu. Chcete-li změnit množství na nákup, musíte po vytvoření fakturu upravit.
+> [!NOTE]  
+>   This function creates a purchase invoice for the exact item quantity on the selected sales document. To change the purchase quantity, you must edit the purchase invoice after it is created.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
-2. Otevřete prodejní fakturu, pro kterou chcete zboží zakoupit.
-3. Vyberte jeden nebo více řádků prodejní faktury, které chcete použít na nákupní faktuře. Chcete-li použít všechny řádky prodejní faktury, vyberte všechny z nich nebo nevyberte žádný.
-4. Vyberte akci **Vytvořit nákupní fakturu**.
-5. Vyberte buď **Všechny řádky** nebo **Vybrané řádky** a poté vyberte tlačítko **OK**.
-6. V zobrazeném seznamu dodavatelů vyberte dodavatele, od kterého chcete koupit všechno zboží, a poté zvolte tlačítko **OK**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+2. Open a sales invoice that you want to purchase items for.
+3. Select one or more sales invoice lines that you want to use on the purchase invoice. To use all the sales invoice lines, select either all of them or do not select any lines.
+4. Choose the **Create Purchase Invoice** action.
+5. Select either **All Lines** or **Selected Lines**, and then choose the **OK** button.  
+6. In the list of vendors that appears, select the vendor that you want to buy all the items from, and then choose the **OK** button.
 
-   Je vytvořena nákupní faktura, která obsahuje jeden, více než jeden nebo všechny řádky na prodejní faktuře.
-7. Pokračujte ve zpracování nákupní faktury, například úpravou nebo přidáním řádků nákupní faktury. Pro více informací navštivte [Záznam nákupů](purchasing-how-record-purchases.md).
+    A purchase invoice is created that contains one, more than one, or all the lines on the sales invoice.
+7. Proceed to process the purchase invoice, for example, by editing or adding purchase invoice lines. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 
-## Viz také
-[Nákup](purchasing-manage-purchasing.md)  
-[Záznam nákupu](purchasing-how-record-purchases.md)  
-[Fakturace prodeje](sales-how-invoice-sales.md)  
-[Evidence nových dodavatelů](purchasing-how-register-new-vendors.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Purchasing](purchasing-manage-purchasing.md)  
+[Record Purchases](purchasing-how-record-purchases.md)  
+[Invoice Sales](sales-how-invoice-sales.md)  
+[Register New Vendors](purchasing-how-register-new-vendors.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

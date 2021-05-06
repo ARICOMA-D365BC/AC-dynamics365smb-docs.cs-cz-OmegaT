@@ -4,223 +4,226 @@ description: Describes how to create a sales credit memo, directly or through a 
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: undo, credit memo, return
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Zpracování prodejních vratek nebo zrušení
-Pokud chce zákazník vrátit zboží nebo chce, aby mu byly vráceny peníze za zboží nebo služby, které jste mu prodali a obdrželi platbu, musíte vytvořit a účtovat  prodejní dobropis, který specifikuje požadovanou změnu. Chcete-li zahrnout správné informace o prodejní faktuře, můžete vytvořit prodejní dobropis přímo z účtované prodejní faktury nebo můžete vytvořit nový prodejní dobropis se zkopírovanými fakturačními údaji.
+# Process Sales Returns or Cancellations
+If a customer wants to return items or be reimbursed for items or services that you have sold and received payment for, you must create and post a sales credit memo that specifies the requested change. To include the correct sales invoice information, you can create the sales credit memo directly from the posted sales invoice or you can create a new sales credit memo with copied invoice information.
 
-Pokud potřebujete větší kontrolu nad procesem prodejní vratky, například nad doklady skladu pro zpracování zboží nebo lepší přehled při příjmu zboží z více prodejních dokladů s jednou prodejní vratkou, můžete vytvořit objednávky prodejní vratky. Objednávka prodejní vratky automaticky vydá související prodejní dobropis a další doklady týkající se vrácení, například náhradní prodejní objednávku, pokud je potřeba. Více informací viz [Vytvoření objednávky prodejní vratky na základě jednoho nebo více účtovaných prodejních dokladů](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-return-order-based-on-one-or-more-posted-sales-documents).
+If you need more control of the sales return process, such as warehouse documents for the item handling or better overview when receiving items from multiple sales documents with one sales return, then you can create sales return orders. A sales return order automatically issues the related sales credit memo and other return-related documents, such as a replacement sales order, if needed. For more information, see [To create a sales return order based on one or more posted sales documents](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-return-order-based-on-one-or-more-posted-sales-documents).
 
-> [!POZNÁMKA]  
-> Pokud účtovaná prodejní faktura ještě nebyla zaplacena, můžete pro obrácení transakcí použít funkce **Opravit** nebo **Zrušit** na účtované prodejní faktuře. Tyto funkce fungují pouze pro nezaplacené faktury a nepodporují částečné vrácení nebo zrušení. Více informací viz [Oprava nebo zrušení nezaplacených prodejních faktur](sales-how-correct-cancel-sales-invoice.md).
+> [!NOTE]  
+>   If a posted sales invoice has not yet been paid, then you can use the **Correct** or **Cancel** functions on the posted sales invoice to reverse transactions. These functions work only for unpaid invoices, and they do not support partial returns or cancellations. For more information, see [Correct or Cancel Unpaid Sales Invoices](sales-how-correct-cancel-sales-invoice.md).
 
-Vrácení nebo náhrada se může týkat pouze některého zboží nebo služeb na původní prodejní faktuře. V takovém případě je nutné upravit informace na řádcích na prodejním dobropisu nebo objednávce prodejní vratky. Když účtujete prodejní dobropis nebo objednávku prodejní vratky, prodejní doklady, které jsou změnou ovlivněny, jsou stornovány a pro zákazníka lze vytvořit refundaci platby. Více informací viz [Provádění plateb](payables-make-payments.md).
+A return or reimbursement may relate to only some of the items or services on the original sales invoice. In that case, you must edit information on the lines on the sales credit memo or sales return order. When you post the sales credit memo or sales return order, the sales documents that are affected by the change are reversed and a refund payment can be created for the customer. For more information, see [Making Payments](payables-make-payments.md).  
 
-Kromě původní účtované prodejní faktury můžete použít prodejní dobropis nebo objednávku prodejní vratky na jiné prodejní doklady, například jinou účtovanou prodejní fakturu, protože zákazník také vrací zboží dodané s touto fakturou.
+In addition to the original posted sales invoice, you can apply the sales credit memo or sales return order to other sales documents, for example another posted sales invoice because the customer is also returning items delivered with that invoice.
 
-Účtovaný prodejní dobropis můžete odeslat zákazníkovi, abyste potvrdili vrácení nebo zrušení a sdělili, že související hodnota bude vrácena, například při vrácení zboží.
+You can send the posted sales credit memo to the customer to confirm the return or cancellation and communicate that the related value will be reimbursed, for example when the items are returned.
 
-Účtování dobropisu také vrátí veškeré poplatky za zboží, které byly přiřazeny k účtovanému dokumentu, tak aby položky hodnot zboží byly stejné jako před přiřazením poplatku za zboží.
+The credit memo posting will also revert any item charges that were assigned to the posted document, so that the item's value entries are the same as before the item charge was assigned.
 
-> [!POZNÁMKA]
-> Aspekty účetnictví prodejních vratek, jako jsou platby zákazníkům jako refundace, jsou považovány za účetní práce a nejsou zde popsány. Více informací viz [Správa závazků](payables-manage-payables.md).
+> [!NOTE]
+> The bookkeeping aspects of sales returns, such as the payments to customers as reimbursement, is considered bookkeeping work and not described here. For more information, see [Managing Payables](payables-manage-payables.md).
 
-## Zásoby a ocenění
-Chcete-li zachovat správné ocenění zásob, obvykle chcete vrátit vrácené zboží zpět do skladu za pořizovací cenu, za kterou byly prodány, nikoli za aktuální cenu. Toto se označuje jako přesné obrácení nákladů.
+## Inventory Costing
+To preserve correct inventory valuation, you typically want to put returned items back in inventory at the unit cost that they were sold at, not at their current unit cost. This is referred to as exact cost reversing.
 
-Pro automatické přiřazení přesného stornování nákladů existují dvě funkce.
+Two functions exist to assign exact cost reversing automatically.   
 
-| Funkce | Popis |
+|Function|Description|  
 |------------------|---------------------------------------|  
-| Funkce **Získat účtované řádky dokladu ke stornování** na stránce **Objednávka prodejní vratky**. | Zkopíruje řádky jednoho nebo více účtovaných dokladů, které mají být vráceny do objednávky prodejní vratky. Více informací viz [Vytvoření objednávky prodejní vratky na základě jednoho nebo více účtovaných prodejních dokladů](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-return-order-based-on-one-or-more-posted-sales-documents). |
-| Funkce **Kopírovat z dokladu** na stránkách **Prodejní dobropis** a **Objednávka prodejní vratky** | Zkopíruje záhlaví i řádky jednoho účtovaného dokladu, který má být stornován. <br /><br /> Vyžaduje, aby bylo zaškrtnuto políčko **Nutné přesné vrácení nákladů** na stránce **Nastavení prodeje a pohledávek**. |
+|**Get Posted Document Lines to Reverse** function on the **Sales Return Order** page|Copies lines of one or more posted documents to be reversed into the sales return order. For more information, see [To create a sales return order based on one or more posted sales documents](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-return-order-based-on-one-or-more-posted-sales-documents).|  
+|**Copy from Document** function in the **Sales Credit Memo** and **Sales Return Order** pages|Copies both the header and lines of one posted document to be reversed.<br /><br /> Requires that the **Exact Cost Reversing Mandatory** check box is selected on the **Sales & Receivables Setup** page.|
 
-Chcete-li přiřadit přesné stornování nákladů ručně, musíte zvolit pole **Vyrovnáno položkou zboží** na libovolném typu řádku dokladu vratky a potom vybrat číslo původní prodejní položky. Tím propojíte prodejní dobropis nebo objednávku prodejní vratky s původní prodejní položkou a zajistíte, že zboží bude oceněno původní pořizovací cenou.
+To assign exact cost reversing manually, you must choose the **Appl.-from Item Entry** field on any type of return document line, and then select the number of the original sales entry. This links the sales credit memo or sales return order to the original sales entry and ensures that the item is valued at the original unit cost.
 
-Více informací viz [Podrobnosti návrhu: Zásoby a ocenění](design-details-inventory-costing.md).
+For more information, see [Design Details: Inventory Costing](design-details-inventory-costing.md).
 
-## Vytvoření prodejního dobropisu z účtované prodejní faktury
-1. Zvolte ikonu ![Žárovky, která otevře funkci](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účtované prodejní faktury** a vyberte související odkaz.
-2. Na stránce **Účtované prodejní faktury** vyberte účtovanou prodejní fakturu, kterou chcete stornovat, a pak zvolte akci **Vytvořit opravný dobropis.**
+## To create a sales credit memo from a posted sales invoice
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Invoices**, and the choose the related link.  
+2. On the **Posted Sales Invoices** page, select the posted sales invoice that you want to reverse, and then choose the **Create Corrective Credit Memo** action.
 
-   Záhlaví prodejního dobropisu obsahuje některé informace z účtované prodejní faktury. Toto můžete upravit například novými informacemi, které odrážejí dohodu o navrácení.
-3. Upravte informace na řádcích podle dohody, například množství vráceného zboží nebo částku k vrácení.
-4. Zvolte akci **Vyrovnat položky**.
-5. Na stránce **Vyrovnat položky zákazníka** vyberte řádek s účtovaným prodejním dokladem, na který chcete vyrovnat prodejní dobropis, a pak zvolte akci **ID vyrovnání**.
+    The sales credit memo header contains some information from the posted sales invoice. You can edit this, for example, with new information that reflects the return agreement.  
+3. Edit information on the lines according to the agreement, such as the number of returned items or the amount to reimburse.
+4. Choose the **Apply Entries** action.
+5. On the **Apply Customer Entries** page, select the line with the posted sales document that you want to apply the sales credit memo to, and then choose the **Applies-to ID** action.
 
-   Identifikátor prodejního dobropisu se zobrazí v poli **ID vyrovnání**.
-6. Do pole **Částka k vyrovnání** zadejte částku, kterou chcete použít, pokud je menší než původní částka.
+    The identifier of the sales credit memo displays in the **Applies-to ID** field.
+6. In the **Amount to Apply** field, enter the amount that you want to apply if it's smaller than the original amount.  
 
-   V dolní části stránky **Vyrovnat položky zákazníka** se zobrazí celková částka, která má být vyrovnáno pro storno všech zapojených položek, konkrétně pokud je hodnota v poli **Zůstatek** nulová.
-7. Zvolte tlačítko **OK**. Když účtujete prodejní dobropis, bude vyrovnán s účtovanými prodejními doklady.
+    At the bottom of the **Apply Customer Entries** page, you can see the total amount to apply to reverse all involved entries, namely when the value in the **Balance** field is zero.
+7. Choose the **OK** button. When you post the sales credit memo, it is applied to the posted sales documents.
 
-   Po vytvoření nebo úpravě řádků prodejního dobropisu a zadání jednoho nebo více vyrovnání můžete prodejní dobropis účtovat.
-8. Zvolte akci **Účtovat a Odeslat**.
+    After you create or edit sales credit memo lines, and the single or multiple applications are specified, you can post the sales credit memo.   
+8. Choose the **Post and Send** action.  
 
-Otevře se dialogové okno **Zaúčtovat a odeslat potvrzení**, které zobrazuje upřednostňované metody odeslání pro zákazníka. Způsob odesílání můžete změnit výběrem vyhledávacího tlačítka v poli **Odeslat doklad**. Více informací viz [Nastavení profilů odesílání dokladů](sales-how-setup-document-send-profiles.md).
+The **Post and Send Confirmation** dialog box opens showing the preferred sending method for the customer. You can change the sending method by choosing the lookup button for the **Send Document** to field. For more information, see [Set Up Document Sending Profiles](sales-how-setup-document-send-profiles.md).  
 
-Účtované prodejní doklady, na které jste dobropis vyrovnáli, jsou nyní stornovány a pro zákazníka lze vytvořit refundační platbu. Prodejní dobropis je odebrán a nahrazen novým dokladem v seznamu účtovaných prodejních dobropisů.
+The posted sales documents that you applied the credit memo to are now reversed, and a refund payment can be created for the customer. The sales credit memo is removed and replaced with a new document in the list of posted sales credit memos.
 
-## Vytvoření prodejního dobropisu zkopírováním účtované prodejní faktury
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
-2. Zvolte akci **Nový** pro otevření nového prázdného prodejního dobropisu.
-3. Do pole **Zákazník** zadejte jméno stávajícího zákazníka.
-4. Zvolte akci **Kopírovat z dokladu**.
-5. Na stránce **Kopírovat prodejní doklad** vyberte v poli **Typ dokladu** **Zaúčtovaná faktura**.
-6. Zvolte pole **Číslo dokladu**, chcete-li otevřít stránku **Účtované prodejní faktury,** a pak vyberte účtovanou prodejní fakturu obsahující řádky, které chcete stornovat.
-7. Zaškrtněte políčko **Přepočítat řádky**, pokud chcete, aby se zkopírované řádky účtované prodejní faktury aktualizovaly o jakékoli změny v ceně zboží a jednotkových nákladech od odeslání faktury.
-8. Zvolte tlačítko **OK**. Zkopírované řádky faktury se vloží do prodejního dobropisu.
-9. Vyplňte prodejní dobropis, jak je vysvětleno ve [Vytvoření prodejního dobropisu z účtované prodejní faktury](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-credit-memo-from-a-posted-sales-invoice).
+## To create a sales credit memo by copying a posted sales invoice
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
+2. Choose the **New** action to open a new empty sales credit memo.
+3. In the **Customer** field, enter the name of an existing customer.
+4. Choose the **Copy from Document** action.
+5. On the **Copy Sales Document** page, in the **Document Type** field, select **Posted Invoice**.
+6. Choose the **Document No.** field to open the **Posted Sales Invoices** page, and then select the posted sales invoice that contains lines that you want to reverse.
+7. Select the **Recalculate Lines** check box if you want the copied posted sales invoice lines to be updated with any changes in item price and unit cost since the invoice was posted.
+8. Choose the **OK** button. The copied invoice lines are inserted in the sales credit memo.
+9. Complete the sales credit memo as explained in [To create a sales credit memo from a posted sales invoice](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-credit-memo-from-a-posted-sales-invoice).
 
-## Chcete-li vytvořit objednávku prodejní vratky na základě jednoho nebo více účtovaných prodejních dokladů
-1. Vyberte ikonu ![Žárovky, která otevře funkci](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Objednávky prodejní vratky** a pak zvolte související odkaz.
-2. Vyberte akci **Nový**.
-3. Vyplňte pole na pevné záložce **Obecné** podle potřeby.
-4. Na pevné záložce **Řádky** vyplňte řádky ručně nebo zkopírujte informace z jiných dokladů pro vyplnění řádků automaticky:
+## To create a sales return order based on one or more posted sales documents
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Return Orders**, and then choose the related link.
+2. Choose the **New** action.  
+3. Fill in the fields on the **General** FastTab as necessary.
+4. On the **Lines** FastTab, fill the lines manually, or copy information from other documents to fill the lines automatically:
 
-   - Pomocí funkce **Získat řádky účtovaných dokladů k obrácení** můžete zkopírovat jeden nebo více řádků účtovaných dokladů z jednoho nebo více účtovaných dokladů. Tato funkce vždy přesně obrátí náklady z řádku účtovaného dokladu. Tato funkce je popsána v následujících krocích.
-   - Pomocí funkce **Kopírovat z dokladu** zkopírujte existující doklad do objednávky vratky. Pomocí této funkce zkopírujete celý doklad. Může to být buď účtovaný doklad, nebo doklad, který ještě není účtován. Tato funkce umožňuje přesné obrácení nákladů pouze v případě, že je na stránce **Nastavení prodeje a pohledávek** zaškrtnuto políčko **Nutné přesné vrácení nákladů**.
+    - Use the **Get Posted Document Lines to Reverse** function to copy one or more posted document lines from one or more posted documents. This function always exactly reverses the costs from the posted document line. This function is described in the following steps.    
+    - Use the **Copy from Document** function to copy an existing document to the return order. Use this function to copy the entire document. It can be either a posted document or a document that is not yet posted. This function only enables exact cost reversing when the **Exact Cost Reversing Mandatory** check box is selected on the **Sales and Receivables Setup** page.  
 
-5. Zvolte akci **Získat účtované řádky dokladu ke stornování**.
-6. V horní části stránky **Řádky účtovaného prodejního dokladu** zaškrtněte políčko **Zobrazit pouze vratné řádky**, pokud chcete zobrazit pouze řádky, které mají množství, které ještě nebylo vráceno. Například pokud již bylo množství účtované prodejní faktury vráceno, možná nebudete chtít toto množství vrátit na novém dokladu prodejní vratky.
+5. Choose the **Get Posted Document Lines to Reverse** action.
+6. At the top of the **Posted Sales Document Lines** page, select the **Show Reversible Lines Only** check box if you want to see only lines that have quantities that have not yet been returned. For example, if a posted sales invoice quantity has already been returned, you may not want to return that quantity on a new sales return document.
 
-   > [!POZNÁMKA]  
-   > Toto pole funguje pouze pro účtované dodávky a účtované řádky faktury, nikoli pro účtované vratky nebo účtované řádky dobropisu.
+    > [!NOTE]  
+    >  This field only works for posted shipments and posted invoice lines, not for posted return or posted credit memo lines.
 
-   Na levé straně stránky jsou uvedeny různé typy dokladů a číslo v závorkách udává počet dostupných dokladů pro každý typ dokladu.
+    At the left side of the page, the different document types are listed, and the number in brackets shows the number of documents available of each document type.
 
-7. V poli **Filtr typů dokladů** vyberte typ účtovaných řádků dokladu, které chcete použít.
-8. Vyberte řádky, které chcete zkopírovat do nového dokladu.
+7. In the **Document Type Filter** field, select the type of posted document lines you would like to use.  
+8. Select the lines that you would like to copy to the new document.  
 
-   > [!POZNÁMKA]  
-   > Pokud pomocí Ctrl+A vyberete všechny řádky, zkopírují se všechny řádky ve filtru, který jste nastavili, ale filtr **Zobrazit pouze reverzibilní množství** je ignorován. Předpokládejme například, že jste vyfiltrovali řádky na konkrétní číslo dokladu se dvěma řádky, z nichž jeden již byl vrácen. I když je vybráno pole **Zobrazit pouze reverzibilní množství**, stisknutím kláves Ctrl+A pro zkopírování všech řádků, se zkopírují oba řádky, nikoli pouze ten, který ještě nebyl obrácen.
+    > [!NOTE]  
+    >  If you use Ctrl+A to select all lines, all lines within the filter you have set are copied, but the **Show Reversible Quantity Only** filter is ignored. For example, suppose you have filtered the lines to a particular document number with two lines, one of which has already been returned. Even if the **Show Reversible Quantity Only** field is selected, if you press Ctrl+A to copy all lines, both lines are copied, instead of only the one that has not yet been reversed.  
 
-9. Zvolte tlačítko **OK**, chcete-li řádky zkopírovat do nového dokladu.
+9. Choose the **OK** button to copy the lines to the new document.  
 
-   Nastanou následující procesy:
+    The following processes occur:  
 
-   - Pro řádky účtovaných dokladů typu **Zboží** se vytvoří nový řádek dokladu, který je kopií řádku účtovaného dokladu s množstvím, které ještě nebylo obráceno. Pole **Vyrovnáno položkou zboží** je podle potřeby vyplněno číslem položky zboží účtovaného dokladu.
+    -   For posted document lines of the type **Item**, a new document line is created that is a copy of the posted document line, with the quantity that has not yet been reversed. The **Appl.-from Item Entry** field is filled in as appropriate with the number of the item ledger entry of the posted document line.  
 
-   - Pro účtované řádky dokladu, které nejsou typu **Zboží**, například poplatky za zboží, je vytvořen nový řádek dokladu, který je kopií původního účtovaného řádku dokladu.
+    -   For posted document lines that are not of the type **Item**, such as item charges, a new document line is created that is a copy of the original posted document line.  
 
-   - Vypočítá pole **Pořizovací cena (LM)** na novém řádku z nákladů na odpovídající položky zboží.
+    -   Calculates the **Unit Cost (LCY)** field on the new line from the costs on the corresponding item ledger entries.  
 
-   - Pokud je zkopírovaným dokladem účtovaná dodávka, účtovaná příjemka, účtovaná příjemka vratky nebo účtovaná dodávka vratky, jednotková cena se vypočítá automaticky z karty zboží.
+    -   If the copied document is a posted shipment, posted receipt, posted return receipt, or posted return shipment, the unit price is calculated automatically from the item card.  
 
-   - Pokud je zkopírovaným dokladem účtovaná faktura nebo dobropis, zkopíruje se jednotková cena, slevy na faktuře a řádkové slevy z řádku účtovaného dokladu.
+    -   If the copied document is a posted invoice or credit memo, the unit price, invoice discounts, and line discounts from the posted document line are copied.  
 
-   - Pokud řádek účtovaného dokladu obsahuje řádky pro sledování zboží, pole **Vyrovnáno položkou zboží** na řádcích pro sledování zboží je vyplněno příslušnými čísly položek zboží ze sledovacích řádků účtovaných zboží.
+    -   If the posted document line contains item tracking lines, the **Appl.-from Item Entry** field on the item tracking lines is filled with the appropriate item ledger entry numbers from the posted item tracking lines.  
 
-   Při kopírování z účtované faktury nebo účtovaného dobropisu aplikace zkopíruje všechny příslušné fakturační slevy a řádkové slevy platné v době účtování tohoto dokladu z účtovaného řádku dokladu do nového řádku dokladu. Uvědomte si však, že pokud je aktivovaná možnost **Výpočet fakt. slevy** na stránce **Nastavení prodeje a pohledávek**, pak bude fakturační sleva nově vypočtena při účtování nového řádku dokladu. Částka řádku pro nový řádek se proto může lišit od částky řádku účtovaného dokladu v závislosti na novém výpočtu fakturační slevy.
+     When you copy from a posted invoice or posted credit memo, application copies any relevant invoice discounts and line discounts as valid at the time of posting that document from the posted document line to the new document line. Be aware, however, that if the **Calc. Inv. Discount** option is activated on the **Sales & Receivables Setup** page, then the invoice discount will be newly calculated when you post the new document line. The line amount for the new line may therefore be different than the line amount for the posted document line, depending on the new calculation of the invoice discount.  
 
-   > [!POZNÁMKA]  
-   > Pokud část množství účtovaného řádku dokladu již byla obrácena nebo prodána nebo spotřebována, vytvoří se řádek pouze pro množství, které zůstane v zásobách nebo které nebylo vráceno. Pokud již bylo obráceno celé množství účtovaného řádku dokladu, nový řádek dokladu se nevytvoří.
-   >
-   > Pokud je tok zboží v účtovaném dokladu stejný jako tok zboží v novém dokladu, vytvoří se v novém dokladu kopie původního řádku účtovaného dokladu. Pole **Vyrovnáno položkou zboží** není vyplněno, protože v tomto případě není možné přesné obrácení nákladů. Například pokud použijete funkci **Získat účtované řádky dokladu pro obrácení** k získání účtovaného řádku dobropisu k novému dobropisu, do nového dobropisu se zkopíruje pouze původní účtovaný řádek dobropisu. .
+     > [!NOTE]  
+     >  If part of the quantity of the posted document line has already been reversed or sold or consumed, a line is created for only the quantity that remains in inventory or that has not been returned. If the full quantity of the posted document line has already been reversed, a new document line is not created.  
+     >   
+     >  If the flow of goods in the posted document is the same as the flow of goods in the new document, a copy of the original posted document line in the new document is created. The **Appl.-from Item Entry** field is not filled in because, in this case, exact cost reversing is not possible. For example, if you use the **Get Posted Document Lines to Reverse** function to get a posted sales credit memo line for a new sales credit memo, only the original posted credit memo line is copied to the new credit memo.  
 
-10. Na stránce **Objednávka prodejní vratky** vyberte v poli **Kód příčiny vratky** na každém řádku důvod vrácení.
-11. Zvolte akci **účtovat**.
+10. On the **Sales Return Order** page, in the **Return Reason Code** field on each line, select the reason for the return.
+11. Choose the **post** action.
 
-## Vytvoření náhradní prodejní objednávky z objednávky prodejní vratky
-Můžete se rozhodnout kompenzovat zákazníkovi zboží, které jste mu prodali, jeho výměnou. Můžete provést výměnu za stejné zboží nebo jiné zboží. Tato situace může nastat, například pokud jste zákazníkovi omylem dodali nesprávné zboží.
+## To create a replacement sales order from a sales return order
+You may decide to compensate a customer for an item that you have sold them by replacing the item. You can make a replacement with the same item or a different item. This situation could occur if you mistakenly shipped the wrong item to the customer, for example.  
 
-1. Na stránce **Objednávka prodejní vratky** pro aktivní proces vratky vytvořte na prázdném řádku zápornou položku pro náhradní zboží vložením záporné částky do pole **Množství**.
-2. Vyberte akci **Přesunout záporné řádky**.
-3. Na stránce **Přesunout záporné prodejní řádky** vyplňte pole podle potřeby.
-4. Zvolte tlačítko **OK**. Záporný řádek pro náhradní zboží je odstraněn z objednávky prodejní vratky a vložen na novou stránku **Prodejní objednávky**. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
+1. On the **Sales Return Order** page for an active return process, on an empty line, make a negative entry for the replacement item by inserting a negative amount in the **Quantity** field.  
+2. Choose the **Move Negative Lines** action.
+3. On the **Move Negative Sales Lines** page, fill in the fields as necessary.
+4. Choose the **OK** button. The negative line for the replacement item is deleted from the sales return order and inserted in a new **Sales Order** page. For more information, see [Sell Products](sales-how-sell-products.md).
 
-## Vytvoření dokladů souvisejících s objednávkou prodejní vratky.
-Během procesu prodejní vratky můžete automaticky vytvořit náhradní prodejní objednávky, objednávky nákupní vratky a náhradní nákupní objednávky. To je užitečné například v situacích, kdy chcete zpracovat zboží se zárukami poskytovanými dodavateli.
+## To create return-related documents from a sales return order
+You can have replacement sales orders, purchase return orders, and replacement purchase orders created automatically during the sales return process. This is useful, for example, in situations where you want to handle items with warranties provided by vendors.
 
-1. Na stránce **Objednávka prodejní vratky** pro aktivní proces vrácení zvolte akci **Vytvořit dokl.spoj.s vratkou**.
-2. Pokud chcete automaticky vytvářet doklady dodavatele, do pole **Číslo dodavatele** zadejte číslo dodavatele.
-3. Pokud musí být vrácené zboží vráceno dodavateli, vyberte zaškrtávací políčko **Vytvořit nák. obj. vratky**.
-4. Pokud je nutné vrácenou položku objednat u dodavatele, zaškrtněte políčko **Vytvořit nákupní objednávku**.
-5. Pokud je třeba vytvořit náhradní prodejní objednávku, zaškrtněte políčko **Vytvořit prodejní objednávku**.
+1. On the **Sales Return Order** page for an active return process, choose the **Create Return-Related Documents** action.
+2. In the **Vendor No.** field, enter the number of a vendor if you want to create vendor documents automatically.
+3. If a returned item must be returned to the vendor, select the **Create Purch. Ret. Order** check box.
+4. If a returned item must be ordered from the vendor, select the **Create Purchase Order** check box.
+5. If a replacement sales order must be created, select the **Create Sales Order** check box.
 
-## Vytvoření poplatku za doplnění zásob
-Můžete se rozhodnout účtovat zákazníkovi poplatek za doplnění zásob na pokrytí fyzických nákladů na manipulaci s vrácením zboží. K tomu může dojít, například pokud si zákazník omylem objednal nesprávné zboží nebo změnil názor po obdržení zboží, které jste mu prodali.
+## To create a restock charge
+You may decide to charge your customer a restock fee to cover the physical handling costs of returning an item. This could occur if the customer mistakenly ordered the wrong item or changed their mind after receiving the item you sold them, for example.
 
-Tuto zvýšenou cenu můžete účtovat jako poplatek za zboží v dobropisu nebo v objednávce vratky a přiřadit ji k účtované dodávce. Následující text popisuje objednávku prodejní vratky, ale stejné kroky platí pro prodejní dobropis.
+You can post this increased cost as an item charge in a credit memo or a return order and assign it to the posted shipment. The following describes it for a sales return order, but the same steps apply to a sales credit memo.
 
-1. Otevřete stránku **Objednávka prodejní vratky** pro aktivní proces vrácení.
-2. Na novém řádku vyberte v poli **Typ** **Poplatek (zboží)**.
-3. Vyplňte pole jako u každého řádku s účtováním zboží. Více informací viz [Používání poplatků za zboží k účtování dalších obchodních nákladů](payables-how-assign-item-charges.md).
+1. Open the **Sales Return Order** page for an active return process.
+2. On a new line, in the **Type** field, select **Charge (Item)**.  
+3. Fill in the fields as for any item charge line. For more information, see [Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md).  
 
-Při účtování objednávky prodejní vratky se k příslušné částce prodejní položky přidá poplatek za zaskladnění. Tímto způsobem můžete udržovat přesné ocenění zásob.
+When you post the sales return order, the restock charge is added to the relevant sales entry amount. In this way, you can maintain accurate inventory valuation.  
 
-## Vytvoření příspěvku na prodej
-Pokud zákazník obdržel mírně poškozené zboží nebo zboží obdržel pozdě, můžete mu zaslat dobropis se sníženou cenou.  
-Tuto sníženou cenu můžete zaúčtovat jako poplatek za zboží v dobropisu nebo v objednávce vratky a přiřadit ji k účtované dodávce. Následující text popisuje prodejní dobropis, ale stejné kroky platí pro objednávku prodejní vratky.
+## To create a sales allowance
+You can send a customer a credit memo with a price reduction if the customer has received slightly damaged items or received the items late.  
+You can post this reduced price as an item charge in a credit memo or a return order and assign it to the posted shipment. The following describes it for a sales credit memo, but the same steps apply to a sales return order.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
-2. Zvolte akci **Nový** pro otevření nového prázdného prodejního dobropisu.
-3. Vyplňte záhlaví dobropisu relevantními informacemi o zákazníkovi, kterému chcete poskytnout příspěvek na prodej.
-4. Na pevné záložce **Řádky** v poli **Typ** vyberte **Poplatek (zboží)**.
-5. V poli **Číslo** vyberte příslušnou hodnotu poplatku za zboží.  
-   Možná budete chtít vytvořit speciální číslo poplatku za zboží k pokrytí příspěvků na prodej.
-6. Do pole **Množství** zadejte **1**.
-7. Do pole **Jednotková cena** zadejte částku příspěvku na prodej.
-8. Přiřaďte příspěvek na prodej jako poplatek za zboží k zboží v účtované dodávce. Více informací viz [Používání poplatků za zboží k účtování dalších obchodních nákladů](payables-how-assign-item-charges.md). Pokud jste přidělili příspěvek, vraťte se na stránku **Prodejní dobropis**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
+2. Choose the **New** action to open a new empty sales credit memo.
+3. Fill in the credit memo header with relevant information about the customer that you want to give the sales allowance to.  
+4. On the **Lines** FastTab, in the **Type** field, select **Charge (Item)**.  
+5.  In the **No.** field, select the appropriate item charge value.  
+     You may want to create a special item charge number to cover sales allowances.  
+6.  In the **Quantity** field, enter **1**.  
+7.  In the **Unit Price** field, enter the amount of the sales allowance.  
+8.  Assign the sales allowance as an item charge to the items in the posted shipment. For more information, see [Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md). When you have assigned the allowance, return to the **Sales Credit Memo** page.  
 
-Při účtování objednávky prodejní vratky se příspěvek na prodej přidá k příslušné částce položky prodeje. Tímto způsobem můžete udržovat přesné ocenění zásob.
+When you post the sales return order, the sales allowance is added to the relevant sales entry amount. In this way, you can maintain accurate inventory valuation.
 
-## Kombinování příjemek vratky
-Příjemky vratky můžete kombinovat, pokud zákazník vrátí několik zboží, které jsou pokryty různými objednávkami prodejní vratky.
+## To combine return receipts
+You can combine return receipts if your customer returns several items that are covered by different sales return orders.  
 
-Když obdržíte zboží do skladu, účtujte příslušné objednávky prodejní vratky jako přijaté. Tím se vytvoří účtovaná příjemka vratky.
+When you receive the items into your warehouse, post the relevant sales return orders as received. This creates posted return receipts.  
 
-Až budete připraveni fakturovat tohoto zákazníka, můžete namísto fakturace každé objednávky prodejní vratky samostatně vytvořit prodejní dobropis a automaticky zkopírovat účtované řádky příjemky vratky do tohoto dokladu. Poté můžete účtovat prodejní dobropis a pohodlně fakturovat všechny otevřené objednávky prodejních vratek najednou.
+When you are ready to invoice this customer, instead of invoicing each sales return order separately, you can create a sales credit memo and automatically copy the posted return receipt lines to this document. Then you can post the sales credit memo and conveniently invoice all the open sales return orders at once.  
 
-Chcete-li kombinovat příjemky vratky, musí být na stránce **Karta zákazníka** zaškrtnuto políčko **Kombinovat dodávky**.
+To combine return receipts, the **Combine Shipments** check box must be selected on the **Customer Card** page.  
 
-### Ručné kombinování příjemek vratky
+### To manually combine return receipts  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropis** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
-3. Na pevné záložce **Obecné** vyplňte pole podle potřeby.
-4. Vyberte akci **Získat řádky příjemky vratky**.
-5. Vyberte řádky příjmu vratky, které chcete zahrnout do dobropisu:
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memo**, and then choose the related link.  
+2. Choose the **New** action.
+3. On the **General** FastTab, fill in the fields as necessary.  
+4. Choose the **Get Return Receipt Lines** action.  
+5. Select the return receipt lines that you want to include in the credit memo:  
 
-   - Chcete-li vložit všechny řádky, vyberte všechny řádky a klikněte na tlačítko **OK**.
+    -   To insert all lines, select all lines, and then choose the **OK** button.  
 
-   - Chcete-li vložit konkrétní řádky, vyberte řádky a klikněte na tlačítko **OK**.
+    -   To insert specific lines, select the lines, and then choose the **OK** button.  
 
-6. Pokud byl vybrán nesprávný řádek dodávky nebo chcete začít znovu, můžete jednoduše řádky v dobropisu smazat a znovu spustit funkci **Získat řádky příjemky vratky**.
-7. Účtování faktury.
+6.  If an incorrect shipment line was selected or you want to start over, you can simply delete the lines on the credit memo and re-run the **Get Return Receipt Lines** function.  
+7.  Post the invoice.  
 
-### Automatické kombinování příjemek vratky
-Můžete automaticky kombinovat příjemky vratky a mít možnost automatického účtování dobropisů pomocí funkce **Kombinovat příjemky vratky.**
+### To automatically combine return receipts  
+You can automatically combine return receipts and have the option of automatically posting the credit memos using the  **Combine Return Receipts** function.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Kombinovat příjemky vratky** a poté vyberte související odkaz.
-2. Na stránce **Kombinovat příjemky vratky** vyplňte pole a vyberte příslušné příjemky vratky.
-3. Zaškrtněte políčko **Účtovat dobropisy**. Pokud ne, musíte ručně účtovat výsledné nákupní dobropisy.
-4. Zvolte tlačítko **OK**.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Combine Return Receipts**, and then choose the related link.
+2. On the **Combine Return Receipts** page, fill in the fields to select the relevant return receipts.
+3. Select the **Post Credit Memos** check box. If not, you must manually post the resulting purchase credit memos.
+4.  Choose the **OK** button.  
 
-### Odebrání přijaté a fakturované objednávky vratky
-Když tímto způsobem fakturujete příjemky vratky, objednávky vratky, ze kterých byly účtovány příjemky vratky, stále existují, i když byly plně přijaty a fakturovány.
+### To remove a received and invoiced return order  
+When you invoice return receipts in this way, the return orders from which the return receipts were posted still exist, even if they have been fully received and invoiced.  
 
-Když se v dobropisu zkombinují příjemky vratky a účtují se, účtované prodejní dobropisy se vytvoří pro připsané řádky. Pole **Fakturované množství** v původní objednávce prodejní vratky se aktualizuje na základě fakturovaného množství.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Smazat fakturované objednávky prodejní vratky** a poté vyberte odkaz.
-2. Do pole filtru **Číslo** zadejte, které objednávky vratky mají být odstraněny.
-3. Zvolte tlačítko **OK**.
+When return receipts are combined on a credit memo and posted, a posted sales credit memo is created for the credited lines. The **Quantity Invoiced** field on the originating sales return order is updated based on the invoiced quantity.   
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Delete Invoiced Sales Return Orders**, and then select the link.  
+2.  Specify in the **No.** filter field which return orders to delete.  
+3.  Choose the **OK** button.  
 
-Alternativně můžete jednotlivé objednávky prodejní vratky odstranit ručně.
+Alternatively, delete individual sales return orders manually.  
 
-## Viz související školení na [Microsoft Learn](/learn/paths/return-items-dynamics-365-business-central/)
+## See Related Training at [Microsoft Learn](/learn/paths/return-items-dynamics-365-business-central/)
 
-## Viz také
+## See Also
 
-[Prodej](sales-manage-sales.md)  
-[Nastavení prodeje](sales-setup-sales.md)  
-[Správa závazků](payables-manage-payables.md)  
-[Odesílání dokumentů e-mailem](ui-how-send-documents-email.md)  
-[Zpracování vrácení nebo zrušení nákupu](purchasing-how-process-purchase-returns-cancellations.md)
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Sales](sales-manage-sales.md)  
+[Setting Up Sales](sales-setup-sales.md)  
+[Managing Payables](payables-manage-payables.md)  
+[Send Documents by Email](ui-how-send-documents-email.md)  
+[Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

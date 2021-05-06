@@ -1,138 +1,125 @@
 ---
-
-title: Nastavení hlavní knihy DM | Microsoft Docs
-description: 'Než začnete pracovat s dlouhodobým majetkem, musíte nastavit výchozí finanční účty, účto skupiny, alokační klíče, šablony deníků a listy a kódy tříd.'
+title: Set Up General Ledger FA| Microsoft Docs
+description: Before you work with fixed assets, you must set up default G/L accounts, posting groups, allocation keys, journal templates and batches, and class codes.
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2019
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
+# Set Up General Fixed Assets Information
+Before you can manage fixed assets, you must set up default G/L accounts, allocation keys, journal templates and batches for fixed asset posting and reclassification, and you can classify fixed assets in classes, such as Tangible and Intangible.
 
-# <a name="set-up-general-fixed-assets-information"></a>Nastavení obecných informací o dlouhodobém majetku
-Než budete moci spravovat dlouhodobý majetek, musíte nastavit výchozí finanční účty, alokační klíče, šablony deníků a listy pro zaúčtování dlouhodobého majetku a reklasifikaci a klasifikovat dlouhodobý majetek ve třídách, jako je Hmotný a Nehmotný.
+## To set up general default values for fixed assets
+You define the general behavior or the fixed asset functionality and set up document number series in the  on the **Fixed Assets Setup** page.
 
-## <a name="to-set-up-general-default-values-for-fixed-assets"></a>Nastavení obecných výchozích hodnot pro dlouhodobý majetek
-Definujte obecné chování nebo funkčnost dlouhodobého majetku a nastavte číselnou řadu majetku na stránce **Nastavení DM**.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets Setup**, and then choose the related link.  
+2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
+## To set up fixed asset posting groups
+You use posting groups to define groups of fixed assets. Entries for these posting groups are posted to the same general ledger accounts.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení DM** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-
-
-## <a name="to-set-up-fixed-asset-posting-groups"></a>Nastavení účto skupin dlouhodobého majetku
-Pomocí účto skupin můžete definovat skupiny dlouhodobého majetku. Položky pro tyto účtovací skupiny jsou zaúčtovány na stejných účtech hlavní knihy.
-
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Účto skupiny DM** a vyberte související odkaz.
-2. Zvolte tlačítko **Nový**.
-3. Na stránce **Karta účto skupiny MD** vyplňte pole podle potřeby.
-
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.  
+2. Choose the **New** action.
+3. On the **FA Posting Group Card** page, fill in the fields as necessary.
 
     > [!NOTE]  
-    >   Chcete-li se ujistit, že rozvahové účty pro různá účtování dlouhodobého majetku jsou automaticky vloženy, když zvolíte akci **Vložit protiúčet DM** na řádcích deníku, postupujte podle následujícího kroku na základě účtování zhodnocení.
-4. Na pevné záložce **Vyrovnávací účet**, v poli **Protiúčet zhodnocení** zvolte účet hlavní knihy, proti kterému chcete zaúčtovat zhodnocení.
+    >   To make sure that balancing accounts for different fixed assets postings are automatically inserted when you choose the **Insert FA Bal. Account** action on journal lines, follow the next step, based on appreciation posting.
+4. On the **Balancing Account** FastTab, in the **Appreciation Bal. Account** field, select the general ledger account to which you want to post balancing entries for appreciation.
 
-Pro více informací o používání akce **Vložit protiúčet DM** v řádcích finančního deníku DM navštivte například [Přecenění dlouhodobého majetku](fa-how-revalue.md).
+For more information about using the **Insert FA Bal. Account** action on fixed asset G/L journal lines, see, for example, [Revalue Fixed Assets](fa-how-revalue.md).
 
+## To set up fixed asset allocation keys
+Transactions can be allocated to various departments or projects, according to user-defined allocation keys. For example, you could set up an allocation key to allocate depreciation costs on cars with 35 percent to the administration department and 65 percent to the sales department. For more information, see [Allocate Costs and Income](year-allocate-costs-income.md).
 
-## Nastavení klíčů přidělení dlouhodobého majetku
-Transakce mohou být přiděleny různým oddělením nebo projektům podle uživatelem definovaných alokačních klíčů. Můžete například nastavit alokační klíč pro přidělení odpisových nákladů na automobily s 35% na oddělení správy a 65%  na prodejní oddělení. Pro více informací navštivte [Přidělení nákladů a výnosů](year-allocate-costs-income.md).
+Allocation keys apply to fixed asset classes, not to individual assets.
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.  
+2. On the **FA Posting Groups** page, choose the **Allocations** action, and then choose a posting type.
+3. On the **FA Allocations** page, fill in the fields as necessary.
+4. Repeat steps 2 and 3 for each posting type that you want to define allocation keys for.
 
-Přidělovací klíče platí pro účto skupiny dlouhodobého majetku, nikoli pro jednotlivý majetek.
+## To set up fixed asset journal templates
+A template is a predefined layout for a journal. The template contains information about trace codes, reports, and number series. For more information, see [Working with General Journals](ui-work-general-journals.md).
 
+[!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset journal template the first time that you open the **Fixed Asset Journal** page, but you can set up additional journal templates.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Účto skupiny DM** a vyberte související odkaz.
-2. Na stránce **Účto skupiny DM**, vyberte tlačítko **Rozdělení** a zvolte typ účtování.
-3. Na stránce **Rozdělení DM** vyplňte pole podle potřeby.
-4. Opakujte kroky 2 a 3 pro každý typ účtování, pro který chcete definovat alokační klíče.
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.  
+2. Fill in the fields as necessary.
 
-## Nastavení šablon deníku dlouhodobého majetku
-Šablona je předdefinované rozvržení deníku. Šablona obsahuje informace o trasovacích kódech, sestavách a číselných řadách. Pro další informace se běžte na Práce s demenzemi.
+## To set up fixed asset journal batches
+You can set up multiple journal batches, which are individual journals for each journal template. For example, employees can have their own journal batch that uses the employee’s initials as the journal batch name. For more information, see [Work with General Journals](ui-work-general-journals.md).  
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.  
+2. Select the relevant journal template, and then choose the **Batches** action.
+3. On the **FA Journal Batches** page, fill in the fields as necessary.
 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vytvoří šablonu deníku DM při prvním otevření stránky **Deník dlouhodobého majetku**, ale můžete nastavit další šablony deníku.  
+## To set up fixed asset reclassification journal templates
+You use dedicated reclassification journals when you need to transfer, split, or combine fixed assets. [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset reclassification journal template the first time that you open the **FA Reclass. Journal** page, but you can set up additional reclassification journal templates. For more information, see [Work with General Journals](ui-work-general-journals.md).  
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.  
+2. Fill in the fields as necessary.
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Šablony deníků DM** a vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
+## To set up fixed asset reclassification journal batches
+You can set up multiple journal batches, which are individual journals for each reclassification journal template. For example, employees can have their own reclassification journal batch that uses the employee’s initials as the reclassification journal batch name. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.  
+2. Select the relevant journal template, and then choose the **Batches** action.
+3. On the **FA Reclass. Journal Batches** page, fill in the fields as necessary.
 
-## <a name="to-set-up-fixed-asset-journal-batches"></a>Nastavení listů deníku dlouhodobého majetku
-Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každou šablonu deníku. Zaměstnanci mohou například mít vlastní list  deníku, který používá iniciály zaměstnanců jako název listu šablony deníku. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).  
+## To set up fixed asset class codes
+Fixed asset class codes can be used to group fixed assets, for example, in tangible and intangible assets.
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Classes**, and then choose the related link.
+2. Enter codes and names for the classes that you want to create.
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Šablony deníků DM** a vyberte související odkaz.
-2. Vyberte příslušnou šablonu deníku a poté vyberte akci **Listy**.
-3. Na stránce **Listy deníku DM**, vyplňte pole dle potřeby.
+## To set up fixed asset subclass codes
+You use fixed asset subclass codes to group your fixed assets into categories, such as buildings, vehicles, furniture, or machinery.  
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Subclasses**, and then choose the related link.
+2. Enter codes and names for the classes that you want to create.
 
-## <a name="to-set-up-fixed-asset-reclassification-journal-templates"></a>Nastavení šablon deníku přeřazení dlouhodobého majetku
-Pokud potřebujete převádět, rozdělit nebo kombinovat dlouhodobý majetek, použijte konkrétní deníky přeřazení. [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vytvoří šablonu deníku přeřazení DM při prvním otevření stránky **Deník přeřazení DM**, ale můžete nastavit další šablony deníku přeřazení. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).  
+## To set up fixed asset location codes
+You use fixed asset location codes to register the location of the fixed asset, such as sales department, reception, administration, production, or warehouse. This information is useful for insurance and inventory purposes.
 
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA locations**, and then choose the related link.
+2. Enter codes and names for the fixed asset locations that you want to create.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Šablony deníku přeřazení DM**, a vyberte související odkaz..
-2. Podle potřeby vyplňte pole.
+## To register opening entries
+If you are using the fixed assets in [!INCLUDE[prod_short](includes/prod_short.md)] for the first time, you must set up the general ledger application area before you set up fixed assets. How you do this depends on whether fixed assets is integrated with general ledger.  
 
-## Nastavení listů deníku přeřazení dlouhodobého majetku
-Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každou šablonu deníku přeřazení. Zaměstnanci mohou mít například vlastní list deníku přeřazení, který používá iniciály zaměstnance jako název listu deníku přeřazení. Pro další informace se běžte na [Práce deníky](ui-work-general-journals.md).
+ The following procedure is used if fixed asset transactions are to be posted to the general ledger.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Šablony deníku přeřazení DM**, a vyberte související odkaz..
-2. Vyberte příslušnou šablonu deníku a poté vyberte akci **Listy**.
-3. Na stránce **Deník přeřazení zboží**, vyplňte podle dle potřeby.
+1. Make sure that you have completed the basic setup procedures for fixed assets.  
+2. Create a fixed asset card for each existing asset.  
+3. Create a fixed asset depreciation book for each depreciation purpose (such as tax and financial statements). For each depreciation book, you must define the terms and conditions, such as integration with general ledger.  
 
-## Nastavení kódů tříd dlouhodobého majetku
-Kódy tříd dlouhodobého majetku lze použít k seskupení dlouhodobého majetku, například do hmotného a nehmotného majetku.
+    Enable general ledger integration by following the next steps. First, make sure that general ledger integration is disabled for all depreciation books, then post the opening entries, and finally, turn on general ledger integration.  
+4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.  
+5. Select the relevant depreciation book, and then choose the **Edit** action to open the **Depreciation Book Card** page.
+6. On the **Integration** FastTab, make sure all fields are blank by clearing all check marks. If you have more than one depreciation book, turn off general ledger integration for each one.  
+7. In the fixed asset journal, enter the following lines for each asset:
+   * A line with the acquisition cost.
+   * A line with the accumulated depreciation to the end of the previous fiscal year.
+   * A line with the accumulated depreciation from the start of the current fiscal year to the date that [!INCLUDE[prod_short](includes/prod_short.md)] is set to start calculating the depreciation.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Třídy DM** a vyberte související odkaz.
-2. Zadejte kódy a názvy tříd, které chcete vytvořit.
+    If you have other opening balances you can also enter them now, such as write-down and appreciation.  
+8. After you have entered and posted the journal lines for each asset, turn on general ledger integration in the
+depreciation books.
 
+If the fixed assets are not integrated with the general ledger, skip step 6 and 8.
 
-## <a name="to-set-up-fixed-asset-subclass-codes"></a>Nastavení kódů podtříd dlouhodobého majetku
-Používáte kódy podtříd DM k seskupení svého dlouhodobého majetku do kategorií, jako jsou budovy, vozidla, nábytek nebo strojní zařízení.  
-
-1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Podtřídy DM** a poté vyberte související odkaz.
-2. Zadejte kódy a názvy pro podtřídy, které chcete vytvořit.
-
-## <a name="to-set-up-fixed-asset-location-codes"></a>Nastavení kódů umístění dlouhodobého majetku
-Použijete kódy umístění dlouhodobého majetku k registraci umístění dlouhodobého majetku, např. Oddělení prodeje, příjem, správa, výroba nebo sklad. Tyto informace jsou užitečné pro účely pojištění a inventáře.
-
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Umístění DM** a vyberte související odkaz.
-2. Zadejte kódy a názvy skladových míst dlouhodobého majetku, které chcete vytvořit.
-
-## Evidence vstupních záznamů
-Pokud používáte dlouhodobý majetek v [!INCLUDE[d365fin](includes/d365fin_md.md)] poprvé, musíte nastavit oblast aplikace financí před nastavením dlouhodobého majetku. Způsob, jakým je to provést, závisí na tom, zda je dlouhodobý majetek integrován s financemi.
-
-Následující postup se používá, pokud mají být transakce dlouhodobého majetku zaúčtovány do účtů účetní osnovy.
-
-1. Ujistěte se, že jste dokončili základní postupy nastavení dlouhodobého majetku.
-2. Vytvořte kartu dlouhodobého majetku pro každý existující majetek.
-3. Vytvořte knihu odpisů dlouhodobého majetku pro každý účel odpisu (například daně a finanční výkazy). Pro každou knihu odpisů musíte definovat podmínky, jako je integrace s účty účetní osnovy.
-
-   Povolte integraci účtů účetní osnovy podle následujících kroků. Nejprve se ujistěte, že je integrace účtů účetní osnovy zakázána je pro všechny knihy odpisů, potom zaúčtujte počáteční položky a nakonec zapněte integraci.
-4. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Knihy odpisů** související odkaz.
-5. Vyberte příslušnou knihu odpisů a pak zvolte **Upravit** k otevření stránky **Karta knihy odpisů**.
-6. Na záložce **Integrace** se ujistěte ,že všechna pole jsou prázdná zrušením všech zaškrtávacích políček. Pokud máte více než jednu knihu odpisů, vypněte integraci financí pro každou z nich.
-7. Do deníku dlouhodobého majetku zadejte pro každý majetek následující řádky:
-   * Řádek s pořizovací cenou.
-   * Řádek kumulovaného odpisu do konce předchozího fiskálního roku.
-   * Řádek kumulovaného odpisu od začátku aktuálního fiskálního roku do data, které je v [!INCLUDE[d365fin](includes/d365fin_md.md)] nastaveno tak, aby začalo počítat odpisy.
-
-   Pokud máte jiné počáteční zůstatky, můžete je také zadat nyní, například odpis a zhodnocení.
-8. Po zadání a zaúčtování řádků deníku pro každý majetek zapněte integraci financí v knihách odpisů.
-
-Pokud dlouhodobý majetek není integrován s financemi, přeskočte krok 6 a 8.
-
-## Viz také
-[Nastavení dlouhodobého majetku](fa-setup.md)  
-[Dlouhodobý majetek](fa-manage.md)  
+## See Also
+[Setting Up Fixed Assets](fa-setup.md)  
+[Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
-[Začínáme](product-get-started.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

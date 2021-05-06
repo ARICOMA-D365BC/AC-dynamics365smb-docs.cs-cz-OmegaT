@@ -1,76 +1,113 @@
 ---
-title: Instalace rozšíření pro přizpůsobení Business Central | Microsoft Docs
-description: Zjistěte více o přidávání funkcí a přizpůsobení Business Central instalací rozšíření.
-documentationcenter: ''
+title: Installing Extensions to Customize Business Central
+description: Learn about adding functionality and customizing Business Central by installing extensions.
 author: edupont04
+
 ms.service: dynamics365-business-central
-ms.topic: article
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.keywords: 'app, add-in, manifest, customize'
-ms.date: 11/27/2018
+ms.topic: conceptual
+ms.search.keywords: app, add-in, manifest, customize
+ms.date: 04/01/2021
 ms.author: edupont
+
 ---
-# <a name="customizing-business-central-using-extensions"></a>Přizpůsobení Business Central pomocí rozšíření
-Můžete změnit [!INCLUDE[d365fin](includes/d365fin_md.md)] instalací rozšíření, která například přidávají funkce, mění chování nebo umožňují přístup k novým online službám.
-Při prvním spuštění [!INCLUDE[d365fin](includes/d365fin_md.md)], jsou pro vás již některá rozšíření nainstalována. Postupem času vám budou k dispozici další rozšíření a poté si můžete vybrat, zda chcete rozšíření použít nebo ne.
+# Customizing Business Central Online Using Extensions
 
-Společnost Microsoft například poskytuje rozšíření, které zajišťuje integraci s PayPal Payments Standard. Toto rozšíření je nainstalováno ve výchozím nastavení.
-Pokud je však k dispozici další rozšíření, které nabízí integraci s jinou platební službou, můžete nainstalovat nové rozšíření a poté zvolit, kterou z těchto dvou služeb použít.  
+You can change [!INCLUDE[prod_short](includes/prod_short.md)] online by installing extensions that add functionality, changes behavior, or gives you access to new online services, for example.
 
-Rozšíření spravujete na stránce **Správa rozšíření**. Na tuto stránku se dostanete z Domovské stránky. Případně vyberte ikonu **Hledat stránku nebo sestavu** ![ Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), v pravém horním rohu zadejte **Rozšíření** a poté vyberte související odkaz.  
+> [!NOTE]
+> To install extensions from AppSource or add per-tenant extensions, you must have the right permissions. You must either be a member of the D365 EXTENSION MGT user group or you must have the D365 EXTENSION MGT permission set. If you are an administrator, you can assign user groups and permissions to other users in your company.
 
-> [!NOTE]  
->   Pokud si myslíte, že byste měli mít přístup k rozšíření, ale nemůžete ho najít, podívejte se na stránku **Správa rozšíření** - pokud zde rozšíření není uvedeno, můžete jej nainstalovat podle popisu v následující části.  
+To use the functionality that is provided by an extension, such as opening pages, running reports, selecting actions, and so on, you must be assigned the permission sets that are installed as part of the extension.
 
-## <a name="installing-an-extension"></a>Instalace Rozšíření
-Nová rozšíření můžete získat z tržiště na adrese [AppSource.microsoft.com](https://appsource.microsoft.com/en-us/marketplace/apps?src=dynamics365website&product=dynamics-365-business-central). Zde si můžete prohlédnout všechna dostupná rozšíření pro [!INCLUDE[d365fin](includes/d365fin_md.md)] a získat aplikace, rozšíření a balíčky obsahu pro další produkty společnosti Microsoft. Nastavte příslušné filtry, podívejte se na informace o jednotlivých rozšířeních a získejte rozšíření pro své [!INCLUDE[d365fin](includes/d365fin_md.md)].  
-> [!NOTE]  
->   Přihlaste se na [AppSource.microsoft.com](https://appsource.microsoft.com/) pomocí e-mailového účtu, který používáte pro [!INCLUDE[d365fin](includes/d365fin_md.md)]. Použijte stejný e-mailový účet pro další služby a produkty pro bezproblémový provoz.  
+> [!IMPORTANT]  
+> The upload of per-tenant extensions and the installation of AppSource extensions is not supported through the **Extension Management** page for on-premise installations. You cannot install AppSource extensions on-premises, including in Docker-based deployments.
 
-Na marketplace se také můžete dostat z [!INCLUDE[d365fin](includes/d365fin_md.md)]. Na stránce **Správa rozšíření**  vidíte rozšíření, která jsou aktuálně nainstalována, a můžete otevřít stránku**Rozšíření Tržiště**, která zobrazuje [!INCLUDE[d365fin](includes/d365fin_md.md)] rozšíření, která jsou aktuálně dostupná v AppSource. Pokud zvolíte odkaz *Více aplikací*, budete přesměrováni na [AppSource.microsoft.com](https://appsource.microsoft.com/en-us/marketplace/apps?product=dynamics-365%3Bdynamics-365-for-financials&page=1).  
+When you first launch [!INCLUDE[prod_short](includes/prod_short.md)], some extensions are already installed for you. Over time, more extensions will be made available to you, and you can then choose if you want to use the extension or not.
 
-Pokud zvolíte rozšíření, můžete si přečíst, co rozšíření dělá, a můžete získat další nápovědu k tomuto rozšíření. Pokud se rozhodnete pro rozšíření, musíte souhlasit s podmínkami použití. Pokud rozšíření získáte z webu AppSource, budete přihlášeni do [!INCLUDE[d365fin](includes/d365fin_md.md)] pro dokončení instalace.  
+For example, Microsoft provides an extension that provides integration with PayPal Payments Standard. This extension is installed by default.
+But if another extension is made available that offers integration with another payment service, you can install the new extension and then choose which of the two services to use.  
 
-Když nainstalujete rozšíření, budete jej možná muset nastavit, například zadat účet pro použití s rozšířením **Paypal Payments standard pro [!INCLUDE[d365fin](includes/d365fin_md.md)]**.
-Jiná rozšíření jednoduše přidají pole na existující stránku nebo například přidají novou stránku.   
-
-Pokud rozšíření odinstalujete a poté změníte názor, můžete jej znovu nainstalovat. Když odinstalujete rozšíření, které jste používali, budou data zachována, takže pokud rozšíření znovu nainstalujete, budou vaše data stále k dispozici.  
-
-Některá rozšíření jsou poskytována společností Microsoft a jiná rozšíření jsou poskytována [jinými společnostmi](ui-extensions-other.md). Všechna rozšíření jsou testována před tím, než jsou dostupná, doporučujeme vám však přistoupit k odkazům, které jsou s každým rozšířením k dispozici, abyste se o rozšíření dozvěděli více, než se rozhodnete jej nainstalovat.  
-
-Společnost Microsoft poskytuje následující rozšíření:  
-
-* [Dynamics GP Data Migration](ui-extensions-dynamicsgp-data-migration.md)  
-* [Envestnet Yodlee Bank Feeds](ui-extensions-yodlee-bank-feeds.md)  
-* [Microsoft Pay](ui-extensions-microsoft-pay-payments.md)  
-* [PayPal Payments Standard](ui-extensions-paypal-payments-standard.md)  
-* [QuickBooks Data Migration](ui-extensions-quickbooks-data-migration.md)  
-* [Sales and Inventory Forecast](ui-extensions-sales-forecast.md)  
-* [Ceridian Payroll](ui-extensions-ceridian-payroll.md)  
-* [Quickbooks Payroll File Import](ui-extensions-quickbooks-payroll.md)  
-* [WorldPay Payments Standard](ui-extensions-worldpay-payments-standard.md)  
-* [GetAddress.io UK Postcodes](ui-extensions-getaddressio.md)  
-* [QuickBooks Online Data Migration](ui-extensions-quickbooks-online-data-migration.md)  
-* [Accountant Portal](ui-extensions-accountant-portal.md)  
-* [Image Analyzer](ui-extensions-image-analyzer.md)  
-* [Payments and Reconciliations (DK)](ui-extensions-payments-reconciliation-formats-dk.md)  
-* [C5 Data Migration](ui-extensions-c5-data-migration.md)  
-* [Essential Business Insights](ui-extensions-essential-business-insights.md)  
-* [Late Payment Predictions](ui-extensions-late-payment-prediction.md  )
+You manage the extensions on the **Extension Management** page. You can access this page from Home. Alternatively, choose the **Search for Page or Report** icon ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") in the top right corner, enter **Extension**, and then choose the related link. For more information, see [Installing and Uninstalling Extensions](ui-extensions-install-uninstall.md).
 
 > [!NOTE]  
->  Nová rozšíření nejsou v AppSource dostupná ihned po oznámení aktualizace. Rozšíření můžete sledovat na [AppSource.microsoft.com](https://appsource.microsoft.com/en-us/marketplace/apps?product=dynamics-365%3Bdynamics-365-for-financials&page=1).
+> If you think you should have access to an extension but you cannot find its functionality, check the **Extension Management** page - if the extension is not listed there, you can install it as described in the following section.  
 
-## <a name="see-also"></a>Viz také
-[Rozšiřování Dynamics 365 Business Central](about-develop-extensions.md)  
-[Rozšíření Business Central od jiných poskytovatelů](ui-extensions-other.md)  
-[Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md)  
-[Povolení plateb zákazníkům prostřednictvím služby PayPal](sales-how-enable-payment-service-extensions.md)  
-[Migrace obchodních dat z Jiných Finančních Systémů](across-import-data-configuration-packages.md)  
-[Nastavení rozšíření GetAddress.io UK Postal Code](LocalFunctionality/UnitedKingdom/uk-setup-postal-code-service.md)  
-[[!INCLUDE[d365fin](includes/d365fin_md.md)] Rozšíření od jiných poskytovatelů](ui-extensions-other.md)  
-[Začínáme](product-get-started.md)  
+> [!NOTE]  
+> Sign in to [AppSource.microsoft.com](https://appsource.microsoft.com/) using the email account that you use for [!INCLUDE[prod_short](includes/prod_short.md)] online. Use the same email account for other services and products for a smooth experience.  
 
-## [!INCLUDE[d365fin](includes/free_trial_md.md)]  
+You can also get to the marketplace from inside [!INCLUDE[prod_short](includes/prod_short.md)]. On the **Extension Management** page, you can see the extensions that are currently installed, and you can open the **Extension Marketplace** page that shows the [!INCLUDE[prod_short](includes/prod_short.md)] extensions that are currently available in AppSource. If you choose the *More apps* link, you are taken to [AppSource.microsoft.com](https://appsource.microsoft.com/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1).  
+
+If you choose an extension, you can read about what the extension does, and you can access Help for the extension to learn more. When you choose to get an extension, you must agree to the terms of use. If you get the extension from the AppSource website, you will be signed in to [!INCLUDE[prod_short](includes/prod_short.md)] to complete the installation.  
+
+When you install an extension, you might have to set it up, such as specifying an account for use with the **PayPal Payments Standard for [!INCLUDE[prod_short](includes/prod_short.md)]** extension.
+Other extensions simply add fields to an existing page, or they add a new page, for example.   
+
+If you uninstall an extension, and you then change your mind, you can install it again. When you uninstall an extension that you have been using, the data is preserved so that if you install the extension again, your data is still available. There are some extensions that are required. You are prevented from uninstalling these from the **Extension Management** page. If you try, an error message appears.  
+
+Some extensions are provided by Microsoft, and other extensions are provided by [other companies](ui-extensions-other.md). All extensions are tested before they are made available to you, but we recommend that you access the links that are provided with each extension to learn more about the extension before you choose to install it.  
+
+Microsoft provides the following extensions:  
+
+* [AMC Banking 365 Fundamentals Extension](ui-extensions-amc-banking.md)
+* [Ceridian Payroll](ui-extensions-ceridian-payroll.md)
+* [Company Hub](ui-extensions-company-hub.md)  
+* [Dynamics GP Data Migration](ui-extensions-dynamicsgp-data-migration.md)
+* [Envestnet Yodlee Bank Feeds](ui-extensions-yodlee-bank-feeds.md)
+* [Essential Business Insights](ui-extensions-essential-business-insights.md)
+* [Image Analyzer](ui-extensions-image-analyzer.md)
+* [Intelligent Cloud](ui-extensions-data-replication.md)
+* [Intelligent Cloud Base](ui-extensions-intelligent-cloud.md)  
+* [Late Payment Predictions](ui-extensions-late-payment-prediction.md)
+* [Microsoft Pay](ui-extensions-microsoft-pay-payments.md)
+* [PayPal Payments Standard](ui-extensions-paypal-payments-standard.md)
+* [QuickBooks Data Migration](ui-extensions-quickbooks-data-migration.md)
+* [QuickBooks Online Data Migration](ui-extensions-quickbooks-online-data-migration.md)
+* [Quickbooks Payroll File Import](ui-extensions-quickbooks-payroll.md)
+* [Sales and Inventory Forecast](ui-extensions-sales-forecast.md)
+* [VAT Group](ui-extensions-vat-group.md)
+* [WorldPay Payments Standard](ui-extensions-worldpay-payments-standard.md)
+* [DK - C5 Data Migration](ui-extensions-c5-data-migration.md)
+* [DK - Payments and Reconciliations](ui-extensions-payments-reconciliation-formats-dk.md)
+* [DK - Tax File Formats](ui-extensions-tax-file-formats-dk.md)
+* [The GetAddress.io UK Postcodes Extension](LocalFunctionality/UnitedKingdom/ui-extensions-getaddressio.md)  
+* [US/CA/UK/AU/NZ/ZA - Send Remittance Advice](ui-extensions-send-remittance-advice.md)
+
+> [!NOTE]  
+> You can keep an eye out for new extensions from Microsoft and other suppliers at [AppSource.microsoft.com](https://appsource.microsoft.com/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1).
+
+
+## Extensions and data transfer
+
+As the following extensions are communicating with other services they may transfer data out of the geography of the [!INCLUDE[prod_short](includes/prod_short.md)] environment:
+
+* AMC Banking 365 Fundamentals Extension
+* Image Analyzer
+* Late Payment Prediction
+* PayPal Payments Standard
+* Sales and Inventory Forecast
+* WorldPay Payments Standard
+
+This also applies to some functionality in the base application, such as the following capabilities:
+
+* Cash Flow Forecast
+* Document Exchange Service
+* Dataverse connections
+* OCR Service
+* Online Map
+* EU VAT Reg. No. Service
+
+## See Also
+
+[Customize Business Central](ui-customizing-overview.md)  
+[Business Central Extensions by Other Providers](ui-extensions-other.md)  
+[Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)  
+[Enable Customer Payment Through PayPal](sales-how-enable-payment-service-extensions.md)  
+[Migrating Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Setting Up the GetAddress.io UK Postal Code extension](LocalFunctionality/UnitedKingdom/uk-setup-postal-code-service.md)  
+[[!INCLUDE[prod_short](includes/prod_short.md)] Extensions by Other Providers](ui-extensions-other.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+
+## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,212 +1,216 @@
 ---
-title: Work with Dimensions| Microsoft Docs
-description: You use dimensions to categorize entries, for example, by department or project, so you can easily track and analyze data.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+title: Working with Dimensions to Track and Analyze Data Easily
+description: You use dimensions to categorize entries, for example by department or project, so you can easily track and analyze data to help you make good business decisions.
+author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: analysis, history, track
-ms.date: 01/13/2020
-ms.author: sgroespe
+ms.search.keywords: analysis, history, track, business intelligence
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Práce s dimenzemi
-Chcete-li zjednodušit provádění analýzy dokladů, jako jsou prodejní objednávky, můžete použít dimenze. Dimenze jsou atributy a hodnoty, které kategorizují položky, takže je můžete sledovat a analyzovat. Například dimenze mohou označovat projekt nebo středisko, ze kterého pochází položka.
+# Working with Dimensions
+Dimensions are values that categorize entries so you can track and analyze them on documents, such as sales orders. Dimensions can, for example, indicate the project or department an entry came from.  
 
-Například namísto zřízení samostatných finančních účtů pro každé oddělení a projekt můžete použít dimenze. To dává zajímavou příležitost k analýze, aniž by bylo nutné vytvořit složitou účetní osnovu. Pro více informací navštivte [Business Intelligence](bi.md).
+For example, instead of setting up separate general ledger accounts for each department and project, you can use dimensions as a basis for analysis and avoid having to create a complicated chart of accounts. For more information, see [Business Intelligence](bi.md).
 
-Dalším příkladem je nastavení dimenze nazvané *Středisko* a její použití při účtování prodejních dokladů. To vám umožní použít nástroje business intelligence, abyste zjistili, které středisko prodalo které položky.
-Čím více dimenzí používáte, tím podrobnější sestavy můžete vytvořit a pak na nich založit svá obchodní rozhodnutí. Jedna prodejní položka může například obsahovat více informací o dimenzích, například:
+Another example is to set up a dimension called *Department*, and use this dimension when you post sales documents. This will let you use business intelligence tools to see which department sold which items. The more dimensions you use, the more detailed reports you can base your business decisions on. For example, a single sales entry can include information from multiple dimensions, such as:  
 
-* Účet, do kterého byl prodej zboží zaúčtován
-* Kde bylo zboží prodáno
-* Kdo to prodal
-* Typ zákazníka, který ho koupil
+* The account the item sale was posted to  
+* Where the item was sold
+* Who sold it
+* The kind of customer who bought it  
 
-## Analýza pomocí dimenzí
-Funkce Dimenze hraje důležitou roli v business inteligence, například při definování analytických pohledů. Pro více informací navštivte [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md).
-
-> [!TIP]
-> Rychlý způsob, jak analyzovat transakční data podle dimenzí je, že můžete filtrovat součty v tabulce účtů a záznamů na všech stránkách **položek** podle dimenzí. Vyhledejte akci **Nastavit filtr dimenze**.
-
-## Sady dimenzí
-Sada dimenzí je jedinečnou kombinací hodnot dimenzí. Je uložena jako položky sady dimenzí v databázi. Každá položka sady dimenzí představuje jednu hodnotu dimenze. Sada dimenze je označena společným ID, které je přiřazeno ke každé položce sady dimenze, která patří do dané sady.
-
-Při vytváření řádku deníku, záhlaví dokladu nebo řádku dokladu můžete určit kombinaci hodnot dimenze. Namísto explicitního ukládání každé hodnoty dimenze v databázi je řádku deníku, záhlaví dokladu nebo řádku dokladu přiřazeno ID sady dimenzí, které určuje sadu dimenzí.
-
-## Nastavení dimenzí
-Můžete definovat dimenze a hodnoty dimenzí pro kategorizaci deníků a dokladů, například prodejních a nákupních objednávek. Dimenze nastavíte na stránce **Dimenze**, kde pro každou dimenzi můžete vytvořit jeden řádek, například *Projekt*, *Středisko*, *Oblast* nebo *Prodejce*.
-
-Nastavte také hodnoty dimenzí. Hodnoty mohou být například oddělení ve vaší společnosti. Hodnoty dimenzí lze nastavit v hierarchické struktuře podobné účetní osnově, takže lze data rozdělit na různé úrovně a podskupiny hodnot dimenzí lze sčítat. Můžete definovat libovolný počet dimenzí a hodnot dimenzí a všichni ve vaší společnosti je mohou používat.
-
-Když jsou nastaveny dimenze a jejich hodnoty, můžete definovat globální dimenze a zkratky dimenze na stránce **Nastavení financí**, které budou vždy k dispozici pro výběr polí na řádcích deníku a dokladu, aniž byste museli nejprve otevírat stránku **Dimenze**. Pro více informací navštivte [Nastavení globálních dimenzí a zkratek dimenzí](finance-dimensions.md#to-set-up-global-and-shortcut-dimensions).
-
-* **Globální dimenze** se používají jako filtry, například pro sestavy, dávkové úlohy a porty XML. Můžete použít pouze dvě globální dimenze, proto zvolte dimenze, které budete často používat.
-* **Zkratky dimenzí** jsou k dispozici jako pole na řádcích deníku a dokladu. Můžete si jich vytvořit až šest.
-
-### Nastavení výchozích dimenzí pro zákazníky, dodavatele a další účty
-Můžete přiřadit výchozí dimenzi pro konkrétní účet. Dimenze bude zkopírována do deníku nebo dokladu, když zadáte číslo účtu na řádku, ale v případě potřeby můžete kód na řádku odstranit nebo změnit. Můžete také vytvořit dimenzi potřebnou pro zaúčtování položky s konkrétním typem účtu.
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dimenze** a poté vyberte související odkaz.
-2. Na stránce **Dimenze** vyberte příslušnou dimenzi a pak zvolte akci **Výchozí dimenze typu účtu**.
-4. Vyplňte řádek pro každou novou výchozí dimenzi, kterou chcete nastavit. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## Analyzing by Dimensions
+Dimensions play an important role in business intelligence, such as when defining analysis views. For more information, see [Analyze Data by Dimensions](bi-how-analyze-data-dimension.md).
 
 > [!TIP]
-> Pokud chcete vytvořit požadovanou domenzi, ale nechcete jí přiřadit výchozí hodnotu dimenze, nechte pole **Kód hodnoty dimenze** prázdné a poté vyberte **Nutný kód** v poli **Účtování hodnoty**.
-
-> [!WARNING]
-> Pokud je účet používán v dávkové úloze **Úprava směnných kurzů** nebo **Účtování nákladů na zboží**, nevybírejte **Nutný kód** nebo **Stejný kód**. Tyto dávkové úlohy nemohou používat kódy dimenze.
+> A quick way to analyze transactional data by dimensions is to use the **Set Dimension Filter** action filter totals by dimensions in the chart of accounts and on pages for entries.
 
 > [!NOTE]
-> Pokud k účtu musí být přiřazena jiná dimenze než výchozí dimenze již nastavená pro typ účtu, musíte pro tento účet nastavit výchozí dimenzi. Výchozí dimenze pro jednotlivé účty pak nahradí výchozí dimenzi pro typ účtu.
+> Analysis views often use data from dimensions. If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. That will help keep your financial reports and analyses accurate. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)
 
-### Nastavení výchozích priorit dimenzí
-Různé typy účtů, například zákaznický účet a účet zboží, mohou mít nastaveny různé výchozí dimenze. V důsledku toho může mít položka pro dimenzi více než jednu výchozí dimenzi. Chcete-li se těmto konfliktům vyhnout, můžete použít pravidla priorit pro různé zdroje.
+## Dimension Sets
+<!--we describe what they are, but not their value.-->
+A dimension set is a unique combination of dimension values. It is stored as dimension set entries in the database. Each dimension set entry represents a single dimension value. The dimension set is identified by a common dimension set ID that is assigned to each dimension set entry that belongs to the dimension set.  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výchozí priority dimenzí** a poté vyberte související odkaz.
-2. Na stránce **Výchozí priority dimenzí** zadejte do pole **Kód původu** kód pro tabulku vstupů, na kterou se budou vztahovat výchozí priority dimenze.
-3. Vyplňte řádek pro každou výchozí prioritu dimenze, kterou chcete pro vybraný kód původu.
-4. Opakujte postup pro každý kód původu, pro který chcete nastavit výchozí priority dimenze.
+When you create a journal line, document header, or document line, you can specify a combination of dimension values. Instead of explicitly storing each dimension value in the database, a dimension set ID is assigned to the journal line, document header, or document line to specify the dimension set.  
 
-> [!IMPORTANT]
-> Pokud nastavíte dvě tabulky se stejnou prioritou pro stejný kód původu, [!INCLUDE[d365fin](includes/d365fin_md.md)] vždy vybere tabulku s nejnižší hodnotou ID tabulky.
+## Setting Up Dimensions
+You can define the dimensions and dimension values to categorize journals and documents, such as sales orders and purchase orders. You set up dimensions on the **Dimensions** page, where you create one line for each dimension, such as *Project*, *Department*, *Area*, and *Salesperson*.
 
-### Nastavení kombinací dimenzí
-Chcete-li se vyhnout účtování položek s protichůdnými nebo irelevantními dimenzemi, můžete blokovat nebo omezit konkrétní kombinace dvou dimenzí. Kombinace blokovaných dimenzí znamená, že nemůžete účtovat obě dimenze na stejné položce bez ohledu na to, jaké jsou hodnoty dimenze. Omezená kombinace dimenzí umožňuje účtovat obě dimenze na stejné položce, ale pouze pro určité kombinace hodnot dimenze.
+You also set up values for dimensions. For example, values might be departments in your company. Dimension values can be set up in a hierarchical structure similar to the chart of accounts, so that data can be broken down into various levels of granularity, and subsets of dimension values can be totaled. You can define as many dimensions and dimension values as you need, and everyone in your company can use them.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kombinace dimenzí** a poté vyberte související odkaz.
-2. Na stránce **Kombinace dimenzí** vyberte pole kombinace dimenze a vyberte jednu z následujících možností.
+When dimensions and values are set up, you can define global and shortcut dimensions on the **General Ledger Setup** page that will always be available to select as fields on journal and document lines, and ledger entries, without having to open the **Dimensions** page first. For more information, see [To set up global and shortcut dimensions](finance-dimensions.md#to-set-up-global-and-shortcut-dimensions).
 
-   | Pole | Popis |
-   |----------------------------------|---------------------------------------|  
-   | **Bez omezení** | Tato kombinace dimenzí nemá žádná omezení. Všechny hodnoty dimenzí jsou povoleny. |
-   | **Omezeno** | Tato kombinace dimenzí má omezení v závislosti na tom, které hodnoty dimenze zadáte. Omezení musíte definovat na stránce **Kombinace hodnoty dimenze**. |
-   | **Uzavženo** | Tato kombinace dimenzí není povolena. |
+* **Global Dimensions** are used as filters, for example, on reports, batch jobs, and XMLports. You can use only two global dimensions, so choose dimensions you will use often.
+* **Shortcut Dimensions** are available as fields on journals, document lines, and ledger entries. You can create up to eight of these.  
 
-3. Pokud jste vybrali možnost **Omezeno** musíte definovat, které kombinace hodnot dimenzí jsou blokovány. Chcete-li to provést, vyberte pole pro definování kombinace dimenzí.
-4. Nyní vyberte kombinaci hodnoty dimenzí, která je blokována, a do pole zadejte **Uzavženo**. Prázdné pole znamená, že je kombinace hodnot dimenzí povolena. Opakujte, pokud je blokováno více kombinací.
+### To set up default dimensions for customers, vendors, and other accounts
+You can assign a default dimension for a specific account. The dimension will be copied to the journal or document when you enter the account number on a line, but you can delete or change the code on the line if appropriate. You can also make a dimension required for posting an entry with a specific type of account.  
 
-> [!NOTE]
-> Stejné dimenze jsou zobrazeny v řádcích i sloupcích, a proto se všechny kombinace dimenzí objevují dvakrát. [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky zobrazí nastavení v obou polích. V polích z levého horního rohu směrem k pravému dolnímu rohu nemůžete vybrat nic, protože tato pole mají v řádcích i sloupcích stejnou dimenzi.
-> Vybraná možnost není před ukončením pole viditelná.
-> Chcete-li místo dimenze zobrazit název dimenze, vyberte pole **Zobrazit název sloupce**.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Dimensions**, and then choose the related link.  
+2.  On the **Dimensions** page, select the relevant dimension, and then choose the **Account Type Default Dim** action.  
+4.  Fill in a line for each new default dimension that you want to set up. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-### Nastavení globálních dimenzí a zkratek dimenzí
-Globální a zkratkové dimenze lze použít jako filtr kdekoli v [!INCLUDE[d365fin](includes/d365fin_md.md)], včetně zpráv, dávkových úloh a zobrazení analýzy. Globální dimenze a zkratky dimenze jsou vždy k dispozici pro přímé vložení bez prvního otevření stránky **Dimenze**. Na řádcích deníku a dokladu můžete v poli na řádku vybrat globální dimenzi a zkratku dimenze. Můžete nastavit dvě globální dimenze a osm zkratek. Zvolte dimenze, které používáte nejčastěji.
+> [!TIP]  
+>  If you want to make a dimension required but you do not want to assign a default value to the dimension, leave the **Dimension Value Code** field blank and then select **Code Mandatory** in the **Value Posting** field.  
 
-> [!Important]
-Změna globální dimenze nebo zkratky dimenze vyžaduje, aby byly aktualizovány všechny položky účtovány s touto dimenzí. Tuto úlohu můžete provést pomocí funkce **Změna globálních dimenzí**, ale pozor, může to být časově náročné a může to ovlivnit výkon. Proto pečlivě zvolte globální dimenze a zkratky dimenze, abyste je později nemuseli měnit.
+> [!WARNING]  
+>  If an account is used in the **Adjust Exchange Rates** batch job or the **Post Inventory Cost to G/L** batch job, do not select **Code Mandatory** or **Same Code**. These batch jobs cannot use dimension codes.  
+
+> [!NOTE]  
+>  If an account must have a different dimension than the default dimension for the account type, you must set up a default dimension for this account. The default dimension for the account then replaces the default dimension for the account type.  
+
+### To set up default dimension priorities  
+Different account types, such as a customer account and an item account, can have different default dimensions set up. As a result, an entry can have more than one default dimension proposed for a dimension. To avoid such conflicts, you can apply priority rules to the different sources.  
+
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Default Dimension Priorities**, and then choose the related link.  
+2.  On the **Default Dimension Priorities** page, in the **Source Code** field, enter the source code for the entry table to which default dimension priorities will apply.  
+3.  Fill in a line for each default dimension priority that you want for the selected source code.
+4.  Repeat the procedure for each source code for which you want to set up default dimension priorities.  
+
+> [!IMPORTANT]  
+>  If you set up two tables with the same priority for the same source code, [!INCLUDE[prod_short](includes/prod_short.md)] will always select the table with the lowest table ID.  
+
+### To set up dimension combinations  
+To avoid posting entries with contradictory or irrelevant dimensions, you can block or limit specific combinations of two dimensions. A blocked dimension combination means that you cannot post both dimensions on the same entry regardless of what the dimension values are. A limited dimension combination lets you post both dimensions to the same entry, but only for certain combinations of dimension values.
+
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Dimension Combinations**, and then choose the related link.  
+2.  On the **Dimension Combinations** page, choose the field of the dimension combination and select one of the following options.  
+
+    |Field|Description|
+    |----------------------------------|---------------------------------------|  
+    |**No limitation**|This dimension combination has no restrictions. All dimensions values are allowed.|  
+    |**Limited**|This dimension combination has restrictions depending on which dimension values that you enter. You must define the limitations on the **Dimension Value Combination** page.|  
+    |**Blocked**|This dimension combination is not allowed.|  
+
+3.  If you selected the **Limited** option, you must define which combinations of dimension values are blocked. To do this, choose the field to define the dimension combination.  
+4.  Now select a dimension value combination that is blocked and enter **Blocked** in the field. A blank field means that the dimension value combination is allowed. Repeat if multiple combinations are blocked.  
+
+> [!NOTE]  
+>  The same dimensions are displayed in both rows and columns and, therefore, all dimension combinations appear two times. [!INCLUDE[prod_short](includes/prod_short.md)] automatically displays the setting in both fields. You cannot select anything in the fields from the upper-left corner and down, because these fields have the same dimension in both rows and columns.  
+>   
+>  The selected option is not visible before you exit the field.  
+>   
+>  To show the name of the dimensions instead of the code, select the **Show Column Name** field.
+
+### To set up global and shortcut dimensions
+Global and shortcut dimensions can be used as filters in [!INCLUDE[prod_short](includes/prod_short.md)], including on reports, batch jobs, ledger entry pages, and analysis views. Global and shortcut dimensions are always available to be inserted directly without first opening the **Dimensions** page. On journal and document lines, you can select global and shortcut dimensions in a field on the line. You can set up two global dimensions and eight shortcut dimensions. Choose the dimensions that you use most frequently.
+
+> [!Important]  
+> Changing a global or shortcut dimension requires that all entries posted with the dimension are updated. To change a global dimension, use the **Change Global Dimensions** function, but it can be time-consuming and may affect performance and tables may be locked during the update. Therefore, choose your global and shortcut dimensions carefully so that you do not have to change them later. To change a shortcut dimension, use the **Change Dimensions** action. <br /><br />
+> For more information, see [To change global dimensions](finance-dimensions.md#to-change-global-dimensions).
 
 > [!Note]
-Když přidáte nebo změníte globální dimenzi nebo zkratku dimenze, budete automaticky odhlášeni a znovu přihlášenï na to aby byla nová hodnota připravena k použití v celé aplikaci.
+> When you add or change a global or shortcut dimension, you are automatically signed out and back in so that the new value is prepared for use.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení financí** a poté vyberte související odkaz.
-2. Na záložce **Dimenze** vyplňte pole. [!INCLUDE [tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
+2. On the **Dimensions** FastTab, fill in the fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-#### Změna globálních dimenzí
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Změna globálních dimenzí** a poté vyberte související odkaz.
-2. Umístěním kurzoru na akce a pole na stránce se dozvíte, jak změnit globální dimenze a zkratky dimenze.
+#### To change global dimensions
+When you change a global or shortcut dimension, all entries posted with the dimension in question are updated. Because this process may be time-consuming and can affect performance, two different modes are provided to adapt the process to the size of the database.  
 
-### Příklad nastavení dimenze
-Řekněme, že vaše společnost chce sledovat transakce na základě organizační struktury a zeměpisných lokací. Chcete-li to provést, můžete na stránce **Dimenze** nastavit dvě dimenze:
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
+2. Choose the **Change Global Dimensions** action.
+3. At the top of the page, select one of the following options to define in which mode the batch job is run.
 
-* **OBLAST**
-* **STŘEDISKO**
+    |Option|Description|
+    |-|-|
+    |**Sequential**|(Default) The change is done in one transaction that reverts all entries to the dimensions they had before the change.<br /><br />This option is recommended if the company contains relatively few posted entries where it will take the shortest time to complete. The process locks multiple tables and blocks other users until it is done. Note that on large databases, the process may not be able to complete in this mode. In that case, use the **Parallel** option.|
+    |**Parallel**|The dimension change happens in multiple background sessions and the operation is split into multiple transactions. To use this option, turn on the **Parallel Processing** toggle. <br /><br />We recommended this option for large databases or companies with many posted entries because it will take the shortest time to complete. Note that with this mode, the update process will not start if there are more than one active database sessions.|  
 
-| Kód | Název | Titulek kódu | Titulek filtru |
+4. In the **Global Dimension 1 Code** and/or **Global Dimension 2 Code** fields, enter the new dimension(s). The current dimensions are displayed in gray behind the fields.
+5. Depending on the mode, do one of the following:
+    * In **Sequential** mode, choose the **Start** action.
+    * In **Parallel** mode, choose the **Prepare** action.
+
+    The **Log Entries** tab is filled with information about the dimensions that will be changed.
+7. Sign out of [!INCLUDE[prod_short](includes/prod_short.md)], and then sign in again.
+8. Choose the **Start** action to start the parallel processing of the dimension changes. <!--is this also dependent on the mode?-->
+
+### Example of Dimension Setup
+Let's say that your company wants to track transactions based on organizational structure and geographic locations. To do that, you can set up two dimensions on the **Dimensions** page:
+
+* **AREA**  
+* **DEPARTMENT**  
+
+| Code | Name | Code Caption | Filter Caption |
 | --- | --- | --- | --- |
-| OBLAST | Oblast | Kód oblasti | Filtr oblasti |
-| STŘEDISKO | Středisko | Kód střediska | Filtr střediska |
+| AREA |Area |Area Code |Area Filter |
+| DEPARTMENT |Department |Department Code |Department Filter |
 
-Pro **OBLAST** přidejte následující hodnoty dimenze:
+For **AREA**, you add the following dimension values:
 
-| Kód | Název | Typ hodnoty dimenze |
+| Code | Name | Dimension Value Type |
 | --- | --- | --- |
-| 10 | Amerika | Od-součet |
-| 20 | Severní Amerika | Standard |
-| 30 | Pacifik | Standard |
-| 40 | Jižní Amerika | Standard |
-| 50 | Amerika, Celkem | Do-součet |
-| 60 | Evropa | Od-součet |
-| 70 | EU | Standard |
-| 80 | mimo EU | Standard |
-| 90 | Evropa, celkem | Do-součet |
+| 10 |Americas |Begin-Total |
+| 20 |North America |Standard |
+| 30 |Pacific |Standard |
+| 40 |South America |Standard |
+| 50 |Americas, Total |End-Total |
+| 60 |Europe |Begin-Total |
+| 70 |EU |Standard |
+| 80 |Non-EU |Standard |
+| 90 |Europe, Total |End-Total |
 
-Pro dvě hlavní geografické oblasti, Ameriku a Evropu přidáte podkategorie pro regiony odsazením hodnot dimenzí. Umožní vám to podat zprávu o prodeji nebo výdajích v regionech a získat součty za větší geografické oblasti. V závislosti na vaší firmě můžete také použít země nebo oblasti jako hodnoty dimenze nebo okresy nebo města.
+For the two main geographic areas, Americas and Europe, you add subcategories for regions by indenting the dimension values. This will let you report on sales or expenses in regions, and get totals for the larger geographic areas. You could also choose to use countries or regions as your dimension values, or counties or cities, depending on your business.
 
-> [!NOTE]
-K nastavení hierarchie musí být kódy v abecedním pořadí. To zahrnuje kódy hodnot dimenzí, které jsou uvedeny v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+> [!NOTE]  
+>   To set up a hierarchy, the codes must be in alphabetical order. This includes the codes of the dimension values that are provided in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-Pro **STŘEDISKO** přidáte následující hodnoty dimenze:
+For **DEPARTMENT**, you add the following dimension values:
 
-| Kód | Název | Typ hodnoty dimenze |
+| Code | Name | Dimension Value Type |
 | --- | --- | --- |
-| ADM | Administrativa | Standard |
-| VÝROBA | Výroba | Standard |
-| PRODEJ | Prodej | Standard |
+| ADMIN |Administration |Standard |
+| PROD |Production |Standard |
+| SALES |Sales |Standard |
 
-S tímto nastavením můžete přidat své dvě dimenze jako dvě globální dimenze na stránce **Nastavení financí**. To znamená, že můžete použít OBLAST a STŘEDISKO jako filtry pro věcné položky, stejně jako na všechny sestavy a účetní schémata. Obě globální dimenze jsou také automaticky k dispozici pro použití na vstupních řádcích a záhlavích dokladů jako zkratky dimenze.
+With this set up, you can add your two dimensions as the two global dimensions on the **General Ledger Setup** page. This means that you can use AREA and DEPARTMENT as filters for general ledger entries, as well as on all reports and account schedules. Both global dimensions are also automatically available for use on entry lines and document headers as shortcut dimensions.
 
-## Získání přehledu o dimenzích použitých vícekrát
-Stránka **Výchozí dimenze-více** určuje, jak skupina účtů používá dimenze a hodnoty dimenzí. Můžete to provést zvýrazněním více účtů a zadáním výchozích dimenzí a hodnot dimenzí pro všechny účty, které jste zvýraznili v seznamu účtů. Pokud zadáte výchozí dimenze pro zvýrazněné účty, aplikace navrhne tyto dimenze a hodnoty dimenzí při každém použití jednoho z těchto účtů, například na řádku deníku. To uživateli usnadňuje účtování položek, protože pole pro dimenze jsou vyplňována automaticky. Navrhované hodnoty dimenze však lze změnit a to například na řádku deníku.
+## Getting an Overview of Dimensions used Multiple Times
+The **Default Dimensions-Multiple** page specifies how a group of accounts use dimensions and dimension values. You can do this by highlighting multiple accounts and then specifying default dimensions and dimension values for all the accounts you have highlighted in the account list. When you specify default dimensions for the highlighted accounts, application will suggest these dimensions and dimension values whenever one of these accounts is used, for example on a journal line. This makes entry posting easier for the user, as the dimension fields are filled in automatically. However, the dimension values that are suggested can be changed on, for example, a journal line.
 
-Stránka **Výchozí dimenze-více** obsahuje následující pole:
+The **Default Dimensions-Multiple** page contains the following fields:
 
-| Pole | Popis |
+|Field|Description|
 |-----|-----------|  
-| **Kód dimenze** | Zobrazuje všechny dimenze, které byly definovány jako výchozí dimenze na jednom nebo více zvýrazněných účtech. Výběrem pole zobrazíte seznam všech dostupných dimenzí. Pokud vyberete dimenzi, vybraná dimenze bude definována jako výchozí dimenze pro všechny zvýrazněné účty. |
-| **Kód hodnoty dimenze** | Zobrazuje buď hodnotu jedné dimenze, nebo termín (Konflikt). Pokud je v poli zobrazena hodnota dimenze, mají všechny zvýrazněné účty stejnou výchozí hodnotu dimenze. Pokud je v poli zobrazen termín (Konflikt), ne všechny zvýrazněné účty mají pro dimenzi stejnou výchozí hodnotu dimenze. Výběrem pole zobrazíte seznam všech dostupných hodnot dimenzí. Pokud vyberete hodnotu dimenze, bude vybraná hodnota definována jako výchozí hodnota dimenze pro všechny zvýrazněné účty. |
-| **Účtování hodnoty** | Zobrazuje buď pravidlo účtování s jednou hodnotou nebo termín (konflikt). Pokud je v poli zobrazeno pravidlo účtování hodnoty, mají všechny zvýrazněné účty stejné pravidlo účtování hodnoty pro hodnotu dimenze. Pokud je termín (Konflikt) zobrazen v poli, pak ne všechny zvýrazněné účty mají stejné pravidlo účtování hodnoty pro hodnotu dimenze. Výběrem pole Účtování hodnoty se zobrazí seznam pravidel účtování hodnoty. Pokud vyberete pravidlo účtování hodnoty, bude použito pro všechny zvýrazněné účty. |
+|**Dimension Code**|Shows all dimensions that have been defined as default dimensions on one or more of the highlighted accounts. By choosing the field, you can see a list of all available dimensions. If you select a dimension, the selected dimension will be defined as a default dimension for all highlighted accounts.|
+|**Dimension Value Code**|Shows either a single dimension value or the term (Conflict). If a dimension value is shown in the field, then all highlighted accounts have the same default dimension value for a dimension. If the term (Conflict) is shown in the field, then not all of the highlighted accounts have the same default dimension value for a dimension. By choosing the field, you can see a list of all available dimension values for a dimension. If you select a dimension value, the selected dimension value will be defined as a default dimension value for all highlighted accounts.|
+|**Value Posting**|Shows either a single value posting rule or the term (Conflict). If a value posting rule is shown in the field, then all highlighted accounts have the same value posting rule for a dimension value. If the term (Conflict) is shown in the field, then not all of the highlighted accounts have the same value posting rule for a dimension value. By choosing the Value Posting field, you can see a list of value posting rules. If you select a value posting rule, it will be applied for all highlighted accounts.|
 
-## Použití dimenzí
-V dokladu, jako je například prodejní objednávka, můžete přidat informace o dimenzi pro jednotlivý řádek dokladu i pro samotný doklad. Například na stránce **Prodejní objednávky** můžete zadat hodnoty dimenze pro první dvě zkratky dimenze na jednotlivých prodejních řádcích a můžete přidat další informace o dimenzích, pokud zvolíte tlačítko **Dimenze**.
+## Using Dimensions
+In a document such as a sales order, you can add dimension information for both an individual document line and the document itself. For example, on the **Sales Order** page, you can enter dimension values for the first two shortcut dimensions on the individual sales lines, and you can add more dimension information if you choose the **Dimensions** button.  
 
-Pokud místo toho pracujete v deníku, můžete do položky přidat informace o dimenzi stejným způsobem, pokud jste nastavili zkratku dimenze jako pole přímo na řádcích deníku.
+If you work in a journal instead, you can add dimension information to an entry in the same way, if you have set up shortcut dimensions as fields directly on journal lines.  
 
-Můžete nastavit výchozí dimenze pro účty nebo typy účtů, aby se dimenze a hodnoty dimenzí vyplňovaly automaticky.
+You can set up default dimensions for accounts or account types, so that dimensions and dimension values are filled in automatically.
 
-### Zobrazení globálních dimenzí na stránce položek hlavní knihy
-Globální dimenze jsou vždy definovány společností a pojmenovány společností. Chcete-li zobrazit globální dimenze vaší společnosti, otevřete stránku **Nastavení financí**.
+### To view global dimensions in ledger entry pages  
+Global dimensions are always company\-defined and company-named. To see the global dimensions for your company, open the **General Ledger Setup** page.  
 
-Na stránce položky hlavní knihy můžete vidět, zda existují globální dimenze pro položky. Dvě globální dimenze se liší od ostatních vašich dimenzí, protože je můžete použít jako filtry kdekoli v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+In a ledger entry page, you can see whether there are global dimensions for the entries. The two global dimensions differ from the rest of your dimensions because you can use them as filters anywhere in [!INCLUDE[prod_short](includes/prod_short.md)].  
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
-2. Na stránce **Účetní osnova** vyberte akci **Položky**.
-3. Chcete-li zobrazit pouze položky, které jsou relevantní, nastavte na stránce jeden nebo více filtrů.
-4. Chcete-li zobrazit všechny dimenze pro položku, vyberte položku a poté vyberte akci  **Dimenze**.
+1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
+2.  On the **Chart of Accounts** page, choose the **Ledger Entries** action.  
+3.  To see only the entries that are relevant, set one or more filters on the page.  
+4.  To see all the dimensions for an entry, select the entry, and then choose the **Dimensions** action.  
 
-> [!NOTE]
-Na stránce **Dimenze položek** jsou pak zobrazeny dimenze pro jednu položku. Při procházení položek účetní knihy se odpovídajícím způsobem mění obsah na stránce **Dimenze položek**.
+> [!NOTE]  
+>  The **Ledger Entry Dimensions** page displays the dimensions for one ledger entry at a time. As you scroll through the ledger entries, the content on the **Ledger Entry Dimensions** page changes accordingly.
 
-## Odstraňování chyb v dimenzích
-Při účtování dokladů nebo řádků deníku, které obsahují dimenze, mohou nastat různé chyby, které obvykle souvisejí s nesprávným nastavením nebo přiřazením dimenzí.
+## See Related Training at [Microsoft Learn](/learn/modules/dimensions-dynamics-365-business-central/index)
 
-> [!NOTE]
-V následujícím seznamu potenciálních chybových zpráv jsou kódy *%X* zástupnými symboly pro datové proměnné, které bude skutečná zpráva obsahovat v uživatelském rozhraní v závislosti na kontextu. Například, *%1 %2 je uzavřena.* se může objevit v uživatelském rozhraní jako „Kód dimenze OBLAST je uzavřen.“.
-
-| Problém | Chybové hlášení | Možné řešení |
-|-----|-------------|-----------------|
-| Blokovaná dimenze | %1 %2 je uzavřena. | - Vyhledejte nezaúčtované doklady obsahující sadu dimenzí s uzavřenou dimenzí a otevřete ji.<br />- Odstraňte nastavené řádky dimenze pro uzavřenou dimenzi. |
-| Odstranění dimenze | %1 %2 nelze najít. | - Obnovte chybějící dimenzi.<br /> - Najděte nezaúčtované doklady obsahující sadu dimenzí s chybějící dimenzí a přidejte ji.<br />- Odstraňte nastavené řádky dimenze pro chybějící dimenzi. |
-| Hodnota blokované dimenze | %1 %2 - %3 je uzavřena. | - Vyhledejte nezaúčtované doklady obsahující sadu dimenzí s uzavřenou hodnotou dimenze a otevřete ji.<br />- Odstraňte řádek sady dimenze pro uzavřenou hodnotu dimenze. |
-| Hodnota smazané dimenze | %1 pro %2 chybí. | - Obnovte chybějící hodnotu dimenze.<br />-Najděte nezaúčtované doklady obsahující sadu dimenzí s chybějící hodnotou dimenze a přidejte ji. <br />- Odeberte řádek sady dimenze pro chybějící hodnotu dimenze. |
-| Hodnota zakázané dimenze | Typ hodnoty dimenze pro %1 %2 - %3 nesmí být %4. | - Změňte pole **Typ hodnoty dimenze** na stránke **Hodnoty dimenze** na **Standardní** nebo **Od-součet**.<br /> - Odeberte řádek sady dimenzí pro uzavřenou hodnotu dimenze. |
-| Kombinace uzavřených dimenzí | Dimenze %1 a %2 nelze použít současně. | -Najděte nezaúčtované doklady obsahující sadu dimenzí s kombinací uzavžených dimenzí a otevřete ji.<br />- Upravte jeden z konfliktních řádků sady oprávnění pro kombinaci dimenze. |
-| Kombinace hodnoty uzavřené dimenze | Kombinace dimenze %1 - %2 a %3 - %4 nelze použít současně. | -Vyhledejte nezaúčtované doklady obsahující sadu dimenze pomocí kombinace uzavřených hodnot dimenze a otevřete je.<br />- Upravte jeden z konfliktních řádků sady oprávnění pro kombinaci hodnoty dimenze. |
-| Prázdný kód hodnoty dimenze pro výchozí dimenzi, kde pole **Účtování hodnoty** obsahuje **Nutný kódy** | -Vyberte %1 pro %2 %3.<br />-Vyberte %1 pro %2 %3 pro %4 %5. | - Změňte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />- Zadejte neprázdnou hodnotu dimenze pro konfliktní dimenzi v sadě dimenze. |
-| Chybný kód hodnoty dimenze pro výchozí dimenzi, kde pole **Účtování hodnoty** obsahuje **Stejný kód** | -Vyberte %1 %2 pro %3 %4.<br />-Vyberte %1 %2 pro %3 %4 pro %5 %6 | -Změnte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />- Zadejte požadovanou hodnotu dimenze pro konfliktní dimenzi v sadě dimenze. |
-| Neprázdný kód hodnoty dimenze pro prázdnou výchozí dimnezi, kde pole **Účtování hodnoty** obsahuje **Stejný kód** | -%1 %2 musí být prázdné.<br />-%1 %2 musí být prázdné pro %3 %4. | -Změňte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />- Zadejte prázdný kód hodnoty dimenze pro konfliktní dimenzi v sadě dimenze. |
-| Neočekávaná hodnota dimneze pro výchozí dimenzi, kde pole **Účtování hodnoty** neobsahuje **Žádný kód** | -%1 %2 nesmí být uvedeno.<br />-%1 %2 nesmí být uvedeno pro %3 %4 | -Změňte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />-Odeberte konfliktní řádek ze sady dimenze. |
-
-## Viz související školení na webu [Microsoft Learn](/learn/modules/dimensions-dynamics-365-business-central/index)
-
-## Viz také
+## See Also
 [Business Intelligence](bi.md)  
 [Finance](finance.md)  
-[Analýze dat dle dimenzí](bi-how-analyze-data-dimension.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Analyze Data by Dimensions](bi-how-analyze-data-dimension.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

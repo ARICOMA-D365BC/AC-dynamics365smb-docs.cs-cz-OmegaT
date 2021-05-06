@@ -1,33 +1,39 @@
 ---
-title: Přehled účtování dokladů a deníků | Microsoft Docs
-description: 'Nastiňuje akce účtování a způsoby, jak můžete účtovat doklady a deníky.'
+title: Overview of Posting Documents and Journals | Microsoft Docs
+description: Outlines posting actions and the ways you can post documents and journals.
 services: project-madeira
 documentationcenter: ''
-author: SusanneWindfeldPedersen
+author: SorenGP
+
 ms.service: dynamics365-business-central
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2018
-ms.author: solsen
+ms.date: 04/01/2021
+ms.author: edupont
+
 ---
-# <a name="post-documents-and-journals"></a>Účtování dokladů a deníků
-Účtování představuje účetní akci zaznamenávání obchodních transakcí v různých účetních knihách společnosti.
+# Posting Documents and Journals
+Posting represents the accounting action of recording business transactions in the various company ledgers.
 
-Prakticky každý doklad a deník v [!INCLUDE[d365fin](includes/d365fin_md.md)] nabízí skupinu **Účtování**, ze které si můžete vybrat mezi různými akcemi účtování, jako je **Účtovat**, **Náhled účtování**, **Účtovat a odeslat**, **Účtovat a odeslat Emailem**.
+Practically every document and journal in [!INCLUDE[prod_short](includes/prod_short.md)] offers a **Posting** group from which you can choose between different posting actions, such as **Post**, **Preview Posting**, **Post and Send**, **Post and Email**.
 
-Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
+The following table describes related tasks, with links to the topics that describe them.
 
-| Viz | také |
+| To | See |
 | --- | --- |
-| Zjistěte více o účtování nákupních dokladů. |[Účtování nákupů](ui-post-purchases.md) |
-| Zjistěte více o účtování prodejních dokladů. |[Účtování prodeje](ui-post-sales.md) |
-| Zjistěte více o účtování deníků. |[Práce s finančními deníky](ui-work-general-journals.md) |
-| V okně zobrazte náhled položek, které budou vytvořeny při účtování. |[Zobrazení výsledků účtování](ui-how-preview-post-results.md) |
-| V sestavě zobrazte náhled položek, které budou vytvořeny při účtování. |[Zobrazení testovací sestavy před účtováním](ui-how-view-test-reports-posting.md) |
+| Learn about posting purchase documents. |[Posting Purchases](ui-post-purchases.md) |
+| Learn about posting sales documents. |[Posting Sales](ui-post-sales.md) |
+| Post multiple sales or purchase documents together, immediately or as scheduled.|[Post Multiple Documents at the Same Time](ui-batch-posting.md)|
+| Learn about posting general journals. |[Working with General Journals](ui-work-general-journals.md) |
+| Preview, in a page, the entries that will be created when you post. |[Preview Posting Results](ui-how-preview-post-results.md) |
+| Preview, in a report, the entries that will be created when you post. |[View Test Reports Before Posting](ui-how-view-test-reports-posting.md) |
 
-## <a name="see-also"></a>Viz také
-[Hlavní obchodní funkcionality](ui-across-business-areas.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+## See Also
+[Edit Posted Documents](across-edit-posted-document.md)  
+[General Business Functionality](ui-across-business-areas.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

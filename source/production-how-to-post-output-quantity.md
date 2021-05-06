@@ -1,45 +1,51 @@
 ---
-    title: How to Batch Post Production Output and Run Times| Microsoft Docs
-    description: The output quantity represents the work progress in the form of the finished quantity.
+    title: Batch Post Production Output and Run Times
+    description: The output quantity represents the work progress in the form of the finished quantity and used capacity of work or machine center.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: article
+    ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2020
-    ms.author: sgroespe
+    ms.date: 04/01/2021
+    ms.author: edupont
 
 ---
-# Dávkové zaúčtování výstupu a spuštění
-Množství výstupu představuje průběh práce ve formě dokončeného množství.
+# Batch Post Output and Run Times
+The output quantity represents the work progress in the form of the finished quantity and used capacity of work or machine center.
+
+You can use the output journal to:
+*  Adjust inventory in connection with output of finished items from production.
+*  Register quantities and scrap for each operation in production routing.
+*  Register setup and run time for work and machine centers.
 
 > [!NOTE]
-> Pouze v případě, že v poslední operaci zaúčtujete množství výstupu, jsou zásoby automaticky aktualizovány.
+> If production routing are used, the inventory is updated only when you post output quantity on the last operation.
 
-## Zaúčtování množství výstupu pro jeden nebo více řádků výrobní zakázky
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník výstupu** a poté vyberte související odkaz.
-2. Vyplňte pole údaji výrobní zakázky a výstupními daty. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Pokud byla operace dokončena, vyberte pole **Dokončeno**.
+With the **Production Journal** window, you can perform the same tasks as in the **Output Journal** window and at the same time perform the related consumption posting tasks. For more information, see [Register Consumption and Output for One Released Production order line](production-how-to-register-consumption-and-output.md).
 
-   Pokud lokace skladu, kde má být zboží zaskladněné, používá přihrádky, ale nevyžaduje zpracování zaskladnění, přiřaďte k řádku deníku kód přihrádky a určete, kam má být zboží umístěno. Pro více informací navštivte [Zaskladnění výroby nebo výstupu montáže](warehouse-how-to-put-away-production-output.md).
+## To post output quantities and/or register run times for one or more production order lines
+1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Output Journal**, and then choose the related link.  
+2. Fill in the fields with the production order data and the output data and/or run time. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+  
+    You can use the **Explode Routing** function to generate journal lines from production orders.
+  
+4. If the operation has been completed, select the **Finished** field.  
+5. Choose the **Post** action to post the operations. 
+ 
+Capacity ledger entries are updated for the used work or machine centers with information about time and quantity of output and scrap. 
+If you posted the last operation, the item will be added to the inventory. 
 
-4. Zvolte akci **Účtovat** pro zaúčtování operace. Množství výstupu bude zaúčtováno. Zboží je nyní k dispozici pro expedici.
+## See Also  
+[Post Scrap Manually](production-how-to-post-scrap.md)
+[Reverse Output Posting](production-how-to-reverse-output-posting.md)
+[Manufacturing](production-manage-manufacturing.md)    
+[Setting Up Manufacturing](production-configure-production-processes.md)  
+[Planning](production-planning.md)      
+[Inventory](inventory-manage-inventory.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
-## Zaúčtování časů spuštění pro jeden nebo více řádků výrobní zakázky
-Doba běhu představuje průběh práce ve formě potřebné pracovní doby.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník výstupu** a poté vyberte související odkaz.
-2. Vyplňte pole údaji výrobní zakázky a výstupními daty.
-3. Po dokončení operace vyberte pole **Dokončeno**.
-4. Vyberte akci **Účtovat**, chcete-li zaúčtovat čas strávený na operaci. Položky kapacity jsou aktualizovány pro použitá pracovní nebo strojní centra.
-
-## Viz také
-[Výroba](production-manage-manufacturing.md)  
-[Nastavení výroby](production-configure-production-processes.md)  
-[Plánování](production-planning.md)  
-[Zásoby](inventory-manage-inventory.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[!INCLUDE[footer-include](includes/footer-banner.md)]
