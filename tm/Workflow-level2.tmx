@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header creationtool="O aplikaci OO" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="O aplikaci OmegaT" segtype="sentence" srclang="en-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!CAUTION<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>If the workflow code already exists in the database, the workflow steps will be overwritten with the steps in the imported workflow.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102711Z" creationid="sunavcova" creationdate="20191112T102711Z">
+        <seg>!CAUTION<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Pokud kód workflow již v databázi existuje, kroky workflow budou přepsány kroky v importovaném workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!CAUTION<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>When you delete a workflow, all information in the workflow will be lost.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092651Z" creationid="sunavcova" creationdate="20191112T092651Z">
+        <seg>!CAUTION<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Když odstraníte workflow, budou ztraceny i všechny informace v něm.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>All notifications about workflow steps are sent through a job queue.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T140900Z" creationid="sunavcova" creationdate="20191107T140900Z">
+        <seg>!POZNÁMKA<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Všechna oznámení o krocích workflow se odesílají prostřednictvím fronty úloh..</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Approval users, both approval requesters and approvers, must first be set up as workflow users on the <ph x="2">&lt;x2/&gt;</ph>Workflow User Group<ph x="3">&lt;x3/&gt;</ph> page.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T075113Z" creationid="sunavcova" creationdate="20191112T143919Z">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Uživatelé schvalování, žadatelé o schválení i schvalovatelé, musí být nejprve nastaveny jako uživatelé workflow na stránce <ph x="2">&lt;x2/&gt;</ph>Skupina uživatelů workflow<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Do not enable a workflow until you are sure that the workflow is completed and that the involved workflow steps can start.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T091642Z" creationid="sunavcova" creationdate="20191112T091347Z">
+        <seg>!NOTE&lt;x0 /&gt;
+&lt;x1 /&gt;Nepovolujte workflow, dokud si nejste jisti, že je workflow dokončen a že lze jeho příslušné kroky zahájit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>The generic version of [!INCLUDE<ph x="2">&lt;x2/&gt;</ph>d365fin<ph x="3">&lt;x3/&gt;</ph>] offers support for restricting a record from being posted, from being exported as a payment, and from being printed as a check.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105426Z" creationid="sunavcova" creationdate="20191112T105426Z">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Obecná verze [!INCLUDE<ph x="2">&lt;x2/&gt;</ph>d365fin<ph x="3">&lt;x3/&gt;</ph>] nabízí podporu pro omezení záznamu v zaúčtování, v exportu jako platba a v tisku jako šek.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>The workflow functionality to restrict and allow records from being used is not related to the functionality to block item, customer, and vendor records from being posted.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105511Z" creationid="sunavcova" creationdate="20191112T105511Z">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Funkce workflow, která omezuje a umožňuje použití záznamů, nesouvisí s funkcí blokování účtování položek, zákazníků a dodavatelů.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>To define that an approval request is not approved until multiple approvers in an approval chain have approved it, set up approvers in a hierarchy.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T075552Z" creationid="sunavcova" creationdate="20191118T075552Z">
+        <seg>!NOTE<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Chcete-li definovat, že žádost o schválení nebude schválena, dokud ji neschválí více schvalovatelů v schvalovacím řetězci, nastavte schvalovatele v hierarchii.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>!TIP<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>To see relations between tables that are used in workflows, Choose the <ph x="2">&lt;x2/&gt;</ph>Lightbulb that opens the Tell Me feature<ph x="3">&lt;x3/&gt;</ph>Tell me what you want to do<ph x="4">&lt;x4/&gt;</ph> icon, and then enter <ph x="5">&lt;x5/&gt;</ph>Workflow – Table Relations<ph x="6">&lt;x6/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T091635Z" creationid="sunavcova" creationdate="20191112T091635Z">
+        <seg>!TIP&lt;x0 /&gt;
+&lt;x1 /&gt;Chcete-li zobrazit vztahy mezi tabulkami, které se používají ve workflow, vyberte ikonu &lt;x2 /&gt;Žárovky, která otevře ikonu Řekněte mi&lt;x3 /&gt; Řekněte mi, co chcete udělat&lt;x4 /&gt;, a poté zadejte &lt;x5 /&gt;Workflow - vazby tabulky&lt;x6 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><ph x="10">&lt;x10/&gt;</ph>First Qualified Approver<ph x="11">&lt;x11/&gt;</ph> specifies that an approval request entry is only created for the requester’s first qualified approver.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083622Z" creationid="sunavcova" creationdate="20191112T083622Z">
+        <seg><ph x="10">&lt;x10/&gt;</ph>První kvalifikovaný schvalovatel<ph x="11">&lt;x11/&gt;</ph> určuje, že položka požadavku na schválení je vytvořena pouze pro prvního kvalifikovaného schvalovatele žadatele.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><ph x="4">&lt;x4/&gt;</ph>Approver Chain<ph x="5">&lt;x5/&gt;</ph> specifies that approval request entries are created for all the requester’s approvers up to and including the first qualified approver.<ph x="6">&lt;x6/&gt;</ph>2.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083214Z" creationid="sunavcova" creationdate="20191112T083214Z">
+        <seg>&lt;x4 /&gt;Řetěz schvalovatelů&lt;x5 /&gt; určuje, že položky žádosti o schválení jsou vytvářeny pro všechny schvalovatele žadatele až do prvního kvalifikovaného schvalovatele včetně.&lt;x6 /&gt; 2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><ph x="7">&lt;x7/&gt;</ph>Direct Approver<ph x="8">&lt;x8/&gt;</ph> specifies that an approval request entry is only created for the requester’s immediate approver, regardless of the approver’s approval limit.<ph x="9">&lt;x9/&gt;</ph>3.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083549Z" creationid="sunavcova" creationdate="20191112T083549Z">
+        <seg><ph x="7">&lt;x7/&gt;</ph>Přímý schvalovatel<ph x="8">&lt;x8/&gt;</ph> určuje, že položka požadavku na schválení je vytvořena pouze pro okamžitého schvalovatele žadatele, bez ohledu na limit schválení schvalovatele. <ph x="9">&lt;x9/&gt;</ph> 3.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>A qualified approver is an approver whose approval limit is above the value on the request being made.<ph x="0">&lt;x0/&gt;</ph><ph x="1">&lt;x1/&gt;</ph> The following options exist:<ph x="2">&lt;x2/&gt;</ph><ph x="3">&lt;x3/&gt;</ph> 1.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083049Z" creationid="sunavcova" creationdate="20191112T083049Z">
+        <seg>Kvalifikovaný schvalovatel je osoba, jehož schvalovací limit je nad hodnotou na zadané žádosti.&lt;X0 /&gt;&lt;x1 /&gt; Existují následující možnosti:&lt;x2 /&gt;&lt;x3 /&gt; 1.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>All workflow step instances that are defined in the workflow must have status <ph x="0">&lt;x0/&gt;</ph>Completed<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092410Z" creationid="sunavcova" creationdate="20191112T092410Z">
+        <seg>Všechny instance kroků workflow, které jsou ve workflow definovány, musí mít stav &lt;x0 /&gt;Dokončeno&lt;x1 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Alternatively, open the workflow that you want to delete.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092953Z" creationid="sunavcova" creationdate="20191112T092953Z">
+        <seg>Můžete také otevřít workflow, který chcete odstranit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Another way to quickly create a workflow is to import an existing workflow that you have on a file outside of [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>].</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T102636Z" creationid="sunavcova" creationdate="20191105T102636Z">
+        <seg>Dalším způsobem rychlého vytvoření workflow je import existujícího workflow, který je mimo [! INCLUDE <ph x="0">&lt;x0/&gt;</ph> d365fin <ph x="1">&lt;x1/&gt;</ph> ].</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Another way to quickly create workflows is to create workflows from workflow templates.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T101013Z" creationid="sunavcova" creationdate="20191112T101013Z">
+        <seg>Dalším způsobem rychlého vytvoření workflow je vytvoření ze šablon workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Another workflow response will allow usage of the record as defined by the workflow event and conditions.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T104640Z" creationid="sunavcova" creationdate="20191112T104640Z">
+        <seg>Jiná odpověď workflow umožní použití záznamu podle definice událostí a podmínek workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Approval request entries are then created according to the value in the <ph x="10">&lt;x10/&gt;</ph>Approver Limit Type<ph x="11">&lt;x11/&gt;</ph> field.<ph x="12">&lt;x12/&gt;</ph>     For more information, see <ph x="13">&lt;x13/&gt;</ph>Set Up Approval Users<ph x="14">&lt;x14/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T153331Z" creationid="sunavcova" creationdate="20191107T153331Z">
+        <seg>Položky požadavku ke schvalování jsou poté vytvořeny podle hodnoty v poli &lt;x10 /&gt;Typ limitu schvalovatele&lt;x11 /&gt;. &lt;X12 /&gt;Pro více informací navštivte&lt;x13 /&gt; Nastavení uživatelů schválení&lt;x14 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Approver Limit Type</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T153429Z" creationid="sunavcova" creationdate="20191107T153429Z">
+        <seg>Typ limitu schvalovatele</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Approver Type</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151911Z" creationid="sunavcova" creationdate="20191107T151911Z">
+        <seg>Typ schvalovatele</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Before you can create workflows that involve approval steps, you must set up the workflow users who are involved in approval processes.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T143145Z" creationid="sunavcova" creationdate="20191112T143145Z">
+        <seg>Před vytvořením workflow zahrnujícíe kroky schválení je nutné nastavit uživatele workflow, kteří jsou zapojeni do procesů schvalování.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Copy From Workflow Template<ph x="1">&lt;x1/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T110506Z" creationid="sunavcova" creationdate="20191112T110506Z">
+        <seg>Zvolte akci<ph x="0">&lt;x0/&gt;</ph>Nové workflow ze šablony<ph x="1">&lt;x1/&gt;</ph> .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Create Workflow from Template<ph x="1">&lt;x1/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T111325Z" creationid="sunavcova" creationdate="20191105T111325Z">
+        <seg>Vyberte akci &lt;x0 /&gt;Nové workflow ze šablony workflow&lt;x1 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Delete<ph x="1">&lt;x1/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092837Z" creationid="sunavcova" creationdate="20191112T092837Z">
+        <seg>Vyberte akci &lt;x0 /&gt;Odstranit&lt;x1 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Import from File<ph x="1">&lt;x1/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102345Z" creationid="sunavcova" creationdate="20191112T102345Z">
+        <seg>Zvolte akci <ph x="0">&lt;x0/&gt;</ph>Importovat ze souboru<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Increase Indent<ph x="1">&lt;x1/&gt;</ph> and <ph x="2">&lt;x2/&gt;</ph>Decrease Indent<ph x="3">&lt;x3/&gt;</ph> buttons to indent the event name in the <ph x="4">&lt;x4/&gt;</ph>When<ph x="5">&lt;x5/&gt;</ph> field to define the step’s position in the workflow.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T085117Z" creationid="sunavcova" creationdate="20191112T085117Z">
+        <seg>Vyberte tlačítka &lt;x0 /&gt;Zvýšit odsazení&lt;x1 /&gt; a &lt;x2 /&gt;Snížit odsazení&lt;x3 /&gt;, chcete-li odsadit název události v poli &lt;x4 /&gt;Když&lt;x5 /&gt; a definovat pozici kroku ve workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Lightbulb that opens the Tell Me feature<ph x="1">&lt;x1/&gt;</ph>Tell me what you want to do<ph x="2">&lt;x2/&gt;</ph> icon, enter <ph x="3">&lt;x3/&gt;</ph>Approval User Setup<ph x="4">&lt;x4/&gt;</ph>, and then choose the related link.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074532Z" creationid="sunavcova" creationdate="20191119T074234Z">
+        <seg>Vyberte ikonu &lt;x0 /&gt;Žárovky, která otevře ikonu Řekněte mi&lt;x1 /&gt;Řeknete mi, co chcete dělat&lt;x2 /&gt;, zadejte &lt;x3 /&gt;Nastavení uživatelů schvalování&lt;x4 /&gt; a poté vyberte související odkaz.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Lightbulb that opens the Tell Me feature<ph x="1">&lt;x1/&gt;</ph>Tell me what you want to do<ph x="2">&lt;x2/&gt;</ph> icon, enter <ph x="3">&lt;x3/&gt;</ph>Workflows<ph x="4">&lt;x4/&gt;</ph>, and then choose the related link.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074550Z" creationid="sunavcova" creationdate="20191105T110241Z">
+        <seg>Vyberte ikonu <ph x="0">&lt;x0/&gt;</ph>Žárovky, která otevře funkci Řeknete mi<ph x="1">&lt;x1/&gt;</ph>Řeknete mi, co chcete dělat<ph x="2">&lt;x2/&gt;</ph>, zadejte <ph x="3">&lt;x3/&gt;</ph>Workflow<ph x="4">&lt;x4/&gt;</ph> a poté vyberte související odkaz.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>New<ph x="1">&lt;x1/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T141818Z" creationid="sunavcova" creationdate="20191107T141818Z">
+        <seg>Vyberte akci &lt;x0 /&gt;New&lt;x1 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Choose the <ph x="0">&lt;x0/&gt;</ph>Source Workflow Code<ph x="1">&lt;x1/&gt;</ph> field, and then, on the <ph x="2">&lt;x2/&gt;</ph>Workflow Templates<ph x="3">&lt;x3/&gt;</ph> page, choose the Purchase Invoice Approval Workflow workflow template.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T110917Z" creationid="sunavcova" creationdate="20191112T110917Z">
+        <seg>Zvolte pole <ph x="0">&lt;x0/&gt;</ph>Kód původu pracovního postupu<ph x="1">&lt;x1/&gt;</ph> a na stránce <ph x="2">&lt;x2/&gt;</ph>Šablony workflow<ph x="3">&lt;x3/&gt;</ph> zvolte šablonu workflow schválení nákupní faktury.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Code</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074804Z" creationid="sunavcova" creationdate="20191119T074804Z">
+        <seg>Kód</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Code<ph x="7">&lt;x7/&gt;</ph> field on the <ph x="8">&lt;x8/&gt;</ph>Approval User Setup<ph x="9">&lt;x9/&gt;</ph> page determines the approver.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T152937Z" creationid="sunavcova" creationdate="20191107T152937Z">
+        <seg>nákupčího<ph x="7">&lt;x7/&gt;</ph> na stránce <ph x="8">&lt;x8/&gt;</ph>Nastavení uživatelů schvalování<ph x="9">&lt;x9/&gt;</ph> určuje schvalovatele.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T085852Z" creationid="sunavcova" creationdate="20191107T131505Z">
+        <seg>Vytvoření Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows from Workflow Templates</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092248Z" creationid="sunavcova" creationdate="20191105T101815Z">
+        <seg>Vytvoření workflow z šablony workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows from Workflow Templates<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Set Up Approval Users<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>Setting Up Workflow Notifications<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>View Archived Workflow Step Instances<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Delete Workflows<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Walkthrough: Setting Up and Using a Purchase Approval Workflow<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Setting Up Workflows<ph x="12">&lt;x12/&gt;</ph>
+<ph x="13">&lt;x13/&gt;</ph>Using Workflows<ph x="14">&lt;x14/&gt;</ph>
+<ph x="15">&lt;x15/&gt;</ph>Workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092145Z" creationid="sunavcova" creationdate="20191112T092145Z">
+        <seg>Vytvoření workflow z šablony workflow&lt;x0 /&gt;
+&lt;x1 /&gt;Nastavení uživatelů schvalování&lt;x2 /&gt;
+&lt;x3 /&gt;Nastavení upozornění workflow&lt;x4 /&gt;
+&lt;x5 /&gt;Zobrazení archivovaných instancí kroku workflow&lt;x6 /&gt;
+&lt;x7 /&gt;Odstranění workflow&lt;x8 /&gt;
+&lt;x9 /&gt;Návod: Nastavení a použití workflow schvalování nákupů&lt;x10 /&gt;
+&lt;x11 /&gt;Nastavení workflow&lt;x12 /&gt;
+&lt;x13 /&gt;Použití workflow&lt;x14 /&gt;
+&lt;x15 /&gt;Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Create Workflows from Workflow Templates<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>View Archived Workflow Step Instances<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>Delete Workflows<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Walkthrough: Setting Up and Using a Purchase Approval Workflow<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Setting Up Workflows<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Using Workflows<ph x="12">&lt;x12/&gt;</ph>
+<ph x="13">&lt;x13/&gt;</ph>Workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102854Z" creationid="sunavcova" creationdate="20191112T102854Z">
+        <seg>Vytvoření Workflow<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Vytvoření workflow z šablony workflow<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>Zobrazení archivovaných instancí kroku workflow<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>Odstranění workflow<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Návod: Nastavení a použití workflow schvalování nákupů<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Nastavení workflow<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Použití workflow<ph x="12">&lt;x12/&gt;</ph>
+<ph x="13">&lt;x13/&gt;</ph>Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Enable Workflows<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>View Archived Workflow Step Instances<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>Walkthrough: Setting Up and Using a Purchase Approval Workflow<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Setting Up Workflows<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Using Workflows<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T093412Z" creationid="sunavcova" creationdate="20191112T093412Z">
+        <seg>Vytvoření Workflow&lt;x0 /&gt;
+&lt;x1 /&gt;Export a import workflow&lt;x2 /&gt;
+&lt;x3 /&gt;Zobrazení archivovaných instancí kroku workflow&lt;x4 /&gt;
+&lt;x5 /&gt;Návod: Nastavení a použití workflow schvalování nákupů&lt;x6 /&gt;
+&lt;x7 /&gt;Nastavení workflow&lt;x8 /&gt;
+&lt;x9 /&gt;Použití workflow&lt;x10 /&gt;
+&lt;x11 /&gt;Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Export and Import Workflows<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>View Archived Workflow Step Instances<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>Delete Workflows<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Walkthrough: Setting Up and Using a Purchase Approval Workflow<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Setting Up Workflows<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Using Workflows<ph x="12">&lt;x12/&gt;</ph>
+<ph x="13">&lt;x13/&gt;</ph>Workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092250Z" creationid="sunavcova" creationdate="20191105T112627Z">
+        <seg>Vytvoření Workflow&lt;x0 /&gt;
+&lt;x1 /&gt;Export a import workflow&lt;x2 /&gt;
+&lt;x3 /&gt;Zobrazení archivovaných instancí kroku workflow&lt;x4 /&gt;
+&lt;x5 /&gt;Odstranění workflow&lt;x6 /&gt;
+&lt;x7 /&gt;Návod: Nastavení a použití workflow schvalování nákupů&lt;x8 /&gt;
+&lt;x9 /&gt;Nastavení workflow&lt;x10 /&gt;
+&lt;x11 /&gt;Použití workflow&lt;x12 /&gt;
+&lt;x13 /&gt;Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>View Archived Workflow Step Instances<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>Delete Workflows<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>Setting Up Workflows<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Using Workflows<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Walkthrough: Setting Up and Using a Purchase Approval Workflow<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T100730Z" creationid="sunavcova" creationdate="20191112T100730Z">
+        <seg>Vytvoření Workflow<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Zobrazení archivovaných instancí kroku workflow<ph x="2">&lt;x2/&gt;</ph>
+<ph x="3">&lt;x3/&gt;</ph>Odstranění workflow<ph x="4">&lt;x4/&gt;</ph>
+<ph x="5">&lt;x5/&gt;</ph>Nastavení workflow<ph x="6">&lt;x6/&gt;</ph>
+<ph x="7">&lt;x7/&gt;</ph>Použití workflow<ph x="8">&lt;x8/&gt;</ph>
+<ph x="9">&lt;x9/&gt;</ph>Návod: Nastavení a použití workflow schvalování nákupů<ph x="10">&lt;x10/&gt;</ph>
+<ph x="11">&lt;x11/&gt;</ph>Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create Workflows<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T111516Z" creationid="sunavcova" creationdate="20191112T111516Z">
+        <seg>Vytvoření Workflow<ph x="0">&lt;x0/&gt;</ph>
+<ph x="1">&lt;x1/&gt;</ph>Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Create a new line on the <ph x="0">&lt;x0/&gt;</ph>Approval User Setup<ph x="1">&lt;x1/&gt;</ph> page, and then fill the fields as described in the following table.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074645Z" creationid="sunavcova" creationdate="20191119T074645Z">
+        <seg>Na stránce &lt;x0 /&gt;Nastavení uživatelů schvalování&lt;x1 /&gt; vytvořte nový řádek a vyplňte pole podle popisu v následující tabulce.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Custom Link</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151704Z" creationid="sunavcova" creationdate="20191107T151704Z">
+        <seg>Vlastní odkaz</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Delegate After</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151833Z" creationid="sunavcova" creationdate="20191107T151833Z">
+        <seg>Delegovat po</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Delete Workflows</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092209Z" creationid="sunavcova" creationdate="20191112T092209Z">
+        <seg>Odstranění workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Description</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151409Z" creationid="sunavcova" creationdate="20191107T151409Z">
+        <seg>Popis</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Due Date Formula</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151806Z" creationid="sunavcova" creationdate="20191107T151806Z">
+        <seg>Výpočet data platnosti</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Each step consists of a workflow event moderated by event conditions and a workflow response with response options.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T135816Z" creationid="sunavcova" creationdate="20191107T135816Z">
+        <seg>Každý krok sestává z události workflow, která je řízená podmínkami události, a odezvy workflow s možnostmi odezvy.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Each step consists of a workflow event, moderated by event conditions, and a workflow response, moderated by response options.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T104428Z" creationid="sunavcova" creationdate="20191105T104428Z">
+        <seg>Každý krok sestává z události workflow, která je řízená podmínkami událostí, a odezvy workflow, která je řízená možnostmi odezvy.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Enable Workflows</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T093442Z" creationid="sunavcova" creationdate="20191112T093442Z">
+        <seg>Povolení workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Export and Import Workflows</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074544Z" creationid="sunavcova" creationdate="20191112T100755Z">
+        <seg>Export a import workflowa poté vyberte související odkaz.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Field</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151408Z" creationid="sunavcova" creationdate="20191107T151408Z">
+        <seg>Pole</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For approver type <ph x="2">&lt;x2/&gt;</ph>Approver<ph x="3">&lt;x3/&gt;</ph>, set approvers up on the <ph x="4">&lt;x4/&gt;</ph>Approval User Setup<ph x="5">&lt;x5/&gt;</ph> page.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T080147Z" creationid="sunavcova" creationdate="20191118T080147Z">
+        <seg>Pro typ <ph x="2">&lt;x2/&gt;</ph>Schvalovatel<ph x="3">&lt;x3/&gt;</ph>, nastavte schvalovatele na stránce <ph x="4">&lt;x4/&gt;</ph>Nastavení uživatelů schvalování<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For approver type, <ph x="0">&lt;x0/&gt;</ph>Workflow User Group<ph x="1">&lt;x1/&gt;</ph>, set up approvers on the <ph x="2">&lt;x2/&gt;</ph>Workflow User Groups<ph x="3">&lt;x3/&gt;</ph> page and assign the same number to each approver in the <ph x="4">&lt;x4/&gt;</ph>Sequence No.<ph x="5">&lt;x5/&gt;</ph> field.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T073838Z" creationid="sunavcova" creationdate="20191119T073838Z">
+        <seg>Pro typ schvalovatele, <ph x="0">&lt;x0/&gt;</ph>Skupina uživatelů workflow<ph x="1">&lt;x1/&gt;</ph>, nastavte schvalovatele na stránce <ph x="2">&lt;x2/&gt;</ph>Skupiny uživatelů workflow<ph x="3">&lt;x3/&gt;</ph> a přiřaďte každému schvalovateli stejné číslo v poli <ph x="4">&lt;x4/&gt;</ph>&gt;Pořadové číslo<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For approver type, <ph x="6">&lt;x6/&gt;</ph>Workflow User Group<ph x="7">&lt;x7/&gt;</ph>, set approvers up on the <ph x="8">&lt;x8/&gt;</ph>Workflow User Groups<ph x="9">&lt;x9/&gt;</ph> page and define the hierarchy by assigning incremental numbers to each approver in the <ph x="10">&lt;x10/&gt;</ph>Sequence No.<ph x="11">&lt;x11/&gt;</ph> field.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T080427Z" creationid="sunavcova" creationdate="20191118T080427Z">
+        <seg>Pro typ <ph x="6">&lt;x6/&gt;</ph>Skupina uživatelů workflow<ph x="7">&lt;x7/&gt;</ph>, nastavte schvalovatele na stránce <ph x="8">&lt;x8/&gt;</ph>Skupiny uživatelů workflow<ph x="9">&lt;x9/&gt;</ph> a definujte hierarchii přiřazením dílčích čísel každému schvalovateli v poli <ph x="10">&lt;x10/&gt;</ph>Pořadové číslo<ph x="11">&lt;x11/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="0">&lt;x0/&gt;</ph>Create Workflows from Workflow Templates<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T101040Z" creationid="sunavcova" creationdate="20191112T101040Z">
+        <seg>Pro více informací navštivte <ph x="0">&lt;x0/&gt;</ph>Vytvoření workflow z šablony workflow<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="0">&lt;x0/&gt;</ph>Create Workflows<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T112105Z" creationid="sunavcova" creationdate="20191105T112105Z">
+        <seg>Pro více informací navštivte<ph x="0">&lt;x0/&gt;</ph>Vytvoření Workflow<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="2">&lt;x2/&gt;</ph>Create Workflows from Workflow Templates<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T140506Z" creationid="sunavcova" creationdate="20191107T140506Z">
+        <seg>Pro více informací navštivte <ph x="2">&lt;x2/&gt;</ph>Vytvoření workflow ze šablon workflow<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="2">&lt;x2/&gt;</ph>Create Workflows<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T104749Z" creationid="sunavcova" creationdate="20191105T104749Z">
+        <seg>Pro více informací navštivte <ph x="2">&lt;x2/&gt;</ph>Vytvoření Workflow<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="2">&lt;x2/&gt;</ph>Export and Import Workflows<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T111459Z" creationid="sunavcova" creationdate="20191105T102744Z">
+        <seg>Pro více informací navštivte <ph x="2">&lt;x2/&gt;</ph>Export a import workflow<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="4">&lt;x4/&gt;</ph>Create Workflows from Workflow Templates<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T143810Z" creationid="sunavcova" creationdate="20191107T143810Z">
+        <seg>Pro více informací navštivte<ph x="4">&lt;x4/&gt;</ph>Vytvoření workflow ze šablony workflow<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="4">&lt;x4/&gt;</ph>Set Up Workflow Users<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T075201Z" creationid="sunavcova" creationdate="20191118T075201Z">
+        <seg>Pro více informací navštivte <ph x="4">&lt;x4/&gt;</ph>Nastavení uživatelů workflow<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="4">&lt;x4/&gt;</ph>Use Job Queues to Schedule Tasks<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T141709Z" creationid="sunavcova" creationdate="20191107T141709Z">
+        <seg>Pro více informací viz<ph x="4">&lt;x4/&gt;</ph>Použití front úloh k plánování úkolů<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="4">&lt;x4/&gt;</ph>Using Workflows<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T091245Z" creationid="sunavcova" creationdate="20191112T091245Z">
+        <seg>Pro více informací navštivte<ph x="4">&lt;x4/&gt;</ph>Použití workflow<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see <ph x="6">&lt;x6/&gt;</ph>Set Up Workflow Users<ph x="7">&lt;x7/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T073934Z" creationid="sunavcova" creationdate="20191119T073934Z">
+        <seg>Pro více informací navštivte <ph x="6">&lt;x6/&gt;</ph>Nastavení uživatelů workflow<ph x="7">&lt;x7/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see step 9 in <ph x="0">&lt;x0/&gt;</ph>Create Workflows<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T075525Z" creationid="sunavcova" creationdate="20191118T075525Z">
+        <seg>Pro více informací navštivte krok 9 ve <ph x="0">&lt;x0/&gt;</ph>Vytvoření workflow<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For more information, see this topic and <ph x="12">&lt;x12/&gt;</ph>Set Up Workflow Users<ph x="13">&lt;x13/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T072421Z" creationid="sunavcova" creationdate="20191119T072421Z">
+        <seg>Pro více informací navštivte toto téma a <ph x="12">&lt;x12/&gt;</ph>Nastavení uživatelů workflow<ph x="13">&lt;x13/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For workflow responses without placeholders for users, the notification recipient is typically defined by the approval user setup.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151546Z" creationid="sunavcova" creationdate="20191107T151546Z">
+        <seg>Pro odezvy workflow bez zástupných symbolů pro uživatele je příjemce oznámení obvykle definován nastavením uživatele pro schvalování.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>General Journal Batch Name</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083819Z" creationid="sunavcova" creationdate="20191112T083819Z">
+        <seg>Název listu finančního deníku</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>General Journal Template Name</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083741Z" creationid="sunavcova" creationdate="20191112T083741Z">
+        <seg>Název šablony finančního deníku</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If the workflow event is the change of a specific field on a record, then the <ph x="0">&lt;x0/&gt;</ph>Event Conditions<ph x="1">&lt;x1/&gt;</ph> page opens with options to select the field and the type of change.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T145833Z" creationid="sunavcova" creationdate="20191107T145833Z">
+        <seg>Pokud je událostí workflow změna určitého pole záznamu, otevře se stránka <ph x="0">&lt;x0/&gt;</ph>Podmínky události<ph x="1">&lt;x1/&gt;</ph> s možnostmi pro výběr pole a typu změny.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If you are certain that a workflow is no longer being used, you can delete it.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092314Z" creationid="sunavcova" creationdate="20191112T092314Z">
+        <seg>Pokud jste si jisti, že se workflow již nepoužívá, můžete jej odstranit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If you want to restrict a record from being used in certain activities, for example, until the record has been approved, you can incorporate two workflow responses in a workflow that controls the usage of the record.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T103323Z" creationid="sunavcova" creationdate="20191112T103323Z">
+        <seg>Chcete-li zabránit použití záznamu v určitých aktivitách, například do doby, než bude záznam schválen, můžete do workflow zahrnout dvě odezvy workflow, které řídí použití záznamu.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If your business scenario requires workflow events or responses that are not supported, a Microsoft partner must implement them by customizing the application code.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T140702Z" creationid="sunavcova" creationdate="20191107T140702Z">
+        <seg>Pokud váš obchodní scénář vyžaduje události workflow nebo odezvy, které nejsou podporovány, musí je partner společnosti Microsoft implementovat přizpůsobením kódu aplikace.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>Category<ph x="1">&lt;x1/&gt;</ph> field, specify which category the workflow belongs to.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T144011Z" creationid="sunavcova" creationdate="20191107T144011Z">
+        <seg>V poli <ph x="0">&lt;x0/&gt;</ph>Kategorie<ph x="1">&lt;x1/&gt;</ph> zadejte, do které kategorie workflow patří.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>Code<ph x="1">&lt;x1/&gt;</ph> field, enter a maximum of 20 characters to identify the workflow.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T141920Z" creationid="sunavcova" creationdate="20191107T141920Z">
+        <seg>Do pole &lt;x0 /&gt;Kód&lt;x1 /&gt; zadejte maximálně 20 znaků pro identifikaci workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>Condition<ph x="1">&lt;x1/&gt;</ph> field, specify one or more conditions that must be met before the event in the <ph x="2">&lt;x2/&gt;</ph>When Event<ph x="3">&lt;x3/&gt;</ph> field can occur.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T150204Z" creationid="sunavcova" creationdate="20191107T145254Z">
+        <seg>V poli &lt;x0 /&gt;Ppredpoklad&lt;x1 /&gt; zadejte jednu nebo více podmínek, které musí být splněny, aby mohla nastat událost v poli &lt;x2 /&gt;Když událost&lt;x3 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>Description<ph x="1">&lt;x1/&gt;</ph> field, describe the workflow.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T143917Z" creationid="sunavcova" creationdate="20191107T143917Z">
+        <seg>V poli &lt;x0 /&gt;Popis&lt;x1 /&gt; popište pracovní postup.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>Operator<ph x="1">&lt;x1/&gt;</ph> field, select either <ph x="2">&lt;x2/&gt;</ph>Decreased<ph x="3">&lt;x3/&gt;</ph>, <ph x="4">&lt;x4/&gt;</ph>Increased<ph x="5">&lt;x5/&gt;</ph>, or <ph x="6">&lt;x6/&gt;</ph>Changed<ph x="7">&lt;x7/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T150146Z" creationid="sunavcova" creationdate="20191107T150146Z">
+        <seg>V poli &lt;x0 /&gt;Operátor&lt;x1 /&gt; vyberte buď &lt;x2 /&gt;Snížené&lt;x3 /&gt;, &lt;x4 /&gt;Zvýšené&lt;x5 /&gt; nebo &lt;x6 /&gt;Změněno&lt;x7 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>Then Response<ph x="1">&lt;x1/&gt;</ph> field, specify the response that will follow when the workflow event occurs.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T150751Z" creationid="sunavcova" creationdate="20191107T150751Z">
+        <seg>V poli &lt;x0 /&gt;Potom odezva&lt;x1 /&gt; zadejte odezvu, která bude následovat, když dojde k události workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the <ph x="0">&lt;x0/&gt;</ph>When Event<ph x="1">&lt;x1/&gt;</ph> field, specify the event that must occur to start the workflow step.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T144141Z" creationid="sunavcova" creationdate="20191107T144141Z">
+        <seg>V poli <ph x="0">&lt;x0/&gt;</ph>Když událost<ph x="1">&lt;x1/&gt;</ph>zadejte událost, která musí nastat ke spuštění kroku workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Indicate that the step is one of more alternative steps that may start depending on its condition by placing the event name at the same indentation as the other alternative steps.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T085211Z" creationid="sunavcova" creationdate="20191112T085211Z">
+        <seg>Označte, že krok je jedním z více alternativních kroků, které mohou začít v závislosti na jeho stavu umístěním názvu události na stejné odsazení jako ostatní alternativní kroky.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Indicate that the step is the next in the workflow sequence by indenting the event name under the event name of the previous step.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T085152Z" creationid="sunavcova" creationdate="20191112T085152Z">
+        <seg>Označte, že krok je další v sledu workflow odsazením názvu události pod názvem události předchozího kroku.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Link Target Page</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151608Z" creationid="sunavcova" creationdate="20191107T151608Z">
+        <seg>Odkaz na cílovou stránku</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Make sure that the job queue in your installation is set up to handle workflow notifications, and that the <ph x="2">&lt;x2/&gt;</ph>Start Automatically From NAS<ph x="3">&lt;x3/&gt;</ph> check box is selected.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T141626Z" creationid="sunavcova" creationdate="20191107T140925Z">
+        <seg>Ujistěte se, že fronta úloh ve vaší instalaci je nastavena na zpracování oznámení workflow a zda je zaškrtnuto políčko &lt;x2 /&gt;Spustit automaticky z NAS&lt;x3 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Note: This option is only available for workflow responses with a placeholder for a specific user.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151520Z" creationid="sunavcova" creationdate="20191107T151520Z">
+        <seg>Poznámka: Tato možnost je k dispozici pouze pro odezvy workflow se zástupným symbolem pro konkrétního uživatele.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Notice that the first two workflow steps are about restricting and then allowing usage of purchase invoices.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T110934Z" creationid="sunavcova" creationdate="20191112T110934Z">
+        <seg>Všimněte si, že první dva kroky workflow jsou o omezení a následném povolení použití nákupních faktur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Approval User Setup<ph x="1">&lt;x1/&gt;</ph> page, you also set amount limits for specific types of requests and define substitute approvers to whom approval requests are delegated when the original approver is absent.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T143213Z" creationid="sunavcova" creationdate="20191112T143213Z">
+        <seg>Na stránce &lt;x0 /&gt;Nastavení uživatele schválení&lt;x1 /&gt; také nastavíte limity množství pro konkrétní typy požadavků a definujete náhradní schvalující osoby, kterým jsou žádosti o schválení delegovány, když původní schvalující osoba chybí.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Export File<ph x="1">&lt;x1/&gt;</ph> page, choose the <ph x="2">&lt;x2/&gt;</ph>Save<ph x="3">&lt;x3/&gt;</ph> button.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102001Z" creationid="sunavcova" creationdate="20191112T102001Z">
+        <seg>Na stránce <ph x="0">&lt;x0/&gt;</ph>Export souboru<ph x="1">&lt;x1/&gt;</ph> zvolte tlačítko <ph x="2">&lt;x2/&gt;</ph>Uložit<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Export<ph x="1">&lt;x1/&gt;</ph> page, select a file location, and then choose the <ph x="2">&lt;x2/&gt;</ph>Save<ph x="3">&lt;x3/&gt;</ph> button.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102227Z" creationid="sunavcova" creationdate="20191112T102146Z">
+        <seg>Na stránce <ph x="0">&lt;x0/&gt;</ph>Export<ph x="1">&lt;x1/&gt;</ph> vyberte umístění souboru a pak klepněte na tlačítko <ph x="2">&lt;x2/&gt;</ph>Uložit<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Import<ph x="1">&lt;x1/&gt;</ph> page, choose the XML file that contains the workflow, and then choose the <ph x="2">&lt;x2/&gt;</ph>Open<ph x="3">&lt;x3/&gt;</ph> button.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102530Z" creationid="sunavcova" creationdate="20191112T102530Z">
+        <seg>Na stránce <ph x="0">&lt;x0/&gt;</ph>Importu<ph x="1">&lt;x1/&gt;</ph> zvolte soubor XML, který obsahuje workflow, a pak zvolte tlačítko <ph x="2">&lt;x2/&gt;</ph>Otevřít<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Options for the Selected Response<ph x="1">&lt;x1/&gt;</ph> FastTab, specify options for the workflow response, by selecting values in the different fields that appear, as follows:</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151309Z" creationid="sunavcova" creationdate="20191107T151309Z">
+        <seg>Na záložce <ph x="0">&lt;x0/&gt;</ph>Možnosti pro vybranou odezvu<ph x="1">&lt;x1/&gt;</ph> můžete určit možnosti odezvy workflow výběrem hodnot v různých zobrazených polích, a to následovně:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Workflow Steps<ph x="1">&lt;x1/&gt;</ph> FastTab, choose the <ph x="2">&lt;x2/&gt;</ph>Event Conditions<ph x="3">&lt;x3/&gt;</ph> field, and then, for the <ph x="4">&lt;x4/&gt;</ph>Document Type<ph x="5">&lt;x5/&gt;</ph> filter, select <ph x="6">&lt;x6/&gt;</ph>Order<ph x="7">&lt;x7/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T111422Z" creationid="sunavcova" creationdate="20191112T111422Z">
+        <seg>Na záložce <ph x="0">&lt;x0/&gt;</ph>Kroky workflow<ph x="1">&lt;x1/&gt;</ph> zvolte pole <ph x="2">&lt;x2/&gt;</ph>Podmínky událostí<ph x="3">&lt;x3/&gt;</ph> a pak pro filtr <ph x="4">&lt;x4/&gt;</ph>Typ dokladu<ph x="5">&lt;x5/&gt;</ph> vyberte <ph x="6">&lt;x6/&gt;</ph>Objednávka<ph x="7">&lt;x7/&gt;</ph> .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> page, choose the <ph x="2">&lt;x2/&gt;</ph>Delete<ph x="3">&lt;x3/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T093152Z" creationid="sunavcova" creationdate="20191112T093009Z">
+        <seg>Na stránce <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> vyberte akci <ph x="2">&lt;x2/&gt;</ph>Odstranit<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> page, select the <ph x="2">&lt;x2/&gt;</ph>Enabled<ph x="3">&lt;x3/&gt;</ph> check box.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T100559Z" creationid="sunavcova" creationdate="20191112T100559Z">
+        <seg>Na stránce <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> zaškrtněte políčko <ph x="2">&lt;x2/&gt;</ph>Povoleno<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> page, you create a workflow by listing the involved steps on the lines.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092713Z" creationid="sunavcova" creationdate="20191105T103003Z">
+        <seg>Na stránce <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph>vytvoříte workflow vypsáním příslušných kroků na řádcích.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>On the <ph x="0">&lt;x0/&gt;</ph>Workflows<ph x="1">&lt;x1/&gt;</ph> page, create a new workflow named Purchase Order Approval Workflow.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105848Z" creationid="sunavcova" creationdate="20191112T105848Z">
+        <seg>Na stránce<ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> vytvořte nový workflow nazvaný Workflow schvalování nákupní objednávky.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>One workflow response will restrict usage of the record as defined by the workflow event and conditions.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T104617Z" creationid="sunavcova" creationdate="20191112T104617Z">
+        <seg>Jedna odpověď workflow omezí použití záznamu podle definice událostí a podmínek workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Open the workflow that you want to enable.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T100529Z" creationid="sunavcova" creationdate="20191112T100529Z">
+        <seg>Otevřete workflow, který chcete povolit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Order such optional steps according to priority by placing the most important step first.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T085612Z" creationid="sunavcova" creationdate="20191112T085612Z">
+        <seg>Tyto nepovinné kroky navolte podle priority tím, že umístíte nejdůležitější krok jako první.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Proceed to change the event condition on the first step of the new workflow to specify that it applies to purchase orders.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T110953Z" creationid="sunavcova" creationdate="20191112T110953Z">
+        <seg>Přejděte ke změně podmínky události v prvním kroku nového workflow a určete tak, aby byla použita pro nákupní objednávky.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Proceed to create the workflow by editing the workflow steps or add new steps.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T112024Z" creationid="sunavcova" creationdate="20191105T112024Z">
+        <seg>Pokračujte ve vytváření workflow úpravou kroků nebo přidáním nových kroků.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Proceed to edit, delete, or add other workflow steps to fit a business process that begins by restricting unapproved purchase orders from being posted.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T111504Z" creationid="sunavcova" creationdate="20191112T111504Z">
+        <seg>Pokračujte v úpravách, odstranění nebo přidání dalších kroků workflow, které odpovídají obchodnímu procesu, který začíná omezením neschválených nákupních objednávek.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Recipient User ID</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151433Z" creationid="sunavcova" creationdate="20191107T151433Z">
+        <seg>ID uživatele příjemce</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Repeat steps 7 through 11 to add more workflow steps, either before or after the step that you have just created.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T090802Z" creationid="sunavcova" creationdate="20191112T090802Z">
+        <seg>Opakováním kroků 7 až 11 přidejte další kroky workflow, buď před, nebo po kroku, který jste právě vytvořili.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Requesting and granting approval to create new records are typical workflow steps.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T132114Z" creationid="sunavcova" creationdate="20191107T132114Z">
+        <seg>Vyžádání a udělení souhlasu k vytvoření nových záznamů jsou typické kroky workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Restrict and Allow Usage of a Record</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T103240Z" creationid="sunavcova" creationdate="20191112T103240Z">
+        <seg>Omezení a povolení použití záznamu</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Salespers./Purch.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074856Z" creationid="sunavcova" creationdate="20191119T074800Z">
+        <seg>Prodejce/nákupčí</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>See Also</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T112122Z" creationid="sunavcova" creationdate="20191105T112122Z">
+        <seg>Viz také</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Select a workflow template, and then choose the <ph x="0">&lt;x0/&gt;</ph>OK<ph x="1">&lt;x1/&gt;</ph> button.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T111634Z" creationid="sunavcova" creationdate="20191105T111634Z">
+        <seg>Vyberte šablonu workflow a poté zvolte tlačítko &lt;x0 /&gt;OK&lt;x1 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Select a workflow, and then choose the <ph x="0">&lt;x0/&gt;</ph>Export to File<ph x="1">&lt;x1/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T101818Z" creationid="sunavcova" creationdate="20191112T101818Z">
+        <seg>Vyberte workflow a pak zvolte akci <ph x="0">&lt;x0/&gt;</ph>Export do souboru<ph x="1">&lt;x1/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Select the <ph x="0">&lt;x0/&gt;</ph>Enabled<ph x="1">&lt;x1/&gt;</ph> check box to specify that the workflow will start as soon as the event on the first step of type <ph x="2">&lt;x2/&gt;</ph>Entry Point<ph x="3">&lt;x3/&gt;</ph> occurs.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T090922Z" creationid="sunavcova" creationdate="20191112T090922Z">
+        <seg>Zaškrtnutím políčka <ph x="0">&lt;x0/&gt;</ph>Povoleno<ph x="1">&lt;x1/&gt;</ph> určíte, že workflow bude zahájen, jakmile dojde k události v prvním kroku typu <ph x="2">&lt;x2/&gt;</ph>Vstupní bod<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Select the user ID of the user who is involved in the approval process.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074738Z" creationid="sunavcova" creationdate="20191119T074738Z">
+        <seg>Vyberte ID uživatele, který je zapojen do schvalovacího procesu.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Select the workflow that you want to delete.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092824Z" creationid="sunavcova" creationdate="20191112T092824Z">
+        <seg>Vyberte workflow, který chcete odstranit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Set Up Approval Users</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T142754Z" creationid="sunavcova" creationdate="20191112T142754Z">
+        <seg>Nastavení uživatelů schvalování</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Set Up Email</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T082555Z" creationid="sunavcova" creationdate="20191119T082555Z">
+        <seg>Nastavení e-mailu</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Show Confirmation Message</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T153401Z" creationid="sunavcova" creationdate="20191107T153401Z">
+        <seg>Zobrazení potvrzovací zprávu</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify another page in [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>] that the link in the notification opens instead of the default page.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151644Z" creationid="sunavcova" creationdate="20191107T151644Z">
+        <seg>Zadejte jinou stránku v aplikaci [! INCLUDE <ph x="0">&lt;x0/&gt;</ph> d365fin <ph x="1">&lt;x1/&gt;</ph> ], aby se místo výchozí stránky otevřel odkaz v oznámení.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify how approvers’ approval limits affect when approval request entries are created for them.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T082922Z" creationid="sunavcova" creationdate="20191107T153533Z">
+        <seg>Určete, jak mají být limity schválení schvalovatelů ovlivněny při vytváření položek požadavků na schválení.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify if a confirmation message is shown to users after they request an approval.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T153411Z" creationid="sunavcova" creationdate="20191107T153411Z">
+        <seg>Zadejte, zda se uživateli zobrazí potvrzovací zpráva po vyžádání schválení.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify if and when an approval request will automatically be delegated to the relevant substitute.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151841Z" creationid="sunavcova" creationdate="20191107T151841Z">
+        <seg>Určete, zda a kdy bude žádost o schválení automaticky delegována na příslušného zástupce.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify in how many days the approval request must be resolved from the date when it was sent.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151814Z" creationid="sunavcova" creationdate="20191107T151814Z">
+        <seg>Určete, kolik dní musí být žádost o schválení vyřešena od data, kdy byla odeslána.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify the URL of a link that is added to the notification in addition to the link to page in [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>].</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151714Z" creationid="sunavcova" creationdate="20191107T151714Z">
+        <seg>Kromě odkazu na stránku v [! INCLUDE &lt;x0 /&gt; d365fin &lt;x1 /&gt;] zadejte URL odkazu, který se přidá k oznámení.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify the name of the general journal batch that the specified journal lines are created in.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083832Z" creationid="sunavcova" creationdate="20191112T083832Z">
+        <seg>Zadejte název listu finančního deníku, ve kterém jsou vytvořeny zadané řádky deníku.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify the name of the general journal template that the specified journal lines are created in.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083757Z" creationid="sunavcova" creationdate="20191112T083757Z">
+        <seg>Zadejte název šablony finančního deníku, ve které jsou vytvořeny určené řádky deníku.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify the salesperson or purchaser code that applies to the user in the <ph x="0">&lt;x0/&gt;</ph>Salespers./Purch.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074906Z" creationid="sunavcova" creationdate="20191119T074848Z">
+        <seg>Zadejte kód prodejce nebo nákupčího, který se vztahuje k uživateli v poli <ph x="0">&lt;x0/&gt;</ph>Prodejce/nákupčí.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify the user who the notification must be sent to.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151440Z" creationid="sunavcova" creationdate="20191107T151440Z">
+        <seg>Určete uživatele, kterému musí být oznámení zasláno.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Specify who the approver is, according to the setup of approval users and workflow users.<ph x="0">&lt;x0/&gt;</ph><ph x="1">&lt;x1/&gt;</ph> The following options exist:<ph x="2">&lt;x2/&gt;</ph><ph x="3">&lt;x3/&gt;</ph> -   <ph x="4">&lt;x4/&gt;</ph>Salesperson/Purchaser<ph x="5">&lt;x5/&gt;</ph> specifies that the user who is set up in the <ph x="6">&lt;x6/&gt;</ph>Salespers./Purch.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T152949Z" creationid="sunavcova" creationdate="20191107T152759Z">
+        <seg>Určete, kdo je schvalovatel, podle nastavení uživatelů schvalování a uživatelů workflow.<ph x="0">&lt;x0/&gt;</ph><ph x="1">&lt;x1/&gt;</ph> Existují následující možnosti: <ph x="2">&lt;x2/&gt;</ph> <ph x="3">&lt;x3/&gt;</ph> - <ph x="4">&lt;x4/&gt;</ph>Prodejce/nákupčí<ph x="5">&lt;x5/&gt;</ph> Určuje, že uživatel, který je nastaven v poli <ph x="6">&lt;x6/&gt;</ph>Kód prodejce/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>System tasks, such as automatic posting, can be included as steps in workflows, preceded or followed by user tasks.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T131633Z" creationid="sunavcova" creationdate="20191107T131633Z">
+        <seg>Systémové úlohy, jako je například automatické účtování, lze zahrnout jako kroky do workflow, které předchází nebo následují úkoly uživatele.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> page opens for a new workflow containing all the information of the selected template.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T111705Z" creationid="sunavcova" creationdate="20191105T111705Z">
+        <seg>Otevře se stránka &lt;x0 /&gt;Workflow&lt;x1 /&gt; pro nový workflow obsahující všechny informace o vybrané šabloně.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <ph x="2">&lt;x2/&gt;</ph>Workflow Templates<ph x="3">&lt;x3/&gt;</ph> page opens.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T111521Z" creationid="sunavcova" creationdate="20191105T111355Z">
+        <seg>Otevře se stránka &lt;x2 /&gt;Šablony workflow&lt;x3 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <ph x="2">&lt;x2/&gt;</ph>Workflow<ph x="3">&lt;x3/&gt;</ph> page opens.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T141850Z" creationid="sunavcova" creationdate="20191107T141850Z">
+        <seg>Otevře se stránka &lt;x2 /&gt;Workflow&lt;x3 /&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The code for workflow templates that are added by Microsoft are prefixed with “MS-“, such as in “MS-PIW”.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T140350Z" creationid="sunavcova" creationdate="20191107T140350Z">
+        <seg>Kód šablon workflow přidaných společností Microsoft je s předponou „MS-“, například „MS-PIW“.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The codes for workflow templates that are added by Microsoft are prefixed with “MS-“.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T102244Z" creationid="sunavcova" creationdate="20191105T102244Z">
+        <seg>Kódy pro šablony workflow přidané společností Microsoft jsou s předponou "MS-".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The following procedure describes how to restrict purchase orders from being posted until they have been approved.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105524Z" creationid="sunavcova" creationdate="20191112T105524Z">
+        <seg>Následující postup popisuje, jak omezit zaúčtování nákupních objednávek, dokud nejsou schváleny.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The new workflow will be based on the existing Purchase Invoice Approval Workflow workflow template.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105547Z" creationid="sunavcova" creationdate="20191112T105547Z">
+        <seg>Nový workflow bude založen na existující šabloně workflow schvalování nákupní faktury.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The value in the <ph x="2">&lt;x2/&gt;</ph>Code<ph x="3">&lt;x3/&gt;</ph> field is extended with, for example, “-01” to indicate that this is the first workflow that is created from the workflow template.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T111959Z" creationid="sunavcova" creationdate="20191105T111959Z">
+        <seg>Hodnota v poli<ph x="2">&lt;x2/&gt;</ph>Kód<ph x="3">&lt;x3/&gt;</ph> je rozšířena, například o "-01", což označuje, že se jedná o první workflow, který je vytvořen ze šablony daného workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To create a workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T141737Z" creationid="sunavcova" creationdate="20191107T141737Z">
+        <seg>Vytvoření Workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To create a workflow from workflow template</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T104813Z" creationid="sunavcova" creationdate="20191105T104813Z">
+        <seg>Vytvoření workflow ze šablony workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To create a workflow step that restricts posting of unapproved purchase orders</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105728Z" creationid="sunavcova" creationdate="20191112T105728Z">
+        <seg>Vytvoření kroku workflow, který omezuje zaúčtování neschválených nákupních objednávek</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To create the workflow from a workflow template, on the <ph x="0">&lt;x0/&gt;</ph>Workflows<ph x="1">&lt;x1/&gt;</ph> page, choose the <ph x="2">&lt;x2/&gt;</ph>Create Workflow from Template<ph x="3">&lt;x3/&gt;</ph> action.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T143637Z" creationid="sunavcova" creationdate="20191107T143637Z">
+        <seg>Chcete-li vytvořit workflow ze šablony workflow, na stránce<ph x="0">&lt;x0/&gt;</ph>Workflow<ph x="1">&lt;x1/&gt;</ph> zvolte akci <ph x="2">&lt;x2/&gt;</ph>Nové workflow ze šablony<ph x="3">&lt;x3/&gt;</ph>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To define that an approval request is not approved until multiple equal approvers have approved it, regardless of a hirarchy, set up a flat workflow user group.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T073720Z" creationid="sunavcova" creationdate="20191119T073720Z">
+        <seg>Chcete-li definovat, že žádost o schválení není schválena, dokud ji neschválí více stejných schvalovatelů, bez ohledu na hirarchii, vytvořte plochou skupinu uživatelů workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To delete a workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T092807Z" creationid="sunavcova" creationdate="20191112T092807Z">
+        <seg>Odstranění workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To enable a workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T100515Z" creationid="sunavcova" creationdate="20191112T100515Z">
+        <seg>Povolení workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To export a workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T101215Z" creationid="sunavcova" creationdate="20191112T101205Z">
+        <seg>Exportování workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To import a workflow</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T102246Z" creationid="sunavcova" creationdate="20191112T102246Z">
+        <seg>Importování workflow</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To save time when creating new workflows, you can create workflows from workflow templates.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T101959Z" creationid="sunavcova" creationdate="20191105T101922Z">
+        <seg>Chcete-li ušetřit čas při vytváření nového workflow, můžete jej vytvořit ze šablon workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To set up an approval user</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074053Z" creationid="sunavcova" creationdate="20191119T074053Z">
+        <seg>Nastavení uživatele schvalování</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To specify a field change for the event, on the <ph x="0">&lt;x0/&gt;</ph>Event Conditions<ph x="1">&lt;x1/&gt;</ph> page, in the <ph x="2">&lt;x2/&gt;</ph>Field<ph x="3">&lt;x3/&gt;</ph> field, select the field that changes.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T145921Z" creationid="sunavcova" creationdate="20191107T145921Z">
+        <seg>Chcete-li určit změnu pole pro událost, na stránce &lt;x0 /&gt;Podmínky události&lt;x1 /&gt; vyberte v poli &lt;x2 /&gt;Pole&lt;x3 /&gt; pole, které se změní.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To specify options for a workflow response that involves creating an approval request, fill the fields as described in the following table.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151738Z" creationid="sunavcova" creationdate="20191107T151738Z">
+        <seg>Chcete-li určit možnosti pro odezvu workflow, která zahrnuje vytvoření požadavku na schválení, vyplňte pole podle následující tabulky.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To specify options for a workflow response that involves creating journal lines, fill the fields as described in the following table.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T083700Z" creationid="sunavcova" creationdate="20191112T083700Z">
+        <seg>Chcete-li určit možnosti pro odezvu workflow, která zahrnuje vytvoření řádků deníku, vyplňte pole tak, jak je popsáno v následující tabulce.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To specify options for a workflow response that involves sending a notification, fill the fields as described in the following table.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151404Z" creationid="sunavcova" creationdate="20191107T151404Z">
+        <seg>Chcete-li zadat možnosti pro workflow, které zahrnují odeslání oznámení, vyplňte pole podle popisu v následující tabulce.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To support other restrictions, a Microsoft partner must customize the application code.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105438Z" creationid="sunavcova" creationdate="20191112T105438Z">
+        <seg>Pro podporu jiných omezení musí partner společnosti Microsoft přizpůsobit kód aplikace.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>To transfer workflows to other [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>] databases, for example to save time when creating new workflows, you can export and import workflows.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T100919Z" creationid="sunavcova" creationdate="20191112T100919Z">
+        <seg>Přenesení workflow do jiných [! INCLUDE <ph x="0">&lt;x0/&gt;</ph> d365fin <ph x="1">&lt;x1/&gt;</ph> ] databází, například kvůli ušetření času při vytváření nových workflow, můžete daný workflow exportovat a importovat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Two responses exist in the generic version of [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>] for this purpose: <ph x="2">&lt;x2/&gt;</ph>Restrict usage of a record.<ph x="3">&lt;x3/&gt;</ph> and <ph x="4">&lt;x4/&gt;</ph>Allow usage of a record.<ph x="5">&lt;x5/&gt;</ph>.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T105050Z" creationid="sunavcova" creationdate="20191112T105050Z">
+        <seg>V obecné verzi aplikace existují dvě odezvy [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>] pro tento účel: <ph x="2">&lt;x2/&gt;</ph>Omezit použití záznamu.<ph x="3">&lt;x3/&gt;</ph> a <ph x="4">&lt;x4/&gt;</ph>Povolit použití záznamu.<ph x="5">&lt;x5/&gt;</ph></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>User ID</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191119T074657Z" creationid="sunavcova" creationdate="20191119T074657Z">
+        <seg>ID uživatele</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When you choose the field, the <ph x="0">&lt;x0/&gt;</ph>Event Conditions<ph x="1">&lt;x1/&gt;</ph> page opens where you choose from a list of filter fields that are relevant as conditions for the event in question.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T145413Z" creationid="sunavcova" creationdate="20191107T145413Z">
+        <seg>Když vyberete pole, otevře se stránka &lt;x0 /&gt;Podmínky události&lt;x1 /&gt;, kde si vyberete ze seznamu polí filtru, která jsou relevantní jako podmínky pro danou událost.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When you choose the field, the <ph x="0">&lt;x0/&gt;</ph>Workflow Events<ph x="1">&lt;x1/&gt;</ph> page opens where you select from all the workflow events that exist.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T145034Z" creationid="sunavcova" creationdate="20191107T145034Z">
+        <seg>Pokud vyberete pole, otevře se stránka <ph x="0">&lt;x0/&gt;</ph>Události workflow<ph x="1">&lt;x1/&gt;</ph>  kde můžete vybrat ze všech událostí workflow, které existují.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When you choose the field, the <ph x="0">&lt;x0/&gt;</ph>Workflow Responses<ph x="1">&lt;x1/&gt;</ph> page opens where you select from all workflow responses that exist and set response options for the selected response.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151051Z" creationid="sunavcova" creationdate="20191107T151051Z">
+        <seg>Když vyberete pole, otevře se stránka &lt;x0 /&gt;Odezvy workflow&lt;x1 /&gt;, kde můžete vybrat ze všech existujících odezev workflow a nastavit možnosti odezvy pro vybranou odezvu.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When you create workflows, you can copy the steps from existing workflows or from workflow templates.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T140016Z" creationid="sunavcova" creationdate="20191107T140016Z">
+        <seg>Při vytváření workflow můžete zkopírovat kroky z existujících workflow nebo ze šablon workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When you have created a workflow and you are sure that it is ready to start, you must enable the workflow.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T100422Z" creationid="sunavcova" creationdate="20191112T100422Z">
+        <seg>Pokud jste vytvořili workflow a jste si jisti, že je připraven ke spuštění, musíte ho povolit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When you have set up approval users, you can use the setup to create workflow responses for approval workflows.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191118T075342Z" creationid="sunavcova" creationdate="20191118T075342Z">
+        <seg>Po nastavení uživatelů schvalování můžete pomocí nastavení vytvořit odezvy workflow pro schválení workflow.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Workflow templates are non-editable workflows that exist in the generic version of [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>].</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T102216Z" creationid="sunavcova" creationdate="20191105T102216Z">
+        <seg>Šablony workflow jsou neupravitelné postupy, které existují v obecné verzi aplikace [! INCLUDE <ph x="0">&lt;x0/&gt;</ph> d365fin <ph x="1">&lt;x1/&gt;</ph> ].</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Workflow templates represent non-editable workflows that exist in the generic version of [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>].</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T140257Z" creationid="sunavcova" creationdate="20191107T140257Z">
+        <seg>Šablony workflow představují neupravitelné postupy, které existují v obecné verzi aplikace [!INCLUDE<ph x="0">&lt;x0/&gt;</ph>d365fin<ph x="1">&lt;x1/&gt;</ph>].</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can add new filter fields that you want to use as event conditions.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T145442Z" creationid="sunavcova" creationdate="20191107T145442Z">
+        <seg>Můžete přidat nová pole filtru, která chcete použít jako podmínky událostí.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can create workflows that connect business-process tasks performed by different users.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T131534Z" creationid="sunavcova" creationdate="20191107T131534Z">
+        <seg>Můžete vytvářet workflow, které spojují úlohy podnikových procesů prováděné různými uživateli.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can only change the indent of a step that does not have a subsequent step.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191112T090743Z" creationid="sunavcova" creationdate="20191112T090743Z">
+        <seg>Můžete změnit pouze odsazení kroku, který neobsahuje další krok.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can select to automatically delegate one, two, or five days after the date when the approval was requested.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T151857Z" creationid="sunavcova" creationdate="20191107T151857Z">
+        <seg>Můžete zvolit automatické delegování jednoho, dvou nebo pěti dnů po datu požadavku na schválení.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You define workflow steps by filling fields on workflow lines from fixed lists of event and response values representing scenarios that are supported by the application code.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191105T104702Z" creationid="sunavcova" creationdate="20191105T104702Z">
+        <seg>Kroky workflow definujete vyplněním polí na řádcích workflow z pevných seznamů hodnot událostí a odezev představujících scénáře, které jsou podporovány kódem aplikace.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You set event condition filters just as you set filters on report request pages.</seg>
+      </tuv>
+      <tuv xml:lang="cs-CZ" changeid="sunavcova" changedate="20191107T145616Z" creationid="sunavcova" creationdate="20191107T145616Z">
+        <seg>Filtry podmínek událostí se nastavují stejně jako filtry na stránkách požadavků na sestavu.</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

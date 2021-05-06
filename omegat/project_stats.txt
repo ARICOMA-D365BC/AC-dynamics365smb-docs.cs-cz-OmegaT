@@ -1,0 +1,13 @@
+10.8.20 10:24
+Statistika projektu
+
+                             	Segmenty	Slova	Znaky (bez mezer)	Znaky (včetně mezer)	#Soubory	
+Celkem:                      	       0	    0	                0	                   0	       0	
+Zbývající:                   	       0	    0	                0	                   0	       0	
+Jedinečné segmenty:          	       0	    0	                0	                   0	       0	
+Zbývající jedinečné segmenty:	       0	    0	                0	                   0	       0	
+
+
+Statistika jednotlivých souborů:
+
+Název souboru	Segmenty celkem	Zbývající segmenty	Jedinečné segmenty	Zbývající jedinečné segmenty	Slova celkem	Zbývající slova	Jedinečná slova	Jedinečná Zbývající slova	Znaky celkem (bez mezer)	Zbývající znaky (bez mezer)	Jedinečné znaky (bez mezer)	Zbývající jedinečné znaky (bez mezer)	Znaky celkem (včetně mezer)	Zbývající znaky (včetně mezer)	Jedinečné znaky (včetně mezer)	Jedinečné zbývající znaky (včetně mezer)	
