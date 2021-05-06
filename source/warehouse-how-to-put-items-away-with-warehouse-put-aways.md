@@ -13,68 +13,68 @@
     ms.author: edupont
 
 ---
-# Put Items Away with Warehouse Put-aways
-When your location is set up to require warehouse put-away processing and warehouse receive processing, you use the warehouse put-away documents function to control the putting away of items.  
+# Zaskladnění zboží pomocí skladového zaskladnění
+Pokud je lokace nastavena tak, aby vyžadovala zpracování zaskladnění a zpracování příjmů na sklad, použijete funkci dokladů zaskladnění k řízení zaskladnění zboží.
 
-When you post a warehouse receipt, the source documents, such as purchase, inbound transfer, or sales return orders, are updated, the quantity received is posted to the item ledger, and the lines about the items received are sent to the put-away function in the warehouse. If you have internal put-away and pick, the internal put-away can also create lines for put-away.  
+Když zaúčtujete příjemku na sklad, aktualizují se původní doklady, jako je nákup, vstup transferu nebo objednávky prodejní vratky, přijaté množství se zaúčtuje do položek zboží a řádky o přijatém zboží se odešlou pomocí funkce zaskladnění do skladu. Pokud máte interní zaskladnění a vyskladnění, pak může vnitřní zaskladnění také vytvořit řádky pro zaskladnění.
 
-Depending on the warehouse setup, the lines are either made available to the put-away worksheet or used to generate put-away instructions immediately. For more information, see [Plan Put-aways in Worksheets](warehouse-how-to-plan-put-aways-in-worksheets.md).  
+V závislosti na nastavení skladu jsou řádky buď zpřístupněny listu zaskladnění, nebo jsou použity k okamžitému vygenerování pokynů k zaskladnění. Pro více informací navštivte [Plánování v sešitech zaskladění](warehouse-how-to-plan-put-aways-in-worksheets.md).
 
-In addition to the standard ways to create warehouse put-aways that are described in this topic, you can create the put-away from the related posted warehouse receipt. This is useful if you have deleted put-away lines, or if you use directed put-away and pick and have decided not to use the put-away worksheet, because you can create or recreate put-away instructions from the posted receipt lines.  
+Kromě standardních způsobů vytváření zaskladnění skladů, které jsou popsány v tomto tématu, můžete vytvořit zaskladnění z příslušné zaúčtované příjemky na sklad. To je užitečné, pokud jste odstranili řádky zaskladnění nebo pokud používáte řízené zaskladnění a vyskladnění a rozhodli jste se nepoužívat list zaskladnění, protože můžete vytvořit nebo znovu vytvořit pokyny k zaskladnění ze zaúčtovaných řádků příjemky.
 
-## To put items away without directed put-away and pick  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-aways**, and then choose the related link.  
-2.  Open the warehouse put-away that is ready to handle.  
+## Zaskladnění zboží bez řízeného zaskladnění a vyskladnění
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění** a poté vyberte související odkaz.
+2. Otevřete zaskladnění skladu, které je připravené k zpracování.
 
-    You can sort the put-away lines by various criteria, for example, by item, shelf number, or due date, and thereby optimize the put-away process.  
-3.  On each line, in the **Qty. to Handle** field, enter the quantity you want to put away.  
-4.  After you have completed putting the items away, choose the **Register Put-away** action to record the completion of the activity and make the items available for picking.  
+   Řádky zaskladnění můžete seřadit podle různých kritérií, například podle zboží, čísla police nebo data splatnosti, a optimalizovat tak proces zaskladnění.
+3. Na každém řádku v poli **Množ. ke zprac.** zadejte množství, které chcete zaskladnit.
+4. Po dokončení zaskladnení zboží vyberte akci **Zápis zaskladnění**, která zaznamená dokončení aktivity a zpřístupní zboží k vyskladnění.
 
-## To put items away with directed put-away and pick  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-aways**, and then choose the related link.
-    If put-away instructions have been created, a warehouse put-away is visible.  
-2.  Open the warehouse put-away that you want to work on.  
-3.  If your warehouse requires, enter your user ID on the **General** FastTab when you begin work on a particular put-away.  
-4.  Perform the take and place actions indicated in the **Action Type** field on the lines.  
+## Zaskladnění zboží pomocí řízeného zaskladnění a vyskladnění
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění** a poté vyberte související odkaz.
+   Pokud byly vytvořeny pokyny k vyskladnění, je viditelné vyskladnění skladu.
+2. Otevřete zaskladněný sklad, se kterým chcete pracovat.
+3. Pokud to váš sklad vyžaduje, zadejte své uživatelské ID na záložce **Obecné**, když začnete pracovat na konkrétním zaskladňování.
+4. Proveďte akce Vzít a Vložit uvedené v poli **Typ akce** na řádcích.
 
-    Note that each receipt line has become at least two lines in the warehouse put-away:  
+   Všimněte si, že každý řádek příjmu se stal nejméně dvěma řádky ve skladu:
 
-    -   The first line, with **Take** in the **Action Type** field, indicates where the items are located in the receiving area. You cannot change the zone and bin field on this line.  
-    -   The next line, with **Place** in the **Action Type** field, shows where you must place the items in warehouse storage. If the warehouse has received a large number of items on one receipt line, they may have to be put away in several bins, so there is a Place line for each bin.  
+   - První řádek s hodnotou **Vzít** v poli **Typ akce** označuje, kde je zboží umístěno v přijímací oblasti. Na tomto řádku nemůžete změnit zónu a pole přihrádky.
+   - Další řádek s hodnotou **Vložit** v poli **Typ akce** ukazuje, kam je nutné umístit zboží do skladu. Pokud sklad obdržel velký počet zboží na jednom řádku příjemky, může se stát, že bude muset být zaskladněno v několika přihrádkách, takže pro každou přihrádku bude existovat řádek Vložit.
 
-        If the Take and Place lines for each receipt line do not immediately follow one another, and you want them to do so, you can sort the lines by selecting **Item** in the **Sorting Method** field on the **General** FastTab.  
+      Pokud řádky Vzít a Vložit pro každý řádek příjemky na sebe bezprostředně nenavazují a chcete, aby to tak bylo, můžete řádky seřadit výběrem hodnoty **Zboží** v poli **Způsob třídění** na záložce **Obecné**.
 
-        If the physical layout of the warehouse reflects the bin rankings, you can use the **Bin Ranking** sorting method to prepare a put-away round that will minimize your steps through the warehouse.  
+      Pokud fyzické rozložení skladu odráží pořadí přihrádek, můžete použít metodu třídění **Pořadí přihrádky** k přípravě kola zaskladnění, které minimalizuje vaše kroky ve skladu.
 
-5.  When you have placed all the items in bins as instructed, choose the **Register Put-away** action.  
+5. Pokud jste umístili všechny položky do přihrádek podle pokynů, zvolte akci **Zápis zaskladnění**.
 
-At locations that are set up to use directed put-away and pick, the following settings are prerequisites for the procedure above:  
+V lokacích, které jsou nastavené na použití směrovaného zaskladnění a vyskladnění, jsou pro výše uvedený postup nezbytná následující nastavení:
 
-- A put-away template is set up. For more information, see [Set Up Put-away Templates](warehouse-how-to-set-up-put-away-templates.md).  
-- The weight, cubage, and special storage requirements of the item or stockkeeping unit are defined. For more information, see Gross Weight.  
-- The capacity, bin type, and bin ranking of the bins. For more information, see Bin Ranking.  
+- Nastavení šablony zaskladnění. Pro více informací navštivte [Nastavení šablon zaskladnění](warehouse-how-to-set-up-put-away-templates.md).
+- Je definována hmotnost, objem a zvláštní požadavky na skladování zboží nebo skladové jednotky. Pro více informací navštivte Hrubá hmotnost.
+- Kapacita, typ přihrádky a pořadí přihrádek. Pro více informací navštivte Pořadí přihrádky.
 
-The bin ranking is taken into consideration when more than one bin matches put-away template criteria. If both the put-away template criteria and the bin ranking are the same for more than one bin, the bin with the highest number is selected.
+Pořadí přihrádky se zohlední, pokud více než jedna přihrádka odpovídá kritériím šablony zaskladnění. Pokud jsou kritéria šablony zaskladnění i pořadí přihrádky stejné pro více než jednu přihrádku, je vybrána přihrádka s nejvyšším číslem.
 
-## To create a put-away from a posted receipt  
- If your location uses both put-away processing and receive processing and you have deleted put-away lines, or if you use directed put-away and pick and have decided not to use the put-away worksheet, you can create or recreate put-away instructions for the posted receipt lines.
+## Vytvoření zaskladnění ze zaúčtované příjemky
+Pokud vaše lokace používá zpracování zaskladnění i zpracování příjmu a odstranili jste řádky zaskladnění nebo pokud používáte řízené zaskladnění a vyskladnění a rozhodli jste se nepoužívat list zaskladnění, můžete vytvořit nebo znovu vytvořit pokyny pro zaskladnění pro zaúčtované řádky příjemky.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Whse. Receipts**, and then choose the related link.  
-2.  Select a posted receipt that might need to be put away.  
-3.  Choose the **Card** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované příjemky  na sklad** a poté vyberte související odkaz.
+2. Vyberte zaúčtovanou příjemku, kterou bude pravděpodobně třeba zaskladnit.
+3. Vyberte akci **Karta**.
 
-    If the **Document Status** field is blank, the receipt has not been put away at all. Otherwise, the field indicates the receipt is partially put-away or completely put-away.  
+   Pokud je pole **Stav dokladu** prázdné, příjemka nebyla vůbec zaskladněna. Jinak pole označuje, že účtenka je částečně nebo zcela zaskladněna.
 
-4.  If the receipt is partially put away or not put away at all, choose the **Create Put-away** action.  
-5.  Fill in the batch job request page to create the put-away, and then choose the **OK** button.   
+4. Pokud je příjemka částečně zaskladněná nebo není zaskladněná vůbec, zvolte akci **Vytvořit vyskladnění**.
+5. Vyplňte stránku žádosti o dávkovou úlohu a vytvořte zaskladnění a pak zvolte tlačítko **OK**.
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)    
+[Zásoby](inventory-manage-inventory.md)    
+[Nastavení správy skladu](warehouse-setup-warehouse.md)       
+[Správa montáže](assembly-assemble-items.md)      
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

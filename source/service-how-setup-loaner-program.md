@@ -1,36 +1,33 @@
 ---
-    title: How to Set Up Loaners | Microsoft Docs
-    description: You can set up loaners that you can lend to customers to replace service items while they are in service.
-    author: bholtorf
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: bholtorf
-
+title: Jak založit Zápůjčky | Microsoft Docs
+description: 'Můžete si založit zápůjčky, které můžete půjčovat zákazníkům, pro výměnu předmětů, které jsou momentálně v servisu.'
+services: project-madeira
+documentationcenter: ''
+author: bholtorf
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: bholtorf
 ---
-# Set Up a Loaner Program
-Sometimes you must provide a customer a loaner item for use when your customer service team makes a repair. In [!INCLUDE[prod_short](includes/prod_short.md)], you can set up a loaner program, loan items to your customers, and track receipts when customers return the items. Additionally, you can add comments about loaners in one of two ways:  
+# <a name="set-up-a-loaner-program"></a>Nastavení programu zápůjček
+Někdy musíte zákazníkovi poskytnout zápůjčku pro použití v případě, že tým oddělení služeb bude zákazníkům provádět opravu. V [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete nastavit program zápůjček, zapůjčovat zboží svým zákazníkům a sledovat příjemky při jejich navrácení zákazníkem. Komentáře o zápůjčkách můžete také přidat jedním ze dvou způsobů:  
   
-* Enter a note or comment about the loaner itself.  
-* Enter a note on a service item about the need for a loaner.  
+* Zadejte poznámku nebo komentář o samotné zápůjčce.  
+* Zadejte poznámku k předmětu servisu o potřebě zápůjčky.  
 
-## To set up a loaner  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Loaners**, and then choose the related link.  
-2. Create a new loaner card. 
-3. In the **No.** field, enter a number for the loaner. Alternatively, if you have set up number series for loaners on the **Service Mgt. Setup** page, you can press the Enter key to enter the next available loaner number.  
-4. Fill in the **Description**, **Description 2**, and **Serial No.** fields.  
-5. In the **Unit of Measure Code** field, choose the relevant unit of measure.  
+## <a name="to-set-up-a-loaner"></a>Založení zápujčky  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zápůjčky** a poté vyberte související odkaz.  
+2. Vytvořte novou kartu Zápůjčky 
+3. Do pole **Číslo** zadejte číslo pro zápůjčku. Alternativně, pokud jste nastavili číselné řady pro zápůjčky na stránce **Nastavení Správce servisu**, stisknutím klávesy Enter zadejte další dostupné číslo zápůjčky.  
+4. Vyplňte pole **Popis**, **Popis 2** a **Sériové číslo**.  
+5. V poli **Kód měrné jednotky** vyberte příslušnou měrnou jednotku.  
   
-## See Also
-[Lend and Receive Loaners](service-how-to-lend-receive-loaners.md)  
-[Setting Up Service Management](service-setup-service.md)  
-[Delivering Service](service-deliver-service.md)  
+## <a name="see-also"></a>Viz také
+[Půjčování a přijem zápůjček](service-how-to-lend-receive-loaners.md)  
+[Nastavení Správy servisu](service-setup-service.md)  
+[Dodání servisu](service-deliver-service.md)  
 
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]

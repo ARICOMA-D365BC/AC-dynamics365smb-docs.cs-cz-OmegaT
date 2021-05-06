@@ -1,39 +1,38 @@
 ---
 title: Overview of Reports to Help Prepare Closing Statements | Microsoft Docs
 description: Provides an overview of the reports you can use to gather information to prepare your company's closing statements when closing the fiscal year.
+services: project-madeira
+documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, aging, creditor payments, vendor payments, assets, liabilities, equity, analysis, reporting, financial report, business intelligence, BI, Power Bi, KPI
-ms.date: 10/01/2020
+ms.date: 10/01/2019
 ms.author: jswymer
 
 ---
-# Preparing Closing Statements
-There are a number of standard reports that you can use to gather the information that you need to prepare your company's closing statements.
+# Příprava závěrky
+Existuje řada standardních přehledů, které můžete použít ke shromažďování informací, které potřebujete k přípravě závěrky společnosti.
 
-The following table describes a number of reports that may be useful in this process.  
+Následující tabulka popisuje řadu sestav, které mohou být v tomto procesu užitečné, s odkazy na témata, která je popisují.
 
-| To | See this report |
+| K | Zobrazit tuto sestavu |
 | --- | --- |
-| Print a trial balance report with balances and net changes for general ledger accounts. |**Trial Balance** |
-| Get an overview of accounts receivable, with the age of amounts receivable calculated from the due date, posting date, or document date. |**Aged Accounts Receivable** |
-| Get an overview of accounts payable, with the age of amounts payable calculated from the due date, posting date or document date. |**Aged Accounts Payable** |
-| Compare the trial balance with a budget. |**Trial Balance/Budget** |
-| Print a trial balance report with balances and net changes for general ledger accounts calculated for a series of periods. |**Trial Balance by Period** |
-| Print an account schedule to analyze figures in general ledger accounts or compare actual general ledger entries with general ledger budget entries. |**Account Schedule** |
-| Check whether customer and vendor ledger entries balance with corresponding general ledger entries. |**Reconcile Cust. and Vend. Accs** |
+| Tisk sestavy předvahy se zůstatky a čistými změnami pro účty hlavní knihy. | Předvaha |
+| Získání přehledu o pohledávkách s věkem pohledávek vypočteným od data splatnosti, zúčtovacího data nebo data dokladu. | Splatné pohledávky |
+| Získání přehledu splatných účtů s věkem splatných částek vypočtených od data splatnosti, data účtování nebo data dokladu. | Splatné závazky |
+| Porovnání předvahy s rozpočtem. | Předvaha/rozpočet |
+| Tisk sestavy předvahy se zůstatky a čistými změnami pro účty hlavní knihy vypočtené pro řadu období. | Předvaha podle období |
+| Tisk plánu účtu a analýza údajů v účtech nebo porovnání skutečné položky s položkami rozpočtu. | Účetní schéma |
+| Kontrola, zda zůstatky položek odběratele a dodavatele jsou v rovnováze s odpovídajícími položkami hlavní knihy. | Odsouhlas. účtů  zákaz. a  dod. |
 
-To see a report, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, type the name as it appears in the table, and then choose the related link.
+Chcete-li zobrazit sestavu, vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte název, jak je uveden v tabulce, a poté vyberte související odkaz.
 
-## See Also
-[Closing Years and Periods](year-close-years-periods.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+## Viz také
+[Uzavírání roků a období](year-close-years-periods.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
 [Business Intelligence](bi.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]

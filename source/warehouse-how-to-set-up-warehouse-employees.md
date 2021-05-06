@@ -1,36 +1,35 @@
 ---
     title: How to Set Up Warehouse Employees | Microsoft Docs
     description: Each user who performs warehouse activities must be set up as a warehouse employee assigned to one default location and potentially more non-default locations.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2019
+    ms.author: sgroespe
 
 ---
-# Set Up Warehouse Employees
-Each user who performs warehouse activities must be set up as a warehouse employee assigned to one default location and potentially more non-default locations. This user setup filters all warehouse activities across the database to the employee's location so that the employee can only perform the warehouse activities at the default location. A user can be assigned to additional non-default locations for which the employee can view activity lines but not perform the activities.
+# Nastavení zaměstnanců skladu
+Každý uživatel, který provádí aktivity skladu, musí být nastaven jako zaměstnanec skladu a přiřazený k jedné výchozí lokaci, potenciálně více nevýchozím lokacím. Toto uživatelské nastavení filtruje všechny aktivity skladu v databázi do místa zaměstnance, takže zaměstnanec může provádět pouze aktivity skladu ve výchozím umístění. Uživatele lze přiřadit k dalším nevýchozím lokacím, pro které může zaměstnanec zobrazit řádky aktivit, ale neprovádět aktivity.
 
-## To set up warehouse employees  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.  
-2. Choose the **New** action.  
-3. Select the **User ID** field, and then select the user to be added as a warehouse employee. Choose the **OK** button.  
-6.  In the **Location Code** field, enter the code of the location where the user will be working.  
-7.  Select the **Default** check box to define the location as the only location where the employee can perform warehouse activities.  
-8.  Repeat these steps to assign other employees to locations or assign non-default locations to existing warehouse employees.  
+## Nastavení zaměstnanců skladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
+2. Vyberte tlačítko **Nový**.
+3. Vyberte pole **ID Uživatele** a pak vyberte uživatele, který má být přidán jako zaměstnanec skladu. Klikněte na tlačítko **OK**.
+6. V poli **Kód lokace** vyberte, kde bude uživatel pracovat.
+7. Zaškrtněte políčko **Výchozí** a definujte místo jako jediné místo, kde zaměstnanec může provádět skladové činnosti.
+8. Tyto kroky opakujte pro přiřazení dalších zaměstnanců k umístěním nebo přiřazení jiných než výchozích umístění k existujícím zaměstnancům skladu.
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení sprívy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

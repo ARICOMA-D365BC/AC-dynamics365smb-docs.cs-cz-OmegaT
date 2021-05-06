@@ -6,32 +6,29 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: jswymer
 
 ---
-# Managing Sales Opportunities
-Any incoming lead can be considered a sales opportunity. You can create opportunities and associate them to a salesperson so that you can keep track of potential sales.
+# Správa prodejních příležitostí
+Jakýkoli příchozí potenciální zákazník může být považován za prodejní příležitost. Můžete vytvořit příležitosti a přidružit je k prodejci, abyste mohli sledovat potenciální prodej.
 
-Before you can start using opportunity management, you must set up sales cycles and sales cycle stages. As you create opportunities, you should provide information about the contact, salesperson, sales cycle, and dates, as well as your estimates for the sales value of the opportunity and your estimation of the chances of its success.
+Než začnete používat správu příležitostí, musíte nastavit prodejní cykly a fáze prodejního cyklu. Při vytváření příležitostí byste měli poskytnout informace o kontaktu, prodejci, prodejním cyklu a datech, jakož i odhady prodejní hodnoty příležitosti a odhad šancí na její úspěch.
 
-The following table describes a sequence of tasks, with links to the topics that describe them.
+Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
 
-| To | See |
+| K | vidění |
 | --- | --- |
-| Set up the sales cycles that you usually follow, and the different stages within each opportunity sales cycle. |[Set Up Opportunity Sales Cycles and Cycle Stages](marketing-how-setup-opportunity-sales-cycles-stages.md) |
-| Create sales opportunities that you have from your contacts. |[Create Opportunities](marketing-how-create-opportunities.md) |
-| Move a sales opportunity through the sales cycle to completion. |[Process Sales Opportunities](marketing-processing-sales-opportunities.md) |
+| Nastavte prodejní cykly, které obvykle sledujete, a různé fáze každého prodejního cyklu příležitosti. | [Nastavení prodejních cyklů příležitostí a fází prodejního cyklu](marketing-how-setup-opportunity-sales-cycles-stages.md) |
+| Vytvořte prodejní příležitosti, které máte ze svých kontaktů. | [Vytvoření příležitostí](marketing-how-create-opportunities.md) |
+| Přesuňte prodejní příležitost prostřednictvím prodejního cyklu k dokončení. | [Zpracování prodejních příležitostí](marketing-processing-sales-opportunities.md) |
 
-## See Also
-[Sales](sales-manage-sales.md)  
-[Creating and Managing Contacts](marketing-contacts.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Prodej](sales-manage-sales.md)  
+[Vytváření a správa kontaktů](marketing-contacts.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

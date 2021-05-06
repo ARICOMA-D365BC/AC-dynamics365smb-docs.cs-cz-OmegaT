@@ -5,102 +5,94 @@ documentationcenter: ''
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: integration, synchronize, map, Sales
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: bholtorf
 ---
-# Using Dynamics 365 Sales from Business Central
-If you use Dynamics 365 Sales for customer engagement, you can enjoy seamless integration in the lead-to-cash process by using [!INCLUDE[prod_short](includes/prod_short.md)] for backend activities such as processing orders, managing inventory, and doing your finances.
+# Použití aplikace Dynamics 365 for Sales z aplikace Business Central
+Používáte-li Dynamics 365 for Sales pro zapojení zákazníků, můžete provést bezproblémovou integraci do procesu vedoucího k získání hotovosti pomocí [!INCLUDE[d365fin](includes/d365fin_md.md)] pro back-endové aktivity, jako je například zpracování objednávek nebo správa zásob.
 
-Before you can use the integration capabilities, your system administrator must set up the connection and define users in [!INCLUDE[crm_md](includes/crm_md.md)]. For more information, see [Integrating with Dynamics 365 Sales](admin-prepare-dynamics-365-for-sales-for-integration.md).
+Než začnete používat integrační funkce, musí správce systému nastavit připojení a definovat uživatele v [!INCLUDE[crm_md](includes/crm_md.md)]. Pro více informací navštivte [Integrace s Dynamics 365 for Sales](admin-prepare-dynamics-365-for-sales-for-integration.md).
 
 > [!NOTE]
-> These steps describe the process of integrating online versions of [!INCLUDE[crm_md](includes/crm_md.md)] and [!INCLUDE[prod_short](includes/prod_short.md)]. For information about on-premises configuration, see [Preparing Dynamics 365 Sales for Integration on-premises](/dynamics365/business-central/dev-itpro/administration/prepare-dynamics-365-for-sales-for-integration).
+> Tyto kroky popisují proces integrace online verzí [!INCLUDE[crm_md](includes/crm_md.md)] a [!INCLUDE[d365fin](includes/d365fin_md.md)]. Informace o konfiguraci on-premises instalace naleznete v části [Příprava Dynamics 365 for Sales pro integraci on-premises instalace](/dynamics365/business-central/dev-itpro/administration/prepare-dynamics-365-for-sales-for-integration).
 
-Integrating the applications lets you access data in Sales from [!INCLUDE[prod_short](includes/prod_short.md)], and in some cases the other way around. You can work with and synchronize data that both services have in common, such as customers, contacts, and sales information, and keep the data up to date in both applications.  
+Integrace aplikací umožňuje přístup k datům v prodeji z [!INCLUDE[d365fin](includes/d365fin_md.md)] a v některých případech i naopak. Můžete pracovat s daty, která mají obě služby společné, jako jsou zákazníci, kontakty a informace o prodeji, a udržovat data aktuální v obou aplikacích.
 
-For example, a sales person in [!INCLUDE[crm_md](includes/crm_md.md)] can use the price lists from [!INCLUDE[prod_short](includes/prod_short.md)] when they create a sales order. When they add the item to the sales order line in [!INCLUDE[crm_md](includes/crm_md.md)], they can see the inventory level (availability) of the item from [!INCLUDE[prod_short](includes/prod_short.md)].
+Například prodejce v [!INCLUDE[crm_md](includes/crm_md.md)] může při vytváření prodejní objednávky použít ceníky z [!INCLUDE[d365fin](includes/d365fin_md.md)]. Když se přidá položka do řádku prodejní objednávky v [!INCLUDE[crm_md](includes/crm_md.md)] je možné vidět úroveň zásob (dostupnost) zboží z [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-Conversely, order processors in [!INCLUDE[prod_short](includes/prod_short.md)] can handle sales orders that are automatically or manually transferred from [!INCLUDE[crm_md](includes/crm_md.md)]. For example, they can create and post sales order lines for items or resources that were entered in [!INCLUDE[crm_md](includes/crm_md.md)] as write-in products. For more information, see [Handling Sales Order Data](marketing-integrate-dynamicscrm.md#handling-sales-order-data).
+Naopak procesory objednávek v [!INCLUDE[d365fin](includes/d365fin_md.md)] mohou zpracovávat prodejní objednávky, které jsou automaticky nebo ručně přeneseny z [!INCLUDE[crm_md](includes/crm_md.md)]. Mohou například vytvářet a účtovat řádky prodejních objednávek pro zboží nebo zdroje, které byly zadány v [!INCLUDE[crm_md](includes/crm_md.md)] jako produkty pro zápis. Pro více informací navštivte [Zpracování dat prodejní objednávky](marketing-integrate-dynamicscrm.md).
 
-> [!IMPORTANT]  
-> [!INCLUDE[prod_short](includes/prod_short.md)] integrates only with [!INCLUDE[crm_md](includes/crm_md.md)]. Other Dynamics 365 applications that change the standard workflow or data model in [!INCLUDE[crm_md](includes/crm_md.md)], for example Project Service Automation, can break the integration between [!INCLUDE[prod_short](includes/prod_short.md)] and [!INCLUDE[crm_md](includes/crm_md.md)].
+> [!IMPORTANT]
+> [!INCLUDE[d365fin](includes/d365fin_md.md)] je možné integrovat pouze s [!INCLUDE[crm_md](includes/crm_md.md)]. Další aplikace Dynamics 365, které mění standardní workflow nebo datový model v [!INCLUDE[crm_md](includes/crm_md.md)] například Project Service Automation, může přerušit integraci mezi [!INCLUDE[d365fin](includes/d365fin_md.md)] a [!INCLUDE[crm_md](includes/crm_md.md)].
 
-## Coupling Records
-The assisted setup guide lets you choose the data to synchronize. Later, you can also set up synchronization for specific records. This is referred to as *coupling*. For example, you can couple a specific account in [!INCLUDE[crm_md](includes/crm_md.md)] with a specific customer in [!INCLUDE[prod_short](includes/prod_short.md)]. This section describes what to take into consideration when you couple records.
+## Párování záznamů
+Průvodce asistovaným nastavením umožňuje zvolit data, která chcete synchronizovat. Později můžete také nastavit synchronizaci pro určité záznamy. Toto se označuje jako *Párování*. Můžete například spojit konkrétní účet v [!INCLUDE[crm_md](includes/crm_md.md)] s konkrétním zákazníkem v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Tato část popisuje, co je třeba vzít v úvahu při párování záznamů.
 
-For example, if you want to see accounts in [!INCLUDE[crm_md](includes/crm_md.md)] as customers in [!INCLUDE[prod_short](includes/prod_short.md)], you must couple the two types of records. To do that, on the **Customers** list page in [!INCLUDE[prod_short](includes/prod_short.md)], use the **Set Up Coupling** action. Then specify which [!INCLUDE[prod_short](includes/prod_short.md)] customers to match to which accounts in [!INCLUDE[crm_md](includes/crm_md.md)].
+Například pokud chcete vidět účty v [!INCLUDE[crm_md](includes/crm_md.md)] jako zákazníky v [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte spárovat dva typy záznamů. Chcete-li to provést, na stránce **Zákazníci** v [!INCLUDE[d365fin](includes/d365fin_md.md)] použijte akci **Nastavení párování**. Poté určete, kteří zákazníci [!INCLUDE[d365fin](includes/d365fin_md.md)] se shodují s účty v [!INCLUDE[crm_md](includes/crm_md.md)].
 
-You can also create (and couple) an account in [!INCLUDE[crm_md](includes/crm_md.md)] based on, for example, a customer record in [!INCLUDE[prod_short](includes/prod_short.md)] using **Create Account in Dynamics 365 Sales**, or vice versa, using **Create Customer in [!INCLUDE[prod_short](includes/prod_short.md)]**.
+Můžete také vytvořit (a spárovat) účet v [!INCLUDE[crm_md](includes/crm_md.md)] například na základě záznamu zákazníka v [!INCLUDE[d365fin](includes/d365fin_md.md)] použitím **Vytvorění účtu v Dynamics 365 for Sales**, nebo naopak, pomocí **Vytvorění zákazníka v [!INCLUDE[d365fin](includes/d365fin_md.md)]**.
 
-When you set up coupling between two records, you can also manually request current record, for example a customer, to be overwritten immediately by account data from Sales (or from [!INCLUDE[prod_short](includes/prod_short.md)]) using **Synchronize Now** action. **Synchronize Now** action which will ask whether to overwrite Sales or [!INCLUDE[prod_short](includes/prod_short.md)] record data.
+Když nastavíte párování mezi dvěma záznamy, můžete také ručně požádat, aby byl aktuální záznam, například zákazník, okamžitě přepsán údaji o účtu z prodeje (nebo z [!INCLUDE[d365fin](includes/d365fin_md.md)]) pomocí akce **Synchronizovat nyní**. Akce **Synchronizovat nyní** se zeptá, zda má přepsat data prodeje nebo data záznamu v [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-In some cases you must couple certain sets of data before other sets of data, as shown in the following table.
+V některých případech musíte spárovat určité sady dat před jinými sadami dat, jak je uvedeno v následující tabulce.
 
-|Data|What to couple first|
+| Data | Co se nejprve páruje |
 |-----|----|
-|Customers and accounts|Couple salespeople with [!INCLUDE[crm_md](includes/crm_md.md)] users|
-|Items and resources|Couple units of measure with [!INCLUDE[crm_md](includes/crm_md.md)] unit groups|
-|Items and resource prices|Couple customer price groups with [!INCLUDE[crm_md](includes/crm_md.md)] prices|
-
-> [!NOTE]  
-> If your prices or customers use foreign currencies, make sure that you couple currencies to Sales transaction currencies.
-
-In [!INCLUDE[crm_md](includes/crm_md.md)], sales orders depend on information such as customers, units of measure, currencies, customer price groups, and items and/or resources. For the integration with sales orders to work you must couple customers, units of measure, currencies, customer price groups, and items and/or resources.
-
-## Fully Synchronizing Records
-At the end of the assisted setup guide you can choose the **Run Full Synchronization** action to start synchronizing all [!INCLUDE[prod_short](includes/prod_short.md)] records with all related records in [!INCLUDE[crm_md](includes/crm_md.md)]. On the **Dynamics 365 Sales Full Synch Review** page, you choose the **Start** action. Full synchronization can take some time to complete, but you can continue to work in [!INCLUDE[prod_short](includes/prod_short.md)] while it runs in the background.
-
-To check the progress of individual jobs in a full synchronization, on the **Dynamics 365 Sales Full Synch Review** page choose an record to view details. To update the status during synchronization, refresh the page.
-
-From the **Microsoft Dynamics 365 Connection Setup** page, you can get details about full synchronization at any time. From here, you can also open the **Integration Table Mappings** page to see details about the tables in [!INCLUDE[prod_short](includes/prod_short.md)] and Sales that must be synchronized.
-
-## Handling Sales Order Data
-Sales orders that people submit in [!INCLUDE[crm_md](includes/crm_md.md)] will be automatically transferred to [!INCLUDE[prod_short](includes/prod_short.md)] if you select the **Automatically Create Sales Orders** check box on the **Microsoft Dynamics 365 Connection Setup** page.
-Alternatively, you can manually convert submitted sales orders from [!INCLUDE[crm_md](includes/crm_md.md)] by using the **Create in [!INCLUDE[prod_short](includes/prod_short.md)]** action available on **Sales Orders - Dynamics 365 for Sales** page.
-On such sales orders, the **Name** field on the original order is transferred and mapped to the **External Document Number** field on the sales order in [!INCLUDE[prod_short](includes/prod_short.md)].
-
-This can also work if the original sales order contains write-in products, meaning items or resources that are not registered in either app. In that case, you must fill in the **Write-in Product Type** and **Write-in Product No.** fields on the **Sales & Receivables Setup** page so that sales of non-registered products are mapped to a specified item or resource number.
+| Zákazníci a účty | Spárování prodejců s uživateli [!INCLUDE[crm_md](includes/crm_md.md)] |
+| Zboží a zdroje | Spárování jednotek měření se skupinami jednotek [!INCLUDE[crm_md](includes/crm_md.md)] |
+| Ceny zboží a zdrojů | Spárování cenových skupin zákazníků s cenami [!INCLUDE[crm_md](includes/crm_md.md)] prices |
 
 > [!NOTE]
-> You cannot map a write-in to an item or resource in [!INCLUDE[prod_short](includes/prod_short.md)] that is coupled with a product in [!INCLUDE[crm_md](includes/crm_md.md)]. To allow for write-ins, we recommend that you create an item or resource specifically for that purpose, and do not couple it with a product in [!INCLUDE[crm_md](includes/crm_md.md)]. 
+> Pokud vaše ceny nebo zákazníci používají cizí měny, ujistěte se, že spojujete měny s měnami prodejních transakcí.
 
-If the description of the item on the original sales order is long, an additional sales order line of the type **Comment** is created to hold the full text on the sales order in [!INCLUDE[prod_short](includes/prod_short.md)].
+V [!INCLUDE[crm_md](includes/crm_md.md)] závisí prodejní objednávka na informacích, jako jsou zákazníci, měrné jednotky, měny, cenové skupiny zákazníků a zboží a/nebo zdroje. Pro integraci s prodejními objednávkami musíte spojit zákazníky, měrné jednotky, měny, cenové skupiny zákazníků a zboží nebo zdroje.
 
-Updates to fields on sales order headers, such as the Last Shipment Date or Requested Delivery Date fields, that are mapped in the **SALESORDER-ORDER** integration table mapping are periodically synchronized to [!INCLUDE[crm_md](includes/crm_md.md)]. Processes such as releasing a sales order and shipping or invoicing a sales order are posted to the sales order timeline in [!INCLUDE[crm_md](includes/crm_md.md)]. For more information, see [Introduction to activity feeds](/dynamics365/sales-enterprise/manage-activities). <!--The /dynamics365/sales-enterprise/developer/introduction-activity-feeds link was broken. Should this actually point to /dynamics365/sales-enterprise/manage-activities-->
+## Úplná synchronizace záznamů
+Na konci průvodce asistovaným nastavením si můžete vybrat akci **Spustit úplnou synchronizaci** a zahájit synchronizaci všech záznamů [!INCLUDE[d365fin](includes/d365fin_md.md)] se všemi souvisejícími záznamy v [!INCLUDE[crm_md](includes/crm_md.md)]. Na stránce **Kontrola úplné synchronizace Dynamics 365 for Sales** vyberte akci **Start**. Úplná synchronizace může nějakou dobu trvat, ale můžete pokračovat v práci v [!INCLUDE[d365fin](includes/d365fin_md.md)], zatímco běží na pozadí.
 
-> [!NOTE]  
-> Periodical synchronization based on the **SALESORDER-ORDER** integration table mapping will work only when sales order integration is enabled. For more information, see [Connection settings on the Sales Connection Setup Page](admin-prepare-dynamics-365-for-sales-for-integration.md). Only sales orders created from submitted sales orders in [!INCLUDE[crm_md](includes/crm_md.md)] are synchronized. For more information, see [Enable Sales Order Processing Integration](/dynamics365/sales-enterprise/developer/enable-sales-order-processing-integration).
+Chcete-li zkontrolovat průběh jednotlivých úloh v úplné synchronizaci, zvolte na stránce **Kontrola úplné synchronizace Dynamics 365 for Sales** záznam pro zobrazení podrobností. Chcete-li aktualizovat stav během synchronizace, aktualizujte stránku.
+
+Ze stránky **Nastavení připojení Microsoft Dynamics 365** můžete kdykoli získat podrobnosti o úplné synchronizaci. Zde můžete také otevřít stránku **Mapování tabulky integrace** a zobrazit podrobnosti o tabulkách v [!INCLUDE[d365fin](includes/d365fin_md.md)] a prodej, který musí být synchronizován.
+
+## Zpracování dat prodejní objednávky
+Prodejní objednávky, které lidé zadají v [!INCLUDE[crm_md](includes/crm_md.md)] , budou automaticky převedeny na [!INCLUDE[d365fin](includes/d365fin_md.md)], pokud zaškrtnete políčko **Automaticky vytvářet prodejní objednávky** na stránce **Nastavení připojení k Microsoft Dynamics 365**.
+Alternativně můžete ručně převést zadané prodejní objednávky z [!INCLUDE[crm_md](includes/crm_md.md)] pomocí akce **Vytvořit v [!INCLUDE[d365fin](includes/d365fin_md.md)]**, která je k dispozici na stránce **Prodejní objednávky - Dynamics 365 for Sales**.
+U takových prodejních objednávek se pole **Název** v původní objednávce převede a mapuje do pole **Číslo externího dokumentu** v prodejní objednávce v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+
+To může také fungovat, pokud původní prodejní objednávka obsahuje produkty nezahrnuté do katalogu, což znamená zboží nebo zdroje, které nejsou zaregistrovány v žádné aplikaci. V takovém případě musíte vyplnit pole **Typ produktu nezahrnutého v katalogu** a **Číslo produktu nezahrnutého v katalogu** na stránce **Nastavení prodeje a pohledávek** tak, aby byl prodej neregistrovaných produktů mapován na zadané číslo zboží/zdroje pro finanční analýzu.
+
+Pokud je popis zboží na původní prodejní objednávce dlouhý, vytvoří se další řádek prodejní objednávky typu **Poznámka**, který zachová celý text prodejní objednávky v [!INCLUDE[d365fin](includes/d365fin_md.md)].
+
+Aktualizace polí v hlavičkách prodejních objednávek, například pole Posl.datum dodávky nebo Požadované datum dodávky, které jsou mapovány v Prodejní objednávka-objednávka **Mapování tabulky integrace**, jsou periodicky synchronizovány do [!INCLUDE[crm_md](includes/crm_md.md)]. Procesy, jako je uvolnění prodejní objednávky a odeslání nebo fakturace prodejní objednávky, jsou zaúčtovány na časovou osu prodejní objednávky v [!INCLUDE[crm_md](includes/crm_md.md)]. Pri více informací navštivte [Úvod do informačních kanálů o aktivitách](/dynamics365/sales-enterprise/developer/introduction-activity-feeds). <!--The link is broken. Should this actually point to https://docs.microsoft.com/en-us/dynamics365/sales-enterprise/manage-activities-->
+
+> [!NOTE]
+> Periodická synchronizace založená na Prodejní objednávka-objednávka **Mapování tabulky integrace** bude fungovat, pouze pokud je povolena integrace prodejní objednávky. Pro více informací navštivte [Nastavení připojení na stránce Nastavení připojení prodeje](admin-prepare-dynamics-365-for-sales-for-integration.md). Synchronizovány jsou pouze prodejní objednávky vytvořené z odeslaných prodejních objednávek v [!INCLUDE[crm_md](includes/crm_md.md)]. Pro více informací navštivte [Integrace zpracování prodejních objednávek](/dynamics365/sales-enterprise/developer/enable-sales-order-processing-integration).
 
 > [!VIDEO https://go.microsoft.com/fwlink/?linkid=2098170]
 
-## Handling Sales Quotes Data
-Sales quotes that are activated in [!INCLUDE[crm_md](includes/crm_md.md)] will be transferred to [!INCLUDE[prod_short](includes/prod_short.md)] if you select the **Automatically Process Quotes** check box on the **Microsoft Dynamics 365 Connection Setup** page.
-Alternatively, you can manually convert activated sales quotes from [!INCLUDE[crm_md](includes/crm_md.md)] by using the **Process in [!INCLUDE[prod_short](includes/prod_short.md)]** action on the **Sales Quotes - Dynamics 365 Sales** page.
-On such sales quotes, the **Name** field on the original quote is transferred and mapped to the **External Document Number** field on the sales order in [!INCLUDE[prod_short](includes/prod_short.md)]. Also **Effective To** field on quote is transferred and mapped to the  **Quote Valid Until** field on sales quote in [!INCLUDE[prod_short](includes/prod_short.md)].  
+## Zpracování údajů o prodejních nabídkách
+Prodejní nabídky, které jsou aktivovány v [!INCLUDE[crm_md](includes/crm_md.md)], budou převedeny na [!INCLUDE[d365fin](includes/d365fin_md.md)], pokud zaškrtnete políčko **Automaticky zpracovat nabídky** na stránce **Nastavení připojení k Microsoft Dynamics 365**.
+Případně můžete ručně převést aktivované prodejní nabídky z [!INCLUDE[crm_md](includes/crm_md.md)] pomocí akce **Zpracovat v [!INCLUDE[d365fin](includes/d365fin_md.md)]** na stránce **Prodejní nabídky - Dynamics 365 for Sales**.
+Na takových prodejních nabídkách se pole **Název** v původní nabídce převede a mapuje do pole **Číslo externího dokumentu** na prodejní objednávce v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Také pole **Platí do** v nabídce je přeneseno a mapováno do pole **Nabídka platná do data** v prodejní nabídce v  [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-Sales quotes go through many revisions while they are being finalized. Both manual and automatic processing of sales quotes in [!INCLUDE[prod_short](includes/prod_short.md)] ensures that previous versions of sales quotes are archived before processing new revisions of sales quotes from [!INCLUDE[crm_md](includes/crm_md.md)].
+Prodejní nabídky procházejí mnoha revizemi, zatímco jsou dokončovány. Ruční i automatické zpracování prodejních nabídek v [!INCLUDE[d365fin](includes/d365fin_md.md)] zajišťuje, že předchozí verze prodejních nabídek jsou archivovány před zpracováním nových revizí prodejních nabídek z [!INCLUDE[crm_md](includes/crm_md.md)].
 
-When you choose **Process** in [!INCLUDE[prod_short](includes/prod_short.md)] for a quote that is in state **Won**, a sales order is created in [!INCLUDE[prod_short](includes/prod_short.md)] only if a corresponding sales order is submitted in [!INCLUDE[crm_md](includes/crm_md.md)]. Otherwise, the quote is only released in [!INCLUDE[prod_short](includes/prod_short.md)]. If a corresponding sales order is submitted in [!INCLUDE[crm_md](includes/crm_md.md)] later, and a sales order is created from it, the **Quote No.** is updated on the sales order and the quote is archived.
+## Zpracování zaúčtovaných prodejních faktur, plateb zákazníkům a statistiky
+Po splnění prodejní objednávky budou pro ni vytvořeny faktury. Při fakturaci prodejní objednávky můžete převést zaúčtovanou prodejní fakturu do [!INCLUDE[crm_md](includes/crm_md.md)], pokud zašrtnete políčko **Vytvořit fakturu v [!INCLUDE[crm_md](includes/crm_md.md)]** na stránce **Účtovaná prodejní faktura**. Účtované faktury jsou převedeny do [!INCLUDE[crm_md](includes/crm_md.md)] se stavem **Fakturováno**.
 
-## Handling Posted Sales Invoices, Customer Payments, and Statistics
-After fulfilling a sales order, invoices will be created for it. When you invoice a sales order, you can transfer the posted sales invoice to [!INCLUDE[crm_md](includes/crm_md.md)] if you select the **Create Invoice in [!INCLUDE[crm_md](includes/crm_md.md)]** check box on the **Posted Sales Invoice** page. Posted invoices are transferred to [!INCLUDE[crm_md](includes/crm_md.md)] with the status, **Billed**.
+Když obdržíte zákaznickou platbu za prodejní fakturu v [!INCLUDE[d365fin](includes/d365fin_md.md)], stav prodejní faktury se změní na **Zaplaceno** s polem **Důvod stavu** nastaveným na **Částečně**, je-li částečně zaplaceno, nebo **Kompletně**, pokud je zcela zaplaceno, když vyberete akci **Aktualizace statistiky účtu** na stránce zákazníka v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Funkce **Aktualizace statistiky účtu** aktualizuje hodnoty, například **Saldo** a **Celkový prodej** v okně s fakty **Statistika účtu [!INCLUDE[d365fin](includes/d365fin_md.md)]** v [!INCLUDE[crm_md](includes/crm_md.md)]. Případně můžete mít naplánované úlohy, statistiky zákazníků a POSTEDSALESINV-INV, které můžete automaticky spustit na pozadí.
 
-When the customer payment is received for the sales invoice in [!INCLUDE[prod_short](includes/prod_short.md)], the sales invoice status will be changed to **Paid** with the **Status Reason** field set to **Partial**, if partially paid, or **Complete** if completely paid, when you choose the **Update Account Statistics** action on the customer page in [!INCLUDE[prod_short](includes/prod_short.md)]. The **Update Account Statistics** function will also refresh values, such as the **Balance** and **Total Sales** fields in the **[!INCLUDE[prod_short](includes/prod_short.md)] Account Statistics** FactBox in [!INCLUDE[crm_md](includes/crm_md.md)]. Alternatively, you can have the scheduled jobs, Customer Statistics and POSTEDSALESINV-INV automatically run both of these processes in the background.
+## Viz také
+[Integrace s Dynamics 365 for Sales](admin-prepare-dynamics-365-for-sales-for-integration.md)  
+[Řízení vztahů](marketing-relationship-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Změna zobrazovaných funkcí](ui-experiences.md)  
+[Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md)  
+[Přehled prodejů a centra prodeje](/dynamics365/customer-engagement/sales-enterprise/overview)
 
-## See Also
-[Integrating with Dynamics 365 Sales](admin-prepare-dynamics-365-for-sales-for-integration.md)  
-[Relationship Management](marketing-relationship-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[Assign Permissions to Users and Groups](ui-define-granular-permissions.md)    
-[Overview of Sales and Sales Hub](/dynamics365/customer-engagement/sales-enterprise/overview)  
-
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]

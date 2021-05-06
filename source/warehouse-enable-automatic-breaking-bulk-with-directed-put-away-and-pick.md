@@ -1,52 +1,51 @@
 ---
     title: Automatic Breaking Bulk with Directed Put-away and Pick | Microsoft Docs
     description: For locations that use directed put-away and pick, you can break a larger unit of measure into smaller units of measure, when it creates warehouse instructions that fulfill the needs of source documents, production orders, or internal picks and put-aways.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2019
+    ms.author: sgroespe
 
 ---
-# Enable Automatic Breaking Bulk with Directed Put-away and Pick
-For locations that use directed put-away and pick, [!INCLUDE[prod_short](includes/prod_short.md)] can, in various situations, automatically breakbulk, that is, break a larger unit of measure into smaller units of measure, when it creates warehouse instructions that fulfill the needs of source documents, production orders, or internal picks and put-aways. To breakbulk sometimes also means gathering smaller units of measure, if necessary, to meet outbound requests by breaking the larger unit of measure on the source document or production order into the smaller units of measure that are available in the warehouse.   
+# Povolení automatického rozdělení zboží s řízeným zaskladněním a vyskladněním
+Pro lokace, které používají řízené zaskladnění a vyskladnění, [!INCLUDE[d365fin](includes/d365fin_md.md)] může v různých situacích automaticky rozbalovat, to znamená, rozdělit větší měrnou jednotku na menší měrné jednotky při vytváření skladových úkonů, které splňují potřeby původních dokladů, výrobních zakázek nebo interních vyskladnění a zaskladnění. Rozbalení také znamená shromáždění menších měrných jednotek, je-li to nutné, k uspokojení odchozích požadavků, a to tak, že se větší měrná jednotka ve zdrojovém dokladu nebo výrobní zakázce rozdělí na menší měrné jednotky, které jsou ve skladu k dispozici.
 
-## Breakbulking in Picks  
-If you want to store items in several different units of measure and allow them to be automatically combined as needed in the picking process, select the **Allow Breakbulk** field on the location card.  
+## Rozbalení ve vyskladnění
+Pokud chcete skladovat zboží v několika různých měrných jednotkách a umožnit jejich automatické kombinování podle potřeby ve výdejním procesu, vyberte na kartě lokace pole **Povolit rozbalení**.
 
-To fulfill a task, application automatically looks for an item in the same unit of measure. But if it cannot find this form of the item, and this field is selected, application will suggest that you break a larger unit of measure into the unit of measure that is needed.  
+Pro splnění úkolu program automaticky vyhledá zboží ve stejné měrné jednotce. Pokud však tento formulář zboží nenajde a toto pole je vybráno, program navrhne, abyste do měrné jednotky, která je potřebná, dali větší měrnou jednotku.
 
-If the system can only find smaller units of measure, it will suggest that you gather items to fulfill the quantity on the shipment or production order. In effect, it breaks the larger unit of measure on the source document into smaller units for picking.  
+Pokud systém může najít pouze menší měrné jednotky, navrhne vám, abyste shromáždili zboží ke splnění množství v dodávce nebo výrobní zakázce. Ve skutečnosti rozdělí větší měrnou jednotku zdrojového dokumentu na menší jednotky pro výdej.
 
-## Breakbulking in Put-aways  
-In the warehouse put-away, application automatically suggests Place action lines in the put-away unit of measure, for example, pieces, even though the items arrive in a different unit of measure.  
+## Rozbalení v zaskladnění
+V zaskladnění program automaticky navrhne řádky v měrné jednotce zaskladnění, například kusy, i když zboží dorazí v jiné měrné jednotce.
 
-## Breakbulking in Movements  
-The application also breakbulks automatically in replenishment movements, if the **Allow Breakbulk** field is selected on the **Option** FastTab on the **Calculate Bin Replenishment** page.  
+## Rozbalení v přesunech
+Program také automaticky rozbaluje při přesunech doplnění, pokud je vybráno pole **Povolit rozbalení** na záložce **Možnosti** na stránce **Vypočítat doplnění přihrádky**.
 
-You can view the results of the conversion process from one unit of measure to another as intermediate breakbulk lines in the put-away, pick, or movement instructions.  
+Výsledky procesu převodu lze zobrazit z jedné měrné jednotky do jiné jako přechodné řádky rozbalení v pokynech pro zaskladnění, vyskladnění nebo přesun.
 
-> [!NOTE]  
->  If you select the **Set Breakbulk Filter** field on the warehouse instruction header, application will hide the breakbulk lines whenever the larger unit of measure is going to be completely used. For example, if a pallet is 12 pieces and you are going to use all 12 pieces, the pick will then direct you to take 1 pallet and place 12 pieces. However, if you have to pick only 9 pieces, then the breakbulk lines will not be hidden, even if you have selected the **Breakbulk Filter** field, because you have to place the remaining three pieces somewhere in the warehouse.  
+> [!NOTE]
+> Pokud vyberete pole **Nastavit filtr rozbalení** v záhlaví instrukce skladu, program skryje řádky rozbalení, kdykoli bude celá měrná jednotka zcela použita. Pokud je například je na paletě 12 kusů a vy použijete všech 12 kusů, vyskladnění bude brát jednu paletu a umístí 12 kusů. Pokud však potřebujete vybrat pouze 9 kusů, řádky rozbalení nebudou skryty ani v případě, že jste vybrali pole **Filtr rozbalení ** , protože zbývající tři kusy je třeba umístit do skladu.
 
-> [!NOTE]  
->  If you want your units of measure to perform optimally in the warehouse, also in connection with the breakbulk functionality, you should wherever possible try to:  
->   
-> - Set up the base unit of measure for an item as the smallest unit of measure that you expect to handle in your warehouse processes.  
-> - Set up your alternative units of measure for the item as multiples of the base unit of measure.  
-
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+> [!NOTE]
+> Pokud chcete, aby vaše měrné jednotky fungovaly optimálně ve skladu, také ve spojení s funkcemi rozbalení, měli byste se pokusit:
+> - Nastavte základní měrnou jednotku pro zboží jako nejmenší měrnou jednotku, kterou očekáváte ve vašich skladových procesech.
+> - Nastavte alternativní měrné jednotky pro zboží jako násobky základní měrné jednotky.
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

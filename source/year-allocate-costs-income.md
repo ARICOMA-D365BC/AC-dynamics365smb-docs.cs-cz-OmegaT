@@ -14,45 +14,45 @@ ms.date: 10/01/2020
 ms.author: edupont
 
 ---
-# Allocate Costs and Income
-You can allocate an entry in a general journal to several different accounts when you post the journal. The allocation can be made by three different methods:
+# Přidělení nákladů a výnosů
+Při účtování deníku můžete přiřadit položku ve finančním deníku několika různým účtům. Přidělení lze provést třemi různými metodami:
 
-* Quantity
-* Percentage (%)
-* Amount
+* Množství
+* Procento (%)
+* Částka
 
-The allocation features can be used with recurring general journals and in fixed assets journals.
+Funkce přidělení lze použít opakovaně pomocí finančních deníků a deníků dlouhodobého majetku.
 <!--You can also distribute the cost or revenue of a line to an intercompany partner when you post a sales or purchase document. When you post the document, a line will be posted in your general journal, and a corresponding line will be created in the intercompany outbox.-->
 
-The following procedures describe how to prepare to allocate costs in a recurring general journal by defining allocation keys. When allocation keys are defined, you complete and post the journal like any other recurring general journal. For more information, see [Working with General Journals](ui-work-general-journals.md).
+Následující postupy popisují, jak připravit přidělení nákladů v periodickém finanční deníku pomocí definování alokačních klíčů Když jsou definovány alokační klíče, tak poté dokončíte a zaúčtujete deník jako jakýkoli jiný periodický finanční deník. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
 
-## To set up allocation keys
-You can allocate an entry in a recurring general journal to several different accounts when you post the journal. The allocation can be made by quantity, percentage, or amount.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
-2. Choose the **Batch Name** field to open the **General Journal Batches** page.
-3. You can either modify allocations on an existing batch in the list or create a new batch with allocations.
-   * To create a new batch, choose the **New** action, and go to the next step.
-   * To change the allocations of an existing journal, select the journal and go to step 7.    
-4. In the **Name** field, enter a name for the batch, such as CLEANING. In the **Description** field, enter a description, such as Cleaning Expenses Journal.
-5. When you are done, close the page. A new, empty recurring journal opens.
-6. Fill in the fields on the line.
-7. Choose the **Allocations** action.
-8. Add a line for each allocation. You must fill in either the **Allocation %**, **Allocation Quantity**, or **Amount** field. You must also fill in the **Account No.** field and, if you are allocating the transaction among global dimensions, the global dimension fields.
-9. If you enter a percentage on a line, the amount in the **Amount** field is calculated automatically. These amounts have the opposite sign from the total amount in the **Amount** field in the recurring journal.
-10. After entering the allocations lines, choose **OK** to return to the **Recurring General Journal** page. The **Allocated Amt. (USD)** field is filled in and matches the **Amount** field.
-11. Post the journal.
+## Nastavení alokačních klíčů
+Položku v periodickém finančním deníku můžete při účtování přidělit několika různým účtům. Přidělení lze vytvořit podle množství, procenta nebo částky.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Periodické fin. deníky** a poté vyberte související odkaz.
+2. Klepnutím na pole **Název listu** otevřete stránku **Listy Finančního Deníku**.
+3. Můžete buď upravit již existující přidělení v listech děníku, nebo vytvořit nový deník s patřičným přidělením.
+   * Chcete-li vytvořit novou dávku, vyberte akci **Nový** a přejděte k dalšímu kroku.
+   * Chcete-li změnit přidělení existujícího deníku, vyberte deník a přejděte ke kroku 7.
+4. Do pole **Název** zadejte název dávky, například ČIŠTĚNÍ. Do pole **Popis** zadejte popis, například Deník pročištění výdajů.
+5. Až budete hotovi, zavřete stránku. Otevře se nový, prázdný periodický deník.
+6. Vyplňte pole v hlavičce.
+7. Zvolte akci **Rozdělení**.
+8. Přidejte řádek pro každé přidělení. Musíte vyplnit buď pole **Rozdělení %**, **Rozdělené množství** nebo **Částka**. Musíte také vyplnit pole **Číslo účtu** a pokud přidělujete transakci mezi globální dimenze, pole globální dimenze.
+9. Pokud do řádku zadáte procento, automaticky se vypočítá částka v poli **Částka**. Tyto částky mají opačné znaménko než celková částka v poli **Částka** v periodickém deníku.
+10. Po zadání řádků přidělení zvolte **OK** pro návrat na stránku **Periodický finanční deník**. **Rozdělená částka (USD)** je vyplněno a odpovídá poli **Částka**.
+11. Zaúčtujte deník.
 
-## To change an allocation key that has already been set up
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
-2. On the **Recurring General Journal** page, select the journal with the allocation.
-3. Choose the line with the allocation, and then choose **Allocations** action.
-4. Change the relevant fields, and then choose the **OK** button.
+## Změna již nastaveného alokačního klíče
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Periodické fin. deníky** a poté vyberte související odkaz.
+2. Na stránce **Periodický finanční deník** vyberte deník s rozdělením.
+3. Vyberte řádek s rozdělením a poté vyberte akci **Rozdělení**.
+4. Změňte příslušná pole a poté stiskněte tlačítko **OK**.
 
-## See Also
-[Closing Years and Periods](year-close-years-periods.md)  
-[Working with General Journals](ui-work-general-journals.md)    
-[Posting Documents and Journals](ui-post-documents-journals.md)    
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Uzavírání roků a období](year-close-years-periods.md)  
+[Práce s finančními deníky](ui-work-general-journals.md)    
+[Účtování dokladů a deníků](ui-post-documents-journals.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

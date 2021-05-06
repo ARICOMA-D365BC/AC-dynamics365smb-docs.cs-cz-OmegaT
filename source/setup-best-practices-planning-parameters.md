@@ -1,47 +1,41 @@
 ---
-    title: Setup Best Practices - Planning Parameters | Microsoft Docs
-    description: The Planning FastTab on the item card is the center of a company’s supply chain. Setting the correct planning parameters is very important for cost-effective inventory control and high customer service.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Nastavení osvědčených postupů - parametry plánování | Microsoft Docs
+description: Záložka Plánování s náhledem na kartě zboží je středem dodavatelského řetězce společnosti. Nastavení správných parametrů plánování je velmi důležité pro efektivní nákladové řízení zásob a vysoký zákaznický servis.
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Setup Best Practices: Planning Parameters
-The **Planning** FastTab on the item card is the center of a company’s supply chain. Setting the correct planning parameters is very important for cost-effective inventory control and high customer service.  
+# <a name="setup-best-practices-planning-parameters"></a>Nastavení osvědčených postupů: Parametry plánování
+Záložka s náhledem **Plánování** na kartě zboží je středem dodavatelského řetězce společnosti. Nastavení správných parametrů plánování je velmi důležité pro efektivní nákladové řízení zásob a vysokou kvalitu zákaznického servisu.  
 
- The following table provides best practices on how to set up selected planning parameter fields. For more information about a field, choose the link in the **Setup field** column.  
+ Následující tabulka obsahuje doporučené postupy, jak nastavit vybraná pole parametrů plánování. Další informace o poli získáte kliknutím na odkaz ve sloupci **Nastavení pole**.  
 
-|Setup field|Best practice|Comment|  
+|Nastavení pole|Osvědčený postup|Komentář|  
 |-----------------|-------------------|-------------|  
-|Reordering Policy||For more information, see [Setup Best Practices: Reordering Policies](setup-best-practices-reordering-policies.md).|  
-|Reserve|Select **Never** when the item is planned using a reorder point.<br /><br /> In manufacturing, select **Never** to allow the planning system to cover all demands.<br /><br /> Select **Optional** for items that you may want to reserve for top-priority customers.<br /><br /> Select **Always** for non-unique items, such as items of type miscellaneous that are inbound for specific demands.|Reservations generally counteract the purpose of planning, which is to balance demand and supply. Therefore, items that are set up for planning should generally not be reserved.<br /><br /> If the user reserves an inventory quantity for future demand, then the planning foundation will be disturbed, and the reorder point may not work correctly. Even if the projected inventory level is acceptable with regard to the reorder point, the quantities may not be available because of the reservation.|  
-|Dampener Period|Set with regard to the supplier’s flexibility.<br /><br /> A shorter period enables you to reduce working capital by avoiding excessive stock, but will also cause more rescheduling actions.|If the supplier accepts last-minute changes to orders, then use a shorter period, but be prepared for more rescheduling actions. If the supplier requires firm planning, then extend the period as much as possible.<br /><br /> For information about the **Dampener Period** field , see [Design Details: Planning Parameters](design-details-planning-parameters.md).|  
-|Include Inventory|Always select when you are using the Lot-for-Lot reordering policy.|Do not select only in special situations, such as when inventory items are not sellable.|  
-|Safety Lead Time|Set between 1D and 6D.<br /><br /> Set a safety lead time of at least one day to make sure that supplies are available on the day before they are needed.<br /><br /> If using a new supplier, define a longer time until their delivery performance is known.<br /><br /> In manufacturing, define longer safety lead times for critical components.|Supply that is planned by the system to avoid a stock-out will arrive on the same day that the stock-out occurs. This may be several hours too late if, for example, the demand is needed in the morning and the supply arrives in the afternoon. **Note:**  The **Safety Lead Time** field uses the base calendar. Therefore, 14D is not necessarily two weeks.|  
-|Safety Stock Quantity|Use for items with large demand fluctuations.<br /><br /> In manufacturing, use for critical components.<br /><br /> Use for items that are subject to service agreements.|If the **Reorder Point** field is not filled, then the safety stock quantity also functions as a reorder point.|  
-|Lot Accumulation Period|If you want only few big orders and you accept to carry inventory, then set a long lot accumulation period.<br /><br /> If you want multiple small orders and minimal inventory, then set a short lot accumulation period.|The lot accumulation period is generally the longest period that you will carry inventory.|  
-|Reorder Point|Base the reorder point on the item’s demand profile.|If historical data shows that the item’s average demand is 100 units during a lead time of seven days, then the reorder point can be set to 100 as a minimum.<br /><br /> This means that when the inventory level falls below 100 units, then the planning system will suggest to replenish because it takes seven days to supply the item, and there must be enough to cover the demand within those seven days.|  
-|Time Bucket|Leave blank, meaning that the inventory level is checked every day.|Checking the inventory level every day ensures optimal reorder point planning. **Note:**  A time bucket of 1W means that the inventory level may be below the reorder point for one week before a supply order is suggested.|  
-|Rounding Precision|In expensive manufacturing, set to 0.00001.|Large rounding quantities of scrap or material consumption can amount to very large inventory costs. It may therefore be relevant to set the smallest rounding precision to minimize this potential cost.|  
+|Způsob přiobjednání||Pro další informace, viz [Nastavení osvědčených postupů  Způsob přiobjednání](setup-best-practices-reordering-policies.md)|  
+|Rezervovat|Vyberte **Nikdy**, když je zboží naplánováno pomocí objednávacího bodu.<br /><br /> Při výrobě vyberte **Nikdy**, aby plánovací systém pokrýval všechny požadavky.<br /><br /> Vyberte **Volitelné** pro zboží, které můžete chtít rezervovat pro zákazníky s nejvyšší prioritou.<br /><br /> Vyberte **Vždy** pro nejedinečné zboží, například zboží typu různé, které jsou příchozí pro konkrétní požadavky.|Rezervy obecně působí proti účelu plánování, kterým je vyvážit poptávku a nabídku. Proto by položky, které jsou nastaveny pro plánování, by neměly být rezervovány.<br /><br /> Pokud si uživatel rezervuje množství zásob pro budoucí poptávku, bude plánovací základna narušena a bod přiobjednání nemusí fungovat správně. I když je plánovaná úroveň zásob přijatelná s ohledem na pořadí, množství nemusí být kvůli rezervaci k dispozici.|  
+|Období prodlevy|Nastavte s ohledem na flexibilitu dodavatele.<br /><br /> Delší období vám umožní poskytovat lepší služby zákazníkům, ale také způsobí další změny plánu.|Pokud dodavatel přijme změny objednávek na poslední chvíli, použijte delší období, ale buďte připraveni na další změny plánu. Pokud dodavatel vyžaduje pevné plánování, zkraťte toto období co nejvíce.<br /><br /> Informace o poli **Období prodlevy** naleznete v [Podrobnosti návrhu: Parametry plánování](design-details-planning-parameters.md)|  
+|Zahrnutí zásob|Vyberte vždy, když používáte přiobjednání Dávka pro dávku.|Nevybírejte pouze ve zvláštních situacích, například když skladové položky nelze prodat.|  
+|Bezpečná průběžná doba|Nastavte mezi 1D a 6D.<br /><br /> Nastavte bezpečnou průběžnou dobu alespoň jednoho dne, abyste se ujistili, že spotřební materiál je k dispozici den před tím, než jsou potřeba.<br /><br /> Pokud používáte nového dodavatele, definujte delší dobu, než bude znám jejich výkon při dodání.<br /><br /> Při výrobě definujte pro kritické komponenty delší bezpečnostní průběžné doby.|Dodávka, která je plánována systémem, aby se zabránilo výdeji, dorazí ve stejný den, kdy dojde k výdeji. Avšak i rozestup několika hodin může být příliš pozdě, pokud je například poptávka ráno a nabídka dorazí až odpoledne. **Poznámka:**  Pole **bezpečná průběžná doba** používá základní kalendář. 14D tedy nemusí být nutně dva týdny|  
+|Minimální zásoby|Použijte pro položky s velkými výkyvy poptávky.<br /><br /> Při výrobě použijte pro kritické komponenty.<br /><br /> Použijte pro položky, na které se vztahují servisní smlouvy.|Pokud pole **Bod přiobjednání** není vyplněno, pak množství minimálních zásob funguje také jako bod přiobjednání.|  
+|Období shromáždění šarží|Pokud chcete jen několik velkých objednávek a souhlasíte s tím, že budete mít zásoby, stanovte dlouhé období shromáždění šarží.<br /><br /> Pokud chcete více velkých objednávek a minimální zásoby, stanovte krátké období shromáždění šarží.|Období shromáždění šarží je obecně nejdelší období,  které budete mít zásoby.|  
+|Bod přiobjednání|Založte základní bod přiobjednání na profilu zboží.|Pokud historické údaje ukazují, že průměrná poptávka po zboží je 100 jednotek během dodací lhůty sedmi dnů, lze bod pro objednání nastavit minimálně na 100.<br /><br /> To znamená, že když úroveň zásob klesne pod 100 jednotek, pak plánovací systém navrhne doplnění, protože dodání této položky trvá sedm dní a během těchto sedmi dnů musí být dostatek na pokrytí poptávky.|  
+|Časový interval|Ponechte prázdné, což znamená, že úroveň zásob se kontroluje každý den.|Každodenní kontrola úrovně zásob zajišťuje optimální plánování bodů přiobjednání. **Poznámka:**  Časový interval 1W znamená, že úroveň zásob může být pod bodem uspořádání po dobu jednoho týdne před navržením objednávky dodávky.|  
+|Přesnost zaokrouhlování|Ve výdajově náročné výrobě nastavte na 0,00001.|Velké množství zaokrouhleného odpadu nebo spotřeby materiálu může představovat velmi vysoké náklady na zásoby. Proto může být důležité stanovit nejmenší přesnost zaokrouhlování, aby se minimalizovaly tyto potenciální náklady.|  
 
 > [!NOTE]  
->  The best practices for planning parameters on item cards also apply to the same fields on SKU cards.  
+>  Nejlepší osvědčené postupy pro parametry plánování na kartách zboží se vztahují na stejná pole na kartách SKJ.  
 >   
->  If companies plan for demand at different locations, then it is strongly advised to define SKUs for each location and that all demand is created by using a value in the **Location Code** field. For more information, see [Design Details: Demand at Blank Location](design-details-demand-at-blank-location.md).  
+>  Pokud společnosti plánují poptávku na různá místa, důrazně se doporučuje definovat kartu SKJ pro každé místo a že veškerá poptávka je vytvořena pomocí hodnoty v poli **Kód místa**. Pro více informací navštivte [Podrobnosti o designu: Poptávka na prázdné lokaci](design-details-demand-at-blank-location.md)  
 
-## See Also  
- [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)   
- [Design Details: Supply Planning](design-details-supply-planning.md)   
- [Set Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
- [Design Details: Demand at Blank Location](design-details-demand-at-blank-location.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+ [Nastavení osvědčených postupů: Plánovač dodávek](setup-best-practices-supply-planning.md)   
+ [Podrobnosti návrhu: Plánovač dodávek](design-details-supply-planning.md)   
+ [Osvědčené postupy při nastavení komplexních oblasti aplikace](set-up-complex-application-areas-using-best-practices.md)  
+ [Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

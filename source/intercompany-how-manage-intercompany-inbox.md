@@ -6,101 +6,98 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: incoming document
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Manage the Intercompany Inbox and Outbox
-All of the intercompany transactions that you receive electronically from your intercompany partners are listed in the intercompany Inbox.  
+# Správa vnitropodnikové doručené pošty a pošty k odeslání
+Všechny vnitropodnikové transakce, které obdržíte elektronicky od svých vnitropodnikových partnerů, jsou uvedeny ve vnitropodnikové doručené poště.
 
-## Organizing the Inbox  
- You can use the filter fields at the top of the inbox page to determine which transactions are shown on the page. For example, if you only want to look at transactions a particular partner created, you can enter filters in the **Transaction Source** and **Intercompany Partner Code** filters.  
+## Organizace doručené pošty
+Pomocí polí filtru v horní části stránky doručené pošty můžete určit, které transakce jsou na stránce zobrazeny. Například pokud se chcete podívat pouze na transakce vytvořené konkrétním partnerem, můžete zadat filtry do **Zdroje transakce** a **Kódu vnitropodnikového partnera**.
 
-### Transaction Source  
-What you can do with a transaction depends whether it was:  
+### Zdroj transakce
+Co s transakcí můžete udělat, záleží na tom, zda to bylo:
 
-- Created by your intercompany partner  
-- Rejected by your intercompany partner and returned to you  
+- Vytvořeno vaším vnitropodnikovým partnerem
+- Odmítnuto vaším vnitropodnikovým partnerem a vráceno vám
 
-You can use the **Show Transaction Source** field to filter the **Intercompany Inbox Transactions** page so that it displays only one of these types of transactions. (You can also filter by intercompany partner, or by the contents of the **Line Action** field.)  
+Pomocí pole **Zobrazit zdroj transakce** můžete filtrovat stránku **Transakce vnitropodnikové doručené pošty** tak, aby zobrazovala pouze jeden z těchto typů transakcí. (Můžete také filtrovat podle vnitropodnikového partnera nebo podle obsahu pole **Akce řádku**.)
 
-#### Created by Intercompany Partner  
- When you receive a new transaction that was created by your partner, you can choose to either:
+#### Transakce vytvořená vnitropodnikovým partnerem
+Když obdržíte novou transakci, kterou vytvořil váš partner, můžete si vybrat buď:
 
-- Accept the transaction  
-- Reject the transaction (Return to partner)  
-- Cancel the transaction (Delete the transaction but do not return it to your partner)  
+- Přijetí transakce
+- Odmítnutí transakce (vrácení partnerovi)
+- Zrušení transakce (odstraní transakci, ale nevrátí ji vašemu partnerovi)
 
-#### Returned from Intercompany Partner  
- If the transaction was rejected by your intercompany partner, your only choice is to cancel the transaction in the inbox. Then you must create correction lines or reverse the journal or document in your company.  
+#### Vrácení od vnitropodnikového partnera
+Pokud transakce byla odmítnuta vaším vnitropodnikovým partnerem, jedinou možností je zrušení transakce v doručené poště. Poté musíte ve své společnosti vytvořit opravné řádky nebo stornovat deník nebo dokument.
 
-## Recreating Inbox Entries  
- If you accepted a transaction in your inbox but then deleted the document or journal instead of posting it, you can re-create the inbox entry and accept it again.  
+## Opětovné vytvoření položek doručené pošty
+Pokud jste transakci přijali ve složce doručená pošta, ale místo zaúčtování dokumentu jste deník odstranili, můžete položku doručené pošty znovu vytvořit a znovu ji přijmout.
 
-## Getting an Overview of Intercompany Transactions for a Period  
- You can get an overview of all of the intercompany transactions that you have sent and received in a period. The **Intercompany Transactions** report lists all intercompany G/L entries, customer ledger entries, and vendor ledger entries.
+## Získání přehledu vnitropodnikových transakcí za období
+Můžete získat přehled o všech vnitropodnikových transakcích, které jste odeslali a přijali v období. Sestava **Vnitropodnikové transakce** uvádí všechny vnitropodnikové věcné položky, položky zákazníka a položky dodavatele.
 
- > [!NOTE]  
- > If the intercompany partners are in the same database, then transactions are transferred without the need for file or email. See the **Transfer Type** field on the **Intercompany Partner** page. <br /><br />
-In that case, you can set the system up to bypass the inbox and outbox by selecting the **Auto. Accept Transactions** check box on the **Intercompany Partner** page and the **Auto. Send Transactions** check box on the **Intercompany Setup** page respectively.
+> [!NOTE]
+> Pokud jsou vnitropodnikoví partneři ve stejné databázi, pak se transakce přenášejí bez potřeby souboru nebo e-mailu. Podívejte se na pole **Typ přenosu** na stránce **Vnitropodnikový partner**. <br /><br />
+V takovém případě můžete systém nastavit tak, aby obcházel doručenou poštu a poštu k odeslání výběrem zaškrtávacího políčka **Auto.  Přijmout transakce** na stránce **Vnitropodnikový partner** a výběrem zaškrtávacího políčka **Auto.  Odeslat transakce** na stránce **Nastavení vnitropodnikové společnosti**.
 
-## To import intercompany transactions from a file  
-If you have an intercompany partner that is not in the same database as your company, you can receive intercompany transactions from that partner in an .xml file. Then you must import the transactions into your inbox.  
+## Import vnitropodnikových transakcí ze souboru
+Pokud máte vnitropodnikového partnera, který není ve stejné databázi jako vaše společnost, můžete od tohoto partnera přijímat vnitropodnikové transakce v souboru XML. Potom musíte importovat transakce do vaší doručené pošty.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information** , and then choose the related link.
-2. Save the file to the location that you specified in the **Intercompany Inbox Details** field on the **Company Information** page.  
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Inbox Transactions**, and then choose the related link.
-4. On the **Intercompany Inbox Transactions** page, choose the **Import Transaction File** action.  
-5. on the page that appears, select the .xml file that contains the transactions, and then choose the **Open** button.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Informace o společnosti** a poté vyberte související odkaz.
+2. Uložte soubor na místo, které jste určili v poli **Detaily vnitropodnikové doručené pošty** na stránce **Informace o společnosti**.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Transakce vnitropodnikové doručené pošty** a poté vyberte související odkaz.
+4. Na stránce **Transakce vnitropodnikové doručené pošty** vyberte akci **Import souboru transakcí**.
+5. Na zobrazené stránce vyberte soubor .xml, který obsahuje transakce, a poté vyberte tlačítko **Otevřít**.
 
-The transactions are imported into the inbox and you can now process them.
+Transakce se importují do složky Doručená pošta a nyní je můžete zpracovat.
 
-## To process incoming intercompany transactions  
-When your intercompany partners send you intercompany transactions, the transactions end up in your intercompany inbox. You must evaluate each transaction in your inbox and act upon it.  
+## Zpracování příchozích vnitropodnikových transakcí
+Když vám vaši vnitropodnikoví partneři pošlou vnitropodnikové transakce, transakce skončí ve vaší vnitropodnikové doručené poště. Každou transakci v doručené poště musíte vyhodnotit a jednat podle potřeby.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Inbox Transactions**, and then choose the related link.  
-2. On the **Intercompany Inbox Transactions** page, select a line, and then choose an action, such as **Accept**, to process the line.
-3. On the **Complete IC Inbox Action** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Choose the **OK** button.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Transakce vnitropodnikové doručené pošty** a poté vyberte související odkaz.
+2. Na stránce **Transakce vnitropodnikové doručené pošty** vyberte řádek a poté vyberte akci, například **Přijmout**, aby se řádek zpracoval.
+3. Na stránce **Dokončit akci vnitrop.dor.pošty** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Vyberte tlačítko **OK**.
 
-For lines that you processed with the **Accept** action, document or journal lines will be created in your company. Open each document or journal, make any necessary changes, and then post them.  
+Pro řádky, které jste zpracovali pomocí akce **Přijmout**, budou ve vaší společnosti vytvořeny řádky dokumentů nebo deníků. Otevřete každý dokument nebo deník, proveďte potřebné změny a poté je odešlete.
 
-Lines that you processed with the **Return to Partner** action will be moved to the outbox from where you can then send them to your partner.
+Řádky, které jste zpracovali pomocí akce **Vrátit vnitropodnikovému partnerovi**, budou přesunuty do pošty k odeslání, odkud je pak můžete odeslat partnerovi.
 
-For lines that you processed with the **Returned by Partner** action, you must now post a correction to the original transaction that you posted in your company.
+U řádků, které jste zpracovali akcí **Vrátit vnitropodnikovému partnerovi**, musíte nyní zaúčtovat opravu původní transakce, kterou jste zaúčtovali ve vaší společnosti.
 
-## To process outgoing intercompany transactions  
-When you post an intercompany journal or document, or send an intercompany order confirmation, the transactions are sent to your intercompany outbox. In order for them to be sent on to your intercompany partners, you must open the outbox and process them.  
+## Zpracování odchozích vnitropodnikových transakcí
+Když zaúčtujete vnitropodnikový deník nebo dokument nebo odešlete potvrzení vnitropodnikové objednávky, transakce se odešlou do vaší vnitropodnikové pošty. Abyste je mohli zaslat svým vnitropodnikovým partnerům, musíte otevřít složku k odeslání a zpracovat je.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Outbox Transactions**, and then choose the related link.  
-2. On the **Intercompany Outbox Transactions** page, select a line, and then choose an action, such as **Return to Inbox**, to process the line.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Transakce vnitropodnikové pošty k odeslání** a poté vyberte související odkaz.
+2. Na stránce **Transakce vnitropodnikové pošty k odeslání** vyberte řádek a poté vyberte akci, například **Vrátit do doručené pošty**, aby se řádek zpracoval.
 
-Lines that you processed with the **Send to Intercompany Partner** action will be sent to the relevant partner's inbox.
+Řádky, které jste zpracovali pomocí akce **Poslat vnitropodnikovému partnerovi**, budou odeslány do složky Doručená pošta příslušného partnera.
 
-Lines that you processed with the **Return to Inbox** action will be moved to the inbox where you can then accept them to create documents or journal lines in your company.  
+Řádky, které jste zpracovali pomocí akce **Vrátit do doručené pošty**, budou přesunuty do složky Doručená pošta, kde je můžete přijmout a vytvořit dokumenty nebo řádky deníku ve vaší společnosti.
 
-For lines that you processed with the **Cancel** action, you must now post a correction to the original transaction that you posted in your company.  
+U řádků, které jste zpracovali pomocí akce **Storno**, musíte nyní zaúčtovat opravu původní transakce, kterou jste zaúčtovali ve vaší společnosti.
 
-## To recreate intercompany inbox transactions  
-Occasionally, you may want to re-create a transaction in the inbox or outbox. For example, if you accepted a transaction in your inbox but then deleted the document or journal instead of posting it, you can re-create the inbox entry and accept it again.  
+## Opětovné vytvoření vnitropodnikových transakcí doručené pošty
+V některých případech můžete chtít znovu vytvořit transakci v doručené poště nebo v poště k odeslání. Pokud jste například přijali transakci ve složce Doručená pošta, ale místo zaúčtování dokument nebo deník odstranili, můžete položku doručené pošty znovu vytvořit a znovu ji přijmout.
 
-The following procedure describes to re-create inbox transactions, but the same steps also apply to the outbox.
+Následující postup popisuje opětovné vytvoření transakcí doručené pošty, ale stejné kroky platí také pro poštu k odeslání.
 
-  1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Handled IC Inbox Transactions**, and then choose the related link.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zpracované transakce vnitropodnikové doručené pošty** a poté vyberte související odkaz.
 
-  2.  On the **Handled IC Inbox Transactions** page, select the line with the transaction that you want to re-create in the inbox, and then choose the **Re-create Inbox Transaction** action.  
+2. Na stránce **Zpracované transakce vnitropodnikové doručené pošty** vyberte řádek s transakcí, kterou chcete znovu vytvořit ve složce Doručená pošta, a pak vyberte akci **Znovu vytvořit transakce doručené pošty**.
 
-## See Also
-[Managing Intercompany Transactions](intercompany-manage.md)  
+## Viz také
+[Správa vnitropodnikových transakcí](intercompany-manage.md)  
 [Finance](finance.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Nastavení financí](finance-setup-finance.md)  
+[Práce s finančními deníky](ui-work-general-journals.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

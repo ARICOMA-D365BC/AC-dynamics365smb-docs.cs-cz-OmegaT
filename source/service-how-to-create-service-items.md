@@ -1,63 +1,58 @@
 ---
-    title: How to Create Service Items | Microsoft Docs
-    description: When you receive an unregistered item for servicing, you can register it as a service item.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Vytváření Předmětů servisu | Microsoft Docs
+description: 'Když obdržíte neevidované zboží pro servis, můžete jej evidovat jako předmět servisu.'
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Create Service Items
-In [!INCLUDE[prod_short](includes/prod_short.md)], the term "service item" refers to equipment or items that require service. When you create a service order, you specify the items that need service. In the order, you can link a service item to an item in inventory or a service item group.    
+# <a name="create-service-items"></a>Vytváření předmětů servisu
+V [!INCLUDE[d365fin](includes/d365fin_md.md)] se termín „předmět servisu“ vztahuje na vybavení nebo zboží, které vyžaduje servis. Při vytváření servisní zakázky určíte zboží, které vyžaduje servis. V zakázce můžete propojit předmět servisu se zbožím v zásobách nebo se skupinou předmětů servisu.    
 
-When you receive an item that needs service, you can register it as a service item. There are several ways to do so. For example, you can create a service item on the **Service Items** page, or as part of another process, such as when working with a service order.   
+Když obdržíte zboží, které vyžaduje servis, můžete jej zaevidovat jako předmět servisu. Toho lze dosáhnout několika způsoby. Například můžete vytvořit předmět servisu na stránce **Předměty servisu**, nebo v rámci jiného procesu, například při práci se servisní zakázkou.   
 
-## To create a service item  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Items**, and then choose the related link.
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+## <a name="to-create-a-service-item"></a>Vytvoření předmětu servisu  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Předměty servisu** a poté vyberte související odkaz.
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-## To create service items within a service order  
-When you receive items for service that you want to register as service items, you can create them as service items in the **Service Order** or **Service Quote** pages.  
+## <a name="to-create-service-items-within-a-service-order"></a>Vytvoření předmětů servisu uvnitř servisní zakázky  
+Když obdržíte zboží, které chcete zaregistrovat jako předměty servisu, na servis, můžete jej vytvořit jako předmět servisu na stránkách **Servisní zakázky** nebo **Nabídka servisu**.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Orders**, and then choose the related link.  
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
-3. Choose the **Create Service Item** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Servisní zakázky** a poté vyberte související odkaz.  
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+3. Zvolte akci **Vytvořit předmět servisu**.  
 
-    A number is assigned to the service item and a service item card is created. The **Service Item No.** field is filled in with the number of the new service item.
+    K předmětu servisu je přiřazeno číslo a je vytvořena karta předmětu servisu. Pole **Číslo předmětu servisu** je vyplněno číslem nového předmětu servisu.
 
-## To create a service item when shipping items  
-When you ship items by posting either sales orders or sales invoices, the shipped items are automatically registered as service items if the following condition is met. The items must belong to a service item group with the **Create Service Item** check box selected. If the items have serial numbers registered in the Item Tracking Lines page, this information is copied automatically to the **Serial No.** field on the service item card when creating service items.  
+## <a name="to-create-a-service-item-when-shipping-items"></a>Vytvoření předmětu servisu při dopravě zboží  
+Při odeslání zboží zaúčtováním buď servisních zakázek nebo servisních faktur, je expedované zboží automaticky zaregistrováno jako předměty servisu, pokud je splněna následující podmínka. Položky musí patřit do skupiny předmětů servisu se zaškrtnutým políčkem **Vytvořit položku servisu**. Pokud má zboží registrovaná sériová čísla na stránce řádků sledování zboží, jsou tyto informace při vytváření předmětů servisu zkopírovány automaticky do pole **Sériové číslo**.  
 
-The following procedure shows how to create service items when you ship items on sales orders.  
+Následující postup ukazuje, jak vytvořit předměty servisu při odeslání zboží v rámci servisní zakázky.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2. Open the relevant sales order.  
-3. Choose the **Post** or **Post and Print** action.  
-4. Choose the **Ship** or **Ship and Invoice** action.  
-5. The service items are automatically created for the items on the order, provided these belong to a service item group that you have set up to create service items. If you registered specific serial numbers on the **Item Tracking Lines** page, they will be assigned to these service items.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Servisní zakázky** a poté vyberte související odkaz.  
+2. Otevřete příslušnou servisní zakázku.  
+3. Zvolte akci **Účtovat** nebo **Účtovat a Vytisknout**.  
+4. Zvolte akci **Odeslat** nebo **Odeslat a fakturovat**.  
+5. Předměty servisu jsou automaticky vytvořeny pro zboží v zakázce za předpokladu, že patří do skupiny předmětů servisu, kterou jste nastavili pro vytváření předmětů servisu. Pokud jste zaregistrovali konkrétní sériová čísla na stránce **Řádky sledování zboží**, budou přiřazena k těmto předmětům servisu.  
 
 > [!NOTE]  
->  If an item is a BOM and you have exploded the BOM, the exploded BOM items are processed in the same way as regular items. Service items are created based on the service items group condition and, optionally, the serial numbers condition. Additionally, if a service item is created for an exploded BOM item that is made up of other BOM components, these items are created as service item components for the exploded BOM service item.  
+>  Pokud je položka kusovník a rozbalili jste ji, jsou rozbalené položky kusovníku zpracovány stejným způsobem jako běžné zboží. Předměty servisu jsou vytvářeny na základě podmínky skupiny předmětů servisu, případně podmínky sériových čísel. Navíc pokud je předmět servisu vytvořen pro rozbalenou položku kusovníku, která je tvořena jinými komponenty kusovníku, jsou tyto položky vytvořeny jako komponenty předmětu servisu pro rozbalený předmět servisu kusovníku.  
 >   
->  If an item is a BOM and you have not exploded the BOM, a service item is created for it based on the service item group condition and, optionally, the serial numbers condition.  
+>  Pokud je zboží kusovník a nemáte rozbalený kusovník, vytvoří se pro něj předmět servisu na základě podmínky skupiny předmětů servisu, případně podmínky sériových čísel.  
 
-## To insert a starting fee for a service item
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Tasks**, and then choose the related link.
-2. Choose the **Item Worksheet** action.
-3. Choose the service line, and then choose **Actions**, choose **Functions**, and then choose **Insert Starting Fee** action.  
+## <a name="to-insert-a-starting-fee-for-a-service-item"></a>Vložení počátečního poplatku k předmětu servisu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Servisní úlohy** a poté vyberte související odkaz.
+2. Zvolte akci **Sešit předmětu servisu**.
+3. Zvolte řádek servisu, poté zvolte **Akce**, vyberte **Funkce**, a následně akci **Vložit poč.poplatek**.  
 
-    A service line of type **Cost** is inserted with the starting fee. The starting fee applies to the selected service item.
+    S počátečním poplatkem je vložen servisní řádek typu **Náklady**. Počáteční poplatek se vztahuje na vybraný předmět servisu.
 
-## See Also  
-[Set Up Service Items and Service Item Components](service-how-setup-service-items.md)  
-[Setting Up Service Management](service-setup-service.md)  
-[Service Management](service-service.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+[Nastavení Předmětů servisu a Komponent předmětů servisu](service-how-setup-service-items.md)  
+[Nastavení Správy servisu](service-setup-service.md)  
+[Správa servisu](service-service.md)  

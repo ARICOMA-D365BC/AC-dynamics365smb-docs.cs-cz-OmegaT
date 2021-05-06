@@ -13,221 +13,221 @@
     ms.author: edupont
 
 ---
-# Walkthrough: Planning Supplies Manually
+# Návod: Ruční plánování dodávek
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]  
+[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
 
-This walkthrough demonstrates the process of planning supply orders to fulfill new demand. You can initiate supply planning at fixed intervals, for example, every morning or every Monday, or when you are notified by sales or production, depending on the type of demand. In this walkthrough you will use the **Order Planning** page, a simple supply planning tool that is based on manual decision-making instead of parameter-based automatic planning.  
+Tento návod ukazuje proces plánování dodávek na uspokojení nové poptávky. Plánování dodávek můžete iniciovat v pevných intervalech, například každé ráno nebo každé pondělí, nebo když jste upozorněni prodejem nebo výrobou v závislosti na typu poptávky. V tomto návodu použijete stránku **Plánování objednávek**, jednoduchý nástroj pro plánování zásobování, který je založen na manuálním rozhodování místo na automatickém plánování založeném na parametrech.
 
-## About This Walkthrough  
- This walkthrough illustrates the following tasks:  
+## Návod
+Tento návod ilustruje následující úkoly:
 
--   Planning a purchase order for manufacturing components.  
--   Planning a transfer order to fulfill sales demand.  
--   Planning a production order for a multilevel item.  
+- Plánování nákupní objednávky pro výrobu komponentů.
+- Plánování objednávky transferu pro splnění prodejní poptávky.
+- Plánování výrobní zakázky pro víceúrovňové zboží.
 
-## Roles  
- This walkthrough demonstrates tasks performed by the following user roles:  
+## Role
+Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatelskými rolemi:
 
--   Production Planner  
--   Purchasing Agent  
--   Sales Order Processor  
+- Výrobní plánovač
+- Nákupní agent
+- Zpracovatel prodejní objednávky
 
-## Prerequisites  
- Before you begin this walkthrough, you must install the [!INCLUDE[prod_short](includes/prod_short.md)]. The following modifications must be made to the database:  
+## Předpoklady
+Než začnete s tímto návodem, musíte si nainstalovat [!INCLUDE[prod_short](includes/prod_short.md)]. V databázi musí být provedeny následující změny:
 
--   Delete all existing sales orders for bicycles.  
--   Create one sales order for 10 bicycles at EAST location.  
--   Delete all planned and firm planned production orders. Do not delete started orders with entries that are already posted.  
+- Odstraňte všechny existující prodejní objednávky jízdních kol.
+- Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokalitu EAST.
+- Odstraňte všechny plánované a pevně plánované výrobní zakázky. Neodstraňujte spuštěné objednávky s položkami, které jsou již zaúčtovány.
 
- As a rule, use the suggested data in this walkthrough because this data has the necessary records.  
+Zpravidla použijte navrhovaná data v tomto návodu, protože tato data mají potřebné záznamy.
 
-## Story  
- Eduardo, the Production Planner of a small manufacturing company, is about to plan production and purchase orders to fulfill new sales demand.  
+## Příběh
+Eduardo, plánovač výroby malé výrobní společnosti, se chystá plánovat výrobní a nákupní objednávky, aby uspokojil novou poptávku po prodeji.
 
- Because the products have few BOM levels and the flow of orders is relatively low, Eduardo uses the **Order Planning** page to manually create supply orders, one product level at a time.  
+Protože produkty mají několik úrovní kusovníku a tok objednávek je relativně nízký, používá Eduardo stránku **Plánování objednávek** k ručnímu vytváření objednávek dodávek po jedné úrovni produktu.
 
- In a more complex manufacturing environment, the planning worksheet is used to plan supply based on item parameters such as rescheduling period, safety lead time, reorder point, and batch calculations of consolidated demand from all product levels.  
+Ve složitějším výrobním prostředí se plánovací sešit používá k plánování nabídky na základě parametrů položky, jako je období přeplánování, doba vedení bezpečnosti, bod přiobjednání a dávkové výpočty konsolidované poptávky ze všech úrovní produktu.
 
-## Setting Up the Sample Data  
- The standard CRONUS demonstration company currently has lots of unplanned demand. During the different planning tasks in this walkthrough, you will have to deviate from the realistic business flow by ignoring demand with close due dates and instead use demand with later due dates.  
+## Nastavení ukázkových dat
+Standardní demonstrační společnost CRONUS má v současné době spoustu neplánovaných požadavků. Během různých plánovacích úkolů v tomto návodu se budete muset odchýlit od realistického obchodního toku ignorováním poptávky s blízkými daty splatnosti a místo toho použít poptávku s pozdějšími daty splatnosti.
 
-## Using the Order Planning Page  
+## Použití stránky Plánování objednávek
 
-The **Order Planning** page can be accessed from several different locations:  
+Na stránku **Plánování objednávek** lze přistupovat z několika různých míst:
 
--   Manufacturing, Planning  
--   Sales & Marketing, Order Processing  
--   Purchase, Planning  
--   In addition, you can open this page for a specific production order by choosing the **Planning** action.
+- Výroba, Plánování
+- Prodej a marketing, Zpracování objednávek
+- Nákup, Plánování
+- Kromě toho můžete tuto stránku otevřít pro konkrétní výrobní zakázku výběrem akce **Plánování**.
 
-### To use the Order Planning page  
+### Použití stránky Plánování objednávek
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Order Planning**, and then choose the related link.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Plánování objednávek** a poté vyberte související odkaz.
 
-     When the **Order Planning** page first opens, a plan must be calculated to show the new demand since it was last calculated.  
+   Když se nejprve otevře stránka **Plánování objednávek**, je třeba vypočítat plán, aby se zobrazila nová poptávka od posledního výpočtu.
 
-2.  Choose the **Calculate Plan** action.  
+2. Vyberte akci **Vypočítat plán**.
 
-     The planning system analyzes any new demand that has been introduced, such as new sales, changed sales, or production orders.  
+   Systém plánování analyzuje každou novou poptávku, která byla zavedena, například nový prodej, změněný prodej nebo výrobní zakázky.
 
-     Based on total availability, the quantity needed for each demand line is calculated. This calculation is performed order-by-order. This means that the order which includes the demand line with the earliest due date or shipment date will be calculated first. After that, additional demand lines will be calculated in the same order, regardless of the due date or shipment date.  
+   Na základě celkové dostupnosti se vypočítá množství potřebné pro každý řádek poptávky. Tento výpočet se provádí po jednotlivých objednávkách. To znamená, že jako první bude vypočítána objednávka, která obsahuje řádek poptávky s nejbližším datem splatnosti nebo datem odeslání. Poté budou další řádky poptávky vypočítány ve stejné objednávce bez ohledu na datum splatnosti nebo datum odeslání.
 
-3.  Be sure that the **Order Planning** page is maximized and that column fields are resized to show all the default field names.  
+3. Ujistěte se, že je stránka **Plánování objednávek** maximalizována a že velikost sloupců polí se změní tak, aby zobrazovala všechny výchozí názvy polí.
 
-     When the calculation is completed, the page displays all unfulfilled demand as collapsed order header lines sorted by earliest demand date.  
+   Po dokončení výpočtu stránka zobrazí všechny nesplněné požadavky jako sbalené řádky záhlaví objednávky seřazené podle nejbližšího data poptávky.
 
-     Notice that CRONUS has several orders with unfulfilled demand. Each bold planning line represents an order, sales order, or production order, including at least one order line with insufficient availability.  
+   Všimněte si, že CRONUS má několik objednávek s nesplněnou poptávkou. Každý tučný řádek plánování představuje objednávku, prodejní objednávku nebo výrobní zakázku, včetně alespoň jednoho řádku objednávky s nedostatečnou dostupností.
 
-4.  In the **Show Demand As** field, select the **All Demand** filter.  
+4. V poli **Zobrazit poptávku jako** vyberte filtr **Veškerá poptávka**.
 
-     With the **Demand Type** field, you can choose which order types that you want to display.  
+   V poli **Typ poptávky** můžete zvolit, jaké typy objednávek chcete zobrazit.
 
-     Orders that do not have availability problems are not shown. If no orders exist when a plan is calculated, a message will display and no planning lines will appear.  
+   Objednávky, které nemají problémy s dostupností, se nezobrazí. Pokud při výpočtu plánu neexistují žádné objednávky, zobrazí se zpráva a nezobrazí se žádné plánovací řádky.
 
-## Planning a Purchase Order to Fulfill Component Demand  
- In this procedure, you create a purchase order for needed manufacturing components.  
+## Plánování nákupní objednávky k uspokojení poptávky po komponentách
+V tomto postupu vytvoříte nákupní objednávku pro potřebné výrobní komponenty.
 
-### To plan a purchase order to fulfill component need in production  
+### Plánování nákupní objednávky pro splnění potřeby komponent ve výrobě
 
-1.  Expand the first line (choose the + symbol).  
-2.  Choose the first demand line, with item **LSU-15**, and then choose the **Show Document** action.  
-3.  Close the opened production order to return to the **Order Planning** page.  
-4.  In the **Replenishment System** field, select **Purchase**.  
+1. Rozbalte první řádek (vyberte symbol +).
+2. Vyberte první řádek poptávky se zbožím **LSU-15** a poté vyberte akci **Zobrazit doklad** action.
+3. Zavřete otevřenou výrobní zakázku a vraťte se na stránku **Plánování objednávek**.
+4. V poli **Systém doplnění** vyberte **Nákup**.
 
-     The default value is from the item card, or SKU card, but you can change it to one of the following options:  
+   Výchozí hodnota je z karty zboží nebo karty SKU, ale můžete ji změnit na jednu z následujících možností:
 
-    -   **Purchase** – To create a purchase order.  
-    -   **Transfer** – To create a transfer order.  
-    -   **Prod. Order** – To create a production order.  
+   - **Nákup** – Chcete-li vytvořit nákupní objednávku.
+   - **Transfer** – Chcete-li vytvořit objednávku transferu.
+   - **Výr. zakázka** – Chcete-li vytvořit výrobní zakázku.
 
-5.  In the **Supply From** field, select one of the following options according to the selected replenishment system:  
+5. V poli **Dodávka od** vyberte jednu z následujících možností podle vybraného doplňovacího systému:
 
-    -   **Vendor** – For purchases  
-    -   **Location** – For transfers  
+   - **Dodavatel** – pro nákupy
+   - **Lokace** - pro transfery
 
-     If the field is not filled in, an error message will display when you try to create the supply orders.  
+   Pokud pole není vyplněno, zobrazí se při pokusu o vytvoření zásobovacích objednávek chybová zpráva.
 
-    > [!NOTE]  
-    >  If the components have a default vendor number set up on the item cards, the lines will be preset.  
+   > [!NOTE]  
+   > Pokud mají komponenty na kartách položek nastaveno výchozí číslo dodavatele, budou řádky přednastaveny.
 
-6.  Choose the **Supply From**  field.  
-7.  On the **Item Vendor Catalogue** page, choose the **New** action, and then select vendor **30000**.  
-8.  Choose the **OK** button to return to the **Order Planning** page.  
-9. Copy vendor **30000** to the other lines for loudspeaker components on this production order.  
+6. Vyberte pole **Dodávka od**.
+7. Na stránce **Katalog dodavatelů zboží** vyberte akci **Nový** a poté vyberte dodavatele **30000**.
+8. Kliknutím na tlačítko **OK** se vrátíte na stránku **Plánování objednávek**.
+9. Zkopírujte dodavatele **30000** na další řádky pro komponenty v této výrobní zakázce.
 
-     You are now ready to create a purchase order.  
+   Nyní jste připraveni vytvořit nákupní objednávku.
 
-10. Choose the **Make Orders** action. The **Make Supply Orders** page opens.  
-11. On the **Order Planning** FastTab, in the **Make Orders for** field, choose the **Active Order** option.  
-12. On the **Options** FastTab, in the **Create Purchase Order** field, choose the **Make Purch. Order** option.  
-13. Choose the **OK** button to create purchase orders for all the components of the order.  
+10. Vyberte akci **Vytvořit objednávky**. Otevře se stránka **Vytvořit objednávky dodávek**.
+11. Na záložce **Plánování objednávek** vyberte v poli **Vytvořit objednávky pro** možnost **Aktivní objednávka**.
+12. Na záložce **Možnosti** v poli **Vytvořit nákupní objednávku** vyberte možnost **Vytvořit nák. objednávky**.
+13. Kliknutím na tlačítko **OK** vytvoříte nákupní objednávky pro všechny součásti objednávky.
 
-     The purchase orders are now created and saved as the last orders in the list of purchase orders.  
+   Nákupní objednávky jsou nyní vytvořeny a uloženy jako poslední objednávky v seznamu nákupních objednávek.
 
-## Planning a Transfer Order to Fulfill Sales Demand  
- In this procedure, you will plan for demand from a sales order. Demand lines represent sales lines and not component lines, as in production demand.  
+## Plánování objednávky transferu pro splnění prodejní poptávky
+V tomto postupu naplánujte poptávku z prodejní objednávky. Řádky poptávky představují prodejní řádky, nikoli řádky komponent, jako je tomu v případě poptávky po výrobě.
 
-### To plan a transfer order to fulfill sales demand  
+### Plánování objednávky transferu pro splnění prodejní poptávky
 
-1.  Move the pointer to the planning line for order **2008**.  
-2.  Expand the line and move the pointer to the demand line.  
+1. Přesuňte ukazatel na plánovací řádek pro objednávku **2008**.
+2. Rozbalte řádek a přesuňte ukazatel na řádek poptávky.
 
-     Sales order **2008** is for ten loudspeakers, item **LS-120**, ordered by John Haddock Insurance Co.  
+   Prodejní objednávka **2008** je pro deset reproduktorů, zboží **LS-120**, objednané společností John Haddock Insurance Co.
 
-     The item's defined replenishment system and default vendor will display.  
+   Zobrazí se definovaný doplňovací systém zboží a výchozího prodejce.
 
-    > [!NOTE]  
-    >  At the bottom of the page, there are four information fields. In the **Earliest Date Available** field, the ten pieces that are needed will be available, on an inbound supply order, nine days later than the current due date. If this is too late for the customer, the **Available for Transfer** field shows 13 pieces of the item at another location. You will want to plan for this stock.  
+   > [!NOTE]  
+   > Ve spodní části stránky jsou čtyři informační pole. V poli **Nejbližší dostupné datum** bude k dispozici deset kusů, které jsou potřeba, u příchozí objednávky dodávky, o devět dní později než aktuální datum splatnosti. Pokud je pro zákazníka příliš pozdě, pole **K dispozici pro transfer** zobrazuje 13 kusů zboží na jiné lokaci. Tuto akci budete chtít naplánovat.
 
-3.  Choose the **Available for Transfer** field to open the **Get Alternative Supply** page.  
-4.  Choose the **OK** button to book the ten items that are available.  
+3. Vyberte pole **K dispozici pro transfer** a otevřete stránku **Získat alternativní dodávku**.
+4. Kliknutím na tlačítko **OK** zarezervujete deset dostupných položek.
 
-    > [!NOTE]  
-    >  In the demand line, the suggested purchase has been exchanged with a transfer from MAIN location. The **Make Orders** function creates a transfer order from MAIN to the demanded location. The **Substitutes Exists** field works in the same way.  
+   > [!NOTE]  
+   > V řádku poptávky byl navržený nákup vyměněn s převodem z HLAVNÍ lokace. Funkce **Vytvořit objednávky** vytvoří převodní příkaz z HLAVNÍ do požadované lokace. Pole **Existuje náhrada** funguje stejným způsobem.
 
-5.  Choose the **Make Orders** action. The **Make Supply Orders** page opens.  
-6.  On the **Order Planning** FastTab, in the **Make Orders for** field, choose the **The Active Order** option.  
-7.  On the **Options** FastTab, in the **Create Transfer Order** field, select the **Make Trans. Orders** option.  
-8.  Choose the **OK** button to create the transfer order to supply the sales order.  
+5. Vyberte akci **Vytvořit objednávky**. Otevře se stránka **Vytvořit objednávky dodávek**.
+6. Na záložce **Plánování objednávek** vyberte v poli **Vytvořit objednávky pro** možnost **Aktivní objednávka**.
+7. Na záložce **Možnosti** v poli **Vytvořit objednávku transferu** vyberte možnost **Vytvořit objednávky  transferu**.
+8. Zvolte tlačítko **OK** a vytvořte objednávku transferu, která dodá prodejní objednávku.
 
-     The transfer order is now created and saved in the list as the last order in the list of open transfer orders.  
+   Převodní příkaz je nyní vytvořen a uložen v seznamu jako poslední objednávka v seznamu otevřených objednávkach transferu.
 
-## Planning a Multilevel Production Order to Fulfill Sales Demand  
- In this procedure, you will plan to fulfill sales demand for a produced item with multiple product levels, each creating dependent production demand.  
+## Plánování víceúrovňové výrobní zakázky pro splnění prodejní poptávky
+V tomto postupu budete plánovat, jak uspokojit prodejní poptávku po vyrobeném zboží s více úrovněmi produktu, přičemž každá vytvoří závislou výrobní poptávku.
 
-### To plan multilevel production to fulfill sales demand  
+### Plánování víceúrovňové výroby pro splnění prodejní poptávky
 
-1.  Select the planning line with sales demand for order **1001**, created earlier as prerequisite data.  
+1. Vyberte řádek plánování s prodejní poptávkou pro objednávku **1001**, vytvořený dříve jako data požadavků.
 
-     This demand is a sales line, but the item has a defined replenishment system of **Prod. Order**. Proceed to add an extra bell to the component need of each bicycle.  
+   Tato poptávka je řádek prodeje, ale zboží má definovaný doplňovací systém **Výr. zakázka**. Pokračujte přidáním dalšího zvonku k potřebným komponentám každého kola.
 
-2.  Choose the **Components** action to open the **Planning Components** page.  
-3.  On the line with the Bell item, change the **Quantity per** field from **1** to **2**.  
-4.  On the **Order Planning** page, consider your planning alternatives. In this case, you have no alternative means of supply, no transfer, substitute, or later delivery. You must create the suggested supply order, a production order.  
-5.  Choose the **Make Orders** action to create the production order.  
+2. Výběrem akce **Komponenty** otevřete stránku **Plánované komponenty**.
+3. Na řádku s položkou Zvonek změňte pole **Množství za** z hodnoty **1** na **2**.
+4. Na stránce **Plánování objednávek** zvažte alternativy plánování. V tomto případě nemáte žádné alternativní způsoby dodání, žádný transfer, náhradní nebo pozdější doručení. Je nutné vytvořit navrhovanou objednávku dodávky, výrobní zakázku.
+5. Zvolte akci **Vytvořit objednávky** a vytvořte výrobní zakázku.
 
-     On the **Order Planning** page, notice that the planning line for sales order **1001** no longer exists and that the initial sales demand has been covered.  
+   Na stránce **Plánování objednávek** si všimněte, že plánovací řádek pro prodejní objednávku **1001** již neexistuje a že byla pokryta počáteční poptávka.
 
-6.  Close the **Order Planning** page.  
+6. Zavřete stránku **Plánování objednávek**.
 
-     Now, you could choose to stay in this view and complete all the planning tasks. Instead, you will now take on the Production Planner role by going to the production order that you just created and access the **Order Planning** page.  
+   Nyní byste se mohli rozhodnout zůstat v tomto zobrazení a dokončit všechny plánovací úkoly. Místo toho nyní převezmete roli plánovače výroby tím, že přejdete na produkční zakázku, kterou jste právě vytvořili, a přejdete na stránku **Plánování objednávek**.
 
- As a production planner you now must plan a specific production order.  
+Jako plánovač výroby nyní musíte naplánovat konkrétní výrobní zakázku.
 
-### To plan a specific production order  
+### Plánování konkrétní výrobní zakázky
 
-1.  Open the production order **101001**, for ten bicycles, that you just created by using the **Make Orders** function.  
-2.  Open the **Prod. Order Components** page to check that the extra bell is reflected on the production order.  
-3.  Choose the **Planning** action.  
+1. Otevřete výrobní zakázku **101001** pro deset jízdních kol, kterou jste právě vytvořili pomocí funkce **Vytvořit objednávky**.
+2. Otevřete stránku **Komponenty  výrobní zakázky** a zkontrolujte, zda se zvláštní zvonek projeví ve výrobní zakázce.
+3. Vyberte akci **Plánování**.
 
-     The **Order Planning** page opens in a view that is always filtered on the specific production demand. Sales demand is not displayed. You must calculate a plan before you can see any additional demand.  
+   Stránka **Plánování objednávek** se otevře v zobrazení, které je vždy filtrováno podle konkrétní poptávky po produkci. Prodejní poptávka není zobrazena. Před tím, než uvidíte další požadavky, je nutné vypočítat plán.
 
-4.  Choose the **Calculate Plan** action.  
+4. Vyberte akci **Vypočítat plán**.
 
-     Notice that four new production orders appear as unplanned production demand derived from order **101001**. The new lines represent new production demand from the subassemblies that must be created to produce the order.  
+   Všimněte si, že čtyři nové výrobní zakázky se zobrazují jako neplánovaná výrobní poptávka odvozená od objednávky **101001**. Nové řádky představují novou výrobní poptávku z podsestav, které je třeba vytvořit, aby byla zakázka vyrobena.
 
-5.  Choose the **Expand All** action to get an overview of all the production demand for the production orders.  
+5. Zvolte akci **Rozbalit vše**, abyste získali přehled o všech produkčních poptávkách po výrobních objednávkách.
 
-     To provide additional information about the demand lines, you may want to add the **Demand Quantity** and **Demand Qty. Available** fields to your view.  
+   Chcete-li poskytnout další informace o řádcích poptávky, můžete přidat pole **Množství poptávky** a **Dostupné množství  poptávky** do vašeho zobrazení.
 
-     Now you must supply ten of each component.  
+   Nyní musíte dodat deset kusů z každé komponenty.
 
-     Note that four of the demand lines have replenishment system Prod. Order. These four subassemblies represent the second product level of the bicycle.  
+   Všimněte si, že čtyři řádky poptávky mají systém doplnění Výr. zakázka. Tyto čtyři podsestavy představují druhou úroveň produktu jízdního kola.
 
-     The default replenishment settings are already filled in and you can proceed to make orders.  
+   Výchozí nastavení doplnění je již vyplněno a můžete pokračovat v objednávce.
 
-6.  Choose the **Make Orders** action.  
+6. Vyberte akci **Vytvořit objednávky**.
 
-     Before you choose the **OK** button, notice the text on the **Order Planning** FastTab. This text is important because you know that the bicycle has several produced components, subassemblies, in its product structure that might be in demand when you create this production order.  
+   Než kliknete na tlačítko **OK**, všimněte si textu na záložce **Plánování objednávek**. Tento text je důležitý, protože víte, že jízdní kolo má ve své produktové struktuře několik vyrobených komponent, podsestav, které mohou být při vytváření této výrobní zakázky žádané.
 
-7.  On the **Make Supply Order** page, in the **Make Orders for** field, choose the **All Lines** option, and then choose the **OK** button to create production orders for the second product level of the order.  
+7. Na stránce **Vytvořit objednávky dodávek** v poli **Vytvořit objednávky pro** vyberte možnost **Všechny řádky** a poté klikněte na tlačítko **OK** k vytvoření produkčních objednávek pro druhou úroveň produktu objednávky.
 
-     Note that the top-level production demand for production order 101001 no longer exists. This means that the initial production demand for subassemblies has been planned for.  
+   Všimněte si, že nejvyšší výrobní poptávka po výrobní zakázce 101001 již neexistuje. To znamená, že počáteční poptávka po výrobě podsestav byla plánována.
 
-     On the **Order Planning** page, you calculate a plan again in order to plan the bicycle structure.  
+   Na stránce **Plánování objednávek** vypočítáte plán znovu, abyste mohli naplánovat strukturu kola.
 
-8.  Choose the **Calculate Plan** action to recalculate the plan as instructed by the embedded Help text.  
+8. Vyberte akci **Vypočítat plán** a přepočítejte plán podle pokynů vloženého textu nápovědy.
 
-     The two new lines represent additional production demand derived from the subassemblies planned in the previous steps. It is suggested that you make two production orders to supply the wheel hubs, one for 10 front hubs and one for 10 back hubs.  
+   Dva nové řádky představují další poptávku po produkci odvozenou z podsestav plánovaných v předchozích krocích. Navrhuje se, abyste pro dodávku nábojů kol udělali dvě výrobní zakázky, jednu pro 10 předních nábojů a jednu pro 10 zadních nábojů.
 
-9. Choose the **Expand All** action to get an overview of all the demand for the two production orders.  
+9. Zvolte akci **Rozbalit vše**, abyste získali přehled o veškeré poptávce po dvou produkčních objednávkách.
 
-     The suggested supply plan indicates that a total of four purchase orders will be created for the components. You decide to make the proposed orders.  
+   Navrhovaný plán dodávek naznačuje, že pro komponenty budou vytvořeny celkem čtyři nákupní objednávky. Rozhodnete se provést navrhované objednávky.
 
-10. Choose the **Make Orders** action.  
-11. In the **Make Orders for** field, select the **All Lines** option, and then choose the **OK** button. Check if additional demand exists for the production of the parent item, the bicycle, which is being sold on sales order 1001.  
-12. Choose the **Calculate Plan** action.  
+10. Vyberte akci **Vytvořit objednávky**.
+11. V poli **Vytvořit objednávky pro** vyberte možnost **Všechny řádky**a klikněte na tlačítko **OK**. Zkontrolujte, zda existuje další poptávka po výrobě nadřazeného zboží, jízdního kola, které se prodává na prodejní objednávce 1001.
+12. Vyberte akci **Vypočítat plán**.
 
-     The message indicates that all required items are now supplied. Verify the firm planned production orders that are created.  
+   Zpráva označuje, že je nyní dodáno všechno požadované zboží. Ověření firmou plánovaných výrobních zakázek, které jsou vytvořeny.
 
-13. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Orders**, and then choose the related link.  
+13. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. zakázka** a poté vyberte související odkaz.
 
-     On the **Firm Planned Prod. Orders** page review how start times and end times of individual orders are scheduled according to the product structure. The lowest-level components are produced first. Therefore, you must plan multilevel orders as demonstrated in this planning workflow.  
+   Na stránce **Pevně plánovaná výr. zakázka** zkontrolujte, jak jsou podle struktury produktu naplánovány počáteční a konečné časy jednotlivých objednávek. Komponenty nejnižší úrovně jsou vyráběny jako první. Proto je nutné naplánovat víceúrovňové objednávky, jak je znázorněno v tomto pracovním postupu plánování.
 
-## See Also  
- [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)   
- [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md)
+## Viz také
+[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)     
+[Návod: Automatické plánování dodávek](walkthrough-planning-supplies-automatically.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

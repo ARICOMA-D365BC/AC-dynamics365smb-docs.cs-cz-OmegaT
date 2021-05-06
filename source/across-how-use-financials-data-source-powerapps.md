@@ -4,54 +4,51 @@ description: You can make your Business Central data available as a data source 
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: OData, Power App, SOAP
-ms.date: 10/01/2020
+ms.date: 06/22/2020
 ms.author: edupont
 
 ---
-# Connecting to Your Business Central Data to Build a Business App Using Power Apps
+# Připojení k centrálním obchodním datům pro vytvoření obchodní aplikace pomocí PowerApps
 
-You can make your [!INCLUDE[prod_short](includes/prod_short.md)] data available as a data source in Power Apps.  
+Svá data z [!INCLUDE[prodshort](includes/prodshort.md)] můžete zpřístupnit jako zdroj dat v aplikacích Power Apps.
 
 > [!NOTE]  
-> You must have a valid account with [!INCLUDE[prod_short](includes/prod_short.md)] and with Power Apps.  
+> Musíte mít platný účet pro [!INCLUDE[prodshort](includes/prodshort.md)] a Power Apps.
 
-## To add [!INCLUDE[prod_short](includes/prod_short.md)] as a data source in Power Apps
+## Přidání [!INCLUDE[prodshort](includes/prodshort.md)] jako zdroj dat pro Power Apps
 
-1. In your browser, navigate to [powerapps.microsoft.com](https://powerapps.microsoft.com/), and then sign in.
-2. On the Home page, in the **Start from data** section, choose the **Other data sources** tile.  
+1. Běžte v prohlížeči na stránku [powerapps.microsoft.com](https://powerapps.microsoft.com/) a přihlašte se.
+2. Na domovské stránce v sekci **Vycházet z dat** vyberte dlaždici **Jiné datové zdroje** tile.
 
-    This opens Power Apps Studio. On first login, you must specify the country/region.  
-3. In the list of available connections, choose **Business Central**, and then choose the **Create** button.
+   Tím se otevře Power Apps Studio. Při prvním přihlášení musíte zadat zemi nebo oblast
+3. V seznamu dostupných připojení zvolte **Business Central** a pak zvolte tlačítko **Vytvořit**.
 
-    Power Apps will connect to your [!INCLUDE[prod_short](includes/prod_short.md)] using the credentials that you are signed in with. If you are not an administrator of your [!INCLUDE[prod_short](includes/prod_short.md)], you may have to sign in with another account.  
+   Power Apps se připojí k vašemu [!INCLUDE[prodshort](includes/prodshort.md)] pomocí přihlašovacích údajů, s kterými jste přihlášeni. Pokud nejste správcem vašeho [!INCLUDE[prodshort](includes/prodshort.md)], budete se muset přihlásit pomocí jiného účtu.
 
-4. Power Apps will display a list of *Environments and companies* that are available from [!INCLUDE[prod_short](includes/prod_short.md)]. Choose the environment and company that contains the data you want to connect to, such as *PRODUCTION - My Company*.  
+4. Power Apps zobrazí seznam *Prostředí a společností*, které jsou dostupné z [!INCLUDE[prodshort](includes/prodshort.md)]. Vyberte prostředí a společnost, která obsahuje data, ke kterým se chcete připojit, například *VÝROBA - Moje společnost*.
 
-5. Next, you will be presented with a list of tables that are exposed as part of the API for your environment. Select the table that you want to connect to, and then choose **Connect**.
+5. Dále se zobrazí seznam tabulek, které jsou vystaveny jako součást rozhraní API pro vaše prostředí. Vyberte tabulku, ke které se chcete připojit, a poté zvolte **Připojit** .
 
-These so-called tables are exposed as endpoints by the [!INCLUDE[prod_short](includes/prod_short.md)] connector for Power Apps.  
-
-> [!NOTE]
-> If you want to include data from other tables in [!INCLUDE[prod_short](includes/prod_short.md)] in your app, then you must work with a developer to define a custom API in [!INCLUDE[prod_short](includes/prod_short.md)] and then consume that custom API through a custom connector in Power Apps. For more information, see [Create a custom connector from scratch](/connectors/custom-connectors/define-blank).  
-
-At this point, you have successfully connected to your [!INCLUDE[prod_short](includes/prod_short.md)] data and are ready to begin building your PowerApp. You can add additional screens and connect to additional data from your [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Create a canvas app from a sample in Power Apps](/powerapps/maker/canvas-apps/open-and-run-a-sample-app).  
-
-When you have designed and built your app, you can share it with your colleagues. For more information, see [Save and publish a canvas app in Power Apps](/powerapps/maker/canvas-apps/save-publish-app).  
+Tyto takzvané tabulky jsou vystaveny jako koncové body [!INCLUDE[prodshort](includes/prodshort.md)] - konektor pro Power Apps.
 
 > [!NOTE]
-> If you want to connect to [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, then you must choose the **Business Central (on-premises)** connector in step 3.  
+> Pokud chcete zahrnout i data z jiných tabulek z [!INCLUDE[prodshort](includes/prodshort.md)] do Vaší aplikace, musíte s vývojářem definovat vlastní API v [!INCLUDE[prodshort](includes/prodshort.md)] a poté toto vlastní API použijte jako vlastní konektor v aplikacích Power Apps. Pro více informací navštivte [Vytváření vlastního konektoru od nuly](/connectors/custom-connectors/define-blank).
 
-## See Also
+V tomto okamžiku jste se úspěšně připojili k vašemu [!INCLUDE[prodshort](includes/prodshort.md)] a jste připraveni začít vytvářet PowerApp. Můžete přidat další obrazovky a připojit se k dalším datům z vašeho [!INCLUDE[prodshort](includes/prodshort.md)]. Pro více informací navštivte [Vytvoření aplikace z příkladu Power Apps](/powerapps/maker/canvas-apps/open-and-run-a-sample-app).
 
-[Create a canvas app from a template in Power Apps](/powerapps/maker/canvas-apps/get-started-test-drive)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Getting Started Developing Connect Apps for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/developer/devenv-develop-connect-apps)  
+Pokud jste aplikaci navrhli a vytvořili, můžete ji sdílet se svými kolegy. Pro více informací navštivte [Uložení a publikování vzorové aplikace in Power Apps](/powerapps/maker/canvas-apps/save-publish-app).
 
+> [!NOTE]
+> Pokud se chcete připojit k on-premises [ [!INCLUDE[prodshort](includes/prodshort.md)] tak musíte vybrat **Business Central (on-premises)** konektor v kroku 3.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+
+[Vytvoření vzorové aplikace z šablony v Power Apps](/powerapps/maker/canvas-apps/get-started-test-drive)  
+[Importování dat z jiných finančích systémů](across-import-data-configuration-packages.md)  
+[Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md)  
+[Vývoj Connect Apps pro Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/developer/devenv-develop-connect-apps)

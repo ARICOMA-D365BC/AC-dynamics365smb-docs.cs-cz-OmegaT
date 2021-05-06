@@ -4,36 +4,33 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Handling Inventory and Manufacturing Costs
-Although much of the cost accounting functionality is expressed in underlying processes with no user interaction, such as entry application and automatic cost adjustment, a number of fields, pages, and reports are aimed at users who directly or indirectly manage the cost of items or operations.  
+# Zpracování skladových a výrobních nákladů
+Přestože je většina funkcí nákladového účetnictví vyjádřena v základních procesech bez interakce s uživatelem, jako je vyrovnání položek a automatická úprava nákladů, je řada polí, stránek a sestav zaměřena na uživatele, kteří přímo nebo nepřímo spravují náklady na položky nebo operace.
 
- Assigning item charges to purchase documents is an example of an indirect cost accounting task. Updating the unit cost of assembly or production BOM item is an example of a more direct cost accounting task.  
+Příkladem nepřímého nákladového účetnictví je přiřazení zboží na nákup dokladů. Aktualizace pořizovacích cen na montážní nebo výrobní kusovník je příkladem úlohy s přímějším nákladovým účetnictvím.
 
- The following table describes a sequence of tasks, with links to the topics that describe them.   
+Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
 
-|**To**|**See**|  
+| **K** | **Videní** |
 |------------|-------------|  
-|Periodically or automatically update the unit cost of one or multiple items to forward any cost changes from inbound entries, such as those for purchases or production output, to the related outbound entries, such as consumption or transfers.|[Adjust Item Costs](inventory-how-adjust-item-costs.md)|  
-|Get insight into average cost dynamics to make pricing decisions or to track cost fluctuations caused by data entry errors.|[Register New Items](inventory-how-register-new-items.md)|  
-|Create a manufacturing item's standard cost by entering the three cost elements: material cost, capacity cost, and subcontractor cost.|[About Calculating Standard Cost](finance-about-calculating-standard-cost.md)|  
-|Calculate the unit cost of a BOM item based on the unit costs of its underlying components.|[Work with Bills of Material](inventory-how-work-BOMs.md)|  
-|Complete the costing life cycle of a produced item by adjusting the costs and reconciling the value entries with the general ledger.|[About Finished Production Order Costs](finance-about-finished-production-order-costs.md)|  
-|Change the value of an item in inventory or the value of one item ledger entry, such as a purchase transaction.|[Revalue Inventory](inventory-how-revalue-inventory.md)|
-|Manually undo an item application or reapply item ledger entries created by application.|[Remove and Reapply Item Ledger Entries](finance-how-to-remove-and-reapply-item-entries.md)|  
-|Use the **Applies-from Entry** field in the item journal to manually create a fixed application between an inbound transaction and the original outbound transaction.|[Close Open Item Ledger Entries Resulting from Fixed Application in the Item Journal](finance-how-to-close-open-item-ledger-entries-resulting-from-fixed-application-in-the-item-journal.md)|  
+| Pravidelně nebo automaticky aktualizujte jednotkové náklady jedného nebo více zboží tak, aby přesměrovávaly veškeré změny nákladů z příchozího zboží, jako jsou například náklady na nákupy nebo produkci, na související odchozí zboží, jako je spotřeba nebo převody. | [Úprava nákladů](inventory-how-adjust-item-costs.md) |
+| Získejte přehled o průměrné dynamice nákladů a rozhodujte se o cenách nebo sledujte kolísání nákladů způsobené chybami při zadávání dat. | [Registrace nového zboží](inventory-how-register-new-items.md) |
+| Vytvořte standardní náklady na vyrobené zboží zadáním tří nákladových prvků: náklady na materiál, náklady na kapacitu a náklady na subdodavatele. | [Výpočet pevné pořizovací ceny](finance-about-calculating-standard-cost.md) |
+| Vypočítejte pořizovací cenu zboží kusovníku na základě jednotkových nákladů jeho podkladových komponent. | [Práce s kusovníky](inventory-how-work-BOMs.md) |
+| Dokončete nákladový cyklus vyrobeného zboží úpravou nákladů a odladěním položek ocenění s věcnými položkami. | [Dokončení výrobní zakázky](finance-about-finished-production-order-costs.md) |
+| Změňte hodnotu zboží v zásobách nebo hodnotu jedné položky zboží, jako je například nákupní transakce. | [Přeceňování zásob](inventory-how-revalue-inventory.md) |
+| Ručně zrušte položku vyrovnání zboží nebo znovu vyrovnejte položky zboží vytvořené pomocí aplikace. | [Odebrání a opětovné vyrovnání položek zboží](finance-how-to-remove-and-reapply-item-entries.md) |
+| Pomocí pole **Vyrovnáno položkou** v deníku zboží můžete ručně vytvořit pevné vyrovnání mezi příchozí transakcí a původní odchozí transakcí. | [Zavření položky zboží vyplývající z pevného vyrovnání v deníku zboží](finance-how-to-close-open-item-ledger-entries-resulting-from-fixed-application-in-the-item-journal.md) |
 
-## See Also  
-[Manage Inventory Costs](finance-manage-inventory-costs.md)
-[Design Details: Inventory Costing](design-details-inventory-costing.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa nákladů](finance-manage-inventory-costs.md)  
+[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)

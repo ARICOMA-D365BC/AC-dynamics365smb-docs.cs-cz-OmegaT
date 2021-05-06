@@ -13,41 +13,41 @@ ms.date: 10/01/2020
 ms.author: edupont
 
 ---
-# Reconcile Payments that Cannot be Applied Automatically
-You may sometimes have to handle payments to your bank account that cannot be applied to a related open customer, vendor or bank account ledger entry. Reasons may be that no document exists in [!INCLUDE[prod_short](includes/prod_short.md)] that the payment can be applied to, or the related document in [!INCLUDE[prod_short](includes/prod_short.md)] has a different amount than the transaction amount, for example, because of currency exchange. On the **Payment Reconciliation Journal** page, all transaction amounts for payments that are not yet applied appear in the **Difference** field, including amounts that cannot be applied because of reasons such as the above.
+# Odsouhlasení plateb, které nelze vyrovnat automaticky
+Někdy budete možná muset zpracovat platby na váš bankovní účet, které nemohou být vyrovány se související položžkou zákazníka, dodavatele nebo bankovního účtu. Důvodem může být, že v [!INCLUDE[prod_short](includes/prod_short.md)] není doklad, na který by se platba vyrovnala, nebo související doklad v  [!INCLUDE[prod_short](includes/prod_short.md)] má rozdílnou částku, než transakce. Může se jednat například důvod způsobený směnou měny. Na stránce **Deník odsouhlasení plateb** se všechny částky transakcí pro dosud nevyrovnané platby zobrazí v poli **Rozdíl** včetně částek, které nelze vyrovnat z výše uvedených důvodů.
 
-The methods for resolving these types of unapplied payments:
-* Apply manually
-* Use text-to-account mapping
-* Transfer an excess amount to a journal line to create and post the required entry, such as a refund of an overpayment.
+Metody řešení těchto typů nevyrovnaných plateb:
+* Ruční vyrovnání
+* Použítí textového mapování účtů
+* Převod nadbytečné částky na řádek deníku a pomocí úřtování vytvoření požadavoané položky, jako je například vrácení přeplatku.
 
-Payments that cannot be applied can appear on payment reconciliation journal lines in the following different ways:
+Platby, které nelze vyrovnat se mohou na řádcích deníku odsouhlasení zobrazít následujícími způsoby:
 
-* The value in the **Difference** field is equal to the value in the **Transaction Amount** field, which indicates that no part of the payment can be applied to a related open customer, vendor, or bank account ledger entry.
-* The value in the **Difference** field is lower than the value in the **Transaction Amount** field, which indicates that a part of the payment can be applied to a related open customer, vendor, or bank account ledger entry. The remaining part of the payment cannot be applied and must be reconciled manually or by posting it directly to an account.
+* Hodnota v poli **Rozdíl** je rovná hodnotě v poli **Částka transakce**, což znamená, že žádnou část platby nelze vyrovnat se související otevřenou položkou zákazníka, dodavatele nebo bankovního účtu.
+* Hodnota v poli **Rozdíl** je menší než hodnota v poli **Částka transakce** což znamená, že část platby může být vyrovnaná se související otevřenou položkou zákazníka, dodavatele nebo bankovního účtu. Zbývající část platby nelze vyrovnat a musí být odsouhlasena ručně pomocí přímého účtování na účet.
 
-To reconcile such payments, you can choose the **Transfer Difference to Account** action and then specify to which account the amount in the **Difference** field will be posted when you post the payment reconciliation journal. You can do this either from the **Payment Reconciliation Journal** page or from the **Payment Application Review** page that you open by choosing the value in the **Match Confidence** field or by choosing the **Difference** field.
+Chcete-li tyto platby odsouhlasit, zvolte akce **Převést rozdíl na účet** a poté určete na jaký účet bude částka v poli **Rozdíl** zaúčtována při účtování deníku odsouhlasení plateb. Můžete to udělat buď na stránce **Deník odsouhlasení plateb** nebo ze stránky **Přehled vyrovnání plateb** kterou otevřete výběrem hodnoty v poli **Spolehlivost párování** nebo v poli **Rozdíl**.
 
 > [!TIP]  
->   Similar functionality exists to set up automatic reconciliation of recurring payments that cannot be applied to related open customer, vendor, or bank account ledger entries. For more information, see [Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md).
+> Podobné funkce existují pro nastavení automatického odsouhlasení opakujících se plateb, které nelze vyrovnat na související otevřené položky zákazníka, dodavatele nebo bankovního účtu. Další informace naleznete v [Textové mapování opakovaných plateb pro automatické odsouhlasení](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md).
 
-## To reconcile payments that cannot be applied automatically
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.
-2. Open a payment reconciliation journal. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
-3. Choose the **Transfer Difference to Account**. The **Transfer Difference to Account** page opens.
-4. In the **Account Type** field, specify if the type of account that the payment amount will be posted to.
-5. In the **Account No.** field, specify the account that the payment amount will be posted to.
-6. In the **Description** field, specify text that describes this direct payment posting. By default, the text in the **Transaction Text** field on the payment reconciliation journal line is inserted.
-7. Choose the **OK** button.
+## Odsouhlasení plateb, které nelze vyronávat automaticky
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Deníky odsouhlasení plateb** a poté vyberte související odkaz.
+2. Otevřete deník odsouhlasení plateb. Pro více informací navštivte [Automatické odsouhlasení plateb](receivables-how-reconcile-payments-auto-application.md).
+3. Zvolte funkci **Převést rozdíl na účet**. Stránka **Převést rozdíl na účet** se otevře.
+4. Do pole **Typ účtu** vyberte na jaký typ účtu bude platba účtována.
+5. Do pole **Číslo účtu** vyberte účet, na který bude platba účtována.
+6. V poli **Popis** zadejte text, který popisuje toto přímé účtování platby. Ve výchozím nastavení je vložen text do pole **Text transkace** a řádku deníku odsouhlasení plateb.
+7. Vyberte tlačítko **OK**.
 
-If the value in the **Difference** field was equal to the value in the **Transaction Amount** field when you post the payment reconciliation journal, the whole payment on the journal line will be posted directly to the specified balancing account.
+Hodnota v poli **Rozdíl** je rovna hodnotě v poli **Částka transakce**, při účtování deníku odsouhlasení plateb, tak poté celá platba na řádku deníku bude přímo zaúčtována do zadaného protiúčtu.
 
-If the value in the **Difference** field was lower than the value in the **Transaction Amount** field, then an additional journal line will be created with the same text and date and with the difference inserted in the **Transaction Amount** field. On the original journal line, the difference will be deducted from the value in the **Transaction Amount** field, and the payment will remain applied to its related customer, vendor, or bank account ledger entry. When you post the payment reconciliation journal, one part of the payment will be posted as an applied payment. The other part of the payment will be posted directly to the specified account.
+Pokud hodnota v poli **Rozdíl** je nižší než hodnota v poli **Částka transakce** tbude vytvořen další řádek deníku se stejnám textem, datem a s rozdílem vloženým do pole**Částka transakce**. Na původním řádku deníku bude rozdíl odečten od hodnoty v poli **Částka transakce** a platba zůstane vyrovnaná na související položku zákazníka, dodavatele nebo bankovního účtu. Při účtování deníku odsouhlasení plateb bude částka platby zaúčtovaná jako vyrovnání. Druhá část platby bude zaúčtována přímo na zadaný účet.
 
-## See Also
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Správa pohledávek](receivables-manage-receivables.md)  
+[Prodej](sales-manage-sales.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

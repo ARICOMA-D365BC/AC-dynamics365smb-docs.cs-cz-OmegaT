@@ -4,64 +4,61 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Archive Documents
-You can archive sales and purchase orders, quotes, return orders, and blanket orders, for example because you want to save a copy of a document for reuse later. You can archive a sales or purchase document several times, saving a different archived version each time.
+# Archivování dokladů
+Můžete archivovat prodejní a nákupní objednávky, nabídky, objednávky vratky a hromadné objednávky, například proto, že chcete uložit kopii dokumentu pro pozdější použití. Prodejní nebo nákupní doklad můžete archivovat několikrát a pokaždé uložit jinou archivovanou verzi.
 
-For archived documents where the original still exists and is not posted, you can use the **Restore** function to overwrite the original with the archived version of the document. This is practical if you need to restore the contents of a document to an earlier state.
+U archivovaných dokladů, kde originál stále existuje a není zaúčtován, můžete pomocí funkce **Obnovit** přepsat originál archivovanou verzí dokladu. To je praktické, pokud potřebujete obnovit obsah dokladu do dřívějšího stavu.
 
-For archived documents where the original is deleted, you can only reuse the content by copying the data, for example with the **Copy from Document** function.   
+U archivovaných dokladů, kde je originál odstraněn, můžete obsah znovu použít pouze zkopírováním dat, například pomocí funkce **Kopírovat doklad**.
 
-## To set up automatic document archiving  
-You can set up automatic archiving of sales and purchase orders, quotes, blanket orders, and return orders, before you delete documents.
+## Nastavení automatické archivace dokladu
+Před odstraněním dokladů můžete nastavit automatickou archivaci prodejních a nákupních objednávek, nabídek, hromadných objednávek a objednávek vratek.
 
-The following procedure describes how to set up automatic archiving of sales documents. The steps are similar for purchase documents.
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
-2. On the **Sales & Receivables Setup** page, fill in the fields as follows.
+Následující postup popisuje, jak nastavit automatickou archivaci prodejních dokladů. Kroky jsou podobné i pro nákupní dokumenty.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení prodeje a poheldávek** související odkaz.
+2. Na stránce **Nastavení prodeje a pohledávek** vyplňte pole následujícím způsobem.
 
-|Field|Description|
+| Pole | Popis |
 |-----|-----------|
-|**Archiving Sales Quotes**|**Never** to never archive sales quotes when they are deleted. **Question** to prompt the user to choose whether to archive sales quotes when they are deleted. **Always** to archive sales quotes automatically when they are deleted.|
-|**Archiving Blanket Sales Orders**|Select to archive blanket sales orders automatically each time they are deleted.|
-|**Arch. Orders and Ret. Orders**|Select to automatically archive sales orders each time they are deleted.|
+| **Archivovaná prodejní nabídka** | **Nikdy** - Nearchivovat prodejní nabídky při jejich odstranění. **Dotaz** - Výzva uživatele, aby vybral, zda má být archivovaný doklad při mazání **Vždy** - Automatická archivace dokladu při jeho smazání. |
+| **Archivovaná hromadná prodejní objednávka** | Vyberte, chcete-li automaticky archivovat hromadné prodejní objednávky při každém odstranění. |
+| **Archivované  objednávky a objednávky  vratky** | Vyberte, chcete-li automaticky archivovat prodejní objednávky pokaždé, když jsou odstraněny. |
 
-## To archive a sales order
-The following procedure describes how to archive a sales order. The steps are similar for all orders, blanket orders, return orders, and quotes.
+## Archivace prodejní objednávky
+Následující postup popisuje, jak archivovat prodejní objednávku. Postup je podobný jako u všech objednávek, hromadných objednávek, objednávek vratek a nabídek.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2.  Open a sales order that you want to archive.  
-3.  Choose the **Archive Document** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Prodejní objednávky** související odkaz.
+2. Otevřete prodejní objednávku, kterou chcete archivovat.
+3. Vyberte tlačítko **Archivovat dokument**.
 
-The sales order is archived. You can view it on the **Archived Sales Orders** page.
+Prodejní objednávka je archivována. Můžete si ji prohlédnout na stránce **Archivované prodejní objednávky**.
 
-## To restore a non-posted sales order from the archive
-The following procedure describes how to bring the contents of an archived sales order back to the original sales order. This is only possible when the original document has not been posted. The steps are similar for all orders, blanket orders, return orders, and quotes.
+## Obnovení nezaúčtované prodejní objednávky z archivu
+Následující postup popisuje, jak přenést obsah archivované prodejní objednávky zpět na původní prodejní objednávku. To je možné pouze tehdy, pokud původní dokument nebyl zaúčtován. Postup je podobný jako u všech objednávek, hromadných objednávek, objednávek vratek a nabídek.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Archived Sales Orders**, and then choose the related link.
-2. Select the archived sales order, or version of it, that you want to restore, and then choose the **Restore** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Archivované prodejní objednávky** související odkaz.
+2. Vyberte archivovanou prodejní objednávku nebo její verzi, kterou chcete obnovit, a pak zvolte tlačítko **Obnovit**.
 
-The contents of the original sales order is replaced with that of the selected archived version.
+Obsah původní prodejní objednávky bude nahrazen textem vybrané archivované verze.
 
-## To delete archived sales orders
-The following procedure describes how to delete archived sales orders. The steps are similar for other archived sales and purchase documents.
+## Odstranění archivovaných prodejních objednávek
+Následující postup popisuje, jak odstranit archivované prodejní objednávky. Postup je podobný ostatním archivovaným prodejním a nákupním dokladům.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Delete Archived Sales Order Versions**, and then choose the related link.  
-2.  On the **Delete Archived Sales Order Versions** page, select the appropriate filters.  
-3.  Choose the **OK** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Odstranit archivované verze prod.objednávek** související odkaz.
+2. Na stránce **Odstranit archivované verze prod.objednávek** nastavte patřičné filtry.
+3. Vyberte tlačítko **OK**.
 
-## See Also
-[Track Document Lines](across-how-to-track-document-lines.md)  
-[Sales](sales-manage-sales.md)  
-[General Business Functionality](ui-across-business-areas.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Sledování řádků dokladu](across-how-to-track-document-lines.md)  
+[Prodej](sales-manage-sales.md)  
+[Obecné obchodní Funkcionality](ui-across-business-areas.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

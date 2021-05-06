@@ -1,53 +1,40 @@
 ---
-    title: Set Up Statuses for Service Orders and Repairs | Microsoft Docs
-    description: You must set up nine repair status options that identify the progress of repair and maintenance of service items in service orders.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/15/2020
-    ms.author: edupont
-
+title: Nastavení stavů pro Servisní zakázky a Opravy | Microsoft Docs
+description: 'Musíte nastavit devět možností stavu opravy, které určují průběh opravy a údržby předmětů servisu v servisních zakázkách.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Set Up Statuses for Service Orders and Repairs
+# <a name="set-up-statuses-for-service-orders-and-repairs"></a>Nastavení stavů pro Servisní zakázky a Opravy
+Musíte nastavit možnosti stavu opravy, které určují průběh opravy a údržby předmětů servisu v servisních zakázkách. Musíte nastavit nejméně devět možností stavu opravy, které identifikují situace nebo kroky provedené při servisu předmětů servisu.  
 
-You must set up repair status options that identify the progress of repair and maintenance of service items in service orders. You must set up at least nine repair status options that identify situations or actions taken when servicing service items.  
+Můžete nastavit úroveň priority pro možnosti stavu servisní zakázky. Tyto čtyři úrovně jsou Vysoká, Středně vysoká, Středně nízká a Nízká.  
 
-You can set the priority level for service order status options. The four priorities are **High**, **Medium High**, **Medium Low**, and **Low**.  
+Když změníte stav opravy předmětu servisu v servisní zakázce, stav servisní zakázky se aktualizuje. Stav opravy každého předmětu servisu je spojen se stavem servisní zakázky. Pokud jsou předměty servisu spojeny se dvěma nebo více možnostmi stavu servisní zakázky, je vybrán stav servisní zakázky s nejvyšší prioritou.  
 
-When you change the repair status of a service item in a service order, the service order status is updated. The repair status of each service item is linked to the service order status. If the service items are linked to two or more service order status options, the service order status with the highest priority is selected.  
+## <a name="to-set-up-a-repair-status"></a>Nastavení stavu opravy  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení stavů opravy** a poté vyberte související odkaz.
+2. Vytvoření nového stavu opravy  
+3. Vyplňte pole **Kód** a **Popis**.  
+4. V poli **Stav servisní zakázky** zvolte stav zakázky, ke kterému chcete stav opravy připojit. Pole **Priorita** zobrazuje prioritu vybraného stavu servisní zakázky.  
+5. Vyberte stav opravy. Můžete zvolit pouze jeden.  
+6. Chcete-li, aby bylo možné zaúčtovat servisní zakázky, včetně předmětů servisu, v tomto stavu opravy, vyberte pole **Účtování povoleno**.  
+7. Chcete-li manuálně měnit možnost stavu servisní zakázky na **Příprava**  v servisních zakázkách, včetně předmětů servisu s tímto stavem opravy, zaškrtněte políčko **Povolen stav Příprava**.  
+8. Stejným způsobem zaškrtněte políčka **Povolen stav Zpracovává se**, **Povolen stav Dokončeno**, a **Povolen stav Vyčkávat**.
+  
+## <a name="to-set-up-service-status-priorities"></a>Nastavení priority stavu servisu  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení stavu servisní zakázky** a poté vyberte související odkaz.  
+2. Vyberte stav servisní zakázky, pro kterou chcete nastavit prioritu.  
+3. V poli **Priorita** vyberte prioritu, kterou chcete nastavit pro tento stav servisní zakázky. Tento krok opakujte pro každý stav.  
 
-Before you can set up a repair status, you must set up service status priorities.
-
-## To set up service status priorities
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Order Status**, and then choose the related link.  
-2. Select the service order status you want to set a priority for.  
-3. In the **Priority** field, choose the priority you want for this service order status.  
-
-Repeat steps 2 and 3 until you have set the priority for each of the four status options: **Pending**, **In Process**, **Finished**, and **On Hold**.  
-
-## To set up a repair status
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Repair Status**, and then choose the related link.
-2. Create a new repair status.  
-3. Fill in the **Code** and **Description** fields.  
-4. In the **Service Order Status** field, choose the order status to link the repair status to. The **Priority** field displays the priority of the service order status you have chosen.  
-5. Choose a repair status. You can choose only one. A repair status cannot be linked more than one repair status option.  
-6. To be able to post service orders, including service items, with this repair status, choose the **Posting Allowed** field.  
-7. To be able to manually change the service order status option to **Pending** in service orders including service items with this repair status, choose the **Pending Status Allowed** check box.  
-8. Choose the **In Process Status Allowed**, **Finished Status Allowed**, and **On Hold Status Allowed** check boxes in the same way.
-
-Repeat these steps for each of the repair status options you want to create.
-
-## See Also
-
-[Service Order Status and Repair Status](service-service-order-status-and-repair-status.md)  
-[Setting Up Service Management](service-setup-service.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+[Stav servisní zakázky a opravy](service-service-order-status-and-repair-status.md)  
+[Nastavení Správy servisu](service-setup-service.md)  

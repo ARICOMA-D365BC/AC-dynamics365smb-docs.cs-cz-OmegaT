@@ -1,38 +1,32 @@
 ---
-title: Set Up Purchasers and Assign Purchasers to Vendors | Microsoft Docs
-description: If several purchasers, or purchasing agents, work at your company, you can organize them for statistical analysis.
+title: Založení nákupčího a přiřazení nákupčího k dodavatelům | Microsoft Docs
+description: 'Pokud ve vaší společnosti pracuje několik nákupčí, můžete je uspořádat pro statistickou analýzu.'
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: purchasing agent
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Set Up Purchasers
-If several purchasers work at your company, you can set them up in a page and assign them each a code. You can then use the codes to prepare statistics and to filter information in printed reports.<br><br>  
+# <a name="set-up-purchasers"></a>Založení nákupčí
+Pokud ve vaší společnosti pracuje několik nákupčí, můžete je založit na stránce, a každému z nich přiřadit kód. Kódy pak můžete použít k přípravě statistik a k filtrování informací v tištěných sestavách.
 
-> [!Video https://www.microsoft.com/videoplayer/embed/RE3Q7hU?rel=0]
+## <a name="to-set-up-purchasers"></a>Založení nákupčí
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejci/nákupčí** a poté vyberte související odkaz.
+2. Na stránce **Prodejci/nákupčí** zvolte **Nový**.
+3. Na stránce **Karta Prodejce/nákupčího** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To set up purchasers
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Salespeople/Purchasers**, and then choose the related link.
-2. On the **Salespeople/Purchasers** page, choose **New**.
-3. On the **Salesperson/Purchaser Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## <a name="to-assign-purchasers-to-vendors"></a>Přiřazení nákupčí k prodejcům
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
+2. Otevřete příslušnou kartu dodavatele, kterému bude přidělen nákupčí.
+3. V poli **Kód nákupčího** vyberte příslušný kód nákupčího a poté stránku zavřete.
 
-## To assign purchasers to vendors
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
-2. Open the relevant vendor card for the vendor that will be assigned a purchaser.
-3. In the **Purchaser Code** field, select the applicable purchaser code and then close the page.
-
-## See Also
-[Setting Up Purchasing](purchasing-setup-purchasing.md)  
-[Managing Payables](payables-manage-payables.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Nastavení nákupu](purchasing-setup-purchasing.md)  
+[Správa závazků](payables-manage-payables.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

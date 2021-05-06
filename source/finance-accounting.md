@@ -1,110 +1,103 @@
 ---
-title: Accountant experiences in Business Central
-description: Learn about the Accountant Role Center and the Company Hub that support internal and external accountants in the client company.
+title: Business Central accountant experience | Microsoft Docs
+description: Learn about the accountant portal for Business Central and the Accountant Role Center that supports internal and external accountants in the client company.
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accountant, accounting, financial report
-ms.date: 11/05/2020
+ms.date: 01/06/2020
 ms.author: edupont
 
 ---
-# Accountant Experiences in [!INCLUDE[prod_long](includes/prod_long.md)]
+# Zkušenosti účetních v [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)]
+Každý podnik musí dělat své vlastní účetnictví. Některé podniky zaměstnávají externího účetního a jiné mají účetního jako zaměstnance. Bez ohledu na to, jaký typ účetního jste, můžete použít centrum rolí **Účetní** v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Odtud máte přístup ke všem stránkám, které potřebujete ke své práci.
 
-Any business must do its books and sign off on the accounting. Some businesses employ an external accountant, and others have an accountant on staff. No matter which type of accountant you are, you can use the **Accountant** Role Center as your Home in [!INCLUDE[prod_short](includes/prod_short.md)]. From here, you can access all pages that you need in your work.  
+## Centrum rolí pro účetní
+Centrum rolí je řídicí panel s dlaždicemi aktivit, které zobrazují klíčová čísla v reálném čase a poskytují rychlý přístup k datům. Na pásu karet v horní části stránky máte přístup k dalším činnostem, například k otevření nejčastěji používaných finančních výkazů a výkazů v Excelu. Na navigačním panelu v horní části můžete rychle přepínat mezi seznamy, které používáte nejčastěji. Zde uvidíte další oblasti, například **Zaúčtované doklady** s různými typy dokladů, které společnost zaúčtovala.
 
-## Accountant Role Center
+Pokud jste novým uživatelem [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete spustit seznam videí přímo z Centra rolí. Můžete také spustit prohlídku **Začínáme**, která ukazuje na klíčové oblasti.
 
-The Role Center is a dashboard with activity tiles that show you real-time key figures and give you quick access to data. In the ribbon at the top of the page, you have access to more actions, such as opening the most commonly used financial reports and statements in Excel. In the navigation bar at the top, you can quickly switch between the lists you use most often. Here, you will see other areas, such as **Posted Documents** with the various types of documents that the company has posted.  
+## <a name="inviteaccountant"></a>Pozvání externího účetního do vašeho [!INCLUDE[d365fin](includes/d365fin_md.md)]
+Pokud ke správě finančního výkaznictví používáte externí účetní, může ji správce pozvat do svého [!INCLUDE[d365fin](includes/d365fin_md.md)], aby vám mohla pomoci při práci s vašimi finančními údaji. [!INCLUDE[d365fin](includes/d365fin_md.md)] zahrnuje tři licence typu externí účetní. Pro více informací o licencích navštivte [Příručka licencí Microsoft Dynamics 365 Business Central](https://go.microsoft.com/fwlink/?LinkId=871590).
 
-If you are new to [!INCLUDE[prod_short](includes/prod_short.md)], you can launch a list of videos right from your Role Center. You can also launch a **Getting Started** tour that points out key areas.  
+Jakmile váš účetní získá přístup k vašemu [!INCLUDE[d365fin](includes/d365fin_md.md)], může použít Centrum rolí pro **Účetní**, které umožňuje snadný přístup k nejdůležitějším stránkám pro jejich práci.
 
-## Company Hub
+Usnadnili jsme vám pozvání externího účetního. Jednoduše otevřete stránku **Uživatelé** a poté na pásu karet vyberte akci **Pozvat externí účetní**. Nyní je připraven e-mail na odeslání, stačí přidat pracovní e-mail svého účetního a odeslat pozvánku.
 
-If you work in multiple [!INCLUDE [prod_short](includes/prod_short.md)] companies, you might find it useful to use the **Company Hub** page to keep track of work.  For more information, see [Manage Work across Multiple Companies in the Company Hub](company-hub.md).  
-
-## <a name="inviteaccountant"></a>Inviting Your External Accountant to Your [!INCLUDE[prod_short](includes/prod_short.md)]
-
-If you use an external accountant to manage your books and financial reporting, your administrator can invite them to your [!INCLUDE[prod_short](includes/prod_short.md)] so they can work with you on your fiscal data. [!INCLUDE[prod_short](includes/prod_short.md)] includes three licenses of type External Accountant. For more information about licensing, see the [Microsoft Dynamics 365 Business Central Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=871590).
-
-Once your accountant has gained access to your [!INCLUDE[prod_short](includes/prod_short.md)], they can use the **Accountant** Role Center that gives easy access to the most relevant pages for their work. They can also use the company hub in their own [!INCLUDE [prod_short](includes/prod_short.md)] to manage their work. For more information, see [Manage Work across Multiple Companies in the Company Hub](company-hub.md).  
-
-> [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4Fnyw?rel=0]
-
-We have made it easy for you to invite your external accountant. Simply open the **Users** page, and then choose the **Invite External Accountant** action in the ribbon. An email is made ready for you, just add your accountant's work email, and send the invitation.  
-
-> [!Note]  
-> This requires that you have set up SMTP email. For more information, see [Set Up Email](admin-how-setup-email.md).  
+> [!Note]
+> To vyžaduje, abyste nastavili e-mail SMTP. Pro více informací navštivte [Nastavení e-mailu](admin-how-setup-email.md).
 
 <!-- ![Invite your accountant](./media/finance-invite-accountant/invite-accountant.png)-->
 
-> [!IMPORTANT]  
-> The accountant's email address must be a work address that is based on Azure Active Directory. If the accountant uses another type of email, then the invitation cannot be sent.
->
-> This task requires access to managing users and licenses in Azure Active Directory. The user who sends this invitation must be assigned the **Global admin** role or **User admin** role in the Microsoft 365 admin center. For more information, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles) in the Microsoft 365 admin content.  
+> [!IMPORTANT]
+> E-mailová adresa účetního musí být pracovní adresa založená na Azure Active Directory. Pokud účetní používá jiný typ e-mailu, pozvánku nelze odeslat.
+> Tento úkol vyžaduje přístup ke správě uživatelů a licencí v Azure Active Directory, uživateli, který odešle toto pozvání, musí být v Office 365 přiřazena role **Globální správce** nebo **Správce uživatelů**. Pro více informací navštivte [O rolích správce](/office365/admin/add-users/about-admin-roles) v obsahu administrátora Office 365.
+> 
+### Přidání vašeho účetního do Office 365 prostřednictvím portálu Azure
 
-### Adding your accountant to your Microsoft 365 in the Azure portal
+Pokud váš administrátor nebo prodávající partner nechce používat průvodce **Pozvat externí účetní**, může přidat externího uživatele do portálu Azure Portal a přiřadit tomuto uživateli licenci Externí účetní. Pro více informací navštivte [Rychlý start: Přidejte hostujícího uživatele do svého adresáře na portálu Azure](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
 
-If your administrator or reselling partner do not want to use the **Invite External Accountant** guide, they can add an external user in the Azure portal and assign this user the *External Accountant* license. For more information, see [Quickstart: Add guest users to your directory in the Azure portal](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+#### Přidání účetního jako hostujícího uživatele
 
-#### To add your accountant as a guest user
+1. Otevřete [portál Azure](https://portal.azure.com/).
+2. V levém podokně vyberte **Azure Active Directory**.
+3. V části **Správa** vyberte **Uživatelé**.
+4. Vyberte **Nový uživatel typu host**.
+5. Na stránce **Nový uživatel** vyberte **Pozvat uživatele** a poté přidejte informace o externím účetním.
 
-1. Open the [Azure portal](https://portal.azure.com/).
-2. In the left pane, select **Azure Active Directory**.
-3. Under **Manage**, select **Users**.
-4. Select **New guest user**.
-5. On the **New user** page, select **Invite user** and then add information about your external accountant.  
+   Případně přiložte k uvítacímu účtu osobní uvítací zprávu, která jim sdělí, že je přidáváte do svého [!INCLUDE [prodshort](includes/prodshort.md)].
 
-   Optionally, include a personal welcome message to the accountant to let them know that you are adding them to your [!INCLUDE[prod_short](includes/prod_short.md)].
+6. Vyberte **Pozvat**, chcete-li automaticky odeslat pozvánku. V pravém horním rohu se zobrazí upozornění se zprávou **Uživatel je úspěšně pozván**.
+7. Po odeslání pozvánky je uživatelský účet automaticky přidán do adresáře jako host.
 
-6. Select **Invite** to automatically send the invitation. A notification appears in the upper right with the message **Successfully invited user**. 
-7. After you send the invitation, the user account is automatically added to the directory as a guest.
+Dále musíte novému uživateli přiřadit licenci k [!INCLUDE [prodshort](includes/prodshort.md)].
 
-Next, you must assign the new guest user a license to [!INCLUDE[prod_short](includes/prod_short.md)].
+#### Předání přístupu účetnímu k vašemu [!INCLUDE [prodshort](includes/prodshort.md)]
 
-#### To give your accountant access to your [!INCLUDE[prod_short](includes/prod_short.md)]
+1. Na portálu Azure vyberte na nově přidaném uživateli možnost **Profil** a poté zvolte akci **Upravit**.
+2. Aktualizujte pole **Místo použití** na příslušnou zemi a poté vyberte akci **Uložit**.
+3. Vyberte akci **Licence** a poté otevřete možnost **Přiřazení**.
+4. Vyberte licenci **Dynamics 365 Business Central Externí účetní**.
 
-1. In the Azure portal, on the newly added user, choose **Profile**, and then choose **Edit**
-2. Update the **Usage Location** field to the relevant country, and then choose **Save**.
-3. Choose **Licenses**, and then open **Assignments**.
-4. Choose the **Dynamics 365 Business Central External Accountant** license.  
-    
-    If this license is not available, contact your reselling partner to add the license to your subscription.
+   Pokud tato licence není k dispozici, musíte místo toho použít dostupnou licenci **Dynamics 365 Business Central for IWs**.
+5. Uložte přiřazení.
 
-    Specifically for evaluation purposes in a trial tenant, you can use an available **Dynamics 365 Business Central for IWs** license instead. However, you cannot use this type of license if you have already purchased [!INCLUDE[prod_short](includes/prod_short.md)]. 
-5. Save the assignment.
+V případě úspěchu je licence přidělena hostujícímu uživateli a je vytvořen hostitelský účet.
 
-If successful, the license is assigned to the guest user, and the guest account is created.
+### Import nového uživatele do [!INCLUDE [prodshort](includes/prodshort.md)]
 
-### Importing the new user into [!INCLUDE[prod_short](includes/prod_short.md)]
+Účetní obdrží e-mail s upozorněním, že ji byl udělen přístup k vaší službě Active Directory. Dále ji musíte poskytnout přístup ke správné společnosti v [!INCLUDE [prodshort](includes/prodshort.md)].
 
-The accountant will receive an email that notifies them that they have been given access to your Active Directory. Next, you must give them access to the right company in [!INCLUDE[prod_short](includes/prod_short.md)].
+#### Přidání účetní do správné společnosti
 
-#### To add the accountant to the right company
+1. Otevřete společnost [!INCLUDE [prodshort](includes/prodshort.md)] jejíž přistup chcete poskytnout účetní na [https://businesscentral.dynamics.com](https://businesscentral.dynamics.com).
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
+3. Vyberte akci **Získat nové uživatele z Office 365**.
 
-1. Open the [!INCLUDE[prod_short](includes/prod_short.md)] company that you want to give the accountant access to at [https://businesscentral.dynamics.com](https://businesscentral.dynamics.com).
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then chose the related link.  
-3. Choose the **Get New Users from Office 365** action.
+Tím se importuje uživatelský účet, který jste vytvořili na portálu společnosti Azure. Pro více informací navštivte [Přidání uživatele v Business Central](ui-how-users-permissions.md#to-add-a-user-in-business-central).
 
-This imports the user account that you created in the Azure portal to the company. For more information, see [To add a user in Business Central](ui-how-users-permissions.md#adduser).  
+Pokud chcete udělit přístup k více společnostem, potom se musíte přihlásit do každé společnosti a tento proces opakovat. Alternativně můžete aktualizovat skupiny oprávnění pro uživatelský profil účetní v [!INCLUDE [prodshort](includes/prodshort.md)], například přiřadit jim skupinu uživatelů *D365 Bus Premium*. Pro více informací navštivte [Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md).
 
-If you want to give access to multiple companies, then you must log into each company and repeat this process. Alternatively, you can update the permission groups for the accountant's user profile in [!INCLUDE[prod_short](includes/prod_short.md)], such as assigning them the *D365 Bus Premium* user group. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).  
+## Centrum účetních
 
-## See Also
+Pokud jste účetní s více klienty, můžete použít [!INCLUDE[d365acc_long](includes/d365acc_long_md.md)] pro lepší přehled o svých klientech. Odtud máte přístup k systému každého klienta v [!INCLUDE[d365fin](includes/d365fin_md.md)] a můžete použít Centrum rolí pro účetní, jak je popsáno výše. Pro více informací navštivte [Vítejte v [!INCLUDE[d365acc_long](includes/d365acc_long_md.md)]](/dynamics365/accountants/index).
+
+> [!NOTE]
+[!INCLUDE [d365acc_long_md](includes/d365acc_long_md.md)] je aktuálně ve veřejném náhledu na omezeném počtu trhů.
+
+## Viz také
 
 [Finance](finance.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Closing Years and Periods](year-close-years-periods.md)  
-[Working with Dimensions](finance-dimensions.md)  
-[Analyzing Financial Statements in Excel](finance-analyze-excel.md)  
-[Manage Work across Multiple Companies in the Company Hub](company-hub.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Setting Up Cash Flow Analysis](finance-setup-cash-flow-analyses.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Nastavení financí](finance-setup-finance.md)  
+[Věcné položky a účetní osnova](finance-general-ledger.md)  
+[Uzavírání roků a období](year-close-years-periods.md)  
+[Práce s dimenzemi](finance-dimensions.md)  
+[Analýza finančních výkazů v aplikaci Excel](finance-analyze-excel.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Nastavení analýzy cashflow](finance-setup-cash-flow-analyses.md)  
+[Vítejte v [!INCLUDE[d365acc_long](includes/d365acc_long_md.md)]](/dynamics365/accountants/index)  
+[Dynamics 365 - Účetní Hub na Microsoft.com](https://www.microsoft.com/dynamics365/financial-insights-for-accountants)

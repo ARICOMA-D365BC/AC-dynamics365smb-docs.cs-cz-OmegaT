@@ -1,104 +1,95 @@
 ---
     title: How to Modify Planning Suggestions in a Graphical View | Microsoft Docs
-    description: A typical planning activity is to change or add planning worksheet lines to modify the suggested supply orders before you commit them by running the Carry out Action Message function. An alternative to doing this in the planning worksheet is to use a graphical view.
+    description: A typical planning activity is to change or add planning worksheet lines to modify the suggested supply orders before you commit them by running the **Carry out Action Message** function. An alternative to doing this in the planning worksheet is to use a graphical view.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Modify Planning Suggestions in a Graphical View
+# Změna návrhů plánování v grafickém zobrazení
+Typickou plánovací činností je změna nebo přidání řádků plánovacího listu za účelem úpravy navrhovaných objednávek dodávek dříve, než je provedete, spuštěním funkce **Provést hlášené akce**. Alternativou k tomu v sešitu plánování je použití grafického zobrazení.
 
-A typical planning activity is to change or add planning worksheet lines to modify the suggested supply orders before you commit them by running the **Carry out Action Message** function. An alternative to doing this in the planning worksheet is to use a graphical view. However, this is currently not supported in [!INCLUDE[prod_short](includes/prod_short.md)].  
+Na stránce **Dostupnost zásob v čase**, můžete upravit určité objednávky a návrhy dodávky přetažením prvků na ose x a změnit tak množství, nebo přetažením prvků na ose y změnit datum splatnosti.
 
-<!--On the **Item Availability by Timeline** page, you can modify certain supply orders and suggestions by dragging elements on the x-axis to change quantity or dragging elements on the y-axis to change due date.  
+Na stránce **Dostupnost zásob v čase** a stránce **Plánovací sešit** můžete provést následující změny:
 
-When you open the **Item Availability by Timeline** page from the **Planning Worksheet** page, you can make the following changes:  
+- Upravte navrhovanou objednávku dodávky, která existuje pouze jako řádek plánování.
+- Upravte existující objednávku dodávky, kterou systém plánování navrhuje změnit.
+- Vytvořte novou doporučenou objednávku dodávky a upravte ji.
 
-- Modify a suggested supply order that only exists as a planning line.  
-- Modify an existing supply order that the planning system suggests to change.  
-- Create a new suggested supply order and modify it.  
+Další informace o zobrazených typech řádků plánování naleznete v poli Popis na záložce **Změny události**.
 
-For more information about the planning line types that are shown, see the Description field on the **Event Changes** FastTab.  
+Pokud zvolíte **Uložit změny** na stránce **Dostupnost zásob v čase**, provedené změny se zkopírují do sešitu plánování nebo sešitu požadavků. Nyní je můžete implementovat pomocí funkce **Provést hlášení akce - plán.**.
 
-When you choose **Save Changes** on the **Item Availability by Timeline** page, the modifications that you have made are copied to the planning or requisition worksheet. You can now implement them using the **Carry Out Action Msg.-Plan.** function.  
+Následující postup ukazuje, jak upravit návrhy nabídky přetažením. Alternativně můžete změnit pole **Datum splatnosti** a **Množství** na záložce **Změny události** a okamžitě zobrazit změny graficky na záložce **Časová osa** na stránce **Sešity plánování**.
 
-The following procedure shows how to modify supply suggestions by drag and drop. As an alternative, you can change the **Due Date** and **Quantity** fields on the **Event Changes** FastTab and immediately see the changes graphically on the **Timeline** FastTab on the **Planning Worksheet** page.  
+## Chcete-li upravit navrhované objednávky dodávek v grafickém zobrazení
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dostupnost zásob v čase** a poté vyberte související odkaz.
 
-## To modify suggested supply orders in the graphical view
+   Stránka **Dostupnost zásob v čase** se otevře s číslem zboží, lokací, and variantou zboží na vybraném plánovacím řádku předvyplněném na záložce s náhledem **Možnosti**. Záložka s náhledem **Časová osa** zobrazuje grafické znázornění plánovaných zásob položky, včetně návrhů plánování
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheet**, and then choose the related link.  
+2. Ujistěte se, že je vybráno pole **Zahrnout návrhy plánování**.
+3. Najděte navrhovanou objednávku dodávky, kterou chcete upravit. Modifikovatelné prvky můžete identifikovat pomocí zeleného kruhu a ikony disku. Pro více informací o různých symbolech, navštivte [Symboly a ikony na záložce časové osy](production-how-to-modify-planning-suggestions-in-a-graphical-view.md#symbols-and-icons-on-the-timeline-fasttab).
+4. Umístěte ukazatel nad zelený kruh, dokud se nezvětší a ukazatel se nezmění na Přesunout tvar (čtyři šipky).
+5. Stisknutím a podržením tlačítka myši během tažení ukazatelem nahoru nebo dolů upravte množství. Stisknutím a podržením tlačítka myši při přetahování ukazatele doleva nebo doprava upravíte datum splnění.
+6. Kromě pohyblivých prvků přetažením můžete upravovat návrhy plánování pomocí několika funkcí rozevírací nabídky. Otevřete rozbalovací nabídku zeleného kruhu navrhovaného prvku dodávky a vyberte jednu z následujících funkcí
 
-2. Choose the line that you want to see item availability for, choose **Item Availability by**, and then choose **Timeline**.
+   | Funkce | Popis |
+   |--------------|---------------------------------------|  
+   | **Vytvořit novou dodávku** | Vytvoří nový bod prvku, ve kterém přistupujete k rozevírací nabídce, která představuje novou navrhovanou objednávku dodávky. Když zvolíte **Uložit změny** stane se z něj nový řádek v sešitu plánování.<br /><br /> **NOTE:** Pokud jsou pole **Filtr lokace** nebo **Filtr varianty** na záložce s náhledem **Možnosti** prázdné, nebo mají více než jednu hodnotu filtru. Pak je nová dodávka vytvořena a později uložena do sešitu plánování nebo seš.požadavků s následujícími kódy:<br /><br /> * Pokud je pole filtru prázdné, nové dodávky jsou vytvořeny bez kódu lokace nebo varianty.<br /><br /> * Pokud je definováno více než jedna hodnota filtru, bude nové zboží vytvořeno pro první hodnotu filtru podle metody řazení.<br /><br />  Pokud chcete jinou variantu nebo kód lokace, musíte jej ručně změnit na novém řádku plánování. |
+   | **Automaticky upravovaná dodávka** | Optimalizuje novou dodávku, kterou jste vytvořili v grafu, tím, že se ujistíte, že má za následek nulový počet zásob před další dodávkou. |
+   | **Odstranit dodávku** | Odstraní prvek v záložce s náhledem **Časová ose** a vymaže plánovací řádek, když zvolíte **Uložit změny**. Po odstranění zdroje se ikona změní na disk, který má červený kříž.<br /><br /> **NOTE:** Smazat lze pouze dodávku typu zprávy o akci **Nový**. Potom co zvolíte **Uložit změny**, je nutné ručně odstranit plánování řádek plánování nebo sešitu požadavků. |
 
-    The **Item Availability by Timeline** page opens with the item number, location, and variant of the item on the selected planning line prefilled in the **Options** FastTab. The **Timeline** FastTab shows a graphical representation of the item’s projected inventory, including planning suggestions.  
+7. Vyberte akci **Znovu načíst** pokud chcete resetovat všechny změny, které jste provedli po posledním otevření stránky **Dostupnost zásob v čase** nebo vybrané **Znovu načíst**.
+8. Když jsou prvky umístěny tam, kam je chcete v diagramu umístit, zvolte **Uložit změny** a zkopírujte změněné množství a datum do plánovacích nebo rekvizičních linek, které představují grafické prvky.
 
-<!--3. Make sure that the **Include Planning Suggestions** field is selected.  
-3. Find the suggested supply order that you want to modify. You can identify modifiable elements by the green circle and the disk icon. For more information about the different symbols, see [Symbols and Icons on the Timeline FastTab](#symbols-and-icons-on-the-timeline-fasttab).  
-4. Place the pointer over the green circle until it enlarges and the pointer changes to Move shape (four arrows).  
-5. Press and hold the mouse button while you drag the pointer up or down to modify the quantity. Press and hold the mouse button while you drag the pointer left or right to modify the due date.  
-6. In addition to moving elements by drag and drop, you can modify planning suggestions by using a number of drop-down menu functions. Access the drop-down menu for the green circle of a suggested supply element and select one the following functions  
+Chcete-li implementovat změny plánu zásobování, musíte dodržovat výsledné zprávy o akci z plánovacího nebo rekvizičního listu. Další informace naleznete v části Provést hlášení akce - plán.
 
-    |Function|Description|  
-    |--------------|---------------------------------------|  
-    |**Create New Supply**|Creates a new element point where you access the drop-down menu, which represents a new suggested supply order. It becomes a new line in the planning worksheet when you choose **Save Changes**.<br /><br /> **NOTE:** If the **Location Filter** or **Variant Filter** fields on the **Options** FastTab are empty or have more than one filter value, then the new supply is created and later saved to the planning or requisition worksheet with the following codes:<br /><br /> * If the filter field is empty, then the new supply is created without a location or variant code.<br /><br /> * If more than one filter value is defined, then the new supply is created for the first filter value according to the sorting method.<br /><br /> If you want another variant or location code, then you must manually change it on the new planning line.|  
-    |**Auto-Adjust Supply**|Optimizes a new supply that you have created in the graph by making sure that it results in zero inventory before the next supply.|  
-    |**Delete Supply**|Deletes the element in the **Timeline** FastTab and deletes the planning line when you choose **Save Changes**. The icon changes to a disk that has a red cross when the supply has been deleted.<br /><br /> **NOTE:** You can only delete a supply of action message type **New**. After you choose **Save Changes**, you must manually delete the planning line in question in the planning or requisition worksheet.|  
+## Symboly a ikony na časové ose záložky s náhledem
+| Symbol/ikona | Popis |
+|------------------|---------------------------------------|  
+| Černý křížek | Objednávky (jak nabídky tak poptávky).<br /><br /> -   Nemohou být upravovány<br />-   Viditelné když pole **Zobrazit plánované zásoby** je vybráno (oranžový graf). |
+| Rudý kruh | Existující objednávky dodávek, které nejsou v návrzích plánování.<br /><br /> -   Nemůže být upravena.<br />-   Viditelné, když je vybráno pole **Zobrazit plánované zásoby** (oranžový graf). |
+| Žlutá hvězda | Předpověď poptávky.<br /><br /> -   Nemůže být upravena.<br />-   Viditelné, když má pole **Název předpovědi** hodnotu.<br /><br /> Když jsou vybrané oba dva pole **Zobrazit plánované zásoby** a **Zahrnout návrhy plánování**, pak každá žlutá hvězda má each yellow star has a propojený protějšek na opačné straně grafu. To ilustruje, jak navrhovaná nabídka splňuje předpokládanou poptávku. |
+| Zelený kruh s ikonou ve tvaru disku, který má červený kříž | Navrhovaná objednávka dodávky se zprávou akce *Zrušit*.<br /><br /> -   Nemůže být modifikována.<br />-   Viditelná, když je vybráno pole **Zahrnout návrhy plánování** (zelený graf). |
+| Zelený kruh s ikonou ve tvaru disku, který má hvězdu | Navrhované objednávky dodávek s akční zprávou *Nový*.<br /><br /> -   Mohou být modifikovány <br />-   Viditelné když je vybráno pole **Zahrnout návrhy plánování** (zelený graf). |
+| Zelený kruh s ikonou ve tvaru disku, který má jednu nebo dvě šipky | Navrhované objednávky dodávek se zprávou akce *Přeplánovat*, *Změna množ.*, nebo *Přeplán. změna  množství*<br /><br /> -   Může být upraveno.<br />-   Viditelné když je vybráno pole **Zahrnout návrhy plánování** (zelený graf).<br /><br /> Šipky odrážejí směr návrhu plánování. Například šipka vlevo spolu se šipkou nahoru odráží akční zprávu *Přeplán. změna  množ.* která se skládá ze zpětného přeplánování a zvýšení množství. |
 
-7. Choose the **Reload** action if you want to reset all the changes that you have made after you last opened the **Item Availability by Timeline** page or selected **Reload**.  
-8. When the elements are placed where you want them in the diagram, choose **Save Changes** to copy modified quantity and date changes to the planning or requisition lines that represent the graphical elements.  
+Když otevřete rozbalovací nabídku pro záložku **Časová osa**, zobrazí se následující funkce v závislosti na tom, co zvolíte
 
-To implement the supply plan changes, you must follow the resulting action messages from the planning or requisition worksheet. For more information, see Carry Out Action Msg.-Plan..
+| Funkce | Popis |
+|--------------|---------------------------------------|  
+| **Vytvořit novou dodávku** | Vytvoří nový prvek v bodě, kde vstoupíte do rozbalovací nabídky, což představuje novou navrhovanou objednávku dodávky. Když zvolíte **Uložit změny** na záložce **Proces** stane se z něj nový řádek v sešitu plánování.<br /><br /> Jakékoliv hodnoty filtru, které jsou definovány na polích **Filtru lokace** nebo **Filtr varianty** na záložce s náhledem **Možnosti** budou použity pro novou objednávku dodávky. **Note:** Pokud jsou pole filtru prázdná nebo mají více než jednu hodnotu filtru, vytvoří se nová objednávka dodávky pomocí následujících kódů: <ul><li>Pokud je pole filtru prázdné, je nový zdroj vytvořen bez kódu umístění nebo varianty.</li><li>Je-li definována více než jedna hodnota filtru, vytvoří se nová dodávka pomocí první hodnoty filtru podle pořadí třídění.</li></ul> Pokud chcete v nové objednávce dodávek jinou variantu nebo kód lokace, musíte jej ručně změnit na novém řádku plánování. |
+| **Automaticky upravovaná dodávka** | Optimalizuje novou dodávku, kterou jste vytvořili v grafu, tím, že se ujistí o tom, že vytvoří nulové zásoby před další dodávkou. |
+| **Odstranit dodávku** | Odstraní prvek v záložce s náhledem **Časová osa** a vymaže plánovací řádek, když zvolíte **Uložit změny** na záložce **Proces**. Ikona se změní na disk, který má červený kříž, když byl zdroj odstraněn. **Note:** Můžete smazat pouze nabídku akční zprávy typu *Nový*. Po tom co zvolíte **Uložit změny** na kartě **Process** je nutné ručně odstranit plánování řádek plánování nebo sešitu požadavků. |
+| **Zobrazit dokument** | Otevře objednávku, řádek plánování nebo prognózu, kterou prvek představuje. |
+| **Oddálit (Ctrl++)** | Zvětší měřítko osy x, takže se zobrazí méně dní. **Note:**   To lze také provést stisknutím ctrl + kolečka myši. |
+| **Přiblížit (Ctrl+-)** | Zmenší měřítko osy x, takže se zobrazí více dní. **Note:**   To lze také provést stisknutím ctrl + kolečka myši. |
+| **Resetovat zvětšení (Ctrl+0)** | Vrací měřítko osy x podle toho, co bylo použito před zvětšením. |
 
-## Symbols and Icons on the Timeline FastTab
- |Symbol/Icon|Description|  
- |------------------|---------------------------------------|  
- |Black cross|Orders (both supply and demand).<br /><br /> -   Cannot be modified.<br />-   Visible when the **Show Projected Inventory** field is selected (orange graph).|  
- |Red circle|Existing supply orders that are not in planning suggestions.<br /><br /> -   Cannot be modified.<br />-   Visible when the **Show Projected Inventory** field is selected (orange graph).|  
- |Yellow star|Forecast demand.<br /><br /> -   Cannot be modified.<br />-   Visible when the **Forecast Name** field has a value.<br /><br /> When both the **Show Projected Inventory** and the **Include Planning Suggestions** fields are selected, then each yellow star has a linked counterpart in the opposite graph. This illustrates how a suggested supply fulfills the forecasted demand.|  
- |Green circle with an icon shaped as a disk that has a red cross|Suggested supply order with action message *Cancel*.<br /><br /> -   Cannot be modified.<br />-   Visible when the **Include Planning Suggestions** field is selected (green graph).|  
- |Green circle with an icon shaped as a disk that has a star|Suggested supply orders with action message *New*.<br /><br /> -   Can be modified.<br />-   Visible when the **Include Planning Suggestions** field is selected (green graph).|  
- |Green circle with an icon shaped as a disk that has one or two arrows|Suggested supply orders with action message *Reschedule*, *Change Qty.*, or *Resched. and Chg. Qty.*<br /><br /> -   Can be modified.<br />-   Visible when the **Include Planning Suggestions** field is selected (green graph).<br /><br /> The arrows reflect the direction of the planning suggestion. For example, a left arrow together with an up arrow reflects a *Resched. and Chg. Qty.* action message that consists of a backward rescheduling and a quantity increase.|  
--->
-<!--When you access the drop-down menu for the **Timeline** FastTab, the following functions appear depending what you choose  
+Kromě akcí klávesnice, které byly zmíněny dříve, můžete také použít následující akce klávesnice v záložce s náhledem **Časová osa**.
 
- |Function|Description|  
- |--------------|---------------------------------------|  
- |**Create New Supply**|Creates a new element on the point where you access the drop-down menu, which represents a new suggested supply order. It becomes a new line in the planning worksheet when you choose **Save Changes** on the **Process** tab.<br /><br /> Any filter values that are defined in the **Location Filter** or **Variant Filter** fields on the **Options** FastTab will be applied to the new supply order. **Note:**  If the filter fields are empty or have more than one filter value, then the new supply order is created by using the following codes: <ul><li>If the filter field is empty, then the new supply is created without a location or variant code.</li><li>If more than one filter value is defined, then the new supply is created by using the first filter value according to the sorting order.</li></ul> If you want another variant or location code in the new supply order, then you must manually change it on the new planning line.|  
- |**Auto-Adjust Supply**|Optimizes a new supply that you have created in the graph by making sure that it creates zero inventory before the next supply.|  
- |**Delete Supply**|Deletes the element in the **Timeline** FastTab and deletes the planning line when you choose **Save Changes** on the **Process** tab. The icon changes to a disk that has a red cross when the supply has been deleted. **Note:**  You can only delete a supply of action message type *New*. After you choose **Save Changes** on the **Process** tab, you must manually delete the planning line in question in the planning or requisition worksheet.|  
- |**Show Document**|Opens the order, planning line, or forecast that the element represents.|  
- |**Zoom Out (Ctrl++)**|Makes the scale of the x-axis larger, so that fewer days are shown. **Note:**  You can also do this by pressing Ctrl + scroll mouse wheel.|  
- |**Zoom In (Ctrl+-)**|Makes the scale of the x-axis smaller, so that more days are shown. **Note:**  You can also do this by pressing Ctrl + scroll mouse wheel.|  
- |**Reset Zoom (Ctrl+0)**|Reverts the scale of the x-axis to what was used before you zoomed.|  
--->
-<!--In addition to the keyboard actions that were mentioned earlier, you can also use the following keyboard actions in the **TimeLine** FastTab.  
+| Akce klávesnice | Popis |
+|---------------------|---------------------------------------|  
+| Ctrl + kolečko myši | Mění měřítko osy x. |
+| Vyberte prvek a poté stiskněte Shift + Šipka | Posune prvek ve směru šipky. |
+| Tab | Přesune se na další prvek. |
+| Shift+Tab | Přechod na předchozí prvek. |
+| Při přesouvání prvku stisknutí klávesy Esc. | Zruší přesun. **Note:**  Nefunguje, pokud jste uvolnili tlačítko myši. |
 
- |Keyboard Action|Description|  
- |---------------------|---------------------------------------|  
- |Ctrl + scroll mouse wheel|Changes the scale of the x-axis.|  
- |Select an element, then press Shift+Arrow|Moves the element in the direction of the arrow stroke.|  
- |Tab|Moves to the next element.|  
- |Shift+Tab|Moves to the previous element.|  
- |While moving an element, press Esc.|Cancels the move. **Note:**  Does not work if you have released the mouse button.|
--->
-
-## See Also
-
-[Planning](production-planning.md)  
-[Setting Up Manufacturing](production-configure-production-processes.md)  
-[Manufacturing](production-manage-manufacturing.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Design Details: Supply Planning](design-details-supply-planning.md)  
-[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Plánování](production-planning.md)  
+[Nastavení výroby](production-configure-production-processes.md)  
+[Výroba](production-manage-manufacturing.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
+[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

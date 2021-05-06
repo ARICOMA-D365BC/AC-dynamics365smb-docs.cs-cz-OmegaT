@@ -4,52 +4,49 @@ description: In advanced warehouse configurations, that is, locations with direc
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Move Items in Advanced Warehouse Configurations
-In advanced warehouse configurations, that is, locations with directed put-away and pick, warehouse movements between bins are performed by a senior employee preparing warehouse movements in the movement worksheet and then creating the warehouse movements for warehouse employees to perform.  
+# Přesouvání zboží v rozšířených konfiguracích skladu
+V pokročilých konfiguracích skladu, tedy v lokacích s řízeným zaskladněním a vyskladněním, jsou přesuny skladu mezi přihrádky prováděny vedoucím zaměstnancem, který připravuje přesuny v sešitu přesunu a poté vytváří přesuny ve skladu pro zaměstnance skladu k provedení.
 
-## To move items with the warehouse movement worksheet
-The **Movement Worksheet** page has two functions that can assist in automatically filling in the lines. The first is the **Calculate Bin Replenishment** function. This function uses the bin rankings to suggest replenishment for high-ranking bins from low-ranking bins. The second is the **Get Bin Content** function, which fills in the worksheet lines with the entire bin contents of the bin or bins you specify.
+## Přesunutí zboží pomocí sešitu skladového přesunu
+Stránka **Sešit přesunu** má dvě funkce, které mohou pomoci při automatickém vyplňování řádků. První je funkce **Vypočítat doplnění přihrádky**. Tato funkce používá pořadí přihrádek k navržení doplnění pro vysoce řazené přihrádky z přihrádek s nízkým pořadím. Druhou je funkce **Načíst obsah přihrádky**, která vyplní řádky sešitu celým obsahem přihrádky nebo přihrádek, které zadáte.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Movement Worksheet**, and then choose the related link.  
-2.  Enter the warehouse movement information on the worksheet lines as appropriate.  
-3. Choose the **Create Movement** action to create a warehouse movement document which can then be registered when the warehouse movement is completed.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit přesunu** a poté vyberte související odkaz.
+2. Podle potřeby zadejte informace o přesunu skladu na řádky sešitu.
+3. Vyberte akci **Vytvořit přesun** a vytvořte doklad přesunu skladu, který pak může být registrován po dokončení přesunu.
 
-### To register the warehouse movement  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Movements**, and then choose the related link.  
-2.  Open the warehouse movement that you want to process.  
-3.  On lines of action type **Place**, specify where, which, and when to move the item in question by editing the **Zone Code**, **Bin Code**, **Qty. to Handle**, or **Due Date** fields.  
+### Zápis přesunu skladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Přesuny** a poté vyberte související odkaz.
+2. Otevřete přesun skladu, který chcete zpracovat.
+3. Na řádcích typu akce **Vložit** určete, kde, kdy a které zboží má být přesunuto pomocí úpravy polí **Kód zóny**, **Kód přihrádky**, **Množ. ke zpracování** nebo **Datum vyřízení**.
 
-    If your warehouse has been set up so the bin codes follow the physical structure of the warehouse, you can take quantities of several items from successive bulk bins and then place them in forward picking bins, which also might be close to one another.  
-4.  On lines of action type **Take**, specify in the **Qty. to Handle** field a part quantity of the bin content that you want to move. All other fields on lines of action type **Take** are read-only.  
-5.  To move all suggested quantities as specified in the **Quantity** field, choose the **Autofill Qty. to Handle** action.  
-6. Choose the **Register** action.  
+   Pokud byl váš sklad nastaven tak, aby kódy přihrádek sledovaly fyzickou strukturu skladu, můžete odebrat množství několika zboží z po sobě jdoucích hromadných přihrádek a poté je umístit do dopředných výdejních přihrádek, které mohou být také blízko sebe.
+4. Na řádcích typu akce **Vzít** zadejte v poli **Množ. ke zpracování** část množství obsahu přihrádky, který chcete přesunout. Všechna ostatní pole na řádcích typu akce **Vzít** jsou pouze pro čtení.
+5. Chcete-li přesunout všechna navrhovaná množství, jak je uvedeno v poli **Množství** vyberte akci **Automat.vyplnit  množ.ke zprac.**.
+6. Vyberte akci **Zápis**.
 
-> [!NOTE]  
->  If the location uses directed put-away and pick, then you cannot manually move items in or out of bins of bin type RECEIVE, because items in such bins must be registered as being put away before they are part of available inventory.
+> [!NOTE]
+> Pokud lokace používá řízené zaskladnění/vyskladnění, nemůžete ručně přesouvat zboží do nebo z přihrádek typu K příjmu, protože zboží v těchto přihrádkách musí být zapsáno jako zaskladněné, než jsou součástí dostupných zásob.
 
-## To register the movement of an item that has already occurred  
-If your location uses directed put-away and pick, and you need to move items to other bins without a pre-existing warehouse put-away, pick, or movement, you can register the correct placement of the items in the warehouse using the **Whse. Reclassification Journal**.
+## Zápis přesunu zboží, ke kterému již došlo
+Pokud lokace používá řízené zaskladnění a vyskladnění a potřebujete přesunout zboží do jiných přihrádek bez již existujícího zaskladnění, vyskladnění nebo přesunu, můžete zapsat správné umístění zboží ve skladu pomocí **Deníku  přeřazení skladu**.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Reclassification Journal**, and then choose the related link.  
-2.  Fill in the **Item No.**, **From Zone Code**, **From Bin Code**, **To Zone Code**, and **To Bin Code** fields.  
-3.  Choose the **Register** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník  přeřazení skladu** a poté vyberte související odkaz.
+2. Vyplňte pole **Číslo zboží**, **Z kódu zóny**, **Z kódu přihrádky**, **Do kódu zóny** a **Do kódu přihrádky**.
+3. Vyberte akci **Zápis**.
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)  
+[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -1,40 +1,35 @@
 ---
-title: Transfer Data from a QuickBooks App  | Microsoft Docs
-description: You can migrate data such as customers, vendors, inventory items, and G/L accounts from QuickBooks apps to Business Central.
+title: Přenos dat z QuickBooks App | Microsoft Docs
+description: 'Z aplikací QuickBooks můžete do Business Central migrovat data, jako jsou zákazníci, dodavatelé, skladové položky a účty hlavní knihy.'
 documentationcenter: ''
 author: bholtorf
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: app, import, migrate, data, transfer, QuickBooks, customize
-ms.date: 10/01/2020
+ms.search.keywords: 'app, import, migrate, data, transfer, QuickBooks, customize'
+ms.date: 10/01/2018
 ms.author: bholtorf
-
 ---
 
 
-# Changing from a QuickBooks App to Dynamics 365 Business Central
-More and more growing businesses are changing from finance apps like QuickBooks Desktop and QuickBooks Online, which are designed for startups and other small businesses, to [!INCLUDE[prod_short](includes/prod_short.md)], which also supports larger, more complex organizations. 
+# <a name="changing-from-a-quickbooks-app-to-dynamics-365-business-central"></a>Přechod z QuickBooks App na Dynamics 365 Business Central
+Stále více a více podniků přechází z finančních aplikací, jako jsou QuickBooks Desktop a QuickBooks Online, které jsou určeny pro startupy a další malé podniky, do [!INCLUDE[d365fin](includes/d365fin_md.md)], které podporují větší a složitější organizace. 
 
-As they transition, companies typically want to bring their business data with them so they don't start from scratch. To help transfer data, [!INCLUDE[prod_short](includes/prod_short.md)] offers built-in extensions that migrate data such as customers, vendors, inventory items, and general ledger accounts. The following extensions are installed and ready to go as an integrated part of the **Data Migration** assisted setup guide:
+Při přechodu, společnosti obvykle chtějí se sebou přinést i svá obchodní data, aby nezačínali zase od nuly. Chcete-li pomoci s přenosem dat, [!INCLUDE[d365fin](includes/d365fin_md.md)] nabízí vestavěná rozšíření, která migrují data, jako jsou zákazníci, dodavatelé, skladové položky a účty hlavní knihy. Následující rozšíření jsou nainstalována a připravena k použití jako integrované části asistovaného průvodce nastavením **Data Migration**:
 
 * QuickBooks Data Migration 
 * QuickBooks Online Data Migration
 
-For more information, read about the extension that suits your QuickBooks app:   
+Pro další informace čtěte o rozšíření, které je vhodné pro vaši aplikaci QuickBooks:   
 
-* [The QuickBooks Desktop Data Migration Extension](ui-extensions-quickbooks-data-migration.md)
-* [The QuickBooks Online Data Migration Extension](ui-extensions-quickbooks-online-data-migration.md)
+* [Rozšíření QuickBooks Desktop Data Migration](ui-extensions-quickbooks-data-migration.md)
+* [Rozšíření QuickBooks Online Data Migration](ui-extensions-quickbooks-online-data-migration.md)
 
-## Ready now?
-If you are ready to get started now, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assisted Setup**, and then choose the related link. Choose **Migrate business data**, and then follow the steps in the guide.
+## <a name="ready-now"></a>Připraveni?
+Pokud jste připraveni začít hned teď, vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "ikona řekněte mi co chcete udělat"), zadejte **Asistované nastavení** a poté vyberte související odkaz. Vyberte možnost **Migrovat obchodní data** a poté postupujte podle pokynů v průvodci.
 
-## See Also
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Customizing Business Central Using Extensions](ui-extensions.md)   
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Import obchodních dat z jiných finančních systémů.](across-import-data-configuration-packages.md)  
+[Přizpůsobení Business Central Použitím Rozšíření](ui-extensions.md)   

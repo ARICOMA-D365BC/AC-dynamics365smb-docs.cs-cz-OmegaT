@@ -1,118 +1,130 @@
 ---
-    title: Use XML Schemas to Prepare Data Exchange Definitions
-    description: Use XML schemas to set up the document exchange framework.
+    title: Create XMLports based on XML schemas | Microsoft Docs
+    description: Use XML schemas to set yup the document exchange framework.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Use XML Schemas to Prepare Data Exchange Definitions
+# Použití schémat XML k přípravě definic datových výměn
+Chcete-li povolit import / export dat v souborech XML prostřednictvím rámce pro výměnu dat v  [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete použít schémata XML k definování datových prvků, které chcete vyměnit s [!INCLUDE[d365fin](includes/d365fin_md.md)]. Tuto práci provedete na stránce **Náhled XML schématu** načtením souboru schématu XML, výběrem příslušných datových prvků a poté inicializací definice výměny dat nebo XMLportu.
 
-To enable import/export of data in XML files through the data exchange framework in [!INCLUDE[prod_short](includes/prod_short.md)], you can use XML schemas to define which data elements you want to exchange with [!INCLUDE[prod_short](includes/prod_short.md)]. You perform this work on the **XML Schema Viewer** page by loading the XML schema file, selecting the relevant data elements, and then initializing a data exchange definition.  
+Pokud jste definovali, které datové prvky mají být zahrnuty na základě schématu XML, můžete použít akci **Generovat XMLport** k vytvoření objektu XMLport.
 
- When you have defined which data elements to include based on the XML schema, you can use the **Generate Data Exchange Definition** action to initialize a data exchange definition based on the selected data elements, which you then complete in the Data Exchange Framework. This creates a record on the **Posting Exchange Definition** page where you continue by defining which elements in the file map to which fields in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md).  
+Alternativně můžete použít akci **Generovat definici výměny dat** k inicializaci definice výměny dat na základě vybraných datových prvků, které pak dokončíte v rámci výměny dat. Tím se na stránce **Definice výměny účtovaných dat** vytvoří záznam, kde budete pokračovat definováním, které prvky v souboru, se mapují do kterých polí v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Více informací viz [Nastavení definic výměny dat](across-how-to-set-up-data-exchange-definitions.md).
 
- This topic contains the following procedures:  
+Toto téma obsahuje následující postupy:
 
-- To load an XML schema file  
+- Načtení souboru schématu XML
 
-- To select or clear nodes in an XML schema  
+- Výběr nebo vymazání uzlů ve schématu XML
 
-- To generate a data exchange definition that is based on an XML schema  
+- Generování definice výměny dat, která je založena na schématu XML
 
-## To load an XML schema file
+- Generování XMLportu pro soubor, který je založen na schématu XML
 
-1. Make sure that the relevant XML schema file is available. The file extension is .xsd.  
+- Import XMLportu do Návrháře objektů
 
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XML Schemas**, and then choose the related link.  
+### Načtení souboru schématu XML
 
-3. Choose the **New** action.  
+1. Zkontrolujte, zda je k dispozici příslušný soubor schématu XML. Přípona souboru je .xsd.
 
-4. Fill the fields as described in the following table.  
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **XML Schéma** a poté vyberte související odkaz.
 
-    |Field|Description|  
-    |---------------------------------|---------------------------------------|  
-    |**Code**|Specify a code to identify the XML schema.|  
-    |**Description**|Specify a description of the XML schema.|  
+3. Zvolte akci **Nový**.
 
-     The **Target Namespace** field specifies any namespace in the XML schema file that has been loaded for the line.  
+4. Vyplňte pole podle popisu v následující tabulce.
 
-5. Choose the **Load Schema** action, and then select the XML schema file.  
+   | Pole | Popis |
+   |---------------------------------|---------------------------------------|  
+   | **Kód** | Zadejte kód pro identifikaci schématu XML. |
+   | **Popis** | Zadejte popis schématu XML. |
 
-     When the file is loaded, the rest of the fields on the line are filled with information from the file, and the **Schema is Loaded** check box is selected.  
+   Pole **Cílový obor názvů** určuje jakýkoli obor názvů v souboru schématu XML, který byl pro řádek načten.
 
-    > [!NOTE]  
-    >  The tree of the loaded XML schema is collapsed by default. You expand each node by choosing the **+** button on the node. To expand all nodes, choose **Expand All** on the ribbon.  
+5. Zvolte akci **Načíst schéma** a vyberte soubor schématu XML.
 
-### To select or clear nodes in an XML schema  
+   Po načtení souboru jsou zbývající pole na řádku vyplněna informacemi ze souboru a políčko **Schéma je načteno** je zaškrtnuto.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XML Schema Viewer**, and then choose the related link.  
+   > [!NOTE]
+   > Podle výchozího nastavení je strom načteného schématu XML sbalen. Každý uzel rozbalíte výběrem tlačítka **+** v uzlu. Chcete-li rozbalit všechny uzly, zvolte na pásu karet možnost **Rozbalit vše**.
 
-2. Fill the fields on the header as described in the following table.  
+### Výběr nebo vymazání uzlů ve schématu XML
 
-    |Field|Description|  
-    |---------------------------------|---------------------------------------|  
-    |**XML Schema Code**|Specify the XML schema file that you loaded in step 5 in the "To load an XML schema file" section.|  
-    |**New XMLport No.**|Specify the number of the XMLport that is created from this XML schema when you choose the **Generate XMLport** action.|  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Náhled XML schématu** a poté vyberte související odkaz.
 
-     The lines are now filled with nodes representing all elements in the XML schema. Nodes for elements that are mandatory according to the XML schema are selected by default.  
+2. Vyplňte pole v záhlaví, jak je popsáno v následující tabulce.
 
-3. On the first line, in the **Node Name** column, expand the **Document** node, and then gradually expand underlying nodes that you want to review.  
+   | Pole | Popis |
+   |---------------------------------|---------------------------------------|  
+   | **Kód XML schématu** | Určete soubor schématu XML, který jste načetli v kroku 5, v části „Načtení souboru schématu XML“. |
+   | **Číslo nového XML portu** | Určete číslo XMLportu, který bude vytvořen z tohoto XML schématu, když zvolíte akci **Generovat XMLport**. |
 
-     Alternatively, right-click on a node and then choose **Expand All**.  
+   Řádky jsou nyní vyplněny uzly představujícími všechny prvky ve schématu XML. Ve výchozím nastavení jsou vybrány uzly pro prvky, které jsou povinné podle schématu XML.
 
-4. Choose either of the following actions to change which nodes are displayed.  
+3. Na prvním řádku ve sloupci **Název uzlu** rozbalte uzel **Dokument** a poté postupně rozbalte nově zobrazené uzly, které chcete zkontrolovat.
 
-    |**Action**|Description|  
-    |----------------|---------------------------------------|  
-    |**Show All**|All nodes are shown.|  
-    |**Hide Non-Mandatory**|Only nodes representing elements that are required according to the XML schema are shown. These nodes are typically indicated by a **1** in the **MinOccurs** field.<br /><br /> Choose **Show All** to reverse the view.|  
-    |**Hide Non-Selected**|Only nodes where the **Selected** check box is selected are shown.<br /><br /> Choose **Show All** to reverse the view.|  
+   Případně klikněte pravým tlačítkem myši na uzel a pak zvolte **Rozbalit vše**.
 
-5. Choose the **Edit** action.  
+4. Zvolte některou z následujících akcí, chcete-li změnit, které uzly jsou zobrazeny.
 
-6. In the **Selected** check box, specify for each node if you want the element to be supported in the data exchange definition for the related SEPA bank file.  
+   | **Akce** | Popis |
+   |----------------|---------------------------------------|  
+   | **Zobrazit vše** | Všechny uzly jsou zobrazeny. |
+   | **Skrýt nepovinné** | Zobrazí se pouze uzly představující prvky, které jsou požadovány podle schématu XML. Tyto uzly jsou obvykle označeny jako **1** v poli **Minimální výskyt.**<br /><br />Chcete-li zobrazení obrátit, zvolte **Zobrazit vše**. |
+   | **Skrýt nevybrané** | Zobrazí se pouze uzly, kde je zaškrtnuto políčko **Vybrané**. <br /><br /> Chcete-li zobrazení obrátit, zvolte **Zobrazit vše**. |
 
-    > [!NOTE]  
-    >  When you select a mandatory child node, all parent nodes above it are also selected.  
+5. Vyberte akci **Upravit**.
 
-7. Choose the **Select All Mandatory Elements** action to reselect all nodes that represent elements that are mandatory according to the XML schema.  
+6. V zaškrtávacím políčku **Vybráno**, zadejte pro každý uzel, zda má být prvek podporován v definici výměny dat pro související soubor banky SEPA.
 
-8. Choose the **Deselect All** action to clear all selections.  
+   > [!NOTE]
+   > Když vyberete povinný podřízený uzel, vyberou se také všechny nadřazené uzly nad ním.
 
-     The **Choice** field specifies that the node has two or more sibling nodes that function as options.  
+7. Zvolte akci **Vybrat všechny povinné prvky** chcete-li znovu vybrat všechny uzly, které představují prvky, které jsou podle schématu XML povinné.
 
-### To generate a data exchange definition that is based on an XML schema  
+8. Zvolte akci **Odznačit všechny**, pro vymazání všech výběrů.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter  **XML Schemas**, and then choose the related link.  
+   Pole  **Volba** určuje, že uzel má dva nebo více uzlů na stejné úrovni, které fungují jako možnosti.
 
-2. Select the relevant XML schema, and then choose the **Open XML Schema Viewer** action.  
+### Generování definice výměny dat, která je založena na schématu XML
 
-3. Make sure the relevant nodes are selected. For more information, see the "To select or clear nodes in an XML schema" section.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **XML Schéma** a poté vyberte související odkaz.
 
-4. On the **XML Schema Viewer** page, choose the **Generate Data Exchange Definition** action.  
+2. Vyberte příslušné schéma XML a pak zvolte akci **Otevřít prohlížeč schématu**.
 
- A data exchange definition is created on the **Posting Exchange Definition** page, which you can complete by specifying which elements in the file map to which fields in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md).  
+3. Zkontrolujte, zda jsou vybrány příslušné uzly. Pro více informací navštivte sekci „Výběr nebo vymazání uzlů ve schématu XML“.
 
-> [!NOTE]  
-> You can also use the **Get File Structure** function from the **Posting Exchange Definition** page, which uses the functionality of the **XML Schema Viewer** page to prefill the **Column Definitions** TastTab.  
+4. Na stránce **Náhled XML schématu** vyberte akci **Generovat definici výměny dat**.
+
+Definice výměny dat je vytvořena na stránce **Definice výměny účtovaných dat**, kterou můžete dokončit zadáním, které prvky v souboru, se mají mapovat na která pole v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Více informací viz [ Nastavení definice výměny dat ](across-how-to-set-up-data-exchange-definitions.md).
 
 > [!NOTE]
-> In 2019 release wave 1 and earlier versions, you could generate an XMLport that was based on the schema and then import that into your solution. This is no longer supported.
+> Můžete také použít funkci **Získat strukturu souboru** ze stránky **Definice výměny účtovaných dat**, která používá funkcionalitu ze stránky **Náhled XML schématu** pro předvyplnění záložky **Definice sloupce**.
 
-## See Also
+### Generování XMLportu, který je založen na XML schématu
 
-[Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md)  
-[Export Payments to a Bank File](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)  
-[Collect Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md)  
-[About the Data Exchange Framework](across-about-the-data-exchange-framework.md)  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **XML Schéma** a poté vyberte související odkaz.
 
+2. Vyberte příslušné schéma XML a pak zvolte akci **Otevřít prohlížeč schématu**.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+3. V poli **Číslo nového XML portu** zadejte číslo, které bude novému objektu XMLportu při generování přiděleno.
+
+4. Zkontrolujte, zda jsou vybrány příslušné uzly. Pro více informací navštivte sekci „Výběr nebo vymazání uzlů ve schématu XML“.
+
+5. Vyberte akci **Generovat XMLport** a potom uložte objekt jako soubor .txt na vhodné místo.
+
+6. Import nového XMLportu do vývojového prostředí [!INCLUDE[d365fin](includes/d365fin_md.md)] a jeho zkompilování.
+
+## Viz také
+[Nastavení definice výměny dat](across-how-to-set-up-data-exchange-definitions.md)  
+[Export plateb do bankovního souboru](payables-how-export-payments-bank-file.md)  
+[Sběr plateb pomocí SEPA – příkaz k inkasu](finance-collect-payments-with-sepa-direct-debit.md)  
+[O rozhraní výměny dat](across-about-the-data-exchange-framework.md)

@@ -1,48 +1,44 @@
 ---
-title: Validate VAT Registration Numbers
-description: Let Business Central use the VIES service to validate VAT registration numbers for you automatically.
-author: kielkenny
+title: Validate a VAT Registration Number | Microsoft Docs
+description: Validate a VAT Registration Number
+author: andregu
 ms.service: dynamics365-business-central
-ms.topic: conceptual
-ms.reviewer: edupont
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
 ms.search.keywords: VAT, posting, tax, value-added tax
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: andregu
 
 ---
 
-# Validate VAT Registration Numbers
+# Ověření daňového identifikačního čísla
 
-It is important that the VAT registration numbers you have for customers, vendors, and contacts are valid. For example, companies sometimes change their tax liability status, and in some countries tax authorities might ask you to provide reports, such as the EC Sales List report, that list the VAT registration numbers you use when you do business.
+## Ověření daňového identifikační čísla
+Je důležité, aby čísla DIČ pro zákazníků, dodavatelů a kontaktů byla platná. Společnosti například někdy změní svůj status daňové povinnosti a v některých zemích vás daňové úřady mohou požádat o poskytnutí výkazů, například výkaz přehledu ES přehled prodeje, které uvádějí DIČ, která používáte při podnikání.
 
-The European Commission provides the VIES VAT Number Validation service on its website, which is public and free. [!INCLUDE[prod_short](includes/prod_short.md)] can save you a step and let you use the VIES service to validate and track VAT numbers for customers, vendors, and contacts straight from the customer, vendor, and contact cards. The service in [!INCLUDE[prod_short](includes/prod_short.md)] is named **EU VAT Reg. No. Validation Service**. The service is available on the **Service Connections** page, and you can start using it right away. The service connection is free, and sign-up is not required.
+Evropská komise poskytuje na svých internetových stránkách službu VIES k ověření daňového identifikačního čísla. [!INCLUDE[d365fin](includes/d365fin_md.md)] ám může ušetřit krok a umožní vám použít službu VIES k ověření a sledování čísel DIČ pro zákazníky, dodavatele a kontakty přímo z karet zákazníka, dodavatele a kontaktů. Služba se v  [!INCLUDE[d365fin](includes/d365fin_md.md)] jmenuje **Nastavení služby Ověření EU DIČ**. Služba je k dispozici na stránce **Služba spojení** a můžete ji ihned začít používat. Připojení služby je zdarma a registrace není vyžadována.
 
-## To verify VAT registration numbers
+Aby bylo možné povolit **Nastavení . služby ověření EU DIČ** otevřete položku na stránce **Služba spojení**. Pole **Koncový bod služby** by již mělo být vyplněno. Pokud ne, můžete použít **Nastavit výchozí koncový bod služby**. Poté nastavte pole **Povoleno** a můžete začít.
 
-In order to enable the **EU VAT Reg. No. Validation Service** open the entry in the **Service Connection** page. The **Service Endpoint** field should already be populated. If not, you can use the **Set Default Endpoint** action. Then set the **Enabled** field and you are good to go.
+> [!Note]
+> Pro zapnutí Nastavení služby ověření EU DIČ, musíte mít oprávnění správce.
 
-> [!NOTE]
-> To enable the EU VAT Reg. No. Validation Service, you must have administrator permissions.
+Když používáte naše servisní připojení, zaznamenáváme historii čísel DPH a ověření pro každého zákazníka, dodavatele nebo kontakt v **Protokol ověření DIČ**, takže je můžete snadno sledovat. Protokol je specifický pro každého zákazníka. Protokol je například užitečný pro prokázání, že jste ověřili, že aktuální DIČ je správné. Při ověření DIČ bude sloupec **Identifikátor požadavku** v protokolu odrážet, že jste podnikli příslušné kroky.
 
-When you use our service connection, we record a history of VAT numbers and verifications for each customer, vendor, or contact, in the **VAT Registration Log**, so you can easily track them. The log is specific to each customer. For example, the log is useful for proving that you have verified that the current VAT number is correct. When you verify a VAT number, the **Request Identifier** column in the log will reflect that you have taken action.
+Protokol registrace DPH můžete zobrazit na kartách zákazníka, dodavatele nebo kontaktu na záložce **Fakturace** výběrem vyhledávacího tlačítka v poli **DIČ**.
 
-You can view the VAT Registration log on the Customer, Vendor, or Contact cards, on the **Invoicing** FastTab, by choosing the lookup button in the **VAT Registration No.** field.  
+Naše služby vám také mohou ušetřit čas při vytváření zákazníka nebo dodavatele. Pokud znáte DIČ zákazníka, můžete ho zadat do pole **DIČ** na kartě zákazníka nebo dodavatele a my pro vás vyplníme jméno zákazníka. Některé země také poskytují adresy společností ve strukturovaném formátu. V těchto zemích také vyplníme adresu.
 
-There are a couple of things to note about the VIES VAT Number Validation service:
+O službě ověření DIČ ve VIES je potřeba myslet na několik věcí:
 
-* The service uses the http protocol, which means that data transferred through the service is not encrypted.  
-* You may experience downtime for this service for which Microsoft is not responsible. The service is part of a broad EU network of national VAT registers.
+* Služba používá protokol http, což znamená, že data přenášená prostřednictvím služby nejsou šifrována.
+* U této služby může dojít k výpadkům, za kterou společnost Microsoft nenese odpovědnost. Služba je součástí široké sítě vnitrostátních registrů DPH v EU.
 
-> [!IMPORTANT]
-> It is your responsibility to check that the data is valid. On occasion, data with errors is returned by the VIES VAT Number Validation service. If validation fails, validate the VAT registration numbers on the [web site](https://ec.europa.eu/taxation_customs/vies/), print the result or save it to a shared location, and then add the link to the record for your customer, vendor, or contact. For more information, see [Manage Attachments, Links, and Notes on Cards and Documents](ui-how-add-link-to-record.md).
-
-## See Also
-
-[Set Up Value-Added Tax](finance-setup-vat.md)  
-[Setting Up Unrealized Value Added Tax](finance-setup-unrealized-vat.md)  
-[Report VAT to a Tax Authority](finance-how-report-vat.md)  
-[Work with VAT on Sales and Purchases](finance-work-with-vat.md)  
-[Local functionality in Business Central](about-localization.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Nastavení daně z přidané hodnoty ](finance-setup-vat.md)  
+[Nastavení nerealizované daně z přidané hodnoty](finance-setup-unrealized-vat.md)      
+[Reportování DPH finančímu úřadu](finance-how-report-vat.md)  
+[Práce s DPH v prodeji a nákupu](finance-work-with-vat.md)  
+[Lokální funkcionality v Business Central](about-localization.md)

@@ -1,54 +1,47 @@
 ---
-    title: Set Up Workflows
-    description: You can set up and use workflows that connect business-process tasks performed by different users. Learn about the different steps you must take.
+    title: Setting Up Workflows | Microsoft Docs
+    description: You can set up and use workflows that connect business-process tasks performed by different users. System tasks, such as automatic posting, can be included as steps in workflows, preceded or followed by user tasks. Requesting and granting approval to create new records are typical workflow steps.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/14/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Set Up Workflows
+# Nastavení workflow
+Můžete nastavovat a používat workflow, které spojují úlohy podnikových procesů prováděné různými uživateli. Systémové úlohy, jako je například automatické účtování, lze zahrnout jako kroky do workflow, které předchází nebo následují úkoly uživatele. Vyžádání a udělení souhlasu k vytvoření nových záznamů jsou typické kroky workflow. Pro více informací navštivte [Použití workflow](across-use-workflows.md).
 
-You can set up and use workflows that connect business-process tasks performed by different users. System tasks, such as automatic posting, can be included as steps in workflows, preceded or followed by user tasks. Requesting and granting approval to create new records are typical workflow steps. For more information, see [Using Workflows](across-use-workflows.md).  
+Dříve než začnete používat workflow, musíte nastavit uživatele a uživatele schvalování workflow, určit způsob, jakým budou uživatelé dostávat oznámení o krocích workflow, a potom vytvořit workflow, které mohou předcházet přizpůsobení kódu.
 
- Before you begin to use workflows, you must set up workflow users and approval users, specify how users receive notifications about workflow steps, and then create the workflows, potentially preceded by code customization.  
+Na stránce **Workflow** vytvoříte workflow vypsáním příslušných kroků na řádcích. Každý krok sestává z události workflow, která je řízená podmínkami událostí, a odezvy workflow, která je řízená možnostmi odezvy. Kroky workflow definujete vyplněním polí na řádcích workflow z pevných seznamů hodnot událostí a odezev představujících scénáře, které jsou podporovány kódem aplikace.
 
- On the **Workflow** page, you create a workflow by listing the involved steps on the lines. Each step consists of a workflow event, moderated by event conditions, and a workflow response, moderated by response options. You define workflow steps by filling fields on workflow lines from fixed lists of event and response values representing scenarios that are supported by the application code.  
+Pokud váš obchodní scénář vyžaduje události workflow nebo odezvy, které nejsou podporovány, musí je partner společnosti Microsoft implementovat přizpůsobením kódu aplikace. Pro více informací navštivte v nápovědě pro vývojáře a IT-pro [Návod: Implementace nových událostí a odezev workflow](/dynamics-nav/Walkthrough--Implementing-New-Workflow-Events-and-Responses).
 
- If a business scenario requires a workflow event or response that is not supported, a Microsoft partner must implement them through code, or you can set up a workflow using Power Automate. For more information, see [Using [!INCLUDE[prod_short](includes/prod_short.md)] in an Automated Workflow](across-how-use-financials-data-source-flow.md) or [Events in AL](/dynamics365/business-central/dev-itpro/developer/devenv-events-in-al) in the developer help, respectively.
+Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
- The following table describes a sequence of tasks, with links to the topics that describe them.  
-
-|**To**|**See**|  
+| **Viz** | **také** |
 |------------|-------------|  
-|Set up workflow users and user groups.|[Set Up Workflow Users](across-how-to-set-up-workflow-users.md)|  
-|Set up workflow users who take part in approval workflows.|[Set Up Approval Users](across-how-to-set-up-approval-users.md)|  
-|Specify how workflow users are notified of workflow steps, including approval requests.|[Setting Up Workflow Notifications](across-setting-up-workflow-notifications.md)|  
-|Specify if users are notified by email or note and how often notifications are sent.|[Specify When and How to Receive Notifications](across-how-to-specify-when-and-how-to-receive-notifications.md)|  
-|Customize the content of the email notification by modifying report 1320, Notification Email.|[Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)|  
-|Set up an SMTP server to enable email communication in and out of [!INCLUDE[prod_short](includes/prod_short.md)]|[Set up Email](admin-how-setup-email.md)|
-|Specify the different steps of a workflow by connection workflow events with workflow responses.|[Create Workflows](across-how-to-create-workflows.md)|  
-|Use workflow templates to create new workflows.|[Create Workflows from Workflow Templates](across-how-to-create-workflows-from-workflow-templates.md)|  
-|Share workflows with other [!INCLUDE[prod_short](includes/prod_short.md)] databases.|[Export and Import Workflows](across-how-to-export-and-import-workflows.md)|  
-|Learn how to set up a workflow for approving sales documents by following an end-to-end procedure.|[Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)|  
+| Nastavení uživatelů workflow a skupin živatelů. | [Nastavení uživatelů workflow](across-how-to-set-up-workflow-users.md) |
+| Nastavení uživatelů workflow, kteří se účastní workflow schvalování. | [Nastavení uživatelů schvalování](across-how-to-set-up-approval-users.md) |
+| Určete, jak budou uživatelé workflow upozorňováni na kroky workflow, včetně žádostí o schválení. | [Nastavení upozornění workflow](across-setting-up-workflow-notifications.md) |
+| Určete, zda jsou uživatelé upozorněni e-mailem nebo poznámkou a jak často jsou oznámení posílané. | [Určení, kdy a jak přijímat upozornění](across-how-to-specify-when-and-how-to-receive-notifications.md) |
+| Přizpůsobte obsah oznámení e-mailem úpravou sestavy 1320, e-mailové oznámení. | [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md) |
+| Nastavení serveru SMTP pro povolení e-mailové komunikace v aplikaci [! INCLUDE [ d365fin ](includes/d365fin_md.md) ] | [Nastavení e-mailu](admin-how-setup-email.md) |
+| Zadejte různé kroky workflow podle událostí workflow připojením odezvy workflow. | [Vytvoření workflow](across-how-to-create-workflows.md) |
+| Použijte šablony workflow k vytváření nového workflow. | [Vytvoření workflow z šablony workflow](across-how-to-create-workflows-from-workflow-templates.md) |
+| Sdílejte workflow s jinými [!INCLUDE[d365fin](includes/d365fin_md.md)] databázemi. | [Export a import workflow](across-how-to-export-and-import-workflows.md) |
+| Naučte se nastavit workflow pro schvalování prodejních dokladů provedením koncové procedury. | [Návod: Nastavení a použití workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md) |
+| Přidejte podporu pro obchodní scénář, který vyžaduje nové události nebo odezvy workflow přizpůsobením kódu aplikace. | [Návod: Implementace nových událostí a odezev workflow](/dynamics-nav/Walkthrough--Implementing-New-Workflow-Events-and-Responses) |
 
-## Example of an Approval Workflow
-This video shows how to set up an workflow that will require someone to request someone else's approval before they can change information about an existing customer, or create a new customer.  
-<br><br>  
-
-> [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4jzHI?rel=0]
-
-## See Also  
- [Using Workflows](across-use-workflows.md)   
- [Workflow](across-workflow.md)   
- [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
- [Working with Business Central](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Použití workflow](across-use-workflows.md)  
+[Workflow](across-workflow.md)  
+[Návod: Nastavení a použití workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
+[Práce s Business Central](ui-work-product.md)

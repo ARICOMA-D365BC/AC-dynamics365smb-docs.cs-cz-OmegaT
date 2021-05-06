@@ -4,61 +4,52 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Plan Picks in Worksheets
+# Plánování v sešitech vyskladnění
+Pokud je váš sklad nastaven tak, aby vyžadoval zpracování vyskladnění i dodávky, může sklad pracovat tak, aby řádky na dodací doklady nebyly automaticky transformovány na pokyny k vyskladnění, ale byly k dispozici místo toho v sešitu vyskladnění.
 
-If your warehouse is set up to require both pick and shipment processing, the warehouse can choose to operate so that the lines on shipment documents are not automatically transformed into pick instructions, but are made available instead to the pick worksheet.  
+> [!NOTE]
+> Pokud již byly vytvořeny pokyny pro vyskladnění a chcete je kombinovat do jedného pokynu vyskladnění, musíte jednotlivé vyskladnění odstranit. Řádky, které mají být vyskladněny, mohou být nyní uvedeny v přehledu.
 
-> [!NOTE]  
-> If warehouse pick instructions have already been created, and you would like to combine them into one efficient pick instruction, then you must delete the individual warehouse picks. The lines to be picked can now be listed in the worksheet.  
+V sešitu vyskladnění můžete nastavit seznamy vyskladnění pro zaměstnance, které minimalizují dobu, po kterou se zaměstnanec musí pohybovat kolem zboží pro vyskladnění. Existují pole, která obsahují informace o množství zboží, které je k dispozici v přihrádkách přeložení. To je užitečné v situacích přeložení k plánování pracovních přiřazení, protože aplikace vždy navrhne vyskladnění z přihrádky přeložení před jakoukoli jinou přihrádku, bez ohledu na měrnou jednotku. Řádky v sešitu mohou pocházet z několika původních dokladů a mohou být seřazeny podle zboží, čísla police, původního dokladu, data splatnosti nebo adresy dodání.
 
-In the pick worksheet, you can set up pick lists for employees that minimize the time the employee has to move about the warehouse picking items. There are fields that contain information about the quantities of items available in the cross-dock bins. This is useful in cross docking situations to plan your work assignments, because application will always propose a pick from a cross-dock bin before any other bin, regardless of the unit of measure. The lines in the worksheet can come from a number of source documents and be sorted by item, shelf number, source document, due date, or ship-to address.  
+Pokud řadíte podle termínu splatnosti, můžete ze sešitu odstranit všechny řádky kromě těch, které vyžadují okamžitou pozornost. Méně naléhavé řádky nejsou jako takové odstraněny, ale pouze odeslány zpět do sešitu **Výběr vyskladnění**. Když vytvoříte vyskladnění pro řádky, které již byly seřazeny podle data splatnosti, můžete se rozhodnout přiřadit vyskladnění konkrétnímu zaměstnanci.
 
-If you sort by due date, you can choose to delete from the worksheet all lines except those that need immediate attention. The less urgent lines are not deleted as such, but just sent back to the **Pick Selection** worksheet. When you create the pick, the lines have already been sorted by due date, and you can choose to assign the pick to a particular employee.  
+> [!NOTE]
+> Vyskladnění ddávek ze skladu u zboží, které je spojeno s dodanou prodejní objednávkou, probíhá podle stejných kroků jako u pravidelných vyskladnění zboží k dodání, jak je popsáno v tomto tématu. Počet řádků vyskladnění pro množství, které má být dodáno, však může být vyšší, protože vybíráte komponenty, nikoli zboží montáže.
+> Řádky vyskladnění jsou vytvořeny pro hodnotu v poli **Zůstatek (množství)** na řádcích montážní zakázky, která je spojena s řádkem prodejní objednávky, který je dodán. Tím zajistíte, že všechny komponenty jsou vyskladněny v jedné akci.
+> Pro více informací navštivte “Princip montáže na zakázku v dodávce ze skladu”.
+Obecné informace o vyskladněných komponentách pro montážní objednávky, včetně situací, kdy zboží montáže není splatné u prodejní dodávky, naleznete v tématu [Vyskladnění pro výrobu nebo montáž v rozšířených konfiguracích skladu](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md).
 
-> [!NOTE]  
-> Picking for warehouse shipment of items that are assembled to the sales order being shipped follows the same steps as for regular warehouse picks for shipment, as described in this topic. However, the number of pick lines per quantity to ship may be many to one because you pick the components, not the assembly item.  
->
-> The warehouse pick lines are created for the value in the **Remaining Quantity** field on the lines of the assembly order that is linked to the sales order line that is being shipped. This ensures that all components are picked in one action.  
->
-> For more information, see “Handling Assemble-to-Order Items in Warehouse Shipments” in Warehouse Shipment.  
->
-> For information about picking components for assembly orders generally, including situations where the assembly item is not due on a sales shipment, see [Pick for Assembly or Production in Advanced Warehouse Configurations](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md).  
+## Plánování v sešitech vyskladnění
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit vyskladnění** a poté vyberte související odkaz.
+2. Vyberte akci **Kopie dokladů  skladu**.
+3. Vyberte dodávky, pro které chcete připravit vyskladnění. Nyní můžete řádky do určité míry seřadit, ale řazení, které zde provedete, nebude provedeno do pokynu vyskladnění. Můžete také odstranit některé řádky, aby bylo možné zboží efektivněji vyskladnit. Pokud například existuje několik řádků se zbožím v přihrádkách přeložení, můžete vytvořit vyskladnění pro všechny řádky přidružené k těmto řádkům. Přeložené zboží bude dodáno spolu s ostatními položkami v dodávkách a přihrádky přeložení budou mít prostor pro další příchozí zboží.
+4. Vyberte akci **Vytvořit vyskladnění** a vyplňte stránku požadavku **Vytvořit vyskladnění**. Řazení, které zde požadujete, uspořádá řádky vyskladnění, které vytvoříte. Můžete například vytvořit jedno vyskladnění pro každou zónu a seřadit řádky podle pořadí přihrádek v rámci každého vyskladnění.
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz. Otevře se stránka **Vyskladnění**.
+6. Přiřazení vyskladnění, které jste právě vytvořili, můžete nyní najít výběrem vyskladnění s nejvyšším číslem.
+7. Ve vyskladnění můžete v případě potřeby změnit přiřazené ID uživatele a způsob řazení řádků.
+8. Vyberte akci **Tisk** a vytiskněte pokyny k vyskladnění.
+9. Po provedení vyskladnění zvolte akci **Zapsat**.
 
-## To plan picks in the worksheet
+Pokud byly přihrádky očíslovány způsobem, který odráží fyzické rozložení skladu, řádky seřazené podle kódu přihrádky umožňují pracovníkovi vyskladnit několik dodávek v jednom kole. Pracovník vytáhne z každé přihrádky požadovaný počet zboží pro každý řádek dodávky a umístí je spolu s ostatním zbožím pro konkrétní dodávku. Pracovník může ušetřit spoustu času výběrem několika dodávek při jedné návštěvě přihrádky.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Pick Worksheet**, and then choose the related link.  
-2. Choose the **Get Warehouse Documents** action.  
-3. Select the shipments for which you want to prepare a pick. You can now sort the lines to some degree, but the sorting you do here will not be carried through to the pick instruction. You can also delete some of the lines to make a more effective pick. For instance, if there are a number of lines with items in cross-dock bins, you might want to create a pick for all the lines associated with these lines. The cross-docked items will be shipped, along with the other items on the shipments, and the cross-dock bins will have space for more incoming items.  
-4. Choose the **Create Pick** action, and fill in the **Create Pick** request page. The sorting you request here will order the pick lines you create. For example, you can create one pick for each zone and sort the lines by bin ranking within each pick.  
-5. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Picks**, and then choose the related link. The **Warehouse Picks** page opens.  
-6. You can now find the pick assignment you just created by selecting the pick with the highest number.  
-7. In the pick, you can still alter, if necessary, the assigned user ID and the way the lines are sorted.  
-8. Choose the **Print** action to print the pick instructions.  
-9. After you have performed the pick, choose the **Register** action.  
+Další účinnou možností třídění je pořadí přihrádek, pokud je fyzické rozložení skladu více podle pořadí přihrádky než kódu přihrádky.
 
-If the bins have been numbered in a way that mirrors the physical layout of the warehouse, the lines sorted by bin code allow the picker to pick for a number of shipments in one round of the warehouse. The worker takes the required number of items for each shipment line out of each bin and places them along with the other items for the particular shipment. A picker can save a great deal of time by picking for several shipments in one visit to a bin.  
+V sešitu vyskladnění můžete také řadit podle dodací adresy, což vám umožní nejprve sestavit a odeslat objednávky vzdáleným zákazníkům.
 
-Another effective sorting option is bin ranking, if the physical layout of the warehouse is more according to bin ranking than bin code.  
-
-In the pick worksheet, you can also sort by ship-to address, enabling you to assemble and ship the orders to far-away customers first.  
-
-## See Also
-
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
-[Assembly Management](assembly-assemble-items.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)  
+[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

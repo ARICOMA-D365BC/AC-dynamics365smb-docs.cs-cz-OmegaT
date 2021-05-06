@@ -1,141 +1,140 @@
 ---
     title: How to Set Up Basic Warehouses with Operations Areas | Microsoft Docs
     description: If internal operation areas such as production or assembly exist in basic warehouse configurations where locations use the **Bin Mandatory** setup field and possibly the **Require Pick** and **Require Put-away** setup fields, then you use three basic warehouse documents to record your warehouse activities for internal operation areas.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2019
+    ms.author: sgroespe
 
 ---
-# Set Up Basic Warehouses with Operations Areas
-If internal operation areas such as production or assembly exist in basic warehouse configurations where locations use the **Bin Mandatory** setup field and possibly the **Require Pick** and **Require Put-away** setup fields, then you can use the following basic warehouse documents to record your warehouse activities for internal operation areas:  
+# Nastavení základních skladů s provozními oblastmi
+Pokud v základních konfiguracích skladu existují vnitřní provozní oblasti, jako je výroba nebo montáž, kde skladová místa používají nastavení přihrádky pole **Přihrádka nutná**, případně **Vyžadovat vyskladnění** a **Vyžadovat zaskladnění**, můžete k evidenci aktivit skladu pro interní provozní oblasti použít následující základní doklady skladu:
 
-- **Inventory Movement** page.  
-- **Inventory Pick** page.  
-- **Inventory Put-away** page.
-
-> [!NOTE]
-> Even though the settings are called **Require Pick** and **Require Put-away**, you can still post receipts and shipments directly from the source business documents at locations where you select these check boxes.  
-
-To use these pages with internal operations, such as to pick and move components to production, you must make some or all the following setup steps depending on how much control you need:  
-
-- Enable the inventory pick, move, and put-away documents.  
-- Define default bin structures for components and end items flowing to and from operation resources.  
-- Make to- and from- bins that are dedicated to specific operation resources to prevent the items from being picked for outbound documents.
-
-Bin codes that are set up on location cards define a default warehouse flow for certain activities, such as components in an assembly department. Additional functionality exists to make sure that when items are placed in a certain bin, they cannot be moved or picked to other activities. For more information, see [To create dedicated component bins](warehouse-how-to-set-up-basic-warehouses-with-operations-areas.md#to-create-dedicated-component-bins).
-
-The following procedures are based on setting up basic warehouse activities around a production area. The steps are similar for other operation areas, such as assembly, service management, and jobs.  
-
-> [!NOTE]  
->  In the following procedure, the **Bin Mandatory** setup field on location cards is selected as a precondition because that is considered the foundation for any level of warehouse management.  
-
-## To enable inventory documents for internal operation activities  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
-2. Open the location card you want to set up.  
-3.  On the **Warehouse** FastTab, select the **Require Put-away** check box to indicate that, when an inbound or internal source document with a bin code is released, an inventory put-away or an inventory movement document can be created.  
-4.  Select the **Require Pick** check box to indicate that when an outbound or internal source document with a bin code is created, an inventory pick or an inventory movement document must be created.  
-
-## To define a default bin structure in the production area  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
-2. Open the Location you want to set up.  
-3.  On the **Bins** FastTab, in the **Open Shop Floor Bin Code** field, enter the code of the bin in the production area with plenty of components that the machine operator can consume from without requesting a warehouse activity to bring them to the bin. Items that are placed in this bin are typically set up for automatic posting, or flushing. This means that the **Flushing Method** field contains **Forward** or **Backward**.  
-4. In the **To-Production Bin Code** field, enter the code of the bin in the production area where components that are picked for production at this location are placed by default before they can be consumed. Items that are placed in this bin are typically set up for manual consumption posting. This means that the **Flushing Method** field contains **Manual** or **Pick + Forward** or **Pick + Backward** for warehouse picks and inventory movements.  
-
-    > [!NOTE]  
-    >  When you use inventory picks, the **Bin Code** field on a production order component line defines the *take* bin from where components are decreased when posting consumption. When you use inventory movements, the **Bin Code** field on production order component lines defines the *place* bin in the operation area where the warehouse worker must place the components.  
-
-5. On the **Bins** FastTab, in the **From-Production Bin Code** field, enter the code of the bin in the production area where finished end items are taken from by default when the process involves a warehouse activity. In basic warehouse configurations, the activity is recorded as an inventory put-away or an inventory movement.  
-
-Now, production order component lines with the default bin code require that forward-flushed components are placed there. However, until the components are consumed from that bin, other component demands may pick or consume from that bin because they are still considered available bin contents. To make sure that bin content is only available to component demand that uses that to-production bin, you must select the **Dedicated** field on the line for that bin code on the **Bins** page that you open from the location card.
-
-This flow chart shows how the **Bin Code** field on production order component lines is filled according to your setup.  
-
-![Bin flow chart](media/binflow.png "BinFlow")    
-
-## To define a default bin structure in the assembly area
-Components for assembly orders cannot be picked or posted with inventory picks. Instead, use the **Inventory Movement** page. For more information, see [Move Components to an Operation Area in Basic Warehousing](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
-
-When picking and shipping sales line quantities that are assembled to the order, you must follow certain rules when creating the inventory pick lines. For more information, see the “Handling Assemble-to-Order Items in Inventory Picks” section in [Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md).
-
-For more information, see [Assembly Management](assembly-assemble-items.md).
-
-### To set up that an inventory movement is automatically created when the inventory pick for the assembly item is created
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Setup**, and then choose the related link.
-2. Select the **Create Movements Automatically** check box.
-
-### To set up the bin in the assembly area where components are placed by default before they can be consumed in assembly
-The value in this field is automatically inserted in the **Bin Code** field on assembly order lines when this location is entered in the **Location Code** field on the assembly order line.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
-2. Open the Location you want to set up.
-3. Fill in the **To-Assembly Bin Code** field.
-
-### To set up the bin in the assembly area where finished assembly items are posted to when they are assembled to stock
-The value in this field is automatically inserted in the **Bin Code** field on assembly order headers when this location code is filled into the **Location Code** field on the assembly order header.
-
-Bin codes that are set up on location cards define a default warehouse flow for specific warehouse activities, such as consumption of components in an assembly area. Additional functionality exists to make sure that when items are placed in a default bin, they cannot be moved or picked to other activities.
+- Stránku **Přesuny**.
+- Stránku **Vyskladnění zásob**.
+- Stránku **Zaskladnění zásob**.
 
 > [!NOTE]
-> This setup is only possible for locations where the Bin Mandatory field is selected.
+> Přestože se nastavení nazývá **Vyžadovat vyskladnění** a **Vyžadovat zaskladnění**, stále můžete účtovat příjmy a dodávky přímo ze zdrojových obchodních dokumentů na lokacích, kde zaškrtnete tyto políčka.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
-2. Open the Location you want to set up.
-3. Fill in the **From-Assembly Bin Code** field.
+Chcete-li tyto stránky použít k interním operacím, například k vyskladnění a přesunu komponent do výroby, je třeba provést některé nebo všechny následující kroky nastavení podle toho, jakou kontrolu potřebujete:
 
-### To set up the bin where finished assembly items are posted to when they are assembled to a linked sales order
-From this bin, the assembly items are shipped immediately, via an inventory pick, to fulfill the sales order.
+- Povolte doklady vyskladnění zásob, přesunutí a zaskladnění.
+- Definujte výchozí struktury přihrádek pro komponenty a koncové položky, které budou proudit do a z provozních zdrojů.
+- Vytvořte do- a z- přihrádky vyhrazené pro konkrétní provozní zdroje, aby se zabránilo vyskladnění zboží výstupními doklady
 
-> [!NOTE]
-> This field cannot be used if the location is set up to use directed pick and put-away.
+Kódy přihrádek nastavené na kartách lokace definují výchozí tok skladu pro určité aktivity, například komponenty v oddělení montáže. Existují další funkce, které zajistí, že když jsou položky umístěny do určité přihrádky, nemohou být přesunuty nebo vydány do jiných aktivit. Pro více informací navštivte [Vytvoření dedikované přihrádky komponent](warehouse-how-to-set-up-basic-warehouses-with-operations-areas.md#to-create-dedicated-component-bins).
 
-The bin code is copied from the sales order line to the assembly order header to communicate to assembly workers where to place the output to ready it for shipping. It is also copied to the inventory pick line to communicate to warehouse workers where to take it from to ship it.
+Následující postupy jsou založeny na nastavení základních aktivit skladu v oblasti výroby. Kroky jsou podobné pro další oblasti činnosti, jako je montáž, servis a projekty.
 
 > [!NOTE]
-> The Assemble-to-Order Shipment bin is always empty. When you post an assemble-to-order sales line, then the bin content is first positively adjusted with the assembly output. Immediately after, it is negatively adjusted with the shipped quantity.
+> V následujícím postupu je jako předběžná podmínka vybrána pole nastavení **Přihrádka nutná** na kartě lokace, protože se to považuje za základ pro jakoukoli úroveň správy skladu.
 
-The value in this field is automatically inserted in the Bin Code field on sales order lines that contain a quantity in the **Qty. to Assemble to Order** field or if the item to be sold has **Assemble-to-Order** in the **Replenishment System** field.
+## Povolení skladových dokladů pro interní operace skladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete kartu lokace, kterou chcete nastavovat.
+3. V záložce **Sklad** vybráním políčka **Vyžadovat zaskladnění** označíte, že při uvolnění vstupního nebo interního původního dokladu s kódem přihrádky lze vytvořit zaskladnění zásob nebo doklad o přesunu zásob.
+4. Zaškrtnutím políčka **Vyžadovat vyskladnění** označíte, že při vytvoření výstupního nebo interního zdrojového dokladu s kódem přihrádky je nutné vytvořit vyskladnění zásob nebo doklad o přesunu zásob.
 
-If the **Asm.-to-Order Shpt. Bin Code** is blank, then the **From-Assembly Bin Code** field is used instead. If both setup fields are blank, then the last used bin with content is used in the **Bin Code** field on sales order lines.
+## Definování výchozí struktury přihrádky v oblasti výroby
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete lokaci, kterou chcete nastavovat.
+3. V záložce **Přihrádky** v poli **Kód přihrádky díly** zadejte kód přihrádky v oblasti výroby s množstvím komponent, z nichž může operátor na stroji spotřebovat, aniž by požádal o aktivitu skladu pro dodání do přihrádky. Zboží, které jsou umístěny v této přihrádce, se obvykle nastavují pro automatické účtování nebo vyčištění. To znamená, že pole **Metoda spotřeby** obsahuje **Ručně** nebo **Zpětně** .
+4. Do pole **Kód přihrádky do výroby** zadejte kód přihrádky, kde jsou komponenty vyskladněné pro výrobu a umístěny ve výchozím nastavení dříve, než mohou být spotřebovány. Položky, které jsou umístěny v této přihrádce, jsou obvykle nastaveny pro ruční účtování spotřeby. To znamená, že pole **Metoda spotřeby** obsahuje **Ruční** nebo **Vyskladnění + dopředu** nebo **Vyskladnění + zpětně** pro vyskladnění a pohyby zásob.
 
-The same bin code is in turn copied to the **Bin Code** field on the inventory pick line that manages the shipment of the assemble-to-order quantity. For more information, see the “Handling Assemble-to-Order Items in Inventory Picks” section in [Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md).
+   > [!NOTE]
+   > Když použijete vyskladnění zásob,  pole **Kód přihrádky** na řádku komponenty výrobní zakázky definuje *Přihrádku*, ze které jsou komponenty při účtování spotřeby sníženy. Při použití pohybů zásob  pole **Kód přihrádky** na řádcích komponent výrobní zakázky definuje *umístění* operační oblasti, do které musí pracovník skladu komponenty umístit.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
-2. Open the Location you want to set up.
-3. Fill in the **Asm.-to-Order Shpt. Bin Code** field.
+5. V záložce **Přihrádky** v poli **Kód přihrádky z výroby** zadejte kód přihrádky v oblasti výroby, ve které jsou dokončené koncové položky převzaty ve výchozím nastavení, když proces zahrnuje aktivitu skladu. V základních konfiguracích skladu je aktivita zaznamenána jako zaskladnění zásob nebo přesun zásob.
 
-## To create dedicated component bins
-You can specify that quantities in a bin are protected from being picked for other demands than demand from their current purpose.
+Nyní, řádky komponenty výrobní zakázky s výchozím kódem přihrádky vyžadují, aby byly do této složky umístěny předem spotřebované komponenty. Dokud však nebudou komponenty spotřebovány z této přihrádky, mohou z této přihrádky vybírat nebo spotřebovávat další požadavky na komponenty, protože jsou stále považovány za dostupný obsah přihrádky. Chcete-li zajistit, aby byl obsah přihrádky k dispozici pouze pro požadavek na komponentu, který používá tuto výrobní přihrádku, musíte na řádku vyplnit kód přihrádky na **Vyhrazená** na řádku pro tento kód přihrádky na stránce **Přihrádky**, kterou otevřete z karty lokace.
 
-Quantities in dedicated bins can still be reserved. Accordingly, the quantities in dedicated bins are included in the **Total Available Quantity** field on the **Reservation** page.
+Tento vývojový diagram ukazuje, jak je vyplněno pole <x1 />Kód přihrádky<x2 /> na řádcích komponent výrobní zakázky podle vašeho nastavení.
 
-For example, is a work center is set up with a bin code in the **To-Production Bin Code** field. Production order component lines with that bin code require that forward-flushed components are placed there. However, until the components are consumed from that bin, other component demands may pick or consume from that bin because they are still considered available bin contents. To make sure that bin content is only available to component demand that uses that to-production bin, you must select the **Dedicated** field on the line for that bin code on the **Bins** page that you open from the location card.
+![Vývojový diagram toku přihrádky](media/binflow.png "BinFlow")
 
-Making a bin dedicated provides similar functionality to using bin types, which is only available in advanced warehousing. For more information, see [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md).
+## Definování výchozí struktury přihrádek v oblasti montáže
+Komponenty pro montážní zakázky nemohou být vydány nebo zaúčtovány s vyskladněním zásob. Místo toho použijte stránku **Přesuny**. Pro více informací navštivte [Přesouvání komponent do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
+
+Při Vyskladnění a odesílání prodejních řádků, které jsou smontovány pro objednávku, musíte při vytváření řádků vyskladnění zásob dodržet určitá pravidla. Pro více informací navštivte  sekci "Zpracování zboží montáže na zakázku a vyskladnění zásob" ve Vyskladnění zboží pomocí vyskladnění zásob.
+
+Pro více informací navštivte [Správa montáže](assembly-assemble-items.md).
+
+### Nastavení automatického vytvoření přesunu při vyskladnění zásob pro montážní zakázku
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení montáže** a poté vyberte související odkaz.
+2. Zaškrtněte políčko **Vytvořit pohyby automaticky**.
+
+### Nastavit přihrádky montáže, ve které jsou komponenty ve výchozím nastavení umístěny, než mohou být spotřebovány
+Hodnota v tomto poli je automaticky vložena do pole **Kód přihrádky** na řádcích montážní zakázky, když je toto umístění zadáno do pole **Kód lokace** na řádku montážní zakázky.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete lokaci, kterou chcete nastavovat.
+3. Vyplňte pole **Kód přihrádky na montáž**.
+
+### Nastavení přihrádky montáže, do které se při dokončení montáže zaúčtuje hotové zboží
+Hodnota v tomto poli je automaticky vložena do pole **Kód přihrádky** v hlaviček montáže, když je tento kód lokace vyplněn do pole ** Kód lokace** v hlavičce montážní zakázky4.
+
+Kódy přihrádek nastavené na kartách lokace definují výchozí tok skladu pro specifické aktivity skladu, jako je například spotřeba komponent v oblasti montáže. Existují další funkce, které zajistí to, že případě umístění zboží do výchozí přihrádky, nemohou být přesunuty nebo vydány do jiných aktivit.
+
+> [!NOTE]
+> Toto nastavení je možné pouze v přídadě, že je na lokaci nastaveno "Přihrádka nutná".
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete lokaci, kterou chcete nastavovat.
+3. Vyplňte políčko **Kód přihrádky z montáže**.
+
+### Nastavení přihrádky, do níž je dokončené zboží montáže zaúčtováno, jakmile jsou montáže propojené prodejní objednávky
+Z této přihrádky je zboží montáže odesláno okamžitě, prostřednictvím vyskladnění, k naplnění prodejní objednávky.
+
+> [!NOTE]
+> Toto pole nelze používat, pokud je na lokaci nastaveni řízené zaskladnění a vyskladnění.
+
+Kód přihrádky se kopíruje z řádku prodejní objednávky do hlavičky montážní zakázky, aby bylo sděleno pracovníkům montáže, kam mají umístit výstup pro expedici. Zkopíruje se také do řádku vyskladnění, aby bylo možné sdělit pracovníkům skladu, odkud je mají převzít.
+
+> [!NOTE]
+> Kód dod. přihr. montáže na zakázku zůstává vždy prázdný. Při zaúčtování prodejního řádku montáže na zakázku je obsah přihrádky nejprve pozitivně upraven pomocí výstupu montáže. Ihned poté je negativně upraveno s dodaným množstvím.
+
+Hodnota v tomto poli je automaticky vložena do pole Kód přihrádky na řádcích prodejní objednávky, které obsahují množství v poli **Množství  montáže na zakázku** nebo pokud jsou prodány **Montáž na zakázku** v poli **Systém doplnění**.
+
+Pole**Kód dod.   přihrádky montáže na zakázku** je prázdné, místo toho se použije **Kód přihrádky z montáže**. Pokud jsou obě pole nastavení prázdná, použije se v řádcích **Kód přihrádky<x6 /> na řádcích prodejních objednávek naposledy použitá přihrádka s obsahem.
+
+Stejný kód přihrádky se pak zkopíruje do pole **Kód přihrádky** na řádku vyskladnění zásob, který spravuje dodávku množství montážní zakázky. Pro více informací navštivte  sekci "Zpracování zboží montáže na zakázku a vyskladnění zásob" ve Vyskladnění zboží pomocí vyskladnění zásob.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete lokaci, kterou chcete nastavovat.
+3. Vyplňte pole **Kód dod. přihr.  montáže na zakázku**.
+
+## Vytvoření vyhrazených přihrádek komponent
+Můžete určit, že množství v přihrádce je chráněno proti vyskladnění pro jiné požadavky než pro poptávku z jejich aktuálního účelu.
+
+Množství v vyhrazených zásobnících může být stále rezervováno Proto jsou množství ve vyhrazených přihrádkách zahrnuta do pole **Celkové dostupné množství** na stránce **Rezervace**.
+
+Například, pracovní centrum nastaveno s kódem přihrádky v poli **Kód přihrádky do výroby**. Řádky komponenty výrobní zakázky s tímto kódem přihrádky vyžadují, aby byly do tohoto kódu umístěny předem vyprazdňované komponenty. Dokud však nebudou komponenty spotřebovány z této přihrádky, mohou z této přihrádky vybírat nebo spotřebovávat další požadavky na komponenty, protože jsou stále považovány za dostupný obsah přihrádky. Chcete-li se ujistit, že obsah přihrádky je k dispozici pouze pro požadavek, který používá tuto přihrádku pro výrobu, musíte vybrat pole **Vyhrazeno** na řádku pro přihrádku na stránce **Přihrádky**, kterou otevřete z karty lokace.
+
+Vytvoření vyhrazené přihrádky poskytuje podobnou funkci jako použití typů přihrádek, které jsou k dispozici pouze v rozšířeném skladu. Pro více informací navštivte <x3/>Nastavení typu přihrádky<x4/>.
 
 > [!Caution]
-> Items in dedicated bins are not protected when they are picked and consumed as production components with the Inventory Pick page.
+> Zboží ve vyhrazené přihrádce nená chráněno proti vyskladnění a spotřebě jako výrobníí komponenty na kartě vyskladnění.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link. Select the location that you want to update.  
-2.  Choose the **Bins** action.  
-3.  Select the **Dedicated** field for each bin that you want to use exclusively for certain internal operations and where you want quantities to be reserved for that internal operation once placed there.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz. Vyberte lokaci, kterou chcete aktualizovat.
+2. Vyberte tlačítko **Přihrádky**.
+3. Vyberte pole **Vyhrazeno** pro každou přihrádku, kterou chcete použít výhradně pro určité interní operace a kde chcete, aby množství bylo rezervováno pro tuto interní operaci, jakmile je tam umístěno.
 
-> [!NOTE]  
->  The bin must be empty before you can select or clear the **Dedicated** field.
+> [!NOTE]
+> Přihrádka musí být prázná, předtám než můžete vybrat nebo smazat pole **Vyhrazeno**.
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

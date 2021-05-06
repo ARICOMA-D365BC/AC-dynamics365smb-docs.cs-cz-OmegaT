@@ -4,7 +4,7 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
@@ -13,35 +13,32 @@
     ms.author: edupont
 
 ---
-# Date Calculation for Sales
-[!INCLUDE[prod_short](includes/prod_short.md)] automatically calculates the earliest possible date that an item on a sales order line can be shipped.
+# Výpočet data pro prodej
+[!FUNKCE INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vypočítá nejbližší možné datum dodávky zboží na řádku prodejní objednávky.
 
-If the customer has requested a specific delivery date, then the date on which the items must be available to pick to meet that delivery date is calculated.
+Pokud zákazník požádal o konkrétní datum dodání, vypočítá se datum, kdy musí být zboží k dispozici pro vyskladnění, aby splnilo dané datum dodání.
 
-If the customer does not request a specific delivery date, then the date on which the items can be delivered is calculated, starting from the date on which the items are available for picking.
+Pokud zákazník nepožaduje konkrétní datum dodání, vypočítá se datum, kdy lze zboží doručit, počínaje dnem, kdy jsou položky k dispozici k vyskladnění.
 
-## Calculating a Requested Delivery Date
-If you specify a requested delivery date on the sales order line, that date becomes the starting point for the following calculations.
+## Výpočet požadovaného data dodání
+Pokud zadáte požadované datum dodání na řádku prodejní objednávky, stane se toto datum výchozím bodem pro následující výpočty.
 
-- requested delivery date - shipping time = planned shipment date
-- planned shipment date - outbound whse. handling time = shipment date
+- požadované datum dodání - čas dodávky = plánované datum dodávky
+- plánované datum dodávky -  výstupní sklad doba zpracování = datum dodávky
 
-If the items are available to pick on the shipment date, then the sales process can continue. Otherwise, a stock-out warning is displayed.
+Pokud je zboží dostupné k vyskladnění k datu dodávky, může proces prodeje pokračovat. Jinak se zobrazí varování o vyprodání zásob.
 
-> [!Note]
-> If your process is based on backward calculation, for example, if you use the requested delivery date to get the planned shipment date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Date formulas without fixed durations, such as "CW" for current week or CM for current month, can result in incorrect date calculations. For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
+> <x1/>!Note<x2/>
+> Pokud je váš proces založen na zpětném výpočtu, například pokud k získání plánovaného data dodávky použijete požadované datum dodání, doporučujeme vám použít datové vzorce s pevnou dobou trvání, například „5D“ pro dobu pěti dnů nebo „1W“ pro jeden týden. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. Více informací o datových vzorcích viz [Práce s daty a časy kalendáře](ui-enter-date-ranges.md).
 
-## Calculating the Earliest Possible Delivery Date
-If you do not specify a requested delivery date on the sales order line, or if the requested delivery date cannot be met, then the earliest date on which that the items are available is calculated. That date is then entered in the Shipment Date field on the line, and the date on which you plan to ship the items as well as the date on which they will be delivered to the customer are calculated using the following formulas.
+## Výpočet nejbližšího možného data dodání
+Pokud na řádku prodejní objednávky nezadáte požadované datum dodání nebo pokud požadované datum dodání nelze splnit, vypočítá se nejbližší možné datum, kdy bude zboží k dispozici. Toto datum se poté zadá do pole Datum dodávky na řádku a datum, kdy plánujete zboží odeslat, stejně jako datum, kdy budou zákazníkovi dodány, se vypočítá podle následujících vzorců.
 
-- shipment date + outbound whse. handling time = planned shipment date
-- planned shipment date + shipping time = planned delivery date
-
-
-## See Also  
- [Date Calculation for Purchases](purchasing-date-calculation-for-purchases.md)   
- [Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+- datum dodávky + výstupní sklad doba zpracování = plánované datum dodávky
+- plánované datum dodávky + doba dodávky = plánované datum dodání
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Výpočet data pro nákupy](purchasing-date-calculation-for-purchases.md)<x2/>
+[Vypočet slibovaných dat objednávky](sales-how-to-calculate-order-promising-dates.md)<x4/>
+[Práce s [! INCLUDE[d365fin](includes/d365fin_md.md)]] (ui-work-product.md)

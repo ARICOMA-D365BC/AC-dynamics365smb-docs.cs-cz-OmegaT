@@ -1,44 +1,41 @@
 ---
 title: Close a Fiscal Year and Accounting Periods | Microsoft Docs
 description: Outlines the tasks to close a fiscal year or accounting period, for example, making sure documents and journals are posted and verifying bank balances.
+services: project-madeira
+documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, bank account detailed trial balance
-ms.date: 10/01/2020
+ms.date: 01/13/2020
 ms.author: jswymer
 
 ---
-# Closing Years and Periods
+# Uzavírání roků a období
+Na konci fiskálního roku je třeba provést řadu administrativních úkolů, například zajistit, aby byly zaúčtovány všechny doklady a deníky, zajistit, aby byla data měny aktuální, zavřít knihy a mnoho dalších. Skutečné úkoly budou záviset na vaší společnosti.
 
-At the end of a fiscal year, there are a number of administrative tasks that you have to perform, like making sure all documents and journals are posted, making sure currency data are up-to-date, closing the books, and more. The actual tasks will depend your company.
+Následující tabulka poskytuje přehled úkolů, které obvykle provádíte za účelem uzavření roku a období.
 
-The following table provides an overview of tasks that you typically perform to close a year and period.
-
-| To | See |
+| K | Vidění |
 | --- | --- |
-| Define your fiscal year, and divide it into time periods for which to report financial performance. | [Working with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)|
-| Specify system-wide and user-specific posting date ranges. Depending on your business needs, you may want to restrict user posting date ranges at the start of the period-end process or after it. |[Specify Posting Periods](finance-how-specify-posting-periods.md) |
-| Get an overview of activities that are commonly performed at the end of a period, such as posting all documents and journals, or running account schedules. |[Closing Periods](year-how-complete-period-end-processes.md) |
-| Update currency exchange rates and adjust the exchange rates of posted customer, vendor, and bank account entries. |[Update Currency Exchange Rates](finance-how-update-currencies.md) |
-| Allocate costs and income among accounts and dimensions. |[Allocating Costs and Income](year-allocate-costs-income.md) |
-| Prepare to report value-added tax amounts that you have collected for sales to the tax authorities' web service. |[Report VAT to Tax Authorities](finance-how-report-vat.md)|
-| Print reports to verify general ledger, customer, vendor and bank account balances before closing a period. |[Preparing Pre-Closing Reports](year-prepare-preclose-reports.md) |
-| Close accounting periods and fiscal year, transfer income statement balances to balance sheet accounts and post the year end closing entry. |[Closing Books](year-close-books.md) |
-| Print reports that can assist you in creating financial statements. |[Preparing Closing Statements](year-prepare-close-statement.md) |
+| Definujte svůj fiskální rok a rozdělte ho na časová období, za která se má vykazovat finanční výkonnost. | [Práce s účetními obdobími a fiskálními roky](finance-accounting-periods-and-fiscal-years.md) |
+| Zadejte rozsahy účetních období uživatele pro celý systém. V závislosti na vašich obchodních potřebách můžete chtít omezit rozsahy dat účtování uživatelů na začátku procesu ukončení období nebo po něm. | [Určení zúčtovacího období](finance-how-specify-posting-periods.md) |
+| Získejte přehled aktivit, které jsou běžně prováděny na konci období, jako je například zaúčtování všech dokladů a deníků nebo spuštění účetních schémat. | [Uzavíraní období](year-how-complete-period-end-processes.md) |
+| Aktualizujte směnné kurzy měn a upravte směnné kurzy účtovaných položek zákazníků, prodejců a bankovních účtů. | [Směnné kurzy měn](finance-how-update-currencies.md) |
+| Přidělte náklady a výnosy mezi účty a dimenze. | [Přidělení nákladů a výnosů](year-allocate-costs-income.md) |
+| Připravte se nahlásit částku daně z přidané hodnoty, kterou jste vybrali za prodej webové služby finančního uřadu. | [Ohlásit DPH finančnímu úřadu](finance-how-report-vat.md) |
+| Před uzavřením období vytiskněte zprávy a ověřte zůstatky hlavní knihy, zákazníka, prodejce a bankovního účtu. | [Příprava předběžných sestavy](year-prepare-preclose-reports.md) |
+| Uzavřete účetní období a fiskální rok, převeďte zůstatky výsledovky na rozvahové účty a zaúčtujte závěrku po skončení roku. | [Uzavírání knih](year-close-books.md) |
+| Tisk sestav, které vám mohou pomoci při vytváření finančních výkazů. | [Příprava závěrky](year-prepare-close-statement.md) |
 
-## See Related Training at [Microsoft Learn](/learn/modules/close-fiscal-year-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/close-fiscal-year-dynamics-365-business-central/index)
 
-## See Also
+## Viz také
+[Otevření nového fiskálního roku](finance-how-open-new-fiscal-year.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
 
-[Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]

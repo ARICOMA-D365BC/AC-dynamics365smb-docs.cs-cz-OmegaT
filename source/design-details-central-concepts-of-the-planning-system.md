@@ -4,293 +4,282 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Design Details: Central Concepts of the Planning System
-The planning functions are contained in a batch job that first selects the relevant items and period to plan for. Then, according to each item’s low-level code (BOM position), the batch job calls a code unit, which calculates a supply plan by balancing supply-demand sets and suggesting possible actions for the user to take. The suggested actions appear as lines in the planning worksheet or the requisition worksheet.  
+# Detaily návrhu: Centrální koncepce plánovacího systému
+Funkce plánování jsou obsaženy v dávkové úloze, která nejprve vybere příslušné zboží a období, pro které chcete plánovat. Poté, podle nízkoúrovňového kódu každého zboží (pozice kusovníku) vyvolá dávková úloha kódovou jednotku, která vypočítá plán dodávky vyvážením sad nabídky a poptávky a následně navrhnutím možných akcí, které má uživatel provést. Navrhované akce se zobrazí jako řádky v sešitu plánování, nebo v sešitu požadavků.
 
-![Contents of the Planning Worksheet page](media/NAV_APP_supply_planning_1_planning_worksheet.png "Contents of the Planning Worksheet page")  
+![Obsah stránky sešitu plánování](media/NAV_APP_supply_planning_1_planning_worksheet.png "Obsah stránky sešitu plánování")
 
-The planner of a company, such as a purchaser or a production planner is presumed to be the user of the planning system. The planning system assists the user by performing the extensive but rather straightforward calculations of a plan. The user can then concentrate on solving the more difficult problems, such as when things differ from normal.  
+Předpokládá se, že plánovač společnosti, například kupující nebo plánovač výroby, je uživatelem plánovacího systému. Plánovací systém pomáhá uživateli prováděním rozsáhlých, ale spíše jednoduchých výpočtů plánu. Uživatel se pak může soustředit na řešení složitějších problémů, například když se věci liší od normálu.
 
-The planning system is driven by anticipated and actual customer demand, such as forecast and sales orders. Running the planning calculation will result in application suggesting specific actions for the user to take concerning possible supply from vendors, assembly or production departments, or transfers from other warehouses. These suggested actions could be to create new supply orders, such as purchase or production orders. If supply orders already exist, the suggested actions could be to increase or expedite the orders to meet the changes in demand.  
+Systém plánování je poháněn očekávanou a skutečnou poptávkou zákazníků, jako jsou prognózy a prodejní objednávky. Spuštění výpočtu plánování bude mít za následek aplikaci navrhovaných konkrétních akcí, které má uživatel provést v souvislosti s možnými dodávkami od dodavatelů, montáže, či středisek dílen nebo převody z jiných skladů. Tyto navrhované akce by mohly být vytvoření nových objednávek dodávek, jako jsou nákupní nebo výrobní zakázky. Pokud již objednávky dodávek existují, navrhované akce by mohly být zvýšení nebo urychlení objednávek ke splnění změn v poptávce.
 
-Another goal of the planning system is to ensure that the inventory does not grow unnecessarily. If demand decreases, the planning system will suggest that the user postpone, decrease in quantity, or cancel existing supply orders.  
+Dalším cílem plánování je zajistit, aby zásoby zbytečně nerostly. Pokud se poptávka sníží, plánovací systém navrhne, aby uživatel odložil, snížil množství nebo zrušil stávající objednávky dodávek.
 
-MRP and MPS, Calculate Net Change Plan, and Calculate Regenerative Plan are all functions within one code unit that contains the planning logic. However, the supply plan calculation involves different sub systems.  
+MRP a MPS, Vypočítat plánovaný pohyb, nebo Vypočítat regenerační plán jsou všechny funkce v jedné kódové jednotce, které obsahují logiku plánování. Výpočet plánu dodávky však zahrnuje různé podsystémy.
 
-Note that the planning system includes no dedicated logic for capacity leveling or fine scheduling. Therefore, such scheduling work is performed as a separate discipline. The lack of direct integration between the two areas also means that substantial capacity or schedule changes will require that the planning is rerun.  
+Všimněte si, že systém plánování neobsahuje žádnou vyhrazenou logiku pro vyrovnání kapacity nebo jemné plánování. Proto se tato práce plánování provádí jako samostatná disciplína. Nedostatečná přímá integrace mezi oběma oblastmi také znamená, že podstatné změny kapacity nebo plánu budou vyžadovat opětovné spuštění plánování.
 
-## Planning Parameters  
-Planning parameters that the user sets for an item or a group of items control which actions the planning system will suggest in the various situations. The planning parameters are defined on each item card to control when, how much, and how to replenish.  
+## Parametry plánování
+Parametry plánování, které uživatel nastaví pro položku nebo skupinu položek, určují, které akce plánovací systém v různých situacích navrhne. Parametry plánování jsou definovány na každé kartě zboží, která určuje, kdy, kolik a jak doplňovat.
 
-Planning parameters can also be defined for any combination of item, variant, and location by setting up a stockkeeping unit (SKU) for each needed combination, and then specifying individual parameters.  
+Parametry plánování lze také definovat pro jakoukoliv kombinaci zboží, varianty a umístění nastavením skladované jednotky (SKJ) pro každou potřebnou kombinaci a poté zadáním jednotlivých parametrů.
 
-For more information, see [Design Details: Handling Reordering Policies](design-details-handling-reordering-policies.md) and [Design Details: Planning Parameters](design-details-planning-parameters.md).  
+Pro více informací navštivte [Detaily návrhu: Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md) a [Detaily návrhu: Parametry plánování](design-details-planning-parameters.md).
 
-## Planning Starting Date  
-To avoid a supply plan that incorporates open orders in the past and suggests potentially impossible actions, the planning system treats all dates before the planning starting date as a frozen zone where the following special rule applies:  
+## Počáteční datum plánování
+Aby se zabránilo plánu dodávek, který zahrnuje otevřené objednávky v minulosti a navrhuje potenciálně nemožné akce, plánovací systém zachází se všemi daty před počátečním datem plánování jako se zamraženou zónou, kde platí následující zvláštní pravidlo:
 
-All supply and demand before the starting date of the planning period will be considered a part of inventory or shipped.  
+Veškerá nabídka a poptávka před počátečním datem plánovacího období budou považovány za součást zásob nebo za dodané.
 
-In other words, it assumes that the plan for the past is executed according to the given plan.  
+Jinými slovy, se předpokládá, že plán minulosti je realizován podle daného plánu.
 
-For more information, see [Dealing with Orders Before the Planning Starting Date](design-details-balancing-demand-and-supply.md#dealing-with-orders-before-the-planning-starting-date).  
+Pro více informací navštivte [Práce s objednávkami před počátečním datem plánování](design-details-balancing-demand-and-supply.md#dealing-with-orders-before-the-planning-starting-date).
 
-## Dynamic Order Tracking (Pegging)  
-Dynamic Order Tracking, with its simultaneous creation of action messages in the planning worksheet, is not a part of the supply planning system in [!INCLUDE[prod_short](includes/prod_short.md)]. This feature links, in real-time, the demand and the quantities that could cover them, whenever a new demand or supply is created or changed.  
+## Dynamické sledování zakázky (Doložení)
+Dynamické sledování zakázky, se současným vytvářením zpráv o akcích v sešitu plánování, není součástí systému plánování dodávek v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Tato funkce v reálném čase propojuje poptávku a množství, která by je mohla pokrýt, kdykoli je vytvořena nebo změněna nová poptávka nebo nabídka.
 
-For example, if the user enters or changes a sales order, the dynamic order tracking system will instantly and search for an appropriate supply to cover the demand. This could be from inventory or from an expected supply order (such as a purchase order or a production order). When a supply source is found, the system creates a link between the demand and the supply, and displays it in view-only pages that are accessed from the involved document lines. When appropriate supply cannot be found, the dynamic order tracking system creates action messages in the planning worksheet with supply plan suggestions reflecting the dynamic balancing. Accordingly, the dynamic order tracking system offers a very basic planning system that can be of help both to the planner and other roles in the internal supply chain.  
+Pokud uživatel například zadá nebo změní prodejní objednávku, dynamický systém sledování objednávek okamžitě vyhledá vhodnou nabídku, která pokryje poptávku. To může být ze zásob, nebo z očekávané objednávky dodávky (jako je nákupní, nebo výrobní objednávka). Když je nalezen zdroj dodávky, systém vytvoří vazbu mezi poptávkou a dodávkou a zobrazí ji na stránkách pouze pro zobrazení, ke kterým je přístup z příslušných řádků dokladu. Pokud nelze najít vhodné dodávky, systém dynamického sledování objednávek vytvoří zprávy o akcích v sešitu plánování s návrhy plánu dodávek, které odrážejí dynamické vyvažování. Systém dynamického sledování zakázek proto nabízí velmi základní plánovací systém, který může pomoci jak plánovači, tak dalším rolím ve vnitřním dodavatelském řetězci.
 
-Accordingly, Dynamic Order Tracking can be considered a tool that assists the user in assessing whether to accept supply order suggestions. From the supply side, a user can see which demand has created the supply, and from the demand side, which supply should cover the demand.  
+Dynamické sledování zakázek lze proto považovat za nástroj, který pomáhá uživateli při posuzování, zda přijmout návrhy objednávek dodávek. Z nabídky může uživatel zjistit, která poptávka vytvořila nabídku, a ze strany poptávky, která nabídka by měla pokrýt poptávku.
 
-![Example of dynamic order tracking](media/NAV_APP_supply_planning_1_dynamic_order_tracking.png "Example of dynamic order tracking")  
+![Příklad dynamického sledování zakázky](media/NAV_APP_supply_planning_1_dynamic_order_tracking.png "Příklad dynamického sledování zakázky")
 
-For more information, see [Design Details: Reservation, Order Tracking, and Action Messaging](design-details-reservation-order-tracking-and-action-messaging.md).  
+Pro více informací navštivte [Detaily návrhu: Rezervace, sledování zásilky a zasílání zpráv](design-details-reservation-order-tracking-and-action-messaging.md).
 
-In companies with a low item flow and less advanced product structures, it may be adequate to use the Dynamic Order Tracking as the main means of supply planning. However, in busier environments, the planning system should be used to ensure a properly balanced supply plan at all times.  
+Ve společnostech s nízkým tokem zboží a méně pokročilými výrobními strukturami, může být vhodné použít dynamické sledování zakázky jako hlavní prostředek plánování dodávek. V rušnějších prostředích by však měl být systém plánování používán k zajištění řádně vyváženého plánu dodávek za všech okolností.
 
-### Dynamic Order Tracking versus the Planning System  
-At a quick glance, it may be difficult to differentiate between the planning system and Dynamic Order Tracking. Both features display output in the planning worksheet by suggesting actions that the planner should take. However, the way this output is produced differs.  
+### Dynamické sledování zakázky nebo systéme plánování
+Na první pohled může být obtížné rozlišit plánovací systém od dynamického sledování zakázek. Obě funkce zobrazují výstup ze sešitu plánování tím, že navrhují akce, které by měl plánovač provést. Způsob výroby tohoto výstupu se však liší.
 
-The planning system deals with the entire supply-demand pattern of an item through all levels of the BOM hierarchy along the time line, whereas Dynamic Order Tracking only addresses the situation of the order that activated it. When balancing demand and supply, the planning system creates links in a user-activated batch mode, whereas Dynamic Order Tracking creates the links automatically and on the fly, whenever the user enters a demand or a supply in application, such as a sales order or purchase order.  
+Systém plánování se zabývá celým vzorem nabídky a poptávky zboží prostřednictvím všech úrovní hierarchie kusovníku podél časové osy, zatímco dynamické sledování zakázky řeší pouze situaci objednávky, která ji aktivovala. Při vyrovnávání poptávky a nabídky vytvoří systém plánování propojení v dávkovém režimu aktivovaném uživatelem, zatímco dynamické sledování objednávek vytvoří odkazy automaticky a průběžně, kdykoli uživatel zadá poptávku nebo dodávku v aplikaci, například prodejní objednávku nebo nákupní objednávku.
 
-Dynamic Order Tracking establishes links between demand and supply when data is entered, on a first-come/first-served basis. This may lead to some disorder in priorities. For example, a sales order entered first, with a due date next month, may be linked to the supply in inventory, while the next sales order due tomorrow may cause an action message to create a new purchase order to cover it, as illustrated below.  
+Dynamické sledování zakázek vytváří vazby mezi poptávkou a nabídkou při zadávání dat podle zásady "kdo dřív přijde ten dřív mele". To může vést k určitým poruchách v prioritách. Například prodejní objednávka zadaná jako první, s termínem splatnosti příští měsíc, může být propojena s dodávkou ve skladu, zatímco další prodejní objednávka splatná zítra může způsobit, že zpráva akce vytvoří novou nákupní objednávku, která ji zakryje, jak je znázorněno níže.
 
-![Example of order tracking in supply planning 1](media/NAV_APP_supply_planning_1_dynamic_order_tracking_graph.png "Example of order tracking in supply planning 1")  
+![Příklad sledování zakázky v plánování dodávek 1](media/NAV_APP_supply_planning_1_dynamic_order_tracking_graph.png "Příklad sledování zakázky v plánování dodávek 1")
 
-In contrast, the planning system deals with all demand and supply for a particular item, in prioritized order according to due dates and order types, that is, on a first-needed/first-served basis. It deletes all order tracking links that were created dynamically and reestablishes them according to due date priority. When the planning system has run, it has solved all imbalances between demand and supply, as illustrated below for the same data.  
+Naproti tomu plánovací systém se zabývá veškerou poptávkou a nabídkou pro konkrétní zboží, v pořadí podle priority podle termínů splatnosti a typů objednávek, tj. "kdo dřív přijde ten dřív mele". Odstraní všechny odkazy sledování zakázek, které byly vytvořeny dynamicky a obnoví je podle priority termínu splnění. Po spuštění plánovacího systému, vyřeší všechny nerovnováhy mezi poptávkou a nabídkou, jak je znázorněno níže pro stejná data.
 
-![Example of order tracking in supply planning 2](media/NAV_APP_supply_planning_1_planning_graph.png "Example of order tracking in supply planning 2")  
+![Příklad sledování zakázky v plánování dodávek 2](media/NAV_APP_supply_planning_1_planning_graph.png "Příklad sledování zakázky v plánování dodávek 2")
 
-After the planning run, no action messages remain in the Action Message Entry table, because they have been replaced by the suggested actions in the planning worksheet  
+Po spuštění běhu plánování nezůstanou v tabulce Položka hlášení akce žádné zprávy o akci, protože byly nahrazeny navrhovanými akcemi v sešitu plánováním.
 
-For more information, see [Order Tracking Links during Planning](design-details-balancing-demand-and-supply.md#seriallot-numbers-are-loaded-by-specification-level).  
+Pro více informací navštivte Spojení sledování zakázky během plánování v [Vyvažování poptávky a nabídky
 
-## Sequence and Priority in Planning  
-When establishing a plan, the sequence of the calculations is important to get the job done within a reasonable timeframe. In addition, the prioritization of requirements and resources play an important role in obtaining the best results.  
+## Posloupnost a priorita v plánování
+Při sestavování plánu je důležitá posloupnost výpočtů, aby byla práce provedena v přiměřeném časovém rámci. Kromě toho priority požadavků a zdrojů hrají důležitou roli při dosahování nejlepších výsledků.
 
-The planning system in [!INCLUDE[prod_short](includes/prod_short.md)] is demand-driven. High-level items should be planned before low-level items, because the plan for high-level items might generate additional demand for the lower-level items. This means, for example, that retail locations should be planned before distribution centers are planned, because the plan for a retail location may include additional demand from the distribution center. On a detailed balancing level, this also means that a sales order should not trigger a new supply order if an already released supply order is can cover the sales order. Likewise, a supply carrying a specific lot number should not be allocated to cover a generic demand if another demand requires this specific lot.  
+Plánovací systém v [!INCLUDE[d365fin](includes/d365fin_md.md)] je řízen podle poptávky. Položky vysoké úrovně by měly být naplánovány před položkami nižší úrovně, protože plán pro položky vysoké úrovně může vygenerovat další poptávky po položkách nižší úrovně. To například znamená, že maloobchodní místa by měla být naplánována před plánovanými distribučními centry, protože plán pro maloobchodní lokace může zahrnovat další poptávky z distribučního centra. Na podrobné úrovni vyrovnávání to také znamená, že prodejní objednávka by neměla aktivovat novou objednávku dodávky, pokud je již uvolněná objednávka dodávky, může pokrýt prodejní objednávku. Stejně tak by nabídka s určitým číslem šarže neměla být přidělena na pokrytí obecné poptávky, pokud tuto konkrétní šarži vyžaduje jiná poptávka.
 
-### Item Priority / Low-Level Code  
-In a manufacturing environment, the demand for a finished, sellable item will result in derived demand for components that comprise the finished item. The bill-of-material structure controls the component structure and can cover several levels of semi-finished items. Planning an item at one level will cause derived demand for components at the next level, and so on. Eventually, this will result in derived demand for purchased items. Consequently, the planning system plans for items in order of their ranking in the total BOM hierarchy, starting with finished saleable items at the top level and continuing down through the product structure to the lower level items (according to the low-level code).  
+### Priorita položky / Kód nižší úrovně
+Ve výrobním prostředí bude poptávka po dokončené, prodejné položce vést k odvozené poptávce po komponentech, které tvoří hotovou položku. Struktura kusovníku řídí strukturu komponent a může pokrývat několik úrovní polotovarů. Plánování položky na jedné úrovni způsobí odvozenou poptávku po komponentách na další úrovni atd. Výsledkem bude nakonec odvozená poptávka po zakoupených položkách. V důsledku toho systém plánování plánuje položky v pořadí podle jejich pořadí v celkové hierarchii kusovníku, počínaje dokončenými prodejnými položkami na nejvyšší úrovni a pokračujícím dolů prostřednictvím struktury produktu na položky nižší úrovně (podle kódu nižší úrovně).
 
-![Planning for bills of material](media/NAV_APP_supply_planning_1_BOM_planning.png "Planning for bills of material")  
+![Plánování pro výrobní kusovník](media/NAV_APP_supply_planning_1_BOM_planning.png "Plánování pro výrobní kusovník")
 
-The figures illustrate in which sequence the system makes suggestions for supply orders at the top level and, assuming that the user will accept these suggestions, for any lower-level items as well.  
+Obrázky ilustrují, v jakém pořadí systém předkládá návrhy na objednávky dodávek na nejvyšší úrovni, a za předpokladu, že uživatel tyto návrhy přijme, také pro jakékoli položky nižší úrovně.
 
-For more information about manufacturing considerations, see [Loading the Inventory Profiles](design-details-balancing-demand-and-supply.md#loading-the-inventory-profiles).  
+Pro další informace o úvahách výroby, navštivte [Načítání profilů zásob](design-details-balancing-demand-and-supply.md#loading-the-inventory-profiles).
 
-#### Optimizing Performance for Low-Level Calculations
-Low-level code calculations can impact system performance. To mitigate the impact, you can disable **Dynamic low-level code calculation** on the **Manufacturing Setup** page. When you do, [!INCLUDE[prod_short](includes/prod_short.md)] will suggest that you create a recurrent job queue entry that will update low-level codes daily. You can ensure that the job will run outside working hours by specifying a start time the **Earliest Start Date/Time** field.
+### Lokace / Priorita úrovně transferu
+Společnosti, které působí na více než jedné lokaci, možná budou muset naplánovat každou lokaci zvlášť. Například úroveň bezpečného stavu zboží a její způsob přiobjednání se mohou v různých lokalitách lišit. V takovém případě musí být parametry plánování určeny pro zboží a také pro skladové místo.
 
-You can also enable logic that speeds up low-level code calculations by selecting **Optimize low-level code calculation** on the **Manufacturing Setup** page. 
+To je podporováno s použitím SKJ, kde lze zadat jednotlivé parametry plánování na úrovni skladové jednotky. SKJ lze považovat za zboží na konkrétní lokaci. Pokud uživatel nedefinoval SKJ pro tuto lokaci, aplikace bude výchozí na parametry, které byly nastaveny na kartě zboží. Aplikace vypočítá plán pouze pro aktivní lokace, což je místo, kde existuje poptávka nebo nabídka pro dané zboží.
 
-> [!IMPORTANT]
-> If you choose to optimize performance, [!INCLUDE[prod_short](includes/prod_short.md)] will use new calculation methods to determine low-level codes. If you have an extension that relies on the events used by the old calculations, the extension may stop working.   
+V zásadě lze s libovolným zbožím nakládat a pracovat na libovolné lokaci, ale přístup aplikace ke koncepci lokací je poměrně přísný. Například prodejní objednávka na jedné lokaci nemůže být splněna určitým množstvím na skladě na jiné lokaci. Množství na skladě musí být nejprve převedeno na lokaci uvedenou na prodejní objednávce.
 
-### Locations / Transfer-Level Priority  
-Companies that operate at more than one location may need to plan for each location individually. For example, an item’s safety stock level and its reordering policy may differ from one location to another. In this case, the planning parameters must be specified per item and also per location.  
+![Plánování skladových jednotek](media/NAV_APP_supply_planning_1_SKU_planning.png "Plánování skladových jednotek")
 
-This is supported with the use of SKUs, where individual planning parameters can be specified at the SKU level. An SKU can be regarded as an item at a specific location. If the user has not defined a SKU for that location, application will default to the parameters that have been set on the item card. The application calculates a plan for active locations only, which is where there is existing demand or supply for the given item.  
+Pro více informací navštivte [Detaily návrhu: Plánování transferů](design-details-transfers-in-planning.md).
 
-In principle, any item can be handled at any location, but application’s approach to the location concept is quite strict. For example, a sales order at one location cannot be fulfilled by some quantity on stock at another location. The quantity on stock must first be transferred to the location specified on the sales order.  
+### Priorita objednávky
+V rámci dané SKJ, představuje požadované nebo dostupné datum nejvyšší prioritu; dnešní poptávka by měla být řešena před poptávkou nadcházejících dní. Kromě této určité priority se však různé typy poptávky a nabídky třídí podle důležitosti podnikání, aby se rozhodlo, která poptávka by měla být uspokojena před uspokojením jiné poptávky. Na straně nabídky bude priorita objednávky říkat, jaký zdroj dodávky by měl být použit před použitím jiných zdrojů dodávky.
 
-![Planning for stockkeeping units](media/NAV_APP_supply_planning_1_SKU_planning.png "Planning for stockkeeping units")  
+Pro více informací navštivte [Upřednostňování objednávek](design-details-balancing-demand-and-supply.md#prioritizing-orders).
 
-For more information, see [Design Details: Transfers in Planning](design-details-transfers-in-planning.md).  
+## Prognózy poptávky a hromadné objednávky
+Prognózy i hromadné objednávky představují očekávanou poptávku. Hromadná objednávka, která pokrývá zamýšlené nákupy zákazníka za určité časové období, snižuje nejistotu celkové prognózy. Hromadná objednávka je prognóza specifická pro zákazníka nad nespecifikovanou prognózou, jak je znázorněno níže.
 
-### Order Priority  
-Within a given SKU, the requested or available date represents the highest priority; the demand of today should be dealt with before the demand of the coming days. But apart from this some kind of priority, the different demand and supply types are sorted according to business importance to decide which demand should be satisfied before satisfying another demand. On the supply side, the order priority will tell what source of supply should be applied before applying other sources of supply.  
+![Plánování s prognózami](media/NAV_APP_supply_planning_1_forecast_and_blanket.png "Plánování s prognózami")
 
-For more information, see [Prioritizing Orders](design-details-balancing-demand-and-supply.md#prioritizing-orders).  
+Pro více informací navštivte sekci “Snížení předpovědi poptávky prodejními objednávkami” v [Načítání profilů zásob](design-details-balancing-demand-and-supply.md#loading-the-inventory-profiles).
 
-## Demand Forecasts and Blanket Orders  
-Forecasts and blanket orders both represent anticipated demand. The blanket order, which covers a customer’s intended purchases over a specific period of time, acts to lessen the uncertainty of the overall forecast. The blanket order is a customer-specific forecast on top of the unspecified forecast as illustrated below.  
+## Přiřazení plánováním
+Všechno zboží by mělo být plánováno, není však důvod vypočítat plán pro zboží, ledaže by došlo ke změně struktury poptávky nebo nabídky od posledního výpočtu plánu.
 
-![Planning with forecasts](media/NAV_APP_supply_planning_1_forecast_and_blanket.png "Planning with forecasts")  
+Pokud uživatel zadal novou prodejní objednávku nebo změnil existující, vznikne důvod přepočítat plán. Mezi další důvody patří změna v prognóze nebo požadované množství bezpečných zásob. Změna kusovníku přidáním nebo odebráním komponenty by s největší pravděpodobností znamenala změnu, ale pouze pro položku komponenty.
 
-For more information, see [Forecast Demand is Reduced by Sales Orders](design-details-balancing-demand-and-supply.md#forecast-demand-is-reduced-by-sales-orders).  
+Plánovací systém sleduje tyto události a přiřazuje příslušné položky pro plánování.
 
-## Planning Assignment  
-All items should be planned for, however, there is no reason to calculate a plan for an item unless there has been a change in the demand or supply pattern since the last time a plan was calculated.  
+Pro více lokací se přiřazení provádí na úrovni zboží podle kombinace lokace. Pokud byla například prodejní objednávka vytvořena pouze v jedné lokace, aplikace přiřadí zboží v této konkrétní lokaci k plánování.
 
-If the user has entered a new sales order or changed an existing one, there is reason to recalculate the plan. Other reasons include a change in forecast or the desired safety stock quantity. Changing a bill-of-material by adding or removing a component would most likely indicate a change, but for the component item only.  
+Důvodem výběru zboží pro plánování je otázka výkonu systému. Pokud nedošlo k žádné změně ve struktuře poptávky a nabídky zboží, systém plánování nenavrhl žádné akce, které mají být podniknuty. Bez přiřazení plánování by systém musel provést výpočty pro všechny položky, aby zjistil, co plánovat, a to by vyčerpalo systémové prostředky.
 
-The planning system monitors such events and assigns the appropriate items for planning.  
+Úplný seznam důvodů pro přiřazení zboží k plánování je uveden v [Detaily návrhu: Tabulka přiřazení plánování](design-details-planning-assignment-table.md) .
 
-For multiple locations, the assignment takes place at the level of item per location combination. If, for example, a sales order has been created at only one location, application will assign the item at that specific location for planning.  
+Možnosti plánování v [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou:
 
-The reason for selecting items for planning is a matter of system performance. If no change in an item’s demand-supply pattern has occurred, the planning system will not suggest any actions to be taken. Without the planning assignment, the system would have to perform the calculations for all items in order to find out what to plan for, and that would drain system resources.  
+- Vypočítat regenerační plán – Vypočítá všechno vybrané zboží, zda je to nutné nebo ne.
+- Vypočítat plánovaný pohyb – Vypočítá pouze to vybrané zboží, u kterého došlo k určité změně ve struktuře poptávky a nabídky, a proto byly přiřazeny k plánování.
 
-The full list of reasons for assigning an item for planning is provided in [Design Details: Planning Assignment Table](design-details-planning-assignment-table.md).  
+Někteří uživatelé se domnívají, že plánování čistých změn by mělo být prováděno průběžně, například při zadávání prodejních objednávek. To však může být matoucí, protože dynamické sledování zakázky a zasílání zpráv akcí se také počítají za běhu. Kromě toho, [!INCLUDE[d365fin](includes/d365fin_md.md)] nabízí kontrolu v reálném čase, která je k dispozici pro slib, která poskytuje varování pomocí vyskakovacích oken při zadávání prodejních objednávek, pokud poptávku nelze splnit podle současného plánu dodávek.
 
-The planning options in [!INCLUDE[prod_short](includes/prod_short.md)] are:  
+Kromě těchto aspektů systém plánování plánuje pouze pro ty položky, které uživatel připravil s příslušnými parametry plánování. Jinak se předpokládá, že uživatel naplánuje položky ručně nebo poloautomaticky pomocí funkce Plánování objednávek.
 
--   Calculate Regenerative Plan – Calculates all selected items, whether it is necessary or not.  
--   Calculate Net Change Plan – Calculates only those selected items that have had some change in their demand-supply pattern and, therefore, have been assigned for planning.  
+Pro více informací o postupech automatického plánování navštivte, [Detaily návrhu: Vyvažování poptávky a nabídky](design-details-balancing-demand-and-supply.md).
 
-Some users believe that net change planning should be performed on the fly, for example, when sales orders are entered. However, this could be confusing because dynamic order tracking and action messaging are also calculated on the fly. Besides, [!INCLUDE[prod_short](includes/prod_short.md)] offers real-time available-to-promise control, which provides pop–up warnings when entering sales orders if the demand cannot be fulfilled under the present supply plan.  
+## Dimenze položky
+Poptávka a nabídka mohou nést alternativní kódy a lokalizační kódy, které musí být respektovány, když plánovací systém vyrovnává poptávku a nabídku.
 
-In addition to these considerations, the planning system only plans for those items that the user has prepared with appropriate planning parameters. Otherwise, it is assumed that the user will plan the items manually or semi-automatically by using the Order Planning feature.  
+Systém považuje kódy variant a lokací za dimenze zboží na řádku prodejní objednávky, položky zboží, atd. Podle toho vypočítá plán pro každou kombinaci varianty a lokace, jako by kombinace byla samostatným číslo zboží.
 
-For more information about the automatic planning procedures, see [Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md).  
+Namísto výpočtu jakékoli teoretické kombinace varianty a umístění aplikace počítá pouze ty kombinace, které skutečně existují v databázi.
 
-## Item Dimensions  
-Demand and supply can carry variant codes and location codes that must be respected when the planning system balances demand and supply.  
+Pro více informací o tom, jak systém plánování zachází s kódy lokací na poptávce navštivte, [ Detaily návrhu: Poptávka v prázdném skladu](design-details-balancing-demand-and-supply.md).
 
-The system treats variant and location codes as item dimensions on a sales order line, inventory ledger entry, and so on. Accordingly, it calculates a plan for each combination of variant and location as if the combination were a separate item number.  
+## Atributy zboží
+Kromě obecných dimenzí zboží, jako je číslo zboží, kód varianty, kód lokace a typ objednávky, může každá událost poptávky a dodávky nést další specifikace ve formě sériových čísel/čísel šarží. Plánovací systém plánuje tyto atributy určitým způsobem v závislosti na jejich úrovni specifikace.
 
-Instead of calculating any theoretical combination of variant and location, application calculates only those combinations that actually exist in the database.  
+Propojení mezi objednávkou a dodávkou je jiný typ atributu, který ovlivňuje systém plánování.
 
-For more information on how the planning system deals with location codes on demand, see [Design Details: Demand at Blank Location](design-details-balancing-demand-and-supply.md).  
+### Specifické atributy
+Určité atributy na vyžádání jsou specifické a musí se přesně shodovat s odpovídající nabídkou. Existují následující dva specifické atributy:
 
-## Item Attributes  
-Apart from general item dimensions, such as item number, variant code, location code, and type of order, each demand and supply event can carry additional specifications in the form of serial/lot numbers. The planning system plans these attributes in certain ways depending on their level of specification.  
+- Požadovaná sériová čísla, nebo čísla šarže, která vyžadují určitou aplikaci (zaškrtávací políčko **Sledování sériových čísel** nebo **Sledování určité dávky** jsou vybrané na stránce **Karta kódu sledování zboží** pro kód sledování zboží, který je zbožím používán.)
+- Odkazy na objednávky dodávek vytvořené ručně nebo automaticky pro konkrétní poptávku (odkazy zakázky na zakázku).
 
-An order-to-order link between demand and supply is another type of attribute that affects the planning system.  
+Pro tyto atributy použije plánovací systém následující pravidla:
 
-### Specific Attributes  
-Certain attributes on demand are specific and must be matched exactly by a corresponding supply. The following two specific attributes exist:  
+- Poptávku se specifickými atributy lze splnit pouze dodávkou odpovídajících atributů.
+- Nabídka se specifickými atributy může také uspokojit poptávku, která tyto atributy výslovně nevyžaduje.
 
--   Demanded serial/lot numbers that require specific application (The **SN Specific Tracking** or **Lot Specific Tracking** check box is selected on the **Item Tracking Code Card** page for the item tracking code that is used by the item.)  
--   Links to supply orders created manually or automatically for a specific demand (order-to-order links).  
+Pokud tedy poptávku po konkrétních atributech nelze splnit zásobami nebo předpokládanými dodávkami, systém plánování navrhne novou objednávku dodávek, která pokryje tuto specifickou poptávku bez ohledu na parametry plánování.
 
-For these attributes, the planning system applies the following rules:  
+### Nespecifické atributy
+Sériová čísla nebo čísla šarže bez určitého sledování zboží mohou nést sériová čísla, nebo čísla šarží, která nemusí být použita na přesně stejné sériové číslo/číslo šarže, ale mohou být použita na libovolné sériové číslo/číslo šarže. To dává plánovacímu systému větší volnost při porovnávání například serializovanou poptávku s serializovanou dodávkou, obvykle v inventáři.
 
--   Demand with specific attributes can only be fulfilled by supply with matching attributes.  
--   Supply with specific attributes can also satisfy demand that does not ask specifically for those attributes.  
+Poptávka-dodávky se sériovým číslem, číslem šarže, specifickým, nebo nespecifickým, jsou považovány za vysoko prioritní a jsou tedy osvobozeny od zamrzlé zóny, což znamená, že budou součástí plánování, i když jsou splatné před plánovaným datem zahájení.
 
-Accordingly, if a demand for specific attributes cannot be met by inventory or projected supplies, the planning system will suggest a new supply order to cover this specific demand with no regard of planning parameters.  
+Pro více informací navštivte část “Nakládání sériových čísel a čísla šarže podle úrovně zadání” v [Načítání profilů zásob](design-details-balancing-demand-and-supply.md#loading-the-inventory-profiles).
 
-### Non-Specific Attributes  
-Serial/lot-numbered items without specific item tracking setup may carry serial/lot numbers that do not need to be applied to the exact same serial/lot number, but can be applied to any serial/lot number. This gives the planning system more freedom to match, for example, a serialized demand with a serialized supply, typically in inventory.  
+Pro více informací o tom jak plánovací systém vyrovnává atributy, navštivte [ Sériová čísla/čísla šarží a zakázka na zakázku odkazy jsou vyňaty ze zmrazené zóny ](design-details-balancing-demand-and-supply.md#seriallot-numbers-and-order-to-order-links-are-exempt-from-the-frozen-zone).
 
-Demand-supply with serial/lot numbers, specific or non-specific, are considered high priority and are therefore exempt from the frozen zone, meaning that they will be part of planning even if they are due before the planning starting date.  
+## Zakázka pro zakázku
+Zásobování zakázky pro zakázku znamená, že položka je zakoupena, sestavena nebo vyrobena výhradně pro pokrytí konkrétní poptávky. Obvykle se to týká zboží typu A. Motivací pro výběr této zásady může být, že poptávka je vzácná, dodací lhůta je nevýznamná nebo se požadované atributy liší.
 
-For more information, see [Serial/Lot Numbers are Loaded by Specification Level](design-details-balancing-demand-and-supply.md#seriallot-numbers-are-loaded-by-specification-level).
+Dalším zvláštním případem, který používá propojení mezi objednávkami, je, když je objednávka sestavení propojena s prodejní objednávkou ve scénáři sestavení na objednávku.
 
-For more information about how the planning system balances attributes, see [Serial/Lot Numbers and Order-to-Order Links are Exempt from the Frozen Zone](design-details-balancing-demand-and-supply.md#seriallot-numbers-and-order-to-order-links-are-exempt-from-the-frozen-zone).  
+Propojení mezi objednávkami jsou aplikované mezi nabídkou a poptávkou a to čtyřmi způsoby:
 
-## Order-to-Order Links  
-Order-to-order procurement means that an item is purchased, assembled, or produced to exclusively cover a specific demand. Typically it relates to A-items and the motivation for choosing this policy can be that the demand is infrequent, the lead-time is insignificant, or the required attributes vary.  
+- Když plánované zboží používá zásadu přiobjednání Objednávka.
+- Při použití způsobu výroby Zhotovit na objednávku k vytvoření víceúrovňových výrobních zakázek nebo výrobních zakázek typu projektu (výroba potřebných komponent ve stejné výrobní zakázce).
+- Při vytváření výrobních objednávek pro prodejní objednávky pomocí funkce Plánování prod.objednávky.
+- Při sestavování položky do prodejní objednávky. (Způsob montáže je nastaven na Montáž-na-objednávku.
 
-Another special case that uses order-to-order links is when an assembly order is linked to a sales order in an assemble-to-order scenario.  
+V těchto případech systém plánování pouze navrhne objednat požadované množství. Po vytvoření bude objednávka nákupu, výroby nebo sestavy nadále odpovídat odpovídající poptávce. Pokud se například prodejní objednávka změní v čase nebo množství, systém plánování navrhne změnění odpovídající objednávky dodávky a to odpovídajícím způsobem.
 
-Order-to-order links are applied between demand and supply in four ways:  
+Pokud existují spojení zakázky pro zakázku, plánovací systém nezahrnuje do vyrovnávacího procesu související dodávku ani inventář. Je na uživateli, aby vyhodnotil, zda by propojená zakázka měla být použita k pokrytí jiné nebo nové poptávky, a v takovém případě vymaže objednávku dodávky nebo si zarezervuje propojenou dodávku ručně.
 
--   When the planned item uses the reordering policy Order.  
--   When using the manufacturing policy Make-to-Order to create multi-level or project-type production orders (producing needed components on the same production order).  
--   When creating production orders for sales orders with the Sales Order Planning feature.  
--   When assembling an item to a sales order. (Assembly Policy is set to Assemble-to-Order.  
+Rezervace a odkazy pro sledování se přeruší, pokud se situace stane nemožnou, například přesunutím poptávky na datum dřívější než dodávka. Propojení mezi objednávkami se však přizpůsobuje jakýmkoli změnám v příslušné poptávce nebo nabídce, a proto není propojení nikdy přerušeno.
 
-In these instances, the planning system will only suggest to order the required quantity. Once created, the purchase, production, or assembly order will continue to match the corresponding demand. For example, if a sales order is changed in time or quantity, the planning system will suggest that the corresponding supply order is changed accordingly.  
+## Rezervace
+Plánovací systém nezahrnuje do výpočtu žádná rezervovaná množství. Pokud byla například prodejní objednávka zcela nebo částečně rezervována proti množství ve skladu, nelze rezervované množství ve skladu použít k pokrytí jiné poptávky. Plánovací systém nezahrnuje tuto sadu poptávky a nabídky do svého výpočtu.
 
-When order-to-order links exist, the planning system does not involve linked supply or inventory in the balancing procedure. It is up to the user to evaluate if the linked supply should be used to cover other or new demand and, in that case, delete the supply order or reserve the linked supply manually.  
+Systém plánování však bude stále zahrnovat rezervovaná množství v profilu předpokládaného skladu, protože všechna množství musí být zohledněna jak při předpokládání bodu přiobjednání, tak počet změn, které mají být k dispozici, a nesmí překročit maximální úroveň zásob. V důsledku toho zbytečné rezervace povedou ke zvýšeným rizikům, že úrovně zásob jsou nízké, protože logika plánování nerozezná vyhrazená množství.
 
-Reservations and order tracking links will break if a situation becomes impossible, such as moving the demand to a date earlier than the supply. However, the order-to-order link adapts to any changes in the respective demand or supply and thereby the link is never broken.  
+Následující obrázek ukazuje, jak rezervace mohou bránit nejvhodnějšímu plánu.
 
-## Reservations  
-The planning system does not include any reserved quantities in the calculation. For example, if a sales order has been totally or partially reserved against the quantity in inventory, the reserved quantity in inventory cannot be used to cover other demand. The planning system does not include this demand-supply set in its calculation.  
+![Plánování s rezervacemi](media/NAV_APP_supply_planning_1_reservations.png "Plánování s rezervacemi")
 
-However, the planning system will still include reserved quantities in the projected inventory profile because all quantities must be considered when determining both when the reorder point has been passed and how many to reorder to reach and not exceed the maximum inventory level. Consequently, unnecessary reservations will lead to increased risks that inventory levels run low because the planning logic does not detect reserved quantities.  
+Pro více informací navštivte [Detaily návrhu: Rezervace, sledování zásilky a zasílání zpráv](design-details-reservation-order-tracking-and-action-messaging.md).
 
-The following illustration shows how reservations can hinder the most feasible plan.  
+## Varování
+První sloupec v sešitu plánování je pro pole upozornění. Na každém řádku plánování vytvořeném pro neobvyklou situaci se v tomto poli zobrazí výstražná ikona, na kterou může uživatel klepnout a získat další informace.
 
-![Planning with reservations](media/NAV_APP_supply_planning_1_reservations.png "Planning with reservations")  
+Dodávky na plánovacích řádcích s upozorněním se obvykle nezmění podle parametrů plánování. Místo toho plánovací systém pouze navrhuje dodávku, která pokryje přesné množství poptávky. Systém však může být nastaven tak, aby respektoval určité parametry plánování pro plánovací řádky s určitými varováními. Další informace naleznete v popisu těchto možností pro dávkové úlohy **Výpočet plánu - plán. sešit** a **Vypočítat plán-sešit požadavků**.
 
-For more information, see [Design Details: Reservation, Order Tracking, and Action Messaging](design-details-reservation-order-tracking-and-action-messaging.md).  
+Varovné informace jsou zobrazeny na stránce **Nesledované prvky plánování**, která se také používá k zobrazení odkazů na sledování objednávek na neobjednané síťové entity. Existují následující typy upozornění:
 
-## Warnings  
-The first column in the planning worksheet is for the warning fields. Any planning line created for an unusual situation will display a warning icon in this field, which the user can click for additional information.  
+- Nouzové
+- Výjimka
+- Pozor
 
-Supply on planning lines with warnings will normally not be modified according to planning parameters. Instead, the planning system only suggests a supply to cover the exact demand quantity. However, the system can be set up to respect certain planning parameters for planning lines with certain warnings. For more information, see the description of these options for the **Calculate Plan - Plan. Wksh.** batch job and the **Calculate Plan - Req. Wksh.** batch job respectively.  
+![Upozornění v sešitu plánování](media/NAV_APP_supply_planning_1_warnings.png "Upozornění v sešitu plánování")
 
-The warning information is shown on the **Untracked Planning Elements** page, which is also used to show order tracking links to non-order network entities. The following warning types exist:  
+### Nouzové
+Nouzové varování se zobrazuje ve dvou situacích:
 
--   Emergency  
--   Exception  
--   Attention  
+- Pokud je zásoba záporná k počátečnímu datu plánování.
+- Pokud existují datované nebo poptávané události.
 
-![Warnings in the planning worksheet](media/NAV_APP_supply_planning_1_warnings.png "Warnings in the planning worksheet")  
+Pokud jsou zásoby položky k počátečnímu datu plánování záporné, systém plánování navrhne nouzovou objednávku dodávky pro záporné množství, které má být doručeno k počátečnímu datu plánování. Text upozornění uvádí počáteční datum a množství nouzové objednávky. Pro více informací navštivte [Nakládání s předpokládaným záporným stavem zásob](design-details-handling-reordering-policies.md#handling-projected-negative-inventory).
 
-### Emergency  
-The emergency warning is displayed in two situations:  
+Všechny řádky dokladu s daty splatnosti před datem zahájení plánování jsou sloučeny do jedné objednávky nouzové dodávky, aby zboží dorazilo k počátečnímu datu plánování.
 
--   When the inventory is negative on the planning starting date.  
--   When back-dated supply or demand events exist.  
+### Výjimka
+Varování o výjimce se zobrazí, pokud plánované dostupné zásoby klesnou pod množství bezpečného materiálu. Plánovací systém navrhne objednávku na dodávky, které uspokojí poptávku v den splatnosti. Varovný text uvádí množství bezpečnostního materiálu a datum, kdy došlo k jeho porušení.
 
-If an item’s inventory is negative on the planning starting date, the planning system suggests an emergency supply for the negative quantity to arrive on the planning starting date. The warning text states the starting date and the quantity of the emergency order. For more information, see [Handling Projected Negative Inventory](design-details-handling-reordering-policies.md#handling-projected-negative-inventory).  
+Porušení úrovně bezpečných zásob je považováno za výjimku, protože by nemělo nastat, pokud byl správně nastaven bod přiobjednání. Pro více informací navštivte [ Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md#the-role-of-the-reorder-point).
 
-Any document lines with due dates before the planning starting date are consolidated into one emergency supply order for the item to arrive on the planning starting date.  
+Obecně platí, že výjimečné návrhy objednávek zajišťují, že předpokládané dostupné zásoby nebudou nikdy nižší než úroveň zásob bezpečnosti. To znamená, že navrhované množství je dostatečné na pokrytí bezpečnostního materiálu, aniž by byly zohledněny parametry plánování. V některých scénářích však budou brány v úvahu modifikátory objednávky.
 
-### Exception  
-The exception warning is displayed if the projected available inventory drops below the safety stock quantity. The planning system will suggest a supply order to meet the demand on its due date. The warning text states the item’s safety stock quantity and the date on which it is violated.  
+> [!NOTE]
+> Plánovací systém může spotřebovat pojistnou zásobu záměrně a kterou poté ihned doplní. Pro více informací navštivte [Vyvažování poptávky a nabídky](design-details-balancing-demand-and-supply.md#loading-the-inventory-profiles).
 
-Violating the safety stock level is considered an exception because it should not occur if the reorder point has been set correctly. For more information, see [The Role of the Reorder Point](design-details-handling-reordering-policies.md#the-role-of-the-reorder-point).  
+### Pozor
+Upozornění je zobrazeno ve třech situacích:
 
-In general, exceptional order proposals ensure that the projected available inventory is never lower than the safety stock level. This means that the proposed quantity is just enough to cover the safety stock, without considering planning parameters. However, in some scenarios, order modifiers will be considered.  
+- Počáteční datum plánování je dřívější než pracovní datum.
+- Řádek plánování navrhuje změnu vydané nákupní nebo výrobní zakázky.
+- Plánované zásoby přesahují úroveň přetečení ke dnu splatnosti. Pro více informací navštivte [Pod úrovni přetečení](design-details-handling-reordering-policies.md#staying-under-the-overflow-level).
 
-> [!NOTE]  
->  The planning system may have consumed the safety stock intentionally and will then replenish it straight away. For more information, see [Safety Stock May Be Consumed](design-details-balancing-demand-and-supply.md#loading-the-inventory-profiles).
+> [!NOTE]
+> V plánování řádků s výstrahami není vybráno pole **Přijmout hlášené akce**, protože se očekává, že plánovač tyto řádky před provedením plánu dále prozkoumá.
 
-### Attention  
-The attention warning is displayed in three situations:  
+## Protokoly chyb
+Na stránce požadavku Vypočítat plán může uživatel vybrat pole **Ukončit a zobrazit první chybu** aby se zastavilo spuštění plánování, když narazí na první chybu. Současně se zobrazí zpráva s informacemi o chybě. Pokud dojde k chybě, budou v plánovacím sešitu zobrazeny pouze úspěšné řádky plánování provedené před výskytem chyby.
 
--   The planning starting date is earlier than the work date.  
--   The planning line suggests changing a released purchase or production order.  
--   The projected inventory exceeds the overflow level on the due date. For more information, see [Staying under the Overflow Level](design-details-handling-reordering-policies.md#staying-under-the-overflow-level).  
+Pokud toto pole není vybráno, dávková úloha Vypočítat plán bude pokračovat, dokud nebude dokončena. Chyby dávkovou úlohu nepřeruší. Pokud existuje jedna nebo více chyb, aplikace po dokončení zobrazí zprávu, která říká, na kolik položek se chyba vztahuje. Stránka **Protokol chyb plánování**, kde se zobrazí další podrobnosti o chybě a odkazy na postižené dokumenty nebo instalační karty.
 
-> [!NOTE]  
->  In planning lines with warnings, the **Accept Action Message** field is not selected, because the planner is expected to further investigate these lines before carrying out the plan.  
+![Chybové zprávy v sešitu plánování](media/NAV_APP_supply_planning_1_error_log.png "Chybové zprávy v sešitu plánování")
 
-## Error Logs  
-In the Calculate Plan request page, the user can select the **Stop and Show First Error** field to have the planning run stop when it encounters the first error. At the same time, a message is displayed with information about the error. If an error exists, only the successful planning lines that were made before the error was encountered will be presented in the planning worksheet.  
+## Pružnost plánování
+Není vždy praktické plánovat stávající objednávku dodávek, například když byla zahájena výroba nebo jsou na konkrétní den najati další lidé, kteří tuto práci vykonají. Aby bylo možné určit, zda stávající plán může být plánovacím systémem změněn, mají všechny řádky objednávek dodávky pole Pružnost plánování s dvěma možnostmi: Neomezeno nebo Žádné. Pokud je pole nastaveno na Žádné, plánovací systém se nepokusí změnit řádek objednávky dodávek.
 
-If the field is not selected, the Calculate Plan batch job will continue until it has completed. Errors will not interrupt the batch job. If one or more errors exist, application will display a message after completion saying how many items are affected by errors. The **Planning Error Log** page then opens to provide more details about the error and to provide links to the affected documents or setup cards.  
+Pole může být ručně nastaveno uživatelem, v některých případech však bude nastaveno systémem automaticky. Skutečnost, že flexibilitu plánování může uživatel nastavit ručně, je důležitá, protože usnadňuje přizpůsobení použití této funkce různým pracovním postupům a obchodním případům.
 
-![Error messages in the planning worksheet](media/NAV_APP_supply_planning_1_error_log.png "Error messages in the planning worksheet")  
+Pro více informací o použití těchto polí naleznete v [Detaily návrhu: Plánování transferů](design-details-transfers-in-planning.md).
 
-## Planning Flexibility  
-It is not always practical to plan an existing supply order, such as when production has started or extra people are hired on a specific day to do the job. To indicate whether an existing order can be changed by the planning system, all supply order lines have a Planning Flexibility field with two options: Unlimited or None. If the field is set to None, the planning system will not try to change the supply order line.  
+## Plánování objednávek
+Základní nástroj pro plánován reprezentovaný stránkou **Plánování objednávek** je vytvořen pro manuální rozhodování. Nezohledňuje žádné parametry plánování, a proto se nebudeme v tomto dokumentu dále jim zabývat. Další informace o funkci Plánování objednávek, naleznete v nápovědě v [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-The field can be manually set by the user, however, in some cases it will be set automatically by the system. The fact that planning flexibility can be manually set by the user is important, because it makes it easy to adapt the usage of the feature to different workflows and business cases.  
+> [!NOTE]
+> Nedoporučuje se používat plánování objednávek, pokud společnost již používá sešity požadavků, nebo sešity plánování. Objednávky dodávek vytvořené prostřednictvím stránky **Plánování objednávek** mohou být během automatických spuštění plánování změněny nebo odstraněny. Důvodem je to, že automatické spuštění plánování používá parametry plánování a tyto nemusí být považovány uživatelem, který provedl ruční plán na stránce Plánování objednávek.
 
-For more information about how this field is used, see [Design Details: Transfers in Planning](design-details-transfers-in-planning.md).  
+## Omezené zatížení
+[!INCLUDE[d365fin](includes/d365fin_md.md)] je standardní ERP systém, nikoli expediční nebo dílenské řízení. Plánuje možné využití zdrojů poskytováním hrubého plánu, ale automaticky nevytváří a neudržuje podrobné plány na základě priorit nebo pravidel optimalizace.
 
-## Order Planning  
-The basic supply planning tool represented by the **Order Planning** page is designed for manual decision making. It does not consider any planning parameters and is therefore not discussed further in this document. For more information, see [Plan for New Demand Order by Order](production-how-to-plan-for-new-demand.md).  
+Zamýšlené použití funkce Zdroje s limitovanou kapacitou je 1): aby se zabránilo přetížení konkrétních prostředků a 2): zajistit, že žádná kapacita nezůstane nepřidělená, pokud by mohla zvýšit dobu obratu výrobní zakázky. Tato funkce neobsahuje žádná zařízení ani možnosti pro stanovení priorit nebo optimalizaci operací, jak by se dalo očekávat v dispečerském systému. Může však poskytovat informace o hrubé kapacitě, které jsou užitečné, k identifikaci úzkých míst a zamezení přetížení zdrojů.
 
-> [!NOTE]  
->  It is not advisable to use Order Planning if the company already uses the planning or requisition worksheets. Supply orders created through the **Order Planning** page may be changed or deleted during the automated planning runs. This is because the automated planning run uses planning parameters and these may not be considered by the user who made the manual plan in the Order Planning page.  
+Při plánování se zdroji s omezenou kapacitou systém zajišťuje, aby žádný zdroj nebyl načten nad jeho definovanou kapacitu (Kritické zatížení). To se provádí přiřazením každé operace k nejbližšímu dostupnému časovému úseku. Pokud časový úsek není dostatečně velký na dokončení celé operace, operace bude rozdělena na dvě nebo více částí umístěných v nejbližších dostupných časových slotech.
 
-##  Finite Loading  
-[!INCLUDE[prod_short](includes/prod_short.md)] is a standard ERP system, not a dispatching or shop floor control system. It plans for a feasible utilization of resources by providing a rough-cut schedule, but it does not automatically create and maintain detailed schedules based on priorities or optimization rules.  
+> [!NOTE]
+> V případě rozdělení provozu je nastavovací čas přiřazen pouze jednou, protože se předpokládá, že je provedeno nějaké ruční nastavení pro optimalizaci plánu.
 
-The intended use of the Capacity-Constrained Resource feature is 1): to avoid overload of specific resources and 2): to ensure that no capacity is left unallocated if it could increase the turn-around time of a production order. The feature includes no facilities or options to prioritize or optimize operations as one would expect to find in a dispatching system. However, it can provide rough-cut capacity information useful to identify bottlenecks and to avoid overloading resources.  
+Časová prodleva lze přidat k prostředkům, aby se minimalizovalo rozdělení operací. To umožňuje systému naplánovat zatížení na poslední možný den mírným překročením procenta kritického zatížení, pokud to může snížit počet rozdělených operací.
 
-When planning with capacity-constrained resources, the system ensures that no resource is loaded above its defined capacity (critical load). This is done by assigning each operation to the nearest available time slot. If the time slot is not big enough to complete the entire operation, then the operation will be split into two or more parts placed in the nearest available time slots.  
+Tím je dokončen nástin centrálních konceptů týkajících se plánování dodávek v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Následující části tyto pojmy podrobněji zkoumají a umisťují je do kontextu základních plánovacích postupů, vyvažují poptávku a nabídku a používají způsob přiobjednání.
 
-> [!NOTE]  
->  In case of operation splitting, the setup time is only assigned once because it is assumed that some manual adjustment is done to optimize the schedule.  
-
-Dampener time can be added to resources to minimize operation splitting. This enables the system to schedule load on the last possible day by exceeding the critical load percent slightly if this can reduce the number of operations that are split.  
-
-This completes the outline of central concepts relating to supply planning in [!INCLUDE[prod_short](includes/prod_short.md)]. The following sections investigate these concepts deeper and place them in the context of the core planning procedures, balancing demand and supply as well as the use of reordering policies.  
-
-## See Also  
-[Design Details: Transfers in Planning](design-details-transfers-in-planning.md)   
-[Design Details: Planning Parameters](design-details-planning-parameters.md)   
-[Design Details: Planning Assignment Table](design-details-planning-assignment-table.md)   
-[Design Details: Handling Reordering Policies](design-details-handling-reordering-policies.md)   
-[Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Detaily návrhu: Plánování transferů](design-details-transfers-in-planning.md)  
+[Detaily návrhu: Parametry plánování](design-details-planning-parameters.md)  
+[Detaily návrhu: Tabulka přiřazení plánování](design-details-planning-assignment-table.md)  
+[Detaily návrhu: Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md)  
+[Detaily návrhu: Vyvažování poptávky a nabídky](design-details-balancing-demand-and-supply.md)

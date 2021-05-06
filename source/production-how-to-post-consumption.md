@@ -4,34 +4,31 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Batch Post Production Consumption
-If the flushing method is **Manual**, you must post the components manually, using a consumption journal.
+# Dávkové účtování spotřeby
+Pokud je metoda vyprázdnění nastavena na **Ruční**,  je nutné zaúčtovat komponenty ručně pomocí deníku spotřeby.
 
-You can also set the system up to automatically post (*flush*) components when you start or finish production orders. For more information, see [Enable Flushing of Components According to Operation Output](production-how-to-flush-components-according-to-operation-output.md).
+Můžete také nastavit systém tak, aby automaticky účtoval (*vyprazdňoval*) komponenty při spuštění nebo dokončení výrobních zakázek. Pro více informací navštivte [Povolit vyprázdnění komponent podle operace výstupu](production-how-to-flush-components-according-to-operation-output.md).
 
-## To post consumption for one or more production order lines  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Consumption Journal**, and then choose the related link.  
-2.  Fill in the fields with the production order data and the consumption data. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+## Zaúčtování spotřeby pro jeden nebo více řádků výrobní zakázky
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník spotřeby** a poté vyberte související odkaz.
+2. Vyplňte pole údaji o výrobní zakázce a údaji o spotřebě. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-    If the warehouse location where the components are stored is set up to use bins but does not require pick processing, assign a bin code to the journal line to indicate where the items should be taken from in the warehouse. For more information, see [Pick for Production or Assembly](warehouse-how-to-pick-for-production.md).  
-3.  Choose the **Post** action to post the consumption. The related item ledger entries are reduced.
+   Pokud je umístění ve skladu, kde jsou komponenty uloženy, nastaveno na použití přihrádek, ale nevyžaduje zpracování vyskladnění, přiřaďte k řádku deníku kód přihrádky, který označuje, odkud má být zboží ve skladu odebráno. Pro více informací navštivte [Vyskladnění pro výrobu nebo montáž v základních konfiguracích skladu](warehouse-how-to-pick-for-production.md).
+3. Vyberte akci **Účtovat** abyste zaúčtovali spotřebu. Související položky zboží jsou sníženy.
 
-## See Also  
-[Manufacturing](production-manage-manufacturing.md)    
-[Setting Up Manufacturing](production-configure-production-processes.md)  
-[Planning](production-planning.md)      
-[Inventory](inventory-manage-inventory.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Výroba](production-manage-manufacturing.md)  
+[Nastavení výroby](production-configure-production-processes.md)  
+[Plánování](production-planning.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

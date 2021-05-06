@@ -1,70 +1,69 @@
 ---
     title: Set Up Directed Put-away and Pick | Microsoft Docs
     description: When you set up a warehouse location for directed put-away and pick, you have new functionality available to you to help run the warehouse in the most efficient way possible.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2019
+    ms.author: sgroespe
 
 ---
-# Set Up Items and Locations for Directed Put-away and Pick
-When you set up a warehouse location for directed put-away and pick, you have new functionality available to you to help run the warehouse in the most efficient way possible. In order to make full use of this functionality, you provide additional information about the items, which in turn helps to make the calculations necessary to suggest the most efficient and effective ways to conduct warehouse activities. For more information, see [Design Details: Warehouse Setup](design-details-warehouse-setup.md).
+# Nastavení zboží a lokací pro přímé zaskladnění a vyskladnění
+Když nastavíte lokaci pro řízené zaskladnění a vyskladnění, máte k dispozici nové funkce, které vám pomohou spustit sklad co nejefektivnějším způsobem. Chcete-li tuto funkci plně využít, zadejte další informace o zboží, které pak pomohou provést výpočty nezbytné k tomu, aby navrhli nejúčinnější způsoby provádění skladových aktivit. Pro více informací navštivte [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md).
 
-## To set up an item for directed put-away and pick  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
-2.  Open the card for the item that you want to set up for directed put-away and pick.
-3. On the **Warehouse** FastTab of the item card, fill in the fields to define how the item should be handled in the warehouse.  
-4.  Choose the **Units of Measure** action.
-5. On the **Item Units of Measure** page, fill in the fields to define the different units of measure in which the item may be transacted, including the height, width, length, cubage, and weight for the unit of measure.
-6. Choose the **Bin Contents** action.
-7. On the **Bin Contents** page, define the location and bin to which the item should be associated. The **Default** field is not used when the location is set up for directed put-away and pick.  
+## Nastavení zboží pro řízené zaskladnění a vyskladnění
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Otevřete kartu zboží, které chcete nastavit pro řízené zaskladnění a vyskladnění.
+3. V záložce **Sklad** na kartě lokace, vyplňte políčka, která definují, jak by se mělo se zbožím v rámci skladu manipulovat.
+4. Vyberte tlačítko **Měrné jednotky**.
+5. Na stránce **Měrné jednotky zboží**, vyplněním polí definujte různé měrné jednotky, ve kterých může být zboží zpracováváno, včetně výšky, šířky, délky, objemu a hmotnosti pro měrnou jednotku.
+6. Vyberte tlačítko **Obsah přihrádky**.
+7. Na stránce **Obsah přihrádky**, definujte lokaci a přihrádku, ke které by mělo být zboží přiřazeno. Políčko **Výchozí** se nepoužívá, pokud je na lokaci nastaveno řízené zaskladněni a vyskladnění.
 
-## To activate directed put away and pick functionality  
-Directed put-away and pick gives you access to advanced warehouse configuration features that can greatly enhance your efficiency and data reliability. In order to use this functionality, you must first set up a number of parameters in your warehouse location.  
+## Aktivace řízeného zaskladnění a vyskladnění
+Řízené zaskladnění a vyskladnění umožňuje přístup k rozšířeným funkcím konfigurace skladu, které mohou výrazně zvýšit efektivitu a spolehlivost dat. Abyste mohli tuto funkci využívat, musíte nejprve nastavit několik parametrů ve vašem skladu.
 
-To use the directed put-away and pick functionality, you must activate the functionality on the location card.    
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  Select the location where you want to use directed put-away and pick, and then choose the **Edit** action.  
-3.  On the **Warehouse** FastTab, select the **Directed Put-away and Pick** check box.  
+Chcete-li použít funkci řízeného zaskladnění a vyskladnění, musíte aktivovat funkčnost na kartě lokace.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Vyberte lokaci, kde chcete použít řízené zaskladnění a vyskladnění, a pak zvolte tlačítko **Úpravy**
+3. V záložce **Sklad** vyberte políčka **Řízené vyskladnění a zaskladnění**.
 
-You do not need to fill in any other fields on the location card until later in the setup process.  
+Na kartě lokace není nutné vyplňovat žádná další pole, dokud nebude potřeba dalšího nastavení.
 
-> [!NOTE]  
->  You cannot set up the warehouse to use bins when the location has open item ledger entries.  
+> [!NOTE]
+> Nemůžete nastavit na skladě použití přihrádek, pokud má sklad otevřené položky.
 
-The next step is to define the type of bins you want to operate. For more information, see [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md). The bin type defines how to use a given bin when processing the flow of items through the warehouse. You can assign a bin type to both a zone and to a bin.  
+Dalším krokem je definování typu přihrádek, které chcete používat. Pro více informací navštivte <x3/>Nastavení typu přihrádky<x4/>. Typ přihrádky určuje způsob použití dané přihrádky při zpracování toku zboží ve skladu. Typ přihrádky můžete přiřadit zóně i přihrádce.
 
-You can also define warehouse class codes, if the warehouse carries items that need various storage conditions. Warehouse class codes are used when suggesting item placement in bins. You assign the warehouse class codes to product groups, which are then assigned to items and SKUs, or to zones and bins that can accommodate the storage conditions required by the warehouse class codes.  
+Můžete také definovat kódy tříd skladu, pokud sklad přepravuje zboží, které potřebuje různé skladovací podmínky. Kódy tříd skladu se používají při navrhování umístění zboží v přihrádkách. Kódy tříd skladu přiřadíte skupinám produktů, které jsou poté přiřazeny zboží, skladovým jednotkám nebo zónám a přihrádkám, které mohou vyhovovat podmínkám skladování vyžadovaným kódy tříd skladu.
 
-You are now ready to set up zones, if you want to operate zones in your warehouse. Using zones reduces the number of fields you need to fill in when you set up your bins, because bins created within zones inherit several properties from the zone. Zones can also make it easier for new or temporary employees to orient themselves in your warehouse. Note that flow is controlled by bins, therefore it is possible to operate with bins and only one zone.  
+Nyní jste připraveni nastavit zóny, pokud je chcete provozovat ve skladu. Použití zón snižuje počet polí, která je třeba vyplnit při nastavování přihrádek, protože přihrádky vytvořené v rámci zón dědí z této zóny několik vlastností. Zóny mohou také usnadnit novým nebo dočasným zaměstnancům orientaci ve vašem skladu. Všimněte si, že tok je řízen přihrádkami, proto je možné pracovat s přihrádkami a pouze s jednou zónou.
 
-## To set up a zone in your warehouse  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  Select the location where you want to set up zone and open the location card, and then choose the **Zones** action.  
-3.  On the **Zones** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+## Nastavení zóny ve skladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Vyberte lokaci, kde chcete nastavit zónu, a otevřete kartu lokace a pak zvolte tlačítko **Zóny**.
+3. Na kartě **Zóny**, vyplňte potřebná políčka. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-When you change a zone parameter, all bins created thereafter in that zone will have the new characteristics, but the original bins will not be changed.  
+Když změníte parametr zóny, všechny přihrádky vytvořené v této zóně budou mít nové vlastnosti, ale původní přihrádky nebudou změněny.
 
-> [!NOTE]  
->  If you want to operate without zones, you must still create one zone code that is undefined except for the code.  
+> [!NOTE]
+> Pokud chcete pracovat bez zón, musíte vytvořit jednu zóny, která bude nenadefinovaná, tedy kromě kód zóny.
 
-The next step in setting up the warehouse is to define bins. For more information, see [Set Up Locations to Use Bins](warehouse-how-to-set-up-locations-to-use-bins.md).  
+Dalším krokem při nastavení skladu je definování přihrádek. Pro více informací navštivte [Nastavení lokací pro použití přihrádek](warehouse-how-to-set-up-locations-to-use-bins.md).
 
-In addition, you must create put-away templates and counting periods. For more information, see [Set Up Put-away Templates](warehouse-how-to-set-up-put-away-templates.md).  
+Dále je nutné vytvořit šablony zaskladnění a období inventury. Pro více informací navštivte [Nastavení šablon zaskladnění](warehouse-how-to-set-up-put-away-templates.md).
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -1,66 +1,54 @@
 ---
-title: Create a Vendor Card to Register a New Vendor | Microsoft Docs
-description: Learn how to create a vendor card to register a new vendor or supplier.
+title: Vytvoření karty dodavatele pro zaznamenání nového dodavatele | Microsoft Docs
+description: 'Naučte se, jak vytvořit kartu dodavatele pro registraci nového dodavatele.'
+services: project-madeira
+documentationcenter: ''
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: supplier
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Register New Vendors
+# <a name="register-new-vendors"></a>Zaevidujte nové dodavatele
+Dodavatelé poskytují produkty, které prodáváte. Každý dodavatel, od kterého nakupujete, musí být evidován jako karta dodavatele.
 
-Vendors provide the products that you sell. Each vendor that you purchase from must be registered as a vendor card.
+Než budete moci zaregistrovat nové dodavatele, musíte nastavit různé kódy nákupu, ze kterých si můžete vybrat při vyplňování karty dodavatele. Po vytvoření všech požadovaných hlavních dat můžete provést další konfiguraci dodavatele, například upřednostnit dodavatele pro platební účely a položky seznamu, které může dodavatel a jiní dodavatelé dodávat. Další skupinou úkolů nastavení dodavatelů je zaznamenání vašich dohod týkajících se slev, cen a způsobů platby. Pro více informací navštivte [Nastavení nákupu](purchasing-setup-purchasing.md).
 
-Before you can register new vendors, you must set up various purchase codes that you can select from when you fill vendor cards. When all of the required master data is created, you can perform additional configuration of the vendor, such as prioritize the vendor for payment purposes and list items that the vendor and other vendors can supply. Another group of setup tasks for vendors is to record your agreements concerning discounts, prices, and payment methods. For more information, see [Setting Up Purchasing](purchasing-setup-purchasing.md).
-
-Vendor cards hold the information that is required to buy products from the vendor. For more information, see [Record Purchases](purchasing-how-record-purchases.md) and [Register New Items](inventory-how-register-new-items.md).
-
-> [!NOTE]  
-> If vendor templates exist for different vendor types, then a page appears when you create a new vendor card from where you can select an appropriate template. If only one vendor template exists, then new vendor cards always use that template.
-<br><br>  
-
-> [!Video https://www.microsoft.com/videoplayer/embed/RE3PZtd?rel=0]
-
-## To create a new vendor card
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.  
-2. On the **Vendors** page, Choose **New**.
-
-    If more than one vendor template exists, then a page opens from which you can select a vendor template. In that case, follow the next two steps.
-3. On the **Select a template for a new vendor** page, choose the template that you want to use for the new vendor card.
-4. Choose the **OK** button. A new vendor card opens with some fields filled with information from the template.
-5. Proceed to fill or change fields on the vendor card as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+Karty dodavatelů obsahují informace, které jsou potřebné k nákupu produktů od dodavatele. Pro více informací navštivte [Evidence nákupů](purchasing-how-record-purchases.md) a [Evidence nového zboží](inventory-how-register-new-items.md).
 
 > [!NOTE]  
-> If you do not know the invoicing address that will be used for every invoice from a vendor, do not fill in the **Vendor No.** field. Instead, choose the pay-to vendor number after you have set up a purchase quote, order, or invoice header.
+>   Pokud existují šablony dodavatele pro různé typy dodavatelů, objeví se při vytváření nové karty dodavatele stránka, ze které můžete vybrat vhodnou šablonu. Pokud existuje pouze jedna šablona dodavatele, pak nové karty dodavatele vždy používají tuto šablonu.
 
-The vendor is now registered, and the vendor card is ready to be used on purchase documents.
+## <a name="to-create-a-new-vendor-card"></a>Vytvoření nové karty dodavatele
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.  
+2. Na stránce **Dodavatelé** zvolte **Nový**.
 
-If you want to use this vendor card as a template when you create new vendor cards, you can save it as a vendor template. For more information, see the following section.
+    Pokud existuje více než jedna šablona dodavatele, otevře se stránka, ze které můžete zvolit šablonu dodavatele. V takovém případě postupujte podle následujících dvou kroků.
+3. Na stránce **Vybrat šablonu pro dodavatele** vyberte šablonu, kterou chcete použít pro novou kartu dodavatele.
+4. Zvolte tlačítko **OK**. Otevře se nová karta dodavatele, s některými poli vyplněnými informacemi ze šablony.
+5. Podle potřeby pokračujte ve vyplňování nebo změně polí na kartě dodavatele. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-### Deleting Vendor Cards
-If you have posted a transaction for a vendor, you cannot delete the card because the ledger entries may be needed for auditing. To delete vendor cards with ledger entries, contact to Microsoft partner to do so through code.
+> [!NOTE]  
+>   Pokud neznáte fakturační adresu, která bude použita pro každou fakturu od dodavatele, nevyplňujte pole **Věřitel**. Místo toho vyberte číslo věřitele poté, co jste nastavili nákupní poptávku, objednávku nebo záhlaví faktury.
 
-## To save the vendor card as a template
-1. On the **Vendor Card** page, choose the **Save as Template** action. The **Vendor Template** page opens showing the vendor card as a template.
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. To reuse dimensions in templates, choose the **Dimensions** action. The **Dimension Templates** page opens showing any dimension codes that are set up for the vendor.
-4. Edit or enter dimension codes that will apply to new vendor cards created by using the template.
-5. When you have completed the new vendor template, choose the **OK** button.  
-   The vendor template is added to the list of vendor templates, so that you can use it to create new vendor cards.
+Dodavatel je nyní zaregistrován a karta dodavatele je připravena k použití v nákupních dokladech.
 
-## See Also
-[Merge Duplicate Records](sales-how-merge-duplicate-records.md)  
-[Create Number Series](ui-create-number-series.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Record Purchases](purchasing-how-record-purchases.md)   
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+Pokud chcete tuto kartu dodavatele použít jako šablonu při vytváření nových karet dodavatele, můžete ji uložit jako šablonu dodavatele. Pro další informace se podívejte na následující sekci.
 
+## <a name="to-save-the-vendor-card-as-a-template"></a>Pro uložení karty dodavatele jako šablonu
+1. Na stránce **Karta dodavatele**, vyberte akci **Uložit jako šablonu**. Stránka **Šablona dodavatele** se otevře, zobrazující kartu dodavatele jako šablonu.
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Chcete-li znovu použít dimenze v šablonách, zvolte akci **Dimenze**. Stránka **Šablony dimenzí** se otevře, zobrazující všechny kódy dimenzí, které jsou pro dodavatele nastaveny.
+4. Upravte nebo zadejte kódy dimenzí, které se budou vztahovat na nové karty dodavatelů vytvořené pomocí šablony.
+5. Po dokončení vytváření nové šablony dodavatele vyberte tlačítko **OK** .  
+   Šablona dodavatele je přidána do seznamu šablon dodavatelů, takže ji můžete použít k vytváření nových karet dodavatelů.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Vytváření číselné řady](ui-create-number-series.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Evidence nákupu](purchasing-how-record-purchases.md)   
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  

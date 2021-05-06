@@ -4,110 +4,107 @@ description: You must define how you will write-down, depreciate, or amortize ea
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: write down
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Depreciate or Amortize Fixed Assets
-Depreciation is used to allocate the cost of fixed assets, such as machinery and equipment, over their depreciable life. For each fixed asset, you must define how it will be depreciated.  
+# Odpis nebo amortizace dlouhodobého majetku
+Odpisy se používají k rozdělení nákladů na dlouhodobý majetek, jako jsou stroje a zařízení, po dobu jejich odpisovatelnosti. Pro každý dlouhodobý majetek je nutné definovat, jak bude odepsán.
 
- There are two ways to post depreciation:  
+Existují dva způsoby, jak zaúčtovat odpisy:
 
-* Automatically, by running the **Calculate Depreciation** batch job.  
-* Manually, by using the fixed asset G/L journal.  
+* Automaticky spuštěním dávkové úlohy **Výpočet odpisů**.
+* Ručně pomocí finančního deníku dlouhodobého majetku.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] can calculate daily depreciation, which allows you to calculate depreciation for any period. You can therefore analyze current operating results on, for example, a monthly, quarterly, or annual basis. The calculation uses a standard year of 360 days and a standard month of 30 days. For more information, see [Depreciation Methods](fa-depreciation-methods.md).  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] může vypočítat denní odpisy, které umožňují vypočítat odpisy pro libovolné období. Můžete tedy analyzovat aktuální provozní výsledky například na měsíční, čtvrtletní nebo roční bázi. Výpočet používá standardní rok 360 dní a standardní měsíc 30 dní. Pro více informací navštivte [Metody odpisování](fa-depreciation-methods.md).
 
-If several departments use a fixed asset, periodic depreciation can be automatically allocated to these departments according to a user-defined allocation table.  
+Používá-li dlouhodobý majetek více oddělení, lze těmto oddělením automaticky přidělit pravidelné odpisy podle uživatelsky definované alokační tabulky.
 
-You can cancel incorrect depreciation entries by using the **Cancel FA Ledger Entries** batch job. Afterward, you can post the correct amount by running the **Calculate Depreciation** batch job again. The errors you correct are posted as fixed asset error ledger entries.  
+Nesprávné položky odpisů můžete zrušit pomocí dávkové úlohy **Storno položek DM**. Poté můžete zaúčtovat správné množství opětovným spuštěním dávkové úlohy **Výpočet odpisů**. Chyby, které opravíte, jsou zaúčtovány jako chybné položky dlouhodobého majetku.
 
-Indexation is used to adjust values for general price-level changes. You can use the **Index Fixed Assets** batch job to recalculate the depreciation amounts.  
+Indexace se používá k úpravě hodnot pro obecné změny cenové hladiny. Pro přepočet odpisových částek můžete použít dávkovou úlohu **Indexace dlouhodobého majetku**.
 
-## To calculate depreciation automatically
-Once a month, or whenever you choose, you can run the **Calculate Depreciation** batch job. The batch job ignores fixed assets that have been sold, are blocked or inactive, or use the manual depreciation method.  
+## Automatický výpočet odpisů
+Jednou za měsíc nebo kdykoli se rozhodnete, můžete spustit dávkovou úlohu **Výpočet odpisů**. Dávková úloha ignoruje dlouhodobý majetek, který byl prodán, je blokován nebo neaktivní, nebo používa metodu ručního odpisu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Calculate Depreciation**, and then choose the related link.  
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
-3. Choose the **OK** button.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výpočet odpisů** a poté vyberte související odkaz.
+2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyberte tlačítko **OK**.
 
-    The batch job calculates the depreciation and creates lines in the fixed asset G/L journal.
+   Dávková úloha vypočítá odpisy a vytvoří řádky ve finančním deníku dlouhodobého majetku.
 
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.  
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky DM** a poté vyberte související odkaz.
 
-    On the **Fixed Asset G/L Journal** page, in the **No. of Depreciation Days** field, you can see how many days of depreciation have been calculated.  
-5. Choose the **Post** action.  
+   Na stránce **Finanční deník DM** v poli **Počet  dní odpisu** můžete vidět, kolik dní odpisů bylo vypočteno.
+5. Vyberte akci **Účtovat**.
 
-## To post depreciation manually from the fixed asset G/L journal
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset G/L Journal**, and then choose the related link.  
-2. Create an initial journal line and fill in the fields as necessary.  
-3. In the **FA Posting Type** field, select **Depreciation**.  
-4. Choose the **Insert FA Bal. Account** action. A second journal line is created for the balancing account that is set up for depreciation posting. For more information, see [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
-5. Choose the **Post** action to post the journal.  
+## Ruční zaúčtování odpisů z finančního deníku dlouhodobého majetku
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deník DM** poté vyberte související odkaz.
+2. Vytvořte počáteční řádek deníku a vyplňte pole podle potřeby.
+3. V poli **Typ účtování DM** vyberte **Odpisy**.
+4. Vyberte akci **Vložit protiúčet  DM**. Druhý řádek deníku je vytvořen pro protiúčet, který je nastaven pro zaúčtování odpisů. Pro více informací navštivte [Nastavení účto skupin dlouhodobého majetku](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
+5. Chcete-li deník zaúčtovat, vyberte akci **Účtovat**.
 
-The **Book Value** field on the **Fixed Asset Card** page is updated accordingly.
+Pole **Účetní hodnota** na stránce **Karta DM** se odpovídajícím způsobem aktualizuje.
 
-If you have set up fixed asset allocation keys to allocate amounts to different departments or projects, the amounts are allocated during posting. For more information, see [Set Up General Fixed Assets Information](fa-how-setup-general.md).  
+Pokud jste nastavili klíče přidělení dlouhodobého majetku pro přidělení částek různým oddělením nebo projektům, částky jsou přiděleny během účtování. Pro více informací navštivte [Nastavení obecných informací o dlouhodobém majetku](fa-how-setup-general.md).
 
-## To manage the ending book value
-In the **Ending Book Value** field on the **FA Depreciation Books** page, you can specify the book value that you want your fixed asset to have in the current depreciation book after it has been fully depreciated. You can do this manually or you can fill in the **Default Ending Book Value** field on the related **Depreciation Book** page, which will then be used to automatically fill the field.
+## Správa koncové účetní hodnoty
+V poli **Konečná účetní hodnota** na stránce **Knihy odpisů DM** můžete určit účetní hodnotu, kterou má mít dlouhodobý majetek v aktuální knize odpisů poté, co byl plně odepsán. Můžete to provést ručně nebo můžete vyplnit pole **Výchozí konečná úč.hodnota** na související stránce **Kniha odpisů**, která pak bude použita k automatickému vyplnění pole.
 
 > [!NOTE]
-> If the last depreciation means that the **Book Value** field on the **Fixed Asset Card** page is zero, the last depreciation is automatically reduced by this amount.<br /><br />
-> If the value in the **Book Value** field is greater than zero after the last depreciation,  for example because of a rounding problem or because a salvage value exists, the value in the **Ending Book Value** field on the **FA Depreciation Books** page is ignored. For more information, see [To post the salvage value together with the acquisition cost](fa-how-acquire.md#to-post-the-salvage-value-together-with-the-acquisition-cost).
+> Pokud poslední odpisy znamenají, že pole **Účetní hodnota** na stránce **Karta DM** je nula, poslední odpisy se automaticky sníží o tuto částku.<br /><br />
+> Pokud je hodnota v poli **Účetní hodnota** po posledním odpisování větší než nula, například kvůli problému se zaokrouhlením nebo protože existuje hodnota záchrany, je hodnota v poli **Konečná účetní hodnota** na stránce **Knihy odpisů DM** ignorována. Pro více informací navštivte [Zaúčtování hodnoty při vyřazení spolu s náklady na pořízení](fa-how-acquire.md#to-post-the-salvage-value-together-with-the-acquisition-cost).
 
-## To calculate allocations in the fixed asset G/L journal
-If a fixed asset is used by several departments, periodic depreciation can be automatically allocated to these departments according to a user-defined allocation table.  
+## Výpočet alokací ve finančním deníku dlouhodobého majetku
+Pokud je dlouhodobý majetek používán několika odděleními, mohou být pravidelné odpisy automaticky přiděleny těmto oddělením podle uživatelem definované alokační tabulky.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset G/L Journal**, and then choose the related link.  
-2. Create an initial line and fill in the fields as necessary.
-3. In the **FA Posting Type** field, select **Allocation**.  
-4. Choose the **Insert FA Bal. Account** action. A second journal line is created for the balancing account that is set up for allocation posting.  
-5. Choose the **Post** action to post the journal.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deník DM** poté vyberte související odkaz.
+2. Vytvořte počáteční řádek a vyplňte pole podle potřeby.
+3. V poli **Typ účtování DM** vyberte **Přidělení**.
+4. Vyberte akci **Vložit protiúčet  DM**. Druhý řádek deníku je vytvořen pro protiúčet, který je nastaven pro zaúčtování přidělení.
+5. Chcete-li deník zaúčtovat, vyberte akci **Účtovat**.
 
-## Use duplication lists to prepare to post to multiple depreciation books
-When you fill in journal lines to post to a depreciation book, you can duplicate the lines in a separate journal so you can post to a different depreciation book. For more information, see To [post entries to different depreciation books](fa-how-depreciate-amortize.md#to-post-entries-to-different-depreciation-books).
+## Použití seznamů duplikací k přípravě na zaúčtování do více knih odpisů
+Když vyplňujete řádky deníku k zaúčtování do knihy odpisů, můžete je duplikovat v samostatném deníku, abyste mohli zaúčtovat do jiné knihy odpisů. Pro více informací navštivte [Zaúčtování položek do různých knih odpisů](fa-how-depreciate-amortize.md#to-post-entries-to-different-depreciation-books).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.  
-2. Open the depreciation book, and then select the **Part of Duplication List** check box.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Knihy odpisů** a poté vyberte související odkaz.
+2. Otevřete knihu odpisů a potom zaškrtněte políčko **Část seznamu duplikací**.
 
-> [!IMPORTANT]  
->   If you have selected the **Use Duplication List** field, do not use number series on the journal. The reason is that the number series for the fixed asset G/L journal does not the number series for the fixed asset journal.  
+> [!IMPORTANT]
+> Pokud jste vybrali pole **Použít seznam duplikátů**, nepoužívejte v deníku číselné řady. Důvodem je, že číselná řada pro finanční deník dlouhodobého majetku neobsahuje číselnou řadu pro deník dlouhodobého majetku.
 
-## To post entries to different depreciation books
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset G/L Journal**, and then choose the related link.  
-2. In the journal that you want to post depreciation with, select the **Use Duplication List** check box.  
-3. Fill in the remaining fields as necessary.  
-4. Choose the **Post** action.  
-5. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journals**, and then choose the related link.  
+## Zaúčtování položek do různých knih odpisů
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deník DM** poté vyberte související odkaz.
+2. V deníku, se kterým chcete zaúčtovat odpisy, zaškrtněte políčko **Použít seznam duplikátů**.
+3. Podle potřeby vyplňte zbývající pole.
+4. Vyberte akci **Účtovat**.
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky DM** a poté vyberte související odkaz.
 
-    > [!NOTE]  
-    >   The **Fixed Asset Journal** page contains new lines for different depreciation books according to the duplication list.  
-6. Review or edit the lines, and then choose the **Post** action.  
+   > [!NOTE]
+   > Stránka **Deník dlouhodobého majetku** obsahuje nové řádky pro různé knihy odpisů podle seznamu duplikace.
+6. Zkontrolujte nebo upravte řádky a poté vyberte akci **Účtovat**.
 
-    > [!NOTE]  
-    >   Another way to duplicate an entry in a separate book is to enter a depreciation book code in the **Duplicate in Depreciation Book** field when you fill in a journal line.  
+   > [!NOTE]
+   > Dalším způsobem, jak duplikovat položku v samostatné knize, je zadat kód knihy odpisů do pole **Duplikát v knize odpisů**, když vyplníte řádek deníku.
 
-You can copy entries from one depreciation book to another by using the **Copy Depreciation Book** batch job. The batch job creates journal lines in the journal batch that you have specified on the **FA Journal Setup** page for the depreciation book that you want to copy to. For more information, see the following procedure.  
+Položky z jedné knihy odpisů do druhé můžete kopírovat pomocí dávkové úlohy **Kopie knihy odpisů**. Dávková úloha vytvoří řádky deníku v listu deníku, který jste zadali na stránce **Nastavení deníku DM**, do které chcete kopírovat. Další informace naleznete v následujícím postupu.
 
-## To copy fixed asset ledger entries between depreciation books
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.  
-2. Open the relevant depreciation book card, and then choose the **Copy Depreciation Book** action.  
-3. On the **Copy Depreciation Book** page, fill in the fields as necessary.  
-4. Choose the **OK** button.  
+## Kopírování položek dlouhodobého majetku mezi knihami odpisů
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Knihy odpisů** a poté vyberte související odkaz.
+2. Otevřete příslušnou kartu knihy odpisů a zvolte akci **Kopie knihy odpisů**.
+3. Na stránce **Kopie knihy odpisů** vyplňte pole podle potřeby.
+4. Vyberte tlačítko **OK**.
 
-The copied lines are created in either the fixed asset G/L journal or the fixed asset journal, depending on whether the depreciation book that you are copying has integration to the general ledger.  
+Zkopírované řádky jsou vytvořeny buď v deníku finančního majetku dlouhodobého majetku, nebo v deníku dlouhodobého majetku v závislosti na tom, zda kniha odpisů, kterou kopírujete, má integraci do hlavní knihy.
 
-## See Also
-[Fixed Assets](fa-manage.md)  
-[Setting Up Fixed Assets](fa-setup.md)  
+## Viz také
+[Dlouhodobý majetek](fa-manage.md)  
+[Nastavení dlouhodobého majetku](fa-setup.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

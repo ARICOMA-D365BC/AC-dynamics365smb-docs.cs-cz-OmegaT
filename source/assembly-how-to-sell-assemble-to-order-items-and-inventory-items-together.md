@@ -4,42 +4,39 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: kit, kitting
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Sell Assemble-to-Order Items and Inventory Items Together
-If the **Assembly Policy** field on the item card of an assembly item contains **Assemble-to-Stock**, then the default sales order process assumes that the item is already assembled and can be picked from inventory, if it is available. Therefore, no assembly order is automatically created and linked to the sales order line. However, if a part (or all) of the quantity is not available, then you have the flexibility to create an assembly order for the remaining quantity by filling in the **Qty. to Assemble to Order** field on the sales order line. In this manner, you can assemble the item to order although it is set up to be assembled to stock by default.  
+# Prodej zboží montáže na zakázku a skladového zboží dohromady
+Pokud pole **Způsob montáže**  na kartě zboží montáže obsahuje **Montáž-na-sklad**, pak výchozí proces prodejní objednávky předpokládá, že zboží je již sestaveno a může být vyskladněno ze skladu, pokud je k dispozici. Proto není automaticky vytvořena žádná montážní zakázka, která je propojena s řádkem prodejní objednávky. Pokud však není k dispozici součást (nebo celé) množství, máte možnost vytvořit montážní zakázku pro zbývající množství vyplněním pole **Mn.  k montáži na zakázku** na řádku prodejní objednávky. Tímto způsobem můžete sestavit zboží na zakázku, i když je ve výchozím nastavení nastaveno tak, aby bylo sestaveno na sklad.
 
-Similar flexibility exists when you are selling items to be assembled to the order and a part of the quantity is in inventory, which you want to deduct from the assembly order. For more information, see [Sell Inventory Items in Assemble-to-Order Flows](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md).  
+Podobná flexibilita existuje při prodeji zboží, které má být sestaveno na zakázku, kde část množství, kterou chcete odečíst z montážní zakázky, je už ve skladu. Pro více informací navštivte [Prodej skladového zboží podle montáže na zakázku](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md).
 
-> [!NOTE]  
->  Certain rules apply to the **Qty. to Ship** field on sales order lines that contain a combination of assemble-to-order quantities and inventory quantities. For more information, see the Combination Scenarios section in [Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md).  
+> [!NOTE]
+> Určitá pravidla se vztahují na pole **K  dodání** na řádcích prodejní objednávky, které obsahují kombinaci množství montáže na zakázku a množství zásob. Pro více informací navštivte sekci Kombinované scénáře v [Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md).
 
-> [!NOTE]  
->  The following procedure does not include the standard sales order steps that you need to follow before you create an assembly order for unavailable quantities.
+> [!NOTE]
+> Následující postup nezahrnuje standardní kroky prodejní objednávky, které je třeba provést před vytvořením montážní objednávky pro nedostupná množství.
 
-## To sell assemble-to-order items and inventory items together  
-1.  On a sales order line for an item that is set up to be assembled to stock, enter a quantity in the **Quantity** field that exceeds inventory. The **Check Availability** page appears. For more information, see [View the Availability of Items](inventory-how-availability-overview.md).
-2.  Note the **Total Quantity** field (a negative value), which you will enter in the next step.  
-3.  In the **Qty. to Assemble to Order** field, enter the value from the previous step.  
-4.  Perform any changes to the assembly components. For more information, see [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md).  
-5.  Proceed to release the sales order, to prepare it for picking of the inventory items and for assembly of the unavailable items. For more information about these standard assembly steps, see [Assemble Items](assembly-how-to-assemble-items.md).  
+## Prodej zboží montáže na zakázku a skladového zboží společně
+1. Na řádku prodejní objednávky pro zboží, které je nastaveno tak, aby bylo sestaveno na sklad, zadejte množství do pole **Množství**, které přesahuje zásoby. Zobrazí se stránka **Kontrola dostupnosti**. Pro více informací navštivte [Zobrazení dostupnosti zboží](inventory-how-availability-overview.md).
+2. Všimněte si pole **Celkové množství** (záporná hodnota), které zadáte v dalším kroku.
+3. Do pole **Mn.  k montáži na zakázku** zadejte hodnotu z předchozího kroku.
+4. Proveďte jakékoli změny s komponenty montáže. Pro více informací navštivte [Prodej zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md).
+5. Pokračujte uvolněním prodejní objednávky, přípravou na výdej skladového zboží a sestavením nedostupného zboží. Pro další informace o těchto standardních montážních krocích navštivte [Montáž zboží](assembly-how-to-assemble-items.md).
 
-> [!CAUTION]  
->  The **Bin Code** field on the sales order may be prefilled according to the **Assemble-to-Order Shpt. Bin Code** field or the **From-Assembly Bin Code** field on the location card. In that case, the **Bin Code** field on the sales order line may be incorrect in this combination of assemble-to-order and assemble-to-stock quantities. It is a good idea to examine the **Bin Code** field and make sure that the placement works for all quantities. Alternatively, enter the two different quantities on separate sales order lines.  
+> [!CAUTION]
+> Pole **Kód přihrádky** na prodejní objednávce může být předvyplněno podle pole **Kód dod. přihr. montáže-na-zák** nebo podle pole **Kód přihrádky z montáže** na kartě lokace. V takovém případě může být pole **Kód přihrádky** na řádku prodejní objednávky nesprávné, při této kombinaci množství montáže na zakázku a montáže na sklad. Je vhodné zkontrolovat pole **Kód přihrádky** a ujistěte se, že lokace funguje pro všechna množství. Případně zadejte dvě různá množství na samostatných řádcích prodejní objednávky.
 
-## See Also  
-[Assembly Management](assembly-assemble-items.md)  
-[Work with Bills of Material](inventory-how-work-BOMs.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa montáže](assembly-assemble-items.md)  
+[Práce s kusovníky](inventory-how-work-BOMs.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

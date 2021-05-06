@@ -4,56 +4,53 @@ description: Use intercompany documents to post transactions with your intercomp
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: IC, group, consolidation, affiliate, subsidiary
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Work with Intercompany Documents and Journals
-You use intercompany documents or journals to post transactions with your intercompany partners. When you post an intercompany document or journal line in your company, a corresponding document or journal line is created in your intercompany outbox that you can transfer to your partner. Your partner can then post the corresponding transaction in their company, without having to re-enter the data.
+# Práce s vnitropodnikovými doklady a deníky
+K účtování transakcí s vašimi partnery v rámci společnosti používáte vnitropodnikové doklady nebo deníky. Když ve společnosti zaúčtujete vnitropodnikový doklad nebo řádek deníku, vytvoří se odpovídající řádek dokladu nebo deníku ve vnitropodnikové poště k odeslání, kterou můžete přenést na svého partnera. Váš partner pak může zaúčtovat odpovídající transakci ve své společnosti, aniž by musel znovu zadávat data.
 
-For sales and purchase documents, the intercompany partner code on the involved customer or vendor ensures that all orders and invoices generated pertaining to transactions with these companies will produce corresponding documents in the partner company, resulting in correct balancing of the accounts.
+U prodejních a nákupních dokladů zajišťuje kód vnitropodnikového partnera na příslušném odběrateli nebo dodavateli, že všechny objednávky a faktury vytvořené v případě transakcí s těmito společnostmi budou v partnerské společnosti vytvářet odpovídající doklady a vést ke správnému přiřazení účtů.
 
-For intercompany general journal lines, you do not need to specify the accounts for an individual set of books, but simply give the identification of the partner company. Corresponding intercompany general journal lines are then created in the partner company that result in the balancing of the books of both companies involved in a transaction.
+U řádku vnitropodnikového finančního deníku nemusíte specifikovat účty pro jednotlivou sadu knih, ale jednoduše uveďte identifikaci partnerské společnosti. Odpovídající řádky vnitropodnikového finančního deníku jsou pak vytvořeny v partnerské společnosti, což vede k vyrovnání účetních knih obou společností zapojených do transakce.
 
-## To fill in and send an intercompany sales order
-You can send sales and purchase orders and return orders before posting. Invoices and credit memos cannot be sent until they are posted.
+## Vyplnění a odeslání vnitropodnikové prodejní objednávky
+Před zaúčtováním můžete odeslat prodejní a nákupní objednávky a vratky. Faktury a dobropisy nelze odeslat, dokud nejsou zaúčtovány.
 
-The following procedure describes how to fill in and send an intercompany sales order. The same steps apply to intercompany purchase orders and return orders, and to posted intercompany invoices and credit memos.  
+Následující postup popisuje, jak vyplnit a odeslat vnitropodnikovou prodejní objednávku. Stejné kroky se vztahují na vnitropodnikové objednávky a vratky a na zaúčtované vnitropodnikové faktury a dobropisy.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2. Choose **New** to create a new sales order. For more information, see [Sell Products](sales-how-sell-products.md).  
-3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Make sure the customer is an intercompany partner.
-5. To send the sales order before you post it, choose the **Send IC Sales Order** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
+2. Vyberte **Nový** a vytvořte novou prodejní objednávku. Pro více informací navštivte [Prodávání produktů](sales-how-sell-products.md).
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Ujistěte se, že zákazník je vnitropodnikový partner.
+5. Chcete-li objednávku odeslat před zaúčtováním, vyberte akci **Odeslat vnitropodnikovou prodejní objednávku**.
 
 > [!NOTE]
-> If you do perform step 4, then the sales order will be moved to your intercompany outbox where you can send it later. For more information, see [Manage the Intercompany Inbox and Outbox](intercompany-how-manage-intercompany-inbox.md).
+> Pokud provedete krok 4, bude prodejní objednávka přesunuta do vaší vnitropodnikové pošty k odeslání, kde ji můžete odeslat později. Pro více informací navštivte [Správa vnitropodnikové doručené pošty a pošty k odeslání](intercompany-how-manage-intercompany-inbox.md).
 
-## To fill in and post an intercompany journal
-When you post an intercompany general journal line in your company, a corresponding journal line is created in your intercompany outbox that you can transfer to your partner. Your partner can then post the corresponding transaction in their company, without having to re-enter the data.
+## Vyplnění a zaúčtování vnitropodnikového deníku
+Když ve vaší společnosti zaúčtujete řádek vnitropodnikového finančního deníku, vytvoří se odpovídající řádek deníku ve vnitropodnikové poště k odeslání, kterou můžete převést na svého partnera. Váš partner pak může zaúčtovat odpovídající transakci ve své společnosti, aniž by musel znovu zadávat data.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany General Journals**, and then choose the related link.  
-2. Open the relevant journal batch. For more information, see [Working with General Journals](ui-work-general-journals.md).
-3. Fill in the fields as necessary.
-4. In the **IC Partner G/L Acc. No.** field, enter the intercompany general ledger account that the amount will be posted to in your partner's company.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vnitropodnikové finanční deníky** a poté vyberte související odkaz.
+2. Otevřete příslušný list deníku. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
+3. Podle potřeby vyplňte pole.
+4. Do pole **Číslo fin.účtu vnitrop.  partnera** zadejte vnitropodnikový účet hlavní knihy, na který bude částka zaúčtována ve společnosti vašeho partnera.
 
-    > [!NOTE]
-    > This field must be filled in on a line with a bank account or general ledger account in either the **Account No.** field or the **Bal. Account No.** field.  
-5. Choose the **Post** action.
+   > [!NOTE]
+   > Toto pole musí být vyplněno na řádku s bankovním účtem nebo účtem hlavní knihy v poli **Číslo účtu** nebo **Číslo  protiúčtu**.
+5. Vyberte akci **Účtovat**.
 
-The involved entries are posted in your company and a journal with the corresponding entries are created in your intercompany outbox that you can send to your partner company. For more information, see [Manage the Intercompany Inbox and Outbox](intercompany-how-manage-intercompany-inbox.md).
+Příslušné položky jsou zaúčtovány ve vaší společnosti a ve vnitropodnikové poště k odeslání je vytvořen deník s odpovídajícími položkami, které můžete odeslat partnerské společnosti. Pro více informací navštivte [Správa vnitropodnikové doručené pošty a pošty k odeslání](intercompany-how-manage-intercompany-inbox.md).
 
-## See Also
-[Managing Intercompany Transactions](intercompany-manage.md)  
+## Viz také
+[Správa vnitropodnikových transakcí](intercompany-manage.md)  
 [Finance](finance.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Nastavení financí](finance-setup-finance.md)  
+[Práce s finančními deníky](ui-work-general-journals.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -1,88 +1,73 @@
 ---
 title: How to Post Inventory Costs to the General Ledger| Microsoft Docs
-description: At the end of accounting periods, monthly, yearly or other, a sequence of cost control and auditing tasks must be performed to report a correct and balanced inventory value to the finance department. Apart from the posting routine that transfers the individual item value entries to dedicated general ledger accounts, several reports, tracing functions, and a special reconciliation tool are available to the auditor or controller responsible for this business-critical work.
+description: Describes how to manage the physical products that you trade in, for example, handling the stock in your warehouse.
 documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Reconcile Inventory Costs with the General Ledger
-When you post inventory transactions, such as sales shipments, purchase invoices, or inventory adjustments, the changed item costs are recorded in item value entries. To reflect this change of inventory value in your financial books, the inventory costs are automatically posted to the related inventory accounts in the general ledger. For each inventory transaction that you post, the appropriate values are posted to the inventory account, adjustment account, and COGS account in the general ledger.
+# Odsouhlasení nákladů na zboží s financemi
+Při zaúčtování skladových transakcí, jako jsou prodejní dodávky, nákupní faktury nebo úpravy zásob, jsou změněné náklady na zboží zaznamenány do položek ocenění zboží. Aby se tato změna hodnoty zásob projevila ve vašich finančních knihách, jsou náklady automaticky zaúčtovány na související účty zásob v hlavní knize. Pro každou skladovou transakci, kterou účtujete, jsou příslušné hodnoty zaúčtovány na účet zásob, účet úprav a účet nákladů na prod.zboží v hlavní knize.
 
-Automatic cost posting is defined by the **Automatic Cost Posting** field on the **Inventory Setup** page.
+Automatické účtování nákladů je definováno polem **Automatické účtování nákladů** na stránce **Nastavení zásob**.
 
-Even though inventory costs are automatically posted to the general ledger, it is still necessary to ensure that the costs of goods are forwarded to the related outbound sales transaction, especially in situations where you sell goods before you invoice the purchase of those goods. This is referred to as cost adjustment. Item costs are automatically adjusted when you post item transactions, but you can also adjust item costs manually. For more information, see [Adjust Item Costs](inventory-how-adjust-item-costs.md).
+I když jsou náklady automaticky zaúčtovány do hlavní knihy, je stále nutné zajistit, aby náklady na zboží byly předány na související transakci odchozího prodeje, zejména v situacích, kdy zboží prodáváte před fakturací nákupu tohoto zboží. Toto se nazývá úprava nákladů. Náklady zboží se automaticky upravují, když účtujete transakce za zboží, ale také můžete zboží upravovat ručně. Pro více informací navštivte [Úprava nákladů](inventory-how-adjust-item-costs.md).
 
-## To post inventory costs manually
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Post Inventory Cost to G/L**, and then choose the related link.
-2. Post inventory costs to the general ledger manually by running the batch job. When you run this batch job, general ledger entries are created on the basis of value entries. You can post the entries so that they are summarized per posting group.
+## Ruční zaúčtování nákladů zásob
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtování nákladů na zboží** a poté vyberte související odkaz.
+2. Ručně zaúčtujte náklady do hlavní knihy spuštěním dávkové úlohy. Při spuštění této dávkové úlohy jsou vytvořeny věcné položky na základě položek ocenění. Položky můžete zaúčtovat tak, aby byly shrnuty podle účto skupiny.
 
-> [!NOTE]  
-> When you run this batch job, you might encounter errors having to do with missing setup or incompatible dimension setup. If the batch job encounters errors in the dimension setup, it overrides these errors and uses the dimensions of the value entry. For any other errors, the batch job skips posting the value entries and lists them at the end of the report in a section titled “Skipped Entries.” To post these entries, you must fix the errors.
+> [!NOTE]
+> Při spuštění této dávkové úlohy se mohou vyskytnout chyby související s chybějícím nastavením nebo nekompatibilním nastavením dimenze. Pokud dávková úloha narazí na chyby v nastavení dimenze, přepíše tyto chyby a použije dimenze položky ocenění. V případě jakýchkoli dalších chyb přeskočí dávková úloha zaúčtování položek ocenění a uvádí je na konci zprávy v části nazvané „Přeskočené položky“. Chcete-li zaúčtovat tyto položky, musíte opravit chyby.
 
-To see a list of errors before running the posting batch job, you can run the **Post Invt. Cost to G/L - Test** report. The test report lists all the errors encountered during a test posting. You can then fix the errors, and run the inventory cost posting batch job without skipping any entries.
+Chcete-li zobrazit seznam chyb před spuštěním dávkové úlohy účtování, můžete spustit sestavu **Účtování nákladů  na zboží - test**. Protokol o testu uvádí všechny chyby, které se vyskytly během testovacího účtování. Potom můžete chyby opravit a spustit dávkovou úlohu účtování nákladů zásob bez přeskočení jakýchkoli položek.
 
-If you would like to simply get an overview of what values could be posted to the general ledger without actually performing the posting, you can run the **Post Inventory Cost to G/L** batch job without actually posting the values to the general ledger. You do this by clearing the check mark from the **Post** field on the request page. This way, when you run the batch job, the report is produced showing the values that are ready to be posted to the general ledger, but they are not posted.
+Pokud byste chtěli jednoduše získat přehled o tom, jaké hodnoty by mohly být zaúčtovány do hlavní knihy bez skutečného provedení účtování, můžete spustit dávkovou úlohu **Účtování nákladů na zboží** bez skutečného účtování hodnoty do hlavní knihy. To provedete zrušením zaškrtnutí pole **Účtovat** na stránce požadavku. Tímto způsobem je při spuštění dávkové úlohy vytvořena sestava zobrazující hodnoty, které jsou připraveny k zaúčtování do hlavní knihy, ale nejsou zaúčtovány.
 
-## To audit the reconciliation between the inventory ledger and the general ledger
-The **Inventory - G/L Reconciliation** page provides the following:
+## Kontrola sladění mezi položkami inventury a věcnými položkami
+Stránka **Odsouhlasení zásoby – finance** obsahuje následující:
 
-- Exposes reconciliation differences by comparing what is recorded in G/L and what is recorded in the inventory ledger (value entries).
-- Displays unreconciled cost amounts in the value entries in the inventory ledger as if they were mapped to corresponding inventory-related accounts in G/L and compares those to the totals actually recorded in the same accounts in G/L.
-- Reflects the double entry structure of G/L by visually presenting data as such. For example, a COGS entry has a corresponding inventory entry.
-- Lets users drill down and see the entries that make up the cost amounts.
-- Includes filters to narrow the analysis by date, item, and location.
-- Explains reasons for reconciliation differences in informative messages.
-
-
-The **Name** column on the far left in the grid lists the various G/L account types that are associated with inventory.
-
-The **Inventory**, **Inventory (Interim)**, and **WIP Inventory** columns show the invoiced, non-invoiced, and WIP totals of each G/L account type. These are calculated from value entries, that is, they are projected onto the G/L account types where they will end when they are eventually posted to G/L.
-
-The **Total** column shows the sum (in bold font) of the value entry amounts in the three inventory columns.
-
-The **G/L Total** column shows the amounts (in bold font) for each G/L account type that exists in G/L. These are calculated from G/L entries, that is, they represent inventory costs already posted to G/L.
-
-The **Difference** column represents the difference between the value in the **G/L Total** and **Total** fields.
-
-In the top of the **Inventory - G/L Reconciliation** page, you can enter filters to limit, for example, the period of time for which you want information.
-
-If you select the **Show Warning** check box and if there are any discrepancies between the inventory totals and G/L totals, application shows messages in the **Warning** field of the grid that explain the discrepancy. If you choose the Warning field, application gives you more information on what the warning means.
-
-When you have entered all relevant filters, choose the **Show Matrix** action. The data is calculated and the matrix page appears.
-
-On the far left column in the grid, you see the various general ledger account types that are associated with inventory. The grid then shows the invoiced, non-invoiced (interim), and WIP inventory totals for each of these account types. These totals are calculated from the value entries.
-
-The next columns show the totals for the same account types calculated from the general ledger entries.
-
-Choose the  amount in any of the total fields to see the inventory report entries that were used to calculate the totals. For inventory totals, the inventory report entries are the sums of the value entries for the items. For the G/L totals, the inventory report entries are the sums from the general ledger entries.
-
-## Reporting Costs and Reconciling with the General Ledger
-Other reports, tracing functions, and a special reconciliation tool are available to the auditor or controller responsible for reporting a correct and balanced inventory value to the finance department.
-
-The following table describes them.    
-
-|**To**|**See**|  
-|------------|-------------|  
-|View the inventory value of selected items, including information about the quantities and values of increases and decreases in inventory over a selected period.|**Inventory Valuation** report|  
-|View the inventory value of selected production orders in your WIP (work in process) inventory, such as the quantities and values of consumption, capacity usage, and output in ongoing production orders.|**Inventory Valuation - WIP** report|  
-|View the inventory value of selected items, including their actual and expected cost on the date specified.|**Invt. Valuation - Cost Spec.** report|  
-|Use a report to analyze the reasons for cost variances or to gain insight into the cost shares of sold items (COGS).|**Cost Shares Breakdown** report|  
-
-## See Also  
-[Managing Inventory Costs](finance-manage-inventory-costs.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Sales](sales-manage-sales.md)    
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[General Business Functionality](ui-across-business-areas.md)
+- Zpřístupní rozdíly odsouhlasení porovnáním toho, co je zaznamenáno ve věcných položkách a co je zaznamenáno v položkách inventury (položky ocenění).
+- Zobrazí neodsouhlasené částky nákladů v položkách ocenění a v položkách inventury, jako by byly mapovány na odpovídající účty související se zásobami ve věcných položkách, a porovná je s součty skutečně zaznamenanými ve stejných účtech ve financích.
+- Odráží strukturu podvojného účetnictví financí, a to vizuálním zobrazením dat jako takových. Například položka Náklady na prod. zboží má odpovídající položku inventury.
+- Umožňuje uživatelům rozbalit a zobrazit položky, které tvoří částky nákladů.
+- Zahrnuje filtry pro zúžení analýzy podle data, zboží a umístění.
+- Vysvětluje důvody nesouladu v informativních zprávách.
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+Sloupec **Název** zobrazen vlevo v mřížce uvádí různé typy finančních účtů, které jsou spojeny se zásobami.
+
+Sloupce **Zásoby**, **Zásoby (dočasné)** a **Nedokončená výroba** zobrazují fakturované, nefakturované a nedokončené součty každého typu finančního účtu. Vypočítávají se z položek ocenění, to znamená, že se promítají do typů finančních účtů, kde skončí, až budou nakonec zaúčtovány do financí.
+
+Sloupec **Celkem** zobrazuje součet (tučným písmem) vstupních hodnot ve třech sloupcích zásob.
+
+Sloupec **Finance celkem** zobrazuje částky (tučným písmem) pro každý typ finančního účtu, který existuje ve financích. Vypočítávají se z věcných položek, tj. představují náklady na zásoby již zaúčtované ve financích.
+
+Sloupec **Rozdíl** představuje rozdíl mezi hodnotou v polích **Finance celkem** a **Celkem**.
+
+V horní části stránky **Odsouhlasení zásoby – finance** můžete zadat filtry, které omezí například dobu, za kterou chcete získat informace.
+
+Pokud zaškrtnete políčko **Zobrazit varování** a pokud existují nějaké nesrovnalosti mezi celkovými hodnotami zásob a věcnými položkami, aplikace zobrazí zprávy v poli **Varování** které vysvětlují tento rozpor. Pokud vyberete pole Varování, aplikace vám poskytne více informací o významu varování.
+
+Po zadání všech příslušných filtrů vyberte akci **Zobrazit matici**. Data se vypočítají a objeví se stránka matice.
+
+V levém sloupci v matici vidíte různé typy finančních účtů, které jsou spojeny se zásobami. V matici se pak zobrazí součty pro fakturované, nefakturované (dočasné) a nedokončené výrobky pro každý z těchto typů účtů. Tyto součty se počítají z položek ocenění.
+
+Následující sloupce ukazují součty pro stejné typy účtů vypočtené z věcných položek.
+
+Vyberte částku v kterémkoli z polí Celkem a zobrazte položky sestavy zásob, které byly použity k výpočtu součtů. U součtů zásob jsou položky sestavy zásob součtem položek ocenění pro zboží. Pro součty financí jsou položky sestavy zásob součty věcných položek.
+
+## Viz také
+[Správa nákladů zásob](finance-manage-inventory-costs.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Prodej](sales-manage-sales.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Obecné obchodní funkcionality](ui-across-business-areas.md)

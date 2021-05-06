@@ -1,6 +1,6 @@
 ---
-    title: Setup Best Practices - Supply Planning | Microsoft Docs
-    description: Supply planning is a critical business area. When set up and used correctly, supply planning helps a company avoid stock out and reduce both ordering costs and inventory costs.
+    title: Nastavení osvědčených postupů - Plánování dodávek | Microsoft Docs
+    description: 'Plánování dodávek je pro oblast podnikání klíčové. Pokud je vše v pořádku nastaveno a použito, pomáhá plánovač dodávek společnosti, aby zboží bylo vždy skladem a snižuje jak náklady na objednání tak i náklady na zásoby.'
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -13,24 +13,24 @@
     ms.author: edupont
 
 ---
-# Setup Best Practices: Supply Planning
-Supply planning is a critical business area. When set up and used correctly, supply planning helps a company avoid stock out and reduce both ordering costs and inventory costs.  
+# Doporučené postupy nastavení: Plánování dodávek
+Plánování dodávek je pro oblast podnikání klíčové. Pokud je vše v pořádku nastaveno a použito, pomáhá plánovač dodávek společnosti, aby zboží bylo vždy skladem a snižuje jak náklady na objednání tak i náklady na zásoby.
 
- It is not possible to prescribe one optimal setup of all planning fields as this varies from company to company because of business variables, such as market situation and business strategy. However, there are best practices for selecting options in items cards and global setup fields to help get the company started with timely and cost-effective inventory flows.  
+Není možné předepsat jedno optimální nastavení všech oblastí plánování, protože, kvůli podnikovým proměnným, jako je situace na trhu a obchodní strategie, je každá společnost jiná. Existují však osvědčené postupy pro výběr možností v položkách karty a pole globálního nastavení, které pomohou společnosti začít s včasnými a nákladově efektivními toky zásob.
 
- The following topics provide best-practice information about how to set up selected planning fields that are key to inventory and supply planning.  
+Následující témata poskytují informace o osvědčených postupech, jak nastavit vybraná pole plánování, která jsou klíčová pro plánování zásob a zásobování.
 
-|**To**|**See**|  
+| **Viz** | **také** |
 |------------|-------------|  
-|Learn the best practices for selecting the best reordering policy to plan efficiently and economically for an item according to carrying costs and demand patterns.|[Setup Best Practices: Reordering Policies](setup-best-practices-reordering-policies.md)|  
-|Learn the best practices for specifying selected planning parameters under the defined reordering policy to plan efficiently and economically for an item according to critical elements, such as lead time, carrying costs, and seasonality.|[Setup Best Practices: Planning Parameters](setup-best-practices-planning-parameters.md)|  
-|Learn the best practices for applying a general supply strategy to all item cards, such as always receiving items one day before they are needed or dampening the system’s reaction to small demand fluctuations.|[Setup Best Practices: Global Planning Setup](setup-best-practices-global-planning-setup.md)|  
+| Naučte se osvědčené postupy pro výběr nejlepšího způsobu přiobjednání, který chcete efektivně a ekonomicky naplánovat pro zboží podle nákladových a poptávkových vzorců. | [Doporučené postupy nastavení: Způsoby přiobjednání](setup-best-practices-reordering-policies.md) |
+| Naučte se osvědčené postupy pro specifikaci vybraných parametrů plánování v rámci definovaného Parametru plánování, abyste mohli naplánovat účinně a ekonomicky zboží podle kritických prvků, jako je dodací lhůta, účetní náklady a sezónnost. | [Doporučené postupy nastavení: Parametry](setup-best-practices-planning-parameters.md) |
+| Naučte se osvědčené postupy pro aplikaci obecné strategie dodávek na všechny karty zboží, jako je například vždy přijímání položek jeden den před tím, než jsou potřeba, nebo tlumení reakce systému na malé výkyvy poptávky. | [Doporučené postupy nastavení: Nastavení globálního plánování](setup-best-practices-global-planning-setup.md) |
 
-## See Also  
- [Design Details: Supply Planning](design-details-supply-planning.md)   
- [Design Details: Planning Parameters](design-details-planning-parameters.md)   
- [Set Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)     
+[Detaily návrhu: Parametry plánování](design-details-planning-parameters.md)     
+[Nastavení složitých oblastí aplikace pomocí doporučených postupů](set-up-complex-application-areas-using-best-practices.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

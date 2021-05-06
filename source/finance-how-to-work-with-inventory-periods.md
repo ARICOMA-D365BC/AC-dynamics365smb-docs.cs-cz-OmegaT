@@ -4,67 +4,64 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: inventory, periods
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Work with Inventory Periods
-Inventory periods define a period of time in which you can post changes to inventory. An inventory period is defined by the date on which it ends, or the ending date. When you close an inventory period, you cannot post any changes to inventory, either expected or invoiced, before this ending date. You cannot post any new values to inventory before the ending date. If you have open item entries in the closed period, meaning positive quantities that have not yet been applied to outbound transactions, you can still apply outbound quantities to these entries, even if the period is closed.  
+# Práce s obdobím zásob
+Období zásob definuje časové období, ve kterém můžete zaúčtovat změny v zásobách. Období zásob je definováno koncovým datem. Když uzavřete období zásob, nemůžete před tímto datem ukončení zaúčtovat žádné změny zásob, očekávané ani fakturované. Nemůžete zaúčtovat žádné nové hodnoty do zásob před datem ukončení. Pokud máte otevřené položky zboží v uzavřeném období, což znamená kladná množství, která ještě nebyla vyrovnána s výstupními transakcemi, můžete pro tyto položky vyrovnat výstupní množství, a to i v případě, že je období uzavřeno.
 
-The following sections describe how to:
+Následující části popisují, jak:
 
-* Create inventory periods.  
-* Close inventory periods.  
-* Reopen inventory periods.  
+* Vytvořit období zásob.
+* Uzavřít období zásob.
+* Znovu otevřít období zásob.
 
-## To create an inventory period  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Periods**, and then choose the related link.  
-2. Create a new line.  
-3. In the **Ending Date** field, enter the last date in the inventory period that you want to define. When the period is closed, you will not be able to post inventory changes before this date.  
-4. Enter a descriptive name in the **Name** field. Choose the **OK** button.  
+## Vytvoření období zásob
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Období zásob** a poté vyberte související odkaz.
+2. Vytvořte nový řádek.
+3. Do pole **Koncové datum** zadejte poslední datum v období zásob, které chcete definovat. Po uzavření období nebudete moci zaúčtovat změny zásob před tímto datem.
+4. Do pole **Název** zadejte popisný název. Vyberte tlačítko **OK**.
 
-## Closing Inventory Periods  
-The **Closed** field indicates whether or not the inventory period is closed to inventory value changes. You cannot edit this field.  
+## Uzavření období zásob
+Pole **Uzavřeno** označuje, zda je období zásob uzavřeno pro změny hodnot zásob. Toto pole nelze upravit.
 
-You can close any inventory period, provided that the following is true:  
+Můžete uzavřít libovolné období zásob za předpokladu, že platí následující:
 
-* There are no open outbound item ledger entries, meaning negative inventory, in that period.  
-* The cost of all items has been adjusted using the **Adjust Cost – Item Entries** batch job.  
+* V tomto období neexistují žádné otevřené odchozí položky zboží, což znamená záporný sklad.
+* Cena všech položek byla upravena pomocí dávkové úlohy **Adjustace nákladů položek zboží**.
 
-This means that all outbound transaction quantities, such as those from sales orders, outbound transfers, sales invoices, purchase returns, or purchase credit memos, must be applied to existing quantity in inventory.  
+To znamená, že všechna množství odchozích transakcí, například množství z prodejních objednávek, odchozích převodů, prodejních faktur, nákupních vratek nebo nákupních dobropisů, musí být použita na existující množství ve skladu.
 
-### To close an inventory period  
-1. Before closing an inventory period, choose the **Adjust Cost – Item Entries** action to ensure that all cost adjustments are posted.
+### Uzavření období skladu
+1. Před uzavřením období skladu vyberte akci **Adjustace nákladů položek zboží** abyste zajistili, že budou zaúčtovány všechny úpravy nákladů.
 
-     Run the **Close Inventory Period – Test** report to determine if there are any open outbound item entries within the inventory period or any items whose cost has not yet been adjusted.  
-2. Choose the **Close Inventory Period – Test** action.  
+   Spusťte sestavu **Uzavření období zásob - test** a zjistěte, zda existují nějaké otevřené vyrovnávací položky v období zásob nebo položky, jejichž náklady ještě nebyly upraveny.
+2. Vyberte akci **Uzavření období zásob - test**.
 
-     Run the **Post Inventory Cost to G/L** batch job to ensure that all costs are posted to the general ledger.  
-3. Choose the **Post Inventory to G/L** action.  
-4. On the **Inventory Periods** page, select the inventory period you want to close.  
-5. Choose the **Close Period** action. After the inventory period has been closed, you cannot post inventory changes before the ending date. The cost of all items must be adjusted with the **Adjust Cost – Item Entries** batch job before you close the inventory period.  
-6. Choose the **Yes** button to confirm that you want to close the period, or choose **No** to cancel the closing.  
-7. The inventory period is closed and a confirmation message is displayed when it is finished.  
+   Spusťte dávkovou úlohu **Účtování nákladů na zboží** a zajistěte, aby byly všechny náklady zaúčtovány do hlavní knihy.
+3. Vyberte akci **Zaúčtovat fakturu**.
+4. Na stránce **Období zásob** vyberte období zásob, které chcete zavřít.
+5. Vyberte akci **Uzavřít období**. Po uzavření období zásob nemůžete zaúčtovat změny zásob před datem ukončení. Než zavřete období zásob, náklady na všechny položky musí být upraveny dávkovou úlohou **Adjustace nákladů položek zboží**.
+6. Stisknutím tlačítka **Ano** potvrďte, že chcete období uzavřít, nebo volbou **Ne** uzavření zrušte.
+7. Období zásob je uzavřeno a po dokončení se zobrazí potvrzovací zpráva.
 
-## Reopening Inventory Periods  
-After you have closed the inventory period, you cannot delete the inventory period. You can, however, reopen it, if you would like to allow posting before the ending date of the inventory period. Reopening a period also reopens all inventory periods with ending dates later than the period you reopen.  
+## Znovuotevření období zásob
+Po uzavření období zásob nelze toto období odstranit. Můžete ji však znovu otevřít, pokud chcete povolit zaúčtování před koncovým datem období zásob. Znovuotevření období také znovu otevře všechna období zásob s konečnými daty později než znovuotevřené období.
 
-### To reopen an inventory period  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Periods**, and then choose the related link.  
-2. Select the inventory period you want to reopen.  
-3. Choose the **Reopen Period** period action. Confirm that you want to reopen the period.  
-4. All inventory periods with ending dates later than the period you selected are reopened.  
+### Opětovné otevření období zásob
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Období zásob** a poté vyberte související odkaz.
+2. Vyberte období zásob, které chcete znovu otevřít.
+3. Vyberte akci **Znovu otevřít období**. Potvrďte, že chcete období znovu otevřít.
+4. Znovu se otevřou všechna období zásob s konečnými daty později než vybrané období.
 
-## See Also  
-[Design Details: Inventory Periods](design-details-inventory-periods.md)  
+## Viz také
+[Detaily návrhu: Období zásob](design-details-inventory-periods.md)  
 [Finance](finance.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Working with Financials](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Zásoby](inventory-manage-inventory.md)  
+[Práce s financemi](ui-work-product.md)

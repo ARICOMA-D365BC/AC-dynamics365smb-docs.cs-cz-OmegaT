@@ -6,37 +6,34 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 10/01/2019
 ms.author: jswymer
 
 ---
-# Using Pre-Closing Reports
-There are many standard reports that you can use to verify the accuracy of the accounts before closing the books at the end of a year or period. For example, you can use the **Customer - Trial Balance** report to verify that the balance for a customer posting group is equal to the balance on the corresponding general ledger account on a certain date.
+# Příprava předběžných sestav
+Existuje mnoho standardních sestav, které můžete použít k ověření přesnosti účtů před uzavřením účetních knih na konci roku nebo období. Například můžete pomocí výkazu **Zákazník – předvaha** ověřit, že zůstatek pro skupinu účtování zákazníků se rovná zůstatku na příslušném účtu hlavní knihy k určitému datu.
 
-The following table describes a number of reports that may be useful in this process.
+Následující tabulka popisuje řadu sestav, které mohou být v tomto procesu užitečné.
 
-| To | See this report |
+| K | Zobrazit tuto sestavu |
 | --- | --- |
-| Print a detailed trial balance report for one or more bank accounts with additional information about individual entries. |Bank Acc. - Detail Trial Bal. |
-| Print a detail trial balance for selected customers. |Customer - Trial Balance |
-| Print a detail trial balance with detailed information about individual entries, for selected customers during a selected period. |Customer - Detail Trial Bal. |
-| Print a detail trial balance for selected vendors. |Vendor - Trial Balance |
-| Print a detail trial balance with detailed information about individual entries, for selected vendors during a selected period. |Vendor - Detail Trial Balance |
-| Print a trial balance with the current year's and the previous year's figures. |Closing Trial Balance |
-| Print a detailed trial balance report for general ledger account balances. |Detail Trial Balance |
-| Print a trial balance report with balances and net changes for general ledger accounts. |Trial Balance |
-| Print a trial balance for a consolidated company. |Consolidated Trial Balance |
+| Tisk sestavy podrobné předvahy pro jeden nebo více bankovních účtů s dalšími informacemi o jednotlivých položkách. | Bank.účet -podrob.předvaha |
+| Tisk podrobné předvahy pro vybrané zákazníky. | Zákazník – předvaha |
+| Tisk podrobné předvahy s podrobnými informacemi o jednotlivých položkách pro vybrané zákazníky za vybrané období. | Zákazník – podrobná předvaha |
+| Tisk podrobné předvahy pro vybrané dodavatele. | Dodavatel – předvaha |
+| Tisk podrobné předvahy s podrobnými informacemi o jednotlivých položkách pro vybrané dodavatelé během vybraného období. | Dodavatel – podrobná předvaha |
+| Tisk předvahy s údaji za aktuální rok a předchozí rok. | Uzávěrková předvaha |
+| Tisk podrobné správy o předvahe pro zůstatky na finančních účtech. | Podrobná předvaha |
+| Tisk sestavy předvahy se zůstatky a čistými změnami pro účty hlavní knihy. | Předvaha |
+| Tisk předvahy pro konsolidovanou společnost | Konsolidovaná předvaha |
 
-To see a report, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, type the name as it appears in the table, and then choose the related link.
+Chcete-li zobrazit sestavu, vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte název, jak je uveden v tabulce, a poté vyberte související odkaz.
 
-## See Also
-[Closing Years and Periods](year-close-years-periods.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Uzavírání roků a období](year-close-years-periods.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
 
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]

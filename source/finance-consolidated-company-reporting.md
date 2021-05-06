@@ -1,122 +1,163 @@
 ---
 title: Consolidate Data from Multiple Companies | Microsoft Docs
-description: Get an summary view of the financial health across your business units.
-author: edupont04
+description: Get an summary view of the financial health accross your businesses.
+documentationcenter: ''
+author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: consolidation, subsidiaries, consolidate
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: bholtorf
 
 ---
 
-# Consolidating Financial Data from Multiple Companies
+# Konsolidování finančních dat z několika společností
+Pokud máte více než jednu společnost v [!INCLUDE[d365fin](includes/d365fin_md.md)], může vám zpráva o konsolidovaném zkušebním zůstatku v centru rolí Účetní poskytnout přehled o finančním zdraví celého vašeho podnikání.
 
-Some organizations use [!INCLUDE [prod_short](includes/prod_short.md)] in multiple business units or legal entities. Others use [!INCLUDE [prod_short](includes/prod_short.md)] in subsidiaries that must report into parent organizations. In both cases, the accountants use built-in tools to help consolidate the financial data.  
+Sestava kombinuje položky hlavní knihy z každé z vašich společností v nové společnosti, kterou vytvoříte, aby obsahovala konsolidovaná data. Tato společnost se obvykle označuje jako "konsolidovaná společnost". Konsolidovaná společnost je pouze kontejner pro konsolidovaná data a nemá žádná živá obchodní data. Společnosti, které zahrnete do konsolidované společnosti, se stanou **Účetními jednotkami** v sestavě.
 
-You can consolidate the general ledger entries of two or more separate companies (subsidiaries) into a consolidated company. Each individual company involved in a consolidation is called a business unit. The combined company is called the consolidated company.  
+Konsolidace finančních údajů může být důležitá zejména v souvislosti s vnitropodnikovými procesy. Pro více informací navštivte [Správa vnitropodnikových transakcí](intercompany-manage.md).
 
-You can import data into the consolidated company from other companies in the same [!INCLUDE [prod_short](includes/prod_short.md)] tenant, from tenants, or from files.  
+Můžete konsolidovat:
 
-If the financial statements of a business unit are in a different currency than those of the consolidated company, you must set up exchange rates for consolidation.  
+* Napříč společnostmi, které mají různé účetní osnovy.
+* Společnosti, které používají různé fiskální roky a různé měny.
+* Celú částku nebo procento finančních informací společnosti.
+* Použití různých směnných kurzů na jednotlivých finančních účtech.
 
-You can consolidate:  
+V závislosti na složitosti vašich podniků existují dva způsoby nastavení sestavy:
 
-* Across companies that have different charts of accounts.  
-* Companies that use different fiscal years and different currencies.  
-* Either the full amount or a percentage of a company's financial information
-* Using different currency exchange rates in individual G/L accounts
-* Companies in other accounting and business management programs
+* Pokud nepotřebujete pokročilá nastavení, jako je například zahrnutí společnosti, ve které vlastníte pouze část, můžete pomocí průvodce **Konsolidace společnosti** rychle nastavit konsolidaci. Průvodce vám pomůže projít základní kroky.
+* Pokud potřebujete pokročilejší nastavení, můžete si sami nastavit konsolidovanou společnost a účetní jednotky.
 
-You set up the consolidated company in the same way that you set up other companies. The chart of accounts is independent of the chart of accounts in the other business units, and the chart of accounts in the individual business units may differ from one another. You set up a list of companies to consolidate, verify the accounting data before consolidating, import from files or databases, and generate consolidation reports. For more information, see [Set Up Company Consolidation](finance-consolidated-company-reporting-setup.md).  
+## Jednoduché nastavení konsolidace
+Pokud je vaše konsolidace přímá, například proto, že zcela vlastníte účetní jednotky, které chcete konsolidovat, pomůže vám průvodce nastavením **Konsolidace společnosti** pomocí následujících kroků:
 
-> [!TIP]
-> Consolidating financial data may especially be relevant in connection with intercompany processes. For more information, see [Managing Intercompany Transactions](intercompany-manage.md).
+* Zvolte, zda chcete vytvořit novou konsolidovanou společnost nebo zda chcete konsolidovat data ve společnosti, kterou jste již pro konsolidaci vytvořili. Společnost by neměla obsahovat transakce.
+* Prohlédněte si náhled výsledků. [!INCLUDE[d365fin](includes/d365fin_md.md)] ověřuje, že hlavní data a transakce lze úspěšně převést do konsolidované společnosti.
 
-## Trial balance
+Chcete-li použít průvodce asistovaným nastavením, postupujte takto:
 
-If you have more than one company in [!INCLUDE[prod_short](includes/prod_short.md)], the **Consolidated Trial Balance** report can give you an overview of the financial health of your overall business.  
+1. V Centre rolí **Účetní** vyberte akci **Asistované nastavení**.
+2. Zvolte **Nastavit vykazování konsolidace** a pak dokončete každý krok v průvodci asistovaným nastavením.
 
-The report combines general ledger entries from each of your companies in a new company that you create to contain the consolidated data. This company is typically referred to as the "consolidated company". The consolidated company is just a container for the consolidated data, and does not have any live business data. The companies that you include in the consolidated company become **Business Units** in the report. For more information, see [Set Up Company Consolidation](finance-consolidated-company-reporting-setup.md).  
+## Postup nastavení rozšířené konsolidace
+Pokud pro svou konsolidaci potřebujete pokročilejší nastavení, můžete konsolidaci nastavit ručně. Máte-li například společnosti, které vlastníte pouze částečně, nebo máte společnosti, které nechcete zahrnout do konsolidace. Konsolidovanou společnost založíte stejným způsobem jako ostatní společnosti. Pro více informací navštivte [Příprava obchodování](ui-get-ready-business.md).
 
-## Consolidate data
+[!INCLUDE[d365fin](includes/d365fin_md.md)] umožňuje nastavit seznam společností pro konsolidaci, ověření účetních dat před jejich konsolidací, import souborů a generování konsolidačních sestav.
 
-The process of transferring the figures from the business units to the consolidated company is the actual *consolidation*. Before you do this, it is a good idea to check whether there are differences between the basic information in the business units and in the consolidated company. There are two reports that you can use to test the database and file.
+1. Přihlaste se do konsolidované společnosti.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní jednotky** a poté vyberte související odkaz.
+3. Vyberte **Nový** a vyplňte povinná pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-### To test the data before you consolidate
+> [!IMPORTANT]
+> Když vyplníte pole **Počáteční datum** a **Koncové datum**, ujistěte se, že dodržujete pravidla GAAP týkající se fiskálních období účetní jednotky proti mateřské společnost.
 
-You can test your data before you transfer it to the consolidated company. [!INCLUDE[prod_short](includes/prod_short.md)] looks for differences in the information in the business units and the consolidated company. For example, whether account numbers or dimension codes are different. You must correct errors before you can run the report. You can test the database or, if you are importing data from an XML file, you can test the file.  
+Pokud vaše účetní jednotka používá cizí měnu, musíte určit směnný kurz, který se použije při konsolidaci. Musíte také zadat informace o konsolidaci finančních účtů účetní jednotky. Tyto procesy jsou popsány v následujících částech.
 
-1. Open the consolidated company.  
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Business Units**, and then choose the related link.  
-3. Do one of the following:  
+### Příprava účtů hlavní knihy pro konsolidaci
+Pokud se účetní osnova v účetní jednotce liší od konsolidované společnosti, musíte pro konsolidaci připravit účty hlavní knihy. Můžete pro strany MD a Dal určit účty, na které se má účtovat a metodu, která se použije k převodu měn v konsolidované společnosti. To je užitečné například v případě, že sestavu často spouštíte.
 
-    * To test a file, choose the **Test File** action, enter the name of the file to test, and then choose **Print**.  
-    * To test the database, choose **Test Database**.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
+2. Otevřete kartu pro účet a poté vyplňte pole na záložce **Konsolidace**.
 
-### Run the consolidation
+### Upřesnění směnných kurzů pro konsolidaci
+Pokud účetní jednotka používá jinou měnu než konsolidovaná společnost, musíte před konsolidací zadat metody směnného kurzu pro každý účet. U každého účtu obsah pole **Způsob  převodu konsolidace** určuje směnný kurz. Na každé kartě účetní jednotky v poli **Tabulka směnných kurzů** určete, zda konsolidace použije směnné kurzy z obchodní jednotky nebo konsolidované společnosti. Pokud používáte směnné kurzy od konsolidované společnosti, můžete změnit směnné kurzy pro účetní jednotku. Pokud pro účetní jednotky obsahuje pole **Tabulka směnných kurzů** na kartě účetní jednotky hodnotu **Místní** můžete změnit směnný kurz z karty účetních jednotek. Směnné kurzy jsou zkopírovány z tabulky **Směnný kurz**, ale před konsolidací je můžete změnit.
 
-After you have tested the data, you can transfer it to the consolidated company.  
+Následující tabulka popisuje metody směnného kurzu, které můžete použít pro účty.
 
-1. Sign in to the consolidated company.  
-2. On the **Accountant Role Center**, choose the **Run Consolidation** action.  
-3. Fill in the required fields.  
-4. In the Filter section, set a filter for the relevant business unit or company name.  
-5. Optionally, schedule the report to run at a convenient time.  
+| Směnné kurzy | Typické použití |
+|---|---|
+| Průměrný kurz (ručně) | Ručně vypočítáte průměrný kurz za období, které má být konsolidováno. Vypočítejte průměr buď jako aritmetický průměr nebo jako nejlepší odhad a zadejte výsledek pro každou účetní jednotku. Používá se pro účty výsledovky. |
+| Uzavírací kurz | Používá se pro rozvahové účty. |
+| Poslední uzavírací kurz | Kurz platný na devizovém trhu k datu, ke kterému se sestavuje rozvaha nebo výsledovka. Tenhle kurz zadáváte pro každou účetní jednotku. Používá se pro rozvahové účty. |
+| Historický kurz | Směnný kurz platný v době, kdy došlo k transakci. |
+| Složený kurz | Částky za běžné období jsou přepočteny průměrným kurzem a připočteny k dříve zaznamenanému zůstatku v konsolidované společnosti. Tato metoda se obvykle používá pro účty nerozděleného zisku, protože zahrnují částky z různých období, a jsou tedy složením částek převedených s různými směnnými kurzy. |
+| Kurz cenných papíru | Je to podobné jako **Složený kurz**. Rozdíl je, že se účtuje na samostatné účty hlavní knihy. |
 
-## Eliminate repeated transactions
+Chcete-li určit směnné kurzy pro účetní jednotky, postupujte takto:
 
-After you have consolidated all the companies, you must find any transactions that are recorded more than once across companies and then post elimination entries to remove them.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní jednotky** a poté vyberte související odkaz.
+2. Na stránce **Přehled účetní jednotky** vyberte účetní jednotku a poté vyberte akci **Průměrný kurz (ručně)**.
+3. Na stránce **Změna směnného kurzu** byl obsah pole **Částka vztažného  sm.kurzu** zkopírován z tabulky **Směnný kurz**, ale můžete ho upravit. Zavřete stránku.
+4. Vyberte akci **Uzavírací kurz**.
+5. Do pole **Částka vztažného  sm.kurzu** zadejte směnný kurz.
 
-Processing consolidation eliminations is a manual process.  
+<!-- ### To include or exclude dimensions
 
-To eliminate repeated transactions:
+COMMENTING THIS OUT BECAUSE i CANNOT REPRODUCE THE SETTINGS. tHERE IS NO CONSOLIDATION CODE FIELD ON DIMENSIONS OR DIMENSIOIN VALUES.
 
-1. Find transactions that potentially need to be adjusted and enter general journal lines to eliminate them.
-2. Run the **G/L Consolidation Eliminations** report to help you assess the effect of the general journal lines before posting.
-3. Post the adjusting transactions.
+You can consolidate dimension information and general ledger accounts, as follows:
 
-The **G/L Consolidation Eliminations** report displays a tentative trial balance where you can simulate the consequences of eliminating entries by comparing the entries in the consolidated company with the eliminations that have been entered in the general journal.
+* To exclude dimension information in the consolidation, leave the **Consolidation Code** field blank, and do not choose dimensions in the **Copy Dimensions** fields in any consolidation functions or reports described later in this topic.
+* To include dimension information in the consolidation, leave the **Consolidation Code** field blank. However, the consolidation will only work if the dimension values in the business unit are the same as the consolidated company.
+* To consolidate the dimension value code in the business unit with a different dimension value code in the consolidated company, fill in the **Consolidation Code**. -->
 
-Before a business unit can be included in the report, it must be set up on the **Business Units** page and the **Consolidate** field must be selected.
+### Vyloučení společnosti z konsolidace
+Pokud nechcete zahrnout účetní jednotku do konsolidace, můžete ji vyloučit. Chcete-li to provést, přejděte na kartu účetní jednotky a zrušte zaškrtnutí políčka **Konsolidovat**.
 
-Each account appears on a line by itself, following the structure of the chart of accounts. An account is not shown if all the amounts on the line are 0. The following information is shown for each account:
+### Zahrnutí částečně vlastněné společnosti do konsolidace
+Pokud vlastníte pouze část společnosti, můžete zahrnout procento každé transakce, které odpovídá procentu společnosti, kterou vlastníte. Pokud například vlastníte 70 % společnosti, bude konsolidace zahrnovat 70 USD faktury za 100 USD. Chcete-li určit procento společnosti, kterou vlastníte, přejděte na kartu účetní jednotky a zadejte procento do pole **Konsolidace %**.
 
-* Account number
-* Account name.
-* If you have selected one or more business unit codes in the **Business Unit Code** field on the request page, a total is shown for the consolidated company excluding the selected business units and eliminations. If you have not filled in the **Business Unit Code** field, a total is shown for the consolidated company excluding eliminations.
-* If you have selected a business unit code in the **Business Unit Code** field on the request page, a total is shown for the imported entries from the business unit. If you have not filled in the **Business Unit Code** field, a total is shown for the posted eliminations in the consolidated company.
-* The total for the consolidated company with all the business units and all posted eliminations.
-* The eliminations to be made in the consolidated company, that is, the entries in the general journal that is selected on the request page.
-* The posting text copied from the general journal.
-* The consolidated company's total after the eliminations, if they are posted.
+### Testování dat před konsolidací
+Data můžete před přenosem do konsolidované společnosti otestovat. [!INCLUDE[d365fin](includes/d365fin_md.md)] hledá rozdíly v informacích v účetních jednotkách a konsolidované společnosti. Například zda se čísla účtů nebo kódy dimenzí liší. Před spuštěním sestavy je nutné opravit chyby. Databázi můžete otestovat nebo, pokud importujete data ze souboru XML, můžete otestovat soubor.
 
-## Export and import consolidated data between databases
+1. Otevřete konsolidovanou společnost.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní jednotky** a poté vyberte související odkaz.
+3. Proveďte jeden z následujících úkonů:
 
-If data for a business unit is in another database, you must export the data to a file before you can include it in the consolidation. Each company must be exported separately. For this purpose, use the **Export Consolidation** batch job.  
+   * Chcete-li testovat soubor, vyberte akci **Test souboru**,  zadejte název souboru, který chcete testovat, a poté vyberte **Tisk**.
+   * Chcete-li testovat databázi, vyberte **Test databáze**.
 
-> [!TIP]
-> Use the same process to export consolidated data that must be submitted to Dynamics 365 Finance, such as if the current business unit is a subsidiary and the parent company uses Dynamics 365 Finance.
+## Spuštění konsolidace
+Po otestování dat je můžete přenést do konsolidované společnosti.
 
-After you run the batch job, all entries in general ledger accounts are processed. For every combination of selected dimensions and date, the contents of the entries' **Amount** fields are totaled and exported. The next combination of selected dimensions and date with the same account number is processed, then the combinations in the next account number are processed, and so on.  
+1. Přihlaste se do konsolidované společnosti.
+2. V **Centru rolí Účetní** vyberte akci **Spustit konsolidaci**.
+3. Vyplňte povinná pole.
+4. V poli **Kde** vyberte **Název společnosti** a poté vyberte konsolidovanou společnost v poli **je**.
 
-The exported entries contain the following fields: **Account No.**, **Posting Date**, and **Amount**. If dimensions information was also exported, dimension codes and dimension values are also included.  
+## Odstranění opakovaných transakcí
+Po konsolidaci všech společností musíte najít všechny transakce, které jsou zaznamenány více než jednou mezi společnostmi, a potom zaúčtovat položky eliminace, abyste je odstranili.
 
-1. For each exported line, if the total of the **Amount** fields is a debit, the account number that is set up in the business unit's **Consol. Debit Acc.** field is exported to the line. If the total is a credit, the corresponding number in the **Consol. Credit Acc.** field is exported to the line.  
-2. The date used for each exported line is either the period's ending date or, if the transfer occurs each day, the exact date of the calculation.  
-3. The dimension value exported for the entry will be the consolidated company dimension value that is set up in the **Consolidation Code** field for that dimension value. If no consolidated company dimension value has been entered in the **Consolidated Code** field for that dimension value, the dimension value itself will be exported to the line.  
-4. The XML files also contain the currency exchange rates in the consolidation period. These rates are included in a separate section at the beginning of the file.  
+Zpracování eliminace konsolidace je manuální proces. Můžete postupovat takto:
+1. Najděte transakce, které je potenciálně nutné upravit, a zadejte řádky finančního deníku, abyste je odstranili.
+2. Spusťte sestavu **Eliminace fin. konsolidace**, která vám pomůže posoudit účinek řádků finančního deníku před účtováním.
+3. Zaúčtujte vyrovnávací transakce.
 
-## See Also
+Sestava **Eliminace fin. konsolidace** zobrazuje předběžnou zkušební bilanci, ve které můžete simulovat důsledky eliminace položek porovnáním položek v konsolidované společnosti s vyloučením, která byla zapsána do finančního deníku.
 
-[Set Up Company Consolidation](finance-consolidated-company-reporting-setup.md)  
-[Managing Intercompany Transactions](intercompany-manage.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Exporting Your Business Data to Excel](about-export-data.md)
+Předtím, než může být účetní jednotka zahrnuta do sestavy, musí být nastavena na stránce **Účetní jednotky** a musí být vybráno pole **Konsolidovat**.
+
+Každý účet se objeví na řádku samostatně podle struktury účetní osnovy. Účet se nezobrazí, pokud jsou všechny částky na řádku 0. Pro každý účet jsou zobrazeny následující informace:
+
+* Číslo účtu.
+* Název účtu.
+* Pokud jste vybrali jeden nebo více kódů účetních jednotek v poli **Kód účetní jednotky** na stránce požadavku, zobrazí se součet za konsolidovanou společnost bez vybraných účetních jednotek a vyloučení. Pokud jste nevyplnili pole **Kód účetní jednotky**, zobrazí se součet za konsolidovanou společnost bez vyloučení.
+* Pokud jste na stránce požadavku vybrali kód účetní jednotky v poli **Kód účetní jednotky**, zobrazí se součet importovaných položek z účetní jednotky. Pokud jste nevyplnili pole **Kód účetní jednotky**, zobrazí se celkový počet zaúčtovaných eliminací v konsolidované společnosti.
+* Součet pro konsolidovanou společnost se všemi účetními jednotkami a všemi zaúčtovanými eliminacemi.
+* Eliminace, které mají být provedeny v konsolidované společnosti, to znamená položky ve finančním deníku, které jsou vybrány na stránce požadavku.
+* Zaúčtování textu zkopírovaného z finančního deníku.
+* Konsolidovaná společnost po eliminaci, pokud je zaúčtována.
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Export a import konsolidovaných dat mezi databázemi
+Pokud jsou data pro účetní jednotku v jiné databázi, musíte je exportovat do souboru, než je můžete zahrnout do konsolidace. Každá společnost musí být exportována samostatně. Za tímto účelem použijte dávkovou úlohu **Export konsolidace**.
+
+Po spuštění dávkové úlohy jsou zpracovány všechny položky v účtech hlavní knihy. Pro každou kombinaci vybraných dimenzí a dat se obsah polí **Částka** sčítá a exportuje. Zpracovává se další kombinace vybraných dimenzí a dat se stejným číslem účtu, poté se zpracují kombinace v dalším čísle účtu atd.
+
+Exportované položky obsahují následující pole: **Číslo účtu**, **Zúčtovací datum** a **Částka**. Pokud byly exportovány také informace o dimenzích, jsou zahrnuty také kódy dimenzí a hodnoty dimenzí.
+
+1. Pokud je pro každý exportovaný řádek součet polí **Částka** MD, číslo účtu, které je nastaveno v poli účetní jednotky **Kons.  účet MD** je exportováno na řádek. Pokud je součet na straně Dal, odpovídající číslo v poli **Kons.  účet Dal** je exportováno na řádek.
+2. Datum použitý pro každý exportovaný řádek je buď datum ukončení období, nebo, pokud dojde k převodu každý den, přesné datum výpočtu.
+3. Hodnota dimenze exportovaná pro položku bude konsolidovaná hodnota dimenze společnosti, která je nastavena v poli **Kód konsolidace** pro tuto hodnotu dimenze. Pokud nebyla do pole **Kód konsolidace** pro tuto hodnotu dimenze zadána žádná konsolidovaná hodnota dimenze společnosti, bude hodnota dimenze exportována do řádku.
+4. Soubory XML také obsahují směnné kurzy měn v konsolidačním období. Tyto sazby jsou zahrnuty v samostatné části na začátku souboru.
+
+## Viz také
+[Správa vnitropodnikových transakcí](intercompany-manage.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Export vašich obchodních dat do Excelu](about-export-data.md)

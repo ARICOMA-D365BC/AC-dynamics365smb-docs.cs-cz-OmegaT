@@ -1,50 +1,52 @@
 ---
-title: Job Tasks using Resources and Time Sheets| Microsoft Docs
-description: Outlines how to use resources, time sheets, and jobs to manage projects.
-author: edupont04
+title: Úlohy na projektu s využitím zdrojů a pracovních výkazů | Dokumenty aplikace Microsoft
+description: 'Popisuje způsob použití zdrojů, pracovních výkazů a úloh pro správu projektů.'
+services: project-madeira
+documentationcenter: ''
+author: ZdenekBicek
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: projects
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.date: 01/17/2020
+ms.reviewer: v-zdbice
+ms.author: sgroespe
 ---
-# Project Management
-In [!INCLUDE[prod_short](includes/prod_short.md)], you can perform common project management tasks, such as configuring a job and scheduling a resource, as well as providing the information needed to manage budgets and monitor progress. You can track machine and employee hours on the project by using time sheets. As a project manager, you have a good overview, not only of individual jobs, but also of the allocation of employees, machinery and other resources being used in all projects.
+# Správa projektů
 
-Before you can use [!INCLUDE[prod_short](includes/prod_short.md)] to manage projects, you must set up resources, time sheets, and jobs. For more information, see [Setting Up Project Management](projects-setup-projects.md).  
+V aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete provádět běžné úkoly správy projektů, jako je například definice projektu a plánování zdrojů, a také poskytování informací potřebných pro správu rozpočtu a sledování průběhu. Můžete sledovat odpracované hodiny strojů a zaměstnanců na projektu pomocí pracovních výkazů. Jako vedoucí projektu máte dobrý přehled nejen jednotlivých projektech, ale také o přidělení zaměstnanců, strojů a dalších zdrojů používaných ve všech projektech.
 
-The following table describes a sequence of tasks, with links to the topics that describe them.
+Před použitím [!INCLUDE[d365fin](includes/d365fin_md.md)] pro správu projektů je nutné nastavit zdroje, pracovní výkazy a projekty. Pro více informací navštivte [Nastavení správy projektů](projects-setup-projects.md).  
 
-| To | See |
+Následující tabulka popisuje přehled úloh s odkazy na témata, které je popisují.
+
+| Funkce | Odkaz |
 | --- | --- |
-| Create jobs, assign job tasks, and prepare job planning lines. |[Create Jobs](projects-how-create-jobs.md) |
-| Allocate resources to jobs and manage resource prices. |[Use Resources for Jobs](projects-how-use-resources.md) |
-| Create a time sheet with integrated job task and planning lines and post time sheet lines to a job journal. |[Use Time Sheets for Jobs](projects-how-use-time-sheets.md) |
-| Budget for resources to be used in jobs and compare actual item and resource usage to budgeted usage to improve the quality and cost efficiency of future projects. |[Manage Job Budgets](projects-how-manage-budgets.md) |
-| Review and record usage on various parts of your job, which is automatically updated as you modify and transfer information from job planning lines to job journals or job invoices for posting. |[Record Usage for Jobs](projects-how-record-job-usage.md) |
-| Purchase supplies for a job, either on purchase orders or invoices, and record item and time usage. |[Manage Job Supplies](projects-how-manage-project-supplies.md) |
-| Learn about WIP (Work in Process), a feature that ensures correct financial statements and enables you to estimate the financial value of jobs that are ongoing. |[Understanding WIP Methods](projects-understanding-wip.md) |
-| Post the consumption of materials, resources, and other expenses of job work in process (WIP) to monitor its financial value and to maintain correct financial statements even though you post job expenses before invoicing the job. |[Monitor Job Progress and Performance](projects-how-monitor-progress-performance.md) |
-| Record job costs for resource usage, materials, and job-related purchases on an on-going basis and invoice the customer, either when the job is finished or according to an invoicing schedule. |[Invoice Jobs](projects-how-invoice-jobs.md) |
+|Vytvoření projektů, přiřazení úloh projektu a příprava řádků plánování projektu. |[Vytváření projektů](projects-how-create-jobs.md)|
+|Přiřazení zdrojů k projektům a správa cen zdrojů pro projekty. |[Použití zdrojů pro projekty](projects-how-use-resources.md)|
+|Vytvoření pracovního výkazu s integrovanými úkoly projektu a řádky plánování a zaúčtování řádků pracovního výkazu do deníku projektů.|[Použití pracovních výkazů pro projekty](projects-how-use-time-sheets.md)|
+|Rozpočet pro zdroje, které mají být použity v projektech, a porovnání skutečného použitím zboží a zdrojů s rozpočtem za účelem zvýšení kvality a nákladové efektivity budoucích projektů. |[Správa rozpočtů projektu](projects-how-manage-budgets.md) |
+|Kontrola a evidence spotřeby v různých částech projektu, které se automaticky aktualizují při úpravách a přenosu informací z řádků plánování projektu do deníků projektů nebo faktur projektu k zaúčtování.|[Evidence spotřeby na projekty](projects-how-record-job-usage.md)|
+|Nákup dodávek pro projekt, buď na nákupních objednávkách nebo fakturách a účtování spotřeby zboží a času.|[Správa dodávek projektu](projects-how-manage-project-supplies.md)|
+|Nedokončená výroba (NV) projektu, funkce pro zajištění správných finančních výkazů a odhad finanční hodnoty probíhajících prací.|[Metody nedokončené výroby](projects-understanding-wip.md)|
+|Zaúčtování spotřeby materiálů, zdrojů a dalších nákladů do nedokončené výroby (NV) ke sledování její finanční hodnoty a k udržování správných finančních výkazů, při účtování výdajů na projekt před fakturací projektu.|[Sledování průběhu a výkonu projektu](projects-how-monitor-progress-performance.md)|
+|Průběžná evidence nákladů na použité zdroje, materiál a nákupy souvisejících s projektem a fakturace zákazníkovi, a to buď po dokončení projektu nebo podle plánu fakturace.|[Fakturace projektů](projects-how-invoice-jobs.md) |
 
-## Get started with projects
+## Začínáme s projekty
 
-Project management is complicated enough in itself, and learning how to create jobs and managing work in process in a new tool can be another complication. To help you get started with project management in [!INCLUDE[prod_short](includes/prod_short.md)], you can see [a video about creating jobs](https://www.youtube.com/watch?v=VqaPWr7BWmw) on the [!INCLUDE[prod_short](includes/prod_short.md)] YouTube channel.  
+Řízení projektů je samo o sobě dost komplikované a další komplikací může být učení se, jak vytvářet projekty a řídit nedokončenou výrobu v novém nástroji. Abyste mohli začít se správou projektů v [!INCLUDE [prodshort](includes/prodshort.md)], můžete se podívat na [video o vytváření projektů](https://www.youtube.com/watch?v=VqaPWr7BWmw ) na YouTube kanálu [!INCLUDE [prodshort](includes/prodshort.md)].
 
-## See Also
+## Viz také
 
-[Setting Up Project Management](projects-setup-projects.md)  
-[Video: How to create a job in Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Sales](sales-manage-sales.md)  
+[Nastavení správy projektů](projects-setup-projects.md)  
+[Video: Jak vytvořit projekt v Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)  
+[Změna zobrazovaných funkcí](ui-experiences.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Prodej](sales-manage-sales.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Práce s[!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

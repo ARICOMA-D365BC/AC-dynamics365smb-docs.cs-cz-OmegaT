@@ -4,65 +4,62 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Design Details: Planning Assignment Table
-All items should be planned for, however, there is no reason to calculate a plan for an item unless there has been a change in the demand or supply pattern since the last time a plan was calculated.  
+# Detaily návrhu: Tabulka přiřazení plánování
+Všechno zboží by měly být plánovány, ale není důvod pro výpočet plánu pro zboží, pokud nedošlo ke změně ve struktuře poptávky nebo nabídky od posledního výpočtu plánu.
 
-If the user has entered a new sales order or changed an existing one, there is reason to recalculate the plan. Other reasons include a change in forecast or the desired safety stock quantity. Changing a bill of material by adding or removing a component would most likely indicate a change, but for the component item only.  
+Pokud uživatel zadal novou prodejní zakázku nebo změnil stávající, existuje důvod k přepočítání plánu. Mezi další důvody patří změna v prognóze nebo požadované množství bezpečných zásob. Změna kusovníku přidáním nebo odebráním komponenty by s největší pravděpodobností znamenala změnu, ale pouze pro položku komponenty.
 
-For multiple locations, the assignment takes place at the level of item per location combination. If, for example, a sales order has been created at only one location, application will assign the item at that specific location for planning.  
+Pro více skladových míst se přiřazení provádí na úrovni zboží podle kombinace skladového místa. Pokud byla například prodejní objednávka vytvořena pouze v jedné lokaci, aplikace přiřadí zboží v tomto konkrétním skladovém místě k plánování.
 
-The reason for selecting items for planning is a matter of system performance. If no change in an item’s demand-supply pattern has occurred, the planning system will not suggest any actions to be taken. Without the planning assignment, the system would have to perform the calculations for all items in order to find out what to plan for, and that would drain system resources.  
+Důvodem pro výběr zboží pro plánování je otázka výkonu systému. Pokud nenastane žádná změna ve struktuře nabídky-poptávky, plánovací systém nenavrhne žádné kroky, které mají být podniknuty. Bez přiřazení plánování by systém musel provést výpočty pro všechny položky, aby zjistil, na co se plánuje, a to by vyčerpalo systémové prostředky.
 
-The **Planning Assignment** table monitors demand and supply events and assigns the appropriate items for planning. The following events are monitored:  
+Tabulka **Přiřazení plánováním** sleduje události poptávky a nabídky a přiřadí příslušné zboží pro plánování. planning. Sledovány jsou následující události:
 
-* A new sales order, forecast, component, purchase order, production order, assembly order, or transfer order.  
-* Change of item, quantity, location, variant, or date on a sales order, forecast, component, purchase order, production order, assembly order, or transfer order.  
-* Cancellation of a sales order, forecast, component, purchase order, production order, assembly order, or transfer order.  
-* Consumption of items other than planned.  
-* Output of items other than planned.  
-* Unplanned changes in inventory.  
+* Nová prodejní objednávka, prognóza, komponenta, nákupní objednávka, výrobní zakázka, montážní zakázka nebo objednávka transferu.
+* Změna zboží, množství, umístění, varianty nebo data v prodejní objednávce, prognóze, komponentě, nákupní objednávce, výrobní zakázce, montážní objednávce nebo v objednávce transferu.
+* Zrušení prodejní objednávky, prognózy, komponenty, nákupní objednávky, výrobní zakázky, objednávky sestavy nebo objednávky transferu.
+* Spotřeba jiných než plánovaných položek.
+* Produkce jiného zboží, než bylo plánováno.
+* Neplánované změny ve skladu.
 
-For these direct supply-demand displacements, the order tracking and action messaging system maintains the Planning Assignment table and states a planning reason as an action message.  
+U těchto přímých přesunů nabídky a poptávky systém sledování objednávek a zasílání zpráv o akci udržuje tabulku přiřazení plánování a uvádí jako důvod akce plánovací důvod.
 
-The following changes in master data can also cause a planning imbalance:  
+Následující změny v kmenových datech mohou také způsobit nerovnováhu při plánování:
 
-* Change of status to Certified in the production BOM header (for all items using that header).  
-* Deleted line (child item).  
-* Change of status to Certified in the routing header (for all items using that routing).  
-* Changes in the following item card fields.  
-* Safety Stock Quantity or Safety Lead Time.  
-* Lead Time Calculation.  
-* Reorder Point.  
-* Production BOM No. (and all children of old BOM reference).  
-* Routing No.  
-* Reordering Policy.  
+* Změna stavu na Certifikované v hlavičce výrobního kusovníku (pro všechno zboží používající tuto hlavičku).
+* Smazaný řádek (podřízené zboží).
+* Změna stavu na Certifikované v hlavičce technologického postupu (pro všechno zboží používající tento postup).
+* Změny v následujících polích karty zboží.
+* Minimální zásoby nebo Bezpečná průběžná doba.
+* Výpočet dodací doby.
+* Bod přiobjednání.
+* Číslo výrobního kusovníku. (a všechno podřízené zboží starého kusovníku).
+* Číslo TNG postupu
+* Způsob přiobjednání
 
-In these cases, a new function, Planning Assignment Management, maintains the table and states the planning reason as Net Change.  
+V těchto případech nová funkce správa přiřazení plánováním, udržuje tabulku a uvádí důvod plánování jako Čistá změna.
 
-The following changes do not cause a planning assignment:  
+Následující změny nezpůsobují změny v přiřazení plánování:
 
-* Calendars  
-* Other planning parameters on the item card  
+* Kalendáře
+* Další parametry plánování na kartě zboží
 
-When calculating an MPS or an MRP, the following restrictions apply:  
+Při výpočtu MPS nebo MRP platí následující omezení:
 
-* MPS: The planning system checks that the item carries a demand forecast or a sales order. If not, the item is not included in the plan.  
-* MRP: If the planning system detects that the item is being replenished by an MPS planning line or MPS supply order, the item will be left out of the planning. However, any demand from relevant components is included.  
+* MPS: Plánovací systém kontroluje, zda položka nese předpověď poptávky nebo prodejní objednávku. Pokud ne, položka není zahrnuta do plánu.
+* MRP: Pokud plánovací systém zjistí, že zboží je doplňováno plánovacím řádkem MPS nebo objednávkou dodávek MPS, bude zboží vynecháno z plánování. Zahrnuta je však veškerá poptávka po příslušných komponent.
 
-## See Also  
-[Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md)   
-[Design Details: Handling Reordering Policies](design-details-handling-reordering-policies.md)   
-[Design Details: Transfers in Planning](design-details-transfers-in-planning.md)   
-[Design Details: Planning Parameters](design-details-planning-parameters.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Detaily návrhu: Vyvažování poptávky a nabídky](design-details-balancing-demand-and-supply.md)   
+[Detaily návrhu: Používání způsobu přiobjednání](design-details-handling-reordering-policies.md)   
+[Detaily návrhu: Plánování transferů](design-details-transfers-in-planning.md)   
+[Detaily návrhu: Plánovací parametry](design-details-planning-parameters.md)

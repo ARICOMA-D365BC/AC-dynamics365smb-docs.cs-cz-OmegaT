@@ -1,94 +1,94 @@
 ---
-title: Getting Started
-description: Get to know Business Central's capabilities and work scenarios so that you can get off to a good start.
-author: edupont04
+title: Začínáme | Microsoft Docs
+description: Zjistěte více o možnostech a pracovních scénářích v Business Central, řešení podnikového řízení pro malé a střední organizace.
+author: v-pejano
 
 ms.service: dynamics365-business-central
 ms.topic: get-started-article
 ms.search.keywords: setup wizard
-ms.date: 10/01/2020
+ms.date: 01/06/2020
+ms.reviewer: v-pejano
 ms.author: edupont
-
 ---
-# Getting Started with [!INCLUDE[prod_long](includes/prod_long.md)]
-[!INCLUDE[prod_short](includes/prod_short.md)] is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Signing up is easy, and you can migrate existing business data from your legacy system.  
+# Začínáme s [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)]
 
-To help you with your subscription, find a [!INCLUDE[prod_short](includes/prod_short.md)] partner. For more information, see [How do I find a reselling partner?](across-faq.md#findpartner).  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] je řešení pro správu podnikání pro malé a střední organizace, které automatizuje a zjednodušuje obchodní procesy a pomáhá vám spravovat vaše podnikání. Registrace je snadná a můžete přesunout stávající obchodní data z původního systému.
 
-When you sign up for [!INCLUDE[prod_short](includes/prod_short.md)], you get access to a demonstration company. The demonstration company contains sample data, but you can create new sales documents, for example, or set up a bank account. However, if you want to use [!INCLUDE[prod_short](includes/prod_short.md)] to help run your business, you must contact a [!INCLUDE[prod_short](includes/prod_short.md)] reselling partner and buy a subscription. For more information about trials and subscriptions, see [Trials and Subscriptions](across-preview.md).  
+Pro pomoc s Vaším předplatným vyhledejte [!INCLUDE[d365fin](includes/d365fin_md.md)] partnera. Pro více informací běžte na [Jak najdu obchodního partnera?](across-faq.md#findpartner).  
 
-## Get to know [!INCLUDE[prod_short](includes/prod_short.md)]
+Pokud si zaregistrujete [!INCLUDE[d365fin](includes/d365fin_md.md)], dostanete přístup k demonstrační společnosti. Demonstrační společnost obsahuje ukázkové údaje, ale můžete například vytvořit vlastní prodejní doklady nebo si založit bankovní účet. Chcete-li však použít [!INCLUDE[prodshort](includes/prodshort.md)], aby vám pomohl řídit vaše podnikání, musíte kontaktovat prodejce [!INCLUDE[prodshort](includes/prodshort.md)] a zakoupit si předplatné. Další informace o zkušebních verzích a předplatných najdete v části [Zkušební verze a předplatné](across-preview.md).
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], some things will be familiar to you, and other things might be unfamiliar. For some quick, nice-to-know tricks, see:  
+## Seznamte se s [!INCLUDE[d365fin](includes/d365fin_md.md)]
 
-* [Find things](ui-search.md)  
-* [Searching, Filtering, and Sorting Lists](ui-enter-criteria-filters.md)  
-* [Entering Data](ui-enter-data.md)  
+V [!INCLUDE[d365fin](includes/d365fin_md.md)], Vám některé věci budou známy a jiné zase ne. Některé rychlé, příjemné triky naleznete v:  
 
-For more information, see [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md).  
+* [Vyhledávání funkcí](ui-search.md)  
+* [Řazení, vyhledávání a filtrování](ui-enter-criteria-filters.md)  
+* [Vkládání dat](ui-enter-data.md)  
+
+Pro další informace se podívejte na [Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md).  
 
 > [!TIP]  
-> You can always get back to the Role Center by selecting the company name in the upper left corner.
+> Zpět do centra rolí se dostanete kliknutím na název společnosti v horním levém rohu.
 
-In the demonstration company, the Business Manager and Accountant Role Centers include the Getting Started tile and the Product Videos tile. Both tiles launch pages where you can choose between different videos that can help you get started with different aspects of [!INCLUDE[prod_short](includes/prod_short.md)]. You can find more videos on our YouTube channel. For more information, see [Visit Our Video Library](across-videos.md). You can also find eLearning content for the base version of [!INCLUDE[prod_short](includes/prod_short.md)] on [Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs). If you want more assistance, contact a [!INCLUDE[prod_short](includes/prod_short.md)] partner.  
+V demonstrační společnosti role Obchodní ředitel a Účetní obsahují dlaždice Začínáme a Videa o produktech. Obě dlaždice spouštějí stránky, kde si můžete vybrat mezi různými videí, která vám pomohou začít s různými oblastmi [!INCLUDE [prodshort](includes/prodshort.md)]. Na našem YouTube kanálu najdete další videa. Další informace naleznete v části [Navštivte naši video knihovnu](across-videos.md). eLearningový obsah najdete také pro základní verzi [!INCLUDE [prodshort](includes/prodshort.md)] na [Microsoft Learn](/learn/browse/?products=dynamics-business-central). Pokud potřebujete další pomoc, kontaktujte  [!INCLUDE[d365fin](includes/d365fin_md.md)] partnera [zde](https://www.microsoft.com/en-us/solution-providers/search).
 
-When you are ready to start working and you want to look at some of the business processes that [!INCLUDE[prod_short](includes/prod_short.md)] supports, see [Business Functionality](across-business-functionality.md).
+Pokud jste připravení začít pracovat a chcete se podívat na některé z obchodních procesů, které [!INCLUDE[d365fin](includes/d365fin_md.md)] podporuje, běžte na [Obchodní funkcionality](across-business-functionality.md).
 
-Before you can begin to use functionality, certain setup must be made. To get started, simply choose the ![Sprocket icon to open the Settings menu](media/ui-experience/settings_icon_small.png) icon, and then the **Assisted Setup** action. For more information, see also [Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md).  
+Než začnete používat funkce, musíte provést určité nastavení. Pro další informace se podívejte také na
+[Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md).  
 
 > [!TIP]
-> Some setup steps can be performed semi-automatically by using assisted setup guides. Others required manual setup, and you can find a list in the **Advanced Settings** page.
+> Některé kroky nastavení lze provést poloautomaticky pomocí asistovaných průvodců nastavením.
 
-<!--Some Role Center pages provide a **Setup and Extensions** button. Here you have access to a list of assisted setup guides that can help you get started by setting selected areas up quickly. If an area is not covered by an assisted setup, choose the **Manual Setup** action to access setup pages where you can fill in setup fields for all areas manually. For more information, see also [Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md).  
+Přehled současných možností a toho, co se chystá, najdete v našich dokumentech k vydání na  [Microsoft Dynamics 365 Business Central Release Notes](https://go.microsoft.com/fwlink/?linkid=2047422).  
 
-> [!NOTE]
-> The list of setup guides, extensions, and services that are available differ depending on the user experience you choose for your company. The **Essential** experience gives access to fewer than the **Premium** experience does. The first time you sign in, you use the Essential experience. For more information, see [Change Which Features are Displayed](ui-experiences.md).  -->
+## Centra rolí
 
-For an overview of current capabilities and what is coming, take a look at our release plan at [Microsoft Dynamics 365 Business Central Release Plan](https://go.microsoft.com/fwlink/?linkid=2047422).  
+Stránka Centrum rolí je založena na roli, která Vám umožní rychlý přístup k podnikovým procesům a nástrojům inteligence, které potřebujete pro Vaši práci. Například účetní může sledovat platby a schvalování a zobrazit grafy výkonnosti financí. Vyzkoušejte různá Centra rolí pomocí tlačítka  **Nastavení** ![Nastavení](media/ui-experience/settings_icon_small.png "") v pravém horním rohu, dále vyberte **Má nastavení**, klikněte na Centrum rolí k přehledu rolí. Chcete-li provést změnu, přihlaste se znovu. Pro další informace se podívejte na [Změna základního nastavení](ui-change-basic-settings.md).
 
-## The Role Centers
-The Role Center page is based on a role-centric design to give you fast access to the business process and intelligence tools that you need to do your job. For example, an accountant can monitor payments and approvals, and view finance performance charts. Find out what your current role gives access to with the role explorer. For more information, see [Finding Pages with the Role Explorer](ui-role-explorer.md). Check out the various Role Centers by choosing the **Settings** icon ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center") in the top right corner, choosing **My Settings**, and then the Role Center to explore. You are automatically signed out and in again to apply the change. For more information, see [Change Basic Settings](ui-change-basic-settings.md).  
+Některá centra rolí obsahují tlačítko **Nastavení a Rozšíření**. Zde máte přístup k seznamu průvodce asistovaným nastavením, který vám pomůže začít rychlým nastavením vybraných oblastí. Pokud není požadovaná oblast pokryta pomocí asistovaných nastavením, vyberte akci **Manuální nastavení** pro přístup na  nastavovací stránky, kde můžete ručně vyplnit daná pole pro nastavení všech oblastí. Pro další informace se podívejte na [Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md).  
 
-## Trying things out in your own company
-Thinking about subscribing? You can easily change from the demonstration company, and create and work in a company of your own. This is a great way to start toward a subscription. Setups for finances are provided; you just need to create or import your customers, vendors, and the products or services that you sell. After that, you're ready to post invoices and use business intelligence tools to analyze your business. You can use your company for free for a 30-day trial period. If you subscribe to [!INCLUDE[prod_short](includes/prod_short.md)] during that time, you're already up and running. You can continue with the work you did during the trial.  
+> [!NOTE]  
+> Seznam průvodců nastavení, rozšíření a služeb, které jsou k dispozici se liší v závislosti na uživatelském prostředí, jaké si vyberete pro svou společnost. **Essential** nabízí menší přístup v aplikaci než **Premium**. Při prvním přihlašování používáte Essentials. Pro další informace se podívejte na [Změna zobrazovaných funkcí](ui-experiences.md).  
 
-To create a company to try things out, go to the **My Settings** menu in the top right corner, and change the company to **My Company**. Sign out of [!INCLUDE[prod_short](includes/prod_short.md)] and then sign in again to apply the change. An assisted setup guide will help you provide basic information about your company. When that's done, explore the Role Center and find the **Assisted Setup** action.  
+## Vyzkoušejte si věci ve vaší vlastní společnosti
 
-You can also contact a Dynamics 365 reselling partner. For more information, see [How do I find a reselling partner?](across-faq.md#findpartner).  
+Přemýšlíte nad předplatným? Můžete snadno provést změnu z Vaší demonstrační společnost, jednoduše si můžete vytvořit novou vlastní a pracovat s ní. Je to skvělý způsob, jak začít s předplatným. Nastavení financí jsou již nachystány, stačí pouze vytvořit nebo importovat zákazníky, dodavatele, zboží nebo služby, které prodáváte. Poté jste připraveni k účtování faktur a použít nástroje BI k analýze vašeho podnikání. Vaši společnost můžete používat zdarma ve zkušebním období 30 dnů. Pokud se během této doby přihlásíte k předplatnému [!INCLUDE[d365fin](includes/d365fin_md.md)], již budete v aktivním provozu. Budete moci pokračovat v práci, kterou jste udělali v rámci zkušebního období.  
 
-## Getting answers to questions
+K vytvoření zkušební společnosti, běžte do menu **Má nastavení** v pravém horním rohu a změňte společnost na **Má společnost**. Odhlašte se z [!INCLUDE[d365fin](includes/d365fin_md.md)] a poté se přihlaste znovu pro provedení změn. Průvodce asistovaným nastavením Vám pomůže zadat základní informace o vaší společnosti. Jakmile nastavení bude hotové, prohlédněte si Centrum rolí a najděte akci **Asistovaná nastavení**.  
 
-If you are not sure how to do something in [!INCLUDE[prod_short](includes/prod_short.md)], you can hopefully find the answer either from reading the tooltip for the field that you are unsure of, or by reading the content by opening the *Learn more* link in a tooltip (use the keyboard shortcut Ctrl+F1 ). You can also get to the documentation by choosing the related link in the [Help and Support page](product-help-and-support.md).  
+Alternativně najděte [!INCLUDE[d365fin](includes/d365fin_md.md)] partnera [zde](https://www.microsoft.com/en-us/solution-providers/search). 
 
-All fields in [!INCLUDE[prod_short](includes/prod_short.md)] are described in tooltips. You can access tooltips by choosing the name of the field. For example, in a page like the **Customer Card**, simply choose the name of the field to read the tooltip. In a list such as the **Customers** list, or the lines in a document such as a sales order, you have to choose the drop-down menu to the right of the name of the column and then choose the **What's this?** menu item.  
+## Odpovědi na otázky
 
-If you have additional questions, we recommend that you ask the community or contact your reselling partner. For more information, see [Where do I go if I have questions?](across-faq.md#where-do-i-go-if-i-have-questions).  
+Pokud si nejste jisti, jak něco udělat v [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete snadno najít odpověď buď přečtením popisku pole nebo přečtením obsahu pomocí odkazu *Další informace* v popisku (použijte klávesovou zkratku Ctrl+F1 ).K dokumentaci se také můžete dostat výběrem příslušného odkazu v nabídce [Nápověda a podpora](product-help-and-support.md).
 
-## Ready to subscribe?
+Všechna pole v [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou popsána pomocí tooltipů (popisek pole). K tooltipu se dostanete najetím myší na název pole. Například na stránce, jako je **Karta zákazníka**, jednoduše vyberte název pole a přečtěte si nápovědu. Na přehledech, například v seznamu **Zákazníci**, nebo v řádcích v dokumentu, jako je například prodejní objednávka, musíte vybrat rozbalovací nabídku napravo od názvu sloupce a poté zvolit možnost **Co je to?**.  
 
-Each time you sign in during the trial period, a notification in a blue bar at the top displays the time remaining. If you decide to subscribe, you must contact a Dynamics 365 reselling partner. For more information, see [How do I find a reselling partner?](across-faq.md#findpartner) and [[!INCLUDE[prod_long](includes/prod_long.md)] Trials and Subscriptions](across-preview.md).  
+Pokud máte další otázky, doporučujeme se zeptat komunity nebo kontaktovat Vašeho partnera. Pro další informace se podívejte na [Kam mám jít, pokud mám dotazy?](across-faq.md#where-do-i-go-if-i-have-questions).  
 
-## Other Dynamics 365 apps
-Navigate to content about the other Dynamics 365 apps by choosing the [Dynamics 365](/dynamics365/) link in the black banner at the top of this page. You can also learn more at the [Dynamics 365 Business Central website](https://dynamics.microsoft.com/business-central/overview/).  
+## Jste připraveni na předplatné?
 
-## See Related Training at [Microsoft Learn](/learn/paths/get-started-dynamics-365-business-central/)
+Pokaždé, když se během zkušebního období přihlásíte, oznámení v modrém pruhu nahoře zobrazuje zbývající dobu. Pokud se rozhodnete pro předplatné, najděte [!INCLUDE[d365fin](includes/d365fin_md.md)] partnera [zde](https://www.microsoft.com/en-us/solution-providers/search). Také můžete kontaktovat [[!INCLUDE[d365fin](includes/d365fin_md.md)]Prodejní tým](https://go.microsoft.com/fwlink/?linkid=828707).  
 
-## See Also
+## Ostatní aplikace Dynamics 365
 
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as my Business Inbox in Outlook](admin-outlook.md)  
-[Getting [!INCLUDE[prod_short](includes/prod_short.md)] on Your Mobile Device](install-mobile-app.md)  
-[[!INCLUDE[prod_long](includes/prod_long.md)] Trials and Subscriptions](across-preview.md)  
-[Resources for Help and Support](product-help-and-support.md)  
-[Dynamics 365 Business Central on Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs)  
-[How do I find a reselling partner?](across-faq.md#findpartner)
-[Dynamics 365 Documentation](/dynamics365/)  
-[Microsoft Dynamics 365 Business Central Release Plan](https://go.microsoft.com/fwlink/?linkid=2047422)  
+Přejděte na obsah dalších aplikací Dynamics 365 výběrem odkazu [Dynamics 365](https://docs.microsoft.com/dynamics365) na modrém proužku v horní části této stránky. Více se toho  můžete dozvědět na webové stránce [Dynamics 365 Business Central](https://dynamics.microsoft.com/en-us/business-central/overview/).
+
+## Související školení na [Microsoft Learn](/learn/paths/get-started-dynamics-365-business-central/)
+
+## Viz také
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md)  
+[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření](ui-extensions.md)  
+[Použití [!INCLUDE[d365fin](includes/d365fin_md.md)] jako mojí obchodní schránky v aplikaci Outlook](admin-outlook.md)  
+[Získání [!INCLUDE[d365fin](includes/d365fin_md.md)] na mobilním zařízení](install-mobile-app.md)  
+[[!INCLUDE[d365fin_long](includes/d365fin_long_md.md)] zkušební verze a předplatné](across-preview.md)  
+[Zdroje pro nápovědu a podporu](product-help-and-support.md)  
+[Dynamics 365 Business Central na Microsoft Learn](/learn/browse/?products=dynamics-business-central)  
+[Dokumentace Dynamics 365](https://docs.microsoft.com/en-us/dynamics365/)  
+[Microsoft Dynamics 365 Business Central Poznámky k vydání](https://go.microsoft.com/fwlink/?linkid=2047422)  
 [Microsoft Dynamics 365 Business Central](https://go.microsoft.com/fwlink/?linkid=828707)  
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

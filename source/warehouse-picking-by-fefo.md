@@ -1,50 +1,49 @@
 ---
     title: How to Enable Picking by FEFO | Microsoft Docs
     description: First-Expired-First-Out (FEFO) is a sorting method that ensures that the oldest items, those with the earliest expiration dates, are picked first.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2019
+    ms.author: sgroespe
 
 ---
-# Enable Picking Items by FEFO
-First-Expired-First-Out (FEFO) is a sorting method that ensures that the oldest items, those with the earliest expiration dates, are picked first.  
+# Povolení vyskladnění pomocí FEFO
+First-Expired-First-Out (FEFO - První expiruje, první ven) je metoda třídění, která zajišťuje, že se nejdříve vyberou nejstarší položky, které mají nejstarší data vypršení platnosti.
 
- This functionality only works when the following criteria are met:  
+Tato funkce funguje, pouze pokud jsou splněna následující kritéria:
 
--   The item must have a serial/lot number.  
--   On the item’s item tracking code setup, the **SN Warehouse Tracking** field or the **Lot Warehouse Tracking** field must be selected.  
--   The item must be posted to inventory with an expiration date.  
--   On the location card, the **Require Pick** check box must be selected.  
--   On the location card, the **Pick According to FEFO** check box must be selected.  
--   On the location card, the **Bin Mandatory** check box must be selected.  
+- Zboží musí mít sériové číslo/číslo šarže.
+- U zboží nastavením kódu sledování zboží je nutné vybrat pole **sledování skladu specifické pro s.č.** nebo **Sledování skladu specifické pro šarži**.
+- Zboží musí být zaúčtováno do skladu s datem expirace.
+- Na kartě lokace musí být zaškrtnuté políčko **Vyžadovat vyskladnění**.
+- Na kartě lokace musí být zaškrtnuté políčko **Vyskladnění podle metody FEFO**.
+- Na kartě umístění musí být zaškrtnuto políčko **Přihrádka nutná**.
 
- When all the criteria are met, then serial/lot-numbered items to be picked are sorted with the oldest first in all picks and movements, except for items that use SN-specific or lot-specific tracking.  
+Když jsou splněna všechna kritéria, jsou položky, které mají sériové číslo nebo šarži řazeny od nejstarších ve všech vyskladněních a přesunech zboží,  s výjimkou zboží, které používají sledování specifické pro SN nebo šarže.
 
-> [!NOTE]  
-> If some serial/lot-numbered items use specific tracking, then those are respected first and under them, the remaining, non-specific, serial/lot numbers are listed according to FEFO.
+> [!NOTE]
+> Pokud některé zboží se sériovým číslem nebo číslem šarže používá specifické sledování, jsou pak nejprve respektovány a pod nimi jsou zbývající, nespecifická, sériová čísla nebo šarže uvedena podle FEFO..
 <br /><br />
-If two serial/lot-numbered items have the same expiration date, then application selects the item with the lowest serial or lot number.
+Pokud dvě zboží se sériovým číslem / číslem šarže mají stejné datum exspirace, program vybere zboží s nejnižší sériovým číslem nebo číslem šarže.
 <br /><br />
-When picking serial/lot-numbered items in locations set up for directed put-away and pick, only quantities on bins of type *Pick* are picked according to FEFO.  
+Při vyskladnění zboží se sériovým číslem nebo číslem šarží v lokacích nastavených pro řízené zaskladnění a vyskladnění se podle FEFO počítá pouze množství na přihrádkách typu *Vyskladnění*.
 <br /><br />
-To enable movements according to FEFO, either on the **Inventory Movement** page or the **Movement Worksheet** page, you must leave the **From Bin** field empty.  
+Pro povolení pohybů dle FEFO, musíte nechat volné políčko **Z přihrádky** buďto na **Přesunech** a nebo na **Sešitu přesunu**.
 <br /><br />
-If the **Strict Expiration Posting** field is selected, then only items that are not expired will be included in the pick. This applies even if you are not using Pick according to FEFO.
+Pokud je pole **Přísné účtování expirace** vybrané, bude do výběru zahrnuto pouze zboží, jehož platnost vypršela. To platí, i když nepoužíváte vyskladnění podle FEFO.
 
-## See Also  
-[Picking Items](warehouse-pick-items.md)   
-[Pick Items for Warehouse Shipment](warehouse-how-to-pick-items-for-warehouse-shipment.md)   
-[Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md)   
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Vyskladnění zboží](warehouse-pick-items.md)  
+[Vyskladnění zboží pro dodávku ze skladu](warehouse-how-to-pick-items-for-warehouse-shipment.md)  
+[Vyskladnění zboží pomocí vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md)  
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

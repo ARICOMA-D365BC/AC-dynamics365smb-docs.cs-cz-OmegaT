@@ -1,89 +1,87 @@
 ---
     title: How to Restructure Warehouses | Microsoft Docs
     description: You may want to restructure your warehouse with new bin codes and new bin characteristics.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2019
+    ms.author: sgroespe
 
 ---
-# Restructure Warehouses
-You may want to restructure your warehouse with new bin codes and new bin characteristics. You will not undertake this kind of activity very often, but situations can occur where a reclassification is necessary to achieve or maintain a more efficient operation. For example:  
+# Restrukturalizace skladů
+Je možné, že budete chtít změnit strukturu skladu s novými kódy přihrádek a s vlastnostmi nových přihrádek. Tento druh aktivity nebudete provádět příliš často, ale situace může nastat, pokud je přeřazení nezbytné k dosažení nebo udržení účinnějšího provozu. Například:
 
-- You might want to switch to bin codes that support the use of automatic data capture, for example, with hand-held devices.  
-- The warehouse may have purchased a new rack system that gives new possibilities in item storage.  
-- The company may have altered its item assortment and moved the warehouse to a new physical location to accommodate this change.  
+- Je možné, že budete chtít přepnout kódy přihrádek, které podporují automatické zachycení dat, například pomocí ručních zařízení.
+- Ve skladu může být zakoupen nový stojanový systém, který dává nové možnosti v skladování zboží.
+- Společnost mohla změnit svůj sortiment zboží a přesunout sklad do nového fyzického umístění, aby se přizpůsobila této změně.
 
-If your warehouse is set up to use bins but not directed put-away and pick, restructure your warehouse by creating the new bins that you want to use in the future.  
+Pokud je sklad nastaven na používání přihrádek, ale nikoli na řízené zaskladnění a vyskladnění, proveďte restrukturalizaci skladu vytvořením nových přihrádek, které chcete v budoucnosti použít.
 
-## To restructure a basic warehouse that uses bins only  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  On the **Warehouse** FastTab, set the **Default Bin Selection** field to **Last-Used Bin**.  
-3.  Move all the contents of your current bins to the new bins that you have just created.  
+## Restrukturalizace skladu, který používá pouze přihrádky
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. V záložce **Sklad**, nastavte pole **Volba výchozí přihrádky** na **Poslední použitá přihrádka**. 
+3. Přesuňte veškerý obsah aktuálních přihrádek do nových přihrádek, které jste právě vytvořili.
 
-    1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Reclassification Journal**, and then choose the related link.  
-    2.  Select a journal line, and then choose the **Get Bin Content** action.  
-    3.  On the **Bin Content** FastTab, set filters in the **Location Code**, **Bin Code**, and **Item No.** fields to specify the content that you want to move.  
-    4.  Choose the **OK** button to fill a journal line.  
-    5.  In the **New Bin Code** field, select the bin to which the items should be moved.  
-    6.  Repeat steps b through e for all bin content that you want to move.  
-    7.  Choose the **Post** action.  
+   1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník přeřazení zboží** a poté vyberte související odkaz.
+   2. Vyberte řádek deníku a pak zvolte akci **Načíst obsah přihrádky** .
+   3. V záložce **Obsah přihrádky**, nastavte filtr **Kód lokace**, **Kód přihrádky** a **Číslo zboží** pro specifikaci obsahu, který chcete přemístit.
+   4. Klikněte na tlačítko **OK** k naplnění řádku deníku.
+   5. V poli **Nový kód přihrádky**, vyberte přihrádku, do které by se mělo zboží přemístit.
+   6. Opakujte kroky b až e pro veškerý obsah přihrádky, který chcete přesunout.
+   7. Vyberte tlačítko **Účtovat**.
 
-You have now emptied the bins where the items used to be. The default bins for your items have now been changed to the new bins.  
+Nyní jste vyprázdnili přihrádky, ve kterých se zboží používá. Výchozí přihrádky pro vaše položky byly nyní změněny na nové přihrádky.
 
-## To restructure an advanced warehouse that uses directed put-away and pick  
+## Restrukturalizace pokročilého skladu, který používá řízené zaskladnění a vyskladnění,
 
-1.  Create the new bins that you want to use in the future. For more information, see [Create Bins](warehouse-how-to-create-individual-bins.md).  
-2.  Move all the contents of your current bins to the new bins that you just created.  
+1. Vytvořte nové přihrádky, které chcete v budoucnosti použít. Pro více informací navštivte [Vytvoření přihrádek](warehouse-how-to-create-individual-bins.md).
+2. Přesuňte veškerý obsah aktuálních přihrádek do nových přihrádek, které jste právě vytvořili.
 
-    1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Reclassification Journal**, and then choose the related link.  
-    2.  For the bins where no real movement of items is involved, create a line for each of your current bins in the **Warehouse Reclassification Journal** with the old bin code, **From Bin Code**, and the new bin code, **To Bin Code**.  
-    3.  If some of the movements involve actual physical movements that you want employees to perform, use **Movement Worksheets** to prepare movement instructions instead of using the warehouse reclassification journal. For more information, see [Move Items in Advanced Warehouse Configurations](warehouse-how-to-move-items-in-advanced-warehousing.md).  
+   1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník přeřazení skladu** a poté vyberte související odkaz.
+   2. Pro přihrádky, ve kterých se není žádný skutečný pohyb zboží, vytvořte řádek pro každou z aktuálních přihrádek v **Deníku přeřazení skladu**. Starý kód přihrádky do **Z kódu přihrádky** a nový kód přihrádky do **Do kódu přihrádky** .
+   3. Pokud některé pohyby zahrnují skutečné fyzické pohyby, které mají zaměstnanci provádět, použijte **Sešity přesunu** k přípravě pokynů k pohybu namísto použití deníku přeřazení skladu. Pro více informací navštivte [Přesouvání zboží v rozšířených konfiguracích skladu](warehouse-how-to-move-items-in-advanced-warehousing.md).
 
-3.  When the old bins are emptied, reclassify them as **QC** type bins to ensure that they are not included in item flows.  
+3. Když jsou staré přihrádky vyprázdněny, přeřaďte je jako přihrádku typu **KVAL**, aby se zajistilo, že nebudou zahrnuty do toků zboží.
 
-    1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-    2.  Select the line with the location, and then choose the **Bins** action.  
-    3.  On the **Bins** page, in the **Bin Type Code** field, enter **QC** for each of the old bins that you emptied in step 3 in the previous procedure.  
+   1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+   2. Vyberte řádek s lokací a pak zvolte tlačítko **Přihrádky**.
+   3. Na stránce **Přihrádky** zadejte do pole **Kód typu přihrádky** vložte **KVAL** pro každou starou přihrádku, kterou jste vyprázdnili v kroku 3 v předchozím postupu.
 
-You have now removed the bins from the warehouse flow, and reclassified them as QC bins. QC bins have none of the activity fields on the **Bin Types** page selected and are therefore not considered by the item flow. For more information, see [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md).  
+Nyní jste odstranili přihrádky z toku skladu a překlasifikovali je jako přihrádky KVAL (bez typu). Přihrádky KVAL nemají žádné pole aktivity na stránce **Typy přihrádek** , a proto nejsou považovány za tok zboží. Pro více informací navštivte [Nastavení přihrádek](warehouse-how-to-set-up-bin-types.md).
 
-## To delete a bin  
+## Odstranění přihrádky
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  Select the location where you want to delete bins. Choose the **Bins** action.  
-3.  Select the lines for the bins that you want to delete.  
-4.  Choose the **Delete** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Vyberte lokaci, kde chcete odstranit přihrádky. Vyberte tlačítko **Přihrádky**.
+3. Vyberte řádky pro přihrádky, které chcete odstranit.
+4. Vyberte tlačítko **Odstranit**.
 
-If you choose the **Yes** button, the bin is deleted for use in the future, but the bin code in all warehouse entries remains the same.  
+Pokud zvolíte tlačítko **Ano**, přihrádka bude odstraněna pro budoucí použití, ale kód přihrádky ve všech položkách skladu zůstane stejný.
 
-If you want to rename a bin so that all records associated with the bin are also renamed, including bin contents, warehouse activity lines, registered warehouse activity lines, warehouse worksheet lines, warehouse receipt lines, posted warehouse receipt lines, warehouse shipment lines, posted warehouse shipment lines, and warehouse entries, you can do so on the **Bins** page.  
+Pokud chcete přejmenovat přihrádku tak, aby byly také přejmenovány všechny záznamy spojené s přihrádkou, včetně obsahu přihrádky, řádků aktivit skladu, evidovaných řádků aktivit skladu, řádků sešitu skladu, řádků příjemky na sklad, zaúčtovaných řádků příjemky na sklad, řádků dodávky ze skladu, zaúčtovaných řádků dodávky ze skladu a položek skladu, můžete tak učinit na stránce **Přihrádky**.
 
-## To rename a bin and change the bin code in all records  
+## Přejmenování přihrádky a změna kódu přihrádky ve všech záznamech
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  Select the location where you want to rename a bin or change the bin code, and then choose the **Bins** action.  
-3.  Select the bin that you want to change and enter a new bin code in the **Code** field.  
-4.  Choose the **Yes** button.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Vyberte lokaci, kde chcete přejmenovat přihrádku nebo změnit kód přihrádky, a pak zvolte tlačítko **Přihrádky**.
+3. Vyberte přihrádku, kterou chcete změnit, a do pole **Kód** zadejte nový kód přihrádky.
+4. Klikněte na tlačítko **Ano**.
 
-> [!NOTE]  
->  If you choose **Yes** and there are many entries concerning this bin, for example, because you have not deleted warehouse documents for some time, it may take some time to rename all the records. Therefore, if you use this method, consider running the batch job **Delete Registered Whse. Documents** before you start the renaming process. Also note that the only documents that are deleted in this batch job are put-aways, picks, and movements.  
->   
->  If you are renaming a receiving bin or a shipping bin, all the posted receipts or shipments that refer to the bin in question are renamed.  
-
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+> [!NOTE]
+> Pokud zvolíte **Ano** a existuje mnoho položek týkajících se této přihrádky, například proto, že jste po určitou dobu neodstranili doklady skladu, může nějakou dobu trvat než program přejmenuje všechny záznamy. Pokud tedy použijete tuto metodu, zvažte spuštění dávkové úlohy **Odstranit zapsané doklady  skladu** před začátkem procesu přejmenování. Všimněte si také, že jedinými dokumenty, které jsou v této dávkové úloze odstraněny, jsou zaskladnění, vyskladnění a přesuny.
+> Pokud přejmenujete přijímací přihrádku nebo dodací přihrádku, budou všechny zaúčtované příjemky nebo dodávky, které se vztahují k dané přihrádce, přejmenovány.
+> 
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

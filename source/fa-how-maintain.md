@@ -6,86 +6,83 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: repair, service
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Maintain Fixed Assets
-Maintenance expenses are routine periodic costs undertaken to preserve the value of fixed assets. Unlike capital improvements, they do not increase values.
+# Údržba dlouhodobého majetku
+Náklady na údržbu jsou běžné pravidelné náklady vynaložené na zachování hodnoty dlouhodobého majetku. Na rozdíl od kapitálových zisků nezvyšují hodnotu.
 
-You can record and maintain an up-to-date file on maintenance and service of your fixed assets to have complete maintenance records on a fixed asset easily accessible. Each time a fixed asset is sent to service, you record all relevant information such as date of service, vendor number and service agent's phone number. Maintenance registration is recorded for each fixed asset from the relevant fixed asset card.
+Můžete zaznamenávat a udržovat aktuální soubor o údržbě a servisu dlouhodobého majetku, abyste měli snadno přístupné úplné záznamy o údržbě dlouhodobého majetku. Při každém používání dlouhodobého majetku zaznamenáte všechny relevantní informace, například datum služby, číslo dodavatele a telefonní číslo servisního agenta. Registrace údržby se zaznamenává pro každý dlouhodobý majetek z příslušné karty dlouhodobého majetku.
 
-Indexation is used to adjust values for general price-level changes. The **Index Fixed Assets** batch job can be used to recalculate the maintenance costs.
+Indexace se používá k úpravě hodnot pro obecné změny cenové hladiny. Dávkovou úlohu **Indexace dlouhodobého majetku** lze použít k přepočtu nákladů na údržbu.
 
-## To record maintenance work on a fixed asset
-Every time maintenance has been performed, such as a service visit, you can record it for the relevant fixed asset on the **Maintenance Registrations** page.  
+## Záznam údržby dlouhodobého majetku
+Pokaždé, když byla provedena údržba, například servisní návštěva, můžete ji zaznamenat pro příslušný dlouhodobý majetek na stránce **Evidence údržby**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.  
-2. Select the fixed asset that you want to record maintenance for, and then choose the **Maintenance Registration** action.
-3. On the **Maintenance Registration** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek** a poté vyberte související odkaz.
+2. Vyberte dlouhodobý majetek, pro který chcete zaznamenat údržbu, a pak zvolte akci **Evidence údržby**.
+3. Na stránce **Evidence údržby** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To post maintenance costs from a fixed asset G/L journal
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Book List**, and then choose the related link.  
-2. Select the depreciation book that is assigned to the fixed asset, and then choose the **Edit** action.
-3. On the **Depreciation Book Card** page, make sure the **Maintenance** check box is not selected. This ensures that maintenance costs are not posted to the general ledger.
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.  
-5. Create an initial journal line and fill in the fields as necessary.
-6. In the **FA Posting Type** field, select **Maintenance**.
-7. Choose the **Insert FA Bal. Account** action. A second journal line is created for the balancing account that is set up for maintenance posting.
+## Účtování nákladů na údržbu z finančního deníku DM
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Přehled knihy odpisů** a poté vyberte související odkaz.
+2. Vyberte knihu odpisů, která je přiřazena k dlouhodobému majetku, a poté vyberte akci **Upravit**.
+3. Na stránce **Karta knihy odpisů** zkontrolujte, zda není zaškrtnuto políčko **Údržba**. Tím je zajištěno, že náklady na údržbu nejsou účtovány do věcných položek.
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky DM** a poté vyberte související odkaz.
+5. Vytvořte počáteční řádek deníku a vyplňte pole podle potřeby.
+6. V poli **Typ účtování DM** vyberte **Údržba**.
+7. Vyberte akci **Vložit protiúčet  DM**. Druhý řádek deníku je vytvořen pro protiúčet, který je nastaven pro účtování údržby.
 
-    > [!NOTE]  
-    >   Step 7 only works if you have set up the following: On the **FA Posting Group Card** page for the posting group of the fixed asset, the **Maintenance Account** field contains the general ledger debit account and the **Maintenance Bal. Account** field contains the general ledger account to which you want to post balancing entries for appreciation. For more information, see [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
-8. Choose the **Post** action.
+   > [!NOTE]
+   > Krok 7 funguje pouze v případě, že jste nastavili následující: Na stránce **Karta účto skupiny DM** pro účto skupinu dlouhodobého majetku třeba nastavit pole **Účet údržby** tak, aby obsahoval MD účet hlavní knihy a pole **Protiúčet  údržby** musí obsahovat účet hlavní knihy, na který chcete zaúčtovat vyrovnávací položky. Pro více informací navštivte [Nastavení účto skupin dlouhodobého majetku](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).
+8. Vyberte akci **Účtovat**.
 
-## To follow up on fixed assets service visits
-You can print the **Maintenance - Next Service** report to see which assets you have scheduled a service visit for. You can also use this report when you are updating the **Next Service Date** field on fixed asset cards.  
+## Sledování servisních návštěv dlouhodobého majetku
+Můžete si vytisknout sestavu **Údržba – příští servis** a zjistit, pro které položky jste naplánovali servisní návštěvu. Tuto sestavu můžete také použít při aktualizaci pole **Datum další údržby** na kartách dlouhodobého majetku.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Maintenance Next Service**, and then choose the related link.  
-2. Fill in the **Starting Date** and **Ending Date** fields.  
-3. Choose the **Print** or **Preview** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Údržba – příští servis** a poté vyberte související odkaz.
+2. Vyplňte pole **Počáteční datum** a **Datum dokončení**.
+3. Vyberte tlačítko **Tisk** nebo **Náhled**.
 
-## To monitor maintenance costs
-You can view the maintenance costs when you look at the statistics of a fixed asset.  
+## Sledování nákladů na údržbu
+Náklady na údržbu můžete zobrazit při pohledu na statistiky dlouhodobého majetku.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
-2. Select the fixed asset you want to view maintenance costs for, and then choose the **Depreciation Books** action.
-3. On the **FA Depreciation Books** page, select the relevant fixed asset depreciation book, and then choose the **Statistics** action.
-4. On the **Fixed Asset Statistics** page, choose the **Maintenance** field.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek** a poté vyberte související odkaz.
+2. Vyberte dlouhodobý majetek, pro který chcete zobrazit náklady na údržbu, a pak zvolte akci **Knihy odpisů**.
+3. Na stránce **Knihy odpisů DM** vyberte příslušnou knihu odpisů dlouhodobého majetku a pak zvolte akci **Statistika**.
+4. Na stránce **Statistika DM** vyberte pole **Údržba**.
 
-The **Maintenance Ledger Entries** page opens showing the entries that make up the amount in the **Maintenance** field.
+Otevře se stránka **Položky údržby** zobrazující položky, které tvoří částku v poli **Údržba**.
 
-## To view or print maintenance costs for multiple fixed assets
-In the **Maintenance - Analysis** report, you can select to see maintenance based on one, two, or three maintenance codes for a specified date or period. You can see the total of all selected assets or a total for each asset.
+## Zobrazení nebo tisk nákladů na údržbu pro více dlouhodobých aktiv
+V sestavě **Údržba - analýza** můžete zvolit zobrazení údržby na základě jednoho, dvou nebo tří kódů údržby pro zadané datum nebo období. Můžete zobrazit součet všech vybraných majetků nebo součet pro každý majetek.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Maintenance Analysis**, and then choose the related link.
-2. Fill in the fields as necessary.
-3. Choose the **Print** or **Preview** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Analýza údržby** a poté vyberte související odkaz.
+2. Podle potřeby vyplňte pole.
+3. Vyberte tlačítko **Tisk** nebo **Náhled**.
 
-## To view maintenance ledger entries
-You can also study maintenance costs by viewing the maintenance ledger entries.  
+## Zobrazení položek údržby
+Náklady na údržbu můžete také studovat zobrazením položek údržby.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
-2. Select the fixed asset that you want to view ledger entries for, and then choose the **Depreciation Books** action.
-3. On the **FA Depreciation Books** page, select the relevant fixed asset depreciation book, and then choose the **Maintenance Ledger Entries** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek** a poté vyberte související odkaz.
+2. Vyberte dlouhodobý majetek, pro který chcete zobrazit položky, a pak zvolte akci **Knihy odpisů**.
+3. Na stránce **Knihy odpisů DM** vyberte příslušnou knihu odpisů dlouhodobého majetku a pak zvolte akci **Položky údržby**.
 
-## To view or print maintenance ledger entries for multiple fixed assets
-In the **Maintenance - Details** report, you can view or print maintenance ledger entries for one or many fixed assets.  
+## Zobrazení nebo tisk položek údržby pro více dlouhodobých aktiv
+V sestavě **Detaily údržby** můžete zobrazit nebo vytisknout položky údržby pro jeden nebo více dlouhodobých majetků.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Maintenance Details**, and then choose the related link.
-2. Fill in the fields as necessary.
-3. Choose the **Print** or **Preview** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Detaily údržby** a poté vyberte související odkaz.
+2. Podle potřeby vyplňte pole.
+3. Vyberte tlačítko **Tisk** nebo **Náhled**.
 
-## See Also
-[Fixed Assets](fa-manage.md)  
-[Setting Up Fixed Assets](fa-setup.md)  
+## Viz také
+[Dlouhodobý majetek](fa-manage.md)  
+[Nastavení dlouhodobého majetku](fa-setup.md)  
 [Finance](finance.md)  
-[Getting Started](product-get-started.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Začínáme](product-get-started.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

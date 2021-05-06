@@ -4,71 +4,68 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# About Cost Accounting
-Cost accounting can help you understand the costs of running a business. Cost accounting information is designed to analyze:  
+# Nákladové účetnictví
+Nákladové účetnictví vám může pomoci pochopit náklady na provoz podniku. Informace o nákladovém účetnictví jsou určeny k analýze:
 
--   What types of costs that you incur when you run a business?  
--   Where do the costs occur?  
--   Who bears the costs?  
+- Jaké typy nákladů vám vzniknou při podnikání?
+- Kde se náklady vyskytují?
+- Kdo nese náklady?
 
-In cost accounting, you allocate actual and budgeted costs of operations, departments, products, and projects to analyze the profitability of your company.  
+V nákladovém účetnictví přidělujete skutečné a rozpočtované náklady na provoz, oddělení, produkty a projekty k analýze ziskovosti vaší společnosti.
 
-## Workflow in Cost Accounting  
-Cost accounting has the following main components:  
+## Workflow v nákladovém účetnictví
+Nákladové účetnictví má následující hlavní komponenty:
 
--   Cost types, cost centers, and cost objects  
--   Cost entries and cost journals  
--   Cost allocations  
--   Cost budgets
--   Cost reporting  
+- Typy nákladů, nákladová střediska a objekty nákladů
+- Položky nákladů a deníky nákladů
+- Rozdělení nákladů
+- Nákladové rozpočty
+- Vykazování nákladů
 
-The following diagram shows the workflow in cost accounting.  
+Následující diagram znázorňuje workflow v nákladovém účetnictví.
 
-![Cost Accounting overview](media/costaccountingoverview.png "CostAccountingOverview")  
+![Přehled nákladového účetnictví](media/costaccountingoverview.png "CostAccountingOverview")
 
-## Cost Types, Cost Centers, and Cost Objects  
-You define cost types, cost centers, and cost objects to analyze what the costs are, where the costs come from, and who should bear the costs.  
+## Typy nákladů, nákladová střediska a objekty nákladů
+Definujete typy nákladů, nákladová střediska a objekty nákladů, abyste analyzovali, jaké jsou náklady, odkud náklady pocházejí a kdo by měl náklady nést.
 
-You define a chart of cost types with a structure and functionality that resembles the general ledger chart of accounts. You can transfer the general ledger income statement accounts or create your own chart of cost types.  
+Definujete graf typů nákladů se strukturou a funkcemi, která se podobá účetní osnově hlavní knihy. Můžete převést účty výkazu příjmů hlavní knihy nebo vytvořit vlastní graf typů nákladů.
 
-Cost centers are departments and profit centers that are responsible for costs and income. Often, there are more cost centers set up in cost accounting than in any dimension that is set up in the general ledger. In the general ledger, usually only the first level cost centers for direct costs and the initial costs are used. In cost accounting, additional cost centers are created for additional allocation levels.  
+Nákladová střediska jsou oddělení a zisková centra, která jsou zodpovědná za náklady a příjmy. V nákladovém účetnictví je často zřízeno více nákladových středisek než v jakékoli dimenzi, která je zřízena v hlavní knize. V hlavní knize se obvykle používají pouze nákladová střediska první úrovně pro přímé náklady a počáteční náklady. V nákladovém účetnictví jsou vytvořena další nákladová střediska pro další úrovně přidělení.
 
-Cost objects are products, product groups, or services of a company. These are the finished goods of a company that carry the costs.  
+Objekty nákladů jsou produkty, skupiny produktů nebo služby společnosti. Jedná se o hotové výrobky společnosti, které nesou náklady.
 
-You can link cost centers to departments and cost objects to projects in your company. However, you can link cost centers and cost objects to any dimensions in the general ledger and supplement them with subtotals and titles.  
+Můžete propojit nákladová střediska s odděleními a nákladovými objekty s projekty ve vaší společnosti. Můžete však propojit nákladová střediska a nákladové objekty s libovolnými dimenzemi v hlavní knize a doplnit je mezisoučty a názvy.
 
-## Cost Entries and Cost Journals  
-Operational costs can be transferred from the general ledger. You can automatically transfer the cost entries from the general ledger to cost entries with each posting. You can also use a batch job to transfer the general ledger entries to cost entries based on daily or monthly summary posting.  
+## Položky nákladu a Deník nákladů
+Provozní náklady lze převést z hlavní knihy. Položky nákladů můžete automaticky převést z hlavní knihy do položek nákladů s každým zaúčtováním. Dávkovou úlohu můžete také použít k převodu položek hlavní knihy do položek nákladů na základě denního nebo měsíčního souhrnného účtování.
 
-In cost journals, you can post cost and activities that do not come from the general ledger or are not generated by allocations. For example, you can post pure operational costs, internal charges, allocations, and corrective entries between cost types, cost centers, and cost objects individually or on a recurring basis.  
+V denících nákladů můžete účtovat náklady a činnosti, které nepocházejí z hlavní knihy nebo nejsou generovány z přidělení. Můžete například zaúčtovat čisté provozní náklady, interní poplatky, přidělení a opravné položky mezi typy nákladů, nákladovými středisky a objekty nákladů jednotlivě nebo opakovaně.
 
-## Cost Allocations  
-Allocations move costs and revenues between cost types, cost centers, and cost objects. Overhead costs are first posted to cost centers and later charged to cost objects. For example, this might be done in a sales department that sells several products at the same time. Direct costs can be directly allocated to a cost object, such as a material purchased for a specific product.  
+## Přidělení nákladů
+Přidělení přesunou náklady a výnosy mezi typy nákladů, nákladovými středisky a objekty nákladů. Režijní náklady jsou nejprve zaúčtovány do nákladových středisek a později josu účtovány do objektů nákladů. To může být provedeno například v prodejním oddělení, které prodává několik produktů současně. Přímé náklady lze přímo přiřadit k objektu nákladů, jako je materiál zakoupený pro konkrétní produkt.
 
-The allocation base that is used and the accuracy of the allocation definition have an influence on the results of cost allocations. The allocation definition is used to allocate costs first from so-called pre-cost centers to main cost centers and then from cost centers to cost objects.  
+Použitý základ přidělení a přesnost definice přidělení mají vliv na výsledky přidělení nákladů. Definice přidělení se používá k přidělení nákladů nejprve z takzvaných přednákladových středisek do hlavních nákladových středisek a pak od nákladových středisek až po objekty nákladů.
 
-Each allocation consists of an allocation source and one or more allocation targets. You can allocate actual values or budgeted values by using the static allocation method that is based on a definite value, such as square footage, or an established allocation ratio of 5:2:4. You can also allocate actual values or budgeted values by using the dynamic allocation method with nine predefined allocation bases and 12 dynamic date ranges.  
+Každé přidělení se skládá ze zdroje přidělení a jednoho nebo více cílů rozdělení. Skutečné hodnoty nebo hodnoty rozpočtu můžete přidělit pomocí metody statického přidělení, která je založena na určité hodnotě, například na čtverečních stopách nebo na stanoveném poměru přidělení 5:2:4. Můžete také přidělit skutečné hodnoty nebo hodnoty rozpočtu pomocí metody dynamického přidělení s devíti předdefinovanými základy přidělení a 12 dynamickými rozsahy dat.
 
-## Cost Budgets  
-You can create as many cost budgets as you want. You can copy the cost budget to the general ledger budget and vice versa. You can transfer budgeted costs as actual costs.  
+## Nákladové rozpočty
+Můžete vytvořit libovolný počet nákladových rozpočtů. Nákladové rozpočty můžete zkopírovat do rozpočtu hlavní knihy a naopak. Nákladové rozpočty můžete převést jako skutečné náklady.
 
-## Cost Reporting  
-Most reports and statistics are based on the posted cost entries. You can set the sorting of the results and use filters to define which data must be displayed. You can create reports for cost distribution analysis. In addition, you can use the standard account schedules to define how your reports for the chart of cost types are displayed.  
+## Vykazování nákladů
+Většina přehledů a statistik je založena na položkách zaúčtovaných nákladů. Můžete nastavit třídění výsledků a pomocí filtrů definovat, která data se mají zobrazit. Můžete vytvořit sestavy pro analýzu distribuce nákladů. Kromě toho můžete pomocí standardních účetních schémat definovat, jak jsou zobrazeny přehledy pro graf typů nákladů.
 
-## See Also  
- [Accounting for Costs](finance-manage-cost-accounting.md)  
- [Finance](finance.md)   
- [Terminology in Cost Accounting](finance-terminology-in-cost-accounting.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Účtování nákladů](finance-manage-cost-accounting.md)  
+[Finance](finance.md)  
+[Terminologie v nákladovém účetnictví](finance-terminology-in-cost-accounting.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -1,55 +1,54 @@
 ---
-title: Using General Functionality Across Business Areas | Microsoft Docs
-description: Learn about the functionality and features that are used across business areas in Business Central .
+title: Používání obecných funkcionalit napříč obchodními oblastmi | Microsoft Docs
+description: 'Naučte se o funkcích a vlastnostech, které se používají ve všech obchodních oblastech Business Central.'
 services: project-madeira
 documentationcenter: ''
-author: SorenGP
+author: ZdenekBicek
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: feature overview, functionality
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'feature overview, functionality'
+ms.date: 01/17/2020
+ms.reviewer: v-zdbice
+ms.author: sgroespe
 ---
-# General Business Functionality
-[!INCLUDE[prod_short](includes/prod_short.md)] provides dedicated functionality for typical business areas, such as finance and sales. For more information, see [Business Functionality](across-business-functionality.md).
+# Obecné obchodní funkcionality
 
-To support those business area-specific tasks, you can use a variety of general business functionality, such as defining extended text for document lines and organizing connecting business tasks in workflows.
+[!INCLUDE[d365fin](includes/d365fin_md.md)] poskytuje definovanou funkcionalitu pro typické obchodní oblasti, jako jsou finance a prodej. Pro více informací navštivte [Obchodní funkcionality](across-business-functionality.md).
+
+K podpoře těchto úloh, specifických pro obchodní oblast, můžete použít celou řadu obecných obchodních funkcionalit, například definování rozšířeného textu pro řádky dokumentů a organizování propojení obchodních úkolů ve workflow.
 
 > [!NOTE]
-> In addition to the business-related functions described in this section, you will use general UI functions every day to interact with the system. For more information, see [Working with Business Central](ui-work-product.md).
+> Kromě funkcí souvisejících s podnikáním, popsaných v této části, budete pro interakci se systémem používat dennodenně také obecné funkce uživatelského rozhraní. Další informace naleznete v části [Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md).
 
-The following table lists these general business areas with links to topics that describe them.
+V následující tabulce jsou uvedeny obecné oblasti s odkazy na témata, která je popisují.
 
-| To | See |
+| Funkce | Odkaz |
 | --- | --- |
-|Add extra information to accounts, customers cards, or sales orders to communicate agreements, such as a special price or delivery method, to other users.|[Add Comments to Cards and Documents](across-how-use-comments.md)|
-|View ongoing, posted, or archived documents that are related to sales and purchase order lines.|[Track Document Lines](across-how-to-track-document-lines.md)|
-| Communicate the contents of business documents quickly to your business partners, such as the payment information on sales documents to customers. |[Send Documents by Email](ui-how-send-documents-email.md) |
-|Archive sales and purchase orders, quotes, return orders, and blanket orders, and you use the archived document to recreate the document that it was archived from.|[Archive Documents](across-how-to-archive-documents.md)|
-| Set up standard text codes so you can extend standard text by adding extra lines, and set up conditions for use of the extra lines. |[Add Extended Item Text](ui-how-define-ext-text.md) |
-|Create tasks to remind you of work to be done. You can create tasks for yourself, but you can also assign tasks to others or be assigned a task by someone else in your organization.|[Define User Tasks](across-user-tasks.md)|
-|Work with your Business Central data in Excel.|[Exporting Your Business Data to Excel](about-export-data.md)|
-|Understand what happens when you choose the **Post** action.|[Posting Documents and Journals](ui-post-documents-journals.md)|
-|Post multiple sales or purchase documents together, immediately or as scheduled.|[Post Multiple Documents at the Same Time](ui-batch-posting.md)|  
-|Review the result of posting before you post.|[Preview Posting Results](ui-how-preview-post-results.md)|
-|Edit selected fields on posted sales or purchase documents.|[Edit Posted Documents](across-edit-posted-document.md)|
-|Learn how to work with general journals, which are used to post to general ledger accounts and other accounts such as bank, customer, vendor, and fixed assets accounts. |[Working with General Journals](ui-work-general-journals.md) |
-| Schedule a report to run at a specific date and time. |[Scheduling a Report to Run](ui-work-report.md#ScheduleReport) |
-|Let the system help you complete tasks quicker and more correctly by prefilling fields or complete lines with data that you would otherwise have to calculate and enter yourself.|[Letting Business Central Suggest Values](ui-let-system-suggest-values.md)|
-|Record external documents, including their file attachments, and then manually create the related documents or automatically convert the files to electronic documents.|[Incoming Documents](across-income-documents.md)|
-|Set up and use workflows that connect tasks performed by different users or by the system, such as automatic posting. Requesting and granting approval to create or post documents are typical workflow steps.|[Workflow](across-workflow.md)|
-| Set up data exchange definitions so you can send and receive electronic documents. |[Exchanging Data Electronically](across-data-exchange.md) |
+|Přidejte další informace k účtům, zákaznickým kartám nebo prodejním objednávkám za účelem informování dalších uživatelů o dohodách, jako jsou zvláštní cena nebo způsob dodání.|[Přidávání komentářů ke kartám a dokladům](across-how-use-comments.md)|
+|Zobrazte nové, zaúčtované nebo archivované dokumenty, které souvisejí s řádky prodeje a objednávky.|[Sledování řádků dokumentů](across-how-to-track-document-lines.md)|
+|Sdělte rychle obsah obchodních dokumentů svým obchodním partnerům, například platební informace na prodejních dokladech zákazníkům. |[Odeslat dokumenty e-mailem](ui-how-send-documents-email.md) |
+|Archivujte prodejní a nákupní objednávky, nabídky, vratky a hromadné objednávky, a pomocí archivovaného dokladu znovu vytvořte doklad, ze kterého byl archivován.|[Archivování dokladů](across-how-to-archive-documents.md)|
+|Nastavte kódy standardních textů, abyste mohli rozšířit standardní text přidáním dalších řádků a nastavit podmínky pro použití dalších řádků. |[Přidat rozšířený text](ui-how-define-ext-text.md) |
+|Vytvářejte úlohy, které vám připomenou práci, kterou je třeba udělat. Úlohy si můžete vytvořit sami, ale můžete je také přiřadit ostatním nebo mohou být Vám přiřazeny někým jiným ve vaší organizaci.|[Definice úloh uživatele](across-user-tasks.md)|
+|Práce s daty [!INCLUDE[d365fin](includes/d365fin_md.md)] v Excelu.|[Export vašich obchodních dat do Excelu](about-export-data.md)|
+|Zjistěte, co se stane při volbě akce **Účtovat**.|[Účtování dokladů a deníků](ui-post-documents-journals.md)|
+|Zaúčtujte více prodejních nebo nákupních dokladů společně, okamžitě nebo podle plánu.|[Zaúčtovat více dokumentů současně](ui-batch-posting.md)|
+|Zkontrolujte výsledek účtování před zaúčtováním.|[Náhled výsledků zaúčtování](ui-how-preview-post-results.md)|
+|Upravte vybraná pole u zaúčtovaných prodejních nebo nákupních dokladů.|[Úprava zaúčtovaných dokladů](cross-edit-posted-document.md) |
+|Naučte se, jak pracovat s finančními deníky, které se používají k účtování na finanční účty a na další účty, jako jsou bankovní účty, zákazníci, dodavatelé a dlouhodobý majetek.|[Práce s finančními deníky](ui-work-general-journals.md)|
+|Naplánujte spuštění sestavy v konkrétní datum a čas.|[Plánování spuštění sestavy](ui-work-report.md#ScheduleReport)|
+|Nechte systém Vám pomoci rychleji a přesněji dokončit úkoly vyplněním polí nebo vyplněním řádků údaji, které byste jinak museli vypočítat a zadat sami.|[Nechte Business Central navrhovat hodnoty](ui-let-system-suggest-values.md)|
+|Zaznamenejte externí doklady včetně jejich příloh a poté ručně vytvořte související doklady nebo je automaticky převeďte na elektronické doklady.|[Došlé doklady](across-income-documents.md)|
+|Nastavte a používejte workflow, která propojují úlohy prováděné různými uživateli nebo systémem, jako je například automatické účtování. Typickým krokem pracovního postupu je požadavek a udělení schválení k vytvoření nebo zaúčtování dokladů.|[Workflow](across-workflow.md)|
+|Nastavte definice výměny dat, abyste mohli odesílat a přijímat elektronické doklady.|[Elektronická výměna dat](across-data-exchange.md) |
 
-## See Also
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Administration](admin-setup-and-administration.md)
+## Viz také
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Správa](admin-setup-and-administration.md)
 
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

@@ -13,40 +13,40 @@
     ms.author: edupont
 
 ---
-# Design Details: Searching for Dimension Combinations
-When you close a page after you edit a set of dimensions, [!INCLUDE[prod_short](includes/prod_short.md)] evaluates whether the edited set of dimensions exists. If the set does not exist, a new set is created and the dimension combination ID is returned.  
+# Detaily návrhu: Vyhledávání kombinací dimenzí
+Vyhledávání kombinací dimenzí, [!INCLUDE[prod_short](includes/prod_short.md)] vyhodnotí, zda upravená sada dimenzí existuje. Pokud sada neexistuje, vytvoří se nová sada a vrátí se ID kombinace dimenzí.
 
-## Building Search Tree  
- Table 481 **Dimension Set Tree Node** is used when [!INCLUDE[prod_short](includes/prod_short.md)] evaluates whether a set of dimensions already exists in table 480 **Dimension Set Entry** table. The evaluation is performed by recursively traversing the search tree starting at the top level numbered 0. The top level 0 represents a dimension set with no dimension set entries. The children of this dimension set represent dimension sets with only one dimension set entry. The children of these dimension sets represent dimension sets with two children, and so on.  
+## Budování stromu vyhledávání
+Tabulka **Uzel stromu sady dimenzí** je použita když [!INCLUDE[prod_short](includes/prod_short.md)] vyhodnotí, zda sada dimenzí již existuje v tabulce 480 **Položka sady dimenzí**. Vyhodnocení se provádí rekurzivně procházením vyhledávacího stromu počínaje nejvyšší úrovní s číslem 0. Nejvyšší úroveň 0 představuje sadu dimenzí bez položek sady dimenzí. Podřízené sady této sady dimenzí představují sady dimenzí pouze s jednou položkou. Podřízené sady těchto sad dimenzí představují sady dimenzí se dvěmi podřízenými a tak dále.
 
-### Example 1  
- The following diagram represents a search tree with six dimension sets. Only the distinguishing dimension set entry is displayed in the diagram.  
+### Příklad 1
+Následující diagram představuje vyhledávací strom se šesti sadami dimenzí. V diagramu je zobrazena pouze položka rozlišovací sady dimenzí.
 
- ![Example of dimension tree structure](media/nav2013_dimension_tree.png "Example of dimension tree structure")  
+![Příklad struktury stromu dimenzí](media/nav2013_dimension_tree.png "Příklad struktury stromu dimenzí")
 
- The following table describes a complete list of dimension set entries that make up each dimension set.  
+Následující tabulka popisuje úplný seznam položek sady dimenzí, které tvoří každou sadu dimenzí.
 
-|Dimension Sets|Dimension Set Entries|  
+| Sady dimenzí | Položky sady dimenzí |
 |--------------------|---------------------------|  
-|Set 0|None|  
-|Set 1|AREA 30|  
-|Set 2|AREA 30, DEPT ADM|  
-|Set 3|AREA 30, DEPT PROD|  
-|Set 4|AREA 30, DEPT ADM, PROJ VW|  
-|Set 5|AREA 40|  
-|Set 6|AREA 40, PROJ VW|  
+| Sada 0 | Žádné |
+| Sada 1 | AREA 30 |
+| Sada 2 | AREA 30, DEPT ADM |
+| Sada 3 | AREA 30, DEPT PROD |
+| Sada 4 | AREA 30, DEPT ADM, PROJ VW |
+| Sada 5 | AREA 40 |
+| Sada 6 | AREA 40, PROJ VW |
 
-### Example 2  
- This example shows how [!INCLUDE[prod_short](includes/prod_short.md)] evaluates whether a dimension set that consists of the dimension set entries AREA 40, DEPT PROD exists.  
+### Příklad 2
+Tento příklad ukazuje, jak  [!INCLUDE[prod_short](includes/prod_short.md)] vyhodnotí, zda existuje sada dimenzí, která se skládá z položek sady AREA 40, DEPT PROD.
 
- First, [!INCLUDE[prod_short](includes/prod_short.md)] also updates the **Dimension Set Tree Node** table to make sure that the search tree looks like the following diagram. Thus dimension set 7 becomes a child of the dimension set 5.  
+Nejprve, [!INCLUDE[prod_short](includes/prod_short.md)] aktualizuje tabulku **Uzel stromu sady dimenzí** aby se ujistil, že vyhledávací strom vypadá jako následující diagram. Sada dimenzí 7 se tak stává podřízenou sadou dimenzí 5.
 
- ![Example of dimension tree structure in NAV 2013](media/nav2013_dimension_tree_example2.png "Example of dimension tree structure in NAV 2013")  
+![Příklad struktury stromu dimenzí v NAV 2013](media/nav2013_dimension_tree_example2.png "Příklad struktury stromu dimenzí v NAV 2013")
 
-### Finding Dimension Set ID  
- At a conceptual level, **Parent ID**, **Dimension**, and **Dimension Value**, in the search tree, are combined and used as the primary key because [!INCLUDE[prod_short](includes/prod_short.md)] traverses the tree in the same order as the dimension entries. The GET function (record) is used to search for dimension set ID. The following code example shows how to find the dimension set ID when there are three dimension values.  
+### Hledání ID sady dimenzí
+Na koncepční úrovni jsou **Nadřazené ID**, **Dimenze** a **Hodnoty dimenze**,  ve stromu hledání kombinovány a používány jako primární klíč, protože [!INCLUDE[prod_short](includes/prod_short.md)] tprochází strom ve stejném pořadí jako položky dimenze. Funkce GET (záznam) se používá k vyhledání ID sady dimenzí. Následující příklad kódu ukazuje, jak najít ID sady dimenzí, pokud existují tři hodnoty dimenze.
 
-```  
+```
 DimSet."Parent ID" := 0;  // 'root'  
 IF UserDim.FINDSET THEN  
   REPEAT  
@@ -54,11 +54,11 @@ IF UserDim.FINDSET THEN
   UNTIL UserDim.NEXT = 0;  
 EXIT(DimSet.ID);  
 
-```  
+```
 
-However, to preserve the ability of [!INCLUDE[prod_short](includes/prod_short.md)] to rename both a dimension and a dimension value, table 349, **Dimension Value**, is extended with an integer field, **Dimension Value ID**. This table converts the field pair, **Dimension** and **Dimension Value**, to an integer value. When you rename the dimension and dimension value, the integer value is not changed.  
+Nicméně, aby se zachovala schopnost [!INCLUDE[prod_short](includes/prod_short.md)] pro přejmenování dimenze i hodnoty tabulky 349, **Hodnoty dimenze**, je rozšířena o celé pole **ID hodnoty dimenze**. Tato tabulka převede dvojici polí **Dimenze** a **Hodnoty dimenze** na celočíselnou hodnotu. Při přejmenování dimenze a hodnoty dimenze se celá hodnota nezmění.
 
-```  
+```
 DimSet."Parent ID" := 0;  // 'root'  
 IF UserDim.FINDSET THEN  
   REPEAT  
@@ -66,14 +66,14 @@ IF UserDim.FINDSET THEN
   UNTIL UserDim.NEXT = 0;  
 EXIT(DimSet.ID);  
 
-```  
+```
 
-## See Also  
- [GET Function (Record)](/dynamics-nav/GET-Function--Record-)    
- [Design Details: Dimension Set Entries](design-details-dimension-set-entries.md)   
- [Dimension Set Entries Overview](design-details-dimension-set-entries-overview.md)   
- [Design Details: Table Structure](design-details-table-structure.md)   
- 
+## Viz také
+[Funkce GET (Záznam)](/dynamics-nav/GET-Function--Record-)    
+[Detaily návrhu: Položky sady dimenzí](design-details-dimension-set-entries.md)   
+[Přehled položek sad dimenzí](design-details-dimension-set-entries-overview.md)   
+[Detaily návrhu: Struktura tabulky](design-details-table-structure.md)
+
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

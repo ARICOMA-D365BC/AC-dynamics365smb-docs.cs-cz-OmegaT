@@ -6,48 +6,45 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: jswymer
 
 ---
-# Manage Interactions for Segments
-The **Segment** page is a type of worksheet where you can:
+# Správa interakcí pro segmenty
+Stránka **Segment** je typ listu, kde můžete:
 
-* Create segments.
-* Save the segmentation criteria you have used to select contacts.
-* Log the segment and record interactions involving the contacts within the segment.
+* Vytvářet segmenty.
+* Uložit kritéria segmentace, která jste použili při výběru kontaktů.
+* Protokolovat segment a zaznamenávat interakce zahrnující kontakty v segmentu.
 
-## Segmenting
-There are several ways to create segments:
+## Segmentace
+Segmenty lze vytvořit několika způsoby:
 
-* You can manually enter the contacts you want to include in the segment in the segment lines.
-* You can select contacts.
-* You can reuse a logged segment as the basis to create a new one.
-* You can reuse saved segmentation criteria.
+* Kontakty, které chcete zahrnout do segmentu, můžete zadat ručně.
+* Můžete vybrat kontakty.
+* Protokolovaný segment můžete znovu použít jako základ pro vytvoření nového segmentu.
+* Uložená kritéria segmentace můžete znovu použít.
 
-## Interactions
-On the **Segment** page, you can create interactions for several contacts simultaneously. For example, you can merge a segment with a Microsoft Word document, so that you can send a letter to all the contacts in the segment.
+## Interakce
+Na stránce **Segment** můžete vytvořit interakce pro několik kontaktů současně. Segment můžete například sloučit s dokumentem aplikace Microsoft Word, abyste mohli odeslat dopis všem kontaktům v segmentu.
 
-You can specify information about the interaction for the segment on the **Segment** header. For example, you can decide which interaction template you want to use for all the contacts, specify a description, a correspondence type, and so on. However, you can modify this information in the segment line for each particular contact, for example, by specifying another description for one contact. If you are merging a segment with a Microsoft Word document, you can personalize the document to be sent for one or several of the contacts within the segment, for example, by adding individualized comments to the document.
+V záhlaví stránky **Segment** můžete zadat informace o interakci pro segment. Můžete se například rozhodnout, kterou šablonu interakce chcete použít pro všechny kontakty, zadat popis, typ korespondence atd. Tyto informace však můžete upravit v řádku segmentu pro každý konkrétní kontakt, například zadáním jiného popisu pro jeden kontakt. Pokud slučujete segment s dokumentem aplikace Microsoft Word, můžete přizpůsobit dokument, který má být odeslán pro jeden nebo několik kontaktů v segmentu, například přidáním individualizovaných komentářů k dokumentu.
 
-## Logging
-On the **Segment** page, when you choose **Log**, the application records the interactions on the **Interaction Log Entry** page, and logs the segment. After you have logged the segment, you can only find it on the **Logged Segments** page.
+## Protokolování
+Na stránce **Segment** zvolíte-li **Protokol**, aplikace zaznamená interakce na stránce **Položka protokolu interakce** a zaznamená segment. Po zaznamenání segmentu jej najdete pouze na stránce **Protokolované segmenty**.
 
-On the **Logged Segments** page, you can decide to create a follow-up segment containing the same contacts as the segment you have logged.
+Na stránce **Protokolované segmenty** se můžete rozhodnout vytvořit segment zpracování obsahující stejné kontakty jako segment, který jste zaznamenali.
 
-## See Also
-[Create Segments](marketing-how-create-segment.md)  
-[Create Interactions for Segments](marketing-how-create-interactions.md)  
-[Managing Segments](marketing-segments.md)  
-[Recording Interactions With Contacts](marketing-interactions.md)  
-[Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
-[Creating and Managing Contacts](marketing-contacts.md)  
-[Working with Business Central](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Vytvoření segmentů](marketing-how-create-segment.md)  
+[Vytvoenít interakce pro segmenty](marketing-how-create-interactions.md)  
+[Správa segmentů](marketing-segments.md)  
+[Interakce záznamu s kontakty](marketing-interactions.md)  
+[Správa prodejních příležitostí](marketing-manage-sales-opportunities.md)  
+[Vytváření a správa kontaktů](marketing-contacts.md)  
+[Práce s Business Central](ui-work-product.md)

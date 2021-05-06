@@ -6,42 +6,39 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: jswymer
 
 ---
-# Create Sales Opportunities
-You can create opportunities for the sales opportunities you have on your contacts. All opportunities must be assigned to a salesperson or purchaser and must have a contact.
+# Vytvoření příležitostí
+Můžete vytvořit prodejní příležitosti, které máte na svých kontaktech. Všechny příležitosti musí být přiřazeny prodejci nebo nákupčímu a musí mít kontakt.
 
-You can create opportunities from the **Opportunity List** page. But you typically will create opportunities from the specific contact or salespeople.
+Příležitosti můžete vytvořit na stránce **Přehled příležitostí**. Obvykle však vytvoříte příležitosti od konkrétního kontaktu nebo prodejce.
 
-Before you can create opportunities, you must set up opportunity sales cycles. For more information see [Set Up Opportunity Sales Cycles and Stages](marketing-how-setup-opportunity-sales-cycles-stages.md).
+Než budete moci vytvářet příležitosti, musíte nastavit prodejní cykly příležitostí. Pro více informací navštivte [Nastavení prodejních cyklů a fází příležitosti](marketing-how-setup-opportunity-sales-cycles-stages.md).
 
-## To create an opportunity from a salesperson
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Salespeople**, and then choose the related link.
-2. Select the salesperson from the list for whom you want to create an opportunity.
-3. Choose the **Opportunities** action, and then choose **List**.
-4. Choose **New**, and then fill in the fields as relevant. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
-
-
-
-## To create an opportunity from a contact
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Contacts**, and then choose the related link.
-2. Select the contact from the list for whom you want to create an opportunity.
-3. Do one of the following:
-   * Choose the **Create Opportunity** action.
-   * Choose the  **Opportunities** action, and then choose **New**.
-4. Fill in the relevant fields.
-
-## See Also
-[Sales](sales-manage-sales.md)  
-[Creating and Managing Contacts](marketing-contacts.md)  
-[Working with Business Central](ui-work-product.md)
+## Vytvoření příležitosti od prodejce
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejci** a poté vyberte související odkaz.
+2. Vyberte prodejce ze seznamu, pro kterého chcete vytvořit příležitost.
+3. Vyberte akci **Příležitosti** a poté vyberte **Přehled**.
+4. Vyberte **Nový** a poté vyplňte příslušná pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+
+## Vytvoření příležitosti z kontaktu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kontakty** a poté vyberte související odkaz.
+2. Vyberte kontakt ze seznamu, pro který chcete vytvořit příležitost.
+3. Proveďte jeden z následujících úkonů:
+   * Vyberte akci **Vytvořit příležitost**.
+   * Vyberte akci **Příležitosti** a poté zvolte **Nový**.
+4. Vyplňte příslušná pole.
+
+## Viz také
+[Prodej](sales-manage-sales.md)  
+[Vytváření a správa kontaktů](marketing-contacts.md)  
+[Práce s Business Central](ui-work-product.md)

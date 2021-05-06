@@ -6,66 +6,63 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Create Incoming Document Records
-On the **Incoming Documents** page, you can use different functions to review expense receipts, manage OCR tasks, and convert incoming document files, manually or automatically, to the relevant documents or journal lines. The external files can be attached at any process stage, including to posted documents and to the resulting vendor, customer, and general ledger entries.
+# Vytvoření záznamu došlého dokladu
+Na stránce **Došlé doklady** můžete pomocí různých funkcí prohlížet účtenky, spravovat úlohy OCR a ručně nebo automaticky převádět soubory příchozích dokladů na příslušné doklady nebo řádky deníku. Externí soubory lze připojit v libovolné fázi procesu, včetně zaúčtovaných dokladů a výsledných položek dodavatele, zákazníka a financí.
 
-To record an external document in [!INCLUDE[prod_short](includes/prod_short.md)], you must first create or complete an incoming document record. You can do this manually, or you can take a photo of the external document and then create the incoming document record with the image file attached.
+Chcete-li zaznamenat externí doklad v [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte nejprve vytvořit nebo dokončit záznam došlého dokladu. Můžete to udělat ručně, nebo můžete vyfotografovat externí doklad a pak vytvořit záznam došlého dokladu s připojeným obrázkovým souborem.
 
-Before you can use the Incoming Documents feature, you must perform the required setup. For more information, see [Set Up Incoming Documents](across-how-setup-income-documents.md).
+Předtím než můžete použít funkce Došlých dokladů, musíte provést požadované nastavení. Pro více informací navštivte [Nastavení došlých dokladů](across-how-setup-income-documents.md).
 
-## To approve or reject an incoming document
-If you do want to allow users to create invoices or general journal lines from incoming document records unless they are approved, you can set up approvers who must approve the records before they can be processed.
+## Schválení nebo odmítnutí došlých dokladů
+Pokud chcete povolit uživatelům vytvářet faktury nebo řádky finančního deníku ze záznamů došlého dokladu, dokud nejsou schváleny, můžete nastavit toho, kdo musí schválit záznamy předtím, než budou zpracovány.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
-2. Select the line with the document that you want to approve or reject, and then choose the **Approve** or **Reject** actions.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Došlé doklady** a poté vyberte související odkaz.
+2. Vyberte řádek dokumentu, který chcete schválit nebo odmítnout a pak zvolte akci **Schválit** nebo **Odmítnout**.
 
-If you approve the incoming document record, the **Released** check box on the incoming document line is selected. The user in charge of creating, for example, purchase invoices can proceed to process the record.
+Pokud schválíte došlý doklad, je vybráno zaškrtávací políčko **Vydat** v řádku doělého dokladu. Uživatel, který je pověřen tvorbou například nákupních faktur, může zpracovat záznam.
 
-## To create an incoming document record by taking a photo
+## Vytvoření záznamu došlého dokladu pořízením fotografie
 > [!NOTE]  
->   The following procedure only applies to the [!INCLUDE[prod_short](includes/prod_short.md)] Tablet and Phone clients.
+> Následující postup platí pouze pro klienty tabletu a telefonu [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-1. On the app bar, choose the **Create Incoming Document from Camera** tile, and then go to step 4.
-2. Alternatively, on the app bar, choose the options button, choose **Incoming Documents**, and then choose **All**.
-3. On the **Incoming Documents** page, choose the ellipsis button, and then choose **Create from Camera**. The camera on the tablet or phone is activated.
-4. Take a photo of a document, such as a purchase receipt, that you want to process as an incoming document, and then choose the **OK** button.
+1. Na panelu aplikace zvolte dlaždici **Vytvořit příchozí dokument z fotoaparátu** a pak pokračujte na krok 4.
+2. Alternativně, na panelu aplikace zvolte tlačítko možnosti, vyberte **Došlé doklady** a pak zvolte **Vše**.
+3. Na stránce **Došlých dokladů** vyberte tlačítko se třemi tečkami a pak zvolte **Vytvoořit z kamery** Fotoaparát na tabletu nebo telefonu je aktivován.
+4. Udělejte fotku dokladů například nákupní účtenku, který chcete zpracovat jako příchozí doklad a potom klepněte na tlačítko **OK**.
 
-    A new incoming document record is created, with the image attached.
+   Vytvoří se nový záznam došlého dokladu s připojeným obrázkem.
 
-## To attach an image to an incoming document record by taking a photo
+## Připojení obrázku k záznamu došléh dokladu pomocí fotografie
 > [!NOTE]  
->   The following procedure only applies to the [!INCLUDE[prod_short](includes/prod_short.md)] Tablet and Phone clients.
+> Následující postup platí pouze pro klienty tabletu a telefonu [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-1. On the app bar, choose the options button, choose **Incoming Documents**, and then choose **All**.
-2. Open the card for an existing incoming document record.
-3. On the **Incoming Document** page, choose the ellipsis button, and then choose **Attach Image from Camera**. The camera on the tablet or phone is activated.
-4. Take a photo of a document, such as a purchase receipt, that you want to process as an incoming document, and then choose the **OK** button.
+1. Na panelu aplikace zvolte tlačítko možnosti, zvolte **Došlé doklady** a pak zvolte **Vše**.
+2. Otevře se karta pro existující záznam došlého dokladu.
+3. na stránce **Došlé doklady** vyberte tlačítko se třemi tečkami a zvolte **Připojit obrázek z fotoaparátu**. Fotoaparát na tabletu nebo telefonu je aktivován.
+4. Udělejte fotku dokladů například nákupní účtenku, který chcete zpracovat jako příchozí doklad a potom klepněte na tlačítko **OK**.
 
-    The image is attached to the incoming document record.
+   Obrázek je připojen k záznamu došlého dokladu.
 
-## To create an incoming document record manually
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
-2. Choose the **Create from File** action.  
-3. On the **Insert File** page, select a file, and then choose **Open**. The file is automatically attached.
-4. Alternatively, choose the **New** action.
-5. To attach a file, choose the **Attach File** action.
-6. On the **Insert File** page, select the file that represents the incoming document in question, and then choose the **Open** button.
-7. On the **Incoming Document** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## Vytvoření záznamu došlého dokladu ručně
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Došlé doklady** a poté vyberte související odkaz.
+2. Vyberte akci **Vytvořit ze souboru**.
+3. Na stránce **Vložit soubor** vyberte soubor a poté zvolte **Otevřít**. Soubor je automaticky připojen.
+4. Alternativně vyberte **Nový**.
+5. Chcete-li připojit soubor, zvolte **Připojit soubor**.
+6. Na stránce **Vložit soubor** vyberte soubor, který představuje daný došlý doklad a pak zvolte **Otevřít**.
+7. Na stránce **Došlé doklady** vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## See Also
-[Process Incoming Documents](across-process-income-documents.md)  
-[Incoming Documents](across-income-documents.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Proces došlých dokladů](across-process-income-documents.md)  
+[Došlé doklady](across-income-documents.md)  
+[Nakupování](purchasing-manage-purchasing.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

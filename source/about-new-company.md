@@ -4,76 +4,55 @@ description: It's easy to create a new, blank company in Business Central. An as
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: company, setup wizard
-ms.date: 10/01/2020
+ms.date: 11/01/2019
 ms.author: edupont
 
 ---
-# Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]
+# Vytváření nových společností v [!INCLUDE[d365fin](includes/d365fin_md.md)]
+V [!INCLUDE[d365fin](includes/d365fin_md.md)], se kontejnery pro obchodní data, která patří obchodní jednotce nebo právnické osobě, označují jako *společnost*. Když se v [!INCLUDE[d365fin](includes/d365fin_md.md)] zaregistrujete, dostanete demonstrační společnost a prázdnou společnost, *Moje společnost*. Přepínání mezi společnostmi je snadné, stačí jít do **Moje nastavení** a přejít na druhou společnost. Můžete však také vytvořit nové společnosti v [!INCLUDE[d365fin](includes/d365fin_md.md)] v závislosti na vašich obchodních potřebách. Když vytvoříte novou společnost, pomůže vám průvodce asistovanou instalací. Poté můžete importovat relevantní data z vaší starší verze systému nebo jiné společnosti do [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], the container for business data that belongs to a business unit or legal entity is referred to as a *company*. When you sign up for [!INCLUDE[prod_short](includes/prod_short.md)], you are given a demonstration company and an empty company, *My Company*. Switching between the companies is easy: just go to **My Settings** and move to the other company. But you can also create new companies in [!INCLUDE[prod_short](includes/prod_short.md)] depending on your business needs. When you create a new company, an assisted setup guide helps you get the basics in place. Then, you can import relevant data from your legacy system or another company in [!INCLUDE[prod_short](includes/prod_short.md)].  
+## Vytvoření nové společnosti
+Pokud se rozhodnete přidat společnost do svého [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete použít průvodce asistovanou instalací **Vytvořit novou společnost**, který vám pomůže začít. Průvodce nastavením je k dispozici na stránce **Společnosti** a z vyhledávání v poli **Společnost** na stránce **Moje nastavení**.
 
-## Creating a New Company
+Průvodce nastavením nabízí tři šablony:
 
-If you decide to add a company to your [!INCLUDE[prod_short](includes/prod_short.md)], you can use the **Create New Company** assisted setup guide to get you started. The setup wizard is available from the **Companies** page and from the lookup in the **Company** field on the **My Settings** page.  
+- **Vyhodnocení - vzorek dat**
+Tím se vytvoří společnost, která je podobná demonstrační společnosti s ukázkovými daty a instalačními daty.
+- **Provozní sada - pouze nastavení dat**
+Tím se vytvoří společnost, která je podobná  **Mé společnosti** s daty nastavení, ale bez ukázkových dat.
+- **Úplné vyhodnocení - úplný vzorek dat**
+Tím se vytvoří společnost s daty nastavení a úplnými ukázkovými daty pro všechny funkce, včetně výroby a správy služeb.
+- **Vytvořit novou - žádná data**
+Tím se vytvoří prázdná společnost bez nastavovacích dat.
 
-The setup wizard offers three templates and a blank option:
+Pokud chcete snadno začít s novou společností, zvolte **Provozní sada - pouze nastavení dat** importujte vlastní obchodní data, jako jsou zákazníci, zboží a dodavatelé. Vyberte šablonu **Nové** pokud chcete vše nastavit od začátku. V takovém případě můžete použít průvodce nastavením **Nastavení společnosti**, který vám pomůže začít se základními daty nastavení.
 
-- **Evaluation - Sample Data**  
-    This creates a company that is similar to the demonstration company with sample data and setup data.  
-- **Production - Setup Data Only**  
-    This creates a company that is similar to **My Company** with setup data but without sample data.
-- **Advanced Evaluation - Complete Sample Data**
-    This creates a company with setup data and complete sample data for all features, including Manufacturing and Service Management.
-- **Create New - No Data**  
-    This creates a blank company without setup data.  
+> [!NOTE]
+> Když vytvoříte novou společnost, trvá několik minut, než k ní získáte přístup v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Stav nastavení na stránce **Společnosti** ukazuje, kdy je nová společnost pro vás připravena. Poté můžete přejít na novou společnost pomocí **Má nastavení**.
 
-If you want to get started easily with a new company, choose **Production - Setup Data Only** and then import your own business data, such as customers, items, and vendors. Choose the **New** template if you want to set everything up from scratch. In that case, you can use the **Company Setup** assisted setup guide to help you get started with essential setup data.  
+Během vaší 30denní zkušební verze, můžete vytvořit libovolný počet nových společností, ty ale budou k dispozici pouze během zkušebního období. Pro více informací, kontaktujte vašho [!INCLUDE[d365fin](includes/d365fin_md.md)] partnera.
 
-> [!NOTE]  
-> When you create a new company, it takes a few minutes before you can access it in [!INCLUDE[prod_short](includes/prod_short.md)]. The setup status on the **Companies** page shows when the new company is ready for you. Then, you can switch to the new company by using **My Settings**.  
-
-During your 30 day trial, you can create any number of new companies, but they will only be available during your trial. For more information, contact your [!INCLUDE[prod_short](includes/prod_short.md)] partner.  
-
-## Copying a company
-
-On the **Companies** page, you can use the **Copy** action to create a second company based on the contents of an existing company. This is useful, for example, when you want to test a company without disrupting production data.
+## Kopírování společnosti
+Na stránce  **Společnosti**, můžete pomocí akce **Kopírovat** vytvořit druhou společnost založenou na obsahu existující společnosti. To je užitečné například v případě, že chcete otestovat společnost bez narušení výrobních dat.
 
 > [!Important]
-> This function cannot be used to take a backup of a company. Taking a company backup begins by exporting the database as a .bacpac file. For more information, see [Exporting Databases](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-database-export) in the development and administration help.
+> Tuto funkci nelze použít k vytvoření zálohy společnosti. Zálohování společnosti začíná exportem databáze jako souboru .bacpac. Pro více informací navštivte [Exportování databází](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-database-export) v nápovědě ITPro a pro vývojáře.
 
-## Company Setup
+## Nastavení společnosti
+Když se přihlásíte k nové společnosti, automaticky se spustí průvodce **Nastavení společnosti** a pomůže vám začít. Budete požádáni o informace o vaší firmě, jako je adresa, bankovní údaje a metoda ocenění zásob. Tyto informace požadujeme, protože se používají jako základ pro mnoho oblastí v [!INCLUDE[d365fin](includes/d365fin_md.md)], které nebudete muset později nastavovat ručně.
 
-When you sign in to a new company, the **Company Setup** wizard runs automatically and helps you get started. You will be asked for information about your business, such as the address, bank details, and inventory costing method. We ask for this information because it is used as a basis for many areas in [!INCLUDE[prod_short](includes/prod_short.md)] that you will then not have to set up manually later.  
+Například adresa vaší společnosti je zahrnuta ve fakturách a dalších dokumentech, informace o vaší bance se používají v platbách a metoda ocenění se používá k výpočtu cen a ocenění zásob.
 
-For example, your company address is included in invoices and other documents, your bank information is used in payments, and the costing method is used to calculate prices as well as inventory valuation.  
+Jakmile máte základy na místě, můžete nastavit zbývající základní oblasti. Potom jste připraveni přidat obchodní data, jako jsou zákazníci a dodavatelé. Pro více informaci navštivte [Setting Up [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md).
 
-Once you have the basics in place, you can set up remaining core areas. Then, you are ready to add business data, such as customers and vendors. For more information, see [Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md).  
-
-## Companies and Environments
-
-[!INCLUDE [company_environment](includes/company_environment.md)]
-
-For more information, see [Switching to Another Company or Environment](ui-organization-switch.md). 
-
-## Changing a Company's Name
-
-Once a company has been created, you can't change it's name. But you can change its **Display Name**, which is text that will be shown for the company throughout the application.  
-
-> [!TIP]
-> You can rename a company if you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.
-
-## See Also
-
-[Customizing Business Central](ui-customizing-overview.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Change Basic Settings](ui-change-basic-settings.md)  
-[Getting Started](product-get-started.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Přizpůsobení Business Central](ui-customizing-overview.md)  
+[Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md)  
+[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)  
+[Změna základního nastavení](ui-change-basic-settings.md)  
+[Začínáme](product-get-started.md)

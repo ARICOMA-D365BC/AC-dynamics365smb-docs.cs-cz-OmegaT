@@ -13,100 +13,99 @@
     ms.author: edupont
 
 ---
-# Design Details: Production Order Posting
-Similar to assembly order posting, the consumed components and the used machine time are converted and output as the produced item when the production order is finished. For more information, see [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md). However, the cost flow for assembly orders is less complex, especially because assembly cost posting only occurs once and therefore does not generate work-in-process inventory.
+# Podrobnosti návrhu: Účtování výrobní zakázky
+Podobně jako při zaúčtování montážní zakázky jsou spotřebované komponenty a použitý čas stroje převedeny a výstupem je vyrobené zboží po dokončení výrobní zakázky. Pro více informací navštivte [Detaily návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md). Tok nákladů pro montážní zakázky je však méně složitý, zejména proto, že účtování nákladů na montáž probíhá pouze jednou a nevytváří zásoby v procesu práce.
 
 
-Transactions that occur during the manufacturing process can be tracked through the following stages:  
+Transakce, ke kterým dochází během výrobního procesu, lze sledovat v následujících fázích:
 
-1.  Purchase of materials and other manufacturing inputs.  
-2.  Conversion into work in process.  
-3.  Conversion into finished goods inventory.  
-4.  Sale of finished goods.  
+1. Nákup materiálů a dalších výrobních vstupů.
+2. Přeměna na nedokončenou výrobu.
+3. Přeměna na zásoby hotových výrobků.
+4. Prodej hotových výrobků.
 
-Therefore, apart from regular inventory accounts, a manufacturing company must establish three separate inventory accounts to record transactions at various stages of production.  
+Proto kromě běžných skladových účtů musí výrobní společnost zřídit tři samostatné skladové účty pro evidování transakcí v různých fázích výroby.
 
-|Inventory Account|Description|  
+| Skladový účet | Popis |
 |-----------------------|---------------------------------------|  
-|**Raw Materials account**|Includes the cost of raw materials that are purchased but not yet transferred to production. The balance in the Raw Materials account indicates the cost of raw materials on hand.<br /><br /> When raw materials move into the production department, the cost of the materials is transferred from the Raw Materials account to the WIP account.|  
-|**Work in Process (WIP) account**|Accumulates the costs that are incurred during production in the accounting period. The WIP account is debited for the cost of raw materials that are transferred from the raw materials warehouse, the cost of direct labor performed, and the manufacturing overhead costs that are incurred.<br /><br /> The WIP account is credited for the total manufacturing cost of units that are completed in the factory and transferred to the finished goods warehouse.|  
-|**Finished Goods account**|This account includes the total manufacturing cost of units that are completed but not yet sold. At the time of sale, the cost of units sold is transferred from the Finished Goods account to the Cost of Goods Sold account.|  
+| **Účet surovin** | Zahrnuje náklady na suroviny, které jsou zakoupeny, ale dosud nebyly převedeny do výroby. Zůstatek na účtu Surovin označuje náklady na suroviny, které jsou k dodaní.<br /><br /> Když se suroviny přesunou do výroby, náklady na materiál se převedou z účtu Surovin na účet nedokončené výroby. |
+| **Účet nedokončené výroby (NV)** | Kumulace nákladů vzniklých během výroby v účetním období. Účet nedokončené výroby je odepisován z nákladů na suroviny, které jsou převedeny ze skladu surovin, nákladů na přímou práci a vzniklých výrobních režijních nákladů.<br /><br /> Účet nedokončené výroby se připisuje k celkovým výrobním nákladům jednotek, které jsou dokončeny ve výrobním závodě a převedeny do skladu hotových výrobků. |
+| **Účet hotových výrobků** | Tento účet zahrnuje celkové výrobní náklady jednotky, které jsou dokončeny, ale ještě nebyly prodány. V době prodeje se náklady na prodané jednotky převádí z účtu Hotových výrobků na účet Nákladů na prodané zboží. |
 
-The inventory value is calculated by tracking the costs of all increases and decreases, as expressed by the following equation:  
+Hodnota zásob se vypočítá sledováním nákladů na všechna zvýšení a snížení vyjádřená následující rovnicí:
 
-* inventory value = beginning balance of inventory + value of all increases - value of all decreases  
+* hodnota zásob = počáteční zůstatek zásob + hodnota všech zvýšení - hodnota všech snížení
 
-Depending on the type of inventory, increases and decreases are represented by different transactions.  
+V závislosti na typu zásob jsou zvýšení a snížení reprezentovány různými transakcemi.
 
 ||Increases|Decreases|  
 |-|---------------|---------------|  
-|**Raw material inventory**|-   Net purchases of material<br />-   Output of subassemblies<br />-   Negative consumption|Material consumption|  
-|**WIP inventory**|-   Material consumption<br />-   Capacity consumption<br />-   Manufacturing overhead|Output of end items (cost of goods manufactured)|  
-|**Finished goods inventory**|Output of end items (cost of goods manufactured)|-   Sales (cost of goods sold)<br />-   Negative output|  
-|**Raw material inventory**|-   Net purchases of material<br />-   Output of subassemblies<br />-   Negative consumption|Material consumption|  
+|**Zásoby surovin**|-   Čistý nákup materiálu<br />-   Výstup podzakázek<br />-   Záporná spotřeba|Spotřeba materiálu|  
+|**Nedokončená výroba**|-   Spotřeba materiálu<br />-   Spotřeba kapacit<br />-   Výrobní režie|Výstup zboží (náklady na vyrobené zboží)|  
+|**Zásoby hotových výrobků**|Výstup hotových výrobků (náklady na vyrobené zboží)|-   Tržby (náklady na prodané zboží)<br />-   Záporný výstup|  
+|**Zásoby surovin**|-   Čistý nákup materiálu<br />-   Výstup podzakázek<br />-   Záporná spotřeba|Spotřeba materiálu|
 
-The values of increases and decreases are recorded in the different types of manufactured inventory in the same way as for purchased inventory. Every time a transaction of inventory increase or decrease takes place, an item ledger entry and a corresponding general ledger entry are created for the amount. For more information, see [Design Details: Inventory Posting](design-details-inventory-posting.md).  
+Hodnoty zvýšení a snížení se zaznamenávají v různých typech vyrobených zásob stejným způsobem jako u nakoupených zásob. Pokaždé, když se transakce zvýšení nebo snížení zásob uskuteční, vytvoří se pro tuto částku položka zboží a odpovídající věcná položka. Pro více informací navštivte [Detaily návrhu: Účtování zásob](design-details-inventory-posting.md).
 
-Although values of transactions that are related to purchased goods are posted only as item ledger entries with related value entries, transactions that are related to produced items are posted as capacity ledger entries with related value entries, in addition to the item ledger entries.  
+Přestože hodnoty transakcí, které souvisejí s nakoupeným zbožím, jsou zaúčtovány pouze jako položky zboží se souvisejícími položkami ocenění, transakce, které souvisejí s vyrobeným zbožím, jsou kromě položek zboží zaúčtovány jako položky kapacity se souvisejícími položkami ocenění.
 
-## Posting Structure  
-Posting production orders to WIP inventory involves output, consumption, and capacity.  
+## Struktura účtování
+Zaúčtování výrobních objednávek do Nedokončené výroby zahrnuje výstup, spotřebu a kapacity.
 
-The following diagram shows the involved posting routines in codeunit 22.  
+Následující diagram znázorňuje princip účtování v codeunitě 22.
 
-![Production order posting routines](media/design_details_inventory_costing_14_production_posting_1.png "Production order posting routines")  
+![Postupy účtování výrobní zakázky](media/design_details_inventory_costing_14_production_posting_1.png "Postupy účtování výrobní zakázky")
 
-The following diagram shows the associations between the resulting entries and the cost objects.  
+Následující diagram znázorňuje spojení mezi výslednými položkami a nositeli nákladů.
 
-![Production entry flow](media/design_details_inventory_costing_14_production_posting_2.png "Production entry flow")  
+![Vstupní tok výroby](media/design_details_inventory_costing_14_production_posting_2.png "Vstupní tok výroby")
 
-The capacity ledger entry describes the capacity consumption in terms of time units, whereas the related value entry describes the value of the specific capacity consumption.  
+Položka kapacity popisuje spotřebu kapacity z hlediska časových jednotek, zatímco související položka ocenění popisuje hodnotu specifické spotřeby kapacity.
 
-The item ledger entry describes the material consumption or output in terms of quantities, whereas the related value entry describes the value of this specific material consumption or output.  
+Položka zboží popisuje spotřebu materiálu nebo výstup z hlediska množství, zatímco související položka ocenění popisuje hodnotu této specifické spotřeby nebo výstupu materiálu.
 
-A value entry that describes WIP inventory value can be associated with one of the following combinations of cost objects:  
+Položku hodnoty, která popisuje hodnotu zásob nedokončené výroby, lze přidružit k jedné z následujících kombinací objektů nákladů:
 
--   A production order line, a work or machine center, and a capacity ledger entry.  
--   A production order line, an item, and an item ledger entry.  
--   Only a production order line  
+- Řádek výrobní zakázky, pracovního nebo strojního centra a položky kapacity.
+- Řádek výrobní zakázky, zboží a položka zboží.
+- Pouze řádek výrobní zakázky
 
-For more information about how costs from production and assembly are posted to the general ledger, see [Design Details: Inventory Posting](design-details-inventory-posting.md).  
+Další informace o tom, jak jsou náklady z výroby a montáže zaúčtovány do hlavní knihy, naleznete v tématu [Detaily návrhu: Účtování zásob](design-details-inventory-posting.md).
 
-## Capacity Posting  
-Posting output from the last production order routing line results in a capacity ledger entry for the end item, in addition to its inventory increase.  
+## Účtování kapacit
+Zaúčtování výstupu z posledního řádku TNG postupu výrobní zakázky má za následek kromě zvýšení zásob také položku kapacity pro koncové zboží.
 
- The capacity ledger entry is a record of the time that was spent to produce the item. The related value entry describes the increase of the WIP inventory value, which is the value of the conversion cost. For more information, see “From the Capacity Ledger” in [Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md).  
+Položka kapacity je záznam času stráveného k výrobě zboží. Související položka hodnoty popisuje zvýšení hodnoty zásob nedokončené výroby, což je hodnota převodních nákladů. Pro více informací navštivte “Z položek kapacity” v [Detaily návrhu: Účty hlavní knihy](design-details-accounts-in-the-general-ledger.md).
 
-## Production Order Costing  
- To control inventory and production costs, a manufacturing company must measure the cost of production orders, because the predetermined standard cost of each produced item is capitalized in the balance sheet. For information about why produced items use the Standard costing method, see [Design Details: Costing Methods](design-details-costing-methods.md).  
+## Náklady výrobní zakázky
+K řízení zásob a výrobních nákladů musí výrobní společnost měřit náklady výrobních zakázek, protože předem stanovené standardní náklady na každou vyrobenou položku jsou kapitalizovány v rozvaze. Informace o tom, proč vyráběné položky používají metodu Standardní metody ocenění, najdete v [Detaily návrhu: Metody ocenění](design-details-costing-methods.md).
 
-> [!NOTE]  
->  In environments that do not use the Standard costing method, the actual rather than the standard cost of produced items is capitalized on the balance sheet.  
+> V prostředích, která nepoužívají standardní metodu ocenění se v rozvaze kapitalizují skutečné, nikoli standardní náklady na vyrobené položky.
 
-The actual cost of a production order consists of the following cost components:  
+Skutečné náklady výrobní zakázky se skládají z následujících nákladových složek:
 
--   Actual material cost  
--   Actual capacity cost or subcontractor cost  
--   Manufacturing overhead  
+- Skutečné náklady na materiál
+- Skutečné náklady na kapacitu nebo náklady na subdodavatele
+- Výrobní režie
 
-These actual costs are posted to the production order and compared to the standard cost to calculate variances. Variances are calculated for each of the item cost components: raw materials, capacity, subcontractor, capacity overhead, and manufacturing overhead. The variances can be analyzed to determine problems, such as excessive waste in processing.  
+Tyto skutečné náklady jsou zaúčtovány do výrobní zakázky a porovnány se standardními náklady pro výpočet odchylek. Odchylky se počítají pro každou složku nákladů na zboží: suroviny, kapacitu, subdodavatele, režijní náklady na kapacitu a výrobní režii. Odchylky lze analyzovat, aby se zjistily problémy, jako je nadměrný odpad při výrobě.
 
-In standard-cost environments, the costing of a production order is based on the following mechanism:  
+V prostředí se standardními náklady je nákladování výrobní zakázky založeno na následujícím mechanismu:
 
-1.  When the last routing operation is posted, the production order cost is posted to the item ledger and set to the expected cost.  
+1. Při zaúčtování poslední operace TNG postupu jsou náklady výrobní zakázky zaúčtovány do položek zboží a nastaveny na očekávané náklady.
 
-    This cost equals the output quantity that is posted in the output journal multiplied by the standard cost that is copied from the item card. The cost is treated as expected cost until the production order is finished. For more information, see [Design Details: Expected Cost Posting](design-details-expected-cost-posting.md).  
+   Tyto náklady se rovnají výstupnímu množství, které je zaúčtováno do deníku výstupu vynásobené standardními náklady, které jsou zkopírovány z karty zboží. Náklady jsou považovány za očekávané náklady, dokud není výrobní zakázka dokončena. Pro více informací navštivte [Detaily návrhu: Účtování očekávaných nákladů](design-details-expected-cost-posting.md).
 
-    > [!NOTE]  
-    >  This differs from assembly order posting, which always posts actual costs. For more information, see [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md).  
-2.  When the production order is set to **Finished**, the order is invoiced by running the **Adjust Cost-Item Entries** batch job. As a result, the total cost of the order is calculated based on the standard cost of the consumed materials and capacity. The variances between the calculated standard costs and the actual production costs are calculated and posted.  
+   > [!NOTE]  
+   > To se liší od zaúčtování montáží zakázky, ktera vždy zaúčtuje skutečné náklady. Pro více informací navštivte [Detaily návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md).
+2. Je-li výrobní zakázka nastavena **Dokončeno**, je objednávka fakturována spuštěním dávkové úlohy **Úprava nákladů - položky zboží**. V důsledku toho se celkové náklady objednávky počítají na základě standardních nákladů spotřebovaných materiálů a kapacity. Rozdíly mezi vypočtenými standardními náklady a skutečnými výrobními náklady se počítají a zaúčtují.
 
-## See Also  
- [Design Details: Inventory Costing](design-details-inventory-costing.md)   
- [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md)  
- [Managing Inventory Costs](finance-manage-inventory-costs.md)
- [Finance](finance.md)  
- [Working with Business Central](ui-work-product.md)
+## Viz také
+[Detaily návrhu: Náklady zásobg](design-details-inventory-costing.md)   
+[Detaily návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md)  
+[Správa nákladů zásob](finance-manage-inventory-costs.md)
+[Finance](finance.md)  
+[Práce s Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

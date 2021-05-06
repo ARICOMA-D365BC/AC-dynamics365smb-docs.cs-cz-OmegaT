@@ -1,222 +1,160 @@
 ---
-title: Working with General Journals to Post Directly to G/L
-description: Learn about using journals to post financial transactions to general ledger accounts and other accounts, such as bank and vendor accounts. Use recurring journals to post accruals and allocate balances by dimension values.
-author: bholtorf
-
+title: Použití finančních deníků k přímému účtování do hlavní knihy | Microsoft Docs
+description: 'Další informace o používání deníků k účtování finančních transakcí na účty hlavní knihy a další účty, jako jsou účty bank a dodavatelů.'
+author: SorenGP
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: journals, recurring, accrual
-ms.date: 02/15/2021
-ms.author: edupont
-
+ms.date: 03/01/2019
+ms.author: sgroespe
 ---
-# Working with General Journals
+# <a name="working-with-general-journals"></a>Práce s finančními deníky
 
-Most financial transactions are posted to the general ledger through dedicated business documents, such as purchase invoices and sales orders. But you can also process business activities such as purchasing, paying, using recurring journals to post accruals, or refunding employee expenses by posting journal lines in the various journals in [!INCLUDE[prod_short](includes/prod_short.md)].  
+Většina finančních transakcí je zaúčtována do hlavní knihy prostřednictvím vyhrazených obchodních dokladů, jako jsou nákupní faktury a prodejní objednávky. Můžete však také zpracovat obchodní činnosti, jako je nákup, výplata nebo náhrada výdajů za zaměstnance, a to tak, že zaúčtujete řádky deníku v  různých denících v [!INCLUDE[d365fin](includes/d365fin_md.md)].  
 
-Most journals are based on the *General Journal*, and you can process all transactions on the **General Journal** page. For more information, see [Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md).  
+Většina deníků je založena na *Finančním deníku* a všechny transakce můžete zpracovat na stránce **Finančního deníku**. Pro více informací navštivte [Účtujte transakce přímo do hlavní knihy](finance-how-post-transactions-directly.md).  
 
-For example, you can use post employees' expenditure of own money on business-related expenses, for later reimbursement. For more information, see [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md).
+Například můžete zaúčtovat výdaje zaměstnanců na výdaje spojené s podnikáním, abyste je mohli později uhradit. Pro více informací navštivte [Zaznamenávaní a uhrazovaní výdajů zaměstnanců](finance-how-record-reimburse-employee-expenses.md).
 
-But in many cases, you will want to use the journals that are optimized for specific types of transactions, such as the **Payment Journal** for registering payments. For more information, see [Record Payments and Refunds in the Payment Journal](payables-how-post-payments-refunds.md).  
+V mnoha případech však budete chtít pro registraci plateb používat deníky, které jsou optimalizovány pro konkrétní typy transakcí, jako je například **Deník plateb**. Pro více informací navštivte [Záznam plateb a vrácení peněz do deníku plateb](payables-how-post-payments-refunds.md).  
 
-You use general journals to post financial transactions directly to general ledger accounts and other accounts, such as bank, customer, vendor, and employee accounts. Posting with a general journal always creates entries on general ledger accounts. This is true even when, for example, you post a journal line to a customer account, because an entry is posted to a general ledger receivables account through a posting group.
+Finanční deníky používáte k zaúčtování finančních transakcí přímo na účty hlavní knihy a další účty, jako jsou bankovní účty, účty zákazníků, dodavatelů a zaměstnanců. Účtování pomocí finančního deníku vždy vytvoří položky na účtech hlavní knihy. To platí i tehdy, když například zaúčtujete řádek deníku na účet zákazníka, protože položka je zaúčtována na účet pohledávek hlavní knihy prostřednictvím účtovací skupiny.
 
-The information that you enter in a journal is temporary and can be changed while it is in the journal. When you post the journal, the information is transferred to entries on individual accounts, where it cannot be changed. You can, however, unapply posted entries, and you can post reversing or correcting entries. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
+Informace, které zadáte do deníku, jsou dočasné a mohou být změněny, zatímco jsou v deníku. Když zaúčtujete deník, informace se přenesou do záznamů na jednotlivých účtech, kde je nelze změnit. Můžete však použít nepublikované účtované položky a můžete zveřejňovat reverzní nebo opravné položky. Pro více informací navštivte [Reverzní účtovaní](finance-how-reverse-journal-posting.md).
 
 > [!NOTE]
 > [!INCLUDE[journal-showhide-columns-inline-tip](includes/journal-showhide-columns-inline-tip.md)]  
 
-## Using Journal Templates and Batches
+## <a name="using-journal-templates-and-batches"></a>Používaní šablon a listů deníku
 
-There are several general journal templates. Each journal template is represented by a dedicated page with particular functions and the fields that are required to support those functions, such as the **Payment Reconciliation Journal** page to process bank payments and the **Payment Journal** page to pay your vendors or reimburse your employees. For more information, see [Make Payments](payables-make-payments.md) and [Reconcile Customer Payments with the Cash Receipt Journal or from Customer Ledger Entries](receivables-how-apply-sales-transactions-manually.md).
+Existuje několik šablon finančního deníku. Každá šablona deníku je reprezentována vyhrazeným oknem s konkrétními funkcemi a poli, která jsou vyžadována pro podporu těchto funkcí, jako je například stránka **Deník odsouhlasení plateb** pro zpracování bankovních plateb a stránka **Deník Plateb** pro platby vašim dodavatelům nebo proplacení vašich zaměstnanců. Pro více informací navštivte [Provedení platby](payables-make-payments.md) a [Odsouhlasení platby zákazníků s Deníkem přijaté hotovosti nebo z Položek zákazníka](receivables-how-apply-sales-transactions-manually.md).
 
-For each journal template, you can set up your own personal journal as a journal batch. For example, you can define your own journal batch for the payment journal that has your personal layout and settings. The following tip is an example of how to personalize a journal.
+Pro každou šablonu deníku můžete nastavit vlastní osobní deník jako list deníku. Můžete například definovat vlastní list deníku pro deník plateb, který má vaše osobní rozvržení a nastavení. Následující tip je příkladem přizpůsobení deníku.
 
 > [!TIP]  
-> If you select the **Suggest Balancing Amount** check box on the line for your batch on the **General Journal Batches** page, then the **Amount** field on, for example, general journal lines for the same document number is automatically prefilled with the value that is required to balance the document. For more information, see [Letting [!INCLUDE[prod_short](includes/prod_short.md)] Suggest Values](ui-let-system-suggest-values.md).
+> Pokud zaškrtnete políčko **Navrhnout vyrovnávací částku** na řádku pro váš list na stránce **Listy finančního deníku**, pak se pole **Částka** například na řádcích finančního deníku pro stejné číslo dokladu automaticky vyplní hodnotou, která je nutná k vyrovnání dokladu. Pro více informací navštivte [Nechat [!INCLUDE[d365fin](includes/d365fin_md.md)] navrhnout hodnoty](ui-let-system-suggest-values.md).
 
-> [!TIP]
-> To add or remove fields in journals, use the **Personalizing** banner. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
-
-### Validating General Journal Batches
-To help prevent delays when posting, you can turn on a background check that will notify you when there is a mistake in the financial journal you're working on that will prevent you from posting the journal. On the **General Journal Batch** page, you can choose **Background Error Check** to have [!INCLUDE[prod_short](includes/prod_short.md)] validate finance journals, such as general or payment journals, while you're working on them. 
-
-When you enable the validation the **Journal Check** FactBox displays next to the journal lines and will show issues in the current line and the whole batch. Validation happens when you load a finance journal batch, and when you choose another journal line. The **Issues total** tile in the FactBox shows the total number of issues that [!INCLUDE[prod_short](includes/prod_short.md)] found, and you can choose it to open an overview the issues. 
-
-You can use the **Show Lines with Issues** and **Show All Lines** actions to toggle between journal lines that have or don't have issues. The new **Journal Line Details** FactBox provides quick overview and access to data from journal lines, such as the G/L account, customer, or vendor, as well as to the posting setup for specific accounts.     
-
-### Reversing Journals to Correct Mistakes
-When working with journals that have many lines and something goes wrong, it's important to have an easy way to correct mistakes. The **Posted General Journal** page offers a couple of actions that can help.
-
-* **Copy Selected Lines to Journal** - Copy only the lines that you select.
-* **Copy G/L Register to Journal** - Copy all lines that belong to the same G/L register.
-
-These actions let you create a copy of a general journal line or a batch, and then specify the following:
-
-* The journal to copy the lines to
-* Whether with opposite signs (a reversing journal)
-* A different posting date or document number
-
-To allow journals to be copied to posted general journals, on the **General Journal Templates** page, choose the **Copy to Posted Jnl. Lines** check box. After you allow people to copy posted general journals, if needed you can turn off copying for specific batches.
-
-## Understanding Main Accounts and Balancing Accounts
-If you have set up default balancing accounts for the journal batches on the **General Journals** page, the balancing account will be filled in automatically when you fill in the **Account No.** field. Otherwise, fill in both the **Account No.** field and the **Bal. Account No.** field manually. A positive amount in the **Amount** field is debited to the main account and credited to the balancing account. A negative amount is credited to the main account and debited to the balancing account.
+## <a name="understanding-main-accounts-and-balancing-accounts"></a>Porozumění hlavním a vyrovnávacím účtům
+Pokud jste nastavili výchozí vyrovnávací účty pro listy deníku na stránce **Finanční deníky**, vyrovnávací účet bude vyplněn automaticky, když vyplníte pole **Číslo účtu**. Jinak vyplňte pole **Číslo účtu** i **Číslo protiúčtu** ručně. Kladná částka v poli **Částka** je zaúčtovaná na hlavní účet a připsána na vyrovnávací účet. Záporná částka je připsána na hlavní účet a odúčtována na vyrovnávací účet.
 
 > [!NOTE]  
->   VAT is calculated separately for the main account and the balancing account, so they can use different VAT percentage rates.
+>   DPH se počítá zvlášť pro hlavní účet a vyrovnávací účet, takže se mohou použít různé procentní sazby DPH.
 
-## Working with Recurring Journals
-A recurring journal is a general journal with specific fields for managing transactions that you post frequently with few or no changes, such as rent, subscriptions, electricity, and heat. Using these fields for recurring transactions, you can post both fixed and variable amounts. You can also specify automatic reversal entries for the day after the posting date. You can also use allocation keys to divide the recurring entries among various accounts. For more information, see [Allocating Recurring Journal Amounts to Several Accounts](#allocating-recurring-journal-amounts-to-several-accounts).
+## <a name="working-with-recurring-journals"></a>Práce s periodickými deníky
+Periodický deník je obecný deník se specifickými poli pro správu transakcí, které často účtujete, s malými nebo žádnými změnami, jako je nájemné, předplatné, elektřina a teplo. Pomocí těchto polí pro opakované transakce můžete účtovat pevné i variabilní částky. Můžete také určit automatické storno pro den po datu účtování. Můžete také použít alokační klíče k rozdělení opakujících se položek mezi různé účty. Pro více informací navštivte [Přidělení opakujících se částek deníku na několik účtů](ui-work-general-journals.md#allocating-recurring-journal-amounts-to-several-accounts).
 
-With a recurring journal, entries that will be posted regularly need to be typed in only once. That is, the accounts, dimensions and dimension values and so on that you enter will be remain in the journal after posting. If any adjustments are necessary, you can make them with each posting.
+U opakujícího se deníku je třeba položky, které budou zveřejněny pravidelně, psát pouze jednou. To znamená, že účty, dimenze a hodnoty dimenzí atd., které zadáte, zůstanou po zaúčtování v deníku. Pokud jsou nutné úpravy, můžete je provést s každým účtováním.
 
-### Recurring Method field
+### <a name="recurring-method-field"></a>Pole metoda periody
+Toto pole určuje, jak bude po zaúčtování zpracována částka na řádku deníku. Pokud například použijete stejnou částku při každém zaúčtovaní řádku, můžete částku ponechat. Pokud na řádku použijete stejné účty a text, ale částka se bude při každém účtování lišit, můžete částku po zaúčtovaní odstranit.
 
-This field determines how the amount on the journal line is treated after posting. For example, if you will use the same amount every time you post the line, you can let the amount remain. If you will use the same accounts and text on the line but the amount will vary every time you post, you can choose to delete the amount after posting.
-
-| To | See |
+| Viz | také |
 | --- | --- |
-|F Fixed|The amount on the journal line will remain after posting.|
-|V Variable|The amount on the journal line will be deleted after posting.|
-|B Balance|The posted amount on the account on the line will be allocated among the accounts specified for the line in the Gen. Jnl. Allocation table. The balance on the account will thus be set to zero. Remember to fill in the **Allocation %** field on the **Allocations** page. For more information, see [Allocating Recurring Journal Amounts to Several Accounts](#allocating-recurring-journal-amounts-to-several-accounts).|
-|RF Reversing Fixed|The amount on the journal line will remain after posting, and a balancing entry will be posted on the next day.|
-|RV Reversing Variable|The amount on the journal line will be deleted after posting, and a balancing entry will be posted on the next day.|
-|RB Reversing Balance|The posted amount on the account on the line will be allocated among the accounts specified for the line on the **Allocations** page. The balance on the account will be set to zero, and a balancing entry is posted on the next day.|
-|BD Balance by Dimension|The journal line allocates costs based on a G/L account's balance by dimension. You'll be prompted to set the dimension filters to be used to calculate the source G/L account's balance by dimension from which you want to allocate costs. Alternatively, choose the **Set Dimension Filters** action later.|
-|RBD Reversing Balance by Dimension|The journal line allocates costs based on a G/L account's reversing balance by dimension. You'll be prompted to set the dimension filters to be used to calculate the source G/L account's balance by dimension from which you want to allocate costs. Alternatively, choose the **Set Dimension Filters** action later.|
+|Pevná|Částka na řádku deníku zůstane po zaúčtování.|
+|Proměnná|Částka na řádku deníku bude po zaúčtování odstraněna.|
+|Zůstatek|Zaúčtovaná částka na řádku účtu bude přidělena mezi účty určené pro řádek v tabulce Deníku rozdělení. Saldo na účtu bude tedy nastaveno na nulu. Nezapomeňte vyplnit pole **Alokace %** na stránce **Alokace**. Pro více informací navštivte [Přidělení opakujících se částek deníku na několik účtů](ui-work-general-journals.md#allocating-recurring-journal-amounts-to-several-accounts).|
+|Reverzní neměnná|Částka na řádku deníku zůstane po zaúčtování a vyrovnávací položka bude zaúčtována následující den.|
+|Reverzní proměnná|Částka na řádku deníku bude po zaúčtování odstraněna a vyrovnávací položka bude zaúčtována následující den.|
+|Reverzní saldo|Zaúčtovaná částka na řádku účtu bude přidělena mezi účty určené pro řádek na stránce **Přidělení**. Saldo na účtu bude nastaven na nulu a následující den se zaúčtuje vyrovnávací položka.|
 
 > [!NOTE]  
-> The VAT fields can be filled in on either the recurring journal line or on the allocation journal line but not on both. That is, they can be filled in on the **Allocations** page only if the corresponding lines in the recurring journal are not filled in.
+>  Pole DPH mohou být vyplněna buď na řádku periodického deníku, nebo na řádku deníku přidělení, ale nikoli na obou. To znamená, že je lze vyplnit na stránce **Alokace**, pouze pokud nejsou vyplněny odpovídající řádky v periodickém deníku.
 
-### Recurring Frequency field
-This field determines how often the entry on the journal line will be posted. It is a date formula field, and it must be filled in for recurring journal lines. For more information, see [Using Date Formulas](ui-enter-date-ranges.md#using-date-formulas).
+### <a name="recurring-frequency-field"></a>Pole frekvence periody
+Toto pole určuje, jak často bude položka na řádku deníku zaúčtována. Je to pole Vzorec data a musí být vyplněno pro řádky periodického deníku. Pro více informací navštivte [Použití vzorců dat](ui-enter-date-ranges.md#using-date-formulas).
 
-#### Examples
-If the journal line must be posted every month, enter "1M". After every posting, the date in the **Posting Date** field will be updated to the same date in the next month.
+#### <a name="examples"></a>Příklady:
+Pokud musí být řádek deníku zaúčtován každý měsíc, zadejte „1M“. Po každém účtování bude datum v poli **Zúčtovací datum** aktualizovaný na stejné datum v příštím měsíci.
 
-If you want to post an entry on the last day of every month, you can do one of the following:
+Chcete-li zaúčtovat položku v poslední den každého měsíce, můžete provést jednu z následujících akcí:
 
-- Post the first entry on the last day of a month by entering 1D+1M-1D (1 day + 1 month - 1 day). With this formula, the posting date is calculated correctly regardless of how many days there are in the month.
+- Zaúčtujte první položku v poslední den měsíce zadáním 1D+1M-1D (1 den + 1 měsíc - 1 den). U tohoto vzorce se datum účtování vypočítá správně bez ohledu na to, kolik dní v měsíci je.
 
-- Post the first entry on any arbitrary day of a month by entering 1M+CM. With this formula, the posting date will be after one full month + the remaining days of the current month.
+- Zaúčtujte první položku v libovolný den v měsíci zadáním 1M + CM. U tohoto vzorce bude datum účtování po jednom úplném měsíci + zbývajících dnech aktuálního měsíce.
 
-### Expiration Date field
-This field determines the date on which the line will be posted for the last time. The line will not be posted after this date.
+### <a name="expiration-date-field"></a>Pole datum expirace
+Toto pole určuje datum, kdy bude řádek zaúčtován naposledy. Po tomto datu už řádek nebude účtován.
 
-The advantage of using the field is that the line will not be deleted from the journal immediately and you can always replace the present expiration date with a later one so that you can use the line further into the future.
+Výhodou použití tohoto pole je, že řádek nebude z deníku odstraněn okamžitě a stávající datum expirace můžete vždy nahradit pozdějším, takže můžete tento řádek použít i do budoucna.
 
-If the field is blank, the line will be posted every time you post until it is deleted from the journal.
+Pokud je pole prázdné, řádek bude zaúčtovaný pokaždé, když položku zaúčtujete, dokud nebude odstraněn z deníku.
 
-### Allocating Recurring Journal Amounts to Several Accounts
+### <a name="allocating-recurring-journal-amounts-to-several-accounts"></a>Přidělení částek periodického deníku na několik účtů
+Na stránce **Periodický finanční deník** si můžete vybrat akci **Přidělení**, abyste viděli nebo spravovali, jak jsou částky na řádku periodického deníku přiděleny několika účtům a dimenzím. Všimněte si, že přidělení funguje jako řádek vyrovnávacího účtu pro řádek periodického deníku.
 
-On the **Recurring General Journal** page, you can choose the **Allocations** action to see or manage how amounts on the recurring journal line are allocated to several accounts and dimensions. Note that an allocation functions as balancing account line to the recurring journal line.
+Stejně jako v periodickém deníku je třeba zadat přidělení pouze jednou. Přidělení zůstane v deníku přidělení i po zaúčtování, takže nemusíte zadávat částky a přidělení pokaždé, když zaúčtujete řádek periodického deníku.
 
-Just as in a recurring journal, you need to enter an allocation only once. The allocation will remain in the allocation journal after posting, so you do not need to enter amounts and allocations every time you post the recurring journal line.
+Pokud je metoda periody v periodickém deníku nastavena na **Saldo** nebo **Reverzní saldo**, nebudou při nastavení účtu na nulu ignorovány žádné kódy hodnot dimenze v periodickém deníku. Pokud tedy na stránce **Přidělení** přidělíte opakující se řádek různým hodnotám dimenze, bude vytvořena pouze jedna reverzní položka. Pokud tedy přiřadíte řádek periodického žurnálu, který obsahuje kód hodnoty dimenze, pak na stránce **Přidělení** nesmíte zadat stejný kód. Pokud tak učiníte, budou hodnoty dimenze nesprávné.
 
-If the *recurring method* in the recurring journal is set to **Balance** or **Reversing Balance**, then any dimension value codes in the recurring journal are disregarded when the account is set to zero. So if you allocate a recurring line to various dimension values on the **Allocations** page, then only one reversing entry will be created. Therefore, if you allocate a recurring journal line that contains a dimension value code, then you must not enter the same code on the **Allocations** page. If you do, the dimension values will be incorrect.  
+#### <a name="example-allocating-rent-payments-to-different-departments"></a>Příklad: Přidělení plateb nájemného do různých oddělení
+Platíte nájem každý měsíc, takže jste vložili částku nájemného na hotovostní účet na řádek periodického deníku. Na stránce **Přidělení** můžete rozdělit výdaje mezi několik oddělení (dimenze oddělení) podle počtu čtverečních metrů, které každé z nich zabírá. Výpočet je založen na procentuálním přídělu na každém řádku. Můžete zadat různé účty na různých řádcích přidělení (pokud se nájemné také rozdělí mezi několik účtů), nebo můžete zadat stejný účet, ale s různými kódy hodnot dimenze pro dimenzi oddělení na každém řádku.
 
-To allocate recurring journal amounts based on dimensions, set the **Recurring Method** field to **Balance by Dimension** or **Reversing Balance by Dimension** instead. If the recurring method in the recurring journal is set to **Balance by Dimension** or **Reversing Balance by Dimension**, then any dimension value codes in the recurring journal are considered when the account is set to zero. So if you allocate a recurring line to various dimension values on the **Allocations** page, then a number of reversing entries that matches the number of dimension value combinations that the balance is comprised of, are created. If you allocate account balance through the recurring journal that contains a dimension value code, remember to use **Balance by Dimension** or **Reversing Balance by Dimension** to make sure that the dimension values are correctly balanced or reversed from the source account.  
-
-For example, your company has a couple of business units and a handful of departments that your controllers have set up as dimensions. To speed up the purchase invoice entry process, you decide to require the accounts payable clerks to enter only business unit dimensions. Since each business unit has specific allocation keys for the Department dimension, such as based on the number of employees, you can use the **BD Balance by Dimension** or **RBD Reversing Balance by Dimension** recurring methods to re-allocate expenses for each business unit to the right departments based on the allocation keys.  
-
-> [!NOTE]
-> Dimensions that you set on allocation lines are not automatically calculated, and you must specify which dimension values must be set on the allocation accounts. In case you want to preserve the link between the source account dimension and the allocation account dimension, we recommend that you use the [Cost Accounting](finance-about-cost-accounting.md) capabilities instead.
-
-#### Example: Allocating Rent Payments to Different Departments
-You pay rent every month, so you have entered the rent amount on the cash account on a recurring journal line. On the **Allocations** page, you can divide the expense among several departments (Department dimension) according to the number of square feet that each one occupies. The calculation is based on the allocation percentage on each line. You can enter various accounts on different allocation lines (if rent will also be divided among several accounts), or you can enter the same account but with various dimension value codes for the Department dimension on each line.
-
-### Reversal Date Calculation
-When using recurring general journals to post accruals at the end of a period, it's important to have full control over reversal entries. On the **Recurring General Journals** page, the **Reversal Date Calculation** field lets you control the date that reversal entries will be posted when reversal recurring methods are used.
-
-#### Example
-Accruals are usually posted with Fixed, Variable, or Balance recurring methods on the journal line. The posting date of the posted amount on the account on journal line is calculated using the recurring frequency. The posting date for the balancing entry is calculated using the **Reversal Date Calculation** field, as follows:
-
-* If the field is blank, the balancing entry will be posted the next day.
-* If the field contains a date formula (for example, **5D** for five days), the balancing entry will be posted with a posting date calculated using the reversal date calculation.
-
-> [!NOTE]
-> By default, the **Reversal Date Calculation** field is not available on the **Recurring General Journals** page. To use the field, you must add it by personalizing the page. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
-
-## Working with Standard Journals
-When you have created journal lines which you know you are likely to create again later, you can save them as a standard journal before you post the journal. This functionality applies to item journals and general journals.
+## <a name="working-with-standard-journals"></a>Práce se standardními deníky
+Pokud jste vytvořili řádky deníku, o kterých víte, že je budete pravděpodobně později vytvářet znovu, můžete je uložit jako standardní deník před zaúčtováním deníku. Tato funkce se vztahuje na deníky a finanční deníky.
 
 > [!NOTE]  
->   The following procedure refers to the item journal, but the information also applies to the general journal.
+>   Následující postup se vztahuje na deník položek, ale informace se vztahují také na finanční deník.
 
-### To save a standard journal
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link.
-2. Enter one or more journal lines.
-3. Select the journal lines that you want to reuse.
-4. Choose the **Save as Standard Journal** action.
-5. In the **Save as Standard Item Journal** request page, define a new or existing standard item journal that the lines should be saved in.
+### <a name="to-save-a-standard-journal"></a>Uložení standardního deníku
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zboží** a poté vyberte související odkaz.
+2. Zadejte jeden nebo více řádků deníku.
+3. Vyberte řádky deníku, které chcete znovu použít.
+4. Vyberte akci **Uložit jako standardní deníky**.
+5. Na stránce **Uložit jako standardní deníky** definujte nový nebo existující Standardní deníky zboží, do kterého se mají řádky uložit.
 
-    If you have already created one or more standard item journals and you want to replace one of these with the new set of item journal lines, in the Code field, select the code you want.
-6. Choose the **OK** button to verify that you want to overwrite the existing standard item journal and replace all its content.
-7. Select the **Save Unit Amount** field if you want to save the values in the **Unit Amount** field of the standard item journal.
-8. Select the **Save Quantity** field if you want application to save the values in the **Quantity** field.
-9. Choose the **OK** button to save the standard item journal.
+    Pokud jste již vytvořili jeden nebo více standardních deníků zboží a chcete jeden z nich nahradit novou sadou řádků deníku, v poli Kód vyberte požadovaný kód.
+6. Stisknutím tlačítka **OK** potvrďte, zda chcete přepsat existující standardní deník zboží a nahradit veškerý jeho obsah.
+7. Pokud chcete uložit hodnoty do pole **Jednotkové ceny** standardního deníku zboží, vyberte pole **Uložit jednotkovou cenu**.
+8. Vyberte pole **Uložit množství**, pokud chcete, aby program ukládal hodnoty do pole **Množství**.
+9. Zvolte tlačítko **OK** pro uložení standardního deníku zboží.
 
-When you have finished saving the standard item journal, the Item Journal page is displayed so you can proceed to post it, knowing that it can easily be recreated next time you need to post the same or similar lines.
+Po dokončení ukládání standardního deníku se zobrazí stránka Deník zboží, takže můžete pokračovat v jeho účtovaní, protože víte, že jej lze snadno znovu vytvořit, až budete muset zaúčtovat stejné nebo podobné řádky.
 
-### To reuse a standard journal
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link.
-2. Choose the **Get Standard Journals** action.
+### <a name="to-reuse-a-standard-journal"></a>Opětovné použití standardního deníku
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zboží** a poté vyberte související odkaz.
+2. Vyberte akci **Získat standardní deníky**.
 
-    The Standard Item Journals page opens showing codes and descriptions for all existing standard item journals.
-3. To review a standard item journal before you select it for reuse, choose the **Show Journal** action.
+    Otevře se stránka Standardní deníky zboží, kde jsou zobrazeny kódy a popisy pro všechny existující standardní deníky.
+3. Chcete-li zkontrolovat Standardní deníky zboží, než jej vyberete pro opětovné použití, vyberte akci **Zobrazit deník**.
 
-    Any changes you make in a standard item journal are implemented right away. They will be there next time you open or reuse the standard item journal in question. You should therefore be sure that the change is important enough to apply generally. Otherwise, make the specific change in the item journal after the standard item journal lines have been inserted. See step 4 below.
-4. On the **Standard Item Journals** page, select the standard item journal you want to reuse, and then choose the **OK** button.
+    Veškeré změny, které provedete ve standardním deníku zboží, jsou implementovány okamžitě. Budou tam příště, když otevřete nebo znovu použijete daný standardní deník. Proto byste si měli být jisti, že změna je natolik důležitá, aby se obecně použila. Jinak proveďte konkrétní změnu v deníku zboží po vložení standardních řádků deníku. Viz krok 4.
+4. Na stránce **Standardní deníky zboží** vyberte Standardní deníky zboží, který chcete opětovně použit a potom vyberte tlačítko **OK**.
 
-    Now the item journal is filled with the lines you saved as the standard item journal. If journal lines already existed in the item journal, the inserted lines will be placed under the existing journal lines.
+    Nyní je deník položek vyplněn řádky, které jste uložili jako standardní deník. Pokud řádky deníku již existovaly v deníku  zboží, vložené řádky budou umístěny pod existující řádky deníku.
 
-    If you did not check the **Save Unit Amount** field when you used the **Save as Standard Item Journal** function job, then the **Unit Amount** field on lines that are inserted from the standard journal is automatically filled with the item's current value, copied from the **Unit Cost** field on the item card.
+    Pokud jste při použití funkce **Uložení jako Standardní deníky zboží** nezaškrtli pole **Uložit jednotkovou cenu**, pak se pole **Jednotkové ceny** na řádcích vložených ze standardního deníku automaticky vyplní aktuální hodnotou zboží a zkopíruje se z pole **Jednotkových nákladů** na kartě zboží.
 
     > [!NOTE]  
-    >   If you selected the **Save Unit Amount** or **Save Quantity** fields, you should now make sure the inserted values are correct for this particular inventory adjustment before you post the item journal.
+    >   Pokud jste vybrali pole **Uložit jednotkovou cenu** nebo **Uložit množství**, měli byste se před účtováním deníku zboží ujistit, že vložené hodnoty jsou správné pro tuto konkrétní úpravu.
 
-    If the inserted item journal lines contain saved unit amounts that you do not want to post, you can quickly adjust it to the current value of the item as follows.
+    Pokud vložené řádky deníku zboží obsahují uložené jednotkové částky, které nechcete zaúčtovat, můžete je rychle upravit na aktuální hodnotu zboží následujícím způsobem.
 
-6. Select the item journal lines you want to adjust, and then choose the **Recalculate Unit Amount** action. This will update the Unit Amount field with the current unit cost of the item.
-7. Choose the **post** action.
+6. Vyberte řádky deníku zboží, které chcete upravit, a poté vyberte akci **Přepočítat jednotkovou cenu**. Tím se aktualizuje pole Jednotková ceny s aktuální jednotkovou cenou zboží.
+7. Zvolte akci **Účtovat**.
 
-## To renumber document numbers in journals
-To make sure that you do not receive posting errors because of the document number order, you can use the **Renumber Document Numbers** function before you post a journal.
+## <a name="to-renumber-document-numbers-in-journals"></a>Přečíslování čísel dokumentů v denících
+Chcete-li se ujistit, že se neobjeví chyby účtování kvůli pořadí čísel dokumentů, můžete použít funkci **Přečíslovat čísla dokladů** před zaúčtováním deníku.
 
-In all journals that are based on the general journal, the **Document No.** field is editable so that you can specify different document numbers for different journal lines or the same document number for related journal lines.
+Ve všech denících, které jsou založeny na finančním deníku, je pole **Číslo dokladu** upravitelné, takže můžete zadat různá čísla dokladu pro různé řádky deníku nebo stejné číslo dokladu pro související řádky deníku.
 
-If the **No. Series** field on the journal batch is filled, then the posting function in general journals requires that the document number on individual or grouped journal lines be in sequential order. To make sure that you do not receive posting errors because of the document number order, you can use the **Renumber Document Numbers** function before you post the journal. If related journal lines were grouped by document number before you used the function, they will remain grouped but may be assigned a different document number.
+Pokud je vyplněno pole **Číselné řady** v listu deníku, vyžaduje funkce účtování ve finančních denících, aby číslo dokladu na jednotlivých nebo seskupených řádcích deníku bylo v sekvenčním pořadí. Chcete-li se ujistit, že se neobjeví chyby účtování kvůli pořadí čísel dokladů, můžete použít funkci **Přečíslovat čísla dokladů** před zaúčtováním deníku. Pokud byly související řádky deníku před použitím funkce seskupeny podle čísla dokladu, zůstanou seskupeny, ale může jim být přiřazeno jiné číslo dokladu.
 
-This function also works on filtered views.
+Tato funkce funguje také na filtrovaných pohledech.
 
-Any renumbering of document numbers will respect related applications, such as a payment application that has been made from the document on the journal line to a vendor account. Accordingly, the **Applies-to ID** and **Applies-to Doc. No.** fields on the affected ledger entries may be updated.
+Jakékoli přečíslování čísel dokladů bude respektovat související aplikace, například platební aplikaci, která byla vytvořena z dokumentu na řádku deníku na účet dodavatele. Proto pole **ID vyrovnání** a **Číslo vyrovnání dokladu** na příslušných položkách hlavní knihy mohou být aktualizovány.
 
-The following procedure is based on the **General Journal** page, but applies to all other journals that are based on the general journal, such as the **Payment Journal** page.
+Následující postup je založen na stránce **Finančního deníku**, ale vztahuje se na všechny ostatní deníky, které jsou založeny na finančním deníku, jako je například stránka **Deník plateb**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link.
-2. When you are ready to post the journal, choose the **Renumber Document Numbers** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deník** a poté vyberte související odkaz.
+2. Až budete připraveni zaúčtovat deník, vyberte akci **Přečíslovat čísla dokladů**.
 
-Values in the **Document No.** field are changed, where required, so that the document number on individual or grouped journal lines are in sequential order. After documents are renumbered, you can proceed to post the journal.
+Hodnoty v poli **Čísla dokladu** se v případě potřeby mění, takže číslo dokladu na jednotlivých nebo skupinových řádcích deníku je v sekvenčním pořadí. Po přečíslování dokumentů můžete pokračovat v účtování deníku.
 
-## See Related Training at [Microsoft Learn](/learn/paths/use-journals-dynamics-365-business-central/)
-
-## See Also
-
-[Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md)  
-[Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md)  
-[Allocate Costs and Income](year-allocate-costs-income.md)  
+## <a name="see-also"></a>Viz také
+[Zaúčtování transakce přímo do hlavní knihy](finance-how-post-transactions-directly.md)  
+[Reverzní účtovaní](finance-how-reverse-journal-posting.md)  
+[Přidělení nákladů a výnosů](year-allocate-costs-income.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Close Open Item Ledger Entries Resulting from Fixed Application in the Item Journal](finance-how-to-close-open-item-ledger-entries-resulting-from-fixed-application-in-the-item-journal.md)  
-[Revalue Inventory in the Revaluation Journal](inventory-how-revalue-inventory.md)  
-[Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md)  
-[Reconcile Customer Payments with the Cash Receipt Journal or from Customer Ledger Entries](receivables-how-apply-sales-transactions-manually.md)  
-[Reconcile Vendor Payments with the Payment Journal or from Vendor Ledger Entries](payables-how-apply-purchase-transactions-manually.md)  
-[Work with Intercompany Documents and Journals](intercompany-how-work-documents-journals.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

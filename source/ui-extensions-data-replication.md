@@ -1,6 +1,6 @@
 ---
-title: Business Central Intelligent Cloud Extensions for Cloud Migration | Microsoft Docs
-description: Use the cloud migration extensions to migrate your on-premises data to Business Central online. These extensions move your on-premises data to the cloud so you can use Business Central online with your existing data.
+title: Rozšíření Intelligent Cloud Extensions pro Business Central | Microsoft Docs
+description: 'Toto rozšíření k replikaci dat použijte k vytvoření cloudové kopie dat, abyste byli připojeni k inteligentnímu cloudu.'
 author: jenolson
 
 ms.service: dynamics365-business-central
@@ -15,33 +15,33 @@ ms.author: edupont
 
 ---
 
-# Intelligent Cloud Extensions for Cloud Migration
+# Inteligentní Cloud
 
-Depending on your on-premises solution, you must use different extensions to connect your data with [!INCLUDE[prod_short](includes/prod_short.md)] online for purposes of migrating your solution to the cloud.  
+V závislosti na vašem on-premises řešení musíte použít různá rozšíření pro připojení vašich dat s [!INCLUDE[prod_short](includes/prod_short.md)] za účelem migrace vašeho řešení do cloudu.
 
-If you are using one of the supported on-premises products, you can configure your cloud environment based on a product-specific extension. Once your cloud environment is configured, you will be able to migrate data from your on-premises solution to [!INCLUDE[prod_short](includes/prod_short.md)]. This will enable you to take full advantage of what the cloud has to offer your business such as, enhanced insights into your business, artificial intelligence, multiple device access, and anytime, anywhere access.  
+Pokud používáte některý z podporovaných on-premises produktů, můžete nakonfigurovat své inteligentní cloudové prostředí na základě specifického rozšíření pro daný produkt. Jakmile je vaše inteligentní cloudové prostředí nakonfigurováno, budete moci replikovat data z vašeho on-premises řešení do vašeho [!INCLUDE[prod_short](includes/prod_short.md)]. To vám umožní plně využít toho, co cloud nabízí vaší firmě, jako je například lepší přehled o vaší firmě, umělá inteligence, přístup k více zařízením a možnost přístupu kdykoli a kdekoli.
 
-For more information, see [Migrating On-Premises Data to Business Central Online](/dynamics365/business-central/dev-itpro/administration/migrate-data) in the administration content for [!INCLUDE[prod_short](includes/prod_short.md)].  
+Pro více informací navštivte [Migrace on-premises dat do Business Central Online](/dynamics365/business-central/dev-itpro/administration/migrate-data) v obsahu správy pro [! INCLUDE[prod_short](includes/prod_short.md)].
 
 ## Business Central on-premises
 
-If you are using an on-premises deployment of [!INCLUDE[prod_short](includes/prod_short.md)], get the **Intelligent Cloud Base** extension and the **Business Central Intelligent Cloud** extension, and then run the **Cloud Migration Setup** assisted setup guide.  
+Pokud používáte on-premises nasazení [! INCLUDE[prod_short](includes/prod_short.md)], získejte rozšíření **Intelligent Cloud Base** a **Business Central Intelligent Cloud** a poté spusťte průvodce nastavením **Nastavení migrace do cloudu**.
 
 ## Dynamics GP
 
-If you are using Dynamics GP,  get the **Intelligent Cloud Base Extension** extension and the **Dynamics GP Intelligent Cloud** extension, and then run the **Cloud Migration Setup** assisted setup guide.  
+Pokud používáte Dynamics GP, získejte rozšíření **Intelligent Cloud Base** a **Dynamics GP Intelligent Cloud** a poté spusťte průvodce nastavením **Nastavení migrace do cloudu**.
 
 > [!IMPORTANT]
-> Migrating from Dynamics GP using the **Cloud Migration Setup** assisted setup guide is currently only supported for the following markets: United States, Canada, United Kingdom.
+> Migrace z Dynamics GP pomocí průvodce asistovaným nastavením **Nastavení migrace do cloudu** je aktuálně podporována pouze pro následující trhy: USA, Kanada, Spojené království.
 
 ## Dynamics SL
 
-If you are using Dynamics SL, get the **Intelligent Cloud Base** extension, the **Microsoft Dynamics SL Intelligent Cloud** extension and the **Microsoft Dynamics SL History SmartLists** extension, and then run the **Cloud Migration Setup** assisted setup guide.  
+Pokud používáte Dynamics SL, získejte rozšíření **Intelligent Cloud Base**, **Microsoft Dynamics SL Intelligent Cloud** a **Microsoft Dynamics SL History SmartLists** a poté spusťte průvodce nastavením **Nastavení migrace do cloudu**.
 
-## See Also
+## Viz také
 
-[Intelligent Insights](about-intelligent-cloud.md)  
-[Intelligent Cloud Base Extension](ui-extensions-intelligent-cloud.md)  
+[Inteligentní přehledy](about-intelligent-cloud.md)    
+[Rozšíření Intelligent Cloud Base](ui-extensions-intelligent-cloud.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

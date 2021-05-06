@@ -1,62 +1,56 @@
 ---
-title: Viewing and Editing in Excel From Business Central
-description: Learn about how you can open the pages in Microsoft Excel from Business Central for better data analysis.
-author: jswymer
+title: Prohlížení a úpravy v Excelu z Business Central | Microsoft Docs
+description: Zjistěte, jak můžete otevřít stránky v aplikaci Microsoft Excel z aplikace Business Central pro lepší analýzu dat.
+author: ZdenekBicek
+
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accountant, accounting, financial report
-ms.date: 11/06/2020
+ms.date: 01/14/2020
+ms.reviewer: v-zdbice
 ms.author: jswymer
 
 ---
-# Viewing and Editing in Excel From Business Central
+# Prohlížení a úpravy v Excelu z Business Central
 
-With pages that display a list of records in rows and columns, like a list of customers, sale orders, or invoices, you can also view the records using Microsoft Excel. To do this, you have two options. You can either select the **Open in Excel** action or the **Edit in Excel** action on the page. The differences between the two actions are as follows:  
+U stránek, které zobrazují seznam záznamů v řádcích a sloupcích, například seznam zákazníků, prodejních objednávek nebo faktur, můžete tyto záznamy zobrazit také pomocí aplikace Microsoft Excel. K tomu máte dvě možnosti. Na stránce můžete vybrat akci **Otevřít v Excelu** nebo **Upravit v Excelu**. Rozdíly mezi těmito dvěma akcemi jsou následující:
 
-## Open in Excel
+## Otevřít v Excelu
 
-- With this action, Excel respects any filters on the page that limit the records shown. The Excel workbook will contain the same rows and columns that appear on the page in [!INCLUDE[prod_short](includes/prod_short.md)].
+- Při této akci Excel respektuje všechny filtry na stránce, které omezují zobrazené záznamy. To znamená, že sešit aplikace Excel bude obsahovat stejné řádky a sloupce, které se zobrazují na stránce v [!INCLUDE[prodshort](includes/prodshort.md)].
 
-- You can make changes to the records in Excel, but you cannot publish the changes back to [!INCLUDE[prod_short](includes/prod_short.md)]. You can only save the changes to Excel file on your computer.
+- Můžete provádět změny záznamů v Excelu, ale nemůžete publikovat změny zpět do [!INCLUDE[prodshort](includes/prodshort.md)]. Změny můžete uložit pouze do souboru Excel v počítači.
 
-- This action works on both on Windows and macOS.
-
-> [!NOTE]
-> For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, the **Open in Excel** action is available by default. However, if you set up [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for editing data in Excel, then the **Open in Excel** action is replaced by the **Edit in Excel** action.
-
-## Edit in Excel
-
-- With this action, Excel respects most filters on the page that limit the records shown, so the Excel workbook will contain almost the same records and columns.
-
-- The advantage of the **Edit in Excel** action is that it lets you make changes to records in Excel and then publish the changes back to [!INCLUDE[prod_short](includes/prod_short.md)].
-
-- It only works on Windows; not macOS.
-
-- You can switch the company that you are working with. To switch company, select the **Options** icon ![Excel add-in options](media/cogwheel.png "Excel add-in options") in the Excel Add-in pane, then select the company from the **Company** field.  
-
-    > [!IMPORTANT]
-    > When changing the company, make sure that the **Environment** field is not empty. If it is, then set it to one of the available options; otherwise, the add-in will not work correctly.  
-
-If you make changes to the add-in, you must reload it to update the connection. To reload, use the ![Excel add-in menu](media/excel-addin-menu.png "Excel add-in menu") menu in the top-right corner of the add-in. If you cannot load the add-in, talk to your administrator. If you are the administrator, see [Setting up the Excel Add-In for Editing Business Central Data](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin).
+- Tato akce funguje ve Windows i MacOS.
 
 > [!NOTE]
-> For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, the **Edit in Excel** action is only available if the Excel add-in has been configured by your administrator, and only available for the Web client. For administrators, if you want to learn how to install the Excel add-in, see [Setting up the Excel Add-In for Editing Business Central Data](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin).
+> Pro [!INCLUDE[prodshort](includes/prodshort.md)] on-premises, ve výchozím nastavení je k dispozici akce **Otevřít v Excelu**. Pokud však nastavíte [!INCLUDE[prodshort](includes/prodshort.md)] on-premises pro úpravy dat v Excelu, akce **Otevřít v Excelu** je nahrazena akcí **Upravit v Excelu**.
 
-### See the differences between the options
+## Upravit v Excelu
+
+- Při této akci aplikace Excel respektuje většinu filtrů na stránce, které omezují zobrazené záznamy. To znamená, že sešit aplikace Excel bude obsahovat téměř stejné záznamy a sloupce.
+
+- Výhodou akce **Upravit v Excelu** je, že umožňuje provádět změny v záznamech v Excelu a poté je publikovat zpět do [!INCLUDE[prodshort](includes/prodshort.md)].
+
+- Funguje to pouze ve Windows, ne v MacOS.
+
+Toto bylo vylepšeno ve vydání 2019 wave 2. Další informace viz [Vylepšení integrace Excelu](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration).
+
+> [!NOTE]
+> Pro [!INCLUDE[prodshort](includes/prodshort.md)] on-premises, je akce **Upravit v Excelu** k dispozici pouze v případě, Váš správce že nakonfiguroval doplněk Excel (Excel AddIn). Pokud se chcete dozvědět, jak nainstalovat doplněk Excel, přečtěte si část [Nastavení doplňku Excel pro úpravy dat Business Central](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin).
+
+> [!NOTE]
+> Pro [!INCLUDE[prodshort](includes/prodshort.md)] on-premises, tato funkce je k dispozici pouze pro webového klienta.
+
+### Podívejte se na rozdíly mezi oběma akcemi
+
 <br><br>  
 
 > [!Video https://go.microsoft.com/fwlink/?linkid=2086039]
 
-## See Related Training at [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Viz také
 
-## See Also
-
-[Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md)  
-[Working with Business Central](ui-work-product.md)  
-[Enhancements to Excel integration in 2019 release wave 2](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[prodshort](includes/prodshort.md)]](ui-work-product.md)  

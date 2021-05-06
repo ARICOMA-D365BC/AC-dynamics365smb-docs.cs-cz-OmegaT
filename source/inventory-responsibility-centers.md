@@ -1,64 +1,59 @@
 ---
-    title: How to Work with Responsibility Centers | Microsoft Docs
-    description: Responsibility centers providing the ability to handle administrative centers. A responsibility center can be a cost center, a profit center, an investment center, or other company-defined administrative center.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 11/03/2020
-    ms.author: edupont
-
+title: Jak pracovat s centry odpovědnosti | Microsoft Docs
+description: 'Centra odpovědnosti poskytují schopnost spravovat administrativní střediska. Centrem odpovědnosti může být nákladové centrum, ziskové centrum, investiční centrum nebo jiné administrativní centrum definované společností.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Work with Responsibility Centers
+# <a name="work-with-responsibility-centers"></a>Práce s Centry odpovědnosti
+Centra odpovědnosti poskytují schopnost spravovat administrativní střediska. Centrem odpovědnosti může být nákladové centrum, ziskové centrum, investiční centrum nebo jiné administrativní centrum definované společností. Příkladem center odpovědnosti je prodejní kancelář, nákupní oddělení pro několik míst a kancelář pro plánování továren. Například pomocí této funkce mohou společnosti nastavit uživatelsky specifické pohledy na prodejní a nákupní doklady související výhradně s konkrétním centrem odpovědnosti.  
 
-Responsibility centers provide the ability to handle administrative centers. A responsibility center can be a cost center, a profit center, an investment center, or other company-defined administrative center. Examples of responsibility centers are a sales office, a purchasing department for several locations, and a plant planning office. Using this functionality, for example, companies can set up user-specific views of sales and purchase documents related exclusively to a particular responsibility center.  
+Použití více umístnění společně s odpovědnými centry poskytuje možnost řídit obchodní operace nejflexibilnějším a zároveň optimálním způsobem.
 
-Using multiple locations together with responsibility centers provides the ability to manage business operations in the most flexible, yet optimal way.
+Více umístnění umožňuje společnostem spravovat své zásoby na více místech pomocí jedné databáze. Základními kameny této části jsou dva koncepty, umístění a skladovací jednotky. Umístění je definováno jako místo, které zpracovává fyzické umístění a množství zboží. Koncept je dostatečně široký, aby zahrnoval místa, jako jsou závody nebo výrobní zařízení, jakož i distribuční centra, sklady, předváděcí místnosti a servisní vozidla. Skladová jednotka je definována jako položka na konkrétním místě a/nebo jako varianta. Pomocí skladových jednotek mohou společnosti s více pobočkami přidávat informace o doplňování, adresy a některé finanční účetní informace na úrovni umístění. Výsledkem je, že mají schopnost doplňovat varianty téže položky pro každé místo, jakož i objednávat položky pro každé místo na základě informací o doplňování pro konkrétní umístění.  
 
-Multiple locations allows companies to manage their inventory in multiple locations using one database. Two concepts, locations and stockkeeping units, are the cornerstones of this granule. A location is defined as a place that handles physical placement and quantities of items. The concept is broad enough to include locations such as plants or production facilities as well as distribution centers, warehouses, showrooms and service vehicles. A stockkeeping unit is defined as an item at a specific location and/or as a variant. Using stockkeeping units, companies with multiple locations are able to add replenishment information, addresses, and some financial posting information at the location level. As a result, they have the ability to replenish variants of the same item for each location as well as to order items for each location on the basis of location-specific replenishment information.  
+Centra odpovědnosti rozšiřují funkčnost více umístění tím, že uživatelům umožňují spravovat administrativní centra. Centrem odpovědnosti může být nákladové centrum, ziskové centrum, investiční centrum nebo jiné administrativní centrum definované společností. Příkladem center odpovědnosti je prodejní kancelář, nákupní oddělení pro několik míst a kancelář pro plánování továren. Například pomocí této funkce mohou společnosti nastavit uživatelsky specifické pohledy na prodejní a nákupní doklady související výhradně s konkrétním centrem odpovědnosti.
 
-## To set up a responsibility center
+## <a name="to-set-up-a-responsibility-center"></a>Zřídit Centrum odpovědností  
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Centra odpovědnosti** a poté vyberte související odkaz.  
+2.  Zvolte akci **Nový**.  
+3.  Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Responsibility Centers**, and then choose the related link.  
-2. Choose the **New** action.  
-3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+    Pokud pro správu vaší společnosti používáte centra odpovědnosti, může být užitečné mít výchozí středisko odpovědnosti pro vaši společnost.
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Informace o společnosti** a poté vyberte související odkaz.
+5. Do pole **Centrum odpovědnosti** zadejte kód střediska odpovědnosti.
 
-    If you are using responsibility centers to administer your company, it can be useful to have a default responsibility center for your company.
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.
-5. In the **Responsibility Center** field, enter a responsibility center code.
-
-This code will be used on all purchase, sales, or service documents, if the user, customer, or vendor has no default responsibility center. On any sales, purchase, or service document, you can enter another responsibility center than the default.
-
-> [!NOTE]  
-> When you enter a responsibility center code on a document, it affects the address, dimensions, and prices on the document.  
-
-## To assign responsibility centers to users
-
-You can set up users so that in their daily routines application retrieves only the documents relevant for their particular work areas. Users are usually associated with one responsibility center and work only with documents related to specific application areas at that particular center.  
-
-To set this up, you assign responsibility centers to users in three functional areas: Purchases, Sales, and Service Management.  
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Setup**, and then choose the related link.  
-2. On the **User Setup** page, select the user you want to assign a responsibility center to. If the user not is on the list, you must enter a user ID in the **User ID** field.  
-3. In the **Sales Resp. Ctr. Filter** field, enter the responsibility center where the user will have tasks related to sales.  
-4. In the **Purchase Resp. Ctr. Filter** field, enter the responsibility center where the user will have tasks related to purchasing.  
-5. In the **Service Resp. Ctr. Filter** field, enter the responsibility center where the user will have tasks related to service management.  
+Tento kód bude použit ve všech dokumentech o nákupu, prodeji nebo servisu, pokud uživatel, zákazník nebo prodejce nemá žádné výchozí centrum odpovědnosti. V jakémkoli prodejním, nákupním nebo servisním dokumentu můžete zadat jiné centrum odpovědnosti než výchozí.
 
 > [!NOTE]  
-> Users can view only those posted documents that related to their own responsibility center. However, they can view all ledger entries and navigate to other posted documents from the ledger entries.
+>  Když do dokumentu zadáte kód centra odpovědnosti, ovlivní to adresu, dimenze a ceny v dokumentu.  
 
-## See Also
+## <a name="to-assign-responsibility-centers-to-users"></a>Přiřazení center odpovědnosti uživatelům  
+Můžete nastavit uživatele tak, aby v jejich každodenních rutinách program načítal pouze dokumenty relevantní pro jejich konkrétní pracovní oblasti. Uživatelé jsou obvykle spojeni s jedním centrem odpovědnosti a pracují pouze s dokumenty souvisejícími s konkrétními oblastmi aplikace v tomto konkrétním centru.  
 
-[Setting Up Inventory](inventory-setup-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)
-[Inventory](inventory-manage-inventory.md)[Warehouse Management](warehouse-manage-warehouse.md)  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+Chcete-li to nastavit, přiřaďte centra odpovědnosti uživatelům ve třech funkčních oblastech: Nákup, prodej a správa služeb.  
 
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skupiny uživatelů** a poté vyberte související odkaz.  
+2.  Na stránce **Nastavení uživatele** vyberte uživatele, kterému chcete přiřadit centrum odpovědnosti. Pokud uživatel není na seznamu, musíte do pole **ID Uživatele** zadat ID uživatele.  
+3.  V poli **Filtr prod. centra  odpovědnosti**  zadejte centrum odpovědnosti, kde bude mít uživatel úkoly související s prodejem.  
+4.  V poli **Filtr nák. centra  odpovědnosti** zadejte centrum odpovědnosti, kde bude mít uživatel úkoly související s Nakupování.  
+5.  V poli **Filtr servis. centra   odpovědnosti**  zadejte centrum odpovědnosti, kde bude mít uživatel úkoly související se správou služeb.  
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+> [!NOTE]  
+>  Uživatelé budou stále moci zobrazit všechny zaúčtované dokumenty a položky knihy, nejen ty, které se vztahují k jejich vlastnímu centru zodpovědnosti.
+
+## <a name="see-also"></a>Viz také  
+[Nastavení zásob](inventory-setup-inventory.md)  
+[Nastavení Správy skladu](warehouse-setup-warehouse.md)
+[Zásoby](inventory-manage-inventory.md)[Správa skladu](warehouse-manage-warehouse.md)  
+[Správa skladů](warehouse-manage-warehouse.md)    
+[Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

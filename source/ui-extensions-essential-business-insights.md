@@ -1,40 +1,35 @@
 ---
-title: Display Actionable Insights in Role Centers | Microsoft Docs
-description: The Essential Business Insights extension rotates a series of business insights on Role Centers.
+title: Zobrazení užitečných přehledů v Centrech rolí | Microsoft Docs
+description: Rozšíření Essential Business Insights přináší řadu obchodních přehledů do Center rolí.
 documentationcenter: ''
 author: bholtorf
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: BI, add-in, insight, headline, data
-ms.date: 10/01/2020
+ms.search.keywords: 'BI, add-in, insight, headline, data'
+ms.date: 10/01/2018
 ms.author: bholtorf
-
 ---
 
-# The Essential Business Insights Extension
-The Essential Business Insights extension finds interesting business facts in your company data and displays them as newspaper-like headlines in Role Centers. Depending on what the extension finds in the data, the insights are from the last week, month, or three months from the current date. The insights update every 10 minutes.  
+# <a name="the-essential-business-insights-extension"></a>Rozšíření Essential Business Insights
+Rozšíření Essential Business Insights najde v podnikových datech zajímavá obchodní fakta a zobrazuje je jako novinové titulky v Centrech rolí. V závislosti na tom, co rozšíření v datech najde, jsou přehledy z minulého týdne, měsíce nebo tří měsíců od aktuálního data. Přehledy se aktualizují každých 10 minut.  
 
-If you want to take a closer look at an insight, you can choose it to go to its source. For example, if you want details about the largest sales invoice that was posted last week, you can choose the insight to display the invoice.
+Pokud se chcete blíže podívat na přehled, můžete přejít k jeho zdroji. Chcete-li například získat informace o největší prodejní faktuře, která byla zaúčtována minulý týden, můžete si vybrat přehled k zobrazení této faktury.
 
-The following table describes the insights that this extension provides for each Role Center.
+Následující tabulka popisuje přehledy, které toto rozšíření poskytuje pro každé Centrum rolí.
 
-|Role Center|Questions the Insights Answer|
+|Centrum rolí|Otázky zodpovídané přehledy|
 |----|-----|
-|Default|Displays a greeting, and link to product information.|
-|Business Manager|<li> What was the most popular item last week, month, or last three months, and how many did we sell?<br><li> What was the largest sale order last week, month, or last three months?<br><li> Who, or what, was the busiest resource, and what were the bookings?<br><li> Have sales gone up in the last week, month, or three months, compared to the same period last year?<br><li> What was the biggest sales invoice we posted last week, month, or last three months, and to which customer did we send the bill?</li> |
-|Accountant|<li> What was the largest sales order and posted invoice last week, month, or last three months?<br><li> Have sales gone up in the last week, month, or three months, compared to the same period last year? |
-|Order Processor| What was the largest sale order and posted invoice last week, month, or last three months?|
-|Relationship Manager| What was the largest invoiced amount, and to which customer did we send the bill?|
-|Team Member| Displays a greeting, and link to product information.|
-|Project Manager| Displays a greeting, and link to product information.|
-|Administrator| Displays a greeting, and link to product information.|
+|Výchozí|Zobrazuje pozdrav a odkaz na informace o produktu.|
+|Obchodní ředitel|<li> Jaká byla nejoblíbenější položka minulý týden, měsíc nebo poslední tři měsíce a kolik jsme jí prodali?<br><li> Jaká byla největší prodejní objednávka minulý týden, měsíc nebo poslední tři měsíce?<br><li> Kdo nebo co bylo nejrušnějším zdrojem a jaké byly rezervace?<br><li> Vzrostly prodeje za poslední týden, měsíc nebo tři měsíce ve srovnání se stejným obdobím minulého roku?<br><li> Jaká byla největší prodejní faktura, kterou jsme zaúčtovali minulý týden, měsíc nebo poslední tři měsíce a kterému zákazníkovi jsme zaslali účet?</li> |
+|Účetní|<li> Jaká byla největší prodejní objednávka a zaúčtovaná faktura minulý týden, měsíc nebo poslední tři měsíce?<br><li> Vzrostly prodeje za poslední týden, měsíc nebo tři měsíce ve srovnání se stejným obdobím minulého roku? |
+|Zpracovatel objednávek| Jaká byla největší prodejní objednávka a zaúčtovaná faktura minulý týden, měsíc nebo poslední tři měsíce?|
+|Manažer vztahů| Jaká byla největší fakturovaná částka a kterému zákazníkovi jsme zaslali účet?|
+|Člen týmu| Zobrazuje pozdrav a odkaz na informace o produktu.|
+|Vedoucí projektu| Zobrazuje pozdrav a odkaz na informace o produktu.|
+|Správce| Zobrazuje pozdrav a odkaz na informace o produktu.|
 
-## See Also
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí rozšíření](ui-extensions.md)

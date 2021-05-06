@@ -1,83 +1,71 @@
 ---
 title: Using Business Central with Outlook| Microsoft Docs
-description: This service has deep integration with Microsoft 365 enabling you to manage all your business interactions and mail with customers and vendors directly in Outlook.
+description: This service has deep integration with Office 365 enabling you to manage all your business interactions and mail with customers and vendors directly in Outlook.
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: SMTP, mail, Microsoft 365
-ms.date: 10/01/2020
+ms.search.keywords: SMTP, mail, Office 365
+ms.date: 08/14/2019
 ms.author: edupont
 
 ---
-# Using Business Central as your Business Inbox in Outlook
+# Použití aplikace Business Central jako schránka v aplikaci Outlook
+[!INCLUDE[d365fin](includes/d365fin_md.md)] zavádí možnost spravovat obchodní interakce se zákazníky a dodavateli přímo v aplikaci Microsoft Outlook. S [!INCLUDE[d365fin](includes/d365fin_md.md)] doplňky aplikace Outlook můžete zobrazit finanční údaje týkající se zákazníků a dodavatelů a také vytvářet a odesílat finanční doklady, jako jsou nabídky a faktury.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] introduces the ability to manage business interactions with your customers and vendors, directly in Microsoft Outlook. With the [!INCLUDE[prod_short](includes/prod_short.md)] Outlook add-ins, you can see financial data related to customers and vendors, as well as create and send financial documents, such as quotes and invoices.  
+## Získání doplňku
+Je snadné začít s doplňkem [!INCLUDE[d365fin](includes/d365fin_md.md)] pro Outlook. V asistovaném nastavení **Nastavit vaši schránku v aplikaci Outlook**, můžete nastavit připojení pro sebe nebo pro vaši organizaci, pokud vaše organizace používá Office 365. Pokud budete vyzváni, jednoduše zadejte své uživatelské jméno a heslo pro Office 365 a sdělte nám, zda chcete obdržet ukázkovou e-mailovou zprávu. Doplněk [!INCLUDE[d365fin](includes/d365fin_md.md)] je automaticky přidán do aplikace Outlook. Pro více informací navštivte [Minimální požadavky pro aplikaci Outlook](product-requirements.md#outlook).
 
-## Getting the Add-in
-It is easy to get started with the [!INCLUDE[prod_short](includes/prod_short.md)] add-in for Outlook. In the **Set up your Business Inbox in Outlook** assisted setup guide, you can set up the connection for yourself or for your organization if your organization uses Microsoft 365. Simply specify your Microsoft 365 user name and password, if you are prompted, and tell us if you want to receive a sample email message. The [!INCLUDE[prod_short](includes/prod_short.md)] add-ins are then automatically added to your Outlook. For more information, see [Minimum Requirements for Outlook](product-requirements.md#outlook).  
-
-Then, when you open Outlook, you will see an email message from *Dynamics 365 Business Central Admin*. The new add-ins are added to the Outlook ribbon, and in the browser, you can see the [!INCLUDE[prod_short](includes/prod_short.md)] add-ins immediately above or below the body of the email message. The add-ins are updated periodically, and you'll get notified that a new version is ready for you in Outlook.  
+Po spuštění aplikace Outlook se pak zobrazí e-mailová zpráva od *Administrátor Dynamics 365 Business Central*. Nové doplňky jsou přidány do pásu karet aplikace Outlook a v prohlížeči můžete vidět doplňky [!INCLUDE[prodshort](includes/prodshort.md)] přímo nad nebo pod tělem e-mailové zprávy. Doplňky jsou pravidelně aktualizovány a budete upozorněni, že v aplikaci Outlook je pro vás připravena nová verze.
 
 > [!TIP]
-> If you use the new Outlook on the web, then the [!INCLUDE[prod_short](includes/prod_short.md)] add-ins can be hidden under **More actions**. If you use the add-in often, you can pin it so that it is always immediately visible. For more information, see [Using add-ins in Outlook on the web](https://support.office.com/article/using-add-ins-in-outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?ns=OLWAO365B&version=16).  
+> Použíávate-li nový Outlook v prohlížeči, pak doplňky [!INCLUDE [prodshort](includes/prodshort.md)] budou skryty pod **Další akce**.
 
-If you work with more that one [!INCLUDE[prod_short](includes/prod_short.md)] company, you can easily switch between companies in Outlook. In the add-in's action bar, choose **More Actions**, and then you can see the option for switching between companies.  
+Některé společnosti používající Office 365 omezují oprávnění uživatelů k nasazení doplňků. Musíte se proto ujistit, že máte předplatné sady Office 365, které zahrnuje e-mail, a které vám umožní nasadit doplňky. Chcete-li přesto doplněk vyzkoušet, můžete [Vyzkoušet zdarma sadu Office 365](https://products.office.com/try).
 
-<!--TEMP-->
-> [!NOTE]
-> Switching between companies requires [!INCLUDE[prod_short](includes/prod_short.md)] 2019 release wave 2 or later as announced in the [release plan](/dynamics365-release-plan/2019wave2/dynamics365-business-central/switch-between-companies-business-inbox-outlook).
+## Použití doplňku Contact Insights
+Řekněme, že dostanete e-mail od zákazníka, který chce získat nabídku na některé zboží. Přímo v aplikaci Outlook můžete otevřít doplněk [!INCLUDE[d365fin](includes/d365fin_md.md)], který rozpozná odesílatele jako zákazníka a otevírá zákaznickou kartu pro jeho společnost. Na tomto ovládacím panelu můžete vidět přehledné informace o zákazníkovi a podrobnější informace o konkrétních dokladech. Můžete také nahlédnout do historie prodeje pro zákazníka. Pokud se jedná o nový kontakt, můžete jej vytvořit jako nového zákazníka v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] bez opuštění aplikace Outlook.
 
-Some companies using Microsoft 365 restrict users' permissions to deploy add-ins. So you must make sure that you have a Microsoft 365 subscription that includes email and allows you to deploy add-ins. If you want to try out the add-in anyway, you can [try Microsoft 365 for free](https://www.microsoft.com/microsoft-365/try).  
+V doplňku můžete vytvořit prodejní nabídku a odeslat ji zpět tomuto zákazníkovi, aniž byste opustili aplikaci Outlook. Všechny informace, které potřebujete k odeslání nabídky, jsou k dispozici ve vaší schránce v aplikaci Outlook.
+Po zadání dat můžete nabídku zaúčtovat. Potom ji můžete odeslat e-mailem. [!INCLUDE[d365fin](includes/d365fin_md.md)] vygeneruje  .PDF soubor s prodejní nabídkou a připojí jej k e-mailové zprávě, kterou v návrhu doplníte.
 
-## Using the Contact Insights Add-in
-Let's say that you get an email from a customer that wants to get a quote on some items. Directly in Outlook, you can open the [!INCLUDE[prod_short](includes/prod_short.md)] add-in, which recognizes the sender as a customer, and opens the customer card for that company. From this dashboard, you can see overview information for the customer, as well as drill down for more detail on specific documents. You can also dig into the sales history for the customer. If it's a new contact, you can create them as a new customer in [!INCLUDE[prod_short](includes/prod_short.md)] without leaving Outlook.  
+Podobně, pokud dostanete e-mail od dodavatele, můžete tento doplněk použít pro práci s dodavateli a nákupními fakturami.
 
-In the add-in, you can create a sales quote and send it back to this customer without leaving Outlook. All of the information that you need to send the sales quote is available in your business inbox in Outlook.  
-Once you have the data entered, you can post the quote. You can then send it by email. [!INCLUDE[prod_short](includes/prod_short.md)] generates a .PDF file with the sales quote and attaches it to the email message that you draft in the add-in.  
+Někdy chcete zobrazit více polí, než je v doplňku možné zobrazit, například když chcete vyplnit řádky faktury. Chcete-li mít více místa pro práci, můžete tento doplněk vložit na samostatnou stránku. Stále je součástí aplikace Outlook, ale máte více místa. Při zadávání dat ve vyskakovacím okně se změny automaticky ukládají. Po dokončení zadávání dat do dokladu můžete zvolit tlačítko **OK**. Výběrem rámce doplňku v aplikaci Outlook se automaticky obnoví dokument se změnami provedenými ve vyskakovacím zobrazení.
 
-Similarly, if you get an email from a vendor, you can use the add-in to work with vendors and purchase invoices.  
+## Vytváření faktur z vašich schůzek
+Některé firmy zaznamenávají všechny fakturovatelné schůzky v kalendáři aplikace Outlook. S [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete vytvořit fakturu zákazníkovi přímo z položky kalendáře: Otevřete událost a pak můžete otevřít aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)], vyhledejte stávající informace nebo vytvořte fakturu nebo jiný prodejní doklad přímo na jedom místě.
 
-Sometimes you want to see more fields than you can see in the add-in, such as when you want to fill in lines in an invoice. To give you a bit more space to work with, you can pop out the add-in to a separate page. It's still part of Outlook, but you have more space. As you enter data for the document in the pop-out view, the changes are automatically saved. When you are done entering data for the document, you can choose the **OK** button. Choosing the add-in frame in Outlook automatically refreshes the document with the changes you made in the pop-out view.  
+## Rychlé vyhledání dokumentu
+Doplněk [!INCLUDE[d365fin](includes/d365fin_md.md)] umožňuje rychlý přístup k dokumentům a dokladů uvedeným v e-mailových zprávách. Doplněk je k dispozici pro e-mailovou zprávu, pokud je v těle zprávy rozpoznáno číslo dokladu. Otevřením doplňku získáte rychlý přístup k dokladu.
 
-## Creating Invoices from Your Meeting Appointments
-Some businesses record all billable appointments in the Outlook calendar. With [!INCLUDE[prod_short](includes/prod_short.md)], you can create the invoice for the customer right from the calendar item: Open the appointment, and then you can open the [!INCLUDE[prod_short](includes/prod_short.md)] add-in, look up existing information or create an invoice or another sales document right there.  
+Obdržíte-li například e-mailovou zprávu, která zmiňuje text *S-QUO100* , [!INCLUDE[d365fin](includes/d365fin_md.md)] ji označuje jako prodejní nabídku, takže můžete tento doklad otevřít v aplikaci Outlook. V aplikaci Outlook vyberte tlačítko **Odkazy na doklady** bezprostředně nad tělem e-mailové zprávy. V aplikaci Outlook Web App zvolte text *S-QUO1001* v těle e-mailové zprávy.
 
-## Doing Quick Document Lookup
-The [!INCLUDE[prod_short](includes/prod_short.md)] Document Links add-in gives you quick access to documents mentioned in email messages. The add-in is available for an email message if a document number is recognized in the body of the message. Opening the add-in provides quick access to the document.  
+V doplňku Document Links můžete upravovat a provádět akce s dokladem, stejně jako v [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-For example, if you receive an email message that mentions the text *S-QUO100*, [!INCLUDE[prod_short](includes/prod_short.md)] identifies that as a sales quote, and so you can open this document in Outlook. In Outlook, choose the **Document Links** button immediately above the body of the email message. In the Outlook Web App, choose the *S-QUO1001* text in the body of the email message.  
+## Ruční přidání doplňků
+V některých případech se doplňky do aplikace Outlook nepřidávají automaticky. I když jste vy nebo kolega spustili asistované průvodce instalací jménem společnosti, [!INCLUDE[d365fin](includes/d365fin_md.md)] nemusí být v aplikaci Outlook zobrazena. Pokud k tomuto problému dojde, můžete přidat doplňky [!INCLUDE[d365fin](includes/d365fin_md.md)] ručně.
 
-In the Document Links add-in, you can modify and take actions with the document, just like you can in [!INCLUDE[prod_short](includes/prod_short.md)].
+Nejprve musíte ověřit, zda máte přístup k doplňkům ve svém účtu Office 365. Stačí jednoduše otevřít aplikaci Outlook v prohlížeči, otevřít zprávu, vybrat **Další akce** (...) v horní části zprávy a pak v dolní části seznamu zvolit možnost **Získat doplňky** . Otevře se stránka **Doplňky pro aplikaci Outlook**, kde můžete pro aplikaci Outlook povolit [!INCLUDE[prodshort](includes/prodshort.md)]. Poté, co přejdete zpět do aplikace Outlook, [!INCLUDE[prodshort](includes/prodshort.md)] by mělo být k dispozici.
 
-## Adding the Add-ins Manually
-In some cases, the add-ins do not get added automatically to Outlook. Even if you or a colleague ran the assisted setup guide on behalf of the company, [!INCLUDE[prod_short](includes/prod_short.md)] might not show up in Outlook. If you experience this issue, you can add the [!INCLUDE[prod_short](includes/prod_short.md)] add-ins manually.  
+Podobně v klientovi aplikace Outlook desktop můžete ověřit, zda [!INCLUDE[d365fin](includes/d365fin_md.md)] je uveden na stráce **Získat doplňky** .
 
-First, you must verify that you have access to the add-ins in your Microsoft 365 account. Quite simply open your Outlook in a browser, open a message, select **More actions** (...) at the top of the message, and then, at the bottom of the list, choose **Get Add-ins**. This opens the **Add-ins for Outlook** page, where you can enable [!INCLUDE[prod_short](includes/prod_short.md)] for your Outlook. Then, when you navigate back to Outlook, [!INCLUDE[prod_short](includes/prod_short.md)] should be available.  
+V obou případech, pokud [!INCLUDE[d365fin](includes/d365fin_md.md)] stále není k dispozici, je nutné získat soubory manifestu doplňku. Další informace získáte od administrátora sady Office 365.
 
-Similarly in the Outlook desktop client, you can verify that [!INCLUDE[prod_short](includes/prod_short.md)] is listed on the **Get Add-ins** page.  
+## Použití jiných e-mailových účtů
 
-In both cases, if [!INCLUDE[prod_short](includes/prod_short.md)] is still not available, you have to get the add-in manifest files. For more information, please contact your Microsoft 365 administrator.
+Doplňky jsou navrženy pro použití s ​​Office 365. Pokud používáte [!INCLUDE[prodshort](includes/prodshort.md)] on-premises, váš správce bude vědět, zda můžete v aplikaci Outlook použít doplňky [!INCLUDE [prodshort](includes/prodshort.md)]. Pro více informací běžte na [Jakou e-mailovou adresu mohu použít v [!INCLUDE[prodshort](includes/prodshort.md)]?](across-faq.md#what-email-address-can-i-use-with-) a [Funkce, které vyžadují specifické okolnosti](/dynamics365/business-central/dev-itpro/features-not-implemented-on-premises#features-that-require-specific-circumstances).
 
-## Using Other Email Accounts
+## Viz také
 
-The add-ins are designed to be used with Microsoft 365. If you use [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, your administrator will know if you can use the [!INCLUDE[prod_short](includes/prod_short.md)] add-ins in Outlook. For more information, see [What email address can I use with [!INCLUDE[prod_short](includes/prod_short.md)]?](across-faq.md#email), and the [Features that require specific circumstances](/dynamics365/business-central/dev-itpro/features-not-implemented-on-premises#features-that-require-specific-circumstances?toc=/dynamics365/business-central/toc.json) article and the [Why doesn't the Outlook add-in work for my users?](/dynamics365/business-central/dev-itpro/faq#why-doesnt-the-outlook-add-in-work-for-my-users?toc=/dynamics365/business-central/toc.json) section in the general FAQ in the administration content.  
-
-## See Related Training at [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
-
-## See Also
-
-[Getting Started](product-get-started.md)  
-[Getting Business Central on my Mobile Device](install-mobile-app.md)  
-[Send Documents by Email](ui-how-send-documents-email.md)  
+[Začínáme](product-get-started.md)  
+[Získání Business Cental na mobilní zařízení](install-mobile-app.md)  
+[Odesílání dokladů e-mailem](ui-how-send-documents-email.md)  
 [Finance](finance.md)  
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Minimum Requirements for Outlook](product-requirements.md#outlook)  
-[Using add-ins in Outlook on the web](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Prodej](sales-manage-sales.md)  
+[Nakupování](purchasing-manage-purchasing.md)  
+[Minimální požadavky pro aplikaci Outlook](product-requirements.md#outlook)  
+[používání doplňků ve webové aplikaci Outlook](https://support.office.com/en-us/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)

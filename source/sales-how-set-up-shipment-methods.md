@@ -4,35 +4,32 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: incoterms
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Set Up Shipment Methods
-Shipment methods, also called incoterms, often depend on the items, the customers, and the vendors. For example, if the customer lives on an island, they can choose to have items always shipped by air or always by sea. Some customers may require next day delivery. Some may want to pick up the order. On the customer and vendor cards, you can specify what sort of delivery is desired.
+# Nastavení způsobu přepravy
+Metody přepravy, také nazývané incoterms, často závisí na zboží, zákaznících a dodavatelích. Pokud například zákazník žije na ostrově, může si vybrat, že bude zboží vždy přepravováno letecky nebo vždy po moři. Někteří zákazníci mohou vyžadovat doručení následující den. Někteří si možná budou chtít vyzvednout objednávku sami. Na kartě zákazníka a dodavatele můžete určit, jaký druh dodání je požadovaný.
 
-You set up the description and code for each shipment method on the **Shipment Methods** page. For example, you can set up the code FOB, and enter Free on Board in the **Description** field. You can then enter the code in **Shipment Method Code** fields elsewhere in the system, such as on a customer card. Then when you create new orders, invoices, credit memos, and so on, the system will enter the description represented by the code. You can change it on the document as needed.
+Popis a kód pro každou metodu dodávky nastavíte na stránce **Způsoby dodávky**. Můžete například nastavit kód FOB a do pole **Popis** zadat Vyplaceně na palubu. Kód pak můžete zadat do polí **Způsob dodávky** jinde v systému, například na kartě zákazníka. Když potom vytvoříte nové objednávky, faktury, dobropisy a další, systém zadá popis reprezentovaný kódem. Podle potřeby je můžete v dokladu změnit.
 
-## To set up a shipment method
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Shipment Methods**, and then choose the related link.
-2. On the **Shipment Methods** page, choose the **New** action.
-3. On the new line, specify a code and description for the shipment method.
+## Nastavení kódu dodávky
+1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Způsoby dodávky** a vyberte související odkaz.
+2. Na stránce **Způsoby dodávky**, vybrte tlačítko **Nový**.
+3. Na novém řádku zadejte kód a popis způsobu dodávky.
 
-## See Also
-[Set Up Shipping Agents](sales-how-to-set-up-shipping-agents.md)  
-[Track Packages](sales-how-track-packages.md)    
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Incoterms on iccwbo.org](https://iccwbo.org/resources-for-business/incoterms-rules)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Incoterms](https://iccwbo.org/resources-for-business/incoterms-rules)  
+[Nastavení přepravců](sales-how-to-set-up-shipping-agents.md)  
+[Sledování zásilek](sales-how-track-packages.md)    
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)     
+[Nastavení montáže](assembly-assemble-items.md)    
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

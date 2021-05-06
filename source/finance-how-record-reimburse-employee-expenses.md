@@ -1,61 +1,56 @@
 ---
 title: Record and Reimburse Employees' Business-Related Expenses | Microsoft Docs
 description: Post employees' expenses with the general journal to the employee's account and later post a payment to the employee's bank account to reimburse for the business-related expense.
+services: project-madeira
+documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: reimbursement
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Record and Reimburse Employees' Expenses
+# Evidence a uhrazení výdajů zaměstnance
+[!INCLUDE[d365fin](includes/d365fin_md.md)] podporuje transakce pro zaměstnance stejným způsobem jako u dodavatelů. V souladu s tím existují účto skupiny zaměstnanců, aby bylo zajištěno, že položky zaměstnance jsou zaúčtovány na příslušné účty v hlavní knize.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] supports transactions for employee in a similar way as for vendors. Accordingly, employee posting groups exist to make sure that employee ledger entries are posted to the relevant accounts in the general ledger.
+> [!NOTE]
+> Zaměstnanecké transakce lze účtovat pouze v místní měně. Úhrady zaměstnancům nepodporují slevy a odchylky plateb.
 
-> [!NOTE]  
-> Employee transactions can be posted in the local currency only. Reimbursement payments to employees do not support discounts and payment tolerances.
+Pokud zaměstnanci utratí své vlastní peníze během obchodní činnosti, můžete zaúčtovat výdaje na účet zaměstnance. Poté můžete zaměstnanci uhradit platbu na bankovní účet zaměstnance, podobně jako platíte dodavatelům.
 
-If employees spend their own money during business activities, you can post the expense to the employee's account. Then you can reimburse the employee by making a payment to the employee's bank account, similarly to how you pay vendors.  
+## Evidence výdajů zaměstnance
+Výdaje zaměstnanců účtujete na stránce **Finanční deník**.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky** a poté vyberte související odkaz.
+2. Otevřete příslušný list finančního deníku. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
+3. V novém řádku deníku vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-> [!TIP]
-> This article explains how to record the expense in the books and how to reimburse the employee. Your organization may have a portal or app where employees can submit their expense reports.
+   > [!NOTE]
+   > [!INCLUDE[journal-showhide-columns-inline-tip](includes/journal-showhide-columns-inline-tip.md)]
+4. Opakujte krok 3 pro všechny výdaje, které zaměstnanec vynaložil.
 
-## To record an employee's expense
-You post employees' expenses on the **General Journal** page.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link.
-2. Open the relevant general journal batch. For more information, see [Working with General Journals](ui-work-general-journals.md).
-3. On a new journal line, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]    
+   > [!TIP]
+   > Pokud chcete zadat více řádků výdajů nad jedním řádkem zůstatkového účtu pro bankovní účet zaměstnance, potom zaškrtněte políčko **Navrhnout vyrovnávací částku** na řádku pro vaši dávku na stránce **Listy finančního deníku**. Poté je pole **Částka** na řádku rozvahového účtu automaticky vyplněno hodnotou, která je nutná k vyrovnání nákladů.
+5. Chcete-li evidovat výdaje na účet zaměstnance, vyberte akci **Účtovat**.
 
-    > [!NOTE]
-    > [!INCLUDE[journal-showhide-columns-inline-tip](includes/journal-showhide-columns-inline-tip.md)]
-4. Repeat step 3 for all the expenses that the employee has incurred.
+## Proplacení nákladů zaměstnance
+Zaměstnancům proplácíte náklady účtováním plateb na jejich bankovní účet na stránce **Deník plateb**.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky plateb** a poté vyberte související odkaz.
+2. Otevřete příslušný list deníku plateb. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
+3. Podle potřeby vyplňte pole. Pro více informací navštivte [Provádění plateb](payables-make-payments.md).
+4. Alternativně můžete vybrat akci **Návrh platby zaměstnance** chcete-li automaticky vložit řádky deníku pro nevyřízené náhrady zaměstnanců.
+5. Vyberte akci **Účtovat** a zaznamenejte úhradu.
 
-    > [!TIP]  
-    > If you want to enter multiple expense lines above one balance-account line for the employee's bank account, then select the **Suggest Balancing Amount** check box on the line for your batch on the **General Journal Batches** page. Then the **Amount** field on the balance-account line is automatically prefilled with the value that is required to balance the expenses.
-5. Choose the **Post** action to record the expenses on the employee's account.
+## Odsouhlasení úhrad se záznamy zaměstnanců
+Platby zaměstnancům použijete na jejich související otevřené položky účetní knihy stejným způsobem jako u plateb dodavatelům, například na stránce **Deník odsouhlasení plateb** na základě souvisejících záznamů v bankovních výpisech. Pro více informací navštivte [Automatické použití plateb a odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md). Případně to můžete převést ručně na stránce **Záznamy zaměstnanců**. Pro více informací navštivte [Odsouhlasení platby dodavatele s deníkem plateb nebo z položek dodavatele](payables-how-apply-purchase-transactions-manually.md).
 
-## To reimburse an employee
-You reimburse employees by posting payments to their bank account on the **Payment Journal** page.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.
-2. Open the relevant payment journal batch. For more information, see [Working with General Journals](ui-work-general-journals.md).
-3. Fill in the fields as necessary. For more information, see [Making Payments](payables-make-payments.md).
-4. Alternatively, choose the **Suggest Employee Payment** action to automatically insert journal lines for pending employee reimbursements.
-5. Choose the **Post** action to register the reimbursement.  
-
-## To reconcile reimbursements with employee ledger entries
-You apply employee payments to their related open employee ledger entries in the same way as you do for vendor payments, for example on the **Payment Reconciliation Journal** page, based on the related bank statement entries. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md). Alternatively, you can apply manually on the **Employee Ledger Entries** page. For more information, see the related [Reconcile Vendor Payments with the Payment Journal or from Vendor Ledger Entries](payables-how-apply-purchase-transactions-manually.md).  
-
-## See Also
-[Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md)  
+## Viz také
+[Účtování transakcí přímo do hlavní knihy](finance-how-post-transactions-directly.md)  
+[Práce s finančními deníky](ui-work-general-journals.md)  
+[Účtování deníku storna a vrácení příjemky/dodávky](finance-how-reverse-journal-posting.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

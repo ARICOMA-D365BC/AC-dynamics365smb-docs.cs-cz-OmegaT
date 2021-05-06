@@ -6,115 +6,104 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Create Reports with XBRL
-XBRL, which stands for eXtensible Business Reporting Language, is an XML-based language for tagging financial data, and enabling businesses to efficiently and accurately process and share their data. The XBRL initiative enables global financial reporting by numerous ERP software companies and international accounting organizations. The goal of the initiative is to provide a standard for the uniform reporting of financial information for banks, investors, and government authorities. Such business reporting can include:  
+# Vytváření sestav pomocí XBRL
+XBRL, což je zkratka pro eXtensible Business Reporting Language, je jazyk založený na XML pro označování finančních dat a umožňuje podnikům efektivně a přesně zpracovávat a sdílet jejich data. Iniciativa XBRL umožňuje globální finanční výkaznictví mnoha softwarových společností ERP a mezinárodních účetních organizací. Cílem této iniciativy je poskytnout standard pro jednotné vykazování finančních informací bankám, investorům a vládním orgánům. Takové obchodní sestavy mohou zahrnovat:
 
- • Financial statements  
- • Financial information  
- • Non-financial information  
- • Regulatory filings, such as annual and quarterly financial statements  
+• Finanční výkazy
+• Finanční informace
+• Nefinanční informace
+• Regulační podání, jako jsou roční a čtvrtletní finanční výkazy
 
-> [!NOTE]
-> You can import G/L-related schemas and create XBRL instance documents by mapping G/L data from the chart of accounts to elements in taxonomies that were designed for financial reports, such as balance sheets, income statements, and so on.
-> 
-> The XBRL capabilities in Business Central support taxonomies for Specification 2.1, however, taxonomies might contain unsupported elements such as Formula linkbases, iXBRL, or have other structural differences. We recommend that you validate the XBRL capability before you use it for reporting.
-> 
-> Full support for taxonomies may require third party XBRL tagging and tools. The XBRL International organization has a list of tools and services that you can use for XBRL reporting. Depending on the XBRL reporting requirements for a given taxonomy, you might want to explore those resources. For more information, see [Getting Started for Business](https://go.microsoft.com/fwlink/?linkid=2153466) and [Tools and Services](https://go.microsoft.com/fwlink/?linkid=2153356).
+[!INCLUDE[d365fin](includes/d365fin_md.md)] umožňuje společnostem implementovat data do XBRL a využít flexibilitu a automatizaci, která zajišťuje sběr i sdílení dat.
 
 ## eXtensible Business Reporting Language
-XBRL (e**X**tensible **B**usiness **R**eporting **L**anguage) is an XML-based language for financial reporting. XBRL provides a standard for uniform reporting for all users of the financial information supply chain; such as public and private companies, the accounting profession, regulators, analysts, the investment community, capital markets and lenders, as well as key third parties such as software developers and data aggregators.  
+XBRL (e **X**tensible **B**usiness **R**eporting **L**anguage) je jazyk založený na XML pro finanční výkaznictví. XBRL poskytuje standard pro jednotné vykazování pro všechny uživatele dodavatelského řetězce finančních informací; jako jsou veřejné a soukromé společnosti, účetní profese, regulátoři, analytici, investiční komunita, kapitálové trhy a věřitelé, jakož i klíčové třetí strany, jako jsou vývojáři softwaru a agregátoři dat.
 
-Taxonomies are maintained by www.xbrl.org. You can download taxonomies or read more detailed information on the XBRL website.  
+Taxonomie spravuje www.xbrl.org. Můžete si stáhnout taxonomie nebo si přečíst podrobnější informace na webu XBRL.
 
-Someone who wants financial information from you, provides you with a taxonomy (an XML document) containing one or more schemas, each with one or more lines to fill out. The lines correspond to the individual financial facts required by the sender. You import this taxonomy and then fill out the schema(s) by entering which account or accounts correspond to each line and what kind of time frame to use, for example, net change or balance at date. In some cases you can enter a constant instead, for example, a number of employees. You are now ready to send the instance document (an XML document) to the requester. The idea is that this might be a recurring event, so unless changes have been made to the taxonomy, you just export new instance documents for new periods on request.  
+Někdo, kdo od vás chce finanční informace, vám poskytne taxonomii (dokument XML) obsahující jedno nebo více schémat, z nichž každé vyplní jeden nebo více řádků. Řádky odpovídají jednotlivým finančním skutečnostem požadovaným odesílatelem. Tuto taxonomii importujete do aplikace a poté vyplníte schéma (schémata) zadáním účtů, které odpovídají každému řádku, může se také použít časový rámec například čistá změna nebo zůstatek k datu. V některých případech můžete místo toho zadat konstantu, například počet zaměstnanců. Nyní jste připraveni odeslat instanční dokument (dokument XML) někomu, kdo požaduje informace. Myšlenka je taková, že se může jednat o opakující se událost, takže pokud nebyly provedeny změny v taxonomii, exportujete pouze nové instanční dokumenty pro nová období na vyžádání.
 
-## XBRL is comprised of the following components  
-The XBRL **Specification** explains what XBRL is, and how to build XBRL instance documents and XBRL taxonomies. The XBRL Specification explains XBRL in technical terms and is intended for a technical audience.  
+## XBRL se skládá z následujících komponent
+**Specifikace** XBRL vysvětluje, co je XBRL, jak vytvářet instanční dokumenty XBRL a taxonomie XBRL. Specifikace XBRL vysvětluje XBRL z technického hlediska a je určena pro technické publikum.
 
-The XBRL **Schema** are the core low-level components of XBRL. The schema is the physical XSD file that expresses how instance documents and taxonomies are to be built.  
+**Schéma** XBRL je základ nízkoúrovňové komponenty XBRL. Schéma je fyzický soubor XSD, který vyjadřuje, jak se mají vytvářet instance a taxonomie.
 
-The XBRL **Linkbases** are the physical XML files that contain various information about the elements defined in the XBRL Schema, such as labels in one or more languages, how they relate to each other, how to sum up elements, and so on.  
+**Propojení** XBRL jsou fyzické soubory XML, které obsahují různé informace o prvcích definovaných ve schématu XBRL, jako jsou popisky v jednom nebo více jazycích, jejich vzájemný vztah, sčítání prvků, atd.
 
-An XBRL **Taxonomy** is a "vocabulary" or "dictionary" created by a group, compliant with the XBRL Specification, in order to exchange business information.  
+**Taxonomie** XBRL je "slovní zásoba" nebo "slovník" vytvořený skupinou, která je v souladu se specifikací XBRL, za účelem výměny obchodních informací.
 
-An XBRL **Instance document** is a business report, such as a financial statement prepared to the XBRL specification. The meaning of the values in the instance document is explained by the taxonomy. An instance document is somewhat useless unless you know the taxonomy for which it is prepared.  
+**Instanční dokument** XBRL je obchodní sestava, například finanční výkaz připravený pro specifikaci XBRL. Význam hodnot v instančním dokumentu je vysvětlen taxonomií. Instanční dokument je poněkud zbytečný, pokud neznáte taxonomii, na kterou je připraven.
 
-## Layered Taxonomies  
-A taxonomy can consist of a base taxonomy, for example, us-gaap or IAS, and then have one or more extensions. To reflect this, a taxonomy refers to one or more schemas, each of which are separate taxonomies. When the additional taxonomies are loaded into the database, the new elements are simply added to the end of the existing elements.  
+## Vrstvené taxonomie
+Taxonomie se může skládat ze základní taxonomie, například us-gaap nebo IAS, a poté může mít jedno nebo více rozšíření. Aby se to zohlednilo, taxonomie odkazuje na jedno nebo více schémat, které jsou všechny samostatné taxonomie. Když jsou do databáze načteny další taxonomie, nové prvky jsou jednoduše přidány na konec existujících prvků.
 
-## Linkbases  
- In XBRL Spec. 2, the taxonomy is described in several XML-files. The primary XML file is the taxonomy schema file itself (.xsd file) which only contains an unordered list of elements or facts to be reported. In addition to this, there are usually associated some linkbase files (.xml). The linkbase files contain data which is complementary to the raw taxonomy (.xsd file). There are six types of linkbases files of which four have relevance for Product Name XBRL. These are:  
+## Propojení
+V XBRL Sp. 2 je taxonomie popsána v několika souborech XML. Primární soubor XML je samotný soubor schématu taxonomie (soubor.xsd), který obsahuje pouze neuspořádaný seznam prvků nebo skutečností, které se mají vykazovat. Kromě toho jsou obvykle spojeny některé soubory pomocí propojení (.xml). Soubory propojení obsahují data, která doplňují prvotní taxonomii (soubor .xsd). Existuje šest typů souborů propojení, z nichž čtyři mají význam pro název produktu XBRL. Jedná se o:
 
--   Label linkbase: This linkbase contains labels or names for the elements. The file may contain labels in different languages which are identified with an XML property called 'lang'. The XML language identifier usually contains a two-letter abbreviation, and although it should be easy to guess what the abbreviation means, there is no connection to the Windows language code or to the language codes defined in the demo data. Therefore, when the user looks up the languages for a specific taxonomy, he will see all the labels for the first element in the taxonomy, meaning that he can then see an example of each language. A taxonomy can have several label linkbases attached to it as long as these linkbases contain different languages.  
+- Báze odkazů pro popisky: Tato propojení obsahuje popisky nebo názvy prvků. Soubor může obsahovat štítky v různých jazycích, které jsou identifikovány vlastností XML nazvanou 'lang'. Identifikátor jazyka XML obvykle obsahuje dvoupísmennou zkratku, a přestože by mělo být snadné uhodnout, co zkratka znamená, neexistuje žádná souvislost s kódem jazyka Windows nebo s kódy jazyků definovanými v ukázkových datech. Když tedy uživatel vyhledá jazyky pro konkrétní taxonomii, uvidí všechny štítky pro první prvek v taxonomii, což znamená, že pak může vidět příklad každého jazyka. Taxonomie může mít připojeno několik bází odkazů pro popisky, pokud tyto propojení obsahují různé jazyky.
 
--   Presentation linkbase: This linkbase contains information about the structure of the elements, or more precisely; how the issuer of the taxonomy suggests that application presents the taxonomy to the user. The linkbase contains a series of links that each connect two elements as parent and child. When applying all these links, the elements can be shown in a hierarchical way. Note that the presentation linkbase deals with just that: the presentation of elements to the user.  
+- Báze odkazů pro prezentace: Tato propojení obsahuje informace o struktuře prvků, nebo přesněji; jak emitent taxonomie navrhuje, aby aplikace prezentovala taxonomii uživateli. Propojení obsahuje řadu odkazů, z nichž každý spojuje dva prvky jako nadřazený a podřízený. Při použití všech těchto odkazů lze prvky zobrazit hierarchicky. Všimněte si, že prezentace propojení se zabývá právě tím: prezentací prvků uživateli.
 
--   Calculation linkbase: This linkbase contains information about which elements roll up to which. The structure is quite similar to the presentation linkbase, except that each link or ‘arc’, as they are called, has a weight property. The weight can be either 1 or –1 indicating whether the element should be added to or subtracted from its parent. Note that the rollups are not necessarily in keeping with the visual presentation.  
+- Báze odkazů pro výpočty: Tato propojení obsahuje informace o tom, ke kterým prvkům dojde. Struktura je velmi podobná bázi odkazů pro prezentace, s tím rozdílem, že každý odkaz nebo 'arc', jak se jim říká, má vlastnost takzvané hmotnosti. Hmotnost může být buď 1 nebo –1 označující, zda prvek má být přidán nebo odečten od nadřazeného prvku. Všimněte si, že souhrny nemusí nutně odpovídat vizuální prezentaci.
 
--   Reference linkbase: This linkbase is an xml file that contains supplementary information about the data that is required by the taxonomy issuer.
+- Referenční báze odkazů: Tento soubor odkazů je soubor XML, který obsahuje doplňující informace o datech, které jsou vyžadovány vystavitelem taxonomie.
 
-## To set up XBRL lines  
-After you import or update the taxonomy, the lines of the schemas must be supplied with all the information that is required. This information will include basic company information, the actual financial statements, notes to the financial statements, supplemental schedules, and other information that is required to satisfy the particular financial reporting requirements.  
+## Nastavení řádků XBRL
+Po importu nebo aktualizaci taxonomie musí být řádky schémat zadány se všemi požadovanými informacemi. Tyto informace budou zahrnovat základní informace o společnosti, skutečnou účetní závěrku, poznámky k účetní závěrce, doplňkové plány a další informace, které jsou nezbytné pro splnění konkrétních požadavků na finanční výkaznictví.
 
-You set up the XBRL Lines by mapping the data in the taxonomy to the data in your general ledger.  
+Řádky XBRL nastavíte mapováním dat v taxonomii na data v hlavní knize.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XBRL Taxonomies**, and then choose the related link.  
-2.  On the **XBRL Taxonomies** page, select a taxonomy from the list.  
-3.  Choose the **Lines** action.  
-4.  Select a line and fill in the fields.   
-5.  To read detailed information about what to fill in, choose the **Information** action.  
-6.  To set up the mapping of the general ledger accounts in the chart of accounts to the XBRL lines, choose the **G/L Map Lines** action.  
-7.  To add notes to the financial statement, choose the **Notes** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Taxonomie XBRL** a poté vyberte související odkaz.
+2. Na stránce **Taxonomie XBRL** vyberte taxonomii ze seznamu.
+3. Vyberte akci **Řádky**.
+4. Vyberte řádek a vyplňte pole.
+5. Chcete-li si přečíst podrobné informace o tom, co vyplnit, vyberte akci **Informace**.
+6. Chcete-li nastavit mapování účtů hlavní knihy v účetní osnově na řádky XBRL, vyberte akci **Řádky propojení financí**.
+7. Chcete-li k finančnímu výkazu přidat poznámky, vyberte akci **Poznámky**.
 
-   > [!TIP]
-   > To exclude lines from the export, choose **NOT APPLICABLE** as the source type.
+> [!NOTE]
+> Můžete exportovat pouze data, která odpovídají typu zdroje, který jste vybrali v poli **Typ původu**, který obsahuje popis a poznámky.
 
-   > [!NOTE]  
-   > You can only export data that corresponds to the selection in the **Source Type** field. This includes descriptions and notes.  
+> [!NOTE]
+> Řádky, které nejsou relevantní, lze označit jako typ řádku **Nelze použít** takže řádky nebudou exportovány.
 
-   > [!NOTE]  
-   > Taxonomies might contain elements that [!INCLUDE[prod_short](includes/prod_short.md)] does not support. If an element is not supported, the **Source Type** field will display **Not Applicable** and the **Description** field will show an error message, such as **Unexpected type: "specific type not recognized"**. If you must export the element, choose a matching source type. Typically, this is a constant or a description. This will allow you to enter and export data, however, such elements might have validation rules that cannot be checked before exporting.
+## Import taxonomie XBRL
+Prvním krokem při práci s funkcí XBRL je import taxonomie do databáze společnosti. Taxonomie sestává z jednoho nebo více schémat a některých propojení. Po dokončení importu schémat i vazebních základů a použití propojovacích základů schématu můžete nastavit řádky a namapovat účty hlavní knihy v účtové osnově na příslušné řádky taxonomie.
 
- ## To import an XBRL taxonomy  
-The first step in working with the XBRL functionality is to import the taxonomy into your company database. A taxonomy consists of one or more schemas and some linkbases. After you have completed the import of both schemas and linkbases and have applied the linkbases to the schema, you can set up the lines and map the general ledger accounts in the chart of accounts to the appropriate taxonomy lines.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Taxonomie XBRL** a poté vyberte související odkaz.
+2. Na stránce **Taxonomie XBRL** vytvořte nový řádek a zadejte název a popis taxonomie.
+3. Vyberte akci **Schémata** a vložte popis schématu.
+4. Chcete-li schéma importovat, vyberte na stránce **Schémata XBRL** akci **Import** a vyberte složku a soubor XSD. Vyberte tlačítko **Otevřít**.
+5. Chcete-li importovat základnu propojení, na stránce **Schémata XBRL** vyberte akci **Propojení** a poté vyberte složku a soubor XML. Vyberte tlačítko **Otevřít**.
+6. Nyní můžete zvolit použití propojení na schéma. Opakujte, dokud neimportujete všechny základny propojení.
+7. Vyberte akci **Použít pro taxonomii**, abyste použili základnu propojení na schéma.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XBRL Taxonomies**, and then choose the related link.  
-2.  On the **XBRL Taxonomies** page, create a new line and enter the name and description of the taxonomy.  
-3.  Choose the **Schemas** action, and then insert the description of the schema.  
-4.  To import the schema, on the **XBRL Schemas** page, choose the **Import** action, and the select a folder and an XSD file. Choose the **Open** button.  
-5.  To import the linkbase, on the **XBRL Schemas** page, choose the **Linkbases** action, and then select a folder and an XML file. Choose the **Open** button..  
-6.  You can now choose to apply the linkbase to the schema. Repeat until you have imported all linkbases.  
-7. Choose the **Apply to Taxonomy** action to apply the linkbase to the schema.  
+> [!IMPORTANT]
+> Namísto jednotlivého použití propojení po importu můžete počkat, až naimportujete všechny propojení a poté je použít současně. Chcete-li to provést, zvolte tlačítko **NE** , když se zobrazí výzva k použití nově importovaného propojení do schématu. Poté vyberte řádky s propojením, které chcete použít.
 
-> [!IMPORTANT]  
->  Instead of individually applying the linkbases after the import, you can wait until you have imported all linkbases and then apply them at the same time. To do this, choose the **NO** button when you are prompted to apply the newly imported linkbase to the schema. Then select the lines with the linkbases that you want to apply.  
+## Aktualizace taxonomie XBRL
+Při změně taxonomie je třeba odpovídajícím způsobem aktualizovat aktuální taxonomii. Důvodem aktualizace může být změněné schéma, změněné propojení nebo nové propojení. Po aktualizaci taxonomie stačí mapovat řádky pro změněné nebo nové řádky.
 
-## To update an XBRL taxonomy  
-When a taxonomy changes you need to update the current taxonomy accordingly. The reason for the update can be an altered schema, an altered linkbase, or a new linkbase. After updating the taxonomy, you only need to map the lines for the changed or new lines.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Taxonomie XBRL** a poté vyberte související odkaz.
+2. Na stránce **Taxonomie XBRL** vyberte akci **Schémata**.
+3. Chcete-li aktualizovat schéma, vyberte schéma, které chcete aktualizovat, a poté vyberte akci **Import**.
+4. Chcete-li aktualizovat nebo přidat novou základnu propojení, vyberte akci **Propojení**.
+5. Vyberte příslušnou základnu odkazů nebo stiskněte Ctrl+N pro nový řádek, vyberte typ propojení a vložte popis.
+6. Chcete-li importovat základnu propojení, vyberte akci **Import**.
+7. Klepnutím na tlačítko **Ano** aplikujte základnu propojení na schéma.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XBRL Taxonomies**, and then choose the related link.  
-2.  On the **XBRL Taxonomies** page, choose the **Schemas** action.  
-3.  To update a schema, select the schema you want to update, and then choose the **Import** action.  
-4.  To update or add a new linkbase, choose the **Linkbases** action.  
-5.  Select the relevant linkbase or press Ctrl+N for a new line, select the type of linkbase, and then insert a description.  
-6.  To import the linkbase, choose the **Import** action.  
-7.  Choose the **Yes** button to apply the linkbase to the schema.  
+## Viz Související školení na [Microsoft Learn](/learn/modules/xbrl-reports-dynamics-365-business-central/index)
 
-## See Related Training at [Microsoft Learn](/learn/modules/xbrl-reports-dynamics-365-business-central/index)
-
-## See Also
-[Finance](finance.md)    
+## Viz také
+[Finance](finance.md)  
 [Business Intelligence](bi.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -1,72 +1,62 @@
 ---
-title: QuickBooks Migration Extension | Microsoft Docs
-description: Describes how to use the extension to import customers, vendors, items, and accounts from QuickBooks Desktop to Business Central.
+title: Použití rozšíření QuickBooks Migration | Microsoft Docs
+description: 'Popisuje jak používat rozšíření k importaci zákazníků, dodavatelů, zboží a účtů z QuickBooks Desktop do Business Central.'
 author: edupont04
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms. search.keywords: app, add-in, manifest, customize, import, implement
-ms.date: 10/01/2020
+ms. search.keywords: 'app, add-in, manifest, customize, import, implement'
+ms.date: 10/01/2018
 ms.author: edupont
 ---
 
-# The QuickBooks Data Migration Extension
+# <a name="the-quickbooks-data-migration-extension"></a>Rozšíření QuickBooks Data Migration
+Toto rozšíření usnadňuje migraci zákazníků, dodavatelů, zboží a účtů z QuickBooks na [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pokud vaše firma používá QuickBooks, můžete exportovat příslušné informace skrz průvodce asistovaného nastavení a poté data uložit do [!INCLUDE[d365fin](includes/d365fin_md.md)].  
+Pro více informací navštivte [Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md).
 
-This extension makes it easy to migrate customers, vendors, items, and accounts from QuickBooks to [!INCLUDE[prod_short](includes/prod_short.md)]. If your business uses QuickBooks today, you can export the relevant information and then open an assisted setup guide to upload the data to [!INCLUDE[prod_short](includes/prod_short.md)].  
-For more information, see [Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md).
+## <a name="data-from-quickbooks-desktop"></a>Data z QuickBooks Desktop
+ 
+Z QuickBooks Online můžete do Business Central importovat následující data:
 
-## Data from QuickBooks Desktop
+- Zákazníci  
+- Dodavatelé  
+- Zboží  
+- Účetní osnova  
+- Počáteční zůstatky v hlavní knize  
+- Dostupné množství skladových položek  
+- Otevřené dokumenty pro zákazníky a dodavatele, jako faktury, dobropisy a platby  
 
-You can import the following data from QuickBooks Online to Business Central:
-
-- Customers  
-- Vendors  
-- Items  
-- Chart of Accounts  
-- Beginning Balance transactions in General Ledger  
-- On-hand Quantities for Inventory Items  
-- Open documents for customers and vendors, such as invoices, credit memos and payments  
-
-We migrate only full amounts on sales and purchase documents. We do not update partially paid amounts. For example, if a customer has paid 300 of a total of 500 dollars on a sales invoice, we migrate the full 500. If you have received partial payments, you must update these manually, either before or after you migrate data. We recommend that you apply outstanding transactions before you migrate, just to make things easier afterward.
-
-> [!NOTE]
-> We do not migrate purchase orders or sales orders.
-
-## Before You Start
-
-An important part of the migration process is to specify the accounts to migrate transactions to. It's a good idea to plan this mapping before you migrate data. For example, the accounts where you post transactions for:
-
-- The sale of items or services to customers  
-- The purchase of items or services from vendors  
-- Adjustments in the general ledger  
-
-Business Central requires that general ledger accounts have account numbers assigned to them. Make sure that account numbers are assigned to your accounts in QuickBooks.
-If transactions in QuickBooks have tax amounts, you must set up a tax account for your tax jurisdictions in Business Central before you can post transactions.
-
-In order to get your data out of the QuickBooks desktop application you will need to download the Microsoft Data Exporter Tool.  The instructions for the tool are in the Data Migration Wizard in [!INCLUDE[prod_short](includes/prod_short.md)]. The tool will connect to your QuickBooks application and export the applicable data to a .zip file.  
+Migrujeme pouze plnou částku v prodejních a nákupních fakturách. Neaktualizujeme částečně zaplacené částky. Například, jestliže zákazník zaplatil 300, z celkových 500 korun na prodejní faktuře, migrujeme celých 500. Jestli jste obdrželi částečnou platbu, tak ji musíte aktualizovat manuálně, buď před, nebo po migraci dat. Doporučujeme abyste před migrací použili neuhrazené transakce, aby bylo možné později věci zjednodušit.
 
 > [!NOTE]
-> Currently the data exporter tool only works with QuickBooks 2017 and 2018.
+> Nemigrujeme nákupní a prodejní objednávky.
 
-## Finding the QuickBooks Data Migration Extension
+## <a name="before-you-start"></a>Než začnete
+Důležitá část migračního procesu je specifikovat účty, do kterých budou transakce migrovat. Je dobrý nápad si toto mapování naplánovat před migrací dat. Například, účty, ve kterých zúčtujete transakce pro:
 
-The QuickBooks Data Migration extension is installed and ready to go as an integrated part of the Data Migration assisted setup guide. If you are ready to get started now, and have exported your data from QuickBooks, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assisted Setup**, and then choose the related link. Choose **Migrate business data**, and then follow the steps in the guide.  
+- Prodej zboží a služeb odběratelům  
+- Nákup zboží a služeb od dodavatelů  
+- Opravné položky v hlavní knize  
 
-## What do I do after I migrate Data?
+Business Central vyžaduje, aby měly účty v hlavní knize přiřazené čísla účtů. Ujistěte se, že čísla účtů jsou přiřazená k vašemu účtu v QuickBooks.
+Pokud mají transakce v aplikaci QuickBooks částky daně, musíte před zaúčtováním transakcí vytvořit daňový účet pro vaše daňové kompetence v aplikaci Business Central.
 
-After you migrate data, transactions have the status Unposted, so you can review them and make adjustments. To review the transactions, go to the page where you would normally find them. For example, to review unposted sales invoices, go to the Sales Invoices page. To review payment journals, go to the Payment Journals page.
-There are a few things in particular that you should do:
-If the transactions in QuickBooks had markup or discount amounts, you must manually add the amounts to the related transactions in Business Central before you post them.
-If you are using value added tax (VAT), you may need to add a business posting group and a product posting group to the posting setup so that you can post VAT amounts.
-Verify the beginning balances for accounts in the general ledger. QuickBooks does not store the current balance for all accounts, so you might need to correct beginning balances.
+Chcete-li získat data z desktopové aplikace QuickBooks, bude nutné stáhnout nástroj Microsoft Data Exporter Tool.  Pokyny pro nástroj jsou v Průvodci migrací dat v [!INCLUDE[d365fin](includes/d365fin_md.md)] Nástroj se připojí k vaší aplikaci QuickBooks a exportuje příslušná data do souboru .zip.  
 
-## See Also
+> [!NOTE]
+> Nástroj pro export dat funguje v současné době pouze s QuickBooks 2017 a 2018.
 
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions ](ui-extensions.md)  
+## <a name="finding-the-quickbooks-data-migration-extension"></a>Vyhledání rozšíření QuickBooks Data Migration
+Rozšíření QuickBooks Data Migration je nainstalováno a připraveno k použítí jako integrovaná část asistovaného průvodce nastavením Data Migration. Pokud jste připraveni začít hned teď a exportovali jste svá data z QuickBooks, vyberte ikonu ![ Žárovka, která otevře Řekněte mi funkci](media/ui-search/search_small.png "Řekněte mi co chcete udělat"), zadejte **Asistované nastavení** a poté vyberte související odkaz. Vyberte možnost **Migrovat obchodní data** a poté postupujte podle pokynů v průvodci.  
 
+## <a name="what-do-i-do-after-i-migrate-data"></a>Co mám dělat po migraci dat?
+Po migraci dat mají transakce stav Nezveřejněno, takže je můžete zkontrolovat a provést úpravy. Pokud chcete transakce zkontrolovat, přejděte na stránku, kde je obvykle najdete. Chcete-li například zkontrolovat nezveřejněné prodejní faktury, přejděte na stránku Prodejní faktury. Jestli chcete zkontrolovat deník plateb, přejděte na stránku Deník plateb.
+Je zde několik věcí, které by jste měli zejména udělat: Pokud transakce v aplikaci QuickBooks měly přirážku nebo slevu, je nutné je před zaúčtováním manuálně přidat do souvisejících transakcí v aplikaci Business Central.
+Pokud jste plátci DPH, budete možná muset do nastavení účtování přidat Obchodní účetní skupinu a Účetní skupinu zboží, abyste mohli účtovat DPH.
+Ověřte počáteční stavy pro účty v hlavní knize. QuickBooks neukládá aktuální stavy všech účtů, takže budete pravděpodobně muset opravit počáteční stavy.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Import obchodních dat z jiných finančních systémů.](across-import-data-configuration-packages.md)  
+[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření ](ui-extensions.md)  

@@ -4,133 +4,119 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Receive Items
+# Příjem zboží
+Když zboží dorazí do skladu, který není nastaven pro zpracování příjemky skladu, jednoduše zaznamenáte příjemku na související obchodní doklad, například nákupní objednávku, objednávku prodejní vratky nebo příchozí objednávku transferu.
 
-When items arrive at a warehouse that is not set up for warehouse receipt processing, you simply record the receipt on the related business document, such as a purchase order, a sales return order, or an inbound transfer order.
+Když zboží dorazí do skladu, který je nastaven pro zpracování příjmu na sklad, musíte načíst řádky vydaného původního dokladu, který spustil jejich příjem. Pokud máte přihrádky, můžete buď přijmout původní přihrádku, která je vyplněna, nebo pokud zboží nebylo nikdy předtím použito ve skladu, vyplňte přihrádku, kde má být zboží zaskladněno. Poté musíte vyplnit množství přijatého zboží a zaúčtovat příjemku.
 
-When items arrive at a warehouse that is set up for warehouse receipt processing, you must retrieve the lines of the released source document that triggered their receipt. If you have bins, you can either accept the default bin that is filled in, or if the item has never been used before in the warehouse, fill in the bin where the item should be put away. You must then fill in the quantities of the items you have received, and post the receipt.  
-
-## To receive items with a purchase order
-
-The following describes how to receive items with a purchase order. The steps are similar for sales return orders and transfer orders.  
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
-2. Open an existing purchase order, or create a new one. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
-3. In the **Qty. to Receive** field, enter the received quantity.
-
-  > [!NOTE]
-  > If the received quantity is higher than ordered on the purchase order, per the **Quantity** field, and the vendor has been set up to allow over-receipts, then you use the **Over-Receive** field to handle the excess quantity. For more information, see [To receive more items than ordered](warehouse-how-receive-items.md#to-receive-more-items-than-ordered).
-
-4. Choose the **Post** action.
-
-  The value in the **Qty. Received** field is updated. If this is a partial receipt, then the value is lower than the value in the **Quantity** field.
+## Příjem zboží s nákupní objednávkou
+Následující text popisuje, jak přijímat zboží s nákupní objednávkou. Kroky jsou podobné u objednávek prodejní vratky a objednávek transferu.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní objednávky** a poté vyberte související odkaz.
+2. Otevřete existující nákupní objednávku nebo vytvořte novou. Pro více informací navštivte [Záznam nákupu](purchasing-how-record-purchases.md).
+3. Do pole **K  příjmu** zadejte přijaté množství.
 
 > [!NOTE]
-> If you use a warehouse document to post the receipt, then you cannot use the **Post** action on the purchase order. Instead, a warehouse worker has already posted the purchase order quantity as received. For more information, see [To receive items with a warehouse receipt](warehouse-how-receive-items.md#to-receive-items-with-a-warehouse-receipt).
+> Pokud je přijaté množství vyšší, než bylo objednáno v nákupní objednávce a prodejce byl nastaven tak, aby byli povoleny nadměrné příjmy, v poli **Množství** použijte pole **Nadměrný příjem**, které slouží ke zpracování nadměrného množství. Pro více informací navštivte [Příjem více zboží, než bylo objednáno](warehouse-how-receive-items.md#to-receive-more-items-than-ordered).
+4. Vyberte akci **Účtovat**.
 
-## To receive items with a warehouse receipt
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Receipts**, and then choose the related link.  
-2. Choose the **New** action.  
-
-    Fill in the fields on **General** FastTab. When you retrieve source document lines, some of the information is copied to each line.  
-
-    For warehouse configuration with directed put-away and pick, if the location has a default zone and bin for receipts, the **Zone Code** and **Bin Code** fields are filled in automatically, but you can change them as appropriate.  
-
-    > [!NOTE]  
-    > If you wish to receive items with warehouse class codes other than the class code of the bin in the **Bin Code** field on the document header, you must delete the contents of the **Bin Code** field on the header before you retrieve source document lines for the items.  
-3. Choose the **Get Source Documents** action. The **Source Documents** page opens.
-
-    From a new or an open warehouse receipt, you can use the **Filters to Get Source Docs.** page to retrieve the released source document lines that define which items to receive or ship.
-
-    1. Choose the **Use Filters to Get Src. Docs.** action.  
-    2. To set up a new filter, enter a descriptive code in the **Code** field, and then choose the **Modify** action.  
-    3. Define the type of source document lines that you want to retrieve by filling in the relevant filter fields.  
-    4. Choose the **Run** action.  
-
-    All released source document lines that fulfill the filter criteria are now inserted in **Warehouse Receipt** page from which you activated the filter function.  
-
-    The filter combinations that you define are saved on the **Filters to Get Source Docs.** page until the next time you need it. You can make an unlimited number of filter combinations. You can change the criteria at any time by choosing the **Modify** action.
-
-4. Select the source documents for which you want to receive items, and then choose the **OK** button.  
-
-    The lines of the source documents appear on the **Warehouse Receipt** page. The **Qty. to Receive** field is filled with the quantity outstanding for each line, but you can change the quantity as necessary. If you deleted the contents of the **Bin Code** field on the **General** FastTab before getting the lines, you must fill in an appropriate bin code on each receipt line.  
-
-    > [!NOTE]  
-    >  To fill in the **Qty. to Receive** field on all the lines with zero, choose the **Delete Qty. to Receive** action. To fill it in once again with the quantity outstanding, choose the **Autofill Qty. to Receive** action.  
-
-    > [!NOTE]  
-    >  You cannot receive more items than the number in the **Qty. Outstanding** field on the source document line. To receive more items, retrieve another source document that contains a line for the item by using the filter function to get source documents with the item.  
-
-5. Post the warehouse receipt. The quantity fields are updated on the source documents, and the items are recorded as part of company inventory.  
-
-If you are using warehouse put-away, the receipt lines are sent to the warehouse put-away function. The items, although received, cannot be picked until they have been put away. The received items are identified as available inventory only when the put-away has been registered.  
-
-If you are not using warehouse put-away but you are using bins, the put-away of the items in the bin specified on the source document line is recorded.  
-
-> [!NOTE]  
-> If you use the **Post and Print** function, you both post the receipt and print a put-away instruction that shows you where to place the items in storage.  
->
-> If your location uses directed put-away and pick, then the put-away templates are used to calculate the best place to put the items away. This is then printed on the put-away instruction.
-
-## To receive more items than ordered
-
-When you receive more goods than you ordered, you may want to receive them instead of canceling the receipt. For example, it may be cheaper to keep the excess on your inventory than returning them or your vendor may offer you a discount for keeping them.
-
-### To set up over-receipts
-
-You must define a percentage by which you allow the ordered quantity to be exceeded when receiving. You define this under an over-receipt code, which contains the percentage in the **Over-Receipt Tolerance %** field. You then assign the code to the cards of relevant items and/or vendors.  
-
-The following describes how to set up and assign an over-receipt code to an item. The steps are similar for a vendor.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Open the card for an item that you suspect may sometimes be delivered with a higher quantity than ordered.
-3. Choose the look-up button in the **Over-Receipt Code** field.
-4. Choose the **New** action.
-5. On the **Over-Receipt Codes** page, create one or more new lines that define different over-receive policies. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
-6. Select a line, and then choose the **OK** button.
-
-The over-receipt code is assigned to the item. Any purchase order or warehouse receipt for the item now allows receiving more than the ordered quantity according to the specified over-receipt tolerance percentage.
+Hodnota v poli **Přijaté  množství** je aktualizována. Pokud se jedná o částečný příjem, je hodnota nižší než hodnota v poli **Množství**.
 
 > [!NOTE]
-> You can set up an approval workflow to require that over-receipts must be approved before they can be handled. In that case, you must select the **Approval Required** check box on the **Over-Receipt Codes** page. For more information, see [Create Workflows](across-how-to-create-workflows.md).
+> Pokud k zaúčtování příjemky použijete doklad skladu, nemůžete použít akci **Účtovat** na nákupní objednávce. Místo toho pracovník skladu již zaúčtoval množství objednávky jako přijaté. Pro více informací navštivte  [Příjem zboží pomocí příjemky na sklad](warehouse-how-receive-items.md#to-receive-items-with-a-warehouse-receipt).
 
-### To perform an over-receipt
+## Příjem zboží pomocí příjemky na sklad
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Příjemky na sklad** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
 
-On purchase lines and warehouse receipt lines, the **Over-Receipt Quantity** field is used to record over-received quantities, meaning quantities that exceed the value in the **Quantity** field, the ordered quantity.
+   Vyplňte pole na záložce **Obecné**. Při načtení řádků původního dokladu se některé informace zkopírují na každý řádek.
 
-When you handle an over-receipt, you can either increase the value in the **Qty. to Receive** field to the actually received quantity. The **Over-Receipt Quantity** field is then updated to show the excess quantity. Alternatively, you can enter the excess quantity in the **Over-Receipt Quantity** field. The **Qty. to Receive** field is then updated to show the ordered quantity plus the excess quantity. The following procedure described how to fill in the **Qty. to Receive** field.  
+   Pro konfiguraci skladu s řízeným zaskladněním a vyskladněním, pokud má lokace výchozí zónu a přihrádku pro příjmy, jsou pole **Kód zóny** a **Kód přihrádky** vyplněna automaticky, ale můžete je podle potřeby změnit.
 
-1. On a purchase order or a warehouse receipt document where the received quantity is higher than ordered, enter the actually received quantity in the **Qty. to Receive** field.
+   > [!NOTE]
+   > Pokud chcete přijímat zboží s jinými kódy třídy skladu, než je kód třídy přihrádky v poli **Kód přihrádky** v hlavičce dokladu, musíte před načtením řádků původního dokladu pro zboží odstranit obsah pole **Kód přihrádky** v hlavičce.
+3. Vyberte akci **Kopie pův.dokladů**. Otevře se stránka **Původní doklady**.
 
-    If the increase is within the tolerance specified by the assigned over-receipt code, the **Over-Receipt Quantity** field is updated to show the quantity by which the value in the **Quantity** field is exceeded.
+   Z nové nebo otevřené příjemky skladu můžete použít stránku **Výběr filtru původu skladu** k načtení vydaných řádků původního dokladu, které definují, které zboží má být přijato nebo dodáno.
 
-    If the increase is above the specified tolerance, the over-receipt is not allowed. In that case, you can investigate if another over-receipt code exists that will allow it. Otherwise, only the ordered quantity can be received, and the excess quantity must be handled otherwise, for example, by returning it to the vendor.
+   1. Vyberte akci **Použít filtry pro kopii pův. dokl.**.
+   2. Chcete-li nastavit nový filtr, zadejte do pole **Kód** popisný kód a poté vyberte akci **Upravit**.
+   3. Vyplněním příslušných polí filtru určete typ řádků původního dokladu, které chcete načíst.
+   4. Vyberte akci **Start**.
+   Všechny vydané řádky původního dokladu, které splňují kritéria filtru, jsou nyní vloženy na stránku **Příjemka na sklad**, ze které jste aktivovali funkci filtru.
 
-2. Post the receipt as you would for any other receipt.
+   Kombinace filtrů, které definujete, se uloží na stránce **Výběr filtru původu skladu**, dokud je příště nebudete potřebovat. Můžete vytvořit neomezený počet kombinací filtrů. Kritéria můžete kdykoli změnit výběrem akce **Upravit**.
+
+4. Vyberte původní doklady, pro které chcete přijímat zboží, a pak zvolte tlačítko **OK**.
+
+   Řádky původních dokladů se zobrazí na stránce **Příjemka na sklad**. Pole **K  příjmu** je vyplněno nevyřízeným množstvím pro každý řádek, ale množství můžete podle potřeby změnit. Pokud jste před získáním řádků odstranili obsah pole **Kód přihrádky** na záložce **Obecné**, musíte vyplnit příslušný kód přihrádky na každém řádku příjmu.
+
+   > [!NOTE]
+   > Vyplňte pole **K  příjmu** na všech řádcích s hodnotou nula a zvolte akci **Odstranit množ. k příjmu**. Chcete-li jej znovu vyplnit zbývajícím množstvím, zvolte akci **Automat.vyplnit množ. k příjmu**.
+
+   > [!NOTE]
+   > Nelze přijmout více zboží, než je uvedeno v poli **Zbývající  množ.** na řádku původního dokladu. Chcete-li získat více zboží, načtěte další původní doklad, který obsahuje řádek pro zboží, pomocí funkce filtru a získejte původní doklady se zbožím.
+
+5. Zaúčtujte příjemku na sklad. Pole množství jsou aktualizována v původních dokladech a zboží je zaznamenáno jako součást zásob společnosti.
+
+Pokud používáte zaskladnění, řádky příjmu jsou odeslány do skladu pomocí funkce zaskladnění. Zboží, přestože bylo přijato, nemůže být vybráno, dokud nebylo předtím zaskladněno. Přijaté zboží je označeno jako dostupné zásoby pouze po zaregistrování zaskladnění.
+
+Pokud nepoužíváte zaskladnění, ale používáte přihrádky, zaskladnění se zaznamená v přihrádce určené na řádku původního dokladu.
 
 > [!NOTE]
-> [!INCLUDE[prod_short](includes/prod_short.md)] does not include functionality to automatically initiate the financial administration of over-receipts. You must manually handle this in agreement with the vendor, for example, by the vendor forwarding a new or updated invoice.
+> Pokud používáte funkci **Účtovat a vytisknout**, odešlete příjemku a vytisknete instrukci zaskladnění, která vám ukáže, kam umístit zboží.
+> Pokud vaše lokace používá řízené zaskladnění/vyskladnění, pak se šablony zaskladnění používají k výpočtu nejlepšího místa pro zaskladnění zboží. Toto je potom vytištěno na instrukci pro zaskladnění.
+> 
+## Příjem více zboží, než bylo objednáno
+Pokud obdržíte více zboží, než jste si objednali, můžete je místo zrušení příjemky příjmout. Například může být levnější ponechat přebytek ve vašem skladu, než je vrátit, nebo vám prodejce může nabídnout slevu za jejich přijetí.
 
-## See Related Training at [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
+### Nastavení nadměrného příjmu
+Je nutné definovat procento, o které povolíte překročení objednaného množství při příjmu. Definujete to prostřednictvím kódu nadměrného příjmu, který obsahuje procento v poli **Tolerance nadměrného příjmu %**. Poté kód přiřadíte kartám příslušného zboží nebo kartám dodavatelů.
 
-## See Also
+Následující text popisuje, jak nastavit a přiřadit kód nadměrného příjmu ke zboží. Kroky jsou podobné i pro dodavatele.
 
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
-[Assembly Management](assembly-assemble-items.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Otevřete kartu zboží, o kterém máte podezření, že může být někdy doručeno v větším množství, než bylo objednáno.
+2. Vyberte vyhledávací tlačítko v poli **Kód nadměrného příjmu**.
+3. Vyberte akci **Nový**.
+4. Na stránce **Kódy nadměrného příjmu** vytvořte jeden nebo více nových řádků, které definují různé zásady nadměrného příjmu. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
+5. Vyberte řádek a poté stiskněte tlačítko **OK**.
 
+Kód nadměrného příjmu je nyní přiřazen ke zboží. Jakákoli nákupní objednávka nebo příjemka na sklad pro toto zboží nyní umožňuje příjem více než objednaného množství podle stanoveného procenta tolerance při převzetí.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+> [!NOTE]
+Můžete nastavit workflow schvalování, který vyžaduje, aby byly nadměrné příjmy schváleny před tím jako budou zpracovány. V takovém případě musíte na stránce **Kódy nadměrného příjmu** zaškrtnout políčko **Požadováno schválení**. Pro tento účel existuje ve standardních datech workflow vyhrazená reakce workflow **Schválení nadměrného příjmu**. Pro více informací navštivte [Vytvoření workflow](across-how-to-create-workflows.md).
+
+### Provedení nadměrného příjmu
+Na nákupních řádcích a řádcích příjmu skladu se pole **Množství nadměrného příjmu** používá k zaznamenávání nadměrně přijatého množství, což znamená množství, které překračují hodnotu objednaného množství v poli **Množství**.
+
+Při zpracování nadměrného příjmu můžete zvýšit hodnotu v poli **K  příjmu** na skutečně přijaté množství. Pole **Množství nadměrného příjmu** je poté aktualizováno tak, aby ukazovalo nadměrné množství. Případně můžete zadat nadměrné množství do pole **Množství nadměrného příjmu**. Pole **K  příjmu** je pak aktualizováno tak, aby se zobrazilo objednané množství plus přebytek množství. Následující postup popisuje, jak vyplnit pole **K  příjmu**.
+
+1. Na nákupní objednávce nebo v dokladu příjemky na sklad, kde je přijaté množství vyšší než objednané, zadejte skutečně přijaté množství do pole **K  příjmu**.
+
+   Pokud je zvýšení v rámci tolerance určené přiřazeným kódem nadměrného příjmu, pole **Množství nadměrného příjmu** je aktualizováno tak, aby zobrazovalo množství, o které byla hodnota v poli **Množství** překročena.
+
+   Je-li zvýšení nad stanovenou tolerancí, není přípustný příjem povolen. V takovém případě můžete prozkoumat, zda existuje jiný kód nadměrného příjmu, který to umožní. V opačném případě může být přijato pouze objednané množství a nadbytečné množství musí být zpracováno jinak, například jeho vrácením prodejci.
+
+2. Zaúčtujte příjemku stejně jako u jakékoli jiné příjemky.
+
+> [!NOTE]
+[!INCLUDE[d365fin](includes/d365fin_md.md)] nezahrnuje funkce pro automatické zahájení finanční správy nadměrného příjmu. Musíte to zpracovat ručně po dohodě s prodejcem, například tím, že dodavatel předá novou nebo aktualizovanou fakturu.
+
+## Viz související školení na [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
+
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)  
+[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

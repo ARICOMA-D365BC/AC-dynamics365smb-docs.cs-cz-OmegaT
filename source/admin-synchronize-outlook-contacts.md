@@ -1,55 +1,52 @@
 ---
 title: Share contacts between Business Central and Outlook| Microsoft Docs
-description: This service has deep integration with Microsoft 365 so you can share contacts between Outlook and Business Central.
+description: This service has deep integration with Office 365 so you can share contacts between Outlook and Business Central.
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: contacts, Microsoft 365
-ms.date: 10/01/2020
+ms.search.keywords: contacts, Office 365
+ms.date: 04/01/2019
 ms.author: edupont
 
 ---
-# Synchronize Contacts in Business Central with Contacts in Microsoft Outlook
-You can see the same contacts in [!INCLUDE[prod_short](includes/prod_short.md)] as you see in Outlook if you set up contact synchronization. For example, if you are a sales person, you might do some of your work in Outlook and some of your work in [!INCLUDE[prod_short](includes/prod_short.md)]. If the contacts are the same in both places, your work is more straightforward.  
+# Synchronizace kontaktů v Business Central s kontakty v Microsoft Outlook
+Stejné kontakty můžete vidět v [!INCLUDE[d365fin](includes/d365fin_md.md)] jako v aplikaci Outlook, pokud nastavíte synchronizaci kontaktů. Pokud jste například prodejce, můžete provést část práce v aplikaci Outlook a další část v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pokud jsou kontakty na obou místech stejné, je vaše práce jednodušší.
 
-A dedicated folder in Outlook makes contacts easy to find, and you can set a filter to synchronize only the contacts from [!INCLUDE[prod_short](includes/prod_short.md)] that you want to see in Outlook. Once the contact synchronization is set up, you can start synchronization manually or set up an automatic synchronization that will keep the contacts in sync on a scheduled basis.  
+Vyhrazená složka v aplikaci Outlook usnadňuje vyhledávání kontaktů a umožňuje nastavit filtr tak, aby synchronizoval pouze kontakty z aplikace [!INCLUDE[d365fin](includes/d365fin_md.md)], které chcete zobrazit v aplikaci Outlook. Jakmile je nastavena synchronizace kontaktů, můžete zahájit synchronizaci ručně nebo nastavit automatickou synchronizaci, která udrží kontakty synchronizované podle plánu.
 
-## Set Up Synchronization
-You set up how you want to synchronize contacts with Outlook on the **Exchange Sync. Setup** page in [!INCLUDE[prod_short](includes/prod_short.md)]. As a prerequisite, your user profile in [!INCLUDE[prod_short](includes/prod_short.md)] must specify your Microsoft 365 email account. You can check this in the **Microsoft 365 Authentication** section of your user profile in the **Users** list.  
+## Nastavení synchronizace
+Nastavte způsob, jakým chcete synchronizovat kontakty s aplikací Outlook na stránce **Nastavení synchronizace  Exchange** v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Předpokladem je, že váš uživatelský profil v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] musí obsahovat e-mailový účet sady Office 365. Můžete to zkontrolovat v části **Ověření Office 365** na svém uživatelském profilu v seznamu **Uživatelé**.
 
-Then, on the **Exchange Sync. Setup** page, you can validate that the connection to Exchange is working and then set up contact synchronization. Open the **Contact Sync. Setup** page and start the synchronization. Optionally, set a filter for which contacts to synchronize between [!INCLUDE[prod_short](includes/prod_short.md)] and Outlook. For example, you can set a filter on name, type, company, or similar. You can also change the default name of the folder that the contacts will synchronize to in Outlook. The default name is *Business Central*.  
+Potom na stránce **Nastavení synchronizace  Exchange**, můžete ověřit, že připojení k serveru Exchange funguje, a poté nastavit synchronizaci kontaktů. Otevřete stránku **Nastavení synchhronizace  kontaktů** a spusťte synchronizaci. Volitelně můžete nastavit filtr, pro který budou kontakty synchronizovány mezi [!INCLUDE[d365fin](includes/d365fin_md.md)] a Outlook. Můžete například nastavit filtr na jméno, typ, společnost nebo podobné. Můžete také změnit výchozí název složky, do které budou kontakty synchronizovány v aplikaci Outlook. Výchozí název je *Business Central*.
 
-Once this synchronization has been set up, any changes to that you make to the contact in either Outlook or in [!INCLUDE[prod_short](includes/prod_short.md)] is synchronized to the other.  
+Po nastavení této synchronizace se veškeré změny kontaktu provedené v aplikaci Outlook nebo v [!INCLUDE[d365fin](includes/d365fin_md.md)] synchronizují s ostatními.
 
-Each of your coworkers can also set up their own Exchange synchronization and set their own filter on which contacts to synchronize.  
+Každý z vašich spolupracovníků může také nastavit vlastní synchronizaci serveru Exchange a nastavit vlastní filtr pro synchronizaci kontaktů.
 
-## Synchronize Contacts
-If you are used to working with contacts in [!INCLUDE[prod_short](includes/prod_short.md)], then you will find it easy to start the synchronization manually whenever it suits you from the **Contacts** list. Simply choose the **Sync with Office 365** action, and then decide if you want to change the filter that you have set up. When you choose the OK button, the synchronization starts immediately, and the latest changes are applied to your contacts in Outlook.  
+## Synchronizace kontaktů
+Při práci s kontakty v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] je snadné spustit synchronizaci ručně, kdykoli se vám bude hodit ze **Seznamu kontaktů.** Jednoduše zvolte tlačítko **Synchronizovat s Office 365** a rozhodněte, zda chcete změnit nastavený filtr. Když zvolíte tlačítko OK, synchronizace se spustí okamžitě a poslední změny se projeví u vašich kontaktů v aplikaci Outlook.
 
-In the **Contacts** list, you can synchronize contacts in two ways:
+V seznamu **Kontaktů** můžete kontakty synchronizovat dvěma způsoby:
 
-* **Sync with Office 365**
+* **Synchronizace s Office 365**
 
-  This action synchronizes all changes from [!INCLUDE[prod_short](includes/prod_short.md)] to Microsoft 365 since the previous synchronization, based on the last modified date. Any new contacts from Microsoft 365 will be synchronized back to [!INCLUDE[prod_short](includes/prod_short.md)] as well. This is typically faster than doing a full sync.  
+   Tato akce synchronizuje všechny změny z [!INCLUDE[d365fin](includes/d365fin_md.md)] do Office 365 od předchozí synchronizace na základě data dle poslední modifikace. Všechny nové kontakty z Office 365 budou také synchronizovány zpět do [!INCLUDE[d365fin](includes/d365fin_md.md)]. Toto je obvykle rychlejší než provedení úplné synchronizace.
 
-* **Full Sync with Office 365**
+* **Plná synchronizace s Office 365**
 
-  This action synchronizes all contacts in both directions regardless of the last sync date and last modified date.  
+   Tato akce synchronizuje všechny kontakty v obou směrech bez ohledu na datum poslední synchronizace a datum poslední změny.
 
-In both cases, contacts are only synchronized from Outlook if they have the required fields filled in. The required fields to synchronize to Microsoft 365 are **Name**, **Email address** and they must be of type Person. [!INCLUDE[prod_short](includes/prod_short.md)] is the master of the contact information, so the [!INCLUDE[prod_short](includes/prod_short.md)] contact information will be saved in the event of duplicates.  
+V obou případech jsou kontakty synchronizovány z aplikace Outlook, pouze pokud mají vyplněna povinná pole. Povinná pole pro synchronizaci s Office 365 jsou **Jméno**, **E-mailová adresa** a kontakt musí být typu Osoba. [!INCLUDE[d365fin](includes/d365fin_md.md)] je zdroj informací o kontaktu, takže [!INCLUDE[d365fin](includes/d365fin_md.md)] kontaktní informace budou uloženy v případě duplicity.
 
-In Outlook, the contacts from [!INCLUDE[prod_short](includes/prod_short.md)] are shown in a folder under **Other contacts** in the **People**  view. If you are not familiar with the People view in Outlook, then you can get to it from the navigation options in the bottom left corner of Outlook.  
+V aplikaci Outlook jsou kontakty z [!INCLUDE[d365fin](includes/d365fin_md.md)] zobrazeny ve složce pod **Ostatní kontakty** v zobrazení **Osoby**. Pokud nejste obeznámeni s zobrazením osob v aplikaci Outlook, můžete se k ní dostat z možností navigace v levém dolním rohu aplikace Outlook.
 
-## See Also
-[Getting Started](product-get-started.md)  
+## Viz také
+[Začínáme](product-get-started.md)  
 [Finance](finance.md)  
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Using contacts (People) in Outlook on the web](https://support.office.com/article/Using-contacts-People-in-Outlook-on-the-web-1e3438c7-26b2-420c-87de-3cea9d31b5cb?appver=OWB150)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Prodej](sales-manage-sales.md)  
+[Nakupování](purchasing-manage-purchasing.md)  
+[Použití kontaktů (Osob) ve webové aplikaci Outlook](https://support.office.com/en-us/article/Using-contacts-People-in-Outlook-on-the-web-1e3438c7-26b2-420c-87de-3cea9d31b5cb?appver=OWB150)

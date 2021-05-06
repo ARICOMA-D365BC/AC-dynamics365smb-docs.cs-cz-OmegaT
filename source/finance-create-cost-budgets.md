@@ -4,36 +4,33 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Creating Cost Budgets
-Budgeting in cost accounting resembles budgeting in the general ledger. A cost budget is created based on cost types just as a budget for the general ledger is created based on general ledger accounts.  
+# Vytváření nákladových rozpočtů
+Sestavování rozpočtu v nákladovém účetnictví se podobá rozpočtování v hlavní knize. Nákladový rozpočet je vytvořen na základě typů nákladů stejně jako je vytvořen rozpočet pro hlavní knihu na základě účtů hlavní knihy.
 
-A cost budget is created for a certain period of time, for example, a fiscal year. You can create as many cost budgets as needed. You can create a new cost budget manually, or by importing a cost budget, or by copying an existing cost budget as the budget base. For more information, see [Create G/L Budgets](finance-how-create-budgets.md).
+Nákladový rozpočet je vytvořen pro určité časové období, například fiskální rok. Můžete vytvořit libovolný počet nákladových rozpočtů. Nový nákladový rozpočet můžete vytvořit ručně nebo importem nákladového rozpočtu nebo zkopírováním existujícího rozpočtu nákladů jako základu rozpočtu. Pro více informací navštivte [Vytvoření finančních rozpočtů](finance-how-create-budgets.md).
 
-You use the following pages to create and analyze cost budgets. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon to find a page, and then read the tooltip for each.
+Následující stránky slouží k vytváření a analýze rozpočtů nákladů. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") pro nalezení stránky, a pak si přečtěte popis pro každou z nich.
 
-|To|See|  
+| Viz | Také |
 |--------|---------|  
-|Transfer budgets from the general ledger.|**Copy G-L Budget to Cost Acctg.** batch job|  
-|Copy cost budgets.|**Copy Cost Budget** batch job|  
-|Allocate budgets.|**Cost Allocation** page|  
-|See cost budget registers and cost budget entries.|**Cost Budget Registers** page|  
-|Print cost budget comparisons using various reports.|**Cost Acctg. Balance-Budget** report<br /><br /> **Cost Acctg. Statement-Budget** report<br /><br /> **Cost Budget by Cost Center** report<br /><br /> **Cost Budget by Cost Object** report|  
+| Převod rozpočtů z finančího rozpočtu | Dávková úloha **Kopírovat fin. rozpočet do náklad. účetnictví** |
+| Kopírovat rozpočet nákladů | Dávková úloha **Kopírovat rozpočet nákladů** |
+| Rozdělení rozpočtů. | Stránka **Rozdělení nákladů** |
+| Zobrazení nákladových rozpočtových registrů a položek rozpočtu nákladů. | Stránka **Žurnály rozpočtu nákladů** |
+| Tisk porovnání nákladů rozpočtu pomocí různých sestav. | Sestava **Saldo nákl.  účetnictví/rozpočet** <br /><br /> Sestava **Výkaz nákl.  účetnictví/rozpočet**<br /><br /> Sestava **Rozpočet nákladů za střediska nákladů**<br /><br /> Sestava **Rozpočet nákladů na nositele nákladů** |
 
-## See Also  
-[Accounting for Costs](finance-manage-cost-accounting.md)  
-[Create G/L Budgets](finance-how-create-budgets.md)  
-[Terminology in Cost Accounting](finance-terminology-in-cost-accounting.md)   
-[Defining and Allocating Costs](finance-define-and-allocate-costs.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Účtování nákladů](finance-manage-cost-accounting.md)  
+[Vytváření fin. rozpočtů](finance-how-create-budgets.md)  
+[Terminologie v nákladovém účetnictví](finance-terminology-in-cost-accounting.md)   
+[Definování a přiřazení nákladů](finance-define-and-allocate-costs.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

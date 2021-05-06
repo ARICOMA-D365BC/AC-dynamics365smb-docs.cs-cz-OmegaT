@@ -1,70 +1,67 @@
 ---
-title: Choosing the User Experience to Show or Hide Advanced Features | Microsoft Docs
-description: Learn what the Essential and Premium user experience tiers mean for the user interface, application areas, and your company.
+title: Výběr uživatelského prostředí pro zobrazení nebo skrytí rozšířených funkcí | Microsoft Docs
+description: 'Zjistěte, co znamenají úrovně uživatelského prostředí Essential a Premium pro uživatelské rozhraní, oblasti aplikací a vaši společnost.'
 documentationcenter: ''
-author: SorenGP
-
+author: edupont04
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: essential, basic, user interface, application area, experience
-ms.date: 10/01/2020
+ms.search.keywords: 'essential, basic, user interface, application area, experience'
+ms.date: 03/01/2019
 ms.author: edupont
-
 ---
-# Change Which Features are Displayed
-[!INCLUDE[prod_short](includes/prod_short.md)] is designed to help you run your business regardless of the size and complexity. At the core of the product, you find essential features, such as financial reporting, sales, purchasing, and inventory management. As business complexity increases, you can turn on functionality for manufacturing and service management, for example.
+# <a name="changing-which-features-are-displayed"></a>Změna zobrazovaných funkcí
+[!INCLUDE[d365fin](includes/d365fin_md.md)] je navržen tak, aby vám pomohl řídit vaše podnikání, bez ohledu na to, ve které oblasti podnikání jste. V jádru [!INCLUDE[d365fin](includes/d365fin_md.md)] najdete finanční výkaznictví a procesy prodeje a nákupu. K tomu přidáváte funkce podle svých obchodních potřeb přidáním rozšíření z AppSource nebo změnou nastavení Zkušenosti pro vaši společnost. Pro více informací navštivte [Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí rozšíření](ui-extensions.md) nebo [Výběr uživatelského prostředí pro zobrazení nebo skrytí funkcí](ui-experiences.md#choosing-a-user-experience-to-show-or-hide-features).
 
-You can define the product complexity level, and thereby which features the company's users get access to, by changing the **Experience** setting on the **Company Information** page. Note that the experience setting can also be changed by adding certain extensions from AppSource. For more information, see [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md).
+## <a name="choosing-a-user-experience-to-show-or-hide-features"></a>Výběr uživatelského prostředí pro zobrazení nebo skrytí funkcí
+Uživatelské prostředí určuje, kolik obecných funkcí je k dispozici, když vy a vaši kolegové používáte [!INCLUDE[d365fin](includes/d365fin_md.md)]. Uživatelské prostředí pro vaši společnost si můžete vybrat na stránce **Informace o společnosti** v poli **Zkušenosti**.
 
-The following table lists the experiences that are currently available.
+> [!NOTE]  
+> Toto nastavení se vztahuje na všechny uživatele ve vaší společnosti. Uživatelé si mohou své vlastní prostředí ještě více přizpůsobit změnou rozvržení stránky a obsahu. Pro více informací navštivte [Přizpůsobení vašeho pracovního prostoru a Stránek](ui-personalization-user.md).  
 
-| Experience | Impact on User Interface |
+Následující tabulka obsahuje seznam aktuálně dostupných prostředí.
+
+| Prostředí | Dopad na uživatelské rozhraní |
 | --- | --- |
-| **Essential** |Shows all actions and fields for all common business functionality.|
-| **Premium** |Shows all actions and fields for all business functionality, including Manufacturing and Service Management.|
+| **Essential** |Zobrazuje všechny akce a pole pro běžné obchodní funkce.|
+| **Premium** |Zobrazuje všechny akce a pole pro všechny obchodní funkce, včetně Výroby a Správy služeb.|
 
-The experiences that can be selected in [!INCLUDE[prod_short](includes/prod_short.md)] reflect the solution licenses, called plans, that are defined for the product. For information about the Essential and Premium plans, see [Business Central](https://go.microsoft.com/fwlink/?linkid=870242) on the Microsoft Dynamics 365 marketing site. See also the [[!INCLUDE[prod_short](includes/prod_short.md)] Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2068931) (requires access to CustomerSource or PartnerSource).
+> [!NOTE]  
+> Prostředí, které si můžete vybrat v [!INCLUDE[d365fin](includes/d365fin_md.md)], závisí na vaší licenci řešení, nazývané plán. Pro více informací o plánech **Essential** a **Premium** navštivte Business Central[](https://go.microsoft.com/fwlink/?linkid=870242) na marketingovém webu Microsoft Dynamics 365. Viz také [Průvodce licencemi [!INCLUDE[d365fin](includes/d365fin_md.md)]](https://go.microsoft.com/fwlink/?linkid=2068931) (vyžaduje přístup k CustomerSource nebo PartnerSource).
 
 > [!IMPORTANT]  
-> All regular users in a solution must be assigned the same plan, Essential or Premium, before that experience can be selected for the company. Accordingly, one user cannot access Premium features if one or more other users can only access Essential features. This is not the case for non-regular users of type Team Member, Internal Admin, External Accountant, and Delegated Admin, who can each be assigned a different plan than other users in the solution.<br /><br /> Only users of type Evaluation or Premium can change the value in the **Experience** field from Essential to Premium.
+> Všem běžným uživatelům musí být přidělen v řešení stejný plán, Essential nebo Premium, než bude možné toto prostředí vybrat pro společnost. Jeden uživatel proto nemůže přistupovat k funkci Premium, pokud jeden nebo více dalších uživatelů má přístup pouze k funkci Essential. To neplatí pro nepravidelné uživatele typu Člen týmu, Interní správce a Delegovaný správce, kterým lze každému z nich přiřadit jiný plán než ostatním uživatelům v řešení.
 
-Prior to defining a company's experience setting, you define users' access to specific functions and pages by assigning permission sets. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
+## <a name="enabling-premium-features-after-upgrading-a-plan"></a>Povolení funkcí Premium po aktualizaci plánu
+Uživatelé jsou přiřazeni k plánům v centru pro správu Office 365 v souvislosti s obecnou prací na vytvoření uživatelů Business Central. Pro více informací navštivte [Přidání uživatelů k Office 365 pro firmy](https://support.office.com/en-us/article/Add-users-to-Office-365-for-business-435ccec3-09dd-4587-9ebd-2f3cad6bc2bc).
 
-The **Experience** setting applies to all users in a company, but each user can personalize their own experience further by changing page layouts and content. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+Poté můžete definovat, ke kterým konkrétním funkcím a stránkám v rámci prostředí mají uživatelé přístup, přidělením sad oprávnění. Pro více informací navštivte [Správa uživatelů a oprávnění](ui-how-users-permissions.md).
 
-## Enabling Premium Features after Upgrading a Plan
-Users are assigned to plans in Microsoft 365 Admin Center in connection with the general work to create the Business Central users. For more information, see [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users?view=o365-worldwide&preserve-view=true).
+### <a name="to-update-plan-changes-in-users-groups"></a>Aktualizace změn plánu ve skupinách uživatelů
+Pokud jste provedli změnu v uživatelských právech v centru pro správu Office 365, jako například přidělení více uživatelů do plánu Premium, musíte brát tuto změnu v [!INCLUDE[d365fin](includes/d365fin_md.md)] na vědomí.
 
-### To update plan changes in users groups
-When you have made a change to users plans in Microsoft 365 Admin Center, such as assigned more users to the Premium plan, you must reflect the change in [!INCLUDE[prod_short](includes/prod_short.md)].
+1. Přihlašte se jako správce.
+2. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Uživatelé** a poté vyberte související odkaz.
+3. Na stránce **Uživatelé** zvolte akci **Aktualizovat všechny skupiny uživatelů**.
 
-1. Sign is as an administrator.
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
-3. On the **Users** page, choose the **Refresh all User Groups** action.
+Všechny nové informace o plánech uživatelů a jejich přiřazených skupinách uživatelů jsou nyní aktualizovány podle změn plánu.
 
-All new information about the users' plans and their assigned user groups are now updated according to the plan changes.
+### <a name="to-select-the-premium-experience"></a>Výběr prostředí Premium
+Nyní můžete přistoupit k výběru nového prostředí.
+1. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Informace o společnosti** a poté vyberte související odkaz.
+2. Na stránce **Informace o společnosti** v záložce s náhledem **Zkušenost uživatele** zvolte Premium v poli **Zkušenosti**.
 
-### To select the Premium experience
-You can now proceed to select the new experience.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.
-2. On the **Company Information** page, on the **User Experience** FastTab, select Premium  in the **Experience** field.
+## <a name="help-assumes-premium-experience"></a>Nápověda předpokládá zkušenost Premium
+Všechny popisy funkcí v uživatelské dokumentaci k [!INCLUDE[d365fin](includes/d365fin_md.md)] předpokládají zkušenost **Premium**, což znamená, že popisy pokrývají celý rozsah prvků uživatelského rozhraní. Textová poznámka je vložena do témat nápovědy na vysoké úrovni pro oblasti funkcí Výroba a Správa služeb, v nichž je uvedeno, že vyžadují zkušenost **Premium**.
 
-## Help Assumes Premium Experience
-All feature descriptions in user documentation for [!INCLUDE[prod_short](includes/prod_short.md)] assume the **Premium** experience, meaning the descriptions cover the full scope of UI elements.
+## <a name="see-also"></a>Viz také
+[Vytvoření nové společnosti](about-new-company.md)  
+[Správa uživatelů a práv](ui-how-users-permissions.md)    
+[Změna základního nastavení](ui-change-basic-settings.md)  
+[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Pomocí rozšíření](ui-extensions.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[[!INCLUDE[d365fin](includes/d365fin_md.md)] Průvodce licencemi](https://go.microsoft.com/fwlink/?LinkId=871590&clcid=0x409)
 
-## See also
-[Personalize Your Workspace](ui-personalization-user.md)  
-[Customizing Business Central](ui-customizing-overview.md)  
-[Assign Permissions to Users and Groups](ui-define-granular-permissions.md)  
-[Creating New Companies](about-new-company.md)  
-[Change Basic Settings](ui-change-basic-settings.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[[!INCLUDE[prod_short](includes/prod_short.md)] Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=871590&clcid=0x409)
-
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

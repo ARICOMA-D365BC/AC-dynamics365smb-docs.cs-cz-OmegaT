@@ -1,196 +1,224 @@
 ---
-title: Entering dates and times in Business Central  | Microsoft Docs
-description: Learn how to enter dates and times including various productivity tips such as shorthand, expressions and ranges. Filter lists or reports down to specific date or time periods.
+title: Zadávání dat a časů v Business Central | Microsoft Docs
+description: 'Naučte se, jak zadávat data a časy, včetně různých tipů na produktivitu, jako jsou zkratky, výrazy a rozsahy. Filtrujte seznamy nebo sestavy podle konkrétního data nebo časového období.'
 documentationcenter: ''
-author: SorenGP
+author: ZdenekBicek
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: dates, reporting, filter, calendar, shorthand, range
-ms.date: 10/01/2020
-ms.author: edupont
+ms.search.keywords: 'dates, reporting, filter, calendar, shorthand, range'
+ms.date: 01/14/2020
+ms.reviewer: v-zdbice
+ms.author: jswymer
 ---
 
-# Working with Calendar Dates and Times
+# Práce s kalendářními daty a časy
 
-[!INCLUDE[prod_short](includes/prod_long.md)] offers multiple ways to enter dates and times, including powerful features that accelerate data entry, or help you write complex calendar expressions. There are various places throughout the application where you can enter dates and times in fields. For example, on a sales order, you can set the shipment date. When filtering lists or report data, you can enter dates and times to pinpoint only the data that you are interested in.
+[!INCLUDE[d365fin](includes/d365fin_long_md.md)] nabízí několik způsobů, jak zadávat data a časy, včetně výkonných funkcí, které urychlují zadávání dat, nebo pomáhají psát složité datové vzorce. V celé aplikaci jsou různá místa, kde můžete do polí zadat data a časy. Například u prodejní objednávky můžete nastavit datum odeslání. Při filtrování seznamů nebo dat sestavy můžete zadat data a časy a omezit pouze údaje, které vás zajímají.
 
-## Check your region and language settings
-The **My Settings** page specifies the **Region** and **Language** that you are using in the application. These settings influence how you enter dates and times.
+## <a name="check-your-region-and-language-settings"></a>Zkontrolujte nastavení oblasti a jazyka
 
--   The **Region** setting determines how dates, times, numbers, and currencies are shown or formatted.
+Stránka **Má nastavení** specifikuje **Oblast** a **Jazyk** , které používáte v aplikaci. Toto nastavení ovlivňuje způsob zadávání dat a časů.
 
--   For date patterns that involve words, the language of the words that you use must correspond to the **Language** setting.
+- Nastavení **Oblast** určuje způsob zobrazení nebo formátování dat, časů, čísel a měn.
+
+- U vzorů dat, která zahrnují slova, musí jazyk použitých slov odpovídat nastavení **Jazyka**
 
 > [!NOTE]
-> [!INCLUDE[prod_short](includes/prod_long.md)] uses the Gregorian calendar system.
+> [!INCLUDE[d365fin](includes/d365fin_long_md.md)] používá gregoriánský kalendářní systém.
 
-<!--
-The following sections describe how you can enter dates, times, datetimes, durations, date ranges, and how you use date formulas.
--->
+<! -
+Následující oddíly popisují, jak můžete zadávat data, časy, datové časy, doby trvání, rozsahy dat a jak používat vzorce data.
+->
 
-## Entering Dates
+## <a name="entering-dates"></a>Vkládání data
 
-In a date field, you can enter a date using the standard format for your region setting. Different regions can use different separators between the days, months and years. For example, some regions use dashes (mm-dd-yyyy) and others use forward slashes (mm/dd/yyyy). However, you can use any separators, even a space, and the date will automatically be changed to use separators that match your region.
+Do datového pole můžete zadat datum pomocí standardního formátu pro vaše nastavení oblasti. Různé oblasti mohou používat různé oddělovače mezi dny, měsíci a lety. Například některé regiony používají pomlčky (mm-dd-rrrr) a jiné používají lomítka (mm/dd/rrrr). Můžete však použít libovolné oddělovače, dokonce i mezeru a datum se automaticky změní, aby se použily oddělovače, které odpovídají vašemu regionu.
 
-Note that the format in which dates are displayed on printed reports or emailed documents is not influenced by your personal choice of region setting.
+Nezapomeňte, že formát, ve kterém jsou data zobrazena v tištěných sestavách nebo e-mailech, není ovlivněn vaším osobním výběrem oblasti.
 
-To work more productively with dates and times, you can use any of the methods or formats that are described in the following sections.
+Pro produktivnější práci s daty a časy můžete použít kteroukoli z metod nebo formátů, které jsou popsány v následujících částech.
 
-### Picking dates from the calendar
+### <a name="picking-dates-from-the-calendar"></a>Vybírání dat z kalendáře
 
-Any field displaying a calendar icon can be set using the calendar date picker. To display the calendar date picker, activate the calendar icon or press the Ctrl + Home keyboard shortcut in the field.
+Libovolné pole zobrazující ikonu kalendáře může být nastaveno pomocí výběru kalendářního data. Chcete-li zobrazit výběr data kalendáře, stiskněte ikonu kalendáře nebo v poli stiskněte klávesovou zkratku **Ctrl+Home**.
 
-![Date fields](media/ui-date-field.png "Example of a date field")
+![Datová pole](media/ui-date-field.png "Příklad datového pole")
 
-See also [Keyboard Shortcuts in the calendar date picker](keyboard-shortcuts.md#calendarshortcuts).
+Viz také [Klávesové zkratky ve výběru dat v kalendáři](keyboard-shortcuts.md#calendarshortcuts)
 
-### Day\-week\-year pattern
+### <a name="day-week-year-pattern"></a>Model den\-týden\-rok
 
-You can enter a date as a weekday followed by a week number and, optionally, a year. For example, Mon25 or mon25 means Monday in week 25. If you do not enter a year, the year of the work date is used.
+Datum můžete zadat jako pracovní den následovaný číslem týdne a volitelně rokem. Například, **Po25** nebo **po25** znamená pondělí v 25. týdnu. Pokud nezadáte rok, použije se rok pracovního data.
 
-Instead of entering the entire word for the day of the week, you can enter part of the word, starting from the beginning. In case of conflicts (such as with s which could be Saturday or Sunday), the days are evaluated according to the region setting. The input is first evaluated against workdate and today as well, so keep this in mind when abbreviating. For example, t already means today, so it cannot mean Tuesday or Thursday.
+Místo zadávání celého slova pro den v týdnu můžete zadat část slova od začátku. V případě konfliktů (jako je to s **s**, kde se může jednat o středu nebo sobotu) se dny vyhodnocují podle nastavení oblasti. Vstup je nejprve vyhodnocen proti pracovnímu datu a také proti dnešnímu datu, takže toto mějte na paměti při použití zkratek. Například, **p** již znamená pracovní datum, takže to nemůže znamenat pondělí nebo pátek.
 
-The week number scheme is always ISO 8601, where week 1 is the week with 4 January in it, or the week with the first Thursday of the year.
+Schéma čísla týdne je vždy dle ISO 8601, kde týden 1 je týden se 4. lednem v týdnu, nebo týden s prvním čtvrtkem roku.
 
-### Digit patterns
+### <a name="digit-patterns"></a>Číselné modely
 
-In a date field you can enter two, four, six, or eight digits:
+Do datového pole můžete zadat dvě, čtyři, šest nebo osm číslic:
 
--   If you enter only two digits, this is interpreted as the day, and it will add the month and the year of the work date.
+- Pokud zadáte pouze dvě číslice, bude to interpretováno jako den a přidá se měsíc a rok pracovního dne.
 
--   If you enter four digits, this is interpreted as the day and the month, and it will add the year of the work date. The order of the day and month is determined by your region settings. Even if your region settings have the year before the day and month, four digits are interpreted as the day and month.
+- Pokud zadáte čtyři číslice, bude to interpretováno jako den a měsíc a přidá se pouze rok daného pracovního roku. Pořadí dne a měsíce je určeno nastavením vaší oblasti. I v případě, že má vaše nastavení oblasti rok před dnem a měsícem, čtyři číslice jsou interpretovány jako den a měsíc.
 
--   If the date you want to enter is in the range 01/01/1930 through 12/31/2029, you can enter the year with two digits; otherwise, enter the year with four digits.
+- Pokud je datum, které chcete zadat, v rozsahu 01.01.1930 až 31.12.2029, můžete zadat rok dvěma číslicemi, jinak zadejte rok čtyřmi číslicemi.
 
-### Today
+### <a name="today"></a>Dnes
 
-Enter the word for today, in the language set by **Language** setting, that will set the date to the current date. Instead of entering the entire word, you can enter part of the word, starting from the beginning, such as t or tod, as long as it is not also the start of another word.
+Zadejte slovo pro dnes, v jazyce určeném v nastavení **Jazyk** které nastaví datum na aktuální datum. Místo zadávání celého slova můžete zadat část slova, počínaje od začátku, například jako **d**, nebo **dne**, pokud to není také začátek jiného slova.
 
-### Period
+### <a name="period"></a>Období
 
-To filter on a specific accounting period, in a date field enter the letter p, or the word period, followed by a number that identifies the accounting period, like p2 or period4. The accounting period is relative to the fiscal year of the current work date that set in your Role Center. For example, if the work date is **03/21/20**, then p1, or just p, filters on the first accounting period of the fiscal year 2020 (such as 01/01/20..01/31/20). p15 filters on the fifteenth accounting period from the start of fiscal year 2020 (such as 03/01/21..03/31/21).
+Chcete-li filtrovat konkrétní účetní období, zadejte do pole datum písmeno **o** nebo slovo **období** následováno číslem, které identifikuje účetní období, jako **o2** nebo **období4**. Účetní období je relativní k fiskálnímu roku aktuálního pracovního data, který je nastaven v Centru rolí. Například pokud je pracovní datum **21.03.20**, pak **o1** nebo jen **o** filtruje za první účetní období fiskálního roku 2020 (například *01.01.20..31.01.20*). **o15** filtruje za patnácté účetní období od začátku fiskálního roku 2020 (například *01.03.21..31.03.21*). 
 
-The accounting periods are defined on the **Accounting Periods** page. To view or change the accounting periods, open the page [here](https://businesscentral.dynamics.com/?page=100).
+Účetní období jsou definována na stránce **Účetní období**. Chcete-li zobrazit nebo změnit účetní období, otevřete stránku [zde](https://businesscentral.dynamics.com/?page=100).
 
-### Current work date
+### <a name="current-work-date"></a>Aktuální pracovní datum
 
-The work date feature allows you to record transactions using a date that is different from the current date.
+Funkce pracovního data umožňuje zaznamenávat transakce pomocí data, které se liší od aktuálního data.
 
-The word for 'workdate', in the language set by **Language** setting, will set the date to the currently set work date that is specified on the **My Settings** page. Instead of entering the entire word, you can enter part of the word, starting from the beginning, such as 'w' or 'work'.
+Slovo pro 'pracovní datum' v jazyce určeném v nastavení **Jazyk** nastaví datum na aktuálně nastavené pracovní datum, které je zadáno na stránce **Má nastavení**. Místo zadávání celého slova můžete zadat část slova počínaje od začátku, například **p** nebo **pracovní**.
 
-If you have not defined a work date, the current date will be used as the work date. You may want to use a work date if you have many transactions with a date other than today's date.
+Pokud jste nedefinovali pracovní datum, použije se jako pracovní datum aktuální datum. Možná budete chtít použít pracovní datum, pokud máte mnoho transakcí s jiným než dnešním datem.
 
-See also [Change Basic Settings, such as the Work Date](ui-change-basic-settings.md#work-date).
+Viz také [Změna základních nastavení, například pracovního data](ui-change-basic-settings.md#work-date). 
 
-### Closing Date
+### <a name="closing-date"></a>Uzávěrkové datum
 
-When you close a fiscal year, you can use closing dates to indicate that an entry is a closing entry. A closing date technically is between two dates, for example between Dec 31 and Jan 1.
+Když uzavřete fiskální rok, můžete použít uzávěrkového data k označení, že položka je položkou uzávěrky. Datum uzávěrky je technicky mezi dvěma daty, například mezi 31. prosincem a 1. lednem.
 
-To specify that a date is a closing date, put C just before the date, such as C123101. This can be used in combination with all the date patterns.
+Chcete-li určit, že datum je datum uzávěrky, vložte **U** těsně před datum, například **U311201**. Toto lze použít v kombinaci se všemi modely data.
 
-### Examples
+### <a name="examples"></a>Příklady:
 
-The following table contains examples of dates using all the formats. It assumes region settings that format dates according to: **year.month.day.**, a week starting on Monday, and the English language.
+Následující tabulka obsahuje příklady dat ve všech formátech.
 
-|**Entry**      |**Interpretation**      |
+Použito nastavení oblasti, které formátuje data podle: **rok.měsíc.den.**, týden začínající v pondělí a anglický jazyk.
+
+|**Vstup**      |**Interpretace**      |
 |---------------|------------------------|
-|2018.12.31.|2018.12.31.|
-|181231|2018.12.31.|
-|18.12.31.|2018.12.31.|
-|18.12.31.|2018.12.31.|
-|20181231|2018.12.31.|
-|18/12,31|2018.12.31.|
-|11|work date year.work date month.11.|
-|1112|work date year.11.12.|
-|t or today|today's date|
-|p4|date range that includes the fourth accounting period, such as 04/01/20..04/30/20|
-|w or workdate|the working date|
-|m or Monday|Monday of the work date week|
-|tu or Tuesday|Tuesday of the work date week|
-|sa or Saturday|Saturday of the work date week|
-|s or Sunday|Sunday of the work date week|
-|t23|Tuesday of week 23 of the work date year|
-|t 23|Tuesday of week 23 of the work date year|
-|t-1|Tuesday of week 1 of the work date year|
+|`2018.12.31.`|2018.12.31.|
+|`181231`|2018.12.31.|
+|`18.12.31.`|2018.12.31.|
+|`18.12.31.`|2018.12.31.|
+|`20181231`|2018.12.31.|
+|`18/12,31`|2018.12.31.|
+|`11`|rok dle pracovní datum.měsíc dle pracovní datum.11.|
+|`1112`|rok dle pracovní datum.12.11.|
+|`t` nebo `today`|dnešní datum|
+|`p4`|časové období, které zahrnuje čtvrté účetní období, např. `04/01/20..04/30/20`|
+|`w` nebo `workdate`|pracovní datum|
+|`m` nebo `Monday`|Pondělí týdne pracovního data|
+|`tu` nebo `Tuesday`|Úterý týdne pracovního data|
+|`sa` nebo `Saturday`|Sobota týdne pracovního data|
+|`s` nebo `Sunday`|Neděle týdne pracovního data|
+|`t23`|Úterý 23. týdne roku pracovního data|
+|`t 23`|Úterý 23. týdne roku pracovního data|
+|`t-1`|Úterý 1. týdne roku pracovního data|
 
-##  <a name="BKMK_SettingDateRanges"></a> Setting Ranges
+Použito nastavení oblasti, které formátuje data podle: **den.měsíc.rok**, týden začínající v pondělí a český jazyk.
 
-On lists, totals and reports, you can set filters on dates, times and datetimes containing a start value and optionally an end value to display only the data contained in that range. The standard rules apply to the way you set date ranges.
+|**Vstup**      |**Interpretace**      |
+|---------------|------------------------|
+|`31.12.2018`|31.12.2018|
+|`311218`|31.12.2018|
+|`31.12.18`|31.12.2018|
+|`31-12-18`|31.12.2018|
+|`31122018`|31.12.2018|
+|`31/12,18`|31.12.2018|
+|`11`|11.měsíc dle pracovní datum.rok dle pracovní datum|
+|`1112`|11.12.rok dle pracovní datum|
+|`d` nebo `dnes`|dnešní datum|
+|`o4`|časové období, které zahrnuje čtvrté účetní období, např. `01.04.20..30.04.20`|
+|`p` nebo `pracovní`|pracovní datum|
+|`po` nebo `pondělí`|Pondělí týdne dle pracovního data|
+|`út` nebo `úterý`|Úterý týdne dle pracovního data|
+|`so` nebo `sobota`|Sobota týdne dle pracovního data|
+|`ne` nebo `neděle`|Neděle týdne dle pracovního data|
+|`út23`|Úterý 23. týdne roku dle pracovního data|
+|`út 23`|Úterý 23. týdne roku dle pracovního data|
+|`út-1`|Úterý 1. týdne roku dle pracovního data|
 
-|**Meaning**|**Sample expression (Date)**|**Data included in the filter**|
+##  <a name="BKMK_SettingDateRanges"></a> Nastavení rozsahů
+
+V seznamech, součtech a sestavách můžete nastavit filtry na pole typu datum, čas a datum-čas obsahujících počáteční hodnotu a případně koncovou hodnotu tak, aby zobrazovala pouze data obsažená v tomto rozsahu. Pro způsob nastavování časových období platí standardní pravidla.
+
+|**Význam**|**Ukázkový výraz (Datum)**|**Data obsažená ve filtru**|
 |-----------|---------------------|--------------------|
-|Interval|12 15 00..01 15 01<br /><br />..12 15 00<br /><br />p1..p4|Records with dates between and including 12 15 00 and 01 15 01.<br /><br />Records with dates of 12 15 00 or earlier.<br /><br />Date range that includes the second, third, and fourth accounting periods, such as 01/01/20..04/30/20.|
-|Either/or|12 15 00\|12 16 00|Records with dates of either 12 15 00 or 12 16 00. If there are records with dates on both days, they will all be displayed.|
-|Combination|12 15 00\|12 01 00..12 10 00  <br /><br />..12 14 00\|12 30 00..|Records with dates of 12 15 00 or on dates between and including 12 01 00 and 12 10 00.  <br /><br />Records with dates of 12 14 00 or earlier, or dates of 12 30 00 or later, that is, all records except those with dates between and including 12 15 00 and 12 29 00.|
+|Interval|`15 12 00..15 01 01`<br /><br />`..15 12 00`<br /><br />`o2..o4`|Záznamy s daty mezi a včetně 15.12.00 a 15.01.01.<br /><br />Záznamy s datem 15.12.00 nebo staršími.<br /><br />Časové období, které zahrnuje druhé, třetí a čtvrté účetní období, například `01.02.20..30.04.20`.|
+|Buď/nebo|`15 12 00|16 12 00`|Záznamy s daty buď 15.12.00 nebo 16.12.00. Pokud jsou záznamy s daty v obou dnech, zobrazí se všechny.|
+|Kombinace|`15 12 00|10 12 00..10 12 00`<br /><br />`..14 12 00|30 12 00..`|Záznamy s datem 15.12.00 nebo s daty mezi 01.12.00 a 10.12.12 včetně.<br /><br />Záznamy s datem 14.12.00 nebo dřívějšími nebo datem 30.12.00 nebo novějšími, tj. všechny záznamy s výjimkou těch, které mají datum mezi 15.12.00 a 29.12.00 včetně.|
 
-You can use any of the valid formats in date range filters. For example, mon14 3..t 4p applied on a datetime field results in a filter from 3 AM on Monday in week 14 of the current work date year, inclusive, until today at 4PM, inclusive.
+Ve filtrech rozsahu dat můžete použít kterýkoli z platných formátů. Například vzorec **po14 3..d 16** aplikovaný na pole typu datum-čas bude mít za výsledek filtr od 3:00 v pondělí 14. týdnu aktuálního roku dle pracovního data včetně, do dnes do 16:00 včetně.
 
-## Using Date Formulas
-A date formula is a short, abbreviated combination of letters and numbers that specifies how to calculate dates. You can enter date formulas in various date calculation fields or filters.
+## <a name="using-date-formulas"></a>Použití vzorců dat
+
+Vzorec data je krátká, zkrácená kombinace písmen a číslic, která určuje, jak vypočítat data. Vzorce data můžete zadat do různých výpočetních polí nebo filtrů.
 
 > [!NOTE]
->  In all data formula fields, one day is automatically included to cover today as the day when the period starts. Accordingly, for example, if you enter 1W, then the period is actually eight days because today is included. To specify a period of seven days \(one true week\) including the period starting date, then you must enter 6D or 1W-1D.
+> Ve všech polích vzorců dat je jeden den automaticky zahrnut jako den, kdy začíná období. Podle toho například, pokud zadáte **1T**, pak období je ve skutečnosti osm dní, protože je zahrnutý i dnešek. Chcete-li určit období sedmi dnů \(skutečný týden\) včetně data začátku období, musíte zadat **6D** nebo **1T-1D**.
 
-Here are some examples of how date formulas can be used:
+Zde je několik příkladů, jak lze použít vzorce:
 
--   The date formula in the recurring frequency field in recurring journals determines how often the entry on the journal line will be posted.
+- Vzorec data v poli frekvence periody v periodických denících určuje, jak často bude položka na řádku deníku zaúčtována.
 
--   The date formula in the **Grace Period** field for a specified reminder level determines the period of time that must pass from the due date \(or from the date of the previous reminder\) before a reminder will be created.
+- Vzorec data v poli **Lhůta odkladu** pro určenou úroveň upomínky určuje časové období, které musí uplynout od data splatnosti \(nebo od data předchozí upomínky\), než bude upomínka vytvořena.
 
--   The date formula in the **Due Date Calculation** field determines how to calculate the due date on the reminder.
+- Vzorec data v poli **Výpočet splatnosti** určuje, jak vypočítat datum splatnosti na upomínce.
 
-The date formula can contain a maximum of 20 characters, both numbers and letters. You can use the following letters, which are abbreviations for calendar units.
+Vzorec data může obsahovat maximálně 20 znaků,spolu číslic i písmen. Můžete použít následující písmena, což jsou zkratky pro kalendářové jednotky.
 
-|  Letter  |  Meaning  |
+|  Písmeno  |  Význam  |
 |----------|----------------------|
-|C|Current|
-|D|Day\(s\)|
-|W|Week\(s\)|
-|M|Month\(s\)|
-|Q|Quarter\(s\)|
-|Y|Year\(s\)|
+|B|Aktuální|
+|D|Den \(Dny\)|
+|T|Týden \(Týdny\)|
+|M|Měsíc \(Měsíce\)|
+|K|Čtvrtletí|
+|R|Rok \(Roky\)|
 
-You can construct a date formula in three ways.
+Vzorec data můžete vytvořit třemi způsoby.
 
-The following example shows how to use C, for current, and a time unit.
+Následující příklad ukazuje, jak používat **B**, pro aktuální a časovou jednotku.
 
-|  Expression  |  Meaning  |
+|  Výraz  |  Význam  |
 |--------------|-----------|
-|CW|Current week|
-|CM|Current month|
+|BT|Aktuální týden|
+|BM|Aktuální měsíc|
 
-The following example shows how to use a number and a time unit. A number cannot be larger than 9999.
+Následující příklad ukazuje, jak používat číslo a časovou jednotku. Číslo nesmí být větší než 9999.
 
-|  Expression  |  Meaning  |
+|  Výraz  |  Význam  |
 |--------------|-----------|
-|10D|10 days from today|
-|2W|2 weeks from today|
+|10D|10 dnů od dnešního dne|
+|2T|2 týdny od dnešního dne|
 
-The following example shows how to use a time unit and a number.
+Následující příklad ukazuje, jak používat časovou jednotku a číslo.
 
-|  Expression  |  Meaning  |
+|  Výraz  |  Význam  |
 |--------------|-----------|
-|D10|The next 10th day of a month|
-|WD4|The next 4th day of a week \(Thursday\)|
+|D10|Dalšího 10. dne v měsíci|
+|DT4|Další čtvrtý den v týdnu \(čtvrtek\)|
 
-The following example shows how you can combine these three forms as needed.
+Následující příklad ukazuje, jak můžete tyto tři formy kombinovat podle potřeby.
 
-|  Expression  |  Meaning  |
+|  Výraz  |  Význam  |
 |--------------|-----------|
-|CM+10D|Current month \+ 10 days|
+|BM+10D|Aktuální měsíc \+ 10 dnů|
 
-The following example shows how you can use a minus sign to indicate a date in the past.
+Následující příklad ukazuje, jak můžete použít znaménko mínus k označení data v minulosti.
 
-|  Expression  |  Meaning  |
+|  Výraz  |  Význam  |
 |--------------|-----------|
-|-1Y|1 year ago from today|
+|-1R|Před 1 rokem od dnešního dne|
 
 > [!IMPORTANT]
->  If the location uses a base calendar, then the date formula that you enter in, for example, the **Shipping Time** field is interpreted according to the calendar working days. For example, 1W  means seven working days.
+> Pokud lokace používá základní kalendář, pak se vzorec data, který zadáte, například pole **Doba dodávky**, interpretuje podle pracovních dnů kalendáře. Například **1T** znamená sedm pracovních dnů.
 <!--
 # Entering Date Ranges
 You can set filters containing a start date and an end date to display only the data contained in that date range or time interval. Special rules apply to the way you set date ranges. Let's take the **Customer Top 10** as an example:
@@ -213,7 +241,7 @@ You can also combine the various format types.
 |12 15 16&#124;12 01 16..05 31 17 | Entries posted either on December 15 2016 or on dates between and including December 01 2016 and May 31 2017. |
 |..12 14 16&#124;12 30 16.. | Entries posted on December 14 or earlier, or entries posted on December 30 or later - that is, all entries except those posted on dates between and including December 15 and 29. |
 
-Note that we have used the US date format MMDDYY here. As [!INCLUDE[prod_short](includes/prod_short.md)] becomes available in other markets, you'll be able to use the formats that you are used to.
+Note that we have used the US date format MMDDYY here. As [!INCLUDE[d365fin](includes/d365fin_md.md)] becomes available in other markets, you'll be able to use the formats that you are used to.
 
 ## Using Date Formulas
 A date formula is a short, abbreviated combination of letters and numbers that specifies how to calculate dates. You can enter date formulas in various date calculation fields and in recurring frequency fields in recurring journals.
@@ -280,91 +308,122 @@ The following example shows how you can use a minus sign to indicate a date in t
 
 -->
 
-## Entering Times
-When you enter times, you can insert any non-space separators that you want between the units, but if you use double digits for each unit up to milliseconds, then it is not required.
+## <a name="entering-times"></a>Zadávání časů
 
-You only have to write the largest units that you require; the rest will be set to zero. You can also leave out any AM/PM indicator.
+Když zadáváte časy, můžete mezi jednotlivé části vložit libovolné oddělovače kromě mezery, ale pokud pro každou část až do milisekund použijete dvojciferné číslice, není to nutné.
 
-The following table lists the various ways in which times can be entered and how they are interpreted. It assumes region settings that format times according to: **Hours:Minutes:Seconds.Milliseconds.** and use the AM and PM indicators of 'AM' and 'PM', respectively.
+Musíte pouze napsat nejvyšší jednotky, které vyžadujete; zbytek bude nastaven na nulu. Můžete také vynechat jakýkoli indikátor AM/PM.
 
-|**Entry**      |**Interpretation**      |
+V následující tabulce jsou uvedeny různé způsoby zadávání časů a jejich interpretace.
+
+Použito nastavení oblasti, které formátuje časy podle: **Hodiny:Minuty:Sekundy.Milisekundy.** a používá ukazatele **dop** a **odp** pro 'dopoledne' a 'odpoledne'.
+
+|**Vstup**      |**Interpretace**      |
 |---------------|------------------------|
-|05:23:17|05:23:17|
-|5|05:00:00|
-|5AM|05:00:00|
-|5P|17:00:00|
-|12|12:00:00|
-|12A|00:00:00|
-|12P|12:00:00|
-|17|17:00:00|
-|5:30|05:30:00|
-|0530|05:30:00|
-|5:30:5|05:30:05|
-|053005|05:30:05|
-|5:30:5,50|05:30:05.5|
-|053005050|05:30:05.05|
+|`05:23:17`|5:23:17|
+|`5`|05:00:00|
+|`5dop`|05:00:00|
+|`5o`|17:00:00|
+|`12`|12:00:00|
+|`12d`|0:00:00|
+|`12o`|12:00:00|
+|`17`|17:00:00|
+|`5:30`|5:30:00|
+|`0530`|5:30:00|
+|`5:30:5`|5:30:05|
+|`053005`|5:30:05|
+|`5:30:5,50`|05:30:05.5|
+|`053005050`|05:30:05.05|
 
-You should be aware that milliseconds are interpreted as decimal notation. So, for example, 3, 30, and 300 all mean 300 milliseconds, while 03 means 30 and 003 means 3 milliseconds.
+Měli byste si být vědomi, že milisekundy jsou interpretovány jako desetinný zápis. Takže například `3`, `30` a `300` všechny znamenají 300 milisekund, zatímco `03` znamená 30 milisekund a `003` znamená 3 milisekundy.
 
-You cannot use 24:00 to mean midnight, or use any value greater than 24:00.
+Nemůžete použít `24:00` pro půlnoc nebo použít jakoukoli hodnotu větší než 24:00.
 
-The word for 'time' in the language used by [!INCLUDE[prod_short](includes/prod_long.md)] will be evaluated to the current time on your computer or mobile device. You can enter any part of the word, starting from the beginning, such as t or TIM.
+Slovo pro 'čas' v jazyce používaném v [!INCLUDE[d365fin](includes/d365fin_long_md.md)] bude vyhodnoceno jako aktuální čas ve vašem počítači nebo mobilním zařízení. Můžete zadat libovolnou část slova počínaje od začátku, například **č** nebo **čas**.
 
-## Entering combined Dates and Times
-When you enter datetimes, which are a date and time combined into one field, you must enter a space between the date and the time. The date part can only contain spaces in the form of the official date separator of your region settings. The time can contain spaces around the AM/PM indicator.
+## <a name="entering-combined-dates-and-times"></a>Zadávání spojených dat a časů
 
-It is also possible to enter only a date in a datetime field, but it is not possible to enter only a time.
+Když zadáváte hodnotu do polí typu Datum-čas, která jsou kombinací data a času v jednom poli, musíte vložit mezeru mezi datem a časem. Část data může obsahovat pouze mezery ve formě oficiálního oddělovače data vašeho nastavení oblasti. Čas může obsahovat mezery kolem ukazatele dop/odp.
 
-The following table lists some examples of date/time combinations. The region settings in the examples displays dates in the day\-month\-year format, using AM/PM designators, English language, and Sunday as the start of the week.
+Je také možné zadat pouze datum do pole Datum-čas, ale není možné zadat pouze čas.
 
-|**Entry**      |**Interpretation**      |
+V následující tabulce jsou uvedeny některé příklady kombinací data a času. 
+
+Nastavení oblasti v příkladech zobrazuje data ve formátu **den\-měsíc\-rok**, s použitím označení AM/PM, anglického jazyka a neděle jako začátku týdne.
+
+|**Vstup**      |**Interpretace**      |
 |---------------|------------------------|
-|08-01-2016 05:48:12 PM|08\-01\-2016 05:48:12 PM|
-|131202 132455|13\-12\-2002 13:24:55|
-|1-12-02 10|01\-12\-2002 10:00:00|
-|1.12.02 5|01\-12\-2002 05:00:00|
-|1.12.02|01\-12\-2002 00:00:00|
-|11 12|11\-work date month\-work date year 12:00:00|
-|1112 12|11\-12\-work date year 12:00:00|
-|t or today|today's date 00:00:00|
-|t 10:30|today's date 10:30:00|
-|t 3:3:3|today's date 03:03:03|
-|w or workdate|the working date 00:00:00|
-|m or Monday|Monday of the work date week 00:00:00|
-|tu or Tuesday|Tuesday of the work date week 00:00:00|
-|sa or Saturday|Saturday of the work date week 00:00:00|
-|s or Sunday|Sunday of the work date week 00:00:00|
-|tu 10:30|Tuesday of the work date week 10:30:00|
-|tu 3:3:3|Tuesday of the work date week 03:03:03|
-|t23 t|Tuesday of week 23 of the work date year, current time of day|
-|t23|Tuesday of week 23 of the work date year|
-|t 23|Today 23:00:00|
-|t-1|Tuesday of week 1 of the work date year|
+|`08-01-2016 05:48:12 PM`|08\-01\-2016 05:48:12 PM|
+|`131202 132455`|13\-12\-2002 13:24:55|
+|`1-12-02 10`|01\-12\-2002 10:00:00|
+|`1.12.02 5`|01\-12\-2002 5:00:00|
+|`1.12.02`|01\-12\-2002 0:00:00|
+|`11 12`|11\-měsíc dle pracovní datum\-rok dle pracovní datum 12:00:00|
+|`1112 12`|11\-12\-rok dle pracovní datum 12:00:00|
+|`t` nebo `today`|dnešní datum 00:00:00|
+|`t 10:30`|dnešní datum 10:30:00|
+|`t 3:3:3`|dnešní datum 3:03:03|
+|`w` nebo `workdate`|pracovní datum 00:00:00|
+|`m` nebo `Monday`|Pondělí týdne dle pracovního data 00:00:00|
+|`tu` nebo `Tuesday`|Úterý týdne dle pracovního data 00:00:00|
+|`sa` nebo `Saturday`|Sobota týdne dle pracovního data 00:00:00|
+|`s` nebo `Sunday`|Sobota týdne dle pracovního data 00:00:00|
+|`tu 10:30`|Úterý týdne dle pracovního data 10:30:00|
+|`tu 3:3:3`|Úterý týdne dle pracovního data 3:03:03|
+|`t23 t`|Úterý 23. týdne roku dle pracovního data, aktuální čas dne|
+|`t23`|Úterý 23. týdne roku dle pracovního data|
+|`t 23`|Dnes 23:00:00|
+|`t-1`|Úterý 1. týdne roku dle pracovního data|
 
-## Entering Duration
-Some fields in the application represent a duration, or amount of elapsed time, instead of a specific date or time. You enter a duration as a number followed by its unit of measure.
+Nastavení oblasti v příkladech zobrazuje data ve formátu **den.měsíc.rok**, při použití českého jazyka, bez označení odpoledne/dopoledne a pondělí jako začátku týdne.
 
-Here are some examples.
+|**Vstup**      |**Interpretace**      |
+|---------------|------------------------|
+|`08.01.2016 17:48:12`|08.01.2016 17:48:12|
+|`131202 132455`|13.12.2002 13:24:55|
+|`1-12-02 10`|01.12.2002 10:00:00|
+|`1.12.02 5`|01.12.2002 5:00:00|
+|`1.12.02`|01.12.2002 0:00:00|
+|`11 12`|11.měsíc dle pracovní datum.rok dle pracovní datum 12:00:00|
+|`1112 12`|11.12.rok dle pracovní datum 12:00:00|
+|`d` nebo `dnes`|dnešní datum 00:00:00|
+|`d 10:30`|dnešní datum 10:30:00|
+|`d 3:3:3`|dnešní datum 3:03:03|
+|`p` nebo `pracovní`|pracovní datum 00:00:00|
+|`po` nebo `pondělí`|Pondělí týdne dle pracovního data 00:00:00|
+|`út` nebo `úterý`|Úterý týdne dle pracovního data 00:00:00|
+|`so` nebo `sobota`|Sobota týdne dle pracovního data 00:00:00|
+|`ne` nebo `neděle`|Sobota týdne dle pracovního data 00:00:00|
+|`út 10:30`|Úterý týdne dle pracovního data 10:30:00|
+|`út 3:3:3`|Úterý týdne dle pracovního data 3:03:03|
+|`út23 t`|Úterý 23. týdne roku dle pracovního data, aktuální čas dne|
+|`út23`|Úterý 23. týdne roku dle pracovního data 00:00:00|
+|`d 23`|Dnes 23:00:00|
+|`út-1`|Úterý 1. týdne roku dle pracovního data|
 
-|**Duration**|**Unit of measure**|
+## <a name="entering-duration"></a>Zadávání doby trvání
+
+Některá pole v aplikaci představují dobu trvání nebo množství uplynulého času namísto konkrétního data nebo času. Trvání zadáte jako číslo následované jeho měrnou jednotkou.
+
+Zde jsou nějaké příklady.
+
+|**Doba trvání**|**Měrná jednotka**|
 |------------|-------------------|
-|2h|2 hrs|
-|6h 30 m|6 hrs 30 mins|
-|6.5h|6 hrs 30 mins|
-|90m|1 hr 30 mins|
-|2d 6h 30m|2 days 6 hrs 30 mins|
-|2d 6h 30m 56s 600ms|2 days 6 hrs 30 mins 56 secs 600 msecs|
+|`2h`|2 hod|
+|`6h 30 m`|6 hod 30 min|
+|`6.5h`|6 hod 30 min|
+|`90m`|1 hod 30 min|
+|`2d 6h 30m`|2 dny 6 hod 30 min|
+|`2d 6h 30m 56s 600ms`|2 dny 6 hod 30 min 56 sec 600 msec|
 
-You can also enter a number, which will be automatically converted to a duration. The number you enter is converted according to the default unit of measure that has been specified for the duration field.
+Můžete také zadat číslo, které bude automaticky převedeno na dobu trvání. Zadané číslo se převede podle výchozí měrné jednotky, která byla zadána pro pole trvání.
 
-To see what unit of measure is being used in a duration field, enter a number and see which unit of measure it is converted to.
+Chcete-li vidět, jaká měrná jednotka se používá v poli trvání, zadejte číslo a podívejte se, na kterou měrnou jednotku se převede.
 
-For example, if the unit of measure is hours, the number 5 is converted to 5 hrs.
+Například pokud jsou měrnou jednotkou hodiny, číslo **5** se převede na 5 hodin.
 
-## See Also
-[Working with [!INCLUDE[prod_short](includes/prod_long.md)]](ui-work-product.md)  
-[Date Calculation for Purchases](purchasing-date-calculation-for-purchases.md)  
-[Entering Criteria in Filters ](ui-enter-criteria-filters.md)  
+## Viz také
 
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_long_md.md)]](ui-work-product.md)  
+[Výpočet data v nákupu](purchasing-date-calculation-for-purchases.md)  
+[Řazení, vyhledávání a filtrování](ui-enter-criteria-filters.md)  

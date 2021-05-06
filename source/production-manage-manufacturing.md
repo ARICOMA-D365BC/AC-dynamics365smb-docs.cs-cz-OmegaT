@@ -1,54 +1,51 @@
 ---
-    title: Execute Production | Microsoft Docs
-    description: When demand is planned for and the materials have been issued according to production BOMs, then the actual production operations can start and be executed in the sequence defined by the production order routing.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Provádění výroby | Microsoft Docs
+description: 'Pokud je poptávka plánována a materiál byl vydán podle výrobních kusovníků, mohou být skutečné výrobní operace spouštěny a spouštěny v pořadí definovaném v TNG postupu výrobní zakázky.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 11/15/2018
+ms.author: sgroespe
 ---
-# Manufacturing
+# <a name="manufacturing"></a>Výroba
 > [!NOTE]
-> Functionality described in this topic and sub topics is only visible in the user interface if you have the **Premium** experience. For more information, see [Change Which Features are Displayed](ui-experiences.md).
+> Funkce popsané v tomto tématu a dílčích tématech jsou viditelné pouze v uživatelském rozhraní, pokud máte **Premium experience** . Pro více informací navštivte [Změna funkcí, které jsou zobrazeny](ui-experiences.md).
 
-When demand is planned for and the materials have been issued according to production BOMs, then the actual production operations can start and be executed in the sequence defined by the production order routing.  
+Pokud je poptávka plánována a materiál byl vydán podle výrobních kusovníků, mohou být skutečné výrobní operace spouštěny a spouštěny v pořadí definovaném v TNG postupu výrobní zakázky.  
 
-An important part of executing production, from a system point of view, is to post production output to the database to report progress and to update inventory with the finished items. Output posting can be done manually, by filling and posting journal lines after production operations. Or, it can be done automatically with the use of backward flushing. In that case material consumption is automatically posted along with output when the production order changes to finished.  
+Důležitou součástí provádění výroby z hlediska systému je zaúčtovat výstup výroby do databáze za účelem vykazování průběhu a aktualizace zásob s dokončovým zbožím. Účtování výstupu lze provést ručně, vyplněním a zaúčtováním řádků deníku po operacích výroby. Nebo to lze provést automaticky pomocí zpětného odvádení. V takovém případě je spotřeba materiálu automaticky zaúčtována společně s výstupem při změně výrobní zakázky na dokončenou.  
 
-As an alternative to the batch journal for output posting for multiple production orders, you can use the **Production Journal** page to post consumption and/or output for one production order line.
+Jako alternativu k dávkám deníku pro účtování výstupu pro více výrobních zakázek můžete použít stránku **Deník Výroby** k zaúčtování spotřeby a/nebo výstupu pro jednu linku výrobní zakázky.
 
-Before you can begin to produce items, you must make various setup, such as work centers, routings, and production BOMs. For more information, see [Setting Up Manufacturing](production-configure-production-processes.md).
+Dříve než můžete začít vyrábět zboží, musíte provést různé nastavení, například pracovní střediska, technologické postupy a výrobní kusovníky. Pro více informací navštivte [Nastavení výroby](production-configure-production-processes.md).
 
-The following table describes a sequence of tasks, with links to the topics that describe them.   
+Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.   
 
-|**To**|**See**|  
+|**Viz**|**také**|  
 |------------|-------------|  
-|Understand how production orders work.|[About Production Orders](production-about-production-orders.md)|
-|Create production orders manually.|[Create Production Orders](production-how-to-create-production-orders.md)|
-|Outsource all or selected operations in a production order to a subcontractor.|[Subcontract Manufacturing](production-how-to-subcontract-manufacturing.md)|
-|Record and post production output along with material and time consumption for a single released production order line.|[Post Consumption and Output for One Released Production Order Line](production-how-to-register-consumption-and-output.md)|  
-|Batch post the quantity of components used per operation in a journal that can processes multiple planned production orders.|[Batch Post Consumption](production-how-to-post-consumption.md)|
-|Post the quantity of finished items and the time spent per operation in a journal that can processes multiple released production orders.|[Batch Post Output and Run Times](production-how-to-post-output-quantity.md)|
-|Undo output, for example because of a data entry error occurred and incorrect amount.  |[Reverse Output Posting](production-how-to-reverse-output-posting.md)|  
-|Post the number of items produced in each finished operation which do not qualify as finished output, but as scrapped material.|[Post Scrap](production-how-to-post-scrap.md)|
-|View the shop floor load as a result of planned and released production orders.|[View the Load in Work and Machine Centers](production-how-to-view-the-load-on-work-centers.md)|      
-|Use the **Capacity Journal** page to post consumed capacities that are not assigned to a production order, such as maintenance work.|[Post Capacities](production-how-to-post-capacities.md)|  
-|Calculate and adjust the cost of finished production items and consumed components for financial reconciliation.|[About Finished Production Order Costs](finance-about-finished-production-order-costs.md)|  
+|Porozumění jak výrobní zakázky fungují.|[O výrobních zakázkách](production-about-production-orders.md)|
+|Ruční vytváření výrobních zakázek.|[Vytváření výrobních zakázek](production-how-to-create-production-orders.md)|
+|Zadávání všech nebo vybraných operací ve výrobní zakázce subdodavateli.|[Subdodavatelská výroba](production-how-to-subcontract-manufacturing.md)|
+|Zaznamenání a zaúčtování výstupu výroby spolu se spotřebou materiálu a časem pro jeden řádek vydané výrobní zakázky.|[Zaúčtování spotřeby a výstupu pro jeden řádek vydané výrobní zakázky](production-how-to-register-consumption-and-output.md)|  
+|Dávkové zaúčtování množství komponent použitých pro operaci v deníku, které mohou zpracovávat více plánovaných výrobních zakázek.|[Dávkové účtování spotřeby](production-how-to-post-consumption.md)|
+|Účtování množství hotového zboží a čas strávený na operaci v deníku, který dokáže zpracovat více vydaných výrobních zakázek.|[Dávkové zaúčtování výstupu a spuštění](production-how-to-post-output-quantity.md)|
+|Vrácení výstupu, například z důvodu chyby v zadání dat a nesprávné částky  |[Reverzivní účtování výstupu](production-how-to-reverse-output-posting.md)|  
+|Účtování několika zboží vyrobených v každé dokončené operaci, které nelze zařadit jako dokončený výstup, ale jako vyřazovaný materiál.|[Účtování odpadu](production-how-to-post-scrap.md)|
+|Zobrazení zatížení dílny v důsledku plánovaných a vydaných výrobních zakázek.|[Zobrazit zatížení v pracovních a strojních centrech](production-how-to-view-the-load-on-work-centers.md)|      
+|Stránka **Deník kapacit** slouží k zaúčtování spotřebovaných kapacit, které nejsou přiřazeny k výrobní zakázce, například k údržbě.|[Účtování kapacit](production-how-to-post-capacities.md)|  
+|Výpočet a úprava nákladů na dokončené výrobní položky a spotřebované komponenty pro finanční odsouhlasení|[O nákladech na dokončenou výrobní zakázku](finance-about-finished-production-order-costs.md)|  
 
-## See Also  
-[Setting Up Manufacturing](production-configure-production-processes.md)  
-[Planning](production-planning.md)      
-[Inventory](inventory-manage-inventory.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## <a name="see-also"></a>Viz také  
+[Nastavení výroby](production-configure-production-processes.md)  
+[Plánování](production-planning.md)<x1 />      
+[Zásoby](inventory-manage-inventory.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Práce s[!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

@@ -6,115 +6,112 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: policy, coverage
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Insure Fixed Assets
-An insurance policy for a fixed asset is represented by an insurance card. You can assign one fixed asset to one insurance policy or multiple fixed assets to one insurance policy.
+# Pojištění dlouhodobého majetku
+Pojistná smlouva pro dlouhodobý majetek je reprezentována kartou pojištění. K jedné pojistné smlouvě můžete přiřadit jednu nebo více položek dlouhodobého majetku.
 
-You assign a fixed asset to an insurance policy by posting to the insurance coverage ledger from the **Insurance Journal** page.
+Dlouhodobý majetek přiřadíte k pojistné smlouvě zaúčtováním do položek pojistného krytí ze strínky **Deník pojištění**.
 
-In addition, you can assign a fixed asset to an insurance policy and create coverage ledger entries when you post its acquisition cost. You do this by posting an acquisition cost from the fixed asset journal with the **Insurance No.** field filled in. The **Automatic Insurance Posting** check box on the **Fixed Asset Setup** page must be selected. For more information, see [To post a fixed asset acquisition manually with the fixed asset G/L journal](fa-how-acquire.md#to-post-a-fixed-asset-acquisition-manually-with-the-fixed-asset-gl-journal).
+Kromě toho můžete přiřadit dlouhodobý majetek k pojistné smlouvě a vytvořit položky krytí při zaúčtování jeho nákladů na pořízení. To uděláte tak, že zaúčtujete náklady na pořízení z deníku dlouhodobého majetku s vyplněným polem **Číslo pojištění**. Na stránce **Nastavení DM** musí být zaškrtnuto políčko **Automatické účtování pojištění**. Pro více informací navštivte [Ruční zaúčtování pořízení dlouhodobého majetku pomocí finančního deníku dlouhodobého majetku](fa-how-acquire.md#to-post-a-fixed-asset-acquisition-manually-with-the-fixed-asset-gl-journal).
 
-If the **Automatic Insurance Posting** check box on the **Fixed Asset Setup** page is not selected, then posting acquisitions from the fixed asset journal will create lines on the **Insurance Journal** page, which you must then post manually.
+Pokud není zaškrtnuto políčko **Automatické účtování pojištění** na stránce **Nastavení DM** vytvoří funkce účtování pořízení z deníku dlouhodobého majetku řádky na stránce **Deník pojištění**, které musíte zaúčtovat ručně.
 
-> [!WARNING]  
->   If you do not select the **Automatic Insurance Posting** check box on the **Fixed Asset Setup** page, then your insurance journal should be based on a journal template without a number series. This is because the inserted document numbers from the fixed asset journal line will otherwise conflict with the number series of the insurance journal. For more information about journal templates and batches, see [Set Up General Fixed Assets Information](fa-how-setup-general.md).
+> [!WARNING]
+> Pokud nezvolíte zaškrtávací políčko **Automatické účtování pojištění** na stránce **Nastavení DM**, pak by měl být váš deník pojištění založen na šabloně deníku bez číselné řady. Je to proto, že vložená čísla dokladů z řádku deníku dlouhodobého majetku budou jinak v konfliktu s číselnou řadou deníku pojištění. Pro více informací o šablonách deníku a listech, navštivnte [Nastavení obecných informací o dlouhodobém majetku](fa-how-setup-general.md).
 
-After you have assigned a fixed asset to an insurance policy, the **Insured** check box is selected on the fixed asset card. When you sell the fixed asset, the check box is automatically deselected.
+Po přiřazení dlouhodobého majetku k pojistné smlouvě je na kartě dlouhodobého majetku zaškrtnuto políčko **Pojištěno**. Když prodáte dlouhodobý majetek, zaškrtávací políčko se automaticky zruší.
 
-## To create or modify an insurance card
-An insurance policy for a fixed asset must be represented by an insurance card.
+## Vytvoření nebo úprava karty pojištění
+Pojistná smlouva pro dlouhodobý majetek musí být reprezentována kartou pojištění.
 
-When you receive information about changes in the coverage amount, you must enter the new information on the **Insurance Card** page to ensure that you analyze insurance policy coverage correctly.  
+Pokud obdržíte informace o změnách ve výši krytí, musíte zadat nové informace na stránce **Karta pojištění** abyste zajistili správnou analýzu pojistného krytí.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance**, and then choose the related link.
-2. Choose the **New** action to create a new card for an insurance policy. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Alternatively, select the insurance policy that you want to change, and then choose the **Edit** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pojištění** a poté vyberte související odkaz.
+2. Vyberte akci **Nový** a vytvořte novou kartu pro pojistnou smlouvu. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Případně vyberte pojistku, kterou chcete změnit, a pak zvolte akci **Upravit**.
 
-## To assign a fixed asset to an insurance policy by posting from the insurance journal
-You assign a fixed asset to an insurance policy by posting to the insurance coverage ledger.  
+## Přiřazení dlouhodobého majetku k pojistné smlouvě zaúčtováním z deníku pojištění
+Dlouhodobý majetek přiřadíte k pojistné smlouvě zaúčtováním do položek pojistného krytí.
 
-The following procedure explains how to create an insurance journal line manually. If the **Automatic Insurance Posting** check box is selected on the **FA Setup** page, then insurance journal lines are automatically created when you post acquisition costs. In that case, all you have to do is to post the journal.  
+Následující postup vysvětluje, jak ručně vytvořit řádek deníku pojištění. Pokud je na stránce **Nastavení DM** zaškrtnuto políčko **Automatické účtování pojištění**, pak se po zaúčtování pořizovacích nákladů automaticky vytvoří řádky deníku pojištění. V takovém případě stačí deník zaúčtovat.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Journals**, and then choose the related link.  
-2. Open the relevant journal, and fill in the journal lines as necessary.  
-3. To assign multiple fixed assets to one insurance policy, create journal lines with the same value in the **Insurance No.** field and different values in the **FA No.** field.  
-4. Choose the **Post** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky pojištění** a poté vyberte související odkaz.
+2. Otevřete příslušný deník a podle potřeby vyplňte řádky deníku.
+3. Chcete-li přiřadit více dlouhodobého majetku k jedné pojistce, vytvořte řádky deníku se stejnou hodnotou v poli **Číslo pojištění** a různou hodnotou v poli **Číslo DM**.
+4. Vyberte akci **Účtovat**.
 
-    > [!NOTE]  
-    >   The entries from an insurance journal are only posted to the insurance coverage ledger.  
+   > [!NOTE]
+   > Položky z deníku pojištění jsou zaúčtovány pouze do položek pojistného krytí.
 
-## To update the insurance value of a fixed asset
-You can use the **Index Insurance** batch job to update the value of the fixed assets that are covered.  
+## Aktualizace hodnoty pojištění dlouhodobého majetku
+Pomocí dávkové úlohy **Indexace pojištění** můžete aktualizovat hodnotu krytého dlouhodobého majetku.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Index Insurance**, and then choose the related link.
-2. Fill in the fields as necessary.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Indexace pojištění** a poté vyberte související odkaz.
+2. Podle potřeby vyplňte pole.
 
-    > [!NOTE]  
-    >   In the **Index Figure** field, you enter a decrease of 5%, for example, as 95, whereas you enter an increase of 2% as 102.  
-3. Choose the **OK** button.  
+   > [!NOTE]
+   > Do pole **Hodnota indexu** můžete zadat pokles o 5%, například jako 95 nebo zvýšení o 2% jako 102.
+3. Vyberte tlačítko **OK**.
 
-   The batch job calculates the new amount as a percentage of the total value insured, as stated on the **Insurance Statistics** page, and then creates a line in the insurance journal.  
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Journals**, and then choose the related link.  
-5. Open the relevant insurance journal, review the created values, and then post them to the insurance coverage ledger.  
+   Dávková úloha vypočítá novou částku jako procento z celkové pojištěné částky, jak je uvedeno na stránce **Statistika pojištění** a poté vytvoří řádek v deníku pojištění.
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky pojištění** a poté vyberte související odkaz.
+5. Otevřete příslušný deník pojištění, zkontrolujte vytvořené částky a poté je zaúčtujte do položek pojistného krytí.
 
-## To monitor insurance coverage
-[!INCLUDE[prod_short](includes/prod_short.md)] provides dedicated reports and statistics pages for use in analyzing insurance policies and whether your fixed assets are over- or under-insured.  
+## Sledování pojistného krytí
+[!INCLUDE[d365fin](includes/d365fin_md.md)] poskytuje vyhrazené sestavy a statistické stránky pro použití při analýze pojistných smluv a zda je váš dlouhodobý majetek nadměrně nebo nedostatečně pojištěný.
 
-### Overview of Insurance Policies
-To get an overview of your insurance policies, preview or print the **Insurance - List** report. The report shows all the policies and the most important fields from the insurance cards.  
+### Přehled pojistných smluv
+Chcete-li získat přehled o svých pojistných smlouvách, prohlédněte si náhled nebo vytiskněte sestavu **Přehled pojištění**. Sestava zobrazuje všechny pojistky a nejdůležitější pole z karet pojištění.
 
-### Insurance Coverage
-To see which insurance policies cover each asset and by which amount, you can preview or print the **Insurance - Tot. Value Insured** report.  
+### Pojistné krytí
+Chcete-li zjistit, které pojistné smlouvy pokrývají jednotlivé aktivum a o jakou částku, můžete zobrazit náhled nebo vytisknout sestavu **Pojištění-celk. hodnota poj**.
 
-### Over/Under Coverage
-You can check if fixed assets are over- or under-insured in the following ways:  
+### Nadměrné/nedostatečné pokrytí
+Můžete zkontrolovat, zda je dlouhodobý majetek nadměrně nebo nedostatečně pojištěný, a to následujícími způsoby:
 
-* The **Insurance Statistics** page. A positive amount in the **Over/Under Insured** field means that the fixed asset is over-insured. A negative amount means that it is underinsured.  
-* The **Fixed Asset Statistics** page. Choose the **Total Value Insured** field to view the **Ins. Coverage Ledger Entries** page.  
-* The **Over/Under Coverage** report.  
-* The **Insurance Analysis** report.  
+* Pomocí stránky **Statistika pojištění**. Kladná částka v poli **Předimenzované nebo poddimenzované pojištění** znamená, že dlouhodobý majetek je nadměrně pojištěn. Záporná částka znamená, že je nedostatečně pojištěn.
+* Pomocí stránky **Statistika DM**. Výběrem pole **Celková pojištěná částka** zobrazíte stránku **Položky  pojistného krytí**.
+* Pomocí sestavy **Nadměrné/nedostatečné pokrytí**.
+* Pomocí sestavy **Analýza pojištění**.
 
-### Uninsured Fixed Assets
-To check if you have forgotten to assign a fixed asset to an insurance policy, you can print or preview the **Insurance - Uninsured FAs** report. This report displays fixed assets for which amounts have not been posted to the insurance coverage ledger.  
+### Nepojištěný dlouhodobý majetek
+Chcete-li zkontrolovat, zda jste nezapomněli přiřadit dlouhodobý majetek k pojistné smlouvě, můžete vytisknout nebo zobrazit náhled **Pojištění - nepojištěný DM**. Tato sestava zobrazuje dlouhodobý majetek, pro který nebyly částky zaúčtovány do položek pojistného krytí.
 
-## To view insurance coverage ledger entries
-You can view the entries that you have made in the insurance coverage ledger.  
+## Zobrazení položek pojistného krytí
+Můžete zobrazit položky, které jste vytvořili v položkách pojistného krytí.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance**, and then choose the related link.  
-2. Select the relevant insurance policy, and then choose the **Coverage Ledger Entries** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pojištění** a poté vyberte související odkaz.
+2. Vyberte příslušnou pojistnou smlouvu a pak zvolte akci **Položky krytí**.
 
-## To view the total insurance value of fixed assets
-A dedicated matrix page shows the insurance values that are registered for each insurance policy for each fixed asset as a result of insurance-related amounts that you have posted.  
+## Zobrazení celkové hodnoty dlouhodobého majetku
+Vyhrazená stránka matice zobrazuje hodnoty pojištění, které jsou registrovány pro každou pojistnou smlouvu pro každý dlouhodobý majetek v důsledku částek souvisejících s pojištěním, které jste zaúčtovali.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance**, and then choose the related link.  
-2. Select the relevant insurance policy, and then choose the **Total Value Insures per FA** action.  
-3. Fill in the fields as necessary.  
-4. Choose the **Show Matrix** action.  
-5. To see the underlying insurance coverage ledger entries, choose a value in the matrix.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pojištění** a poté vyberte související odkaz.
+2. Vyberte příslušnou pojistnou smlouvu a pak zvolte akci **Celková částka pojištění na DM**.
+3. Podle potřeby vyplňte pole.
+4. Vyberte akci **Zobrazit matici**.
+5. Chcete-li zobrazit základní položky pojistného krytí, vyberte hodnotu v matici.
 
-## To correct insurance coverage entries
-If a fixed asset has been attached to the wrong insurance policy, you can correct it by creating two reclassification entries from the insurance journal.  
+## Oprava položek pojistného krytí
+Pokud byl dlouhodobý majetek připojen k nesprávné pojistné smlouve, můžete jej opravit vytvořením dvou položek přeřazení z deníku pojištění.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Journals**, and then choose the related link.  
-2. Create one journal line for the fixed asset and the correct insurance policy where the value in the **Amount** field is positive.  
-3. Create another journal line for the fixed asset and the incorrect insurance policy where the value in the **Amount** field is negative.  
-4. Choose the **Post** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky pojištění** a poté vyberte související odkaz.
+2. Vytvořte jeden řádek deníku pro dlouhodobý majetek a správnou pojistnou smlouvu, kde je hodnota v poli **Částka** kladná.
+3. Vytvořte další řádek deníku pro dlouhodobý majetek a nesprávnou pojistnou smlouvu, kde je hodnota v poli **Částka** záporná.
+4. Vyberte akci **Účtovat**.
 
-The fixed asset will be detached from the incorrect insurance policy, on the second line, and attached to the correct insurance policy, on the first line.  
+Dlouhodobý majetek bude odpojen od nesprávné pojistky na druhém řádku a připojen ke správné pojistce na prvním řádku.
 
-## See Also
-[Fixed Assets](fa-manage.md)  
-[Setting Up Fixed Assets](fa-setup.md)  
+## Viz také
+[Dlouhodobý majetek](fa-manage.md)  
+[Nastavení dlouhodobého majetku](fa-setup.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

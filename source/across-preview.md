@@ -1,102 +1,103 @@
 ---
-title: Trials and Subscriptions
-description: Learn about how to get a trial version of Business Central, how to work with sandbox environments, and how to sign up for a subscription.
-author: edupont04
+title: Zkušební verze a předplatné
+description: Naučte se, jak získat zkušební verzi produktu Business Central, jak pracovat s prostředím sandbox a jak se přihlásit k předplatnému.
+author: ZdenekBicek
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.workload: na
-ms.search.keywords: preview, trial, sandbox, subscription
-ms.date: 10/01/2020
+ms.search.keywords: preview, trial, sandbox
+ms.date: 01/10/2020
+ms:reviewer: v-zdbice
 ms.author: edupont
 
 ---
-# [!INCLUDE[prod_long](includes/prod_long.md)] Trials and Subscriptions
+# [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)] Zkušební verze a předplatné
 
-[!INCLUDE[prod_short](includes/prod_short.md)] is available in an increasing number of countries across the world. If you want to learn about [!INCLUDE[prod_short](includes/prod_short.md)], you can sign up for a free trial. Then, when you are ready, you can talk to a reselling partner about getting a subscription.  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] je k dispozici v rostoucím počtu zemí po celém světě. Chcete-li získat informace o [!INCLUDE [prodshort](includes/prodshort.md)], můžete se přihlásit k bezplatné zkušební verzi. Až budete připraveni, můžete kontaktovat obchodního partnera pro získání předplatného.
 
-If you are not already working with a partner, see [How do I find a reselling partner?](across-faq.md#findpartner).  
+## Začínáme se zkušební verzí
 
-## Getting Started with a Trial
+Můžete si zaregistrovat bezplatnou zkušební verzi [zde](https://go.microsoft.com/fwlink/?linkid=847861). V závislosti na vaší zemi nebo regionu zahrnuje zkušební verze jazyky a funkce, které vaše země nebo region vyžaduje. Další informace naleznete v části [Změna jazyka a národního prostředí](about-locale-language.md).
 
-You can sign up for a free trial [here](https://go.microsoft.com/fwlink/?linkid=847861). We recommend that you work with [a reselling partner](across-faq.md#findpartner) to help your organization get started with [!INCLUDE[prod_short](includes/prod_short.md)].  
+V [!INCLUDE[d365fin](includes/d365fin_md.md)] Vám některé věci budou dobře známy a jiné by mohly být neznámé. Když se poprvé přihlásíte do demonstrační společnosti, získáte přístup na stránku Začínáme s odkazy na videa, která vám mohou pomoci začít. Další informace viz [Začínáme s [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)]](product-get-started.md).
 
-Depending on your country or region, the trial includes the languages and functionality that your country or region requires. For more information, see [Changing Language and Locale](about-locale-language.md).  
+Pokud narazíte na potíže, na stránce [Často kladené otázky](across-faq.md) vám pomohou odpovědět na některé vaše otázky. Pokud se vám nepodařilo přihlásit ke zkušební verzi, může vám pomoci stránka [Řešení problémů se samoobslužným přihlášením](ui-troubleshoot-self-signup.md). Můžete také kontaktovat [partnera](across-faq.md#findpartner) a požádat je o vytvoření bezplatné zkušební verze pro Vás.
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], some things will be familiar to you, and other things might be unfamiliar. When you first sign in to the demonstration company, you get access to a Getting Started page with links to videos that can help you get started. For more information, see [Getting Started with [!INCLUDE[prod_long](includes/prod_long.md)]](product-get-started.md).  
+### Vyzkoušejte svou vlastní společnost
 
-If you encounter difficulties, the [Frequently Asked Questions](across-faq.md) page can help you answer some of your questions. If you are unable to sign up for the trial, the [Troubleshooting Self-Service Sign-Up](ui-troubleshoot-self-signup.md) page can help. You can also contact a [partner](across-faq.md#findpartner) and ask them to create a free trial or a different type of preview of [!INCLUDE[prod_short](includes/prod_short.md)] for you.  
+Pokud si chcete vyzkoušet [!INCLUDE [prodshort](includes/prodshort.md)] se svými vlastními údaji, můžete přepnout na bezplatnou 30-denní zkušební verzi s prázdnou společností. Průvodce nastavením **Založit moji společnost** vám pomůže zadat základní informace o vaší společnosti. Volitelně můžete importovat data ze svého stávajícího řešení pro řízení podniku, abyste mohli vyzkoušet [!INCLUDE [prodshort](includes/prodshort.md)] s vašimi vlastními údaji.
 
-### Try Out Your Own Company
+Pokud vám 30 dnů nestačí k rozhodnutí, můžete prodloužit zkušební období. Další informace naleznete v části [Potřebujete více času na rozhodnutí, zda se přihlásit k odběru?](admin-extend-trial.md).
 
-If you want to try out [!INCLUDE[prod_short](includes/prod_short.md)] with your own data, you can switch to a free 30 day trial with an empty company. The **Set up my company** assisted setup guide can help you specify basic information about your business. Optionally, you can import data from your existing business management solution so that you can evaluate [!INCLUDE[prod_short](includes/prod_short.md)] with your own data. However, we recommend that you do not use a free trial to help run your business. Contact [a reselling partner](across-faq.md#findpartner) to learn more about how to get started with [!INCLUDE[prod_short](includes/prod_short.md)].  
+### Založení společnosti v [!INCLUDE [prodshort](includes/prodshort.md)]
 
-If 30 days are not enough for you to decide, you can extend your trial. For more information, see [Need More Time to Decide Whether to Subscribe?](admin-extend-trial.md).  
+Abychom vám pomohli založit společnost, na stránce **Asistované nastavení** jsou uvedeny průvodci asistovaným nastavením, které vám mohou pomoci. V závislosti na vaší roli a zemi nebo oblasti se na stránce zobrazují různí průvodci asistovaným nastavením, například následující:
 
-### Setting Up Your Company in [!INCLUDE[prod_short](includes/prod_short.md)]
-
-To help you set up your company, the **Assisted Setup** page lists the assisted setup guides that can help you. Depending on your role and country or region, the page shows different assistant setup guides as illustrated in the following table:
-
-| Assisted Setup | Description |
+| Asistované nastavení | Popis |
 | -------------- | ----------- |
-| Set Up My Company |Creates a new trial company for you to enter data and try out [!INCLUDE[prod_short](includes/prod_short.md)]. |
-| Set Up Approval Workflows |Sets up the ability to automatically notify an approver when a user tries to create or change certain values on documents, journal lines, or cards. For example, you can set up approval of amounts above a specified limit. |
-| Set Up Email |Gets you ready for sending email messages directly from, for example, sales orders or contacts in [!INCLUDE[prod_short](includes/prod_short.md)]. |
-| Set Up Your Business Inbox in Outlook |Gets you ready to manage business interactions with your customers and vendors, directly in Microsoft Outlook. |
-| Migrate Business Data |Lets you import your existing company data such as vendors, customers, and items from Excel or Quickbooks. |
-| Set Up Email Logging |Sets up the capability to log email correspondence in [!INCLUDE[prod_short](includes/prod_short.md)] to follow up on interactions. |
-| Set Up an Item Approval Workflow |Sets up the ability to send a notification to an approver when a user changes or creates an item. |
-| Set Up a Customer Approval Workflow |Sets up the ability to automatically notify an approver when a user tries to create or change a customer card. |
-| Set Up a Payment Approval Workflow |Sets up the ability to send a notification to an approver when a user sends payment journal lines for approval. |
-| Set Up Dynamics 365 Sales Connection |Sets up a connection to Dynamics 365 Sales, which allows you to synchronize data such as contacts and sales order information. |
-| Set Up Cash Flow Forecast |Sets up the Cash Flow Forecast chart, so you can view the predicted movement of cash in and out of your business. The chart is available on the **Accountant Role Center**. |
-| Set Up Reporting Data|Sets up data sets that you can use to build powerful reports using Excel or Power BI, for example. |
-| Invite External Accountant |If you use an external accountant to manage your books and financial reporting, you can invite them to your [!INCLUDE[prod_short](includes/prod_short.md)] so they can work with you on your fiscal data. |
+| Založit moji společnost |Vytvoří pro vás novou zkušební společnost pro zadávání dat a vyzkoušení [!INCLUDE[d365fin](includes/d365fin_md.md)]. |
+| Nastavit workflow schvalování |Nastavuje schopnost automaticky informovat schvalovatele, když se uživatel pokusí vytvořit nebo změnit určité hodnoty v dokumentech, řádcích deníku nebo na kartách, jako je částka nad zadaným limitem. |
+| Nastavit e-mail |Připraví Vás k odesílání e-mailových zpráv přímo například z prodejních objednávek nebo kontaktů v [!INCLUDE[d365fin](includes/d365fin_md.md)]. |
+| Nastavit vaši schránku v aplikaci Outlook |Připraví Vás ke správě obchodních interakcí se svými zákazníky a dodavateli přímo v aplikaci Microsoft Outlook. |
+| Migrovat obchodní data |Umožňuje importovat stávající data společnosti, jako jsou dodavatelé, zákazníci a zboží, z Excelu nebo Quickbooks. |
+|  Nastavení protokolování e-mailu |Nastavuje možnost protokolování e-mailové korespondence v [!INCLUDE[d365fin](includes/d365fin_md.md)] pro sledování interakcí. |
+| Nastavit workflow schvalování zboží |Nastavuje možnost odesílat oznámení schvalovateli, když uživatel změní nebo vytvoří zboží. |
+| Nastavit workflow schvalování zákazníka |Nastavuje možnost odesílat oznámení schvalovateli, když uživatel změní nebo vytvoří kartu zákazníka. |
+| Nastavit workflow schvalování plateb |Nastavuje možnost odesílat oznámení schvalovateli, když uživatel odešle řádky deníku plateb ke schválení. |
+| Nastavit připojení k Dynamics 365 Sales |Nastaví připojení k Dynamics 365 Sales, což vám umožní synchronizovat data, jako jsou kontakty a informace o prodejní objednávce. |
+| Nastavit plán cash flow |Nastaví graf Plán cash flow, takže si můžete prohlédnout předpokládaný pohyb hotovosti do a z podnikání. Graf je k dispozici v Centru rolí **Účtárna**. |
+| Nastavit data výkazů |Nastavuje datové sady, které můžete použít například k vytváření výkonných sestav pomocí Excelu nebo Power BI. |
 
-The **Assisted Setup** page may contain other entries. When you go through a setup, the setup will be marked as **Completed**. You can set up additional areas of the company by using manual setup. For more information, see [Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md).  
+Stránka **Asistované nastavení** může obsahovat další položky. Když projdete nastavením, bude to označeno jako **Dokončeno**. Další oblasti společnosti můžete nastavit pomocí ručního nastavení. Další informace viz [Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]](setup.md).  
 
-### Resetting your [!INCLUDE[prod_short](includes/prod_short.md)] trial experience
+### Resetování Vašeho [!INCLUDE[prodshort](includes/prodshort.md)] zkušebního prostředí
 
-If you have added data to your [!INCLUDE[prod_short](includes/prod_short.md)] free trial, and you want to start over with a fresh experience, you can create a new evaluation company and then delete the first company. Open the **Companies** page and choose **New** to start the **Create New Company** assisted setup guide. The guide can help you set up a fresh evaluation company with sample data. You can also create a copy of your current company, sign out, and then sign into your new company.  
+Pokud jste do své bezplatné zkušební verze [!INCLUDE[prodshort](includes/prodshort.md)] zadali data a chcete začít znovu s novým prostředím, můžete vytvořit novou zkušební společnost a poté smazat první společnost. Pokud otevřete stránku **Společnosti** a zvolíte **Nový**, průvodce nastavením **Založit moji společnost** vám pomůže založit novou zkušební společnost s ukázkovými daty. Můžete také vytvořit kopii své současné společnosti, odhlásit se a poté se přihlásit do své nové společnosti.
 
 > [!IMPORTANT]
-> When you share [!INCLUDE[prod_short](includes/prod_short.md)] with other people from your organization, you must make sure other people are not logged in when you delete a company.  
+> Když sdílíte [!INCLUDE[prodshort](includes/prodshort.md)] s dalšími lidmi z vaší organizace, musíte při mazání společnosti zajistit, aby ostatní lidé nebyli přihlášeni.
 
-## Getting Started with a Subscription
+## Začínáme s předplatným
 
-Each time you sign in during the trial period, a notification in a blue bar at the top displays the time remaining. If you decide to subscribe, find a [!INCLUDE[prod_short](includes/prod_short.md)] partner. For more information, see [How do I find a reselling partner?](across-faq.md#findpartner). The reselling partner can help you set up [!INCLUDE[prod_short](includes/prod_short.md)] to fit your business, including importing your data from your previous system. You can also customize [!INCLUDE[prod_short](includes/prod_short.md)] by adding apps from [Microsoft AppSource](https://go.microsoft.com/fwlink/?linkid=2081646).  
+Pokaždé, když se během zkušebního období přihlásíte, zobrazuje se zbývající doba v oznámení v modrém pruhu nahoře. Pokud se rozhodnete pro předplatné, najděte si partnera [!INCLUDE[d365fin](includes/d365fin_md.md)]. Další informace viz [Jak najdu obchodního partnera?](across-faq.md#findpartner). Obchodní partner Vám může pomoci nastavit [!INCLUDE [prodshort](includes/prodshort.md)] tak, aby vyhovoval vašemu podnikání, včetně importu dat z vašeho předchozího systému a přidání funkcí, jako jsou aplikace z [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?product=dynamics-365-business-central).  
 
-[!INCLUDE[prod_short](includes/prod_short.md)] online uses Microsoft 365. If your company uses a different type of email setup, the reselling partner can help you decided how to migrate, or if you should use [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.  
+[!INCLUDE[prodshort](includes/prodshort.md)] online používá Office 365. Pokud vaše společnost používá jiný typ nastavení e-mailu, obchodní partner vám může pomoci rozhodnout, jak přemigrovat, nebo zda byste měli použít [!INCLUDE[prodshort](includes/prodshort.md)] on-premises.  
 
-You can also contact the [[!INCLUDE[prod_short](includes/prod_short.md)] Sales team](https://go.microsoft.com/fwlink/?linkid=828707).  
+Můžete také kontaktovat [Obchodní tým [!INCLUDE[d365fin](includes/d365fin_md.md)]](https://go.microsoft.com/fwlink/?linkid=828707).  
 
-## Getting Started with Sandboxes
+## Začínáme se Sandboxy
 
-Sandbox environments can be a way for you to practice with [!INCLUDE[prod_short](includes/prod_short.md)]. Think of a sandbox as a non-production environment that you can use on top of your production instance of [!INCLUDE[prod_short](includes/prod_short.md)]. For example, if you want to take the free online training from [Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs), your administrator can [create a sandbox environment](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments#create-a-sandbox-environment) so that you and your colleagues can practice there rather than in your production environment.  
+Zkušební verze v sandbox prostředí jsou skvělým způsobem, jak začít s [!INCLUDE[d365fin](includes/d365fin_md.md)]. Můžete si představit sandbox prostředí jako neprodukční prostředí, které můžete použít nad svou produkční instancí [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pokud například chcete využít bezplatného online školení z [Microsoft Learn](/learn/browse/?products=dynamics-business-central), váš administrátor může vytvořit sandbox prostředí karantény, abyste tam vy a vaši kolegové mohli zkoušet místo ve vašem produkčním prostředí.
 
-If you are a developer, a sandbox lets you safely build and test extensions and develop new functionality to customize the service without affecting the data and settings of your production environment.  
+Pokud jste vývojář, sandbox vám umožní bezpečně vytvářet a testovat rozšíření a vyvíjet nové funkce pro přizpůsobení služby bez ovlivnění dat a nastavení vašeho produkčního prostředí.
 
-Right now, all customers can use a sandbox, including organizations who have signed up for a trial. For more information about how to get started with a sandbox, see [Creating a Sandbox Environment](across-how-create-sandbox-environment.md).  
+Právě teď mohou všichni zákazníci používat sandbox, včetně organizací, které se zaregistrovaly ke zkušební verzi. Další informace o tom, jak začít se sandboxy, naleznete v části [Vytvoření sandbox prostředí](across-how-create-sandbox-environment.md).
 
 > [!NOTE]
-> Sandboxes created this way contain demonstration data for the fictitious CRONUS company. No data is copied or otherwise transferred from the production environment.  
+> Sandbox prostředí obsahuje demo data pro finktivní společnost CRONUS. Z provozního prostředí nejsou kopírována ani jinak přenášena žádná data.
 
-The administrator of your [!INCLUDE[prod_short](includes/prod_short.md)] and your reselling partner can create additional environments in the administration center. For more information, see [The Business Central Administration Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center).  
+Správce vašeho [!INCLUDE[prodshort](includes/prodshort.md)] a váš obchodní partner mohou v administrativním centru vytvořit další prostředí. Další informace naleznete v [Business Central Administration Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center).  
 
-## See Also
+<!-- Jako partner můžete zákazníkům poskytovat zkušební verze založené na již existujících funkcích, přizpůsobeních a náhledech budoucích vlastností. S takovými náhledy můžete vyzkoušet a poskytnout zpětnou vazbu k připravovaným funkcím.  -->
 
-[Getting Started](product-get-started.md)  
-[Extending Your Trial Version](admin-extend-trial.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Frequently Asked Questions](across-faq.md)  
-[How do I find a reselling partner?](across-faq.md#findpartner)  
-[Choosing Your Dynamics 365 Business Central Development Sandbox Environment](/dynamics365/business-central/dev-itpro/developer/devenv-sandbox-overview?toc=/dynamics365/business-central/toc.json)  
-[Country/Regional Availability and Supported Translations](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json)  
-[Extending trials (as an administrator)](/dynamics365/business-central/dev-itpro/administration/tenant-administration#extending-trials)  
-[Get Started as a Reseller of Business Central Online](/dynamics365/business-central/dev-itpro/administration/get-started-online)  
-[Preparing Demonstration Environments (as a partner)](/dynamics365/business-central/dev-itpro/administration/demo-environment)  
+<!--Chcete-li začít s náhledem, přejděte na [tuto stránku](https://go.microsoft.com/fwlink/?linkid=866045)a uveďte svou pracovní e-mailovou adresu. Další informace o [!INCLUDE[d365fin](includes/d365fin_md.md)] a možnostech, které nabízí, najdete v dokumentaci zde na tomto webu.-->
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
+<!--
+### Budování nových řešení a duševního vlastnictví
 
+[!INCLUDE[d365fin](includes/d365fin_md.md)] nabízí sadu vývojářských nástrojů a moderní platformu, na jejímž základě můžete vytvořit vlastní doplňky a vložit řešení jako rozšíření do [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+Můžete například použít rozhraní API k připojení aplikace pro výměnu dat mezi [!INCLUDE[d365fin](includes/d365fin_md.md)] a vaší mzdovou aplikací. Připojení k aplikacím může také využít rozšíření k vytvoření stránek, které budou použity pro nastavení, konfiguraci nebo podporu funkcí specifických pro aplikaci. Pro více informací navštivte [Vybudujte svoje podnikání na webu Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/developer/readiness/readiness-welcome).-->
+
+## Viz také
+
+[Začínáme](product-get-started.md)  
+[Rozšíření Vaší zkušební verze](admin-extend-trial.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Často kladené otázky](across-faq.md)  
+[Jak najdu obchodního partnera?](across-faq.md#findpartner)  
+[Výběr Vašeho Dynamics 365 Business Central Sandbox vývojového prostředí](/dynamics365/business-central/dev-itpro/developer/devenv-sandbox-overview?toc=/dynamics365/business-central/toc.json)  
+[Dostupnost zemí/regionů a podporované lokalizace](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json)  
+
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]

@@ -7,36 +7,34 @@ ms.author: bholtorf
 ms.custom: na
 ms.reviewer: na
 ms.service: dynamics365-business-central
-ms.topic: conceptual
-ms.date: 10/01/2020
+ms.topic: article
+ms.date: 02/03/2020
 ---
 
-# Handling Missing Option Values
-[!INCLUDE[prod_short](includes/cc_data_platform_banner.md)]
+# Zpracování chybějících hodnot možností
+[!INCLUDE[d365fin](includes/cds_long_md.md)] obsahuje pouze tři pole sady možností, která obsahují hodnoty možností, které můžete mapovat na [!INCLUDE[d365fin](includes/d365fin_md.md)] typu Option<!-- Option type, not enum? @Onat can you vertify this? --> pro automatickou synchronizaci. Během synchronizace jsou nemapované možnosti ignorovány a chybějící možnosti jsou připojeny k související tabulce [!INCLUDE[d365fin](includes/d365fin_md.md)] a přidány do systémové tabulky **Volba mapování CDS**, kterou můžete zpracovat ručně později. Například přidáním chybějících možností v obou produktech a aktualizací mapování. Tato část popisuje, jak to funguje.
 
-[!INCLUDE[prod_short](includes/cds_long_md.md)] contains only three option set fields that contain option values that you can map to [!INCLUDE[prod_short](includes/prod_short.md)] fields of Option type<!-- Option type, not enum? @Onat can you vertify this? --> for automatic synchronization. During synchronization, non-mapped options are ignored and the missing options are appended to the related [!INCLUDE[prod_short](includes/prod_short.md)] table and added to the **CDS Option Mapping** system table to handle manually later. For example, by adding the missing options in either product and then updating the mapping. This section describes how that works.
+Stránka **Mapování tabulky integrace** obsahuje tři mapy pro pole, která obsahují jednu nebo více mapovaných hodnot možností. Po úplné synchronizaci obsahuje stránka  **Volba mapování CDS** obsahuje nemapované možnosti ve třech polích.
 
-The **Integration Table Mapping** page contains three maps for fields that contain one or more mapped option values. After a full synchronization, the **CDS Option Mapping** page contains the non-mapped options in the three fields respectively.
-
-|         Record             | Option Value | Option Value Caption |
+| Záznam | Hodnota možnosti | Titulek hodnoty možnosti |
 |----------------------------|--------------|----------------------|
-| Payment Terms: NET30	     | 1            | Net 30	           |
-| Payment Terms: 2%10NET30   | 2            | 2% 10; Net 30        |
-| Payment Terms: NET45	     | 3            | Net 45               |
-| Payment Terms: NET60	     | 4            | Net 60               |
-| Shipment Method: FOB	     | 1            | FOB                  |
-| Shipment Method: NOCHARGE  | 2            | No Charge            |
-| Shipping Agent: AIRBORNE   | 1            | Airborne             |
-| Shipping Agent: DHL        | 2            | DHL                  |
-| Shipping Agent: FEDEX      | 3            | FedEx                |
-| Shipping Agent: UPS        | 4            | UPS                  |
-| Shipping Agent: POSTALMAIL | 5            | Postal Mail          |
-| Shipping Agent: FULLLOAD   | 6            | Full Load            |
-| Shipping Agent: WILLCALL   | 7            | Will Call            |
+| Platební podmínky: NET30 | 1 | Netto 30 |
+| Platební podmínky: 2%10NET30 | 2 | 2% 10; Netto 30 |
+| Platební podmínky: NET45 | 3 | Netto 45 |
+| Payment Terms: NET60 | 4 | Netto 60 |
+| Způsob dodávky: FOB | 1 | FOB |
+| Způsoby dodávky: BEZPOPLATKU | 2 | Bez poplatku |
+| Přepravce: VZDUCEHM | 1 | VZDUCHEM |
+| Přepravce: DHL | 2 | DHL |
+| Přepravce: FEDEX | 3 | FedEx |
+| Přepravce: UPS | 4 | UPS |
+| Přepravce: POŠTA | 5 | Poštovní zásilky |
+| Přepravce: FULLLOAD | 6 | Plně naložen |
+| Přepravce: BUDEVOLAT | 7 | Bude telefonovat |
 
-The content of the **CDS Option Mapping** page is based on enum values in the **CDS Account** table. In [!INCLUDE[prod_short](includes/cds_long_md.md)], the following fields on the account table are mapped to fields on the customer and vendor records:
+Obsah stránky **Volba mapování CDS**  je založen na hodnotách výčtu v tabulce **Účet CDS**. V [!INCLUDE[d365fin](includes/cds_long_md.md)], jsou následující pole na entitě účtu mapována do polí v záznamech zákazníků a dodavatelů:
 
-- **Address 1: Freight Terms** of data type Enum, where values are defined as follow:
+- **Adresa 1: Přepravní podmínky** datového typu Enum, kde jsou hodnoty definovány následovně:
 
 ```
 enum 5335 "CDS Shipment Method Code"
@@ -48,7 +46,7 @@ enum 5335 "CDS Shipment Method Code"
 }
 ```
 
-- **Address 1: Shipping Method** of data type Enum, where values are defined as follows:
+- **Adresa 1: Způsob dopravy** datového typu Enum, kde jsou hodnoty definovány následovně:
 
 ```
 enum 5336 "CDS Shipping Agent Code"
@@ -66,7 +64,7 @@ enum 5336 "CDS Shipping Agent Code"
 }
 ```
 
-- **Payment Terms** of data type Enum, where values are defined as follows:
+- **Platební podmínky** datového typu Enum, kde jsou hodnoty definovány následovně:
 
 ```
 enum 5334 "CDS Payment Terms Code"
@@ -80,12 +78,12 @@ enum 5334 "CDS Payment Terms Code"
 }
 ```
 
-All of the [!INCLUDE[prod_short](includes/prod_short.md)] enums above are mapped to option sets in [!INCLUDE[prod_short](includes/cds_long_md.md)].
+Všechny výčty [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou mapovány na sady voleb v [!INCLUDE[d365fin](includes/cds_long_md.md)].
 
-### Extending Option Sets in [!INCLUDE[prod_short](includes/prod_short.md)]
-1. Create a new AL extension.
+### Rozšíření sady možností v [!INCLUDE[d365fin](includes/d365fin_md.md)]
+1. Vytvořte nové AL rozšíření.
 
-2. Add an Enum extension for the options that you want to extend. Be sure that you use the same value. 
+2. Přidejte rozšíření Enum pro možnosti, které chcete rozšířit. Ujistěte se, že používáte stejnou hodnotu.
 
 ```
 enumextension 50100 "CDS Payment Terms Code Extension" extends "CDS Payment Terms Code"
@@ -96,51 +94,44 @@ enumextension 50100 "CDS Payment Terms Code Extension" extends "CDS Payment Term
 ```
 
 > [!IMPORTANT]  
-> You must use the same option ID values from [!INCLUDE[prod_short](includes/cds_long_md.md)] when you extend the [!INCLUDE[prod_short](includes/prod_short.md)] enum. Otherwise synchronization will fail.
+> Při rozšíření výčtu [!INCLUDE[d365fin](includes/cds_long_md.md)]musíte použít stejné hodnoty ID možnosti z [!INCLUDE[d365fin](includes/d365fin_md.md)]. V opačném případě se synchronizace nezdaří.
 
-> [!IMPORTANT]  
-> Do not use the ","  character in the enum values and captions. This is currently not supported by the [!INCLUDE[prod_short](includes/prod_short.md)] runtime.
+> Prvních deset znaků nových názvů hodnot a titulků musí být jedinečné. Například dvě možnosti s názvem "Převod 20 pracovních dnů" a "Převod 20 kalendářních dnů" způsobí chybu, protože obě mají stejné první 10 znaků, "Transfer 2". Pojmenujte je například "TRF20 WD" a "TRF20 CD."
 
-> [!NOTE]
-> The first ten characters of the new option value names and captions must be unique. For example, two options named "Transfer 20 working days" and "Transfer 20 calendar days" will cause an error because both have the same first 10 characters, "Transfer 2". Name them, for example, "TRF20 WD" and "TRF20 CD."
+### Aktualizace Možnosti mapování [!INCLUDE[d365fin](includes/cds_long_md.md)]
+Nyní můžete znovu vytvořit mapování voleb mezi [!INCLUDE[d365fin](includes/cds_long_md.md)] a zánamy [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-### Update [!INCLUDE[prod_short](includes/cds_long_md.md)] Option Mapping
-Now you can recreate the mapping between [!INCLUDE[prod_short](includes/cds_long_md.md)] options and [!INCLUDE[prod_short](includes/prod_short.md)] records.
+Na stránce **Mapování tabulky integrace**vyberte řádek mapování **Platební podmínky** a poté zvolte **Synchronizovat upravené záznamy**. Stránka **Volba mapování CDS** je aktualizována s přidanými záznamy níže.
 
-On the **Integration Table Mapping** page, choose the line for the **Payment Terms** map, and then choose the **Synchronize Modified Records** action. The **CDS Option Mapping** page is updated with the additional records below.
-
-|         Record                 | Option Value   | Option Value Caption |
+| Záznam | Hodnota možnosti | Titulek hodnoty možnosti |
 |--------------------------------|----------------|----------------------|
-| Payment Terms: NET30	         | 1              | Net 30	             |
-| Payment Terms: 2%10NET30       | 2              | 2% 10; Net 30        |
-| Payment Terms: NET45 	         | 3              | Net 45               |
-| Payment Terms: NET60	         | 4              | Net 60               | 
-| **Payment Terms: CASH PAYME**  | **779800001**  | **Cash Payment**     |
-| **Payment Terms: TRANSFER**    | **779800002**  | **Transfer**         |
+| Platební podmínky: NET30 | 1 | Netto 30 |
+| Platební podmínky: 2%10NET30 | 2 | 2% 10; Netto 30 |
+| Platební podmínky: NET45 | 3 | Netto 45 |
+| Payment Terms: NET60 | 4 | Netto 60 |
+| **Platební podmínky: CASH PAYME** | **779800001** | **Platba v hotovosti** |
+| **Platební podmínky: PREVOD** | **779800002** | **Převod** |
 
-The **Payment Terms** table in [!INCLUDE[prod_short](includes/prod_short.md)] will then have new records for the [!INCLUDE[prod_short](includes/cds_long_md.md)] options. In the following table new options are in bold font . Italic rows represent all options that can now be synchronized. Remaining rows represent options are not in use and will be ignored during synchronization. You can remove them or extend CDS options with the same names.)
+Tabulka **Platební podmínky** [!INCLUDE[d365fin](includes/d365fin_md.md)] bude mít nové záznamy pro volby v [!INCLUDE[d365fin](includes/cds_long_md.md)]. V následující tabulce jsou nové možnosti tučným písmem . Řádky kurzívou představují všechny možnosti, které lze nyní synchronizovat. Zbývající řádky představují možnosti, nejsou používány a budou ignorovány během synchronizace. Můžete je odebrat nebo rozšířit možnosti CDS stejnými jmény.
 
-| Code       | Due Date Calculation | Discount Date Calculation | Discount % | Calc. Pmt. Disc. on Cr. Memos | Description       |
+| Kód | Výpočet splatnosti | Výpočet skonto data | Sleva % | Výp.  Platba skonta v dobropisu | Popis |
 |------------|----------------------|---------------------------|------------|-------------------------------|-------------------|
-| 10 DAYS    | 10D                  |                           | 0.         | FALSE                         | Net 10 days       |
-| 14 DAYS    | 14D                  |                           | 0.         | FALSE                         | Net 14 days       |
-| 15 DAYS    | 15D                  |                           | 0.         | FALSE                         | Net 15 days       |
-| 1M(8D)     | 1M                   | 8D                        | 2.         | FALSE                         | 1 Month/2% 8 days |
-| 2 DAYS     | 2D                   |                           | 0.         | FALSE                         | Net 2 days        |
-| *2%10NET30* |                      |                           | 0.         | FALSE                         |                   |
-| 21 DAYS    | 21D                  |                           | 0.         | FALSE                         | Net 21 days       |
-| 30 DAYS    | 30D                  |                           | 0.         | FALSE                         | Net 30 days       |
-| 60 DAYS    | 60D                  |                           | 0.         | FALSE                         | Net 60 days       |
-| 7 DAYS     | 7D                   |                           | 0.         | FALSE                         | Net 7 days        |
-| ***CASH PAYME*** |                      |                           | 0.         | FALSE                         |                   |
-| CM         | CM                   |                           | 0.         | FALSE                         | Current Month     |
-| COD        | 0D                   |                           | 0.         | FALSE                         | Cash on delivery  |
-| *NET30*      |                      |                           | 0.         | FALSE                         |                   |
-| *NET45*      |                      |                           | 0.         | FALSE                         |                   |
-| *NET60*      |                      |                           | 0.         | FALSE                         |                   |
-| ***TRANSFER*** |                      |                           | 0.         | FALSE                         |                   |
+| 10 DNY | 10D |                           | 0. | NEPRAVDA | Čistých 10 dní |
+| 14 DNY | 14D |                           | 0. | NEPRAVDA | Čistých 14 dní |
+| 15 DNY | 15D |                           | 0. | NEPRAVDA | Čistých 15 dní |
+| 1M(8D) | 1M | 8D | 2. | NEPRAVDA | 1 Měsíc/2% 8 dnů |
+| 2 DNY | 2D |                           | 0. | NEPRAVDA | Čisté 2 dny |
+| *2%10NET30* |                      |                           | 0. | NEPRAVDA |                   |
+| 21 DNY | 21D |                           | 0. | NEPRAVDA | Čistý 21 dní |
+| 30 DNY | 30D |                           | 0. | NEPRAVDA | Čistých 30 dní |
+| 60 DNY | 60D |                           | 0. | NEPRAVDA | Čistých 60 dní |
+| 7 DNU | 7D |                           | 0. | NEPRAVDA | Čistých 7 dní |
+| ***CASH PAYME*** |                      |                           | 0. | NEPRAVDA |                   |
+| CM | CM |                           | 0. | NEPRAVDA | Aktuální měsíc |
+| COD | 0D |                           | 0. | NEPRAVDA | Dobírka |
+| *NET30* |                      |                           | 0. | NEPRAVDA |                   |
+| *NET45* |                      |                           | 0. | NEPRAVDA |                   |
+| *NET60* |                      |                           | 0. | NEPRAVDA |                   |
+| ***PREVOD*** |                      |                           | 0. | NEPRAVDA |                   |
 
-## See Also
-[Mapping the Tables and Fields to Synchronize](admin-how-to-modify-table-mappings-for-synchronization.md)
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také

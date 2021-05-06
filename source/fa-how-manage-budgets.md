@@ -6,59 +6,56 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: forecast
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Manage Budgets for Fixed Assets
-You can set up budgeted fixed assets. For example, this lets you include anticipated acquisitions and sales in reports.  
+# Správa rozpočtů dlouhodobého majetku
+Můžete nastavit rozpočty dlouhodobého majeteku. To vám například umožní zahrnout do sestav očekávané akvizice a prodeje.
 
-To prepare your budgeted income statement, budgeted balance sheet, and cash budget, you need information about future investments, disposals and depreciation of fixed assets. You can get this information from the **Fixed Asset - Projected Value** report. Before you print this report, you must prepare the budget.  
+K přípravě vaší výsledovky, rozpočtované rozvahy a hotovostního rozpočtu potřebujete informace o budoucích investicích, úbytcích a odpisech dlouhodobého majetku. Tyto informace můžete získat ze sestavy **Dlouhodobý majetek-očekávaná hodnota**. Před tiskem této zprávy musíte připravit rozpočet.
 
-## To budget the acquisition cost of a fixed asset
-To prepare a budget, you have to set up fixed asset cards for fixed assets that you intend to buy in the future. The budget fixed assets are set up as ordinary fixed assets, but it must be set up to not post to the general ledger.
+## Rozpočet nákladů na pořízení dlouhodobého majetku
+Chcete-li připravit rozpočet, musíte nastavit karty dlouhodobého majetku pro dlouhodobý majetek, který chcete v budoucnu koupit. Dlouhodobý rozpočtový majetek je nastaven jako běžný dlouhodobý majetek, ale musí být nastaven tak, aby se nezaúčtoval do věcných položek.
 
-When you post the acquisition cost, you enter the number of the budgeted fixed asset in the **Budgeted FA No.** field. This will post an acquisition cost with an opposite sign for the budgeted asset. This means that the total acquisition cost on the budgeted asset is the difference between the budgeted and the actual acquisition cost.
+Když účtujete náklady na pořízení, zadáte číslo rozpočtového dlouhodobého majetku do pole **Číslo rozpočtu DM**. Tím se zaúčtují náklady na pořízení s opačným znaménkem pro rozpočtový majetek. To znamená, že celkové náklady na pořízení rozpočtového majetku jsou rozdílem mezi rozpočtovými a skutečnými náklady na pořízení.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
-2. Choose the **New** action to create a new fixed asset card for the budgeted fixed asset.
-3. Select the **Budgeted Asset** check box to prevent posting to the general ledger.
-4. Fill in the remaining fields, assign a depreciation book, and then post the first acquisition cost with the budgeted fixed asset entered in the **Budgeted FA No.** field on the journal line. For more information, see [Acquire Fixed Assets](fa-how-acquire.md).
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek** a poté vyberte související odkaz.
+2. Vyberte akci **Nový** a vytvořte novou kartu dlouhodobého majetku pro dlouhodobý majetek s rozpočtem.
+3. Zaškrtnutím políčka **Rozpočtový majetek** zabráníte účtování do věcných položek.
+4. Vyplňte zbývající pole, přiřaďte knihu odpisů a poté zaúčtujte první náklady na pořízení s rozpočtovaným dlouhodobým majetkem zadaným v poli **Číslo rozpočtu DM** na řádku deníku. Pro více informací navštivte [Získání dlouhodobého majetku](fa-how-acquire.md).
 
-## To budget the disposal of a fixed asset
-If you plan to sell assets within the budget period, you can enter information about sales price and sales date.
+## Rozpočet na vyřazení dlouhodobého majetku
+Pokud plánujete prodat majetek v rozpočtovém období, můžete zadat informace o prodejní ceně a datu prodeje.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
-2. Select the fixed asset to be disposed of, and then choose the **Depreciation Books** action.
-3. On the **FA Depreciation Books** page, fill in the **Projected Disposal Date** and **Projected Proceeds on Disposal** fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek** a poté vyberte související odkaz.
+2. Vyberte dlouhodobý majetek, který má být vyřazen, a pak zvolte akci **Knihy odpisů**.
+3. Na stránce **Knihy odpisů DM** vyplňte pole **Plánované datum vyřazení** a **Plánovaný výsledek vyřazení**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To view projected disposal values
-To see the projected disposal values and have the gain and loss calculated, you can use the **FA Projected Value** report.
+## Zobrazení hodnot plánované likvidace
+Chcete-li zobrazit hodnoty předpokládaného vyřazení a vypočítat zisk a ztrátu, můžete použít sestavu **Očekávaná hodnota DM**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Projected Value**, and then choose the related link.
-2. Fill in the fields as necessary.
-3. Choose the **Print** or **Preview** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Očekávaná hodnota DM** a poté vyberte související odkaz.
+2. Podle potřeby vyplňte pole.
+3. Vyberte tlačítko **Tisk** nebo **Náhled**.
 
-## To budget depreciation
-You can use the **Fixed Asset - Projected Value** report to calculate future depreciation. The report shows the book value and accumulated depreciation at the start of the selected period, changes during the period, and the book value and accumulated depreciation at the end of the selected period.
+## Odpisy rozpočtu
+Sestavu **Dlouhodobý majetek-očekávaná hodnota** můžete použít k výpočtu budoucího odpisu. Sestava zobrazuje účetní hodnotu a akumulované odpisy na začátku vybraného období, změny během období a účetní hodnotu a akumulované odpisy na konci vybraného období.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Projected Value**, and then choose the related link.
-2. Fill in the fields as necessary.
-3. To see total values for all assets, clear the **Print per Fixed Asset** check box.
-4. Leave the **Fixed Asset** FastTab blank to have all assets included. In the **Budgeted Asset** field, enter **No** to exclude budgeted assets or **Yes** to see budgeted assets only.
-5. Choose the **Print** or **Preview** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dlouhodobý majetek-očekávaná hodnota** a poté vyberte související odkaz.
+2. Podle potřeby vyplňte pole.
+3. Chcete-li zobrazit celkové hodnoty pro veškerý majetek, zrušte zaškrtnutí políčka **Tisk dle DM**.
+4. Záložku **Dlouhodobý majetek** ponechte prázdnou, aby byl zahrnut veškerý majetek. Do pole **Rozpočtový majetek** zadejte **Ne**, chcete-li vyloučit rozpočtový majetek, nebo  **Ano**, chcete-li zobrazit pouze rozpočtový majetek.
+5. Vyberte tlačítko **Tisk** nebo **Náhled**.
 
-## See Also
-[Fixed Assets](fa-manage.md)  
-[Setting Up Fixed Assets](fa-setup.md)  
+## Viz také
+[Dlouhodobý majetek](fa-manage.md)  
+[Nastavení dlouhodobého majetku](fa-setup.md)  
 [Finance](finance.md)  
-[Getting Started](product-get-started.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Začínáme](product-get-started.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

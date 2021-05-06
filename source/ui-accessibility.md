@@ -1,39 +1,34 @@
 ---
-title: Assistive features
-description: Keyboard shortcuts and other assistive features.
+title: Pomocné funkce
+description: Klávesové zkratky a další pomocné funkce.
 author: edupont04
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords:
-ms.date: 11/26/2020
+ms.search.keywords: null
+ms.date: 10/01/2018
 ms.author: edupont
-
 ---
-# Accessibility and Keyboard Shortcuts
+# <a name="accessibility-and-keyboard-shortcuts-in-included365finincludesd365fin_mdmd"></a>Usnadnění přístupu a klávesové zkratky v [!INCLUDE[d365fin](includes/d365fin_md.md)]
+Toto téma poskytuje informace o funkcích, které jsou v [!INCLUDE[d365fin](includes/d365fin_md.md)]  snadno dostupné lidem se zdravotním postižením. [!INCLUDE[d365fin](includes/d365fin_md.md)] podporuje následující funkce usnadnění přístupu:  
 
-This topic provides information about the features that make [!INCLUDE[prod_short](includes/prod_short.md)] readily available to people with disabilities. [!INCLUDE[prod_short](includes/prod_short.md)] supports the following accessibility features:  
+-   Klávesové zkratky
 
-- Keyboard shortcuts
+    Pro více informací navštivte [Oblastní dostupnost](keyboard-shortcuts.md)
 
-    For more information, see [Keyboard Shortcuts](keyboard-shortcuts.md)
+-   Navigace  
 
-- Navigation  
+-   Záhlaví  
 
-- Headings  
+-   Alternativní text pro obrázky a odkazy  
 
-- Alternative text for images and links  
-
-- Support for common assistive technologies  
-
-- Use keyboard shortcuts to zoom in or out on any page
+-   Podpora běžných asistenčních technologií  
 
 <!-- moved to separate article
 ##  <a name="Keyboard"></a> Keyboard Shortcuts in the browser
- [!INCLUDE[prod_short](includes/prod_short.md)] supports the keyboard shortcuts that are supported by most web browsers. The keyboard shortcuts described here refer to the U.S. keyboard layout. The layout of the keys on other keyboards may not correspond exactly to the keys on a U.S. keyboard.  
+ [!INCLUDE[d365fin](includes/d365fin_md.md)] supports the keyboard shortcuts that are supported by most web browsers. The keyboard shortcuts described here refer to the U.S. keyboard layout. The layout of the keys on other keyboards may not correspond exactly to the keys on a U.S. keyboard.  
 
 |To do this|Press|  
 |----------------|-----------|  
@@ -47,36 +42,24 @@ This topic provides information about the features that make [!INCLUDE[prod_shor
 
 -->
 
-## <a name="Navigation"></a> Navigation  
- You can navigate between the tabs and actions in the ribbon, elements in the navigation bar, and other controls on [!INCLUDE[prod_short](includes/prod_short.md)] pages and reports using the keyboard. To move the focus from one tab, action, or control to another, press the Tab key to move forward. Press Shift+Tab to move backward.  
+##  <a name="Navigation"></a> Navigace  
+ Můžete procházet mezi kartami a akcemi na pásu karet, prvky v navigačním panelu a dalšími ovládacími prvky na stránkách [!INCLUDE[d365fin](includes/d365fin_md.md)] a v sestavách pomocí klávesnice. Chcete-li přesunout výběr z jedné karty, akce nebo ovládacího prvku na jiný, stiskněte klávesu Tab pro posun vpřed. Stiskněte Shift + Tab pro posun zpět.  
 
- By using the tab order, you can also switch between the main browser page and dialog boxes that request confirmation, for example, or the login page.  
+ Pomocí pořadí karet můžete také přepínat mezi hlavním oknem prohlížeče a dialogovými okny, které vyžadují potvrzení, jako je například přihlašovací stránka.  
 
-## <a name="Headings"></a> Headings in Content
- 
- The HTML source for [!INCLUDE[prod_short](includes/prod_short.md)] content uses tags to help users of assistive technology to understand the structure and content of the page. For example, on list pages, the columns are defined in TH tags and the column headings are set with TITLE attribute inside the tag. Captions for elements, such as FastTabs, FactBoxes, and fields are included in heading tags (H1, H2, H3, and H4).  
+##  <a name="Headings"></a> Záhlaví  
+ Zdroj HTML obsahu [!INCLUDE[d365fin](includes/d365fin_md.md)] používá značky, které pomáhají uživatelům asistivních technologií pochopit strukturu a obsah stránky. Například na stránkách seznamů jsou sloupce definovány ve značkách TH a záhlaví sloupců jsou nastavena s atributem TITLE uvnitř značky. V záhlaví značek (H1, H2, H3 a H4) jsou zahrnuty titulky pro prvky, jako jsou Pevné záložky, Okna s fakty a pole.  
 
-## <a name="Images"></a> Image and Links
+##  <a name="Images"></a> Obrázek a odkazy  
+ Popisný text pro obrázky je nastaven s atributem ALT uvnitř značky IMG. Popisný text pro hypertextové odkazy je nastaven s atributem title uvnitř značky A.  
 
- A descriptive text for images is set with the ALT attribute inside the IMG tag. A descriptive text for hyperlinks is set with the title attribute inside the A tag.  
+##  <a name="AssistiveTech"></a> Pomocné technologie  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] podporuje různé asistenční technologie, jako je vysoký kontrast, čtečky obrazovky a software pro rozpoznávání hlasu. Některé asistenční technologie nemusí u některých prvků na stránkách [!INCLUDE[d365fin](includes/d365fin_md.md)] fungovat správně.  
 
-## <a name="AssistiveTech"></a> Assistive Technologies
+## <a name="for-more-accessibility-information"></a>Pro více informací o usnadnění přístupu  
+Další informace o usnadnění přístupu k produktům společnosti Microsoft a pomocným technologiím naleznete na webu [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkId=262160).
 
-[!INCLUDE[prod_short](includes/prod_short.md)] supports various assistive technologies, such as high contrast, screen readers, and voice recognition software. Some assistive technologies may not work well with certain elements in [!INCLUDE[prod_short](includes/prod_short.md)] pages.  
-
-## <a name="zoom"></a> Zoom
-
-Most browsers use standard keyboard shortcuts to zoom in and out on the current page. These keyboard shortcuts are not specific to [!INCLUDE [prod_short](includes/prod_short.md)], but they work when you use [!INCLUDE [prod_short](includes/prod_short.md)] in a browser. For a list of supported keyboard shortcuts, see [Keyboard Shortcuts for Zooming In and Out](keyboard-shortcuts.md#zoomshortcuts).  
-
-## For more accessibility information
-
-You can find additional information about accessibility with Microsoft products and assistive technologies on the [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkId=262160) site.
-
-## See Also
-
-[Getting Started](product-get-started.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Frequently Asked Questions](across-faq.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Začínáme](product-get-started.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Často kladené otázky](across-faq.md)  

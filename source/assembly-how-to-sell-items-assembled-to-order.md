@@ -4,61 +4,57 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: kit, kitting
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Sell Items Assembled to Order
-If the **Assembly Policy** field on the item card of an assembly item is **Assemble-to-Order**, then the item is not expected to be in inventory, and it must be assembled specifically to a sales order. When you enter the item on a sales order line, then an assembly order is automatically created and linked to the sales order.  
+# Prodej zboží montáže na obejdnávku
+Pokud je pole **Způsob montáže** na kartě zboží pro zboží montáže nastaveno na **Montáž-na-zakázku**, neočekává se, že by zboží bylo na skladě a musí být sestaveno konkrétně do prodejní objednávky. Když zadáte zboží na řádku prodejní objednávky, pak je automaticky vytvořena montážní zakázka, která je propojena s prodejní objednávkou.
 
-> [!NOTE]  
->  If some assemble-to-order items are already in inventory, then you can deduct that quantity from the assembly order and reserve it from inventory. For more information, see [Sell Inventory Items in Assemble-to-Order Flows](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md).  
+> [!NOTE]
+> Pokud je již některé zboží montáže na zakázku v zásobách, můžete si toto množství odečíst z montážní zakázky a rezervovat ho ze zásob. Pro více informací navštivte [Prodej skladového zboží podle montáže na zakázku](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md).
 
-In this procedure, you process the sale of an item that will be assembled according to specifications that are requested by the customer. The steps include initiating the sales order line, customizing the assembly item by editing its components and resources, checking availability to establish a delivery date, and releasing the sales order to be assembled and immediately shipped.  
+V tomto postupu zpracováváte prodej zboží, které bude sestaveno podle specifikací požadovaných zákazníkem. Mezi tyto kroky patří zahájení řádku prodejní objednávky, přizpůsobení zboží montáže úpravou jeho komponent a zdrojů, kontrola dostupnosti za účelem stanovení data dodání a uvolnění prodejní objednávky, která má být sestavena a okamžitě dodána.
 
-> [!NOTE]  
->  The following procedure does not include the standard sales order steps before the step where you enter the assemble-to-order item on a sales order line.  
+> [!NOTE]
+> Následující postup nezahrnuje standardní kroky prodejní objednávky před krokem, ve kterém zadáte zboží montáže na zakázku na řádku prodejní objednávky.
 
-## To sell an item that is assembled to order  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2.  Create a sales order. For more information, see [Sell Products](sales-how-sell-products.md).  
-3.  In the **No.** field, enter an item that is set up to be assembled to order.  
-4.  In the **Location Code** field, define which location the item will be sold from. The assembly process will occur at that location.  
-5.  In the **Quantity** field, enter how many units to sell.  
+## Prodej zboží, které je sestaveno na zakázku
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
+2. Vytvořte prodejní objednávku. Pro více informací navštivte [Prodej produktů](sales-how-sell-products.md).
+3. Do pole **Číslo** zadejte zboží, které je nastaveno k sestavení na zakázku.
+4. V poli **Kód lokace** definujte, ze které lokace bude zboží prodáno. Proces sestavení proběhne v této lokaci.
+5. Do pole **Množství** zadejte, kolik jednotek se má prodat.
 
-    > [!NOTE]  
-    >  If one or more components of the requested assembly item quantity are not available, then a detailed availability warning page opens. For more information, see Assembly Availability.  
+   > [!NOTE]
+   > Pokud není k dispozici jedna nebo více komponent požadovaného množství zboží montáže, otevře se stránka s podrobnými informacemi o dostupnosti. Pro více informací navštivte Dostupnost montáže.
 
-    An assembly order is now automatically created and linked to the sales order line. The due date of this assembly order is synchronized with the shipment date of the sales order line.  
+   Montážní zakázka je nyní automaticky vytvořena a propojena s řádkem prodejní objednávky. Datum splatnosti této montážní zakázky je synchronizován s datem dodávky řádku prodejní objednávky.
 
-    The quantity to sell is copied to the **Qty. to Assemble to Order** field, which indicates that the item setup expects the full quantity on the sales line to be assembled to the order. You can decrease the quantity to assemble to order, such as if you know that some items are already available. For more information, see [Sell Inventory Items in Assemble-to-Order Flows](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md).  
+   Množství, které se má prodat, se zkopíruje do pole **Mn.  k montáži na zakázku**, což znamená, že nastavení zboží očekává, že celé množství na prodejním řádku bude sestaveno na zakázku. Množství, které můžete sestavit, můžete snížit, například pokud víte, že některé zboží je již k dispozici. Pro více informací navštivte [Prodej skladového zboží podle montáže na zakázku](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md).
 
-6.  To reflect that the customer wants an additional item in a kit, on the **Lines** FastTab, choose the **Line** action, choose the **Assemble to Order** action, and then choose the **Assemble-to-Order Lines** action to view and change the standard assembly components. Alternatively, choose the **Qty. to Assemble to Order** field.  
-7.  On the **Assemble-to-Order Lines** page, create a new line of type **Item** for the requested additional kit content. The line represents an additional assembly component.  
+6. Chcete-li uvést, že zákazník chce další zboží v sadě, vyberte na záložce **Řádky** akci **Řádek**, vyberte **Montáž na zakázku** a poté vyberte akci **Řádky montáže na zakázku**, chcete-li zobrazit a změnit standardní komponenty montáže. Případně zvolte pole **Mn.  k montáži na zakázku**.
+7. Na stránce **Řádky montáže na zakázku** vytvořte nový řádek typu **Zboží** pro požadovaný další obsah sady. Řádek představuje další komponentu montáže.
 
-    You could also customize the order by increasing the quantity of one standard item in the kit. You can do this by increasing the value in the **Quantity Per** field on the specific assembly order line.  
+   Můžete také upravit objednávku zvýšením množství jedného standardního zboží v sadě. To lze provést zvýšením hodnoty v poli **Množství za** na konkrétním řádku montážní zakázky.
 
-    > [!NOTE]  
-    >  The **Assemble-to-Order Lines** page only contains the basic fields that a salesperson is expected to use to customize the component list, add item tracking numbers, or to solve component availability issues. To see more assembly order information, such as the assembly order starting date, choose the **Show Documents** action. This opens a full view of the assembly order that is linked to the sales order line. You cannot change the contents of most fields on the assembly order header, and you cannot post assembly output from it because you must use shipment posting of the sales order line.  
-    >   
-    >  On the header of linked assembly orders, only the **Starting Date** field can be changed to enable assembly workers to specify a date that is earlier than the due date when they will start the process. All fields on the lines of the linked assembly order can be changed so that warehouse workers can enter consumption figures during the process.  
+   > [!NOTE]
+   > Stránka **Řádky montáže na zakázku** obsahuje pouze základní pole, které může prodejce použít k přizpůsobení seznamu komponent, přidání čísel sledování zboží nebo k vyřešení problémů s dostupností komponent. Chcete-li zobrazit další informace o montážní zakázce, například počáteční datum zakázky, zvolte akci **Zobrazit doklady**. Tím se otevře úplné zobrazení montážní zakázky, která je propojena s řádkem prodejní objednávky. Obsah většiny polí v hlavičce montážní zakázky nelze změnit a nelze z ní zaúčtovat výstup montáže, protože je nutné použít zaúčtování dodávky řádku prodejní objednávky.
+   > V záhlaví propojených montážních zakázek lze změnit pouze pole **Počáteční datum**, aby montážní pracovníci mohli určit datum, které je dřívější než datum splatnosti, kdy zahájí proces. Všechna pole na řádcích připojené montážní zakázky lze změnit tak, aby pracovníci skladu mohli během procesu zadávat údaje o spotřebě.
+   > 
+8. Zkontrolujte nebo reagujte na problémy s dostupností komponent. Vyberte například dostupné náhradní zboží nebo vytvořte pozdější datum splatnosti.
+9. Zavřete stránku **Řádky montáže na zakázku**. Propojená montážní zakázka je nyní připravena začít sestavovat přizpůsobené zboží do data splatnosti.
+10. Na prodejní objednávce vyberte akci **Vydat** a informujte oddělení montáže, že proces montáže může začít.
+11. V oddělení montáže proveďte kroky sestavení zboží, které se v tomto postupu prodávají. Pro více informací navštivte [Montáž zboží](assembly-how-to-assemble-items.md).
 
-8.  Review or react to component availability issues. For example, select an available substitute item or establish a later due date.  
-9. Close the **Assemble-to-Order Lines** page. The linked assembly order is now ready to start to assemble the customized items by the due date.  
-10. On the sales order, choose the **Release** action to notify the assembly department that the assembly process can start.  
-11. In the assembly department, perform the steps of assembling the items that are sold in this procedure. For more information, see [Assemble Items](assembly-how-to-assemble-items.md).  
-
-## See Also  
-[Assembly Management](assembly-assemble-items.md)  
-[Work with Bills of Material](inventory-how-work-BOMs.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa montáže](assembly-assemble-items.md)  
+[Práce s kusovníky](inventory-how-work-BOMs.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

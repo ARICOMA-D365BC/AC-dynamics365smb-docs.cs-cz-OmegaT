@@ -4,7 +4,7 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
@@ -13,83 +13,49 @@
     ms.author: edupont
 
 ---
-# Service Order Status and Repair Status
-
-The **Status** field on the **Service Order** page and the service item repair status, which is represented by the **Repair Status Code** field on the **Service Order** page have a certain relationship in Service Management. The service order status reflects the repair status of all the service items in the service order.  
+# Stav servisní zakázky a Stav opravy
+Pole **Stav** na stránce **Servisní zákazky** a stav opravy předmětu sevisu, který je reprezentován polem **Kód stavu opravy** na stránce **Servisní zakázky** spojuje ve správě servisu vzájemný vztah. Stav servisní zakázky odráží stav opravy všech předmětů sevisu v servisní zakázce.
 
 > [!NOTE]  
-> These two status field are not related to the **Release Status** field on the service order header, which determines how the warehouse handles service items.  
+> Tato dvě stavová pole nesouvisí s polem **Stav Vydáno** v záhlaví servisní zakázky, které určuje, jak sklad zachází s předměty servisu.
 
-Each time the repair status of a service item is changed in a service order, the status of the order is updated. To display the status that reflects the overall repair status of the individual service items, you must specify the following:  
+Pokaždé, když se stav opravy předmětu sevisu v servisní zakázce změní, stav zakázky se aktualizuje. Chcete-li zobrazit stav, který odráží celkový stav opravy jednotlivých předmětů servisu, musíte zadat následující:
 
-* The service order status that each repair status is linked to.  
-* The level of priority of each service order status option.  
+* Stav servisní zakázky, se kterým je spojen každý stav opravy. Více informací viz Stav servisní zakázky.
+* Úroveň priority každé možnosti stavu servisní zakázky. Více informací viz Priorita.
 
-When you convert a service quote to a service order, the repair status of each service item is changed in the order to **Initial** and the service order status is changed to **Pending**.  
+Když převedete nabídku servisu na servisní zakázku, stav opravy každého předmětu servisu se v zakázce změní  na **Počáteční** a stav servisní zakázky se změní na **Čekající**.
 
-> [!NOTE]
-> Before you can create service orders, you must set up repair statuses and service status priorities. For more information, see [Set Up Statuses for Service Orders and Repairs](service-order-repair-status.md).
+## Specifikace stavu servisní zakázky a stavu opravy
+Každý stav opravy je spojen s konkrétním stavem servisní zakázky. Možnosti stavu servisní zakázky jsou následující: **Čekající**, **Zpracovává se**, **Vyčkat** a **Dokončeno**. Možnosti stavu opravy jsou následující: **Počáteční**, **Servis probíhá**, **Odesláno**, **Částečný servis**, **Cenová nabídka dokončena**, **Čekání na zákazníka**, **Náhr. díl objednán**, **Náhr. díl přijat** a **Servis byl dokončen**.
 
-## Specifying Service Order Status for Repair Status
+### Čekající
+Stav servisní zakázky **Čekající** naznačuje, že servis může být zahájen nebo pokračovat kdykoli. Proto lze propojit možnosti stavu opravy **Počáteční**, **Odesláno**, **Částečný servis** a **Náhr. díl přijat** k tomuto stavu servisní zakázky.
 
-Each repair status is linked to a particular service order status. The options for the service order status are as follows:
+### Zpracovává se
+Stav servisní zakázky **Zpracovává se** označuje, že servis probíhá. Proto mohou být možnosti stavu opravy **Servis probíhá** a **Náhr. díl objednán** propojeny s tímto stavem servisní zakázky. Pokud propojíte stav **Náhr. díl objednán** se stavem servisní zakázky **Zpracovává se**, musíte k této servisní zakázce také připojit stav **Náhr. díl přijat**.
 
-* **Pending**
-* **In Process**
-* **On Hold**
-* **Finished**
+### Vyčkat
+Stav servisní zakázky **Vyčkat** označuje, že servis je dočasně pozastavený, protože čekáte na odpověď zákazníka nebo náhradní díly, než bude možné servis zahájit. Možnosti stavu oprav **Cenová nabídka dokončena**, **Náhr. díl objednán** a **Čekání na zákazníka** proto mohou být propojeny s tímto stavem servisní zakázky.
 
-The repair status options are as follows:
+### Dokončeno
+Stav servisní zakázky **Dokončeno** označuje, že servis byl dokončen. Proto je stav opravy **Dokončeno** propojen s tímto stavem.
 
-* **Initial**
-* **In Process**
-* **Referred**
-* **Partly Serviced**
-* **Quote Finished**
-* **Waiting for Customer**
-* **Spare Part Ordered**
-* **Spare Part Received**
-* **Finished**  
+## Přiřazení priority stavu servisní zakázky
+Když se změní stav opravy předmětu servisu, jsou identifikovány možnosti stavu servisní zakázky spojené s různými možnostmi stavu opravy všech předmětů servisu v zakázce. Pokud jsou předměty servisu propojeny se dvěma nebo více možnostmi stavu servisní zakázky, je vybrána možnost stavu servisní zakázky s nejvyšší prioritou.
 
-### Pending
+Musíte se rozhodnout, který stav servisní zakázky obsahuje nejdůležitější informace o stavu servisní zakázky, a přiřadit tomuto stavu nejvyšší prioritu,  apod.
 
-The service order status **Pending** indicates that the service can start or continue at any time. Therefore, the repair status options of **Initial**, **Referred**, **Partly Serviced**, and **Spare Part Received** can be linked to this service order status.  
+### Příklad
+Typické přiřazení úrovně priority může být následující:
 
-### In Process
+* Zpracovává se - Vysoká
+* Čekající - Středně vysoká
+* Vyčkat - Středně nízká
+* Dokončeno - Nízká
 
-The service order status **In Process** indicates that the service is in process. Therefore, the repair status options **In Process** and **Spare Part Ordered** can both be linked to this service order status. If you link the **Spare Part Ordered** status to an **In Process** service order status, you must also link the **Spare Part Received** status to this service order status.  
+Například pokud má jeden předmět servisu stav opravy **Počáteční**, spojený se stavem servisní zakázky **Čekající**, další má stav opravy **Servis probíhá**, propojen se stavem servisní zakázky **Zpracovává se** a třetí má stav opravy **Náhr. díl objednán**, spojený se stavem servisní zakázky **Vyčkat**, výsledný stav servisní zakázky bude **Zpracovává se**, protože má nejvyšší prioritu.
 
-### On Hold
-
-The service order status **On Hold** indicates that the service is temporarily on hold because you are waiting for a customer response or spare parts before the service can start. Therefore, the repair status options of **Quote Finished**, **Spare Part Ordered**, and **Waiting for Customer** can be linked to this service order status.  
-
-### Finished
-
-The service order status **Finished** indicates that the service has been completed. Therefore, the **Finished** repair status is linked to this status.  
-
-## Assigning Priority to Service Order Status
-
-When a repair status of a service item is changed, the service order status options linked to the different repair status options of all the service items in the order are identified. If the service items are linked to two or more service order status options, the service order status option with the highest priority is selected.  
-
-You must decide which service order status contains the most important information about the status of the service order and assign that status the highest priority, and so on.  
-
-Then, when you create a new service order and you add service items to it, the **Priority** field on the service order header is updated based on the priorities on the service items.  
-
-### Example
-
-A typical priority level assignment could be as follows:  
-
-* In Process - High  
-* Pending - Medium high  
-* On Hold - Medium low  
-* Finished - Low  
-
-For example, if one service item has the repair status **Initial**, linked to the service order status **Pending**, another has the repair status **In Process**, linked to the service order status **In Process**, and a third has the repair status **Spare Part Ordered**, linked to the service order status **On Hold**, the resulting service order status will be **In Process** because this has the highest priority.  
-
-## See Also
-
-[Set Up Statuses for Service Orders and Repairs](service-order-repair-status.md)  
-[Setting Up Service Management](service-setup-service.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Nastavení stavu Servisních zakázek a Oprav](service-order-repair-status.md)  
+[Nastavení Správy servisu](service-setup-service.md)

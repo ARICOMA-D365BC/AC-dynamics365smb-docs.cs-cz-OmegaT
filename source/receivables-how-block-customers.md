@@ -12,29 +12,29 @@
     ms.author: edupont
 
 ---
-# Block Customers
-You can block a customer, for example because of insolvency, so that the customer cannot be added to sales documents or so that no transactions can be posted for the customer.
+# Blokace zákazníků
+Zákazníka můžete zablokovat například z důvodu platební neschopnosti, aby jej nebylo možné přidat do prodejních dokladů nebo na zákazníka nemohly být zaúčtovány žádné transakce.
 
-In addition to blocking a customer, you can set receivable transactions for the customer to be on hold in connection with reminders. For more information, see [Collect Outstanding Balances](receivables-collect-outstanding-balances.md).   
+Kromě blokování zákazníka můžete nastavit transakce pohledávek, aby byl zákazník v souvislosti s upomínkami pozastaven. Pro více informací navštivte [Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md).
 
-The following table describes the options for blocking customers.  
+Následující tabulka popisuje možnosti blokování zákazníků.
 
-|Option|Description|  
+| Možnost | Popis |
 |--------------------|------------|  
-|**Blank**|Transactions are allowed for this customer.|
-|**Ship**|New orders and new shipments cannot be created for this customer. Existing shipments not yet invoiced can be invoiced.|  
-|**Invoice**|New orders, new shipments, and new invoices cannot be created for this customer. Existing shipments not yet invoiced cannot be invoiced. You can still send reminders and finance charge memos to the customer.|  
-|**All**|No transaction is allowed for this customer, including payments.|  
+| **Prázdný** | Transakce jsou pro tohoto zákazníka povoleny. |
+| **Dodávky** | Pro tohoto zákazníka nelze vytvořit nové objednávky ani nové dodávky. Existující dodávky, které ještě nebyly fakturovány, lze fakturovat. |
+| **Faktury** | Pro tohoto zákazníka nelze vytvořit nové objednávky, nové dodávky ani nové faktury. Existující dodávky, které ještě nebyly fakturovány, nelze fakturovat. Zákazníkovi můžete stále posílat upomínky a penále. |
+| **Vše** | Pro tohoto zákazníka není povolena žádná transakce, včetně plateb. |
 
-## To block a customer  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
-2. Select a customer, and then choose the **Edit** action.
-3. In the **Blocked** field, choose what to block, as described in the table above.
+## Zablokování zákazníka
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+2. Vyberte zákazníka a poté vyberte talčítko **Úpravy**.
+3. Do políčka **Uzavřeno** vyberte, co chcete blokovat, tak jak je popsáno v tabulce výše.
 
-## See Also  
-[Register New Customers](sales-how-register-new-customers.md)  
-[Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
-[Managing Receivables](receivables-manage-receivables.md)  
+## Viz také
+[Evidence nových zákazníků](sales-how-register-new-customers.md)  
+[Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)  
+[Správa pohledávek](receivables-manage-receivables.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

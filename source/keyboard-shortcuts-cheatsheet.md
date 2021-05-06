@@ -1,59 +1,23 @@
 ---
-title: PC Keyboard Shortcuts Quick Reference
-description: "A print-friendly reference sheet containing the most popular keyboard shortcuts for PC users."
-author: bholtorf
+title: Rychlý průvodce klávesových zkratek
+description: 'Referenční list vhodný pro tisk, obsahující nejpoužívanější klávesové zkratky.'
+author: jswymer
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: accessibility, shortcuts, keyboarding
-ms.date: 10/01/2020
-ms.author: bholtorf
+ms.search.keywords: 'accessibility, shortcuts, keyboarding'
+ms.date: 10/01/2018
+ms.author: jswymer
 ---
 
-# Keyboard Quick Reference - PC Only
+# <a name="keyboard-shortcuts-quick-reference"></a>Rychlý průvodce klávesových zkratek
 
-#### General
-
-|Press these keys|To do this|  
-|-|-|
-|Alt+F2<br />Alt+N<br />Alt+Shift+N<br />Alt+O<br />Alt+Q<br />Alt+Up<br />Alt+Down Arrow<br />Alt+T<br />Alt+Shift+W<br />Ctrl+Insert<br />Ctrl-Delete<br />Ctrl+Shift+F12<br />Ctrl+F1<br />Ctrl+Click<br />Shift+F12<br />F5/Ctrl+F5<br />Tab/Shift+Tab<br />F6/Shift+F6<br />|Show and hide the FactBox pane<br />Create a new record<br />Close a newly created record and create a new one<br />Add a new note for the selected record<br />Open **Tell me**<br />Open tooltip or validation error<br />Open a drop-down or look up<br />Open the **My Settings** page<br />Open the current card or document in a new window<br />Insert a new line on a document<br />Delete the line on a document, journal, or worksheet<br />Maximize the line items part on a document page<br />Open help for the page<br />Navigate when personalizing and customizing<br />Open the role explorer, a feature overview<br />Refresh/reload page<br />Move focus to the next/previous element<br />Move to next FastTab/part|
-
-#### Navigate & Select Rows
-
-|Press these keys|To do this|
-|-|-|
-|Home/End<br />Ctrl+Home/End <br />Ctrl+Up/Down<br />Ctrl+A <br />Ctrl+Space<br />Ctrl/Shift+Click<br />Shift+Up/Down<br />Shift+Page Up/Down<br />Ctrl+Enter|Go to first/last field<br />Go to first/last row<br />Navigate without losing selection<br />Select all<br />Toggle row selection<br /> Add the row/rows to the selection<br />Add row above/below to selection<br />Select visible rows above/below <br />Focus out of the list|
-
-#### Copy & Paste
-
-|Press these keys|To do this|
-|-|-|
-|Ctrl+C/V<br />F8|Copy/paste rows<br />Copy field above into current row|
-
-#### Search, Filter, & Sort
-
-|Press these keys|To do this|
-|-|-|
-|Alt+F7<br />F3<br />Shift+F3<br />Ctrl+Shift+F3<br />Alt+F3<br />Shift+Alt+F3<br />Ctrl+Alt+Shift+F3|Sort column in ascending/descending order<br />Toggle search<br />Toggle filter pane; focus on field filters<br />Toggle filter pane; focus on totals filters<br />Filter on selected cell value<br />Add filter on selected field<br />Reset filters|
-
-#### Quick Entry
-
-|Press these keys|To do this|
-|-|-|
-|Ctrl+Shift+Enter<br />Enter/Shift+Enter|Go to next Quick Entry field outside a list<br />Go to next/previous Quick Entry field|
-
-##### Report Preview
-
-|Press these keys|To do this|
-|-|-|
-|Ctrl+Home/End|Go to the first/last page|
-
-> [!TIP]
-> For a graphical, print-friendly version, choose the following image and download the PDF file.
->
-> [![Icon that opens a PDF](media/keyboard_shortcut_inline.png)](media/keyboard_shortcuts.pdf)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+||||  
+|----------------|-----------|----------------|
+|**Obecné**|Alt+Q<br />Alt+Up<br />Tab<br />Shift+Tab<br />Alt+šipka dolů<br />Alt+šipka vpravo<br />F5/ Ctrl+F5<br />Esc|Otevře **Řekněte mi**<br />Otevře popisek nebo chybu ověření<br />Posune zaměření na další ovládací prvek<br />Posune zaměření na předchozí ovládací prvek<br />Otevře rozevírací nabídku nebo vyhledávač<br />Ukáže transakci pro počítanou hodnotu<br />Obnovit/znovu načíst stránku<br />Zavře aktuální stránku nebo rozevírací seznam.|
+|**Naviguje a vybere řádky**| Home/End<br />Ctrl+Home/End <br />Ctrl+nahoru/dolů<br />Ctrl+A <br />Ctrl+mezerník<br />Ctrl/Shift+kliknutí<br />Ctrl+Shift+Home/End<br />Shift+dolů/nahoru<br />Shift+Page Up/Down<br />Ctrl+Enter| Přejde na první/poslední pole<br />Přejde na první/poslední řádek<br />Naviguje bez ztráty výběru<br />Vybere vše<br />Přepne výběr řádku<br /> Přidá do výběru řádek/řádky <br />Rozšíří výběr na první/poslední řádek<br />Přidá řádek nad/pod výběr<br />Přidá všechny viditelné řádky nad/pod výběr<br />Zaměří na celý seznam|
+|**Kopírovat a vložit**|Ctrl+C<br />Ctrl+V<br />F8|Kopírovat řádky<br />Vložit řádky<br />Zkopíruje pole nad aktuální řádek|
+|**Vyhledat, filtrovat a seřadit**|F3<br />Shift+F3<br />Ctrl+ Shift+F3<br />Alt+F3<br />Shift+Alt+F3<br />Ctrl+Alt+Shift+F3|Přepne vyhledávání<br />Přepne podokno filtru; zaměří se na filtry polí<br />Přepne podokno filtru; zaměří se na celkové filtry<br />Filtrování vybrané hodnoty buňky<br />Přidá filtr na vybrané pole<br />Resetuje filtry|
+|**Náhled sestavy**|Nahoru/dolů<br />Doprava/doleva<br />Ctrl+Home/End<br />Page Up/Down|Přejde nahoru, nebo dolů na stránku<br />Přejde doprava/doleva <br />Přejde na první/poslední stránku<br />Přejde na předchozí/další stránku|

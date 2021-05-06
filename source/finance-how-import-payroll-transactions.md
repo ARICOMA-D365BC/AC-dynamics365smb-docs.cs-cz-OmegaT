@@ -4,36 +4,33 @@ description: To manage salary, you import and post financial transactions from y
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: Ceridian, Quickbooks, salary
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: SorenGP
 
 ---
-# Import Payroll Transactions
-To account for salary payments and related transactions, you must import and post financial transactions made by your payroll provider to the general ledger. To do this, you first import a file that you receive from the payroll provider into the **General Journal** page. Then you map the external accounts in the payroll file to the relevant G/L accounts. Lastly, you post the payroll transactions according to the account mapping.
+# Import mzdových transakcí
+Chcete-li účtovat platby mezd a související transakce, musíte importovat a zaúčtovat finanční transakce provedené poskytovatelem mezd do hlavní knihy. Chcete-li to provést, nejprve importujte soubor, který obdržíte od poskytovatele mezd, na stránku **Finanční deník**. Potom namapujte externí účty v souboru mezd na příslušné účty hlavní knihy. Nakonec zaúčtujte mzdové transakce podle mapování účtu.
 
-> [!NOTE]  
->   To use this functionality, an extension for payroll import must be installed and enabled. The Ceridian Payroll and the Quickbooks Payroll File Import extensions are pre-installed in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md).
+> [!NOTE]
+> Pro použití této funkce je nutné nainstalovat a povolit rozšíření pro import mezd. Rozšíření Ceridian Payroll a Quickbooks Payroll File Import jsou předinstalovány v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pro více informací navštivte [Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Použití rozšíření](ui-extensions.md).
 
-## To import a payroll file
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link.
-2. In the relevant general journal batch, choose the **Import Payroll Transactions** action. An assisted setup guide opens.
-3. Follow the steps on the **Import Payroll Transactions** page.
+## Import mzdového souboru
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční deníky** a poté vyberte související odkaz.
+2. V příslušné dávke finančního deníku vyberte akci **Import mzdových transakcí**. Otevře se průvodce asistovaným nastavením.
+3. Postupujte podle pokynů na stránce **Import mzdových transakcí**.
 
-    > [!TIP]  
-    >   In the step about mapping the external payroll records to your G/L accounts, the mappings that you make will be remembered next time the same records are imported. This will save you time as you do not have to manually fill in the **Account No.** field in the general journal every time you have imported recurring payroll transactions.   
+   > [!TIP]
+   > V kroku mapování externích mzdových záznamů na finančních účtech budou mapování, která provedete, zapamatována při příštím importu stejných záznamů. To vám ušetří čas, protože nemusíte ručně vyplňovat pole **Číslo účtu** ve finančním deníku pokaždé, když importujete opakované transakce mezd.
 
-    When you choose the **OK** button in the assisted setup guide, the **General Journal** page is filled with lines representing the transactions that the payroll file contains and with the relevant accounts prefilled in the **G/L Account** fields according to mappings you made in the guide.
-4. Edit or post the journal lines as for any other general ledger transactions. For more information, see [Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md).   
+   Když v průvodci nastavíte tlačítko **OK**, je stránka **Finanční denník** vyplněna řádky představujícími transakce, které soubor mezd obsahuje, a s příslušnými předvyplněnými účty v polích **Finanční účet** podle mapování provedených v průvodci.
+4. Upravte nebo zaúčtujte řádky deníku stejně jako u jiných transakcí hlavní knihy. Pro více informací navštivte [Účtování transakcí přímo do hlavní knihy](finance-how-post-transactions-directly.md).
 
-## See Also
+## Viz také
 [Finance](finance.md)  
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Přizpůsobení [!INCLUDE[d365fin](includes/d365fin_md.md)] Použití rozšíření](ui-extensions.md)  
+[Práce s finančními denníky](ui-work-general-journals.md)

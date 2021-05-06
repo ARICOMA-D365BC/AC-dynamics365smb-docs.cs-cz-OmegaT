@@ -1,145 +1,121 @@
 ---
-title: Special and Alternate Vendor Pricing and Discounts | Microsoft Docs'
-description: You can define different or alternate prices and discount agreements and apply them to purchase documents for vendors.
-author: bholtorf
-
+title: Speciální a alternativní ceny a slevy pro dodavatele | Microsoft Docs
+description: 'Můžete definovat zvláštní nebo alternativní ceny a dohody o slevách, a aplikovat je na nákupní doklady pro dodavatele.'
+author: SorenGP
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: special price, alternate price, pricing
-ms.date: 10/01/2020
-ms.author: bholtorf
-
+ms.search.keywords: 'special price, alternate price, pricing'
+ms.date: 03/01/2019
+ms.author: sgroespe
 ---
-# Record Special Purchase Prices and Discounts
-> [!NOTE]
-> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. If you're a new customer using that version, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. For more information, see [Enabling Upcoming Features Ahead of Time](/dynamics365/business-central/dev-itpro/administration/feature-management).
+# <a name="record-special-purchase-prices-and-discounts"></a>Zaznamenávání speciálních nákupních cen a slev
+Různé smlouvy o cenách a slevách, které platí při nákupu od různých dodavatelů, musí být definovány tak, aby se dohodnutá pravidla a hodnoty vztahovaly na nákupní doklady, které pro dodavatele vytvoříte.
 
-The different price and discount agreements that apply when you buy from different vendors must be defined so that the agreed rules and values are applied to purchase documents that you create for the vendors.
+Pokud jste zaznamenali speciální ceny a řádkové slevy za prodej a nákupy, [!INCLUDE[d365fin](includes/d365fin_md.md)] zajistí, že váš zisk z obchodu se zbožím je vždy optimální automatickým výpočtem nejlepší ceny na prodejních a nákupních dokladech, a na řádcích deníků zboží a projektů. Pro více informací navštivte sekci [Výpočet nejlepší ceny](purchasing-how-record-purchase-price-discount-payment-agreements.md#best-price-calculation).
 
-When you have recorded special prices and line discounts for sales and purchases, [!INCLUDE[prod_short](includes/prod_short.md)] ensures that your profit on item trade is always optimal by automatically calculating the best price on sales and purchase documents and on job and item journal lines. For more information, see [Best Price Calculation](purchasing-how-record-purchase-price-discount-payment-agreements.md#best-price-calculation).
+Pokud jde o ceny, můžete do nákupních řádků vložit speciální nákupní cenu, pokud existuje určitá kombinace dodavatele, zboží, minimálního množství, měrné jednotky nebo počátečního/koncového data.
 
-Concerning prices, you can have a special purchase price inserted on purchase lines if a certain combination of vendor, item, minimum quantity, unit of measure, or starting/ending date exists.
+Pokud jde o slevy, můžete nastavit a použít dva typy nákupních slev:
 
-Concerning discounts, you can set up and use two types of purchase discounts:
-
-| Discount Type | Description |
+| Typ slevy | Popis |
 | --- | --- |
-| **Purchase Line Discount** |An amount discount that is inserted on purchase lines if a certain combination of vendor, item, minimum quantity, unit of measure, or starting/ending date exists. This works in the same way as for purchase prices. |
-| **Invoice Discount** |A percentage discount that is subtracted from the document total if the value amount of all lines on a purchase document exceeds a certain minimum. |
+| **Sleva nákupního řádku** |Množstevní sleva, která je vložena na nákupní řádky, pokud existuje určitá kombinace dodavatele, zboží, minimálního množství, měrné jednotky nebo počátečního/koncového data. Toto funguje stejně jako u nákupních cen. |
+| **Fakturační sleva** |Procentní sleva, která se odečte od celkové částky dokladu, pokud hodnota všech řádků na nákupním dokladu přesáhne určité minimum. |
 
-Because purchase line discounts and purchase prices are based on a combination of item and vendor, you can also enter this configuration from the item card, where the rules and values are defined. For more information, see [Register New Items](inventory-how-register-new-items.md).
+Protože slevy na nákupních řádcích a nákupní ceny jsou založeny na kombinaci zboží a dodavatele, můžete tuto konfiguraci zadat také z karty zboží, kde jsou definována pravidla a hodnoty. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
 
-## To set up a special purchase price for a vendor
+## <a name="to-set-up-a-special-purchase-price-for-a-vendor"></a>Nastavení speciálních nákupních cen pro dodavatele
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
+2. Vyberte příslušnou kartu dodavatele a pak zvolte akci **Ceny**.
 
-#### [Current Experience](#tab/current-experience)  
+    Pole**Typ nákupu** je předvyplněno **Dodavatelem** a pole **Kód nákupu** je vyplněno číslem dodavatele.
+3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Vyplňte řádek pro každou kombinaci, pro kterou vám dodavatel poskytne nákupní řádkovou slevu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
-2. Open the relevant vendor card, and then choose the **Prices** action.
-3. Fill in the fields on the line as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Fill a line for each combination for which the vendor grants you a purchase line discount.
+## <a name="to-set-up-a-line-discount-for-a-vendor"></a>Chcete-li nastavit řádkovou slevu pro dodavatele
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
+2. Vyberte příslušnou kartu dodavatele a pak zvolte akci **Řádkové slevy**.
 
-#### [New Experience](#tab/new-experience)  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
-2. Choose the vendor, and then choose the **Sales Price Lists** action. 
-3. Choose **New** to create a new purchase price list.
-4. On the **General** and **Tax** FastTabs, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-5. To add items to the list, do one of the following:
-   * To add many items, choose **Suggest Lines**, and then enter filter criteria to specify the types of items to add. Optionally, you can also enter some additional settings for the items that are specific to the price list. You can change these later, if needed.
-   * To copy items from another price list, choose **Copy Lines**, and then choose the price list to copy.
-   * To add items manually, in the grid, in the **Product Type** field, choose the type of product that the price list is for. Depending on your selection, fill in the remaining fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-6. To start using the price list, in the **Status** field, choose **Active**.
+    Pole**Typ nákupu** je předvyplněno **Dodavatelem** a pole **Kód nákupu** je vyplněno číslem dodavatele.
+3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Vyplňte řádek pro každou kombinaci, pro kterou vám dodavatel poskytne nákupní řádkovou slevu.
 
----
+## <a name="to-set-up-an-invoice-discount-for-a-vendor"></a>Nastavení fakturační slevy pro dodavatele
+Jakmile vás vaši dodavatelé informují o tom, které slevy z faktury poskytují, zadejte na kartách dodavatele kód slevy z faktury a nastavte podmínky pro každý kód.
 
-## To set up a line discount for a vendor
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
-2. Open the relevant vendor card, and then choose the **Line Discounts** action.
-
-    The **Purchase Type** field is prefilled with **Vendor**, and the **Purchase Code** field is prefilled with the vendor number.
-3. Fill in the fields on the line as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Fill a line for each combination for which the vendor grants you a purchase line discount.
-
-## To set up an invoice discount for a vendor
-When your vendors have informed you which invoice discounts they grant, enter the invoice discount code on the vendor cards and set up the terms for each code.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
-2. Open the vendor card for a vendor that will be eligible for invoice discounts.
-3. In the **Invoice Disc. Code** field, select a code for the relevant invoice discount terms to use to calculate invoice discounts for the vendor.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodavatelé** a poté vyberte související odkaz.
+2. Otevřete kartu dodavatele pro dodavatele, který bude mít nárok na slevy z faktury.
+3. V části **Kód fakturační slevy** vyberte kód pro příslušné podmínky slev z faktury, které chcete použít pro výpočet slev z faktury pro dodavatele.
 
     > [!NOTE]  
-    >   Invoice discount codes are represented by existing vendor cards. This enables you to quickly assign invoice discount terms to vendors by picking the name of another vendors who will have the same terms.
+    >   Kódy slev z faktury jsou představovány existujícími kartami dodavatelů. To vám umožní rychle přiřadit dodavatelům podmínky slevy z faktury výběrem jmen dalších dodavatelů, kteří budou mít stejné podmínky.
 
-    Proceed to set up new the purchase invoice discount terms.
-4. On the **Vendor Card** page, choose the **Invoice Discounts** action. The **Vend. Invoice Discounts** page opens.
-5. In the **Currency Code** field, enter the code for a currency that the invoice discount terms on the line applies to. Leave the field blank to set up invoice discount terms in USD.
-6. In the **Minimum Amount** field, enter the minimum amount that an invoice must have to be eligible for the discount.
-7. In the **Discount %** field, enter the invoice discount as a percentage of the invoice amount.
-8. Repeat steps 5 through 7 for each currency that the vendor will receive a different invoice discount for.
+    Pokračujte v nastavování nových podmínek slevy z nákupní faktury.
+4. Na stránce **Karta dodavatele** vyberte akci **Fakturační slevy**. Otevře se karta **Dod. fakturační slevy**.
+5. Do pole **Kód měny** zadejte kód měny, na kterou se vztahují podmínky slevy z faktury na řádku. Chcete-li nastavit podmínky slevy z faktury v USD, ponechte pole prázdné.
+6. Do pole **Minimální částka** zadejte minimální částku, kterou musí faktura obsahovat, aby vznikl nárok na slevu.
+7. Do pole **Sleva %** zadejte slevu z faktury jako procento z částky faktury.
+8. Opakujte kroky 5 až 7 pro každou měnu, pro kterou dodavatel obdrží jinou slevu z faktury.
 
-The invoice discount is now set up and assigned to the vendor in question. When you select the vendor code in the **Invoice Disc. Code** field on other vendor cards, the same invoice discount is assigned to those vendor.
+Sleva z faktury je nyní nastavena a přiřazena dotyčnému dodavateli. Při výběru kódu dodavatele v části **Kód fakturační slevy** na kartách dalších dodavatelů je těmto prodejcům přidělena stejná sleva z faktury.
 
-## To choose a principle for posting purchase discounts  
-When you post a purchase invoice that includes one or more discounts, you can choose between two principles for posting discount amounts. You can post discounts separately or you can subtract discounts from invoice discounts.  
+## <a name="to-choose-a-principle-for-posting-purchase-discounts"></a>Pro výběr principu účtování nákupních slev  
+Když zaúčtujete nákupní fakturu, která obsahuje jednu nebo více slev, můžete si vybrat mezi dvěma principy pro účtování částek slev. Slevy můžete účtovat samostatně nebo je můžete odečíst z fakturačních slev.  
 
-Before you can do this, you must have already set up the necessary accounts for posting discount amounts in the chart of accounts. You must also check that you have entered the correct account numbers in the general posting setup in the **Purch. Line Disc. Account** and **Purch. Inv. Disc. Account** fields.
+Než to budete moci udělat, budete muset mít již zřízené účty potřebné pro účtování částek slev do účetní osnovy. Musíte také zkontrolovat, zda jste zadali správná čísla účtů v nastavení obecného účtování v polích **Účet  nákupní řádkové slevy** a **Účet nákupní  fakturační slevy**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
-2. In the **Discount Posting** field, choose one of the following principles for posting discounts.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení nákupu a závazků** a poté vyberte související odkaz.
+2. V poli **Účtování slevy** vyberte jeden z následujících principů účtování slev.
 
-|**Discount Posting Principle**|**Invoice Discount**|**Line Discount**|  
+|**Princip účtování slevy**|**Fakturační sleva**|**Řádková sleva**|  
 |------------------------------------|--------------------------|-----------------------|  
-|**All Discounts**|Posted separately|Posted separately|  
-|**Invoice Discounts**|Posted separately|Subtracted|  
-|**Line Discounts**|Subtracted|Posted separately|  
-|**No Discounts**|Subtracted|Subtracted|  
+|**Všechny slevy**|Účtováno samostatně|Účtováno samostatně|  
+|**Fakturační slevy**|Účtováno samostatně|Odečteno|  
+|**Řádkové slevy**|Odečteno|Účtováno samostatně|  
+|**Žádné slevy**|Odečteno|Odečteno|  
 
-## Purchase Invoice Discounts and Service Charges
-If you have fixed terms for invoice discounts with any vendors, you can enter them for those vendors. Then the discount will be calculated when you fill in a purchase invoice.  
+## <a name="purchase-invoice-discounts-and-service-charges"></a>Slevy z nákupních faktur a poplatky za služby
+Pokud máte u jakýchkoli dodavatelů pevně stanovené podmínky pro slevy z faktury, můžete je pro tyto dodavatele zadat. Sleva se poté vypočítá při vyplnění nákupní faktury.  
 
- Before you can use invoice discounts with purchases, you must specify the vendors that offer you the discounts.  
+ Než budete moci u nákupů použít fakturační slevy, musíte určit dodavatele, kteří vám slevy nabízejí.  
 
- You link discount percentages to specific invoice amounts in **Vend. Invoice Discounts** pages. You can enter any number of percentages in each page. Each vendor can have its own page, or you can link several vendors to the same page.  
+ Procenta slev s konkrétními částkami faktury propojíte v sekci **Dodav. fakturační slevy**. Na každou stránku můžete zadat libovolný počet procent. Každý dodavatel může mít svou vlastní stránku, nebo můžete ke stejné stránce připojit několik dodavatelů.  
 
- In addition to a discount percentage, you can link a service charge amount to a specific invoice amount.  
+ Kromě procenta slevy můžete také spojit částku poplatku za služby s konkrétní částkou faktury.  
 
- You can define the terms of the invoice discount in LCY for domestic vendors and in foreign currency for foreign vendors.  
+ Podmínky slevy z faktury můžete definovat v lokální měně pro domácí dodavatele a v cizí měně pro zahraniční dodavatele.  
 
- You can choose to have [!INCLUDE[prod_short](includes/prod_short.md)] automatically calculate the invoice discounts for quotes, blanket orders, orders, invoices, or credit memos.  
+ Můžete si vybrat, zda chcete aby [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vypočítal slevy na fakturách pro nabídky, hromadné objednávky, objednávky, faktury nebo dobropisy.  
 
 > [!TIP]  
->  Before you enter this information, it is a good idea to prepare an outline of the discount structure that you want to use. This makes it easier to see which vendors can be linked to the same invoice discount page. The fewer pages that you have to set up, the faster that you can enter the basic information.
+>  Před zadáním těchto informací je vhodné připravit osnovu struktury slev, kterou chcete použít. Díky tomu je snazší zjistit, kteří dodavatelé mohou být spojeni se stejnou stránkou slevy z faktury. Čím méně stránek musíte nastavit, tím rychleji můžete zadat základní informace.
 
-## Best Price Calculation
-When you have recorded special prices and line discounts for sales and purchases, [!INCLUDE[prod_short](includes/prod_short.md)] ensures that your profit on item trade is always optimal by automatically calculating the best price on sales and purchase documents and on job and item journal lines.
+## <a name="best-price-calculation"></a>Výpočet nejlepší ceny
+Pokud jste zaznamenali speciální ceny a řádkové slevy za prodej a nákupy, [!INCLUDE[d365fin](includes/d365fin_md.md)] zajistí, že váš zisk z obchodu se zbožím je vždy optimální automatickým výpočtem nejlepší ceny na prodejních a nákupních dokladech a na řádcích deníků zboží a projektů.
 
-The best price is the lowest permissible price with the highest permissible line discount on a given date. [!INCLUDE[prod_short](includes/prod_short.md)] automatically calculates this when it inserts the unit price and the line discount percentage for items on new document and journal lines.
+Nejlepší cena je nejnižší přípustná cena s nejvyšší přípustnou řádkovou slevou k danému datu. [!INCLUDE[d365fin](includes/d365fin_md.md)] ji automaticky vypočte při vložení jednotkové ceny a procenta řádkové slevy pro zboží na nových řádcích dokladu a deníku.
 
 > [!NOTE]  
->   The following describes how the best price is calculated for sales. The calculation is the same for purchases.
+>   Následující text popisuje, jak je pro prodej vypočítána nejlepší cena. Výpočet je stejný pro nákupy.
 
-1. [!INCLUDE[prod_short](includes/prod_short.md)] checks the combination of the bill-to customer and the item and then calculates the applicable unit price and line discount percentage, using the following criteria:
+1. [!INCLUDE[d365fin](includes/d365fin_md.md)] zkontroluje kombinaci plátce a zboží a poté vypočítá použitelnou jednotkovou cenu a procentuální řádkovou slevu pomocí následujících kritérií:
 
-    - Does the customer have a price/discount agreement, or does the customer belong to a group that does?
-    - Is the item or the item discount group on the line included in any of these price/discount agreements?
-    - Is the order date (or the posting date for the invoice and credit memo) within the starting and ending date of the price/discount agreement?
-    - Is a unit of measure code specified? If so, [!INCLUDE[prod_short](includes/prod_short.md)] checks for prices/discounts with the same unit of measure code, and prices/discounts with no unit of measure code.
+    - Má zákazník dohodu o cenách/slevách, nebo patří do skupiny, která dohodu má?
+    - Je zboží nebo skupina slev zboží na řádku zahrnuta v některé z těchto dohod o cenách/slevách?
+    - Je datum objednávky (nebo datum zaúčtování faktury a dobropisu) v rozmezí počátečního a koncového data dohody o ceně/slevě?
+    - Je zadán kód měrné jednotky? Pokud ano, [!INCLUDE[d365fin](includes/d365fin_md.md)] zkontrolujte ceny/slevy se stejným kódem měrné jednotky a ceny/slevy bez kódu měrné jednotky.
 
-2. [!INCLUDE[prod_short](includes/prod_short.md)] checks if any price/discount agreements apply to information on the document or journal line, and then inserts the applicable unit price and line discount percentage, using the following criteria:
+2. [!INCLUDE[d365fin](includes/d365fin_md.md)] zkontroluje, zda se nějaké dohody o ceně/slevě nevztahují na informace v dokladu nebo v řádku deníku a poté vloží příslušné jednotkové ceny a procentuální řádkovou slevu, a to pomocí následujících kritérií:
 
-    - Is there a minimum quantity requirement in the price/discount agreement that is fulfilled?
-    - Is there a currency requirement in the price/discount agreement that is fulfilled? If so, the lowest price and the highest line discount for that currency are inserted, even if LCY would provide a better price. If there is no price/discount agreement for the specified currency code, [!INCLUDE[prod_short](includes/prod_short.md)] inserts the lowest price and the highest line discount in LCY.
+    - Existuje v dohodě o ceně/slevě požadavek na minimální množství, který je splněn?
+    - Existuje v dohodě o ceně/slevě požadavek na měnu, který je splněn? Pokud ano, vloží se nejnižší cena a nejvyšší řádková sleva pro tuto měnu, i když by lokální měna poskytla lepší cenu. Pokud pro zadaný kód měny neexistuje dohoda o ceně/slevě, [!INCLUDE[d365fin](includes/d365fin_md.md)] vloží nejnižší cenu a nejvyšší řádkovou slevu v lokální měně.
 
-If no special price can be calculated for the item on the line, then either the last direct cost or the unit price from the item card is inserted.
+Pokud pro zboží na řádku nelze vypočítat žádnou speciální cenu, je vložen buď poslední přímý náklad, nebo jednotková cena z karty zboží.
 
-## See Related Training at [Microsoft Learn](/learn/modules/set-up-prices-discounts-dynamics-365-business-central/index)
-
-## See Also
-[Setting Up Purchasing](purchasing-setup-purchasing.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Nastavení nákupu](purchasing-setup-purchasing.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

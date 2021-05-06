@@ -15,73 +15,72 @@ ms.date: 10/01/2020
 ms.author: edupont
 
 ---
-# Use Item Charges to Account for Additional Trade Costs
-To ensure correct valuation, your inventory items must carry any added costs, such as freight, physical handling, insurance, and transportation that you incur when purchasing or selling the items. For purchases, the landed cost of a purchased item consists of the vendor's purchase price and all additional direct item charges that can be assigned to individual receipts or return shipments. For sales, knowing the cost of shipping sold items can be as vital to your company as knowing the landed cost of purchased items.
+# Použití poplatku zboží k účtování dodatečných obchodních nákladů
+Aby bylo zajištěno správné ocenění, musí vaše skladové zboží nést veškeré dodatečné náklady, jako je přeprava, fyzická manipulace, pojištění a doprava, které vám vzniknou při nákupu nebo prodeji zboží. U nákupů se vyložené náklady na nakoupené zboží skládají z nákupní ceny dodavatele a všech dodatečných přímých poplatků za zboží, které lze přiřadit k jednotlivým příjmům nebo dodávkám vratky. Pro prodej může být znalost nákladů na dopravu prodaných položek pro vaši společnost stejně důležitá jako znalost nákladů na vyložené položky.
 
-In addition to recording the added cost in you inventory value, you can use the Item Charges feature for the following:
+Kromě zaznamenání přidaných nákladů do hodnoty zásob můžete použít funkci Poplatky za zboží pro následující:
 
-- Identify the landed cost of an item for making more accurate decisions on how to optimize the distribution network.
-- Break down the unit cost or unit price of an item for analysis purposes.
-- include purchase allowances into the unit cost and sales allowances into the unit price.
+- Určete náklady na vyložené zboží pro přesnější rozhodování o optimalizaci distribuční sítě.
+- Pro účely analýzy rozdělte pořizovací cenu nebo jednotkovou cenu zboží.
+- Zahrňte povolenky na nákup a prdej do jednotkové ceny.
 
-Before you can assign item charges, you must set up item charge numbers for the different types of item charges, including to which G/L accounts costs related to sales, purchases, and inventory adjustments are posted to. An item charge number contains a combination of general product posting group, tax group code, VAT product posting group, and item charge. When you enter the item charge number on a purchase or sales document, the relevant G/L account is retrieved based on the setup of the item charge number and the information on the document.
+Před přiřazením poplatků za zboží je nutné nastavit čísla poplatků za zboží pro různé typy poplatků za zboží, včetně nákladů na účty souvisejících s prodejem, nákupy a úpravami zásob. Číslo poplatku za zboží obsahuje kombinaciobecné účto skupiny zboží, daňové skupiny, DPH účto skupiny zboží a poplatku zboží. dyž zadáte číslo poplatku za zboží na nákupním nebo prodejním dokladu, příslušný účet se načte na základě nastavení čísla poplatku za zboží a informací v dokladu.
 
-For both purchase and sales documents, you can assign an item charge in two ways:
-- On the document where the items that the item charge relates to are listed. This you typically do for documents that are not yet fully posted.
-- On a separate invoice by linking the item charge to a posted receipt or shipment where the items that the item charge relate to are listed.
+U nákupních i prodejních dokladů můžete poplatek za zboží přiřadit dvěma způsoby:
+- V dokladu, kde je uvedeno zboží, ke kterému se poplatek za zboží vztahuje. To obvykle děláte pro doklady, které ještě nejsou plně zaúčtovány.
+- Na samostatné faktuře propojením poplatku za zboží se zaúčtovanou příjemkou nebo dodávkou, kde je uvedeno zboží, ke kterému se poplatek za zboží vztahuje.
 
-> [!NOTE]  
->   You can assign item charges to orders, invoices, and credit memos, for both sales and purchases. The following procedures describe how to work with item charges for a purchase invoice. The steps are similar for all other purchase and sales documents.
+> K objednávkám, fakturám a dobropisům můžete přiřadit poplatky za zboží a to jak pro prodej, tak i pro nákup. Následující postupy popisují, jak pracovat s poplatky za zboží v nákupní faktuře. Kroky jsou podobné pro všechny ostatní nákupní a prodejní doklady.
 
-## Example
-This video shows how to handle an additional shipping cost as part of inventory costing.
-<br><br>  
+## Příklad
+Toto video ukazuje, jak zpracovat dodatečné náklady na dopravu v rámci nákladů zásob.
+<br><br>
 > [!Video https://www.microsoft.com/videoplayer/embed/RE4b0SB?rel=0]
 
-## To set up item charge numbers
-You use item charge numbers to distinguish between the different kinds of item charges that are used in your company.
+## Nastavení čísel poplatků za zboží
+Čísla poplatků za zboží slouží k rozlišení mezi různými druhy poplatků za zboží, které se používají ve vaší společnosti.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Charges**, and then choose the related link.
-2. On the **Item Charges** page, choose the **New** action to create a new line.
-3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Poplatky za zboží** a poté vyberte související odkaz.
+2. Na stránce **Poplatky za zboží** vyberte tlačítko **Nový** k vytvoření nového řádku..
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To assign an item charge directly to the purchase invoice for the item
-If you know the item charge at the time when you post a purchase invoice for the item, follow this procedure.
+## Přiřazení poplatku za zboží přímo k nákupní faktuře za zboží
+Pokud znáte poplatek za zboží v době, kdy účtujete nákupní fakturu za zboží, postupujte podle tohoto postupu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. Create a new purchase invoice. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
-3. Make sure the purchase invoice has one or more lines of type Item.
-4. On a new line, in the **Type** field, select **Charge (Item)**.
-5. In the **Quantity** field, enter the units of the item charge that you have been invoiced for.
-6. In the **Direct Unit Cost** field, enter the amount of the item charge.
-7. Fill in the remaining fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
+2. Vytvořte novou nákupní fakturu. Pro více informací navštivte [Zaznamenávání nákupu](purchasing-how-record-purchases.md).
+3. Ujistěte se, že nákupní faktura má jeden nebo více řádků typu Zboží.
+4. Na novém řádku do pole **Typ** vyberte **Poplatek (zboží)**.
+5. Do pole **Množství** zadejte jednotky poplatku za zboží, který vám byl fakturován.
+6. Do pole **Nákupní cena** zadejte částku poplatku za zboží.
+7. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-    In the following steps, you will perform the actual assignment. Until the item charge is fully assigned, the value in the **Qty. to Assign** field is in red font.
-8. On the **Lines** tab, choose the **Item Charge Assignment** action.
+   V následujících krocích provedete skutečné přiřazení. Dokud není poplatek za zboží plně přiřazen, hodnota v poli **Množství k přiřazení** je napsán červeně.
+8. V záložce **Řádky** vyberte tlačítko **Přiřazení poplatku zboží**.
 
-    The **Item Charge Assignment** page opens showing one line for each line of type Item on the purchase invoice. To assign the item charge to one or more invoice lines, you can use a function that assigns and distributes it for you or you can manually fill in the **Qty. to Assign** field. The following steps describe how to use the Suggest Item Charge Assignment function.
+   Otevře se stránka **Přiřazení poplatku zboží** zobrazující jeden řádek pro každý řádek typu Zboží na nákupní faktuře. Chcete-li přiřadit poplatek za zboží k jednomu nebo více řádkům faktury, můžete použít funkci, která vám jej přiřadí nebo  můžete ručně vyplnit množství v poli **Množství k přiřazení**. Následující kroky popisují, jak používat funkci Navrhnout přiřazení poplatku za zboží.
 
-9. On the **Item Charge Assignment** page, choose the **Suggest Item Charge Assignment** action.
-10. If there are more than one invoice lines of type Item, choose one of the four distribution options.  
+9. Na stránce **Přiřazení poplatku zboží** zvolte tlačítko **Navrhnout přiřazení popl.zboží**.
+10. Pokud existuje více než jeden řádek faktury typu Zboží, zvolte jednu ze čtyř možností rozdělení.
 
-It the item charge is fully assigned, the value in the **Qty. to Assign** field on the purchase invoice is zero.
+To je poplatek za zboží je plně přiřazen, hodnota v poli **Množství k přiřazení** na faktuře je nula.
 
-The item charge is now assigned to the purchase invoice. When you post the receipt of the purchase invoice, the items' inventory values are updated with the cost of the item charge.  
+Poplatek za zboží je nyní přiřazen k nákupní faktuře. Při zaúčtování příjmu nákupní faktury se hodnoty zásob zboží aktualizují o náklady na poplatek za zboží.
 
-## To assign an item charge from a separate invoice to the purchase invoice for the item
-If you received an invoice for the item charge after you posted the original purchase receipt, follow this procedure.
-1. Repeat steps 1 through 8 in [To assign an item charge directly to the purchase invoice for the item](payables-how-assign-item-charges.md#to-assign-an-item-charge-directly-to-the-purchase-invoice-for-the-item).
-2. On the **Item Charge Assignment** page, choose the **Get Receipt Lines** action.
-3. On the **Purch. Receipt Lines** page, select the posted purchase receipt for the item that you want to assign the item charge to, and then choose the **OK** button.
-4. Choose the **Suggest Item Charge Assignment** action.
+## Přiřazení poplatku za zboží ze samostatné faktury k nákupní faktuře za zboží
+Pokud jste po zaúčtování původního nákupního dokladu obdrželi fakturu za poplatek za zboží, postupujte podle tohoto postupu.
+1. Opakujte kroky 1 až 8 v [Přiřazení poplatku za zboží ze samostatné faktury k nákupní faktuře za zboží](payables-how-assign-item-charges.md#to-assign-an-item-charge-directly-to-the-purchase-invoice-for-the-item).
+2. Na stránce **Přiřazení poplatku zboží** vyberte tlačítko **Kopie řádků příjemky**.
+3. Na stránce **Řádky nák. příjemky** vyberte zaúčtované nákupní doklady pro zboží, ke kterým chcete přiřadit poplatek za zboží a pak zvolte tlačítko **OK** button.
+4. Vyberte tlačítko **Navrhnout přiřazení popl.zboží**.
 
-The item charge on the separate purchase invoice is now assigned to the item on the posted purchase receipt, thereby updating the item's inventory value with the cost of the item charge.
+Poplatek za zboží na samostatné nákupní faktuře je nyní přiřazen zboží na zaúčtované nákupní příjemce, čímž se aktualizuje hodnota zásob zboží s náklady na poplatek za zboží.
 
-## See Also
-[Managing Payables](payables-manage-payables.md)  
-[Record Purchases](purchasing-how-record-purchases.md)  
-[Invoice Sales](sales-how-invoice-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+## Viz také
+[Správa závazků](payables-manage-payables.md)  
+[Zaznamenávání nákupu](purchasing-how-record-purchases.md)  
+[fakturace prodeje](sales-how-invoice-sales.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -4,180 +4,177 @@
     author: bholtorf
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: VAT, sales, purchases,
-    ms.date: 10/01/2020
+    ms.date: 01/13/2020
     ms.author: bholtorf
 
 ---
-# Work with VAT on Sales and Purchases
-If your country or region requires you to calculate value-added tax (VAT) on sales and purchase transactions so that you can report the amounts to a tax authority, you can set up [!INCLUDE[prod_short](includes/prod_short.md)] to calculate VAT automatically on sales and purchase documents. For more information, see [Setting Up to Calculations and Posting Methods for Value-Added Tax](finance-setup-vat.md).
+# Práce s DPH z prodeje a nákupu
+Pokud vaše země nebo region vyžaduje, abyste vypočítali daň z přidané hodnoty (DPH) z prodejních a nákupních transakcí, abyste mohli nahlásit částky daňovému úřadu, můžete nastavit [!INCLUDE[d365fin](includes/d365fin_md.md)] pro automatický výpočet DPH v prodejních a nákupních dokladech. Pro více informací navštivte [Nastavení výpočtů a metod účtování daně z přidané hodnoty](finance-setup-vat.md).
 
-There are, however, some VAT-related tasks that you can do manually. For example, you might need to correct a posted amount if you discover that a vendor uses a different rounding method.
+Existují však některé úkoly související s DPH, které můžete provádět ručně. Například může být nutné opravit zaúčtované částky, pokud zjistíte, že dodavatel používá jinou metodu zaokrouhlení.
 
-## Calculating and Displaying VAT Amounts in Sales and Purchase Documents  
-You can calculate and display VAT amounts in sales and purchase documents differently, depending on the type of customer or vendor that you are dealing with. You can also override the calculated VAT amount to match the VAT amount calculated by your vendor on a given transaction.  
+## Výpočet a zobrazení částek DPH v prodejních a nákupních dokladech
+Částky DPH v prodejních a nákupních dokladech můžete vypočítat a zobrazit odlišně v závislosti na typu zákazníka nebo dodavatele. Vypočtenou částku DPH můžete také přepsat tak, aby odpovídala částce DPH vypočtené vaším dodavatelem na danou transakci.
 
-### Unit Price and Line Amount Including/Excluding VAT on Sales Documents  
-When you choose an item number in the **No.** field on a sales document, [!INCLUDE[prod_short](includes/prod_short.md)] fills in the **Unit Price** field. The unit price comes from either the **Item** card or the item prices allowed for the item and customer. [!INCLUDE[prod_short](includes/prod_short.md)] calculates the **Line Amount** when you enter a quantity for the line.  
+### Jednotková cena a částka řádku včetně/bez DPH na prodejních dokladech
+Když vyberete číslo položky v poli **Číslo** na prodejním dokladu, [!INCLUDE[d365fin](includes/d365fin_md.md)] vyplní pole **Jednotková cena**. Jednotková cena pochází buď z karty **Zboží**, nebo z povolených cen zboží pro zboží a zákazníka. [!INCLUDE[d365fin](includes/d365fin_md.md)] vypočítá **Částku na řádku**, když zadáte množství pro řádek.
 
-If you are selling to retail consumers, you may want prices on sales documents to include VAT. To do this, choose the **Prices Including VAT** check box on the document.  
+Pokud prodáváte maloobchodním spotřebitelům, můžete chtít, aby ceny na prodejních dokladech zahrnovaly DPH. Za tímto účelem zaškrtněte v dokumentu políčko **Ceny včetně DPH**.
 
-### Including or Excluding VAT on Prices
-If the **Prices Including VAT** check box is chosen on a sales document, the **Unit Price** and **Line Amount** fields include VAT, and the field names will also reflect this. By default, VAT is not included in these fields.  
+### Včetně nebo bez DPH
+Pokud je v prodejním dokladu zaškrtnuto políčko **Ceny včetně DPH**, pole  **Jednotková cena** a **Částka na řádku** zahrnují DPH a názvy polí to také budou zobrazovat. Ve výchozím nastavení není v těchto polích zahrnuta DPH.
 
-If the field is not selected, application will fill in the **Unit Price** and **Line Amount** field excluding VAT and the field names will reflect this.  
+Pokud pole není vybráno, aplikace vyplní pole **Jednotková cena** a **Částka na řádku** bez DPH a názvy polí to budou zobrazovat.
 
-You can set up the default setting of the **Prices Including VAT** for all sales documents for a customer in the **Prices Including VAT** field on the **Customer** card. You can also set up item prices to include or exclude VAT. Normally, item prices contained in the Item Card will be the price excluding VAT. The application uses the information from the **Price Includes VAT** field on the **Item** card to determine the unit price amount for sales documents.  
+Můžete nastavit výchozí nastavení **ceny včetně DPH** pro všechny prodejní doklady pro zákazníka v poli **Ceny včetně DPH** na kartě **Zákazník**. Můžete také nastavit ceny zboží tak, aby zahrnovaly nebo vyloučily DPH. Ceny zboží obsažené v kartě zboží obvykle budou cenou bez DPH. Aplikace používá informace z pole **Ceny včetně DPH** na kartě **Zboží** k určení výše jednotkové ceny pro prodejní doklady.
 
-The following table provides an overview of how application calculates the unit price amounts for a sales document when you have not set up prices on the **Sales Prices** page:  
+Následující tabulka poskytuje přehled o tom, jak aplikace počítá částky jednotkové ceny pro prodejní doklad, pokud jste nenastavili ceny na stránce **Prodejní ceny**:
 
-|**Price Includes VAT field on Item Card**|**Prices Including VAT field in Sales Header**|**Action Performed**|  
+| **Cena zahrnuje pole DPH na kartě zboží** | **Ceny zahrnují pole DPH v prodejní hlavičce** | **Provedená akce** |
 |-----------------------------------------------|----------------------------------------------------|--------------------------|  
-|No check mark|No check mark|The **Unit Price** on the Item Card is copied to **Unit Price Excl. VAT** field on the sales lines.|  
-|No check mark|Check mark|The application calculates the VAT amount per unit and adds to the **Unit Price** on the Item Card. This total Unit Price is then entered in the **Unit Price Incl. VAT field** on the sales lines.|  
-|Check mark|No check mark|The application calculates the VAT amount included in the **Unit Price** on the Item Card using the VAT% related to the VAT Bus. Posting Gr. (Price) and the VAT Prod. Posting Group combination. The **Unit Price** on the Item Card, reduced by the VAT amount, is then entered in the **Unit Price Excl. VAT** field in the sales lines.|  
-|Check mark|Check mark|The **Unit Price** on the Item Card is copied to **Unit Price Incl. VAT** field on the sales lines.|
+| Bez zaškrtnutí | Bez zaškrtnutí | **Jednotková cena** na kartě zboží je zkopírována do pole **Jednotková cena  DPH** na prodejních řádcích. |
+| Bez zaškrtnutí | Zaškrtnutí | Aplikace vypočítá částku DPH na jednotku a připočítá ji k **jednotkové ceně** na kartě zboží. Tato celková jednotková cena je poté zadána do pole **Jednotková cena včetně  DPH** na prodejních řádcích. |
+| Zaškrtnutí | Bez zaškrtnutí | Aplikace vypočítá částku DPH zahrnutou v poli **Jednotková cena** na kartě zboží pomocí DPH% vztahující se k obchodní DPH. Kombinace účto skupiny (Cena) a DPH účto  skupiny zboží. **Jednotková cena** na kartě zboží snížená o částku DPH je pak zadána do pole **Jednotková cena  bez DPH** v prodejních řádcích. |
+| Zaškrtnutí | Zaškrtnutí | **Jednotková cena** na kartě zboží je zkopírována do pole **Jednotková cena včetně  DPH** na prodejních řádcích. |
 
-## Correcting VAT Amounts Manually in Sales and Purchase Documents  
-You can make corrections to posted VAT entries. This allows you to change the total sales or purchase VAT amounts without changing the VAT base. You may need to do this, for example, if you receive an invoice from a vendor that has calculated VAT incorrectly.  
+## Ruční oprava částek DPH v prodejních a nákupních dokladech
+Můžete provádět opravy zaúčtovaných položek DPH. To vám umožní změnit celkové částky prodeje nebo nákupu DPH beze změny základu DPH. To může být nutné provést, například pokud obdržíte fakturu od dodavatele, který správně vypočítal DPH.
 
-Although you may have set up one or more combinations to handle import VAT, you must set up at least one VAT product posting group. For example, you can name it **CORRECT** for correction purposes, unless you can use the same general ledger account in the **Purchase VAT Account** field on the VAT posting setup line. For more information, see [Setting Up to Calculations and Posting Methods for Value-Added Tax](finance-setup-vat.md).
+Přestože jste pro zpracování dovozní DPH nastavili jednu nebo více kombinací, musíte nastavit alespoň jednu DPH účto skupinu zboží. Můžete jej například pojmenovat **SPRÁVNĚ** pro účely korekce, pokud nemůžete použít stejný účet hlavní knihy v poli **Účet nákupní DPH** v řádku nastavení účtování DPH. Pro více informací navštivte [Nastavení výpočtů a metod účtování u daně z přidané hodnoty](finance-setup-vat.md).
 
-If a payment discount has been calculated on the basis of an invoice amount that includes VAT, you revert the payment discount part of the VAT amount when the payment discount is granted. Note that you must activate the **Adjust for Payments Disc.** field in both the general ledger setup in general and the VAT posting setup for specific combinations of a VAT business posting group and a VAT product posting group.  
+Pokud bylo skonto vypočteno na základě částky faktury, která zahrnuje DPH, vrátíte část skonta částky DPH při udělení skonta. Všimněte si, že musíte aktivovat pole **Úprava o slevu na platby** jak v obecném nastavení hlavní knihy, tak v nastavení účtování DPH pro konkrétní kombinace skupiny účtování firem na základě DPH a skupiny účtování produktů na bázi DPH.
 
-### To set the system up for manual VAT entry in sales documents
-The following describes how to enable manual VAT changes on sales documents. The steps are similar on the **Purchases & Payables Setup** page.
+### Nastavení systému pro ruční zadávání DPH do prodejních dokladů
+Následující text popisuje, jak povolit ruční změny DPH v prodejních dokladech. Kroky jsou podobné jak na stránce **Nastavení nákupu a závazků**.
 
-1. On the **General Ledger Setup** page, specify a **Max. VAT Difference Allowed** between the amount calculated by application and the manual amount.  
-2. On the **Sales & Receivables Setup** page, place a check mark in the **Allow Vat Difference** field.  
+1. Na stránce **Nastavení financí** zadejte **Max.povolená  odchylka DPH** mezi částkou vypočítanou podle aplikace a manuální částkou.
+2. Na stránce **Nastavení prodeje a pohledávek** zaškrtněte pole **Povolit odchylku DPH**.
 
-### To adjust VAT for a sales document  
-1. Open the relevant sales order.  
-2. Choose the **Statistics** action.  
-3. On the **Invoicing** FastTab, choose the value in the **No. of Tax Lines** field.
-4. Edit the **VAT Amount** field.   
+### Úprava DPH u prodejního dokladu
+1. Otevřete příslušnou prodejní objednávku.
+2. Vyberte akci **Statistika**.
+3. Na záložce **Fakturace** vyberte hodnotu v poli **Počet řádků  částek DPH**.
+4.  Upravte pole **Částka DPH**.
 
-> [!NOTE]  
-> The total VAT amount for the invoice, grouped by VAT identifier, is displayed in the lines. You can manually adjust the amount in the **VAT Amount** field on the lines for each VAT identifier. When you modify the **VAT Amount** field, application checks to ensure that you have not changed the VAT by more than the amount you have specified as the maximum difference allowed. If the amount is outside the range of the **Max. VAT Difference Allowed**, a warning will be displayed stating the maximum allowed difference. You will be unable to proceed until the amount is adjusted to within the acceptable parameters. Click **OK** and enter another **VAT Amount** that is within the allowed range. If the VAT difference is equal to or lower than the maximum allowed, the VAT will be divided proportionally among the document lines that have the same VAT identifier.  
+> [!NOTE]
+> V řádcích se zobrazí celková částka DPH na faktuře, seskupená podle identifikátoru DPH. Částku můžete ručně upravit v poli **Částka DPH** na řádcích pro každý identifikátor DPH. Když upravíte pole **Částka DPH**, aplikace zkontroluje, zda jste nezměnili DPH o více než částku, kterou jste určili jako maximální povolený rozdíl. Pokud je částka mimo rozsah zadaný v poli **Max.povolená  odchylka DPH** zobrazí se varování s uvedením maximálního povoleného rozdílu. Nebudete moci pokračovat, dokud nebude částka upravena v rámci přijatelných parametrů. Klikněte na **OK** a zadejte další  **částku DPH**, která je v povoleném rozsahu. Je-li rozdíl v DPH roven nebo nižší než maximální povolené množství, bude DPH rozdělena úměrně mezi řádky dokladů, které mají stejný identifikátor DPH.
 
-## Calculating VAT Manually Using Journals  
-You can also adjust VAT amounts in general, sales, and purchase journals. For example, you might need to do this when you enter a vendor invoice in your journal and there is a difference between the VAT amount that [!INCLUDE[prod_short](includes/prod_short.md)] calculated and the VAT amount on the vendor's invoice.  
+## Ruční výpočet DPH pomocí deníků
+Obecně můžete také upravit částky DPH, deníky prodeje a nákupu. Možná to budete muset udělat, když do svého deníku zadáte dodavatelskou fakturu a je rozdíl mezi částkou DPH, kterou vypočte [!INCLUDE[d365fin](includes/d365fin_md.md)] a částou DPH na faktuře dodavatele.
 
-### To set the system up for manual VAT entry in a general journals
-You must perform the following steps before you manually enter VAT in a general journal.  
+### Nastavení systému pro ruční zadávání DPH ve finančních denících
+Před manuálním zadáním DPH do finančního deníku musíte provést následující kroky.
 
-1. On the **General Ledger Setup** page, specify a **Max. VAT Difference Allowed** between the amount calculated by application and the manual amount.  
-2. On the **General Journal Templates** page, choose the **Allow VAT Difference** check box for the relevant journal.  
+1. Na stránce **Nastavení financí** zadejte **Max.povolená  odchylka DPH** mezi částkou vypočítanou podle aplikace a manuální částkou.
+2. Na stránce **Šablony finančního deníku** zaškrtněte políčko **Povolit odchylku DPH** pro příslušný deník.
 
-### To set the system up for manual VAT entry in a sales and purchase journals
-You must perform the following steps before you manually enter VAT in a sales or purchase journal.
+### Nastavení systému pro ruční zadání DPH v deníku prodeje a nákupu
+Než ručně zadáte DPH do prodejního nebo nákupního deníku, musíte provést následující kroky.
 
-1. On the **Purchases & Payables Setup** page, choose the **Allow VAT Difference** check box.  
-2. Repeat step 1 for the **Sales & Receivables Setup** page.
-3. After you complete the setup described above, you can adjust the **VAT Amount** field on the general journal line, or the **Bal. VAT Amount** field on the sales or purchase journal line. [!INCLUDE[prod_short](includes/prod_short.md)] will check that the difference is not greater than the specified maximum.  
+1. Na stránce **Nastavení nákupu a závazků** zaškrtněte políčko **Povolit odchylku DPH**.
+2. Opakujte krok 1 pro stránku  **Nastavení prodeje a pohledávek**.
+3. Po dokončení výše popsaného nastavení můžete upravit pole **Částka DPH** na řádku finančního deníku nebo pole **Částka  DPH protiúčtu** na řádku prodejního nebo nákupního deníku. [!INCLUDE[d365fin](includes/d365fin_md.md)] zkontroluje, zda rozdíl není větší než zadané maximum.
 
-    > [!NOTE]  
-    > If the difference is greater, a warning will be displayed stating the maximum allowed difference. To continue, you must adjust the amount. Choose **OK** and then enter an amount that is within the allowed range. If the VAT difference is equal to or lower than the maximum allowed, [!INCLUDE[prod_short](includes/prod_short.md)] will show the difference in the **VAT Difference** field.  
+   > [!NOTE]
+   > Pokud je rozdíl větší, zobrazí se upozornění s uvedením maximálního povoleného rozdílu. Chcete-li pokračovat, je nutné upravit částku. Zvolte **OK** a zadejte částku, která je v povoleném rozsahu. Pokud je rozdíl DPH roven nebo nižší než maximální povolená hodnota, [!INCLUDE[d365fin](includes/d365fin_md.md)] zobrazí rozdíl v poli **Odchylka DPH**.
 
-## Posting Import VAT with Purchase Invoices
-Instead of using journals to post an import VAT invoice, you can use a purchase invoice.  
+## Účtování dovozní DPH s nákupními fakturami
+Namísto použití deníků k zaúčtování dovozní faktury s DPH můžete použít nákupní fakturu.
 
-### To set up purchasing for posting import VAT invoices  
-1. Set up a vendor card for the import authority that sends you the import VAT invoice. The **Gen. Bus. Posting Group** and **VAT Bus. Posting Group** must be set up in the same way as the general ledger account for the import VAT.  
-2. Create a **Gen. Product Posting Group** for the import VAT and set up an import VAT **Def. VAT Product Posting Group** for the related **Gen. Product Posting Group**.  
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
-4. Select the import VAT general ledger account, and then choose the **Edit** action.  
-5. On the **Posting** FastTab, select the **Gen. Prod. Posting Group** setup for import VAT. [!INCLUDE[prod_short](includes/prod_short.md)] automatically fills in the **VAT Prod. Posting Group** field.  
-6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.  
-7. Create a combination of the **Gen. Bus. Posting Group** for the VAT authority and the **Gen. Prod. Posting Group** for import VAT. For this new combination, in the **Purchase Account** field, choose the import VAT general ledger account.  
+### Nastavení nákupu pro zaúčtování dovozních faktur DPH
+1. Nastavit kartu dodavatele pro dovozní úřad, který vám pošle dovozní fakturu s DPH. **Obecná  obch.účto  skupina** a **DPH obchodní  účto skupina** musí být nastavena stejným způsobem jako účet hlavní knihy pro dovozní DPH.
+2. Vytvořte **Obecnou účto  skupinu zboží** pro dovozní DPH a nastavte dovozní DPH na **Výchozí  DPH účto skupina zboží** pro související **Obecnou účto  skupinu zboží**.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
+4. Vyberte účet hlavní knihy pro dovozní DPH a poté vyberte akci **Upravit**.
+5. Na záložce **Účtování** vyberte nastavení **Obecná  účto  skupina zboží** pro dovozní DPH. [!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vyplní pole **DPH účto  skupina zboží**.
+6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
+7. Vytvořte kombinaci **Obecné  obch.účto  skupiny** pro finanční úřad a **Obecné  účto  skupiny** pro dovozní DPH. Pro tuto novou kombinaci vyberte v poli **Účet nákupu** účet hlavní knihy pro dovozní DPH.
 
-### To create a new invoice for the import authority vendor once you have completed the setup  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.  
-2. Create a new purchase invoice.  
-3. In the **Buy-from Vendor No.** field, choose the import authority vendor, and then choose the **OK** button.  
-4. In the purchase line, in the **Type** field, choose **G/L Account**, and in the **No.** field, choose the import VAT general ledger account.  
-5. In the **Quantity** field, type **1**.  
-6. In the **Direct Unit Cost Excl. VAT** field, specify the VAT amount.  
-7. Post the invoice.  
+### Vytvoření nové faktury pro dodavatele dovozního úřadu po dokončení nastavení
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
+2. Vytvořte novou nákupní fakturu.
+3. V poli **Nákup od dodavatele** zvolte dodavatele dovozního úřadu a pak zvolte tlačítko **OK**.
+4. V nákupním řádku v poli **Typ** vyberte **Finanční účet** a v poli **Číslo** vyberte Účet hlavní knihy pro dovozní DPH.
+5. V poli **Množství** zadejte **1**.
+6. V poli **Nákupní cena bez DPH**, zadejte částku DPH.
+7. Zaúčtujte fakturu.
 
-## Processing Certificates of Supply
-When you sell goods to a customer in another EU country/region, you must send the customer a certificate of supply that the customer must sign and return to you. The following procedures are for processing certificates of supply for sales shipments, but the same steps apply for service shipments of items, and return shipments to vendors.  
+## Zpracování certifikátů dodání
+Při prodeji zboží zákazníkovi v jiné zemi nebo oblasti EU musíte zákazníkovi zaslat certifikát o dodávce, který musí zákazník podepsat a vrátit vám ho. Následující postupy platí pro zpracování certifikátu o dodávce pro prodejní dodávky, ale stejné kroky platí pro dodávky servisu zboží a pro vrácení dodávek dodavatelům.
 
-### To view certificate of supply details  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Shipments**, and then choose the related link.  
-2. Choose the relevant sales shipment to a customer in another EU country/region.  
-3. Choose **Certificate of Supply Details**.  
-4. By default, if the **Certificate of Supply Required** check box is selected for VAT Posting Group setup for the customer, the **Status** field is set to **Required**. You can update the field to indicate whether the customer has returned the certificate.  
+### Zobrazení detailů o certifikátu dodání
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované prodejní dodávky** a poté vyberte související odkaz.
+2. Vyberte příslušnou prodejní dodávku zákazníkovi v jiné zemi / regionu EU.
+3. Zvolte **Detaily certifikátu dodání**.
+4. Ve výchozím nastavení, pokud je pro nastavení účto. skupiny DPH pro zákazníka zaškrtnuto políčko **Požadován certifikát dodání**, je pole **Stav** nastaveno na **Povinné**. Toto pole můžete aktualizovat a uvést, zda zákazník certifikát vrátil.
 
-    > [!Note]  
-    >  If the VAT Posting Group setup does not have the **Certificate of Supply Required** check box selected, then a record is created and the **Status** field is set to **Not Applicable**. You can update the field to reflect the correct status information. You can manually change the status from **Not Applicable** to **Required**, and from **Required** to **Not Applicable** as needed.  
+   > [!Note]
+   > Pokud v nastavení DPH není zaškrtnuto políčko **Požadován certifikát dodání**, je vytvořen záznam a pole **Stav** je nastaveno na **Nelze použít**. Pole můžete aktualizovat tak, aby zobrazovalo správné informace o stavu. Stav můžete podle potřeby ručně změnit z hodnoty **Nelze použít** na **Povinné** a z hodnoty **Povinné** na **Nelze použít**.
 
-   When you update the **Status** field to **Required**, **Received**, or **Not Received**, a certificate is created.  
+   Když aktualizujete pole **Stav** na **Povinné**, **Přijato** nebo **Nelze použít** certifikát se vytvoří.
 
-    > [!TIP]  
-    >  You can use the **Certificates of Supply** page to get a view of the status of all posted shipments for which a certificate of supply has been created.  
+   > [!TIP]
+   > Na stránce **Certifikáty dodání** můžete zobrazit stav všech zaúčtovaných zásilek, pro které byl vytvořen certifikát dodávky.
 
-5. Choose **Print Certificate of Supply**.  
+5. Zvolte **Tisk certifikátu dodání**.
 
-    > [!Note]  
-    >  You can preview or print the document. When you choose **Print Certificate of Supply** and print the document, the **Printed** check box is automatically selected. In addition, if not already specified, the status of the certificate is updated to **Required**. If needed, you include the printed certificate with the shipment.  
+   > [!Note]
+   > Doklad můžete zobrazit nebo vytisknout. Pokud vyberete **Tisk certifikátu dodání** a doklad vytisknete, automaticky se zaškrtne políčko **Vytištěno**. Kromě toho, pokud již není zadán, stav certifikátu je aktualizován na **Povinné**. V případě potřeby zahrnete k dodávce vytištěný certifikát.
 
-### To print a certificate of supply  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Shipments**, and then choose the related link.  
-2. Choose the relevant sales shipment to a customer in another EU country/region.  
-3. Choose the **Print Certificate of Supply** action.  
+### Tisk certifikátu dodání
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované prodejní dodávky** a poté vyberte související odkaz.
+2. Vyberte příslušnou prodejní dodávku zákazníkovi v jiné zemi / regionu EU.
+3. Vyberte akci **Tisk certifikátu dodání**.
 
-    > [!NOTE]  
-    >  Alternatively, you can print a certificate from the **Certificate of Supply** page.  
+   > [!NOTE]
+   > Alternativně můžete vytisknout certifikát ze stránky **Certifikát dodání**.
 
-4. To include information from the lines on the shipment document in the certificate, select the **Print Line Details** check box.  
-5. Choose the **Create Certificates of Supply if Not Already Created** check box to have [!INCLUDE[prod_short](includes/prod_short.md)] create certificates for posted shipments that do not have one at the moment of execution. When you choose the check box, new certificates will be created for all posted shipments that do not have certificates within the selected range.  
-6. By default, the filter settings are for the shipment document that you have selected. Fill in the filter information to select a specific certificate of supply that you want to print.  
-7. On the **Certificate of Supply** page, choose the **Print** action to print the report, or choose the **Preview** action to view it on the screen.  
+4. Chcete-li do certifikátu zahrnout informace z řádků v dodacím dokladu, zaškrtněte políčko **Tisk detailů řádku**.
+5. Zaškrtněte políčko **Vytvořit Certifikát dodání, jestliže ještě není vytvořen** a [!INCLUDE[d365fin](includes/d365fin_md.md)] vytvoří certifikáty pro zaúčtované dodávky, které jej nemají v okamžiku spuštění. Pokud zaškrtnete políčko, budou vytvořeny nové certifikáty pro všechny zaúčtované dodávky, které nemají certifikáty ve vybrané oblasti.
+6. Ve výchozím nastavení se nastavení filtru vztahuje na vybraný doklad dodávky. Vyplňte informace o filtru a vyberte konkrétní certifikát o dodávce, který chcete vytisknout.
+7. Na stránce **Certifikát dodání** vyberte akci **Tisk** pro tisk sestavy nebo zvolte akci **Náhled** a zobrazte ji na obrazovce.
 
-    > [!Note]  
-    > The **Certificate of Supply Status** field and the **Printed** field are updated for the shipment on the **Certificates of Supply** page.  
+   > [!Note]
+   > Pole **Stav certifikátu dodání** a **Vytištěno** jsou aktualizovány pro dodávku na stránce **Certifikáty dodání**.
 
-8. Send the printed certificate of supply to the customer for signature.  
+8. Tištěný certifikát o dodávce zašlete zákazníkovi k podpisu.
 
-### To update the status of a certificate of supply for a shipment  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Shipments**, and then choose the related link.  
-2. Choose the relevant sales shipment to a customer in another EU country/region.  
-3. In the **Status** field, choose the relevant option.  
+### Aktualizace stavu certifikátu o dodávce zásilky
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované prodejní dodávky** a poté vyberte související odkaz.
+2. Vyberte příslušnou prodejní dodávku zákazníkovi v jiné zemi / regionu EU.
+3. V poli **Stav** zvolte příslušnou možnost.
 
-   If the customer has returned the signed certificate of supply, choose **Received**. The **Receipt Date** field is updated. By default, the receipt date is set to the current work date.  
+   Pokud zákazník vrátil podepsaný certifikát o dodávce, zvolte **Přijato**. Pole **Datum příjmu** je aktualizováno. Ve výchozím nastavení je datum příjmu nastaven na aktuální pracovní datum.
 
-   You can modify the date to reflect the date that you received the customer's signed certificate of supply. You can also add a link to the signed certificate using standard [!INCLUDE[prod_short](includes/prod_short.md)] linking.  
+   Datum můžete upravit tak, aby zobrazoval datum, kdy jste obdrželi podepsaný certifikát dodávky zákazníka. K podepsanému certifikátu můžete také přidat odkaz pomocí standardního propojení [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-   If the customer does not return the signed certificate of supply, choose **Not Received**. You must then send the customer a new invoice that includes VAT, because the original invoice will not be accepted by the tax authority.  
+   Pokud zákazník nevrátí podepsaný certifikát o dodávce, vyberte **Nepřijato**. Poté musíte zákazníkovi poslat novou fakturu, která zahrnuje DPH, protože původní faktura nebude daňovým úřadem akceptována.
 
-To view a group of certificates, you start from the **Certificates of Supply** page, and then update the information about the status of outstanding certificates as you receive them back from your customers. This can be useful when you want to search for all certificates that have a certain status, for example, **Required**, for which you want to update their status to **Not Received**.  
+Chcete-li zobrazit skupinu certifikátů, začněte na stránce **Certifikáty dodání** a poté aktualizujte informace o stavu zbývajících certifikátů, jakmile je obdržíte od svých zákazníků. To může být užitečné, když chcete hledat všechny certifikáty, které mají určitý stav, například **Povinné**, u kterých chcete aktualizovat jejich stav na **Nepřijato**.
 
-### To update the status of a group of certificates of supply  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Certificates of Supply**, and choose the related link.  
-2. Filter the **Status** field to the value that you want in order to create the list of certificates that you want to manage.  
-3. To update the status information, choose **Edit List**.  
-4. In the **Status** field, choose the relevant option.  
+### Aktualizace stavu skupiny certifikátů dodávky
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Certifikáty dodání** a poté vyberte související odkaz.
+2. Chcete-li vytvořit seznam certifikátů, které chcete spravovat, filtrujte pole **Stav** na hodnotu, kterou chcete.
+3. Chcete-li aktualizovat informace o stavu, vyberte **Upravit přehled**.
+4. V poli **Stav** zvolte příslušnou možnost.
 
-   If the customer has returned the signed certificate of supply, choose **Received**. The **Receipt Date** field is updated. By default, the receipt date is set to the current work date.  
+   Pokud zákazník vrátil podepsaný certifikát o dodávce, zvolte **Přijato**. Pole **Datum příjmu** je aktualizováno. Ve výchozím nastavení je datum příjmu nastaven na aktuální pracovní datum.
 
-   You can modify the date to reflect the date that you received the signed the certificate of supply. You can also add a link to the signed certificate using standard [!INCLUDE[prod_short](includes/prod_short.md)] document linking.  
+   Datum můžete upravit tak, aby zobrazoval datum, kdy jste obdrželi podepsaný certifikát o dodávce. Odkaz na podepsaný certifikát můžete také přidat pomocí standardního propojení dokladů [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-    > [!NOTE]  
-    >  You cannot create a new certificate of supply on the **Certificate of Supply** page when you navigate to it using this procedure. To create a certificate for a shipment that was not set up to require one, open the posted sales shipment, and use either of two procedures described above:  
-    >   
-    > * To manually create a certificate of supply certificate  
-    > * To print a certificate of supply.
-
-## See Related Training at [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
-
-## See Also  
-[Setting Up to Calculations and Posting Methods for Value-Added Tax](finance-setup-vat.md)   
-[Report VAT to a Tax Authority](finance-how-report-vat.md)   
+   > [!NOTE]
+   > Když na stránku **Certifikáty dodání** přejdete tímto postupem nemůžete vytvořit nový certifikát spotřebního materiálu. Chcete-li vytvořit certifikát pro dodávku, která nebyla nastavena tak, aby vyžadovala certifikát, otevřete odeslanou prodejní dodávku a použijte jeden ze dvou výše popsaných postupů:
+   > * Ruční vytvoření certifikátu dodávky
+   > * Tisk certifikátu dodávky.
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz související školení na webu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
+
+## Viz také
+[Nastavení výpočtů a metod účtování daně z přidané hodnoty](finance-setup-vat.md)  
+[Ohlásit DPH finančnímu úřadu](finance-how-report-vat.md)

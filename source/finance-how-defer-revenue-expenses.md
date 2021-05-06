@@ -1,95 +1,91 @@
 ---
 title: Defer Revenues and Expenses| Microsoft Docs
 description: To recognize revenues and expenses in periods other than the period in which the transaction was posted, you can automatically defer or postpone them over a specified schedule.
+services: project-madeira
 documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: postpone
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Defer Revenues and Expenses
-To recognize a revenue or an expense in a period other than the period in which the transaction was posted, you can use functionality to automatically defer revenues and expenses over a specified schedule.
+# Odložení příjmů a výdajů
+Chcete-li uznat příjmy nebo výdaje v jiném období, než je období, ve kterém byla transakce zaúčtována, můžete použít funkce automaticky odložit výnosy a výdaje nad zadaný plán.
 
-To distribute revenues or expenses on the involved accounting periods, you set up a deferral template for the resource, item, or G/L account that the revenue or expense will be posted for. When you post the related sales or purchase document, the revenue or expense are deferred to the involved accounting periods, according to a deferral schedule that is governed by settings in the deferral template and the posting date.
+Chcete-li rozdělit příjmy nebo výdaje v příslušných účetních obdobích, nastavte šablonu odkladu pro zdroj, položku nebo účet hlavní knihy, do kterého se budou účtovat příjmy nebo výdaje. Když zaúčtujete související prodejní nebo nákupní doklad, příjmy nebo výdaje se odloží do příslušných účetních období, v souladu s plánem odkladu, který se řídí nastavením v šabloně odkladu a datem zaúčtování.
 
-## To set up a G/L account for deferral
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
-2. Choose the **New** action.
-3. Fill in the fields as necessary to create a G/L account for deferred revenues. For more information, see [The General Ledger and the Chart of Accounts](finance-general-ledger.md).
-4. Repeat steps 2 and 3 to create a new G/L account for deferred expenses.
+## Nastavení finančního účtu pro časově rozlišení
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Vyplňte pole podle potřeby k vytvoření finančního účtu pro odložené příjmy. Pro více informací navštivte [Hlavní kniha a účetní osnova](finance-general-ledger.md).
+4. Opakováním kroků 2 a 3 vytvořte nový finanční účet pro odložené výdaje.
 
-For both types of deferral, select **Balance Sheet** in the **Type** field, and name the accounts appropriately, such as "Unearned Income" for deferred revenues and "Unpaid Expenses" for deferred expenses.
+U obou typů odkladů vyberte v poli **Typ** hodnotu **Rozvaha** a odpovídajícím způsobem pojmenujte účty, například „Nezaslaný příjem“ pro odložené příjmy a „Neuhrazené výdaje“. pro odložené výdaje.
 
-## To set up a deferral template
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Deferral Templates**, and then choose the related link.
-2. Choose the **New** action.
-3. Fill in the fields as necessary.
-4. In the **Calc. Method** field, specify how the **Amount** field for each period on the **Deferral Schedule** page is calculated. You can choose between the following options:
+## Nastavení šablony časového rozlišení
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Šablony časového rozlišení** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Podle potřeby vyplňte pole.
+4. V poli **Metoda  výpočtu** určete způsob výpočtu pole **Částka** pro každé období na stránce **Plán časového rozlišení**. Můžete si vybrat mezi následujícími možnostmi:
 
-   * **Straight-Line**: The periodic deferral amounts are calculated according to the number of periods, distributed according to period length.
-   * **Equal Per Period**: The periodic deferral amounts are calculated according to the number of periods, distributed evenly on periods.
-   * **Days Per Period**: The periodic deferral amounts are calculated according to the number of days in the period.
-   * **User-Defined**: The periodic deferral amounts are not calculated. You must manually fill the **Amount** field for each period in the Deferral Schedule page. For more information, see the “To change a deferral schedule from a sales invoice” section.
-5. In the **Period Desc.** field, specify a description that will be shown on entries for the deferral posting. You can enter the following placeholder codes for typical values, which will be inserted automatically when the period description is displayed.
+   * **Lineární**: Pravidelné odložené částky se počítají podle počtu periody, rozdělené podle délky periody.
+   * **Stejně za období**: Periodické odložené částky se počítají podle počtu period rovnoměrně rozložených podle období.
+   * **Dní za období**: Částky periodického odkladu se počítají podle počtu dní v období.
+   * **Uživatelsky definovaná**: Částky periodického odkladu se nepočítají. Na stránce Časový plán odkladu musíte ručně vyplnit pole **Částka** pro každé období. Další informace naleznete v části „Změna plánu časového rozlišení z prodejní faktury“.
+5. V poli **Popis období** zadejte popis, který bude zobrazen u položek pro účtování odložení. Můžete zadat následující zástupné kódy pro typické hodnoty, které budou vloženy automaticky při zobrazení popisu období.
 
-   * %1 = The day number of the period posting date
-   * %2 = The week number of the period posting date
-   * %3 = The month number of the period posting date
-   * %4 = The month name of the period posting date
-   * %5 = The accounting period name of the period posting date
-   * %6 = The fiscal year of the period posting date
+   * %1 = Číslo dne zúčtovacího data období
+   * %2 = Číslo týdne zúčtovacího data období
+   * %3 = Číslo měsíce zúčtovacího data období
+   * %4 = Název měsíce zúčtovacího data období
+   * %5 = Název účetního zúčtovacího data období
+   * %6 = Fiskální rok zúčtovacího data období
 
-Example: The posting date is 02/06/2016. If you enter “Expenses deferred for %4 %6”, then the description displayed will be "Expenses deferred for February 2016".
+Příklad: Zúčtovací datum je 02/06/2016. Pokud zadáte „Odložené výdaje pro %4 %6“, bude zobrazený popis „Odložené výdaje za únor 2016“.
 
-## To assign a deferral template to an item
-> [!NOTE]  
->   The steps in this procedure are the same as when you assign a deferral template to a G/L account or a resource.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item**, and then choose the related link.
-2. Open the card for the item for which revenues or expenses must be deferred to the accounting periods when the item was sold or purchased.
-3. In the **Default Deferral Template** field, select the relevant deferral template.
+## Přiřazení šablony časového rozlišení ke zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Šablony časového rozlišení** a poté vyberte související odkaz.
+2. Otevřete kartu pro zboží, u níž musí být příjmy nebo výdaje odloženy na účetní období, kdy bylo zboží prodáno nebo zakoupeno.
+3. V poli **Výchozí šablona časového rozlišení** vyberte příslušnou šablonu.
 
-## To change a deferral schedule from a sales invoice
-> [!NOTE]  
->   The steps in this procedure are the same as when you change a deferral schedule, for expenses, from a purchase invoice.
+## Změna plán časového rozlišení z prodejní faktury
+> [!NOTE]
+> Kroky v tomto postupu jsou stejné jako při změně plánu časového rozlišení z nákupní faktury.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.
-2. Create a sales invoice for an item that has a deferral template assigned. For more information, see [Invoice Sales](sales-how-invoice-sales.md).
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní faktury** a poté vyberte související odkaz.
+2. Vytvořte prodejní fakturu pro zboží, které má přiřazenu šablonu časového rozlišení. Pro více informací navštivte [Faktury prodeje](sales-how-invoice-sales.md).
 
-    Notice that as soon as you enter the item (or resource or G/L account) on the invoice line, the **Deferral Code** field is filled with the code of the assigned deferral template.
-3. Choose the **Deferral Schedule** action.
-4. On the **Deferral Schedule** page, change settings on the header or values on the lines, for example to defer the amount to an additional accounting period.
-5. Choose the **Calculate Schedule** action.
-6. Choose the **OK** button. The deferral schedule is updated for the sales invoice. The related deferral template is unchanged.
+   Všimněte si, že jakmile na řádku faktury zadáte zboží (nebo zdroj nebo účet hlavní knihy), pole **Kód časového rozlišení** je vyplněno kódem přiřazené šablony časového rozlišení.
+3. Vyberte akci **Plán časového rozlišení**.
+4. Na stránce **Plán časového rozlišení** změňte nastavení v záhlaví nebo hodnoty na řádcích, například odložte částku do dalšího účetního období.
+5. Vyberte akci **Vypočítat plán**.
+6. Vyberte tlačítko **OK**. Plán časového rozlišení je aktualizován pro prodejní fakturu. Související šablona časového rozlišení se nezmění.
 
-## To preview how deferred revenues or expenses will be posted to the general ledger
-> [!NOTE]  
->   The steps in this procedure are the same as when you preview how expense deferrals are posted.
+## Zobrazení náhledu, jak budou odložené příjmy nebo výdaje zaúčtovány do hlavní knihy
+> [!NOTE]
+> Kroky v tomto postupu jsou stejné jako při náhledu způsobu účtování odkladů výdajů.
 
-1. On the **Sales Invoice** page, choose the **Preview Posting** action.
-2. On the **Posting Preview** page, choose the **G/L Entry** action, and then choose the **Show Related Entries** action.
+1. Na stránce **Prodejní faktury** vyberte akci **Náhled účtování**.
+2. Na stránce **Náhled účtování** vyberte akci **Věcné položky** a poté vyberte akci  **Zobrazit související položky**.
 
-G/L entries to be posted to the specified deferral account, for example, Unearned Income, are denoted by the description that you entered in the **Period Desc.** field in the deferral template, for example, "Expenses deferred for February 2016".
+Věcné položky, které mají být zaúčtovány na určený účet odkladu, například Nezaslaný příjem, jsou označeny popisem, který jste zadali do pole **Popis období** v šabloně odkladu, například “ Odložené výdaje za únor 2016 “.
 
-## To review posted deferrals in the Sales Deferral Summary report
-> [!NOTE]  
->   The steps in this procedure are the same as when you review the Purchasing Deferral Summary report.
+## Kontrola zaúčtovaných odkladů v sestavě Souhrn časového rozlišení prodeje
+> [!NOTE]
+> Kroky v tomto postupu jsou stejné jako při prohlížení sestavy Souhrn časového rozlišení nákupu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Deferral Summary**, and then choose the related link.
-2. On the **Sales Deferral Summary** page, in the **Balance as of** field, enter the date up to which you want to see deferred revenues.
-3. Choose the **Preview** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Souhrn časového rozlišení prodeje** a poté vyberte související odkaz.
+2. Na stránce **Souhrn časového rozlišení prodeje** zadejte do pole **Zůstatek k** datum, do kterého chcete zobrazit odložené výnosy.
+3. Vyberte tlačítko **Náhled**.
 
-## See Also
+## Viz také
 [Finance](finance.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Nastavení financí](finance-setup-finance.md)  
+[Práce s finančními deníky](ui-work-general-journals.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

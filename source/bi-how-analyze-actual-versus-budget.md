@@ -6,69 +6,66 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Analyze Actual Amounts Versus Budgeted Amounts
-As a part of gathering, analyzing, and sharing your company data, you view actual amounts compared to budgeted amounts for all accounts and for several periods.
+# Analýza skutečných částek proti částkám rozpočtu
+V rámci shromažďování, analýzy a sdílení údajů o vaší společnosti zobrazíte skutečné částky ve srovnání s částkami rozpočtu pro všechny účty a za několik období.
 
-To analyze budgeted amounts, you must first create G(L budgets. For more information, see [Create G/L Budgets](finance-how-create-budgets.md).
+Chcete-li analyzovat částky rozpočtu, musíte nejprve vytvořit finanční rozpočty. Pro více informací navštivte [Vytvoření finančních rozpočtů](finance-how-create-budgets.md).
 
-## To view a G/L budget
-In a budget with dimensions, you can filter the entries and see specific budgets.
+## Zobrazení finančního rozpočtu
+V rozpočtu s dimenzemi můžete filtrovat položky a zobrazit konkrétní rozpočty.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **G/L Budgets**, and then choose the related link.
-2. On the **G/L Budgets** page, open the budget that you want to view.  
-3. At the top of the page, fill in the fields as necessary to define what is shown. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Finanční rozpočty** a poté vyberte související odkaz.
+2. Na stránce **Finanční rozpočty** otevřete rozpočet, který chcete zobrazit.
+3. V horní části stránky vyplňte pole podle potřeby, abyste určili, co se má zobrazit. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-> [!NOTE]  
->   If you have selected **Period** in either the **Show as Lines** or the **Show as Columns** field, then you must fill in the **View by** field. If you have not selected **Period** in either the **Show as Lines** or **Show as Columns** field, then enter the appropriate period in **Date Filter** field.  
+> [!NOTE]
+> Pokud jste v poli **Zobrazit jako řádky** nebo **Zobrazit jako sloupce** vybrali **Období**, pak musíte vyplnit pole **Zobrazit podle**. Pokud jste nevybrali **Období** v poli **Zobrazit jako řádky** nebo **Zobrazit jako sloupce** zadejte příslušné období do pole **Filtr data**.
 
-> [!NOTE]  
->   Only entries from the general ledger budget with the filter codes that you enter on the **Filters** FastTab are included in the calculation. Budget entries with other filter codes or without any filter codes are not included. As long as the filter remains on the page, the budget only displays the budget entries with these filter codes.  
+> [!NOTE]
+> Do výpočtu jsou zahrnuty pouze položky z rozpočtu hlavní knihy s kódy filtrů, které zadáte do záložky **Filtry**. Položky rozpočtu s jinými kódy filtrů nebo bez kódů filtrů nejsou zahrnuty. Dokud filtr zůstane na stránce, rozpočet zobrazí pouze položky rozpočtu s těmito kódy filtrů.
 
-> [!TIP]  
->   If you want to modify the budget, you can modify the budget entries. Choose an amount to view the underlying general ledger budget entries.
+> [!TIP]
+> Pokud chcete upravit rozpočet, můžete upravit položky rozpočtu. Vyberte částku a zobrazte základní položky rozpočtu hlavní knihy.
 
-## To view actual and budgeted amounts for all accounts  
-You can view general ledger budgets and compare them with actual figures in several areas of [!INCLUDE[prod_short](includes/prod_short.md)].
+## Zobrazení skutečných částek a částek rozpočtu pro všechny účty
+Můžete zobrazit rozpočty hlavní knihy a porovnat je se skutečnými čísly v několika oblastech [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
-2. On the **Chart of Accounts** page, choose the **G/L Balance/Budget** action.
-3. At the top of the page, fill in the fields as necessary to define what is shown.  
-4. To see a specification that makes up the amount shown, choose the field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
+2. Na stránce **Účetní osnova** vyberte akci **Saldo/rozpočet**.
+3. V horní části stránky vyplňte pole podle potřeby, abyste určili, co se má zobrazit.
+4. Chcete-li zobrazit specifikaci, která tvoří zobrazenou částku, vyberte pole.
 
-> [!NOTE]  
->   The filters you set on the page header will be applied to general ledger entries and also budget entries.
+> [!NOTE]
+> Filtry, které nastavíte v záhlaví stránky, budou použity na položky hlavní knihy a také na položky rozpočtu.
 
-The leftmost columns contain the chart of accounts. Of the five columns on the rightmost side, the first four columns show actual and budgeted debit and credit amounts for each account. The fifth column shows the proportional relationship between the actual and the budgeted amounts on the general ledger account.  
+Sloupce vlevo obsahují graf účtů. Z pěti sloupců na pravé straně první čtyři sloupce zobrazují skutečné částky, částky rozpočtů a částky MD pro každý účet. Pátý sloupec zobrazuje proporcionální vztah mezi skutečnými a rozpočtovými částkami na účtu hlavní knihy.
 
-> [!TIP]  
->   Use the **View by** field on the **G/L Balance/Budget** page to select the period length. Use the **View as** field to select the way the amounts will be calculated, **Net Change** or **Balance at Date**. Choose the **Previous Period** or **Next Period** action to change the period.  
+> [!TIP]
+> Pomocí pole **Zobrazit podle** na stránce **Saldo/rozpočet** vyberte délku období. Pomocí pole **Zobrazit jako** vyberte způsob výpočtu částek, **Pohyb** nebo **Saldo do data**. Vyberte akci **Předchozí období** nebo **Další období** pokud chcete období změnit.
 
-## To view actual and budgeted amounts for several periods  
-Instead of viewing the actual and budgeted amounts for all accounts within a single period, you can view a number of periods for a single account.  
+## Zobrazení skutečných částek a částek rozpočtu za několik období
+Místo zobrazení skutečných částek a částek rozpočtu pro všechny účty v jednom období můžete zobrazit několik období pro jeden účet.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.  
-2. On the **Chart of Accounts** page, select the relevant general ledger account, and then choose the **G/L Account Balance/Budget** action.  
-3. At the top of the page, fill in the fields as necessary to define what is shown.   
-4. To see a specification of an amount shown, choose the field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
+2. Na stránce **Účetní osnova** vyberte příslušný účet hlavní knihy a poté vyberte akci **Saldo/rozpočet účtu**.
+3. V horní části stránky vyplňte pole podle potřeby, abyste určili, co se má zobrazit.
+4. Chcete-li zobrazit specifikaci zobrazené částky, zvolte pole.
 
-## See Related Training at [Microsoft Learn](/learn/modules/budgets-exchange-rates-dynamics-365-business-central/index)
+## Viz Související školení na [Microsoft Learn](/learn/modules/budgets-exchange-rates-dynamics-365-business-central/index)
 
-## See Also
+## Viz také
 [Business Intelligence](bi.md)  
-[Work with Account Schedules](bi-how-work-account-schedule.md)  
+[Práce s účetní schémou](bi-how-work-account-schedule.md)  
 [Finance](finance.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Nastavení financí](finance-setup-finance.md)  
+[Věcné položky a Účetní osnova](finance-general-ledger.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

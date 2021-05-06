@@ -1,48 +1,42 @@
 ---
-    title: Business Process Walkthroughs | Microsoft Docs
-    description: This selection of walkthroughs provides step-by-step, end-to-end business processes that you can perform using the CRONUS International Ltd. demonstration company. 
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Návody obchodních procesů | Microsoft Docs
+description: 'Tento výběr návodů poskytuje podrobné a koncové obchodní procesy, které můžete provádět pomocí RapidStart CRONUS International Ltd. demo společnost. Návody se skládají z více procedur, z nichž některé obvykle provádí jeden uživatel, zatímco jiné obsahují několik různých uživatelských rolí. V zájmu simulace pracovního prostředí některé návody obsahují kroky potřebné k dokončení cvičení, jak je popsáno. Tyto kroky mohou poskytnout přehled o typu informací, které uživatelé potřebují sdílet s odborníky v oblasti IT společnosti.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 01/31/2019
+ms.author: sgroespe
 ---
-# Business Process Walkthroughs
+# <a name="business-process-walkthroughs"></a>Návody obchodních procesů
+Tento výběr návodů poskytuje podrobné a koncové obchodní procesy, které můžete provádět pomocí RapidStart CRONUS International Ltd. demo společnost. Návody se skládají z více procedur, z nichž některé obvykle provádí jeden uživatel, zatímco jiné obsahují několik různých uživatelských rolí. V zájmu simulace pracovního prostředí některé návody obsahují kroky potřebné k dokončení cvičení, jak je popsáno. Tyto kroky mohou poskytnout přehled o typu informací, které uživatelé potřebují sdílet s odborníky v oblasti IT společnosti.  
 
-This selection of walkthroughs provides step-by-step, end-to-end business processes that you can perform using the CRONUS International Ltd. demonstration company. The walkthroughs consist of multiple procedures, some of which would normally be performed by one user, while others incorporate several different user roles. In order to simulate the working environment, some of the walkthroughs contain setup steps necessary to complete the exercises as described. These steps can provide insight into the kind of information users need to share with their company's IT professionals.  
-
- The walkthroughs are complete scenarios, and should be performed from beginning to end for the greatest benefit. Many are based on [!INCLUDE[prod_short](includes/prod_short.md)] demonstrations, and enable you to try those procedures yourself, at your own pace.  
+ Návody jsou úplné scénáře a měly by být provedeny od začátku do konce pro největší přínos. Mnoho z nich je založeno na [!INCLUDE[d365fin](includes/d365fin_md.md)] demonstracích a umožňuje vyzkoušet tyto postupy sami, vlastním tempem.  
 
 > [!NOTE]
-> Some of the walkthroughs require sample data that is not available in the default demonstration company in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [To create a company with complete sample data in a sandbox](across-how-create-sandbox-environment.md#to-create-a-company-with-complete-sample-data-in-a-sandbox).
+> Některé návody používají ukázková data, která nejsou k dispozici ve standardní společnosti CRONUS. Pro tyto návody je nutné provést kroky ve společnosti vytvořené z možnosti **Úplné vyhodnocení-úplná ukázková data** , která jsou k dispozici v Sandbox prostředí. Pro více informací navštivte [Vytvoření Sandbox prostředí](across-how-create-sandbox-environment.md).
 
-|To|See|  
+|Viz|také|  
 |--------|---------|  
-|Set up a marketing campaign.|[Walkthrough: Conducting a Sales Campaign](walkthrough-conducting-a-sales-campaign.md)|  
-|Use prepayments to manage part payments for sales and purchases. **Requires complete sample data** |[Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)|  
-|Set up approval users, when and how the users receive notification about approval workflows, and then modify and enable the relevant approval workflow.|[Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)|  
-|Put received items away in basic warehouse configurations. **Requires complete sample data**|[Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-receiving-and-putting-away-in-basic-warehousing.md)|  
-|Put received items away in advanced warehouse configurations. **Requires complete sample data**|[Walkthrough: Receiving and Putting Away in advanced warehouse configurations](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md)|  
-|Plan supply orders to fulfill demand manually. **Requires complete sample data**|[Walkthrough: Planning Supplies Manually](walkthrough-planning-supplies-manually.md)|  
-|Plan supply orders to fulfill demand automatically. **Requires complete sample data**|[Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md)|  
-|Assemble and ship items that are customized on the sales order. **Requires complete sample data**|[Walkthrough: Selling, Assembling, and Shipping Kits](walkthrough-selling-assembling-and-shipping-kits.md)|  
-|Plan a project, from start to finish. **Requires complete sample data**|[Walkthrough: Managing Projects with Jobs](walkthrough-managing-projects-with-jobs.md)|  
-|Report on the costs of a project. **Requires complete sample data**|[Walkthrough: Calculating Work in Process for a Job](walkthrough-calculating-work-in-process-for-a-job.md)|  
-|Pick items for shipment in basic warehouse configurations. **Requires complete sample data**|[Walkthrough: Picking and Shipping in Basic Warehouse Configurations](walkthrough-picking-and-shipping-in-basic-warehousing.md)|  
-|Perform defects management. **Requires complete sample data**|[Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md)|
-|Export business data for auditing purposes in Germany.|[Walkthrough: Exporting Data for a Digital Audit](LocalFunctionality/Germany/walkthrough-exporting-data-for-a-digital-audit.md)|
+|Vytvoření marketingové kampaně|[Návod: Vedení prodejní kampaně](walkthrough-conducting-a-sales-campaign.md)|  
+|Použití záloh ke správě záloh na prodej a nákupy **Vyžaduje úplná ukázková data** |[Návod: Nastavení a fakturace prodejních záloh](walkthrough-setting-up-and-invoicing-sales-prepayments.md)|  
+|Nastavení uživatelů schvalování, kdy a jak budou uživatelé dostávat oznámení o schvalování workflow a potom upravit a povolit příslušný pracovní postup schválení.|[Návod: Nastavení a použití Workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)|  
+|Zaskladnění přijatého zboží v základních konfiguracích skladu **Vyžaduje úplná ukázková data**|[Návod: Příjem a zaskladnění v základních konfiguracích skladu](walkthrough-receiving-and-putting-away-in-basic-warehousing.md)|  
+|Zaskladnění přijatého zboží v rozšířených konfiguracích skladu **Vyžaduje úplná ukázková data**|[Návod: Příjem a zaskladnění v rozšířených konfiguracích skladu](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md)|  
+|Plánování objednávek dodávek pro ruční uspokojení poptávky **Vyžaduje úplná ukázková data**|[Návod: Ruční plánování dodávek](walkthrough-planning-supplies-manually.md)|  
+|Plánování objednávek dodávek pro automatické splnění poptávky **Vyžaduje úplná ukázková data**|[Návod: automatické plánování dodávek](walkthrough-planning-supplies-automatically.md)|  
+|montáž a odeslání zboží přizpůsobené na prodejní objednávce. **Vyžaduje úplná ukázková data**|[Návod: Prodejní, montážní a přepravní soupravy](walkthrough-selling-assembling-and-shipping-kits.md)|  
+|Naplánujte si projekt od začátku do konce. **Vyžaduje úplná ukázková data**|[Návod: Správa projektů pomocí úloh](walkthrough-managing-projects-with-jobs.md)|  
+|Zpráva o nákladech na projekt. **Vyžaduje úplná ukázková data**|[Návod: výpočet nedokončené výroby pro projekt](walkthrough-calculating-work-in-process-for-a-job.md)|  
+|Vyberte položky k odeslání v základních konfiguracích skladu. **Vyžaduje úplná ukázková data**|[Návod: Vyskladnění a přeprava v základních konfiguracích skladu](walkthrough-picking-and-shipping-in-basic-warehousing.md)|  
+|Provádění správy závad. **Vyžaduje úplná ukázková data**|[Návod: Sledování sériových čísel](walkthrough-tracing-serial-lot-numbers.md)|  
 
-## See Also
+## <a name="see-also"></a>Viz také
+[Práce s[!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
 
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

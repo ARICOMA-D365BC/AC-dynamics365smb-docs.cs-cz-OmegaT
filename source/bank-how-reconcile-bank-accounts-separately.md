@@ -1,160 +1,97 @@
 ---
-title: Reconcile Bank Accounts| Microsoft Docs
-description: Describes how your inventory value is reconciled with the general ledger.
+title: Odsouhlasení bankovních účtů odděleně | Microsoft Docs
+description: 'Popisuje, jak je hodnota zásob odsouhlasena s financemi.'
+services: project-madeira
+documentationcenter: ''
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: bank account balance, bank statement
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'bank account balance, bank statement'
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Reconcile Bank Accounts
+# <a name="reconcile-bank-accounts-separately"></a>Odsouhlasit bankovní účty samostatně
 
-You perform bank reconciliation to make sure that your various business transactions and expenses are reflected correctly in the company books. You do this by comparing and matching entries in your internal bank accounts with bank transactions at your bank, and then posting the balances to your internal bank accounts to make totals available to finance managers. Bank reconciliation is also a practical way to discover and resolve missing payments and bookkeeping errors.
-
-The following describes how to perform bank reconciliation with the **Bank Acc. Reconciliation** page.
-
-> [!TIP]
-> You can also reconcile bank accounts on the **Payment Reconciliation Journal** page when you process payments. Any open bank account ledger entries related to the applied customer or vendor ledger entries will be closed when you choose the **Post Payments and Reconcile Bank Account** action. This automatically reconciles the bank account for the payments that you post with the journal. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
+Chcete-li odsouhlasit bankovní účty [!INCLUDE[d365fin](includes/d365fin_md.md)] s výpisy obdrženými z banky, začněte vyplněním podokna na stránce **Odsouhlasení bankovního účtu** informacemi z bankovního výpisu, které pak porovnáte (odsouhlasíte) s položkami bankovních účtů v pravém podokně. Inteligentní způsob vyplnění řádků bankovních výpisů je importem souboru nebo zdrojem bankovních výpisů.
 
 > [!NOTE]  
-> In the North American versions, you can also perform this work on the **Bank Rec. Worksheet** page, which is better suited for checks and deposits but does not offer import of bank statement files. To use this page instead of the **Bank Acc. Reconciliation** page, deselect the **Bank Recon. with Auto. Match** field on the **General Ledger Setup** page. For more information, see [Reconciling Bank Accounts](LocalFunctionality/UnitedStates/how-to-reconcile-bank-accounts.md) under United States Local Functionality.
+> V severoamerických verzích můžete tuto práci provést také v **Sešitu  odsouhlasení bankovního účtu**,  který je vhodnější pro šeky a vklady, ale nenabízí import souborů výpisu z účtu Chcete-li místo stránky **Odsouhlasení bankovního účtu** použít tuto stránku, odznačte volbu ** Automatické Odsouhlasení bankovního účtu **  pole shoda v  **Nastavení financí**. Další informace naleznete v části „Odsouhlasit bankovní účty“ v části lokální funkce Spojených států.
 
-The lines on the **Bank Acc. Reconciliation** page are divided into two panes. The **Bank Statement Lines** pane shows either imported bank transactions or ledger entries with outstanding payments. The **Bank Account Ledger Entries** pane shows the ledger entries in the internal bank account.
+> [!TIP]  
+> Bankovní účty můžete také odsouhlasit na stránce **Deníky odsouhlasení plateb** . Všechny otevřené položky účetní knihy vztahující se k použitým položkám účetní knihy odběratele nebo dodavatele budou uzavřeny, pokud zvolíte akci **Účtování plateb a odsouhlasení bankovního účtu**. To znamená, že bankovní účet je automaticky odsouhlasen pro platby, které zaúčtujete do deníku. Pro více informací bežte na [Automatické odsouhlasení plateb.](receivables-how-reconcile-payments-auto-application.md)
 
-Reconciling bank transactions with internal bank entries is referred to as *matching*. You can choose to perform matching automatically by using the **Match Automatically** function. Alternatively, you can manually select lines in both panes to link each bank statement line to one or more related bank account ledger entries, and then use the **Match Manually** function. The **Applied** check box is selected on lines where entries match. For more information, see [Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md).
+Chcete-li povolit import bankovních výpisů jako bankovní zdroje, musíte nejprve nastavit a povolit službu Envestnet Yodlee Bank Feed a poté propojit své bankovní účty se souvisejícími online bankovními účty. Pro více informací navštivte [Nastavení Envestnet  yodlee Bank služby](bank-how-setup-bank-statement-service.md).
+
+Řádky na stránce **Odsouhlasení bankovního účtu** jsou rozděleny do dvou podoken. V podokně **Řádky bankovního výpisu** se zobrazují buď importované bankovní transakce nebo položky s nezaplacenými platbami. V podokně **Položky bankovního účtu** se zobrazí položky bankovního účtu.
+
+Aktivita hledání a vyrovnání položek, které mají být odsouhlaseny, se označuje jako *Shoda*. Můžete zvolit, aby se porovnávání provádělo automaticky pomocí funkce **Shoda automaticky** . Alternativně můžete ručně vybrat řádky v obou podoknech pro propojení jednotlivých řádků bankovního výpisu s jednou nebo více souvisejícími položkami bankovního účtu a potom použít funkci **Shoda ručně** . V řádcích, kde se položky shodují, je vybráno **Vyrovnané** zaškrtávací políčko.
+
+Můžete vyplnit podokno **Řádky bankovních výpisů** v **Odsouhlasení bankovního účtu** následujícími způsoby:
+
+* Automaticky pomocí funkce **Import bankovního výpisu** k vyplnění řádků podle skutečných bankovních výpisů na základě souboru poskytovaném bankou.
+* Ručně, pomocí funkce **Navrhnout řádky** vyplňte řádky s položkami pro faktury, které mají nezaplacené platby.
+
+Když se hodnota v poli **Celkové saldo** v podokně **Řádky bankovního výpisu** rovná hodnotě v poli **Saldo k odsouhlasení** v okně **Položky bankovního účtu** , můžete zvolit akci **Zaúčtování** , která bude odsouhlasovat vyrovnání položek bankovního účtu. Všechny nevyrovnané položky bankovního účtu zůstanou na stránce, což znamená, že platby zpracované pro bankovní účet se neodrážejí v posledním bankovním výpisu nebo že některé platby byly přijaty při kontrolách.
 
 > [!NOTE]  
-> If bank statement lines relate to check ledger entries, you cannot use the matching functions. Instead, you must choose the **Apply Entries** action, and then select the relevant check ledger entry to match the bank statement line with.
+>   Pokud se řádky bankovního výpisu vztahují k položkám šeků, nelze použít odpovídající funkce. Místo toho musíte zvolit akci **Vyrovnat položky** a pak vybrat příslušnou položku šeku, která bude odpovídat řádku bankovního výpisu.
 
-When the value in the **Total Balance** field in the **Bank Statement Lines** pane equals the value in the **Balance To Reconcile** field in the **Bank Account Ledger Entries** pane, you can choose the **Post** action. Any non-matched bank account ledger entries will remain on the page, indicating some discrepancy that you should resolve to reconcile the bank account.
+## <a name="to-fill-bank-reconciliation-lines-by-importing-a-bank-statement"></a>Postup při vyplňování řádků odsouhlasení bankovního výpisu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Odsouhlasení bankovního účtu** a poté vyberte související odkaz.
+2. Vyberte akci **Nová**.
+3. V poli **Číslo bankovního účtu** vyberte příslušný bankovní účet. Položky bankovního účtu, které existují na bankovním účtu, se zobrazí v okně **Položky bankovního účtu**.
+4. Do pole **Datum výpisu** zadejte datum výpisu z banky.
+5. Do pole **Zůstatek** zadejte saldo výpisu z banky.
+6. Pokud máte soubor bankovního výpisu, zvolte akci **Import bankovního výpisu** .
+7. Najděte soubor a pak zvolte **Otevřit** tlačítko pro Import bankovních transakcí do řádků na stránce **Odsouhlasení bankovního účtu** .
 
-Any lines that cannot be matched, indicated by a value in the **Difference** field, will remain on the **Bank Acc. Reconciliation** page after posting. They represent some kind of discrepancy that you must resolve before you can complete the bank account reconciliation. Typical business situations that may cause differences:
+## <a name="to-fill-bank-reconciliation-lines-with-the-suggest-lines-function"></a>Chcete-li vyplnit řádky odsouhlasení banky funkcí Navrhnout řádky
+1. Na stránce **Odsouhlasení bankovního účtu** zvolte akci **Navrhnout řádky** .
+2. Do pole **Počáteční datum** zadejte nejstarší datum účtování, aby se položky účetní knihy shodovaly.
+3. Do pole **Koncové datum** zadejte poslední zúčtovací datum položek, které se mají odsouhlasit.
+4. Zaškrtněte políčko **Včetně šeků** pro všechny návrhy položek šeků namísto odpovídajících položek bankovního účtu.
+5. Klepněte na tlačítko **OK** .
 
-|Difference|Reason|Resolution|
-|-|-|
-|A transaction in the internal bank account is not on the bank statement.|The bank transaction did not occur although a posting was made in [!INCLUDE[prod_short](includes/prod_short.md)].|Make the missing money transaction (or prompt a debitor to make it), and then reimport the bank statement file or enter the transaction manually.|
-|A transaction on the bank statement does not exist as a document or journal line in [!INCLUDE[prod_short](includes/prod_short.md)].|A bank transaction was made without a corresponding posting in [!INCLUDE[prod_short](includes/prod_short.md)], for example a journal line posting for an expense.|Create and post the missing entry. For information on a quick way to initiate this, see [To create missing ledger entries to match bank transactions with](bank-how-reconcile-bank-accounts-separately.md#to-create-missing-ledger-entries-to-match-bank-statement-lines-with).|
-|A transaction in the internal bank account corresponds to a bank transaction but some information is too different to give a match.|Information, such as the amount or the customer name, was entered differently in connection with the bank transaction or the internal posting.|Review the information, and then manually match the two. Optionally, correct the information mismatch.||
+## <a name="to-match-bank-statement-lines-with-bank-account-ledger-entries-automatically"></a>Automatická shoda řádků bankovních výpisů s položkami bankovních účtů
+Stránka nabízí funkci automatického přiřazování, která aplikuje platby na související otevřené položky na základě shody textu na řádku výpisu z bankovního účtu (levý panel) s textem na jednom nebo více záznamech z bankovních účtů (pravý panel). Upozorňujeme, že můžete přepsat automaticky navrhované návrhy a můžete se rozhodnout, že automatické navrhování nebudete používat vůbec. Další informace naleznete v dalším postupu.
 
-You must resolve the differences, for example by creating missing entries and correcting non-matching information, or by making missing money transactions, until the bank account reconciliation is completed and posted.
+1. Na stránce **Odsouhlasení bankovního účtu** zvolte **Automatická shoda**. Otevře se stránka **Mapuj položky banky**
+2. V poli **Odchylka data transakce (dny)** určete rozsah dnů před a za zúčtovacím datem položky bankovního účtu, v rámci kterého bude funkce vyhledávat odpovídající data transakcí v bankovním výpisu.
 
-You can fill in the **Bank Statement Lines** pane on the **Bank Acc. Reconciliation** page in the following ways:
+    Pokud zadáte hodnotu 0 nebo necháte pole prázdné, bude funkce **Shoda automaticky** vyhledávat pouze odpovídající data transakcí v zúčtovacím datu položky bankovního účtu.
+3. Klepněte na tlačítko **OK** .
 
-* Automatically, by using the **Import Bank Statement** function to fill in the **Bank Statement Lines** pane with bank transactions according to an imported file or stream provided by the bank.
-* Manually, by using the **Suggest Lines** function to fill in the **Bank Statement Lines** pane according to invoices in [!INCLUDE[prod_short](includes/prod_short.md)] that have outstanding payments.
+    Všechny řádky bankovního výpisu a položky bankovního účtu, které lze přiřadit jsou zobrazeny zeleným písmem, a je zaškrtnuto políčko **Vyrovnáno** .
+4. Chcete-li odebrat shodu, vyberte řádek bankovního výpisu a pak zvolte akci **Odstranit shodu** .
 
-## To fill bank reconciliation lines by importing a bank statement
+## <a name="to-match-bank-statement-lines-with-bank-account-ledger-entries-manually"></a>Ruční přiřazení řádků bankovních výpisů k položkám účetní knihy
+1. Na stránce **Odsouhlasení bankovního účtu** vyberte nepoužitý řádek v okně **Řádky bankovního výpisu** .
+2. V podokně **Položky bankovního účtu** vyberte jednu nebo více bankovních položek bankovních účtů, které lze spárovat s vybraným řádkem bankovního výpisu. Chcete-li vybrat více řádků, stiskněte a podržte klávesu Ctrl.
+3. Vyberte akci **Shoda ručně**.
 
-The **Bank Statement Lines** pane will be filled with bank transactions according to an imported file or stream provided by the bank.
+    Vybraný řádek bankovního výpisu a vybrané položky bankovního účtu se změní na zelené písmo a je vybráno **Vyrovnané** zaškrtávací políčko v pravém podokně.
+4. Opakujte kroky 1 až 3 pro všechny řádky bankovního výpisu, které nejsou shodné.
+5. Chcete-li odebrat shodu, vyberte řádek bankovního výpisu a pak zvolte akci **Odstranit shodu** .
 
-To enable import of bank statements as bank feeds, you must first set up and enable the Envestnet Yodlee Bank Feed service, and then link your bank accounts to the related online bank accounts. For more information, see [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md).
+## <a name="to-create-missing-ledger-entries-to-match-bank-transactions-with"></a>Vytvoření chybějících položek pro odpovídající bankovní transakce
+V některých případech bankovní výpis obsahuje částky úroků nebo účtovaných poplatků. Takové bankovní transakce nelze spárovat, protože v aplikaci [!INCLUDE[d365fin](includes/d365fin_md.md)] neexistují žádné související položky. Poté je nutné zaúčtovat řádek deníku pro každou transakci a vytvořit tak související položku, se kterou lze spárovat.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Account Reconciliation**, and then choose the related link.
-2. Choose the **New** action.
-3. In the **Bank Account No.** field, select the relevant bank account. The bank account ledger entries that exist on the bank account appear in the **Bank Account Ledger Entries** pane.
-4. In the **Statement Date** field, enter the date of the statement from the bank.
-5. In the **Statement Ending Balance** field, enter the balance of the statement from the bank.
-6. If you have a bank statement file, choose the **Import Bank Statement** action.
-7. Locate the file, and then choose the **Open** button to import the bank transactions into the **Bank Statement Lines** pane on the **Bank Acc. Reconciliation** page.
+1. Na stránce **Odsouhlasení bankovního účtu** zvolte položku **Transfer do finančního deníku** .  
+2. Na stránce **Převod odsouhl.bank.účtu do fin.den.** určete, který obecný deník se má použít, a poté zvolte tlačítko **OK**.
 
-## To fill bank reconciliation lines with the Suggest Lines function
+    Otevře se stránka **Finanční deník** , která obsahuje nové řádky deníku pro všechny řádky výpisu z banky s chybějícími položkami.
+3. Vyplňte řádek deníku odpovídajícími informacemi, například protiúčtem. Další informace naleznete v části [Práce s Finančním deníkem](ui-work-general-journals.md).  
+4. Chcete-li si prohlédnout výsledek účtování před účtováním, zvolte akci **Testovací sestava** . Otevře se sestava **Výpis bankovního účtu** a zobrazí stejná pole jako v hlavičce stránky **Odsouhlasení bank. účtu**.
+4. Vyberte akci **Účtovat**.
 
-The **Bank Statement Lines** pane will be filled according to invoices in [!INCLUDE[prod_short](includes/prod_short.md)] that have outstanding payments.  
+    Když je položka zaúčtována, pokračujte tak, aby odpovídala bankovní transakci.
+5. Obnovte nebo znovu otevřete stránku **Odsouhlasení bankovního účtu** . Nová položka knihy se zobrazí v podokně **Položky knihy bankovních účtů**.
+6. Řádek bankovního výpisu porovnejte s položkou účetní knihy, buď ručně nebo automaticky.
 
-1. On the **Bank Acc. Reconciliation** page, choose the **Suggest Lines** action.
-2. In the **Starting Date** field, enter the earliest posting date for the ledger entries to be reconciled.
-3. In the **Ending Date** field, enter the latest posting date for the ledger entries to be reconciled.
-4. Select the **Include Checks** check box to any suggest check ledger entries instead of the corresponding bank account ledger entries.
-5. Choose the **OK** button.
-
-## To match bank statement lines with bank account ledger entries automatically
-
-The **Bank Acc. Reconciliation** page offers automatic matching functionality based on a matching of text on a bank statement line (left pane) with text on one or more bank account ledger entries (right pane). Note that you can overwrite the suggested automatic matching, and you can choose to not use automatic matching at all. For more information, see [To match bank statement lines with bank account ledger entries manually](bank-how-reconcile-bank-accounts-separately.md#to-match-bank-statement-lines-with-bank-account-ledger-entries-manually).
-
-1. On the **Bank Acc. Reconciliation** page, choose the **Match Automatically**. **The Match Bank Entries** page opens.
-2. In the **Transaction Date Tolerance (Days)** field, specify the span of days before and after the bank account ledger entry posting date within which the function will search for matching transaction dates in the bank statement.
-
-    If you enter 0 or leave the field blank, then the **Match Automatically** function will only search for matching transaction dates on the bank account ledger entry posting date.
-3. Choose the **OK** button.
-
-    All bank statement lines and bank account ledger entries that can be matched change to green font, and the **Applied** check box is selected.
-4. To remove a match, select the bank statement line, and then choose the **Remove Match** action.
-
-## To match bank statement lines with bank account ledger entries manually
-
-1. On the **Bank Acc. Reconciliation** page, select a non-applied line in the **Bank Statement Lines** pane.
-2. In the **Bank Account Ledger Entries** pane, select one or more banks account ledger entries that can be matched with the selected bank statement line. To choose multiple lines, press and hold the Ctrl key.
-3. Choose the **Match Manually** action.
-
-    The selected bank statement line and the selected bank account ledger entries change to green font, and the **Applied** check box in the right pane is selected.
-4. Repeat steps 1 through 3 for all bank statement lines that are not matched.
-5. To remove a match, select the bank statement line, and then choose the **Remove Match** action.
-
-## To create missing ledger entries to match bank statement lines with
-
-Sometimes a bank statement contain amounts for interest or fees charged. Such bank statement lines cannot be matched because no related ledger entries exist in [!INCLUDE[prod_short](includes/prod_short.md)]. You must then post a journal line for each transaction to create a related ledger entry that it can be matched with.
-
-1. On the **Bank Acc. Reconciliation** page, choose the **Transfer to General Journal** action.  
-2. On the **Trans. Bank Rec. to Gen. Jnl.** page, specify which general journal to use, and then choose the **OK** button.
-
-    The **General Journal** page opens containing new journal lines for any banks statement lines with missing ledger entries.
-3. Complete the journal line with relevant information, such as the balancing account. For more information, see [Working with General Journals](ui-work-general-journals.md).  
-4. To review the result of posting before you post, choose the **Test Report** action. The **Bank Account Statement** report opens and shows the same fields as at the header of the **Bank Acc. Reconciliation** page.
-5. Choose the **Post** action.
-
-    When the entry is posted, proceed to match the bank statement line to it.
-6. Refresh or reopen the **Bank Acc. Reconciliation** page. The new ledger entry will appear in the **Bank Account Ledger Entries** pane.
-7. Match the bank statement line with the bank account ledger entry, either manually or automatically.
-
-## Undo a bank account reconciliation
-If you discover a mistake in a posted bank reconciliation, you can use the **Undo** action on the **Bank Acc. Statement** page to correct the mistake. When you undo a posted bank reconciliation, the entries will be moved to the **Bank Reconciliation** page and marked as **Open**, meaning they are not reconciled. You can then correct the bank reconciliation and post it again.
-
-> [!NOTE]
-> In the North American version, to use the Undo feature for posted bank reconciliations and bank statements you must turn on the **Bank Recon. with Auto-Match** toggle on the **General Ledger Setup** page. The Undo feature is not available for bank statements posted from bank reconciliation worksheets.
-
-### Reusing the bank statement number
-The bank statement number used for the new bank reconciliation is taken from the bank account as is the Balance Last Statement. You can change these values before you start a new bank reconciliation. However, when you create a new bank reconciliation, [!INCLUDE[d365fin](includes/d365fin_md.md)] checks whether the statement number is already assigned to a posted bank statement. If the number is in use, but you want the new bank statement to use it instead, you can use the **Change Statement No.** action on the **Bank Acct. Reconciliation** page.
-
-### Examples
-The following are a few examples of how to fix a mistake on a posted bank reconciliation with or without using the same statement number.
-
-#### Example 1
-You did bank reconciliations for January, February, and March. The bank statement number was 100 for March. Later, you discover that March only included entries until the 30th, which means entries for the 31st are missing. So, you need to redo the bank reconciliation for March. In this case, we'll open the **Bank Acc. Statement** page, choose the statement for March, and then choose **Undo**. 
-
-The new bank reconciliation is given the statement number 101. To reassign the number 100, choose **Change Statement No.** and enter **100**. 
-
-> [!TIP]
-> Remember to set the appropriate Statement ending date (in this example, that is March 31), and edit the **Balance Last Statement** field. 
-
-#### Example 2
-You did bank reconciliations for January, February, June, and July. You discover that February was incorrect. Let's assume it had statement number 100. As in the Example 1, you use the Undo and Change Statement No. actions to change the statement number as in example #1 above and you can now redo February bank reconciliation.  
-
-After you post the corrected bank reconciliation for February, on the corresponding Bank Account card, the **Last Statement No.** field will show **100**, and the **Balance Last Statement** field will show the ending balance for the February statement. 
-
-If the next bank reconciliation you do is for March, [!INCLUDE[d365fin](includes/d365fin_md.md)] will assign 101 as the statement number and give it the correct **Balance Last Statement**.
-
-If the next bank reconciliation you do is for August, consider changing the values in the **Last Statement No.** and **Balance Last Statement** fields on the **Bank Account** card before you create the next bank reconciliation, or use the Change Statement No. action and also change the value in the "Balance Last Statement" field on the bank reconciliation page.
-
-> [!NOTE]
-> The statement number is important when you do bank reconciliations with imported CAMT files that contain statement numbers, or when you reconcile based on printed bank statements. If you just download a range of bank transactions from your online bank, the statement number is usually not important. 
->
->The Balance Last Statement is kept on the bank account to minimize mistakes when doing bank reconciliations, but it’s also editable, allowing you to do your bank reconciliations in any order you want. This also means that if you undo a bank statement, the new ending balance might not be the balance last statement on the next bank statement. There’s no feature that allows you to move a balance forward to all subsequent bank statements, so be aware of this when using Undo. 
-
-## See Related Training at [Microsoft Learn](/learn/modules/bank-reconciliation-dynamics-365-business-central/index)
-
-## See Also
-
-[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
-[Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md)  
-[Setting Up Banking](bank-setup-banking.md)  
-[Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Správa bankovních účtů](bank-manage-bank-accounts.md)  
+[Nastavení bankovnictví](bank-setup-banking.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

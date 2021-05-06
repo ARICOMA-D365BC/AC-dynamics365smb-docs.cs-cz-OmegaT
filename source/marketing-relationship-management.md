@@ -1,36 +1,40 @@
 ---
-title: Relationship Management| Microsoft Docs
-description: The relationship management features in Business Central support your sales efforts and let you access information about contacts and prospects so you can serve customers efficiently.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+title: Řízení vztahů | Micorosoft Docs
+description: Funkce správy vztahů v Business Central podporují vaše úsilí o prodej a umožňují vám získat přístup k informacím o kontaktech a perspektivách, abyste mohli efektivně obsluhovat zákazníky.
+author: v-pejano
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: contact, prospect, client
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'contact, prospect, client'
+ms.date: 01/17/2020
+ms.reviewer: v-zdbice
+ms.author: sgroespe
 ---
-# Managing Relationships
-The relationship management features of [!INCLUDE[prod_short](includes/prod_short.md)] help you manage and support your sales efforts. With these features, you have access to complete and accurate information so you can focus your interactions on preferred customer/contact segments.
+# Správa vztahů
 
-Good sales and marketing practices are all about how to make the best decisions at the right time. [!INCLUDE[prod_short](includes/prod_short.md)] provides a precise and timely overview of your contact information so that you can serve your prospective customers more efficiently and increase customer satisfaction.
+Funkcionality správy vztahů [!INCLUDE[d365fin](includes/d365fin_md.md)] vám pomohou spravovat a podporovat vaše prodejní procesy. Díky těmto funkcím máte přístup k úplným a přesným informacím, abyste mohli zaměřit své aktivity na preferované segmenty zákazníků / kontaktů.
 
-The following table describes a sequence of tasks, with links to the topics that describe them.  
+Dobré prodejní a marketingové postupy jsou o tom, jak učinit nejlepší rozhodnutí ve správný čas. [!INCLUDE[d365fin](includes/d365fin_md.md)] poskytuje přesný a včasný přehled kontaktních informací, aby bylo možné efektivněji obsluhovat potenciální zákazníky a zvýšit spokojenost zákazníků.
 
-| To | See |
+Následující tabulka popisuje přehled úloh s odkazy na témata, která je popisují.
+
+| Funkce | Odkaz |
 | --- | --- |
-|Define default settings for the use of contacts and interactions and set up number series.|[Setting Up Relationship Management](marketing-setup-marketing.md)|
-|Define the external entities that you have business relations with, such as customers, prospective customers, vendors, lawyers, and consultants, either as Person type or Company type.|[Managing Contacts](marketing-contacts.md)|
-|Manage all types of communications between your company and your contacts, such as by email, letter, telephone, meetings.|[Managing Interactions](marketing-interactions.md)|
-|Define segments to select a group of contacts according to specific criteria, such as the industry that the contacts belong to.|[Managing Segments](marketing-segments.md)|
-|Process incoming leads by creating opportunities and associating them to salespeople so that you can keep track of potential sales.|[Managing Sales Opportunities](marketing-manage-sales-opportunities.md)|
-|Create marketing plans to identify, attract, and retain customers.|[Managing Marketing Campaigns](marketing-campaigns.md)|
-|Use Dynamics 365 Sales for customer engagement and enjoy seamless integration in the lead-to-cash process by using Business Central for backend activities such as processing orders, managing inventory, and doing your finances.|[Integrating with Dynamics 365 Sales](marketing-integrate-dynamicscrm.md)|
+|Definice výchozích nastavení pro použití kontaktů a interakcí a nastavení číselných řad.|[Nastavení správy vztahů](marketing-setup-marketing.md)|
+|Definice externích subjektů, se kterými máte obchodní vztahy, jako jsou zákazníci, budoucí zákazníci, dodavatelé, právníci a konzultanti, buď jako typ Osoby nebo typ Společnost.|[Správa kontaktů](marketing-contacts.md)|
+|Správa všech typů komunikace mezi vaší společností a vašimi kontakty, například e-mailem, dopisem, telefonem, schůzkami.|[Správa interakcí](marketing-interactions.md)|
+|Definice segmentů pro výběr skupiny kontaktů podle konkrétních kritérií, například podle odvětví, ke kterému kontakty patří.|[Správa segmentů](marketing-segment.md)|
+|Zpracování příchozí potenciálních obchodů vytvořením příležitostí a jejich přiřazením prodejcům, abyste mohli sledovat potenciální prodej.|[Správa prodejních příležitostí](marketing-manage-sales-opportunities.md)|
+|Vytvoření marketingových kampaní pro identifikaci, přilákání a udržení zákazníků.|[Správa marketingových kampaní](marketing-campaigns.md)|
+|Použití Dynamics 365 for Sales s bezproblémovou integrací do procesu vedoucího k zisku s využitím [!INCLUDE[d365fin](includes/d365fin_md.md)] pro obchodní aktivity, jako je zpracování objednávek, správa zásob a zpracování financí.|[Integrace s Dynamics 365 for Sales](marketing-integrate-dynamicscrm.md)|
 
+## Viz také
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Prodej](sales-manage-sales.md)  
+[Integrace s Dynamics 365 for Sales](marketing-integrate-dynamicscrm.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

@@ -1,225 +1,223 @@
 ---
-title: Count, Adjust, and Reclassify Inventory| Microsoft Docs
-description: Describes how to perform physical counting, make negative or positive adjustments, and how to change information, such as location or lot number, on item ledger entries or warehouse entries.
+title: 'Výpočet, úprava a přeřazení zásob | Microsoft Docs'
+description: 'Popisuje, jak provádět fyzické počítání, záporné nebo kladné úpravy a jak měnit informace, jako je lokace nebo číslo šarže, u položek zboží nebo položek skladu.'
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: adjustment, negative, positive, increase, decrease
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'adjustment, negative, positive, increase, decrease'
+ms.date: 03/01/2019
+ms.author: sgroespe
 ---
-# Count, Adjust, and Reclassify Inventory Using Journals
-At least once every fiscal year you must take a physical inventory, that is, count all the items on inventory, to see if the quantity registered in the database is the same as the actual physical quantity in the warehouses. When the actual physical quantity is known, it must be posted to the general ledger as a part of period-end valuation of inventory.
+# <a name="count-adjust-and-reclassify-inventory"></a>Výpočet, úprava a přeřazení zásob
+Alespoň jednou za fiskální rok musíte provést fyzickou inventuru, tj. spočítat všechno zboží ve skladu, abyste zjistili, zda je množství evidované v databázi stejné jako skutečné fyzické množství ve skladech. Je-li známo skutečné fyzické množství, musí být zaúčtováno do hlavní knihy jako součást ocenění zásob na konci období.
 
-Although you count all items in inventory at least once a year, you may have decided to count some items more often, perhaps because they are more valuable, or because they are very fast movers and a large part of your business. For this purpose, you can assign special counting periods to those items. For more information, see [To perform cycle counting](inventory-how-count-adjust-reclassify.md#to-perform-cycle-counting).
+Ačkoli počítáte všechno zboží v inventáři alespoň jednou ročně, možná jste se rozhodli některé zboží počítat častěji, snad proto, že jsou cennější, nebo proto, že jsou velmi rychlými pohyby a velkou částí vašeho podnikání. Za tímto účelem můžete těmto zbožím přiřadit speciální období pro počítání. Pro více informací navštivte [Provádění počítání cyklů](inventory-how-count-adjust-reclassify.md#to-perform-cycle-counting).
 
-If you need to adjust recorded inventory quantities, in connection with counting or for other purposes, you can use an item journal to change the inventory ledger entries directly without posting business transactions. Alternatively, you can adjust for a single item on the item card.
+Pokud potřebujete upravit zaznamenané množství zásob, v souvislosti s počítáním nebo pro jiné účely, můžete pomocí deníku položek přímo měnit položky inventury bez účtování obchodních transakcí. Můžete také upravit samostatné zboží na kartě zboží.
 
-If you need to change attributes on item ledger entries, you can use the item reclassification journal. Typical attributes to reclassify include dimensions and sales campaign codes, but you also perform "system transfers" by reclassifying bin and location codes. Special steps apply when you want to reclassify serial or lot numbers and their expiration dates. For more information, see [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md).
-
-> [!NOTE]
-> In advanced warehouse configurations, items are registered in bins as warehouse entries, not as item ledger entries. Therefore, you perform counting, adjusting, and reclassifying in special warehouse journals that support bins. Then, you use special functions to synchronize the new or changed warehouse entries with their related item ledger entries to reflect the changes in inventory quantities and values. This is described in specific procedures below where relevant.
-
-## To perform a physical inventory
-You must take a physical inventory, that is, count the actual items on hand, to check if the quantity registered is the same as the physical quantity in stock at the end of a fiscal year, if not more often. If there are differences, you must post them to the item accounts before you do the inventory valuation.
+Pokud potřebujete změnit atributy u položek zboží, můžete použít deník přeřazení zboží. Mezi typické atributy, které se mají přeřadit, patří dimenze a kódy prodejních kampaní, ale také třeba vykonat „systémové transfery“ přeřazením kódů bin a lokace. Pokud chcete přeřadit sériová čísla nebo čísla šarže a data jejich vypršení, platí zvláštní kroky. Pro více informací navštivte [Práce se sériovými čísly a čísly šarže](inventory-how-work-item-tracking.md).
 
 > [!NOTE]
-> This procedure describes how to perform a physical inventory using a journal, the **Phys. Inventory Journal** page. You can also perform the task using documents, the **Physical Inventory Order** and **Physical Inventory Recording** pages, which provide more control and support distributing the counting to multiple employees. For more information, see [Count Inventory Using Documents](inventory-how-count-inventory-with-documents.md).<br /><br />
-> Note that the document-based functionality cannot be used to count items in bins, warehouse entries.
+> V pokročilých konfiguracích skladů je zboží evidováno v přihrádkách jako položky skladu, nikoli jako položky zboží. Proto provádíte počítání, úpravy a přeřazení ve speciálních denících skladu, které podporují přihrádky. Poté pomocí speciálních funkcí synchronizujete nové nebo změněné položky skladu s jejich souvisejícími položkami zboží, aby odrážely změny v množstvích a hodnotách zásob. To je popsáno v konkrétních postupech níže.
 
-Apart from the physical counting task, the complete process involves the following three tasks:
+## <a name="to-perform-a-physical-inventory"></a>Provádění fyzické inventury
+Musíte provést fyzickou inventuru, tj. spočítat skutečné zboží na skladě, abyste zkontrolovali, zda evidované množství je stejné jako fyzické množství na skladě na konci fiskálního roku, ne-li častěji. Pokud existují rozdíly, musíte je před ohodnocením zásob zaúčtovat na účty zboží.
 
-- Calculate the expected inventory.
-- Print the report to be used when counting.
-- Enter and post the actual counted inventory.
+Kromě úlohy fyzického počítání zahrnuje celý proces následující tři úkoly:
 
-You can perform the physical inventory in either of the following ways depending on your warehouse setup. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).  
+- Výpočet očekávaného množství na skladě.
+- Vytištění sestavy, která se použije při počítání.
+- Zadání a zaúčtování skutečně spočítaných zásob.
 
--   If your location is not using directed put-away and pick (basic warehouse configuration), you use the **Phys. Inventory Journal** page in the **Inventory** menu, and the procedure is much the same as when you conduct a physical inventory without cycle counting.  
--   If your location is using directed put-away and pick (advanced warehouse configuration), you first use the **Whse. Phys. Invt. Journal** page, and then you use the **Item Journal** page to run the **Calculate Whse. Adjustment** function.
+Fyzickou inventuru můžete provést jedním z následujících způsobů v závislosti na nastavení vašeho skladu. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).  
 
-### To calculate the expected inventory in basic warehouse configurations
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. Inventory Journals**, and then choose the related link.
-2. Choose the **Calculate Inventory** action.
-3. On the **Calculate Inventory** page, specify the conditions to use to create the journal lines, such as whether to include items that have zero recorded inventory.
-4. Set filters if you only want to calculate inventory for certain items, bins, locations, or dimensions.
-5. Choose the **OK** button.
+-   Pokud vaše lokace nepoužívá řízené zaskladnění/vyskladnění (základní konfigurace skladu), použijete stránku **Deník  fyzické inventury** v nabídce **Zásoby** a postup je téměř stejný jako při provádění fyzické inventury bez cyklické inventury.  
+-   Pokud vaše lokace nepoužívá řízené zaskladnění/vyskladnění (základní konfigurace skladu), použijete stránku **Deník fyz.  inventury  skladu** a poté pomocí stránky **Deník zboží** spusťte funkci **Vypočítat adjustace skladu**.
+
+### <a name="to-calculate-the-expected-inventory-in-basic-warehouse-configurations"></a>Výpočet očekávaného množství na skladě v základních konfiguracích skladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Období fyzické inventury** a poté vyberte související odkaz.
+2. Vyberte akci **Vypočítat množství zásob**.
+3. Na stránce **Vypočítat množství zásob** určete podmínky, které se mají použít k vytvoření řádků deníku, například zda zahrnout zboží, které má nulovou evidovanou zásobu.
+4. Nastavte filtry, pokud chcete vypočítat inventury pouze pro určité zboží, přihrádky, lokace nebo dimenze.
+5. Zvolte tlačítko **OK**.
 
 > [!NOTE]  
->   The item entries are processed according to the information that you specified, and lines are created in the physical inventory journal. Notice that the **Qty. (Phys. Inventory)** field is automatically filled in with the same quantity as the **Qty. (Calculated)** field. With this feature, it is not necessary for you to enter the counted inventory on hand for items that are the same as the calculated quantity. However, if the quantity counted differs from what is entered in the **Qty. (Calculated)** field, you must overwrite it with the quantity actually counted.
+>   Položky zboží jsou zpracovávány podle zadaných informací a řádky jsou vytvářeny v deníku fyzické inventury. Všimněte si, že pole **Množství  (Fyz.inventura)** je automaticky vyplněno stejným množstvím jako pole **Množství (vypočtené)**. S touto funkcí není nutné zadávat počítané zásoby na skladě pro zboží, které jsou stejné jako vypočtené množství. Pokud se však vypočítané množství liší od toho, co je zadáno do pole **Množství (vypočtené)**, musíte jej přepsat skutečným vypočítaným množstvím.
 
-### To print the report to be used when counting
-1. On the **Phys. Inventory Journal** page containing the calculated expected inventory, Choose the **Print** action.
-2. On the **Phys. Inventory List** page, specify if the report should show the calculated quantity and if the report should list inventory items by serial/lot numbers.
-3. Set filters if you only want to print the report for certain items, bins, locations, or dimensions.
-4. Choose the **Print** button.
+### <a name="to-calculate-the-expected-inventory-in-advanced-warehouse-configurations"></a>Výpočet očekávaného množství na skladě v pokročilých konfiguracích skladu
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zboží** a poté vyberte související odkaz.  
+2.  Vyberte akci **Výpočet adjustace skladu**.  
+3.  Vyplňte stránku žádosti o dávkovou úlohu čísly zboží, které chcete spočítat, a svou lokaci.
+4. Vyberte tlačítko **OK** a zaúčtujte změny, pokud existují.
 
-Employees can now proceed to count inventory and record any discrepancies on the printed report.
+    Pokud tak neučiníte před provedením fyzické inventury skladu, výsledky, které zaúčtujete do deníku fyzické inventury a položek zboží ve druhé části procesu, budou výsledky fyzické inventury kombinované s dalšími úpravami skladu pro zboží, které byly spočítané.  
+5.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník fyz. inventury skladu** a poté vyberte související odkaz.  
+6. Vyberte akci **Vypočítat množství zásob**. Otevře se stránka dávkové úlohy **Výpočet  zásob skladu**.  
+7.  Nastavte filtry tak, aby omezovaly zboží, které bude započítávané do deníku, a poté zvolte tlačítko **OK**.
 
-> [!NOTE]
-> It can take several days before printed reports come back for final processing and posting. When you specify and post actual counted inventory, the system adjusts inventory to reflect the difference between the expected and the actual counted inventory. You must keep the originally calculated journal lines and not recalculate the expected inventory, because the expected inventory may change and lead to wrong inventory levels. If you need to issue multiple reports, such as for different locations or group of items, you must create and keep separate journal batches.
+    Program vytvoří řádek pro každou přihrádku, která splňuje požadavky na filtr. V tomto okamžiku můžete některé řádky odstranit, ale pokud chcete výsledky zaúčtovat jako fyzickou inventuru, musíte zboží spočítat ve všech přihrádkách, které jej obsahují.  
 
-### To enter and post the actual counted inventory in basic warehouse configurations
-1. On each line on the **Phys. Inventory Journal** page where the actual inventory on hand, as determined by the physical count, differs from the calculated quantity, enter the actual inventory on hand in the **Qty. (Phys. Inventory)** field.
-
-    The related fields are updated accordingly.
-
-    > [!NOTE]  
-    >   If the physical count reveals differences that are caused by items posted with incorrect location codes, do not enter the differences in the physical inventory journal. Instead, use the reclassification journal or a transfer order to redirect the items to the correct locations. For more information, see Item Reclass. Journal or Create Transfer Orders.
-
-2. To adjust the calculated quantities to the actual counted quantities, choose the **Post** action.
-
-    Both item ledger entries and physical inventory ledger entries are created. Open the item card to view the resulting physical inventory ledger entries.
-
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-4. To verify the inventory counting, open the item card in question, and then, choose the **Phys. Inventory ledger Entries** action.
-
-### To calculate the expected inventory in advanced warehouse configurations
-Synchronize item ledger and warehouse before you perform the warehouse physical inventory, otherwise the results you post to the physical inventory journal and item ledger in the final part of the process will be the physical inventory results combined with other warehouse adjustments for the items that were counted. For more information, see [synchronize quantities in the item ledger and warehouse](inventory-how-count-adjust-reclassify.md#to-synchronize-the-adjusted-warehouse-entries-with-the-related-item-ledger-entries)
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Phys. Invt. Journal**, and choose the related link.  
-2. Choose the **Calculate Inventory** action. The **Whse. Calculate Inventory** batch job request page opens.  
-3. Set the filters to limit the items that will be counted in the journal, and then choose the **OK** button.
-
-    The application creates a line for each bin that fulfills the filter requirements. You can at this point still delete some of the lines, but if you want to post the results as a physical inventory, you must count the item in all the bins that contain it.  
-
-     If you only have time to count the item in some bins and not others, you can discover discrepancies, register them, and later post them in the item journal using the **Calculate Whse. Adjustment** function.  
-
-
-### To print the report to be used when counting
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Physical Inventory List**, and choose the related link.  
-2. Open the  report request page and print the lists on which you want employees to record the quantity of items that they count in each bin.  
-
-Employees can now proceed to count inventory and record any discrepancies on the printed report.
-
-### To enter and post the actual counted inventory in advanced warehouse configurations
-1. When the counting is done, enter the counted quantities in the **Qty. (Phys. Inventory)** field in the warehouse physical inventory journal.  
+     Pokud máte pouze čas spočítat zboží jenom v některých přihrádkách, ne ve všech, můžete odhalit nesrovnalosti, zaregistrovat je a později je zaúčtovat v deníku zboží pomocí funkce **Výpočet  adjustace skladu**.  
+8.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník fyz. inventury skladu** a vyberte související odkaz.  
+9.  Otevřete stránku dialog sestavy a vytiskněte seznamy, na kterých mají zaměstnanci zaznamenávat množství zboží, které počítají v každé přihrádce.  
+10. Po dokončení počítání zadejte počet kusů do pole **Množství (fyz. Inventura)** v deníku fyzické inventury skladu.  
 
     > [!NOTE]  
-    >  In the warehouse physical inventory journal, **Qty. (Calculated)** field is filled in automatically on the basis of warehouse bin records and copies these quantities are copied to the **Qty. (Physical)** field on each line. If the quantity counted by the warehouse employee differs from what application has entered in the Qty. (Physical) field, you must enter the quantity actually counted.  
+    >  V deníku fyzické inventury skladu, se pole **Množství (vypočtené)** vyplní automaticky na základě záznamů ze skladu a tyto kopie se zkopírují do pole **Množství (fyzické)** na každém řádku. Pokud se množství počítané zaměstnancem skladu liší od toho, co program zadal do pole Množství. (Fyzické), musíte zadat skutečně spočítané množství.  
 
-2. When you have entered all the counted quantities, choose the **Register** action.  
+11. Po zadání všech počítaných množství vyberte akci **Zápis**.  
 
-    When you register the journal, application creates two warehouse entries in the warehouse register for every line that was counted and registered:  
+    Když zapíšete deník, program vytvoří dvě položky skladu v žurnály skladu pro každý řádek, který byl spočítán a zapsán:  
 
-    -   If the calculated and the physical quantities differ, a negative or positive quantity is registered for the bin, and a balancing quantity is posted to the adjustment bin of the location.  
-    -   If the quantity calculated is equal to the physical quantity, application registers an entry of 0 for both the bin and the adjustment bin. The entries are the record that on the registering date, a warehouse physical inventory was performed, and there was no discrepancy in inventory for the item.  
+    -   Pokud se vypočtené a fyzické množství liší, zaregistruje se do přihrádky záporné nebo kladné množství a vyrovnávací množství se zaúčtuje do vyrovnávací přihrádky lokace.  
+    -   Pokud se vypočítané množství rovná fyzickému množství, program zaregistruje položku 0 pro přihrádku i pro adjustační přihrádka. Položky jsou záznamy, které k datu zápisu byly provedeny fyzickou inventurou skladu a nedošlo k žádnému rozporu v zásobě zboží.  
 
-When you register the warehouse physical inventory, you are not posting to the item ledger, the physical inventory ledger, or the value ledger, but the records are there for immediate reconciliation whenever necessary. If you like to keep precise records of what is happening in the warehouse, however, and you counted all of the bins where the items were registered, you should immediately post the warehouse results as an inventory physical inventory. For more information, see [synchronize quantities in the item ledger and warehouse](inventory-how-count-adjust-reclassify.md#to-synchronize-the-adjusted-warehouse-entries-with-the-related-item-ledger-entries).
+Když zapíšete fyzickou inventuru skladu, nezaúčtuje se do knihy zboží, do knihy fyzické inventury nebo do knihy ocenění, ale záznamy jsou k dispozici pro okamžité odsouhlasení, kdykoli to bude nutné. Pokud však chcete vést přesné záznamy o tom, co se děje ve skladu, a započítali jste všechny přihrádky, ve kterých bylo zboží zapsáno, měli byste okamžitě zaúčtovat výsledky skladu jako fyzický inventář zásob. Pro více informací navštivte [Zadání a zaúčtování aktuálně počítaných zásob v pokročilých konfiguracích skladu](inventory-how-count-adjust-reclassify.md#to-enter-and-post-the-actual-counted-inventory-in-advanced-warehouse-configurations).
 
+### <a name="to-print-the-report-to-be-used-when-counting"></a>Tisk sestavy, která se použije při počítání
+1. Na stránce **Deníku  fyzické inventury** obsahující vypočítaný očekávaný inventář vyberte akci **Tisk**.
+2. Na stránce **Deníku fyzické inventury** určete, zda by se v sestavě mělo zobrazit vypočtené množství a zda by se v sestavě mělo zobrazovat zboží soupisu podle sériových čísel nebo čísel šarže.
+3. Nastavte filtry, pokud chcete tisknout sestavu pouze pro určité zboží, přihrádky, lokace nebo dimenze.
+4. Zvolte tlačítko **Tisk**.
 
-## To perform cycle counting
-Although you count all items in inventory at least once a year, you may have decided to count some items more often, perhaps because they are more valuable, or because they are very fast movers and a large part of your business. For this purpose, you can assign special counting periods to those items.
+Zaměstnanci nyní mohou začít počítat zásoby a zaznamenávat jakékoli nesrovnalosti ve vytištěné sestavě.
 
-You can perform the cycle counting in either of the following ways depending on your warehouse setup. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).  
+### <a name="to-enter-and-post-the-actual-counted-inventory-in-basic-warehouse-configurations"></a>Zadání a zaúčtování aktuálně počítané inventury v základních konfiguracích skladu
+1. Na každém řádku na stránce **Deník  fyzické inventury**, kde se skutečné zásoby na skladě, stanovené fyzickým počtem, liší od vypočteného množství, zadejte skutečné množství zásob na skladě do pole **Množství (fyz. inventura)**.
 
--   If your location is not using directed put-away and pick (basic warehouse configuration), you use the **Phys. Inventory Journal** page in the **Inventory** menu, and the procedure is much the same as when you conduct a physical inventory without cycle counting.  
--   If your location is using directed put-away and pick (advanced warehouse configuration), you first use the **Whse. Phys. Invt. Journal** page, and then you use the **Item Journal** page to run the **Calculate Whse. Adjustment** function.  
-
-### To set up counting periods
-A physical inventory is typically taken at some recurring interval, for example monthly, quarterly, or annually. You can set up whatever inventory counting periods necessary.
-
-You set up the inventory counting periods that you want to use and then assign one to each item. When you perform a physical inventory and use the **Calculate Counting Period** in the physical inventory journal, lines for the items are created automatically.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. Invt. Counting Periods**, and then choose the related link.  
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-
-### To assign a counting period to an item  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
-2. Select the item to which you want to assign a counting period.  
-3. In the **Phys Invt Counting Period Code** field, select the appropriate counting period.  
-4. Choose the **Yes** button to change the code and calculate the first counting period for the item. The next time you choose to calculate a counting period in the physical inventory journal, the item appears as a line on the **Phys. Invt. Item Selection** page. You can then begin to count the item on a periodic basis.
-
-### To initiate a count based on counting periods in basic warehouse configurations
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. Inventory Journal**, and then choose the related link.
-2. Choose the **Calculate Counting Period** action.
-
-    The **Phys. Invt. Item Selection** page opens showing the items that have counting periods assigned and need to be counted according to their counting periods.
-3. Perform the physical inventory. For more information, see [To perform a physical inventory](inventory-how-count-adjust-reclassify.md#to-perform-a-physical-inventory).
-
-### To initiate a count based on counting periods in advanced warehouse configurations
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Phys. Invt. Journal**, and choose the related link.  
-2. Choose the **Calculate Counting Period** action.
-
-    The **Phys. Invt. Item Selection** page opens showing the items that have counting periods assigned and need to be counted according to their counting periods.
-3. Perform the physical inventory. For more information, see [To perform a physical inventory](inventory-how-count-adjust-reclassify.md#to-perform-a-physical-inventory).  
+    Související pole jsou odpovídajícím způsobem aktualizována.
 
     > [!NOTE]  
-    >  You must count the item in all the bins that contain the particular item. If you delete some of the bin lines that application has retrieved for counting on the **Whse. Phys. Inventory** page, then you will not be counting all the items in the warehouse. If you later post such incomplete results in the Phys. Inventory Journal, the amounts posted will be incorrect.  
+    >   Pokud fyzický počet odhalí rozdíly způsobené zbožím zaúčtovaným s nesprávnými kódy lokace, nezadávejte rozdíly v deníku fyzických zásob. Místo toho použijte k přeřazení zboží na správnou lokaci deník přeřazení nebo objednávku transferu. Pro více informací navštivte Deník přeřazení zboží nebo Vytváření objednávek transferu.
 
-## To adjust the inventory of one item
-After you have made a physical count of an item in your inventory area, you can use the **Adjust Inventory** function to record the actual inventory quantity.
+2. Chcete-li upravit vypočtená množství na skutečná počítaná množství, vyberte akci **Účtovat**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Select the item for which you want to adjust inventory, and then choose the **Adjust Inventory** action.
-3. In the **New Inventory** field, enter the inventory quantity that you want to record for the item.
-4. Choose the **OK** button.
+    Vytvoří se položky zboží i položky fyzické inventury. Otevřete kartu zboží a zobrazte výsledné položky fyzické inventury.
 
-The item’s inventory is now adjusted. The new quantity is shown in the **Quantity on Hand ** field on the **Item Card** page.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+4. Chcete-li ověřit počítání inventury, otevřete dotyčnou kartu zboží a poté vyberte akci **Položky  fyzické inventury**.
 
-You can also use the **Adjust Inventory** function as a simple way to place purchased items on inventory if you do not use purchase invoices or orders to record your purchases. For more information, [Record Purchases](purchasing-how-record-purchases.md).
+### <a name="to-enter-and-post-the-actual-counted-inventory-in-advanced-warehouse-configurations"></a>Zadání a zaúčtování aktuálně počítané inventury v pokročilých konfiguracích skladu
+
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zboží** a poté vyberte související odkaz.  
+2.  Vyberte akci **Výpočet adjustace skladu**.  
+3.  Vyberte stejné zboží, které jste započítali ve fyzické inventuře počítání cyklů, který jste právě provedli, a všechno další zboží, které vyžaduje úpravu, a poté stiskněte tlačítko **OK**.  
+
+     Otevře se stránka **Deník zásob** a pro toto zboží se vytvoří řádky. Pamatujte, že čistá množství, která jste právě spočítali a zapsali přihrádku po přihrádce, jsou nyní připravena ke konsolidaci a synchronizaci jako položky zboží.  
+
+4.  Zaúčtujte deník beze změny množství.  
+
+Množství v položkách zboží a množství ve skladu (položky skladu) jsou nyní opět stejné pro toto zboží a program aktualizoval poslední datum počítání zboží nebo skladové jednotky.  
+
+## <a name="to-perform-cycle-counting"></a>Provádění počítání cyklů
+Ačkoli počítáte všechno zboží v inventáři alespoň jednou ročně, možná jste se rozhodli některé zboží počítat častěji, snad proto, že jsou cennější, nebo proto, že jsou velmi rychlými pohyby a velkou částí vašeho podnikání. Za tímto účelem můžete těmto zbožím přiřadit speciální období pro počítání.
+
+Počítání cyklů můžete provést jedním z následujících způsobů v závislosti na nastavení vašeho skladu. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).  
+
+-   Pokud vaše lokace nepoužívá řízené zaskladnění/vyskladnění (základní konfigurace skladu), použijete stránku **Deník fyzické inventury** v nabídce **Zásoby** a postup je téměř stejný jako při provádění fyzické inventury bez cyklické inventury.  
+-   Pokud vaše lokace používá řízené zaskladnění/vyskladnění (pokročilá konfigurace skladu), nejprve použijte stránku **Deník  fyz. inventury   skladu** a poté pomocí stránky **Deník zboží** spusťte funkci **Vypočítat  adjustace skladu**.  
+
+### <a name="to-set-up-counting-periods"></a>Nastavení období počítání
+Fyzická inventura se obvykle provádí v opakujících se intervalech, například měsíčně, čtvrtletně nebo ročně. Můžete nastavit libovolná nezbytná období počítání zásob.
+
+Nastavíte období počítání zásob, které chcete použít, a pak každému zboží přiřadíte jedno. Když provedete fyzickou inventuru a použijete **Vypočítat období inventury** v deníku fyzické inventury, automaticky se vytvoří řádky pro zboží.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Období   fyzické inventury** a pak vyberte související odkaz.  
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+
+### <a name="to-assign-a-counting-period-to-an-item"></a>Přiřadění období inventury ke zboží  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.  
+2. Vyberte zboží, kterému chcete přiřadit období inventury.  
+3. V poli **Kód období fyzické inventury** vyberte příslušné období inventury.  
+4. Stisknutím tlačítka **Ano** změníte kód a vypočítáte první období inventury pro zboží. Při příštím výběru výpočtu období inventury v deníku fyzického inventáře se zboží zobrazí jako řádek na stránce **Výběr  fyzické inventury**. Poté můžete začít pravidelně počítat zboží.
+
+### <a name="to-initiate-a-count-based-on-counting-periods-in-basic-warehouse-configurations"></a>Inicializace počtu na základě období inventury v základních konfiguracích skladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Období inventury** a pak vyberte související odkaz.
+2. Vyberte akci **Vypočítat období inventury**.
+
+    Otevře se stránka **Výběr  fyzické inventury**, kde je zobrazené zboží, které má přiřazené období inventury a musí být dopočítáno podle jejich období inventury.
+3. Provádění fyzické inventury. Pro více informací navštivte [Provádění fyzické inventury](inventory-how-count-adjust-reclassify.md#to-perform-a-physical-inventory).
+
+### <a name="to-initiate-a-count-based-on-counting-periods-in-advanced-warehouse-configurations"></a>Inicializace počtu na základě období inventury v pokročilých konfiguracích skladu
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník  fyz.  inventury skladu** a poté vyberte související odkaz.  
+2. Vyberte akci **Vypočítat období inventury**.
+
+    Otevře se stránka **Výběr  fyz. inventury  inventury**, kde je zobrazené zboží, které má přiřazené období inventury a musí být dopočítáno podle jejich období inventury.
+3. Provádění fyzické inventury. Pro více informací navštivte [Provádění fyzické inventury](inventory-how-count-adjust-reclassify.md#to-perform-a-physical-inventory).  
+
+    > [!NOTE]  
+    >  Musíte spočítat zboží ve všech přihrádkách, které obsahují konkrétní zboží. Pokud odstraníte některé řádky přihrádky, které program načítal pro počítání na stránce **Fyzické  Inventury  skladu**, nebudete počítat všechno zboží ve skladu. Pokud později zaúčtujete takové neúplné výsledky v Deníku fyzické inventury, budou zveřejněné částky nesprávné.  
+
+## <a name="to-adjust-the-inventory-of-one-item"></a>Úprava zásob jednoho zboží
+Po provedení sčítaní fyzického počtu zboží ve skladě můžete pomocí funkce **Upravit zásoby** zaznamenat skutečné množství zásob.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte zboží, pro které chcete upravit zásoby, a poté vyberte akci **Upravit zásoby**.
+3. Do pole **Nové zásoby** zadejte množství zásob, které chcete pro zboží zaznamenat.
+4. Zvolte tlačítko **OK**.
+
+Zásoby zboží jsou nyní upraveny. Nové množství se zobrazí v poli **Aktuální zásoby**, v okně **Upravit zásoby** a v poli **Zásoby** na stránce **Karty zboží**.
+
+Funkci **Upravit zásoby** můžete také použít jako jednoduchý způsob umisťování zakoupeného zboží do skladu, pokud k zaznamenávání svých nákupů nepoužíváte nákupní faktury nebo objednávky. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md).
 
 > [!NOTE]  
->   After you have adjusted inventory, you must update it with the current, calculated value. For more information, see [Revalue Inventory](inventory-how-revalue-inventory.md).
+>   Po úpravě zásob musíte aktualizovat aktuální vypočtenou hodnotu. Pro více informací navštivte [Přeceňovaní zásob](inventory-how-revalue-inventory.md).
 
-### To adjust the inventory quantity of multiple items in basic warehouse configurations
-On the **Item Journal** page, you can post item transaction directly to adjust inventory in connection with purchases, sales, and positive or negative adjustments without using documents.
+### <a name="to-adjust-the-inventory-quantity-of-multiple-items-in-basic-warehouse-configurations"></a>Úprava množství zásob více zboží v základních konfiguracích skladu
+Na stránce **Deníku zboží** můžete zaúčtovat transakci přímo a upravit zásoby v souvislosti s nákupy, prodejem a kladnými nebo zápornými úpravami bez použití dokladů.
 
-If you often use the item journal to post the same or similar journal lines, for example, in connection with material consumption, you can use the **Standard Item Journal** page to make this recurring work easier. For more information, see [Working with Standard Journals](ui-work-general-journals.md#working-with-standard-journals).
+Pokud často používáte deník zboží k zaúčtování stejných nebo podobných řádků deníku, například v souvislosti se spotřebou materiálu, můžete tuto opakující se práci usnadnit pomocí stránky **Standardní deník zboží**. Pro více informací navštivte [Práce se standardními deníky](ui-work-general-journals.md#working-with-standard-journals).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link.
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Choose the **Post** action to make the inventory adjustments.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zboží** a poté vyberte související odkaz.
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Chcete-li provést úpravy zásob, vyberte akci **Účtovat**.
 
-### To adjust bin quantities in advanced warehouse configurations  
-If your location uses directed put-away and pick, use the **Whse. Item Journal** to post, outside the context of the physical inventory, all positive and negative adjustments in item quantity that you know are real gains, such as items previously posted as missing that show up unexpectedly, or real losses, such as breakage.  
+> [!NOTE]  
+>   Po úpravě zásob musíte aktualizovat aktuální vypočítanou hodnotu. Pro více informací navštivte [Přeceňovaní zásob](inventory-how-revalue-inventory.md).
 
-Unlike posting adjustments in the inventory item journal, using the warehouse item journal gives you an additional level of adjustment that makes your quantity records even more precise at all times. The warehouse thus always has a complete record of how many items are on hand and where they are stored, but each adjustment registration is not posted immediately to the item ledger. In the registering process, credits or debits are made to the real bin with the quantity adjustment and a counterbalancing entry is made in an adjustment bin, a virtual bin with no real items. This bin is defined in the **Invt. Adjustment Bin Code** on the location card.
+### <a name="to-adjust-bin-quantities-in-advanced-warehouse-configurations"></a>Nastavení množství přihrádek v pokročilých konfiguracích skladu  
+Pokud vaše lokace používá řízené zaskladnění a vyskladnění, použijte **Deník  zboží skladu** k účtování, mimo kontextu fyzické inventury, všechny pozitivní a negativní úpravy v počtu zboží, o kterých víte, že jsou skutečné zisky, jako například zboží dříve zaúčtováno jako chybějící, které se projeví neočekávaně nebo jako skutečné ztráty, například rozbití.  
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Item Journal**, and then choose the related link.  
-2.  Fill in the header information.  
-3.  Fill in the **Item No.** field on the line.  
-4.  Enter the bin in which you are putting the extra items or where you have found items to be missing.  
-5.  Fill in the quantity that you observe as a discrepancy in the **Quantity** field. If you have found extra items, enter a positive quantity. If items are missing, enter a negative quantity.  
-6.  Choose the **Register** action.
+Na rozdíl od účtování adjustace zásob deníkem zboží, pomocí deníku zboží skladu získáte další úroveň úprav, díky níž jsou záznamy o množství ještě přesnější. Sklad má tedy vždy kompletní záznam o tom, kolik zboží je na skladě a kde je uloženo, ale žádná registrace úpravy se neúčtuje okamžitě do položek zboží. V procesu registrace jsou strany Má dáti nebo Dal provedeny do skutečné přihrádky s úpravou množství a do vyrovnávací přihrádky, virtuální přihrádky bez skutečných položek, je provedeno vyrovnávací zboží. Tato přihrádka je definována v **kódu  adjustační přihrádky** na kartě lokace.
 
-## To synchronize the adjusted warehouse entries with the related item ledger entries
-At appropriate intervals as defined by company policy, you must post the warehouse adjustment bin records in the item ledger. Some companies find it appropriate to post adjustments to the item ledger every day, while others may find it adequate to reconcile less frequently.
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník Zboží** a pak vyberte související odkaz.  
+2.  Vyplňte informace v záhlaví.  
+3.  Vyplňte pole **Číslo zboží** na řádku.  
+4.  Zadejte přihrádku, do které vkládáte další zboží nebo kde jste našli zboží, které chybí.  
+5.  Do pole **Množství** zadejte množství, které považujete za nesrovnalost. Pokud jste našli zboží navíc, zadejte kladné množství. Pokud zboží chybí, zadejte záporné množství.  
+6.  Zvolte akci **Zápis**.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journal**, and then choose the related link.  
-2.  Fill in the fields on each journal line.  
-3.  Choose the **Calculate Whse. Adjustment** action, and fill in the filters as appropriate in the batch job request page. The adjustments are calculated only for the entries in the adjustment bin that meet filter requirements.  
-4.  On the **Options** FastTab, fill in the **Document No.** field with a number that you enter manually. Because no number series has been set up for this batch job, use the number scheme set up by the warehouse, or enter the date followed by your initials.  
-5.  Choose the **OK** button. The positive and negative adjustments are totaled for each item and lines are created in the item journal for any items where the sum is a positive or negative quantity.  
-6.  Post the journal lines to enter the quantity differences in the item ledger. The inventory in the warehouse bins now corresponds precisely to the inventory in the item ledger.  
+## <a name="to-synchronize-the-adjusted-warehouse-entries-with-the-related-item-ledger-entries"></a>Synchronizace upraveného zboží skladu s příslušnými položkami zboží
+Ve vhodných intervalech, jak je definováno v zásadách společnosti, musíte zaúčtovat záznamy adjustační přihrádky skladu do položek zboží. Některé společnosti považují za vhodné zaúčtovat úpravy do položek zboží každý den, zatímco jiné mohou považovat za vhodné účtovat méně často.
 
-## To reclassify an item's lot number
-If you need to change attributes on item ledger entries, you can use the item reclassification journal. Typical attributes to reclassify include dimensions and sales campaign codes, but you also perform "system transfers" by reclassifying bin and location codes.
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deník zboží** a poté vyberte související odkaz.  
+2.  Vyplňte pole na každém řádku deníku.  
+3.  Vyberte akci **Výpočet  adjustace skladu** a vyplňte filtry podle potřeby na stránce požadavku dávkové úlohy. Úpravy se počítají pouze pro zboží v adjustační přihrádce, které splňuje požadavky na filtr.  
+4.  Na záložce **Možnosti** vyplňte pole **Číslo dokladu** číslem, které zadáte ručně. Protože pro tuto dávkovou úlohu nebyla nastavena žádná číselná řada, použijte číselné schéma nastavené ve skladu nebo zadejte datum, za kterým následují vaše iniciály.  
+5.  Zvolte tlačítko **OK**. Kladné a záporné úpravy se sčítají pro každé zboží a v deníku zboží se vytvoří řádky pro všechno zboží, u kterého je součet kladné nebo záporné množství.  
+6.  Zaúčtováním řádků deníku zadejte rozdíly v množství v položkách zboží. Inventura v přihrádkách skladu nyní přesně odpovídá inventáři v položkách zboží.  
 
-Special steps apply when you want to reclassify serial or lot numbers and their expiration dates. For more information, see [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md).
+## <a name="to-reclassify-an-items-lot-number"></a>Přeřazení čísla šarže zboží
+Pokud potřebujete změnit atributy u položek zboží, můžete použít deník přeřazení zboží. Mezi typické atributy, které se mají přeřadit, patří dimenze a kódy prodejních kampaní, ale také třeba vykonat „systémové transfery“ přeřazením kódů bin a lokace.
 
-The following example is based on a location code. The steps are similar for other types of item attributes.
+Pokud chcete přeřadit sériová čísla nebo čísla šarže a data jejich vypršení, platí zvláštní kroky. Pro více informací navštivte [Práce se sériovými čísly a čísly šarže](inventory-how-work-item-tracking.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Reclass. Journals**, and then choose the related link.
-2. On the **Item Reclass. Journal** page, fill in the fields as necessary.
-3. In the **Location Code** field, enter the item's current location code.
-4. In the **New Location Code** field, enter the item's new location code.
-5. Choose the **Post** action.
+Následující příklad je založen na kódu lokace. Kroky jsou podobné pro další typy atributů zboží.
 
-For information about transferring items with full control of quantities shipped and received, see [Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md).
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky  přeřazení zboží** a poté vyberte související odkaz.
+2. Na stránce **Deníku  přeřazení zboží** vyplňte pole podle potřeby.
+3. Do pole **Kód lokace** zadejte aktuální kód lokace zboží.
+4. Do pole **Kód nové lokace** zadejte nový kód lokace zboží.
+5. Zvolte akci **Zaúčtovat**.
 
-## See Also
-[CountInventory Using Documents](inventory-how-count-inventory-with-documents.md)  
-[Inventory](inventory-manage-inventory.md)
-[Warehouse Management](warehouse-manage-warehouse.md)    
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+Informace o převodu zboží s plnou kontrolou odeslaného a přijatého množství naleznete v části [Převod zásob mezi lokacemi](inventory-how-transfer-between-locations.md).
 
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Zásoby](inventory-manage-inventory.md)
+[Správa skladu](warehouse-manage-warehouse.md)    
+[Prodej](sales-manage-sales.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

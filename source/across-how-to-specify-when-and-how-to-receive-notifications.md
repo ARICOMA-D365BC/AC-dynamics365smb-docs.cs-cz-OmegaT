@@ -1,66 +1,62 @@
 ---
     title: How to Specify When and How to Receive Notifications | Microsoft Docs
     description: When you set up users in approval workflows, you must specify in the Notification Setup and Notification Schedule pages how and when each user receives notifications about approval workflow steps. Individual users can also change their notification setup by choosing the Change Notification Settings button on any notification.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 ---
-# Specify When and How to Receive Notifications
-When you set up users in approval workflows, you must specify in the **Notification Setup** and **Notification Schedule** pages how and when each user receives notifications about approval workflow steps. Individual users can also change their notification setup by choosing the **Change Notification Settings** button on any notification.  
+# Určení, kdy a jak přijímat upozornění
+Pokud nastavíte uživatele ve workflow schvalování, musíte na stránkách **Nastavení upozornení** a **Plán upozornění** určit, jak a kdy jednotliví uživatelé obdrží upozornění na kroky workflow schvalování. Jednotliví uživatelé mohou také změnit své nastavení upozornění výběrem tlačítka **Změnit nastavení upozornění** u jakéhokoli upozornění.
 
-> [!NOTE]
-> Notifications are delivered according to notification settings for the receiver, not the sender. That's an important distinction because it means that when someone requests an approval as part of a workflow their request is not necessarily sent immediately. Instead, it will be delivered according to the approvers's notification settings. 
+Než budete moci nastavit předvolby upozornění uživatele schvalování, musíte jej nastavit jako uživatele schvalování. Pro více informací navštivte [Nastavení uživatelů schvalování](across-how-to-set-up-approval-users.md).
 
- Before you can set up an approval user’s notification preferences, you must set the user up as an approval user. For more information, [Set Up Approval Users](across-how-to-set-up-approval-users.md).  
+Rozložení e-mailových upozornení můžete definovat přizpůsobením sestavy 1320, e-mailové upozornění. Pro více informací navštivte [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md).
 
- You can define the layout of email notifications by customizing Report 1320, Notification Email. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).  
+Mnoho kroků workflow schvalování je o upozorňování uživatelů na to, že došlo k události, na kterou musí reagovat. Například v jednom kroku workflow může být událostí, že uživatel 1 požaduje schválení nového záznamu. Související odpověď je, že oznámení je zasláno uživateli 2, schvalovateli. V dalším kroku workflow může být událostí, že uživatel 2 záznam schválí. Související odpovědí je, že uživateli 3 je odesláno upozornění o zahájení procesu se schváleným záznamem. U kroků workflow, které se týkají schvalování, je každé oznámení vázáno na položku schválení. Pro více informací navštivte [Workflow](across-workflow.md).
 
- Many approval workflow steps are about notifying users that an event has occurred that they must act on. For example, on one workflow step, the event can be that User 1 requests approval of a new record. The related response is that a notification is sent to User 2, the approver. On the next workflow step, the event can be that User 2 approves the record. The related response is that a notification is sent to User 3 to start a process with the approved record. For workflow steps that are about approval, each notification is tied to an approval entry. For more information, see [Workflow](across-workflow.md).  
+## Určení, kdy a jak budou uživatelé dostávat upozornění
 
-## Specify when and how users receive notifications  
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Nastavení uživatelů schvalování** a poté vyberte související odkaz.
+2. Vyberte řádek pro uživatele, pro kterého chcete nastavit předvolby upozornění, a poté vyberte akci **Nastavení upozornění**.
+3. Na stránce **Nastavení upozornení** vyplňte pole podle popisu v následující tabulce.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Approval User Setup**, and then choose the related link.  
-2.  Select the line for the user that you want to set up notification preferences for, and then choose the **Notification Setup** action.  
-3.  On the **Notification Setup** page, fill the fields as described in the following table.  
+   | Pole | Popis |
+   |---------------------------------|---------------------------------------|  
+   | **Typ upozornění** | Zadejte typ události, které se upozornění týká. <br /><br />Vyberte jednu z následujících možností:<br /><br /> - **Nový záznam** Určuje, že se upozornení týká nového záznamu, například dokladu, na který musí uživatel reagovat.<br /> - **Schválení** Určuje, že oznámení se týká nejméně jedné žádosti o schválení.<br /> - **Vypr. platnost** Určuje, že upozornění upozorní uživatele, že se zpozdí v reakci na událost. |
+   | **Metoda upozornění** | Určete, zda je upozornění e-mailem nebo interní poznámkou. |
 
-    |Field|Description|  
-    |---------------------------------|---------------------------------------|  
-    |**Notification Type**|Specify what type of event the notification is about.<br /><br /> Select one of the following options:<br /><br /> -   **New Record** specifies that the notification is about a new record, such as a document, that the user must act on.<br />-   **Approval** specifies that the notification is about one or more approval requests.<br />-   **Overdue** specifies that the notification is to remind users that they are late in acting on an event.|  
-    |**Notification Method**|Specify if the notification is an email or an internal note.|
+   Rozložení e-mailových upozornení můžete definovat přizpůsobením sestavy 1320, e-mailové upozornění. Pro více informací navštivte [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md).
 
-    You can define the layout of email notifications by customizing Report 1320, Notification Email. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
+   Nyní jste určili, jak uživatel obdrží upozornění. Pokračujte a určete, kdy uživatel obdrží upozornění.
 
-    You have now specified how the user receives notifications. Proceed to specify when the user receives notifications.  
+4. Vyberte akci **Plán upozornění**.
+5. Na stránce **Plán upozornění** vyplňte pole podle popisu v následující tabulce.
 
-4.  Choose the **Notification Schedule** action.  
-5.  On the **Notification Schedule** page, fill the fields as described in the following table.  
+   | Pole | Popis |
+   |---------------------------------|---------------------------------------|  
+   | **Opakování** | Zadejte způsob opakování, ve kterém uživatel obdrží upozornění. |
+   | **Čas** | Určete, kdy počas dne obdrží uživatel upozornění, pokud se ohdnota v poli **Opakování** liší od **Okamžitě**. |
+   | **Denní frekvence** | Určete, ve které části dne obdrží uživatel upozornění, když je hodnota v poli **Opakování** nastavena na **Denně**. <br /><br />Vyberte **Pracovní den** a uživatel bude přijímat upozornění každý pracovní den v týdnu. Vyberte **Denně**, chcete-li dostávat oznámení každý den v týdnu, včetně víkendů. |
+   | **Pondělí** až **neděle** | Můžete určit dny, kdy uživatel obdrží upozornění, pokud je hodnota v poli **Opakování** nastavena na **Týdně**. |
+   | **Den v měsíci** | Určete, zda uživatel obdrží upozornění první, poslední nebo konkrétní den v měsíci. |
+   | **Datum měsíčního upozornění** | Zadejte datum v měsíci, ve kterém uživatel obdrží upozornění, pokud je hodnota v poli **Den upozornění** nastavena na **Vlastní** . |
 
-    |Field|Description|  
-    |---------------------------------|---------------------------------------|  
-    |**Recurrence**|Specify the recurrence pattern in which the user receives notifications.|  
-    |**Time**|Specify what time of the day the user receives notifications when the value in the **Recurrence** field is different from **Instantly**.|  
-    |**Daily Frequency**|Specify on which type of days the user receives notifications when the value in the **Recurrence** field is **Daily**.<br /><br /> Select **Weekday** to receive notifications every work day of the week. Select **Daily** to receive notifications every day of the week, including weekends.|  
-    |**Monday** through **Sunday**|Specify on which days the user receives notifications when the value in the **Recurrence** field is **Weekly**.|  
-    |**Date of Month**|Specify if the user receives notifications on the first, last, or a specific date of the month.|  
-    |**Monthly Notification Date**|Specify the date of the month on which the user receives notifications when the value in the **Date of Month** field is **Custom**.|  
+## Změnit, kdy a jak dostávat upozornění
+1. V jednom z přijatých upozornění, buď jako e-mail nebo poznámka, vyberte tlačítko **Změnit nastavení oznámení**.
+2. Na stránce **Nastavení upozornění** změňte předvolby upozornění, jak je popsáno v předchozím postupu.
 
-## Change when and how you receive notifications  
-1.  On one of the notifications that you have received, either as email or note, choose the **Change Notification Settings** button.  
-2.  On the **Notification Setup** page, change your notification preferences as described in the previous procedure.  
-
-## See Also  
- [Set Up Approval Users](across-how-to-set-up-approval-users.md)   
- [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)   
- [Setting Up Workflow Notifications](across-setting-up-workflow-notifications.md)   
- [Setting Up Workflows](across-set-up-workflows.md)   
- [Using Workflows](across-use-workflows.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Nastavení uživatelů schvalování](across-how-to-set-up-approval-users.md)  
+[Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md)  
+[Nastavení upozornění workflow](across-setting-up-workflow-notifications.md)  
+[Nastavení workflow](across-set-up-workflows.md)  
+[Použití workflow](across-use-workflows.md)

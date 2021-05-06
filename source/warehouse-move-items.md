@@ -13,35 +13,35 @@
     ms.author: edupont
 
 ---
-# Moving Items
-The warehouse activity of moving items within the warehouse is performed in different ways depending on how warehouse management features are configured. The complexity can rank from no warehouse features, through basic warehouse configurations for order-by order handling in one or more activities only, to advanced configurations where all warehouse activities must be performed in a directed workflow. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).
+# Přesouvání zboží
+Skladová aktivita přesouvání zboží ve skladu se provádí různými způsoby v závislosti na tom, jak jsou nakonfigurovány funkce správy skladu. Složitost se může řadit od žádných funkcí skladu, přes základní konfigurace skladu pro zpracování objednávek pouze v jedné nebo více aktivitách, až po pokročilé konfigurace, kde všechny aktivity skladu musí být prováděny v směrovaném workflow. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
-While in one warehouse location, items may need to be moved between bins to support the daily warehouse activities involved in keeping items flowing through the warehouse. Some movements happen in direct relation to internal operations, such as a production order that needs components delivered or end items put away. Other movements happen as mere warehouse space optimization or as ad-hoc movements to and from operations.
+V jedné lokaci skladu může být nutné zboží přesouvat mezi přihrádky, aby se podpořily denní aktivity skladu spojené s udržováním zboží procházejících skladem. Některé přesuny se uskutecují v přímém vztahu k interním operacím, například výrobní zakázka, která vyžaduje dodání komponent nebo zaskladnění koncového zboží. K dalším přesunům dochází jako pouhá optimalizace skladových prostor nebo jako ad hoc přesuny do a z operací.
 
-Additional movement tasks are to periodically replenish picking bins or shop floor bins and to modify bin content information.
+Další úkoly přesunu jsou pravidelné doplňování výdejní přihrádky nebo přihrádek dílny a úprava informací o obsahu přihrádky.
 
-Moving items to other locations affects the item ledger entries and must therefore be done by transfer order. For more information, see [Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md).  
+Přesunutí zboží do jiných lokací ovlivní položky zboží, a proto musí být provedeno objednávkou transferu. Pro více informací navštivte [Převádění zásob mezi lokacemi](inventory-how-transfer-between-locations.md).
 
-The inventory-related tasks of counting, adjusting, and reclassifying items may involve warehouse tasks that must be performed on warehouse entries before they can be synchronized with the related item ledger entries. For more information, see [Count, Adjust, and Reclassify Inventory](inventory-how-count-adjust-reclassify.md)  
+Úkoly inventury, úpravy a přeřazení zboží související se skladem mohou zahrnovat skladové úkoly, které musí být provedeny u položek skladu před jejich synchronizací se souvisejícími položkami zboží. Pro více informací navštivte [Výpočet, úprava a překlasifikace zásob pomocí deníků](inventory-how-count-adjust-reclassify.md).
 
- The following table describes a sequence of tasks, with links to the topics that describe them.   
+Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-|**To**|**See**|  
+| **Viz** | **také** |
 |------------|-------------|  
-|Move items between bins in basic warehouse configurations at any time and without source documents.|[Move Items in Basic Warehouse Configurations](warehouse-how-to-move-items-ad-hoc-in-basic-warehousing.md)|
-|Use the warehouse movement worksheet to move items in advanced warehouse configurations, both for source documents and ad hoc.|[Move Items in Advanced Warehouse Configurations](warehouse-how-to-move-items-in-advanced-warehousing.md)|  
-|Bring component items to internal operations in basic warehouse configurations as requested by source documents for those operations.|[Move Components to an Operation Area in Basic Warehouse Configurations](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md)|
-|Plan which bins to fill or empty to maintain an efficient flow, such as emptying a bulk storage area before a large receipt.|[Plan Warehouse Movements in Worksheets](warehouse-how-to-plan-warehouse-movements-in-worksheets.md)|
-|Update the frequency at which bins, such as picking bins, must be replenished as a result of demand fluctuations.|[Calculate Bin Replenishment](warehouse-how-to-calculate-bin-replenishment.md)|
-|Restructure your warehouse with new bin codes and new bin characteristics and potentially move them around.|[Restructure Warehouses](warehouse-how-to-restructure-warehouses.md)|  
+| Přesouvaní zboží mezi přihrádkami v základních konfiguracích skladu kdykoli a bez původních dokladů. | [Přesun zboží v základních konfiguracích skladu](warehouse-how-to-move-items-ad-hoc-in-basic-warehousing.md) |
+| Sešit přesunu skladu se používá k přesunu zboží v pokročilých konfiguracích skladu, a to jak pro původní doklady, tak pro Ad Hoc. | [Přesun zboží v pokročilých konfiguracích skladu](warehouse-how-to-move-items-in-advanced-warehousing.md) |
+| Přineste komponenty zboží do interních operací v základních konfiguracích skladu, jak je požadováno původním dokladem pro tyto operace. | [Přesuňte komponenty do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md) |
+| Naplánujte, které přihrádky se mají naplnit nebo vyprázdnit, aby se zachoval efektivní tok, například vyprázdnění velkokapacitního skladovacího prostoru před velkým příjmem. | [Naplánujte pohyby skladu v sešitech](warehouse-how-to-plan-warehouse-movements-in-worksheets.md) |
+| Aktualizujte frekvenci, s jakou musí být přihrádky, například přihrádky vyskladnění, doplněny v důsledku kolísání poptávky. | [Výpočet doplnění přihrádky](warehouse-how-to-calculate-bin-replenishment.md) |
+| Restrukturalizujte svůj sklad pomocí nových kódů přihrádek a nových charakteristik přihrádky a případně je přesuňte. | [Restrukturalizace skladů](warehouse-how-to-restructure-warehouses.md) |
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)    
+[Zásoby](inventory-manage-inventory.md)    
+[Nastavení správy skladu](warehouse-setup-warehouse.md)       
+[Správa montáže](assembly-assemble-items.md)      
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

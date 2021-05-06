@@ -1,28 +1,23 @@
 ---
-title: Using the Tax File Formats (DK) Extension | Microsoft Docs
-description: This extension makes it easy to export files that are pre-formatted to meet bank requirements for electronic submissions.
+title: Použití rozšíření Tax File Formats (DK) | Microsoft Docs
+description: 'Toto rozšíření usnadňuje export souborů, které jsou předem naformátovány tak, aby splňovaly bankovní požadavky na elektronická podání.'
 services: project-madeira
 documentationcenter: ''
 author: bholtorf
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms. search.keywords: extension, bank, formats
-ms.date: 10/01/2020
+ms. search.keywords: 'extension, bank, formats'
+ms.date: 10/01/2018
 ms.author: bholtorf
-
 ---
 
-# The Tax File Formats (DK) Extension
-If you engage in trade with companies, or internal branches or subsidiaries, in other EU countries you must report information about the activities to SKAT and to Statistics Denmark. If you use the VAT and Intrastat reporting features in [!INCLUDE[prod_short](includes/prod_short.md)], this extension can ensure that the file you export is compatible with requirements from these organizations. The extension adds the MS-ECSL Report Export File and Intrastat Export Lines submission codeunits to your VAT Report configuration, so you can export data in the new format right away.
+# <a name="the-tax-file-formats-dk-extension"></a>Rozšíření Tax File Formats (DK) 
+Pokud obchodujete se společnostmi nebo interními pobočkami nebo dceřinými společnostmi v jiných zemích EU, musíte o činnosti informovat SKAT a dánsky statistický úřad. Pokud používáte funkce pro hlášení DPH a Intrastat v [!INCLUDE[d365fin](includes/d365fin_md.md)], může toto rozšíření zajistit, že exportovaný soubor bude kompatibilní s požadavky těchto organizací. Rozšíření přidá do vaší konfigurace sestavy DPH MS-ECSL Report Export File a Intrastat Export Lines submission codeunits, takže můžete okamžitě exportovat data v novém formátu.
 
-The extension is free, you just need to install it.
+Rozšíření je zdarma, stačí jej nainstalovat.
 
-## See Also
-[Customizing Business Central Using Extensions](ui-extensions.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Přizpůsobení Business Central použitím rozšíření](ui-extensions.md)

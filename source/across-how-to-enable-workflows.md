@@ -1,36 +1,35 @@
 ---
     title: How to Enable Workflows | Microsoft Docs
     description: When you have created a workflow and you are sure that it is ready to start, you must enable the workflow.
+    services: project-madeira
+    documentationcenter: ''
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Enable Workflows
-When you have created a workflow and you are sure that it is ready to start, you must enable the workflow.  
+# Povolení workflow
+Pokud jste vytvořili workflow a jste si jisti, že je připraven ke spuštění, musíte ho povolit.
 
- On the **Workflow** page, you create a workflow by listing the involved steps on the lines. Each step consists of a workflow event, moderated by event conditions, and a workflow response, moderated by response options. You define workflow steps by filling fields on workflow lines from fixed lists of event and response values representing scenarios that are supported by the application code. For more information, see [Create Workflows](across-how-to-create-workflows.md).  
+Na stránce **Workflow** vytvoříte workflow vypsáním příslušných kroků na řádcích. Každý krok sestává z události workflow, která je řízená podmínkami událostí, a odezvy workflow, která je řízená možnostmi odezvy. Kroky workflow definujete vyplněním polí na řádcích workflow z pevných seznamů hodnot událostí a odezev představujících scénáře, které jsou podporovány kódem aplikace. Pro více informací navštivte [Vytvoření workflow](across-how-to-create-workflows.md).
 
-## To enable a workflow  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Workflows**, and then choose the related link.  
-2.  Open the workflow that you want to enable.  
-3.  On the **Workflow** page, select the **Enabled** check box.  
+## Povolení workflow
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Workflow** a poté vyberte související odkaz.
+2. Otevřete workflow, který chcete povolit.
+3. Na stránce **Workflow** zaškrtněte políčko **Povoleno**.
 
-## See Also  
- [Create Workflows](across-how-to-create-workflows.md)   
- [View Archived Workflow Step Instances](across-how-to-view-archived-workflow-step-instances.md)   
- [Delete Workflows](across-how-to-delete-workflows.md)   
- [Setting Up Workflows](across-set-up-workflows.md)   
- [Using Workflows](across-use-workflows.md)   
- [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)   
- [Workflow](across-workflow.md)   
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Vytvoření Workflow](across-how-to-create-workflows.md)  
+[Zobrazení archivovaných instancí kroku workflow](across-how-to-view-archived-workflow-step-instances.md)  
+[Odstranění workflow](across-how-to-delete-workflows.md)  
+[Nastavení workflow](across-set-up-workflows.md)  
+[Použití workflow](across-use-workflows.md)  
+[Návod: Nastavení a použití workflow schvalování nákupů](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
+[Workflow](across-workflow.md)

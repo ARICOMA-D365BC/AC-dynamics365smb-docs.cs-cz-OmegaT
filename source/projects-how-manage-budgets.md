@@ -6,52 +6,49 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project budget, forecast
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Manage Job Budgets
-You can set up a budget for each job. The budget is used to plan the resources that you allocate to a job. The budget can be either general with few entries or it can contain more entries that are divided into activity levels. You can then compare the budgeted amounts with the actual usage as recorded in the job journal. By monitoring differences between actual usage and budgeted usage, you can control an ongoing project and improve the quality of future jobs by reducing the risk of underestimating costs.
+# Správa rozpočtů projektu
+Pro každý projekt můžete nastavit rozpočet. Rozpočet se používá k plánování zdrojů, které k projektu přidělujete. Rozpočet může být buď obecný s několika položkami, nebo může obsahovat více položek, které jsou rozděleny do úrovní aktivity. Poté můžete porovnat rozpočtové částky se skutečnou spotřebou zaznamenanou v deníku projektů. Sledováním rozdílů mezi skutečným využitím a rozpočtovaným využitím můžete řídit probíhající projekt a zlepšit kvalitu budoucích projektů snížením rizika podceňování nákladů.
 
-The following procedure describes how to estimate budgeted costs during planning. For information about recording budgeted versus actual job prices and costs, see [Record Usage for Jobs](projects-how-record-job-usage.md).  
+Následující postup popisuje, jak odhadnout rozpočtované náklady během plánování. Pro více informací o zaznamenávání rozpočtovaných cen oproti skutečným cenám práce a nákladům navštivte [Evidence spotřeby na projektu](projects-how-record-job-usage.md).
 
-## <a name="JobBudgetCosts"></a> To estimate the budgeted costs for a job
-When a customer wants to know the price of a job that will be invoiced based on usage, you must have to determine the budgeted costs for the job. You use the **Job Task Lines** page to do this.
+## <a name="JobBudgetCosts"></a> Odhad rozpočtových nákladů na projekt
+Pokud chce zákazník znát cenu projektu, který bude fakturován na základě spotřeby, musíte určit rozpočtové náklady projektu. K tomu použijte stránku **Řádky úlohy projektu**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.  
-2. Open a relevant job.
-3. Select a task line of type Posting, and then choose the **Job Planning Lines** action.
-4. On a new line, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]   
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+2. Otevřete příslušný projekt.
+3. Vyberte řádek úkolu typu Účtování a poté vyberte akci **Řádky plánování projektu**.
+4. Na novém řádku vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-For the **Line Type** field, refer to the following information.  
+Označení pole **Typ řádku**, naleznete v následujících informacích.
 
-| Line Type | Description |
+| Typ řádku | Popis |
 | --- | --- |
-| **Both Budget and Billable** |The cost and price amounts entered on the planning line are the budgeted costs for the particular planning line. The price amount will be invoiced. |
-| **Budget** |The customer is not charged for usage. Usage is not transferred to an invoice, but will still be used in the calculation of WIP. |
-| **Billable** |The customer is charged for usage. Usage is transferred to the invoice, based on the quantity specified in the Qty. to Transfer to Invoice field. |
+| **Plán i Fakturovatelné** | Částky nákladů a cen zadané do řádku plánování jsou rozpočtové náklady pro konkrétní řádek plánování. Částka ceny bude fakturována. |
+| **Plán** | Zákazník není za používání účtován. Použití není převedeno na fakturu, ale bude stále použito při výpočtu Nedokončené výroby. |
+| **Fakturovatelné** | Za použití je zákazník účtován. Použití je převedeno na fakturu na základě množství určeného v poli Množství k transf. k fakturaci. |
 
-> [!NOTE]  
-> The **Planned Delivery Date** field for the planning line contains the date when usage related to the planning line is expected to be completed. It is also the date when the planning line may be transferred to a sales invoice and posted. <br /><br /> On the underlying job task on the **Job Card** page, the **Start Date** and **End Date** fields respectively contain the value of the **Planned Delivery Date** field on the earliest and latest job planning lines in the related **Job Planning Lines** page.
+> [!NOTE]
+> Pole **Plánované datum dodávky** plánovacího řádku obsahuje datum, kdy se očekává dokončení použití související s řádkem plánování. Je to také datum, kdy může být řádek plánování převeden na prodejní fakturu a zaúčtován. <br /><br /> Na podkladové úloze projektu na stránce **Karta projektu**, obsahují jednotlivé pole **Počáteční datum** a **Koncové datum** určitou hodnotu z pole **Plánované datum dodávky** na nejstarších a nejnovějších řádcích plánování projektu související stránky - **Řádky plánování projektu**.
 
-> [!NOTE]  
->   When you fill in the **Quantity** field, all total price and total cost information will be calculated and filled in for that planning line. You can edit them at any time.
+> [!NOTE]
+> Když vyplníte pole **Množství**, budou všechny informace o celkové ceně a celkových nákladech vypočteny a vyplněny pro tento plánovací řádek. Můžete je kdykoli upravit.
 
-On the **Job Card** page, you can now see a summary of the total budgeted costs, budgeted price, billable cost and billable price for each task.
+Na stránce **Karta projektu**, můžete nyní zobrazit souhrn celkových rozpočtových nákladů, rozpočtovaných cen, fakturovatelných nákladů a fakturovatelných cen pro každý projekt.
 
-For information about recording budgeted versus actual job prices and costs, see [Record Usage for Jobs](projects-how-record-job-usage.md).
+Pro více informací o zaznamenávání rozpočtovaných cen oproti skutečným cenám práce a nákladům navštivte [Evidence spotřeby na projektu](projects-how-record-job-usage.md).
 
-## See Also
-[Project Management](projects-manage-projects.md)  
+## Viz také
+[Správa projektů](projects-manage-projects.md)  
 [Finance](finance.md)  
-[Purchasing](purchasing-manage-purchasing.md)         
-[Sales](sales-manage-sales.md)      
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Nakupování](purchasing-manage-purchasing.md)  
+[Prodej](sales-manage-sales.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

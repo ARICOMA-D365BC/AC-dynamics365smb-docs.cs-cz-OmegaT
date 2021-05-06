@@ -4,76 +4,72 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Remove and Reapply Item Ledger Entries
-On the **Application Worksheet** page, you can view and manually change certain item application entries that are created automatically during inventory transactions.  
+# Odebrat a znovu vyrovnat položky zboží
+Na stránce **Sešit vyrovnání** můžete zobrazit a ručně změnit určité položky vyrovnání zboží, které jsou vytvářeny automaticky během skladových transakcí.
 
-When you post a transaction where items are moved in or out of inventory, an item application is created between each inventory increase and inventory decrease. These applications determine the flow of costs from the goods that are received in inventory to the cost of goods going out of inventory. Because of the way the unit cost is calculated, an incorrect item application could lead to a skewed average cost and a skewed unit cost. For more information, see Design Details: Item Application.
+Když odešlete transakci, ve které je zboží přesunuto nebo vyřazeno ze zásob, vytvoří se mezi každým zvýšením a poklesem zásob vyrovnání zboží. Toto vyrovnání určuje tok nákladů ze zboží, které je přijato na skladě, do nákladů na zboží, které vychází ze skladu. Z důvodu způsobu výpočtu jednotkových nákladů by nesprávné vyrovnání zboží mohlo vést k překročení průměrných nákladů a zkreslení jednotkových nákladů. Pro více informací navštivte Detaily návrhu: Vyrovnání zboží.
 
-The following scenarios might require that you undo an application or reapply item ledger entries:
+Následující scénáře mohou vyžadovat, abyste vyrovnání zrušili nebo znovu vyrovnali položky zboží:
 
-- You have forgotten to make a fixed application.
-- You have made an incorrect fixed application.
-- You have to return an item to which a sale has already been applied.
+- Zapomněli jste určit pevné vyrovnání.
+- Udělali jste nesprávné pevné vyrovnání.
+- Musíte vrátit zboží, které již bylo prodáno.
 
-If possible, use a document to reapply an item ledger entry. For example, if you must make a purchase return of an item to which a sale has already been applied, you can reapply by creating and posting the purchase return document by using the correct application in the **Appl.-to Item Entry** field on the purchase return line. You can use the **Get Posted Document Lines to Reverse** function or the **Copy from Document** function in the purchase return document to make this easier. When you post the document, the item ledger entry is automatically reapplied. For more information, see [Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md).
+Pokud je to možné, použijte doklad k opětovnému použití položky zboží. Pokud například musíte provést nákupní vratku zboží, na které již byl prodej vyrovnán, můžete znovu použít vytvoření a zaúčtování dokladu nákupní vratky pomocí správného vyrovnání v poli **Vyrovnat položkou zboží** na řádku nákupní vratky. Chcete-li to usnadnit, můžete použít funkci **Získat účt. řádky pro stornování** nebo funkci **Kopírovat z dokladu**. Když zaúčtujete doklad, položka zboží se automaticky znovu použije. Pro více informací navštivte [Zpracování nebo zrušení nákupní vratky](purchasing-how-process-purchase-returns-cancellations.md).
 
-If you cannot use a document to reapply, such as when you have to correct a fixed application, then use the **Application Worksheet** page to correct an application.
+Pokud nemůžete doklad opětovně použít, například když je třeba opravit pevné vyrovnání, opravte vyrovnání pomocí stránky **Sešit vyrovnání**.
 
-> [!Warning]  
-> The following are important considerations to remember when you are working with the application worksheet:
-    - You should not leave application entries unapplied for long periods of time because other users cannot process the items until you reapply the application entries or close the **Application Worksheet** page. Users who try to perform actions that involve a manually unapplied application entry receive the following error message: “You cannot perform this action because entries for item XXX are unapplied in the Application Worksheet by user XXX.”
-    - You should only reapply item ledger entries during nonworking hours to avoid conflicts with other users who are posting transactions with the same items.
-    - When you close the application worksheet, [!INCLUDE[prod_short](includes/prod_short.md)] performs a check to make sure that all entries are applied. For example, if you remove a quantity application but do not create a new application, and then you close the application worksheet, a new application is created. This helps keep the cost intact. However, if you remove a fixed application, a new fixed application is not automatically created when you close the worksheet. You must do this manually by creating a new application in the worksheet.
-    - It is possible to remove applications from more than one entry at a time in the application worksheet. However, because applying entries affects the set of entries that are available for application, you cannot create an application for more than one entry at a time.
-    - The application worksheet cannot make an application in the following situation: If there is not enough quantity on stock to apply, the application worksheet cannot make an application when you are trying to apply an inventory decrease entry without item tracking information to an inventory increase entry with item tracking information.
+> [!Warning]
+> Při práci s sešitem vyrovnání je důležité si pamatovat následující:
+- Položky vyrovnání byste neměli ponechat dlouho nepoužívané, protože ostatní uživatelé pak nemohou zpracovat zboží, dokud znovu nevyrovnáte položky vyrovnání nebo nezavřete stránku **Sešit vyrovnání**. Uživatelé, kteří se pokoušejí provádět akce, které zahrnují nepoužívané položky vyrovnání, obdrží následující chybovou zprávu: „Tuto akci nemůžete provést, protože pro položky zboží XXX je vyrovnání zrušeno v pracovním sešitě vyrovnání uživatelem XXX.“
+- Položky zboží byste měli znovu vyrovnat pouze během nepracovních hodin, abyste zabránili konfliktům s ostatními uživateli, kteří účtují transakce se stejným zbožím.
+- Když zavřete sešit vyrovnání, [!INCLUDE[d365fin](includes/d365fin_md.md)] provede kontrolu, aby se ujistil, že jsou použity všechny položky. Pokud například odeberete žádost o množství, ale nevytvoříte nové vyrovnání a potom zavřete sešit vyrovnání, vytvoří se nové vyrovnání. To pomáhá udržet náklady neporušené. Pokud však odstraníte pevné vyrovnání, nové pevné vyrovnání se po zavření sešitu automaticky nevytvoří. Musíte to udělat ručně vytvořením nového vyrovnání v sešitu.
+- V sešitu vyrovnání je možné odstranit vyrovnání z více než jedné položky najednou. Protože však vyrovnávací položky ovlivňují sadu položek, které jsou k dispozici pro vyrovnání, nemůžete vytvořit vyrovnání pro více než jednu položku najednou.
+- Sešit vyrovnání nemůže vytvořit vyrovnání v následující situaci: Pokud není na skladě dostatek množství k vyrovnání, nelze vytvořit sešit vyrovnání, když se pokoušíte vyrovnat položku snížení zásob bez informací o sledování zboží na položku zvýšení zásob s informacemi o sledování zboží.
 
-## To remove an item application by using the Application Worksheet  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Application Worksheet**, and then choose the related link.  
-2.  The **Application Worksheet** page opens displaying existing item ledger entries for all items.  
-3.  Enter filters on the **General** FastTab to make it easier to find the item ledger entry for which you want to change the application.  
-4.  Select the item ledger entry, and then choose the **Applied Entries** action. The **View Applied Entries – Applied Entries** page opens to show the item ledger entry or entries that are currently applied to the selected entry.  
-5.  Select the item ledger entry for which you want to remove the application.  
-6.  Choose the **Remove Application** action. This removes the item application entry that links the two item ledger entries and moves it to the **View Applied Entries – Unapplied Entries** page.  
-7.  Close the **View Applied Entries – Applied Entries** page.  
+## Odebrání vyrovnání zboží pomocí sešitu vyrovnání
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit vyrovnání** a poté vyberte související odkaz.
+2. Otevře se stránka **Sešit vyrovnání** zobrazující existující položky zboží pro všechno zboží.
+3. Zadejte filtry na záložce **Obecné**, aby bylo snazší najít položku zboží, pro kterou chcete vyrovnání změnit.
+4. Vyberte položku zboží a poté vyberte akci **Vyrovnané položky**. Otevře se stránka **Zobrazit vyrovnané položky – Vyrovnané položky** která zobrazuje položku zboží nebo položky, které jsou aktuálně vyrovnány s vybranou položkou.
+5. Vyberte položku zboží, pro kterou chcete vyrovnání odebrat.
+6. Vyberte akci **Odebrat vyrovnání**. Tím odeberete položku vyrovnání zboží, která propojí dvě položky zboží, a přesunete ji na stránku **Zobrazit vyrovnané položky – Nevyrovnané položky**.
+7. Zavřete stránku **Zobrazit vyrovnané položky – Vyrovnané položky**.
 
- The **Remaining Quantity** field of the two item ledger entries are increased by the quantity that has been unapplied. The removed item ledger entry is now available for reapplication on the **View Applied Entries – Unapplied Entries** page.  
+Pole **Zůstatek (množství)** dvou položek zboží je zvýšeno o množství, které nebylo vyrovnáno. Odebraná položka zboží je nyní k dispozici pro opětovné vyrovnání na stránce **Zobrazit vyrovnané položky – Nevyrovnané položky**.
 
-> [!IMPORTANT]  
->  You should not leave application entries unapplied for longer periods of time because other users cannot process the affected items until you reapply the application entries or close the **Application Worksheet** page. The following error message is displayed if you try to perform actions that involve a manually unapplied application entry:  
->   
->  **You cannot perform this action because entries for item <item> are unapplied in the Application Worksheet by user <user>.**  
+> [!IMPORTANT]
+> Neměli byste ponechat položky vyrovnání déle nevyrovnané, protože ostatní uživatelé nemohou zpracovat ovlivněné položky, dokud znovu položky vyrovnání nevyrovnáte nebo nezavřete stránku **Sešit vyrovnání**. Následující chybová zpráva se zobrazí, pokud se pokusíte provést akce, které se týkají  nevyrovnané položky vyrovnání:
+> **Tuto akci nemůžete provést, protože položky pro zboží  <item> nejsou uživatelem vyrovnány v sešitu vyrovnání. <user>**
+> 
+## Opětovné vyrovnání položky pomocí sešitu vyrovnání
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit vyrovnání** a poté vyberte související odkaz.
+2. Otevře se stránka **Sešit vyrovnání** zobrazující existující položky zboží pro všechno zboží.
+3. Chcete-li znovu vyrovnat položky, které byly odebrány od otevření sešitu, vyberte položku zboží, kterou chcete znovu vyrovnat, a poté vyberte akci **Znovu vyrovnat**.
 
-## To reapply an item application by using the Application Worksheet  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Application Worksheet**, and then choose the related link.  
-2.  The **Application Worksheet** page opens displaying existing item ledger entries for all items.  
-3.  To reapply entries that were removed since the worksheet was opened, select the item ledger entry that you want to reapply, and then choose the **Reapply** action.  
+   > [!NOTE]
+Toto opětovné vyrovnání se automaticky projeví v původní rozvaze, když zavřete stránku **Sešit vyrovnání**.
+4. Chcete-li použít dostupnou otevřenou položku zboží s jinou položkou, vyberte položku zboží, kterou chcete použít. Vyberte akci **Nevyrovnané položky**. Otevře se stránka **Zobrazit vyrovnané položky – Nevyrovnané položky**.
+5. Vyberte jednu nebo více položek zboží, které chcete použít pro vybranou položku na stránce **Sešit vyrovnání**, a poté vyberte tlačítko **OK**.
 
-    > [!NOTE]  
-    >  This reapplication to the original balance also occurs automatically when you close the **Application Worksheet** page.  
-4.  To apply an available open item ledger entry to another entry, select the item ledger entry that you want to apply. Choose the **Unapplied Entries** action. The **View Applied Entries – Unapplied Entries** page opens.  
-5.  Select one or more item ledger entries that you want to apply to the entry selected on the **Application Worksheet** page, and then choose the **OK** button.  
+   Mezi dvěma položkami zboží je vytvořena položka vyrovnání zboží. Pole **Zůstatek (množství)** obou položek jsou snížena o použité množství.
 
-     An item application entry is created between the two item ledger entries. The **Remaining Quantity** fields of the two entries are reduced by the applied quantity.  
+   > [!NOTE]
+Pokud jste se rozhodli vytvořit vyrovnání, které by v procesu úpravy nákladů vytvořilo nekonečnou smyčku, nebude navržené vyrovnání vytvořeno. K tomu může dojít, když původní položky vytvořily záporné zásoby. Žádost není podána. Proto je nutné vybrat jinou položku pro vyrovnání.
+6. Pokud je pole **Automatická adjustace nákladů** v **Nastavení zásob** nastaveno na **Vždy**, pak se po provedení opětovného vyrovnání automaticky spustí dávková úloha pro úpravu nákladů. Jinak spusťte dávkovou úlohu **Adjustace nákladů položek zboží** a ujistěte se, že jsou všechny náklady aktuální.
 
-    > [!NOTE]  
-    >  If you have chosen to make an application that would create an infinite loop in the cost adjustment process, then the application that you proposed is not made. This can occur when the original entries created negative stock. The application is not made. Therefore, you must select a different entry for the application.  
-6.  If the **Automatic Cost Adjustment** field in the **Inventory Setup** is set to **Always**, then the cost adjustment batch job is automatically run after you make a reapplication. Otherwise, run the **Adjust Cost - Item Entries** batch job to make sure that all costs are up to date.  
-
-## See Also  
-[Close Open Item Ledger Entries Resulting from Fixed Application in the Item Journal](finance-how-to-close-open-item-ledger-entries-resulting-from-fixed-application-in-the-item-journal.md)  
- [Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md)  
- [Managing Inventory Costs](finance-manage-inventory-costs.md)   
- [Design Details: Item Application](design-details-item-application.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Uzavření otevřených položek zboží, které vyplývají z pevného vyrovnání z deníku zboží](finance-how-to-close-open-item-ledger-entries-resulting-from-fixed-application-in-the-item-journal.md)  
+[Zpracování nebo zrušení nákupní vratky](purchasing-how-process-purchase-returns-cancellations.md)  
+[Správa nákladů zásob](finance-manage-inventory-costs.md)  
+[Detaily návrhu: Vyrovnání zboží](design-details-item-application.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -1,195 +1,189 @@
 ---
-title: Count Inventory With Document-Based Functionality
+title: Count Inventory With Document-Based Functionality| Microsoft Docs
 description: Describes how to perform physical inventory counting using the Physical Order Inventory and Physical Inventory Recording pages.
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: adjustment, status, negative, positive, increase, decrease
-ms.date: 10/20/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Count Inventory Using Documents
+# Výpočet zásob pomocí dokumentů
+Fyzickou inventuru zboží můžete provést pomocí objednávky fyzické inventury a dokladů pro záznamenání fyzické inventury. Stránka **Objednávky fyzické inventury** se používá k uspořádání celého projektu inventury zásob, například podle dimenzí. Stránka **Záznam fyz. inventury** se používá ke komunikaci a zachycení skutečného počtu zboží. Můžete vytvořit více záznamů pro jednu objednávku, například distribuovat skupiny zboží různým zaměstnancům.
 
-You can take a physical inventory of your items by using physical inventory order and physical inventory recording documents. The **Physical Inventory Order** page is used to organize the complete inventory counting project, for example one per location. The **Physical Inventory Recording** page is used by to communicate and capture the actual counting of items. You can create multiple recordings for one order, for example to distribute groups of items to different employees.
-
-The **Physical Inventory Recording** report can be printed from each recording and contains empty quantity fields for entering the counted inventory. When a user is done counting, and the quantities are entered on the **Physical Inventory Recording** page, you choose the **Finish** action. This transfers the quantities to the related lines on the **Physical Inventory Order** page. Functionality ensures that no item count can be recorded twice.  
-
-> [!NOTE]
-> This article describes how to perform a physical inventory using documents, a method that provides more control and supports distributing the counting to multiple employees. You can also perform the task by using journals, such as the **Phys. Inventory Journals** and **Whse. Phys. Inventory Journals** pages. For more information, see [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md).<br /><br />
-> Note that if you use the Zones functionality, then you cannot use physical inventory orders. Instead, use **Whse. Phys. Inventory Journal** page to count your warehouse entries before synchronizing them with item ledger entries.
-
-Counting inventory by using documents consist of the following overall steps:
-
-1. Create a physical inventory order with expected item quantities prefilled.
-2. Generate one or more physical inventory recordings from the order.
-3. Enter the counted item quantities on the recordings, as captured on print-outs, for example, and set it to **Finished**.
-4. Complete and post the physical inventory order.
-
-## To create a physical inventory order
-A physical inventory order is a complete document that consists of a physical inventory order header and some physical inventory order lines. The information on a physical inventory header describes how to take the physical inventory. The physical inventory order lines contain the information about the items and their locations.
-
-To create the physical inventory order lines, you typically use the **Calculate Lines** function to reflect the current inventory as lines on the order. Alternatively, you can use the **Copy from Document** function to fill the lines with the content of another open or posted physical inventory order. The following procedure only describes how to use the **Calculate Lines** function.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Physical Inventory Orders**, and then choose the related link.
-2. Choose the **New** action.
-3. Fill in the required fields on the **General** FastTab. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Choose the **Calculate Lines** action.
-5. Select options as necessary.
-6. Set filters, for example, to only include a subset of items to be counted with the first recording.
-
-    > [!TIP]
-    > To plan for multiple employees to count the inventory, it is advisable to set different filters each time you use the **Calculate Lines** action to only fill the order with the subset of inventory items that one user will be recording. Then as you generate multiple physical inventory recordings for multiple employees, you minimize the risk of counting items twice. For more information, see the [To create a physical inventory recording](#to-create-a-physical-inventory-recording) section.
-
-7. Choose the **OK** button.
-
-A line for each item that exists on the chosen location and per the set filters and options is inserted on the order. For items that are set up for item tracking, the **Use Item Tracking** check box is selected, and information about the expected quantity of serial and lot numbers is available by choosing the **Lines** action and then **Item Tracking Lines**. For more information, see the [Handling Item Tracking when Counting Inventory](#handling-item-tracking-when-counting-inventory) section.
-
-You can now proceed to create one or more recordings, which are instructions to the employees who perform the actual counting.  
-
-## To create a physical inventory recording
-For each physical inventory order, you can create one or more physical inventory recording documents on which employees enter the counted quantities, either manually or through an integrated scanning device.
-
-By default, a recording is created for all the lines on the related physical inventory order. To avoid that two employees count the same items in case of distributed counting, it is advisable to gradually fill the physical inventory order by setting filters on the **Calculate Lines** batch job (see the "To create a physical inventory order" section) and then create the physical inventory recording while selecting the **Only Lines Not in Recordings** check box. This settings makes sure that each new recording that you create only contains different items than the ones on other recordings.
-
-In case of manual counting, you can print a list, the **Phys. Invt. Recording** report, which has an empty column to write the counted quantities in. When counting is completed, you enter the recorded quantities on the related lines on the **Phys. Inventory Recording** page. Lastly, you transfer the recorded quantities to the related physical inventory order by setting the status to **Finished**.
-
-1. On a **Physical Inventory Order** page that contains lines for the items to be counted in one recording, choose the **Make New Recording** action.
-2. Select options and set filters as necessary.
-3. Choose the **OK** button.
-
-    A physical inventory recording document is created.
-
-4. For every set of items to be counted, load them on the related physical inventory order and repeat steps 1 through 3 with the **Only Lines Not in Recordings** check box selected.
-
-5. Choose the **Recordings** action to open the **Phys. Inventory Recording List** page.
-6. Open the relevant recording.
-7. On the **General** FastTab, fill in the fields as necessary.
-8. For items that use item tracking, create an additional line for each lot number or serial number code by choosing the **Functions** action, and then the **Copy Line** action. For more information, see the [Handling Item Tracking when Counting Inventory](#handling-item-tracking-when-counting-inventory) section.  
-9. Choose the **Print** action to prepare the physical document that employees will use to write down the counted quantities.
-
-## To finish a physical inventory recording
-
-When employees have counted the inventory quantities, you must prepare to record them in the system.
-
-1. From the **Phys. Inventory Recording List** page, select the physical inventory recording that you want to finish, and then choose the **Edit** action.
-2. On the **Lines** FastTab, fill the actual counted quantity in the **Quantity** field for each line.
-3. For items with serial or lot numbers (the **Use Item Tracking** check box is selected), enter the counted quantities on the dedicated lines for the item's serial and lot numbers respectively question. For more information, see the [Handling Item Tracking when Counting Inventory](#handling-item-tracking-when-counting-inventory) section.
-4. Select the **Recorded** check box on each line.
-5. When you have entered all data for a physical inventory recording, choose the **Finish** action. Note that all lines must have the **Recorded** checkbox selected.
+Sestavu **Záznam fyz. inventury** lze vytisknout z každého záznamu a obsahuje prázdná pole množství pro zadání počítaných zásob. Když uživatel provádí počítání a množství jsou zadána na stránce **Záznam fyz. inventury**, vyberete akci **Dokončit**. Tím se převedou množství na související řádky na stránce **Objednávky fyzické inventury**. Funkčnost zajišťuje, že počet zboží nelze zaznamenat dvakrát.
 
 > [!NOTE]
-> When you finish a physical inventory recording, each line is transferred to the line on the related physical inventory order that matches it exactly. To match, the values in the **Item No.**, **Variant Code**, **Location Code**, and **Bin Code** fields must be the same on the recording and the order lines.<br /><br />
-> If no matching physical inventory order line exists, and if the **Allow Recording Without Order** checkbox is selected, then a new line is inserted automatically and the **Recorded Without Order** checkbox on the related physical inventory order line is selected. Otherwise, an error message is displayed and the process is canceled.<br /><br />
-> If more than one physical inventory recording lines match a physical inventory order line, then a message is displayed and the process is canceled. If, for some reason, two identical physical inventory lines end up on the physical inventory order, you can use a function to resolve it. For more information, see the [To find duplicate physical inventory order lines](#to-find-duplicate-physical-inventory-order-lines) section.
+> Tento postup popisuje, jak provést fyzickou inventuru pomocí dokladů, což je metoda, která poskytuje větší kontrolu a podporuje distribuci počítání více zaměstnancům. Úkol můžete také provést pomocí deníků na stránkách **Deníky  fyzické inventury** a **Deník  fyz. inventury skladu**. Pro více informací navštivte [Počet, úprava a překlasifikace zásob pomocí deníků](inventory-how-count-adjust-reclassify.md).<br /><br />
+> Upozorňujeme, že pokud používáte funkci Přihrádky nebo Zóny, nemůžete použít objednávky fyzické inventury. Místo toho použijte stránku **Deník  fyz. inventury skladu** pro počítání zboží na skladě před jejich synchronizací s položkami zboží.
 
-## To complete a physical inventory order
-When you have finished a physical inventory recording, the **Qty. Recorder (Base)** field on the related physical inventory order is updated with the counted (recorded) values, and the **On Recording** check box is selected. If a counted value is different from the expected, then that difference is shown in the **Pos Qty. (Base)** and **Neg Qty. (Base)** field respectively.
+Počítání zásob pomocí dokladů se skládá z následujících kroků:
 
-To see expected quantities and any recorded differences for items with item tracking, choose the **Lines** action, and then choose the **Item Tracking Lines** action to select various views for serial and lot numbers involved in the physical inventory count.
+1. Vytvořte objednávku fyzické inventury s předvyplněným očekávaným množstvím zboží.
+2. Z objednávky vygenerujte jeden nebo více záznamů fyzické inventury.
+3. Zadejte počty kusů zboží do záznamů, jak jsou zachyceny například na výtiscích, a nastavte je na **Dokončeno**.
+4. Dokončete a zaúčtujte fyzickou inventuru.
 
-You can also choose the **Phys. Inventory Order Diff.** action to view any differences between the expected quantity and the counted quantity.
+## Vytvoření objednávky fyzické inventury
+Objednávka fyzické inventury je úplný doklad, který se skládá z hlavičky a některých řádků objednávky fyzické inventury. Informace v hlavičce fyzické inventury popisují, jak provést fyzickou inventuru. Řádky fyzické inventury obsahují informace o zboží a jejich lokacích.
 
-### To find duplicate physical inventory order lines
+Chcete-li vytvořit řádky objednávek fyzické inventury, použijte funkci **Vypočítat řádky** tak, aby odrážela aktuální zásoby jako řádky v objednávce. Alternativně můžete pomocí funkce **Kopírovat z dokladu** vyplnit řádky obsahem jiné otevřené nebo zaúčtované objednávky fyzické inventury. Následující postup popisuje, jak používat funkci **Vypočítat řádky**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Physical Inventory Orders**, and then choose the related link.
-2. Open the physical inventory order that you want to view duplicate lines for.
-3. Choose the **Show Duplicate Lines** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky fyzické inventury** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Vyplňte povinná pole na záložce **Obecné**. [!INCLUDE [tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Vyberte akci **Vypočítat řádky**.
+5. Podle potřeby vyberte možnosti.
+6. Nastavte například filtry, aby zahrnovaly pouze podmnožinu zboží, která se má počítat při prvním záznamu.
 
-Any duplicate physical inventory order lines are displayed so that you can delete them and keep only one line with a unique set of values in the **Item No.**, **Variant Code**, **Location Code**, and **Bin Code** fields.
+   > [!TIP]
+   > Chcete-li naplánovat počítání inventury pro více zaměstnanců, je vhodné nastavit různé filtry pokaždé, když použijete akci **Vypočítat řádky**, aby se objednávka vyplnila pouze podmnožinou zboží inventury, které bude zaznamenávat jeden uživatel. Při generování více záznamů fyzické inventury pro více zaměstnanců minimalizujete riziko počítání stejného zboží dvakrát. Pro více informací navštivte sekci "Vytvoření záznamu fyzické inventury".
 
-### To post a physical inventory order
-After completing a physical inventory order and changing its status to **Finished**, you can post it. You can only set the status of a physical inventory order to **Finished** if the following are true:
+7. Vyberte tlačítko **OK**.
 
-- All related physical inventory recordings have a status of **Finished**.
-- Each physical inventory order line has been counted by at least one inventory recording line.
-- The **In Recording Lines** and the **Qty. Exp. Calculated** check boxes have been selected for all of the physical inventory order lines.
+Řádek pro každé zboží, které existuje ve zvolené lokaci a podle nastavených filtrů a možností, je vložen do objednávky. U zboží, které jsou nastaveny pro sledování zboží, je zaškrtnuto políčko **Použít sledování zboží** a informace o očekávaném množství sériových čísel a čísel šarží jsou k dispozici výběrem akce **Řádky** a poté **Řádky sledování zboží**. Pro více informací navštivte sekci "Zpracování sledování zboží při počítání zásob".
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Physical Inventory Orders**, and then choose the related link.
-2. Select the physical inventory order that you want to complete, and then choose the **Edit** action.
+Nyní můžete přistoupit k vytvoření jedné nebo více záznamů, což jsou pokyny pro zaměstnance, kteří provádějí skutečné počítání.
 
-    On the **Physical Inventory Order** page, you view the quantity recorded in the **Qty. Recorded (Base)** field.
-3. Choose the **Finish** action.
+## Vytvoření záznamu fyzické inventury
+Pro každou objednávku fyzické inventury můžete vytvořit jeden nebo více dokladů zaznamenávajících fyzickou inventuru, do kterých zaměstnanci zadávají počítaná množství, buď ručně, nebo pomocí integrovaného skenovacího zařízení.
 
-    The value in the **Status** field is changed to **Finished**, and you can now only change the order by first choosing the **Reopen** action.
-4. To post the order, choose the **Post** action, and then choose the **OK** button.
+Ve výchozím nastavení je záznam vytvořen pro všechny řádky v související objednávce fyzické inventury. Aby se předešlo tomu, že dva zaměstnanci počítají stejné zboží v případě distribuovaného počítání, je vhodné postupně vyplňovat pořadí fyzických zásob nastavením filtrů v dávkové úloze **Vypočítat řádky** (viz sekci "Vytvoření objednávky fyzické inventury") a poté vytvořit záznam fyzické inventury pomocí zaškrtnutí políčka **Pouze řádky, které nejsou v záznamech**. Toto nastavení zajišťuje, že každý nový záznam, který vytvoříte, obsahuje jiné zboží než to, které je na jiných záznamech.
 
-The involved item ledger entries are updated along with any related item tracking entries.
+V případě ručního počítání můžete vytisknout seznam pomocí sestavy **Záznam  fyz. inventury**, která má prázdný sloupec pro zápis spočítaného množství. Po dokončení počítání zadáte zaznamenaná množství do souvisejících řádků na stránce **Záznam  fyz. inventury**. Nakonec přenesete zaznamenaná množství do související objednávky fyzické inventury nastavením stavu na **Dokončeno**.
 
-### To view posted physical inventory orders
-After posting, the physical inventory order will be deleted and you can view and evaluate the document as a posted physical inventory order including its physical inventory recordings and any comments made.
+1. Na stránce **Objednávky fyzické inventury**, která obsahuje řádky pro zboží, které se mají spočítat v jednom záznamu, vyberte akci **Vytvořit nový záznam**.
+2. Vyberte možnosti a podle potřeby nastavte filtry.
+3. Vyberte tlačítko **OK**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Phys. Invt. Orders**, and then choose the related link.
-2. On the **Posted Phys. Invt. Orders** page, select the posted inventory order that you want to view, and then choose the **View** action.
-3. To view a list of related physical inventory recordings, choose the **Recordings** action.
+   Vytvoří se doklad záznamu fyzické inventury.
 
-## Handling Item Tracking when Counting Inventory
-Item tracking pertains to the serial or lot numbers that are assigned to items. When counting an item that is stored in inventory as, for example, 10 different lot numbers, the employee must be able to record which and how many units of each lot number are on inventory. For more information about item tracking functionality, see [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md).
+4. Pro každou sadu zboží, které se mají spočítat, je načtěte do příslušného pořadí fyzické inventury a opakujte kroky 1 až 3 se zaškrtnutým políčkem **Pouze řádky, které nejsou v záznamech**.
 
-The **Use Item Tracking** check box on physical inventory order lines is automatically selected if an item tracking code is set up for the item, but you can also select or deselect it manually.
+5. Vyberte akci **Záznamy** a otevřete stránku **Seznam  záznamů fyzické inventury**.
+6. Otevřete příslušný záznam.
+7. Na záložce **Obecné** vyplňte pole podle potřeby.
+8. U zboží, které používají sledování zboží, vytvořte další řádek pro každé číslo šarže nebo kód sériového čísla výběrem akce **Funkce** a poté akce **Kopírovat řádek**. Pro více informací navštivte sekci "Zpracování sledování zboží při počítání zásob".
+9. Vyberte akci **Tisk** a připravte fyzický doklad, který zaměstnanci použijí k zapsání započítaných množství.
 
-### Example - Prepare a Physical Inventory Recording for an Item-Tracked Item
-Consider a physical inventory for Item A, which is stored in inventory as ten different serial numbers.
-1. On the recording line for the item, select the **Use Item Tracking** check box.
-2.  Choose the **Serial No.** field, select the first serial number that exists in inventory for the item, and then choose the **OK** button.
+## Dokončení záznamu fyzické inventury
+Když zaměstnanci spočítají množství zásob, musíte se připravit na jejich zaznamenání do systému.
 
-    Proceed to copy the line for the first item-tracked item to insert additional lines corresponding to the number of serial numbers that are stored in inventory.
+1. Ze stránky **Seznam  záznamů fyzické inventury** vyberte záznam fyzické inventury, který chcete dokončit, a poté vyberte akci **Upravit**.
+2. Na záložce **Řádky** vyplňte skutečné počítané množství do pole **Množství** pro každý řádek.
+3. U zboží se sériovým číslem nebo číslem šarže (je zaškrtnuto políčko **Použít sledování zboží**), zadejte započítaná množství na vyhrazených řádcích pro sériová čísla a čísla šarže. Pro více informací navštivte sekci "Zpracování sledování zboží při počítání zásob".
+4. Zaškrtněte políčko **Zaznamenáno** na každém řádku.
+5. Pokud jste zadali všechna data pro záznam fyzické inventury, vyberte akci **Dokončit**. Všimněte si, že na všech řádcích musí být zaškrtnuto políčko **Zaznamenáno**.
 
-3. Choose the **Functions** action, and then the **Copy Line** action.
-4. On the **Copy Phys. Invt. Rec. Line** page, enter 9 in the **No. of Copies** field, and then choose the **OK** button.
-5. On the first of the copy lines, select the **Serial No.** field and select the next serial number for the item.
-6. Repeat step 5 for the remaining eight serial numbers, taking care to not select the same one twice.
-7. Choose the **Print** action to prepare the print-out that employees will use to write down the counted items and serial/lot numbers.
+> [!NOTE]
+> Po dokončení záznamu fyzické inventury se každý řádek převede na řádek v příslušném pořadí fyzické inventury, který se s ním přesně shoduje. Aby se shodovaly hodnoty v polích **Číslo zboží**, **Kód varianty**, **Kód lokace** a **Kód přihrádky** musí být stejné záznamy a řádky objednávky.<br /><br />
+> Pokud neexistuje odpovídající řádek objednávky fyzické inventury a pokud je zaškrtnuto políčko **Povolit záznam bez objednávky** tak se automaticky vloží nový řádek a políčko **Zaznamenáno bez objednávky** je zaškrtnuto na příslušném řádku objednávky fyzické inventury. Jinak se zobrazí chybová zpráva a proces se zruší.<br /><br />
+> Pokud se více řádků záznamu fyzické inventury shoduje s řádkem objednávky fyzické inventury, zobrazí se zpráva a proces se zruší. Pokud z nějakého důvodu dva identické řádky fyzické inventury skončí na objednávce fyzické inventury, můžete ji vyřešit pomocí funkce. Pro více informací navštivte sekci "Vyhledání duplicitních řádků objednávek fyzické inventury".
 
-Notice that the **Phys. Invt. Recording** report contains ten lines for Item A, one for each serial number.
+## Dokončení objednávky fyzické inventury
+Po dokončení záznamu fyzické inventury je pole související s objednávkou fyzické inventury **Množství  záznamů (Základ)** aktualizováno spočítanými (zaznamenanými) hodnotami a políčko **Záznam** je zaškrtnuto. Pokud se počítaná hodnota liší od očekávané, pak se tento rozdíl zobrazí v poli **Pozitivní množství  (Základ)** a **Negativní množství  (Základ)** v uvedeném pořadí.
 
-### Example - Record and Post Counted Lot Number Differences
-A lot-tracked item is stored in inventory with the "LOT" number series.
+Chcete-li zobrazit očekávaná množství a jakékoli zaznamenané rozdíly pro zboží se sledováním zboží, vyberte akci **Řádky** a poté vyberte akci **Řádky sledování zboží** a vyberte různé pohledy pro sériová čísla a čísla šarží zapojených do počtu fyzických zásob.
 
-**Expected Inventory**:
+Můžete si také vybrat akci **Rozdíl  objednávky fyzické inventury** pro zobrazení jakýchkoli rozdílů mezi očekávaným množstvím a počítaným množstvím.
 
-|Lot No.|Quantity|
+### Vyhledání duplicitních řádků fyzické inventury
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky fyzické inventury** a poté vyberte související odkaz.
+2. Otevřete fyzickou inventuru, pro kterou chcete zobrazit duplicitní řádky.
+3. Vyberte akci **Zobrazit duplicitní řádky**.
+
+Zobrazí se všechny duplicitní řádky fyzické inventury, takže je můžete odstranit a zachovat pouze jeden řádek s jedinečnou sadou hodnot v polích **Číslo zboží**, **Kód varianty**, **Kód lokace** a **Kód přihrádky**.
+
+### Zaúčtování objednávky fyzické inventury
+Po dokončení objednávky fyzické inventury a změně jejího stavu na **Dokončeno** ji můžete zaúčtovat. Stav objednávky fyzické inventury můžete nastavit na **Dokončeno**, pokud jsou splněny následující podmínky:
+
+- Všechny související záznamy fyzické inventury mají stav **Dokončeno**.
+- Každý řádek fyzické inventury byl spočítán alespoň jedním záznamovým řádkem zásob.
+- Zaškrtávací políčka **V řádcích záznamu** a **Očekávané  vypočítané  množství** byla vybrána pro všechny řádky objednávek fyzické inventury.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky fyzické inventury** a poté vyberte související odkaz.
+2. Vyberte fyzickou inventuru, kterou chcete dokončit, a pak zvolte akci **Upravit**.
+
+   Na stránce **Objednávky fyzické inventury** zobrazíte množství zaznamenané v poli **Zaznamenané  množstvi (Základ)**.
+3. Vyberte akci **Dokončit**.
+
+   Hodnota v poli **Stav** se změní na **Dokončeno** a nyní můžete změnit pořadí pouze tak, že vyberete akci **Znovu otevřít**.
+4. Chcete-li objednávku zaúčtovat, vyberte akci **Účtovat** a poté vyberte tlačítko **OK**.
+
+Příslušné položky zboží jsou aktualizovány spolu se všemi souvisejícími položkami sledování zboží.
+
+### Zobrazení zaúčtovaných objednávek fyzické inventury
+Po zaúčtování bude objednávka fyzické inventury odstraněna a můžete zobrazit a vyhodnotit doklad jako zaúčtovinovou fyzickou inventuru včetně jejích záznamů fyzické inventury a všech provedených poznámek.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované objednávky  fyz. inventury** a poté vyberte související odkaz.
+2. Na stránce **Účtované objednávky  fyz. inventury** vyberte objednávku zaúčtovaného inventáře, kterou chcete zobrazit, a poté vyberte akci **Zobrazit**.
+3. Chcete-li zobrazit seznam souvisejících záznamů fyzické inventury, vyberte akci **Záznamy**.
+
+## Zpracování sledování zboží při počítání zásob
+Sledování zboží se týká sériových čísel nebo čísel šarží přiřazených danému zboží. Při počítání zboží, které je uloženo na skladě jako například 10 různých čísel šarží, musí být zaměstnanec schopen zaznamenat, které a kolik jednotek každého čísla šarže je na skladě. Pro více informací o funkcionalitě sledování zboží navštivte [Práce se sériovými čísly a čísly šarží](inventory-how-work-item-tracking.md).
+
+Zaškrtávací políčko **Použít sledování zboží** na řádcích objednávky fyzické inventury je automaticky vybráno, pokud je pro zboží nastaven kód sledování zboží, ale můžete jej také vybrat nebo zrušit výběr ručně.
+
+### Příklad - Připravte záznam fyzické inventury pro zboží - sledované zboží
+Zvažte fyzickou inventuru pro položku A, která je uložena ve skladu jako deset různých sériových čísel.
+1. Na řádku záznamu pro zboží zaškrtněte políčko **Použít sledování zboží**.
+2. Vyberte pole **Sériové číslo** a poté vyberte první sériové číslo, které existuje v zásobách pro zboží a poté zvolte tlačítko **OK**.
+
+   Pokračujte v kopírování řádku pro první sledované zboží a vložte další řádky odpovídající počtu sériových čísel uložených v zásobách.
+
+3. Vyberte akci **Funkce** a potom akci **Kopírovat řádek**.
+4. Na stránce **Kopírovat řádky záznamů  fyz.   inventury**, zadejte 9 do pole **Počet  kopií** a poté vyberte tlačítko **OK**.
+5. Na prvním kopírovaném řádku vyberte pole **Sériové číslo** a vyberte další sériové číslo pro zboží.
+6. Opakujte krok 5 pro zbývajících osm sériových čísel, přičemž dbejte na to, abyste nezvolili stejné číslo dvakrát.
+7. Vyberte akci **Tisk** a připravte si výtisk, který zaměstnanci použijí k zapsání započítaného zboží a sériových čísel/čísel šarží.
+
+Všimněte si, že sestava **Záznamy  fyz. inventury** obsahuje deset řádků pro položku A, jeden pro každé sériové číslo.
+
+### Příklad - Zaznamenejte a odečtěte rozdíly v číslech šarží
+Sledovaná položka šarže je uložena v inventáři s číselnou řadou „LOT“.
+
+**Očekávané zásoby**:
+
+|Číslo šarže|Množství|
 |-|-|
 |LOT1001|80|
 |LOT1003|30|
 |LOT1006|10|
-|Total|120|
+|Celkem|120|
 
-**Recorded Quantities**:
+**Zaznamenané zmožství**:
 
-|Lot No.|Quantity|
+|Číslo šarže|Množství|
 |-|-|
 |LOT1001|80|
 |LOT0002|12|
 |LOT1003|20|
 |LOT1006|10|
-|Total|112|
+|Celkem|112|
 
-**Quantities to Post**:
+**Množství k zaúčtování**:
 
-|Lot No.|Expected Quantity|Recorded Quantity|Quantity to Post|
+|Číslo šarže|Očekávané zásoby|Zaznamenané zmožství|Množství k zaúčtování|
 |-|-|-|-|
 |LOT1001|80|80|0|
 |LOT1002|0|12|+12|
 |LOT1003|30|20|-10|
 |LOT1006|10|0|-10|
-|Total|120|112|-8|
+|Celkem|120|112|-8|
 
-On the **Physical Inventory Order** page, the **Neg. Qty. (Base)** field will contain *8*. For the order line in question, the **Phys. Invt. Item Track. List** page will contain the positive or negative quantities for the individual lot numbers.
+Na stránce **Objednávky fyzické inventury** bude pole **Negativní  množství  (Základ)** obsahovat *8*. Pro dotyčný řádek objednávky bude stránka **Seznam sledovaného zboží  fyz.   inventury** obsahovat kladná nebo záporná množství pro jednotlivá čísla šarží.
 
-## See Also
-
-[Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md)  
-[Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Warehouse Management](warehouse-manage-warehouse.md)    
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Počet, úprava a překlasifikace zásob pomocí deníků](inventory-how-count-adjust-reclassify.md)  
+[Práce se sériovými čísly a čísly šarží](inventory-how-work-item-tracking.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Správa skladů](warehouse-manage-warehouse.md)  
+[Prodej](sales-manage-sales.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

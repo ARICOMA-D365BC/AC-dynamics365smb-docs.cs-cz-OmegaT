@@ -1,110 +1,73 @@
 ---
-    title: How to Create a Demand Forecast
+    title: How to Create a Demand Forecast | Microsoft Docs
     description: You can create sales and production forecasts with the **Demand Forecast** page.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 01/12/2021
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Create a Demand Forecast
-You can create sales and production forecasts with the **Demand Forecast** page.  
+# Vytvoření prognózy
+Prognózy prodeje a výroby můžete vytvořit na stránce **Prognóza poptávky**.
 
-Forecasting functionality is used to create anticipated demand; actual demand is created from sales and production orders. During creation of the Master Production Schedule (MPS), the forecast is netted against the sales and production orders. The *Component* option on the forecast determines which type of requirements to take into consideration in the netting process. If the forecast is for a sales item, only sales orders net the forecast. If it is for components, only dependent demand from production order components net the forecast.  
+Prognóza se používá k vytvoření očekávané poptávky; skutečná poptávka je vytvořena z prodejních a výrobních zakázek. Při vytváření hlavního plánu výroby (MPS) je prognóza započtena proti prodejním a výrobním objednávkám. Možnost *Komponenta* v prognóze určuje, jaký typ požadavků je třeba zohlednit v procesu vzájemného započtení. Pokud je prognóza pro zboží prodeje, prognózu tvoří pouze prodejní objednávky. Pokud se jedná o komponenty, pouze závislá poptávka z komponent výrobní zakázky vytvoří prognózu.
 
-Forecasting allows your company to create "what if" scenarios and efficiently and cost-effectively plan for and meet demand. Accurate forecasting can make a critical difference in customer satisfaction levels with regard to order promising dates and on-time delivery.  
+Prognózování umožňuje vaší společnosti vytvářet scénáře "co kdyby" a efektivně a nákladově efektivně plánovat a uspokojovat poptávku. Přesné předpovědi mohou zásadně změnit úroveň spokojenosti zákazníků s ohledem na slibná data objednávek a včasné dodání.
 
-## Sales Forecasts and Production Forecasts  
-The forecasting functionality in application can be used to create sales or production forecasts, in combination or independently. For example, most make-to-order companies do not carry finished goods inventory, because each item is produced when it is ordered. Anticipating orders (sales forecasting) is critical for a reasonable turnaround time on the finished goods (production forecasting). As an example, component parts with lengthy delivery times, if not on order or on inventory, can delay production.  
+## Prognózy prodeje a prognózy výroby
+Funkce prognózy v aplikaci lze použít k vytvoření prognóz prodeje nebo výroby v kombinaci nebo nezávisle. Například většina společností na zakázku neprovádí zásoby hotových výrobků, protože každé zboží je vyrobeno při objednání. Předvídání objednávek (prognózy prodeje) je rozhodující pro přiměřenou dobu obratu hotového zboží (prognóza výroby). Například součásti s dlouhými dodacími lhůtami, pokud nejsou na objednávce nebo na skladě, mohou zpozdit výrobu.
 
--   The sales forecast is the sales department's best guess at what will be sold in the future, and is specified by item and by period. However, the sales forecast is not always adequate for production.  
--   The production forecast is the production planner's projection of how many end items and derived subassemblies to produce in specific periods to meet the forecasted sales.  
+- Prognóza prodeje je nejlepším odhadem obchodního oddělení ohledně toho, co se bude v budoucnu prodávat, a je určeno zbožím a obdobím. Prognóza prodeje však není vždy pro plánování výroby dostatečná.
+- Prognóza výroby je projekce plánovače výroby o tom, kolik koncového zboží a odvozených podsestav má být v určitých obdobích k dispozici pro splnění předpokládaného prodeje.
 
-In most cases, then, the production planner modifies the sales forecast to fit the conditions of production, yet still satisfies the sales forecast.  
+Ve většině případů tedy plánovač výroby upraví prognózu prodeje tak, aby odpovídala podmínkám výroby, přesto stále ještě splňuje prognózu prodeje.
 
-You create forecasts manually on the **Demand Forecast** page. Multiple forecasts can exist in the system, and are differentiated by name and type. Forecasts can be copied and edited as necessary. Note that only one forecast is valid for planning purposes at a time.  
+Prognózy můžete vytvářet ručně na stránce **Prognóza poptávky**. V systému může existovat více prognóz a jsou rozlišeny podle názvu a typu. Prognózy lze podle potřeby kopírovat a upravovat. Všimněte si, že pro plánování je platná pouze jedna předpověď.
 
-The forecast consists of a number of records each stating item number, forecast date, and forecasted quantity. The forecast of an item covers a period, which is defined by the forecast date and the forecast date of the next (later) forecast record. From a planning point of view, the forecasted quantity should be available at the start of the demand period.  
+Prognóza se skládá z počtu záznamů, z nichž každý uvádí číslo zboží, datum prognózy a předpokládané množství. Prognóza zboží zahrnuje období, které je definováno datem prognózy a datem prognózy dalšího (pozdějšího) záznamu prognózy. Z hlediska plánování by mělo být předpokládané množství dostupné na začátku období poptávky.
 
-You must designate a forecast as *Sales Item*, *Component*, or *Both*. The forecast type *Sales Item* is used for sales forecasting. The production forecast is created using the *Component* type. The forecast type *Both* is only used to give the planner an overview of both the sales forecast and the production forecast. With this option, the forecast entries are not editable. By designating these forecast types here, you can use the same worksheet to enter a sales forecast as you do a production forecast, and use the same sheet to view both forecasts simultaneously. Note that the system treats the different inputs (sales and production) differently when calculating planning, based on item, manufacturing, and production setup.  
+Prognózu musíte označit jako *Zboží prodeje*, *Componentu* nebo *Obojí*. Typ prognózy *Zboží prodeje* se používá pro prognózu prodeje. Prognóza výroby je vytvořena pomocí typu *Komponenta*. Typ prognózy *Obojí* se používá pouze k tomu, aby poskytla plánovači přehled o prognóze prodeje i prognóze výroby. Při této možnosti nelze zboží prognózy upravovat. Určením těchto typů prognóz zde můžete použít stejný seznam k zadání prognózy prodeje i prognózy výroby a použít stejný seznam k zobrazení obou prognóz současně. Všimněte si, že systém zachází s různými vstupy (prodeje a výroby) odlišně při výpočtu plánování na základě zboží, výroby a nastavení výroby.
 
-## Component Forecast  
-The component forecast can be seen as an option forecast in relation to a parent item. This can, for example, be useful if the planner can estimate the demand for the component.  
+## Prognóza komponent
+Prognóza komponenty může být zobrazena jako prognóza možností ve vztahu k nadřazenému zboží. To může být například užitečné, pokud plánovač dokáže odhadnout poptávku po komponentě.
 
-As the component forecast is designed to define options for a parent item, the component forecast should be equal or less than the sales item forecast quantity. If the component forecast is higher than the sales item forecast, the system treats the difference between these two types of forecast as independent demand.  
+Protože prognóza komponenty je určena k definování možností pro nadřazené zboží, prognóza komponenty by měla být stejná nebo menší než množství prognózy prodejného zboží. Pokud je prognóza komponenty vyšší než prognóza prodejného zboží, považuje systém rozdíl mezi těmito dvěma typy prognózy za nezávislou poptávku.
 
-## Forecasting Periods  
- The forecast period is valid from its starting date until the date the next forecast starts. The time interval page gives you multiple choices to insert the demand at a specific date in a period. It is therefore recommended not to change the forecast period scope unless you want to move all forecast entries to the starting date of this period.  
+## Prognóza období
+Prognóza období je platná od jeho počátečního data do data, kdy začíná další prognóza. Stránka časového intervalu vám dává více možností, jak vložit poptávku k určitému datu v období. Nedoporučuje se proto měnit rozsah období prognózy, pokud nechcete přesunout všechno zboží prognózy na počáteční datum tohoto období.
 
-## Forecast by Locations  
+## Prognóza podle lokací
+Ve výrobním nastavení může být uvedeno, zda chcete při výpočtu plánu filtrovat prognózu podle lokace. Mějte však na paměti, že pokud jsou prognózy založené na lokaci zobrazovány izolovaně, nemusí být celková prognóza reprezentativní.
 
-It can be stated in the **Manufacturing Setup** page how you want to deal with locations that are defined on forecasts when you calculate a plan. 
+## Vytvoření prognózy poptávky
 
-### Use forecast by locations
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prognóza poptávky** a poté vyberte související odkaz.
+2. Na záložce **Obecné** vyberte prognózu v poli **Název prognózy poptávky**. Může existovat více prognóz a jsou rozlišeny podle názvu a typu prognózy.
+3. V poli **Filtr lokace** vyberte lokaci, na které se tato prognóza použije.
+4. V poli **Zobrazit podle** můžete změnit periodu, která je zobrazena v každém sloupci. Můžete si vybrat z následujících intervalů: **Den**, **Týden**, **Měsíc**, **Čtvrtletí**, **Rok** nebo **Účetní období**  nastavené ve vaší finanční oblasti.
 
-If you choose the **Use Forecast by Location** field, then [!INCLUDE[prod_short](includes/prod_short.md)] will respect any location codes that are specified for each Demand Forecast entry and calculate the remaining forecast for each location.  
+> [!NOTE]
+> Měli byste zvážit, jaký časový interval chcete použít pro budoucí prognózy, aby byl časový interval v celém průběhu konzistentní. Když zadáte množství prognózy, je platné první den vybraného časového intervalu. Pokud například vyberete měsíc, zadáte odhadované množství první den v měsíci. Pokud vyberete čtvrtletí, zadáte předpokládané množství první den prvního měsíce v čtvrtletí.
 
-Consider this example: Your company purchases and sells items on two locations: EAST and WEST. For both locations, you have configured a lot-to-lot reordering policy. You create a forecast for the two locations:
+5. V poli **Zobrazit jako** vyberte způsob zobrazení předpokládaného množství pro časový interval. Pokud vyberete **Pohyb**, zobrazí se pro časový interval pohyb zůstatku. Pokud vyberete **Saldo do data** zobrazí se na stránce saldo k poslednímu dni v časovém intervalu.
+6. V poli **Typ prognózy** vyberte **Zboží prodeje**,  **Componenta** nebo **Obojí**. Pokud vyberete **Zboží prodeje** nebo **Componentu**, můžete upravit množství podle období. Pokud vyberete **Obojí**, nemůžete množství upravit, ale můžete zvolit tlačítko se šipkou rozevíracího seznamu a zobrazit položky prognózy poptávky.
+7. Zadejte **Filtr data** pokud chcete omezit množství zobrazených dat.
+8. Na záložce **Matice prognózy poptávky** zadejte předpokládané množství zadáním množství do buňky představující zboží k určitému datu nebo období. Všimněte si, že v prázdných buňkách vyhledávací tlačítko otevře prázdnou stránku označující, že je nutné zadat hodnotu ručně.
 
-- 10 pieces for location EAST
-- 4 pieces for location WEST
+> [!NOTE]
+> Můžete také upravit existující prognózu. Na stránce **Matice prognózy poptávky** vyberte akci **Kopírovat prognźu poptávky**  a vyplňte stránku **Prognóza poptávky** existující prognózou. Množství pak můžete podle potřeby upravit.
 
-Then, you create a sales order with a quantity of 12 on location WEST. The planning system will suggest that you do the following:
-
-- Replenish 10 pieces for location EAST, based on data from the forecast.  
-- Replenish 12 pieces for location WEST, based on sales order. The 4 pieces that were specified in the forecast are fully consumed by the actual demand pf the sales order. For more information, see [Forecast Demand is Reduced by Sales Orders](design-details-balancing-demand-and-supply.md#forecast-demand-is-reduced-by-sales-orders). 
-
-> [!NOTE]  
->  If location-based forecasts are viewed in isolation, the overall forecast might not be representative.
-
-### Do not use forecast by locations
-If you disable **Use Forecast by Location**, then [!INCLUDE[prod_short](includes/prod_short.md)] will ignore location codes that are specified for each Demand Forecast entry and agregate the forecasts into a forecast for empty locations.  
-
-Consider this example: Your company purchases and sells items on two locations: EAST and WEST. For both locations, you have configured a lot-to-lot reordering policy. You create a forecast for the two locations:
-
-- 10 pieces for location EAST
-- 4 pieces for location WEST
-
-Then, you create a sales order with a quantity of 12 on location WEST. The planning system will suggest that you do the following:
-
-- Replenish 12 pieces for location WEST, based on the sales order. 
-- Replenish 2 pieces for the empty location. The 10 and 4 pieces that were specified in the forecast are partially consumed by the actual demand of the sales order. [!INCLUDE[prod_short](includes/prod_short.md)] ignored the location codes that were specified by the user and uses a blank location instead.
-
-> [!NOTE]  
->  You can set a filter by locations, but location-based results might not match planning results without filters.
-
-## To create a demand forecast
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Demand Forecast**, and then choose the related link.  
-2. On the **General** FastTab, select a forecast in the **Demand Forecast Name** field. Multiple forecasts can exist and are differentiated by name and forecast type.  
-3. In the **Location Filter** field, select the location to which this forecast will apply.
-4. In the **View by** field to change the period that is displayed in each column. You can select from the following intervals: **Day**, **Week**, **Month**, **Quarter**, **Year**, or the **Accounting Period** as set up in your finance area.    
-
-> [!NOTE]  
->  You should consider which time interval that you want to use for future forecasts so that the time interval is consistent throughout. When you enter a forecast quantity, it is valid on the first day of the time interval that you select. For example, if you select a month, then you enter the forecast quantity on the first day of the month. If you select a quarter, then you enter the forecast quantity on the first day of the first month in the quarter.
-
-5. In the **View as** field, select how the forecast quantities are shown for the time interval. If you select **Net Change**, then the net change in balance is displayed for the time interval. If you select **Balance at Date**, then the page displays the balance as of the last day in the time interval.  
-6. In the **Forecast Type** field, select **Sales Item**,  **Component**, or **Both**. If you select **Sales Item** or **Component**, then you can edit the quantity by period. If you select **Both**, then you cannot edit the quantity, but you can choose the drop-down arrow button and view the demand forecast entries.  
-7. Specify a **Date Filter** if you want to limit the amount of data displayed.  
-8. On the **Demand Forecast Matrix** FastTab, enter the forecasted quantities by typing a quantity in the cell representing an item on a particular date or period. Note that in empty cells, the lookup button opens an empty page indicating that you must enter a value manually.   
-
-> [!NOTE]  
->  You can also edit an existing forecast. On the **Demand Forecast Matrix** page, choose the **Copy Demand Forecast** action and populate the **Demand Forecast** page with an existing forecast. You can then edit quantities as appropriate.  
-
-## See Also  
-[Setting Up Manufacturing](production-configure-production-processes.md)  
-[Manufacturing](production-manage-manufacturing.md)    
-[Inventory](inventory-manage-inventory.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Design Details: Supply Planning](design-details-supply-planning.md)   
-[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Nastavení výroby](production-configure-production-processes.md)  
+[Výroba](production-manage-manufacturing.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
+[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

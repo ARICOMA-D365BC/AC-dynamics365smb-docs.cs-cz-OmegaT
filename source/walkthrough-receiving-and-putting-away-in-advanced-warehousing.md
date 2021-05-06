@@ -4,159 +4,154 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Walkthrough: Receiving and Putting Away in Advanced Warehouse Configurations
+# Návod: Příjem a zaskladnění v rozšířených konfiguracích skladu
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]  
+**Poznámka**: Tento návod musí být proveden na demonstrační společnost s možností **Úplné vyhodnocení - úplný vzorek dat**, která je k dispozici v prostředí Sandbox. Pro více informací navštivte [Vytváření prostředí Sandbox](across-how-create-sandbox-environment.md).
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], the inbound processes for receiving and putting away can be performed in four ways using different functionalities depending on the warehouse complexity level.  
+V [!INCLUDE[d365fin](includes/d365fin_md.md)], příchozí procesy pro příjem a zaskladnění lze provádět čtyřmi způsoby pomocí různých funkcí v závislosti na úrovni složitosti skladu.
 
-|Method|Inbound process|Bins|Receipts|Put-aways|Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md))|  
+| Metoda | Vstupní proces | Přihrádky | Příjmy | Zaskladnění | Úroveň složitosti (viz [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md)) |
 |------------|---------------------|----------|--------------|----------------|--------------------------------------------------------------------------------------------------------------------|  
-|A|Post receipt and put-away from the order line|X|||2|  
-|B|Post receipt and put-away from an inventory put-away document|||X|3|  
-|C|Post receipt and put-away from a warehouse receipt document||X||4/5/6|  
-|D|Post receipt from a warehouse receipt document and post put-away from a warehouse put-away document||X|X|4/5/6|  
+| A | Zaúčtování příjemky a zaskladnění z řádku objednávky | X | 2 |
+| B | Zaúčtování příjemky a zaskladnění z dokladu zaskladnění skladu | X | 3 |
+| C | Zaúčtování příjemky a zaskladnění z příjemky skladu | X | 4/5/6 |
+| D | Zaúčtování příjemky z příjemky skladu a zaúčtování vyskladněnní z dokladu zaskladnění skladu | X | X | 4/5/6 |
 
-For more information, see [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md).  
+Pro více informací navštivte [Detaily návrhu: Vstupní procesy skladu](design-details-inbound-warehouse-flow.md).
 
-The following walkthrough demonstrates method D in the previous table.  
+Následující návod ukazuje metodu D v předchozí tabulce.
 
-## About This Walkthrough  
-In advanced warehouse configurations where your location is set up to require receiving processing in addition to put-away processing, you use the **Warehouse Receipt** page to record and post the receipt of items on multiple inbound orders. When the warehouse receipt is posted, one or more warehouse put-away documents are created to instruct warehouse workers to take the received item and place them in designated places according to bin setup or in other bins. The specific placement of the items is recorded when the warehouse put-away is registered. The inbound source document can be a purchase order, sales return order, inbound transfer order, or assembly or production order with output that is ready to be put away. If the receipt is created from an inbound order, more than one inbound source document can be retrieved for the receipt. By using this method you can register many items arriving from different inbound orders with one receipt.  
+## Návod
+V pokročilých konfiguracích skladu, kde je lokace nastavena tak, aby vyžadovala příjem zpracování kromě zpracování zaskladněného zboží, použijete stránku **Příjemka na sklad** k zaznamenání a zaúčtování příjmu zboží na více vstupních objednávkách. Při zaúčtování příjemky na sklad je vytvořeno jedno nebo více dokladů zaskladnění, aby pracovníci skladu dostali pokyn, aby přijaté zboží převzali a umístili na určená místa podle nastavení přihrádky nebo do jiných přihrádek. Konkrétní lokace zboží se zaznamená při registraci zaskladněného zboží. Vstupním původním dokladem může být objednávka, objednávka prodejní vratky, objednávka vstupu transferu nebo montážní nebo výrobní objednávka s výstupem, která je připravena k odeslání. Pokud je příjemka vytvořena z příchozí objednávky, lze pro příjemku načíst více než jeden vstupní zdrojový doklad. Pomocí této metody můžete zaregistrovat mnoho zboží, které přichází z různých vstupních objednávek s jedním potvrzením.
 
-This walkthrough demonstrates the following tasks.  
+Tento návod ukazuje následující úkoly.
 
--   Setting up WHITE location for receiving and putting away.  
--   Creating and releasing two purchase orders for full warehouse handling.  
--   Creating and posting a warehouse receipt document for multiple purchase order lines from specific vendors.  
--   Registering a warehouse put-away for the received items.  
+- Nastavení lokace WHITE pro příjem a zaskladnění.
+- Vytvoření a vydání dvou objednávek pro úplné zpracování ve skladu.
+- Vytvoření a zaúčtování dokladu příjemky skladu pro více řádků nákupní objednávky od konkrétních dodavatelů.
+- Registrace zaskladnění pro přijaté zboží.
 
-> [!NOTE]
-> [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
-## Roles  
-This walkthrough demonstrates tasks that are performed by the following user roles:  
+## Role
+Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatelskými rolemi:
 
--   Warehouse Manager  
--   Purchasing Agent  
--   Receiving Staff  
--   Warehouse Worker  
+- Manažer skladu
+- Nákupčí
+- Zaměstnanci určení pro příjem
+- Skladník
 
-## Prerequisites  
-To complete this walkthrough, you will need:  
+## Předpoklady
+K dokončení tohoto návodu budete potřebovat:
 
--   CRONUS International Ltd. installed.  
--   To make yourself a warehouse employee at WHITE location by following these steps:  
+- Nainstalovaný CRONUS CZ s.r.o.  
+- Chcete-li se stát zaměstnancem skladu v lokaci WHITE, postupujte takto:
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.  
-2.  Choose the **User ID** field, and select your own user account on the **Users** page.  
-3.  In the **Location Code** field, enter WHITE.  
-4.  Select the **Default** field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
+2. Vyberte pole **ID uživatele** a na stránce **Uživatelé** vyberte svůj vlastní uživatelský účet.
+3. Do pole **Kód lokace** zadejte WHITE.
+4. Vyberte pole **Výchozí**.
 
-## Story  
-Ellen, the warehouse manager at CRONUS International Ltd., creates two purchase orders for accessory items from vendors 10000 and 20000 to be delivered to WHITE warehouse. When the deliveries arrive at the warehouse, Sammy, who is responsible for receiving items from vendors 10000 and 20000, uses a filter to create receipt lines for purchase orders arriving from the two vendors. Sammy posts the items as received into inventory in one warehouse receipt and makes the items available for sale or other demand. John, the warehouse worker, takes the items from the receiving bin and puts them away. He puts all units away in their default bins, except 40 out of 100 received hinges that he puts away in the assembly department by splitting the put-away line. When John registers the put-away, the bin contents are updated and the items are made available for picking from the warehouse.  
+## Příběh
+Ellen, vedoucí skladu společnosti CRONUS CZ s.r.o., vytvoří dvě nákupní objednávky pro zboží příslušenství od dodavatelů 10000 a 20000, které mají být dodány do skladu WHITE. Když dodávky dorazí do skladu, Sammy, který je zodpovědný za příjem zboží od prodejců 10000 a 20000, použije filtr k vytvoření řádků příjmu pro nákupní objednávky přicházející od těchto dvou dodavatelů. Sammy zaúčtuje přijaté zboží do zásob v jedné příjemke na skladu a zpřístupní zboží k prodeji nebo jiné poptávce. Jan, pracovník skladu, převezme zboží z přijímající přihrádky a zaskladní je. Všechny jednotky umístí do výchozích přihrádek, s výjimkou 40 ze 100 přijatých závěsů, které zaskladní v montážním oddělení pomocí rozdělení řádku zaskladnění. Když Jan zaeviduje zaskladnění, obsah přihrádky se aktualizuje a zboží je k dispozici pro vyskladnění ze skladu.
 
-## Reviewing the WHITE Location Setup  
-The setup of the **Location Card** page defines the company's warehouse flows.  
+## Kontrola nastavení lokace WHITE
+Nastavení stránky **Karta lokace** definuje toky skladu společnosti.
 
-### To review the location setup  
+### Kontrola nastavení lokace
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  Open the WHITE location card.  
-3.  Note on the **Warehouse** FastTab that the **Directed Put-away and Pick** check box is selected.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete kartu lokace WHITE.
+3. Všimněte si na záložce **Sklad**, že je zaškrtnuto políčko  **Řízené zaskladnění/vyskladnění**.
 
-    This means that the location is set up for the highest complexity level, reflected by the fact that all warehouse handling check boxes on the FastTab are selected.  
+   To znamená, že lokace je nastavena na nejvyšší úroveň složitosti, což se odráží ve skutečnosti, že jsou zaškrtnuta všechna políčka pro manipulaci se skladem na záložce.
 
-4.  Note on the **Bins** FastTab that bins are specified in the **Receipt Bin Code** and the **Shipment Bin Code** fields.  
+4. Všimněte si na záložce **Přihrádky**, že přihrádky jsou určeny v polích **Kód příjmové přihrádky** a **Kód dodací přihrádky**.
 
-This means that when you create a warehouse receipt, this bin code is copied to the header of the warehouse receipt document by default and to the lines of the resulting warehouse put-aways.  
+To znamená, že při vytváření příjemky ze skladu je tento kód přihrádky ve výchozím nastavení zkopírován do hlavičky dokladu příjemky skladu a do řádků výsledného zaskladnění skladu.
 
-## Creating the Purchase Orders  
-Purchase orders are the most common type of inbound source document.  
+## Vytvoření nákupních objednávek
+Nákupní objednávky jsou nejběžnějším typem vstupního zdrojového dokladu.
 
-### To create the purchase orders  
+### Vytvoření nákupních objednávek
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.  
-2.  Choose the **New** action.  
-3.  Create a purchase order for vendor 10000 on the work date (January 23) with the following purchase order lines.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní objednávky** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Vytvořte objednávku na dodavatele 10 000 v pracovní den (23. ledna) s následujícími řádky objednávek.
 
-    |Item|Location code|Quantity|  
-    |----------|-------------------|--------------|  
-    |70200|WHITE|100 PCS|  
-    |70201|WHITE|50 PCS|  
+   | Zboží | Kód lokace | Množství |
+   |----------|-------------------|--------------|  
+   | 70200 | WHITE | 100 KS |
+   | 70201 | WHITE | 50 KS |
 
-    Proceed to notify the warehouse that the purchase order is ready for warehouse handling when the delivery arrives.  
+   Pokračujte v oznámení skladu, že nákupní objednávka je připravena k zpracování ve skladu, jakmile dorazí dodávka.
 
-4.  Choose the **Release** action.  
+4. Vyberte akci **Vydat**.
 
-    Proceed to create the second purchase order.  
+   Pokračujte vytvořením druhé nákupní objednávky.
 
-5.  Choose the **New** action.  
-6.  Create a purchase order for vendor 20000 on the work date with the following purchase order lines.  
+5. Vyberte akci **Nový**.
+6. Vytvořte nákupní objednávku na dodavatele 20000 v pracovní den s následujícími řádky objednávky.
 
-    |Item|Location code|Quantity|  
-    |----------|-------------------|--------------|  
-    |70100|WHITE|10 CAN|  
-    |70101|WHITE|12 CAN|  
+   | Zboží | Kód lokace | Množství |
+   |----------|-------------------|--------------|  
+   | 70100 | WHITE | 10 plechovek |
+   | 70101 | WHITE | 12 plechovek |
 
-    Choose the **Release** action.  
+   Vyberte akci **Vydat**.
 
-    The deliveries of items from vendors 10000 and 20000 have arrived at WHITE warehouse, and Sammy starts to process the purchase receipts.  
+   Dodávky zboží od dodavatelů 10000 a 20000 dorazily do skladu WHITE a Sammy začíná zpracovávat nákupní příjemku.
 
-## Receiving the Items  
-On the **Warehouse Receipt** page, you can manage multiple inbound orders for source documents, such as a purchase order.  
+## Příjem zboží
+Na stránce **Příjemka na sklad** můžete spravovat více vstupních objednávek pro zdrojové doklady, například nákupní objednávku.
 
-### To receive the items  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Receipts**, and then choose the related link.  
-2.  Choose the **New** action.  
-3.  In the **Location Code** field, enter WHITE.  
-4.  Choose the **Use Filters to Get Src. Docs.** action.  
-5.  In the **Code** field, enter **ACCESSORY**.  
-6.  In the **Description** field, enter **Vendors 10000 and 20000**.  
-7.  Choose the **Modify** action.  
-8.  On the **Purchase** FastTab, in the **Buy-from Vendor No. Filter** field, enter **10000&#124;20000**.  
-9. Choose the **Run** action. The warehouse receipt is filled with four lines representing purchase order lines for the specified vendors. The **Qty. to Receive** field is filled because you did not select the **Do not Fill Qty. to Handle** check box on the **Filters to Get Source Docs.** page.  
-10. Optionally, if you want to use a filter as described earlier in this section, choose the **Get Source Document** action, and then select purchase orders from the vendors in question.  
-11. Choose the **Post Receipt** action, and then choose the **Yes** button.  
+### Příjem zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Příjemky na sklad** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Do pole **Kód lokace** zadejte WHITE.
+4. Vyberte akci **Použít filtry pro kopii pův. dokl.**.
+5. Do pole **Kód** zadejte **PŘÍSLUŠENSTVÍ**.
+6. Do pole **Popis** zadejte **Dodavatelé 10000 a 20000**.
+7. Vyberte akci **Změnit**.
+8. Na záložce **Nákup** v poli **Filtr čísla  dodavatele** zadejte **10000&#124;20000**.
+9. Vyberte akci **Start**. Příjemka na sklad je vyplněna čtyřmi řádky představujícími řádky objednávek pro určené dodavatele. Pole **K  příjmu** je vyplněno, protože jste nezašktli políčko **Nevyplňovat množ. ke zprac.** na stránce **Výběr filtru původu skladu**.
+10. Volitelně pokud chcete použít filtr, jak je popsáno výše v této části, zvolte akci **Kopie původ.dokladu** a pak vyberte nákupní objednávky od dotyčných dodavatelů.
+11. Vyberte akci **Účtovat příjem** a poté zvolte tlačítko **Ano**.
 
-    Positive item ledger entries are created reflecting the posted purchase receipts of accessories from vendors 10000 and 20000, and the items are ready to be put away in the warehouse from the receiving bin.  
+   Vytvoří se kladní položky zboží odrážející účtované příjmy z příslušenství od prodejců 10000 a 20000 a toto zboží je připraveno k uložení do skladu z přijímací přihrádky.
 
-## Putting the Items Away  
-On the **Warehouse Put-away** page, you can manage put-aways for a specific warehouse receipt document covering multiple source documents. Like all warehouse activity documents, each item on the warehouse put-away is represented by a Take line and a Place line. In the following procedure, the bin code on the Take lines is the default receiving bin at WHITE location, W-08-0001.  
+## Zaskladnění zboží
+Na stránce **Zaskladnění** můžete spravovat zaskladnění pro konkrétní příjemku skladu, která zahrnuje více původních dokladů. Stejně jako všechny doklady aktivity skladu je každé zboží na zaskladnění reprezentováno řádkem Vzít a Vložit. V následujícím postupu je kód přihrádky na řádcích Vzít nastaven na výchozí přijímací přihrádku lokace WHITE, W-08-0001.
 
-### To put the items away  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-Aways**, and then choose the related link.  
-2.  Select the only warehouse put-away document in the list, and then choose the **Edit** action.  
+### Zaskladnění zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění** a poté vyberte související odkaz.
+2. Vyberte v seznamu jediný doklad zaskladnění skladu a pak zvolte akci **Upravit**.
 
-    The warehouse put-away document opens with a total of eight Take or Place lines for the four purchase order lines.
+   Doklad zaskladnění skladu se otevře s celkem osmi řádky Vzít nebo Vložit pro čtyři řádky nákupní objednávky.
 
-    The warehouse worker is told that 40 hinges are needed in the assembly department, and he proceeds to split the single Place line to specify a second Place line for bin W-02-0001 in the assembly department where he places that part of the received hinges.  
+   Pracovníkovi skladu je řečeno, že v montážním oddělení je zapotřebí 40 závěsů, a pokračuje v dělení jedného řádku Vložit, aby určil druhý řádek Vložit pro přihrádku W-02-0001 v oddělení montáže, kde umístí tuto část přijatých závěsů.
 
-3.  Select the second line on the **Warehouse Put-away** page, the Place line for item 70200.  
-4.  In the **Qty. to Handle** field, change the value from 100 to 60.  
-5.  On the **Lines** FastTab, choose **Functions**, and then choose **Split Line**. A new line is inserted for item 70200 with 40 in **Qty. to Handle** field.  
-6.  In the **Bin Code** field, enter W-02-0001. The **Zone Code** field is automatically filled.  
+3. Vyberte druhý řádek Vložit na stránce **Zaskladnění** pro zboží 70200.
+4. Do pole **Mn.  ke zprac.** změňte hodnotu ze 100 na 60.
+5. Na záložce **Řádky** zvolte **Funkce** a poté zvolte **Rozdělit řádek**. Pro položku 70200 se vloží nový řádek s hodnotou 40 v poli **Množ. ke zprac.**.
+6. Do pole **Kód přihrádky** zadejte W-02-0001. Pole **Kód zóny** je automaticky vyplněno.
 
-    Proceed to register the put-away.  
+   Pokračujte v zápisu zaskladnění.
 
-7.  Choose the **Register Put-Away** action, and then choose the **Yes** button.  
+7. Vyberte akci **Zápis zaskladnění** a pak zvolte tlačítko **Ano**.
 
-    The received accessories are now put-away in the items' default bins, and 40 hinges are placed in the assembly department. The received items are now available for picking to internal demand, such as assembly orders, or to external demand, such as sales shipments.  
+   Přijaté příslušenství je nyní zaskladněno do výchozích přihrádek a 40 závěsů je umístěno v oddělení montáže. Přijaté zboží je nyní k dispozici k vyzvednutí na interní poptávku, jako jsou montážní objednávky, nebo na externí poptávku, jako jsou například prodejní dodávky.
 
-## See Also  
- [Put Items Away with Warehouse Put-aways](warehouse-how-to-put-items-away-with-warehouse-put-aways.md)   
- [Move Items in advanced warehouse configurations](warehouse-how-to-move-items-in-advanced-warehousing.md)   
- [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md)   
- [Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-receiving-and-putting-away-in-basic-warehousing.md)   
- [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Zaskladnění zboží pomocí skladového zaskladnění](warehouse-how-to-put-items-away-with-warehouse-put-aways.md)  
+[Přesouvání zboží v rozšířených konfiguracích skladu](warehouse-how-to-move-items-in-advanced-warehousing.md)  
+[Detaily návrhu: Vstupní procesy skladu](design-details-inbound-warehouse-flow.md)  
+[Návod: Příjem a zaskladnění v základních konfiguracích skladu](walkthrough-receiving-and-putting-away-in-basic-warehousing.md)  
+[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)

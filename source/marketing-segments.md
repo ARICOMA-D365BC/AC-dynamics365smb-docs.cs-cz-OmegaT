@@ -6,35 +6,32 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: jswymer
 
 ---
-# Managing Segments
-You create segments to select a group of contacts according to specific criteria. For example, a segment could be the industry that the contacts belong to or your business relationship with the contacts. You can create a segment to select the contacts you want to target with a campaign.
+# Správa segmentů
+Vytvořte segmenty a vyberete skupinu kontaktů podle konkrétních kritérií. Segmentem může být například odvětví, do kterého kontakty patří, nebo váš obchodní vztah s kontakty. Můžete vytvořit segment a vybrat kontakty, na které chcete v kampani cílit.
 
-There are two main tasks in creating a segment:
+Při vytváření segmentu existují dva hlavní úkoly:
 
-* Enter general information about the segment. Before you can select the contacts within the segment, you must first create the segment.
-* Select the contacts to be included within the segment.
+* Zadejte obecné informace o segmentu. Než budete moci vybrat kontakty v segmentu, musíte nejprve vytvořit segment.
+* Vyberte kontakty, které mají být zahrnuty do segmentu.
 
-The following table describes a sequence of tasks, with links to the topics that describe them.
+Následující tabulka popisuje posloupnost úkolů s odkazy na témata, která je popisují.
 
-| To | See |
+| K | vidění |
 | --- | --- |
-| Create segments which allow you to select a group of contacts. For example, direct mail. |[Create Segments](marketing-how-create-segment.md) |
-| Manage the contacts that are assigned to segments. |[Add Contacts to Segments](marketing-add-contact-segment.md) |
-| Learn about using interactions for segments, including logging. |[Managing Interactions for Segments](marketing-interaction-segments.md) |
+| Vytvářejte segmenty, které vám umožní vybrat skupinu kontaktů. Například přímá pošta. | [Vytvoření segmentů](marketing-how-create-segment.md) |
+| Správa kontaktů, které jsou přiřazeny k segmentům. | [Přidání kontaktů do segmentů](marketing-add-contact-segment.md) |
+| Další informace o používání interakcí pro segmenty, včetně protokolování. | [Správa interakcí pro segmenty](marketing-interaction-segments.md) |
 
-## See Also
-[Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
-[Managing Contacts](marketing-contacts.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa prodejních příležitostí](marketing-manage-sales-opportunities.md)  
+[Správa kontaktů](marketing-contacts.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

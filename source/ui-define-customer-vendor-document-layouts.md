@@ -6,58 +6,55 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: customized report, document layout, logo, personalize
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Define Document Layouts for Customers and Vendors
-When custom report layouts are defined, you can select them from customer and vendor cards to specify which layouts will be used for different types of documents that you create for the customer or vendor in question. The value in the **Usage** field, defines which process the document layout will be used for, such as **Reminder**, **Shipment**, and **Confirmation**.
+# Definování rozložení sestav pro zákaníky a dodavatele
+Po definování vlastních rozložení sestav je můžete vybrat z karet zákazníka a dodavatele a určit, která rozložení budou použita pro různé typy dokladů, a které budou použity pro dotyčného zákazníka nebo dodavatele. Hodnota v poli **Použití** definuje, pro který proces bude rozložení dokladu použito, například **Upomínka**, **Dodávka** a **Potvrzení**.
 
-In addition to setting up which layouts to use for what document, you can save time when sending documents to different customer or vendor contacts by setting up specific contacts' email addresses to use with specific documents. For example, customer statements will be sent to accountant contacts, sales orders to your customers' purchasers, and purchase orders to vendors' salespeople or account managers.
+Kromě nastavení rozvržení, která se mají použít pro vybraný doklad, můžete ušetřit čas při odesílání dokladů různým zákazníkům nebo dodavatelům nastavením e-mailových adres konkrétních kontaktů pro použití s ​​konkrétními dokumenty. Například výkazy zákazníků budou odeslány kontaktům účetních, prodejní objednávky odběratelům a nákupní objednávky prodejcům nebo účetím.
 
-When you define a document layout for a customer or vendor, you can also specify the email address of the contact person that must receive the document. You can quickly do this with the **Select Email from Contacts** function, which automatically filters to contact email addresses registered for the customer or vendor in question.
+ři definování rozložení dokladu pro zákazníka nebo dodavatele můžete také zadat e-mailovou adresu kontaktní osoby, která musí dokument obdržet. Můžete to rychle provést pomocí funkce **Vybrat e-mail z kontaktů** která automaticky filtruje kontaktní e-mailové adresy registrované pro dotyčného zákazníka nebo dodavatele.
 
-Before you can define which document layout to use for which processes, and which contact to send the document to, you must load all the available reports (documents) from the **Report Selections** page. You can quickly do this with the **Copy from Report Selection** function.
+Než budete moci definovat, které rozvržení dokumentu se použije pro které procesy a ke kterému kontaktu se má dokument odeslat, musíte načíst všechny dostupné doklady ze stránky **Výběry sestav**. To lze rychle provést pomocí funkce **Kopírovat z výběru sestav**.
 
-The following describes how to define sales document layouts from a customer card. The steps are the same for purchase document layouts from a vendor card.
+Následující text popisuje, jak definovat rozložení prodejních dokladů z karty zákazníka. Postup je stejný pro rozložení nákupních dokladů z karty dodavatele.
 
-## To enable all available sales documents for a customer
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
-2. Open the card of the customer for whom you want to define document layouts per business process.
-3. On the **Customer Card** page, choose the **Document Layouts** page.
-4. On the **Document Layouts** page, choose the **Copy from Report Selection** action.
+## Povolení všech dostupných prodejních dokladů pro zákazníka
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+2. Otevřete kartu zákazníka, pro kterou chcete definovat rozvržení dokladu v rámci jednoho obchodního procesu.
+3. Na stránce **Karta zákazníka** zvolte stránnku **Rozvržení dokladu**.
+4. Na stránce **Rozvržení dokladu** zvolte akci **Kopírovat z výběru sestavy**.
 
-The **Document Layouts** page for the customer in question is filled with all the report layouts for sales that exist in the system. For more information about they were created, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
+Na stránce **Rozvržení dokladu** dotyčného zákazníka je vyplněna všemi rozloženími sestav pro prodej, které existují v systému. Pro více informací jak se vytváření navštivte [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md).
 
-You can now proceed to adjust the list with any custom report layouts or email addresses for the contacts that the documents must be sent to.
+Nyní můžete pokračovat v úpravě seznamu pomocí vlastních rozložení sestav nebo e-mailových adres pro kontakty, kterým musí být doklady odeslány.
 
-## To select a custom report layout to use for the sales document layout
-If one or more of the report layouts that are defined in the **Document Layouts** page for the customer do not have a custom report layout defined, then you can quickly do that.
+## Výběr vlastního rozvržení sestavy, které se použije pro prodejní doklad
+Pokud jedno nebo více rozvržení sestav definovaných na stránce **Rozvržení dokladu** pro zákazníka, nemá definováno vlastní rozložení sestavy, můžete to rychle provést.
 
-1. On the **Document Layouts** page, on the line for a report layout that you want to use a custom layout for, choose the **Custom Layout Description** field. The field is either filled if customer layout is already selected or blank.
-2. On the **Custom Report Layouts** page, select the special document layout that you want to use for the sales document type in question. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
+1. Na stránce **Rozvržení dokladu**zvolte na řádku rozložení sestavy, pro které chcete použít vlastní rozložení, vyberte pole **Popis vlastního rozvržení**. Toto pole je vyplněno, pokud je rozložení zákazníka již vybráno, nebo prázdné.
+2. Na stránce **Rozvržení dokladu** vyberte speciální rozvržení dokladu, které chcete použít pro příslušný typ prodejního dokladu. Pro více informací navštivte [Vytvoření a úprava vlastní sestavy nebo rozvržení dokladu](ui-how-create-custom-report-layout.md).
 
-## To set up which contact receives which document layout for a customer
-You can save time when sending documents to different customers or vendor contacts by specifying contact email addresses on the different lines on the **Document Layouts** page. For example, customer statements can be sent to accountant contacts, sales orders to your customers' purchasers, and purchase orders to vendors' salespeople or account managers.
+## Nastavení, který kontakt obdrží rozložení dokladu pro zákazníka
+Můžete ušetřit čas při odesílání dokladů různým zákazníkům nebo dodavatelům zadáním e-mailových adres kontaktu na různých řádcích na stránce **Rozvržení dokladu**. Například výkazy zákazníků budou odeslány kontaktům účetních, prodejní objednávky odběratelům a nákupní objednávky prodejcům nebo účetím.
 
-1. On the **Document Layouts** page, on the line for a report layout that you want to send to a specific contact for the customer, choose the **Select Email from Contacts** action.
-2. On the **Contacts** page, select the line for the relevant contact, and then choose the **OK** button.
+1. Na stránce **Rozvržení dokladu** na řádku pro rozvržení sestavy, který chcete odeslat zákazníkovi, vyberte akci **Vybrat e-mail z kontaktů**.
+2. Na stránce **Kontakty** vyberte řádek pro příslušný kontakt a poté vyberte tlačítko **OK**.
 
-The email address of the contact is now inserted on the document layout line so that the sales document in question, for example, reminders, is always sent to that contact at the customer's company.
+E-mailová adresa kontaktu je nyní vložena na řádku rozvržení dokladu, takže dotyčný prodejní doklad, například upomínka, je vždy zaslán tomuto kontaktu ve společnosti zákazníka.
 
-## See Also  
-[Update Custom Report Layouts](ui-update-report-layouts.md)  
-[Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)  
-[Import and Export a Custom Report or Document Layout](ui-how-import-and-export-report-layout.md)  
-[Send Documents by Email](ui-how-send-documents-email.md)  
-[Managing Report Layouts](ui-manage-report-layouts.md)  
-[Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
-[Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Aktualizace vlastního rozvržení sestav](ui-update-report-layouts.md)  
+[Vytvoření a úpravy vlastního rozvržení sestav](ui-how-create-custom-report-layout.md)  
+[Import a Export vlastního rozvržení sestav](ui-how-import-and-export-report-layout.md)  
+[Odesílání dokladů pomocí e-mailu](ui-how-send-documents-email.md)  
+[Správa rozložení sestav](ui-manage-report-layouts.md)  
+[Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md)  
+[Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md)

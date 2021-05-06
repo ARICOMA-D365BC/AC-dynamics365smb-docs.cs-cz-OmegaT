@@ -1,43 +1,41 @@
 ---
-title: Upgrading an Integration with Dynamics 365 Sales
-description: Learn how to move your Dynamics 365 Business Central integration with Dynamics 365 Sales to the latest version.
+title: Upgrading an Integration with Dynamics 365 Sales| Microsoft Docs
+description: Learn how to get Dynamics 365 Business Central ready to integrate with Dynamics 365 Sales.
+services: project-madeira
+documentationcenter: ''
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: sales, crm, integration, integrating
-ms.date: 10/01/2020
+ms.date: 10/01/2019
 ms.author: bholtorf
 
 ---
-# Upgrading an Integration with Dynamics 365 Sales
-[!INCLUDE[prod_short](includes/prod_short.md)] integrates with [!INCLUDE[prod_short](includes/cds_long_md.md)], which makes it easy to connect and synchronize data with other Dynamics 365 applications, such as [!INCLUDE[crm_md](includes/crm_md.md)], or even apps that you build yourself. If you are integrating for the first time, we recommend that you do so through [!INCLUDE[prod_short](includes/cds_long_md.md)]. For more information, see [Integration with Dataverse](admin-common-data-service.md).
+# Aktualizace integrace s Dynamics 365 Sales
+[!INCLUDE[d365fin](includes/d365fin_md.md)] integruje s [!INCLUDE[d365fin](includes/cds_long_md.md)],který usnadňuje připojení a synchronizaci dat s jinými aplikacemi Dynamics 365, například [!INCLUDE[crm_md](includes/crm_md.md)], nebo dokonce aplikace, které si sami vytvoříte. Pokud se integrujete poprvé, doporučujeme, abyste tak učinili prostřednictvím [!INCLUDE[d365fin](includes/cds_long_md.md)]. Pro více informací navštivte [Integrace s Common Data Service](admin-common-data-service.md).
 
-If you have already integrated [!INCLUDE[crm_md](includes/crm_md.md)] with [!INCLUDE[prod_short](includes/prod_short.md)], you can continue to synchronize data using your setup. However, if you upgrade [!INCLUDE[prod_short](includes/prod_short.md)], or turn off your [!INCLUDE[crm_md](includes/crm_md.md)] integration, to turn it on again you must connect through [!INCLUDE[prod_short](includes/cds_long_md.md)]. 
+Pokud jste již integrovali [!INCLUDE[crm_md](includes/crm_md.md)] s [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete pokračovat v synchronizaci dat pomocí nastavení. Nicméně, pokud upgradujete [!INCLUDE[d365fin](includes/d365fin_md.md)], nebo vypínáte vaší integraci [!INCLUDE[crm_md](includes/crm_md.md)] musíte se znovu připojit pomocí [!INCLUDE[d365fin](includes/cds_long_md.md)].
 
 > [!NOTE]
-> Reconnecting through [!INCLUDE[prod_short](includes/cds_long_md.md)] will apply default synchronization settings, and will overwrite any configurations you have. For example, the default table mappings will be applied.
+> Při opětovném připojení pomocí [!INCLUDE[d365fin](includes/cds_long_md.md)] se použijí výchozí nastavení synchronizace a přepíší všechny konfigurace, které máte. Například, bude aplikována tabulka výchozího mappování.
 
-## To upgrade your connection to use Dataverse
-1. Open the **Microsoft Dynamics 365 Connection Setup** page, and then turn off the **Enabled** toggle to disconnect from [!INCLUDE[crm_md](includes/crm_md.md)].
-2. Open the **Dataverse Connection Setup** page, and choose the **Enabled** toggle to turn on the connection to [!INCLUDE[prod_short](includes/cds_long_md.md)].
-  
-   > [!NOTE]
-   > After you enable the connection, the Business Central Integration Solution is deployed to Dataverse.
-3. Choose **Redeploy Integration Solution** to reinstall the Business Central Integration Solution.
-4. On the **Microsoft Dynamics 365 Connection Setup** page, turn on the **Enabled** toggle to reconnect to [!INCLUDE[crm_md](includes/crm_md.md)].
-  
-   > [!NOTE]
-   > After you enable the connection, the Business Central Integration Solution is deployed to [!INCLUDE[prod_short](includes/prod_short.md)]. This enables integration with tables that are specific to [!INCLUDE[crm_md](includes/crm_md.md)], such as sales orders, quotes, and invoices.
-5. Choose **Redeploy Integration Solution** to reinstall the Business Central Integration Solution.
-6. On the **Sales Connection Setup** page, choose **Use Default Synchronization Setup** to initialize the integration table mappings for [!INCLUDE[crm_md](includes/crm_md.md)].
+## Aktualizace vašeho připojení do Common Data Service
+1. Otevřete stránku **Nastavení připojení k Microsoft Dynamics 365**, vyberte **Povoleno** k vypnutí stávajícího připojení do [!INCLUDE[crm_md](includes/crm_md.md)].
+2. Otebřete stránku  **Nastavení připojení Common Data Service**, a vyberte **Povoleno** k vypnutí připojení.
 
-## See Also
-[Integrating with Dynamics 365 Sales](admin-prepare-dynamics-365-for-sales-for-integration.md)  
-[Integrating with Microsoft Dataverse](admin-common-data-service.md)
+   Po tom co povolíte připojení CDS, the Business Central CDS Základní řešení integrace bude nasazeno do Common Data Service.
+3. Odinstalace řešení Microsoft Dynamics 365 Business Central Integration z aplikace Dynamics 365 Sales následujte [téma Odinstalování nebo odebrání řešení](/powerapps/developer/common-data-service/uninstall-delete-solution)
 
+4. Na stránce Nastavení připojení k Microsoft Dynamics 365, zvolte přepínač Povolit a zapněte připojení [!INCLUDE[crm_md](includes/crm_md.md)].
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+   Po tom co povolíte připojení do Sales, the Business Central Integration Solution je nasazeno do Sales. To umožňuje integraci s entitami, které jsou specifické pro [!INCLUDE[crm_md](includes/crm_md.md)], například prodejní objednávky, nabídky a faktury.
+5. Vyberte **Řešení opěovné integrace** pro instalaci a konfiguraci upgradovaného řešení integrace Business Central Integration Solution.
+6. Na stránce **Nastavení připojení Sales** zvolte **Použít výchozí nastavení synchronizace** k inicializaci mapování tabulky integrace v [!INCLUDE[crm_md](includes/crm_md.md)].
+
+## Viz také
+[Integrace s Dynamics 365 Sales](admin-prepare-dynamics-365-for-sales-for-integration.md)  
+[Integrace s Common Data Service](admin-common-data-service.md)

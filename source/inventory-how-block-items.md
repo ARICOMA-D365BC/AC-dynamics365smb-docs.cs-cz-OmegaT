@@ -1,50 +1,55 @@
 ---
     title: How to Block Items from Sales or Purchasing
-    description: You can prevent an item from being being used, for example, on sales or purchase documents.
+    description: In Business Central, an item can be marked as blocked for sales, blocked for purchase, or blocked for all purposes.
 
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Block Items from Sales or Purchasing
-You can block an item from being entered on lines in sales or purchase documents, and you can block it from being posted in any transaction. For example, this is useful when an item has a known defect. If someone chooses a blocked item on a sales or purchase document a message will inform them that the item is blocked.
+# Uzavření zboží z prodeje nebo nákupu
+Můžete uzavřít zboží na prodejních nebo nákupních řádcích a můžete ho uzavřít i před zaúčtováním v jakékoli transakci.
 
-The following table describes what occurs when items are blocked.  
+Následující tabulka ukazuje, co se stane, když je zboží uzavřeno.
 
-|Option|Description|  
+| Možnost | Popis |
 |--------------------|------------|  
-|**Sales Blocked**|You cannot enter the item in a sales document or in a sales item journal.|  
-|**Purchasing Blocked**|You cannot enter the item in a purchase document, in a purchase item journal, or in purchase planning processes.|  
-|**Blocked**|You cannot use the item for any item transaction.|  
+| **Prodej uzavřen** | Nelze zadat zboží do prodejního dokladu nebo do deníku prodeje zboží. |
+| **Nákup uzavřen** | Nemůžete zadat zboží v nákupním dokladu, v deníku nákupu zboží nebo v procesech plánování nákupu. |
+| **Uzavřeno** | Toto zboží nelze použít pro žádnou transakci zboží. |
 
 > [!NOTE]
-> Blocked items can be returned. This means that none of the above settings apply when the item is used on return orders and credit memos.
+> Uzavření zboží lze vrátit. To znamená, že žádné z výše uvedených nastavení se nepoužije, když je zboží použito na objednávky vratek a dobropisy.
 
-When you use the **Copy from Document** function to create new documents based on existing documents, you are notified if any items on the source document lines are blocked. The blocked document lines are excluded from the new document, and a notification shows an overview of all document lines that are blocked in the source document.
+Použijete-li funkci **Kopírovat z dokladu** k vytvoření nových dokladů založených na existujících dokladech, budete upozorněni, pokud je některé zboží na řádcích zdrojového dokladu uzavřeno. Uzavřené řádky dokladu jsou z nového dokladu vyloučeny a v oznámení je zobrazen přehled všech řádků dokladu, které jsou uzavžené ve zdrojovém dokladu.
 
-## To block an item from being entered on sales lines  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
-2.  Select the item that you want to block, and then select the **Sales Blocked** check box.  
+## Uzavření zadávaného zboží na prodejních řádcích
 
-## To block an item from being entered on purchase lines  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
-2.  Select the item that you want to block, and then select the **Purchasing Blocked** check box.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte zboží, které chcete uzavřít, a poté zaškrtněte políčko **Prodej uzavřen**.
 
-## To block an item from being posted
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Select the item that you want to block, and then select the **Blocked** check box.
+Pokud se pokusíte zadat zboží do prodejního dokladu nebo řádku deníku, zobrazí se chybová zpráva, že zboží je uzavženo.
 
-## See Also  
-[Register New Items](inventory-how-register-new-items.md)  
-[Inventory](inventory-manage-inventory.md)  
+## Uzavření zboží na nákupních řádcích
 
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte zboží, které chcete uzavřít, a poté zaškrtněte políčko **Nákup uzavřen**.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+Pokud se pokusíte zadat zboží na nákupním dokladu nebo řádku deníku, zobrazí se chybová zpráva, že zboží je uzavřeno.
+
+## Uzavření zaúčtování zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte zboží, které chcete uzavřít, a poté zaškrtněte políčko **Uzavřeno**.
+
+Pokud se pokusíte zaúčtovat jakýkoli typ transakce pro zboží, zobrazí se chybová zpráva, že je zboží uzavřeno.
+
+## Viz také
+[Evidence nového zboží](inventory-how-register-new-items.md)  
+[Zásoby](inventory-manage-inventory.md)

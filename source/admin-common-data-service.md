@@ -1,68 +1,64 @@
 ---
-title: "Using Microsoft Dataverse"
-description: Introduction to Microsoft Dataverse and its components.
+title: "Using Common Data Service"
+description: Introduction to Common Data Service and its components.
 author: bholtorf
 
 ms.author: bholtorf
 ms.custom: na
 ms.reviewer: na
 ms.service: dynamics365-business-central
-ms.topic: conceptual
-ms.date: 10/01/2020
+ms.topic: article
+ms.date: 06/30/2020
 ---
 
-# Integrating with Microsoft Dataverse
-[!INCLUDE[prod_short](includes/cc_data_platform_banner.md)]
+# Integrace s Common Data Service
 
-Business apps often use data from more than one source. [!INCLUDE[prod_short](includes/cds_long_md.md)] combines data into a single set of logic that makes it easier to connect other Dynamics 365 applications, such as [!INCLUDE[crm_md](includes/crm_md.md)] or your own application built on top of [!INCLUDE[prod_short](includes/cds_long_md.md)], to [!INCLUDE[prod_short_md](includes/prod_short.md)]. For more information about [!INCLUDE[prod_short](includes/cds_long_md.md)], see [What is Dataverse?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
+Obchodní aplikace často používají data z více než jednoho zdroje. [!INCLUDE[d365fin](includes/cds_long_md.md)] kombinuje data do jediné sady logiky, která usnadňuje připojení dalších aplikací Dynamics 365, jako je [!INCLUDE[crm_md](includes/crm_md.md)] nebo vlastní aplikaci postavenou na [!INCLUDE[d365fin](includes/cds_long_md.md)], k [!INCLUDE[d365fin_md](includes/d365fin_md.md)]. Pro více informací navštivte [!INCLUDE[d365fin](includes/cds_long_md.md)], see [Co je Common Data Service?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
 
-The following steps provide an overview of the steps to integrate [!INCLUDE[prod_short](includes/cds_long_md.md)] with [!INCLUDE[prod_short](includes/prod_short.md)].
+Následující kroky poskytují přehled kroků pro integraci [!INCLUDE[d365fin](includes/cds_long_md.md)] with [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
 > [!Note]  
-> These tasks require the **System Administrator** security role in [!INCLUDE[prod_short](includes/cds_long_md.md)] and [!INCLUDE[prod_short](includes/prod_short.md)].  
+> Tyto úkoly vyžadují roli **Správce systému** v [!INCLUDE[d365fin](includes/cds_long_md.md)] a [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-1. Assign licenses for [!INCLUDE[prod_short](includes/cds_long_md.md)] to the [!INCLUDE[prod_short](includes/prod_short.md)] users who will use the integrated apps.
+1. Přiřazením licence [!INCLUDE[d365fin](includes/cds_long_md.md)] do [!INCLUDE[d365fin](includes/d365fin_md.md)] uživatelům, kteří budou používat integrované aplikace.
 
-2. Set up a connection to [!INCLUDE[prod_short](includes/cds_long_md.md)]. For more information, see [Connect to Dataverse](admin-how-to-set-up-a-dynamics-crm-connection.md).  
+2. Nastavení připojení do [!INCLUDE[d365fin](includes/cds_long_md.md)]. Pro více informací navštivte [¨Připojení do Common Data Service](admin-how-to-set-up-a-dynamics-crm-connection.md).
 
-3. Synchronize data between the apps. For more information, see [Synchronizing Business Central and Dataverse](admin-synchronizing-business-central-and-sales.md). 
+3. Synchronizace dat mezi aplikacemi. Pro více informací, navštivte [Synchronizace Business Central a Common Data Service](admin-synchronizing-business-central-and-sales.md).
 
-## Getting Started with [!INCLUDE[prod_short](includes/cds_long_md.md)]
-To get started with [!INCLUDE[prod_short](includes/cds_long_md.md)] you will need a Microsoft Power Apps account. If you do not already have a Power Apps account, you can get one for free by visiting [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and choosing the **Get started free** link. To learn more about how to get started with [!INCLUDE[prod_short](includes/cds_long_md.md)], see the [Get started with Dataverse](https://docs.microsoft.com/learn/modules/get-started-with-powerapps-common-data-service/) module from Microsoft Learn.
+## Začínáme s [!INCLUDE[d365fin](includes/cds_long_md.md)]
+Chcete-li začít s [!INCLUDE[d365fin](includes/cds_long_md.md)] musítě mít účet Microsoft Power Apps. Pokud ještě nemáte účet aplikace Power Apps, můžete si jej zdarma získat na stránce [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) a zvolit odkaz **Začít zdarma**. Chcete-li se dozvědět více o tom, jak začít s [!INCLUDE[d365fin](includes/cds_long_md.md)], bežte na [začínáme s Common Data Service](https://docs.microsoft.com/learn/modules/get-started-with-powerapps-common-data-service/) v Microsft Learn.
 
-## Bi-Directional or Uni-directional Data Synchronization
-Depending on your business needs, you can set up the integration to synchronize data either to or from one Dynamics 365 business app to another, or in both directions in near-real time through [!INCLUDE[prod_short](includes/cds_long_md.md)]. For example, if you integrate [!INCLUDE[prod_short](includes/prod_short.md)] with [!INCLUDE[crm_md](includes/crm_md.md)] through [!INCLUDE[prod_short](includes/cds_long_md.md)], a salesperson can create a sales order in [!INCLUDE[crm_md](includes/crm_md.md)] and the order will be synchronized to [!INCLUDE[prod_short](includes/prod_short.md)]. Conversely, from [!INCLUDE[crm_md](includes/crm_md.md)], the salesperson can view information from [!INCLUDE[prod_short](includes/prod_short.md)] about the availability of the item on the order. 
+## Obousměrná nebo jednosměrná synchronizace dat
+V závislosti na vašich obchodních potřebách můžete nastavit integraci pro synchronizaci dat buď do nebo z jedné obchodní aplikace Dynamics 365 do druhé, nebo v obou směrech v téměř reálném čase prostřednictvím [!INCLUDE[d365fin](includes/cds_long_md.md)]. Například, pokud integrujete [!INCLUDE[d365fin](includes/d365fin_md.md)] s [!INCLUDE[crm_md](includes/crm_md.md)] přes [!INCLUDE[d365fin](includes/cds_long_md.md)], prodejce může vytvořit prodejní objednávku v [!INCLUDE[crm_md](includes/crm_md.md)] a objednávka bude synchronizována s [!INCLUDE[d365fin](includes/d365fin_md.md)]. Naopak, z  [!INCLUDE[crm_md](includes/crm_md.md)], může prodejce zobrazit informace z [!INCLUDE[d365fin](includes/d365fin_md.md)]  o dostupnosti zboží na objednávce.
 
-## Standard and Custom Entities
-[!INCLUDE[prod_short](includes/cds_long_md.md)] securely stores data in a set of tables, which are sets of records similar to how a table stores data within a database. [!INCLUDE[prod_short](includes/cds_long_md.md)] includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization. In [!INCLUDE[prod_short](includes/prod_short.md)], you can view standard and custom tables being synchronized on the Integration Table Mappings page.
+## Standardní a vlastní entity
+[!INCLUDE[d365fin](includes/cds_long_md.md)] bezpečně ukládá data v sadě entit, což jsou sady záznamů podobné tomu, jak tabulka ukládá data v databázi. [!INCLUDE[d365fin](includes/cds_long_md.md)] zahrnuje základní sadu standardních entit, které pokrývají typické scénáře, ale můžete také vytvořit vlastní entity specifické pro vaši organizaci. V [!INCLUDE[d365fin](includes/d365fin_md.md)], můžete zobrazit standardní a vlastní entity, které jsou synchronizovány na stránce Mapování tabulky integrace.
 
-## About the Business Central Base Integration Solution
+## O základním integračním řešení CDS
 
-The Base Integration Solution is a key component of the integration. The solution adds the required roles and access levels to the user accounts for the integration, and it creates tables needed to map [!INCLUDE[prod_short](includes/prod_short.md)] company to business unit in [!INCLUDE[prod_short](includes/cds_long_md.md)]. 
+Základní řešení integrace CDS je klíčovou součástí integrace. Řešení přidá požadované role a úrovně přístupu k uživatelským účtům pro integraci a vytvoří entity potřebné k mapování [!INCLUDE[d365fin](includes/d365fin_md.md)] společnosti k obchodní jednotce v [!INCLUDE[d365fin](includes/cds_long_md.md)].
 
-By default, the **Set up [!INCLUDE[prod_short](includes/cds_long_md.md)] connection** assisted setup guide will import the solution. To do that, the setup guide uses an administrator user account that you specify. This account must be a valid user in [!INCLUDE[prod_short](includes/cds_long_md.md)] with the following security role:
+Ve výchozím nastavení **Nastavení připojení [!INCLUDE[d365fin](includes/cds_long_md.md)]**, asistované nastavení průvodce importuje řešení. K tomu používá průvodce nastavením uživatelský účet správce, který zadáte. Tento účet musí být platným uživatelem v [!INCLUDE[d365fin](includes/cds_long_md.md)] s následující rolí zabezpečení:
 
-* System Administrator  
+* Správce systému
 
-For more information, see [Setting Up User Accounts for Integrating with [!INCLUDE[prod_short](includes/cds_long_md.md)]](admin-setting-up-integration-with-dynamics-sales.md) and [Create users in Microsoft Dynamics 365 (online) and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles). 
+Pro více informací navštivte [Nastavení uživateských účtu pro integraci s [!INCLUDE[d365fin](includes/cds_long_md.md)]](admin-setting-up-integration-with-dynamics-sales.md) a [Vytvoření uživatelů v Microsoft Dynamics 365 (online) a přiřazení bezpečnostních rolí](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).
 
-The administrator account is used only one time during the setup for the configuration changes that the Base Integration Solution makes in [!INCLUDE[prod_short](includes/cds_long_md.md)]. After the solution is imported the account is no longer needed. Integration will continue to use the user account that is automatically created specifically for the integration.
+Účet správce se používá pouze jednou během instalace z důvodu změn konfigurace pro konfiguraci změn v Základu CDS a provádí se v  [!INCLUDE[d365fin](includes/cds_long_md.md)]. Po importu řešení již účet není potřeba. Integrace bude nadále používat uživatelský účet, který je automaticky vytvořen speciálně pro integraci.
 
-In addition to customizing [!INCLUDE[prod_short](includes/cds_long_md.md)], the solution also creates the following roles in [!INCLUDE[prod_short](includes/cds_long_md.md)] for the integration:
+Kromě přizpůsobení [!INCLUDE[d365fin](includes/cds_long_md.md)], řešení také vytváří následující role pro integraci v [!INCLUDE[d365fin](includes/cds_long_md.md)]:
 
-* **Integration Administrator** - Allows users to manage the connection between [!INCLUDE[prod_short](includes/prod_short.md)] and [!INCLUDE[prod_short](includes/cds_long_md.md)]. Typically, this is assigned only to the automatically created user account for synchronization.  
-* **Integration User** - Allows users to access synchronized data. Typically, this is assigned to the automatically created user account for synchronization and other users who need to view or access the synchronized data.
+* **Správce integrace** - Umožňuje uživatelům spravovat spojení mezi [!INCLUDE[d365fin](includes/d365fin_md.md)] a [!INCLUDE[d365fin](includes/cds_long_md.md)]. Obvykle je toto přiřazeno pouze k automaticky vytvořenému uživatelskému účtu pro synchronizaci.
+* **Uživatel integrace** - Umožňuje uživatelům přístup k synchronizovaným datům. Obvykle je to přiřazeno automaticky vytvořenému uživatelskému účtu pro synchronizaci a dalším uživatelům, kteří potřebují prohlížet nebo přistupovat k synchronizovaným datům.
 
-For details about each role, such as the permissions and access levels, see [Setting Up User Accounts for Integrating with [!INCLUDE[prod_short](includes/cds_long_md.md)]](admin-setting-up-integration-with-dynamics-sales.md).
+Podrobnosti o každé roli, například oprávnění a úrovně přístupu, naleznete v části [Nastavení uživatelských účtů pro integraci s [!INCLUDE[d365fin](includes/cds_long_md.md)]](admin-setting-up-integration-with-dynamics-sales.md).
 
-During connection setup, integration table mappings that are needed to synchronize data, are created. Entities in [!INCLUDE[prod_short](includes/cds_long_md.md)] are mapped to tables and table fields in Business Central through integration tables. For more information, see [Standard Entity Mapping for Synchronization](admin-synchronizing-business-central-and-sales.md#standard-table-mapping-for-synchronization).
+Během instalace připojení jsou vytvořena mapování integračních tabulek, která jsou potřebná k synchronizaci dat. Entity ve službě Common Data Service jsou mapovány na tabulky a pole tabulek v Business Central prostřednictvím integračních tabulek. Pro více informací navštivte [ Standardní mapování entit pro synchronizaci](admin-synchronizing-business-central-and-sales.md#standard-entity-mapping-for-synchronization).
 
-## See Also
-[Data Ownership Models](admin-cds-company-concept.md)  
-<!--needs to be removed as this is moved to dev-itpro docs[Walkthrough: Customizing an Integration with Dataverse](\dynamics365\business-central\dev-itpro\administration\administration-custom-cds-integration) -->
-
-
+## Viz také
+[Modely vlastnictví dat](admin-cds-company-concept.md)
+<!--needs to be removed as this is moved to dev-itpro docs[Walkthrough: Customizing an Integration with Common Data Service](docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/administration-custom-cds-integration) -->
 
 
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,64 +1,61 @@
 ---
-    title: Set Up for Service Items and Service Item Components | Microsoft Docs
-    description: Learn about the things you must set up before you can use service items, including default values such as response time, contract discount percent, and service price group.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Nastavení Předmětů servisu a Komponent předmětu servisu | Microsoft Docs
+description: 'Naučte se o věcech, které musíte nastavit, než budete moci používat předměty servisu, včetně výchozích hodnot, jako je čas odezvy, procentní sleva smlouvy a cenová skupina servisu.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Set Up Service Items and Service Item Components
-To work with service items, you must set up the following
+# <a name="set-up-service-items-and-service-item-components"></a>Nastavení Předmětů servisu a Komponent předmětu servisu 
+Chcete-li pracovat s předměty servisu, musíte nastavit následující
 
-* Service item groups.
-* Optional
+* Skupiny předmětu servisu.
+* Volitelné
 
-## To set up service item groups
-You can set up groups of items that are related in terms of repair and maintenance. You can define default values for service items in a service item group, such as response time, contract discount percent, and service price group. For items in a service item group, you can select whether you want them to be automatically registered as service items when they are sold.  
+## <a name="to-set-up-service-item-groups"></a>Nastavení skupin předmětu servisu
+Můžete nastavit skupiny zboží, které se týkají opravy a údržby. Můžete definovat výchozí hodnoty pro předměty servisu ve skupině předmětů servisu, jako je čas odezvy, procentní sleva smlouvy a cenová skupina servisu. U zboží ve skupině předmětů servisu můžete vybrat, zda chcete, aby bylo při prodeji automaticky zaregistrováno jako předmět servisu.  
 
-You assign service item groups to items on the **Item** card, and to service items on the **Service Item** card.  
+Zboží na kartě **Zboží** a předmětům servisu na kartě **Předmět servisu** přiřazujete skupiny předmětů servisu.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Item Groups**, and then choose the related link.  
-2. Create a new service item group.  
-3. Fill in the **Code** and **Description** fields.  
-4. In the **Default Contract Discount %** field, enter the default contract discount percentage that you want the service items in the group to have.  
-5. In the **Default Serv. Price Group Code** field, enter the default service price group code that you want the service items in the group to have.  
-6. In the **Default Response Time (Hours)** field, enter the default response time in hours that you want the service items in the group to have.  
-7. If you want to register the items in the group as service items when they are sold, select the **Create Service Item** field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skupiny předmětů servisu** a poté vyberte související odkaz.  
+2. Vytvoření nové skupiny předmětů servisu  
+3. Vyplňte pole **Kód** a **Popis**.  
+4. Do pole **Výchozí % slevy smlouvy** zadejte výchozí procentuální slevu smlouvy, kterou mají mít předměty servisu ve skupině.  
+5. V poli **Výchozí kód Cenové skupiny servisu** zadejte výchozí kód cenové skupiny servisu, který mají mít předměty servisu ve skupině.  
+6. V poli **Výchozí doba odezvy (hodiny)** zadejte výchozí dobu odezvy v hodinách, kterou mají mít předměty servisu ve skupině.  
+7. Pokud chcete při prodeji zboží ve skupině zaregistrovat jako předmět servisu, vyberte pole **Vytvořit předmět servisu**.  
 
-## To set up service item components
-A service item can consist of several components, which can be replaced with spare parts when the item is serviced. These components are set up on the **Service Item Component List** page. Additionally, if you want to set up components for service items that are BOMs, you can copy the BOM items and create them as service item components.
+## <a name="to-set-up-service-item-components"></a>Nastavení komponent předmětu servisu
+Předmět servisu se může skládat z několika součástí, které mohou být při opravě nahrazeny náhradními díly. Tyto komponenty jsou nastaveny na stránce **Přehled komponent předmětu servisu**. Navíc, pokud chcete nastavit komponenty pro předměty servisu, které jsou kusovníky, můžete zkopírovat položky kusovníku a vytvořit je jako komponenty předmětu servisu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Items**, and then choose the related link.
-2. Open the service item for which you want to set up components.  
-3. Choose the **Components** action. The **Service Item Component List** page opens.  
-4. Add a new component.  
-5. In the **Type** field, choose **Service Item** if the component itself is a registered service item. Otherwise, select **Item**.  
-6. In the **No.** field, choose the item or service item that is a component of the service item.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Předměty servisu** a poté vyberte související odkaz.
+2. Otevřete předmět servisu, pro který chcete nastavit komponenty.  
+3. Zvolte akci **Komponenty**. Otevře se stránka **Přehled komponent předmětu servisu**  
+4. Přidejte nové komponenty  
+5. V poli **Typ** zvolte **Předmět servisu**, pokud je samotná komponenta registrovaným předmětem servisu. Jinak zvolte **Zboží**  
+6. V poli **č.** vyberte zboží nebo předmět servisu, který je součástí předmětu servisu.  
 
-## To set up service item components from a BOM
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Items**, and then choose the related link.  
-2. Open the service item for which you want to set up components from a BOM.  
-3. Choose the **Components** action. The **Service Item Component List** page opens.  
-4. Choose the **Copy from BOM** action.  
+## <a name="to-set-up-service-item-components-from-a-bom"></a>Nastavení komponent předmětu servisu z kusovníku
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Předměty servisu** a poté vyberte související odkaz.  
+2. Otevřete předmět servisu, pro který chcete nastavit komponenty z kusovníku.  
+3. Zvolte akci **Komponenty**. Otevře se stránka **Přehled komponent předmětu servisu**  
+4. Zvolte akci **Kopie z kusovníku**.  
 
-    If the item that the service item is linked to is a BOM, the components for all the items in the BOM are created automatically.  
+    Pokud je zboží, ke kterému je předmět servisu připojen, kusovník, komponenty pro veškeré zboží v kusovníku se vytvoří automaticky.  
 
-## To set up a service shelf
-You can set up service shelves that identify where you store your service items. You assign service shelves to service items on the **Service Order** and **Service Item Worksheet** pages.  
+## <a name="to-set-up-a-service-shelf"></a>Nastavení servisního regálu
+Můžete nastavit servisní regály, které určují kam ukládáte své předměty servisu. Servisní regály přiřadíte předmětům servisu na stránkách **Servisní objednávky** a **Sešit předmětu servisu**.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Shelves**, and then choose the related link.
-2. Fill in the fields as necessary.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Servisní regály** a poté vyberte související odkaz.
+2. Vyplňte pole podle potřeby.
 
-## See Also
-[Set Up Codes for Standard Services](service-how-setup-service-coding.md)   
-[Set Up Troubleshooting](service-how-setup-troubleshooting.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Nastavení kódů standardního servisu](service-how-setup-service-coding.md)   
+[Nastavení řešení potíží](service-how-setup-troubleshooting.md)

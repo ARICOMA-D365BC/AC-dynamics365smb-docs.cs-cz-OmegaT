@@ -4,7 +4,7 @@ description: Describes how to create a sales order linked to a purchase order to
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
@@ -13,70 +13,67 @@ ms.date: 10/01/2020
 ms.author: edupont
 
 ---
-# Make Drop Shipments
+# Vytvoření prodejních dodávek
 
-A drop shipment is the shipment of items from one of your vendors directly to one of your customers.
+Přímá dodávka je dodávka zboží od jednoho z vašich dodavatelů přímo jednomu z vašich zákazníků.
 
-When a sales order is marked for drop shipment, and you create a purchase order specifying the customer in the **Ship-to** field, **Customer Address**, you can link the two documents to instruct the vendor to ship directly to the customer.
-<br><br>  
-  
+Je-li prodejní objednávka označena jako „přímá dodávka“ a vytvoříte nákupní objednávku s uvedením zákazníka v poli **Příjemce**, **Adresa zákazníka**, můžete tyto dva doklady propojit pro poučení dodavatele, aby odeslal zboží přímo zákazníkovi.
+<br><br>
+
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4mOyM?rel=0]
 
-## To create a sales order for drop shipment
+## Chcete-li vytvořit prodejní objednávku pro přímou dodávku
 
-To prepare a drop shipment, you create a sales order for an item and indicate on the sales line that the sale requires drop shipment.
+Chcete-li připravit přímou dodávku, vytvořte prodejní objednávku pro zboží a na prodejním řádku označte, že prodej vyžaduje přímou dodávku.
 
-1. Create a sales order for an item. For more information, see [Sell Products](sales-how-sell-products.md).
-2. On the sales order line for the drop shipment, select the **Drop Shipment** check box. Use the **Choose Columns** function if the field is not visible. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+1. Vytvoření prodejní objednávky pro zboží. Více informací viz [Prodej produktů](sales-how-sell-products.md).
+2. Na řádku prodejní objednávky pro přímou dodávku zaškrtněte políčko **Přímá dodávka**. Pokud pole není viditelné, použijte funkci **Zvolit sloupce** . Více informací viz [Přizpůsobení pracovního prostoru](ui-personalization-user.md).
 
-## To create the purchase order for drop shipment
+## Chcete-li vytvořit nákupní objednávku pro přímou dodávku
 
-To prepare a drop shipment, you indicate on the purchase order that it must be shipped to your customer, not to yourself.
+Chcete-li připravit přímou dodávku, uvedete na objednávce, že musí být odeslána zákazníkovi, nikoli sobě.
 
-1. Create a purchase order. Do not fill any fields on the lines. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
-2. In the **Ship-to** field, select **Customer Address**.
-3. In the **Customer** field, select the customer that you are selling to.
-4. Choose the **Drop Shipments** action, and then choose the **Get Sales Order** action.
-5. On the **Sales List** page, select the sales order that you prepared in [To create a sales order for drop shipment](sales-how-drop-shipment.md#to-create-a-sales-order-for-drop-shipment).
-6. Choose the **OK** button.
+1. Vytvoření nákupní objednávky. Na řádcích nevyplňujte žádná pole. Více informací viz [Zaznamenávání nákupů](purchasing-how-record-purchases.md).
+2. V poli **Příjemce** vyberte **Adresa zákazníka**.
+3. V poli **Zákazník** vyberte zákazníka, kterému prodáváte.
+4. Zvolte akci **Přímé dodávky** a pak zvolte akci **Získat prodejní objednávku.**.
+5. Na stránce **Přehled prodeje** vyberte prodejní objednávku, kterou jste připravili v [Chcete-li vytvořit prodejní objednávku pro přímou dodávku](sales-how-drop-shipment.md#to-create-a-sales-order-for-drop-shipment).
+6. Zvolte tlačítko **OK**.
 
-The line information from the sales order is inserted on the purchase order line(s).
+Informace o řádku z prodejní objednávky se vloží na řádek/řádky nákupní objednávky.
 
-You can now instruct the vendor to ship the items to your customer, for example, by mailing the purchase order as a PDF.     
+Nyní můžete dát pokyn dodavateli, aby zboží odeslal zákazníkovi, například zasláním nákupní objednávky ve formátu PDF.
 
-## To create multiple purchase orders for drop shipments
+## Chcete-li vytvořit více nákupních objednávek pro přímé dodávky
 
-You can also use the requisition worksheet to create the purchase order for the vendor. The advantage of using the requisition worksheet is that it can create purchase orders for all outstanding drop shipments, so you don't have to create each one individually.
+K vytvoření nákupní objednávky pro dodavatele můžete také použít sešit požadavků. Výhodou použití sešitu požadavků je, že může vytvářet nákupní objednávky pro všechny nevyřízené přímé dodávky, takže nemusíte vytvářet každou z nich jednotlivě.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Requistion Worksheets**, and then choose the related link.
-2. Choose the **Drop Shipments** action, and then choose the **Get Sales Order** action.
-3. Choose the **OK** button.
-4. Review the purchase order lines, and in the **Vendor No.** field, select vendor that supplies required goods. 
-5. Choose the **Carry Out Action Message** action to convert reviewed lines to a purchase order.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešity požadavků** a poté vyberte související odkaz.
+2. Zvolte akci **Přímé dodávky** a pak zvolte akci **Získat prodejní objednávku.**.
+3. Zvolte tlačítko **OK**.
+4. Zkontrolujte řádky nákupní objednávky a v poli **Číslo dodavatele** vyberte dodavatele, který dodává požadované zboží.
+5. Vyberte akci **Provést zprávu o akci** pro převedení zkontrolovaných řádků na nákupní objednávku.
 
-## To view the linked purchase order from the sales order
+## Chcete-li zobrazit propojenou nákupní objednávku z prodejní objednávky
 
-* Select the drop-shipment sales order line, choose the **Order** action, choose the **Drop Shipment** action, and then choose the **Purchase Order** action.
+* Vyberte řádek prodejní objednávky přímé dodávky, zvolte akci **Objednat** , zvolte akci **Přímá dodávka** a pak zvolte akci **Nákupní objednávka**.
 
-## To post a drop shipment
+## Chcete-li účtovat přímou dodávku
 
-After the vendor ships the items, you can post the sales order as shipped. You can also post the purchase order, but only with the **Receive** option until the sales order has been invoiced.
+Poté, co dodavatel dodá zboží, můžete účtovat prodejní objednávku tak, jak byla dodána. Můžete také účtovat nákupní objednávku, ale pouze s možností **Přijmout** , dokud nebude prodejní objednávka fakturována.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
-2. Open the sales order that you created in [To create a sales order for drop shipment](#to-create-a-sales-order-for-drop-shipment).
-3. In the **Qty. to Ship** field, specify how many of the order quantity to ship, the full or a partial order quantity.
-4. Choose the **Post** or **Post and Send** action.
-5. Choose either the **Ship** option to invoice later, or the **Ship and Invoice** option to invoice immediately.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
+2. Otevřete prodejní objednávku, kterou jste vytvořili v [Chcete-li vytvořit prodejní objednávku pro přímou dodávku](#to-create-a-sales-order-for-drop-shipment).
+3. V poli **Množství k dodání** , určete, kolik množství objednávky má být dodáno, úplné nebo částečné množství objednávky.
+4. Zvolte akci **Účtovat** nebo **Účtovat a odeslat**.
+5. Vyberte buď možnost **Dodání**, chcete-li fakturovat později, nebo možnost **Dodat a fakturovat**, chcete-li fakturovat okamžitě.
 
-## See Also
+## Viz také
 
-[Create Special Orders](sales-how-to-create-special-orders.md)  
-[Purchase Items for a Sale](purchasing-how-purchase-products-sale.md)  
-[Sell Products](sales-how-sell-products.md)  
-[Record Purchases](purchasing-how-record-purchases.md)  
-[Sales](sales-manage-sales.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Vytvoření speciálních objednávek](sales-how-to-create-special-orders.md)  
+[Nákup zboží pro prodej](purchasing-how-purchase-products-sale.md)  
+[Prodej produktů](sales-how-sell-products.md)  
+[Zaznamenavání nákupů](purchasing-how-record-purchases.md)  
+[Prodej](sales-manage-sales.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -6,59 +6,56 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, aging, creditor payments, vendor payments
-ms.date: 10/01/2020
+ms.date: 10/01/2019
 ms.author: jswymer
 
 ---
-# Overview of Tasks to Close Accounting Periods
-[!INCLUDE[prod_short](includes/prod_short.md)] does not force you to close periods, however, there are many period-end (month-end) activities that you can do. This topic provides an overview of optional processes and activities for closing periods.  
+# Uzavírací období
+[!INCLUDE[d365fin](includes/d365fin_md.md)] vás nenutí k uzavření období, ale existuje mnoho aktivit na konci období (na konci měsíce), které můžete udělat. Toto téma poskytuje přehled volitelných procesů a činností pro uzávěrková období.
 
-## General Ledger
-* Specify system-wide and user-specific posting periods.  
+## Finance
+* Určete období účtování uživatele pro celý systém.
 
-    This specifies the dates between which you allow posting. Depending on your business, you may want to allow posting at the start of the period, or toward the end. For more information, see [Specify Posting Periods](finance-how-specify-posting-periods.md).  
-* Make all necessary G/L adjustments.  
-* Update and post Recurring Journals.  
-  <!--* Process Consolidations-->
-* Run account schedules as follows:  
-  * Open the **Account Schedule** page, and then choose the **Print** action.  
+   Toto určuje data, mezi kterými povolujete účtování. V závislosti na vaší firmě můžete povolit účtování na začátku období nebo ke konci. Pro více informací navštivte [Určení zúčtovacího období](finance-how-specify-posting-periods.md).
+* Proveďte všechny nezbytné opravy financí.
+* Aktualizujte a zaúčtujte periodické deníky.
+   <!--* Process Consolidations-->
+* Spusťte účetní schémata takto:
+   * Otevřete stránku **Účetní schéma** a poté vyberte akci **Tisk**.
 
-## Sales and Receivables
-* Post all sales orders, invoices, credit memos, and return orders.  
-* Post all cash receipt journals.  
-* Update and post recurring journals that are related to sales and receivables.  
-* Reconcile accounts receivable to the general ledger.  
-* Run the **Delete Invoiced Sales Orders** batch job.  
+## Prodej a pohledávky
+* Zaúčtujte všechny prodejní objednávky, faktury, dobropisy a objednávky vratek.
+* Zaúčtujte všechny deníky přijaté hotovosti.
+* Aktualizujte a zaúčtujte periodické deníky, které se vztahují k prodejům a pohledávkám.
+* Odsouhlaste pohledávky v hlavní knize.
+* Spusťte dávkovou úlohu **Odstranit fakt.prod.objednávky**.
 
-## Purchases and Payables
-* Post all purchase orders, invoices, credit memos, and return orders.  
-* Post all payment journals.  
-* Update and post recurring journals that are related to purchases & payables.  
-* Run the **Aged Accounts Payable** report and reconcile accounts payable to the general ledger.  
-* Run the **Delete Invoiced Purchase Orders** batch job.  
+## Nákupy a závazky
+* Zaúčtujte všechny objednávky, faktury, dobropisy a objednávky vratek.
+* Zaúčtujte všechny deníky plateb.
+* Aktualizujte a zaúčtujte periodické deníky, které souvisejí s nákupy a závazky.
+* Spusťte sestavu **Splatné závazky** a odsouhlaste závazky do hlavní knihy.
+* Spusťte dávkovou úlohu **Odstranit fakt. nák. objednávky**.
 
-Fixed Assets
-* Post all maintenance costs have been posted through the fixed asset journals or invoices.
-* Post adjustments.
-* Post appreciation.
-* Post depreciation.
-* Update and post the recurring fixed asset journal.
+Dlouhodobý majetek
+* Účtování všech nákladů na údržbu bylo zaúčtováno prostřednictvím deníků nebo faktur s dlouhodobým majetkem.
+* Zaúčtujte opravy.
+* Zaúčtujte zhodnocení.
+* Zaúčtujte odpisy.
+* Aktualizujte a zaúčtujte periodický deník DM.
 
-Intercompany
-* Process Intercompany Transactions
+Vnitropodnik
+* Zpracování vnitropodnikových transakcí
 
-## Calculate and Process Sales Tax
-* Complete Tax Statements.  
+## Výpočet a zpracování DPH
+* Kompletní daňové přiznání.
 
-## See Also
-[Closing Years and Periods](year-close-years-periods.md)  
-[Closing Books](year-close-books.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Uzavírání roků a období](year-close-years-periods.md)  
+[Uzavírání knih](year-close-books.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

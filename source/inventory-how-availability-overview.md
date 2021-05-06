@@ -1,130 +1,117 @@
 ---
-title: Get an Availability Overview| Microsoft Docs
-description: You can get information about the availability of items or stock across locations, per sales or purchase events, by a time period, or by the item's position on an assembly or production BOM.
+title: Získejte přehled dostupnosti | Microsoft Docs
+description: 'Můžete získat informace o dostupnosti zboží nebo zásob napříč lokacemi, podle prodejních nebo nákupních akcí, podle časového období nebo podle polohy zboží na kusovníku sestavy nebo výroby.'
 documentationcenter: ''
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: stock
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.date: 10/01/2018
+ms.author: SorenGP
 ---
-# View the Availability of Items
-From the context of a business task, you can get advanced information about when and where an item is available, such as when talking to a customer about a delivery date.
+# <a name="view-the-availability-of-items"></a>Zobrazení dostupnosti zboží
+Z kontextu obchodního úkolu můžete získat pokročilé informace o tom, kdy a kde je zboží k dispozici, například při rozhovoru se zákazníkem ohledně data dodání.
 
-You can view the availability of all items per location, and you can view the availability of each item by event, by period, or by location. An event is any scheduled item transaction, such as a sales shipment or an inbound transfer receipt.
+Můžete zobrazit dostupnost všeho zboží na lokacích a dostupnost každého zboží podle události, podle období nebo podle lokace. Událost je jakákoli transakce naplánovaného zboží, jako je prodejní zásilka nebo potvrzení o příchozím převodu.
 
 > [!NOTE]  
->   Availability views by location require that you maintain inventory at more than one location. For more information, see [Set Up Locations](inventory-how-setup-locations.md).
+>   Zobrazení dostupnosti podle lokace vyžaduje, abyste udržovali zásoby na více než jedné lokaci. Pro více informací navštivte [Nastavení lokací](inventory-how-setup-locations.md).
 
-If you use warehousing functionality, availability varies depending on allocations at the bin level when warehouse activities such as picks and movements occur and when the inventory reservation system imposes restrictions to comply with. A rather complex algorithm verifies that all conditions are met before allocating quantities to picks for outbound flows. For more information see [Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md).
+V [!INCLUDE[d365fin](includes/d365fin_md.md)] jsou zobrazeny údaje o dostupnosti ve dvou různých polích, každé s odlišnou definicí:
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], availability figures are typically shown in two different fields, each with a different definition:
-
-* The **Quantity on Hand** field, in some places named **Inventory**, shows the actual quantity today according to posted item ledger entries.
-* The **Projected Available Balance** field is calculated and shows the quantity on hand plus scheduled receipts minus gross requirements. (In [!INCLUDE[prod_short](includes/prod_short.md)], scheduled receipts include quantities on purchase orders and inbound transfer orders. Gross requirements include quantities on sales orders and outbound transfer orders.)
+* Pole **Množství na skladě** zobrazuje skutečné aktuální množství podle účtovaných položek zboží.
+* Pole **Předpokládané dost.množ.** je vypočteno a zobrazuje množství na skladě plus plánované příjmy mínus celkové požadavky. (V [!INCLUDE[d365fin](includes/d365fin_md.md)], naplánované příjmy zahrnují množství na nákupních objednávkách a vstupních objednávkách transferu. Hrubé požadavky zahrnují množství na prodejních objednávkách a odchozích objednávkách transferu.)
 
 > [!TIP]  
->   The projected available balance is especially relevant to view in the **Item Availability by Periods** and **Item Availability by Event** pages because they contain the date dimension.  
+>   Předpokládaný disponibilní zůstatek je zvláště důležitý pro zobrazení na stránkách **Zboží k dispozici dle období** a **Zboží k dispozici dle událostí**, protože obsahují dimenzi data.  
 
 > [!NOTE]  
->   The following procedures describe how to view advanced availability information from the items list and item card. You can also access the information from sales document lines for the item on the line. For more information, see [Sell Products](sales-how-sell-products.md).
+>   Následující postupy popisují, jak zobrazit informace o rozšířené dostupnosti ze seznamu zboží a karty zboží. Můžete také získat přístup k informacím z řádků prodejních dokladů pro zboží na řádku. Pro více informací navštivte [Prodej produktů](sales-how-sell-products.md).
 
-## To view the availability of an item according to when it will be received or shipped
-You view the availability of an item according to scheduled item transactions on the **Availability by Event** page.
+## <a name="to-view-the-availability-of-an-item-according-to-when-it-will-be-received-or-shipped"></a>Zobrazení dostupnosti zboží podle toho, kdy bude přijato nebo odesláno
+Dostupnost zboží podle naplánovaných transakcí zboží zobrazíte na stránce **k dispozici dle události**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Open the card of an item that you want to view availability for.
-3. Choose the **Item Availability by** action, and then choose the **Event** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Otevřete kartu zboží, pro které chcete zobrazit dostupnost.
+3. Vyberte akci **K dispozici dle** a poté vyberte **Událost**.
 
-    The **Item Availability by Event** page shows how the inventory quantity of the item will develop over time according scheduled shipment and receipt events. The page gives a condensed view that shows one line of accumulated information per time interval in which inventory quantities change. Time intervals where no events occurred are not shown. You can expand each line to show details about the event or events that caused the accumulated quantity on the line.
-4. Choose the value in the **Projected Available Balance** field to view the item ledger entries or open documents that make up the value.
+    Stránka **Zboží k dispozici dle událostí** ukazuje, jak se bude množství zásob zboží vyvíjet v průběhu času podle naplánovaných zásilek a událostí přijetí. Stránka poskytuje zhuštěné zobrazení, které ukazuje jeden řádek kumulovaných informací za časový interval, ve kterém se mění množství zásob. Časové intervaly, ve kterých nedošlo k žádným událostem, nejsou zobrazeny. Každý řádek můžete rozbalit a zobrazit podrobnosti o události nebo událostech, které způsobily nashromážděné množství na řádku.
+4. Vyberte hodnotu v poli **Předpokládané dost.množ.** pro zobrazení položky zboží nebo otevřených dokladů, které tuto hodnotu tvoří.
 
-## To view the availability of an item in different periods
-You view the availability of an item over time for specified time periods on the **Item Availability by Periods** page.
+## <a name="to-view-the-availability-of-an-item-in-different-periods"></a>Zobrazení dostupnosti zboží v různých obdobích
+Dostupnost zboží v čase pro určitá časová období zobrazíte na stránce **Zboží k dispozici dle období**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Open the card of an item that you want to view availability for.
-3. Choose the **Item Availability by** action, and then choose the **Period** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Otevřete kartu zboží, pro které chcete zobrazit dostupnost.
+3. Vyberte akci **K dispozici dle** a poté vyberte **Období**.
 
-    The **Item Availability by Periods** page shows how the inventory quantity of the item will develop over time, shown for a period that you select, such as Day, Week, or Quarter.
-4. Choose the value in the **Projected Available Balance** field to view the item ledger entries or open documents that make up the value.
+    Stránka **Zboží k dispozici dle období** zobrazuje, jak se bude množství zásob zboží vyvíjet v průběhu času, a to po dobu, kterou vyberete, například den, týden nebo čtvrtletí.
+4. Vyberte hodnotu v poli **Předpokládané dost.množ.** pro zobrazení položky zboží nebo otevřených dokladů, které tuto hodnotu tvoří.
 
-## To view the availability of an item at the locations where it is stored
-You view the availability of an item at the different places where it is stored on the **Item Availability by Location** page.
+## <a name="to-view-the-availability-of-an-item-at-the-locations-where-it-is-stored"></a>Zobrazení dostupnosti zboží v lokacích, kde je uloženo
+Dostupnost zboží pro různé lokace, kde je uloženo zobrazíte v okně **Zboží k dispozici dle lokace**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Open the card of an item that you want to view availability for.
-3. Choose the **Item Availability by** action, and then choose the **Location** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Otevřete kartu zboží, pro které chcete zobrazit dostupnost.
+3. Vyberte akci **K dispozici dle** a poté vyberte **Lokace**.
 
-    The **Item Availability by Location** page shows how the inventory quantity of the item will develop in the future, shown for each location where it is stored.
-4. Choose the value in the **Qty. on Hand** field to view the item ledger entries that make up the value.
-5. Choose the value in the **Projected Available Balance** field to view the item ledger entries or open documents that make up the value.
+    Stránka **Zboží k dispozici dle lokace** ukazuje, jak se bude v budoucnu vyvíjet množství zásob zboží, zobrazené pro každou lokaci, kde je uloženo.
+4. Vyberte hodnotu v poli **Množství na skladě** pro zobrazení položky zboží, které tuto hodnotu tvoří.
+5. Vyberte hodnotu v poli **Předpokládané dost.množ.** pro zobrazení položky zboží nebo otevřených dokladů, které tuto hodnotu tvoří.
 
-## To view the availability of all items by the location where they are stored
-You view the availability of all your items across all your locations on the **Items by Location** page.
+## <a name="to-view-the-availability-of-all-items-by-the-location-where-they-are-stored"></a>Zobrazení dostupnosti všeho zboží dle lokace
+Na stránce **Zboží dle lokací** můžete zobrazit dostupnost všeho zboží ve všech lokacích.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-2. Choose the **Items by Location** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte akci **Zboží dle lokací**.
 
-    The **Items by Location** page shows for all your items how many are available at each location.
-3. Choose the value in the **Qty. on Hand** field to view the item ledger entries that make up the value.
+    Na stránce **Zboží dle lokací** se u všeho zboží zobrazuje, kolik je v každé lokaci k dispozici.
+3. Vyberte hodnotu v poli **Množství na skladě** pro zobrazení položky zboží, které tuto hodnotu tvoří.
 
-## To view the availability of an item by its use in assembly or production BOMs
-If an item is part of assembly or production BOMs as either a parent item or a component, you can view how many units of it are required on the **Item Availability by BOM Level** page. The page shows how many units of a parent item you can make based on the availability of child items on underlying lines. Any item that has an assembly or production BOM is shown on the page as a collapsible line. You can expand this line to see the underlying components and lower-level subassemblies with their own BOMs.
+## <a name="to-view-the-availability-of-an-item-by-its-use-in-assembly-or-production-boms"></a>Zobrazení dostupnosti zboží pomocí jejího použití v montážních nebo výrobních kusovnících
+Pokud zboží existuje v montáži nebo kusovnících výroby, buď jako nadřazené zboží nebo jako komponenta, můžete na stránce **Dostupnost zásob za úroveň kusovníku** zobrazit, kolik jeho jednotek je vyžadováno. Na této stránce je uvedeno, kolik jednotek nadřazeného zboží můžete vytvořit na základě dostupnosti podřízeného zboží na základních řádcích. Každé zboží, které má kusovník sestavy nebo výroby, se na stránce zobrazí jako skládací řádek. Tento řádek můžete rozšířit a zobrazit základní komponenty a podsestavy nižší úrovně s jejich vlastními kusovníky.
 
-For example, you can use the page to determine whether you can fulfill a sales order for an item on a specified date by looking at its current availability and the quantities that can be supplied by its components. You can also use the page to identify bottlenecks in related BOMs.
+Pomocí této stránky můžete zjistit, zda můžete splnit prodejní objednávku pro zboží v určeném datu, a to tak, že se podíváte na její aktuální dostupnost a množství, které mohou její součásti dodat. Stránku můžete také použít k identifikaci úzkých míst v souvisejících kusovnících.
 
-On each line on the page for both parent items and child items, the following key fields specify the availability figures. You can use these figures to promise how many units of a parent you can supply if you start the related assembly process.
+Na každém řádku na stránce pro nadřazené i podřízené zboží určují následující klíčová pole údaje o dostupnosti. Pomocí těchto čísel můžete slíbit, kolik jednotek nadřazeného zboží můžete dodat, pokud zahájíte související proces montáže.
 
-|Field|Description|
+|Pole|Popis|
 |------|-----------|
-|**Able to Make Parent**|Shows how many units of any subassembly in the top item you can make. The field specifies how many immediate parent units you can assemble. The value is based on availability of the item on the line.|
-|**Able to Make Top Item**|Shows how many units of the top item you can make. The field specifies how many units of the top-line BOM item you can assemble. The value is based on availability of the item on the line.|
+|**Schopnost vyrobit nadřazené zboží**|Zobrazuje, kolik jednotek jakékoli podsestavy v zboží nejvyšší úrovně můžete vytvořit. Pole určuje, kolik okamžitých nadřazených jednotek můžete sestavit. Hodnota je založena na dostupnosti zboží na řádku.|
+|**Schopnost vyrobit zboží nejvyšší úrovně**|Zobrazuje, kolik jednotek zboží nejvyšší úrovně můžete vytvořit. Pole specifikuje, kolik jednotek zboží nejvyšší úrovně kusovníku můžete sestavit. Hodnota je založena na dostupnosti zboží na řádku.|
 
-### To view the availability of an item according to demand for its parent
-The **Item Availability by BOM Level** page shows information for the item on the card or document line that the page is opened for. The item is always shown on the top line. You can view information for other items or for all items by changing the value in the **Item Filter** field.
-
-> [!NOTE]  
->   By default, availability figures on the lines show the total availability of all items under the top item. These figures are displayed in the **Available Quantity** field, and the focus is on the top item. However, information about how many subassemblies you can make may be skewed. To get a true indication of how many of the shown subassemblies you can make, you must clear the **Show Total Availability** check box and then see the figure in the **Able to Make Parent** field.
-
-The **Bottleneck** field specifies which item in the BOM structure restricts you from making a larger quantity than the quantity that is shown in the **Able to Make Top Item** field. For example, the bottleneck item can be a purchased component with an expected receipt date that is too late to make additional units of the top item by the date in the **Needed by Date** field.
-
-## To view the availability of an item by its units of measure
-The **Item Availability by Unit of Measure** page shows the availability of an item in the units of measure that it is stored in.
+### <a name="item-availability-by-bom-level-page"></a>Dostupnost zboží podle úrovně kusovníku
+Stránka **Dostupnost zásob za úroveň kusovníku** zobrazuje informace o zboží na kartě nebo řádku dokladu, pro kterou je stránka otevřena. Zboží je vždy zobrazeno v horním řádku. Informace o jiným zboží nebo o všem zboží můžete zobrazit změnou hodnoty v poli **Filtr zboží**.
 
 > [!NOTE]  
-> To keep this information accurate, you must convert item units of measure. For example, if you purchase an item in one unit of measure, such as boxes, and you sell items in another unit of measure, such as pieces, you must use an item journal to convert the units of measure, or "unbox" items. You can use a negative adjustment item journal line to reduce inventory in the purchase unit of measure, for example boxes, and a positive adjustment to increase inventory in the sales unit of measure, for example pieces. 
+>   Ve výchozím nastavení čísla dostupnosti na řádcích ukazují celkovou dostupnost všeho zboží pod zbožím nejvyšší úrovně. Tyto údaje jsou zobrazeny v poli **Dostupné množství** a důraz je kladen na zboží nejvyšší úrovně. Informace o tom, kolik podsestav můžete vytvořit, však mohou být zkreslené. Chcete-li získat skutečný údaj o tom, kolik zobrazených podsestav můžete vytvořit, musíte zrušit zaškrtnutí políčka **Zobrazit celkovou dostupnost** a poté zobrazit hodnotu v poli **Schopnost vytvořit nadřazené**.
 
-## Assembly Availability Page
-The **Assembly Availability** page shows detailed availability information for the assembly item. It opens:
+Pole **Úzký profil** určuje, které zboží ve struktuře kusovníku vám omezuje možnost vyrobit větší množství, než je množství, které je zobrazeno v poli **Schopnost vytvořit nejvyšší položku**. Například může být úzkým profilem zakoupená komponenta s očekávaným datem přijetí, které je příliš pozdní na to, aby se další jednotky nejvyššího zboží mohly do data v poli **Potřebné dle data** vytvořit.
 
-- Automatically from a sales order line in assemble-to-order scenarios when you enter a quantity that causes a component availability issue.
-- Automatically from an assembly order header when you enter a value in the Quantity field that causes a component availability issue.
-- Manually when you open it from an assembly order. On the Actions tab, in the Functions group, click Show Availability.
+## <a name="assembly-availability-page"></a>Dostupnost sestavy
+Stránka **Dostupnost sestavy** zobrazuje podrobné informace o dostupnosti zboží sestavy. Otevře se:
 
-The **Details** FastTab shows detailed availability information for the assembly item, including how many of the assembly order quantity can be assembled by the due date based on availability of the required components. This is shown in the Able to Assemble field on the Details FastTab.
+- Automaticky z řádku prodejní objednávky ve scénářích sestavení na objednávku, když zadáte množství, které způsobuje problém s dostupností komponent.
+- Automaticky z hlavičky objednávky sestavy, když do pole Množství zadáte hodnotu, která způsobuje problém s dostupností komponent.
+- Ručně, když ji otevřete z objednávky sestavy. Na záložce Akce ve skupině Funkce klikněte na Zobrazit dostupnost.
 
-The value in the **Able to Assemble** field is shown in red font if the quantity is lower than the quantity in the **Remaining Quantity** field, indicating that there are not enough components available to assemble the full quantity.
+Záložka **Podrobnosti** zobrazuje podrobné informace o dostupnosti zboží sestavy, včetně toho, kolik z množství sestavy lze sestavit do data splatnosti na základě dostupnosti požadovaných komponent. To se zobrazí v poli Schopen montáže na záložce Podrobnosti.
 
-The **Lines** FastTab shows detailed availability information for the assembly components.
+Pokud je množství menší než množství v poli **Zůstatek (množství)**, je hodnota v poli **Schopen montáže** zobrazena červeně, což znamená, že není k dispozici dostatek komponent k sestavení celého množství.
 
-If one or more assembly components are not available, then this is reflected in the **Able to Assemble** field on the line in question as a quantity less than the quantity in the **Remaining Quantity** field on the **Details** FastTab.
+Záložka **Řádky** zobrazuje podrobné informace o dostupnosti komponent sestavy.
 
-## See Also
-[Manage Inventory](inventory-manage-inventory.md)  
-[Assembly Management](assembly-assemble-items.md)  
-[Work with Bills of Materials](inventory-how-work-BOMs.md)    
-[Set Up Locations](inventory-how-setup-locations.md)  
-[Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md)  
-[Sell Products](sales-how-sell-products.md)      
-[Working with Business Central](ui-work-product.md)  
-[General Business Functionality](ui-across-business-areas.md)
+Pokud není k dispozici jedna nebo více součástí sestavy, projeví se to v poli **Schopen montáže** na příslušném řádku jako množství menší než množství v poli **Zůstatek (množství)** na záložce **Podrobnosti**.
 
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Spravovat zásoby](inventory-manage-inventory.md)  
+[Řízení montáže](assembly-assemble-items.md)  
+[Práce s kusovníky](inventory-how-work-BOMs.md)    
+[Nastavení lokace](inventory-how-setup-locations.md)  
+[Převod zásob mezi lokacemi](inventory-how-transfer-between-locations.md)  
+[Prodávané produkty](sales-how-sell-products.md)      
+[Práce s Business Central](ui-work-product.md)  
+[Hlavní obchodní funkcionality](ui-across-business-areas.md)

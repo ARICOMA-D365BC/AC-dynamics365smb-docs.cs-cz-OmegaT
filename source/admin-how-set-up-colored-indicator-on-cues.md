@@ -1,65 +1,62 @@
 ---
-    title: Set up your customized colored indicators for a Cue's activity
+    title: Specify Colored Indicators to Customize Visual Signals About a Cue's Activity for the Company or Individual Users | Microsoft Docs
     description: As an administrator, you can set up Cues that appear on the users' Role Centers to include an indicator that changes color based on the data values in the Cues.
     author: jswymer
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 10/01/2019
     ms.author: jswymer
 
 ---
-# Set Up a Colored Indicator on Cues for the Company or Individual Users
-As an administrator, you can set up Cues that appear on the users' Role Centers to include an indicator that changes color based on the data values in the Cues.  
+# Nastavení barevného indikátoru na hromádkách pro společnost, nebo individuálního uživatele
+Jako správce můžete nastavit hromádky, které se zobrazují v Centrech rolí uživatelů, aby zahrnovaly indikátor, který mění barvu na základě datových hodnot v hromádkách.
 
-The indicator appears as a colored bar along the top border of the Cue tile. It provides a visual signal of the status of the Cue's activity, which can indicate favorable or unfavorable conditions to prompt the user to take action. For example, if a Cue displays ongoing sales invoices, you can set up the indicator to appear green (favorable) when total number of ongoing sales invoices is below 10, and appears red (unfavorable) when the total is greater than 20.  
+Indikátor se zobrazí jako barevný pruh podél horního okraje dlaždice hromádky. Poskytuje vizuální signál o stavu aktivity hromádky, což může naznačovat příznivé nebo nepříznivé podmínky, které vyzve uživatele k akci. Pokud například hromádka zobrazí průběžné prodejní faktury, můžete nastavit, aby se indikátor zobrazoval zeleně (příznivě), když je celkový počet probíhajících prodejních faktur nižší než 10, a zobrazí se červeně (nepříznivě), pokud je součet větší než 20.
 
-From the **Cue Setup** page, you set up indicators for all the Cues that are available in the company database. You can set up the indicators to apply to all users in the company or an individual user only. The indicator settings on the **Cue Setup** page act as the default indicator settings. If the **Cue Setup End User** page is made available to users, then they can personalize the indicators settings that you define on the **Cue Setup** page.  
+Na stránce **Nastavení hromádky** nastavíte indikátory pro všechny hromádky, které jsou dostupné v databázi společnosti. Indikátory můžete nastavit tak, aby se vztahovaly na všechny uživatele ve společnosti nebo pouze na jednotlivé uživatele. Nastavení indikátoru na stránce **Nastavení hromádky** fungují jako výchozí nastavení. Pokud je stránka **Nastavení hromádky** uživatelům k dispozici, mohou přizpůsobit nastavení indikátorů, které definujete na stránce **Nastavení hromádky**.
 
-To set up the indicator, you specify up to two threshold values that define three ranges of data values (low, middle, and high) to which you can apply a different color (or style).  
+Chcete-li nastavit označení, určete až dvě prahové hodnoty, které definují tři rozsahy datových hodnot (dolní, střední a vysoká), na které můžete použít jinou barvu (nebo styl).
 
-### To set up colored indicators on Cues  
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cue Setup**, and then choose the related link.  
+### Nastavení barevných označení v Hromádkách
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení hromádky** a poté vyberte související odkaz.
 
-     The **Cue Setup** page appears. The page lists the indicators that are currently setup up on Cues. Indicators that apply to all users in the company have a blank **User Name** field. Indicators that apply to a specific user include the user's name in the **User Name** field.  
+   Zobrazí se stránka **Nastavení hromádky**. Na stránce jsou uvedené označení, které jsou aktuálně nastaveny v Hromádce. Indikátory, které se vztahují na všechny uživatele ve společnosti, mají pole **Uživatelské jméno** prázdné. Indikátory, které se vztahují na konkrétního uživatele, zahrnují jméno uživatele v poli **Uživatelské jméno**.
 
-    > [!NOTE]  
-    >  If you set up a company-wide indicator and a user modifies the indicator later on, then a separate entry for the indicator appears in list for that user.  
+   > [!NOTE]
+   > Pokud nastavíte celofiremní indikátor a uživatel jej později upraví, objeví se v seznamu pro tohoto uživatele samostatný záznam pro tento indikátor.
 
-2. Choose **Edit List** action.  
-3. To set up an indicator for a Cue that is not listed on the page, choose the **New** action, and then fill in the fields as described in the following. If you want to modify an existing indicator, go to the next step.  
+2. Zvolte akci **Upravit přehled**.
+3. Chcete-li nastavit indikátor pro hromádku, která není uvedena na stránce, vyberte akci **Nový** a vyplňte pole podle následujícího popisu. Pokud chcete upravit existující indikátor, přejděte k dalšímu kroku.
 
-    |  Field  |  Description  |    
-    |---------|---------------|  
-    |**User Name**|If you want to set up the indicator for all users, leave this field blank.<br /><br /> If you want to set up the indicator for a specific user, then set this field to the user name.|  
-    |**Table No**|Specifies the ID of the table object that contains the Cue. Use the drop down list to find the table. The drop down list includes all Cue tables in the company database.<br /><br /> The **Table Name** field will be automatically filled in based on your selection.|  
-    |**Field No**|Specifies the ID of the Cue that you want to set up an indicator on. Use the drop down list to find the Cue that you want. **Note:**  The Cue ID corresponds to the field number that is assigned to the Cue in the table. <br /><br /> The **Field Name** field is automatically filled in based on your selection|  
+   | Pole | Popis |
+   |---------|---------------|  
+   | **Název uživatele** | Chcete-li nastavit indikátor pro všechny uživatele, ponechte toto pole prázdné.<br /><br /> Pokud chcete nastavit indikátor pro konkrétního uživatele, nastavte toto pole na název uživatele. |
+   | **Číslo tabulky** | Určuje ID objektu tabulky, který obsahuje hromádku. K nalezení tabulky použijte rozevírací seznam. Rozevírací seznam obsahuje všechny tabulky hromádky v databázi společnosti<br /><br /> Pole **Název tabulky** pole bude automaticky doplněno podle vašeho výběru. |
+   | **Číslo pole** | Určuje ID hromádky, na které chcete nastavit indikátor. Pomocí rozevíracího seznamu najděte hromádku, kterou chcete. **Poznámka:**  ID hromádky odpovídá číslu pole, které je hromádce přiřazeno v tabulce. <br /><br /> Pole **Název pole** je automaticky vyplněno na základě vaší volby.  |
 
-4. To set up the indicator for a Cue, set the fields as described in the following table.  
+4. Chcete-li nastavit indikátor hromádky, nastavte pole podle popisu v následující tabulce.
 
-    |  Field  |  Description  |    
-    |---------|---------------|  
-    |**LowStyle**|Specifies the color of the indicator when the Cue's value is below the value of the **Threshold 1** field.|  
-    |**LowThreshold**|Specifies the value at or above which the indicator changes to the color specified by the **Middle Range Style** field.|  
-    |**MiddleStyle**|Specifies the color of the indicator when Cue's value is greater than or equal to the value of the **Threshold 1** field but less than or equal to the value of the **Threshold 2** field.|  
-    |**HighThreshold**|Specifies the value above which the indicator changes to the color specified by the **High Range Style** field.|  
-    |**HighStyle**|Specifies the color to use when the Cue's value is above the value of the **Threshold 2** field.|  
+   | Pole | Popis |
+   |---------|---------------|  
+   | **LowStyle** | Určuje barvu indikátoru, když je hodnota hromádky pod hodnotou pole  **Práh 1**. |
+   | **LowThreshold** | Určuje hodnotu, při které indikátor změní barvu určenou v poli **Middle Range Style**. |
+   | **MiddleStyle** | Určuje barvu indikátoru, když je hodnota hromádky větší nebo rovná hodnotě pole **Práh 1**, ale menší nebo rovna hodnotě pole **Práh 2**. |
+   | **HighThreshold** | Určuje hodnotu, nad kterou se indikátor změní na barvu určenou v poli **High Range Style**. |
+   | **HighStyle** | Určuje barvu, která se má použít, když je hodnota hromádky vyšší než hodnota pole **Práh 2**. |
 
-     The following table lists the colors that correspond to the options of the **LowStyle**, **MiddleStyle**, and **HighStyle** fields.  
+   Následující tabulka uvádí barvy, které odpovídají možnostem polí **LowStyle**, **MiddleStyle**, a **HighStyle**.
 
-    |  Option  |  Color  |  
-    |----------|---------|  
-    |**None**|No color (same color as the Cue tile)|  
-    |**Favorable**|Green|  
-    |**Unfavorable**|Red|  
-    |**Ambiguous**|Yellow|  
-    |**Subordinate**|Gray|  
+   | Možnost | Barva |
+   |----------|---------|  
+   | **None** | Žádná barva (stejná barva jako dlaždice hromádky) |
+   | **Favorable** | Zelená |
+   | **Unfavorable** | Červená |
+   | **Ambiguous** | Žlutá |
+   | **Subordinate** | Šedá |
 
-## See Also
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také

@@ -1,65 +1,60 @@
 ---
-title: Set Up Bank Data Conversion| Microsoft Docs
-description: You can set up bank accounts to keep track of transactions and import or export bank feeds, such as Yodlee.
+title: Nastavení převodu Bankovních dat | Microsoft Docs
+description: 'Můžete nastavit bankovní účty, abyste mohli sledovat transakce a importovat nebo exportovat bankovní zdroje, jako je například Yodlee.'
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: Yodlee, feed, stream, data exchange, AMC, bank file import, bank file export, re-export, bank transfer, AMC, AMC Banking 365 Fundamentals extension, funds transfer
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'Yodlee, feed, stream, data exchange, AMC, bank file import, bank file export, re-export, bank transfer, AMC, bank data conversion service, funds transfer'
+ms.date: 10/02/2018
+ms.author: sgroespe
 ---
-# Set Up the AMC Banking 365 Fundamentals extension
-A global provider of services to convert payment information to any data format that your bank requires is connected and ready to be enabled in [!INCLUDE[prod_short](includes/prod_short.md)]. This is referred to in [!INCLUDE[prod_short](includes/prod_short.md)] as the AMC Banking 365 Fundamentals extension.
+# <a name="set-up-the-bank-data-conversion-service"></a>Nastavení služby převodu bankovních dat
+Globální poskytovatel služeb, který převádí informace o platbách do libovolného formátu dat, který banka vyžaduje, je připojen a připraven k zapnutí v [!INCLUDE[d365fin](includes/d365fin_md.md)]. Tento postup se označuje v [!INCLUDE[d365fin](includes/d365fin_md.md)] jako služba pro převod bankovních dat.
 
-You can export payment lines from the **Payment Journal** page to a file or a data stream that you then upload to your bank for automatic processing so that you do not have to make electronic payments individually. For more information, see [Export Payments to a Bank File](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file).
+Platební řádky můžete exportovat ze stránky **Platební deník** do souboru nebo datového toku, který pak nahrajete do své banky pro automatické zpracování, takže nemusíte provádět elektronické platby jednotlivě. Další informace naleznete v části [Export plateb do Bankovních dokladů](payables-how-export-payments-bank-file.md).
 
-You can import bank statement files into the **Payment Reconciliation Journal** page by using the AMC Banking 365 Fundamentals extension to convert a file that you receive from your bank to a data stream that [!INCLUDE[prod_short](includes/prod_short.md)] can import. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
+Soubory bankovních výpisů můžete importovat na stránku **deník odsouhlasení plateb** pomocí služby pro převod bankovních dat a převést soubor, který obdržíte z banky, do datového formátu, který je [!INCLUDE[d365fin](includes/d365fin_md.md)] schopen importovat. Další informace naleznete v části [Automatické vyrovnání plateb a odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md).
 
-As an alternative to importing bank statements with the AMC Banking 365 Fundamentals extension, you can use the Envestnet Yodlee Bank Feeds service. For more information, see [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md).
+Jako alternativu k importu bankovních výpisů pomocí služby převodu bankovních údajů můžete použít službu Envestnet Yodlee Bank Feeds. Pro více informací běžte na [Nastavení Envestnet  yodlee Bank služby](bank-how-setup-bank-statement-service.md).
 
-To import or export bank files, you must set up your own bank account and your vendors' bank accounts. For more information, see [Set Up Bank Accounts](bank-how-setup-bank-accounts.md).
+Chcete-li importovat nebo exportovat bankovní soubory, musíte si nastavit vlastní bankovní účet a bankovní účty svých dodavatelů. Další informace naleznete v části [Nastavení bankovních účtů](bank-how-setup-bank-accounts.md).
 
 > [!NOTE]  
-> The AMC Banking 365 Fundamentals extension may impose a limit on the number of lines that can be exported in one file. You will receive an error message if the limit is exceeded. It is recommended that bank statement files do not exceed 1000 lines as the processing time in the AMC Banking 365 Fundamentals extension may otherwise increase significantly.
+> Služba převodu bankovních dat může omezit počet řádků, které lze exportovat do jednoho souboru. Při překročení limitu se zobrazí chybová zpráva. Doporučuje se, aby soubory bankovních výpisů nepřekročily 1000 řádků, jelikož doba zpracování v bankovní službě převodu dat se může výrazně zvýšit.
 
-## To sign your company up for the AMC Banking 365 Fundamentals extension
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Data Conv. Service Setup**, and then choose the related link.  
-2. The **Bank Data Conv. Service Setup** page opens with three fields prefilled with relevant URLs of the provider of AMC Banking 365 Fundamentals extension.
+## <a name="to-sign-your-company-up-for-the-bank-data-conversion-service"></a>Zaregistrování vaší společnosti na službu převodu bankovních dat
+1. Zvolte ![,žárovku, která otevře funkci Tell Me](media/ui-search/search_small.png "co chcete udělat"), zadejte **Služba konv.bank. dat** a pak vyberte související odkaz.  
+2. **Převod konv. bankovních dat** se třemi políčky předem vyplněnými příslušnými adresami URL poskytovatele služby převodu bankovních dat.
 
     > [!NOTE]  
-    >   In the CRONUS International Ltd. demonstration database, the User Name and Password fields are prefilled with demonstration logon information, which you will replace with your company’s actual information as you sign up for the AMC Banking 365 Fundamentals extension.
-3. In the **Sign-up URL** field, choose the browser button to open the service provider’s sign-up page.  
-4. On the sign-up page of the bank data service provider, enter the user name and password for your company’s subscription to the service, and then complete the sign-up process as instructed by the service provider.
+    >   V demonstrační databázi jsou pole Uživatelské jméno a Heslo předem vyplněny přihlašovacími informacemi, které nahradíte skutečnými informacemi vaší společnosti při přihlášení k službě převod bankovní dat.
+3. V poli **Registrační adresa** vyberte tlačítko prohlížeče a otevřete přihlašovací stránku poskytovatele služeb.  
+4. Na přihlašovací stránce poskytovatele služby bankovních dat zadejte uživatelské jméno a heslo pro předplatné vaší společnosti a dokončete přihlašovací proces podle pokynů poskytovatele služby.
 
-    Your company is now signed up for the AMC Banking 365 Fundamentals extension. Proceed to enter the user name and password that you specified for the service in the related setup fields in [!INCLUDE[prod_short](includes/prod_short.md)].
+    Vaše společnost je nyní zaregistrována pro službu převodu bankovních dat. Pokračujte v zadání uživatelského jména a hesla, které jste zadali do příslušných polí v nastavení v [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-5. On the **Bank Data Conv. Service Setup** page, in the User **Name** field, enter the same value that you entered as logon name on the service provider’s page in step 4.
-6. In the **Password** field, enter the same value that you entered in the **Password** field on the service provider’s page in step 4.
-
-> [!NOTE]  
-> You login data is automatically encrypted.
-
-## To view or update the list of currently supported bank data formats
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Data Conv. Service Setup** , and then choose the related link.
-2. On the **Bank Data Conv. Service Setup** page, choose the **Bank Name - Data Conversion List** action to open the list of bank names representing bank data formats that are supported by the conversion service.
-3. On the **Bank Name - Data Conversion List** page, choose the **Update Bank Name List** action.
-
-The list of bank data formats that are supported by the AMC Banking 365 Fundamentals extension is now updated. This is the list of bank names, filtered by the country/region, that you can select from in the **Bank Name - Data Conversion** field on the **Bank Account Card** page.
+5. Na stránce **Nastavení Konverze bankovních dat** v poli **Uživatel** Jméno zadejte stejnou hodnotu, kterou jste zadali jako přihlašovací jméno na stránce poskytovatele služby v kroku 4.
+6. V poli **Heslo** zadejte stejnou hodnotu, kterou jste zadali v poli **Heslo** na stránce poskytovatele služby v kroku 4.
 
 > [!NOTE]  
->   The update of supported bank data formats also occurs when you select or enter a value in the **Bank Name - Data Conversion** field on the bank account.
+> Vaše přihlašovací údaje jsou automaticky šifrovány.
 
-You have now signed up for the AMC Banking 365 Fundamentals extension. Proceed to reflect the sign-up information on every bank account that will use the service.
+## <a name="to-view-or-update-the-list-of-currently-supported-bank-data-formats"></a>Zobrazení nebo aktualizace seznamu aktuálně podporovaných formátů bankovních dat
+1. Zvolte ![,žárovku, která otevře funkci Tell Me](media/ui-search/search_small.png "co chcete udělat"), zadejte **Služba konv. služby konver. bank. dat** a pak vyberte související odkaz.
+2. Na stránce **Nastavení Konverze bankovních dat** , zvolte akci **Název banky - Přehled převodu dat** a otevřete seznam názvů bank představujících formáty bankovních dat podporované službou převodu.
+3. Na stránce **Název banky - seznam převodu dat** vyberte akci **Aktualizovat seznam bankovních názvů**.
 
-## See Also
-[Setting Up Banking](bank-setup-banking.md)  
-[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+Seznam formátů bankovních dat, které jsou podporovány službou převodu bankovních dat je nyní aktualizován. Toto je seznam bankovních názvů filtrovaný podle země nebo oblasti, ze kterého můžete vybírat v poli **název banky-převod dat** na stránce **Karta bankovního účtu** .
 
+> [!NOTE]  
+>   Aktualizace podporovaných formátů bankovních dat nastane také, když vyberete nebo zadáte hodnotu do pole **Název banky - převod dat** na bankovním účtu.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+Nyní jste se zaregistrovali na službu převodu bankovních dat. Postupujte podle přihlašovacích informací na každém bankovním účtu, který služba použije.
+
+## <a name="see-also"></a>Viz také
+[Nastavení bankovnictví](bank-setup-banking.md)  
+[Správa bankovních účtů](bank-manage-bank-accounts.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

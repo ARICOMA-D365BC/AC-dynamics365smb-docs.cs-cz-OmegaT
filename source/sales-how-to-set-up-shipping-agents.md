@@ -1,6 +1,6 @@
 ---
-    title: How to Set Up Shipping Agents | Microsoft Docs
-    description: You can set up a code for each of your shipping agents and enter information about them.
+    title: Jak nastavit přepravce | Microsoft Docs
+    description: Můžete nastavit kód pro každého z vašich přepravců a zadat o nich informace.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -13,34 +13,34 @@
     ms.author: edupont
 
 ---
-# Set Up Shipping Agents
-You can set up a code for each of your shipping agents and enter information about them.  
+# Nastavení přepravců
+Můžete nastavit kód pro každého z vašich přepravců a zadat o nich informace.
 
-If you enter an Internet address for the shipping agent, and the agent provides package tracking services on the Internet, you can use the automatic package tracking feature. For more information, see [Track Packages](sales-how-track-packages.md).
+Pokud pro přepravce zadáte internetovou adresu a přepravce poskytuje služby sledování zásilek na internetu, můžete použít funkci automatického sledování zásilek. Pro více informací navštivte [Sledování balíčků](sales-how-track-packages.md).
 
-When you set up shipping agents on your sales orders, you can also specify the services that each shipping agent offers.  
-For each shipping agent, you can set up an unlimited number of services, and you can specify a shipping time for each service.  
+Při nastavování přepravců na prodejních objednávkách můžete také určit služby, které každý přepravce nabízí.  
+Pro každého přepravce můžete nastavit neomezený počet služeb a pro každou službu můžete zadat dobu dodávky.
 
-When you have assigned a shipping agent service to a sales order line, the shipping time of the service will be included in the order promising calculation, for that line. For more information, see [Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md).
+Po přiřazení služby přepravce k řádku prodejní objednávky bude doba dodávky služby zahrnuta do výpočtu příslibu vyřízení objednávky pro tento řádek. Pro více informací navštivte [Výpočet data přislíbení objednávky](sales-how-to-calculate-order-promising-dates.md).
 
-## To set up a shipping agent  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Shipping Agents**, and then choose the related link.  
-2.  Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].  
-3.  Choose the **Shipping Agent Services** action.
-4. In the **Shipping Agent Services**, fill in the fields as necessary.
+## Nastavení přepravce
+1. Vyberte ikonu ![Žárovku, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Přepravci** a poté vyberte související odkaz.
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
+3. Vyberte akci **Služby přepravce**.
+4. Na stránce **Služby přepravce**, vyplňte pole podle potřeby.
 
 > [!NOTE]  
->  If you delete the shipping agent on the order line, the shipping agent service code is also deleted. The contents of fields that were based in part on the shipping agent service are recalculated.  
+> Pokud na řádku objednávky odstraníte přepravce, odstraní se také kód služby přepravce. Obsah polí, která byla částečně založena na službě přepravce, se přepočítá.
 
-## See Also
-[Set Up Shipment Methods](sales-how-set-up-shipment-methods.md)  
-[Track Packages](sales-how-track-packages.md)    
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+## Viz také
+[Nastavení způsobu přepravy](sales-how-set-up-shipment-methods.md)    
+[Sledování balíčků](sales-how-track-packages.md)      
+[Správa skladů](warehouse-manage-warehouse.md)    
+[Zásoby](inventory-manage-inventory.md)    
+[Nastavení správy skladu](warehouse-setup-warehouse.md)       
+[Správa montáže](assembly-assemble-items.md)      
+[Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)    
+[Práce s [! INCLUDE[​​prod_short](includes/prod_short.md)]] (ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

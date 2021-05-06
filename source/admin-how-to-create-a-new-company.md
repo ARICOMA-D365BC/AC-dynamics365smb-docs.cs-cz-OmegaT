@@ -1,77 +1,74 @@
 ---
-    title: How to Create a New Company | Microsoft Docs
-    description: To use RapidStart Services tables and pages are created, but there is no data in them.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Jak vytvořit novou společnost | Microsoft Docs
+description: 'Pro použití služeb RapidStart jsou vytvořeny tabulky a stránky, ale v nich nejsou žádná data.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Create a New Company
-To use RapidStart Services for [!INCLUDE[prod_short](includes/prod_short.md)], you first create a new company for which you want to perform a customer implementation. When you create a new company, the standard [!INCLUDE[prod_short](includes/prod_short.md)] tables and pages are created, but there is no data in them.
+# <a name="create-a-new-company"></a>Vytvoření nové společnosti
+Chcete-li používat služby RapidStart pro [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte nejprve vytvořit novou společnost, pro kterou chcete provést implementaci zákazníka. Když vytvoříte novou společnost, vytvoří se standardní tabulky a stránky [!INCLUDE[d365fin](includes/d365fin_md.md)], ale v nich nejsou žádná data.
 
-In addition, you can apply specific setup data to your company after you initialize it. The information is provided in a configuration package, a .rapidstart file, which delivers content in a compressed format.  
+Kromě toho můžete po inicializaci použít ve vaší společnosti konkrétní instalační data. Informace jsou poskytovány v konfiguračním balíčku, souboru .rapidstart, který dodává obsah v komprimovaném formátu.  
 
-Example configuration packages, including country/region-specific files, are included with the CRONUS demonstration company. Use the following procedures to use the example configuration package with a new company.  
+Příklady konfiguračních balíčků, včetně souborů specifických pro zemi nebo oblast, jsou součástí demonstrační společnosti CRONUS. Použijte následující postupy pro použití vzorového konfiguračního balíčku s novou společností.  
 
-## To use the sample BASICCONFIG configuration package  
-1. Open the CRONUS International Ltd. company. For more information, see [Change Basic Settings](ui-change-basic-settings.md).
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Packages**, and then choose the related link.  
-3. Choose the BASICCONFIG package from the list, and then choose the **Export Package** action.  
+## <a name="to-use-the-sample-basicconfig-configuration-package"></a>Použití ukázkového konfiguračního balíčku BASICCONIG  
+1. Otevřete společnost CRONUS International Ltd. Pro další informace se podívejte na [Změna základního nastavení](ui-change-basic-settings.md).
+2. Vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zvolte **Konfigurační balíčky** a poté vyberte související odkaz.  
+3. Vyberte balíček BASICCINFOG ze seznamu a poté vyberte akci **Exportovat balíček**.  
 
-Use the following procedure to create a new company, and use the BASICCONFIG package as part of the process.  
+Následující postup použijte k vytvoření nové společnosti a jako součást procesu použijte balíček BASICCONFIG.  
 
-## To create a new company  
-1. Create a new company. For more information, see [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).
-2. From the RapidStart Services Implementer Role Center, you can now import the configuration package that you exported from the CRONUS International Ltd. company.
+## <a name="to-create-a-new-company"></a>Vytvoření nové společnosti  
+1. Vytvořte novou společnost. Pro více informací navštivte [Vytváření nových společností v [!INCLUDE[d365fin](includes/d365fin_md.md)]](about-new-company.md).
+2. Z role Implementátor služeb RapidStart můžete nyní importovat konfigurační balíček, který jste exportovali od společnosti CRONUS International Ltd.
 
-After you create a new company, some tables are automatically filled in, even if no company template is applied. For example, you can review the standard codes for posting and batch transactions on the **Source Code** page. If you provide a local version of [!INCLUDE[prod_short](includes/prod_short.md)], you should review this table and consider any local language issues.
+Po vytvoření nové společnosti jsou některé tabulky automaticky vyplněny, i když není použita žádná firemní šablona. Na stránce **Zdrojový kód** si můžete například prohlédnout standardní kódy pro účtování a dávkové transakce. Pokud poskytujete místní verzi [!INCLUDE[d365fin](includes/d365fin_md.md)], měli byste si přečíst tuto tabulku a zvážit případné problémy s místním jazykem.
 
-## About Data Tables
-[!INCLUDE[prod_short](includes/prod_short.md)], data tables come in two basic types: Master and Setup. When you are setting up a company configuration, you can use these types to focus your configuration strategy.  
+## <a name="about-data-tables"></a>O datových tabulkách
+[!INCLUDE[d365fin](includes/d365fin_md.md)], data přicházejí ve dvou základních typech: hlavní a data nastavení. Při nastavování firemní konfigurace můžete pomocí těchto typů zaměřit svou konfigurační strategii.  
 
-### Master Data Tables  
-The following table lists some of the master data tables. When you initialize a new company, these tables are empty.  
+### <a name="master-data-tables"></a>Tabulky hlavních dat  
+V následující tabulce jsou uvedeny některé tabulky hlavních dat. Při inicializaci nové společnosti jsou tyto tabulky prázdné.  
 
-|Table No.|Table Name|  
+|Číslo tabulky|Název tabulky|  
 |-------------------|--------------------|  
-|15|G/L Account|  
-|18|Customer|  
-|23|Vendor|  
-|27|Item|  
-|5050|Contact|  
+|15|Finanční účet|  
+|18|Zákazník|  
+|23|Dodavatel|  
+|27|Zboží|  
+|5050|Kontakt|  
 
-### Setup Data Tables  
-The following table lists some of the setup data tables, in which you capture setup information in the configuration questionnaire. These tables contain baseline information when the company is created.  
+### <a name="setup-data-tables"></a>Tabulky dat nastavení  
+V následující tabulce jsou uvedeny některé tabulky dat nastavení, ve kterých zaznamenáváte informace o nastavení do konfiguračního dotazníku. Tyto tabulky obsahují základní informace o založení společnosti.  
 
-|Table No.|Table Name|  
+|Číslo tabulky|Název tabulky|  
 |-------------------|--------------------|  
-|98|General Ledger Setup|  
-|311|Sales & Receivables Setup|  
-|312|Purchases & Payables Setup|  
-|313|Inventory Setup|  
+|98|Nastavení financí|  
+|311|Nastavení prodeje a pohledávek|  
+|312|Nastavení nákupu a závazků|  
+|313|Nastavení zásob|  
 
-In addition to setup data tables, [!INCLUDE[prod_short](includes/prod_short.md)] also has setup-type data tables that specify core information about the company and its business processes. The following table lists some of them.  
+Kromě datových tabulek nastavení má [!INCLUDE[d365fin](includes/d365fin_md.md)] také datové tabulky typu nastavení, které specifikují základní informace o společnosti a jejích obchodních procesech. Následující tabulka uvádí některé z nich.  
 
-|Table No.|Table Name|  
+|Číslo tabulky|Název tabulky|  
 |-------------------|--------------------|  
-|3|Payment Terms|  
-|4|Currency|  
-|6|Customer Price Groups|  
-|5700|Stockkeeping Unit|
+|3|Platební podmínky|  
+|4|Měna|  
+|6|Cenové skupiny odběratele|  
+|5700|Skladová jednotka|
 
   
 
-## See Also  
-[Apply Configurations to New Companies](admin-apply-configuration-to-new-companies.md)  
-[Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  
-[Administration](admin-setup-and-administration.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+[Aplikování konfigurace pro nové společnosti](admin-apply-configuration-to-new-companies.md)  
+[Založení společnosti pomocí služeb RapidStart](admin-set-up-a-company-with-rapidstart.md)  
+[Správa](admin-setup-and-administration.md)

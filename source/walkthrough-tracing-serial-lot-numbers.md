@@ -13,293 +13,293 @@
     ms.author: bholtorf
 
 ---
-# Walkthrough: Tracing Serial/Lot Numbers
+# Návod: Sledování sériových čísel
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]  
+[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
 
-When product defects occur, the errors must be identified and affected items must be prevented from leaving the company. If defective items have already been shipped, you must trace who received them and, if you need to, recall the items.  
+Pokud se vyskytnou vady produktu, musí být chyby identifikovány a musí se zabránit tomu, aby dotčené zboží opustilo společnost. Pokud již bylo vadné zboží odesláno, musíte sledovat, kdo jej obdržel, a pokud potřebujete zboží odvolat.
 
-The first task of defects management is to investigate where the defective items came from and where they were used. This investigation is based on historic data and is made easier by searching through item tracking entries using the **Item Tracing** page.  
+Prvním úkolem řízení závad je prošetřit, odkud vadné zboží pochází a kde bylo použito. Toto šetření je založeno na historických datech a tím je usnadněno prohledávání položek sledování zboží pomocí stránky **Trasování zboží**.
 
-The second task of defects management is to determine whether the traced items are planned for in open documents, such as non-posted sales orders or consumption journals. This work is performed on the **Find entries** page. You can use the Find Entries feature to search all kinds of database records.  
+Druhým úkolem správy závad je určit, zda je vysledované zboží plánováno v otevřených dokladech, jako jsou nezaúčtované prodejní objednávky nebo deníky spotřeby. Tato práce se provádí na stránce **Najít položky**. Funkci Najít položky můžete použít k prohledávání všech druhů databázových záznamů.
 
-## About This Walkthrough
+## Návod
 
-This walkthrough demonstrates how to identify which items are defective, which vendor supplied them, and where they are used so that those orders can be stopped or recalled.  
+Tento návod ukazuje, jak zjistit, které položky jsou vadné, který dodavatel je dodal a kde jsou používány, aby bylo možné tyto objednávky zastavit nebo stáhnout.
 
-This walkthrough illustrates the following tasks:  
+Tento návod ilustruje následující úkoly:
 
-- Tracing usage to origin.  
-- Tracing origin to usage.  
-- Searching for all current records which hold the traced serial/lot number.  
+- Sledování využití k původu.
+- Sledování původu k použití.
+- Hledání všech aktuálních záznamů, které obsahují sledované sériové číslo / číslo šarže.
 
-## Roles
+## Role
 
-This walkthrough demonstrates tasks that are performed by the following user roles:  
+Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatelskými rolemi:
 
-- Quality Controller  
-- Warehouse Manager  
-- Order Processor  
-- Purchasing Agent  
+- Kontrolor kvality
+- Správce skladu
+- Zpracovatel objednávek
+- Nákupní agent
 
-## Prerequisites
+## Předpoklady
 
-To complete this walkthrough, you will need:  
+K dokončení tohoto návodu budete potřebovat:
 
-- The [!INCLUDE[prod_short](includes/prod_short.md)] company.  
-- To create new items and several business transactions by following the [Prepare Sample Data](walkthrough-tracing-serial-lot-numbers.md#prepare-sample-data)..  
+- Společnost [!INCLUDE[prod_short](includes/prod_short.md)].
+- Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle [Příprava ukázkových dat](walkthrough-tracing-serial-lot-numbers.md#prepare-sample-data)..
 
-## Story
+## Příběh
 
-Ricardo, the quality controller, is acting on a sales return of item 1002, Racing Bike. The customer, Selangorian Ltd., complained that the frame has cracked welding seams. Quality control engineers have confirmed that the racing frame of the returned bike is defective. The quality controller must now determine:  
+Ricardo, kontrolor kvality, jedná o návratnost prodeje položky 1002, Závodní kolo. Zákazník, společnost Selangorian Ltd., si stěžoval, že rám kola je prasklý. Kontrolor kvality potvrdil, že závodní rám vráceného kola je vadný. Kontrolor kvality musí nyní určit:
 
-- Which lot of racing frames was faulty.  
-- On which purchase order the faulty lot was received.  
+- Které závodní rámy byly vadné.
+- Na kterou nákupní objednávku byla chybná šarže přijata.
 
-From the sales department, the quality controller knows that the returned racing bike, item 1002, had the serial number SN1. By using this basic information, he must determine where the finished racing bike was last used, and then he must trace backward to the earliest origin to establish which lot number the faulty component, the racing frame, came from.  
+Z obchodního oddělení kontrolér kvality ví, že vrácené závodní kolo, položka 1002, mělo sériové číslo SN1. Pomocí těchto základních informací musí určit, kde bylo hotové závodní kolo naposledy použito, a pak ho musí vysledovat zpět k nejstaršímu původu, aby zjistil, ze kterého čísla šarže vadná součást pochází.
 
-The results of this first item tracking task identify which racing frames were defective and which vendor supplied them. Afterward, but in the same overall tracking process, the quality controller must find all the sold racing bikes that contain racing frames from the faulty lot so that those orders can be stopped or recalled. Lastly, the quality controller must find any open documents where the faulty lot is used so that no additional transactions are made.  
+Výsledky tohoto prvního úkolu sledování zboží identifikují, které závodní rámy byly vadné a který dodavatel je dodal. Poté, ale ve stejném celkovém sledovacím procesu, musí kontrolor kvality najít všechna prodaná závodní kola, která obsahují závodní rámy z vadné šarže, aby bylo možné tyto objednávky zastavit nebo odvolat. A konečně, kontrolor kvality musí najít všechny otevřené dokumenty, kde se používá vadná šarže, aby se neprováděly žádné další transakce.
 
-The first two defects-management tasks are performed on the **Item Tracing** page. The last task is performed on the **Find entries** page in integration with the **Item Tracing** page.  
+První dvě úlohy správy vad se provádějí na stránce **Trasování zboží**. Poslední úkol se provádí na stránce **Najít položky** v integraci se stránkou **Trasování zboží**.
 
-## Prepare Sample Data
+## Příprava ukázkových dat
 
-You must create the following new items:  
+Musíte vytvořit následující nové zboží:
 
-- 2000, Racing Frame: lot-specific tracking, component of 1002  
-- 1002, Racing Bike: serial number-specific tracking  
+- 2000, Závodní rám: sledování specifické pro šarže, součást 1002
+- 1002, Závodní kolo: sledování specifické pro sériové číslo
 
-Then you must create various purchase, production, and sales transactions with the two items.  
+Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které obsahují oba zboží.
 
-### To create the items  
+### Vytvoření zboží
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
-2. Choose the **New** action.  
-3. In the **No.** field, enter **2000**, and then proceed to fill in the following fields.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Do pole **Číslo** zadejte **2000** a poté vyplňte následující pole.
 
-    |Description|Base Unit of Measure|Gen. Prod. Posting Group|VAT Prod. Posting Group|Inventory Posting Group|Item Tracking Code|  
-    |-----------|--------------------|------------------------|-----------------------|--------------------|------------------|  
-    |Racing Frame|PCS|RAW MAT|VAT25|RAW MAT|LOTALL|  
+   | Popis | Základní měrná jednotka | Obecná  účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Kód sledování zboží |
+   |-----------|--------------------|------------------------|-----------------------|--------------------|------------------|  
+   | Závodní rám | KS | SUROVINY | DPH19 | SUROVINY | DÁVKAVŠE |
 
-    > [!NOTE]  
-    >  To enter the base unit of measure, choose the **New** button, and then select **PSC** on the **Item Units of Measure** page.  
+   > [!NOTE]  
+   > Chcete-li zadat základní měrnou jednotku, zvolte tlačítko **Nový** a poté na stránce **Měrné jednotky zboží** vyberte **KS**.
 
-4. All other fields have acceptable default data or do not have to be filled in.  
-5. Choose the **OK** button to create the first new item card, 2000.  
-6. Choose **New**.  
-7. In the **No.** field, enter **1002**, and then proceed to fill in the following fields.  
+4. Všechna ostatní pole mají přijatelná výchozí data nebo nemusí být vyplněna.
+5. Zvolte tlačítko **OK** a vytvořte první novou kartu položky, 2000..
+6. Vyberte **Nový**.
+7. Do pole **Číslo** zadejte **1002** a poté vyplňte následující pole.
 
-    |Description|Base Unit of Measure|Gen. Prod. Posting Group|VAT Prod. Posting Group|Inventory Posting Group|Replenishment System|Item Tracking Code|  
-    |-----------------|--------------------------|------------------------------|-----------------------------|-----------------------------|--------------------------|------------------------|  
-    |Racing Bike|PCS|RETAIL|VAT25|FINISHED|Prod. Order|SNALL|  
+   | Popis | Základní měrná jednotka | Obecná  účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Systém doplnění | Kód sledování zboží |
+   |-----------------|--------------------------|------------------------------|-----------------------------|-----------------------------|--------------------------|------------------------|  
+   | Závodní kolo | KS | OBCHOD | DPH19 | DOKONČENÉ | výr. zakázky | SČVŠE |
 
-    > [!NOTE]  
-    >  To enter the base unit of measure, choose the **New** button, and then select **PSC** on the **Item Units of Measure** page.  
+   > [!NOTE]  
+   > Chcete-li zadat základní měrnou jednotku, zvolte tlačítko **Nový** a poté na stránce **Měrné jednotky zboží** vyberte **KS**.
 
-    Next, define the item's manufacturing setup.
+   Dále definujte nastavení výroby položky.
 
-8. On the **Replenishment** FastTab, in the **Routing No.** field, enter **1000**.  
-9. Choose the **Production BOM No.** field, and then choose **Advanced**.  
-10. On the **Production BOM List** page, choose the first line, **1000**, and then choose the **Edit** action.  
-11. On the **Production BOM** page, change the value in the **Status** field to **Under Development**.  
-12. Go to an empty line, enter **2000** in the **No.** field, and then enter **1** in the **Quantity Per** field.  
-13. Change the value in the **Status** field back to **Certified**.  
-14. Choose the **OK** button to insert the production BOM on the item card and close the **Production BOM** page.  
+8. Na záložce **Doplnění** zadejte do pole **Číslo TNG postupu** hodnotu **1000**.
+9. Vyberte pole **Číslo výrobního kusovníku** a poté vyberte **Detaily**.
+10. Na stránce **Přehled výr.kusovníků** vyberte první řádek, **1000**, a poté vyberte akci **Upravit**.
+11. Na stránce **Výrobní kusovník**  změňte hodnotu v poli **Stav** na **Ve vývoji**.
+12. Přejděte na prázdný řádek, zadejte **2000** v poli **Číslo** a pak zadejte **1** do pole **Množství za**.
+13. Změňte hodnotu v poli **Stav** zpět na **Certifikováno**.
+14. Kliknutím na tlačítko **OK** vložíte výrobní kusovník na kartu zboží a zavřete stránku **Výrobní kusovník**.
 
-    Next, purchase racing frames from Custom Metals Incorporated.  
+   Dále nakupte závodní rámy od Custom Metals Incorporated.
 
-### To purchase components
+### Nákup komponent
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.  
-2. Choose the **New** action.  
-3. Create a purchase order for vendor, Custom Metals Incorporated, by filling in the following line fields.  
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
+2. Vyberte akci **Nový**.
+3. Vytvořte nákupní objednávku pro dodavatele Custom Metals Incorporated vyplněním následujících polí v řádku.
 
-    |Item|Quantity|Lot No.|  
-    |----|--------|-------|  
-    |2000|10|LOT1|  
+   | Zboží | Množství | Číslo šarže |
+   |----|--------|-------|  
+   | 2000 | 10 | ŠARŽE1 |
 
-4. To enter the lot number, choose the **Item Tracking Lines** action.  
-5. On the **Item Tracking Lines** page, fill in the **Lot No.** and **Quantity (Base)** fields, and then close the page.  
-6. In the **Vendor Invoice No.** field, enter any value.  
-7. Choose the **Post** action, select the **Receive and Invoice** option, and then choose the **OK** button.  
+4. Chcete-li zadat číslo šarže, zvolte akci **Řádky sledování zboží**.
+5. Na stránce **Řádky sledování zboží** vyplňte pole **Číslo šarže** a **Množství (základ)** a poté stránku zavřete.
+6. Do pole **Číslo faktury dodavatele** zadejte libovolnou hodnotu.
+7. Zvolte akci **Účtovat**, vyberte možnost **Příjem a fakturace** a poté klikněte na tlačítko **OK**.
 
-    Next, purchase racing frames from Coolwood Technologies.  
-8. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.  
-9. Choose the **New** action.
-10. Create a purchase order for vendor, Coolwood Technologies, by filling in the following line fields.  
+   Dále si zakupte závodní rámy od Coolwood Technologies.
+8. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
+9. Vyberte akci **Nový**.
+10. Vytvořte nákupní objednávku pro dodavatele Coolwood Technologies vyplněním následujících řádkových polí.
 
-    |Item|Quantity|Lot No.|  
-    |----------|--------------|-------------|  
-    |2000|11|LOT2|  
+   | Zboží | Množství | Číslo šarže |
+   |----------|--------------|-------------|  
+   | 2000 | 11 | ŠARŽE2 |
 
-11. To enter the lot number, on the **Lines** FastTab, in the **Line** group, choose the **Item Tracking Lines** action.  
-12. On the **Item Tracking Lines** page, fill in the **Lot No.** and **Quantity (Base)** fields, and then close the page.  
-13. In the **Vendor Invoice No.** field, enter any value.  
-14. Choose the **Post** action, select the **Receive and Invoice** option, and then choose the **OK** button.  
+11. Chcete-li zadat číslo šarže, na záložce **Řádky** ve skupině **Řádek** vyberte akci **Řádky sledování zboží**.
+12. Na stránce **Řádky sledování zboží** vyplňte pole **Číslo šarže** a **Množství (základ)** a poté stránku zavřete.
+13. Do pole **Číslo faktury dodavatele** zadejte libovolnou hodnotu.
+14. Zvolte akci **Účtovat**, vyberte možnost **Příjem a fakturace** a poté klikněte na tlačítko **OK**.
 
-    Next, produce two racing bikes, SN1 and SN2.  
+   Dále vyrobte dvě závodní kola, SN1 a SN2.
 
-### To produce end items
+### Vytvoření koncových položek
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Prod. Orders**, and then choose the related link.  
-2. Choose the **New** group.  
-3. Create a new released production order by filling in the following fields.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vydané výr.  zakázky** a poté vyberte související odkaz.
+2. Vyberte skupinu **Nový**.
+3. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí.
 
-    |Source No.|Quantity|Serial No.|  
-    |----------|--------|----------|  
-    |1002|2|SN1|  
-    |1002|2|SN2|  
+   | Číslo původu | Množství | Sériové číslo |
+   |----------|--------|----------|  
+   | 1002 | 2 | SČ1 |
+   | 1002 | 2 | SČ2 |
 
-4. Choose the **Refresh Production Order** action, and then choose the **OK** button to fill the line.  
-5. To enter the serial numbers, choose the **Item Tracking Lines** action.  
-6. On the **Item Tracking Lines** page, fill in the **Serial No.** and **Quantity (Base)** fields, and then close the page.  
+4. Zvolte akci **Aktualizace výrobní zakázky** a poté kliknutím na tlačítko **OK** vyplňte řádek.
+5. Chcete-li zadat sériová čísla, vyberte akci **Řádky sledování zboží**.
+6. Na stránce **Řádky sledování zboží** vyplňte pole **Sériové číslo** a **Množství (základ)** a poté stránku zavřete.
 
-    Next, post consumption of racing frames from LOT1.  
-7. On the **Released Production Order** page, choose the **Production Journal** action.  
-8. On the **Production Journal** page, select the consumption line for item 2000, choose the **Item Tracking Lines** action.
-9. On the **Item Tracking Lines** page, choose the **Lot No.** field, choose **LOT1**, and then choose the **OK** button.  
-10. Leave all other defaults on the **Production Journal** page, and then choose the **Post** action.  
+   Dále uaúčtujte spotřebu závodních rámů ze ŠARŽE1.
+7. Na stránce **Vydaná výrobní zakázka** vyberte akci **Deník výroby**.
+8. Na stránce **Deník výroby** vyberte řádek spotřeby pro zboží 2000 a zvolte akci **Řádky sledování zboží**.
+9. Na stránce **Řádky sledování zboží** vyberte pole **Číslo šarže**, zvolte **ŠARŽE1** a pak zvolte tlačítko **OK**.
+10. Všechny ostatní výchozí hodnoty ponechejte na stránce **Deník výroby** a poté vyberte akci **Účtovat**.
 
-    Next, produce two more racing bikes, SN3 and SN4.  
+   Dále vyrobte další dvě závodní kola, SČ3 a SČ4.
 
-11. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Prod. Orders**, and then choose the related link.  
-12. Choose the **New** action.  
-13. Create a new released production order by filling in the following fields on the header.  
+11. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vydané výr.  zakázky** a poté vyberte související odkaz.
+12. Vyberte akci **Nový**.
+13. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí v záhlaví.
 
-    |Source No.|Quantity|Serial No.|  
-    |----------------|--------------|----------------|  
-    |1002|2|SN3|  
-    |1002|2|SN4|  
+   | Číslo původu | Množství | Sériové číslo |
+   |----------------|--------------|----------------|  
+   | 1002 | 2 | SČ3 |
+   | 1002 | 2 | SČ4 |
 
-14. Choose the **Refresh Production Order** action to fill the line.  
-15. To enter the serial numbers, choose the **Item Tracking Lines** action, and then the numbers on two lines in the **Serial No.** field on the **Item Tracking Lines** page.  
+14. Vyberte akci **Aktualizace výrobní zakázky** a vyplňte řádek.
+15. Chcete-li zadat sériová čísla, vyberte akci **Řádky sledování zboží** a poté čísla na dvou řádcích v poli **Sériové číslo** na stránce **Řádky sledování zboží**.
 
-    Next, post more consumption of racing frames from LOT1.  
-16. On the **Released Production Order** page, choose the **Production Journal** action.  
-17. On the **Production Journal** page, select the consumption line for item 2000, choose the **Item Tracking Lines** action.
-18. On the **Item Tracking Lines** page, choose the **Lot No.** field, choose **LOT1**, and then choose the **OK** button.  
-19. Leave all other defaults on the **Production Journal** page, and then choose the **Post** action.  
+   Dále zaúčtujte větší spotřebu závodních rámů ze ŠARŽE1.
+16. Na stránce **Vydaná výrobní zakázka** vyberte akci **Deník výroby**.
+17. Na stránce **Deník výroby** vyberte řádek spotřeby pro zboží 2000 a zvolte akci **Řádky sledování zboží**.
+18. Na stránce **Řádky sledování zboží** vyberte pole **Číslo šarže**, zvolte **ŠARŽE1** a pak zvolte tlačítko **OK**.
+19. Všechny ostatní výchozí hodnoty ponechejte na stránce **Deník výroby** a poté vyberte akci **Účtovat**.
 
-    You have produced four racing bikes, SN1 to SN4, and consumed four of the ten racing frames from LOT1, two frames in each production order.  
+   Vyrobili jste čtyři závodní kola, SČ1 až SČ4, a spotřebovali jste čtyři z deseti závodních rámů ze ŠARŽE1, dva rámy v každé výrobní zakázce.
 
-20. Close the production journal and the production orders.  
+20. Zavřete deník výroby a výrobní zakázky.
 
-    Next, sell racing bikes. First sell the racing bike with SN1 to Selangorian Ltd..  
+   Dále prodejte závodní kola. Nejprve prodejte závodní kolo se SČ1 společnosti J V v.o.s..
 
-### To sell the end items  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2.  Choose the **New** action, and then, create a sales order by filling in the following fields.  
+### Prodej koncového zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+2. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
-    |Customer|Item|Qty.|Serial No.|  
-    |--------------|----------|----------|----------------|  
-    |Selangorian Ltd.|1002|1|SN1|  
+   | Zákazník | Zboží | Množství | Sériové číslo |
+   |--------------|----------|----------|----------------|  
+   | J V v.o.s. | 1002 | 1 | SČ1 |
 
-3.  To enter the serial number, choose the **Item Tracking Lines** action, and then the number in the **Serial No.** field on the **Item Tracking Lines** page.  
-4.  Choose the **Post** action, select the **Ship and Invoice** option, and then choose the **OK** button.  
+3. Chcete-li zadat sériové číslo, vyberte akci **Řádky sledování zboží** a poté číslo v poli **Sériové číslo** na stránce **Řádky sledování zboží**.
+4. Vyberte akci **Účtovat** , vyberte možnost **Dodat a fakturovat** a poté klikněte na tlačítko **OK**.
 
-    Next, sell the racing bike with SN2 to The Cannon Group PLC.  
+   Dále prodejte závodní kolo se SČ2 společnosti BYT-KOMPLET s.r.o..
 
-5.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-6.  Choose the **New** action, and then, create a sales order by filling in the following fields.  
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+6. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
-    |Customer|Item|Qty.|Serial No.|  
-    |--------------|----------|----------|----------------|  
-    |Cannon Group PLC.|1002|1|SN2|  
+   | Zákazník | Zboží | Množství | Sériové číslo |
+   |--------------|----------|----------|----------------|  
+   | BYT-KOMPLET s.r.o. | 1002 | 1 | SČ2 |
 
-7.  To enter the serial number, choose the **Item Tracking Lines** action, and then the number in the **Serial No.** field on the **Item Tracking Lines** page.  
-8.  Choose the **Post** action, select the **Ship and Invoice** option, and then choose the **OK** button.  
+7. Chcete-li zadat sériové číslo, vyberte akci **Řádky sledování zboží** a poté číslo v poli **Sériové číslo** na stránce **Řádky sledování zboží**.
+8. Vyberte akci **Účtovat** , vyberte možnost **Dodat a fakturovat** a poté klikněte na tlačítko **OK**.
 
-    Finally, sell some racing frames separately. The Cannon Group PLC. also orders four separate racing frames for their own assembly line.  
+   Nakonec prodejte některé závodní rámy samostatně. BYT-KOMPLET s.r.o. také objednává čtyři samostatné závodní rámy pro vlastní montážní linku.
 
-9. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-10. Choose the **New** action, and then, create a sales order by filling in the following fields.  
+9. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+10. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
-    |Customer|Item|Qty.|Serial No.|  
-    |--------------|----------|----------|----------------|  
-    |Cannon Group PLC.|2000|5|LOT1|  
+   | Zákazník | Zboží | Množství | Sériové číslo |
+   |--------------|----------|----------|----------------|  
+   | BYT-KOMPLET s.r.o. | 2000 | 5 | ŠARŽE1 |
 
-11. To enter the serial number, on the **Lines** FastTab, in the **Line** group, choose the **Item Tracking Lines** action, and then the number in the **Serial No.** field on the **Item Tracking Lines** page.  
+11. Chcete-li zadat sériové číslo, na záložce **Řádky** ve skupině **Řádek** vyberte akci **Řádky sledování zboží** a poté číslo v poli **Sériové číslo** na stránce **Řádky sledování zboží**.
 
-    > [!NOTE]  
-    >  Do not post the last sales order for five racing frames.  
+   > [!NOTE]  
+   > Neúčtujte poslední prodejní objednávku pro pět závodních rámů.
 
-    This completes the preparation of data to demonstrate the Item Tracing and Find Entries features.  
+   Tím je dokončena příprava dat k předvedení funkcí trasování zboží a hledání položek.
 
-## Tracing from Usage to Origin  
- From the sales department, the quality controller knows that the returned racing bike, item 1002, has the serial number SN1. By using this basic information, he can determine where the finished racing bike was last used, in this case, on the sales shipment to Selangorian Ltd.. Then, the quality controller must trace backward to the earliest origin to establish which lot number the faulty racing frame came from and which vendor supplied it.  
+## Trasování od využití k původu
+Od obchodního oddělení kontrolor kvality ví, že vrácené závodní kolo, položka 1002, má sériové číslo SČ1. Pomocí těchto základních informací může určit, kde bylo hotové závodní kolo naposledy použito, v tomto případě na prodejní zdodávce společnosti J V v.o.s. Poté musí kontrolor kvality vysledovat zboží zpět k nejstaršímu původu, aby zjistil, ze kterého čísla šarže vadný závodní rám pochází a který dodavatel ho dodal.
 
-### To determine which lot included the faulty frame and who supplied it  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracing**, and then choose the related link.  
-2.  On the **Item Tracing** page, enter **SN1** in the **Serial No. Filter** field, and then enter **1002** in the **Item Filter** field.  
-3.  Keep the default setting of **Item-Tracked Only** in the **Show Components** field, and keep the default trace method of **Usage – Origin** in the **Trace Method**.  
-4.  Choose the **Trace** action.  
+### Určení, která šarže obsahovala vadný rám a kdo ji dodal
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Trasování zboží** a poté vyberte související odkaz.
+2. Na stránce **Trasování zboží** zadejte **SČ1** do pole **Filtr sériového  čísla** a poté do pole **Filtr zboží** zadejte **1002**.
+3. Ponechte výchozí nastavení **Se sledováním zboží** v poli **Zobrazit komponenty** a ponechte výchozí metodu trasování **Použití -> Původ** v poli **Metoda sledování**.
+4. Vyberte akci **Sledovat**.
 
-    Note that one sales shipment header matches the search criteria. Before you continue the trace, verify that the shipment is the one that shipped the faulty racing bike to Selangorian Ltd.  
+   Všimněte si, že jedna hlavička prodejní dodávky odpovídá kritériím vyhledávání. Než budete pokračovat ve sledování, ověřte, zda tato dodávka je ta, která odeslala vadné závodní kolo společnosti J V v.o.s.
 
-5.  Select the trace line, and then choose the **Show Document** action.  
+5. Vyberte řádek sledování a pak zvolte **Zobrazit doklad**.
 
-    Now continue to trace the origin of the sales shipment of the racing bike with number SN1.  
-6.  Choose the + icon on the trace lines to gradually expand and trace backward in the chain of transactions that the sales shipment originates from.  
+   Nyní pokračujte ve sledování původu prodejní dodávky závodního kola s číslem SČ1.
+6. Zvolte ikonu + na řádcích sledování a postupně sledujte zboží zpět v řetězci sledování, ze které prodejní dodávky pochází.
 
-    You can trace the following transaction history:  
+   Můžete sledovat následující historii transakcí:
 
-    - The first posted document backward in the chain of transactions is the output posting of SN1 from the first released production order.  
-    - The next posted document backward after that is the consumption posting from the first released production order. Here the quality controller sees that a racing frame from LOT1 was used.  
-    - The lowest posted document in this chain is the posted purchase receipt on which racing frames with LOT1 entered inventory.  
+   - Prvním zaúčtovaným dokumentem zpětně v řetězci transakcí je zaúčtování výstupu SČ1 z první vydané výrobní zakázky.
+   - Dalším zaúčtovaným dokumentem zpětně poté je účtování spotřeby z první vydané výrobní zakázky. Zde kontrolér kvality vidí, že byl použit závodní rám ze ŠARŽE1.
+   - Nejnižší zaúčtovaný dokument v tomto řetězci je zaúčtovaná nákupní příjemka, na které závodní rámy se ŠARŽE1 vstoupily do zásob společnosti.
 
-    The quality controller has now established which lot of racing frames was faulty and he can search for the last trace line to see which vendor supplied them, namely Custom Metals Incorporated.  
+   Kontrolér kvality nyní zjistil, které závodní rámy byly vadné, a může vyhledat poslední stopu, aby zjistil, který prodejce je dodal, konkrétně Custom Metals Incorporated.
 
-    > [!NOTE]  
-    >  Do not make any additional modifications to the trace result, as you will use it in the next section.  
+   > [!NOTE]  
+   > Neprovádějte žádné další úpravy výsledku sledování, protože ho použijete v další části.
 
-     This completes the first defects-management task using the **Item Tracing** page. The quality controller must now determine whether other posted documents have processed racing frames from LOT1.  
+   Tím je dokončena první úloha správy vad pomocí stránky **Trasování zboží**. Kontrolor kvality musí nyní určit, zda ostatní zaúčtované dokumenty zpracovávaly závodní rámy ze ŠARŽE1.
 
-## Tracing from Origin to Usage  
- The quality controller has established that the faulty racing frames came from LOT1. He must now find any other racing bikes that contain racing frames from the faulty lot so that those bikes can be stopped or recalled.  
+## Trasování od původu k použití
+Kontrolor kvality stanovil, že vadné závodní rámy pocházejí ze ŠARŽE1. Nyní musí najít další závodní kola, která obsahují závodní rámy z vadné šarže, aby tato kola by měla být zastavena nebo stažena.
 
- One way to prepare this trace task on the **Item Tracing** page is to manually enter LOT1 in the **Lot No. Filter** field and 2000 in the **Item Filter** field. However, this walkthrough will use the **Trace Opposite - from Line** function.  
+Jedním ze způsobů, jak připravit tento úkol trasování na stránce **Trasování zboží** , je ruční zadání ŠARŽE1 do pole **Filtr čísla  šarže** a hodnoty 2000 do pole **Filtr zboží**. Tento návod však bude používat funkci **Sledovat opačné – od řádku**.
 
-### To find all usage of the faulty lot  
+### Vyhledání veškerého využití vadné šarže
 
-1.  On the **Item Tracing** page, select the line of the purchase receipt, the last trace line, and then choose **Trace Opposite – from Line**.  
+1. Na stránce **Trasování zboží** vyberte řádek nákupní příjemky, poslední sledovací řádek a poté zvolte **Sledovat opačné – od řádku**.
 
-    The trace result is now based on the filters of the trace line for the purchase receipt, LOT1 and item 2000, and the result is based on trace method **Origin - Usage**.  
+   Výsledek trasování je nyní založen na filtrech řádku trasování pro nákupní příjemku, ŠARŽE1 a položku 2000 a výsledek je založen na trasovací metodě **Původ -> Použití**.
 
-    To obtain an overview of all usage of item 2000 with LOT1, continue to expand all trace lines.  
+   Chcete-li získat přehled o veškerém využití zboží 2000 pomocí ŠARŽE1, pokračujte v rozbalování všech řádků trasování.
 
-2.  Choose the **Expand All** action.  
+2. Vyberte akci **Rozbalit vše**.
 
-    The first four trace lines refer to the sales shipment to Selangorian Ltd., which is already resolved. The last line indicates that one more racing bike, SN2, was produced in the same released production order and then sold and shipped on another sales shipment.  
+   První čtyři řádky trasování odkazují na prodejní dodávku společnosti J V v.o.s., která je již vyřešena. Poslední řádek označuje, že ještě jedno závodní kolo, SČ2, bylo vyrobeno ve stejné vydané výrobní objednávce a poté prodáno a odesláno v jiné prodejní dodávce.
 
-    The quality controller immediately informs the sales department so that they can initiate a recall of the defective racing bike from the customer, Cannon Group PLC.  
+   Kontrolor kvality okamžitě informuje obchodní oddělení, aby mohlo zahájit stažení vadného závodního kola od zákazníka, BYT-KOMPLET s.r.o.
 
-    At the same time, he can see from the last three trace lines that another two items, SN3 and SN4, have been produced based on racing frames from LOT1. He takes action to block these end items in inventory.  
+   Zároveň z posledních tří trasovacích řádků vidí, že na základě závodních rámů ze ŠARŽE1 byly vyrobeny další dvě položky, SČ3 a SČ4. Proto přijme opatření k zablokování těchto koncových položek v zásobách.
 
-    This completes the second defects management task using the **Item Tracing** page for defects management. Since the **Item Tracing** page is based on posted entries only, the quality controller must continue to the **Find entries** page to make sure that LOT1 is not used in non-posted documents.  
+   Tím se dokončí druhá úloha správy závad pomocí stránky **Trasování zboží** pro správu závad. Vzhledem k tomu, že stránka **Trasování zboží** je založena pouze na zaúčtovaných položkách, musí kontrolor kvality pokračovat na stránku **Najít položky** , aby se ujistil, že ŠARŽE1 není použita v neúčtovaných dokladech.
 
-## Finding All Records of a Serial/Lot Number  
- With the **Item Tracing** page, the quality controller learned that LOT1 contained the faulty racing frames, which vendor supplied them, and in which posted transaction they have been used. He must now determine whether LOT1 is in any open documents by integrating from the trace result to the **Find entries** page where he can perform a search through all database records.  
+## Vyhledání všech záznamů sériového čísla/čísla šarže
+Na stránce **Trasování zboží** se kontrolor kvality dozvěděl, že ŠARŽE1 obsahuje vadné závodní rámy, které jim dodavatel dodal a ve které zaúčtované transakci byly použity. Nyní musí určit, zda je ŠARŽE1 v jakýchkoli otevřených dokumentech integrací z výsledku trasování na stránku **Najít položky**, kde může provádět vyhledávání ve všech databázových záznamech.
 
-### To find all occurrences of LOT1 in non-posted records, such as open orders  
+### Vyhledání všech výskytů ŠARŽE1 v nezaúčtovaných záznamech, například otevřených objednávkách
 
-1.  On the **Item Tracing** page, select the first trace line, the purchase receipt of LOT1.  
-2.  Choose the **Find entries** action.  
+1. Na stránce **Trasování zboží** vyberte první sledovací řádek, potvrzení o nákupu ŠARŽE1.
+2. Vyberte akci **Najít položky**.
 
-    The **Find entries** page is preset with search filters based on the trace result for LOT1. The quality controller recognizes most of the records as pertaining to documents already identified on the **Item Tracing** page. For example, the last Find Entries line of type Production Order refers to the two released production orders that consumed racing frames from LOT1.  
+   Stránka **Najít položky** je přednastavena pomocí vyhledávacích filtrů založených na výsledku trasování pro ŠARŽE1. Kontrolor kvality rozpozná většinu záznamů, které se týkají dokumentů již identifikovaných na stránce **Trasování zboží**. Například poslední řádek nalezených položek typu výrobní zakázka odkazuje na dvě vydané výrobní zakázky, které spotřebovaly závodní rámy ze ŠARŽE1.
 
-    However, the second Find Entries line of type **Sales Line** is a non-posted document line, so the quality controller proceeds to investigate.  
+   Druhý řádek nalezené položky typu **Prodejní řádek** je však nezaúčtovaný řádek dokladu, takže kontrolor kvality pokračuje v prošetřování.
 
-3.  To open the sales line record, select the second Find Entries line, choose the **Show** action. Alternatively, choose the value in the **No. of Records** field.  
+3. Chcete-li otevřít záznam prodejního řádku, vyberte druhý řádek nalezených položek a zvolte akci **Zobrazit**. Případně vyberte hodnotu v poli **Počet  záznamů**.
 
-    Here the quality controller sees one open sales line for the faulty racing frames. He immediately suggests to the sales department that this order be canceled and a new production order, based on good racing frames, be initiated.  
+   Zde kontrolor kvality vidí jeden otevřený prodejní řádek pro vadné závodní rámy. Okamžitě navrhuje prodejnímu oddělení, aby byla tato objednávka zrušena a byla zahájena nová výrobní zakázka založená na dobrých závodních rámech.
 
- This completes the walkthrough of how to use the **Find entries** page for defects management in integration with the **Item Tracing** page.  
+Tím je dokončen návod, jak používat stránku **Najít položky** pro správu závad v integraci se stránkou **Trasování zboží**.
 
-## See Also
-[Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md)  
-[Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md)  
-[Find Entries](ui-find-entries.md)  
-[Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
+## Viz také
+[Práce se sériovými čísly a čísly šarže](inventory-how-work-item-tracking.md)    
+[Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md)    
+[Nájdění položek](ui-find-entries.md)    
+[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)
 
 
 

@@ -4,113 +4,97 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Ship Items
+# Odesílání zboží
+Při odesílání zboží ze skladu, který není nastaven pro zpracování dodávky ze skladu, jednoduše zaznamenáte dodávku do souvisejícího obchodního dokladu, například prodejní objednávky, servisní zakázky, objednávky nákupní vratky nebo výstupní objednávky transferu.
 
-When you ship items from a warehouse that is not set up for warehouse shipment processing, you simply record the shipment on the related business document, such as a sales order, service order, purchase return order, or outbound transfer order.
-
-When you ship items from a warehouse that is set up warehouse shipment processing, you can ship items only on the basis of source documents that other company units have released to the warehouse for action.
-
-> [!NOTE]
-> If your warehouse uses cross-docking and bins, for each line, you can view the quantity of items that have been placed in the cross-dock bins. The application calculates these quantities automatically whenever the fields on the shipment are updated. If they are the items that apply to the shipment you are preparing, you can create a pick for all the lines and then complete the shipment. For more information, see [Cross-Dock Items](warehouse-how-to-cross-dock-items.md).
-
-## To ship items with a sales order
-
-The following describes how to ship items from a sales order. The steps are similar for purchase return orders, service orders, and outbound transfer orders.  
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
-2. Open an existing sales order, or create a new one. For more information, see [Sell Products](sales-how-sell-products.md).
-3. In the **Qty. to Ship** field, enter the shipped quantity.
-
-    The value in the **Qty. Shipped** field is updated. If this is a partial shipment, then the value is lower than the value in the **Quantity** field.
-4. Choose the **Post** action.
+Při odeslání zboží ze skladu, který je nastaven pro zpracování dodávky ze skladu, můžete zboží odeslat pouze na základě původních dokladů, které ostatní jednotky společnosti vydaly do skladu k akci.
 
 > [!NOTE]
-> If your organization does not use sales orders, then, when you post the sales invoice, [!INCLUDE [prod_short](includes/prod_short.md)] assumes that you have shipped the full quantity. If this contradicts with how your organization works, then we recommend that you use sales orders and register shipments as explain in this article.
+> Pokud váš sklad používá překládání a přihrádky, můžete pro každý řádek zobrazit počet zboží, které bylo vloženo do přihrádky přeložení. Aplikace vypočítává tato množství automaticky při každé aktualizaci polí v dodávke. Pokud se jedná o zboží, které se vztahuje k dodávce, kterou připravujete, můžete vytvořit vyskladnění pro všechny řádky a dokončit dodávku. Pro více informací navštivte [Přeložení zboží](warehouse-how-to-cross-dock-items.md).
 
-## To ship items with a warehouse shipment
+## Odesílání zboží pomocí prodejní objednávky
+Následující text popisuje, jak přijímat zboží s nákupní objednávkou. Kroky jsou podobné pro objednávky nákupní vratky, servisní zakázky a výstupní objednávky transferu.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
+2. Otevřete existující prodejní objednávku nebo vytvořte novou. Pro více informací navštivte [Prodej produktů](sales-how-sell-products.md).
+3. Do pole **Množ. dodání**, zadejte přijaté množství.
 
-First you create a shipment document from a business source document. Then you pick the specified items for the shipment.
+   Hodnota v poli **Dodané  množství** je aktualizována. Pokud se jedná o částečnou dodávku, je hodnota nižší než hodnota v poli **Množství**.
+4. Vyberte akci **Účtovat**.
 
-### To create a warehouse shipment
+## Odesílání zboží pomocí dodávky ze skladu
+Nejprve vytvořte doklad dodávky z původního obchodního dokladu. Poté vyberte zadané zboží pro dodávku.
 
-Typically, the employee who is responsible for shipping creates a warehouse shipment. The following procedure describes how to create the shipment manually in the default version of [!INCLUDE[prod_short](includes/prod_short.md)], but your organization might have automated part of the process, such as with the use of hand-held or mounted scanners that are supported by external providers.  
+### Vytvoření dodávky ze skladu
+Dodávku ze skladu obvykle vytvoří zaměstnanec odpovědný za expedici zboží.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávky ze skladu** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipments**, and then choose the related link.  
-2. Choose the **New** action.  
+   Vyplňte pole na záložce **Obecné**. Při načtení řádků původního dokladu se některé informace zkopírují na každý řádek.
 
-    Fill in the fields on **General** FastTab. When you retrieve source document lines, some of the information is copied to each line.  
+   Pro konfiguraci skladu s řízeným zaskladněním a vyskladněním, pokud má lokace výchozí zónu a přihrádku pro dodávky, jsou pole **Kód zóny** a **Kód přihrádky** vyplněna automaticky, ale můžete je podle potřeby změnit.
 
-    For warehouse configuration with directed put-away and pick, if the location has a default zone and bin for shipments, the **Zone Code** and **Bin Code** fields are filled in automatically, but you can change them as appropriate.  
+   > [!NOTE]
+   > Pokud chcete dodávat zboží s jinými kódy třídy skladu, než je kód třídy přihrádky v poli **Kód přihrádky** v hlavičce dokladu, musíte před načtením řádků zdrojového dokladu pro zboží odstranit obsah pole **Kód přihrádky** v hlavičce.
+3. Vyberte akci **Kopie pův.dokladů**. Otevře se stránka **Původní doklady**.
 
-    > [!NOTE]  
-    > If you wish to ship items with warehouse class codes other than the class code of the bin in the **Bin Code** field on the document header, you must delete the contents of the **Bin Code** field on the header before you retrieve source document lines for the items.  
-3. Choose the **Get Source Documents** action. The **Source Documents** page opens.
+   Z nové nebo otevřené dodávky ze skladu můžete použít stránku **Výběr filtru původu skladu** k načtení vydaných řádků původního dokladu, které definují zboží, které má být dodáno.
 
-    From a new or an open warehouse shipment, you can use the **Filters to Get Source Docs.** page to retrieve the released source document lines that define which items to ship.
+   1. Vyberte akci **Použít filtry pro kopii pův. dokl.**.
+   2. Chcete-li nastavit nový filtr, zadejte do pole **Kód** popisný kód a poté vyberte akci **Upravit**.
+   3. Vyplněním příslušných polí filtru určete typ řádků původního dokladu, které chcete načíst.
+   4. Vyberte akci **Start**.
+   Všechny vydané řádky původního dokladu, které splňují kritéria filtru, jsou nyní vloženy na stránku **Dodávka ze skladu**, ze které jste aktivovali funkci filtru.
 
-    1. Choose the **Use Filters to Get Src. Docs.** action.  
-    2. To set up a new filter, enter a descriptive code in the **Code** field, and then choose the **Modify** action.  
-    3. Define the type of source document lines that you want to retrieve by filling in the relevant filter fields.  
-    4. Choose the **Run** action.  
+   Kombinace filtrů, které definujete, se uloží na stránce **Výběr filtru původu skladu**, dokud je příště nebudete potřebovat. Můžete vytvořit neomezený počet kombinací filtrů. Kritéria můžete kdykoli změnit výběrem akce **Upravit**.
 
-    All released source document lines that fulfill the filter criteria are now inserted in **Warehouse Shipment** page from which you activated the filter function.  
+4. Vyberte původní doklady, pro které chcete zboží dodat, a pak zvolte tlačítko **OK**.
 
-    The filter combinations that you define are saved on the **Filters to Get Source Docs.** page until the next time you need it. You can make an unlimited number of filter combinations. You can change the criteria at any time by choosing the **Modify** action.
-
-4. Select the source documents for which you want to ship items, and then choose the **OK** button.  
-
-The lines of the source documents appear on the **Warehouse Shipment** page. The **Qty. to Ship** field is filled with the quantity outstanding for each line, but you can change the quantity as necessary. If you deleted the contents of the **Bin Code** field on the **General** FastTab before getting the lines, you must fill in an appropriate bin code on each shipment line.  
-
-> [!NOTE]  
-> You cannot ship more items than the number in the **Qty. Outstanding** field on the source document line. To ship more items, retrieve another source document that contains a line for the item by using the filter function to get source documents with the item.  
-
-When you have the lines you want to ship, you can start the process that sends the lines to warehouse employees to pick.
-
-### To pick and ship
-
-Typically, a warehouse worker responsible for picking creates a pick document, or opens an already created pick document.  
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipments**, and then choose the related link.
-2. Select the warehouse shipment that you want to pick for, and then choose the **Create Pick** action.
-3. Fill in the fields in the request page, and then choose the **OK** button. The specified warehouse pick document is created.
-
-    Alternatively, open an existing warehouse pick.
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link. Select the warehouse pick that you want to work on.
-
-    If the warehouse is set up to use bins, then the pick lines have been converted to Take and Place action lines.
-
-    You can sort the lines, assign an employee to the pick, set a break-bulk filter, if you are using directed put-away and pick, and print the pick instructions.
-
-5. Perform the actual picking of items and place them in the specified shipping bin, or in the shipping area, if you do not have bins.
-6. Choose the **Register Pick** action.
-
-    The **Qty. to Ship** field and the **Document Status** field on the header of the shipment document are updated. The items you have picked are no longer available for picking for other shipments or for internal operations.
-7. Print your shipping documents, prepare the shipment packages, and then post the shipment.
-
-For more information about picking for warehouse shipments, see [Pick Items for Warehouse Shipment](warehouse-how-to-pick-items-for-warehouse-shipment.md).
-
-You can also use the pick worksheet to make several pick instructions into one instruction (for several shipments) and thereby improve the efficiency of picking in the warehouse. For more information, see [Plan Pick in Worksheets](warehouse-how-to-plan-picks-in-worksheets.md).
+Řádky původních dokladů se zobrazí na stránce **Dodávka ze skladu**. Pole **K  dodání** je vyplněno zbývajícím množstvím pro každý řádek, ale toto množství můžete podle potřeby změnit. Pokud jste před získáním řádků odstranili obsah pole **Kód přihrádky** na záložce **Obecné**, musíte vyplnit příslušný kód přihrádky na každém řádku dodávky.
 
 > [!NOTE]
-> If you are waiting for particular items to arrive at the warehouse, and you use cross-dock functionality, then [!INCLUDE[prod_short](includes/prod_short.md)] calculates on each shipment or pick worksheet line the quantity of the item that is in the cross-dock bin. It updates this field each time you leave and open the shipment document or worksheet. For more information, see [Cross-Dock Items](warehouse-how-to-cross-dock-items.md).
+> Nelze odeslat více zboží, než je množství v poli **Zbývající  množ.** na řádku původního dokladu. Chcete-li odeslat více zboží, načtěte jiný původní doklad, který obsahuje řádek pro zboží, pomocí funkce filtru k získání původních dokladů se zbožím.
 
-## See Also
+Pokud máte řádky, které chcete dodat, můžete zahájit proces, který odešle řádky zaměstnancům skladu k vyskladnění.
 
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
-[Assembly Management](assembly-assemble-items.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+### Vyskladnění a odesílání
+Pracovník ve skladu odpovědný za vyskladnění obvykle vytvoří doklad o vyskladnění nebo otevře již vytvořený doklad o vyskladnění.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávky ze skladu** a poté vyberte související odkaz.
+2. Vyberte dodávku ze skladu, pro kterou chcete vytvořit vyskladnění a pak zvolte akci **Vytvořit vyskladnění**.
+3. Vyplňte pole na stránce požadavku a pak zvolte tlačítko **OK**. Je vytvořen zadaný doklad vyskladnění.
 
+   Případně otevřete existující vyskladnění.
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz. Vyberte vyskladnění ze skladu, na kterém chcete pracovat.
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+   Pokud je sklad nastaven na použití přihrádek, byly řádky vyskladnění převedeny na řádky akce Vzít a Vložit.
+
+   Řádky můžete třídit, přiřadit zaměstnance k vyskladnění, nastavit filtr rozbalení, pokud používáte řízené zaskladnění a vyskladnění, a vytisknout pokyny k vyskladnění.
+
+5. Proveďte skutečné vyskladnění zboží a vložte jej do určené přepravné přihrádky nebo do přepravní oblasti, pokud přihrádky nemáte.
+6. Vyberte akci **Zápis vyskladnění**.
+
+   Pole **K  dodání** a **Stav dokladu** v záhlaví dodacího dokladu jsou aktualizovány. Zboží, které jste vyskladnili, již není k dispozici pro výdej pro jiné dodávky nebo pro interní operace.
+7. Vytiskněte si přepravní doklady, připravte balíky zásilek a zaúčtujte zásilku.
+
+Pro více informací o vyskladnění u dodávek ze skladu navštivte [Vyskladnění zboží pro dodávku ze skladu](warehouse-how-to-pick-items-for-warehouse-shipment.md).
+
+Sešit vyskladnění můžete také použít k tomu, abyste do jedné instrukce (pro několik dodávek) vytvořili několik pokynů vyskladnění a tím zvýšili efektivitu vyskladnění ze skladu. Pro více informací navštivte [Plánování v sešitech vyskladnění](warehouse-how-to-plan-picks-in-worksheets.md).
+
+> [!NOTE]
+> Pokud čekáte na konkrétní zboží, které dorazí do skladu, a používáte funkci přeložení, pak [!INCLUDE[d365fin](includes/d365fin_md.md)] vypočítá pro každou dodávku nebo řádek sešitu vyskladnění množství zboží, které je v přihrádce přeložení. Toto pole se aktualizuje pokaždé, když opustíte a znovu otevřete doklad nebo list dodávky. Pro více informací navštivte [Přeložení zboží](warehouse-how-to-cross-dock-items.md).
+
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)  
+[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

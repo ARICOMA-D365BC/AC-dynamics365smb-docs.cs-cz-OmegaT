@@ -1,50 +1,47 @@
 ---
-    title: How to Configure a Company with the RapidStart Wizard | Microsoft Docs
-    description: You can quickly configure a new company that you have created by using the RapidStart Services configuration wizard.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Jak nakonfigurovat společnost pomocí Průvodce RapidStart | Microsoft Docs
+description: 'Pomocí průvodce konfigurací služeb RapidStart Services můžete rychle nakonfigurovat novou společnost, kterou jste vytvořili.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 03/01/2019
+ms.author: sgroespe
 ---
-# Configure a Company with the RapidStart Wizard
-You can quickly configure a new company that you have created by using the RapidStart Services configuration wizard.
+# <a name="configure-a-company-with-the-rapidstart-wizard"></a>Konfigurace společnosti s průvodcem RapidStart
+Pomocí průvodce konfigurací služeb RapidStart Services můžete rychle nakonfigurovat novou společnost, kterou jste vytvořili.
 
-In the following procedure, you have provided the customer with the configuration package, which is then installed on a computer. The customer opens the new company, which contains no customer data. You or the customer then follows the steps in the RapidStart Services wizard, which are described in this procedure, to provide basic information about the company. The wizard imports the configuration package and then applies the package to the company.  
+V následujícím postupu jste zákazníkovi poskytli konfigurační balíček, který je nainstalován v počítači. Zákazník otevře novou společnost, která neobsahuje žádné zákaznické údaje. Vy nebo zákazník pak postupujete podle pokynů v Průvodci RapidStart Services, které jsou popsány v tomto postupu, abyste poskytli základní informace o společnosti. Průvodce importuje konfigurační balíček a poté tento balíček aplikuje na společnost.  
 
-## To configure a new company  
-1. On the RapidStart Services Implementer Role Center, choose the **RapidStart Wizard** action.  
-2. Expand the **Step 1** FastTab, which contains general information about the new company. Enter the appropriate information about the new company in the fields. There is one field that you are required to fill out, **Name**. The rest of the fields are optional.  
-3. Expand the **Step 2** FastTab, which contains communication and contact information for the new company. Enter the appropriate information about the new company in the fields.
-4. Expand the **Step 3** FastTab, which contains bank account and payment information for the new company. Enter the appropriate information about the new company in the fields.  
-5. Expand the **Step 4** FastTab. Choose the **AssistEdit** button to select the configuration package you want to apply. The name of the configuration package is displayed. You can then perform the following actions, in the listed order:  
+## <a name="to-configure-a-new-company"></a>Konfigurace nové společnosti  
+1. V Centru rolí implementátoru služeb RapidStart Services vyberte akci **Průvodce RapidStart**.  
+2. Rozbalte pevnou záložku **Krok 1**, která obsahuje obecné informace o nové společnosti. Do příslušných polí zadejte příslušné informace o nové společnosti. Pole **Název** je povinné. Ostatní pole jsou volitelná.  
+3. Rozbalte pevnou záložku **Krok 2**, která obsahuje komunikační a kontaktní informace pro novou společnost. Do příslušných polí zadejte příslušné informace o nové společnosti.
+4. Rozbalte pevnou záložku **Krok 3**, která obsahuje bankovní účet a platební údaje pro novou společnost. Do příslušných polí zadejte příslušné informace o nové společnosti.  
+5. Rozbalte pevnou záložku **Krok 4**. Zvolte tlačítko **AssistEdit** a vyberte konfigurační balíček, který chcete použít. Zobrazí se název konfiguračního balíčku. Poté můžete provést následující akce v uvedeném pořadí:  
 
-    1. Apply the configuration by choosing the **Apply Package** action. This imports the configuration package and applies the package database data all at the same time.  
+    1. Aplikujte konfiguraci výběrem akce **Použít balíček**. Tím se importuje konfigurační balíček a všechna data databáze balíků se aplikují současně.  
 
-    2. Review the configuration after it has been applied. This option lets you review configuration details and questionnaires provided by the partner and import some master data that is required for your company. Choose the **Configuration Worksheet** action. For more information, see [To complete the configuration questionnaire](admin-gather-customer-setup-values.md#to-complete-the-configuration-questionnaire).  
+    2. Po použití zkontrolujte konfiguraci. Tato možnost umožňuje zkontrolovat podrobnosti konfigurace a dotazníky poskytnuté partnerem a importovat některá hlavní data, která jsou pro vaši společnost požadována. Zvolte akci **Konfigurační sešit**. Pro více informací navštivte [Vyplnění konfiguračního dotazníku](admin-gather-customer-setup-values.md#to-complete-the-configuration-questionnaire).  
 
-6. Expand the **Step 5** FastTab. Specify which Role Center that you want to be the default for the new company.  
+6. Rozbalte pevnou záložku **Krok 5**. Určete, které Centrum rolí má být výchozí pro novou společnost.  
 
     > [!IMPORTANT]  
-    >  Only change your Role Center after you have completed configuration of the company. If you have more setup details to consider and modify, first use the configuration worksheet to continue your work. Then, return to the wizard to update your Role Center profile, or choose the **Complete Setup** action.
+    >  Změňte své Centrum rolí až po dokončení konfigurace společnosti. Pokud máte více podrobností o nastavení, které je třeba zvážit a upravit, pokračujte v práci nejprve pomocí konfiguračního sešitu. Poté se vraťte do průvodce a aktualizujte svůj profil Centra rolí nebo vyberte akci **Dokončit instalaci**.
 
-7. Choose the **OK** button.  
-8. To verify that the configuration information has been applied to the new company, Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.
+7. Zvolte tlačítko **OK**.  
+8. Chcete-li ověřit, zda byly informace o konfiguraci použity pro novou společnost, vyberte ikonu ![Žárovka, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi co chcete dělat"), zadejte **Informace o společnosti** a poté vyberte související odkaz.
 
-The **Company Information** page contains information that you have specified.   
+Stránka **Informace o společnosti** obsahuje informace, které jste zadali.   
 
-You have now configured the company and applied data to it.  
+Nyní jste nakonfigurovali společnost a aplikovali na ni data.  
 
-## See Also  
-[Apply Configurations to New Companies](admin-apply-configuration-to-new-companies.md)  
-[Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  
-[Administration](admin-setup-and-administration.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+[Aplikování konfigurace pro nové společnosti](admin-apply-configuration-to-new-companies.md)  
+[Založení společnosti pomocí služeb RapidStart](admin-set-up-a-company-with-rapidstart.md)  
+[Správa](admin-setup-and-administration.md)

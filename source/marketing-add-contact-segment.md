@@ -6,54 +6,51 @@ documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: marketing, campaign, promo, prospect, contact, client, customer
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: jswymer
 
 ---
-# Add Contacts to Segments
-After you have created a segment and entered basic information about it, you may want to add contacts to the segment. You can do this by filling in the lines on the **Segment** page manually, but it is easier and faster to use the **Add Contacts** action.
+# Přiřazení kontaktů do segmentů
+Po vytvoření segmentu a zadání základních informací o něm můžete chtít do segmentu přidat kontakty. To lze provést ručním vyplněním řádků na stránce **Segment**, ale použití akce **Přidat kontakty** je snazší a rychlejší.
 
-## To add a contact to a segment
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Segments**, and then choose the related link.  
-2. Select the segment, and then choose the **Add Contacts** action. The **Add Contacts** batch job page opens.
-3. In the **Contact** section, set filters to specify the information by which you want to select contacts.
+## Přidání kontaktu do segmentu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Segmenty** a poté vyberte související odkaz.
+2. Vyberte segment a poté vyberte akci **Přidat kontakty**. Otevře se stránka dávkové úlohy **Přidat kontakty**.
+3. V sekci **Kontakt** nastavte filtry a určete informace, podle kterých chcete vybrat kontakty.
 
-To enter additional filters, repeat this procedure on each of the remaining sections, and then choose the **OK** button.
+Chcete-li zadat další filtry, opakujte tento postup u všech zbývajících sekcí a pak zvolte tlačítko **OK**.
 
-If you have added contacts by mistake and want to go back one step, then choose the **Go Back** action.
+Pokud jste omylem přidali kontakty a chcete se vrátit o jeden krok zpět, zvolte akci **Zpět**.
 
-## To refine the number of contacts
-After you have selected the contacts within a segment, you may decide to remove some but keep others. You can manually remove contacts from the lines on the **Segment** page, but it is easier and faster to use the **Refine Contacts** action.
+## Upravení počtu kontaktů
+Po výběru kontaktů v segmentu se můžete rozhodnout některé z nich odebrat. Můžete ručně odebrat kontakty z řádků na stránce **Segment**, ale použití akce **Upravit kontakty** je snazší a rychlejší.
 
-1. Open the segment.
-2. Choose **Contacts**, and then choose the **Refine Contacts** action. The **Remove Contacts - Refine** page opens.
-3. In the **Contact** section, enter filters to specify the information that you want to use to select the contacts to be removed from the segment.
-4. Add additional filters as needed, and then choose the **OK** button.
+1. Otevřete segment.
+2. Zvolte **Kontakty** a poté vyberte akci **Upravit kontakty**. Otevře se stránka **Odstranit kontakty - upravit**.
+3. V sekci **Kontakt** zadejte filtry a informace, které chcete použít k výběru kontaktů, které mají být ze segmentu odebrány.
+4. Podle potřeby přidejte další filtry a poté vyberte tlačítko **OK**.
 
-You can refine a segment as many times as you want. If you have refined the segment by mistake and want to go one step back, choose the **Go Back**.
+Segment můžete upravit, kolikrát chcete. Pokud jste segment omylem upravili a chcete se vrátit o krok zpět, vyberte akci **Zpět**.
 
-To see a list of the segment criteria that you have used, in the **General** section, choose the **No. of Criteria Actions** field.
+Chcete-li zobrazit seznam kritérií segmentu, která jste použili, vyberte v části **Obecné** pole **Počet  akcí pro kritéria**.
 
-## To reduce the number of contacts
-After you have selected the contacts within a segment, you may want to remove some of them. You can do this by manually removing them from the lines in the Segment page, but it is easier and faster to use the Reduce Contacts function to specify which contacts to remove, and to use the Refine Contacts function to specify which contacts to keep.
+## Snížení počtu kontaktů
+Po výběru kontaktů v segmentu můžete některé z nich odebrat. To lze provést ručním odebráním z řádků na stránce Segment, ale je jednodušší a rychlejší použít funkci Odebrat kontakty k určení, které kontakty chcete odebrat, a použít funkci Upravit kontakty k určení, které kontakty mají být uchovány.
 
-1. Open the segment.
-2. Choose Contacts, and then choose the **Reduce Contacts** action. The **Remove Contacts - Reduce** page opens.
-3. In the **Contact** section, enter filters to specify the information that you want to use to select the contacts to be removed from the segment.
-4. Add additional filters as needed, and then choose the **OK** button.
+1. Otevřete segment.
+2. Zvolte Kontakty a pak vyberte akci **Odebrat kontakty**. Otevře se stránka **Odstranit kontakty - odebrat**.
+3. V sekci **Kontakt** zadejte filtry a informace, které chcete použít k výběru kontaktů, které mají být ze segmentu odebrány.
+4. Podle potřeby přidejte další filtry a poté vyberte tlačítko **OK**.
 
-You can reduce a segment as many times as you want. If you have refined the segment by mistake and want to go one step back, then choose the **Go Back** action.
+Segment můžete zmenšit tolikrát, kolikrát chcete. Pokud jste segment upravili omylem a chcete přejít o krok zpět, zvolte akci **Zpět**.
 
-## See Also
-[Create a Segment](marketing-how-create-segment.md)   
-[Managing Segments](marketing-segments.md)  
-[Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Vytvoření segmentů](marketing-how-create-segment.md)  
+[Správa segmentů](marketing-segments.md)  
+[Zpracování prodejních příležitostí](marketing-manage-sales-opportunities.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

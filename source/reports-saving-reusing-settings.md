@@ -1,57 +1,52 @@
 ---
 title: Apply and Modify Saved Settings on Reports | Microsoft Docs
 description: Describes using predefined options and filters to customize a report, and to generate the correct data.
-author: SorenGP
+author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: customization, personalization
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 04/01/2019
+ms.author: jswymer
 
 ---
-# Manage Saved Settings for Reports and Batch jobs
-When running reports, users are typically presented with a page that lets them select options and set filters to change the data that is included in the generated report. This page is called the request page. A report can include one or more *saved settings* that users can apply to the report from the request page. *Saved settings* are basically predefined options and filters. Using saved settings is a fast and reliable way to consistently generate reports that contain the correct data. For more information, see [Using Saved Settings](ui-work-report.md#SavedSettings).
+# Správa uložených nastavení sestav
+Při spuštění sestav se uživatelům obvykle zobrazí stránka, která umožňuje nastavit určité možnosti a filtry pro změnu dat zahrnutých do generované sestavy. Tato stránka se nazývá stránka úpravy sestavy. Sestava může obsahovat jedno nebo více *uložených nastavení*, která mohou uživatelé použít pro sestavu na stránce požadavků. *Uložené nastavení* jsou v podstatě přednastavené možnosti a filitry. Použití uložených nastavení představuje rychlý a spolehlivý způsob, jak důsledně generovat sestavy obsahující správná data. Další informace o použití uložených nastavení naleznete v části <x5 />Používání uložených nastavení](ui-work-report.md#SavedSettings).
 
-> [!NOTE]
-> This topic refers mainly to "report", but similar information applies to batch jobs.
-
-If you have the proper permissions, you can view, create, and modify the saved settings for all reports for all users in a company. You can assign saved settings for a report to individual users or to all users in the company.
+Pokud máte příslušná oprávnění, můžete prohlížet, vytvářet a upravovat uložená nastavení pro všechny sestavy pro všechny uživatele ve společnosti. Uložená nastavení pro sestavu můžete přiřadit jednotlivým uživatelům nebo všem uživatelům ve společnosti.
 
 <!--
 ## Apply saved settings to a report
 1. Open the report.
 
-   The request page appears.    
+   The report request page appears.    
 2. In the **Saved Settings** section of the page, set the **Name** field  to the saved settings that you want to use.
 
    The **Saved Settings** section only appears if the report has been run before or if there are existing saved settings entries. The saved settings entry called **Last used options and filters** is always available. These settings are the option and filter values that were used the last time you ran the report.
 
 -->
 
-## To create and modify saved settings for all users
-You manage saved settings on the **Reports Settings** page. There are two ways to open this page:
--   Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Settings**, and then choose the related link.
--   Open a report, choose the lookup in the **Use default values from** field, and then choose the **Select from full list** action.
+## Vytvořit a upravit uložené nastavení pro všechny uživatele
+Uložená nastavení se spravují na stránce **1560 Nastavení sestav** . Tuto stránku lze otevřít dvěma způsoby:
+- Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení sestav** a poté vyberte související odkaz.
+- Otevřete sestavu, vyberte vyhledávání vedle pole **Použít výchozí hodnoty z:**, vyberte **Vybrat z úplného seznamu**.
 
-The page displays all the existing saved settings entries for all users. If there is a user name in the **Assigned to** field, only that user can use the saved settings for the associated report. If there is a check mark in the **Share with all users** field, all users can use the saved settings for the report.
+Stránka zobrazuje všechny existující položky nastavení ukládání pro všechny uživatele. Pokud je ve sloupci **Přiřazeno k** jméno uživatele, uložená nastavení pro přidruženou sestavu může použít pouze tento uživatel. Pokud je zaškrtnuto políčko **Sdílet se všemi uživateli **, mohou použít uložené nastavení sestavy všichni uživatelé.
 
-From the **Report Settings** page, you can:
--   Choose the **New** action to create a new saved settings entry from scratch.
--   Select a saved settings entry from the list, and choose the **Copy** action to create a copy.
--   Select a saved settings entry from the list, and choose the **Edit** action to modify a saved settings entry.
+Na stránce **Nastavení sestav** můžete:
+- Zvolit **Nový** k vytvoření nové položky uloženého nastavení sestav.
+- Vybrat uloženou položku nastavení ze seznamu a zvolit **Kopírovat** pro vytvoření kopie.
+- Vyberat položku uloženého nastavení ze seznamu a zvolit **Upravit** pro úpravu uložené položky nastavení.
+
 
 > [!Important]
-> Consider the name that you give a saved settings entry. If you create a saved settings entry for all users, and you give it the same name as an existing saved settings entry that is assigned to a specific user only, then that user will not be able to use the saved settings entry that is assigned to everyone.  In the **Saved Settings** section on the request page, the user will see two saved settings entries with the same name. However, no matter which option they choose, the user-specific saved settings entry will be used.
+> Zvažte jméno, které zadáte pro uloženou položku nastavení.. Pokud vytvoříte uloženou položku nastavení pro všechny uživatele a přiřadíte jí stejný název jako existující položka nastavení přiřazená pouze určitému uživateli, nebude moci tento uživatel použít uloženou položku nastavení přiřazenou všem.  V části **Uložená nastavení** na stránce požadavku na sestavu uvidí uživatelé dvě uložené položky nastavení se stejným názvem. Avšak bez ohledu na to, kterou možnost uživatel zvolí, bude použita uložená položka nastavení specifická pro uživatele.
 
 > [!NOTE]
-> The Saved Settings feature is available only on reports where the [SaveValues property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-savevalues-property) of the report's request page is set to **Yes**. The **SaveValues** property is set in the development environment.  
+<x3 /> Funkce uloženého nastavení je dostupná pouze u sestav, kde je vlastnost [Uložit hodnoty​](https://docs.microsoft.com/en-us/dynamics-nav/savevalues-property) na stránce sestavy nastavena na `Ano`. Vlastnost **SaveValues - Uložit hodnoty** se nastavuje ve vývojovém prostředí.
 
-## See Also
-[Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Práce se sestavami a dávkovými úlohami ](ui-work-report.md)

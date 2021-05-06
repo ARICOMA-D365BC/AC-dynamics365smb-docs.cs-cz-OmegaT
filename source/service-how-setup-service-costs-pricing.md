@@ -1,67 +1,64 @@
 ---
-    title: Set Up Pricing and Costs for Services | Microsoft Docs
-    description: Learn how to set up prices and additional costs for services.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: service, cost, service order
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Nastavení cen a nákladů za Servis | Microsoft Docs
+description: 'Naučte se, jak nastavit ceny a další náklady za servis.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: 'service, cost, service order'
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
 
-# Set Up Pricing and Additional Costs for Services
-You can use the [!INCLUDE[prod_short](includes/prod_short.md)] pricing features to set up and customize your application so that you apply and adjust pricing on service items, repairs, and orders. These pricing decisions are then easily transmitted to the invoicing process.  
+# <a name="set-up-pricing-and-additional-costs-for-services"></a>Nastavení cen a dodatečných nákladů za servis
+Pomocí funkcí stanovení ceny [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete nastavit a přizpůsobit svou aplikaci tak, abyste mohli aplikovat a upravovat ceny za předměty servisu, servisní opravy a servisní zakázky. Tato cenová rozhodnutí jsou poté snadno předána do fakturačního procesu.  
   
-As your implementation requires, you can set up pricing groups and map them to specific time periods, customers, or currency. You can set up fixed, minimum, or maximum pricing, depending on the service contracts that you have with customers. Finally, as you adjust your prices, you can view and approve the changes before committing them to the ledger.  
+Jak vyžaduje implementace, můžete nastavit cenové skupiny a namapovat je na konkrétní časová období, zákazníky nebo měnu. Můžete nastavit pevné, minimální, nebo maximální ceny, podle toho, jaké servisní smlouvy máte uzavřené se zákazníky. Nakonec, jak upravujete své ceny, můžete si prohlížet a schvalovat změny před jejich odevzdáním do hlavní knihy.  
 
-## To set up a service price group
-You can set up groups containing service items that you want to receive the same special service pricing. You assign service price groups to service items on service item lines. You can also assign service price groups to service item groups.  
+## <a name="to-set-up-a-service-price-group"></a>Nastavení cenové skupiny servisu
+Můžete nastavit skupiny obsahující předměty servisu, které chcete dostávat za stejné speciální ceny servisu. Předmětům servisu na řádcích předmětů servisu přiřazujete cenové skupiny servisu. Skupinám předmětů servisu můžete také přiřadit cenové skupiny servisu.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Price Groups**, and then choose the related link.  
-2. Create a new service price group.  
-3. Fill in the **Code** and **Description** fields.  
-4. Choose the **Setup** action.  
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Cenové skupiny servisu** a poté vyberte související odkaz.  
+2. Vytvořit novou cenovou skupiny servisu.  
+3. Vyplňte pole **Kód** a **Popis**.  
+4. Zvolte akci **Nastavení**.  
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
  > [!Tip]
- > The **Adjustment Type** and **Amount** fields work together to specify whether an adjustment concerns a fixed amount, or applies only when the total service price exceeds or is lower than the amount in the **Amount** field.  
+ > Pole **Typ úpravy** a **Částka** společně určují, zda se úprava týká pevné částky, nebo se použije pouze v případě, kdy celková cena servisu překročí nebo je nižší než částka v poli **Částka**.  
 
-## To set up a service price adjustment group  
-You can set up price adjustment groups to adjust service pricing of service items. For example, you can set up price adjustment groups that adjust price of freight or spare parts.  
+## <a name="to-set-up-a-service-price-adjustment-group"></a>Nastavení skupiny úpravy ceny servisu  
+Můžete nastavit skupiny úpravy ceny pro úpravu cen servisu u předmětů servisu. Můžete například nastavit skupiny úpravy ceny, které upravují cenu přepravného nebo náhradních dílů.  
   
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Price Adjustment Groups**, and then choose the related link.  
-2. Create a new service price adjustment group.  
-3. Fill in the **Code** and **Description** fields.  
-4. In the **Type** field, enter the type of the entry that you want to adjust.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skupiny úprav ceny servisu** a poté vyberte související odkaz.  
+2. Vytvoření nové skupiny úpravy ceny servisu  
+3. Vyplňte pole **Kód** a **Popis**.  
+4. Do pole **Typ** zadejte typ záznamu, který chcete upravit.  
   
-    * To adjust only one specific entry, enter the number of this entry in the **No.** field. When you leave this field blank, your adjustment group will adjust all entries of the type defined in the **Type** field.  
-    * To adjust service prices related to only one specific service, fill in the **Work Type** field. When you leave this field blank, it will just be ignored.  
+    * Chcete-li upravit pouze jeden konkrétní záznam, zadejte číslo tohoto záznamu do pole **Číslo** . Pokud toto pole ponecháte prázdné, vaše skupina úpravy ceny upraví všechny položky typu definovaného v poli **Typ**.  
+    * Chcete-li upravit ceny služeb vztahující se pouze k jedné konkrétní službě, vyplňte pole **Typ práce**. Pokud toto pole necháte prázdné, bude ignorováno.  
   
-5. In the **Description** field, enter a short description of the service price adjustment.  
-6. To adjust service prices related to only one specific general product posting group, fill in the **Gen. Prod. Posting Group** field.
+5. Do pole **Popis** zadejte krátký popis úpravy ceny servisu.  
+6. Chcete-li upravit ceny servisu vztahující se pouze na jednu konkrétní obecnou účto skupinu zboží, vyplňte pole **Obecná účto skupina zboží**.
 
 > [!Tip]
-> You can choose **Details** to add additional information about the adjustment group. For example, you can specify which item belongs to the service price adjustment group, and whether this is an item, a resource, a resource group, or a service charge.  
+> Chcete-li přidat další informace o skupině úprav ceny, můžete vybrat **Podrobnosti**. Můžete například určit, které zboží patří do skupiny úpravy ceny servisu a zda se jedná o zboží, zdroj, skupinu zdrojů nebo poplatek za servis.  
 
-## To set up additional costs for services
-When you work with service items and service orders, you may need to register additional costs, such as travel costs to particular service zones or starting fees. When you create a service order, you can insert these costs and a line with the type **Cost** will be added to the order. Alternatively, if you want to apply the cost to all service orders, you can set up a default cost. For example, if you always want to apply a starting fee.
+## <a name="to-set-up-additional-costs-for-services"></a>Stanovení dodatečných nákladů za servis
+Při práci s předměty servisu a servisními zakázkami budete možná muset zaregistrovat další náklady, například cestovní náklady do konkrétních zón servisu, nebo počáteční poplatky. Když vytvoříte servisní zakázku, můžete vložit tyto náklady, a do objednávky bude přidán řádek  **Náklady**. Alternativně, pokud chcete použít náklady na všechny servisní zakázky, můžete nastavit výchozí náklad. Pokud například chcete vždy použít počáteční poplatek.
   
-### To set up service costs
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Costs**, and then choose the related link. 
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+### <a name="to-set-up-service-costs"></a>Nastavení Servisních nákladů
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Náklady na servis** a poté vyberte související odkaz. 
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-### To specify a default cost for service orders
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Setup**, and then choose the related link. 
-2. In the **Service Order Starting Fee** field, choose the appropriate service cost.
+### <a name="to-specify-a-default-cost-for-service-orders"></a>Nastavení výchozích nákladů na servisní zakázky
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení servisu** a poté vyberte související odkaz. 
+2. V poli **Počáteční poplatek servisní zakázky** vyberte příslušné servisní náklady.
 
-## See Also
-[Setting Up Service Management](service-setup-service.md)  
-[Service Management](service-service.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Nastavení Správy servisu](service-setup-service.md)  
+[Správa servisu](service-service.md)  

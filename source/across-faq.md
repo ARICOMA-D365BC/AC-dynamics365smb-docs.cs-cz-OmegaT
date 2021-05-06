@@ -1,148 +1,142 @@
 ---
-title: FAQ About Using Business Central
-description: Answers common questions about how to sign up for or buy Business Central, extend a trial, cancel a subscription, and find training and other support.
-author: edupont04
+title: Otázky a odpovědi o používání Business Central | Microsoft Docs
+description: 'Odpovědi na běžné otázky o tom, jak si zaregistrovat, koupit Business Central, získat zkušební verzi, získat podporu, prodloužit zkušební období, zrušit předplatné, vyhledat školení a další podporu.'
+author: ZdenekBicek
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
-ms.search.keywords: FAQ, email, Microsoft 365, subscription, subscribe, trial, plan, application area, experience, support, buy, upgrade, extend
-ms.date: 10/01/2020
+ms.topic: article
+ms.search.keywords: 'FAQ, email, Office 365, subscription, subscribe, trial, plan, application area, experience, support, buy, upgrade, extend'
+ms.date: 01/07/2020
+ms.reviewer: v-zdbice
 ms.author: edupont
-
 ---
-# Frequently Asked Questions about Using Business Central
+# Často kladené otázky
 
-This section contains answers to frequently asked questions about signing up for a trial, buying a subscription, and using [!INCLUDE[prod_short](includes/prod_short.md)]. You can also learn how to get technical support.  
+Tato část obsahuje odpovědi na nejčastější dotazy týkající se registrace zkušební verze, zakoupení předplatného a použití [!INCLUDE[d365fin](includes/d365fin_md.md)]. Můžete se také naučit, jak získat technickou podporu.  
 
-## Is [!INCLUDE[prod_short](includes/prod_short.md)] available in my country/region?
+## Je [!INCLUDE[d365fin](includes/d365fin_md.md)] dostupná v mé zemi?
 
-[!INCLUDE[prod_short](includes/prod_short.md)] is available in a limited number of markets, but new countries are added through Microsoft-led localization or through partner-led localization on a quarterly basis. For more information, see [Country/Regional Availability and Supported Translations](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json) (available in English only).  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] je k dispozici na omezeném počtu trhů, ale nové země jsou přidávány prostřednictvím lokalizací prováděných společností Microsoft nebo prostřednictvím lokalizací prováděných partnery na čtvrtletní bázi. Pro více informací běžte na [Dostupnost zemí/regionů a podporované lokalizace](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json) (dostupné pouze v angličtině).
 
-## How do I get [!INCLUDE[prod_short](includes/prod_short.md)]?
+## Jak získám [!INCLUDE [prodshort](includes/prodshort.md)]?
 
-You can sign up for a free trial to explore [!INCLUDE[prod_short](includes/prod_short.md)]. [!INCLUDE[free_trial_md](includes/free_trial_md.md)] If you want more time to explore, [you can extend your trial period](#can-i-extend-my-30-day-new-company-trial-period).  
+Můžete se zaregistrovat a vyzkoušet bezplatnou zkušební verzi [!INCLUDE [prodshort](includes/prodshort.md)]. [!INCLUDE [free_trial_md](includes/free_trial_md.md)] Pokud budete potřebovat více času k vyzkoušení, [můžete prodloužit bezplatné zkušební období](#can-i-extend-my-30-day-new-company-trial-period).  
 
-To help you get ready for doing business in [!INCLUDE[prod_short](includes/prod_short.md)], you can launch assisted setup guides, videos, or help topics for selected setup tasks. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).  
+Chcete-li se připravit na podnikání v [!INCLUDE [prodshort](includes/prodshort.md)], můžete pro vybraná nastavení spustit průvodce asistovaného nastavení, videa nebo nápovědu. Pro více informací běžte na [Příprava na podnikání](ui-get-ready-business.md).  
 
-When you are ready to buy [!INCLUDE[prod_short](includes/prod_short.md)], you can find a [!INCLUDE[prod_short](includes/prod_short.md)] partner on the [I'm looking for a solution provider](https://go.microsoft.com/fwlink/?linkid=2038145) page. For more information, see [How do I find a reselling partner?](#findpartner).  
+Pokus jste připraveni ke koupi [!INCLUDE [prodshort](includes/prodshort.md)], můžete vyhledat [!INCLUDE [prodshort](includes/prodshort.md)] partnera na [Hledám poskytovatele řešení](https://go.microsoft.com/fwlink/?linkid=2038145). Další informace naleznete v části [Jak najdu obchodního partnera?](#findpartner).
 
-## Where do I go if I have questions?
-If you have questions about [!INCLUDE[prod_short](includes/prod_short.md)] that you can't find an answer for in this documentation, you can ask the Business Central community. For more information, see [Dynamics 365 Business Central community](https://community.dynamics.com/business).  
+## Kam mám jít, pokud mám dotazy?
 
-From the community home page, you can also find links to our blogs where you can also find tips and tricks. For more information, see [Microsoft Dynamics 365 Business Central on the Dynamics 365 blog](https://cloudblogs.microsoft.com/dynamics365/it/product/business-central/) and the older [Dynamics 365 Business Central Blog](https://community.dynamics.com/business/b/financials).  
+Máte-li dotazy k [!INCLUDE[d365fin](includes/d365fin_md.md)], na které nemůžete v této dokumentaci najít odpověď, můžete se zeptat komunity Business Central. Více informací naleznete na [Komunita Dynamics 365 Business Central](https://community.dynamics.com/business)  
 
-Finally, you can contact your [!INCLUDE[prod_short](includes/prod_short.md)] reselling partner. For more information, see the [How do I get technical support?](across-faq.md#hdigetsupport) and [How do I find a reselling partner?](#findpartner) sections.  
+Na domovské stránce komunity najdete také odkazy na naše blogy, kde najdete také tipy a triky. Další informace naleznete na [Microsoft Dynamics 365 Business Central na blogu Dynamics 365](https://cloudblogs.microsoft.com/dynamics365/it/product/business-central/) a starším [blogu Dynamics 365 Business Central](https://community.dynamics.com/business/b/financials).
 
-## Why can't I find that capability in my [!INCLUDE[prod_short](includes/prod_short.md)]?
-Did you read about a new capability in the release plan or on our blog recently? In that case, your [!INCLUDE[prod_short](includes/prod_short.md)] might not have been upgraded to the latest version yet. You can check which version your [!INCLUDE[prod_short](includes/prod_short.md)] is based on in the [Help and Support](product-help-and-support.md) page.  
+Nakonec se můžete obrátit na svého obchodního partnera [!INCLUDE[d365fin](includes/d365fin_md.md)]. Pro více informací běžte na sekce [Jak získat technickou podporu](#how-do-i-get-technical-support-for-) a [Jak najdu obchodního partnera?](#findpartner).  
 
-Also, if the capability is published as an extension in AppSource, then there is a delay between the extension being announced and its availability in AppSource.  
+## Proč nemohu najít tuto vlastnost ve svém [!INCLUDE[d365fin](includes/d365fin_md.md)]?
 
-## Are there any differences between an on-premises deployment and the cloud version of Business Central?
-Yes. Some Cloud-based features may run on premises in certain cases and others are not supported at all. For more information, see [Features not implemented in on-premises deployments of Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/features-not-implemented-on-premises).
+Četli jste nedávno v poznámkách k vydání nebo na našem blogu o nových možnostech? V případě Váš [!INCLUDE[d365fin](includes/d365fin_md.md)] možná zatím nebyl aktualizován na poslední verzi. Na stránce [Nápověda a podpora](product-help-and-support.md) si můžete ověřit, na jaké verzi je vaše [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-## Can I get training in [!INCLUDE[prod_short](includes/prod_short.md)]?
-Yes, you can! You can find free eLearning content on the [Microsoft Learn site](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs). You can also ask your reselling partner for additional training. If you don't know who that is, see the [How do I find a reselling partner?](#findpartner) section.  
+Pokud je tato funkce publikována jako rozšíření v AppSource, pak existuje zpoždění mezi oznámením o rozšíření a jeho dostupností v AppSource.  
 
-For more information about training across Dynamics 365 that is provided by Microsoft, see the [Microsoft Dynamics 365 training](/dynamics365/get-started/training/index#dynamics-365-customers) page.  
+## Existují nějaké rozdíly mezi on-premises nasazením a cloudovou verzí Business Central?
 
-Additional content is provided by the [!INCLUDE[prod_short](includes/prod_short.md)] community, such as the [Microsoft Dynamics 365 Business Central Field Guide](https://leanpub.com/dynamics) that is written by a partner.  
+Ano. Některé funkce založené na cloudu mohou v některých případech fungovat i v on-premises a jiné nejsou vůbec podporovány. Další informace naleznete v části [Funkce neobsažené v on-premises implementacích Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/features-not-implemented-on-spaces).
 
-## <a name="hdigetsupport"></a>How do I get technical support for [!INCLUDE[prod_short](includes/prod_short.md)]?
+## Mohu se zúčastnit školení [!INCLUDE[d365fin](includes/d365fin_md.md)]?
 
-[!INCLUDE[prod_short](includes/prod_short.md)] is sold through partners, and you should contact your reselling partner to get help with technical problems. If your [!INCLUDE[prod_short](includes/prod_short.md)] partner then cannot resolve the problem, they will raise a support ticket with Microsoft.  
+Ano, můžete. Bezplatný eLearningový obsah najdete na [stránce Microsoft Learn](/learn/browse/?products=dynamics-business-central). Další informace naleznete v [Katalog vzdělávání Business Central](readiness/readiness-learning-catalog.md). Můžete také požádat svého obchodního partnera o další školení. Pokud nevíte, kdo to je, běžte na sekci [Jak najdu obchodního partnera?](#findpartner).
 
-For more information, see [Help and Support](product-help-and-support.md) and the [How do I find a reselling partner?](#findpartner) section.  
+Další informace o školení napříč Dynamics 365, které poskytuje společnost Microsoft, naleznete na stránce [Školení Microsoft Dynamics 365](/dynamics365/get-started/training/index#dynamics-365-customers).
 
-## Why does Help describe functionality that I cannot access?
-If your Experience setting on the **Company Information** page is set to **Essential**, then UI elements for the Manufacturing and Service Management features are not visible to you because they require the **Premium** experience. A text note is inserted in high-level help topics for these feature areas. For more information, see [Change Which Features are Displayed](ui-experiences.md).
+Další obsah poskytuje komunita [!INCLUDE [prodshort](includes/prodshort.md)], například [Microsoft Dynamics 365 Business Central Field Guide](https://leanpub.com/dynamics), která je napsána partnerem.
 
-## Where is the save button?
+## <a name="how-do-i-get-technical-support-for-"></a>Jak získám technickou podporu pro [!INCLUDE[d365fin](includes/d365fin_md.md)]?
 
-There is no *save* button on pages like in other programs that you might be familiar with. In [!INCLUDE[prod_short](includes/prod_short.md)], changes that you make to a field are automatically saved as soon as you move to the next field or close the page, as long as there are no errors. When you make changes to a field and move to another field, you will see the text **Saving** in the top-right corner of the page, which will quickly change to **Saved** if no errors occur. If an error occurs, the text will change to **Not Saved**.
+[!INCLUDE[d365fin](includes/d365fin_md.md)] se prodává prostřednictvím partnerů a měli byste se obrátit na svého obchodního partnera, který vám pomůže s technickými problémy. Pokud váš [!INCLUDE[d365fin](includes/d365fin_md.md)] partner nemůže problém vyřešit, získá podporu u společnosti Microsoft.
 
-## <a name="email"></a>What email address can I use with [!INCLUDE[prod_short](includes/prod_short.md)]?
-[!INCLUDE[prod_short](includes/prod_short.md)] requires that you use a work, or school, email address to sign up. [!INCLUDE[prod_short](includes/prod_short.md)] does not support email addresses provided by consumer email services or telecommunication providers. This includes outlook.com, hotmail.com, gmail.com, and others.  
+Další informace naleznete v části [Nápověda a podpora](product-help-and-support.md) a v části [Jak najdu obchodního partnera?](#findpartner).
 
-If you try to sign up with a personal email address, you will get a message indicating to use a work or school email address. For more information, see [Troubleshooting Self-Service Sign-Up](ui-troubleshoot-self-signup.md).  
+## Proč nápověda popisuje funkcionality, na kterou nemám přístup?
 
-If you want to deploy [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, then you can use other authentication methods. For more information, see [Deployment of Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/deployment).  
+Pokud vaše nastavení Experience na stránce **Informace o společnosti** je nastaveno na **Essential**, potom prvky uživatelského prostředí pro funkce Výroby a Servisu nejsou viditelné, protože vyžadují **Premium** experience. V hlavních sekcích pro takovéto oblasti aplikace je vložena odpovídající textová poznámka. Pro další informace se podívejte na [Změna zobrazování funkcí](ui-experiences.md).
 
-## Do I have to buy Microsoft 365?
-No. But if you want to experience [!INCLUDE[prod_short](includes/prod_short.md)] as fully integrated with Microsoft 365, you can sign up for a 1-month free trial of Microsoft 365 [here](https://products.office.com/try).  
+## Kde je tlačítko pro uložení?
 
-If the account you sign up with is a non-Microsoft 365 work account (such as joe@mysolution.com), and you have a Microsoft 365 subscription, then you can associate your domain (*mysolution.com*) with the Microsoft 365 subscription. For more information, see [What is a domain?](/microsoft-365/admin/get-help-with-domains/what-is-a-domain?view=o365-worldwide&preserve-view=true) in the Microsoft 365 content.  
+Na stránkách neexistuje žádné tlačítko *uložit* jako v jiných programech, které byste mohli znát. V [!INCLUDE[d365fin](includes/d365fin_md.md)] se změny, které provedete v poli, automaticky uloží, jakmile přejdete na další pole nebo zavřete stránku, pokud nedojde k chybám. Když provedete změny v poli a přesunete se do jiného pole, uvidíte text **Ukládání** v pravém horním rohu stránky, který se rychle změní na **Uloženo**, pokud nedojde k chybám. Pokud dojde k chybě, text se změní na **Neuloženo**.
 
-If you do not have a Microsoft 365 subscription, and you do not want to buy one, then, when you sign up, we provision a new Azure Active Directory tenant for you so that you have access to the Azure portal where you have access to advanced administration tools.  
+## Jakou e-mailovou adresu mohu použít v [!INCLUDE[d365fin](includes/d365fin_md.md)]?
 
-## What is the integration with Microsoft 365 about?
-[!INCLUDE[prod_short](includes/prod_short.md)] online is fully integrated with Microsoft 365 so that you can navigate freely between Microsoft 365 apps and [!INCLUDE[prod_short](includes/prod_short.md)] using the app launcher. In [!INCLUDE[prod_short](includes/prod_short.md)], you can open data in Excel, print reports using Word, and you can work with your [!INCLUDE[prod_short](includes/prod_short.md)] data in Outlook, for example. For more information, see [Using [!INCLUDE[prod_short](includes/prod_short.md)] as your Business Inbox in Outlook](admin-outlook.md).  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] vyžaduje, abyste k registraci použili Vaší pracovní nebo školní e-mailovou adresu. [!INCLUDE[d365fin](includes/d365fin_md.md)] nepodporuje e-mailové adresy poskytované spotřebitelskými e-mailovými službami nebo poskytovateli telekomunikačních služeb. To zahrnuje outlook.com, hotmail.com, gmail.com a další.  
 
-## Can I extend my 30-day "New Company" trial period?
-Yes. When the expiration date for your trial period is approaching we will display a notification to alert you when you sign in. The notification contains a link to the **Extend Trial Period** guide that you can use to extend your trial period. The extra 30 days start the moment you choose **Extend Trial** in the guide. You can extend the trial period one time yourself. After that, a Microsoft partner can extend it for another 30 days. For more information, see [Extend Your Trial Version](admin-extend-trial.md).
+Pokud se pokusíte zaregistrovat pomocí své osobní e-mailové adresy, zobrazí se zpráva, že musíte použít pracovní nebo školní e-mailovou adresu. Další informace naleznete na stránce [Řešení problémů při samoobslužné registraci](ui-troubleshoot-self-signup.md).  
+
+Pokud chcete nasadit [!INCLUDE[d365fin](includes/d365fin_md.md)] on-premises, můžete použít jiné metody ověřování. Více informací naleznete na [Nasazení Dynamics 365 Business Cental](/dynamics365/business-central/dev-itpro/deployment/deployment)  
+
+## Musím si koupit Office 365?
+
+Ne. Pokud však chcete zažít [!INCLUDE[d365fin](includes/d365fin_md.md)] jako plně integrovaný s Office 365, můžete si zaregistrovat bezplatnou zkušební verzi Office 365 na 1 měsíc [zde](https://products.office.com/try).  
+
+Pokud účet, se kterým se zaregistrujete není účet Office 365 (například joe@mysolution.com) a máte předplatné Office 365, můžete svou doménu (mysolution.com) spojit s předplatným Office 365. Pro více informací běžte na [Získejte pomoc s doménami Office 365](/office365/admin/get-help-with-domains/get-help-with-domains?view=o365-worldwide)  
+
+Pokud nemáte předplatné Office 365 a nechcete si ho kupovat, poskytneme vám při registraci nový tenant služby Azure Active Directory, abyste měli přístup k portálu Azure, kde máte přístup k pokročilým nástrojům pro správu.
+
+## O čem je integrace s Office 365?
+
+[!INCLUDE[d365fin](includes/d365fin_md.md)] online je plně integrován s Office 365, takže můžete volně procházet mezi aplikacemi Office 365 a [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí spouštěče aplikací. V [!INCLUDE[d365fin](includes/d365fin_md.md)] můžete otevírat data v Excelu, tisknout sestavy pomocí aplikace Word a pracovat s vašimi [!INCLUDE[d365fin](includes/d365fin_md.md)] daty například v aplikaci Outlook. Pro více informací běžte na [Použití[!INCLUDE[d365fin](includes/d365fin_md.md)] jako vaší obchodní schránky v Outlook](admin-outlook.md).  
+
+## <a name="can-i-extend-my-30-day-new-company-trial-period"></a>Mohu prodloužit 30 denní zkušební období pro „Novou společnost“?
+
+Ano. Když se blíží datum vypršení zkušební období, zobrazí se vám upozornění při přihlašování. Oznámení obsahuje odkaz na průvodce **Prodloužit zkušební období**, který můžete použít k prodloužení zkušebního období. Dalších 30 dní začíná okamžikem, kdy v průvodci zvolíte **Prodloužit zkušební verzi**. Zkušební období můžete jednou prodloužit sami. Poté jej může partner společnosti Microsoft prodloužit o dalších 30 dní. Pro více informací běžte na [Prodloužení Vaší zkušební verze](admin-extend-trial.md).
 
 > [!NOTE]
-> It may take up to two business days to complete the trial extension process.  
+> Dokončení procesu rozšíření zkušebního období může trvat až dva pracovní dny.  
 
-For more information about finding a partner, see [How do I find a reselling partner?](#findpartner).  
+Pro další informace o nalezení partnera jděte do části [Jak najdu obchodního partnera?](#findpartner). 
 
-## What are the service level agreements for the cloud?
+## Náš správce mě přesunul do jiného plánu, aby mi dal jinou roli, ale stále vidím stejné Centrum rolí v [!INCLUDE[d365fin](includes/d365fin_md.md)]?
 
-[!INCLUDE [service-terms](includes/service-terms.md)]
+Je to trochu komplikované, ale zdá se, že váš správce nezměnil vaše Centrum rolí a nepřidělil skupiny uživatelů, které odpovídají nové licenci. Váš přístup do [!INCLUDE[d365fin](includes/d365fin_md.md)] je v zásadě určen typem plánu (licence), který máte - to nastavuje oprávnění a výchozí stránku Centra rolí. Centrum rolí můžete změnit ručně v **Moje nastavení**, ale pokud jste přesunuti do jiného plánu, například přesunem z Business plan do Team Members plan, můžete vidět staré Centrum rolí, protože se Vaše oprávnění nezměnila.  
 
-## Our administrator has moved me to another plan to give me another role, but I still see the same Home screen in [!INCLUDE[prod_short](includes/prod_short.md)]?
-This is a bit complicated, but it looks like your administrator didn't change your assigned role and assign user groups that match the new license. Essentially, your access to [!INCLUDE[prod_short](includes/prod_short.md)] is determined by the type of plan (license) that you have - this sets permissions, your assigned role and your default Home screen. You can change your current role manually in My Settings, but if you are moved to another plan, such as moving you from the Business plan to the Team Members plan, you might see the old Home screen because your permissions were not changed.  
+## Můžu zrušit své předplatné?
 
-## Can I cancel my subscription?
-Yes, but depending on how you signed up to [!INCLUDE[prod_short](includes/prod_short.md)], your data can be deleted or preserved. For more information, see [Canceling [!INCLUDE[prod_short](includes/prod_short.md)]](admin-cancel.md).  
+Ano, ale v závislosti na tom, jak jste se zaregistrovali v [!INCLUDE[d365fin](includes/d365fin_md.md)], mohou být vaše data smazána nebo zachována. Další informace, viz [Zrušení [!INCLUDE[d365fin](includes/d365fin_md.md)]](admin-cancel.md).  
 
-## Can I use multi-factor authentication?
-Sure. If you do, you might need an app password in order to send email messages. App passwords give an app or a device access to your email account. The steps for getting an app password vary, depending on your email provider. For more information, see the help from your provider. For example, if you're using Outlook, see [Multi-factor authentication for Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2082543).  
+## Mohu použít vícefaktorové ověřování?
 
-## <a name="findpartner"></a>How do I find a reselling partner?
+Určitě. Pokud tak učiníte, možná budete potřebovat heslo aplikace pro odesílání e-mailových zpráv. Hesla aplikace dávají aplikaci nebo zařízení přístup k vašemu e-mailovému účtu. Postup získání hesla aplikace se liší v závislosti na poskytovateli e-mailu. Další informace naleznete v nápovědě vašeho poskytovatele. Pokud například používáte aplikaci Outlook, běžte na [Vytvoření hesla aplikace pro Office 365](https://go.microsoft.com/fwlink/?linkid=2082543).
 
-[!INCLUDE[prod_short](includes/prod_short.md)] is sold and implemented through a global network of Dynamics 365 partners with industry expertise. Contact a partner for a detailed assessment, consulting services, and additional pricing. For more information, see the **Pricing** section on the [Dynamics 365 Business Central page on microsoft.com](https://dynamics.microsoft.com/business-central/overview/).  
+## <a name="findpartner"></a>Jak najdu obchodního partnera?
 
-When you are ready to buy [!INCLUDE[prod_short](includes/prod_short.md)], you can find a [!INCLUDE[prod_short](includes/prod_short.md)] partner on the [I'm looking for a solution provider](https://go.microsoft.com/fwlink/?linkid=2038145) page. You can also find solutions and services from partners in [Microsoft AppSource](https://go.microsoft.com/fwlink/?linkid=845998).  
+[!INCLUDE [prodshort](includes/prodshort.md)] je prodáván a implementován prostřednictvím globální sítě partnerů Dynamics 365 s odbornými znalostmi. Kontaktujte partnera a požádejte o podrobné posouzení, poradenské služby a další ceny. Další informace naleznete v části **Cenotvorba** na stránce [Dynamics 365 Business Central na Microsoft.com](https://dynamics.microsoft.com/business-central/overview/).
 
-If you want guidance from Microsoft, contact the [Microsoft Sales team](https://go.microsoft.com/fwlink/?linkid=828707).  
+Když jste připraveni ke koupi [!INCLUDE [prodshort](includes/prodshort.md)], najdete partnera [!INCLUDE [prodshort](includes/prodshort.md)] na stránce [Hledám poskytovatele řešení](https://go.microsoft.com/fwlink/?linkid=2038145). Můžete také najít řešení a služby od partnerů na [Microsoft AppSource](https://go.microsoft.com/fwlink/?linkid=845998).  
 
-Your reselling partner will also handle technical support for you. For more information, see [Resources for Help and Support](product-help-and-support.md).  
+Pokud chcete získat radu od společnosti Microsoft, obraťte se na [Microsoft Sales team](https://go.microsoft.com/fwlink/?linkid=828707).  
 
-## Where do I find that line number?
+Technickou podporu pro vás zajistí i váš obchodní partner. Další informace viz [Zdroje informací pro nápovědu a podporu](product-help-and-support.md).
 
-Documents such as sales order or purchase invoices consist of headers and lines. Each line has a number that [!INCLUDE [prod_short](includes/prod_short.md)] uses to identify this particular line. As a result, you might see a warning or an error message that something is wrong in line number 1000, for example. In the default version of [!INCLUDE [prod_short](includes/prod_short.md)], line numbers are hidden. If you want to see the line numbers, you must personalize the current page and add the **Line No.** field. For more information, see [Personalize Your Workspace](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).  
+## Je podporován klient pro Windows?
 
-## Why is new information not available in my language?
+První vydání [!INCLUDE[prodshort](includes/prodshort.md)] on-premises zahrnovalo nainstalovaného klienta odvozeného od Microsoft Dynamics NAV. Počínaje vydáním 2019 wave 2, tato starší součást, označovaná jako „klient Windows“, již nebude k dispozici pro [!INCLUDE[prodshort](includes/prodshort.md)]. Další informace viz [Nejčastější dotazy týkající se klienta Windows a Business Central](/dynamics365/business-central/dev-itpro/faq-win-cli).
 
-On the docs.microsoft.com site, content about business functionality is published in a number of languages. The content is authored in English and published to URLs with *en-us* as the language code. When new information is published in English, it is then sent off for translation into the supported languages. This means that you will not be able to read this new content in your own language for up to 4 weeks.  
+## Viz také
 
-We understand the problems this can cause, and we encourage users to search for what they are looking for in English if they cannot find it in their own language.  
-
-## Is the Windows client supported?
-
-The first releases of [!INCLUDE[prod_short](includes/prod_short.md)] on premises included an installed client derived from Microsoft Dynamics NAV. Starting with 2019 release wave 2, this legacy component, referred to as "the Windows client", will no longer be available for [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [FAQ About the Windows Client and Business Central](/dynamics365/business-central/dev-itpro/faq-win-cli).
-
-## See Also
-
-[Getting Started](product-get-started.md)  
-[Tell Me FAQ](ui-search-faq.md)  
-[Searching and Filtering FAQ](ui-search-filter-faq.md)  
-[List Views FAQ](ui-views-faq.md)  
-[Changing Language and Locale](about-locale-language.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as Your Business Inbox in Outlook](admin-outlook.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] without Outlook](admin-no-outlook.md)  
-[Change Basic Settings](ui-change-basic-settings.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Getting answers to questions](product-get-started.md#getting-answers-to-questions)  
-[Resources for Help and Support](product-help-and-support.md)  
+[Začínáme](product-get-started.md)  
+[Často kladené otázky o Řekněte mi](ui-search-faq.md)  
+[Často kladené otázky týkající se hledání a filtrování](ui-search-filter-faq.md)  
+[Často kladené otázky týkající se zobrazení seznamů](ui-views-faq.md)  
+[Použití [!INCLUDE[d365fin](includes/d365fin_md.md)] jako Vaší obchodní schránky v aplikaci Outlook](admin-outlook.md)  
+[Použití [!INCLUDE[d365fin](includes/d365fin_md.md)] bez aplikace Outlook](admin-no-outlook.md)  
+[Změna základního nastavení](ui-change-basic-settings.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Odpovědi na otázky](product-get-started.md#getting-answers-to-questions)  
+[Zdroje informací pro nápovědu a podporu](product-help-and-support.md)  
 [Business Central Learning Catalog](readiness/readiness-learning-catalog.md)  
-[Assign Permissions to Users and Groups](ui-define-granular-permissions.md)  
-[Country/Regional Availability and Supported Translations](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json)  
-[Service Terms](compliance/compliance-service-compliance.md#service-terms)  
-[FAQ About Developer and ITPro Experiences](/dynamics365/business-central/dev-itpro/faq)
+[Správa uživatelů a práv](ui-how-users-permissions.md)  
+[Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md)  
+[Dostupnost zemí/regionů a podporované lokalizace](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json)  
+[Často kladené otázky pro vývojáře a IT](/dynamics365/business-central/dev-itpro/faq)
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

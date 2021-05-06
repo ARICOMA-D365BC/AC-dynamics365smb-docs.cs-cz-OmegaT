@@ -1,41 +1,39 @@
 ---
 title: Close Income Statement Accounts | Microsoft Docs
 description: At year closing, you must run the Close Income Statement batch job to close the accounting periods that make up the fiscal year.
+services: project-madeira
+documentationcenter: ''
 author: jswymer
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, bank account detailed trial balance
-ms.date: 10/01/2020
+ms.date: 10/01/2019
 ms.author: jswymer
 
 ---
-# Close Income Statement Accounts
-When a fiscal year is over, you must close the periods that comprise it. To do this, you run the **Close Income Statement** batch job. This job transfers the year's result to an account in the balance sheet and closes the income statement accounts. You do this by creating lines in a journal, which you then can post.
+# Uzavírání účtů výsledovky
+Když skončí fiskální rok, musíte uzavřít období, která jej tvoří. Chcete-li to provést, spusťte dávkovou úlohu **Uzavření výsledovky**. Tato úloha převede výsledek roku na účet v rozvaze a uzavře účty výsledovky. To lze provést vytvořením řádků v deníku, které pak můžete zaúčtovat.
 
-## To run the Close Income Statement batch job
-1. Close the fiscal year. The fiscal year must closed before the batch job can be run. For more information, see [Close Accounting Periods](year-close-account-periods.md).
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Close Income Statement**, and then choose the related link.
-3. Choose the **OK** button to run the batch job.
+## Spuštění dávkové úlohy Uzavření výsledovky
+1. Zavřete fiskální rok. Před spuštěním dávkové úlohy musí být fiskální rok uzavřen. Pro více informací navštivte [Uzavírání účetního období](year-close-account-periods.md).
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uzavření výsledovky** a poté vyberte související odkaz.
+3. Zvolte tlačítko **OK** a spusťte dávkovou úlohu.
 
-## About the Close Income Statement Batch Job
-The batch job processes all general accounts of the income statement type and creates entries that cancel out their respective balances. That is, each entry is the sum of all the general ledger entries on the account in the fiscal year. These new entries are placed in a journal in which you must specify a balancing account and retained earnings account in the balance sheet before you post. When you post the journal, an entry is posted to each income statement account so that its balance becomes zero and at the same time the year's result is transferred to the balance sheet.
+## Dávková úloha Uzavření výsledovky
+Dávková úloha zpracuje všechny obecné účty typu výsledovka a vytvoří položky, které zruší jejich příslušné zůstatky. To znamená, že každá položka je součtem všech položek financí na účtu ve fiskálním roce. Tyto nové položky jsou umístěny do deníku, ve kterém musíte zadat protiúčet a účet nerozděleného zisku v rozvaze před zaúčtováním. Při zaúčtování deníku je položka zaúčtována na každý účet výsledovky tak, aby se její zůstatek stal nulovým a současně byl výsledek roku převeden do rozvahy.
 
-You must post the journal yourself. The batch job does not post the entries automatically, except when an additional reporting currency is being used. When an additional reporting currency is being used, the batch job posts entries directly to the general ledger.
+Deník musíte zaúčtovat sami. Dávková úloha neúčtuje položky automaticky, s výjimkou případů, kdy se používá další měna pro hlášení. Při použití další měny vykazování dávková úloha zaúčtuje položky přímo do hlavní knihy.
 
-The date on the lines that the batch job inserts in the journal is always a closing date for the fiscal year. The closing date is a fictitious date between the last day of the old fiscal year and the first day of the new year. The advantage of posting on a closing date is that you maintain the correct balances for the ordinary dates of the fiscal year.
+Datum na řádcích, které dávková úloha vloží do deníku, je vždy konečným datem pro fiskální rok. Datum uzávěrky je fiktivní datum mezi posledním dnem starého fiskálního roku a prvním dnem nového roku. Výhodou zaúčtování v den uzávěrky je to, že udržujete správné zůstatky pro běžná data fiskálního roku.
 
-The **Close Income Statement** batch job can be used several times. You can post in a previous fiscal year, even after the income statement accounts have been closed, if you run the batch job again.
+Dávkovou úlohu **Uzavření výsledovky**  lze použít několikrát. Pokud dávkovou úlohu spustíte znovu, můžete účtovat v předchozím fiskálním roce, a to i po uzavření účtů výsledovky.
 
-## See Also
-
-[Closing Books](year-close-books.md)  
-[Post the Year-End Closing Entry](year-how-post-year-end-close-entry.md)  
-[Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Uzavírání knih](year-close-books.md)  
+[Účtování položky konce roku](year-how-post-year-end-close-entry.md)  
+[Otevření nového fiskálního roku](finance-how-open-new-fiscal-year.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

@@ -4,71 +4,68 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: kit, kitting
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Assemble Items
-If the **Replenishment System** field on the item card contains **Assembly**, then the default method of supplying the item is to assemble it from defined components and potentially by a defined resource.  
+# Montáž zboží
+Pokud pole **Systém doplnění** na kartě zboží obsahuje **Montáž**, pak výchozí metodou dodání tohoto zboží je montáž z definovaných komponent a případně pomocí definovaného zdroje.
 
-The components and resources that go into this kind of an assembly item must be defined in an assembly BOM. For more information, see [Work with Bills of Material](inventory-how-work-BOMs.md).  
+Komponenty a zdroje, které jdou do tohoto druhu zboží montáže, musí být definovány v kusovníku sestavy. Pro více informací navštivte [Práce s kusovníky](inventory-how-work-BOMs.md).
 
-Assembly items can be set up for two different assembly processes:  
+Zboží montáže lze nastavit pro dva různé procesy montáže:
 
--   Assemble to stock.  
--   Assemble to order.  
+- Montáž na sklad.
+- Montáž na zakázku.
 
-You typically use **Assemble to Stock** for items that you want to assemble ahead of sales, such as to prepare for a kit campaign, and keep in stock until they are ordered. These items are usually standard items such as packaged kits that you do not offer to customize to customer requests.  
+Obvykle používáte **Montáž na sklad** pro zboží, které chcete sestavit před prodejem, například pro přípravu na kampaň a udržení jich na skladě, dokud nejsou objednány. Toto zboží je obvykle standardní, jako jsou zabalené sady, které nenabízíte k přizpůsobení požadavkům zákazníků.
 
-You typically use **Assemble to Order** for items that you do not want to stock because you expect to customize them to customer requests or because you want to minimize the inventory carrying cost by supplying them just in time. For more information, see [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md).  
+Obvykle používáte **Montáž na zakázku** pro zboží, které nechcete skladovat, protože očekáváte, že je přizpůsobíte požadavkům zákazníků nebo protože chcete minimalizovat účetní náklady zásob tím, že je dodáte včas. Pro více informací navštivte [Prodej zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md).
 
-For more information about how to set up an assembly item, see [Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md).  
+Pro další informace o nastavení zboží montáže navštivte [Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md).
 
-These setup options are default settings that manage how sales and assembly order lines are initially processed. You can depart from these defaults and supply the assembly item in the most optimal way when processing a sale. For more information, see [Sell Inventory Items in Assemble-to-Order Flows](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md) and [Sell Assemble-to-Order Items and Inventory Items Together](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md).
+Tyto možnosti nastavení jsou výchozí nastavení, které řídí, jak se prvotně zpracovávají řádky prodejních a montážních objednávek. Při zpracování prodeje se můžete odchýlit od těchto výchozích hodnot a dodávat zboží montáže nejoptimálnějším způsobem. Pro více informací navštivte [Prodej skladového zboží podle montáže na zakázku](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md) a [Prodej zboží montáže na zakázku a skladového zboží dohromady](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md).
 
-> [!NOTE]  
-> Assembly components are handled in a special way in basic warehouse configurations. For more information, see the “Handling Assemble-to-Order Items in Inventory Picks” section in [Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md).   
+> [!NOTE]
+> S komponenty montáže se manipuluje speciálním způsobem v základních konfiguracích skladu. Pro více informací navštivte sekci “Zpracování zboží montáže na zakázku pomocí vyskladnění zásob” v [Vyskladnění zboží pomocí vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md).
 
-In this procedure, you create and process an assembly order for items that are assembled to stock, which means without a linked sales order. The steps include initiating the assembly order, handling potential component availability issues, and partially posting assembly item output.
+V tomto postupu vytvoříte a zpracujete montážní zakázku pro zboží, které je smontováno do zásoby, což znamená bez propojené prodejní objednávky. Kroky zahrnují zahájení montážní zakázky, řešení potenciálních problémů s dostupností komponent a částečné zaúčtování výstupu zboží montáže.
 
-## To assemble an item  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Orders**, and then choose the related link.  
-2.  Choose the **New** action. The **New Assembly Order** page opens.  
-3.  Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4.  In the **Item No.** field, select the assembly item that you want to process. The field is filtered to show only items that are set up for assembly, which means that they have assembly BOMs assigned.  
-5.  In the **Quantity** field, enter how many units of the item that you want assembled.  
+## Smontování zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Montážní zakázky** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**. Otevře se stránka **Nové montážní zakázky**.
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. V poli **Číslo zboží** vyberte zboží montáže, které chcete zpracovat. Toto pole je filtrováno tak, aby zobrazovalo pouze zboží, které je nastaveno pro montáž, což znamená, že mají přiřazené kusovníky montáže.
+5. Do pole **Množství** zadejte, kolik jednotek zboží chcete sestavit.
 
-    > [!NOTE]  
-    >  If one or more components are not available to fulfill the entered assembly item quantity on the defined due date, then the **Assembly Availability** page automatically opens to provide detailed information about how many assembly items can be assembled based on component availability. For more information, see [View the Availability of Items](inventory-how-availability-overview.md). When you close the page, the assembly order is created with availability alerts on the affected component lines.  
+   > [!NOTE]
+   > Pokud jedna nebo více komponent není k dispozici ke splnění zadaného množství zboží montáže k definovanému datu splnění, otevře se automaticky stránka **Dostupnost montáže**, která poskytne podrobné informace o počtu sestaveného zboží, které lze sestavit na základě dostupnosti komponent. Pro více informací navštivte [Zobrazení dostupnosti zboží](inventory-how-availability-overview.md). Po zavření stránky se vytvoří montážní zakázka s upozorněním na dostupnost při daných řádcích komponent.
 
-    The assembly order lines are automatically filled with the contents of the assembly BOM and with line quantities according to the assembly order header.  
+   Řádky montážní zakázky jsou automaticky vyplněny obsahem kusovníku montáže a s množstvím řádků podle záhlaví montážní zakázky.
 
-    > [!NOTE]  
-    >  If the **Assembly Availability** page opened when you filled in the assembly order header, then each affected assembly order line contains a **Yes** in the **Avail. Warning** field with a link to detailed availability information. For more information, see Check Availability. You can resolve a component availability issue by postponing the starting date, replacing the component with another item, or selecting an available substitution if one is defined.  
+   > [!NOTE]
+   > Pokud se po vyplnění záhlaví montážní zakázky otevře stránka **Dostupnost montáže**, pak každý ovlivněný řádek zakázky obsahuje hodnotu **Ano** v poli **Varování  dostupnosti** s odkazem na podrobné informace o dostupnosti. Pro více informací navštivte Kontrola dostupnosti. Problém s dostupností komponent můžete vyřešit odložením počátečního data, nahrazením komponenty jiným zbožím nebo výběrem dostupné náhrady, pokud je definována.
 
-6.  In the **Quantity to Assemble** field, enter how many units of the assembly item that you want to post as output the next time that you post the assembly order. This quantity can be lower than the value in the **Quantity** field to reflect a partial output posting.  
+6. Do pole **Množství k montáži** zadejte, kolik jednotek zboží montáže chcete zaúčtovat jako výstup při příštím odeslání montážní zakázky. Toto množství může být nižší než hodnota v poli **Množství**, aby odráželo částečné zaúčtování výstupu.
 
-    > [!NOTE]  
-    >  To make sure that component consumption posting matches the assembly item output posting, the quantity fields in the assembly order lines automatically adjust to the value that you enter in the **Quantity to Assemble** field.  
-7.  On assembly order lines of type **Item** or **Resource**, in the **Quantity to Consume** field, specify how many units you want to post as consumed the next time that you post the assembly order.
-8.  When you are ready to partially or fully post, choose the **Post** action.  
+   > [!NOTE]
+   > Aby se zajistilo, že účtování spotřeby komponenty odpovídá účtování výstupu montáže, pole množství v řádcích montážní objednávky se automaticky přizpůsobí hodnotě, kterou zadáte do pole **Množství k montáži**.
+7. Na řádcích montážní zakázky typu **Zboží** nebo **Zdroj** zadejte v poli **Množství ke spotřebě**, kolik jednotek chcete zaúčtovat jako spotřebované při příštím odeslání montážní zakázky.
+8. Pokud jste připraveni částečně nebo úplně účtovat, vyberte akci **Účtovat**.
 
-    > [!NOTE]  
-    >  If warnings are still present in any of the assembly order lines, then the posting is blocked. A message about which component or components are not in inventory is displayed.  
+   > [!NOTE]
+   > Pokud jsou výstrahy stále přítomny v kterékoli z řádků montážní zakázky, účtování se zablokuje. Zobrazí se zpráva o tom, která komponenta nebo komponenty nejsou v zásobách.
 
-After posting succeeds, the assembly item is posted as output to the location code and potential bin code that are defined on the assembly order. For manually created assembly orders, the location may be copied from the **Default Location for Orders** setup field. For assemble-to-order flows, the location code may be copied from the sales order line.  
+Po úspěšném zaúčtování je zboží montáže zaúčtováno jako výstup do kódu lokace a potenciálního kódu přihrádky, které jsou definovány v montážní zakázce. U ručně vytvořených montážních zakázek může být lokace zkopírována z pole **Vých. kód lokace pro obj**. Pro toky montáže na zakázku lze kód lokace zkopírovat z řádku prodejní objednávky.
 
-## See Also
-[Assembly Management](assembly-assemble-items.md)  
-[Work with Bills of Material](inventory-how-work-BOMs.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa montáže](assembly-assemble-items.md)  
+[Práce s kusovníky](inventory-how-work-BOMs.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

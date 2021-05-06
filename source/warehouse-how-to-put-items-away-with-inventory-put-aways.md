@@ -4,76 +4,73 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Put Items Away with Inventory Put-aways
-When your location is set up to require put-away processing but not receive processing, you use the **Inventory Put-away** document to record and post put-away and receipt information for your source documents. The inbound source document can be a purchase order, a sales return order, an inbound transfer order, or an assembly or production order whose output is ready to be put away.  
+# Zaskladnění zboží pomocí zaskladnění zásob
+Pokud je lokace nastavena tak, aby vyžadovala zpracování zaskladnění, ale ne zpracování příjmu, použijete doklad **Zaskladnění zásob** k zaznamenání a zaúčtování informací o zaskladnění a příjmu pro vaše původní doklady. Vstupním původním dokladem může být nákupní objednávka, objednávka prodejní vratky, vstupní objednávka transferu nebo sestava nebo výrobní zakázka, jejíž výstup je připraven k zaskladnění.
 
-You can create an inventory put-away in three ways:  
+Zaskladněné zásoby můžete vytvořit třemi způsoby:
 
-- Create the put-away in two steps by first creating a warehouse request from the source document, which acts as a signal to the warehouse that the source document is ready for put-away. The inventory put-away can then be created from the **Inventory Put-away** page based on the source document.  
-- Create the inventory put-away directly from the source document itself.  
-- Create inventory put-aways for several source documents at once by using a batch job.  
+- Nejprve vytvořte zaskladnění ve dvou krocích vytvořením požadavku skladu z původního dokladu, který funguje jako signál pro sklad, že původní doklad je připraven k zaskladnění. Zaskladnění zásob lze pak vytvořit ze stránky **Zaskladnění zásob** na základě původního dokladu.
+- Vytvořte zaskladnění zásob přímo ze samotného původního dokladu.
+- Pomocí dávkové úlohy vytvořte zaskladnění zásob pro několik původních dokladů najednou.
 
-## To request an inventory put-away by releasing the source document
-For purchase orders, sales return orders, inbound transfer orders, and assembly orders, you create the warehouse request by releasing the order. The following describes how to do this from a purchase order.  
+## Žádost o zaskladnění zásob vydáním původního dokladu
+U nákupních objednávek, objednávek prodejní vratky, příchozích objednávek transferu a montážních zakázek vytvoříte požadavek na sklad vydáním objednávky. Následující text popisuje, jak to provést z nákupní objednávky.
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
-2. Select the purchase order that you want to release, and then choose the **Release** action.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní objednávky** a poté vyberte související odkaz.
+2. Vyberte nákupní objednávku, kterou chcete vydat, a pak zvolte akci **Vydat**.
 
-    For production orders, you create the warehouse request by creating an inbound request from the released production order.  
-3.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Production Orders**, and then choose the related link.  
-4. Choose the **Create Inbound Whse. Request** action.  
+   U výrobních zakázek vytvoříte požadavek skladu vytvořením vstupního požadavku z vydané výrobní zakázky.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vydané výrobní zakázky** a poté vyberte související odkaz.
+4. Vyberte akci **Vytvořit vstupní požadavek  skl.**.
 
-> [!NOTE]  
->  You can also create the inbound warehouse request by selecting the **Create Inbound Request** check box when you refresh the production order. For more information, see [Refresh or Replan Production Orders](production-how-to-replan-refresh-production-orders.md).  
+> [!NOTE]
+> Požadavek na vstupní sklad můžete také vytvořit zaškrtnutím políčka **Vytvořit vstupní požadavek** při aktualizaci výrobní zakázky. Pro více informací navštivte [Přeplánování nebo přímá aktualizace výrobních zakázek](production-how-to-replan-refresh-production-orders.md).
 
-When the warehouse request is created, a warehouse employee assigned to putting items away can see that the source document is ready and can create an inventory put-away document.  
+Po vytvoření požadavku na sklad může zaměstnanec skladu přiřazený k zaskladnění zboží vidět, že je původní doklad připraven, a může vytvořit doklad zaskladnění zásob.
 
-## To create an inventory put-away based on the source document
-Now that the request is created, the warehouse employee can create a new inventory put-away based on the released source document.   
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Put-away**, and then select the related link.  
-2. Choose the **New** action.  
-3. In the **Source Document** field, select the type of source document you are putting away for.  
-4. In the **Source No.** field, select the source document.  
-5. Alternatively, choose the **Get Source Document** action to select the document from a list of inbound source documents that are ready for put-away at the location.  
-6. Choose the **OK** button to fill the put-away lines according to the selected source document.  
+## Vytvoření zaskladnění na základě původního dokladu
+Po vytvoření požadavku může zaměstnanec skladu vytvořit nové zaskladnění zásob na základě vydaného původního dokladu.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění zásob** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. V poli **Původní doklad** vyberte typ původního dokladu, pro který chcete vytvořit zaskladnění.
+4. V poli **Číslo původu** vyberte původní doklad.
+5. Případně zvolte akci **Kopie původ.dokladu**, chcete-li vybrat doklad ze seznamu příchozích původních dokladů, které jsou připraveny k zaskladnění v lokaci.
+6. Stisknutím tlačítka **OK** vyplňte řádky zaskladnění podle vybraného původního dokladu.
 
-## To create an inventory put-away from the source document  
-1.  In the source document, which can be a purchase order, sales return order, inbound transfer order, or production order, choose the **Create Inventory Put-away/Pick** action.  
-2. Select the **Create Invt. Put-away** check box.
-3. Choose the **OK** button. A new inventory put-away is created.
+## Vytvoření zaskladnění zásob z původního dokladu
+1. V původním dokladu, kterým může být nákupní objednávka, objednávka prodejní vratky, objednávka vstupního transferu nebo výrobní zakázka, zvolte akci **Vytvořit zaskl./vyskl.zásob**.
+2. Zaškrtněte políčko **Vytvořit zaskladnění  zásob**.
+3. Vyberte tlačítko **OK**. Nyní je vytvořeno nové zaskladnění zásob.
 
-## To create multiple inventory put-aways with a batch job  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Create Invt. Put-away / Pick**, and then choose the related link.  
-2.  On the **Warehouse Request** FastTab of the request page, use the **Source Document** and **Source No.** fields to filter on certain types of documents or ranges of document numbers.  
-3.  On the **Options** FastTab, select the **Create Invt. Put-away** check box.
-4.  Choose the **OK** button. The specified inventory put-aways are created.
+## Vytvoření více zaskladnění zásob pomocí dávkové úlohy
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vytvořit zaskl. /vyskl.zásob** a poté vyberte související odkaz.
+2. Na záložce **Požadavek skladu** na stránce požadavku použijte pole **Původní doklad** a **Číslo původu** pro filtrování určitých typů dokladů nebo rozsahů čísel dokladů.
+3. Na záložce **Možnosti** zašktněte políčko **Vytvořit zaskladnění  zásob**.
+4. Vyberte tlačítko **OK**. Nyní je vytvořeno zadané zaskladnění zásob.
 
-## To record the inventory put-away  
-1. Open a previously created put-away document by selecting one from the **Inventory Put-aways** page.  
-2. In the **Bin Code** field on the put-away lines, the bin where the items must be put away is suggesting per the item's default bin. You can change the bin in this page if necessary.  
-3. Perform the put-away and enter the information for the actual quantity put away in the **Qty. to Handle** field.
+## Zaznamenání zaskladnění zásob
+1. Otevřete dříve vytvořený doklad zaskladnění výběrem dokladu ze stránky **Zaskladnění zásob**.
+2. V poli **Kód přihrádky** na řádcích zaskladnění je přihrádka, kde musí být zboží zaskladněné, navržena podle výchozí přihrádky zboží. V případě potřeby můžete přihrádku na této stránce změnit.
+3. Proveďte zaskladnění a zadejte informace o skutečném zaskladněném množství do pole **Množ. ke zpracování**.
 
-    If it is necessary to place the items for one line in more than one bin, for example because the designated bin is full, then use the **Split Line** function on the **Lines** FastTab. For more information about splitting lines, see [Split Warehouse Activity Lines](warehouse-how-to-split-warehouse-activity-lines.md).  
-4. When you have performed the put-away, choose the **Post** action.  
+   Pokud je nutné umístit zboží pro jeden řádek do více než jedné přihrádky, například proto, že je určená přihrádka plná, použijte funkci **Rozdělit řádek** na záložce **Řádky**. Pro více informací o rozdělení řádků navštivte [Rozdělení řádků aktivit skladu](warehouse-how-to-split-warehouse-activity-lines.md).
+4. Po provedení zaskladnění zvolte akci **Účtovat**.
 
-The posting process will post the receipt, or for production orders, the output, of the source document lines that have been put away, and if the location uses bins, the posting will also create warehouse entries to post the bin quantity changes.
+Proces účtování zaúčtuje příjem nebo pro výrobní zakázky výstup řádků původního dokladu, které byly zaskladněny, a pokud lokace používá přihrádky, účtování také vytvoří položky skladu k zaúčtování změn množství přihrádky.
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)  
+[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

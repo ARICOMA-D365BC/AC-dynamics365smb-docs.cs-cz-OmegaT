@@ -6,128 +6,93 @@ documentationcenter: ''
 author: bholtorf
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: money flow, expense and income, liquidity, cash receipts minus cash payments, Cartera, funds
-ms.date: 10/01/2020
+ms.date: 01/13/2020
 ms.author: bholtorf
 
 ---
-# Setting Up Cash Flow Analysis
-If you want some help to decide what to do with your cash, have a look at the charts on the Accountant Role Center:  
+# Nastavení analýzy cashflow
+Pokud chcete pomoci s rozhodnutím o tom, co dělat s vaší hotovostí, podívejte se na grafy v Centru rolí -  Účetní:
 
-* **Cash Cycle**  
-* **Income & Expense**  
-* **Cash Flow**  
-* **Cash Flow Forecasts**  
+* **Hotovostní cyklus**
+* **Výnosy a Náklady**
+* **Cash Flow**
+* **Předpověď Cash Flow**
 
-This topic describes where the data in the charts comes from and, if necessary, what to do to start using the charts.  
-<br><br>  
+Toto téma popisuje, odkud pocházejí data v grafech a také to, co dělat, když chcete začít používat grafy.  
+<br><br>
 
-> [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4mJhc?rel=0]
+> [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4mJhc]
 
-## The Cash Cycle and Income & Expense charts
-The **Cash Cycle** and **Income & Expense** charts are ready to go, based on the Chart of Accounts and account schedules. The accounts are where the data comes from, and account schedules calculate the relationship between sales and receivables. Some accounts and account schedules are provided. You can use them as-is, change them, and add new ones. If you add G/L accounts to your chart of accounts, for example, by importing them from QuickBooks, you'll need to map to the accounts on the **Account Schedules** page for the following account schedule names:  
+## Grafy peněžních cyklů, příjmů a výdajů
+Grafy **Hotovostní cyklus** a **Výnosy a Náklady** jsou připraveny k použití, založeny na účetní osnově a účetních schématech. Účty účetní osnovy jsou zdrojem dat a účetní schémata vypočítávají vztah mezi prodejem a pohledávkami. K dispozici jsou některé účty a účetní schémata. Můžete je použít tak, jak jsou nebo je změnit a případně přidat nové. Pokud přidáte účty účetní osnovy do grafů, například jejich importem z QuickBooks, budete muset namapovat na účty na stránce **Účetní schémata** pro následující názvy účetních schémat:
 
-| Account Schedule Name | Where it's used |
+| Účetní schémata | Kde se používají |
 | --- | --- |
-| **I_CACYCLE** |Cash Cycle |
-| **I_CASHFLOW** |Cash Flow |
-| **I_INCEXP** |Income & Expense |
-| **I_MINTRIAL** |As an income statement if you don't use the chart of accounts |
+| **I_CACYCLE** | Data pro graf Hotovostní Cyklus |
+| **I_CASHFLOW** | Data pro graf Cash Flow |
+| **I_INCEXP** | Data pro graf Náklady a Výnosy |
+| **I_MINTRIAL** | Info část dat pro redukovanou zkušební bilanci |
 
-**Note** It's a good idea to keep the calculations that are provided for the account schedule.  
+**Note** Je vhodné zachovat výpočty, které jsou k dispozici pro účetní schéma.
 
-Enter accounts in the **Totaling** field for **Total Revenue**, **Total Receivables**, **Total Payables**, and **Total Inventory**. To map to a range of accounts, or more than one specific account, enter the account numbers separated by ".." or by a vertical bar, respectively. For example, **1111..4444** or **2222|3333|5555**.  
+Zadejte účty do políčka **Součet** pro **Celkové tržby**, **Celkové příjmy**, **Celkové náklady** a **Celkové zásoby**. Chcete-li mapovat na rozsah účtů nebo na více než jeden konkrétní účet, zadejte čísla účtů oddělená znaky ".." nebo svislým pruhem. Například, **1111..4444** nebo **2222|3333|5555**.
 
-**Tip** Verify your mapping by choosing the **Overview** action.  
+**Tip** Pro ověření mapování použijte funkci **Náhled**.
 
-## Set up the Cash Flow chart
-The Cash Flow chart is based on the following:  
+## Nastavení grafu Cash Flow
+Graf Cash Flow je založen na následujích:
 
-* A chart of cash flow accounts.
-* One or more cash flow setups. These specify the accounts to use for general ledger, purchases, sales, services, and fixed assets.  
+* Graf účtů peněžních toků.
+* Jedno nebo více nastavení peněžních toků. Ty určují účty, které mají být použity pro hlavní knihu, nákup, prodej, služby a dlouhodobý majetek.
 
-To help you get going, some accounts and cash flow setups are provided. You can add, change, or remove them.  
+Abychom vám pomohli začít, jsou k dispozici některé účty a nastavení cashflow. Můžete je přidat, změnit nebo odebrat.
 
-To set these up, search for **cash flow accounts**, choose the link, and then fill in the fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Repeat these steps for **cash flow setup**.  
+Chcete-li je nastavit vyhledejte **Účetní osnova cash flow**, vyberte odkaz a doplňte do polí. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Opakujte tyto kroky **Nastavení cash flow**.
 
-## Set up cash flow forecasts
-The **Cash Flow Forecast** chart uses cash flow accounts, cash flow setups, and cash flow forecasts. Some are provided, however, you can set up your own by using an assisted setup guide. The guide helps you specify things like how often to update the forecast, the accounts to base it on, information about when you pay taxes, and whether to turn on [Azure AI](https://azure.microsoft.com/overview/ai-platform/).  
+## Seznam plánů cash flow
+Graf **Plán cash flow** používá účty cashflow, nastavení cashflow a plán cash flow. Některé jsou k dispozici, ale můžete nastavit pomocí průvodce asistovaného nastavení. Průvodce vám pomůže určit věci, jako jsou: jak často aktualizovat plán, účty, na kterých jsou založeny, kdy platit daně a zda chcete zapnout [Azure AI](https://azure.microsoft.com/overview/ai-platform/) .
 
-Cash flow forecasts can use Azure AI to predict future documents. The result is a more comprehensive forecast. The connection to Azure AI is already set up for you. You just need to turn it on. When you sign in to [!INCLUDE[prod_short](includes/prod_short.md)], a notification displays in a blue bar, and provides a link to the default cash flow setup. The notification displays only once. If you close it, but decide to turn on Azure AI, you can use the assisted setup guide, or a manual process.  
+Seznam plánů cash flow může použít Azure AI k zahrnutí dokladů s datem splatnosti. Výsledkem je komplexnější předpověď. Připojení k Azure AI je již přednastaveno. Stačí jej pouze zapnout. Když se přihlásíte do [!INCLUDE[d365fin](includes/d365fin_md.md)], zobrazí se v modrém pruhu oznámení a poskytne odkaz na výchozí nastavení cash flow. Oznámení se zobrazí pouze jednou. Pokud ho zavřete, ale rozhodnete se zapnout Azure AI, můžete použít průvodce asistovaným nastavením nebo ručně.
 
 > [!NOTE]  
->   Alternatively, you can use your own predictive web service. For more information, see [Create and use your own predictive web service for cash flow forecasts](#AnchorText).  
+> Případně můžete použít vlastní prediktivní webovou službu. Pro více informací navštivte [tématu Vytvoření a použití vlastní prediktivní webové služby pro prognózy cashflow](#AnchorText).
 
-To use the assisted setup guide:  
+Použití průvodce asistovaným nastavením:
 
-1. In the Accountant Role Center, under the **Cash Flow Forecast** chart, choose the **Open Assisted Setup** action.  
-2. Fill in the fields in each step of the guide.  
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Forecast**, and then choose the related link.
-4. On the **Cash Flow Forecast** page, choose the **Recalculate Forecast** action.  
+1. V centru rolí účetní, pod grafem **Plán Cash Flow**, vyberte tlačítko **Otevřít asistované nastavení**.
+2. Vyplňte pole v každém kroku průvodce.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Seznam plánů cash flow** a vyberte související odkaz.
+4. Na stránce **Seznam plánů cash flow**, vyberte tlačítko **Přepočítat plán**.
 
-To use a manual process:  
+Použití ručního procesu:
 
-1. In the Accountant Role Center, search for **Cash Flow Setup**, and then choose the related link.  
-2. Expand the **Azure AI** FastTab, and then choose the **Azure AI Enabled** check box.  
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Forecast**, and then choose the related link.
-4. On the **Cash Flow Forecast** page, choose the **Recalculate Forecast** action.  
+1. V centru rolí účetní vyhledejte **Nastavení cash flow** a poté vyberte související odkaz.
+2. Rozbalte záložku **Azure AI**, a vyberte šakrtávací tlačítko **Azure AI povoleno**.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Seznam plánů cash flow** a vyberte související odkaz.
+4. Na stránce **Seznam plánů cash flow**, vyberte tlačítko **Přepočítat plán**.
 
 > [!TIP]  
->   Consider the length of the periods that the service will use in its calculations. The more data you provide, the more accurate the predictions will be. Also, watch out for large variances in periods. They will also impact predictions. If Azure AI does not find enough data, or the data varies a lot, the service will not make a prediction.  
+> Zvažte délku období, které služba použije při svých výpočtech. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
 
-## Design details
-Subscriptions for [!INCLUDE[prod_short](includes/prod_short.md)] come with access to several predictive web services in all regions where [!INCLUDE[prod_short](includes/prod_short.md)] is available. For more information, see the Microsoft Dynamics 365 Business Central Licensing Guide. The guide is available for download on the [Business Central](https://dynamics.microsoft.com/en-us/business-central/overview/) website. 
+## <a name="AnchorText"> </a>Vytvoření a použití vlastní prediktivní webové služby pro prognózy cashflow
+Můžete také vytvořit vlastní prediktivní webovou službu založenou na veřejném modelu s názvem **Forecasting model for Microsoft Business Central** . Tento prediktivní model je k dispozici online v AI Azure Gallery. Chcete-li model použít, postupujte takto:
 
-These web services are stateless, meaning they use data only to calculate predictions on demand. They do not store data.
+1. Otevřete prohlížeč a přejděte do [Azure AI Gallery](https://go.microsoft.com/fwlink/?linkid=828352) .
+2. Vyhledejte **Forecasting Model for Microsoft Business Central**, a otevřete model v Azure Machine Learning Studio.
+3. Použijte svůj účet Microsoft k registraci pracovního prostoru a potom zkopírujte model.
+4. Spusťte model a publikujte jej jako webovou službu.
+5. Poznamenejte si API URL a API klíč. Tyto přihlašovací údaje použijete pro nastavení cash flow.
+6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Nastavení Cash Flow** a vyberte související odkaz.
+7. Rozbalte záložku **Azure AI** a vyplňte pole.
 
-> [!NOTE]  
->   You can use your own predictive web service instead of ours. For more information, see [Create and use your own predictive web service for cash flow forecasts](#AnchorText). 
+## Viz související školení v programu [Microsoft Learn](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)
 
-### Data required for forecast
-To make predictions about future revenue and expenses, web services require historical data from receivables, payables, and taxes.
-
-#### Receivables:
-**Due Date**, **Amount (LCY)** fields of the **Customer Ledger Entries** page, where:
-- The document type is Invoice or Credit Memo.
-- The due date is between date that is calculated based on the values in the **Historical Periods** and **Period Type** fields on the **Cash Flow Setup** page and the work date.
-
-Before using the predictive web-service [!INCLUDE[prod_short](includes/prod_short.md)] compresses transactions by **Due Date** based on the value in the **Period Type** field on the **Cash Flow Setup** page.
-
-#### Payables:
-**Due Date**, **Amount (LCY)** fields on the **Vendor Ledger Entries** page, where:
-- The document type is "Invoice" or "Credit Memo."
-- The due date is between date that is calculated based on values in the **Historical Periods** and **Period Type** fields on the **Cash Flow Setup** page and the work date.
-
-Before using the predictive web-service [!INCLUDE[prod_short](includes/prod_short.md)] compresses transactions by **Due Date** based on the value in the **Period Type** field on the **Cash Flow Setup** page.
-
-#### Tax:
-**Document Date**, **Amount** fields on the **VAT (Tax) Ledger Entries** page, where:
-- The document type is "sales."
-- The document date is between the date that is calculated based on values in the **Historical Periods** and **Period Type** fields on the **Cash Flow Setup** page and the work date.
-
-Before using the predictive web-service [!INCLUDE[prod_short](includes/prod_short.md)] compresses transactions by **Document Date** based on value in the **Period Type** field in the **Cash Flow Setup** page.
-
-## <a name="AnchorText"> </a>Create and use your own predictive web service for cash flow forecasts
-You can also create your own predictive web service based on a public model named **Forecasting model for Microsoft Business Central**. This predictive model is available online in the Azure AI Gallery. To use the model, follow these steps:  
-
-1. Open a browser and go to the [Azure AI Gallery](https://go.microsoft.com/fwlink/?linkid=828352).  
-2. Search for **Forecasting Model for Microsoft Business Central**, and then open the model in Azure Machine Learning Studio.  
-3. Use your Microsoft account to sign up for a workspace, and then copy the model.  
-4. Run the model, and publish it as a web service.  
-5. Make a note of the API URL and API key. You will use these credentials for a cash flow setup.  
-6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Setup**, and then choose the related link.  
-7. Expand the **Azure AI** FastTab, and then fill in the fields.  
-
-## See Related Training at [Microsoft Learn](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)
-
-## See Also
-[Analyzing Cash Flow in Your Company](finance-analyze-cash-flow.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Analýza Cash Flow ve Vaši společnosti](finance-analyze-cash-flow.md)  
+[Nastavení financí](finance-setup-finance.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

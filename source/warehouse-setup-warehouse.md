@@ -1,49 +1,45 @@
 ---
-    title: Configure Warehouse Processes | Microsoft Docs
-    description: A company's distribution strategy is reflected in the configuration of its warehouse processes. This includes defining how different items are handled in different warehouse locations, such as the degree of bin control and the extend of workflow required between warehouse activities.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Konfigurace skladových procesů | Microsoft Docs
+description: 'Distribuční strategie společnosti se odráží v konfiguraci jejích skladových procesů. To zahrnuje definování způsobu nakládání s různými položkami na různých místech skladu, jako je například stupeň kontroly přihrádek a rozsah workflow vyžadovaného mezi operacemi skladu.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/04/2018
+ms.author: sgroespe
 ---
-# Setting Up Warehouse Management
-A company's distribution strategy is reflected in the configuration of its warehouse processes. This includes defining how different items are handled in different warehouse locations, such as the degree of bin control and the extend of workflow required between warehouse activities.  
+# <a name="setting-up-warehouse-management"></a>Nastavení správy skladu
+Distribuční strategie společnosti se odráží v konfiguraci jejích skladových procesů. To zahrnuje definování způsobu nakládání s různými položkami na různých místech skladu, jako je například stupeň kontroly přihrádek a rozsah workflow vyžadovaného mezi operacemi skladu.  
 
- The following table describes a sequence of tasks, with links to the topics that describe them.   
+ Následující tabulka popisuje sekvenci úloh s odkazy na témata, která je popisují.   
 
-|**To**|**See**|  
+|**Viz**|**Také**|  
 |------------|-------------|  
-|Get an overview of the capabilities of basic versus advanced warehouse functionality.|[Design Details: Warehouse Overview](design-details-warehouse-overview.md)|  
-|Set up eight different bin types, such as Picking Bin, to define the flow activities that relate to each bin type.|[Set Up Bin Types](warehouse-how-to-set-up-bin-types.md)|  
-|Create bins, either manually or automatically, with information, such as name, number series, and category, according to a bin template.|[Create Bins](warehouse-how-to-create-individual-bins.md)|  
-|Define which items you want to store in any given bin and set the rules that decide when to fill the bin with a particular item.|[Create Bin Contents](warehouse-how-to-set-up-bin-contents.md)|  
-|Set an item up to always be placed in a specific bin.|[Assign Default Bins to Items](warehouse-how-to-assign-default-bins-to-items.md)|
-|Create templates to govern where and how items are put away during directed put-away.|[Set Up Put-away Templates](warehouse-how-to-set-up-put-away-templates.md)|
-|Set users up as warehouse employees at specific locations.|[Set Up Warehouse Employees](warehouse-how-to-set-up-warehouse-employees.md)|
-|Define different types of bins across the warehouse to control where items are placed according to their type, rank, or handling level.|[Set Up Locations to Use Bins](warehouse-how-to-set-up-locations-to-use-bins.md)|
-|Make additional settings to an existing location to enable it for warehouse activities.|[Convert Existing Locations to Warehouse Locations](warehouse-how-to-convert-existing-locations-to-warehouse-locations.md)|
-|Enable picking, moving, and putting away for assembly or production orders in basic warehouse configurations.|[Set Up Basic Warehouses with Operations Areas](warehouse-how-to-set-up-basic-warehouses-with-operations-areas.md)|  
-|Set items and locations up for the most advanced scope of warehouse management where all activities must follow a strict workflow.|[Set Up Items and Locations for Directed Put-away and Pick](warehouse-how-to-set-up-items-for-directed-put-away-and-pick.md)|  
-|Define when and how items in warehouse locations are counted for maintenance or financial reporting purposes.|[Count, Adjust, or Reclassify Inventory](inventory-how-count-adjust-reclassify.md)|
-|Enable warehouse workers to break a larger unit of measure into smaller units of measure to fulfill the needs of source documents.|[Enable Automatic Breaking Bulk with Directed Put-away and Pick](warehouse-enable-automatic-breaking-bulk-with-directed-put-away-and-pick.md)|  
-|Set up the warehouse to automatically suggest items to be picked that expire first.|[Enable Picking by FEFO](warehouse-picking-by-fefo.md)|
-|Get tips on how to reorganize locations, bins, or zones to obtain more efficient warehouse activities.|[Restructure Warehouses](warehouse-how-to-restructure-warehouses.md)|
-|Integrate bar code readers to your warehouse management solution. Only for on-premise deployment.|[Use Automated Data Capture Systems (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md)|
-|Specify default reports to be used for different document types.|[Report Selection in Business Central](across-report-selections.md)|
+|Získejte přehled o možnostech základních a pokročilých funkcí skladu.|[Podrobnosti návrhu: Přehled skladů](design-details-warehouse-overview.md)|  
+|Nastavte osm různých typů přihrádek, například Vyskladňovací přihrádka, pro definování činností, které se vztahují ke každému typu přihrádky.|[Nastavení typu přihrádky](warehouse-how-to-set-up-bin-types.md)|  
+|Vytvářejte přihrádky, buď ručně nebo automaticky s informacemi, jako je název, číselná řada a kategorie podle šablony přihrádky.|[Vytváření přihrádky](warehouse-how-to-create-individual-bins.md)|  
+|Definujte, které zboží chcete uložit do libovolné přihrádky a nastavte pravidla, která rozhodují, kdy se přihrádka naplní konkrétním zbožím.|[Vytvoření obsahu přihrádky](warehouse-how-to-set-up-bin-contents.md)|  
+|Nastavte zboží tak, aby byla vždy umístěna do určité přihrádky.|[Přiřazení výchozí přihrádky ke zboží](warehouse-how-to-assign-default-bins-to-items.md)|
+|Vytvořte šablony, které určují, kde a jak je zboží umístěno během řízeného zaskladnění.|[Nastavení šablon zaskladnění](warehouse-how-to-set-up-put-away-templates.md)|
+|Nastavte uživatele jako zaměstnance skladu na konkrétních lokacích.|[Nastavení zaměstnanců skladu](warehouse-how-to-set-up-warehouse-employees.md)|
+|Definujte různé typy přihrádek ve skladu a určete, kde je zboží umístěno podle jeho typu, pořadí nebo úrovně manipulace.|[Nastavení lokací pro použití přihrádek](warehouse-how-to-set-up-locations-to-use-bins.md)|
+|U stávající lokace proveďte další nastavení, abyste ji mohli povolit pro činnosti skladu.|[Převod existující lokace do lokací skladu](warehouse-how-to-convert-existing-locations-to-warehouse-locations.md)|
+|Umožněte vyskladnění, přesun a zaskladnění montážních nebo výrobních objednávek v základních konfiguracích skladu.|[Nastavení základních lokací s provozními oblastmi](warehouse-how-to-set-up-basic-warehouses-with-operations-areas.md)|  
+|Nastavuje zboží a lokaci pro nejpokročilejší rozsah správy skladu, kde všechny činnosti musí následovat přesný pracovní postup.|[Nastavení zboží a lokace pro přímé zaskladnění a vyskladnění](warehouse-how-to-set-up-items-for-directed-put-away-and-pick.md)|  
+|Definuje, kdy a jak je zboží ve skladu počítáno pro účely údržby nebo finančního výkaznictví.|[Výpočet, adjustace a reklasifikace skladu](inventory-how-count-adjust-reclassify.md)|
+|Umožněte pracovníkům skladu rozdělit větší měrnou jednotku na menší měrné jednotky, aby splnili potřeby zdrojových dokumentů.|[Povolení automatického rozedělení zboží s řízeným zaskladněním a vyskladněním](warehouse-enable-automatic-breaking-bulk-with-directed-put-away-and-pick.md)|  
+|Nastavte sklad tak, aby automaticky navrhoval zboží, které má být vybráno a jehož trvanlivost exspiruje jako první.|[Povolení vyskladnění pomocí FEFO](warehouse-picking-by-fefo.md)|
+|Získejte tipy, jak reorganizovat lokace, přihrádky nebo zóny, abyste získali efektivnější skladové činnosti.|[Restrukturalizace skladů](warehouse-how-to-restructure-warehouses.md)|
+|Integrace čtečky čárových kódů do řešení správy skladu. Pouze pro on-premise řešení.|[Používejte automatizované systémy pro sběr dat (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md)|
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+[Správa skladů](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Správa montáže](assembly-assemble-items.md)    
+[Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

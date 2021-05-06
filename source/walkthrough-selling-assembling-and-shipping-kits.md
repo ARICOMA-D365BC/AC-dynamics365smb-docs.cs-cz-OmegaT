@@ -13,433 +13,433 @@
     ms.author: edupont
 
 ---
-# Walkthrough: Selling, Assembling, and Shipping Kits
+# Návod: Prodejní, montážní a přepravní sestavy
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]  
+[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
 
-To support just-in-time inventory and the ability to customize products to customer requests, assembly orders can be automatically created and linked as soon as the sales order line is created. The link between the sales demand and the assembly supply enables sales order processors to customize the assembly item and promise delivery dates according to component availability. In addition, assembly consumption and output are posted automatically with the shipment of the linked sales order.  
+Aby byla možná podpora zásob za běhu a aby bylo možné přizpůsobit produkty požadavkům zákazníků, lze montážní zakázky automaticky vytvořit a propojit, jakmile je vytvořen řádek prodejní objednávky. Spojení mezi prodejní poptávkou a dodávkou montáže umožňuje procesorům prodejní objednávky přizpůsobit zboží montáže a slíbit dodací termíny podle dostupnosti komponent. Kromě toho se spotřeba a výstup sestavy automaticky zaúčtují s dodávkou propojenou s prodejní objednávky.
 
-Special functionality exists to govern the shipping of assemble-to-order quantities, both in basic and in advanced warehouse configurations. When workers in charge of assembly finish assembling parts or all of the assemble-to-order quantity, they record it in the **Qty. to Ship** field on the warehouse shipment line, in advanced configurations, and then choose **Post Shipment**. The result is that the corresponding assembly output is posted, including the related component consumption, and a sales shipment for the quantity is posted for the linked sales order. This walkthrough illustrates the advanced warehouse process.  
+Existuje speciální funkce, která reguluje přepravu množství montáže na zakázku, a to jak v základní, tak v pokročilé konfiguraci skladu. Když pracovníci odpovědní za montáž dokončí montáž dílů nebo veškerého množství montáže na zakázku, zaznamenají to do pole **K  dodání** v řádku dodávky ze skladu v pokročilých konfiguracích pak třeba zvolit možnost **Účtovat dodávku**. Výsledkem je zaúčtování odpovídajícího výstupu montáže, včetně spotřeby související komponenty, a zaúčtování prodejní dodávky pro množství pro propojenou prodejní objednávku. Tento návod ilustruje pokročilý skladový proces.
 
-In basic warehouse configurations, when an assemble-to-order quantity is ready to be shipped, the warehouse worker in charge posts an inventory pick for the sales order lines. This creates an inventory movement for the components, posts the assembly output, and the sales order shipment. For more information, see [Handling Assemble-to-Order Items in Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md#handling-assemble-to-order-items-with-inventory-picks).  
+Když je v základních konfiguracích skladu připraveno množství k montáži na zakázku k odeslání, odpovědný pracovník skladu zaúčtuje vyskladnění skladu pro řádky prodejní objednávky. Tím se vytvoří pohyb zásob pro komponenty, zaúčtuje se výstup montáže a dodávka prodejní objednávky. Pro více informací navštivte [Zpracování zboží montáže na zakázku vo vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md#handling-assemble-to-order-items-with-inventory-picks).
 
-## About This Walkthrough  
-This walkthrough demonstrates the following tasks:  
+## Návod
+Tento návod ukazuje následující úkoly:
 
-### Setting up Assembly Items  
-Assembly items are characterized by their replenishment system and the assembly BOM. The item's assembly policy can be either assemble-to-order (ATO) or assemble-to-stock (ATS). This section covers the following tasks:  
+### Nastavení montáže zboží
+Zboží montáže se vyznačuje systémem doplňování a kusovníkem montáže. Zásady montáže zboží mohou být buď montáž na objednávku (MNO), nebo montáž na sklad (MNS). Tato část zahrnuje následující úkoly:
 
--   Setting the appropriate replenishment system and assembly policy on a new assembly item card.  
--   Creating an assembly BOM that lists the assembly components and the resource that go into the assembly item.  
+- Nastavení příslušného doplňovacího systému a zásad montáže na nové kartě zboží montáže.
+- Vytvoření kusovníku montáže se seznamem komponent montáže a zdrojů, které budou součástí zboží montáže.
 
-### Selling Customized Assembly Items  
-[!INCLUDE[prod_short](includes/prod_short.md)] provides the flexibility to enter both an inventory quantity and an assemble-to-order quantity on one sales order line. This section covers the following tasks:  
+### Prodej přizpůsobeného zboží montáže
+[!INCLUDE[prod_short](includes/prod_short.md)] poskytuje flexibilitu pro zadávání množství skladu i množství montáže na zakázku na jednom řádku prodejní objednávky. Tato část zahrnuje následující úkoly:
 
--   Creating a pure ATO sales order line where the full quantity is unavailable and must be assembled before shipment.  
--   Customizing ATO items.  
--   Recalculating the unit price of a customized assembly item.  
--   Creating a mixed sales order line where parts of the sales quantity is provided from inventory and the remaining part must be assembled before shipment.  
--   Understanding ATO availability warnings.  
+- Vytvoření čisté řady prodejních objednávek MNO, kde není k dispozici celé množství a musí být před odesláním smontováno.
+- Přizpůsobení zboží MNO.
+- Přepočítání jednotkové ceny přizpůsobeného zboží montáže.
+- Vytvoření řádku smíšené prodejní objednávky, kde je část prodejního množství poskytována ze skladu a zbývající část musí být před dodávkou sestavena.
+- Principy upozornění na dostupnost MNO.
 
-### Planning for Assembly Items  
-Assembly demand and supply are handled by the planning system, just like for purchase, transfer, and production. This section covers the following tasks:  
+### Plánování zboží montáže
+Poptávka montáže a nabídka jsou řešeny plánovacím systémem, stejně jako při nákupu, transferu a výrobě. Tato část zahrnuje následující úkoly:
 
--   Running a regenerative plan for items with sales demand for assembled supply.  
--   Generating an assembly order to fulfill a sales line quantity by the demanded shipment date.  
+- Spuštění regeneračního plánu pro zboží s prodejní poptávkou pro smontovanou nabídku.
+- Generování montážní objednávky pro splnění množství prodejního řádku do požadovaného data dodání.
 
-### Assembling Items  
-Assembly orders function in a similar way as production orders, expect the consumption and output is recorded and posted directly from the order. When the items are assembled to inventory, the assembly worker has full access to all header and line fields. When the items are assembled to an order where the quantity and date are promised to the customer, then certain fields on the assembly order are not editable. In that case, the assembly posting is performed from the warehouse shipment for the linked sales order. This section covers the following tasks.  
+### Sestavování zboží
+Montážní zakázky fungují podobným způsobem jako výrobní zakázky, očekávejte, že spotřeba a výstup budou zaznamenány a zaúčtovány přímo z objednávky. Když je zboží sestaveno do skladu, montážní pracovník má plný přístup ke všem polím záhlaví a samotného řádku. Když je zboží sestaveno do zakázky, kde je zákazníkovi přislíbeno množství a datum, pak některá pole v objednávce nelze upravovat. V takovém případě se zaúčtování montáže provádí ze skladové dodávky pro propojenou prodejní objednávku. Tato část popisuje následující úkoly.
 
--   Recording and posting assembly consumption and output to inventory.  
--   Accessing a warehouse shipment line from an ATO assembly order to record assembly work.  
--   Accessing an ATO assembly order from a warehouse shipment line to review the automatically entered data.  
+- Zaznamenávání a účtování spotřeby a výstupu montáže na sklad.
+- Přístup k řádku dodávky skladu z montážní objednávky MNO pro záznam montážních prací.
+- Přístup k objednávce montáže MNO z řádku dodávky ze skladu a kontrola automaticky zadaných dat.
 
-### Shipping Assembly Items, from Stock and Assembled to Order  
-Special functionality exists to govern the shipping of assemble-to-order quantities. This section covers the following tasks:  
+### Dodání zboží montáže ze skladu a zboží sestaveného na objednávku
+K dispozici jsou speciální funkce, kterými se řídí dodání množství sestaveného na objednávku. Tato část zahrnuje následující úkoly:
 
--   Creating a warehouse pick for inventory assembly items and for assembly components to be assembled before shipment.  
--   Registering warehouse picks for assembly components and then for assembly items.  
--   Accessing an assembly order from a warehouse shipment to review picked or consumed components.  
--   Shipping assemble-to-order quantities.  
--   Shipping inventory assembly items.  
+- Vytvoření vyskladnění pro skladové zboží montáže a pro komponenty montáže, které mají být sestaveny před dodávkou.
+- Registrace vyskladnění pro komponenty montáže a poté pro zboží montáže.
+- Přístup k montážní zakázce ze skladové dodávky ke kontrole vybraných nebo spotřebovaných komponent.
+- Dodání množství sestaveného na zakázku.
+- Dodání skladového zboží montáže.
 
-## Roles  
-This walkthrough demonstrates tasks that are performed by the following user roles:  
+## Role
+Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatelskými rolemi:
 
--   Sales Order Processor  
--   Planner  
--   Assembly Worker  
--   Picker  
--   Shipping Responsible  
+- Zpracovatel prodejní objednávky
+- Plánovač
+- Montážní pracovník
+- Skladník
+- Odpovědná osoba za dopravu
 
-## Prerequisites  
-Before you can perform the tasks in the walkthrough, you must do the following:  
+## Předpoklady
+Před provedením úkolů v návodu je nutné provést následující kroky:
 
--   Install [!INCLUDE[prod_short](includes/prod_short.md)].  
--   Make yourself a warehouse employee at WHITE location by following these steps:  
+- Nainstalujte [!INCLUDE[prod_short](includes/prod_short.md)].
+- Vytvořte si zaměstnance skladu v lokaci BÍLÝ takto:
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.  
-2.  Choose the **User ID** field, and select your own user account on the **Users** page.  
-3.  In the **Location Code** field, enter WHITE.  
-4.  Select the **Default** field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
+2. Vyberte pole **ID uživatele** a na stránce **Uživatelé** vyberte svůj vlastní uživatelský účet.
+3. Do pole **Kód lokace** zadejte BÍLÝ.
+4. Vyberte pole **Výchozí**.
 
 > [!NOTE]
 > [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
-Prepare WHITE location for assembly processing by following these steps:  
+Připravte lokaci BÍLÝ pro zpracování montáže pomocí následujících kroků:
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.  
-2.  Open the location card for WHITE location.  
-3.  On the **Bins** FastTab, enter **W-10-0001** in the **To-Assembly Bin Code** field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+2. Otevřete kartu lokace pro lokaci BÍLÝ.
+3. Na záložce **Přihrádky** zadejte do pole **Kód přihrádky na montáž** hodnotu **W-10-0001**.
 
-    By entering this non-pick bin code, all assembly order lines are ready to receive their components in the bin.  
+   Zadáním tohoto nevybraného kódu přihrádky jsou všechny řádky montážní objednávky připraveny přijímat své komponenty do přihrádky.
 
-4.  In the **From-Assembly Bin Code** field, enter **W-01-0001**.  
+4. Do pole **kód přihrádky z montáže** zadejte **W-01-0001**.
 
-    By entering this pick bin code, finished assembly items will be output to the bin.  
+   Zadáním tohoto kódu přihrádky vyskladnění se do přihrádky vyvede hotové zboží montáže.
 
-Remove the default lead time for internal processes by following these steps:  
+Odeberte výchozí dodací lhůtu pro interní procesy pomocí těchto kroků:
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Manufacturing Setup**, and then choose the related link.  
-2.  On the **Manufacturing Setup** page, on the **Planning** FastTab, remove the value in the **Default Safety Lead Time** field.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení výroby** a poté vyberte související odkaz.
+2. Na stránce **Nastavení výroby** na záložce **Plánování** odeberte hodnotu v poli **Výchozí bezp.průběžná doba**.
 
-Create inventory for assembly components by following [Prepare Sample Data](walkthrough-selling-assembling-and-shipping-kits.md#prepare-sample-data).  
+Vytvořte zásoby pro komponenty montáže pomocí [Přípravy ukázkových dat](walkthrough-selling-assembling-and-shipping-kits.md#prepare-sample-data).
 
-## Story  
-On January 23, Susan, the sales order processor takes an order from The Device Shop for three units of Kit B, which is an ATO item. All three units are customized and must contain the strong graphics card and an extra RAM block. The disc drives are upgraded to DWD because the CD drives are unavailable. Susan knows that the units can be assembled immediately, so she leaves the suggested shipment date of January 23.  
+## Příběh
+Susan, zpracovatelka objednávky, převezme 23. ledna od společnosti Kutilka, s.r.o objednávku na tři jednotky Sady B, což je zboží MNO. Všechny tři jednotky jsou přizpůsobeny a musí obsahovat silnou grafickou kartu a další extra RAM. Diskové jednotky jsou upgradovány na DWD, protože jednotky CD nejsou k dispozici. Susan ví, že jednotky lze sestavit okamžitě, takže opouští navrhované datum dodání 23. ledna.
 
-At the same time, the customer orders fifteen units of Kit A with a special request that five units be customized to contain the strong graphics card. Although Kit A is typically an assemble-to-stock item, the order processor combines the sales line quantities to sell ten units from stock and assemble five customized units to the order. The ten units of Kit A are unavailable and must first be supplied to inventory by an assembly order according to the item's assembly policy. Susan learns from the assembly department that Kit A units cannot be completed in the current week. She sets the shipment date of the second sales order line, for the mixed ATO and inventory quantity, to January 27 and informs the customer that the 15 units of Kit A will be shipped four days later than the three units of Kit B. To signal to the shipping department that this sales order requires assembly processing, Susan creates the warehouse shipment document from the sales order.  
+Současně si zákazník objedná patnáct jednotek sady A se speciálním požadavkem, aby pět jednotek bylo přizpůsobeno tak, aby obsahovaly silnou grafickou kartu. Ačkoli sada A je obvykle položkou montáže na sklad, procesor objednávky kombinuje množství prodejního řádku a prodává deset jednotek ze skladu a sestavuje pět přizpůsobených jednotek do objednávky. Deset jednotek sady A není k dispozici a musí být nejprve dodáno do skladu montážní zakázkou v souladu se zásadou montáže zboží. Susan se od montážního oddělení dozvídá, že jednotky sady A nemohou být dokončeny v aktuálním týdnu. Nastaví datum odeslání druhého řádku prodejní objednávky pro smíšené MNO a množství zásob na 27. ledna a informuje zákazníka, že 15 jednotek sady A bude odesláno o čtyři dny později než tři jednotky sady B. Do přepravního oddělení odešle upozornění, že tato prodejní objednávka vyžaduje zpracování montáže a vytvoří z prodejní objednávky doklad skladové zakázky.
 
-Eduardo, the planner, runs the planning worksheet and generates an assembly order for ten standard units of Kit A with an internal due date of January 27.  
+Eduardo, plánovač, vede sešit plánování a generuje montážní zakázku pro deset standardních jednotek sady A s interním datem splatnosti 27. ledna.
 
-Sammy, who is responsible for shipping, gets three warehouse shipment lines for the sales order: One line for the three pure ATO units, one line for the five ATO units on the mixed sales order line, and one line for the ten ATS units on the mixed sale order line. He creates a warehouse pick document for all the assembly components that are needed to assemble the total of eight ATO units on the warehouse shipment document.  
+Sammy, který je zodpovědný za přepravu, získá tři řádky dodávky ze skladu pro prodejní objednávku: jeden řádek pro tři čisté jednotky AMNO, jeden řádek pro pět jednotek MNO na řádku smíšené prodejní objednávky a jeden řádek pro deset jednotek MNS na řádku smíšené prodejní objednávky. Vytvoří doklad vyskladnění skladu pro všechny komponenty montáže, které jsou potřebné k sestavení celkem osmi jednotek MNO na dokladu dodávky ze skladu.
 
-John, the picker, retrieves components for all the ATO quantities on the warehouse shipment document and brings them to the assembly area. He enters the quantity to handle and registers the warehouse pick.  
+John, skladník, načte komponenty pro všechna množství MNO na dokladu dodávky ze skladu a přinese je do oblasti montáže. Zadá množství, které se má zpracovat, a zaregistruje vyskladnění skladu.
 
-Linda assembles the three ATO units of Kit B. The components are already picked, and she does not record output and consumption quantities or post the order, because both of these actions are performed automatically through the related warehouse shipment lines.  
+Linda sestavuje tři jednotky MNO sady B. Komponenty jsou již vyskladněny a nezaznamená množství výstupu a spotřeby ani nezaúčtuje objednávku, protože obě tyto akce jsou prováděny automaticky prostřednictvím souvisejících řádků dodávky ze skladu.
 
-Sammy records the assembled quantity on the warehouse shipment line and posts the shipment of the three units of Kit B. The first line on the sales order is updated as shipped. The linked assembly order remains open until the sales order is fully invoiced. The two warehouse shipment lines, one ATO and one ATS, for Kit A with due dates on January 27 remain open.  
+Sammy zaznamená sestavené množství na řádku dodávky ze skladu a zaúčtuje dodávku tří jednotek sady B. První řádek prodejní objednávky je aktualizován jako dodaný. Propojená montážní objednávka zůstane otevřená, dokud nebude prodejní objednávka plně fakturována. Dva řádky dodávky ze skladu, jedna MNO a jedna MNS, pro sadu A s daty splatnosti 27. ledna zůstávají otevřené.
 
-On January 27, Linda processes two assembly orders for Kit A. The first order is the ATO order for five units, which she processes differently than the ATO order for Kit B that she processed on January 23. On this order, she is authorized to access the warehouse shipment line herself to record the completed assembly work. The needed components are ready in the assembly department, as they were picked together with components for Kit B.  
+Linda zpracovává 27. ledna dvě montážní objednávky na sadu A. První objednávkou je objednávka MNO na pět jednotek, kterou zpracovává jinak než objednávku MNO pro sadu B, kterou zpracovala 23. ledna. Na této objednávce je oprávněna k přístupu na řádek dodávky ze skladu, aby zaznamenála dokončené montážní práce. Potřebné komponenty jsou připraveny v montážním oddělení, protože byly vybrány společně s komponentami pro sadu B.
 
-The second assembly order is the ATS order for ten units that were created by the planning system. On this ATS order, Linda performs all involved actions from the assembly order. She creates a warehouse pick document for the assembly components that are needed to assemble the ten units. When the PCs are assembled, Linda posts the assembly order and thereby signals that the items are available in inventory and can be picked for shipment.  
+Druhá montážní objednávka je objednávka MNS pro deset jednotek, které byly vytvořeny plánovacím systémem. Na této objednávce MNS provede Linda všechny zúčastněné akce z montážní objednávky. Vytvoří doklad vyskladnění skladu pro komponenty montáže, které jsou potřebné k sestavení deseti jednotek. Když jsou počítače sestaveny, Linda zaúčtuje montážní objednávku a tím signalizuje, že zboží je k dispozici ve skladu a může být vyskladněno pro dodávku.
 
-Sammy creates a warehouse pick document for any quantities that remain before the warehouse shipment can be posted. A pick document is created for the ten units of Kit A that have just finished. The components needed to assemble the five units of Kit A to order where picked on January 23.  
+Sammy vytvoří doklad vyskladnění pro veškeré množství, které zůstane před zaúčtováním dodávky ze skladu. Doklad vyskladnění je vytvořen pro deset jednotek sady A, které se právě dokončili. Komponenty potřebné k sestavení pěti jednotek sady A na objednávku byly vyskladněny 23. ledna.
 
-John brings the ten units of Kit A from the warehouse to the specified shipping area, records the quantity to handle, and then registers the pick.  
+John přinese deset jednotek sady A ze skladu do určené oblasti expedice, zaznamená množství, které má být zpracováno, a pak zaregistruje vyskladnění.
 
-Sammy packs the ten ATS units with the five ATO units that Linda assembled earlier in the day. He fills in the quantity to ship on both lines and then posts the last shipment for The Device Shop. The related assembly order for five units of Kit A is automatically posted. The second line on the sales order is updated as shipped. Two linked assembly order remains open until the sales order is invoiced and closed.  
+Sammy zabalí deset jednotek MNS do pěti jednotek MNO, které Linda sestavila dříve během dne. Vyplní množství, které má být dodáno na obou řádncích, a poté zaúčtuje poslední dodávku pro Kutilka, s.r.o. Související montážní zakázka pro pět jednotek sady A je automaticky zaúčtována. Druhý řádek na prodejní objednávce je aktualizován tak, jak byl dodán. Dvě propojené montážní objednávky zůstávají otevřené, dokud není prodejní objednávka fakturována a uzavřena.
 
-When the sales order is later posted as fully invoiced, the sales order and the linked assembly orders are removed.  
+Když je prodejní objednávka později zaúčtována jako plně fakturovaná, prodejní objednávka a propojené montážní objednávky budou odstráněny.
 
-## Prepare Sample Data  
+## Příprava ukázkových dat
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Item Journals**, and then choose the related link.  
-2.  Choose the **Batch Name** field, and then select the default journal.  
-3.  Create positive inventory adjustments at WHITE location on the work date, January 23, by entering the following information.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky  zboží skladu** a poté vyberte související odkaz.
+2. Vyberte pole **Název dávky** a poté vyberte výchozí deník.
+3. Vytvořte kladné úpravy zásob v lokaci BÍLÝ k datu práce 23. ledna zadáním následujících informací.
 
-    |**Item No.**|**Zone Code**|**Bin Code**|**Quantity**|  
-    |-----------------------------------|---------------------------------------|--------------------------------------|------------------------------------|  
-    |80001|PICK|W-01-0001|20|  
-    |80005|PICK|W-01-0001|20|  
-    |80011|PICK|W-01-0001|20|  
-    |80014|PICK|W-01-0001|20|  
-    |80203|PICK|W-01-0001|20|  
-    |80209|PICK|W-01-0001|20|  
+   | **Číslo zboží** | **Kód zóny** | **Kód přihrádky** | **Množství** |
+   |-----------------------------------|---------------------------------------|--------------------------------------|------------------------------------|  
+   | 80001 | VYSKL | W-01-0001 | 20 |
+   | 80005 | VYSKL | W-01-0001 | 20 |
+   | 80011 | VYSKL | W-01-0001 | 20 |
+   | 80014 | VYSKL | W-01-0001 | 20 |
+   | 80203 | VYSKL | W-01-0001 | 20 |
+   | 80209 | VYSKL | W-01-0001 | 20 |
 
-4.  Choose the **Register** action, and then choose the **Yes** button.  
+4. Vyberte akci **Registrace** a pak zvolte tlačítko **Ano**.
 
-    Next, synchronize the new warehouse entries with inventory.  
+   Dále synchronizujte nové položky skladu se zásobou.
 
-5.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link. The **Item Journal** page opens.  
-6.  Choose the **Calculate Whse. Adjustment** action.  
-7.  On the **Calculate Whse. Adjustment** page, choose the **OK** button.  
-8.  On the **Item Journal** page, choose the **Post** action, and then choose the **Yes** button.  
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky zboží** a poté vyberte související odkaz. Otevře se stránka **Deník zboží**.
+6. Vyberte akci **Výpočet adjustace  skladu**.
+7. Na stránce **Výpočet adjustace  skladu** klikněte na tlačítko **OK**.
+8. Na stránce **Deník zboží** vyberte akci **Účtovat** a poté klikněte na tlačítko **Ano**.
 
-### Creating the Assembly Items  
+### Vytváření zboží montáže
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.  
-2.  Choose the **New** action.  
-3.  Create the first assembly item based on the following information.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte akci **Nový**.
+3. Vytvořte první zboží montáže na základě následujících informací.
 
-    |Field|Value|  
-    |---------------------------------|-----------|  
-    |**Description**|Kit A – Basic PC|  
-    |**Base Unit of Measure**|PCS|  
-    |**Item Category Code**|Misc.|  
-    |**Replenishment System**|Assembly|  
-    |**Assembly Policy**|Assemble-to-Stock|  
-    |**Reordering Policy**|Lot-for-Lot|  
+   | Pole | Hodnota |
+   |---------------------------------|-----------|  
+   | **Popis** | Sada A – Základní PC |
+   | **Základní měrná jednotka** | KS |
+   | **Kód kategorie zboží** | Různé |
+   | **Systém doplnění** | Montáž |
+   | **Způsob montáže** | Montáž-na-sklad |
+   | **Způsob přiobjednání** | Dávka-pro-dávku |
 
-    > [!NOTE]  
-    >  Kit A is typically supplied by assembly to stock and therefore has a reordering policy to make it part of general supply planning.  
+   > [!NOTE]  
+   > Sada A se obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.
 
-4.  Choose the **Assembly** action, and then choose **Assembly BOM**.  
-5.  Define an assembly BOM for Kit A with the following information.  
+4. Vyberte akci **Montáž** a poté vyberte **Kusovník montáže**.
+5. Definujte kusovník montáže pro sadu A s následujícími informacemi.
 
-    |**Type**|**No.**|**Quantity per**|  
-    |-------------------------------|------------------------------|---------------------------------------|  
-    |Item|80001|1|  
-    |Item|80011|1|  
-    |Item|80209|1|  
-    |Resource|Linda|1|  
+   | **Typ** | **Číslo** | **Množství za** |
+   |-------------------------------|------------------------------|---------------------------------------|  
+   | Zboží | 80001 | 1 |
+   | Zboží | 80011 | 1 |
+   | Zboží | 80209 | 1 |
+   | Zdroj | Linda | 1 |
 
-6.  Create the second assembly item based on the following information.  
+6. Vytvořte druhou položku montáže na základě následujících informací.
 
-    |Field|Value|  
-    |---------------------------------|-----------|  
-    |**Description**|Kit B – Pro PC|  
-    |**Base Unit of Measure**|PCS|  
-    |**Item Category Code**|Misc.|  
-    |**Replenishment System**|Assembly|  
-    |**Assembly Policy**|Assemble-to-Order|  
+   | Pole | Hodnota |
+   |---------------------------------|-----------|  
+   | **Popis** | Sada B – Profesionální PC |
+   | **Základní měrná jednotka** | KS |
+   | **Kód kategorie zboží** | Různé |
+   | **Systém doplnění** | Montáž |
+   | **Způsob montáže** | Montáž-na-zakázku |
 
-    > [!NOTE]  
-    >  Kit B is usually supplied by assembly to order and therefore does not have a reordering policy, because it should not be part of general supply planning.  
+   > [!NOTE]  
+   > Sada B je obvykle dodávána pomocí montáže na zakázku, a proto nemá spůsob přiobjednání, protože by neměla být součástí obecného plánování zásobování.
 
-7.  Choose the **Assembly** action, and then choose **Assembly BOM**.  
-8.  Define an assembly BOM for Kit B with the following information.  
+7. Vyberte akci **Montáž** a poté vyberte **Kusovník montáže**.
+8. Definujte kusovník montáže pro sadu B s následujícími informacemi.
 
-    |**Type**|**No.**|**Quantity per**|  
-    |-------------------------------|------------------------------|---------------------------------------|  
-    |Item|80005|1|  
-    |Item|80014|1|  
-    |Item|80210|1|  
-    |Resource|Linda|1|  
+   | **Typ** | **Číslo** | **Množství za** |
+   |-------------------------------|------------------------------|---------------------------------------|  
+   | Zboží | 80005 | 1 |
+   | Zboží | 80014 | 1 |
+   | Zboží | 80210 | 1 |
+   | Zdroj | Linda | 1 |
 
-### Selling the Assembly Items  
+### Prodej zboží montáže
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2.  Choose the **New** action.  
-3.  Create two sales order lines for customer 62000, The Device Shop, on the work date with the following information.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+2. Vyberte akci **Nový**.
+3. Vytvořte dva řádky prodejní objednávky pro zákazníka 62000, Kutilka, s.r.o, k pracovnímu datu s následujícími informacemi.
 
-    |**Type**|**Description**|**Quantity**|Qty. to Assemble to Order|Shipment Date|  
-    |--------------|---------------------|------------------|-------------------------------|-------------------|  
-    |Item|Kit B – Pro PC|3|3|January 23|  
-    |Item|Kit A – Basic PC|15|5|January 27|  
+   | **Typ** | **Popis** | **Množství** | Množství  k montáži na zakázku | Datum odeslání |
+   |--------------|---------------------|------------------|-------------------------------|-------------------|  
+   | Zboží | Sada B – Profesionální PC | 3 | 3 | 23. ledna |
+   | Zboží | Sada A – Základní PC | 15 | 5 | 27. ledna |
 
-    > [!NOTE]  
-    >  The following availability issue exists for the sales order line for Kit B:  
-    >   
-    >  -   Assembly component 80210 is not available. This means that the three specified units of Kit B cannot be assembled, indicated by **0** in the **Able to Assemble** field on the **Assembly Availability** page.  
-    >   
-    >  The following availability issue exists for the sales order line for Kit A:  
-    >   
-    >  -   The ten units of Kit A are not available. This indicates to the planning system that the quantity must be assembled to inventory.  
+   > [!NOTE]  
+   > Pro řádek prodejní objednávky pro sadu B existuje následující problém s dostupností:
+   >
+   > - Součást montáže 80210 není k dispozici. To znamená, že tři zadané jednotky sady B nelze sestavit, jsou označeny hodnotou **0** v poli **Schopen montáže** na stránce **Dostupnost montáže**.
+   >
+   > Pro řádek prodejní objednávky pro sadu A existuje následující problém s dostupností:
+   >
+   > - Deset jednotek sady A není k dispozici. To znamená pro plánovací systém, že množství musí být smontováno do skladu.
 
-    Next, customize the sales order.  
+   Dále přizpůsobte prodejní objednávku.
 
-4.  Select the sales order line for three units of Kit B.  
-5.  On the **Lines** FastTab, choose **Line**, choose **Assemble to Order**, and then choose **Assemble-to-Order Lines**.  
-6.  On the **Assemble-to-Order Lines** page, on the assembly order line for item 80014, enter **2** in the **Quantity per** field.  
-7.  On the assembly order line for item 80210, choose the **No.** field, and then select item 80209 instead.  
-8.  Create a new assembly order line with the following information.  
+4. Vyberte řádek prodejní objednávky pro tři jednotky sady B.
+5. Na záložce **Řádky** vyberte **Řádek** zvolte **Montáž na objednávku** a poté vyberte **Řádky montáže na zakázku**.
+6. Na stránce **Řádky montáže na zakázku** na řádku montážní objednávky pro zboží 80014 zadejte **2** do pole **Množství za**.
+7. Na řádku montážní objednávky pro zboží 80210 zvolte pole **Číslo** a místo toho vyberte položku 80209.
+8. Vytvořte nový řádek montážní objednávky s následujícími informacemi.
 
-    |Type|No.|Quantity per|  
-    |----------|---------|------------------|  
-    |Item|80203|1|  
+   | Typ | Číslo | Množství za |
+   |----------|---------|------------------|  
+   | Zboží | 80203 | 1 |
 
-9. Close the **Assemble-to-Order Lines** page.  
+9. Zavřete stránku **Řádky montáže na zakázku**.
 
-    Next, update the unit price of Kit B according to the customization that you just performed. Notice the current value in the **Unit Price Excl. VAT** field.  
+   Dále aktualizujte jednotkovou cenu sady B podle přizpůsobení, které jste právě provedli. Všimněte si aktuální hodnoty pole **Jednotková cena bez  DPH**.
 
-10. On the **Lines** FastTab, choose **Line**, choose **Assemble to Order**, and then choose **Roll Up Price**.  
-11. Choose the **Yes** button. Notice the increased value in the **Unit Price Excl. VAT** field.  
-12. Select the sales order line for 15 units of Kit A.  
-13. On the **Lines** FastTab, choose **Line**, choose **Assemble to Order**, and then choose **Assemble-to-Order Lines**.  
-14. On the **Assemble-to-Order Lines** page, create a new assembly order line with the following information.  
+10. Na záložce **Řádky** zvolte  **Řádek** zvolte **Montáž na objednávku** a poté zvolte **Cena více úrovní**.
+11. Vyberte tlačítko **Ano**. Všimněte si zvýšené hodnoty v poli **Jednotková cena bez  DPH**.
+12. Vyberte řádek prodejní objednávky pro 15 jednotek sady A.
+13. Na záložce **Řádky** vyberte **Řádek** zvolte **Montáž na objednávku** a poté vyberte **Řádky montáže na zakázku**.
+14. Na stránce **Řádky montáže na zakázku** vytvořte nový řádek montážní zakázky s následujícími informacemi.
 
-    |Type|No.|Quantity per|  
-    |----------|---------|------------------|  
-    |Item|80203|1|  
+   | Typ | Číslo | Množství za |
+   |----------|---------|------------------|  
+   | Zboží | 80203 | 1 |
 
-     Next, change the shipment date of the second sales order line according to the assembly schedule.  
+   Dále změňte datum dodávky druhého řádku prodejní objednávky podle plánu sestavení.
 
-15. On the sales order line for 15 units of Kit A, enter **01-27-2014** in the **Shipment Date** field.  
-16. Choose the **Release** action.  
-17. Choose the **Create Whse. Shipment** action.  
-18. Close the sales order.  
+15. Do řádku prodejní objednávky pro 15 jednotek sady A zadejte **01-27-2014** do pole **Datum odeslání**.
+16. Vyberte akci **Vydat**.
+17. Vyberte akci **Vytvořit dodávku  ze skladu**.
+18. Zavřete prodejní objednávku.
 
-### Planning for the Unavailable ATS Items  
+### Plánování nedostupného zboží MNS
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheet**, and then choose the related link.  
-2.  Choose the **Calculate Regenerative Plan** action.  
-3.  On the **Calculate Plan** page, set the following filters.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Plánovací sešit** a poté vyberte související odkaz.
+2. Vyberte akci **Vypočítat regenerační plán**.
+3. Na stránce **Vypočítat plán** nastavte následující filtry.
 
-    |Starting Date|Ending Date|No.|  
-    |-------------------|-----------------|---------|  
-    |01-23-2014|01-27-2014|Kit A – Basic PC|  
+   | Počáteční datum | Datum ukončení | Číslo |
+   |-------------------|-----------------|---------|  
+   | 01-23-2014 | 01-27-2014 | Sada A – Základní PC |
 
-4.  Choose the **OK** button.  
+4. Zvolte tlačítko **OK**.
 
-    A new planning line is created for the needed assembly order of ten units, due on January 27. It needs no changes, so now you can create the order.  
+   Pro potřebnou montážní zakázku deseti jednotek, která má být splatná 27. ledna, je vytvořen nový řádek plánování. Nepotřebuje žádné změny, takže nyní můžete vytvořit objednávku.
 
-5.  Choose the **Carry Out Action Message** action.  
-6.  On the **Carry Out Action Msg.** page, choose the **Assembly Order** field, and then select **Make Assembly Orders**.  
-7.  Choose the **OK** button.  
+5. Vyberte akci **Provést hlášené akce**.
+6. Na stránce **Provést hlášení akce-pož.** vyberte pole **Objednávka sestavení** a poté vyberte **Vytvořit montážní zakázky**.
+7. Zvolte tlačítko **OK**.
 
-### Assembling and Shipping the First ATO Quantity  
+### Sestavení a dodání množství prvního MNO
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipment**, and then choose the related link.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávka ze skladu** a poté vyberte související odkaz.
 
-    > [!NOTE]  
-    >  In this section, the person who is responsible for shipping is in charge of recording the completed ATO assembly work on the warehouse shipment line. This workflow may occur in environments where the assembly work is performed by the person who is responsible for shipping or by assembly workers in the shipping area.  
-    >   
-    >  In this section, actions on the assembly order are performed indirectly from the warehouse shipment line. For more information about how to process an assembly order directly, see the "Assemble Items to Inventory" section in this walkthrough.  
+   > [!NOTE]  
+   > V této části je osoba odpovědná za přepravu odpovědná za zaznamenávání dokončených montážních prací MNO na řádku dodávky ze skladu. K tomuto pracovnímu postupu může dojít v prostředích, kde montážní práce provádí osoba odpovědná za dopravu nebo montážní pracovníci v oblasti expedice.
+   >
+   > V této části se akce na montážní zakázce provádějí nepřímo z řádku dodávky ze skladu. Pro více informací o přímém zpracování montážní objednávky navštivte "Zboží montáže do skladu" v tomto návodu.
 
-2.  Open the most recent warehouse shipment that is created at WHITE location.  
+2. Otevřete nejnovější dodávku ze skladu, která je vytvořena na lokaci BÍLÝ.
 
-    Notice the three warehouse shipment lines: One line for the ATO quantity of Kit B, due on January 23. One line for the ATO quantity of Kit A, due on January 27. One line for the inventory quantity of Kit A, due on January 27.  
+   Všimněte si tří řádků dodávky ze skladu: Jeden řádek pro množství MNO sady B, splatné 23. ledna. Jeden řádek pro množství MNO sady A, splatné 27. ledna. Jeden řádek pro množství zásob sady A, splatné 27. ledna.
 
-    The **Assemble to Order** field specifies the assembly method.
+   Pole **Montáž na objednávku** určuje metodu montáže.
 
-    Next, create a pick document for all the ATO assembly components that are needed on the warehouse shipment.  
+   Dále vytvořte doklad vyskladnění pro všechny komponenty sestavy MNO, které jsou potřebné pro dodávku ze skladu.
 
-3.  Choose the **Create Pick** action, and then choose the **OK** button.  
+3. Vyberte akci **Vytvořit vyskladnění** a poté klikněte na tlačítko **OK**.
 
-    Next, perform the picker's task.  
+   Dále proveďte úlohu vyskladnění.
 
-4.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link.  
-5.  Open the warehouse pick document that you created in step 3 in this section.  
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz.
+5. Otevřete doklad vyskladnění, který jste vytvořili v kroku 3 v této části.
 
-    Notice the value in the **Source Document** field and that all the pick lines are for assembly components.  
+   Všimněte si hodnoty v poli **Původní doklad** a toho, že všechny řádky vyskladnění jsou pro komponenty montáže.
 
-    Next.register the pick without changing the default information.  
+   Dále zaregistrujte vyskladnění bez změny výchozích informací.
 
-6.  Choose the **Autofill Qty. to Handle** action.  
-7.  Choose the **Register Pick** action.  
+6. Zvolte akci **Automat.vyplnit množ. ke zprac.**.
+7. Vyberte akci **Zápis vyskladnění**.
 
-    Return to performing the shipping tasks.  
+   Vraťte se k provádění úkolů dodání.
 
-8.  Reopen the **Warehouse Shipment** page.  
+8. Znovu otevřete stránku **Dodávka ze skladu**.
 
-    Notice that the **Qty. Picked** field is still empty on all lines. This is because you still have not picked the items to be shipped, but only the components needed to assemble the ATO quantities.  
+   Všimněte si, že pole **Vyskladněné  množství** je na všech řádcích stále prázdné. Důvodem je to, že jste stále nevyskladnili zboží, které má být dodáno, ale pouze komponenty potřebné k sestavení množství MNO.
 
-    Proceed to review the related assembly order.  
+   Pokračujte kontrolou příslušné objednávky montáže.
 
-9. Select the shipment line for three units of Kit B.  
-10. On the **Lines** FastTab, choose **Line**, and then choose **Assemble to Order**. The **Assembly Order** page opens.  
+9. Vyberte řádek dodávky pro tři jednotky sady B.
+10. Na záložce **Řádky** zvolte **Řádek** a pak zvolte**Montáž na objednávku**. Otevře se stránka **Montážní zakázka**.
 
-    Notice that several fields on the assembly order are unavailable because the order is linked to a sales order.  
+   Všimněte si, že několik polí v montážní zakázce není k dispozici, protože zakázka je propojena s prodejní objednávkou.
 
-    Notice on the assembly order lines that the **Qty. Picked** field is filled. This is due to the pick that you registered in step 7 in this section.  
+   Všimněte si, že na řádcích montážní zakázky, je pole **Vyskladněné  množství** vyplněno. To je způsobeno vyskladnění, který jste zaregistrovali v kroku 7 v této sekci.
 
-11. In the **Quantity to Assemble** field, try to enter any value lower than **3**.  
+11. Do pole **Množství k montáži** zkuste zadat libovolnou hodnotu nižší než **3**.
 
-    Read the error message explaining why this field can only be filled through the **Qty. to Ship** field on the related shipment.  
+   Přečtěte si chybovou zprávu s vysvětlením, proč lze toto pole vyplnit pouze prostřednictvím pole **K  dodání** na související dodávce.
 
-    The **Quantity to Assemble** field is editable is to support situations where you want to partially ship an inventory quantity instead of assembling more units to the order. For more information, see the "Combination Scenarios" section in [Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md).  
+   Pole **Množství k montáži** je upravitelné pro podporu situací, kdy chcete částečně odeslat množství zásob namísto sestavení více jednotek do objednávky. Pro více informací navštivte sekci "Kombinované scénáře" v [Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md).
 
-12. Close the **Assembly Order** page to return to the **Warehouse Shipment** page.  
-13. On the shipment line for three units of Kit B, in the **Qty. to Ship** field, enter **3**.  
-14. Choose the **Post Shipment** action, and then select the **Ship** button.  
+12. Zavřete stránku **Montážní zakázka** a vraťte se na stránku **Dodávka ze skladu**.
+13. Na řádku dodávky pro tři jednotky sady B, zadejte do pole **K  dodání** hodnotu **3**.
+14. Vyberte akci **Účtovat dodávku** a poté klikněte na tlačítko **Dodat**.
 
-    Along with this warehouse shipment posting, the full consumption and output quantities of the related assembly order are posted, and the **Remaining Quantity** field is empty. The sales order line for Kit B is updated to show that the three units are shipped.  
+   Spolu s tímto zaúčtováním dodávky ze skladu jsou zaúčtována úplná spotřeba a výstupní množství související objednávky sestavy a pole **Zbývající množství** je prázdné. Řádek prodejní objednávky pro sadu B je aktualizován tak, aby zobrazoval, že jsou dodány tři jednotky.
 
-    Warehouse activities to fulfill the first sales order line by January 23 are completed. Next, fulfill the sales order lines that are shipping on January 27  
+   Aktivity skladu pro splnění prvního řádku prodejní objednávky do 23. ledna jsou dokončeny. Dále proveďte řádky prodejní objednávky, které jsou dodávány 27. ledna
 
-### Assembling and Recording the Second ATO Quantity  
+### Montáž a zaznamenání množství druhého MNO
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Orders**, and then choose the related link.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Montážní zakázky** a poté zvolte související odkaz.
 
-    Notice that the ATO order for shipped units of Kit B is still in the list, although the **Remaining Quantity** is empty. This is because the linked sales order is still not fully invoiced.  
+   Všimněte si, že objednávka MNO pro dodané jednotky sady B je stále v seznamu, i když pole **Zbývající množství** je prázdné. Je to proto, že propojená prodejní objednávka stále není plně fakturována.
 
-    > [!NOTE]  
-    >  In this section, the assembly worker is responsible for recording the completed ATO assembly work on the warehouse shipment line. This workflow may occur in environments where the assembly work is performed in a separate assembly department and assembly workers are authorized to change the warehouse shipment line.  
+   > [!NOTE]  
+   > V této části je montážní pracovník zodpovědný za zaznamenávání dokončených montážních prací MNO na řádku dodávky ze skladu. K tomuto pracovnímu postupu může dojít v prostředích, kde jsou montážní práce prováděny v samostatném montážním oddělení a montážní pracovníci jsou oprávněni změnit řádek dodávky ze skladu.
 
-2.  Open the ATO assembly order for five units of Kit A.  
+2. Otevřete montážní zakázku MNO pro pět jednotek Ksady A.
 
-    Notice that the **Quantity to Assemble** and the **Quantity to Consume** fields are empty because no work is recorded yet.  
+   Všimněte si, že pole **Množství k montáži** a **Množství ke spotřebě** jsou prázdná, protože zatím není zaznamenána žádná práce.
 
-    Notice on the assembly order lines that the **Qty. Picked** field is filled. This is due to the pick that was registered on January 23.  
+   Všimněte si, že na řádcích montážní zakázky, je pole **Vyskladněné  množství** vyplněno. To je způsobeno vyskladněním, které bylo zaregistrováno 23. ledna.
 
-    Next, record that the assembly order is completed.  
+   Dále zaznamenejte, že je montážní objednávka dokončena.
 
-3.  Choose the **Asm.-to-Order Whse. Shpt. Line** action.  
-4.  On the **Asm.-to-Order Whse. Shpt. Line** page, in the **Qty. to Ship** field, enter **5**, and then close the page.  
+3. Vyberte akci **Řádek dod. ze skladu  mont. zakázky**.
+4. Na stránce **Řádek dod. ze skladu  mont. zakázky** do pole **K  dodání** zadejte **5** a poté stránku zavřete.
 
-    Notice on the **Assembly Order** page that the **Quantity to Assemble** and the **Quantity to Consume** fields are now filled with the output and consumption quantities that will be posted with the shipment.  
+   Všimněte si na stránce **Montážní zakázky**, že pole  **Množství k montáži** a **Množství ke spotřebě** jsou nyní vyplněna množstvím výstupu a spotřeby, které budou zaúčtovány s dodávkou.
 
-5.  Close the **Assembly Order** page.  
+5. Zavřete stránku **Montážní zakázky**.
 
-### Assembling the ATS Quantity  
+### Montáž množství MNS
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Orders**, and then choose the related link.  
-2.  Open the assembly order for ten units of Kit A.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Montážní zakázky** a poté zvolte související odkaz.
+2. Otevřete montážní objednávku pro deset jednotek sady A.
 
-    Notice that the **Quantity to Assemble** field is filled with the expected quantity.  
+   Všimněte si, že pole **Množství k montáži** je vyplněno očekávaným množstvím.
 
-    Next, create a pick document to retrieve the needed components.  
+   Dále vytvořte doklad vyskladnění pro načtení potřebných komponent.
 
-3.  Choose the **Release** action.  
-4.  Choose the **Create Whse. Pick** action, and choose the **OK** button.  
+3. Vyberte akci **Vydat**.
+4. Vyberte akci **Vytvořit  vyskladnění** a klikněte na tlačítko **OK**.
 
-    Next, perform the picker's task.  
+   Dále proveďte úlohu vyskladnění.
 
-5.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link.  
-6.  Open the warehouse pick document that you created in step 4 in this section.  
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz.
+6. Otevřete doklad vyskladnění, který jste vytvořili v kroku 4 v této části.
 
-     Proceed to register the pick without changing the default information.  
+   Pokračujte v registraci vyskladnění bez změny výchozích informací.
 
-7.  Choose the **Autofill Qty. to Handle** action.  
-8.  Choose the **Register Pick** action.  
+7. Zvolte akci **Automat.vyplnit množ. ke zprac.**.
+8. Vyberte akci **Zápis vyskladnění**.
 
-    Return to the assembly order to perform the last assembly task.  
+   Vraťte se do montážní zakázky a proveďte poslední úkol montáže.
 
-9. In the **Assembly Order**, choose the **Post** action, and then choose the **Yes** button.  
+9. V **Montážní zakázce** vyberte akci **Účtovat** a poté klikněte na tlačítko **Ano**.
 
-    Notice that the assembly order is removed from the list of open orders.  
+   Všimněte si, že montážní zakázka je odebrána ze seznamu otevřených zakázek.
 
-### Shipping the Remaining Items, Partly from Stock and Partly Assembled to the Order  
+### Dodání zbývajícího zboží, částečně ze skladu a částečně z montáže na zakázku
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipment**, and then choose the related link.  
-2.  Open the most recent warehouse shipment that is created at WHITE location.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávka ze skladu** a poté vyberte související odkaz.
+2. Otevřete nejnovější dodávku ze skladu, která je vytvořena na lokaci BÍLÝ.
 
-    Notice on the line for ten units of Kit A that the **Qty. to Ship** and **Qty. Picked** field are empty.  
+   Všimněte si na řádku pro deset jednotek sady A, že pole **K  dodání** a **Vyskladněné  množství** sou prázdná.
 
-    Next, pick any remaining items.  
+   Dále vyskladněte všechno zbývající zboží.
 
-3.  Choose the **Create Pick** action, and then choose the **OK** button.  
+3. Vyberte akci **Vytvořit vyskladnění** a poté klikněte na tlačítko **OK**.
 
-    Next, perform the picker's last task for this warehouse shipment.  
+   Dále proveďte poslední úkol vyskladnění pro tuto skladovou dodávku.
 
-4.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link.  
-5.  Open the warehouse pick document that you created in step 3 in this section.  
+4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz.
+5. Otevřete doklad vyskladnění, který jste vytvořili v kroku 3 v této části.
 
-    Notice that this pick document is for assembly item, not for assembly components.  
+   Všimněte si, že tento doklad vyskladnění je pro zboží montáže, nikoli pro komponenty montáže.
 
-    Next, register the pick without changing the default information.  
+   Dále zaregistrujte vyskladnění beze změny výchozích informací.
 
-6.  Choose the **Autofill Qty. to Handle** action.  
-7.  Choose the **Register Pick** action, and then choose the **Yes** button.  
+6. Zvolte akci **Automat.vyplnit množ. ke zprac.**.
+7. Vyberte akci **Zápis vyskladnění** a poté klikněte na tlačítko **Ano**.
 
-    Return to the warehouse shipment to perform the last task.  
+   Vraťte se do dodávky ze skladu a proveďte poslední úkol.
 
-8.  Reopen the **Warehouse Shipment** page.  
+8. Znovu otevřete stránku **Dodávka ze skladu**.
 
-    On the **Warehouse Shipment** page, on the line for ten units of Kit A, notice that the **Qty. to Ship** and **Qty. Picked** fields now contain **10**.  
+   Na stránce **Dodávka ze skladu** na řádku pro deset jednotek sady A si všimněte, že pole **K  dodání** a **Vyskladněné  množství** nyní obsahují hodnotu **10**.
 
-9. Choose the **Post Shipment** action, and the choose **Ship**.  
+9. Vyberte akci **Účtovat dodávku** a zvolte **Dodat**.
 
-    The warehouse shipment document is removed, which indicates that the involved warehouse activities are completed. Next, verify that the sales order has been processed.  
+   Dokument dodávky ze skladu je odebrán, což znamená, že příslušné aktivity skladu jsou dokončeny. Dále ověřte, že byla zpracována prodejní objednávka.
 
-10. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link  
-11. Open the sales order for The Device Shop.  
+10. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+11. Otevřete prodejní objednávku pro Kutilka, s.r.o.
 
-    Notice that the **Quantity Shipped** field contains the full quantity on both lines.  
+   Všimněte si, že pole **Dodané množství** obsahuje celé množství na obou řádcích.
 
-    When the Device Shop pays for their receipt of the 18 PCs from CRONUS, the sales order and its linked assembly orders are removed.  
+   Když Kutilka, s.r.o. zaplatí za dodání 18 počítačů od společnosti CRONUS, prodejní objednávka a její propojené montážní zakázky budou odstraněny.
 
-## See Also  
- [Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md)   
- [Assemble Items](assembly-how-to-assemble-items.md)   
- [Pick Items for Warehouse Shipment](warehouse-how-to-pick-items-for-warehouse-shipment.md)   
- [Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md)   
- [Assemble Items](assembly-how-to-assemble-items.md)   
- [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md)   
- [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md)   
- [Design Details: Outbound Warehouse Flow](design-details-outbound-warehouse-flow.md)   
- [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md)
+## Viz také
+[Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md)     
+[Montáž zboží](assembly-how-to-assemble-items.md)     
+[Vyskladnění zboží pro dodávku ze skladu](warehouse-how-to-pick-items-for-warehouse-shipment.md)     
+[Prodej zboží montáže na obejdnávku](assembly-how-to-sell-items-assembled-to-order.md)     
+[Montáž zboží](assembly-how-to-assemble-items.md)     
+[Podrobnosti návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md)     
+[Detaily návrhu: Vnitřní procesy skladu](design-details-internal-warehouse-flows.md)     
+[Detaily návrhu: Výstupní procesy skladu](design-details-outbound-warehouse-flow.md)     
+[Návod: Automatické plánování dodávek](walkthrough-planning-supplies-automatically.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

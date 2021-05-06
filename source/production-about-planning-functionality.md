@@ -4,168 +4,132 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# About Planning Functionality
+# O funkcích plánování
+Plánovací systém bere v úvahu všechna data o nabídce a poptávce, výsledky porovnává a vytváří návrhy pro vyvažování nabídky, aby byla uspokojena poptávka.
 
-The planning system takes all demand and supply data into account, nets the results, and creates suggestions for balancing the supply to meet the demand.  
-
-For detailed information, see [Design Details: Supply Planning](design-details-supply-planning.md).  
-
-> [!NOTE]  
-> For all the fields that are mentioned in this topic, read the tooltip to understand their function. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-
-## Demand and Supply
-
-Planning has two elements: demand and supply. These must be held in balance to ensure that the demand is met in a timely and cost-efficient manner.  
-
-- Demand is the common term used for any kind of gross requirement such as a sales order, service order, component need from assembly or production orders, outbound transfer, blanket order or forecast. In addition to these, application allows some other technical types of demand - such as a negative production or purchase order, negative inventory, and purchase return.  
-- Supply is the common word used for any kind of replenishment such as inventory, a purchase order, assembly order, production order, or inbound transfer. Correspondingly, there can be a negative sales or service order, negative component need or sales return – all of which in some way also represent supply.  
-
-Another goal of the planning system is to ensure that the inventory does not grow unnecessarily. In the case of decreasing demand, the planning system will suggest that you postpone, decrease in quantity, or cancel existing replenishment orders.  
-
-## Planning Calculation
-
-The planning system is driven by anticipated and actual customer demand, as well as inventory reordering parameters. Running the planning calculation will result in application suggesting specific actions (Action Messages) to take concerning possible replenishment from vendors, transfers between warehouses, or production. If replenishment orders already exist, the suggested actions could be to increase or expedite the orders to meet the changes in demand.  
-
-The basis of the planning routine is in the gross-to-net calculation. Net requirements drive planned order releases, which are scheduled based on the routing information (manufactured items) or the item card lead time (purchased items). Planned order release quantities are based on the planning calculation, and are affected by the parameters set on the individual item cards.  
-
-## Planning with Manual Transfer Orders
-
-As you can see from the **Replenishment System** field on a SKU card, the planning system can be set up to create transfer orders to balance supply and demand across locations.  
-
-In addition to such automatic transfer orders, you may sometimes need to perform a general move of inventory quantities to another location, irrespective of existing demand. For this purpose you would manually create a transfer order for the quantity to move. To ensure that the planning system does not try to manipulate this manual transfer order, you must set the **Planning Flexibility** on the transfer line(s) to None.  
-
-Contrarily, if you do want the planning system to adjust the transfer order quantities and dates to existing demand, you must set the **Planning Flexibility** field to the default value, Unlimited.
-
-## Planning Parameters
-
-The planning parameters control when, how much, and how to replenish based on the various settings on the item card (or stockkeeping unit - SKU), and the manufacturing setup.  
-
-The following planning parameters exist on the item or SKU card:  
-
-- Dampener Period  
-- Dampener Quantity  
-- Reordering Policy  
-- Reorder Point
-- Maximum Inventory  
-- Overflow Level  
-- Time Bucket  
-- Lot Accumulation Period  
-- Rescheduling Period  
-- Reorder Quantity  
-- Safety Lead Time  
-- Safety Stock Quantity  
-- Assembly Policy  
-- Manufacturing Policy  
-
-The following order modifiers exist on the item or SKU card:  
-
-- Minimum Order Quantity  
-- Maximum Order Quantity  
-- Order Multiple  
-
-Global planning setup fields on the **Manufacturing Setup** page include:  
-
-- Dynamic Low-Level Code  
-- Current Demand Forecast  
-- Use Forecast on Locations  
-- Default Safety Lead Time  
-- Blank Overflow Level  
-- Combined MPS/MRP Calculation
-- Components at Location  
-- Default Dampener Period  
-- Default Dampener Quantity  
-
-For more information, see [Design Details: Planning Parameters](design-details-planning-parameters.md)  
-
-## Other Important Planning Fields
-
-### Planning Flexibility
-
-On most supply orders, such as production orders, you can select **Unlimited** or **None** in the **Planning Flexibility** field on the lines.
-
-This specifies whether the supply represented by the production order line is considered by the planning system when calculating action messages.
-If the field contains **Unlimited**, then the planning system includes the line when calculating action messages. If the field contains **None**, then the line is firm and unchangeable, and the planning system does not include the line when calculating action messages.
-
-### Warning
-
-The **Warning** information field on the **Planning Worksheet** page informs you of any planning line created for an unusual situation with a text, which the user can choose to read additional information. The following warning types exist:
-
-- Emergency
-- Exception
-- Attention
-- Emergency
-
-The emergency warning is displayed in two situations:
-
-- The inventory is negative on the planning starting date.
-- Back-dated supply or demand events exist.
-
-If an item's inventory is negative on the planning starting date, the planning system suggests an emergency supply order for the negative quantity to arrive on the planning starting date. The warning text states the starting date and the quantity of the emergency order.
-
-Any document lines with due dates before the planning starting date are consolidated into one emergency supply order for the item to arrive on the planning starting date.
-
-### Exception
-
-The exception warning is displayed if the projected available inventory drops below the safety stock quantity.
-
-The planning system will suggest a supply order to meet the demand on its due date. The warning text states the item's safety stock quantity and the date on which it is violated.
-
-Violating the safety stock level is considered an exception because it should not occur if the reorder point has been set correctly.
+Podrobné informace naleznete v [Detaily návrhu: Plánování dodávek](design-details-supply-planning.md).
 
 > [!NOTE]
-> Supply on planning lines with Exception warnings is normally not modified according to planning parameters. Instead, the planning system only suggests a supply to cover the exact demand quantity. However, you can set the planning run up to respect certain planning parameters for planning lines with certain warnings. For more information, see the description for the **Respect Planning Parameters for Exception Warnings** field in the [Run Full Planning, MPS or MRP](production-how-to-run-mps-and-mrp.md) article.
+> Pro všechna pole, která jsou uvedena v tomto tématu, si přečtěte popisy, abyste porozuměli jejich funkci. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-### Attention
+## Poptávka a nabídka
+Plánování má dva prvky: poptávku a nabídku. Ty musí být udrženy v rovnováze, aby bylo zajištěno, že poptávka bude uspokojená včas a nákladově efektivním způsobem.
 
-The attention warning is displayed in two situations:
+- Poptávka je běžný termín používaný pro jakýkoli druh hrubého požadavku, jako je prodejní objednávka, servisní objednávka, potřeba součásti od montážních nebo výrobních objednávek, výstupní transfer, plošná objednávka nebo předpověď. Kromě toho aplikace umožňuje některé další technické typy poptávky - například zápornou výrobní nebo nákupní objednávku, záporné zásoby a nákupní vratku.
+- Nabídka je běžné slovo používané pro jakýkoli druh doplňování, jako jsou zásoby, nákupní objednávka, Montážní zakázka, výrobní objednávka, nebo vstup transferu. Odpovídajícím způsobem, může existovat záporná prodejní nebo servisní zakázka, záporná potřeba komponent nebo prodejní vratka – to vše nějakým způsobem také představuje dodávku.
 
-- The planning starting date is earlier than the work date.
-- The planning line suggests to change a released purchase or production order.
+Dalším cílem plánování je zajistit, aby zásoby zbytečně nerostly. V případě klesající poptávky systém plánování navrhne odložení, snížení množství nebo zrušení existujících objednávek doplnění.
+
+## Výpočet plánování
+Plánovací systém je řízen očekávanou a skutečnou poptávkou zákazníka, stejně jako parametry pro přiobjednání zásob. Spuštění výpočtu plánování bude mít za následek, že aplikace navrhne konkrétní akce (Zprávy akcí), které se budou brát v souvislosti s možným doplněním od dodavatelů, převody mezi sklady nebo výrobou. Pokud již existují objednávky doplnění, navrhované akce by mohly být zvýšení nebo urychlení objednávek ke splnění změn v poptávce.
+
+Základem plánovací rutiny je výpočet hrubého zisku. Síťové požadavky řídí plánované uvolňování objednávek, které jsou naplánovány na základě informací o TNG postupech (vyrobené položky) nebo dodací lhůty karty zboží (zakoupené položky). Množství plánovaného uvolnění objednávky jsou založena na výpočtu plánování a jsou ovlivněna parametry nastavenými na jednotlivých kartách zboží.
+
+## Plánování s Ručními Objednávkami transferu
+Jak můžete vidět z pole **Systém doplnění** na kartě SKJ, systém plánování lze nastavit tak, aby vytvářel převodní příkazy pro vyvážení nabídky a poptávky mezi lokacemi.
+
+Jako doplněk k těmto automatizovaným převodním příkazům, může být někdy nutné provést obecný přesun množství zásob do jiného umístění bez ohledu na existující poptávku. Za tímto účelem byste ručně vytvořili převodní příkaz k převodu množství, které chcete přesunout. Aby se zajistilo, že se plánovací systém nebude pokoušet manipulovat s tímto příkazem pro ruční přenos, musíte v řádcích transferu nastavit **Pružnost plánování** na řádku převodu na žádné.
+
+Pokud naopak chcete, aby plánovací systém přizpůsobil množství a data převodních příkazů existující poptávce, musíte nastavit pole **Pružnost plánování** na výchozí hodnotu, Neomezená.
+
+## Parametry plánování
+Parametry plánování určují, kdy, kolik a jak doplnit na základě různých nastavení na kartě zboží (nebo skladové jednotce -SKJ) nastavení výroby.
+
+Na kartě položky nebo kartě SKJ existují následující parametry plánování:
+
+- Období prodlevy
+- Množství prodlevy
+- Způsob přiobjednání
+- Bod přiobjednání
+- Maximální zásoby
+- Úroveň přetečení
+- Časový interval
+- Období shromáždění šarží
+- Období přeplánování
+- Přiobjednané množství
+- Bezpečná průběžná doba
+- Minimální zásoby
+- Způsob montáže
+- Způsob výroby
+
+Na kartě položky nebo kartě SKJ existují následující modifikátory objednávky:
+
+- Minimální množství objednávky
+- Maximální množství objednávky
+- Násobek objednávky
+
+Pole globálního nastavení plánování na stránce **Nastavení výroby** obsahují:
+
+- Dynamický kód nižší úrovně
+- Aktuální prognóza poptávky
+- Použití prognózy na místech
+- Výchozí bezp.průběžná doba
+- Prázdná úroveň přetečení
+- Kombinovaný výpočet MPS/MRP
+- Komponenty v lokaci
+- Výchozí doba prodlevy
+- Výchozí doba utlumení
+
+Pro více informací navštivte [Detaily návrhu: Parametry plánování](design-details-planning-parameters.md).
+
+## Další důležitá pole plánování
+### Pružnost plánování
+U většiny objednávek dodávek, jako jsou výrobní zakázky, můžete na řádcích zvolit **Neomezeno**, nebo **Žádné** a to, v poli **Flexibilita plánování**
+
+To určuje, zda je dodávka reprezentovaná řádkem výrobní zakázky zvažována plánovacím systémem při výpočtu zpráv akcí.
+Pokud pole obsahuje **Neomezeno**, pak bude plánovacím systémem brán v úvahu při zpracování akce hlášení. Pokud pole obsahuje **Žádné**, pak je řádek pevný, neměnný a systém plánování ho nebere v úvahu při zpracování akce hlášení.
+
+### Varování
+Informační pole **Varování** na stránce **Sešity plánování** vás informuje o jakékoliv plánovacím řádku vytvořeném pro neobvyklou situaci s textem, kterou si uživatel může vybrat, aby si přečetl další informace.  Existují následující typy upozornění:
+
+- Nouzové
+- Výjimka
+- Pozornost
+- Nouzové
+
+Nouzové varování se zobrazuje ve dvou situacích:
+
+- Zásoby jsou záporné k počátečnímu datu plánování.
+- Existují neaktuální nabídky nebo poptávky.
+
+Pokud jsou zásoby položky k počátečnímu datu plánování záporné, systém plánování navrhne nouzovou objednávku dodávky pro záporné množství, které má být doručeno k počátečnímu datu plánování. Text upozornění uvádí počáteční datum a množství nouzové objednávky.
+
+Všechny řádky dokladu s daty splatnosti před datem zahájení plánování jsou sloučeny do jedné objednávky nouzové dodávky, aby zboží dorazilo k počátečnímu datu plánování.
+
+### Výjimka
+Varování o výjimce se zobrazí, pokud plánované dostupné zásoby klesnou pod množství bezpečného materiálu.
+
+Plánovací systém navrhne objednávku na dodávky, které uspokojí poptávku v den splatnosti. Varovný text uvádí množství bezpečnostního materiálu a datum, kdy došlo k jeho porušení.
+
+Porušení úrovně bezpečných zásob je považováno za výjimku, protože by nemělo nastat, pokud byl správně nastaven bod přiobjednání.
 
 > [!NOTE]
-> In planning lines with warnings, the **Accept Action Message** field is not selected, because the planner is expected to further investigate these lines before carrying out the plan.
+> Dodávka na plánovacích řádcích s výjimkami se obvykle nemění podle parametrů plánování. Místo toho plánovací systém pouze navrhuje dodávku, která pokryje přesné množství poptávky. Můžete však nastavit běh plánování tak, aby respektoval určité parametry plánování pro plánování řádků s určitými varováními. Pro více informací navštivte “Parametry plánování Respektování výjimek varování” v části Vypočet plánu- Plán. sešit
 
-## Planning worksheets and requisition worksheets
+### Pozornost
+Varování pozornosti se zobrazuje ve dvou situacích:
 
-As described in [Planning](production-planning.md), you can choose between two worksheets for most planning activities, the planning worksheet and the requisition worksheet. Most processes are described based on the planning worksheet, but there are a couple of scenarios where the requisition worksheet is preferred.
+- Počáteční datum plánování je dřívější než pracovní datum.
+- Řádek plánování navrhuje změnit uvolněnou nákupní nebo výrobní zakázku.
 
-### Requisition worksheet
+> [!NOTE]
+> V plánování řádků s výstrahami není vybráno pole **Přijmout hlášené akce**, protože se očekává, že plánovač tyto řádky před provedením plánu dále prozkoumá.
 
-The **Requisition Worksheet** page lists items that you want to order. You can enter items in the worksheet in the following ways:
-
-- Enter the items manually in the worksheet and fill in the relevant fields.
-
-- Use the **Calculate Plan** batch job. This calculates a replenishment plan for items and stockkeeping units that have been set up with a replenishment system of **Purchase** or **Transfer**. When you use this batch job, the program automatically fills in the **Action Message** field with a suggestion for an action you can take to replenish the item. This could be increasing the item quantity on an existing order or creating a new order, for example.
-
-- If you have used the **Calculate Plan** batch job from the **Planning Worksheet** page to calculate a replenishment plan, you can use the **Carry Out Action Message** batch job to copy purchase and transfer order proposals from the planning worksheet to the requisition worksheet. This is practical if separate users are responsible for handling production orders and purchase/transfer orders.
-
-- You can use the **Drop Shipment** action to fill in the requisition worksheet lines. This action uses the **Get Sales Orders** batch job to determine the sales order lines that you want to designate for a drop shipment.
-
-- You can use the **Special Order** action to fill in the requisition worksheet lines. This action uses the **Get Sales Orders** batch job to determine the sales order lines that you want to designate for a special order.
-
-Requisition worksheet lines contain detailed information about the items that need to be reordered. You can edit and delete the lines to adjust your replenishment plan, and you can further process the lines by using the **Carry Out Action Message** batch job.
-
-For details about planning with locations and transfers, see [Planning With or Without Locations](production-planning-with-without-locations.md).
-
-## See Also
-
-[Design Details: Supply Planning](design-details-supply-planning.md)  
-[Planning](production-planning.md)  
-[Setting Up Manufacturing](production-configure-production-processes.md)  
-[Manufacturing](production-manage-manufacturing.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)  
+[Plánování](production-planning.md)  
+[Nastavení výroby](production-configure-production-processes.md)  
+[Výroba](production-manage-manufacturing.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nakupování](purchasing-manage-purchasing.md)  
+[Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

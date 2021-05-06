@@ -4,43 +4,40 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, item, tracking, tracing
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Design Details: Item Tracking Design
-In the first version of Item Tracking in [!INCLUDE[prod_short](includes/prod_short.md)] 2.60, serial numbers or lot numbers were recorded directly on item ledger entries. This design provided full availability information and simple tracking of historic entries, but it lacked flexibility and functionality.  
+# Detaily návrhu: Design sledování zboží
+V prvních verzích sledování zboží v [!INCLUDE[d365fin](includes/d365fin_md.md)] 2.60, byla sériová čísla a čísla šarží evidována přímo v položkách zboží. Tento design poskytoval úplné informace o dostupnosti a jednoduché sledování historických položek, ale postrádal flexibilitu a funkčnost.
 
-From [!INCLUDE[prod_short](includes/prod_short.md)] 3.00, item tracking functionality was in a separate object structure with intricate links to posted documents and item ledger entries. This design was flexible and rich in functionality, but item tracking entries were not fully involved in availability calculations.  
+Od verze [!INCLUDE[d365fin](includes/d365fin_md.md)] 3.00, je funkce sledování zboží v samostatné struktuře objektů se složitějšími odkazy na účtované doklady a položky zboží. Tento design byl flexibilní a bohatý co se týče funkcionality, ale sledování zboží nebylo plně zapojeno do výpočtů dostupnosti zboží.
 
-Since [!INCLUDE[prod_short](includes/prod_short.md)] 3.60, item tracking functionality is integrated with the reservation system, which handles reservation, order tracking, and action messaging. For more information, see “Design Details: Reservation, Order Tracking, and Action Messaging” in “Design Details: Supply Planning”.  
+Od verze [!INCLUDE[d365fin](includes/d365fin_md.md)] 3.60 je funkce sledování zboží integrována s rezervačním systémem, který zpracovává rezervace, sledování objednávek a zasílání zpráv o akcích. Pro více infomací navštivte “Detaily návrhu: Rezervace, sledování zboží a zasílání zpráv o akcích” v “Detaily návrhu: Plánování dodávek”.
 
-This latest design incorporates item tracking entries in total availability calculations throughout the system, including planning, manufacturing, and warehousing. The old concept of carrying serial and lot numbers on the item ledger entries is reintroduced to ensure simple access to historical data for item tracking purposes. In connection with item tracking improvements in [!INCLUDE[prod_short](includes/prod_short.md)] 3.60, the reservation system was expanded to non-order network entities, such as journals, invoices, and credit memos.  
+Tento nejnovější návrh zahrnuje položky sledování zboží do výpočtů celkové dostupnosti v celém systému, včetně plánování, výroby a skladování. Starý koncept přenášení sériových čísel a čísel šarží v položkách zboží je znovu zaveden, aby byl zajištěn jednoduchý přístup k historickým datům pro účely sledování zboží. V souvislosti se zlepšením sledování zboží v [!INCLUDE[d365fin](includes/d365fin_md.md)] 3.60, byl rezervační systém rozšířen na ne-objednávkové entity, jako jsou deníky, faktury a dobropisy.
 
-With the addition of serial or lot numbers, the reservation system handles permanent item attributes while also handling intermittent links between supply and demand in the form of order tracking entries and reservation entries. Another different characteristic of serial or lot numbers compared to the conventional reservation data is the fact that they can be posted, either partially or fully. Therefore, the **Reservation Entry** table (T337) now works with a related table, the **Tracking Specification** table (T336), which manages and displays summing across active and posted item tracking quantities. For more information, see [Design Details: Active versus Historic Item Tracking Entries](design-details-active-versus-historic-item-tracking-entries.md).  
+S přidáním sériových čísel nebo čísel šarží zpracovává rezervační systém trvalé atributy položek a zároveň zpracovává přerušované propojení mezi nabídkou a poptávkou ve formě položek sledování objednávek a položek rezervace. Další odlišnou charakteristikou sériových čísel nebo čísel šarží ve srovnání s konvenčními údaji o rezervaci je skutečnost, že mohou být zaúčtovány, a to buď částečně, nebo úplně. Proto tabulka **Položky rezervace** (T337) nyní pracuje se související tabulkou **Specifikace sledování** (T336), která spravuje a zobrazuje sčítání mezi aktivním a zaúčtovaným množství položek sledování množství. Pro více informací navštivte [Detaily návrhu: Aktivní versus Historické položky sledování zboží](design-details-active-versus-historic-item-tracking-entries.md).
 
-The following diagram outlines the design of item tracking functionality in [!INCLUDE[prod_short](includes/prod_short.md)].  
+Následující diagram popisuje design funkce sledování zboží v [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-![Example of item tracking flow](media/design_details_item_tracking_design.png "Example of item tracking flow")  
+![Příklad toku sledování zboží](media/design_details_item_tracking_design.png "Příklad toku sledování zboží")
 
-The central posting object is redesigned to handle the unique subclassification of a document line in the form of serial or lot numbers, and special relation tables are added to create the one-to-many relations between posted documents and their split item ledger entries and value ledger entries.  
+Objekt centrálního účtování je přepracován tak, aby zpracovával jedinečnou subklasifikaci řádku dokladu ve formě sériových čísel nebo čísel šarží, a přidávají se speciální relační tabulky, které vytvářejí relace jedna k více mezi zaúčtovanými doklady a jejich položkami a hodnotami rozdělených položek položky hlavní knihy.
 
-Codeunit 22, **Item Jnl. – Post Line**, now splits the posting according to the item tracking numbers that are specified on the document line. Each unique item tracking number on the line creates its own item ledger entry for the item. This means that the link from the posted document line to the associated item ledger entries is now a one-to-many relation. This relation is handled by the following item tracking relation tables.  
+Codeunita 22, **Deník zboží – účtování řádku**, nyní rozdělí účtování podle čísel sledování zboží, která jsou zadaná na řádku dokladu. Každé jedinečné číslo sledování zboží na řádku vytvoří pro zboží vlastní položku zboží. To znamená, že propojení z řádku zaúčtovaného dokladu na přidružené položky zboží je nyní vztahem jedna k více. Tento vztah je zpracován následujícími tabulkami vztahů sledování zboží.
 
-|Field|Description|  
+| Pole | Popis |
 |---------------|---------------------------------------|  
-|**Item Entry Relation** (T6507)|Relates shipped or received lines to item ledger entries|  
-|**Value Entry Relation** (T6508)|Relates invoiced lines to value entries|  
+| **Relace položky zboží** (T6507) | Spojuje dodané nebo přijaté řádky s položkami zboží. |
+| **Relace položky ocenění** (T6508) | Spojuje fakturované řádky s položkami ocenění. |
 
-For more information, see [Design Details: Item Tracking Posting Structure](design-details-item-tracking-posting-structure.md).  
+Pro více informací navštivte [Detaily návrhu: Struktura účtování sledování zboží](design-details-item-tracking-posting-structure.md)
 
-## See Also  
-[Design Details: Item Tracking](design-details-item-tracking.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Detaily návrhu: Sledování zboží](design-details-item-tracking.md)

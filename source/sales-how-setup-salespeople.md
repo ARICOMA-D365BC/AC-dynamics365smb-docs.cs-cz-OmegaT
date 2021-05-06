@@ -1,35 +1,28 @@
 ---
-title: Set Up a Salesperson | Microsoft Docs'
-description: You can set up a identifier for each of your salespeople, so you can track an individual's performance or assign a salesperson to a contact.
+title: Nastavení Prodejce | Microsoft Docs
+description: 'Pro každého prodejce můžete nastavit identifikátor, abyste mohli sledovat výkon jednotlivce nebo přiřadit prodejce ke kontaktu.'
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: sales rep
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Set Up Salespeople
-Many companies want to follow an individual employee's performance as a basis for calculating the sales commission or bonus. See, for example, the **Salesperson Commissions** report. A company may also want to assign a salesperson to each of their contacts.
+# <a name="set-up-salespeople"></a>Nastavení prodejců
+Mnoho společností chce sledovat výkonnost jednotlivých zaměstnanců jako základ pro výpočet prodejních provizí nebo bonusů. Viz například sestava **Provize prodejců**. Společnost může také chtít přiřadit prodejce ke každému ze svých kontaktů.
 
-When you have set up a salesperson on the **Salespeople** page, you can select it in the **Salesperson Code** field on all relevant records, such as G/L account, customer, vendor, contacts, and campaign cards. Then, when you post or set up invoices, credit memos, journal lines, finance charge activities, and so on, the salesperson code is carried to the resulting ledger entries.
-<br><br>  
-> [!Video https://www.microsoft.com/videoplayer/embed/RE43Vhm?rel=0]
+Pokud jste nastavili prodejce na stránce **Prodejci**, můžete jej vybrat v poli **Kód prodejce** ve všech relevantních záznamech, jako jsou účty hlavní knihy, zákazník, dodavatel, kontakty a karty kampaně. Když pak účtujete nebo nastavíte faktury, dobropisy, řádky deníků, aktivity penále atd., je kód prodejce přenesen do výsledných položek.
 
-## To set up a salesperson code
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Salespeople**, and then choose the related link.
-2. On the **Salespeople** page, choose the **New** action.
+## <a name="to-set-up-a-salesperson-code"></a>Nastavení kódu prodejce
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazník**, a poté vyberte související odkaz.
+2. Na stránce **Prodejci**, vyberte akci **Nové**.
 
-You can use salespeople in various relationship management and marketing work. For example, you can assign tasks to salespeople, so that the tasks are incorporated in sales opportunities that the salesperson are assigned to. For more information, see [Set Up Opportunity Sales Cycles and Cycle Stages](marketing-how-setup-opportunity-sales-cycles-stages.md).
+Prodejce můžete používat v různých vztazích ke správě vztahů a marketingu. Můžete například prodejcům přiřadit úkoly, aby byly úkoly začleněny do prodejních příležitostí, ke kterým je prodejce přiřazen. Pro více informací navštivte [Nastavení cyklů prodejních příležitostí a fází prodejních cyklů](marketing-how-setup-opportunity-sales-cycles-stages.md)
 
-## See Also
-[Setting Up Sales](sales-setup-sales.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Nastavení Prodeje](sales-setup-sales.md)  
+[Prodej](sales-manage-sales.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  

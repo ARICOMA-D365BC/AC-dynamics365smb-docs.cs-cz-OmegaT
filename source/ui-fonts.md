@@ -1,53 +1,30 @@
 ---
-title: Available Fonts
+title: Available Fonts | Microsoft Docs
 description: The online version of Business Central contains pre-installed fonts on the servers that can be used when generating reports.
+services: project-madeira
+documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/20/2020
-ms.author: edupont
+ms.date: 04/01/2020
+ms.author: sgroespe
 
 ---
-# Available Fonts
-
-The online version of [!INCLUDE[prod_short](includes/prod_short.md)] contains pre-installed fonts on the servers that can be used when generating reports. The following sections outline which fonts are available.
+# Dostupné fonty
+Online verze [!INCLUDE[d365fin](includes/d365fin_md.md)] obsahuje předinstalované fonty na serverech, která lze použít při generování sestav. Následující přehled popisuje, které fonty jsou k dispozici, a obsahuje odkazy na podrobné informace u dodavatelů písem třetích stran.
 
 > [!NOTE]
-> For security and legal reasons, you cannot upload custom fonts to the [!INCLUDE[prod_short](includes/prod_short.md)] environment.
+> Z bezpečnostních a právních důvodů nemůžete nahrát vlastní fonty do prostředí [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-## Document Fonts
+## Fonty pro šeky (MICR and Security)
+Jsou nainstalována a dostupná písma magnetického inkoustového rozpoznávání znaků (MICR). Jsou podporovány jak standardy E-13B, tak CMC-7. Kromě písem MICR jsou k dispozici speciální bezpečnostní písma pro generování textu, názvů, částek a symbolů měny Dolar, Euro, Libra a Jen, se kterými se po vytištění šeku těžko manipuluje. Pro více informací navštivte [Výběr rozvržení šeku](finance-how-define-check-layouts.md).
 
-The following fonts are installed and available to use in Word and RDLC document reports:
-
-* Arial
-* Consolas
-* Courier New
-* Lucida Console
-* Segoe Print
-* Segoe Script
-* Segoe UI
-* Segoe UI Light
-* Segoe UI Semilight
-* Times New Roman
-
-## Fonts for Checks
-
-Magnetic Ink Character Recognition (MICR) fonts are installed and available to use. Both the E-13B and the CMC-7 standards are supported.  
-
-In addition to MICR fonts, special security fonts are available to generate text, names, amounts, and the currency symbols Dollar, Euro, Pound, and Yen, which are hard to tamper with once a check has been printed.  
-
-For more information, see [Select a Check Layout](finance-how-define-check-layouts.md).  
-
-## See Also
-
-[Managing Report Layouts](ui-manage-report-layouts.md)  
-[Select a Check Layout](finance-how-define-check-layouts.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa rozložená sestav](ui-manage-report-layouts.md)  
+[Výběr rozložení šeků](finance-how-define-check-layouts.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

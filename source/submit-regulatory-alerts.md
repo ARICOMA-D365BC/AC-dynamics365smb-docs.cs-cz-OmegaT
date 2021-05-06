@@ -4,78 +4,75 @@ description: If you know about new legislation that you think requires feature s
 author: sorenfriisalexandersen
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: edupont
 ms.search.keywords:
-ms.date: 10/01/2020
+ms.date: 04/01/2020
 ms.author: soalex
 
 ---
-# Submit Alerts about Country/Region-Specific Regulatory Features
+# Odesílání upozornění na regulační funkce specifické pro danou zemi nebo oblast
 
-We invite you to use Microsoft Dynamics Lifecycle Services (LCS) to submit regulatory alerts through the Dynamics regulatory alert submission service.  
+Zveme vás k použití služby Microsoft Dynamics Lifecycle Services (LCS) tk odesílání regulačních výstrah prostřednictvím služby pro odesílání regulačních záznamů Dynamics.
 
-## To submit a regulatory alert in LCS
+## Odesílání regulačního upozornění v LCS
 
-1. Go to https://lcs.dynamics.com and log in  
+1. Běžte na https://lcs.dynamics.com a přihlašte se
 
-    You will be presented with the projects you have access to
+   Budou vám zobrazeny projekty, ke kterým máte přístup
 
-2. Select the **Regulatory Alerts - Worldwide** project
+2. Zvolte projekt **Regulatory Alerts - Worldwide**
 
-    This will open the project and show a variety of things related to this project
+   Tím se otevře projekt a ukáže se řada věcí souvisejících s tímto projektem
 
-3. Select the **Alert service** on the right side in the **More tools** section
+3. Zvolte **Alert service** na pravé straně v sekci **Více nástrojů**
 
-    You will see a list of alerts with the headline **Dynamics Regulatory Alert Submission**
+   Zobrazí se seznam upozornění s nadpisem **Dynamics Regulatory Alert Submission**
 
-4. You can add a new alert by clicking the plus sign **(+)** sign at the top of the list
+4. Nové upozornění můžete přidat kliknutím na znaménko plus **(+)** v horní části seznamu.
 
-    This will present you with a 4-step guide to create the alert. The guide has the following steps:
-    - Search for existing items
+   Zobrazí se 4 krokový průvodce k vytvoření výstrahy. Průvodce má následující kroky:
+   - Hledání existujících položek
 
-        Search for any information you think is relevant for the alert you are going to create. If you do not find any relevant search results you can select the **Submit regulatory alert** button at the bottom of the page to proceed with the alert submission.
-    - Attach business processes
+      Vyhledejte všechny informace, které považujete za důležité pro výstrahu, kterou chcete vytvořit. Pokud nenajdete žádné relevantní výsledky vyhledávání, můžete v dolní části stránky vybrat  **Odeslat regulační výstrahu** k odeslání.
+   - Připojení obchodních procesů
 
-        This part is not relevant for Dynamics 365 Business Central. Choose **Skip** to proceed to the next step.
-    - Describe the alert
+      Tato část není relevantní pro Dynamics 365 Business Central. Zvolte **Přeskočit** a přejděte k dalšímu kroku.
+   - Popis upozornění
 
-        Enter information about the alert in the appropriate fields. Required fields are indicated by a red asterisk (\*) in the guide.
+      Do příslušných polí zadejte informace o výstraze. Povinná pole jsou v průvodci označena červenou hvězdičkou (\*).
 
-        |Field        |Description                               |
-        |-------------|------------------------------------------|
-        |Title  | Enter a descriptive title to identify the area of impact. For example, enter *Changes in invoice document as of July 1, 2019*. |
-        |Description  | Enter a brief overview of the law. Your description should focus on issues that are relevant to enterprise resource planning (ERP), so that users can understand the requirements at a high level without having to read the legislation first.|
-        |Country  | Specify the country or region that the legislation applies to.|
-        |Industry| Specify the industry, if the requirement applies only to specific industries. For example, choose **Public sector**, **Retail**, or **Manufacturing**.|
-        |Feature reference  | This is not relevant for Dynamics 365 Business Central, but you can enter a feature reference, if you know it. The list of features for the specific country can be found in the [Localization portal](https://docs.microsoft.com/dynamics/s-e/) on the CustomerSource site. |
-        |Law enforcement date  | Specify the date when affected customers must start to comply with the law.|
-        |Government announcement date  | Specify the date when the authority announced the change.|
-        |Latest filing date  | Select the deadline for the first submission of the new or changed report.|
-        |Link to legislation  | Enter one or more links to the published law, interpretation guideline, implementation guidance, or any other useful documentation that will help users understand or implement the requirement.|
-        |Company name  | Enter the company name for the person who is submitting the alert.|
-        |Contact name  | Enter the name of the person who is submitting the alert. |
-        |Contact email  | The email address of the person who is submitting the alert.|
-        |Business process  | The business processes that you selected through the **Alert submission** wizard|
-        |Comments  | Enter any additional information that might be help users understand or implement the requirement. Click **Submit** to save your comment. Multiple comments can be added and should be submitted separately. Comments are saved in the order that they are added. |
-        |Attachments  | Click the **Upload** button, and then browse to select a file to add as an attachment. After you select the file, it is uploaded and appears as a linked file. You can add up to three files that have a size of 5 MB each. To delete files that have been attached, click **Remove** under the title of the file. Attachments must be publicly available materials. They cannot be propriety or customer-specific/partner-specific.|
+      | Pole | Popis |
+      |-------------|------------------------------------------|
+      | Název | Zadejte popisný název pro identifikaci oblasti. Například zadejte *Změny ve faktuře k 1. červenci 2019*. |
+      | Popis | Zadejte stručný přehled zákona. Váš popis by se měl zaměřit na problémy, které jsou relevantní pro plánování podnikových zdrojů (ERP), aby uživatelé mohli rozumět požadavkům na vysoké úrovni, aniž by si museli nejdříve přečíst právní předpisy. |
+      | Země | Uveďte zemi nebo oblast, na kterou se legislativa vztahuje. |
+      | Průmysl | Uveďte odvětví, pokud se požadavek vztahuje pouze na konkrétní odvětví. Například vyberte **Veřejný sektor**, **Obchod** nebo **Výroba**. |
+      | Odkaz na funkci | To není relevantní pro Dynamics 365 Business Central, ale můžete zadat odkaz na funkci, pokud ji znáte. Seznam funkcí pro konkrétní zemi naleznete v [Lokalizačním portálu](https://mbs.microsoft.com/customersource/global/ax/support/support-news/GFMLocalizationPortalMC) na stránce CustomerSource. |
+      | Datum vymáhání práva | Určete datum, kdy musí dotčení zákazníci začít dodržovat zákon. |
+      | Datum oznámení vlády | Zadejte datum, kdy úřad změnu oznámil. |
+      | Poslední datum podání | Vyberte konečný termín pro první odeslání nové nebo změněné sestavy. |
+      | Odkaz na právní předpisy | Zadejte jeden nebo více odkazů na publikované zákony, interpretační pokyny, prováděcí pokyny nebo jakoukoli další užitečnou dokumentaci, která uživatelům pomůže porozumět nebo implementovat požadavek. |
+      | Název společnosti | Zadejte název společnosti, která odesílá upozornění. |
+      | Jméno kontaktu | Zadejte jméno osoby, která odesílá upozornění. |
+      | Kontaktní e-mail | E-mailová adresa osoby, která odesílá upozornění. |
+      | Obchodní proces | Obchodní procesy, které jste vybrali pomocí průvodce **Odeslání výstrahy**. |
+      | Komentáře | Zadejte jakékoli další informace, které by uživatelům mohly pomoci pochopit nebo implementovat požadavek. Kliknutím **Odeslat** uložte svůj komentář. Lze přidat více komentářů, které by měly být odeslány samostatně. Komentáře se ukládají v pořadí, v jakém jsou přidány. |
+      | Přílohy | Klikněte na tlačítko **Nahrát** a poté vyhledejte soubor, který chcete přidat jako přílohu. Po výběru souboru se soubor nahraje a zobrazí se jako připojený soubor. Můžete přidat až tři soubory, každý o velikosti 5 MB. Chcete-li odstranit připojené soubory, klikněte na **Odebrat** pod názvem souboru. Přílohy musí být veřejně dostupné materiály. Nemohou být propriety nebo specifické pro zákazníka / partnera. |
 
-        Click **Submit** to save and submit the alert.
+      Klepnutím na tlačítko  **Odeslat** výstrahu uložíte a odešlete.
 
-        If you don't have all of the required information, or if you're not yet ready to submit the alert, you can save a partially completed alert.
+      Pokud nemáte všechny požadované informace nebo pokud ještě nejste připraveni výstrahu odeslat, můžete částečně dokončenou výstrahu uložit.
 
-    - Submission confirmation
+   - Potvrzení o odeslání
 
-      After you submit the alert, you will get a confirmation that the alert was successfully submitted to Microsoft.
+      Po odeslání výstrahy obdržíte potvrzení, že výstraha byla úspěšně odeslána společnosti Microsoft.
 
-## See Also
+## Viz také
 
-[Local Functionality in [!INCLUDE[prod_long](includes/prod_long.md)]](about-localization.md)  
-[Changing Language and Locale](about-locale-language.md)  
-[Getting Started](product-get-started.md)  
-[Welcome to Business Central](index.md)  
+[Lokální funkcionality v [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)]](about-localization.md)  
+[Změna jazyka a oblasti](about-locale-language.md)  
+[Začínáme](product-get-started.md)  
+[Vítejte v Business Central](index.md)
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]

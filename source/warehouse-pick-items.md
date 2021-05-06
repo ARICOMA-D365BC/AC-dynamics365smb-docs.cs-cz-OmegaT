@@ -13,41 +13,41 @@
     ms.author: edupont
 
 ---
-# Pick Items
+# Vyskladnění zboží
 
-The warehouse activity of picking items before they are shipped or consumed is performed in different ways, depending on how warehouse management features are configured. The complexity can rank from no warehouse features, through basic warehouse configurations for order-by-order handling in one or more activities only, to advanced configurations where all warehouse activities must be performed in a directed workflow. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).
+Aktivita skladu vyskladnění zboží před jeho dodáním nebo spotřebou se provádí různými způsoby v závislosti na konfiguraci funkcí správy skladu. Složitost se může řadit od žádných funkcí skladu, přes základní konfigurace skladu pro zpracování podle objednávek pouze v jedné nebo více aktivitách, až po pokročilé konfigurace, kde musí být všechny aktivity skladu prováděny v řízeném workflow. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
-If you decide to organize and record your picking activity with warehouse documents, you place a check mark in the **Require Pick** field on the location card. This indicates that when you have items that need to be picked for an outbound source document you want the picking of those items to be controlled by the system. An outbound source document can be a sales order, a purchase return order, an outbound transfer order, a service order, or a production order whose components should be picked.
+Pokud se rozhodnete uspořádat a zaznamenat svou aktivitu vyskladnění pomocí dokladů skladu, zaškrtnete políčko **Vyžadovat vyskladnění** na kartě lokace. To naznačuje, že když máte zboží, které je třeba vyskladnit pro odchozí zdrojový doklad, chcete, aby vyskladnění tohoto zboží bylo řízené systémem. Výstupním původním dokladem může být prodejní objednávka, objednávka nákupní vratky, výstupní objednávka transferu, servisní zakázka nebo výrobní zakázka, jejíž komponenty by měly být vyskladněny.
 
 > [!NOTE]
-> Even though the setting is called **Require Pick**, you can still post shipments directly from the source business document at location where you select this check box.
+> I když se toto nastavení nazývá **Vyžadovat vyskladnění**, stále můžete odesílat zásilky přímo z původního obchodního dokladu na místo, kde toto políčko zaškrtnete.
 
-If your location is set up to require pick processing but not shipment processing, you use the **Inventory Pick** page to organize the picking information, print the picking information, enter the result of the pick, and post the picking information, which in turn posts the shipment of the items. In the case of picking components for a production order, the posting of the pick also posts the consumption.
+Pokud je vaša lokace nastavena tak, aby vyžadovala zpracování vyskladnění, ale nikoli zpracování zásilky, můžete pomocí stránky **Vyskladnění zásob** uspořádat informace o vyskladnění, vytisknout informace o vyskladnění, zadat výsledek vyskladnění a odeslat informace o vyskladnění, pomocí kterých následně zaúčtujete zásilku zboží. V případě vyskladnění komponent pro výrobní zakázku zaúčtování vyskladnění také zaúčtuje spotřebu.
 
-If your location is set up to require both pick and shipment processing, so that you have placed check marks in both the **Require Pick** and **Require Shipment** field on the location card, you use the **Warehouse Pick** page to handle the pick. The warehouse pick functions similarly to the inventory pick, except that instead of posting the picking information, you register the pick. This registering process does not post the shipment, but merely makes the items available for shipment. As a warehouse manager, you can use a pick worksheets to organize pick information before creating the individual warehouse pick instructions.
+Pokud je vaše lokace nastavena tak, aby vyžadovala zpracování vyskladnění i dodávky, takže jste na kartě lokace zaškrtli pole **Vyžadovat vyskladnění** a **Vyžadovat dodání**, ke zpracování vyskladnění použijete stránku **Vyskladnění**. Vyskladnění funguje podobně jako vyskladnění zásob, kromě toho, že místo zaúčtování informací o vyskladnění vyskladnění i zaregistrujete. Tento proces registrace nezaúčtuje dodávku, ale pouze zpřístupní zboží k dodávce. Jako správce skladu můžete pomocí pracovních listů pro výběr uspořádat informace o vyskladnění před vytvořením jednotlivých pokynů pro vyskladnění skladu.
 
-The following table describes a sequence of tasks, with links to the topics that describe them.   
+Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-|**To**|**See**|
+| **Viz** | **také** |
 |------------|-------------|  
-|Post the shipment of items directly in the outbound order document because no warehouse features exist. (Works the same for sales orders, outbound transfer orders, and return shipments.)|[Ship Items](warehouse-how-ship-items.md)|  
-|Pick items order by order and post the shipment in the same activity, in a basic warehouse configuration.|[Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md)|
-|Pick items for multiple orders in an advanced warehouse configuration.|[Pick Items with Warehouse Picks](warehouse-how-to-pick-items-for-warehouse-shipment.md)|  
-|Pick components for production or assembly in a basic warehouse configuration.|[Pick for Production or Assembly in Basic Warehouse Configurations](warehouse-how-to-pick-for-production.md)|
-|Pick components for production or assembly in an advanced warehouse configuration.|[Pick for Production or Assembly in Advanced Warehouse Configurations](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md)|  
-|Plan optimized pick instructions for a number of shipments rather than have warehouse workers act directly on posted shipments.|[Plan Picks in Worksheets](warehouse-how-to-plan-picks-in-worksheets.md)|  
-|Pick items technically for a special purpose, such as a production unit in need of extra components, in such a way that the items do not technically leave the warehouse.|[Pick and Put Away Without a Source Document](warehouse-how-to-create-put-aways-from-internal-put-aways.md)|
-|Understand how to automatically pick items according to their expiration date, for example perishable goods.|[Picking By FEFO](warehouse-picking-by-fefo.md)|
-|Split a pick line into multiple lines, for example because there are not enough items to take from in the designated bin.|[Split Warehouse Activity Lines](warehouse-how-to-split-warehouse-activity-lines.md)|
-|Get immediate access to picks that are assigned to you as a warehouse worker.|[Find Your Warehouse Assignments](warehouse-how-to-find-your-warehouse-assignments.md)|  
+| Zaúčtovat dodávku zboží přímo do výstupního dokladu objednávky, protože neexistují žádné prvky skladu. (Totéž platí pro prodejní objednávky, výstupní objednávky transferu a dodávky vratky.) | [Dodání zboží](warehouse-how-ship-items.md) |
+| Vyberte zboží po objednávkách a zaúčtujte zásilku ve stejné aktivitě, v základní konfiguraci skladu. | [Vyskladnění zboží pomocí Vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md) |
+| Vyberte zboží pro více objednávek v pokročilé konfiguraci skladu. | [Vyskladnění zboží pomocí Vyskladnění](warehouse-how-to-pick-items-for-warehouse-shipment.md) |
+| Vyberte komponenty pro výrobu nebo montáž v základní konfiguraci skladu. | [Vyskladnění pro výrobu nebo montáž v základních konfiguracích skladu](warehouse-how-to-pick-for-production.md) |
+| Vyskladnění komponent pro výrobu nebo montáž v pokročilé konfiguraci skladu. | [Vyskladnění pro výrobu nebo montáž v pokročilých konfiguracích skladu](warehouse-how-to-pick-for-internal-operations-in-advanced-warehousing.md) |
+| Naplánujte optimalizované pokyny pro vyskladnění pro řadu dodávek, nikoli aby pracovníci skladu jednali přímo na zaúčtovaných dodávkach. | [Plánujte vyskladnění v sešitech](warehouse-how-to-plan-picks-in-worksheets.md) |
+| Vyskladnění zboží technicky pro zvláštní účel, jako je výrobní jednotka, která potřebuje další komponenty, tak, aby zboží technicky neopustilo sklad. | [Vyskladnění a zaskladnění bez původního dokladu](warehouse-how-to-create-put-aways-from-internal-put-aways.md) |
+| Pochopte, jak automaticky vyskladnit zboží podle data vypršení platnosti, například zboží podléhající rychlé zkáze. | [Vyskladnění podle FEFO](warehouse-picking-by-fefo.md) |
+| Rozdělte řádek vyskladnění na více řádků, například proto, že v určené přihrádce není dostatek zboží, ze kterých je možné požadované množství vyskladnit. | [Rozdělení řádků aktivit skladu](warehouse-how-to-split-warehouse-activity-lines.md) |
+| Získejte okamžitý přístup k vyskladnění, která jsou vám přiřazena jako pracovníkovi skladu. | [Najděte svá přiřazení skladu](warehouse-how-to-find-your-warehouse-assignments.md) |
 
-## See Also  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)    
+[Zásoby](inventory-manage-inventory.md)    
+[Nastavení správy skladu](warehouse-setup-warehouse.md)       
+[Správa montáže](assembly-assemble-items.md)      
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

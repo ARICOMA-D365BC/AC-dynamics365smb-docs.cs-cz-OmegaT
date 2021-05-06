@@ -1,73 +1,68 @@
 ---
-    title: How to Trace Item-Tracked Items | Microsoft Docs
-    description: You can see where an item-tracked item was used, including how and when it was received or produced, transferred, sold, consumed, or returned. You can also find all current instances of a specific serial or lot number in the database. You do this by using the Item Tracing and the Navigate features.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Jak trasovat sledované zboží | Microsoft Docs
+description: 'Můžete vidět, kde bylo sledované zboží použito, včetně toho, jak a kdy bylo přijaté nebo vyrobené, přenesené, prodané, spotřebované nebo vrácené. V databázi najdete také všechny aktuální instance konkrétního sériového čísla nebo čísla šarže. To provedete pomocí funkce Trasování zboží a Navigace.'
+services: project-madeira
+documentationcenter: ''
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Trace Item-Tracked Items
-You can see where an item-tracked item was used, including how and when it was received or produced, transferred, sold, consumed, or returned. You can also find all current instances of a specific serial or lot number in the database. You do this by using the Item Tracing and the [Find Entries](ui-find-entries.md) features.  
+# <a name="trace-item-tracked-items"></a>Trasování zboží
+Můžete vidět, kde bylo sledované zboží použito, včetně toho, jak a kdy bylo přijaté nebo vyrobené, přenesené, prodané, spotřebované nebo vrácené. V databázi najdete také všechny aktuální instance konkrétního sériového čísla nebo čísla šarže. To provedete pomocí funkce Trasování zboží a Navigace.  
 
-These features can be particularly useful in quality control when you need to find out which customers received products with a particular lot number or when you need to find out which lot a defective component came from.  
+ Tyto funkce mohou být zvláště užitečné při kontrole kvality, když potřebujete zjistit, kteří zákazníci obdrželi produkty s konkrétním číslem šarže nebo když potřebujete zjistit, z které šarže pochází vadná komponenta.  
 
- On the **Item Tracing** page, you can trace forwards and backwards in a sequence of posted inventory transactions for the serial or lot number.  
+ Na stránce **Trasování zboží** můžete sledovat pořadí vpřed a vzad v sledu transakcí zaúčtovaných pro sériové číslo nebo číslo šarže.  
 
- On the **Find Entries** page, you cannot see the sequence of transactions, but you can see all records of the serial or lot number, both posted entries and open records.  
+ Na stránce **Navigace** nevidíte sled transakcí, ale můžete vidět všechny záznamy sériového čísla nebo čísla šarže, jak zaúčtované položky, tak otevřené záznamy.  
 
- The two features can be used in combination by transferring a traced serial or lot number to the **Find Entries** page to finish a complete trace scenario. For more information, see [Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md).  
+ Tyto dvě funkce lze použít v kombinaci transferem sledovaného sériového čísla nebo čísla šarže na stránku **Navigace** a dokončit tak kompletní scénář sledování. Pro více informací navštivte  [Návod:  Sledování sériových čísel nebo čísel šarže](walkthrough-tracing-serial-lot-numbers.md).  
 
-## To trace item-tracked items  
+## <a name="to-trace-item-tracked-items"></a>Trasování zboží  
 
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracing**, and then choose the related link.  
-2.  In the filter fields at the top of the page, enter the specific item numbers or a filter on the item numbers that you would like to trace.  
-3.  In the **Show Components** field, select whether you would like to also see where the components for the items came from. Your options in this field are as follows.  
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Trasování zboží** a poté vyberte související odkaz.  
+2.  Do polí filtru v horní části stránky zadejte čísla konkrétních zboží nebo filtr na čísla zboží, které chcete sledovat.  
+3.  V poli **Zobrazit komponenty** vyberte, zda chcete také zjistit, odkud komponenty pocházejí. Vaše možnosti v tomto poli jsou následující.  
 
-    |Field|Description|  
+    |Pole|Popis|  
     |----------------------------------|---------------------------------------|  
-    |**No**|Select this option if you do not want to see any components.|  
-    |**Item-tracked Only**|Select this option if you want to see only components that have lot or serial numbers.|  
-    |**All**|Select this option if you want to see all components.|  
+    |**Žádné**|Tuto možnost vyberte, pokud nechcete vidět žádné součásti.|  
+    |**Se sledováním zboží**|Tuto možnost vyberte, pokud chcete vidět pouze komponenty, které mají číslo šarže nebo sériové číslo.|  
+    |**Vše**|Tuto možnost vyberte, pokud chcete vidět všechny komponenty.|  
 
-4.  In the **Trace Method** field, select the method you would like to use for tracing the item. The options are as follows  
+4.  V poli **Metoda sledování** vyberte metodu, kterou chcete použít pro trasování zboží. Možnosti jsou následující:  
 
-    |Field|Description|  
+    |Pole|Popis|  
     |----------------------------------|---------------------------------------|  
-    |**Usage->Origin**|This method traces the item starting from where it was used to where it came from. For instance, if a manufactured item was sold to a customer, the **Item Tracing** page shows this with the sales shipment line first, which you can then expand to see from which production order it came.|  
-    |**Origin->Usage**|This method traces the item starting from where it came into inventory to where it was used. For instance, if a manufactured item was sold to a customer, the **Item Tracing** page shows this with the finished production order first, which you can then expand to see sale shipment lines where the item was used.|  
+    |**Použití -> Původ**|Tato metoda sleduje zboží od místa, kde bylo použité do místa, odkud pochází. Například, pokud bylo vyrobené zboží prodáno zákazníkovi, stránka **Trasování zboží** zobrazí nejprve řádek prodejní dodávky, který pak můžete rozbalit a zjistit, ze které výrobní zakázky přišla.|  
+    |**Původ -> Použití**|Tato metoda sleduje zboží od místa původu v zásobách do místa, kde bylo použito. Například, pokud bylo vyrobené zboží prodáno zákazníkovi, stránka **Trasování zboží** zobrazí nejprve hotovou výrobní objednávku, kterou pak můžete rozbalit a zobrazit prodejní dodávky, kde bylo zboží použito.|  
 
-5.  Choose the **Trace** action to run the trace.  
+5.  Vyberte akci **Sledovat** pro spuštění sledování.  
 
 > [!NOTE]  
->  If you have received the same lot on more transactions, then the **Item Tracing** page may not show all transactions. Only applied transactions are shown.  
+>  Pokud jste obdrželi stejnou šarži u více transakcí, nemusí stránka **Trasování zboží** zobrazit všechny transakce. Zobrazeny jsou pouze použité transakce.  
 
 > [!NOTE]  
->  If additional transaction history under an item tracing line has already been traced by another line above it, then the **Already Traced** check box is selected. To provide a simpler view, such underlying lines are not shown.  
+>  Pokud již byla další trasa transakcí pod řádkem trasování zboží sledována jiným řádkem nad ní, je zaškrtnuto políčko **Již sledováno**. Pro zajištění jednoduššího pohledu nejsou takové řádky zobrazeny.  
 >   
->  To find the item tracing lines where the transaction history has already been traced, choose the **Go to Already Traced** button. The item tracing line in question is selected, and all underlying lines are expanded.  
+>  Chcete-li najít řádky pro trasování zboží, kde již byla sledována historie transakcí, zvolte tlačítko **Jít na již-sledované**. Je vybrán příslušný řádek pro sledování zboží a všechny podkladové řádky jsou rozbaleny.  
 
-## To find item-tracked items with Find Entries  
+## <a name="to-find-item-tracked-items-with-navigate"></a>Hledání zboží pomocí Navigace  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Find Entries**, and then select the related link.  
-2. Choose **Actions** > **Find by** > **Find by Item Reference**.
-3. In the **Serial No.** and **Lot No.** fields, enter the item tracking numbers that you want to trace.  
-4. Choose the **Find** action to find all instances of the serial or lot number in the database.  
+1.  Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Navigace** a poté vyberte související odkaz.  
+2.  Na záložce **Sledování zboží** zadejte do polí **Sériové číslo** a **Číslo šarže** sledovací čísla zboží, která chcete sledovat.  
+3.  Vyberte akci **Najít** a najděte všechny instance sériového čísla nebo čísla šarže v databázi.  
 
-## See Also  
-[Inventory](inventory-manage-inventory.md)  
-[Design Details: Item Tracking](design-details-item-tracking.md)
-[Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)  
-[Reserve Items](inventory-how-to-reserve-items.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-[Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md)  
-[Find Entries](ui-find-entries.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+[Zásoby](inventory-manage-inventory.md)  
+[Podrobnosti o designu: Trasování zboží](design-details-item-tracking.md)
+[Podrobnosti návrhu - Trasování zboží a Rezervace](design-details-item-tracking-and-reservations.md)  
+[Reservace zboží](inventory-how-to-reserve-items.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Návod: Sledování zboží označeného sériovými čísly nebo čísly šarže](walkthrough-tracing-serial-lot-numbers.md)

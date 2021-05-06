@@ -4,43 +4,33 @@
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 10/01/2019
+    ms.author: sgroespe
 
 ---
-# Correct Prepayments
+# Oprava záloh
+Po zaúčtování zálohové faktury za objednávku můžete provést opravu objednávky. Nové řádky můžete do objednávky přidat po vystavení zálohy a potom můžete zaúčtovat další zálohovou fakturu, ale po fakturaci zálohy pro řádek nelze odstranit řádek z objednávky.
 
-You can make a correction to an order after you have posted a prepayment invoice for the order. You can add new lines to an order after issuing a prepayment, and then you can post another prepayment invoice, but you cannot delete a line from an order after a prepayment has been invoiced for the line.  
+## Oprava zálohy
+Následující postup ukazuje, jak vydat dobropis zálohy a zrušit všechny fakturované zálohy na prodejní objednávce.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
+2. Otevřete příslušnou prodejní objednávku.
+3. Vyberte akci **Záloha** a poté vyberte akci **Zaúčtovat dobropis zálohy** nebo **Zaúčtovat a vytisknout  dobropis  zálohy**.
+4. Na stránce **Prodejní objednávka** pokračujte v opravě příslušných položek, jako u všech prodejních objednávek. Pro více informací navštivte [Zpracování prodejní vratky nebo stornování](sales-how-process-sales-returns-cancellations.md).
 
-> [!TIP]
-> If you have posted a prepayment invoice for a sales invoice that you then correct or cancel, you must correct or cancel the prepayment as well.
+   > [!NOTE]
+   > Chcete-li snížit částku v poli **Částka na řádku**, musíte nejprve zvýšit procento předplacení na řádku tak, aby hodnota v poli **Částka  řádku zálohy** neklesla pod hodnotu v poli **Fakt.  částka  zálohy**.
 
-## To correct a prepayment
+5. Chcete-li vytvořit zálohovou fakturu pro všechny nové řádky v prodejní objednávce, vyberte akci **Záloha** a poté vyberte akci **Zaúčtovat fakturu pro platbu předem** nebo **Zaúčtovat a vytisknout zálohovou  fakturu**.
+6. Chcete-li vystavit další zálohovou fakturu, zvyšte částku zálohy na jednom nebo více řádcích a zaúčtujte zálohovou fakturu. Bude vytvořena nová faktura pro rozdíl mezi fakturovanými částkami zálohy a novými částkami zálohy.
 
-The following procedure shows how to issue a prepayment credit memo to cancel all invoiced prepayments for a sales order.  
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.  
-2. Open the relevant sales order.
-3. Choose the **Prepayment** action, and then choose the **Post Prepayment Credit Memo** action or the **Post and Print Prepmt. Cr. Memo** action.  
-4. On the **Sales Credit Memo** page, proceed to correct the relevant entries, as for any sales credit memo. For more information, see [Process Sales Returns or Cancellations](sales-how-process-sales-returns-cancellations.md).  
-
-    > [!NOTE]  
-    > To reduce the amount in the **Line Amount** field, you must first increase the prepayment percentage on the line so that the value in the **Prepmt. Line Amount** field is not decreased below the value in the **Prepmt. Amt. Inv.** field.
-
-5. To make a prepayment invoice for any new lines in the sales credit memo, choose the **Prepayment** action, and then choose the **Post Prepayment Invoice** action or the **Post and Print Prepmt. Invoice** action.  
-6. To issue an additional prepayment invoice, increase the prepayment amount on one or more lines and post the prepayment invoice. A new invoice will be created for the difference between the prepayment amounts invoiced and the new prepayment amounts.  
-
-## See Also
-
-[Invoicing Prepayments](finance-invoice-prepayments.md)  
-[Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
+## Viz také
+[Fakturace záloh](finance-invoice-prepayments.md)  
+[Návod: Nastavení a fakturace prodejních záloh](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

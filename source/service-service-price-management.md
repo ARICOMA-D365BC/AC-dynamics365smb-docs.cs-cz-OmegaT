@@ -4,73 +4,62 @@
     author: bholtorf
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2020
     ms.author: bholtorf
 
 ---
-# Service Price Management
-The service price management functionality lets you apply the best price to service orders, set up personalized service price agreements for customers, improve service employees' efficiency, and accelerate the invoicing process.  
-  
-Service price management lets you set up different service price groups so you can consider the service item or service item group, in addition to the type of fault that the service task involves. You can set up these groups for a limited period of time, or for a specific customer or currency. You can use price calculation structures as templates to assign a specific price to a specific service task.  
-  
-For example, this makes it possible to assign specific items included in the service price, in addition to the type of work included. This also makes it possible to use different VAT and discount amounts for different service price groups. To make sure that the correct prices are applied, you can assign fixed, minimum, or maximum prices, depending on the agreements that you have with your customers.  
-  
-Before adjusting the price of a service item on a service order, you are provided with an overview of what the results of the price adjustment will be. You can approve of these results, or you can make additional changes, if you want to have a different result. The whole adjustment is performed line by line, which means that there are no additional lines created.  
-  
-Finally, service price group statistics and standard reports let you keep track of the profitability of each service price group.  
-  
-## Service Price Adjustment Groups  
-You use service price adjustment groups to set up the different types of price adjustments for service lines. For example, you can set up a service price adjustment group that adjusts prices for spare parts, one that adjusts prices for labor, one that adjusts prices for costs, and so on. You can also specify whether the service price adjustment should be applied to just one specific item or resource, or to all items or resources.  
-  
-The service price adjustment function does not apply to service items under the following conditions:
+# Správa cen servisu
+Funkce správy cen servisu vám umožňuje aplikovat nejlepší ceny na servisní zakázky, uzavřít dohody o personalizovaných cenách servisu pro zákazníky, zlepšit efektivitu zaměstnanců servisu a urychlit fakturační proces.
 
-* The item belongs to service contracts. You can only adjust the service prices of items that are part of a service order. 
-* If the service item has a warranty. 
-* If the service line has been posted as invoice, either fully or partially.  
-  
-When you run the service price adjustment function, all of the discounts in the order will be replaced by the values of the service price adjustment.  
-  
-## Service Price Groups  
-You can set up service price groups to create groups of service items that receive the same special service pricing. When you have set up service price groups, you can then assign them to service items on service item lines. You can also assign service price groups to service item groups.  
-  
-Before you can assign a service price group to a service item, you have to determine to which fault area, currency, or service price adjustment group the service price group applies. You have to determine to which amount the service price should be adjusted, and whether this amount should include VAT and discounts. You also have to determine whether this adjustment concerns a fixed amount, or should only be applied under certain conditions.  
-  
-When you assign a service price group to a service item, all the special service pricing that you set up in this group will then apply for this service item.  
-  
-## Service Pricing  
-You set up the actual types of service pricing (price adjustment type and price) for a combination of service price groups and customer price groups. For each type of service pricing, you select a service price adjustment group. You also specify the service price adjustment type, fixed, maximum, or minimum, and the actual price.  
-  
-For example, you can set up types of service pricing for a radio service price group. For customers without a price group, you can decide to have service pricing with maximum price on labor, which is the labor price adjustment group. For customers with a particular price group, you can decide to have service pricing with a fixed price on labor, the same labor price adjustment group.  
+Správa cen servisu vám umožňuje nastavit různé cenové skupiny servisu, abyste mohli kromě typu závady, kterou servisní úloha zahrnuje, uvážit i předmět servisu nebo skupinu předmětů servisu. Tyto skupiny můžete nastavit na omezenou dobu nebo pro konkrétního zákazníka nebo měnu. Struktury výpočtu ceny můžete použít jako šablony k přiřazení určité ceny ke konkrétní servisní zakázce.
 
-#### [Current Experience](#tab/current-experience)
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Items**, and then choose the related link.  
-2. Select the service item, expand the **Prices and Sales** FastTab, choose the **Resource**, **Item**, or **G/L Account** action.
-3. On the **Job Resource Prices**, **Job Item Prices**, or **Job G/L Account Prices** pages, fill in the fields as necessary.
+To například umožňuje, kromě druhu práce, přiřadit navíc i konkrétní zboží zahrnuté v ceně servisu. To také umožňuje použít různé částky DPH a slev pro různé cenové skupiny servisu. Abyste se ujistili, že jsou použity správné ceny, můžete přiřadit pevné, minimální nebo maximální ceny v závislosti na dohodách, které máte se svými zákazníky.
 
-  
-## Service Price Adjustment  
-Service price adjustment lets you adjust the price of an item, resource, general ledger account, or cost on a service order.  
-  
-After you have entered an item on the service item line, you then enter all information about the costs of this item on the service lines. When you run the Adjust Service Price function, you can preview the price adjustments. You can make modifications if you have to. When you acknowledge the modifications, the adjustments are calculated, and are then transferred to the service lines. You then post the service order.  
-  
-Depending on the type of service price adjustment, the total amount of the adjustments is calculated.  
-  
-The following table describes the calculations.  
-  
-|Option | Description |  
+Před úpravou ceny předmětu servisu v servisní zákazce získáte přehled o tom, jaké budou výsledky úpravy ceny. Tyto výsledky můžete schválit nebo můžete provést další změny, pokud chcete dostat jiný výsledek. Celé nastavení se provádí řádek po řádku, což znamená, že nejsou vytvořeny žádné další řádky.
+
+A konečně, statistiky cenových skupin servisu a standardní sestavy umožňují sledovat ziskovost každé cenové skupiny servisu.
+
+## Skupiny úprav ceny servisu
+Skupiny úprav ceny servisu můžete použít k nastavení různých typů úprav cen. Můžete například vytvořit skupinu úpravy ceny servisu, která upravuje ceny podle náhradních dílů, skupinu, která upravuje ceny podle práce, skupinu, která upravuje ceny podle nákladů atd. Můžete také určit, zda se má úprava ceny servisu použít pouze na konkrétní zboží nebo zdroj nebo na veškeré zboží nebo zdroje.
+
+Každá skupina úprav ceny servisu obsahuje informace o úpravách, které chcete provést na řádcích servisu.
+
+Funkce úpravy ceny servisu se nevztahuje na předměty servisu, které patří do servisních smluv. Můžete upravit pouze servisní ceny předmětů, které jsou součástí servisní zakázky. Nelze upravit cenu předmětu servisu, pokud má záruku. Nelze upravit cenu předmětu servisu v servisní zakázce, pokud s ním spojený řádek servisu byl zaúčtován jako faktura, zcela nebo částečně.
+
+Při spuštění funkce úpravy ceny servisu budou všechny slevy v zakázce nahrazeny hodnotami úpravy ceny servisu.
+
+## Cenové skupiny servisu
+Můžete nastavit cenové skupiny servisu a vytvořit skupiny předmětů servisu, které obdrží stejné speciální ceny servisu. Pokud jste nastavili cenové skupiny servisu, můžete je přiřadit k předmětům servisu na řádcích předmětů servisu. Cenové skupiny servisu můžete také přiřadit ke skupinám předmětů servisu.
+
+Před přiřazením cenové skupiny servisu k předmětu servisu musíte určit, na kterou oblast poruchy, měnu nebo skupinu úprav ceny servisu se tato cena vztahuje. Musíte určit, na jakou částku by se měla cena servisu upravit, a zda by tato částka měla zahrnovat DPH a slevy. Musíte také určit, zda se tato úprava týká pevné částky, nebo zda by měla být použita pouze za určitých podmínek.
+
+Když k předmětu servisu přiřadíte cenovou skupinu servisu, pak se na tento předmět servisu budou vztahovat všechny speciální ceny servisu, které jste nastavili v této skupině.
+
+## Cena servisu
+Nastavíte skutečné typy cen servisu (typ úpravy ceny a cena) pro kombinaci cenových skupin servisu a cenových skupin zákazníka. Pro každý typ ceny servisu vyberete skupinu úpravy ceny servisu. Můžete také určit typ úpravy ceny servisu, pevný, maximální nebo minimální a skutečnou cenu.
+
+Můžete například nastavit typy cen servisu pro cenovou skupinu rádio servis. Pro zákazníky bez cenové skupiny se můžete rozhodnout, že budete mít k dispozici ceny servisu s maximální cenou práce, což je skupina úpravy ceny práce. Pro zákazníky s konkrétní cenovou skupinou se můžete rozhodnout, že budete mít k dispozici ceny za servis s pevnou cenou za práci, tedy stejnou skupinu úprav ceny práce.
+
+## Úpravy cen servisu
+Úpravy cen servisu vám umožňují upravit cenu zboží, zdroje, účtu hlavní knihy nebo nákladů na servisní zakázku.
+
+Po zadání zboží do řádku předmětu servisu zadáte všechny informace o nákladech tohoto zboží na servisní řádky. Když spustíte funkci Upravit servisní cenu, můžete si prohlédnout úpravy cen. Můžete provést úpravy, pokud musíte. Když potvrdíte úpravy, vypočítají se úpravy a poté se přenesou na řádky servisu. Poté odešlete servisní zakázku.
+
+V závislosti na typu úpravy ceny servisu se vypočítá celková částka úpravy.
+
+Následující tabulka popisuje výpočty.
+
+| Možnost | Popis |
 |----------------------------------|---------------------------------------|  
-|**Fixed Price**|This means that you charge a fixed price for the service item, resource, general ledger account, or cost, regardless of the real costs or regular charges. Selecting this option means that the service price adjustment will reach the exact amount specified in the service price group.|  
-|**Maximum**|This means that you put an upper limit on the charge to your customer, regardless of the real costs or regular charges. Selecting this option means that the service price adjustment will only be performed if the total price exceeds the amount specified in the service price group.|  
-|**Minimum**|This means that you put a lower limit on the charge to your customer, regardless of the real costs or regular charges. Selecting this option means that the service price adjustment will only be performed if the total amount is less than the amount specified on the service price group.|  
-  
-## See Also  
-[Set Up Pricing and Additional Costs for Services](service-how-setup-service-costs-pricing.md)  
-[Setting Up Service Management](service-setup-service.md)  
+| **Pevná cena** | To znamená, že účtujete pevnou cenu za předmět servisu, zdroj, účet hlavní knihy nebo náklady, bez ohledu na skutečné náklady nebo běžné poplatky. Výběr této možnosti znamená, že úprava ceny servisu dosáhne přesné částky uvedené v cenové skupině servisu. |
+| **Maximum** | To znamená, že zákazníkovi stanovíte horní limit poplatku bez ohledu na skutečné náklady nebo pravidelné poplatky. Výběr této možnosti znamená, že úprava ceny servisu bude provedena pouze v případě, že celková cena přesáhne částku uvedenou v cenové skupině servisu. |
+| **Minimum** | To znamená, že zákazníkovi uložíte nižší limit poplatku bez ohledu na skutečné náklady nebo pravidelné poplatky. Výběr této možnosti znamená, že úprava ceny servisu bude provedena, pouze pokud je celková částka nižší než částka uvedená v cenové skupině servisu. |
 
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Nastavení cen a dodatečných nákladů servisu](service-how-setup-service-costs-pricing.md)  
+[Nastavení správy servisu](service-setup-service.md)

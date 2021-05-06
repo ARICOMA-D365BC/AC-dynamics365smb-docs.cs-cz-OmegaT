@@ -1,48 +1,43 @@
 ---
-title: 'Use Allocation Keys in General Journals | Microsoft Docs'
-description: Learn how you can use allocation keys in journals.
+title: Použití přodělovacího klíče ve finančních denících | Microsoft Docs
+description: 'Naučte se, jak můžete v denících používat alokační klíče.'
 services: project-madeira
 documentationcenter: ''
 author: edupont04
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cost accounting
-ms.date: 10/01/2020
+ms.date: 10/01/2018
 ms.author: edupont
-
 ---
-# Use Allocation Keys in General Journals
-You can allocate an entry in a general journal to several different accounts when you post the journal. The allocation can be made by quantity, percentage, or amount.
+# <a name="use-allocation-keys-in-general-journals"></a>Použití přidělovacího klíče ve finančních denících
+Při účtování deníku můžete rozdělit položku ve finančním deníku na několik různých účtů. Přiřazení lze provést podle množství, procenta nebo částky.
 
-## To set up allocation keys
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
-2. Choose the **Batch Name** field to open the **General Journal Batches** page.
-3. You can either modify allocations on an existing batch in the list or create a new batch with allocations.
-   * To create a new batch, choose the **New** action, and go to the next step.
-   * To change the allocations of an existing journal, select the journal and go to step 7.    
-4. In the **Name** field, enter a name for the batch, such as CLEANING. In the **Description** field, enter a description, such as Cleaning Expenses Journal.
-5. When you are done, close the page. A new, empty recurring journal opens.
-6. Fill in the fields on the line.
-7. Choose the **Allocations** action.
-8. Add a line for each allocation. You must fill in either the **Allocation %**, **Allocation Quantity**, or **Amount** field. You must also fill in the **Account No.** field and, if you are allocating the transaction among global dimensions, the global dimension fields.
-9. If you enter a percentage on a line, the amount in the **Amount** field is calculated automatically. These amounts have the opposite sign from the total amount in the **Amount** field in the recurring journal.
-10. After entering the allocations lines, choose **OK** to return to the **Recurring General Journal** page. The **Allocated Amt. (USD)** field is filled in and matches the **Amount** field.
-11. Post the journal.
+## <a name="to-set-up-allocation-keys"></a>Nastavení přidělovacích klíčů
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Periodický finanční deník** a poté vyberte související odkaz.
+2. Klepnutím na pole **Název listu** otevřete stránka **Listy finančního deníku**.
+3. Můžete buď upravit přidělení na existujícím listu deníku, nebo vytvořit nový list finančního deníku.
+   * Chcete-li vytvořit nový list, vyberte akci **Nový** a přejděte k dalšímu kroku.
+   * Chcete-li změnit přidělení existujícího listu deníku, vyberte deník a přejděte ke kroku 7.    
+4. Do pole **Název** zadejte název listu, například ČIŠTĚNÍ. Do pole **Popis** zadejte popis, například Deník čištění výdajů.
+5. Až budete hotovi, zavřete stránku. Otevře se nový, prázdný periodický deník.
+6. Vyplňte pole v hlavičce.
+7. Zvolte akci **Rozdělení**.
+8. Přidejte řádek pro každé přidělení. Musíte vyplnit buď pole **Rozdělení %**, **Rozdělené množství** nebo **Částka**. Musíte také vyplnit pole **Číslo účtu** a, pokud přidělujete transakci mezi globální dimenze, pole globální dimenze.
+9. Pokud do řádku zadáte procento, automaticky se vypočítá částka v poli **Částka**. Tyto částky mají opačné znaménko než celková částka v poli **Částka** v řádku periodického deníku.
+10. Po zadání řádků rozdělení zvolte **OK** pro návrat na stránku **Periodický finanční deník**. **Rozdělená částka (USD)** je vyplněno a odpovídá poli **Částka**.
+11. Zaúčtovat deník.
 
-## To change an allocation key that has already been set up
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
-2. On the **Recurring General Journal** page, select the journal with the allocation.
-3. Choose the line with the allocation, and then choose **Allocations** action.
-4. Change the relevant fields, and then choose the **OK** button.
+## <a name="to-change-an-allocation-key-that-has-already-been-set-up"></a>Změna již nastaveného alokačního klíče
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Periodický finanční deník** a poté vyberte související odkaz.
+2. Na stránce **Periodický finanční deník** vyberte deník s rozdělením.
+3. Vyberte řádek s rozdělením a poté vyberte akci **Rozdělení**.
+4. Změňte příslušná pole a poté stiskněte tlačítko **OK**.
 
-## See Also
-[Working with General Journals](ui-work-general-journals.md)  
-[Posting Documents and Journals](ui-post-documents-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Práce s finančními deníky](ui-work-general-journals.md)  
+[Účtování dokladů a deníků](ui-post-documents-journals.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

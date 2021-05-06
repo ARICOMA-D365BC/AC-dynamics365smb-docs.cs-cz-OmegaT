@@ -1,36 +1,31 @@
 ---
-    title: Best practices for global planning setup | Microsoft Docs
-    description: The Planning FastTab in the Manufacturing Setup page contains several fields that define global rules for supply planning.
-    author: SorenGP
-
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
-
+title: Doporučené postupy pro nastavení globálního plánování | Microsoft Docs
+description: 'Plánovací Záložka s náhledem v stránce Nastavení výroby obsahuje několik polí, která definují globální pravidla pro plánovače dodávek.'
+author: SorenGP
+ms.service: dynamics365-business-central
+ms.topic: article
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: null
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Setup Best Practices: Global Planning Setup
-The **Planning** FastTab on the **Manufacturing Setup** page contains several fields that define global rules for supply planning.  
+# <a name="setup-best-practices-global-planning-setup"></a>Nastavení osvědčených postupů: Instalace globálního plánování
+Záložka **Plánování** s náhledem v stránce **Nastavení výroby** obsahuje několik polí, která definují globální pravidla pro plánovače dodávek.  
 
- The following table provides best practices on how to set up selected global planning parameter fields. For more information about a field, choose the link in the **Setup field** column.  
+ Následující tabulka obsahuje doporučené postupy, jak nastavit vybraná pole parametrů globálního plánování. Další informace o poli získáte kliknutím na odkaz ve sloupci **Nastavení pole**.  
 
-|Setup field|Best practice|Comment|  
+|Nastavení pole|Osvědčený postup|Komentář|  
 |-----------------|-------------------|-------------|  
-|Use Forecast on Locations|Select if you have forecasts for specific locations.||  
-|Components at Location|If items are not defined as SKUs, select the location code of your main warehouse.|This also applies if you only use the requisition worksheet.|  
-|Blank Overflow Level|Select **Allow Default Calculation** if you are migrating from Microsoft Dynamics NAV 5.0 or earlier.|Use only if you want to allow all or some of your items to overflow the reorder point.|  
-|Default Dampener Period|Set between 1D and 5D.<br /><br /> If new to planning in [!INCLUDE[prod_short](includes/prod_short.md)], then set a longer period.|When users are more familiar with the different reasons for action messages, then shorten the dampener period to allow more change suggestions.|  
-|Default Dampener Quantity %|Set between 5 and 20 percent of the item’s lot size.||  
+|Použití prognózy na lokacích|Vyberte, pokud máte prognózy pro konkrétní lokace.||  
+|Komponenty na lokaci|Pokud zboží není definováno jako SKJ, vyberte kód místa vašeho hlavního skladu.|To platí také v případě, že používáte pouze sešity požadavků.|  
+|Prázdná úroveň přetečení|Pokud migrujete z Microsoft Dynamics NAV 5.0 nebo starší, vyberte **Povolit výchozí kalkulaci**.|Používejte pouze v případě, že chcete všem nebo některým zbožím povolit přetečení bodu přiobjednání.|  
+|Výchozí doba prodlevy|Nastavte mezi 1D a 5D.<br /><br /> Pokud teprve s [!INCLUDE[d365fin](includes/d365fin_md.md)] začínáte, tak nastavte delší období.|Když jsou uživatelé více sblížení s různými důvody pro hlášení akcí, tak začínají zkracovat dobu utlumení, aby povolili více doporučených změn.|  
+|Výchozí doba utlumení|Nastavte mezi 5 a 20 procenty velikosti dávky zboží.||  
 
-## See Also  
- [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)   
- [Design Details: Supply Planning](design-details-supply-planning.md)   
- [Set Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také  
+ [Nastavení osvědčených postupů: Plánovač dodávek](setup-best-practices-supply-planning.md)   
+ [Podrobnosti návrhu: Plánovač dodávek](design-details-supply-planning.md)   
+ [Osvědčené postupy při nastavení komplexních oblasti aplikace](set-up-complex-application-areas-using-best-practices.md)  
+ [Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

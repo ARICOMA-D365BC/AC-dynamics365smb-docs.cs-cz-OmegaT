@@ -4,42 +4,39 @@ description: To avoid manual calculations and complete tasks quickly and accurat
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Letting [!INCLUDE[prod_short](includes/prod_short.md)] Suggest Values
-[!INCLUDE[prod_short](includes/prod_short.md)] can help you complete tasks quicker and more correctly by prefilling fields or complete lines with data that you would otherwise have to calculate and enter yourself. Although such automatic data entry is always correct, you can change it afterwards if you want to.
+# Umožnění [!INCLUDE[d365fin](includes/d365fin_md.md)] navrhovat hodnoty
+[!INCLUDE[d365fin](includes/d365fin_md.md)] může pomoci při provádění úloh rychleji a lépe, pokud předvyplňujete pole nebo dokončuje řádky, která byste jinak museli vypočítat a zadávat sami. Ačkoli je automatické zadávání dat vždy správné, můžete je později v případě potřeby změnit.
 
-Functionality that enters field values for you is typically offered for tasks where you enter large volumes of transactional data and want to avoid errors and save time. This topic contains a selection of such functionality. More sections will be added in future updates of [!INCLUDE[prod_short](includes/prod_short.md)].
+Funkce, které zadávají hodnoty polí, jsou obvykle nabízeny pro úkoly, do kterých zadáváte velké objemy transakčních dat a chcete předejít chybám a ušetřit čas. Toto téma obsahuje výběr takových funkcí. Další sekce budou přidány v příštích aktualizacích aplikace [!INCLUDE[d365fin](includes/d365fin_md.md)].
 
-## The **Suggest Balancing Amount** check box on the **General Journal Batches** page
-When, for example, you are entering general journal lines for multiple expenses that must all be posted to the same bank account, then each time you enter a new journal line for an expense, you can have the **Amount** field on the bank account line automatically updated to the amount that balances the expenses. For more information about working with general journals, see [Working with General Journals](ui-work-general-journals.md).
+## Zaškrtávací políčko **Navrhnout vyrovnávací částku** na stránce **Listy finančního deníku**
+Pokud například zadáváte řádky finančního deníku pro více výdajů, které musí být zaúčtovány na stejný bankovní účet, pak při každém zadání nového řádku deníku pro výdaj můžete mít pole **Částka** na řádku bankovního účtu automaticky aktualizováno na částku, která vyrovnává náklady. Další informace o práci s obecnými deníky naleznete v tématu [Práce s finančními deníky](ui-work-general-journals.md) .
 
-### To have the **Amount** field on balancing general journal lines filled automatically
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link.
-2. On the line for your preferred general journal batch, choose the **Suggest Balancing Amount** check box.
-3. Open the general journal and proceed to register and post transactions using the described functionality for automatic entry of a field value.       
+### Automatické vyplnění pole **Částka** pro vyrovnávání řádků finančího deníku
+1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky** související odkaz.
+2. V řádku pro požadovaný list finančního deníku zvolte zaškrtávací pole **Navrhnout částku vyrovnání**.
+3. Otevřete finanční deník a pokračujte v evidenci a zaúčtování transakcí pomocí popsané funkce pro automatické zadávání hodnoty pole.
 
-For information about how to set up a personal general journal batch, for example, for expense handling, see [Working with General Journals](ui-work-general-journals.md).
+Informace o nastavení dávky osobního finančního deníku, například pro zpracování výdajů, naleznete v tématu [Práce s finančními deníky](ui-work-general-journals.md) .
 
-## The **Automatically Fill Date Received** field on the **Payment Registration** page
-The **Payment Registration** page shows outstanding incoming payments as lines that represent sales documents where an amount is due for payment. For more information about applying customer payments, see [Reconcile Customer Payments from a List of Unpaid Sales Documents](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md).
+## Pole **Automaticky vyplnit datum přijetí** na stránce **Platební registrace**
+Stránka **Registrace plateb** zobrazuje neuhrazené příchozí platby jako řádky, které představují prodejní doklady, kde je částka splatná k platbě. Další informace o vyrovnánvíní plateb zákazníků naleznete v části [Odsouhlasení plateb zákazníků ze seznamu nezaplacených prodejních dokladů](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md).
 
-You main actions on the page are to fill in the **Payment Made** check box and the **Date Received** field. You can set [!INCLUDE[prod_short](includes/prod_short.md)] up to automatically enter work date in the **Date Received** field when you select the **Payment Made** check box.
+Mezi hlavní akce na stránce patří vyplnění políčka **Platba** a pole **Datum přijetí**. Můžete nastavit [!INCLUDE[d365fin](includes/d365fin_md.md)] k automatickému zadávání pracovního data do pole **Datum přijetí** když vyberete zaškrtávací políčko **Platba**.
 
-### To have the **Date Received** field on the **Payment Registration** page filled automatically
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration Setup**, and then choose the related link.
-2. Select the **Automatically Fill Date Received** check box.
-3. Open the **Payment Registration** page and proceed to process incoming customer payments using the described functionality for automatic entry of a field value.
+### Automatické vyplnění pole **Datum přijetí** na stránce **Registrace plateb**
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení registrace plateb** související odkaz.
+2. Zaškrtněte políčko **Automaticky doplnit datum přijetí**.
+3. Otevřete stránku **Registrace plateb** a pokračujte ve zpracování příchozích plateb zákazníků pomocí popsané funkce pro automatické zadávání hodnot pole.
 
-## See Also
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+## Viz také
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
 [Finance](finance.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]

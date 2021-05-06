@@ -1,64 +1,59 @@
 ---
-title: Set Up FA Insurance| Microsoft Docs
-description: You set up an insurance card and general insurance policy information to manage fixed asset insurance coverage.
+title: Nastavení pojištění Dlouhodobého majetku | Microsoft Docs
+description: Nastavte kartu pojištění a všeobecné informace o pojistných podmínkách ke správě pojistného krytí dlouhodobého majetku.
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: policy, coverage
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'policy, coverage'
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Set Up Fixed Asset Insurance
-To manage fixed asset insurance coverage, you must first set up some general insurance information and an insurance card per policy.
+# <a name="set-up-fixed-asset-insurance"></a>Nastavení pojištění dlouhodobého majetku
+Ke správě pojistného krytí dlouhodobého majetku musíte nejprve nastavit nějaké obecné informace o pojištění a kartu pojištění dle podmínek.
 
-## To set up general insurance information
-To use the insurance features in [!INCLUDE[prod_short](includes/prod_short.md)], you must set up some general insurance information.  
+## <a name="to-set-up-general-insurance-information"></a>Pro nastavení obecných informací o pojištění
+Pro používání pojišťovacích funkcí v [!INCLUDE[d365fin](includes/d365fin_md.md)], musíte nastavit nějaké obecné informace o pojištění.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Setups**, and then choose the related link.  
-2. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
+1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Nastavení DM** a poté vyberte související odkaz.  
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
-## To set up insurance types
-You can group your insurance policies into categories, such as insurance against theft or fire insurance. The insurance types are used on the insurance card.
+## <a name="to-set-up-insurance-types"></a>Nastavení typů pojištění
+Pojistné smlouvy můžete seskupit do kategorií, např. pojištění proti krádeži nebo pojištění proti požáru. Typy pojištění jsou používány na kartě pojištění.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Types**, and then choose the related link.  
-2. Fill in the fields as necessary.
+1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Typy pojištění** a poté vyberte související odkaz.  
+2. Vyplňte pole podle potřeby.
 
-## To set up insurance cards
-You may accumulate information about each insurance policy on the insurance card.  
+## <a name="to-set-up-insurance-cards"></a>Nastavení karet pojištění
+Na kartě pojištění můžete shromažďovat informace o každé pojistné smlouvě.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance**, and then choose the related link.  
-2. On the **Insurance** page, choose the **New** action to create a  new insurance card.  
-3. Fill in the fields as necessary.
+1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Pojištění** a poté vyberte související odkaz.  
+2. Na stránce **Pojištění** zvolte akci **Nový** pro vytvoření nové karty pojištění.  
+3. Vyplňte pole podle potřeby.
 
-## To set up insurance journal templates
-[!INCLUDE[prod_short](includes/prod_short.md)] automatically creates an insurance journal template the first time that you open the **Insurance Journal** page, but you can set up additional journal templates. For more information, see [Working with General Journals](ui-work-general-journals.md).  
+## <a name="to-set-up-insurance-journal-templates"></a>Nastavení šablon deníku pojištění
+[!INCLUDE[d365fin](includes/d365fin_md.md)] automaticky vytvoří šablonu deníku pojištění při prvním otevření stránky **Deník pojištění**, ale můžete nastavit další šablony deníku. Další informace naleznete v části [Práce s Finančním deníkem](ui-work-general-journals.md).  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Journal Templates**, and then choose the related link.  
-2. Fill in the fields as necessary.
+1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Šablony deníku pojištění** a poté vyberte související odkaz.  
+2. Vyplňte pole podle potřeby.
 
-## To set up insurance journal batches
-You can set up batches in an insurance journal template. The values in the journal batch are used as default values if the fields are not filled in on the journal lines. For more information, see [Work with General Journals](ui-work-general-journals.md)  
+## <a name="to-set-up-insurance-journal-batches"></a>Pro nastavení listů deníku pojištění
+Listy můžete nastavit v šabloně deníku pojištění. Hodnoty v listu deníku jsou používány jako výchozí hodnoty, pokud pole na řádcích deníku nejsou vyplněny. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Journal Templates**, and then choose the related link.  
-2. Select an insurance journal template, and then choose the **Batches** action.
-3. On the **Insurance Journal Batches** page, fill in the fields as necessary.
+1. Vyberte ikonu ![Žárovka, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), vstupte do **Šablony deníku pojištění** a poté vyberte související odkaz.  
+2. Vyberte šablonu deníku pojištění a pak zvolte akci **Listy**.
+3. Na stránce **Listy deníku pojištění** vyplňte pole podle potřeby.
 
 > [!NOTE]  
->   Numbers have a special function in journal names. If a journal template name or journal batch name contains a number, the number automatically advances by one every time that the journal is posted. For example, if HH1 is entered in the **Name** field, the journal name will change to HH2 after the journal named HH1 has been posted.
+>   Čísla mají v názvech deníků zvláštní funkci. Pokud název šablony deníku nebo listu deníku obsahuje číslo, toto číslo je automaticky inkrementováno o jedna pokaždé, když je deník zaúčtován. Např. pokud je v poli **Název** zvoleno HH1, název deníku se změní na HH2 potom, co se zaúčtuje deník HH1.
 
-## See Also
-[Setting Up Fixed Assets](fa-setup.md)  
-[Fixed Assets](fa-manage.md)  
+## <a name="see-also"></a>Viz také
+[Nastavení dlouhodobého majetku](fa-setup.md)  
+[Dlouhodobý majetek](fa-manage.md)  
 [Finance](finance.md)  
-[Getting Started](product-get-started.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Začínáme](product-get-started.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

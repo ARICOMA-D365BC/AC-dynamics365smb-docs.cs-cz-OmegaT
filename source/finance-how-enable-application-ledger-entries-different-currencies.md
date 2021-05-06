@@ -6,47 +6,43 @@ documentationcenter: ''
 author: edupont04
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: multiple currencies, payment, reconcile
-ms.date: 10/01/2020
+ms.date: 10/01/2019
 ms.author: edupont
 
 ---
-# Enable Application of Ledger Entries in Different Currencies
-If you purchase from a vendor in one currency and submit payment in another currency, you can apply the payment to the purchase.
+# Povolení vyrovnávání položek v různých měnách
+Pokud nakupujete od dodavatele v jedné měně a odešlete platbu v jiné měně, můžete vyrovnat platbu s nákupem.
 
-Likewise, if you sell to a customer in one currency and receive payment in another currency, you can apply the payment to the sales invoice.
+Stejně tak, pokud prodáváte zákazníkovi v jedné měně a obdržíte platbu v jiné měně, můžete platbu vyrovnat prodejní fakturou.
 
-The following procedure describes how to set this up for vendor ledger entries on the **Purchases & Payables Setup** page. The setup is similar for customer ledger entries on the **Sales & Receivables Setup** page.
+Následující postup popisuje, jak nastavit vyrovnání položek dodavatele na stránce **Nastavení nákupu a závazků**. Nastavení je podobné pro položky zákazníka na stránce **Nastavení prodeje a pohledávek.**
 
-## To enable application of vendor ledger entries in different currencies
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
-2. In the **Appln. between Currencies** field, select one of the following options.
+## Povolení vyrovnávání položek dodavatele v různých měnách
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení prodeje a poheldávek** a vyberte související odkaz.
+2. V poli **Vyrovnání  mezi měnami** a vyberte následující možnosti.
 
-| Option | Description |
+| Možnost | Popis |
 | --- | --- |
-| None |Application between currencies is not allowed. |
-| EMU |Application between EMU currencies is allowed. |
-| All |Application between all currencies is allowed. |
+| Žádné | Vyrovnání mezi měnami není povoleno. |
+| EMU | Vyrovnání mezi měnami EMU je povoleno. |
+| Všechno | Vyrovnání mezi všemi měnami je povoleno. |
 
-## To set up G/L accounts for currency application rounding differences  
-If you apply entries in different currencies, you must set up the general ledger accounts to which you want to post rounding differences.  
+## Nastavení účtů účetní osnovy pro rozdíly zaokrouhlení při měnovém vyrovnání
+Pokud vyrovnáte položky v různých měnách, musíte nastavit účty hlavní knihy, na které chcete zaúčtovat rozdíly zaokrouhlování.
 
-> [!NOTE]  
->  You must set up the general ledger accounts before you complete the task. For more information, see [Understanding the General Ledger and the Chart of Accounts](finance-general-ledger.md).
+> Před tím, než dokončíte vyrovnávání musítě mít tyto účty založeny a nastaveny. Pro více informací navštivtě [Porozumění financím a účetní osnově](finance-general-ledger.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer Posting Groups**, and then choose the related link.  
-2. In the **Debit Curr. Appln. Rndg. Acc.** and **Credit Curr. Appln. Rndg. Acc.** fields, enter the relevant general ledger accounts to post rounding differences.  
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendor Posting Groups**, and then choose the related link.  
-4. In the **Debit Curr. Appln. Rndg. Acc.** and **Credit Curr. Appln. Rndg. Acc.** fields, enter the relevant general ledger accounts to post rounding differences.  
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Účto skupiny zákazníků** a vyberte související odkaz.
+2. V polích **MD účet  zaok. vyrovnání měny** a **Dal účet. zaok. vyrovnání měny** zadejte příslušné účty hlavní knihy a zaúčtujte rozdíly zaokrouhlování.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Účto skupiny dodavatele** a vyberte související odkaz.
+4. V polích **MD účet  zaok. vyrovnání měny** a **Dal účet. zaok. vyrovnání měny** zadejte příslušné účty hlavní knihy a zaúčtujte rozdíly zaokrouhlování.
 
-## See Also
-[Managing Payables](payables-manage-payables.md)  
-[Managing Receivables](receivables-manage-receivables.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa závazků](payables-manage-payables.md)  
+[Správa pohledávek](receivables-manage-receivables.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

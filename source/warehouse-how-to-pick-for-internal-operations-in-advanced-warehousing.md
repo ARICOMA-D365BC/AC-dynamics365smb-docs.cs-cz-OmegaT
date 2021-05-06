@@ -1,62 +1,59 @@
 ---
-    title: Pick for Internal Operations in Advanced Warehouse Configurations
-    description: If your locations use picking as well as shipping, pick components for production and assembly activities in the Warehouse Pick page.
+    title: How to Pick for Internal Operations in Advanced Warehouse Configurations | Microsoft Docs
+    description: In advanced warehouse configurations where the location is set up to use picking as well as shipping, you can pick components for production and assembly activities with the **Warehouse Pick** page.
     author: SorenGP
 
     ms.service: dynamics365-business-central
-    ms.topic: conceptual
+    ms.topic: article
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
-    ms.author: edupont
+    ms.date: 04/01/2020
+    ms.author: sgroespe
 
 ---
-# Pick for Production or Assembly in Advanced Warehouse Configurations
-In advanced warehouse configurations where the location is set up to use picking as well as shipping, you can pick components for production and assembly activities with the **Warehouse Pick** page.  
+# Vyskladnění pro výrobu nebo montáž v rozšířených konfiguracích skladu
+V pokročilých konfiguracích skladu, kde je lokace nastavena na použití vyskladnění i dodání, můžete vyskladnit komponenty pro výrobní a montážní aktivity pomocí stránky **Vyskladnění**.
 
-Alternatively, you can use the **Movement Worksheet** page to move items between bins ad hoc, meaning without reference to a source document. For more information, see [Move Items in advanced warehouse configurations](warehouse-how-to-move-items-in-advanced-warehousing.md).  
+Případně můžete použít stránku **Sešit přesunu** k ad hoc přesunu zboží mezi přihrádky, což znamená bez odkazu na původní dokument. Pro více informací navštivte [Přesouvání zboží v rozšířených konfiguracích skladu](warehouse-how-to-move-items-in-advanced-warehousing.md).
 
-For information about picking items for internal operations in basic warehouse locations that are set up for picking only, see [Move Components to an Operation Area in Basic Warehouse Configurations](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).  
+Informace o vyskladnění zboží pro interní operace v základních lokacích skladu, které jsou nastaveny pouze pro vyskladnění, naleznete v tématu [Přesouvání komponent do provozní oblasti v základních konfiguracích skladu](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
 
-You cannot create a warehouse pick document from scratch because a pick activity is always part of a workflow, either in a pull or a push scenario.  
+Doklad vyskladnění nelze vytvořit od začátku, protože aktivita vyskladnění je vždy součástí workflow, a to buď ve vyžádaném nebo nabízeném scénáři.
 
-You can create the warehouse pick document in a push fashion by selecting **Create Whse. Pick** on the source document, such as a released assembly order or warehouse shipment. For more information, see [Pick Items with Warehouse Picks](warehouse-how-to-pick-items-for-warehouse-shipment.md).  
+Doklad vyskladnění můžete vytvořit výběrem možnosti **Vytvořit  vyskladnění** v původním dokladu, například vydané montážní objednávky nebo dodávky ze skladu. Pro více informací navštivte [Vyskladnění zboží](warehouse-how-to-pick-items-for-warehouse-shipment.md).
 
-Alternatively, you can create the warehouse pick document in a pull fashion by using the **Pick Worksheet** page to detect pick requests, both for shipment and internal operations, and then create the required warehouse pick documents.  
+Případně můžete vytvořit doklad vyskladnění tažným způsobem pomocí stránky **Sešit vyskladnění** ke zjištění požadavků vyskladnění, a to jak pro dodávku, tak pro interní operace, a pak vytvořit požadované doklady vyskladnění.
 
-The following procedure explains a pull scenario where you pick components for a released production order through the **Pick Worksheet** page. The procedure also applies for an assembly order.  
+Následující postup vysvětluje scénář, kdy vyskladníte komponenty pro vydanou výrobní zakázku pomocí stránky **Sešit vyskladnění**. Postup platí také pro montážní zakázku.
 
-To create pick requests, both for pull and for push scenarios, the source documents in question must be released. Release source documents for internal operations in the following ways.  
+Chcete-li vytvořit požadavky na vyskladnění, a to jak pro vyžádaný nebo nabízený scénář, musí být vydány dotyčné původní doklady. Vydejte původní doklady pro interní operace následujícími způsoby.
 
-|Source Document|Release Method|  
+| Původní doklad | Metoda vydání |
 |---------------------|--------------------|  
-|Production Order|Change order type to released production order.|  
-|Assembly Order|Change status to Released.|  
+| Výrobní zakázka | Změňte typ objednávky na vydanou výrobní zakázku. |
+| Montážní zakázka | Změňte stav na Vydáno. |
 
-## To pick components using the pick worksheet  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Pick Worksheet**, and then choose the related link.  
-2.  Choose the **Get Warehouse Documents** action, and then select the component lines from the released production order.  
-3.  Inspect the lines, sort them to ensure an efficient picking round, and combine them with other worksheet lines if necessary to make best use of employee time.  
-4.  Choose the **Create Pick** action.  
-5.  Define how to create the warehouse pick documents and how to sort pick lines by filling fields on the **Create Pick** page.  
-6.  Choose the **OK** button. Warehouse pick documents are created with pick lines for each component that is required in the internal operation.  
+## Vyskladnění komponent pomocí sešitu vyskladnění
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Sešit vyskladnění** a poté vyberte související odkaz.
+2. Vyberte akci **Kopie dokladů skladu** a pak vyberte řádky komponenty z vydané výrobní zakázky.
+3. Zkontrolujte řádky, seřaďte je, abyste zajistili efektivní zaokrouhlení vyskladnění, a v případě potřeby je zkombinujte s jinými řádky sešitu, abyste co nejlépe využili čas zaměstnance.
+4. Vyberte akci **Vytvořit vyskladnění**.
+5. Definujte způsob vytvoření dokladů vyskladnění a způsob řazení řádků vyskladnění vyplněním polí na stránce **Vytvořit vyskladnění**.
+6. Vyberte tlačítko **OK**. Doklady vyskladnění jsou vytvořeny s řádky vyskladnění pro každou komponentu, která je požadována v interní operaci.
 
-If the internal operation area, such as a production shop floor, is set up with a default bin for placement of components to be used in the operation, then that bin code is inserted in the Place lines on the warehouse pick document to instruct warehouse workers where to place the items. For more information, see the **To-Production Bin Code** or the **To-Assembly Bin Code** field.
+Pokud je interní provozní oblast, například výrobní dílna, nastavena s výchozí přihrádkou pro umístění komponent, které mají být použity v operaci, pak je tento kód přihrádky vložen do řádků Vložit na dokladu vyskladnění, aby bylo možné dát pracovníkům skladu pokyn, kam mají zboží umístit. Pro více informací navštivte pole **Kód přihrádky do výroby** nebo **Kód přihrádky na montáž**.
 
-## Filling the Consumption Bin
-This flow chart shows how the **Bin Code** field on production order component lines is filled according to your location setup.
+## Naplnění přihrádky spotřeby
+Tento vývojový diagram ukazuje, jak je pole **Kód přihrádky** na řádcích komponent výrobní zakázky vyplněno podle nastavení lokace.
 
-![Bin flow chart](media/binflow.png "BinFlow")  
+![Vývojový diagram přihrádky](media/binflow.png "BinFlow")
 
-## See Also
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Správa skladu](warehouse-manage-warehouse.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa montáže](assembly-assemble-items.md)  
+[Design Details: Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

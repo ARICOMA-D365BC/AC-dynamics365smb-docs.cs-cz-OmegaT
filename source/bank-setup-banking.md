@@ -1,36 +1,31 @@
 ---
-title: Set Up Banking| Microsoft Docs
-description: You use bank account cards to keep track of your bank accounts and set up bank feeds, such as Yodlee, to exchange data.
+title: Nastavení bankovnictví | Microsoft Docs
+description: 'Pomocí karet bankovních účtů sledujte své bankovní účty a nastavujete bankovní zdroje, například Yodlee, k výměně dat.'
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
-
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: Yodlee, feed, stream, data exchange, AMC, link
-ms.date: 10/01/2020
-ms.author: edupont
-
+ms.search.keywords: 'Yodlee, feed, stream, data exchange, AMC, link'
+ms.date: 10/01/2018
+ms.author: sgroespe
 ---
-# Setting Up Banking
-Using bank account cards, you can keep track of all your bank accounts, in any currency. After you have set up the bank accounts, you can also use the check printing option.
+# <a name="setting-up-banking"></a>Nastavení bankovnictví
+Pomocí karet bankovních účtů můžete sledovat všechny své bankovní účty v libovolné měně. Po nastavení bankovních účtů můžete použít také možnost kontroly tisku.
 
-To use electronic banking services to import bank statements and  export payments, you must set up and enable the involved services.
+Chcete-li používat služby elektronického bankovnictví k importu bankovních výpisů a exportů plateb, musíte nastavit a povolit příslušné služby.
 
-| To | See |
+| K | Viz |
 | --- | --- |
-| Set up bank account cards for each of your bank accounts, so you can keep track of banking transactions. |[Set Up Bank Accounts](bank-how-setup-bank-accounts.md) |
-| Set up an external service that enables you to import bank statements as bank feeds for payment application and bank reconciliation. |[Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md) |
-| Set up an external service that enables you to export your payments to the bank for processing  and import bank statements as bank files for payment application and bank reconciliation. |[Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md) |
+| Nastavení karet bankovních účtů pro každý z vašich bankovních účtů, abyste mohli sledovat bankovní transakce. |[Nastavení bankovních účtů](bank-how-setup-bank-accounts.md) |
+| Nastavte externí službu, která umožňuje importovat bankovní výpisy jako bankovní prostředky pro účely platby a bankovního odsouhlasení. |[Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md) |
+| Nastavte externí službu, která umožňuje exportovat platby do banky za účelem zpracování a importu bankovních výpisů, jakožto bankovních souborů pro účely platby a bankovního odsouhlasení. |[Nastavení služby převodu bankovních dat](bank-how-setup-bank-data-conversion-service.md) |
 
-## See Also
-[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
-[Managing Receivables](receivables-manage-receivables.md)  
-[Managing Payables](payables-manage-payables.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## <a name="see-also"></a>Viz také
+[Správa bankovních účtů](bank-manage-bank-accounts.md)  
+[Správa pohledávek](receivables-manage-receivables.md)  
+[Správa závazků](payables-manage-payables.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

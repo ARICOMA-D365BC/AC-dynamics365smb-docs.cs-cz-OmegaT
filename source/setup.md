@@ -1,77 +1,73 @@
 ---
-title: Overview of Tasks to Set Up Business Central
-description: Outlines tasks to set up, initialize, and configure Business Central to suit your needs.
-author: edupont04
+title: Přehled úloh pro nastavení Business Central | Microsoft Docs
+description: 'Popisuje úlohy pro nastavení, inicializaci a konfiguraci aplikace Business Central tak, aby vyhovovala vašim potřebám.'
+author: ZdenekBicek
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: configure, initialize
-ms.date: 01/18/2021
+ms.search.keywords: 'configure, initialize'
+ms.date: 01/17/2020
+ms.reviewer: v-zdbice
 ms.author: edupont
-
 ---
-# Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]
+# Nastavení [!INCLUDE[d365fin](includes/d365fin_md.md)]
 
-[!INCLUDE[prod_short](includes/prod_short.md)] includes standard configurations for most business processes, but you can change the configuration to suit the needs of your organization.
+[!INCLUDE[d365fin](includes/d365fin_md.md)]obsahuje standardní konfigurace pro většinu podnikových procesů, můžete však změnit konfiguraci tak, aby vyhovovala potřebám společnosti.
 
-For example, your chart of accounts is prefilled with a number of posting accounts ready for use. You can, of course, change the chart of accounts to suit your needs. For more information, see [Finance](finance.md).
+Například vaše účetní osnova je předvyplněna řadou finančních účtů, které jsou připraveny k použití. Účetní osnovu si můžete samozřejmě změnit tak, aby vyhovovala vašim potřebám. Pro více informací navštivte sekci [Finance](finance.md)
 
-From the ![Sprocket icon to open the Settings menu](media/ui-experience/settings_icon_small.png) menu, you can access assisted setup guides that help you configure certain scenarios and add features to [!INCLUDE[prod_short](includes/prod_short.md)]. For information about how to access all assisted and manual setup pages, see [Getting Ready for Doing Business](ui-get-ready-business.md).
-
-Some functionality, either general or for specific business processes, can be set up manually in addition to the assisted setup guide. The following lists some of functionality that can you can set up manually.
-
-| To | See |
-| --- | --- |
-| Set up payment methods, currencies, and the chart of accounts, and define rules and defaults for managing financial transactions. |[Setting Up Finance](finance-setup-finance.md) |
-| Set up your own and your vendors' bank accounts and enable services for importing and exporting bank files. |[Setting Up Banking](bank-setup-banking.md) |
-| Configure the rules and values that define your company's sales policies, register new customers, and set up how you communicate with customers. |[Setting Up Sales](sales-setup-sales.md) |
-| Configure the rules and values that define your company's purchasing policies, register new vendors, and prioritize your vendors for payment processing. |[Setting Up Purchasing](purchasing-setup-purchasing.md) |
-| Configure the rules and values that define the company's inventory policies, set up locations if you keep inventory in multiple warehouses, and categorize your items to improve searching and sorting . |[Setting Up Inventory](inventory-setup-inventory.md) |
-|Specify default reports to be used for different document types.|[Report Selection in Business Central](across-report-selections.md)|
-| Set up resources, time sheets, and jobs to manage projects. |[Setting Up Project Management](projects-setup-projects.md) |
-| Configure how to insure, maintain, and depreciate fixed assets, and how you record the costs of fixed assets in your company books. |[Setting Up Fixed Assets](fa-setup.md) |
-|Define the general rules and values for warehouse processes and the specific handling at each location.|[Setting Up Warehouse Management](warehouse-setup-warehouse.md)|
-|Prepare production BOMs and routings to define how end items are produced, and prepare machine or work centers to perform the required operations.|[Setting Up Manufacturing](production-configure-production-processes.md)|
-|Establish standard services, symptoms, and fault codes and set up the service items, resources, and documentation needed to provide service to your customers.|[Setting Up Service Management](service-setup-service.md)|
-|Read best practices for setting items up for up inventory costing and supply planning.|[Setting Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)|
-|Improve the quality of implementation and shorten deployment time by using a toolset for setting up a new company using wizards, templates, worksheets, and customer questionnaires.|[Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)|
-|Transfer customers, vendors, inventory, and bank accounts information from another system into [!INCLUDE[prod_short](includes/prod_short.md)]|[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md).|
-|Use Business Central Outlook add-ins to see financial data related to customers and vendors or create and send financial documents, such as quotes and invoices.|[Using Business Central as Your Business Inbox in Outlook](admin-outlook.md)|
-|Get insights into your Business Central data with Power BI and the Business Central content packs.|[Enabling Your Business Data for Power BI](admin-powerbi.md)|
-|Use your Business Central data as part of a workflow in Power Automate.|[Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md)|
-|Make your Business Central data available as a data source in Power Apps.|[Connecting to Your Business Central Data to Build a Business App Using Power Apps](across-how-use-financials-data-source-powerapps.md)|
-|Use dedicated Quickbooks migration guides.|[Changing from a QuickBooks App to Business Central](across-quickbooks-to-business-edition.md)|
-|Access your Business Central data from your mobile device.|[Getting Business Central on Your Mobile Device](install-mobile-app.md)|
-|Do bulk invoicing of appointments created in Bookings.|[Bulk Invoicing for Microsoft Bookings](finance-bookings.md)|
-|Set up an SMTP server to enable e-mail communication in and out of [!INCLUDE[prod_short](includes/prod_short.md)]| [Set Up Email Manually or Using the Assisted Setup](admin-how-setup-email.md)|
-| Set up unique identification codes for records, such as cards, documents, and journal lines, to track them in the system. |[Create Number Series](ui-create-number-series.md) |
-|Set up and assign a base calendar to your company and its business partners, such as customers, vendors, or locations. Delivery and receipt dates on future sales order, purchase order, transfer order, and production order lines are then calculated according to the calendar's specified working days.|[Set Up Base Calendars](across-how-to-assign-base-calendars.md)|
-
-Some areas require you to be an administrator in your [!INCLUDE[prod_short](includes/prod_short.md)] subscription. For more information, see [Administration](admin-setup-and-administration.md).  
+Z centra rolí můžete získat přístup k průvodcům asistovaným nastavením, které vám pomohou nakonfigurovat určité scénáře a přidat funkce do aplikace [!INCLUDE[d365fin](includes/d365fin_md.md)]. Informace o tom, jak získat přístup ke všem stránkám asistovaného a manuálního nastavení, naleznete v části [Příprava na podnikání](ui-get-ready-business.md).
 
 > [!NOTE]
-> As an administrator, you can set up a new company in [!INCLUDE[prod_short](includes/prod_short.md)] with RapidStart Services, which is a tool designed to shorten deployment times, improve quality of implementation, introduce a repeatable approach to implementations, and enhance productivity by automating and simplifying recurring tasks. For more information, see [Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md).
+> Novou firmu můžete vytvořit v [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí služby RapidStart Services, což je nástroj navržený pro zkrácení doby nasazení, zlepšení kvality implementace, zavedení opakovatelných přístupů k implementacím a zvýšení produktivity automatizací a zjednodušením opakovaných úloh. Pro více informací navštivte [Nastavení společnosti pomocí RapidStart Services](admin-set-up-a-company-with-rapidstart.md)
 
-## See Also
+Některé funkce, buď obecné, nebo specifické pro určité obchodní procesy, mohou být kromě asistovaného nastavení nastaveny ručně. V následujícím seznamu jsou uvedeny některé funkcionality, které lze nastavit ručně.
 
-[Administration](admin-setup-and-administration.md)  
+| Funkce | Odkaz |
+| --- | --- |
+| Nastavení způsobů plateb, měn, účetní osnovy, definování pravidel a výchozích hodnot pro správu finančních transakcí. |[Nastavení financí](finance-setup-finance.md) |
+| Nastavení bankovních účtů společnosti a Vašich dodavatelů a povolení služeb pro import a export bankovních souborů |[Nastavení bankovnictví](bank-setup-banking.md) |
+| Konfigurace pravidel a hodnot definujících prodejní procesy společnosti, evidence nových zákazníků a nastavení způsobu komunikace se zákazníky. |[Nastavení prodeje](sales-setup-sales.md) |
+| Konfigurace pravidel a hodnot definujících nákupní procesy vaší společnosti, evidence nových dodavatelů a nastavení priorit dodavatelů pro zpracování plateb. |[Nastavení nákupu](purchasing-setup-purchasing.md) |
+| Konfigurace pravidel a hodnot definujících skladové procesy společnosti, nastavení skladových lokací, pokud udržujete zásoby ve více skladech, a kategorizace zboží pro lepší vyhledávání a třídění. |[Nastavení zásob](inventory-setup-inventory.md) |
+| Nastavení zdrojů, pracovních výkazů a úloh pro správu projektů. |[Nastavení správy projektů](projects-setup-projects.md) |
+| Konfigurace způsobu pojištění, údržby a odepisování dlouhodobého majetku a způsobu zaznamenání nákladů na dlouhodobý majetek v odpisových knihách společnosti. |[Nastavení dlouhodobého majetku](fa-setup.md) |
+|Definice pravidel a hodnot pro skladové procesy a specifické zpracování v každé lokaci.|[Nastavení správy skladů](warehouse-setup-warehouse.md)|
+|Příprava výrobních kusovníků a TNG postupů pro definování způsobu výroby zboží a příprava strojních nebo pracovních center k provedení požadovaných operací.|[Nastavení výroby](production-configure-production-processes.md)|
+|Definice standardních služeb, příznaky a kódy poruch a nastavení předmětů servisu, zdrojů a dokumentace potřebné k poskytování servisních služeb zákazníkům.|[Nastavení správy servisu](service-setup-service.md)|
+|Informace o doporučených postupech pro nastavení zboží pro správné oceňování zásob a plánování dodávek.|[Nastavení složitých oblastí aplikací pomocí doporučených postupů](set-up-complex-application-areas-using-best-practices.md)|
+|Zlepšení kvality implementace a zkrácení doby nasazení pomocí sady nástrojů pro založení nové společnosti pomocí průvodců, šablon, pracovních listů a dotazníků zákazníků.|[Nastavení společnosti pomocí služeb RapidStart](admin-set-up-a-company-with-rapidstart.md)|
+|Přenesení informace o zákaznících, dodavatelích, zásobách a bankovních účtech z jiného systému do [!INCLUDE[d365fin](includes/d365fin_md.md)]|[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md).|
+|Použití doplňku aplikace [!INCLUDE[d365fin](includes/d365fin_md.md)]pro Outlook můžete zobrazit finanční data týkající se zákazníků a dodavatelů nebo vytvářet a odesílat obchodní doklady, jako jsou nabídky a faktury.|[Použití aplikace Business Central jako obchodní složky v aplikaci Outlook](admin-outlook.md)|
+|Získejte informace o datech [!INCLUDE[d365fin](includes/d365fin_md.md)] pomocí Power BI a balíčků obsahu z Business Central.|[Povolení podnikových dat pro Power BI](admin-powerbi.md)|
+|Použití dat z [!INCLUDE[d365fin](includes/d365fin_md.md)]  jako součást Workflow v Power Automate.|[Použití aplikace Business Central v automatickém workflow](across-how-use-financials-data-source-flow.md)|
+|Zpřístupnění dat z [!INCLUDE[d365fin](includes/d365fin_md.md)] jako zdroje dat v PowerApps.|[Připojení k Business Central datům pro vytvoření obchodní aplikace pomocí PowerApps](across-how-use-financials-data-source-powerapps.md)|
+|Použití připraveného průvodce migrací Quickbooks.|[Změna z aplikace QuickBooks na Business Central](across-quickbooks-to-business-edition.md)|
+|Přístup k datům Business Central z mobilního zařízení.|[Použití Business Central na mobilním zařízení](install-mobile-app.md)|
+|Hromadné fakturace událostí vytvořených v Bookings|[Hromadná fakturace pro Microsoft Bookings](finance-bookings.md)|
+|Nastavení SMTP serveru pro umožnění e-mailové komunikace z a do [!INCLUDE[d365fin](includes/d365fin_md.md)]| [Nastavení e-mailu pomocí manuálního nebo asistovaného nastavení](admin-how-setup-email.md)|
+|Nastavení jedinečných identifikačních kódů pro záznamy, jako jsou karty, doklady a řádky deníků, k jejich sledování v systému.|[Vytváření číselných řad](ui-create-number-series.md) |
+|Nastavení a přiřazení základního kalendáře společnosti a jejím obchodním partnerům, například zákazníkům, dodavatelům nebo lokacím. Termíny dodání a příjmu budoucích prodejních objednávek, nákupních objednávek,  objednávek transferu a výrobních zakázek se pak počítají podle pracovních dnů definovaných kalendářem.|[Nastavení základních kalendářů](across-how-to-assign-base-calendars.md)|  
+
+Některé oblasti vyžadují, abyste byli správcem [!INCLUDE[d365fin](includes/d365fin_md.md)]  ve vašem předplatném. Pro více informací navštivte [Administrace](admin-setup-and-administration.md)  
+
+## Viz také
+
+[Administrace](admin-setup-and-administration.md)  
 [Finance](finance.md)  
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Project Management](projects-manage-projects.md)  
-[Fixed Assets](fa-manage.md)  
-[Assembly Management](assembly-assemble-items.md)  
-[Manufacturing](production-manage-manufacturing.md)  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md)  
-[Getting Started](product-get-started.md)  
+[Prodej](sales-manage-sales.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Správa projektů](projects-manage-projects.md)  
+[Dlouhodobý majetek](fa-manage.md)  
+[Správa montáží](assembly-assemble-items.md)  
+[Výroba](production-manage-manufacturing.md)  
+[Správa skladů](warehouse-manage-warehouse.md)  
+[Práce s[!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)  
+[Vytváření nových společností v [!INCLUDE[d365fin](includes/d365fin_md.md)]](about-new-company.md)  
+[Začínáme](product-get-started.md)  
 
-## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## [!INCLUDE[d365fin](includes/free_trial_md.md)]  

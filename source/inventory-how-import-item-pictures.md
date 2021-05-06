@@ -5,52 +5,49 @@ documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
-ms.topic: conceptual
+ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: product, image
-ms.date: 10/01/2020
-ms.author: edupont
+ms.date: 10/01/2019
+ms.author: sgroespe
 
 ---
-# Import Multiple Item Pictures
-You can import multiple item pictures in one go. Simply name your picture files with names corresponding to your item numbers, compress them to a ZIP file, and then use the **Import Item Pictures** page to manage which item pictures to import.
+# Hromadný import obrázků zboží
+Můžete hromadně importovat obrázky zboží. Jednoduše pojmenujte soubory obrázků názvy odpovídajícími číslům zboží, zkomprimujte je do souboru ZIP a potom pomocí stránky **Importovat obrázky zboží** určete, které obrázky zboží chcete importovat.
 
-All common file formats are supported.
+Podporovány jsou všechny běžné formáty souborů.
 
-## To name picture files by the item names and prepare the ZIP file
-1. At the location where your item pictures are stored, name each files according to the number of the related item. For example:
+## Pojmenování souborů obrázků podle názvů zboží a příprava ZIP souboru
+1. V místě, kde jsou obrázky zboží uloženy, pojmenujte každý soubor podle čísla souvisejícího zboží. Například:
 
-    |Item No.|File Name|
-    |-|-|
-    |1000|1000.bmp|
-    |1001|1001.bmp|
-    |1002|1002.bmp|
+   |Číslo zboží|Název souboru|
+   |-|-|
+   |1000|1000.bmp|
+   |1001|1001.bmp|
+   |1002|1002.bmp|
 
-2. Collect all the files in a ZIP file. For example, in Windows Explorer, select the files, and then choose **Send to**, **Compressed (zipped) folder**.     
+2. Seskupte všechny soubory do jednoho souboru ZIP. Například v Průzkumníkovi Windows vyberte soubory a poté kliknete pravým tlačítkem myši a zvolíte **Odeslat do** a dále **Komprimovaná složka (metoda ZIP)**.
 
-## To import item pictures
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Setup**, and then choose the related link.
-2. Choose the **Import Item Pictures** action.
-3. In the **Select a ZIP file** field, select the relevant ZIP folder, and then choose the **Open** button.
+## Import obrázků zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení zásob** a vybrat související odkaz.
+2. Vyberte funkci **Importovat obrázky zboží**.
+3. V poli **vyberte soubor ZIP**, vyberte příslušnou ZIP složku, a potí vyberte tlačítko **Otevřít**.
 
-    A line for each item and picture is created on the **Import Item Pictures** page.
+   Na stránce **Importovat obrázky zboží** je vytvořen řádek pro každé zboží a obrázek.
 
-    > [!NOTE]
-    > For item cards that already have a picture, the **Picture Already Exists** check box is selected. If you do not want any existing pictures to be replaced, deselect the **Replace Pictures** check box. If you do not want individual existing pictures to be replaced, delete the lines in question.
+   > [!NOTE]
+   > U karet zboží, kde již **Obrázky existují** je zaškrtnuto políčko. Pokud nechcete nahrazovat žádné stávající obrázky, zrušte zaškrtnutí políčka **Nahradit obrázky**. Pokud nechcete, aby byly jednotlivé existující obrázky nahrazeny, odstraňte dotyčné řádky.
 
-3. Choose the **Import Pictures** action.
+3. Zvolte tlačítko **Importovat obrázky**.
 
-The **Import Status** field is updated to show if the picture import was skipped or completed.       
+Pole **Stav importu** je aktualizováno, aby ukazovalo, zda byl import obrázku přeskočen nebo dokončen.
 
-## See Also
-[Register New Items](inventory-how-register-new-items.md)  
-[Create Number Series](ui-create-number-series.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+## Viz také
+[Evidence nového zboží](inventory-how-register-new-items.md)  
+[Vytváření číselných řad](ui-create-number-series.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[nakupování](purchasing-manage-purchasing.md)  
+[Prodej](sales-manage-sales.md)  
+[Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
