@@ -4260,6 +4260,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>&lt;x1/&gt;&lt;x2/&gt;Rozšíření Účetní portál pro Business Central</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112847Z" creationid="Janousek" creationdate="20210513T112847Z">
+        <seg>&lt;x1/&gt;&lt;x2/&gt;Rozšíření Účetní portál pro Business Central</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>&lt;x1/&gt;Actual cost versus expected cost&lt;x2/&gt;Actual cost versus expected cost&lt;x3/&gt;</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210503T143408Z" creationid="sunavcova" creationdate="20210503T143408Z">
@@ -10396,6 +10404,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T105824Z" creationid="Janousek" creationdate="20210513T105824Z">
         <seg>Design Details: Rounding</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Design Details: Supply Planning</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112915Z" creationid="Janousek" creationdate="20210513T112915Z">
+        <seg>[přibližně]&lt;g1&gt;Detaily návrhu: Plánování dodávek&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
