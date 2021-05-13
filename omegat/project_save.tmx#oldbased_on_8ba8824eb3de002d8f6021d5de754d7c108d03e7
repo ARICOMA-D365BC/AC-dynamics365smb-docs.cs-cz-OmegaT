@@ -150,22 +150,6 @@
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>(a future date)</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070632Z" creationid="sunavcova" creationdate="20210511T070632Z">
-        <seg>(budoucí datum)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>(today's date)</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132005Z" creationid="sunavcova" creationdate="20210510T132005Z">
-        <seg>(dnešní datum)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>(today’s date)</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210303T072417Z" creationid="sunavcova" creationdate="20210303T072417Z">
@@ -862,26 +846,10 @@
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>400</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132019Z" creationid="sunavcova" creationdate="20210510T132019Z">
-        <seg>400</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>4000</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210303T070412Z" creationid="sunavcova" creationdate="20210303T070412Z">
         <seg>4000</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>40255</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070550Z" creationid="sunavcova" creationdate="20210511T070550Z">
-        <seg>40255</seg>
       </tuv>
     </tu>
     <tu>
@@ -898,14 +866,6 @@
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210315T153921Z" creationid="sunavcova" creationdate="20210315T153921Z">
         <seg>50</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>5000</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070551Z" creationid="sunavcova" creationdate="20210511T070551Z">
-        <seg>5000</seg>
       </tuv>
     </tu>
     <tu>
@@ -1038,14 +998,6 @@
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>80201 (Graphic program)</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132023Z" creationid="sunavcova" creationdate="20210510T132023Z">
-        <seg>80201 (grafický program)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>80203</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T192040Z" creationid="sunavcova" creationdate="20210424T192040Z">
@@ -1066,14 +1018,6 @@
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T193416Z" creationid="sunavcova" creationdate="20210424T193416Z">
         <seg>80210</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>8430 (Travel)</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132018Z" creationid="sunavcova" creationdate="20210510T132018Z">
-        <seg>8430 (cestování)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1272,14 +1216,6 @@
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>&lt;g1&gt;Billable&lt;/g1&gt;: Invoiced, but not added to the schedule.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T131856Z" creationid="sunavcova" creationdate="20210510T131856Z">
-        <seg>&lt;g1&gt;Fakturovatelné&lt;/g1&gt;: Fakturováno, ale není přidáno do plánu.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>&lt;g1&gt;Bin Code&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T192004Z" creationid="sunavcova" creationdate="20210424T192004Z">
@@ -1292,14 +1228,6 @@
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T205748Z" creationid="sunavcova" creationdate="20210301T205654Z">
         <seg>&lt;g1&gt;Plán i Fakturovatelné&lt;/g1&gt;: Fakturováno a přidáno do plánu.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>&lt;g1&gt;Budget&lt;/g1&gt;: Added to the schedule, but not invoiced.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T131709Z" creationid="sunavcova" creationdate="20210510T131709Z">
-        <seg>&lt;g1&gt;Rozpočet&lt;/g1&gt;: Přidáno do plánu, ale není fakturováno.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2122,8 +2050,8 @@
       <tuv lang="en-US">
         <seg>&lt;g1&gt;Job No.&lt;/g1&gt;: &lt;g2&gt;Guildford&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075952Z" creationid="sunavcova" creationdate="20210301T222339Z">
-        <seg>&lt;g1&gt;Číslo projektu&lt;/g1&gt;: &lt;g2&gt;AB&lt;/g2&gt;</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T222339Z" creationid="sunavcova" creationdate="20210301T222339Z">
+        <seg>&lt;g1&gt;Číslo projektu&lt;/g1&gt;: &lt;g2&gt;Guildford&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2196,14 +2124,6 @@
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T205910Z" creationid="sunavcova" creationdate="20210301T205910Z">
         <seg>&lt;g1&gt;Typ řádku&lt;/g1&gt;: &lt;g2&gt;Plán i Fakturovatelné&lt;/g2&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>&lt;g1&gt;Line Type&lt;/g1&gt;: &lt;g2&gt;Budget&lt;/g2&gt;</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132155Z" creationid="sunavcova" creationdate="20210510T132155Z">
-        <seg>&lt;g1&gt;Typ řádku&lt;/g1&gt;: &lt;g2&gt;Rozpočet&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2396,14 +2316,6 @@
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210225T082408Z" creationid="sunavcova" creationdate="20210225T082408Z">
         <seg>&lt;g1&gt;Číslo&lt;/g1&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>&lt;g1&gt;No.&lt;/g1&gt;: &lt;g2&gt;40255&lt;/g2&gt;</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132700Z" creationid="sunavcova" creationdate="20210510T132700Z">
-        <seg>&lt;g1&gt;Číslo&lt;/g1&gt;: &lt;g2&gt;40255&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2692,8 +2604,8 @@
       <tuv lang="en-US">
         <seg>&lt;g1&gt;Put Items Away with Warehouse Put-aways&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095258Z" creationid="sunavcova" creationdate="20210424T144517Z">
-        <seg>&lt;g1&gt;Zaskladnění zboží pomocí zaskladnění&lt;/g1&gt;</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144517Z" creationid="sunavcova" creationdate="20210424T144517Z">
+        <seg>&lt;g1&gt;Zaskladnění zboží pomocí zaskladněními&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3184,8 +3096,8 @@
       <tuv lang="en-US">
         <seg>&lt;g1&gt;To Job No.&lt;/g1&gt;: &lt;g2&gt;GuildfordSetting up 10 Conference Rooms&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T080458Z" creationid="sunavcova" creationdate="20210302T073002Z">
-        <seg>&lt;g1&gt;Projekt č.&lt;/g1&gt;: &lt;g2&gt;AB Nastavení 10 konferenčních místností&lt;/g2&gt;</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T073002Z" creationid="sunavcova" creationdate="20210302T073002Z">
+        <seg>&lt;g1&gt;Projekt č.&lt;/g1&gt;: &lt;g2&gt;Guildford Nastavení 10 konferenčních místností&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3943,9 +3855,9 @@ Pouze v instalacích SSS le možné pracovat s více MJ.</seg>
         <seg>&lt;x1/&gt;!NOTE&lt;x2/&gt;&lt;x3/&gt;
 Kit A is typically supplied by assembly to stock and therefore has a reordering policy to make it part of general supply planning.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093103Z" creationid="sunavcova" creationdate="20210424T193101Z">
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T193101Z" creationid="sunavcova" creationdate="20210424T193101Z">
         <seg>&lt;x1/&gt;!NOTE&lt;x2/&gt;&lt;x3/&gt;
-Sada A je obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.</seg>
+Sada A se obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5188,8 +5100,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Accounting for usage in a job set up for payment by installments.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T071823Z" creationid="sunavcova" creationdate="20210301T132605Z">
-        <seg>Účtování o využití v projektu nastaveném pro platbu na splátky.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T132605Z" creationid="sunavcova" creationdate="20210301T132605Z">
+        <seg>Účtování o využití v projekte nastaveném pro platbu na splátky.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6946,14 +6858,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Billable</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070548Z" creationid="sunavcova" creationdate="20210511T070548Z">
-        <seg>Fakturovatelné</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Bin Ranking</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210509T211028Z" creationid="sunavcova" creationdate="20210509T211028Z">
@@ -7042,14 +6946,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Both Budget and Billable</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132002Z" creationid="sunavcova" creationdate="20210510T132002Z">
-        <seg>Rozpočet i fakturovatelné</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Both demand and supply exist =&gt; questions should be asked and answered before the system can ensure that demand will be met and supply is sufficient.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="Franek" changedate="20201228T151358Z" creationid="Franek" creationdate="20201228T124446Z">
@@ -7078,14 +6974,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210225T092745Z" creationid="sunavcova" creationdate="20210225T092745Z">
         <seg>Přineste komponenty zboží do interních operací v základních konfiguracích skladu, jak je požadováno původním dokladem pro tyto operace.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Budget</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070609Z" creationid="sunavcova" creationdate="20210511T070609Z">
-        <seg>Rozpočet</seg>
       </tuv>
     </tu>
     <tu>
@@ -7190,14 +7078,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210426T100934Z" creationid="sunavcova" creationdate="20210426T100934Z">
         <seg>Při použití metody ocenění nastavené jako standardní je vždy založena na pevné pořizovací ceně.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>By using the &lt;g1&gt;Budget&lt;/g1&gt; line type, there are updates to the scheduled costs and prices, but no updates to the contract costs and prices that are invoiced to the customer.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132220Z" creationid="sunavcova" creationdate="20210510T132220Z">
-        <seg>Použitím typu řádku &lt;g1&gt;Rozpočet&lt;/g1&gt; existují aktualizace plánovaných nákladů a cen, ale žádné aktualizace smluvních nákladů a cen, které jsou fakturovány zákazníkovi.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7570,42 +7450,10 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Choose &lt;g3&gt;DrillDown&lt;/g3&gt; to view the information.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132539Z" creationid="sunavcova" creationdate="20210510T132539Z">
-        <seg>Chcete-li zobrazit informace, zvolte &lt;g3&gt;Přejít k podrobnostem&lt;/g3&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Choose &lt;g4&gt;Yes&lt;/g4&gt; to confirm.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T080139Z" creationid="sunavcova" creationdate="20210302T080139Z">
         <seg>Potvrďte výběrem &lt;g4&gt;Ano&lt;/g4&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Choose task 1000, and then choose the &lt;g1&gt;Job Planning Lines&lt;/g1&gt; action.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070543Z" creationid="sunavcova" creationdate="20210511T070543Z">
-        <seg>Vyberte úkol 1000 a poté vyberte akci &lt;g1&gt;Řádky plánování projektu&lt;/g1&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Choose task 2000, and then choose the &lt;g1&gt;Job Planning Lines&lt;/g1&gt; action.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070604Z" creationid="sunavcova" creationdate="20210511T070604Z">
-        <seg>Vyberte úkol 2000 a poté vyberte akci &lt;g1&gt;Řádky plánování projektu&lt;/g1&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Choose task 32000, and then choose the &lt;g1&gt;Job Planning Lines&lt;/g1&gt; action.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070623Z" creationid="sunavcova" creationdate="20210511T070623Z">
-        <seg>Vyberte úkol 32000 a poté vyberte akci &lt;g1&gt;Řádky plánování projektu&lt;/g1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7676,8 +7524,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Choose the &lt;g1&gt;Base Unit of Measure&lt;/g1&gt; field, and choose the &lt;g2&gt;New&lt;/g2&gt; action to open the &lt;g3&gt;Resource Unit of Measure&lt;/g3&gt; page.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T072248Z" creationid="sunavcova" creationdate="20210301T134817Z">
-        <seg>Vyberte pole &lt;g1&gt;Základní měrná jednotka&lt;/g1&gt; a kliknutím na akci &lt;g2&gt;Nový&lt;/g2&gt; otevřete stránku &lt;g3&gt;Měrná jednotka zdroje&lt;/g3&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T134817Z" creationid="sunavcova" creationdate="20210301T134817Z">
+        <seg>Vyberte pole &lt;g1&gt;Základní měrná jednotka&lt;/g1&gt; a kliknutím na akci &lt;g2&gt;Nový&lt;/g2&gt; a otevřete stránku &lt;g3&gt;Měrná jednotka zdroje&lt;/g3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7860,8 +7708,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Choose the &lt;g1&gt;Item No.&lt;/g1&gt; field, and then choose the &lt;g2&gt;Advanced&lt;/g2&gt; action.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T083414Z" creationid="sunavcova" creationdate="20210415T162021Z">
-        <seg>Vyberte pole &lt;g1&gt;Číslo zboží&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Rozšíření&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T162021Z" creationid="sunavcova" creationdate="20210415T162021Z">
+        <seg>Vyberte pole &lt;g1&gt;Číslo zboží&lt;/g1&gt;a poté vyberte akci &lt;g2&gt;Rozšíření&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8068,8 +7916,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Choose the &lt;g1&gt;OK&lt;/g1&gt; button to create the first new item card, 2000.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T094124Z" creationid="sunavcova" creationdate="20210423T081143Z">
-        <seg>Zvolte tlačítko &lt;g1&gt;OK&lt;/g1&gt; a vytvořte první novou kartu položky, 2000.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210423T081143Z" creationid="sunavcova" creationdate="20210423T081143Z">
+        <seg>Zvolte tlačítko &lt;g1&gt;OK&lt;/g1&gt; a vytvořte první novou kartu položky, 2000..</seg>
       </tuv>
     </tu>
     <tu>
@@ -8764,8 +8612,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Choose the first demand line, with item &lt;g1&gt;LSU-15&lt;/g1&gt;, and then choose the &lt;g2&gt;Show Document&lt;/g2&gt; action.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T090153Z" creationid="sunavcova" creationdate="20210415T085626Z">
-        <seg>Vyberte první řádek poptávky se zbožím &lt;g1&gt;LSU-15&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Zobrazit doklad&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T085626Z" creationid="sunavcova" creationdate="20210415T085626Z">
+        <seg>Vyberte první řádek poptávky se zbožím &lt;g1&gt;LSU-15&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Zobrazit doklad&lt;/g2&gt; action.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9604,8 +9452,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Create one sales order for 10 bicycles at EAST location.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T090118Z" creationid="sunavcova" creationdate="20210415T082745Z">
-        <seg>Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokaci EAST.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T082745Z" creationid="sunavcova" creationdate="20210415T082745Z">
+        <seg>Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokalitu EAST.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9614,14 +9462,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="Franek" changedate="20201228T150147Z" creationid="Franek" creationdate="20201228T150147Z">
         <seg>Vytvořte pouze řádek plánování s aktuálním datem splatnosti a množstvím, ale bez technologického postupu a komponent.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Create planning lines with the following information:</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T131906Z" creationid="sunavcova" creationdate="20210510T131906Z">
-        <seg>Vytvořte řádek plánování s následujícími informacemi:</seg>
       </tuv>
     </tu>
     <tu>
@@ -9644,8 +9484,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Create sample data by using the steps in the following section.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T072013Z" creationid="sunavcova" creationdate="20210301T132648Z">
-        <seg>Vytvoření ukázkových dat pomocí kroků v následující části.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T132648Z" creationid="sunavcova" creationdate="20210301T132648Z">
+        <seg>Vytvořte ukázková data pomocí kroků v následující části.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9660,8 +9500,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Create stockkeeping units (SKUs) for the touring bike and a selection of its components, item numbers 1001 to 1300.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082229Z" creationid="sunavcova" creationdate="20210415T142121Z">
-        <seg>Vytvořte skladové jednotky (SKJ) pro cestovní kolo a výběr jeho komponentů, čísla položek 1001 až 1300.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T142121Z" creationid="sunavcova" creationdate="20210415T142121Z">
+        <seg>Vytvořte skladové jednotky (SKU) pro cestovní kolo a výběr jeho komponentů, čísla položek 1001 až 1300.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10370,14 +10210,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Design Details: Warehouse Overview</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210513T095438Z" creationid="sunavcova" creationdate="20210513T095438Z">
-        <seg>Design Details: Warehouse Overview</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Design Details: Warehouse Setup</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210507T082256Z" creationid="sunavcova" creationdate="20210507T082218Z">
@@ -10676,8 +10508,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>EAST</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082339Z" creationid="Franek" creationdate="20210301T162824Z">
-        <seg>EAST</seg>
+      <tuv lang="cs-CZ" changeid="Franek" changedate="20210301T162824Z" creationid="Franek" creationdate="20210301T162824Z">
+        <seg>VÝCHOD</seg>
       </tuv>
     </tu>
     <tu>
@@ -10894,14 +10726,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210205T115922Z" creationid="sunavcova" creationdate="20210205T115922Z">
         <seg>Zadejte předmět dopisu do pole &lt;g1&gt;Předmět&lt;/g1&gt; v jazyce vybraném pro šablonu.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Enter today's date as the posting date.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132029Z" creationid="sunavcova" creationdate="20210510T132029Z">
-        <seg>Zadejte dnešní datum jako zúčtovací datum.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11372,8 +11196,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Finally, you can select the job that you want to copy to and define whether prices and quantities should be copied as well.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075944Z" creationid="sunavcova" creationdate="20210302T071805Z">
-        <seg>Nakonec můžete vybrat projekt, do kterého chcete kopírovat, a definovat, zda mají být zkopírovány také ceny a množství.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T071805Z" creationid="sunavcova" creationdate="20210302T071805Z">
+        <seg>Nakonec můžete vybrat projekt, do které chcete kopírovat, a definovat, zda mají být zkopírovány také ceny a množství.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11578,14 +11402,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>For each payment task line on the planning lines, the line type is &lt;g1&gt;Billable&lt;/g1&gt;, which means that the customer will be invoiced.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070215Z" creationid="sunavcova" creationdate="20210511T070215Z">
-        <seg>Pro každý řádek platebního úkolu na plánovacích řádcích je typem řádku &lt;g1&gt;Fakturovatelné&lt;/g1&gt;, což znamená, že zákazníkovi bude fakturována.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>For each payment task line on the planning lines, the line type is Contract, which means that the customer will be invoiced.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210303T065542Z" creationid="sunavcova" creationdate="20210303T065542Z">
@@ -11596,8 +11412,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>For each task, the batch job calculates the difference between scheduled usage of items, resources, and general ledger expenses and the actual usage posted in job ledger entries.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T074625Z" creationid="sunavcova" creationdate="20210301T213118Z">
-        <seg>Dávková úloha pro každý úkol vypočítá rozdíl mezi plánovanou spotřebou zboží, zdrojů a částkou výdajů v hlavní knize a skutečnou spotřebou zaúčtovanou v položkách projektu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T213118Z" creationid="sunavcova" creationdate="20210301T213118Z">
+        <seg>Dávková úloha pro každý úkol vypočítá rozdíl mezi plánovanou spotřebu zboží, zdrojů a částku výdajů v hlavní knize a skutečnou spotřebu zaúčtovanou v položkách projektu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12556,8 +12372,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Get immediate access to put-aways that are assigned to you as a warehouse worker.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095238Z" creationid="sunavcova" creationdate="20210424T144947Z">
-        <seg>Získání okamžitého přístupu k zaskladněným položkám, které jsou vám přiřazeny jako skladníkovi.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144947Z" creationid="sunavcova" creationdate="20210424T144947Z">
+        <seg>Získejte okamžitý přístup k zaskladněným položkám, které jsou vám přiřazeny jako skladníkovi.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14060,8 +13876,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>If your location is set up to require both receive and put-away processing, so that you have placed check marks in both the &lt;g1&gt;Require Receive&lt;/g1&gt; and the &lt;g2&gt;Require Put-away&lt;/g2&gt; field on the location card, there is a different process for putting items away.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095056Z" creationid="sunavcova" creationdate="20210424T135720Z">
-        <seg>Pokud je vaše lokace nastavena tak, aby vyžadovala zpracování příjmu i zaskladnění, takže jste zašktrli pole &lt;g1&gt;Vyžadovat příjem&lt;/g1&gt; a &lt;g2&gt;Vyžadovat zaskladnění&lt;/g2&gt; na karte lokace, existuje jiný postup pro zaskladnění zboží.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T135720Z" creationid="sunavcova" creationdate="20210424T135720Z">
+        <seg>Pokud je vaše lokace nastavena tak, aby vyžadovala zpracování příjmu i zaskladnění, takže jste do zašktrli pole &lt;g1&gt;Vyžadovat příjem&lt;/g1&gt; a &lt;g2&gt;Vyžadovat zaskladnění&lt;/g2&gt; na karte lokace, existuje jiný postup pro zaskladnění zboží.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14514,14 +14330,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In the &lt;g1&gt;Budget (Total Cost)&lt;/g1&gt; field, right-click the field, and choose &lt;g2&gt;Drilldown&lt;/g2&gt; again on the &lt;g3&gt;Job Task Lines&lt;/g3&gt; page.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132140Z" creationid="sunavcova" creationdate="20210510T132140Z">
-        <seg>V poli &lt;g1&gt;Rozpočet (Náklady celkem)&lt;/g1&gt; klikněte na toto pole pravým tlačítkem myši a na stránce &lt;g2&gt;Řádky úlohy projektu&lt;/g2&gt; znovu zvolte &lt;g3&gt;Přejít k podrobnostem&lt;/g3&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In the &lt;g1&gt;Code&lt;/g1&gt; field, enter &lt;g2&gt;RESP&lt;/g2&gt;, and in the &lt;g3&gt;Description&lt;/g3&gt; field, enter &lt;g4&gt;Campaign Responses&lt;/g4&gt;.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210205T121818Z" creationid="sunavcova" creationdate="20210205T121818Z">
@@ -14572,8 +14380,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>In the &lt;g1&gt;From-Assembly Bin Code&lt;/g1&gt; field, enter &lt;g2&gt;W-01-0001&lt;/g2&gt;.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T092657Z" creationid="sunavcova" creationdate="20210424T174228Z">
-        <seg>Do pole &lt;g1&gt;Kód přihrádky z montáže&lt;/g1&gt; zadejte &lt;g2&gt;W-01-0001&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T174228Z" creationid="sunavcova" creationdate="20210424T174228Z">
+        <seg>Do pole &lt;g1&gt;kód přihrádky z montáže&lt;/g1&gt; zadejte &lt;g2&gt;W-01-0001&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14894,14 +14702,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T213026Z" creationid="sunavcova" creationdate="20210302T213026Z">
         <seg>V řádcích úloh projektu můžete vytvořit konkrétní řádky věnované platbě ve splátkách.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In the next procedure, the project manager specifies a cost for Tricia's time, sets the price for the required software, and adds in the travel costs that the customer has agreed to pay.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T131639Z" creationid="sunavcova" creationdate="20210510T131639Z">
-        <seg>V dalším postupu projektový manažer specifikuje náklady na čas Tricie, stanoví cenu požadovaného softwaru a přidá cestovní náklady, které zákazník zaplatil.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15340,8 +15140,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Install the CRONUS International Ltd.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T071836Z" creationid="sunavcova" creationdate="20210301T132635Z">
-        <seg>Instalace CRONUS CZ s.r.o.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T132635Z" creationid="sunavcova" creationdate="20210301T132635Z">
+        <seg>Instalace CRONUS International Ltd.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16460,8 +16260,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Like the planning line for item 1251, Axle Back Wheel, this line represents a purchase order for components that are due on the starting date of its produced parent, subassembly item 1250, which in turn is due on 02-03-2014.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082747Z" creationid="sunavcova" creationdate="20210415T145713Z">
-        <seg>Stejně jako plánovací řádek pro položku 1251, Oska zadního kola, představuje tento řádek nákupní objednávku pro komponenty, které jsou splatné k datu zahájení jeho vyrobené nadřazené položky podsestavy 1250, což je splatné 02-03-2014.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T145713Z" creationid="sunavcova" creationdate="20210415T145713Z">
+        <seg>Stejně jako plánovací řádek pro položku 1251, Axle Back Wheel, představuje tento řádek nákupní objednávku pro komponenty, které jsou splatné k datu zahájení jeho vyrobené nadřazené položky podsestavy 1250, což je splatné 02-03-2014.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17284,8 +17084,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Next, purchase racing frames from Coolwood Technologies.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T094405Z" creationid="sunavcova" creationdate="20210423T092612Z">
-        <seg>Dále si zakupte závodní rámy od Mach a spol. v.o.s..</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210423T092612Z" creationid="sunavcova" creationdate="20210423T092612Z">
+        <seg>Dále si zakupte závodní rámy od Coolwood Technologies.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18002,14 +17802,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>On the &lt;g1&gt;Chart of Accounts&lt;/g1&gt; page, select &lt;g2&gt;No. 40255 Job Payment&lt;/g2&gt;, and then choose the &lt;g3&gt;Indent Chart of Accounts&lt;/g3&gt; action.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070128Z" creationid="sunavcova" creationdate="20210511T070128Z">
-        <seg>Na stránce &lt;g1&gt;Účetní osnova&lt;/g1&gt; vyberte &lt;g2&gt;Platba za projekt č. 40255&lt;/g2&gt; a poté vyberte akci &lt;g3&gt;Odsadit účetní osnovu&lt;/g3&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Chart of Accounts&lt;/g1&gt; page, select &lt;g2&gt;No. 6630 Job Payment&lt;/g2&gt;, and then choose the &lt;g3&gt;Indent Chart of Accounts&lt;/g3&gt; action.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T080126Z" creationid="sunavcova" creationdate="20210302T080126Z">
@@ -18028,16 +17820,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Copy Job&lt;/g1&gt; page, you can select the job and task lines that you want to copy.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075638Z" creationid="sunavcova" creationdate="20210302T071442Z">
-        <seg>Na stránce &lt;g1&gt;Kopírovat projekt&lt;/g1&gt; můžete vybrat řádky úloh a úkoly, které chcete kopírovat.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>On the &lt;g1&gt;Create Sales Invoice&lt;/g1&gt; page, set today's date as the posting date, specify &lt;g2&gt;Per Task&lt;/g2&gt;, and choose the &lt;g3&gt;OK&lt;/g3&gt; button to create an invoice with the default information.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070700Z" creationid="sunavcova" creationdate="20210511T070700Z">
-        <seg>Na stránce &lt;g1&gt;Vytvořit prodejní fakturu&lt;/g1&gt; nastavte dnešní datum jako zúčtovací datum, zadejte &lt;g2&gt;Na úkol&lt;/g2&gt; a kliknutím na tlačítko &lt;g3&gt;OK&lt;/g3&gt; pro vytvoření faktury s výchozími informacemi.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T071442Z" creationid="sunavcova" creationdate="20210302T071442Z">
+        <seg>Na stránce &lt;g1&gt;Kopírovat projekt&lt;/g1&gt; můžete vybrat řádky úloh a úkolů, které chcete kopírovat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18068,8 +17852,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Firm Planned Prod.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T084417Z" creationid="sunavcova" creationdate="20210415T103444Z">
-        <seg>Přejděte na stránku &lt;g1&gt;Pevně plánovaná výr.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T103444Z" creationid="sunavcova" creationdate="20210415T103444Z">
+        <seg>Na stránce &lt;g1&gt;Pevně plánovaná výr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18388,8 +18172,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Job Task&lt;/g1&gt; FastTab, enter the following information:</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075309Z" creationid="sunavcova" creationdate="20210301T222849Z">
-        <seg>Na záložce &lt;g1&gt;Úloha projektu&lt;/g1&gt; zadejte následující informace:</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T222849Z" creationid="sunavcova" creationdate="20210301T222849Z">
+        <seg>Na záložce &lt;g1&gt;Úloha projektu&lt;/g1&gt; adejte následující informace:</seg>
       </tuv>
     </tu>
     <tu>
@@ -18412,8 +18196,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Job&lt;/g1&gt; card for the new job, choose the &lt;g2&gt;Job Task Lines&lt;/g2&gt; action.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T073432Z" creationid="sunavcova" creationdate="20210301T204434Z">
-        <seg>Na kartě &lt;g1&gt;Projekt&lt;/g1&gt; zvolte pro nový úkol akci &lt;g2&gt;Řádky úlohy projektu&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T204434Z" creationid="sunavcova" creationdate="20210301T204434Z">
+        <seg>Na kartě &lt;g1&gt;Projekt&lt;/g1&gt; zvolte pro novou úlohu akci &lt;g2&gt;Řádky úlohy projektu&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18442,18 +18226,10 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>On the &lt;g1&gt;Job&lt;/g1&gt; card, in the &lt;g2&gt;Tasks&lt;/g2&gt; section, add job task lines as described in the following table:</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070516Z" creationid="sunavcova" creationdate="20210511T070516Z">
-        <seg>Na kartě &lt;g1&gt;Projekt&lt;/g1&gt; v části &lt;g2&gt;Úlohy&lt;/g2&gt; přidejte řádky úloh, jak je popsáno v následující tabulce:</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Lines&lt;/g1&gt; FastTab, choose &lt;g2&gt;Line&lt;/g2&gt;, and then choose &lt;g3&gt;Assemble to Order&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093215Z" creationid="sunavcova" creationdate="20210424T200734Z">
-        <seg>Na záložce &lt;g1&gt;Řádky&lt;/g1&gt; zvolte &lt;g2&gt;Řádek&lt;/g2&gt; a pak zvolte &lt;g3&gt;Montáž na objednávku&lt;/g3&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T200734Z" creationid="sunavcova" creationdate="20210424T200734Z">
+        <seg>Na záložce &lt;g1&gt;Řádky&lt;/g1&gt; zvolte &lt;g2&gt;Řádek&lt;/g2&gt; a pak zvolte&lt;g3&gt;Montáž na objednávku&lt;/g3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18596,8 +18372,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Order Tracking&lt;/g1&gt; page, choose the &lt;g2&gt;Show&lt;/g2&gt; action.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082716Z" creationid="sunavcova" creationdate="20210415T144637Z">
-        <seg>Na stránce &lt;g1&gt;Sledování zakázky&lt;/g1&gt; vyberte akci &lt;g2&gt;Zobrazit&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T144637Z" creationid="sunavcova" creationdate="20210415T144637Z">
+        <seg>Na stránce &lt;g1&gt;Sledování zakázky&lt;/g1&gt;yberte akci &lt;g2&gt;Zobrazit&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18934,14 +18710,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="pieger" changedate="20201116T163945Z" creationid="pieger" creationdate="20201116T160210Z">
         <seg>Na počáteční účtované prodejní faktuře jsou zaškrtnuta políčka Zrušeno a Zaplaceno.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>On the job card, choose the &lt;g1&gt;Prices&lt;/g1&gt; action, and then choose the &lt;g2&gt;Resource&lt;/g2&gt; action.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070409Z" creationid="sunavcova" creationdate="20210511T070409Z">
-        <seg>Na kartě úlohy vyberte akci &lt;g1&gt;Ceny&lt;/g1&gt; a poté zvolte akci &lt;g2&gt;Zdroj&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -19348,8 +19116,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Open the ATO assembly order for five units of Kit A.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093322Z" creationid="sunavcova" creationdate="20210424T202342Z">
-        <seg>Otevřete montážní zakázku MNO pro pět jednotek sady A.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T202342Z" creationid="sunavcova" creationdate="20210424T202342Z">
+        <seg>Otevřete montážní zakázku MNO pro pět jednotek Ksady A.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20148,8 +19916,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Plan optimized put-away instructions for a number of posted warehouse receipts rather than have warehouse workers act directly on receipts.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095148Z" creationid="sunavcova" creationdate="20210424T144628Z">
-        <seg>Naplánování optimalizovaných pokynů pro zaskladnění pro řadu zaúčtované příjemky ze skladu, nikoli aby pracovníci skladu jednali přímo na příjemkách.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144628Z" creationid="sunavcova" creationdate="20210424T144628Z">
+        <seg>Naplánujte optimalizované pokyny pro zaskladnění pro řadu zaúčtované příjemky ze skladu, nikoli aby pracovníci skladu jednali přímo na příjemkách.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20190,14 +19958,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="Franek" changedate="20201230T164632Z" creationid="Franek" creationdate="20201230T142758Z">
         <seg>Množství řádku plánování = Současné množství nabídky – (Předpokládané zásoby – Úroveň přetečení)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Planning Line Type&lt;/g1&gt;: &lt;g2&gt;Budget + Billable&lt;/g2&gt;</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132652Z" creationid="sunavcova" creationdate="20210510T132652Z">
-        <seg>Typ řádku plánování&lt;/g1&gt;: &lt;g2&gt;Rozpočet + Fakturovatelné&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -20356,8 +20116,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Post the receipt of items directly from the inbound order document and thereby record the put away, because no warehouse configuration exists.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095106Z" creationid="sunavcova" creationdate="20210424T140155Z">
-        <seg>Zaúčtování příjmu zboží přímo z dokladu vstupní objednávky a tím zaznamenání zaskladněného dokladu, protože neexistuje žádná konfigurace skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T140155Z" creationid="sunavcova" creationdate="20210424T140155Z">
+        <seg>Zaúčtujte příjem zboží přímo z dokladu vstupní objednávky a tím zaznamenejte zaskladněný doklad, protože neexistuje žádná konfigurace skladu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20466,14 +20226,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Posting Group&lt;/g2&gt; field, select &lt;g3&gt;Services&lt;/g3&gt;.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T070059Z" creationid="sunavcova" creationdate="20210511T070059Z">
-        <seg>skupina zboží&lt;/g2&gt; vyberte &lt;g3&gt;Služby&lt;/g3&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Posting Group&lt;/g3&gt; field is set to &lt;g4&gt;RETAIL&lt;/g4&gt;, and then choose the &lt;g5&gt;Edit&lt;/g5&gt; action.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210225T081131Z" creationid="sunavcova" creationdate="20210225T081131Z">
@@ -20548,8 +20300,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Prakash has reached an agreement with a customer, Selagorian Ltd, to set up 10 conference rooms.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075533Z" creationid="sunavcova" creationdate="20210302T071314Z">
-        <seg>Prakash dosáhl dohody se zákazníkem, společností Selagorian Ltd, o zřízení 10 konferenčních místností.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210302T071314Z" creationid="sunavcova" creationdate="20210302T071314Z">
+        <seg>Společnost Prakash dosáhla dohody se zákazníkem, společností Selagorian Ltd, o zřízení 10 konferenčních místností.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20956,32 +20708,32 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Put back items that were picked technically with an internal pick, for example for a production order that did not consume the expected quantity.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095156Z" creationid="sunavcova" creationdate="20210424T144806Z">
-        <seg>Vrácení zboží, které bylo technicky vyskladněno pomocí interního vyskladnění, například pro výrobní zakázku, která nespotřebovávala očekávané množství.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144806Z" creationid="sunavcova" creationdate="20210424T144806Z">
+        <seg>Vrátit zboží, které bylo technicky vyskladněno pomocí interního vyskladnění, například pro výrobní zakázku, která nespotřebovávala očekávané množství.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Put items away for multiple orders in an advanced warehouse configuration.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095129Z" creationid="sunavcova" creationdate="20210424T144445Z">
-        <seg>Zaskladnění zboží pro více objednávek v rozšířené konfiguraci skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144445Z" creationid="sunavcova" creationdate="20210424T144445Z">
+        <seg>Zaskladní zboží pro více objednávek v rozšířené konfiguraci skladu.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Put items away order by order and post the receipt in the same activity, in a basic warehouse configuration.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095120Z" creationid="sunavcova" creationdate="20210424T140227Z">
-        <seg>Zaskladnění objednávky zboží podle objednávky a zaúčtování příjemky ve stejné aktivitě v základní konfiguraci skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T140227Z" creationid="sunavcova" creationdate="20210424T140227Z">
+        <seg>Zaskladní objednávku zboží podle objednávky a zaúčtuje příjemku ve stejné aktivitě v základní konfiguraci skladu.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Put produced or assembled items away in a basic or an advanced warehouse configuration.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095139Z" creationid="sunavcova" creationdate="20210424T144542Z">
-        <seg>Zaskladnění vyrobeného nebo sestaveného zboží do základní nebo pokročilé konfigurace skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144542Z" creationid="sunavcova" creationdate="20210424T144542Z">
+        <seg>Zaskladněte vyrobené nebo sestavené zboží do základní nebo pokročilé konfigurace skladu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -21540,8 +21292,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Repeat steps 2 and 3 for all SKUs in the number range between 1100 and 1300.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082332Z" creationid="sunavcova" creationdate="20210415T142620Z">
-        <seg>Opakujte kroky 2 a 3 pro všechny SKJ v rozsahu čísel od 1100 do 1300.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T142620Z" creationid="sunavcova" creationdate="20210415T142620Z">
+        <seg>Opakujte kroky 2 a 3 pro všechny SKU v rozsahu čísel od 1100 do 1300.</seg>
       </tuv>
     </tu>
     <tu>
@@ -21876,8 +21628,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Sales order &lt;g1&gt;2008&lt;/g1&gt; is for ten loudspeakers, item &lt;g2&gt;LS-120&lt;/g2&gt;, ordered by John Haddock Insurance Co.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T091017Z" creationid="sunavcova" creationdate="20210415T091631Z">
-        <seg>Prodejní objednávka &lt;g1&gt;2008&lt;/g1&gt; je pro deset reproduktorů, zboží &lt;g2&gt;LS-120&lt;/g2&gt;, objednané společností UNIVERSAL-TREND a.s.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T091631Z" creationid="sunavcova" creationdate="20210415T091631Z">
+        <seg>Prodejní objednávka &lt;g1&gt;2008&lt;/g1&gt; je pro deset reproduktorů, zboží &lt;g2&gt;LS-120&lt;/g2&gt;, objednané společností John Haddock Insurance Co.</seg>
       </tuv>
     </tu>
     <tu>
@@ -22138,14 +21890,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Select line 1120, and in the &lt;g1&gt;Budget (Total Cost)&lt;/g1&gt; field, right-click the amount and choose &lt;g2&gt;DrillDown&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132102Z" creationid="sunavcova" creationdate="20210510T132102Z">
-        <seg>Vyberte řádek 1120 a v poli &lt;g1&gt;Rozpočet (Náklady celkem)&lt;/g1&gt; klikněte pravým tlačítkem na částku a vyberte &lt;g2&gt;Přejít k podrobnostem&lt;/g2&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Select line 1120, and in the &lt;g1&gt;Schedule (Total Cost)&lt;/g1&gt; field, right-click the amount and choose &lt;g2&gt;DrillDown&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T221049Z" creationid="sunavcova" creationdate="20210301T221049Z">
@@ -22212,8 +21956,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Select the &lt;g1&gt;Guildford&lt;/g1&gt; job number, and then choose the &lt;g2&gt;Jobs Task Lines&lt;/g2&gt; action.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075002Z" creationid="sunavcova" creationdate="20210301T220832Z">
-        <seg>Vyberte číslo projektu &lt;g1&gt;AB&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Řádky úlohy projektu&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T220832Z" creationid="sunavcova" creationdate="20210301T220832Z">
+        <seg>Vyberte číslo projektu &lt;g1&gt;Guildford&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Jobs Řádky úlohy projektu&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -22246,14 +21990,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T223624Z" creationid="sunavcova" creationdate="20210301T223526Z">
         <seg>Vyberte projekt GUILDFORD a poté vyberte akci &lt;g1&gt;Řádky úlohy projektu&lt;/g1&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Select the GUILDFORD job, and then, in the &lt;g1&gt;Job Task Lines&lt;/g1&gt; section, select line 1120 and in the &lt;g2&gt;Budget (Total Cost)&lt;/g2&gt; field, right-click the amount.</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075419Z" creationid="sunavcova" creationdate="20210510T132520Z">
-        <seg>Vyberte projekt AB a potom v části &lt;g1&gt;Řádky úlohy projektu&lt;/g1&gt; vyberte řádek 1120 a v poli &lt;g2&gt;Rozpočet (celkové náklady)&lt;/g2&gt; klikněte pravým tlačítkem na částku.</seg>
       </tuv>
     </tu>
     <tu>
@@ -23116,8 +22852,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Split a put-away line to place part of the put-away quantity in available bins because the designated bin is filled up.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095206Z" creationid="sunavcova" creationdate="20210424T144918Z">
-        <seg>Rozdělení řádku zaskladnění, umístění části zaskladněného množství do dostupných přihrádek, protože určená přihrádka je již plná.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144918Z" creationid="sunavcova" creationdate="20210424T144918Z">
+        <seg>Rozdělením řádku zaskladnění, umístěte část zaskladněného množství do dostupných přihrádek, protože určená přihrádka je již plná.</seg>
       </tuv>
     </tu>
     <tu>
@@ -23781,8 +23517,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The CRONUS International Ltd.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T081840Z" creationid="sunavcova" creationdate="20210415T132037Z">
-        <seg>Demonstrační společnost CRONUS CZ s.r.o.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T132049Z" creationid="sunavcova" creationdate="20210415T132037Z">
+        <seg>Demonstrační společnost CRONUS International Ltd.</seg>
       </tuv>
     </tu>
     <tu>
@@ -24549,16 +24285,16 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The customer, Cannon Group PLC, orders five touring bikes for shipment on 02-05-2021 (February 5).</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082007Z" creationid="sunavcova" creationdate="20210415T141702Z">
-        <seg>Zákazník, společnost BYT-KOMPLET s.r.o., si objedná pět cestovních kol k odeslání dne 02-05-2021 (5. února).</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T141702Z" creationid="sunavcova" creationdate="20210415T141702Z">
+        <seg>Zákazník, společnost Cannon Group PLC, si objedná pět cestovních kol k odeslání dne 02-05-2021 (5. února).</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>The customer, Selangorian Ltd., complained that the frame has cracked welding seams.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093951Z" creationid="sunavcova" creationdate="20210421T132626Z">
-        <seg>Zákazník, společnost J V v.o.s., si stěžoval, že rám kola je prasklý.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210421T132626Z" creationid="sunavcova" creationdate="20210421T132626Z">
+        <seg>Zákazník, společnost Selangorian Ltd., si stěžoval, že rám kola je prasklý.</seg>
       </tuv>
     </tu>
     <tu>
@@ -24589,8 +24325,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The default value is from the item card, or SKU card, but you can change it to one of the following options:</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T090445Z" creationid="sunavcova" creationdate="20210415T085834Z">
-        <seg>Výchozí hodnota je z karty zboží nebo karty SKJ, ale můžete ji změnit na jednu z následujících možností:</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T085834Z" creationid="sunavcova" creationdate="20210415T085834Z">
+        <seg>Výchozí hodnota je z karty zboží nebo karty SKU, ale můžete ji změnit na jednu z následujících možností:</seg>
       </tuv>
     </tu>
     <tu>
@@ -25901,8 +25637,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The only demand that week is for the Cannon Group sales order.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082118Z" creationid="sunavcova" creationdate="20210415T141857Z">
-        <seg>Jediným požadavkem v tomto týdnu je objednávka odběratele BYT-KOMPLET.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T141857Z" creationid="sunavcova" creationdate="20210415T141857Z">
+        <seg>Jediným požadavkem v tomto týdnu je objednávka odběratele Cannon Group.</seg>
       </tuv>
     </tu>
     <tu>
@@ -26029,8 +25765,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The planning line for item 1300, Chain Assy, suggests ten pieces.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T083046Z" creationid="sunavcova" creationdate="20210415T150143Z">
-        <seg>Řádek plánování položky 1300, Soustava převodů, navrhuje deset kusů.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T150143Z" creationid="sunavcova" creationdate="20210415T150143Z">
+        <seg>Řádek plánování položky 1300, Chain Assy, navrhuje deset kusů.</seg>
       </tuv>
     </tu>
     <tu>
@@ -26061,8 +25797,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The planning result is calculated partly from the demand-supply sets in the database and partly by the setup of stockkeeping unit cards or item cards, production BOMs, and routings.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T081803Z" creationid="sunavcova" creationdate="20210415T131043Z">
-        <seg>Výsledek plánování se vypočítá částečně ze sad poptávky a nabídky v databázi a částečně z nastavení karet skladových jednotek nebo karet zboží, výrobních kusovníků a TNG postupů.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T131043Z" creationid="sunavcova" creationdate="20210415T131043Z">
+        <seg>Výsledek plánování se vypočítá částečně ze sad poptávky a nabídky v databázi a částečně z nastavení karet skladových jednotek nebo karet zboží, výrobních kusovníků a tng postupu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -27077,8 +26813,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The timeline ends on the bottom planning line with the purchase order for one of the lowest-level items, 1255, Socket Back, due on 01-30-2021.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T082839Z" creationid="sunavcova" creationdate="20210415T145604Z">
-        <seg>Časová osa končí na spodním řádku plánování nákupní objednávky pro jednu z položek na nejnižší úrovni, 1255, Zadní lůžko, splatná 01-30-2021.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T145604Z" creationid="sunavcova" creationdate="20210415T145604Z">
+        <seg>Časová osa končí na spodním řádku plánování nákupní objednávky pro jednu z položek na nejnižší úrovni, 1255, Socket Back, splatná 01-30-2021.</seg>
       </tuv>
     </tu>
     <tu>
@@ -27869,8 +27605,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>This completes the initial calculation, analysis, and creation of a supply plan for demand at location EAST in the first week of February.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T084318Z" creationid="sunavcova" creationdate="20210416T102251Z">
-        <seg>Tím se dokončí počáteční výpočet, analýza a vytvoření plánu dodávek poptávky v lokaci EAST v prvním únorovém týdnu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210416T102251Z" creationid="sunavcova" creationdate="20210416T102251Z">
+        <seg>Tím se dokončí počáteční výpočet, analýza a vytvoření plánu dodávek poptávky v lokalitě EAST v prvním únorovém týdnu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -28773,8 +28509,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>This walkthrough focuses on CRONUS International Ltd., a design and consultancy firm that designs and fits new infrastructures, such as conference halls and offices, with furniture, accessories, and storage units.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T072209Z" creationid="sunavcova" creationdate="20210203T074918Z">
-        <seg>Tento návod se zaměřuje na CRONUS CZ s.r.o., projekční a poradenskou firmu, která navrhuje a upravuje nové infrastruktury, jako jsou konferenční sály a kanceláře s nábytkem, doplňky a skladovací jednotky.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210203T074918Z" creationid="sunavcova" creationdate="20210203T074918Z">
+        <seg>Tento návod se zaměřuje na CRONUS International Ltd., projekční a poradenskou firmu, která navrhuje a upravuje nové infrastruktury, jako jsou konferenční sály a kanceláře s nábytkem, doplňky a skladovací jednotky.</seg>
       </tuv>
     </tu>
     <tu>
@@ -29011,14 +28747,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Timothy</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T132008Z" creationid="sunavcova" creationdate="20210510T132008Z">
-        <seg>Timothy</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>To</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210426T081200Z" creationid="sunavcova" creationdate="20210426T081200Z">
@@ -29037,8 +28765,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>To add job tasks</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T072818Z" creationid="sunavcova" creationdate="20210301T204345Z">
-        <seg>Přidání úkolů projektu</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T204345Z" creationid="sunavcova" creationdate="20210301T204345Z">
+        <seg>Přidání úloh projektu</seg>
       </tuv>
     </tu>
     <tu>
@@ -29253,8 +28981,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>To create a Job Journal batch</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T072806Z" creationid="sunavcova" creationdate="20210301T200542Z">
-        <seg>Vytvoření listu deníku projektů</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T200542Z" creationid="sunavcova" creationdate="20210301T200542Z">
+        <seg>Vytvoření iistu deníku projektů</seg>
       </tuv>
     </tu>
     <tu>
@@ -29333,8 +29061,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>To create new items and several business transactions by following the &lt;g1&gt;Prepare Sample Data&lt;/g1&gt;..</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093850Z" creationid="sunavcova" creationdate="20210421T132304Z">
-        <seg>Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle &lt;g1&gt;Příprava ukázkových dat&lt;/g1&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210421T132304Z" creationid="sunavcova" creationdate="20210421T132304Z">
+        <seg>Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle &lt;g1&gt;Příprava ukázkových dat&lt;/g1&gt;..</seg>
       </tuv>
     </tu>
     <tu>
@@ -30507,14 +30235,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Unit Price</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T131911Z" creationid="sunavcova" creationdate="20210510T131911Z">
-        <seg>jednotková cena</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Unit Price = 135</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210503T135142Z" creationid="sunavcova" creationdate="20210503T135142Z">
@@ -30885,8 +30605,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>View the changes to the schedule.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T075201Z" creationid="sunavcova" creationdate="20210301T221701Z">
-        <seg>Zobrazí se změny v plánu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T221701Z" creationid="sunavcova" creationdate="20210301T221701Z">
+        <seg>Zobrazit změny v plánu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -31823,8 +31543,8 @@ Pro každého přepravce můžete nastavit neomezený počet služeb a pro každ
       <tuv lang="en-US">
         <seg>With the budget structure set up for jobs, creating a job is straightforward.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T071735Z" creationid="sunavcova" creationdate="20210301T092355Z">
-        <seg>Se strukturou rozpočtu nastavenou pro projekty je jejich vytváření jednoduché.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210301T092355Z" creationid="sunavcova" creationdate="20210301T092355Z">
+        <seg>Se strukturou rozpočtu nastavenou pro pracovní místa je vytváření pracovních míst jednoduché.</seg>
       </tuv>
     </tu>
     <tu>

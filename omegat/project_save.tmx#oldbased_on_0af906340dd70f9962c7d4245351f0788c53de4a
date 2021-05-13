@@ -2692,8 +2692,8 @@
       <tuv lang="en-US">
         <seg>&lt;g1&gt;Put Items Away with Warehouse Put-aways&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095258Z" creationid="sunavcova" creationdate="20210424T144517Z">
-        <seg>&lt;g1&gt;Zaskladnění zboží pomocí zaskladnění&lt;/g1&gt;</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144517Z" creationid="sunavcova" creationdate="20210424T144517Z">
+        <seg>&lt;g1&gt;Zaskladnění zboží pomocí zaskladněními&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3943,9 +3943,9 @@ Pouze v instalacích SSS le možné pracovat s více MJ.</seg>
         <seg>&lt;x1/&gt;!NOTE&lt;x2/&gt;&lt;x3/&gt;
 Kit A is typically supplied by assembly to stock and therefore has a reordering policy to make it part of general supply planning.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093103Z" creationid="sunavcova" creationdate="20210424T193101Z">
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T193101Z" creationid="sunavcova" creationdate="20210424T193101Z">
         <seg>&lt;x1/&gt;!NOTE&lt;x2/&gt;&lt;x3/&gt;
-Sada A je obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.</seg>
+Sada A se obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8068,8 +8068,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Choose the &lt;g1&gt;OK&lt;/g1&gt; button to create the first new item card, 2000.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T094124Z" creationid="sunavcova" creationdate="20210423T081143Z">
-        <seg>Zvolte tlačítko &lt;g1&gt;OK&lt;/g1&gt; a vytvořte první novou kartu položky, 2000.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210423T081143Z" creationid="sunavcova" creationdate="20210423T081143Z">
+        <seg>Zvolte tlačítko &lt;g1&gt;OK&lt;/g1&gt; a vytvořte první novou kartu položky, 2000..</seg>
       </tuv>
     </tu>
     <tu>
@@ -8764,8 +8764,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Choose the first demand line, with item &lt;g1&gt;LSU-15&lt;/g1&gt;, and then choose the &lt;g2&gt;Show Document&lt;/g2&gt; action.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T090153Z" creationid="sunavcova" creationdate="20210415T085626Z">
-        <seg>Vyberte první řádek poptávky se zbožím &lt;g1&gt;LSU-15&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Zobrazit doklad&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T085626Z" creationid="sunavcova" creationdate="20210415T085626Z">
+        <seg>Vyberte první řádek poptávky se zbožím &lt;g1&gt;LSU-15&lt;/g1&gt; a poté vyberte akci &lt;g2&gt;Zobrazit doklad&lt;/g2&gt; action.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9604,8 +9604,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Create one sales order for 10 bicycles at EAST location.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T090118Z" creationid="sunavcova" creationdate="20210415T082745Z">
-        <seg>Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokaci EAST.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T082745Z" creationid="sunavcova" creationdate="20210415T082745Z">
+        <seg>Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokalitu EAST.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10366,14 +10366,6 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210507T080006Z" creationid="sunavcova" creationdate="20210507T080006Z">
         <seg>Detaily návrhu: Správa skladu</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Design Details: Warehouse Overview</seg>
-      </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210513T095438Z" creationid="sunavcova" creationdate="20210513T095438Z">
-        <seg>Design Details: Warehouse Overview</seg>
       </tuv>
     </tu>
     <tu>
@@ -12556,8 +12548,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Get immediate access to put-aways that are assigned to you as a warehouse worker.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095238Z" creationid="sunavcova" creationdate="20210424T144947Z">
-        <seg>Získání okamžitého přístupu k zaskladněným položkám, které jsou vám přiřazeny jako skladníkovi.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144947Z" creationid="sunavcova" creationdate="20210424T144947Z">
+        <seg>Získejte okamžitý přístup k zaskladněným položkám, které jsou vám přiřazeny jako skladníkovi.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14060,8 +14052,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>If your location is set up to require both receive and put-away processing, so that you have placed check marks in both the &lt;g1&gt;Require Receive&lt;/g1&gt; and the &lt;g2&gt;Require Put-away&lt;/g2&gt; field on the location card, there is a different process for putting items away.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095056Z" creationid="sunavcova" creationdate="20210424T135720Z">
-        <seg>Pokud je vaše lokace nastavena tak, aby vyžadovala zpracování příjmu i zaskladnění, takže jste zašktrli pole &lt;g1&gt;Vyžadovat příjem&lt;/g1&gt; a &lt;g2&gt;Vyžadovat zaskladnění&lt;/g2&gt; na karte lokace, existuje jiný postup pro zaskladnění zboží.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T135720Z" creationid="sunavcova" creationdate="20210424T135720Z">
+        <seg>Pokud je vaše lokace nastavena tak, aby vyžadovala zpracování příjmu i zaskladnění, takže jste do zašktrli pole &lt;g1&gt;Vyžadovat příjem&lt;/g1&gt; a &lt;g2&gt;Vyžadovat zaskladnění&lt;/g2&gt; na karte lokace, existuje jiný postup pro zaskladnění zboží.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14572,8 +14564,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>In the &lt;g1&gt;From-Assembly Bin Code&lt;/g1&gt; field, enter &lt;g2&gt;W-01-0001&lt;/g2&gt;.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T092657Z" creationid="sunavcova" creationdate="20210424T174228Z">
-        <seg>Do pole &lt;g1&gt;Kód přihrádky z montáže&lt;/g1&gt; zadejte &lt;g2&gt;W-01-0001&lt;/g2&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T174228Z" creationid="sunavcova" creationdate="20210424T174228Z">
+        <seg>Do pole &lt;g1&gt;kód přihrádky z montáže&lt;/g1&gt; zadejte &lt;g2&gt;W-01-0001&lt;/g2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17284,8 +17276,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Next, purchase racing frames from Coolwood Technologies.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T094405Z" creationid="sunavcova" creationdate="20210423T092612Z">
-        <seg>Dále si zakupte závodní rámy od Mach a spol. v.o.s..</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210423T092612Z" creationid="sunavcova" creationdate="20210423T092612Z">
+        <seg>Dále si zakupte závodní rámy od Coolwood Technologies.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18452,8 +18444,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>On the &lt;g1&gt;Lines&lt;/g1&gt; FastTab, choose &lt;g2&gt;Line&lt;/g2&gt;, and then choose &lt;g3&gt;Assemble to Order&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093215Z" creationid="sunavcova" creationdate="20210424T200734Z">
-        <seg>Na záložce &lt;g1&gt;Řádky&lt;/g1&gt; zvolte &lt;g2&gt;Řádek&lt;/g2&gt; a pak zvolte &lt;g3&gt;Montáž na objednávku&lt;/g3&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T200734Z" creationid="sunavcova" creationdate="20210424T200734Z">
+        <seg>Na záložce &lt;g1&gt;Řádky&lt;/g1&gt; zvolte &lt;g2&gt;Řádek&lt;/g2&gt; a pak zvolte&lt;g3&gt;Montáž na objednávku&lt;/g3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -19348,8 +19340,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Open the ATO assembly order for five units of Kit A.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093322Z" creationid="sunavcova" creationdate="20210424T202342Z">
-        <seg>Otevřete montážní zakázku MNO pro pět jednotek sady A.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T202342Z" creationid="sunavcova" creationdate="20210424T202342Z">
+        <seg>Otevřete montážní zakázku MNO pro pět jednotek Ksady A.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20148,8 +20140,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Plan optimized put-away instructions for a number of posted warehouse receipts rather than have warehouse workers act directly on receipts.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095148Z" creationid="sunavcova" creationdate="20210424T144628Z">
-        <seg>Naplánování optimalizovaných pokynů pro zaskladnění pro řadu zaúčtované příjemky ze skladu, nikoli aby pracovníci skladu jednali přímo na příjemkách.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144628Z" creationid="sunavcova" creationdate="20210424T144628Z">
+        <seg>Naplánujte optimalizované pokyny pro zaskladnění pro řadu zaúčtované příjemky ze skladu, nikoli aby pracovníci skladu jednali přímo na příjemkách.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20356,8 +20348,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Post the receipt of items directly from the inbound order document and thereby record the put away, because no warehouse configuration exists.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095106Z" creationid="sunavcova" creationdate="20210424T140155Z">
-        <seg>Zaúčtování příjmu zboží přímo z dokladu vstupní objednávky a tím zaznamenání zaskladněného dokladu, protože neexistuje žádná konfigurace skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T140155Z" creationid="sunavcova" creationdate="20210424T140155Z">
+        <seg>Zaúčtujte příjem zboží přímo z dokladu vstupní objednávky a tím zaznamenejte zaskladněný doklad, protože neexistuje žádná konfigurace skladu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20956,32 +20948,32 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Put back items that were picked technically with an internal pick, for example for a production order that did not consume the expected quantity.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095156Z" creationid="sunavcova" creationdate="20210424T144806Z">
-        <seg>Vrácení zboží, které bylo technicky vyskladněno pomocí interního vyskladnění, například pro výrobní zakázku, která nespotřebovávala očekávané množství.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144806Z" creationid="sunavcova" creationdate="20210424T144806Z">
+        <seg>Vrátit zboží, které bylo technicky vyskladněno pomocí interního vyskladnění, například pro výrobní zakázku, která nespotřebovávala očekávané množství.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Put items away for multiple orders in an advanced warehouse configuration.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095129Z" creationid="sunavcova" creationdate="20210424T144445Z">
-        <seg>Zaskladnění zboží pro více objednávek v rozšířené konfiguraci skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144445Z" creationid="sunavcova" creationdate="20210424T144445Z">
+        <seg>Zaskladní zboží pro více objednávek v rozšířené konfiguraci skladu.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Put items away order by order and post the receipt in the same activity, in a basic warehouse configuration.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095120Z" creationid="sunavcova" creationdate="20210424T140227Z">
-        <seg>Zaskladnění objednávky zboží podle objednávky a zaúčtování příjemky ve stejné aktivitě v základní konfiguraci skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T140227Z" creationid="sunavcova" creationdate="20210424T140227Z">
+        <seg>Zaskladní objednávku zboží podle objednávky a zaúčtuje příjemku ve stejné aktivitě v základní konfiguraci skladu.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Put produced or assembled items away in a basic or an advanced warehouse configuration.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095139Z" creationid="sunavcova" creationdate="20210424T144542Z">
-        <seg>Zaskladnění vyrobeného nebo sestaveného zboží do základní nebo pokročilé konfigurace skladu.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144542Z" creationid="sunavcova" creationdate="20210424T144542Z">
+        <seg>Zaskladněte vyrobené nebo sestavené zboží do základní nebo pokročilé konfigurace skladu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -21876,8 +21868,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Sales order &lt;g1&gt;2008&lt;/g1&gt; is for ten loudspeakers, item &lt;g2&gt;LS-120&lt;/g2&gt;, ordered by John Haddock Insurance Co.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T091017Z" creationid="sunavcova" creationdate="20210415T091631Z">
-        <seg>Prodejní objednávka &lt;g1&gt;2008&lt;/g1&gt; je pro deset reproduktorů, zboží &lt;g2&gt;LS-120&lt;/g2&gt;, objednané společností UNIVERSAL-TREND a.s.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T091631Z" creationid="sunavcova" creationdate="20210415T091631Z">
+        <seg>Prodejní objednávka &lt;g1&gt;2008&lt;/g1&gt; je pro deset reproduktorů, zboží &lt;g2&gt;LS-120&lt;/g2&gt;, objednané společností John Haddock Insurance Co.</seg>
       </tuv>
     </tu>
     <tu>
@@ -23116,8 +23108,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Split a put-away line to place part of the put-away quantity in available bins because the designated bin is filled up.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T095206Z" creationid="sunavcova" creationdate="20210424T144918Z">
-        <seg>Rozdělení řádku zaskladnění, umístění části zaskladněného množství do dostupných přihrádek, protože určená přihrádka je již plná.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210424T144918Z" creationid="sunavcova" creationdate="20210424T144918Z">
+        <seg>Rozdělením řádku zaskladnění, umístěte část zaskladněného množství do dostupných přihrádek, protože určená přihrádka je již plná.</seg>
       </tuv>
     </tu>
     <tu>
@@ -24557,8 +24549,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The customer, Selangorian Ltd., complained that the frame has cracked welding seams.</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093951Z" creationid="sunavcova" creationdate="20210421T132626Z">
-        <seg>Zákazník, společnost J V v.o.s., si stěžoval, že rám kola je prasklý.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210421T132626Z" creationid="sunavcova" creationdate="20210421T132626Z">
+        <seg>Zákazník, společnost Selangorian Ltd., si stěžoval, že rám kola je prasklý.</seg>
       </tuv>
     </tu>
     <tu>
@@ -24589,8 +24581,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>The default value is from the item card, or SKU card, but you can change it to one of the following options:</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T090445Z" creationid="sunavcova" creationdate="20210415T085834Z">
-        <seg>Výchozí hodnota je z karty zboží nebo karty SKJ, ale můžete ji změnit na jednu z následujících možností:</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210415T085834Z" creationid="sunavcova" creationdate="20210415T085834Z">
+        <seg>Výchozí hodnota je z karty zboží nebo karty SKU, ale můžete ji změnit na jednu z následujících možností:</seg>
       </tuv>
     </tu>
     <tu>
@@ -29333,8 +29325,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>To create new items and several business transactions by following the &lt;g1&gt;Prepare Sample Data&lt;/g1&gt;..</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210511T093850Z" creationid="sunavcova" creationdate="20210421T132304Z">
-        <seg>Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle &lt;g1&gt;Příprava ukázkových dat&lt;/g1&gt;.</seg>
+      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210421T132304Z" creationid="sunavcova" creationdate="20210421T132304Z">
+        <seg>Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle &lt;g1&gt;Příprava ukázkových dat&lt;/g1&gt;..</seg>
       </tuv>
     </tu>
     <tu>
