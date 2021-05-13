@@ -10440,6 +10440,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Detaily návrhu: Položky sady dimenzí</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112747Z" creationid="Janousek" creationdate="20210513T112747Z">
+        <seg>Detaily návrhu: Položky sady dimenzí</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Detecting the Adjustment</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210503T084502Z" creationid="sunavcova" creationdate="20210503T084502Z">
@@ -23496,6 +23504,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Tato dokumentace poskytuje podrobný technický přehled o konceptech a principech funkce ukládání a zaúčtování vstupů dimenzí v [!INCLUDE&lt;g1&gt;prod_short&lt;/g1&gt;].</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112747Z" creationid="Janousek" creationdate="20210513T112747Z">
+        <seg>Tato dokumentace poskytuje podrobný technický přehled o konceptech a principech funkce ukládání a zaúčtování vstupů dimenzí v [!INCLUDE&lt;g1&gt;prod_short&lt;/g1&gt;].</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>That date is then entered in the Shipment Date field on the line, and the date on which you plan to ship the items as well as the date on which they will be delivered to the customer are calculated using the following formulas.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="pieger" changedate="20201116T133850Z" creationid="pieger" creationdate="20201116T132603Z">
@@ -27905,6 +27921,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This can have adverse effects on accurate reporting, especially within global corporations.</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112628Z" creationid="Janousek" creationdate="20210513T112628Z">
+        <seg>This can have adverse effects on accurate reporting, especially within global corporations.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This completes the analysis of the initial supply plan.</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210416T100747Z" creationid="sunavcova" creationdate="20210416T100747Z">
@@ -30693,6 +30717,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210506T073115Z" creationid="sunavcova" creationdate="20210506T073115Z">
         <seg>Vyrovnávacím účtem je obvykle účet vvýsledovky.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>V této části</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112754Z" creationid="Janousek" creationdate="20210513T112754Z">
+        <seg>V této části</seg>
       </tuv>
     </tu>
     <tu>
