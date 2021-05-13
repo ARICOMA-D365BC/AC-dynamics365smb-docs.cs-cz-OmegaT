@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="O aplikaci OO" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="4.3.2_0_6a661c5e" segtype="sentence" srclang="en-US"/>
+  <header creationtool="O aplikaci OO" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="5.4.4_0_ab439459" segtype="sentence" srclang="en-US"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -21702,6 +21702,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210315T151919Z" creationid="sunavcova" creationdate="20210315T151852Z">
         <seg>Typ řady</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Rozšíření [!INCLUDE&lt;g1&gt;d365fin&lt;/g1&gt;]</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T104137Z" creationid="Janousek" creationdate="20210513T104137Z">
+        <seg>Rozšíření [!INCLUDE&lt;g1&gt;d365fin&lt;/g1&gt;]</seg>
       </tuv>
     </tu>
     <tu>
