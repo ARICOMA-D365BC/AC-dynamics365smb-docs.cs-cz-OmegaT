@@ -1638,6 +1638,20 @@
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>&lt;g1&gt;Design Details: Inventory Costing&lt;/g1&gt;
+&lt;g2&gt;Managing Inventory Costs&lt;/g2&gt;
+&lt;g3&gt;Finance&lt;/g3&gt;&lt;x4/&gt;
+&lt;g5&gt;Working with Business Central&lt;/g5&gt;</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T111844Z" creationid="Janousek" creationdate="20210513T111844Z">
+        <seg>&lt;g1&gt;Design Details: Inventory Costing&lt;/g1&gt;
+&lt;g2&gt;Managing Inventory Costs&lt;/g2&gt;
+&lt;g3&gt;Finance&lt;/g3&gt;&lt;x4/&gt;
+&lt;g5&gt;Working with Business Central&lt;/g5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>&lt;g1&gt;Design Details: Inventory Costing&lt;/g1&gt;&lt;x2/&gt;
 &lt;g3&gt;Design Details: Cost Adjustment&lt;/g3&gt;&lt;x4/&gt;
 &lt;g5&gt;Design Details: Reconciliation with the General Ledger&lt;/g5&gt;&lt;x6/&gt;
@@ -10292,8 +10306,8 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
       <tuv lang="en-US">
         <seg>Design Details: Inventory Periods</seg>
       </tuv>
-      <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210510T102448Z" creationid="sunavcova" creationdate="20210510T102448Z">
-        <seg>Design Details: Inventory Periods</seg>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112332Z" creationid="sunavcova" creationdate="20210510T102448Z">
+        <seg>Detaily návrhu: Období inventury</seg>
       </tuv>
     </tu>
     <tu>
