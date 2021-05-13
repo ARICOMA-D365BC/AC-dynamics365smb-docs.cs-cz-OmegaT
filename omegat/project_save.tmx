@@ -6600,6 +6600,14 @@ Pomocí funkce &lt;g4&gt;Vložit účty CF&lt;/g4&gt; můžete rychle označit �
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Backdated transactions or cost adjustments often affect balances and stock valuations for accounting periods that may be considered closed.</seg>
+      </tuv>
+      <tuv lang="cs-CZ" changeid="Janousek" changedate="20210513T112516Z" creationid="Janousek" creationdate="20210513T112516Z">
+        <seg>Zpětné transakce nebo úpravy nákladů často ovlivňují zůstatky a ocenění zásob za účetní období, která lze považovat za uzavřené.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Balance at Date</seg>
       </tuv>
       <tuv lang="cs-CZ" changeid="sunavcova" changedate="20210315T160032Z" creationid="sunavcova" creationdate="20210315T160032Z">
