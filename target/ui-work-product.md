@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -31,7 +31,7 @@ The following table lists some of the general functionality with links to topics
 > [!NOTE]
 > In addition to the general UI functions described in this section, you can use other general functions that are more business-related. For more information, see [General Business Functionality](ui-across-business-areas.md).
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Find a specific page, report, action, help topic, or partner extension. | [Finding Pages and Information with Tell Me](ui-search.md) |
 | Get an overview of pages for your role and for other roles and navigate to pages. | [Finding Pages with the Role Explorer](ui-role-explorer.md) |
@@ -57,18 +57,18 @@ Here's a short video about how to get around in [!INCLUDE[prod_short](includes/p
 
 ## Choosing a desktop browser
 
-[!INCLUDE[prod_short](includes/prod_short.md)] supports multiple browsers that each offer a variety of features and capabilities. The browser plays a significant role in the responsiveness and fluidity of the user interface. See the list of supported, recommended browsers for [Business Central online](https://go.microsoft.com/fwlink/?linkid=2110804) and browsers for [Business Central on-premises](https://go.microsoft.com/fwlink/?linkid=2110719).
+[!INCLUDE[prod_short](includes/prod_short.md)] supports multiple browsers that each offer a variety of features and capabilities. The browser plays a significant role in the responsiveness and fluidity of the user interface. See the list of supported, recommended browsers for [Business Central online](./product-requirements.md) and browsers for [Business Central on-premises](/dynamics365/business-central/dev-itpro/deployment/system-requirement-business-central-v15).
 
 - Where possible, avoid older browsers such as Internet Explorer, and switch to one of our recommended modern browsers, such as the [new Microsoft Edge](https://www.microsoft.com/edge/).
 
-   Internet Explorer is still supported, but since the new Edge browser is available for Windows Server now, we see a declining rate of usage for Internet Explorer. You can also get [a pilot of Edge in IE mode](https://www.microsoft.com/edge/business). For more information, see [Microsoft Edge documentation](https://support.microsoft.com/hub/4337664/microsoft-edge-help).
+   Internet Explorer is no longer supported. For more information, see [Microsoft Edge documentation](https://support.microsoft.com/hub/4337664/microsoft-edge-help).
 - Keep your browser always updated to the latest version.
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/work-pro-data-dynamics-365-business-central/)
 
 ## Viz také
 
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Setting Up Business Central](setup.md)  
 [General Business Functionality](ui-across-business-areas.md)  
 [Performance Tips for Business Users](/dynamics365/business-central/dev-itpro/performance/performance-users?toc=/dynamics365/business-central/toc.json)

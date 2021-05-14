@@ -7,7 +7,7 @@ ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.workload: na
 ms.search.keywords: preview, trial, sandbox, subscription
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ You can sign up for a free trial [here](https://go.microsoft.com/fwlink/?linkid=
 
 Depending on your country or region, the trial includes the languages and functionality that your country or region requires. For more information, see [Changing Language and Locale](about-locale-language.md).
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], some things will be familiar to you, and other things might be unfamiliar. When you first sign in to the demonstration company, you get access to a Getting Started page with links to videos that can help you get started. For more information, see [Getting Started with [!INCLUDE[prod_long](includes/prod_long.md)]](product-get-started.md).
+In [!INCLUDE[prod_short](includes/prod_short.md)], some things will be familiar to you, and other things might be unfamiliar. When you first sign in to the demonstration company, you get access to a Get Started page with links to assisted setup guides that can help you get started. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
 If you encounter difficulties, the [Frequently Asked Questions](across-faq.md) page can help you answer some of your questions. If you are unable to sign up for the trial, the [Troubleshooting Self-Service Sign-Up](ui-troubleshoot-self-signup.md) page can help. You can also contact a [partner](across-faq.md#findpartner) and ask them to create a free trial or a different type of preview of [!INCLUDE[prod_short](includes/prod_short.md)] for you.
 
@@ -41,7 +41,7 @@ To help you set up your company, the **Assisted Setup** page lists the assisted 
 | -------------- | ----------- |
 | Set Up My Company | Creates a new trial company for you to enter data and try out [!INCLUDE[prod_short](includes/prod_short.md)]. |
 | Set Up Approval Workflows | Sets up the ability to automatically notify an approver when a user tries to create or change certain values on documents, journal lines, or cards. For example, you can set up approval of amounts above a specified limit. |
-| Set Up Email | Gets you ready for sending email messages directly from, for example, sales orders or contacts in [!INCLUDE[prod_short](includes/prod_short.md)]. |
+| Nastavení e-mailu | Gets you ready for sending email messages directly from, for example, sales orders or contacts in [!INCLUDE[prod_short](includes/prod_short.md)]. |
 | Set Up Your Business Inbox in Outlook | Gets you ready to manage business interactions with your customers and vendors, directly in Microsoft Outlook. |
 | Migrate Business Data | Lets you import your existing company data such as vendors, customers, and items from Excel or Quickbooks. |
 | Set Up Email Logging | Sets up the capability to log email correspondence in [!INCLUDE[prod_short](includes/prod_short.md)] to follow up on interactions. |
@@ -79,13 +79,13 @@ If you are a developer, a sandbox lets you safely build and test extensions and 
 Right now, all customers can use a sandbox, including organizations who have signed up for a trial. For more information about how to get started with a sandbox, see [Creating a Sandbox Environment](across-how-create-sandbox-environment.md).
 
 > [!NOTE]
-> Sandboxes created this way contain demonstration data for the fictitious CRONUS company. No data is copied or otherwise transferred from the production environment.
+> Sandboxes created this way contain demonstration data for the fictitious CRONUS company. Z provozního prostředí nejsou kopírována ani jinak přenášena žádná data.
 
 The administrator of your [!INCLUDE[prod_short](includes/prod_short.md)] and your reselling partner can create additional environments in the administration center. For more information, see [The Business Central Administration Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center).
 
 ## Viz také
 
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Extending Your Trial Version](admin-extend-trial.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Frequently Asked Questions](across-faq.md)  

@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ You can provide better customer service and optimize your supply chain by organi
 
 When you have set up your inventory, you can manage various processes related to item transactions. For more information, see [Manage Inventory](inventory-manage-inventory.md) and [Warehouse Management](warehouse-manage-warehouse.md).
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Define the general inventory setup, such as number series and how to use locations. | [Set Up General Inventory Information](inventory-how-setup-general.md) |
 | Configure an efficient distribution model with a combination of different locations and responsibility centers assigned to business partners or employees. | [Work with Responsibility Centers](inventory-responsibility-centers.md) |

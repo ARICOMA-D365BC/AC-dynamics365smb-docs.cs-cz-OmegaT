@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -79,7 +79,7 @@ From outbound documents for item-tracked items, such as sales orders or producti
 
 This is referred to as a specific reservation, because you reserve from the quantity of  Item X that belongs to Lot X. If you simply reserve from quantities of Item X, then it is a normal, non-specific, reservation. For more information, see [Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md).
 
-The following procedure is based on a sales order.
+Následující postup je založen na prodejní objednávce.
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then select the related link.
 2. Create a sales order line for an item-tracked item.
 3. Assign serial and lot numbers to the sales order line. For more information, see [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md).

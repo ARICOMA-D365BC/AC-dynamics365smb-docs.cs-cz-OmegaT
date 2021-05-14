@@ -17,11 +17,11 @@ ms.author: edupont
 ---
 # Staňte se prodejcem [!INCLUDE[d365fin_long](includes/d365fin_long_md.md)]
 
-Rozšiřte své obchodní příležitosti s [!INCLUDE[d365fin](includes/d365fin_md.md)]!  
+Rozšiřte své obchodní příležitosti s [!INCLUDE[d365fin](includes/d365fin_md.md)]!
 
 Pokud se specializujete na cloudová řešení, Office 365, SharePoint, průmyslová řešení a analýzy, ERP, CRM, účetní software nebo software/služby pro optimalizaci podnikových procesů, Business Central je nová příležitost.
 
-[!INCLUDE[d365fin](includes/d365fin_md.md)] vám může pomoci odlišit a prohloubit vztahy se zákazníky tím, že vám umožní dodávat komplexní řešení pro správu podniků, které spojuje lidi a procesy, jako nikdy předtím, začleněné do známých nástrojů sady Microsoft Office, které malé a střední podniky používají každý den.  
+[!INCLUDE[d365fin](includes/d365fin_md.md)] vám může pomoci odlišit a prohloubit vztahy se zákazníky tím, že vám umožní dodávat komplexní řešení pro správu podniků, které spojuje lidi a procesy, jako nikdy předtím, začleněné do známých nástrojů sady Microsoft Office, které malé a střední podniky používají každý den.
 
 ## Začínáme
 
@@ -31,4 +31,4 @@ Program „Ready to Go“ je jedním ze způsobů, jak začít jako prodejce [!I
 
 [Začínáme](product-get-started.md)  
 [Import obchodních dat z jiných finančních systémů.](across-import-data-configuration-packages.md)  
-[https://appsource.microsoft.com](https://appsource.microsoft.com/en-us/?product=project-madeira)  
+[https://appsource.microsoft.com](https://appsource.microsoft.com/en-us/?product=project-madeira)

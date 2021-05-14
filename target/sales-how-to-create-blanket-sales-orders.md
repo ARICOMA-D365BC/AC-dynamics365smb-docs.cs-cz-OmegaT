@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -30,7 +30,7 @@ An example of when a blanket sales order could be used is if a customer calls an
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Blanket Sales Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Leave the **Order Date** field blank. When the separate sales orders are created from the blanket order, the order date of the sales order is set to equal the actual work date.
 5. On the **Lines** FastTab, create separate lines for each shipment. For instance, if your customer wants 1000 units split out equally between four weeks, you would enter four separate lines of 250 units each.
 

@@ -6,7 +6,7 @@ author: SorenGP
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords: profiles, users
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -29,7 +29,7 @@ If you cannot copy an existing profile, you can create a new one manually.
 
 1. Choose the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Profiles (Roles)**, and then choose the related link.
 2. On the **Profiles (Roles)** page, choose the **New** action.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## To copy a profile
 To save time, you can create a new profile by copying an existing one. Copy one that has similar settings to the one you want to create.

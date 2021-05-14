@@ -9,14 +9,14 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
 # Accounting for Costs
 Cost accounting is used to help you understand the costs of running a business. To get started with cost accounting, see the following topics.
 
-| Viz | také |
+| Viz | Také |
 |--------|---------|  
 | Understand the terminology that is used in cost accounting. | [Terminology in Cost Accounting](finance-terminology-in-cost-accounting.md) |
 | Get an overall understanding of cost accounting. | [About Cost Accounting](finance-about-cost-accounting.md) |

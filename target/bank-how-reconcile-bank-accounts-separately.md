@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bank account balance, bank statement
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -36,11 +36,11 @@ When the value in the **Total Balance** field in the **Bank Statement Lines** pa
 
 Any lines that cannot be matched, indicated by a value in the **Difference** field, will remain on the **Bank Acc. Reconciliation** page after posting. They represent some kind of discrepancy that you must resolve before you can complete the bank account reconciliation. Typical business situations that may cause differences:
 
-|Difference|Reason|Resolution|
-|-|-|
-|A transaction in the internal bank account is not on the bank statement.|The bank transaction did not occur although a posting was made in [!INCLUDE[prod_short](includes/prod_short.md)].|Make the missing money transaction (or prompt a debitor to make it), and then reimport the bank statement file or enter the transaction manually.|
-|A transaction on the bank statement does not exist as a document or journal line in [!INCLUDE[prod_short](includes/prod_short.md)].|A bank transaction was made without a corresponding posting in [!INCLUDE[prod_short](includes/prod_short.md)], for example a journal line posting for an expense.|Create and post the missing entry. For information on a quick way to initiate this, see [To create missing ledger entries to match bank transactions with](bank-how-reconcile-bank-accounts-separately.md#to-create-missing-ledger-entries-to-match-bank-statement-lines-with).|
-|A transaction in the internal bank account corresponds to a bank transaction but some information is too different to give a match.|Information, such as the amount or the customer name, was entered differently in connection with the bank transaction or the internal posting.|Review the information, and then manually match the two. Optionally, correct the information mismatch.||
+| Difference | Reason | Resolution |
+|------------|--------|------------|
+| A transaction in the internal bank account is not on the bank statement. | The bank transaction did not occur although a posting was made in [!INCLUDE[prod_short](includes/prod_short.md)]. | Make the missing money transaction (or prompt a debitor to make it), and then reimport the bank statement file or enter the transaction manually. |
+| A transaction on the bank statement does not exist as a document or journal line in [!INCLUDE[prod_short](includes/prod_short.md)]. | A bank transaction was made without a corresponding posting in [!INCLUDE[prod_short](includes/prod_short.md)], for example a journal line posting for an expense. | Create and post the missing entry. For information on a quick way to initiate this, see [To create missing ledger entries to match bank transactions with](bank-how-reconcile-bank-accounts-separately.md#to-create-missing-ledger-entries-to-match-bank-statement-lines-with). |
+| A transaction in the internal bank account corresponds to a bank transaction but some information is too different to give a match. | Information, such as the amount or the customer name, was entered differently in connection with the bank transaction or the internal posting. | Review the information, and then manually match the two. Optionally, correct the information mismatch. |
 
 You must resolve the differences, for example by creating missing entries and correcting non-matching information, or by making missing money transactions, until the bank account reconciliation is completed and posted.
 
@@ -54,6 +54,9 @@ You can fill in the **Bank Statement Lines** pane on the **Bank Acc. Reconciliat
 The **Bank Statement Lines** pane will be filled with bank transactions according to an imported file or stream provided by the bank.
 
 To enable import of bank statements as bank feeds, you must first set up and enable the Envestnet Yodlee Bank Feed service, and then link your bank accounts to the related online bank accounts. For more information, see [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md).
+
+> [!TIP]
+> You can also import bank statement files in comma or semicolon delimited format (.CSV). Use the **Set up a bank statement file format** assisted setup to define bank statement import formats and attach the format to a bank account. You can then use these formats when you import bank statements in the **Bank Account Reconciliation** page.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Account Reconciliation**, and then choose the related link.
 2. Vyberte akci **Nový**.
@@ -121,10 +124,10 @@ If you discover a mistake in a posted bank reconciliation, you can use the **Und
 ### Reusing the bank statement number
 The bank statement number used for the new bank reconciliation is taken from the bank account as is the Balance Last Statement. You can change these values before you start a new bank reconciliation. However, when you create a new bank reconciliation, [!INCLUDE[d365fin](includes/d365fin_md.md)] checks whether the statement number is already assigned to a posted bank statement. If the number is in use, but you want the new bank statement to use it instead, you can use the **Change Statement No.** action on the **Bank Acct. Reconciliation** page.
 
-### Examples
+### Příklady
 The following are a few examples of how to fix a mistake on a posted bank reconciliation with or without using the same statement number.
 
-#### Example 1
+#### Příklad 1
 You did bank reconciliations for January, February, and March. The bank statement number was 100 for March. Later, you discover that March only included entries until the 30th, which means entries for the 31st are missing. So, you need to redo the bank reconciliation for March. In this case, we'll open the **Bank Acc. Statement** page, choose the statement for March, and then choose **Undo**.
 
 The new bank reconciliation is given the statement number 101. To reassign the number 100, choose **Change Statement No.** and enter **100**.
@@ -132,7 +135,7 @@ The new bank reconciliation is given the statement number 101. To reassign the n
 > [!TIP]
 > Remember to set the appropriate Statement ending date (in this example, that is March 31), and edit the **Balance Last Statement** field.
 
-#### Example 2
+#### Příklad 2
 You did bank reconciliations for January, February, June, and July. You discover that February was incorrect. Let's assume it had statement number 100. As in the Example 1, you use the Undo and Change Statement No. actions to change the statement number as in example #1 above and you can now redo February bank reconciliation.
 
 After you post the corrected bank reconciliation for February, on the corresponding Bank Account card, the **Last Statement No.** field will show **100**, and the **Balance Last Statement** field will show the ending balance for the February statement.
@@ -144,7 +147,7 @@ If the next bank reconciliation you do is for August, consider changing the valu
 > [!NOTE]
 > The statement number is important when you do bank reconciliations with imported CAMT files that contain statement numbers, or when you reconcile based on printed bank statements. If you just download a range of bank transactions from your online bank, the statement number is usually not important.
 >
-> The Balance Last Statement is kept on the bank account to minimize mistakes when doing bank reconciliations, but it’s also editable, allowing you to do your bank reconciliations in any order you want. This also means that if you undo a bank statement, the new ending balance might not be the balance last statement on the next bank statement. There’s no feature that allows you to move a balance forward to all subsequent bank statements, so be aware of this when using Undo.
+> The Balance Last Statement is kept on the bank account to minimize mistakes when doing bank reconciliations, but it's also editable, allowing you to do your bank reconciliations in any order you want. This also means that if you undo a bank statement, the new ending balance might not be the balance last statement on the next bank statement. There's no feature that allows you to move a balance forward to all subsequent bank statements, so be aware of this when using Undo.
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/bank-reconciliation-dynamics-365-business-central/index)
 

@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: VAT, tax, report, EC sales list, statement
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -56,7 +56,7 @@ For the VAT return, you can specify the entries to include:
 To report VAT to a tax authority electronically, you need to connect [!INCLUDE[prod_short](includes/prod_short.md)] to the tax authority's web service. This requires that you set up an account with your tax authority. When you have an account, you can enable a service connection that we provide in [!INCLUDE[prod_short](includes/prod_short.md)].
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Connections**, and then choose appropriate link.
-2. Fill in the required fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte požadovaná pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]  
    > It is a good idea to test your connection. To do this, choose the **Test Mode** check box, then prepare and submit your VAT report as described in the _To prepare and submit a VAT report_ section. While in Test Mode, the service tests whether the tax authority can receive your report, and the status of the report will indicate whether the test submission was successful. It is important to remember that this is not an actual submission. To submit the report for real, you must clear the **Test Mode** check box, and then repeat the submission process.

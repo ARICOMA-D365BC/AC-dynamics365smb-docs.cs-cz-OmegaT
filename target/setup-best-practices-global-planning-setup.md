@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -18,7 +18,7 @@ The **Planning** FastTab on the **Manufacturing Setup** page contains several fi
 
 The following table provides best practices on how to set up selected global planning parameter fields. For more information about a field, choose the link in the **Setup field** column.
 
-| Setup field | Best practice | Comment |
+| Setup field | Best practice | Komentář |
 |-----------------|-------------------|-------------|  
 | Use Forecast on Locations | Select if you have forecasts for specific locations. |
 | Components at Location | If items are not defined as SKUs, select the location code of your main warehouse. | This also applies if you only use the requisition worksheet. |

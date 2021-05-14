@@ -9,20 +9,20 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Set Up Warehouse Employees
-Each user who performs warehouse activities must be set up as a warehouse employee assigned to one default location and potentially more non-default locations. This user setup filters all warehouse activities across the database to the employee's location so that the employee can only perform the warehouse activities at the default location. A user can be assigned to additional non-default locations for which the employee can view activity lines but not perform the activities.
+# Nastavení zaměstnanců skladu
+Každý uživatel, který provádí aktivity skladu, musí být nastaven jako zaměstnanec skladu a přiřazený k jedné výchozí lokaci, potenciálně více nevýchozím lokacím. Toto uživatelské nastavení filtruje všechny aktivity skladu v databázi do místa zaměstnance, takže zaměstnanec může provádět pouze aktivity skladu ve výchozím umístění. Uživatele lze přiřadit k dalším nevýchozím lokacím, pro které může zaměstnanec zobrazit řádky aktivit, ale neprovádět aktivity.
 
-## To set up warehouse employees
+## Nastavení zaměstnanců skladu
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
 3. Select the **User ID** field, and then select the user to be added as a warehouse employee. Choose the **OK** button.
 6. In the **Location Code** field, enter the code of the location where the user will be working.
 7. Select the **Default** check box to define the location as the only location where the employee can perform warehouse activities.
-8. Repeat these steps to assign other employees to locations or assign non-default locations to existing warehouse employees.
+8. Tyto kroky opakujte pro přiřazení dalších zaměstnanců k umístěním nebo přiřazení jiných než výchozích umístění k existujícím zaměstnancům skladu.
 
 ## Viz také
 [Správa skladu](warehouse-manage-warehouse.md)    

@@ -9,51 +9,51 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Rounding
-Rounding residuals can occur when you value the cost of an inventory decrease that is measured in a different quantity than the corresponding inventory increase. Rounding residuals are calculated for all costing methods when you run the **Adjust Cost - Item Entries** batch job.
+# Detaily návrhu: Zaokrouhlení
+K zaokrouhlení zbytků může dojít, když oceníte náklady na snížení zásob, které se měří v jiném množství než odpovídající zvýšení zásob. Rounding residuals are calculated for all costing methods when you run the **Adjust Cost - Item Entries** batch job.
 
-When you use the average costing method, the rounding residual is calculated and recorded on a cumulative, entry-by-entry basis.
+Použijete-li metodu průměrných nákladů, zaokrouhlení se vypočítá a zaznamená na kumulativním základě položky.
 
-When you use a costing method other than Average, the rounding residual is calculated when the inventory increase has been fully applied, that is when the remaining quantity for the inventory increase is equal to zero. A separate entry is then created for the rounding residual, and the posting date on this rounding entry is the posting date of the last invoiced value entry of the inventory increase.
+Když použijete jinou metodu kalkulace než Průměr, zbytkové zaokrouhlování se vypočítá, když se zvýšení zásob plně vyrovná, tedy když se zbývající množství pro zvýšení zásob rovná nule. Poté se vytvoří samostatná položka pro zbytkové zaokrouhlování a datum zaúčtování u tohoto zaokrouhlovacího záznamu je datem zaúčtování posledního záznamu fakturované hodnoty zvýšení zásob.
 
 ## Příklad
-The following example illustrates how different rounding residuals are handled for the average costing method and non-Average costing method, respectively. In both cases, the **Adjust Cost - Item Entries** batch job has been run.
+Následující příklad ukazuje, jak jsou zpracovány různé zbytky zaokrouhlení pro metodu průměrného výpočtu nákladů a  metodu neprůměrných nákladů. In both cases, the **Adjust Cost - Item Entries** batch job has been run.
 
-The following table shows the item ledger entries that the example is based on.
+V následující tabulce jsou uvedeny položky zboží, na kterých je příklad založen.
 
 | Zúčtovací datum | Množství | Číslo položky |
 |------------------|--------------|---------------|  
-| 1.1.2020 | 3 | 1 |
+| 01.01.20 | 3 | 1 |
 | 1.2.2020 | -1 | 2 |
 | 1.3.2020 | -1 | 3 |
 | 04-01-20 | -1 | 4 |
 
-For an item using the Average costing method, the rounding residual (1/300) is calculated with the first decrease (entry number 2) and is carried forward to entry number 3. Therefore, entry number 3 is valued at –3.34.
+U položky používající metodu průměrných nákladů se zaokrouhlení zbytku (1/300) vypočítá s prvním snížením (číslo položky 2) a přenese se do položky číslo 3. Proto má položka číslo 3 hodnotu –3,34.
 
-The following table shows the resulting value entries.
+Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|--------------|----------------------------|---------------------------|---------------|  
-| 1.1.2020 | 3 | 10 | 1 | 1 |
+| 01.01.20 | 3 | 10 | 1 | 1 |
 | 1.2.2020 | -1 | -3.33 | 2 | 2 |
 | 1.3.2020 | -1 | -3.34 | 3 | 3 |
 | 04-01-20 | -1 | -3.33 | 4 | 4 |
 
-For an item using a costing method other than Average, the rounding residual (0.01) is calculated when the remaining quantity for the inventory increase is zero. The rounding residual has a separate entry (number 5).
+U zboží, které používá jinou metodu ocenění než Průměr, se zaokrouhlení zbytkové hodnoty (0,01) vypočítá, pokud je zbývající množství pro zvýšení zásob nulové. Zbytek zaokrouhlování má samostatný záznam (číslo 5).
 
-The following table shows the resulting value entries.
+Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|--------------|----------------------------|---------------------------|---------------|  
-| 1.1.2020 | 3 | 10 | 1 | 1 |
+| 01.01.20 | 3 | 10 | 1 | 1 |
 | 1.2.2020 | -1 | -3.33 | 2 | 2 |
 | 1.3.2020 | -1 | -3.33 | 3 | 3 |
 | 04-01-20 | -1 | -3.33 | 4 | 4 |
-| 1.1.2020 | 0 | -0.01 | 1 | 5 |
+| 01.01.20 | 0 | -0.01 | 1 | 5 |
 
 ## Viz také
 [Design Details: Inventory Costing](design-details-inventory-costing.md)   

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: service, service items, repairs, maintenance, fix
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ When you define a service, you can associate it with the skills required to perf
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up codes that automatically assign lines on service documents for services you deliver often. | [Set Up Codes for Standard Services](service-how-setup-service-coding.md) |
 | Establish general settings that control aspects of Service Management Processes. | [Configure Service Processes](service-setup-service-processes.md) |
@@ -40,7 +40,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 
 ## Viz také
 [Service Management](service-service.md)  
-[Getting Started](product-get-started.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

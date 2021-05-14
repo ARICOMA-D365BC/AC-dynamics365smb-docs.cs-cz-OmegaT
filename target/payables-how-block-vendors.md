@@ -10,24 +10,24 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
-# Block Vendors
-You can block a vendor, for example because of insolvency, so that the vendor cannot be added to purchase documents or so that no payments can be posted for the vendor.
+# Blokace dodavatelů
+Dodavatele můžete zablokovat, například z důvodu platební neschopnosti, aby nemohl být přidán do nákupních dokladů, nebo aby za něj nemohly být účtovány žádné platby.
 
-The following table describes the options for blocking vendors.
+Následující tabulka popisuje možnosti blokování dodavatelů.
 
 | Možnost | Popis |
 |--------------------|------------|  
-| **Blank** | Transactions are allowed for this vendor. |
-| **Platba** | New payments cannot be created for this vendor. |
-| **All** | No transactions are allowed for this vendor. |
+| **Blank** | Transakce jsou pro tohoto dodavatele povoleny. |
+| **Platba** | Pro tohoto dodavatele nelze vytvořit nové platby. |
+| **All** | Pro tohoto dodavatele nejsou povoleny žádné transakce. |
 
-## To block a vendor
+## Zablokování dodavatele
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
-2. Select the vendor that you want to block.
+2. Vyberte dodavatele, kterého chcete blokovat.
 3. In the **Blocked** field, choose one of the options for blocking.
 
 ## Viz také

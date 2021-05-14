@@ -10,7 +10,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -26,7 +26,7 @@ Even though inventory costs are automatically posted to the general ledger, it i
 2. Post inventory costs to the general ledger manually by running the batch job. When you run this batch job, general ledger entries are created on the basis of value entries. You can post the entries so that they are summarized per posting group.
 
 > [!NOTE]  
-> When you run this batch job, you might encounter errors having to do with missing setup or incompatible dimension setup. If the batch job encounters errors in the dimension setup, it overrides these errors and uses the dimensions of the value entry. For any other errors, the batch job skips posting the value entries and lists them at the end of the report in a section titled “Skipped Entries.” To post these entries, you must fix the errors.
+> When you run this batch job, you might encounter errors having to do with missing setup or incompatible dimension setup. Pokud dávková úloha narazí na chyby v nastavení dimenze, přepíše tyto chyby a použije dimenzi položky ocenění. For any other errors, the batch job skips posting the value entries and lists them at the end of the report in a section titled “Skipped Entries.” To post these entries, you must fix the errors.
 
 To see a list of errors before running the posting batch job, you can run the **Post Invt. Cost to G/L - Test** report. The test report lists all the errors encountered during a test posting. You can then fix the errors, and run the inventory cost posting batch job without skipping any entries.
 

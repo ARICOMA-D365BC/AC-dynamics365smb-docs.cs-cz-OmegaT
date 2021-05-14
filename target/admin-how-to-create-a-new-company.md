@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -28,7 +28,7 @@ Example configuration packages, including country/region-specific files, are inc
 Use the following procedure to create a new company, and use the BASICCONFIG package as part of the process.
 
 ## To create a new company
-1. Create a new company. For more information, see [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).
+1. Vytvoření nové společnosti. For more information, see [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).
 2. From the RapidStart Services Implementer Role Center, you can now import the configuration package that you exported from the CRONUS International Ltd. company.
 
 After you create a new company, some tables are automatically filled in, even if no company template is applied. For example, you can review the standard codes for posting and batch transactions on the **Source Code** page. If you provide a local version of [!INCLUDE[prod_short](includes/prod_short.md)], you should review this table and consider any local language issues.
@@ -39,29 +39,29 @@ After you create a new company, some tables are automatically filled in, even if
 ### Master Data Tables
 The following table lists some of the master data tables. When you initialize a new company, these tables are empty.
 
-| Table No. | Table Name |
+| Číslo tabulky | Název tabulky |
 |-------------------|--------------------|  
 | 15 | Finanční účet |
 | 18 | Zákazník |
-| 23 | Vendor |
+| 23 | Dodavatele |
 | 27 | Zboží |
 | 5050 | Contact |
 
 ### Setup Data Tables
 The following table lists some of the setup data tables, in which you capture setup information in the configuration questionnaire. These tables contain baseline information when the company is created.
 
-| Table No. | Table Name |
+| Číslo tabulky | Název tabulky |
 |-------------------|--------------------|  
-| 98 | General Ledger Setup |
+| 98 | Nastavení financí |
 | 311 | Sales & Receivables Setup |
 | 312 | Purchases & Payables Setup |
-| 313 | Inventory Setup |
+| 313 | Nastavení zásob |
 
 In addition to setup data tables, [!INCLUDE[prod_short](includes/prod_short.md)] also has setup-type data tables that specify core information about the company and its business processes. The following table lists some of them.
 
-| Table No. | Table Name |
+| Číslo tabulky | Název tabulky |
 |-------------------|--------------------|  
-| 3 | Payment Terms |
+| 3 | Platební podmínky |
 | 4 | Currency |
 | 6 | Customer Price Groups |
 | 5700 | Stockkeeping Unit |

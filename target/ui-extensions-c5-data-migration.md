@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms. search.keywords: extension, migrate, data, C5, import
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -24,11 +24,11 @@ This extension makes it easy to migrate customers, vendors, items, and your gene
 ## What Data is Migrated?
 The following data is migrated for each entity:
 
-### Customers
+### Zákazníci
 
-* Contacts
+* Kontakty
 * Lokace
-* Country
+* Země
 * Customer dimensions (department, center, purpose)
 * Shipment method
 * Sales Person
@@ -43,11 +43,11 @@ If you migrate accounts, the following data is also migrated:
 * General journal batch
 * Open transactions (customer ledger entries)
 
-### Vendors
+### Dodavatelé
 
-* Contacts
+* Kontakty
 * Lokace
-* Country
+* Země
 * Vendor dimensions (department, center, purpose)
 * Invoice discount
 * Shipment method
@@ -62,10 +62,10 @@ If you migrate accounts, the following data is also migrated:
 * General journal batch
 * Open transactions (vendor ledger entries)
 
-### Items
+### Zboží
 
 * Lokace
-* Country
+* Země
 * Item dimensions (department, center, purpose)
 * Sales line discounts
 * Customer discount groups
@@ -87,7 +87,7 @@ If you migrate accounts, the following data is also migrated:
 > [!Note]
 > If there are open transactions that use foreign currencies, the exchange rates for those currencies are also migrated. Other exchange rates are not migrated.
 
-### Chart of Accounts
+### Účetní osnova
 
 * Standard dimensions: Department, Cost Center, Purpose
 * Historical G/L transactions
@@ -157,7 +157,7 @@ You can stop migrating data by choosing **Stop All Migrations**. If you do, all 
 ## Viz také
 
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Getting Started](product-get-started.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

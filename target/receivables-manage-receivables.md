@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: customer payment, debtor, balance due, AR
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -33,7 +33,7 @@ Other aspects of managing receivables include to collect outstanding balances, i
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Apply payments to open customer or vendor ledger entries based on an imported bank statement file or feed, and reconcile the bank account when all payments are applied. | [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md) |
 | Apply payments to open customer ledger entries based on a list of unpaid sales documents on the **Payment Registration** page. | [Reconcile Customer Payments from a List of Unpaid Sales Documents](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md) |

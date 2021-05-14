@@ -9,117 +9,117 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, reconciliation, general ledger, inventory
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Reconciliation with the General Ledger
-When you post inventory transactions, such as sales shipments, production output, or negative adjustments, the quantity and value changes to the inventory are recorded in the item ledger entries and the value entries, respectively. The next step in the process is to post the inventory values to the inventory accounts in the general ledger.
+# Detaily návrhu: Odsouhlasení s hlavní knihou
+Při zaúčtování skladových transakcí, jako jsou prodejní dodávky, výstup výroby nebo záporné úpravy, jsou změny množství a hodnoty zásob zaznamenány v položkách zboží a v položkách ocenění. Dalším krokem v procesu je zaúčtování hodnot zásob na účty zásob ve financích.
 
-There are two ways to reconcile the inventory ledger with the general ledger:
+Existují dva způsoby, jak sladit položky inventury s financemi:
 
-* Manually, by running the **Post Inventory Cost to G/L** batch job.
-* Automatically, every time that you post an inventory transaction.
+* Ručně spuštěním dávkové úlohy **Účtování nákladů na zboží**.
+* Automaticky, pokaždé, když zaúčtujete skladovou transakci.
 
-## Post Inventory Cost to G/L Batch Job
-When you run the **Post Inventory Cost to G/L** batch job, the general ledger entries are created based on value entries. You have the option to summarize general ledger entries for each value entry, or create general ledger entries for each combination of posting date, location code, inventory posting group, general business posting group, and general product posting group.
+## Dávková úloha Účtování nákladů na zboží
+Když spustíte dávkovou úlohu **Účtování nákladů na zboží** jsou věcné položky vytvořeny na základě položek ocenění. Máte možnost shrnout věcné položky pro každou položku ocenění nebo vytvořit věcné položky pro každou kombinaci data zaúčtování, kódu lokace, účto skupiny zboží, obecné účto skupiny zboží a obecné obchodní účto skupiny.
 
-The posting dates of the general ledger entries are set to the posting date of the corresponding value entry, except when the value entry falls in a closed accounting period. In this case, the value entry is skipped, and you must change either the general ledger setup or the user setup to enable posting in the date range.
+Zúčtovací data věcných položek jsou nastavena na zúčtovací datum odpovídající položky ocenění, s výjimkou případů, kdy položka ocenění spadá do uzavřeného účetního období. V tomto případě je položka ocenění přeskočena a je nutné změnit nastavení financí nebo nastavení uživatele, aby bylo možné zaúčtování v rozsahu dat.
 
-When you run the **Post Inventory Cost to G/L** batch job, you might receive errors because of missing setup or incompatible dimension setup. If the batch job encounters errors in the dimension setup, it overrides these errors and uses the dimensions of the value entry. For other errors, the batch job does not post the value entries and lists them at the end of the report in a section titled, **Skipped Entries**. To post these entries, you must first fix the errors. To see a list of errors before you run the batch job, you can run the **Post Invt. Cost to G/L - Test** report. This report lists all of the errors that are encountered during a test posting. You can fix the errors, and then run the inventory cost posting batch job without skipping any entries.
+Když spustíte dávkovou úlohu **Účtování nákladů na zboží** se mohou zobrazit chyby z důvodu chybějícího nastavení nebo nekompatibilního nastavení dimenze. Pokud dávková úloha narazí na chyby v nastavení dimenze, přepíše tyto chyby a použije dimenzi položky ocenění. U dalších chyb dávková úloha nezaúčtuje položky ocenění a vypíše je na konci sestavy v části s názvem **Přeskočené položky**. Chcete-li tyto položky zaúčtovat, musíte nejprve opravit chyby. Chcete-li zobrazit seznam chyb před spuštěním dávkové úlohy, můžete spustit sestavu **Účtování nákladů  na zboží - test**. Tato sestava obsahuje seznam všech chyb, ke kterým došlo během testovacího účtování. Chyby můžete opravit a poté spustit dávkovou úlohu zaúčtování nákladů skladu, aniž byste přeskakovali jakékoli položky.
 
-## Automatic Cost Posting
-To set up cost posting to the general ledger to run automatically when you post an inventory transaction, select the **Automatic Cost Posting** check box on the **Inventory Setup** page. The posting date of the general ledger entry is the same as the posting date of the item ledger entry.
+## Automatické zaúčtování nákladů
+Chcete-li nastavit účtování nákladů do financí tak, aby se spouštěla automaticky při zaúčtování skladové transakce, zaškrtněte políčko **Automatické účtování nákladů** na stránce **Nastavení zásob**. Datum zaúčtování věcné položky je stejné jako datum zaúčtování položky zboží.
 
-## Account Types
-During reconciliation, inventory values are posted to the inventory account in the balance sheet. The same amount, but with the reverse sign, is posted to the relevant balancing account. Usually the balancing account is an income statement account. However, when you post direct cost related to consumption or output, the balancing account is a balance sheet account. The type of the item ledger entry and value entry determines which general ledger account to post to.
+## Typy účtů
+Během odsouhlasení jsou hodnoty zásob zaúčtovány v rozvaze na skladový účet. Stejná částka, ale s opačným znaménkem, je zaúčtována na příslušný vyrovnávací účet. Vyrovnávacím účtem je obvykle účet vvýsledovky. Když však zaúčtujete přímé náklady související se spotřebou nebo výstupem, je vyrovnávací účet konečný účet rozvažný. Typ položky zboží a položky ocenění určuje, na který účet hlavní knihy se má účtovat.
 
-The entry type indicates which general ledger account to post to. This is determined either by the sign of the quantity on the item ledger entry or the valued quantity on the value entry, since the quantities always have the same sign. For example, a sales entry with a positive quantity describes an inventory decrease caused by a sale, and a sales entry with a negative quantity describes an inventory increase caused by a sales return.
+Typ položky označuje, na který účet hlavní knihy se má zaúčtovat. To je určeno buď znaménkem množství na vstupu na položke zboží nebo oceněným množstvím na vstupu na položce ocenění, protože množství mají vždy stejné znaménko. Například položka prodeje s kladným množstvím popisuje pokles zásob způsobený prodejem a položka prodeje se záporným množstvím popisuje nárůst zásob způsobený výnosem z prodeje.
 
 ### Příklad
-The following example shows a bike chain that is manufactured from purchased links. This example shows how the various general ledger account types are used in a typical scenario.
+Následující příklad ukazuje řetěz kol, která je vyrobena ze zakoupených částí. Tento příklad ukazuje, jak se v typickém scénáři používají různé typy účtů hlavní knihy.
 
-The **Expected Cost Posting to G/L** check box on the **Inventory Setup** page is selected, and the following setup is defined.
+Je zaškrtnuto políčko **Účtování oček.nákladů do fin.** na stránce **Nastavení zásob** a je definováno následující nastavení.
 
-The following table shows how the link is set up on the item card.
+Následující tabulka ukazuje, jak jsou části nastavené na kartě zboží.
 
-| Setup Field | Hodnota |
+| Nastavení pole | Hodnota |
 |-----------------|-----------|  
-| **Costing Method** | Standard |
-| **Standard Cost** | LCY 1.00 |
-| **Overhead Rate** | LCY 0.02 |
+| **Metoda ocenění** | Standardní |
+| **Pevná pořizovací cena** | 1,00 LM |
+| **Režijní náklady** | 0,02 LM |
 
-The following table shows how the chain is set up on the item card.
+Následující tabulka ukazuje, jak je řetěz nastaven na kartě zboží.
 
-| Setup Field | Hodnota |
+| Nastavení pole | Hodnota |
 |-----------------|-----------|  
-| **Costing Method** | Standard |
-| **Standard Cost** | LCY 150.00 |
-| **Overhead Rate** | LCY 25.00 |
+| **Metoda ocenění** | Standardní |
+| **Pevná pořizovací cena** | 150,00 LM |
+| **Režijní náklady** | 25,00 LM |
 
-The following table shows how the work center is set up on the work center card.
+Následující tabulka ukazuje, jak je pracovní centrum nastaveno na kartě pracovního centra.
 
-| Setup Field | Hodnota |
+| Nastavení pole | Hodnota |
 |-----------------|-----------|  
-| **Direct Unit Cost** | LCY 2.00 |
-| **Indirect Cost Percentage** | 10 |
+| **Nákupní cena** | 2,00 LM |
+| **Procento nepřímých nákladů** | 10 |
 
 ##### Scénář
-1. The user purchases 150 links and posts the purchase order as received. (Purchase)
-2. The user posts the purchase order as invoiced. This creates an overhead amount of LCY 3.00 to be allocated and a variance amount of LCY 18.00. (Purchase)
+1. Uživatel zakoupí 150 částí a zaúčtuje nákupní objednávku jako přijatou. (Nákup)
+2. Uživatel zaúčtuje nákupní objednávku jako fakturovanou. Tím se vytvoří částka režijních nákladů 3,00 LM, která má být přidělena, a částka odchylky 18,00 LM. (Nákup)
 
-   1. The interim accounts are cleared. (Purchase)
-   2. The direct cost is posted. (Purchase)
-   3. The indirect cost is calculated and posted. (Purchase)
-   4. The purchase variance is calculated and posted (only for standard-cost items). (Purchase)
-3. The user sells one chain and posts the sales order as shipped. (Sale)
-4. The user posts the sales order as invoiced. (Sale)
+   1. Pozatímní účty jsou vymazány. (Nákup)
+   2. Přímé náklady jsou zaúčtovány. (Nákup)
+   3. Nepřímé náklady se vypočítají a zaúčtují. (Nákup)
+   4. Nákupní odchylka se vypočítá a zaúčtuje (pouze u položek se standardními náklady). (Nákup)
+3. Uživatel prodá jeden řetězec a zaúčtuje prodejní objednávku tak, jak byla dodána. (Prodej)
+4. Uživatel zaúčtuje prodejní objednávku jako fakturovanou. (Prodej)
 
-   1. The interim accounts are cleared. (Sale)
-   2. Cost of goods sold (COGS) is posted. (Sale)
+   1. Pozatímní účty jsou vymazány. (Prodej)
+   2. Náklady na prodané zboží (NNPZ) jsou zaúčtovány. (Prodej)
 
-      ![Results of sales posting to GL accounts](media/design_details_inventory_costing_3_gl_posting_sales.png "Results of sales posting to GL accounts")
-5. The user posts consumption of 150 links, which is the number of links used to produce one chain. (Consumption, Material)
+      ![Výsledky zaúčtování prodeje na finanční účty](media/design_details_inventory_costing_3_gl_posting_sales.png "Výsledky zaúčtování prodeje na finanční účty")
+5. Uživatel zaúčtuje spotřebu 150 částí, což je počet částí použitých k vytvoření jednoho řetězce. (Spotřeba, Materiál)
 
-   ![Results of material posting to GL accounts](media/design_details_inventory_costing_3_gl_posting_material.png "Results of material posting to GL accounts")
-6. The work center used 60 minutes to produce the chain. The user posts the conversion cost. (Consumption, Capacity)
+   ![Výsledky zaúčtování materiálu na finanční účty](media/design_details_inventory_costing_3_gl_posting_material.png "Výsledky zaúčtování materiálu na finanční účty")
+6. Pracovní centrum využilo na výrobu řetězu 60 minut. Uživatel zaúčtuje náklady převodu. (Spotřeba, Kapacita)
 
-   1. The direct costs are posted. (Consumption, Capacity)
-   2. The indirect costs are calculated and posted. (Consumption, Capacity)
+   1. Přímé náklady jsou zaúčtovány. (Spotřeba, Kapacita)
+   2. Nepřímé náklady se vypočítají a zaúčtují. (Spotřeba, Kapacita)
 
-      ![Results of capacity posting to GL accounts](media/design_details_inventory_costing_3_gl_posting_capacity.png "Results of capacity posting to GL accounts")
-7. The user posts the expected cost of one chain. (Output)
-8. The user finishes the production order and runs the **Adjust Cost - Item Entries** batch job. (Output)
+      ![Výsledky účtování kapacity na finanční účty](media/design_details_inventory_costing_3_gl_posting_capacity.png "Výsledky účtování kapacity na finanční účty")
+7. Uživatel zaúčtuje očekávané náklady na jeden řetězec. (Výstup)
+8. Uživatel dokončí výrobní zakázku a spustí dávkovou úlohu **Adjustace nákladů položek zboží**. (Výstup)
 
-   1. The interim accounts are cleared. (Output)
-   2. The direct cost is transferred from the WIP account to the inventory account. (Output)
-   3. The indirect cost (overhead) is transferred from the indirect cost account to the inventory account. (Output)
-   4. This results in a variance amount of LCY 157.00. Variances are only calculated for standard-cost items. (Output)
+   1. Pozatímní účty jsou vymazány. (Výstup)
+   2. Přímé náklady se převádí z účtu NV na skladový účet. (Výstup)
+   3. Nepřímé náklady (režijní náklady) se převádí z účtu nepřímých nákladů na účet zásob. (Výstup)
+   4. Výsledkem je částka odchylky 157,00 LM. Odchylky se počítají pouze u položek se standardními náklady. (Výstup)
 
-      ![Results of output posting to GL accounts](media/design_details_inventory_costing_3_gl_posting_output.png "Results of output posting to GL accounts")
+      ![Výsledky zaúčtování výstupu na finanční účty](media/design_details_inventory_costing_3_gl_posting_output.png "Výsledky zaúčtování výstupu na finanční účty")
 
       > [!NOTE]  
-      > For the sake of simplicity, only one variance account is shown. In reality, five different accounts exist:
+      > Kvůli zjednodušení je zobrazen pouze jeden účet odchylky. Ve skutečnosti existuje pět různých účtů:
       >
-      > * Material Variance
-      > * Capacity Variance
-      > * Capacity Overhead Variance
-      > * Subcontracting Variance
-      > * Manufacturing Overhead Variance
+      > * Odchylka materiálu
+      > * Odchylka kapacit
+      > * Odchylka kapacitních rež.nákl.
+      > * Odchylka subdodávky
+      > * Odchylka režijních nákladů výroby
 
-9. The user revalues the chain from LCY 150.00 to LCY 140.00. (Adjustment/Revaluation/Rounding/Transfer)
+9. Uživatel přehodnocuje řetězec z 150,00 LM na 140,00 LM. (Adjustace/Přecenění/Zaokrouhlení/Transfer)
 
-   ![Results of adjustment posting to GL accounts](media/design_details_inventory_costing_3_gl_posting_adjustment.png "Results of adjustment posting to GL accounts")
+   ![Výsledky zaúčtování adjustace na finanční účty](media/design_details_inventory_costing_3_gl_posting_adjustment.png "Výsledky zaúčtování adjustace na finanční účty")
 
-For more information about the relationship between the account types and the different types of value entries, see [Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md).
+Pro více informací o vztahu mezi typy účtů a různými typy položek ocenění navštivte [Detaily návrhu: Účty hlavní knihy](design-details-accounts-in-the-general-ledger.md).
 
 ## Viz také
-[Design Details: Inventory Costing](design-details-inventory-costing.md)   
-[Design Details: Expected Cost Posting](design-details-expected-cost-posting.md)   
-[Design Details: Cost Adjustment](design-details-cost-adjustment.md)
-[Managing Inventory Costs](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
+[Detaily návrhu: Účtování očekávaných nákladů](design-details-expected-cost-posting.md)     
+[Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)  
+[Správa nákladů zásob](finance-manage-inventory-costs.md)    
+[Finance](finance.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

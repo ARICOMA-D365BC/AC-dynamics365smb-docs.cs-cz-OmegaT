@@ -9,18 +9,18 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Track Document Lines
-You can view documents that are related to sales order lines and purchase order lines, including from archived order lines. Related documents that you can track include quotes, shipments, receipts, and blanket orders. This helps you to identify documents used to process orders.
+# Sledování řádků dokladů
+Můžete zobrazit doklady, které souvisejí s řádky prodejní objednávky a řádky nákupní objednávky, včetně z archivovaných řádků objednávek. Mezi související doklady, které lze sledovat, patří nabídky, dodávky, příjemky a hromadné objednávky. To vám pomůže identifikovat doklady používané ke zpracování objednávek.
 
-## To track documents related to a sales order line
-The following procedure describes how to track from a sales order line. The steps are similar for purchase order and blanket order lines.
+## Sledování dokladů souvisejících s řádkem prodejní objednávky
+Následující postup popisuje, jak lze sledovat z řádku prodejní objednávky. Postup je podobný jako u řádků nákupní objednávky a hromadné objednávky.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
-2. Open a sales order that you want to track from.
+2. Otevřete prodejní objednávku, ze které chcete sledovat.
 3. Select a line, and then choose the **Document Line Tracking** action.
 4. On the **Document Lines Tracking** page, select the document that you want to view, and then choose the **Show** action to see the related line.
 5. To view the entire document for the selected document line, choose the **Show Document** action.

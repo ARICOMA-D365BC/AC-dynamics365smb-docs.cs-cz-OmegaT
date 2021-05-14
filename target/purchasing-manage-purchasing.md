@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement, supply, vendor order
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -28,7 +28,7 @@ For all purchase processes, you can incorporate an approval workflow, for exampl
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Create a purchase invoice to record your agreement with a vendor to purchase products on certain delivery and payment terms. | [Record Purchases](purchasing-how-record-purchases.md) |
 | Create a purchase quote to reflect a request for quote from your vendor, which you can later convert to a purchase order. | [Request Quotes](purchasing-how-request-quotes.md) |

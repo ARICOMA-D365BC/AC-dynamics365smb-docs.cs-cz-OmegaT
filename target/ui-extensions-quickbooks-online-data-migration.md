@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms. search.keywords: extension, migrate, data, QuickBooks, import
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -22,9 +22,9 @@ This extension is included in the **Data Migration** assisted setup guide to hel
 
 You can import the following data from QuickBooks Online to [!INCLUDE[prod_short](includes/prod_short.md)]:
 
-* Customers
-* Vendors
-* Items
+* Zákazníci
+* Dodavatelé
+* Zboží
 * Chart of accounts
 * Beginning balance transaction in the general ledger
 * On-hand quantities for inventory items

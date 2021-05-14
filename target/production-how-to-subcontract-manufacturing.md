@@ -9,81 +9,81 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Subcontract Manufacturing
-Subcontracting selected operations to vendor is common in many manufacturing companies. Subcontracting can be a rare occurrence or can be an integral part of all production processes.
+# Subdodavatelská výroba
+V mnoha výrobních společnostech je subdodavatelská výroba dodavateli běžná. Subdodávky mohou být vzácným jevem nebo mohou být nedílnou součástí všech výrobních procesů.
 
 [!INCLUDE[prod_short](includes/prod_short.md)] provides several tools for managing subcontract work:
 
-- Work Centers with assigned vendor: This feature enables you to set up a work center that is associated with a vendor (subcontractor). This is called a subcontract work center. You can specify a subcontract work center on a routing operation, which allows you to easily process the subcontracted activity. In addition, the cost of the operation can be designated at the routing or the work center level.
-- Work Center cost based on units or time: This feature enables you to specify whether costs associated with the work center are based on the production time or a flat charge per unit. Although subcontractors commonly use a flat charge per unit to charge for their services, the application can handle both options (production time and flat charge per unit).
-- Subcontracting Worksheet: This feature allows you to find the production orders with material ready to send to a subcontractor and to automatically create purchase orders for subcontract operations from production order routings. The application automatically posts the purchase order charges to the production order during the posting of the purchase order. Only production orders with a status of released can be accessed and used from a subcontracting worksheet.
+- Pracovní centra s přiřazeným dodavatelem: Tato funkce umožňuje nastavit pracovní centrum, které je spojeno s dodavatelem (subdodavatelem). Toto centrum se nazývá subdodavateléské pracovní středisko. Můžete zadat subdodavatelské pracovní středisko při TNG operaci, což vám umožní snadno zpracovat subdodavatelskou činnost. Kromě toho mohou být náklady na operaci určeny na úrovni TNG postupu nebo pracovního centra.
+- Náklady pracovního centra na základě jednotek nebo času: Tato funkce umožňuje určit, zda jsou náklady spojené s pracovním střediskem založeny na době výroby nebo na paušálním poplatku za jednotku. Although subcontractors commonly use a flat charge per unit to charge for their services, the application can handle both options (production time and flat charge per unit).
+- Sešity subdodavatelů: Tato funkce vám umožní najít výrobní zakázky s materiálem připraveným k odeslání subdodavateli a automaticky vytvořit objednávky pro subdodavatelské operace z výrobních zakázek. The application automatically posts the purchase order charges to the production order during the posting of the purchase order. Do sešitu subdodavatelů lze přistupovat a používat pouze výrobní zakázky se stavem Vydaná.
 
-## Subcontract Work Centers
-Subcontract Work Centers are set up the same as regular work centers with additional information. They are assigned to routings in the same manner as other work centers.
+## Subdodavatelská pracovní centra
+Subdodavatelská pracovní centra jsou zřízena stejně jako běžná pracovní centra s dalšími informacemi. Jsou přiřazeny k TNG postupům stejným způsobem jako ostatní pracovní centra.
 
-### Subcontract Work Center Fields
-This **Subcontractor No.** field designates the work center as a subcontract work center. You can enter the number of a subcontractor who supplies the work center. This field can be used to administer work centers, which are not in-house but perform processing under contract.
+### Pole subdodavatelských pracovních středisek
+This **Subcontractor No.** field designates the work center as a subcontract work center. Můžete zadat číslo subdodavatele, který zásobuje pracovní centrum. Toto pole lze použít ke správě pracovních středisek, která nejsou interní, ale provádějí zpracování na základě smlouvy.
 
-If you subcontract with the vendor for a different rate for each process, then select the **Specific Unit Cost** field. This lets you set up a cost on each routing line and saves the time of re-entering each purchase order. The cost on the routing line is used in processing instead of the cost on the work center cost fields. Selecting the **Specific Unit Cost** field calculates costs for the vendor by the routing operation.
+If you subcontract with the vendor for a different rate for each process, then select the **Specific Unit Cost** field. To vám umožní nastavit náklady na každém řádku technologického postupu a ušetřit čas pro opětovné zadávání jednotlivých nákupních objednávek. Náklady na řádku TNG postupu se používají při zpracování místo nákladů na pole nákladů pracovního centra. Selecting the **Specific Unit Cost** field calculates costs for the vendor by the routing operation.
 
 If you subcontract at a single rate per vendor, leave the **Specific Unit Cost** field blank. The costs will be set up by filling in **Direct Unit Cost**, **Indirect Cost %**, and **Overhead Rate** fields.
 
-### Routings that use Subcontract Work Centers
-Subcontract work centers can be used for operations on routings in the same way as regular work centers.
+### TNG postupy, které používají Subdodavatelská pracovní centra
+Pracovní centra subdodávek lze použít pro operace v TNG postupech stejným způsobem jako běžná pracovní centra.
 
-You can set up a routing that uses an outside work center as a standard operational step. Alternatively, you can modify the routing for a particular production order to include an outside operation. This might be needed in an emergency such as a server not working correctly, or during a temporary period of higher demand, where the work generally performed in-house must be sent to a subcontractor.
+Můžete nastavit TNG postup, který používá externí pracovní středisko jako standardní operační krok. Alternativně můžete upravit TNG postup určité výrobní zakázky tak, aby zahrnoval vnější operaci. To může být nutné v případě nouze, jako je například server, který nepracuje správně, nebo během přechodného období vyšší poptávky, kde musí být práce, která je obvykle prováděna interně, zaslána subdodavateli.
 
 For more information, see [Create Routings](production-how-to-create-routings.md).
 
-## Calculate Subcontracting Worksheets and Create Subcontract Purchase Orders
-Once you have calculated the subcontracting worksheet, the relevant document, in this case a purchase order, is created.
+## Výpočet sešitů subdodavatelů a vytvoření nákupních objednávek subdodávek
+Po výpočtu sešitu subdodavatelů se vytvoří příslušný doklad, v tomto případě nákupní objednávka.
 
 The **Subcontracting Worksheet** page functions like the **Planning Worksheet** by calculating the needed supply, in this case purchase orders, which you review in the worksheet and then create with the **Carry Out Action Message** function.
 
 > [!NOTE]  
 > Only production orders with status **Released** can be accessed and used from a subcontracting worksheet.
 
-### To calculate the subcontracting worksheet
+### Výpočet sešitu subdodavatelů
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Subcontracting Worksheet**, and then choose the related link.
 2. To calculate the worksheet, choose the **Calculate Subcontracts** action.
 3. On the **Calculate Subcontracts** page, set filters for the subcontracted operations, or the work centers where they are performed, to calculate only the relevant production orders.
 4. Zvolte tlačítko **OK**.
 
-   Review the lines on the **Subcontracting Worksheet** page. The information in this worksheet comes from the production order and production order routing lines and flows to the purchase order when that document is created. You can delete a row from the worksheet without affecting the original information, just as you can with the other worksheets. The information will reappear the next time you run the **Calculate Subcontracts** function.
+   Review the lines on the **Subcontracting Worksheet** page. Informace v tomto sešitě pocházejí z výrobní zakázky a řádků TNG postupu výrobní zakázky a načíta se do nákupní objednávky při vytvoření tohoto dokladu. Řádek můžete odstranit zesešitu bez ovlivnění původních informací, stejně jako u ostatních sešitů. The information will reappear the next time you run the **Calculate Subcontracts** function.
 
-### To create the subcontract purchase order
+### Vytvoření nákupní objednávky subdodávky
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Subcontracting Worksheet**, and then choose the related link.
 2. Vyberte akci **Provést hlášené akce**.
 3. Select the **Print Orders** field to print the purchase order as it is created.
 4. Zvolte tlačítko **OK**.
 
-If all subcontracted operations are sent to the same vendor location, then only one purchase order is created.
+Pokud jsou všechny subdodavatelské operace odeslány do stejné lokace dodavatele, je vytvořena pouze jedna objednávka.
 
-The worksheet line that was turned into a purchase order is deleted from the worksheet. Once a purchase order is created, it will not appear in the worksheet again.
+Řádek sešitu, který byl převeden na objednávku, je z listu odstraněn. Jakmile je nákupní objednávka vytvořena, již se v sešitě neobjeví.
 
-## Posting Subcontract Purchase Orders
-Once the Subcontractor Purchase Orders have been created, they can be posted. Receiving the order posts a Capacity Ledger Entry to the production order and invoicing the order posts the direct cost of the purchase order to the production order.
+## Účtování nákupních objednávek subdodávek
+Jakmile byly vytvořeny nákupní objednávky subdodavatele, lze je zaúčtovat. Přijetí objednávky zaúčtuje záznam výrobní kapacity do výrobní zakázky a fakturace objednávky zaúčtuje přímé náklady na objednávku do výrobní zakázky.
 
-## To post a subcontract purchase order
+## Zaúčtování nákupní objednávky subdodávek
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then select the related link.
-2. Open a purchase order that is created from the subcontracting worksheet.
+2. Otevřete nákupní objednávku vytvořenou ze sešitu subdodavatelů.
 
-   On the purchase order lines, you see the same information that was in the worksheet. The **Prod. Order No.**, **Prod. Order Line No.**, **Operation No.**, and **Work Center No.** fields are filled in with the information from the source production order.
+   Na řádcích objednávek se zobrazují stejné informace jako v sešitu. The **Prod. Order No.**, **Prod. Order Line No.**, **Operation No.**, and **Work Center No.** fields are filled in with the information from the source production order.
 
 3. Vyberte akci **Zaúčtovat**.
 
-When the purchase is posted as received, then an output journal entry is automatically posted for the production order. This only applies if the subcontract operation is the last operation on the production order routing.
+Když je nákup zaúčtován tak, jak byl přijat, je výstupní položka deníku automaticky zaúčtována pro výrobní zakázku. Toto platí pouze v případě, že operace subdodávek je poslední operací na TNG postupu výrobní zakázky.
 
 > [!CAUTION]  
-> Posting output automatically for an ongoing production order when subcontracted items are received may not be desired. Reasons for this could be that the expected output quantity that is posted may be different from the actual quantity and that the posting date of the automatic output is misleading.
+> Posting output automatically for an ongoing production order when subcontracted items are received may not be desired. Důvodem může být, že očekávané výstupní množství, které je zaúčtováno, může být odlišné od skutečného množství a že zúčtovací datum automatického výstupu je zavádějící.
 >
-> To avoid that the expected output of a production order is posted when subcontract purchases are received, make sure the subcontracted operation is not the last one. Alternatively, insert a new last operation for the final output quantity.
+> Aby se předešlo tomu, že očekávaný výstup výrobní zakázky bude zaúčtován při přijetí subdodavatelských nákupů, ujistěte se, že operace subdodavatele není poslední. Alternativně vložte novou poslední operaci pro konečné výstupní množství.
 
-When the purchase order is posted as invoiced, then the direct cost of the purchase order is posted to the production.
+Když je nákupní objednávka zaúčtována jako fakturovaná, jsou přímé náklady nákupní objednávky zaúčtovány do výroby.
 
 ## Viz také
 [Manufacturing](production-manage-manufacturing.md)    

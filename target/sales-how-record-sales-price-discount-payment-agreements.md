@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: special price, alternate price, pricing
-ms.date: 01/22/2021
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -173,7 +173,7 @@ The status of the price list must be **Draft**.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Price Lists**, and then choose the related link.
 2. Choose the price list to copy, and then choose **Copy Lines**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]
    > You cannot have two lines that have the same settings but different prices. If that happens, a message will display when you activate a price list. You can choose the price to use by opening the list and deleting the incorrect price.

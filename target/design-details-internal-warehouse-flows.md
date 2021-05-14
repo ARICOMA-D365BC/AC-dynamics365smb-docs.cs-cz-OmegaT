@@ -9,19 +9,19 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Internal Warehouse Flows
-The flow of items between bins at a company location centers on picking components and putting away end items for assembly or production orders and ad-hoc movements, such as bin replenishments, without a relation to source documents. The scope and nature of the involved activities vary between basic and advanced warehousing.
+# Detaily návrhu: Interní skladové toky
+Tok zboží mezi přihrádkami na skladě společnosti se soustředí na komponenty vychystávání a ukládání koncového zboží pro montážní nebo výrobní zakázky a adhoc přesuny. Jedný se například o doplnění přihrádky, bez vztahu ke zdrojovým dokladům. Rozsah a povaha zapojených činností se liší mezi základním a pokročilým skladováním.
 
-Some internal flows overlap with inbound or outbound flows. Some of this overlap is shown as steps 4 and 5 in the graphical diagrams for advanced inbound and outbound flows respectively. For more information, see [Design Details: Inbound Warehouse Flow](design-details-outbound-warehouse-flow.md).
+Některé interní toky se překrývají s příchozími nebo odchozími toky. Některé z těchto kroků, které se překrávají jsou zobrazeny jako kroky 4 a 5 v diagramech pro pokročilé příchozí a odchozí toky. For more information, see [Design Details: Inbound Warehouse Flow](design-details-outbound-warehouse-flow.md).
 
-## Internal Flows in Basic Warehousing
-In basic warehouse configuration, the flow of items between bins inside the company centers on picking component and putting away end items for production or assembly orders and ad-hoc movements, such as bin replenishments, without relation to source documents.
+## Vnitřní toky v základním nastavení skladu
+V základní konfiguraci skladu se tok zboží mezi přihrádkami uvnitř společnosti soustředí na vyskladnění komponent a zaskladnění koncového zboží pro výrobní nebo montážní zakázky a adhoc přesuny. Jedná se o procesy jako je doplnění přihrádky, bez vztahu ke zdrojovým dokladům.
 
-### Flows to and from Production
+### Tok do a z Výroby
 The main integration between production orders and basic warehouse activities is represented by the ability to pick production components with the **Inventory Pick** or the **Inventory Movement** pages.
 
 > [!NOTE]  
@@ -31,86 +31,86 @@ In addition to component handling, the integration is represented by the ability
 
 The **To-Production Bin Code**, **From-Production Bin Code**, and **Open Shop Floor Bin Code** fields on the location card or the machine/work center cards define default flows to and from production areas.
 
-For more information about how component consumption is flushed from the To-Production or Open Shop Floor bins, see the "Flushing Production Components in the Warehouse" section in this topic.
+Další informace o tom, jak je spotřeba komponent vyskladněna a spotřebována z Do výroby nebo přihrádky dílky běžte na "Spotřeba komponent výroby ve skladu" v tomto článku.
 
-### Flows to and from Assembly
-The main integration between assembly orders and basic warehouse activities is represented by the ability to move assembly components to the assembly area.
+### Tok z a do Montáže
+Hlavní integrace mezi montážními zakázkami a základními aktivitami skladu je reprezentována schopností přesunout komponenty montáže do montáží.
 
-While no specific warehouse functionality exists for putting assembly items away, the bin code on the assembly order header may be set to a default put-away bin. Posting the assembly order then functions like posting a put-away. The warehouse activity to move assembly items into the warehouse can be managed on the **Internal Movement** page, with no relation to the assembly order.
+I když pro zaskladování položek montáže neexistují žádné specifické funkce skladu, kód přihrádky v hlavičce objednávky montáže může být nastaven na výchozí přihrádku, který je nastavena pro vyskladnění. Zaúčtování montážní zakázky pak funguje jako účtování vyskladnění. The warehouse activity to move assembly items into the warehouse can be managed on the **Internal Movement** page, with no relation to the assembly order.
 
-The following assembly flows exist.
+Existují následující toky montáže.
 
-| Flow | Popis |
+| Tok | Popis |
 |----------|---------------------------------------|  
-| Assemble-to-stock | The components are needed on an assembly order where the output is stored in the warehouse.<br /><br /> This warehouse flow is managed on the **Inventory Movement** page. One take line specifies where to take the components. One place line specifies where to place the components. |
-| Assemble-to-order | The components are needed on an assembly order that is linked to a sales order that is shipped when the sold item is assembled. |
+| Montáž-na-sklad | The components are needed on an assembly order where the output is stored in the warehouse.<br /><br /> This warehouse flow is managed on the **Inventory Movement** page. Jeden řádek take určuje, odkud se budou brát komponenty. Další řádek určuje, kam se mají komponenty umístit. |
+| Montáž-na-zakázku | Komponenty jsou potřebné na montážní zakázce, která je spojena s prodejní objednávkou, která je dodána a sestavena při zaúčtování objednávky. |
 
 > [!NOTE]  
-> If items are assembled to order, then the inventory pick of the linked sales order triggers an inventory movement for all the involved assembly components, not just for the sold item as when shipping inventory items.
+> Pokud je zboží sestaveno na objednávku, poté vyskladnění řádku propojených s prodejní objednávkou spustí pohyb zásob pro všechny komponenty montáže, nejen pro prodané zboží.
 
 The **To-Assembly Bin Code**, **From-Assembly Bin Code**, and **Asm.-to-Order Shpt. Bin Code** fields on the location card define default flows to and from assembly areas.
 
 > [!NOTE]  
 > The **Asm.-to-Order Shpt. Bin Code** field functions as the from-assembly bin in assemble-to-order scenarios.
 
-### Ad-Hoc Movements
+### Ad-Hoc přesuny
 In basic warehousing, the movement of items from bin to bin without relation to source documents is performed on the **Internal Movement** page, which functions together with the **Inventory Movement** page.
 
 Another way to move items ad hoc between bins is to post positive entries in the **New Bin Code** field on the **Item Reclass. Journal** page.
 
-## Internal Flows in Advanced Warehousing
-In advanced warehouse configurations, the flow of items between bins inside the company centers on picking component and putting away end items for production orders and picking components for assembly orders. In addition, internal flows occur as ad-hoc movements, such as bin replenishments, without relation to source documents.
+## Interní skladové toky v rozšířeném nastavení skladu
+V rozšířeném nastavení skladu je se tok mezi přihrádkami uvnitř společnosti soustředí na výdej komponent a vyskladnění koncového zboží pro výrobní zakázky a komponenty pro montážní zakázky. Kromě toho dochází k interním tokům jako jsou ad hoc přesuny, doplnění přihrádek, bez vztahu ke zdrojovým dokumentům.
 
-### Flows To and From Production
+### Toky z a do výroby
 The main integration between production orders and advanced warehouse activities is represented by the ability to pick production components, on the **Warehouse Pick** page and the **Pick Worksheet** page, and the ability to put produced items away with the **Whse. Internal-Put-away** page.
 
 Another integration point in production is provided with the **Warehouse Movement** page, together with the Movement Worksheet page, which enables you to place components and take produced items for released production orders.
 
 The **To-Production Bin Code**, **From-Production Bin Code**, and **Open Shop Floor Bin Code** fields on the location card or the machine/work center cards define default flows to and from production areas.
 
-For more information about how component consumption is flushed from the To-Production or Open Shop Floor Bins, see the "Flushing Production Components in the Warehouse" section in this topic.
+Další informace o tom, jak je spotřeba komponent provedena z přihrádek do výroby nebo otevřené přihrádek dílny, naleznete v části Spotřeba výrobních komponent ve skladu v tomto článku.
 
-### Flows to and from Assembly
-The main integration between assembly orders and advanced warehouse activities is represented by the ability to pick assembly components, both with the **Warehouse Pick** page and the **Pick Worksheet** page. This functionality works just like when picking components for production orders.
+### Tok z a do Montáže
+The main integration between assembly orders and advanced warehouse activities is represented by the ability to pick assembly components, both with the **Warehouse Pick** page and the **Pick Worksheet** page. Tato funkce funguje stejně jako při vyskladnění komponent pro výrobní zakázky.
 
-While no specific warehouse functionality exists for putting assembly items away, the bin code on the assembly order header may be set to a default put-away bin. Posting the assembly order then functions like posting a put-away. The warehouse activity to move assembly items into the warehouse can be managed on the **Movement Worksheet** page or the **Whse. Internal Put-away** page, with no relation to the assembly order.
+I když pro zaskladování položek montáže neexistují žádné specifické funkce skladu, kód přihrádky v hlavičce objednávky montáže může být nastaven na výchozí přihrádku, který je nastavena pro vyskladnění. Zaúčtování montážní zakázky pak funguje jako účtování vyskladnění. The warehouse activity to move assembly items into the warehouse can be managed on the **Movement Worksheet** page or the **Whse. Internal Put-away** page, with no relation to the assembly order.
 
 > [!NOTE]  
-> If items are assembled to order, then the warehouse shipment of the linked sales order triggers a warehouse pick for all the involved assembly components, not just for the sold item as when shipping inventory items.
+> Pokud je zboží smontováno na zakázku, potom skladová dodávka propojené prodejní objednávky aktivuje výběr vyskladnění pro všechny komponenty montáže, nejen pro prodanou položku, jako při klasické expedici zboží.
 
 The **To-Assembly Bin Code** and **From-Assembly Bin Code** fields on the location card define default flows to and from assembly areas.
 
-### Ad-Hoc Movements
+### Ad-Hoc přesuny
 In advanced warehousing, the movement of items from bin to bin without relation to source documents is managed on the **Movement Worksheet** page and registered in the Warehouse Movement page.
 
-## Flushing Production Components in the Warehouse
-If set up on the item card, components picked with warehouse picks are posted as consumed by the production order when the warehouse pick is registered. By using the **Pick + Forward** method and the **Pick + Backward** flushing method, the pick registration triggers the related consumption posting when the first operation starts or when the last operation finishes, respectively.
+## Spotřeba výrobních komponent ve skladu
+Pokud jsou komponenty vyskladněné pomocí vyskladnění jsou účtované jako spotřeba montáže, když se vyskladnění zapíše. By using the **Pick + Forward** method and the **Pick + Backward** flushing method, the pick registration triggers the related consumption posting when the first operation starts or when the last operation finishes, respectively.
 
 Consider the following scenario based on the [!INCLUDE[prod_short](includes/prod_short.md)] demonstration database.
 
-A production order for 15 PCS of item LS-100 exists. Some of the items on the component list must be flushed manually in a consumption journal, and other items on the list can be picked and flushed automatically using the **Pick + Backward** flushing method.
+Existuje výrobní zakázka na 15 Ks zboží LS-100. Some of the items on the component list must be flushed manually in a consumption journal, and other items on the list can be picked and flushed automatically using the **Pick + Backward** flushing method.
 
 > [!NOTE]  
-> **Pick + Forward** only works if the second production routing line operation uses a routing link code. Releasing a planned production order initiates forward flushing of components set to **Pick + Forward**. However, the flushing cannot take place until the pick of the components is registered, which again can only take place when the order is released.
+> **Pick + Forward** only works if the second production routing line operation uses a routing link code. Releasing a planned production order initiates forward flushing of components set to **Pick + Forward**. Spotřeba však nemůže probíhat, dokud není zapsáno vyskladnění komponent, což se opět může uskutečnit pouze po vydání objednávky.
 
-The following steps describe the involved actions by different users and the related response:
+Následující kroky popisují související akce různých uživatelů a odpovídající odpověď:
 
-1. The shop floor supervisor releases the production order. Items with **Forward** flushing method and no routing link code are deducted from the open shop floor bin.
-2. The shop floor supervisor chooses the **Create Warehouse Pick** button on the production order. A warehouse pick document is created pick for items with **Manual**, **Pick + Backward**, and **Pick + Forward** flushing methods. These items are placed in the To-Production bin.
-3. The warehouse manager assigns the picks to a warehouse worker.
-4. The warehouse worker picks the items from appropriate bins and places them in the To-Production bin or in the bin specified on the warehouse pick, which may be a work center or machine center bin.
-5. The warehouse worker registers the pick. The quantity is subtracted from the pick bins and added to the consumption bin. **Množství Picked** field on the component list for all picked items is updated.
+1. Vedoucí dílny uvolní výrobní zakázku. Items with **Forward** flushing method and no routing link code are deducted from the open shop floor bin.
+2. The shop floor supervisor chooses the **Create Warehouse Pick** button on the production order. A warehouse pick document is created pick for items with **Manual**, **Pick + Backward**, and **Pick + Forward** flushing methods. Tyto položky jsou umístěny do přihrádky výroby.
+3. Správce skladu přiřadí vyskladnění skladníkovi.
+4. Pracovník skladu vyskladní zboží z příslušných přihrádek a umístí je do přihrádky výroby nebo do přihrádky určené ve vyskladnění, což může být přihrádka pracovního nebo strojního centra.
+5. Pracovník skladu zapíše vyskladnění. Množství se odečte z přihrádek pro vyskladnění a přidá se do přihrádky spotřeby. **Množství Picked** field on the component list for all picked items is updated.
 
    > [!NOTE]  
-   > Only the quantity that is picked can be consumed.
+   > Spotřebovat lze pouze vyskladněné množství.
 
-6. The machine operator informs the production manager that the end items are finished.
+6. Obsluha stroje informuje vedoucího výroby, že koncové zboží je hotovo.
 7. The shop floor supervisor uses the consumption journal or production journal to post the consumption of component items that use either **Manual** flushing method or **Forward** or **Pick + Forward** flushing methods together with routing link codes.
 8. The production manager posts the output of the production order and changes status to **Finished**. The quantity of component items that use **Backward** flushing method is deducted from the open shop floor bin, and the quantity of component items that use **Pick + Backward** flushing method is deducted from the To-Production bin.
 
 The following illustration shows when the **Bin Code** field on the component list is filled according to your location or machine/work center setup.
 
-![Overview of when/how the Bin Code field is filled in](media/binflow.png "Overview of when/how the Bin Code field is filled in")
+![Přehled, kdy a jak je vyplněno pole Kód přihrádky](media/binflow.png "Přehled, kdy a jak je vyplněno pole Kód přihrádky")
 
 ## Viz také
 [Detaily návrhu: Správa skladu](design-details-warehouse-management.md)

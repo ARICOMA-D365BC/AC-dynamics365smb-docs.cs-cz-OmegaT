@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: costing methods, costing, item cost
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
@@ -37,8 +37,8 @@ When you set up inventory items, you must assign a costing method. The method ca
 * Average
 * FIFO
 * LIFO
-* Standard
-* Specific
+* Standardní
+* Specifikcé
 
 Pro více informace navštivte [Detaily návrhu: Metody ocenění](design-details-costing-methods.md).
 
@@ -79,13 +79,13 @@ To make the new items fully useful you must manually copy some master data from 
 |     | Item substitutions | Check whether any item substitutions are defined for the original item. If there are, transfer that data to the new item. To view substitute items, use the **Substitutions** action on the **Item Card** page. |
 |     | Analysis reports | Review the Item Analysis, Sales Analysis, and Purchase Analysis reports. For those that reference the original items you can either create a new analysis report with a reference to the new item (keeping the original analysis report to use as history) or adjust the reports so that they reference the new item. |
 |     | Standard journals | Check whether standard journals reference the original item and transfer that data to the new item when necessary. This information is found on the standard journals, which are available on the item journal. |
-| Sales | Sales prepayment percentage | Check whether any sales prepayment percentages are defined for the original item and transfer that data to the new item. To view prepayment percentages, on the **Item Card** page, choose **Sales**, and then **Prepayment Percentages**. |
+| Prodej | Sales prepayment percentage | Check whether any sales prepayment percentages are defined for the original item and transfer that data to the new item. To view prepayment percentages, on the **Item Card** page, choose **Sales**, and then **Prepayment Percentages**. |
 | Nákup | Purchase prepayment percentage | Check whether any purchase prepayment percentages are defined for the original item and transfer that data to the new item. To view prepayment percentages, on the **Item Card** page, choose **Purchases**, and then **Prepayment Percentages**. |
 | Warehouse | Bin contents | Review the bin content defined for the original item. If columns such as as Min. Qty., Max. Qty., Default, and Dedicated have been individually entered then you must manually create bin content for the new item. If they are not, no action is required. [!INCLUDE[prod_short](includes/prod_short.md)] will maintain the records when you register warehouse documents and journals. |
 | Job | Job Prices | Check whether job prices are defined for the original item and transfer that data to the new item. This information is available on the **Job Card** page in the **Job Details – No. of Prices** part on the **FactBox pane**. |
 | Service | Service resource skill | Check whether service resource skills are defined for the original item and transfer that data to the new item. To view resource skills, use the **Resource Skills** action on the **Item Card** page. |
 |     | Service item components | Check whether components are defined for the original service item and transfer that data to the new item. To view service item components, on the **Item Card** page use the **Service Item** action to open the list of related service items, and then choose the **Components** action. |
-| Production | Production BOMs | Check whether any production BOMs contain the original item and replace it with the new item. To replace the original item, on the **Production BOMs** page, choose the **Exchange Production BOM Item** action. |
+| Výroba | Production BOMs | Check whether any production BOMs contain the original item and replace it with the new item. To replace the original item, on the **Production BOMs** page, choose the **Exchange Production BOM Item** action. |
 | Montáž | Assembly BOMs | Check whether any assembly BOMs contain the original item and manually replace it with the new item. |
 
 > [!IMPORTANT]
@@ -125,7 +125,7 @@ When creating assembly orders, use the information from the Physical Invt. journ
 | Pole | Value to enter |
 |---------|---------|
 | Typ | Zboží |
-| Číslo | The number of the original item. |
+| Ne. | The number of the original item. |
 | Množství za | 1 |
 | Variant Code | The same as in physical inventory journal. |
 | Kód lokace | The same as in physical inventory journal. |
@@ -151,7 +151,7 @@ The following table lists functional areas where there might be outstanding quan
 
 | Area | Where to look for outstanding quantities |
 |---------|---------|
-| Sales | Sales documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
+| Prodej | Sales documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
 | Zásoby | Item journals, reservations, item tracking, and standard cost worksheet |
 | Nákup | Purchase documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
 | Planning | Requisition worksheet, planning worksheet, and order planning |
@@ -159,7 +159,7 @@ The following table lists functional areas where there might be outstanding quan
 | Montáž | Assembly documents, including orders, return orders, and blanket orders |
 | Jobs | Job planning lines and job journal lines |
 | Service | Service documents and service contracts |
-| Production | Production orders (planned, firm planned, and released) |
+| Výroba | Production orders (planned, firm planned, and released) |
 
 ### Block the original item from further use
 

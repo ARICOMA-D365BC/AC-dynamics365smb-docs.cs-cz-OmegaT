@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ The walkthroughs are complete scenarios, and should be performed from beginning 
 > [!NOTE]
 > Some of the walkthroughs require sample data that is not available in the default demonstration company in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [To create a company with complete sample data in a sandbox](across-how-create-sandbox-environment.md#to-create-a-company-with-complete-sample-data-in-a-sandbox).
 
-| Viz | také |
+| Viz | Také |
 |--------|---------|  
 | Set up a marketing campaign. | [Walkthrough: Conducting a Sales Campaign](walkthrough-conducting-a-sales-campaign.md) |
 | Use prepayments to manage part payments for sales and purchases. **Requires complete sample data** | [Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md) |

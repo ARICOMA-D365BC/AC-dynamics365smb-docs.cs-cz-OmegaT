@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -120,15 +120,15 @@ Forecasts and blanket orders both represent anticipated demand. The blanket orde
 For more information, see [Forecast Demand is Reduced by Sales Orders](design-details-balancing-demand-and-supply.md#forecast-demand-is-reduced-by-sales-orders).
 
 ## Planning Assignment
-All items should be planned for, however, there is no reason to calculate a plan for an item unless there has been a change in the demand or supply pattern since the last time a plan was calculated.
+Všechno zboží by měly být plánovány, ale není důvod pro výpočet plánu pro zboží, pokud nedošlo ke změně ve struktuře poptávky nebo nabídky od posledního výpočtu plánu.
 
-If the user has entered a new sales order or changed an existing one, there is reason to recalculate the plan. Other reasons include a change in forecast or the desired safety stock quantity. Changing a bill-of-material by adding or removing a component would most likely indicate a change, but for the component item only.
+Pokud uživatel zadal novou prodejní zakázku nebo změnil stávající, existuje důvod k přepočítání plánu. Mezi další důvody patří změna v prognóze nebo požadované množství bezpečných zásob. Changing a bill-of-material by adding or removing a component would most likely indicate a change, but for the component item only.
 
 The planning system monitors such events and assigns the appropriate items for planning.
 
-For multiple locations, the assignment takes place at the level of item per location combination. If, for example, a sales order has been created at only one location, application will assign the item at that specific location for planning.
+Pro více skladových míst se přiřazení provádí na úrovni zboží podle kombinace skladového místa. Pokud byla například prodejní objednávka vytvořena pouze v jedné lokaci, aplikace přiřadí zboží v tomto konkrétním skladovém místě k plánování.
 
-The reason for selecting items for planning is a matter of system performance. If no change in an item’s demand-supply pattern has occurred, the planning system will not suggest any actions to be taken. Without the planning assignment, the system would have to perform the calculations for all items in order to find out what to plan for, and that would drain system resources.
+Důvodem pro výběr zboží pro plánování je otázka výkonu systému. Pokud nenastane žádná změna ve struktuře nabídky-poptávky, plánovací systém nenavrhne žádné kroky, které mají být podniknuty. Bez přiřazení plánování by systém musel provést výpočty pro všechny položky, aby zjistil, na co se plánuje, a to by vyčerpalo systémové prostředky.
 
 The full list of reasons for assigning an item for planning is provided in [Design Details: Planning Assignment Table](design-details-planning-assignment-table.md).
 
@@ -179,7 +179,7 @@ For more information, see [Serial/Lot Numbers are Loaded by Specification Level]
 
 For more information about how the planning system balances attributes, see [Serial/Lot Numbers and Order-to-Order Links are Exempt from the Frozen Zone](design-details-balancing-demand-and-supply.md#seriallot-numbers-and-order-to-order-links-are-exempt-from-the-frozen-zone).
 
-## Propojení dávky-pro-dávku
+## Propojení Zakázka-na-Zalázku
 Order-to-order procurement means that an item is purchased, assembled, or produced to exclusively cover a specific demand. Typically it relates to A-items and the motivation for choosing this policy can be that the demand is infrequent, the lead-time is insignificant, or the required attributes vary.
 
 Another special case that uses order-to-order links is when an assembly order is linked to a sales order in an assemble-to-order scenario.

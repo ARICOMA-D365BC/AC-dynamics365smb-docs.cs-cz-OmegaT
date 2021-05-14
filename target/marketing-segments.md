@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
@@ -25,7 +25,7 @@ There are two main tasks in creating a segment:
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Create segments which allow you to select a group of contacts. For example, direct mail. | [Create Segments](marketing-how-create-segment.md) |
 | Manage the contacts that are assigned to segments. | [Add Contacts to Segments](marketing-add-contact-segment.md) |

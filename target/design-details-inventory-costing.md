@@ -9,16 +9,16 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, inventory, costing
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Inventory Costing
+# Detaily návrhu: Ocenění zásob
 This documentation provides detailed technical insight to the concepts and principles that are used within the Inventory Costing features in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-Inventory costing, also referred to as cost management, is concerned with recording and reporting business operating costs.
+Ocenění zásob, také označované jako Správa nákladů, se týká zaznamenávání a vykazování provozních nákladů.
 
-## In This Section
+## V této části
 [Design Details: Costing Methods](design-details-costing-methods.md)  
 [Design Details: Item Application](design-details-item-application.md)  
 [Design Details: Known Item Application Issue](design-details-inventory-zero-level-open-item-ledger-entries.md)  

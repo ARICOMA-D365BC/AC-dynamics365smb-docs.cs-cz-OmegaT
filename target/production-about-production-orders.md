@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -38,7 +38,7 @@ Production orders can be created on an order-by-order basis manually from the **
 
 Production orders are created using information from:
 
-- Items
+- Zboží
 - Production BOMs
 - Routings
 - Machine centers
@@ -114,8 +114,8 @@ The application offers a variety of options for how a manufacturing company migh
 Consumption of materials may be processed through the consumption journal, but also may be recorded automatically by application, known as automatic reporting. The reporting methods are:
 
 - Manual
-- Forward
-- Backward
+- Dopředu
+- Zpětně
 
 Manual consumption reporting uses the consumption journal to specify material picking.
 
@@ -184,8 +184,8 @@ The application provides you with the capability to track how much time is spent
 Output may be processed through the output journal, but also may be recorded automatically by application. The application copies the flushing method from the machine center or work center card to the production order routing when refreshing. As with material consumption, there are three reporting methods for output:
 
 - Manual
-- Forward
-- Backward
+- Dopředu
+- Zpětně
 
 Manual method uses the Output Journal to specify time consumed and quantity produced.
 

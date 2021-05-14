@@ -9,77 +9,77 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Table Structure
-To understand how dimension entries are stored and posted, it is important to understand the table structure.
+# Detaily návrhu:  Struktura tabulky
+Chcete-li pochopit, jak jsou položky dimenzí uloženy a zaúčtovány, je důležité porozumět struktuře tabulky.
 
-## Table 480, Dimension Set Entry
-You cannot change this table. After data has been written to the table, you cannot delete or edit it.
+## Tabulka 480, Položka sady dimenzí
+Tuto tabulku nelze změnit. Po zapsání dat do tabulky není možné data odstranit ani upravit.
 
-| Field No. | Field Name | Data Type | Comment |
+| Číslo pole. | Název pole | Datový typ | Komentář |
 |---------------|----------------|---------------|-------------|  
-| 1 | **ID** | Integer | >0.0 is reserved for the empty dimension set. References field 3 in table 481. |
-| 2 | **Dimension Code** | Code 20 | Table relation to table 348. |
-| 3 | **Dimension Value Code** | Code 20 | Table relation to table 349. |
-| 4 | **Dimension Value ID** | Integer | References field 12 in table 349. It is the secondary key that is used when traversing table 481. |
-| 5 | **Dimension Name** | Text 30 | CalcField. Lookup to table 348. |
-| 6 | **Dimension Value Name** | Text 30 | CalcField. Lookup to table 349. |
+| 1 | **ID** | Integer | >0,0 je rezervováno pro prázdnou sadu dimenzí. Odkazuje na pole 3 v tabulce 481. |
+| 2 | **Dimension Code** | Code 20 | Vztah tabulky k tabulce 348. |
+| 3 | **Dimension Value Code** | Code 20 | Vztah tabulky k tabulce 349. |
+| 4 | **Dimension Value ID** | Integer | Odkazuje na pole 12 v tabulce 349. Jedná se o sekundární klíč, který se používá při procházení tabulky 481. |
+| 5 | **Dimension Name** | Text 30 | CalcField. Lookup do tabulky 348. |
+| 6 | **Dimension Value Name** | Text 30 | CalcField. Lookup do tabulky 349. |
 
-## Table 481, Dimension Set Tree Node
-You cannot change this table. It is used to search for a dimension set. If the dimension set is not found, a new set is created.
+## Tabulka, Uzel stromu sady dimenzí
+Tuto tabulku nelze změnit. Používá se k vyhledání sady dimenzí. Pokud sada dimenzí není nalezena, vytvoří se nová sada.
 
-| Field No. | Field Name | Data Type | Comment |
+| Číslo pole. | Název pole | Datový typ | Komentář |
 |---------------|----------------|---------------|-------------|  
-| 1 | **Parent Dimension Set ID** | Integer | 0 for top level node. |
-| 2 | **Dimension Value ID** | Integer | Table relation to field 12 in table 349. |
-| 3 | **Dimension Set ID** | Integer | AutoIncrement. Used in field 1 in table 480. |
-| 4 | **In Use** | Boolean | False if not in use. |
+| 1 | **Parent Dimension Set ID** | Integer | 0 pro uzel nejvyšší úrovně. |
+| 2 | **Dimension Value ID** | Integer | Vztah tabulky k poli 12 v tabulce 349. |
+| 3 | **Dimension Set ID** | Integer | AutoIncrement. Používá se v poli 1 v tabulce 480. |
+| 4 | **In Use** | Boolean | False, pokud se nepoužívá. |
 
-## Table 482 Reclas. Dimension Set Buffer
+## Tabulka 482 Zásobník přeřazení sady dimenzí
 This table is used when you change a dimension value code, for example, on an item ledger entry by using the **Item Reclassification Journal** page.
 
-| Field No. | Field Name | Data Type | Comment |
+| Číslo pole. | Název pole | Datový typ | Komentář |
 |---------------|----------------|---------------|-------------|  
-| 1 | **Dimension Code** | Code 20 | Table relation to table 348. |
-| 2 | **Dimension Value Code** | Code 20 | Table relation to table 349. |
-| 3 | **Dimension Value ID** | Integer | References field 12 in table 349. |
-| 4 | **New Dimension Value Code** | Code 20 | Table relation to table 349. |
-| 5 | **New Dimension Value ID** | Integer | References field 12 in table 349. |
-| 6 | **Dimension Name** | Text 30 | CalcField. Lookup to table 348. |
-| 7 | **Dimension Value Name** | Text 30 | CalcField. Lookup to table 349. |
-| 8 | **New Dimension Value Name** | Text 30 | CalcField. Lookup to table 349. |
+| 1 | **Dimension Code** | Code 20 | Vztah tabulky k tabulce 348. |
+| 2 | **Dimension Value Code** | Code 20 | Vztah tabulky k tabulce 349. |
+| 3 | **Dimension Value ID** | Integer | Odkazuje na pole 12 v tabulce 349. |
+| 4 | **New Dimension Value Code** | Code 20 | Vztah tabulky k tabulce 349. |
+| 5 | **New Dimension Value ID** | Integer | Odkazuje na pole 12 v tabulce 349. |
+| 6 | **Dimension Name** | Text 30 | CalcField. Lookup do tabulky 348. |
+| 7 | **Dimension Value Name** | Text 30 | CalcField. Lookup do tabulky 349. |
+| 8 | **New Dimension Value Name** | Text 30 | CalcField. Lookup do tabulky 349. |
 
-## Transaction and Budget Tables
-In addition to other dimension fields in the table, this field is important:
+## Tabulky transakcí a rozpočtu
+Kromě dalších polí dimenzí v tabulce je toto pole důležité:
 
-| Field No. | Field Name | Data Type | Comment |
+| Číslo pole. | Název pole | Datový typ | Komentář |
 |---------------|----------------|---------------|-------------|  
-| 480 | **Dimension Set ID** | Integer | References field 1 in table 480. |
+| 480 | **Dimension Set ID** | Integer | Odkazuje na pole 1 v tabulce 480. |
 
-### Table 83, Item Journal Line
-In addition to other dimension fields in the table, these fields are important.
+### Tabulka 83, Řádky deníku zboží
+Kromě dalších polí dimenzí v tabulce jsou tato pole důležitá.
 
-| Field No. | Field Name | Data Type | Comment |
+| Číslo pole. | Název pole | Datový typ | Komentář |
 |---------------|----------------|---------------|-------------|  
-| 480 | **Dimension Set ID** | Integer | References field 1 in table 480. |
-| 481 | **New Dimension Set ID** | Integer | References field 1 in table 480. |
+| 480 | **Dimension Set ID** | Integer | Odkazuje na pole 1 v tabulce 480. |
+| 481 | **New Dimension Set ID** | Integer | Odkazuje na pole 1 v tabulce 480. |
 
 ### Table 349, Dimension Value
-In addition to other dimension fields in the table, these fields are important.
+Kromě dalších polí dimenzí v tabulce jsou tato pole důležitá.
 
-| Field No. | Field Name | Data Type | Comment |
+| Číslo pole. | Název pole | Datový typ | Komentář |
 |---------------|----------------|---------------|-------------|  
-| 12 | **Dimension Value ID** | Integer | AutoIncrement. Used for references in table 480 and table 481. |
+| 12 | **Dimension Value ID** | Integer | AutoIncrement. Používá se pro odkaz v tabulce 480 a 481. |
 
-### Tables That Contain the Dimension Set ID Field
-The **Dimension Set ID** field (480) exists in the following tables. For the tables that store posted data, the field only provides a non-editable display of dimensions, which is marked as Drill-down. For the tables that store working documents, the field is editable. The buffer tables that are used internally do not need editable or non-editable capabilities.
+### Tabulky, které obsahují pole ID sady dimenzí
+The **Dimension Set ID** field (480) exists in the following tables. U tabulek, které ukládají zaúčtovaná data, pole poskytuje pouze neupravitelné zobrazení dimenzí, které je označeno jako přechod k podrobnostem. U tabulek, které ukládají pracovní doklady, je pole upravitelné. Tabulky vyrovnávací paměti, které se používají interně, nepotřebují upravitelné nebo needitovatelné možnosti.
 
-Field 480 is non-editable in the following tables.
+Pole 480 nelze upravovat v následujících tabulkách.
 
-| Table No. | Table Name |
+| Číslo tabulky | Název tabulky |
 |---------------|----------------|  
 | 17 | **G/L Entry** |
 | 21 | **Cust. Ledger Entry** |
@@ -93,8 +93,8 @@ Field 480 is non-editable in the following tables.
 | 115 | **Sales Cr.Memo Line** |
 | 120 | **Purch. Rcpt. Header** |
 | 121 | **Purch. Rcpt. Line** |
-| 122 | **Purch. zál.  Header** |
-| 123 | **Purch. zál.  Line** |
+| 122 | **Purch. Zásoby Header** |
+| 123 | **Purch. Zásoby Line** |
 | 124 | **Purch. zál.  Memo Hdr.** |
 | 125 | **Purch. zál.  Memo Line** |
 | 169 | **Job Ledger Entry** |
@@ -131,9 +131,9 @@ Field 480 is non-editable in the following tables.
 | 6660 | **Return Receipt Header** |
 | 6661 | **Return Receipt Line** |
 
-Field 480 is editable in the following tables.
+Pole 480 je editovatelné v následujících tabulkách.
 
-| Table No. | Table Name |
+| Číslo tabulky | Název tabulky |
 |---------------|----------------|  
 | 36 | **Sales Header** |
 | 37 | **Sales Line** |
@@ -165,9 +165,9 @@ Field 480 is editable in the following tables.
 | 7134 | **Item Budget Entry** |
 | 99000829 | **Planning Component** |
 
-Field 480 exists in the following buffer tables.
+Pole 480 existuje v následujících tabulkách vyrovnávací paměti.
 
-| Table No. | Table Name |
+| Číslo tabulky | Název tabulky |
 |---------------|----------------|  
 | 49 | **Invoice Post. Buffer** |
 | 212 | **Job Posting Buffer** |
@@ -178,10 +178,6 @@ Field 480 exists in the following buffer tables.
 | 7136 | **Item Budget Buffer** |
 
 ## Viz také
-[Design Details: Dimension Set Entries](design-details-dimension-set-entries.md)   
-[Dimension Set Entries Overview](design-details-dimension-set-entries-overview.md)   
+
+[Dimension Set Entries Overview](design-details-dimension-set-entries-overview.md)  
 [Design Details: Searching for Dimension Combinations](design-details-searching-for-dimension-combinations.md)
-
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]

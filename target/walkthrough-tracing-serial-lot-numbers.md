@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
@@ -23,7 +23,7 @@ Prvním úkolem řízení závad je prošetřit, odkud vadné zboží pochází 
 
 Druhým úkolem správy závad je určit, zda je vysledované zboží plánováno v otevřených dokladech, jako jsou nezaúčtované prodejní objednávky nebo deníky spotřeby. Tato práce se provádí na stránce **Najít položky**. Funkci Najít položky můžete použít k prohledávání všech druhů databázových záznamů.
 
-## Návod
+## O tomto návodu
 
 Tento návod ukazuje, jak zjistit, které položky jsou vadné, který dodavatel je dodal a kde jsou používány, aby bylo možné tyto objednávky zastavit nebo stáhnout.
 
@@ -47,11 +47,11 @@ Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatels
 K dokončení tohoto návodu budete potřebovat:
 
 - Společnost [!INCLUDE[prod_short](includes/prod_short.md)].
-- Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle [Příprava ukázkových dat](walkthrough-tracing-serial-lot-numbers.md#prepare-sample-data)..
+- Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle [Příprava ukázkových dat](walkthrough-tracing-serial-lot-numbers.md#prepare-sample-data).
 
 ## Příběh
 
-Ricardo, kontrolor kvality, jedná o návratnost prodeje položky 1002, Závodní kolo. Zákazník, společnost Selangorian Ltd., si stěžoval, že rám kola je prasklý. Kontrolor kvality potvrdil, že závodní rám vráceného kola je vadný. Kontrolor kvality musí nyní určit:
+Ricardo, kontrolor kvality, jedná o návratnost prodeje položky 1002, Závodní kolo. Zákazník, společnost J V v.o.s., si stěžoval, že rám kola je prasklý. Kontrolor kvality potvrdil, že závodní rám vráceného kola je vadný. Kontrolor kvality musí nyní určit:
 
 - Které závodní rámy byly vadné.
 - Na kterou nákupní objednávku byla chybná šarže přijata.
@@ -77,7 +77,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 2. Vyberte akci **Nový**.
 3. Do pole **Číslo** zadejte **2000** a poté vyplňte následující pole.
 
-   | Popis | Základní měrná jednotka | Obecná  účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Kód sledování zboží |
+   | Popis | Základní měrná jednotka | Obecné účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Kód sledování zboží |
    |-----------|--------------------|------------------------|-----------------------|--------------------|------------------|  
    | Závodní rám | KS | SUROVINY | DPH19 | SUROVINY | DÁVKAVŠE |
 
@@ -85,11 +85,11 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
    > Chcete-li zadat základní měrnou jednotku, zvolte tlačítko **Nový** a poté na stránce **Měrné jednotky zboží** vyberte **KS**.
 
 4. Všechna ostatní pole mají přijatelná výchozí data nebo nemusí být vyplněna.
-5. Zvolte tlačítko **OK** a vytvořte první novou kartu položky, 2000..
+5. Zvolte tlačítko **OK** a vytvořte první novou kartu položky, 2000.
 6. Vyberte **Nový**.
 7. Do pole **Číslo** zadejte **1002** a poté vyplňte následující pole.
 
-   | Popis | Základní měrná jednotka | Obecná  účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Systém doplnění | Kód sledování zboží |
+   | Popis | Základní měrná jednotka | Obecné účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Systém doplnění | Kód sledování zboží |
    |-----------------|--------------------------|------------------------------|-----------------------------|-----------------------------|--------------------------|------------------------|  
    | Závodní kolo | KS | OBCHOD | DPH19 | DOKONČENÉ | výr. zakázky | SČVŠE |
 
@@ -123,7 +123,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 6. Do pole **Číslo faktury dodavatele** zadejte libovolnou hodnotu.
 7. Zvolte akci **Účtovat**, vyberte možnost **Příjem a fakturace** a poté klikněte na tlačítko **OK**.
 
-   Dále si zakupte závodní rámy od Coolwood Technologies.
+   Dále si zakupte závodní rámy od Mach a spol. v.o.s..
 8. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 9. Vyberte akci **Nový**.
 10. Vytvořte nákupní objednávku pro dodavatele Coolwood Technologies vyplněním následujících řádkových polí.

@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms. search.keywords: extension, bank, formats
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -48,7 +48,7 @@ There are a few steps to get started.
 * Specify the payment method for each vendor. Payment methods define how you pay invoices from the vendor. For example, Bank, Cash, Check, or Account.
 * Specify the type of format to use for each of your bank accounts. For example, NORDEA, DANSKEBANK, SDC, and so on.
 
-Additionally, you must assign vendors to a domestic **Gen. obch. Posting Group** and a **Vendor Posting Group**. The Country/Region setting for the vendor must be Denmark (DK). For more information, see [Setting Up Posting Groups](finance-posting-groups.md).
+Additionally, you must assign vendors to a domestic **Gen. účto  Posting Group** and a **Vendor Posting Group**. The Country/Region setting for the vendor must be Denmark (DK). For more information, see [Setting Up Posting Groups](finance-posting-groups.md).
 
 ### To allow [!INCLUDE[prod_short](includes/prod_short.md)] to export payment data
 

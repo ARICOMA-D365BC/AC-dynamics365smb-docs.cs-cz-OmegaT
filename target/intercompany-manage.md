@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: IC, group, consolidation, affiliate, subsidiary
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -35,7 +35,7 @@ Consolidating financial data may especially be relevant in connection with inter
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 |---|---|
 | Create your intercompany vendors and customers as so-called intercompany partners, and set up an intercompany chart of accounts. | [Set Up Intercompany](intercompany-how-setup.md) |
 | Use intercompany documents or journals to post transactions with your intercompany partners. | [Work with Intercompany Documents and Journals](intercompany-how-work-documents-journals.md) |

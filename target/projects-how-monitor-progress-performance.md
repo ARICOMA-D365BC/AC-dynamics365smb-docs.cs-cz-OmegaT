@@ -9,30 +9,30 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project management, KPI, work in process, work in progress
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Monitor Job Progress and Performance
-As a job progresses, materials, resources, and other expenses are consumed and must be posted to the job. Work in Process (WIP) is a feature that enables you to estimate the financial value of jobs in the general ledger while the jobs are ongoing. In many cases, you might post expenses for a job before invoicing a job. When only expenses have been posted, your financial statement will be inaccurate. For more information, see [Understanding WIP Methods](projects-understanding-wip.md).
+# Sledování průběhu a výkonu Projektů
+V průběhu projektu se spotřebovávají materiály, zdroje a další výdaje, které je třeba zaúčtovat. Nedokončená výroba (WIP) je funkce, která umožňuje odhadnout finanční hodnotu projektů v hlavní knize v době, kdy projekty stále probíhají. V mnoha případech můžete zaúčtovat výdaje za práci před fakturací projektu. Pokud byly zaúčtovány pouze výdaje, bude finanční výkaz nepřesný. For more information, see [Understanding WIP Methods](projects-understanding-wip.md).
 
-To track the value in the general ledger, you can calculate WIP and post the value to the general ledger.
+Chcete-li sledovat hodnotu v hlavní knize, můžete vypočítat cenu nedokončené výroby a zaúčtovat ji do hlavní knihy.
 
-You can calculate WIP based on the following:
+Nedokončenou výrobu lze vypočítat na základě následujících informací:
 
-* Cost Value
-* Sales Value
-* Recognizable Cost
-* Percentage of Completion
-* Completed Contract
+* Hodnota nákladů
+* Hodnota prodeje
+* Uznatelné náklady
+* Procento dokončení
+* Dokončené smlouvy
 
-If you want to view the result using a different method, you can change the method and calculate WIP again. There is no limit to the number of times that you calculate WIP. WIP is only calculated, it does not get posted to the general ledger. After you have calculated WIP, you can post to the general ledger.
+Chcete-li zobrazit výsledek jinou metodou, můžete metodu změnit a znovu vypočítat nedokončenou výrobu. Počet výpočtů nedokončené výroby není omezen. Nedokončená výroba se pouze vypočítá, ale nezaúčtuje se. Po výpočtu nedokončené výroby můžete zaúčtovat.
 
-## To create a job WIP method
-You can create a job WIP method that reflects the needs of your organization. After you have created it, you can set it as the default job WIP calculation method that will be used in your organization.
+## Vytvoření projektu s nedokončenou výrobou
+Můžete vytvořit projekt s nedokončenou výrobou, který bude odrážet potřeby Vaší společnosti. Po vytvoření můžete nastavit nedokončenou výrobu jako výchozí metodu kalkulace projektu, která bude použita ve Vaší společnosti.
 
 > [!NOTE]
-> After you have used your new method to create WIP entries, you cannot delete the method or modify it.
+> Jakmile použijete novou metodu nedokončené výroby na položky, není možné tuto metodu smazat nebo měnit.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Methods**, and then choose the related link.
 2. Choose the **New** action, and then fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
@@ -40,15 +40,15 @@ You can create a job WIP method that reflects the needs of your organization. Af
 4. To make this new method the default, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs Setup**, and then choose the related link.
 5. In the **Default WIP Method** field, choose the method from the list.
 
-## To define a WIP method for a job
-When you create a new job, you must specify which job WIP method that applies. In some cases, which Job WIP method that you can use has been set up for you as a default.
+## Definování Nedokončené výroby pro projekt
+Při vytváření nového projektu musíte určit, která metoda nedokončené výroby projektu se použije. V některých případech byla pro Vás jako výchozí nastavena metoda nedokončené výroby projektu, kterou můžete použít.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**. For more information, see [Create Jobs](projects-how-create-jobs.md).
-3. On the **Job Card** page, in the **WIP Method** field, select a WIP method from the list. If a default method has been defined, you can select another option if needed.
+3. On the **Job Card** page, in the **WIP Method** field, select a WIP method from the list. Pokud byla definována výchozí metoda, můžete v případě potřeby vybrat jinou možnost.
 
-## Výpočet NV
-You can determine the WIP amount that is to be posted to balance sheet accounts for the period end reporting. You use the **Job Calculate WIP** batch job to do this.
+## Výpočet Nedokončené výroby
+Můžete určit částku nedokončené výroby, která má být zaúčtována na rozvahové účty pro vykazování na konci období. You use the **Job Calculate WIP** batch job to do this.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Calculate WIP**, and then choose the related link.
 2. Choose the **Calculate WIP** action.
@@ -56,31 +56,33 @@ You can determine the WIP amount that is to be posted to balance sheet accounts 
 4. Zvolte tlačítko **OK**.
 
 > [!NOTE]  
-> The batch job only calculates the WIP. Není zaúčtováno do věcných položek. To do so, you must run the **Post WIP to G/L** batch job when you have calculated the WIP. For more information, see the following procedure.
+> Úloha počítá pouze nedokončenou výrobu. Nejedná se o účtování. To do so, you must run the **Post WIP to G/L** batch job when you have calculated the WIP. Další informace naleznete v následujícím postupu.
 
-## To post WIP
-When you have calculated WIP, you can post it to balance sheet accounts for the period end reporting. You use the **Job Post WIP to G/L** batch job to do this.
+## Účtování Nedokončené výroby
+Když jste vypočítali nedokončenou výrobu, můžete jí zaúčtovat na rozvahové účty pro vykazování konce období. You use the **Job Post WIP to G/L** batch job to do this.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Post WIP to G/L**, and then choose the related link.
 2. On the **Job Post WIP to G/L** page, fill in the fields as necessary.
 3. Zvolte tlačítko **OK**.
 
-## To view job usage estimates and post updates
-You can view job usage up to the completion of a project in one step. To do so, you use the **Job Calc. Remaining Usage** batch job for all the tasks up to and including the end of a job.
+## To calculate and post job completion entries
+When you have completed all activities for a job, including usage posting and invoicing, you must update the job to have a **Status** of **Completed**. Then, you must reverse any WIP that has been posted to the general ledger.
 
-This lets you track and compare your original estimates against actual results and make modifications or new entries as needed. For example, you may have estimated that a job required 10 hours, and to date, it has taken 15 hours. You can add the extra five hours to the existing journal line or create a new journal line to report these five hours as overtime, which is another work type. The appropriate cost and price are calculated, and you can then post to the journal.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+2. Select an open job, and then choose the **Edit** action.
+3. In the **Status** field, select **Completed**.
+4. Follow the assistance steps to calculate and post WIP. Alternatively, follows steps 5 and 6 to do so manually.
+5. Choose the **Calculate WIP** action.
+6. On the **Job Calculate WIP** page, fill in the fields as necessary.
 
-> [!NOTE]  
-> Item entries create item ledger entries and reduce the inventory quantity. The **Post Inventory Cost to G/L** batch job transfers the cost from inventory to the general ledger. Resource entries create resource ledger entries.
+   The job WIP entries created by running the batch job will have the **Job Complete** check box selected to show that they are completion entries.
+7. Choose the **Job Post WIP to G/L** action.
+8. On the **Job Post WIP to G/L** page, fill in the fields as necessary.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
-2. Select a relevant job journal, and then choose the **Calc. zbývajícího použití**.
-3. Na stránce **Výpočet zbývajícího  Remaining Usage** page, enter the document number and posting date that is to be inserted in the journal, and then choose the **OK** button.
-4. Update the journal with any modifications that may be needed.
-5. Choose the **Post**.
+   The job WIP general ledger entries created by running the batch job will have the **Job Complete** check box selected to show they are completion entries.
 
-## To view job ledger entries
-All job-related entries are recorded in job registers and are numbered sequentially, starting with 1. From the job register, you can get an overview of all job ledger entries.
+## Zobrazení Položek projektu
+Všechny položky související s projektem jsou zaznamenány v žurnálech a jsou číslovány postupně, počínaje 1. Z žurnálu projektu můžete získat přehled o všech položkách projektu.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Registers**, and then choose the related link.
 2. Select a relevant register, and then choose **Job Ledger** action.

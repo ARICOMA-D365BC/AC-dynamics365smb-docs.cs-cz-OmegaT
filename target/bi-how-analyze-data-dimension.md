@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -23,12 +23,15 @@ Analyzing data by dimensions gives you greater insight into your business, so yo
 > [!TIP]
 > As a quick way to analyze transactional data by dimensions, you can filter totals in the chart of accounts and entries in all **Entries** pages by dimensions. Look for the **Set Dimension Filter** action.
 
+> [!NOTE]
+> If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)
+
 ## To set up an analysis view
 An analysis by dimensions displays a selected combination of dimensions. You can store and retrieve each analysis you have set up. The information for setting up an analysis is stored on an **Analysis View** card to simplify future analysis.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Analysis Views**, and then choose the related link.
 2. On the **Analysis View List** page, choose the **New** action.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. To add other dimension codes in addition to the four on the **Dimensions** FastTab, choose the **Filter** action, fill in the fields, and then choose the **OK** button.
 5. To update the view, choose the **Update** action.
 

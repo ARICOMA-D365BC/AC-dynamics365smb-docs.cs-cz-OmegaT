@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accounting, auditing, bookkeeping
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -24,7 +24,7 @@ Many of the setup tasks must be completed before you can begin recording financi
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Specify how you want to be paid by customers, and how you want to pay your vendors. | [Set Up Payment Methods](finance-payment-methods.md) |
 | Specify payment terms to manage due dates and to calculate possible payment discounts. | [Set Up Payment Terms](finance-payment-terms.md) |

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -19,7 +19,7 @@
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the inbound processes for receiving and putting away can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
-| Metoda | Inbound process | Bins | Receipts | Put-aways | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Inbound process | Přihrádky | Receipts | Put-aways | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
 |------------|---------------------|----------|--------------|----------------|--------------------------------------------------------------------------------------------------------------------|  
 | A | Post receipt and put-away from the order line | X | 2 |
 | B | Post receipt and put-away from an inventory put-away document | X | 3 |
@@ -30,7 +30,7 @@ For more information, see [Design Details: Inbound Warehouse Flow](design-detail
 
 The following walkthrough demonstrates method B in the previous table.
 
-## Návod
+## O tomto návodu
 In basic warehouse configurations where your location is set up to require put-away processing but not receive processing, you use the **Inventory Put-away** page to record and post put-away and receipt information for your inbound source documents. The inbound source document can be a purchase order, sales return order, inbound transfer order, or production order with output that is ready to be put away.
 
 > [!NOTE]
@@ -103,8 +103,8 @@ Purchase orders are the most common type of inbound source document.
 
    | Zboží | Location code | Bin code | Množství |
    |----------|-------------------|--------------|--------------|  
-   | LS_75 | SILVER | S-01-0001 | 10 |
-   | LS-81 | SILVER | S-01-0001 | 30 |
+   | LS_75 | STŘÍBRNÝ | S-01-0001 | 10 |
+   | LS-81 | STŘÍBRNÝ | S-01-0001 | 30 |
 
    > [!NOTE]  
    > The bin code is entered automatically according to the setup that you performed in the "Setting up the Location" section.

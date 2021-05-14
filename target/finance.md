@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accounting, auditing, bookkeeping
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -21,7 +21,7 @@ The default configuration includes a chart of accounts and standard posting grou
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Apply incoming payments, reconcile bank accounts during payment application, and collect outstanding balances. | [Managing Receivables](receivables-manage-receivables.md) |
 | Make payments, apply outgoing payments, and work with checks. | [Managing Payables](payables-manage-payables.md) |

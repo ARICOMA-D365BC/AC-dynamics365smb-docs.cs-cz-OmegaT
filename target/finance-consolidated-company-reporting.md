@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: consolidation, subsidiaries, consolidate
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -53,7 +53,7 @@ You can test your data before you transfer it to the consolidated company. [!INC
 
 1. Open the consolidated company.
 2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Business Units**, and then choose the related link.
-3. Do one of the following:
+3. Proveďte jeden z následujících úkonů:
 
    * To test a file, choose the **Test File** action, enter the name of the file to test, and then choose **Print**.
    * To test the database, choose **Test Database**.
@@ -64,7 +64,7 @@ After you have tested the data, you can transfer it to the consolidated company.
 
 1. Sign in to the consolidated company.
 2. On the **Accountant Role Center**, choose the **Run Consolidation** action.
-3. Fill in the required fields.
+3. Vyplňte požadovaná pole.
 4. In the Filter section, set a filter for the relevant business unit or company name.
 5. Optionally, schedule the report to run at a convenient time.
 

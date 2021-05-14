@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -41,16 +41,16 @@ The following example illustrates when a WIP item transitions to become part of 
 
 | Zúčtovací datum | Zboží | Typ položky | Množství | Číslo položky |
 |------------------|----------|----------------|--------------|---------------|  
-| 1.1.2020 | LINK | Nákup | 150 | 1 |
+| 01.01.20 | LINK | Nákup | 150 | 1 |
 
 > [!NOTE]  
 > Now an item using the Standard costing method is available for revaluation.
 
-**1V**: The user posts the purchased links as invoiced and the links become part of inventory, from a financial point of view. The following table shows the resulting value entries.
+**1V**: The user posts the purchased links as invoiced and the links become part of inventory, from a financial point of view. Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|----------------|--------------------|----------------------------|---------------------------|---------------|  
-| 15.1.2020 | Přímé náklady | 1.1.2020 | 150.00 | 1 | 1 |
+| 15.01.20 | Přímé náklady | 01.01.20 | 150.00 | 1 | 1 |
 
 **2Q + 2V**: The user posts the purchased links as consumed for the production of the iron chain. From a financial point of view, the links become part of WIP inventory.  The following table shows the resulting item ledger entry.
 
@@ -72,11 +72,11 @@ The valuation date is set to the date of the consumption posting (02-01-20), as 
 |------------------|----------|----------------|--------------|---------------|  
 | 15.2.2020 | CHAIN | Output | 1 | 3 |
 
-**3V**: The user runs the **Adjust Cost - Item Entries** batch job, which posts the chain as invoiced to indicate that all material consumption has been completely invoiced. From a financial point of view, the links are no longer part of WIP inventory when the output is completely invoiced and adjusted. The following table shows the resulting value entries.
+**3V**: The user runs the **Adjust Cost - Item Entries** batch job, which posts the chain as invoiced to indicate that all material consumption has been completely invoiced. From a financial point of view, the links are no longer part of WIP inventory when the output is completely invoiced and adjusted. Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|----------------|--------------------|----------------------------|---------------------------|---------------|  
-| 15.1.2020 | Přímé náklady | 1.1.2020 | 150.00 | 2 | 2 |
+| 15.01.20 | Přímé náklady | 01.01.20 | 150.00 | 2 | 2 |
 | 1.2.2020 | Přímé náklady | 1.2.2020 | -150.00 | 2 | 2 |
 | 15.2.2020 | Přímé náklady | 15.2.2020 | 150.00 | 3 | 3 |
 
@@ -93,7 +93,7 @@ When calculating the re-valuable quantity for items using the Standard costing m
 - A value entry with an entry type of **Revaluation**. This entry records the reversal of the revaluation of the expected cost.
 
 ### Příklad
-The following example, which is based on the production of the chain in the previous example, illustrates how the three types of entries are created. It is based on the following scenario:
+The following example, which is based on the production of the chain in the previous example, illustrates how the three types of entries are created. Je založen na následujícím scénáři:
 
 1. The user posts the purchased links as received with a unit cost of LCY 2.00.
 2. The user then posts a revaluation of the links with a new unit cost of LCY 3.00, updating the standard cost to LCY 3.00.
@@ -106,11 +106,11 @@ The following example, which is based on the production of the chain in the prev
 
 | Step | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (očekávaná) | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |----------|------------------|----------------|--------------------|------------------------------|----------------------------|---------------------------|---------------|  
-| 1. | 15.1.2020 | Přímé náklady | 15.1.2020 | 300.00 | 0.00 | 1 | 1 |
+| 1. | 15.01.20 | Přímé náklady | 15.01.20 | 300.00 | 0.00 | 1 | 1 |
 | 2. | 01-20-20 | Přecenění | 01-20-20 | 150.00 | 0.00 | 1 | 2 |
-| 3.a. | 15.1.2020 | Přímé náklady | 15.1.2020 | -300.00 | 0.00 | 1 | 3 |
-| 3.b. | 15.1.2020 | Přecenění | 01-20-20 | -150.00 | 0.00 | 1 | 4 |
-| 3.c. | 15.1.2020 | Variance | 15.1.2020 | 0.00 | 450.00 | 1 | 5 |
+| 3.a. | 15.01.20 | Přímé náklady | 15.01.20 | -300.00 | 0.00 | 1 | 3 |
+| 3.b. | 15.01.20 | Přecenění | 01-20-20 | -150.00 | 0.00 | 1 | 4 |
+| 3.c. | 15.01.20 | Odchylka | 15.01.20 | 0.00 | 450.00 | 1 | 5 |
 
 ## Determining Whether an Inventory Decrease is Affected by Revaluation
 The date of the posting or the revaluation is used to determine if an inventory decrease is affected by a revaluation.
@@ -139,11 +139,11 @@ The following example, which illustrates revaluation of an item that uses the FI
 8. On 04-01-20, the user posts a sale of 1 unit.
 9. The user runs the **Adjust Cost - Item Entries** batch job.
 
-The following table shows the resulting value entries.
+Následující tabulka ukazuje výsledné hodnoty.
 
 | Scénář | Zúčtovací datum | Typ položky | Datum ocenění | Oceněné množství | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |--------------|------------------|----------------|--------------------|---------------------|----------------------------|---------------------------|---------------|  
-|  | 1.1.2020 | Nákup | 1.1.2020 | 6 | 60.00 | 1 | 1 |
+|  | 01.01.20 | Nákup | 01.01.20 | 6 | 60.00 | 1 | 1 |
 |  | 1.3.2020 | Přecenění | 1.3.2020 | 4 | -8.00 | 1 | 5 |
 | A | 1.2.2020 | Prodej | 1.2.2020 | -1 | -10,00 | 2 | 2 |
 | B | 1.3.2020 | Prodej | 1.3.2020 | -1 | -10,00 | 3 | 3 |

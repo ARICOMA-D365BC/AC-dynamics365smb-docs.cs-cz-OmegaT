@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -58,7 +58,7 @@ When a customer has accepted a service quote, you convert it to a service order.
 You can check and see if an item you need to fulfill an order is in stock, and if it is not, when the item will be in stock. In addition, if an item is available to reserve, you can reserve it to make sure it is available for your use. You can check availability for a particular order, or for all orders.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Dispatch Board**, and then choose the related link.
-2. Do one of the following:
+2. Proveďte jeden z následujících úkonů:
 
    * For a particular order, choose the order, and then choose the **Demand Overview** action.
    * For all orders, choose **Show Document**. The **Service Order** page opens.

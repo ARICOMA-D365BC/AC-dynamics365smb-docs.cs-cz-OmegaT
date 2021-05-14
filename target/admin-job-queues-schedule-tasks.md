@@ -9,21 +9,21 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 01/12/2021
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Use Job Queues to Schedule Tasks
+# Použití fronty úloh k plánování úkolů
 
-Job queues in [!INCLUDE[prod_short](includes/prod_short.md)] enable users to schedule and run specific reports and codeunits. You can set jobs to run one time, or on a recurring basis. For example, you might want to run the **Salesperson * Sales Statistics** report weekly, to track sales by salesperson each week, or you might want to run the **Delegate Approval Requests** codeunit daily, to prevent documents from piling up or otherwise block the workflow.
+Job queues in [!INCLUDE[prod_short](includes/prod_short.md)] enable users to schedule and run specific reports and codeunits. Můžete nastavit, aby se úlohy spouštěly jednorázově nebo opakovaně. For example, you might want to run the **Salesperson * Sales Statistics** report weekly, to track sales by salesperson each week, or you might want to run the **Delegate Approval Requests** codeunit daily, to prevent documents from piling up or otherwise block the workflow.
 
-The **Job Queue Entries** page lists all existing jobs. If you add a new job queue entry that you want to schedule, you must specify information about the type of object you want to run, such as a report or codeunit, and the name and object ID of the object that you want to run. You can also add parameters to specify the behavior of the job queue entry. For example, you can add a parameter to only send posted sales orders. You must have permission to run the particular report or codeunit, or an error will be returned when the job queue is run.
+The **Job Queue Entries** page lists all existing jobs. Pokud přidáte novou položku fronty úloh, kterou chcete naplánovat, musíte zadat informace o typu objektu, který chcete spustit, například sestava nebo codeunita, název a ID objektu. Můžete také přidat parametry k určení chování položky fronty úloh. Můžete například přidat parametr, který bude odesílat pouze zaúčtované prodejní objednávky. Musíte mít oprávnění ke spuštění konkrétní sestavy nebo procedury, jinak bude při spuštění položk fronty úloh vrácena chyba.
 > [!IMPORTANT]  
 > If you use the SUPER permissions set that comes with [!INCLUDE[prod_short](includes/prod_short.md)], you and your users have permissions to run all objects within the license. That is still not enough for Delegated Admin or users with Device license, who cannot create job queue entires.
 
-A job queue can have many entries, which are the jobs that the queue manages and runs. Information in the entry specifies what codeunit or report is run, when and how often the entry is run, in what category the job runs, and how it runs.
+Fronta úloh může mít mnoho položek, což jsou úlohy, které fronta spravuje a spouští. Informace v položce určují, která codeunita nebo sestava se spouští, kdy a jak často se položka spouští, v jaké kategorii se úloha spouští a jak se spouští.
 
-After job queues are set up and running, the status can change as follows within each recurring period:
+Po nastavení a spuštění front úloh se stav může v každém opakujícím se období změnit takto:
 
 * **On Hold**
 * **Ready**
@@ -31,9 +31,9 @@ After job queues are set up and running, the status can change as follows within
 * **Error**
 * **Finished**
 
-After a job has finished successfully, it is removed from the list of job queue entries unless it is a recurring job. If it is a recurring job, the **Earliest Start Time** field is adjusted to show the next time that the job is expected to run.
+Po úspěšném dokončení je úloha odebrána ze seznamu položek fronty úloh, pokud se nejedná o opakovanou úlohu. If it is a recurring job, the **Earliest Start Time** field is adjusted to show the next time that the job is expected to run.
 
-## To view status or errors in the job queue
+## Zobrazení stavu nebo chyb ve frontě úloh
 
 Data that is generated when a job queue is run is stored in the database, so that you can troubleshoot job queue errors.  
 For each job queue entry, you can view and change the status. When you create a job queue entry, its status is set to **On Hold**. You can set the status to **Ready** and back to **On Hold**, for example. Otherwise, status information is updated automatically.
@@ -48,21 +48,21 @@ The following table describes the values of the **Status** field.
 | Error | Indicates that there is an error. Choose **Show Error** to see the error message. |
 | Finished | Indicates that the job queue entry is complete. |
 
-### To view status for any job
+### Zobrazení stavu jakékoli úlohy
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
 2. On the **Job Queue Entries** page, select a job queue entry, and then choose the **Log Entries** action.
 
 > [!TIP]
 > With [!INCLUDE [prod_short](includes/prod_short.md)] online, you can also view the status of job queue entries by using Application Insights in Microsoft Azure. For more information, see [Analyzing Job Queue Lifecycle Trace Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-job-queue-lifecycle-trace) in the [!INCLUDE [prod_short](includes/prod_short.md)] Developer and Administration content.
 
-## The My Job Queue Part
-The **My Job Queue** part on your Role Center shows the job queues entries that you have started, but which are not yet finished. By default, the part is not visible, so you have to add it to your Role Center. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+## Moje fronta úloh
+The **My Job Queue** part on your Role Center shows the job queues entries that you have started, but which are not yet finished. Ve výchozím nastavení není tato část viditelná, takže ji musíte přidat do Centra rolí. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
 
-The part shows which documents with your ID in the **Assigned User ID** field are being processed or are queued, including those related to background posting. The part can tell you at a glance whether there has been an error in the posting of a document or if there are errors in a job queue entry. The part also lets you cancel a document posting if it is not running.
+The part shows which documents with your ID in the **Assigned User ID** field are being processed or are queued, including those related to background posting. Část vám může na první pohled sdělit, zda došlo k chybě při zaúčtování dokladu nebo zda došlo k chybám v položce fronty úloh. Část také umožňuje zrušit zaúčtování dokladu, pokud není spuštěno.
 
-### To view an error from the My Job Queue part
+### Zobrazení chyby z části Moje fronta úloh
 1. On an entry with the status **Error**, choose the **Show Error** action.
-2. Review the error message and fix the problem.
+2. Zkontrolujte chybovou zprávu a problém vyřešte.
 
 
 ## Examples of what can be scheduled using job queue
@@ -79,7 +79,7 @@ If you have integrated [!INCLUDE[prod_short](includes/prod_short.md)] with [!INC
 
 ### Schedule the posting of sales and purchase orders
 
-Job queues are an effective tool to schedule the running of business processes in the background, such as when multiple users are trying to post sales orders, but only one order can be processed at a time.
+Fronta úloh je účinným nástrojem pro plánování chodu obchodních procesů na pozadí, například když se více uživatelů pokouší zaúčtovat prodejní objednávky, ale současně lze zpracovat pouze jednu objednávku.
 
 For more information, see [To set up background posting with job queues](ui-batch-posting.md#to-set-up-background-posting-with-job-queues)
 

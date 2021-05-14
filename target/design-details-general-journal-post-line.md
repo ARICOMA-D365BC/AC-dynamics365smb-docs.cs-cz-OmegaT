@@ -9,14 +9,14 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, general journal, posting, codeunit 12
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: General Journal Post Line
-This documentation provides detailed technical insight into the concepts and principles that are used to redesign the general journal posting line feature in [!INCLUDE[prod_short](includes/prod_short.md)]. The redesign makes codeunit 12 simpler and more maintainable. The documentation starts by describing conceptual overviews of the redesign. Then it explains the technical architecture to show the changes that result from the redesign.
+# Detaily návrhu: Účtování řádku finančního deníku
+This documentation provides detailed technical insight into the concepts and principles that are used to redesign the general journal posting line feature in [!INCLUDE[prod_short](includes/prod_short.md)]. Díky redesignu je Codeunit 12 jednodušší a udržovatelnější. Dokumentace začíná popisem koncepčního přehledu redesignu. Poté vysvětluje technickou architekturu a ukazuje změny, které jsou výsledkem redesignu.
 
-## In This Section
+## V této části
 [General Journal Post Line Overview](design-details-general-journal-post-line-overview.md)  
 [Design Details: Posting Interface Structure](design-details-posting-interface-structure.md)  
 [Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)  

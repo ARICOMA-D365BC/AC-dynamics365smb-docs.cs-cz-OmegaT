@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ Existuje speciální funkce, která reguluje přepravu množství montáže na z
 
 Když je v základních konfiguracích skladu připraveno množství k montáži na zakázku k odeslání, odpovědný pracovník skladu zaúčtuje vyskladnění skladu pro řádky prodejní objednávky. Tím se vytvoří pohyb zásob pro komponenty, zaúčtuje se výstup montáže a dodávka prodejní objednávky. Pro více informací navštivte [Zpracování zboží montáže na zakázku vo vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md#handling-assemble-to-order-items-with-inventory-picks).
 
-## Návod
+## O tomto návodu
 Tento návod ukazuje následující úkoly:
 
 ### Nastavení montáže zboží
@@ -94,7 +94,7 @@ Připravte lokaci BÍLÝ pro zpracování montáže pomocí následujících kro
 
    Zadáním tohoto nevybraného kódu přihrádky jsou všechny řádky montážní objednávky připraveny přijímat své komponenty do přihrádky.
 
-4. Do pole **kód přihrádky z montáže** zadejte **W-01-0001**.
+4. Do pole **Kód přihrádky z montáže** zadejte **W-01-0001**.
 
    Zadáním tohoto kódu přihrádky vyskladnění se do přihrádky vyvede hotové zboží montáže.
 
@@ -172,7 +172,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    | **Způsob přiobjednání** | Dávka-pro-dávku |
 
    > [!NOTE]  
-   > Sada A se obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.
+   > Sada A je obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.
 
 4. Vyberte akci **Montáž** a poté vyberte **Kusovník montáže**.
 5. Definujte kusovník montáže pro sadu A s následujícími informacemi.
@@ -235,7 +235,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 7. Na řádku montážní objednávky pro zboží 80210 zvolte pole **Číslo** a místo toho vyberte položku 80209.
 8. Vytvořte nový řádek montážní objednávky s následujícími informacemi.
 
-   | Typ | Číslo | Množství za |
+   | Typ | Ne. | Množství za |
    |----------|---------|------------------|  
    | Zboží | 80203 | 1 |
 
@@ -249,7 +249,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 13. Na záložce **Řádky** vyberte **Řádek** zvolte **Montáž na objednávku** a poté vyberte **Řádky montáže na zakázku**.
 14. Na stránce **Řádky montáže na zakázku** vytvořte nový řádek montážní zakázky s následujícími informacemi.
 
-   | Typ | Číslo | Množství za |
+   | Typ | Ne. | Množství za |
    |----------|---------|------------------|  
    | Zboží | 80203 | 1 |
 
@@ -266,7 +266,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 2. Vyberte akci **Vypočítat regenerační plán**.
 3. Na stránce **Vypočítat plán** nastavte následující filtry.
 
-   | Počáteční datum | Datum ukončení | Číslo |
+   | Počáteční datum | Koncové datum | Ne. |
    |-------------------|-----------------|---------|  
    | 01-23-2014 | 01-27-2014 | Sada A – Základní PC |
 
@@ -318,7 +318,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    Pokračujte kontrolou příslušné objednávky montáže.
 
 9. Vyberte řádek dodávky pro tři jednotky sady B.
-10. Na záložce **Řádky** zvolte **Řádek** a pak zvolte**Montáž na objednávku**. Otevře se stránka **Montážní zakázka**.
+10. Na záložce **Řádky** zvolte **Řádek** a pak zvolte **Montáž na objednávku**. Otevře se stránka **Montážní zakázka**.
 
    Všimněte si, že několik polí v montážní zakázce není k dispozici, protože zakázka je propojena s prodejní objednávkou.
 
@@ -347,7 +347,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    > [!NOTE]  
    > V této části je montážní pracovník zodpovědný za zaznamenávání dokončených montážních prací MNO na řádku dodávky ze skladu. K tomuto pracovnímu postupu může dojít v prostředích, kde jsou montážní práce prováděny v samostatném montážním oddělení a montážní pracovníci jsou oprávněni změnit řádek dodávky ze skladu.
 
-2. Otevřete montážní zakázku MNO pro pět jednotek Ksady A.
+2. Otevřete montážní zakázku MNO pro pět jednotek sady A.
 
    Všimněte si, že pole **Množství k montáži** a **Množství ke spotřebě** jsou prázdná, protože zatím není zaznamenána žádná práce.
 

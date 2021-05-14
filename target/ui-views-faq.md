@@ -8,20 +8,20 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: list, filter, pane, views
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: mikebc
 
 ---
-# List Views FAQ
+# Nejčastějších dotazy - Seznamy
 This article answers questions that our advanced users often ask about working with list views and saving filters.
 
-### How do views handle expressions?
+### Jak seznamy zpracovávají výrazy?
 
 When you save a view that includes filters with expressions (like date ranges, operators, keywords, or filter tokens), only the expression gets saved&mdash;not the resulting values. For example, saving a view that filters on the **Created Date** field with the expression `-1W..today` will always find records related to the current date, even when the view is accessed next month.
 
-### Where are list views saved?
+### Kde jsou uloženy seznamy?
 
-Similarly to hiding a field or reordering your navigation menu, list views are a part of user personalization and are stored in the database. Clearing all personalization on a list will also permanently remove your personal views and clear other personalization such as reordering of views. For more information, see [Personalize your workspace](ui-personalization-user.md).
+Podobně jako skrytí políčka, nebo přeskládání vašeho navigačníhé menu se jedná o perzonalizaci, který je uložena v databázi. Clearing all personalization on a list will also permanently remove your personal views and clear other personalization such as reordering of views. For more information, see [Personalize your workspace](ui-personalization-user.md).
 
 ### <a name="save"></a>Why don't I have a Save icon?
 
@@ -29,7 +29,7 @@ There's a couple reasons why you might not see the Save icon and options menu al
 
 One reason could be that personalization isn't enabled for your user role. In this case, you still have access system views that are a standard part of the pages. You can modify these views, like changing or adding filters. You just can't save the changes. Another reason could be that the page you're looking at is a *worksheet* type page&mdash;not a list.
 
-### On which page types can I use list views?
+### Na kterých typech stránek lze použít zobrazení seznamu?
 
 Views are only available on list pages.
 
@@ -37,71 +37,71 @@ Views are only available on list pages.
 
 Use page inspection. To open page inspection, press Ctrl+Alt+F1. Then, in the **Page** field, look for the word **List** in the parenthesis at the end.
 
-### Are views also available on other form factors?
+### Jsou k dispozici také pohledy na jiné formy?
 
-Yes. Any views you save on your desktop browser or desktop app will also be available on your tablet or smartphone. You can't modify or personalize views on mobile devices.
+Ano. Všechna zobrazení, která uložíte v prohlížeči pro stolní počítače nebo v aplikaci pro stolní počítače, budou k dispozici také na tabletu nebo smartphonu. You can't modify or personalize views on mobile devices.
 
-### Are my personal views always accessible?
+### Jsou moje pohledy vždy přístupné?
 
 Your views are available on a list page whether you access it from the navigation menu, using the **Tell Me** window, or through a URL link. Views aren't available in list parts, lookups or whenever a list page is displayed as a dialog.
 
-### How do I return a view to its original filters after modifying them?
+### Jak mohu po úpravě vrátit seznam na původní filtry?
 
 At the bottom of the filter pane, choose the **Reset filters** action to clear filter changes you have made to the view and return to its original filtered fields and filter criteria.
 
-### What is the difference between hiding and removing views?
+### Jaký je rozdíl mezi skrytím a odebráním pohledů?
 
-Removing a view will permanently delete that view. Hiding a view allows you to temporarily hide it from the filter pane, but you can unhide it again later by choosing the **Show** action.
+Odebráním pohledu se toto zobrazení trvale odstraní. Hiding a view allows you to temporarily hide it from the filter pane, but you can unhide it again later by choosing the **Show** action.
 
-### How can I share my views with others?
+### Jak mohu sdílet své pohledy s ostatními?
 
 [!INCLUDE[prod_short](includes/prod_short.md)] doesn't provide a way to share the precise list view. But you can share your current filters so that other users can see a similar list of records. In your desktop browser, just copy the URL and share it with your colleagues. Sharing filters isn't guaranteed to give the recipient an identical set of filters that you see in your browser.
 
-### Can I search for views in the Tell Me window?
+### Mohu vyhledávat přehledy v okně Řekněte mi?
 
-Číslo The **Tell Me** window only displays search results for the page, but you're only a step away from getting to your favorite view once you navigate to the page.
+Ne. The **Tell Me** window only displays search results for the page, but you're only a step away from getting to your favorite view once you navigate to the page.
 
-### What is shared layout?
+### Co je sdílené rozvržení?
 
 All views on a list page share a common column layout. The layout includes which columns are displayed, their sequence, width, freeze pane, and quick entry settings. Personalizing any column layout will also affect other views sharing the same layout on the list page.
 
-Some system views can have unique layouts of the columns in the list. For example, they could rearrange columns to display only the columns most relevant to that view. You can identify which views have unique layouts by choosing the ![Show more options](media/show-more-options-icon.png "Show more options") icon and observing that the **Shared layout** check box isn't selected. As a user, you can personalize the column layout for a view with unique layout without it affecting any of the other views on the list page. Only developers can define a unique column layout for a view that initially has a shared layout.
+Některá systémová zobrazení mohou mít jedinečná rozložení sloupců v seznamu. For example, they could rearrange columns to display only the columns most relevant to that view. You can identify which views have unique layouts by choosing the ![Show more options](media/show-more-options-icon.png "Show more options") icon and observing that the **Shared layout** check box isn't selected. Jako uživatel si můžete přizpůsobit rozvržení sloupců pro pohled s jedinečným rozvržením, aniž by to ovlivnilo kterékoli z ostatních pohledů na stránce seznamu. Pouze vývojáři mohou definovat jedinečné rozložení sloupců pro zobrazení, které má sdílené rozložení.
 
-### What does the Show System Filters link do?
+### Co dělá odkaz Zobrazit systémové filtry?
 
 On some list pages, the filter pane displays **Show system filters** at the bottom, specifically when the page includes filters specified by the system. These special filters are typically used to display records based on the current context. An example would be when an orders list has to be filtered for a specific customer.
 
 System filters are set by application developers, which they set using filter group 0. For more information about system filters, see [FilterGroup Method](/dynamics365/business-central/dev-itpro/developer/methods-auto/record/record-filtergroup-method).
 
-### I see multiple views on my page, but I didn't create them. Where did they come from?
+### I see multiple views on my page, but I didn't create them. Kde se tu vzali?
 
-The views you see on any list are a combination of your personal views together with system views. System views may originate from the business application, from extensions, or may be role-specific if the list was customized for your role.
+Pohledy, které vidíte v kterémkoli seznamu, jsou kombinací vašich osobních pohledů a systémových pohledů. Systémové pohledy mohou pocházet z obchodní aplikace, z rozšíření nebo mohou být specifická pro roli, pokud byl seznam přizpůsoben pro vaši roli.
 
-### Why do some views provide fewer options?
+### Proč některá zobrazení poskytují méně možností?
 
-Some views only provide the option to save a copy of the view, while others don't allow saving changes to the view. How the view was created determines the options available to that view. Views can be created in multiple ways:
+Some views only provide the option to save a copy of the view, while others don't allow saving changes to the view. Způsob vytvoření pohledů určuje možnosti, které jsou pro toto zobrazení k dispozici. Pohledy lze vytvořit několika způsoby:
 
-- Personal views that you saved
-- System views that are a standard part of the business application, or added by extensions or role-specific views. Unlike personal views, you can't save changes to filters back to that system view.
+- Osobní, které jste uložili
+- Systémové pohledy, která jsou standardní součástí obchodní aplikace nebo jsou přidány rozšířeními nebo zobrazeními specifických pro roli. Unlike personal views, you can't save changes to filters back to that system view.
 - Legacy system views that are a standard part of the business application but were created using older versions of [!INCLUDE[prod_short](includes/prod_short.md)]. These views offer fewer options. You can only save them as a new view and can't hide or reorder them either. Legacy system views will be discontinued in a future update to [!INCLUDE[prod_short](includes/prod_short.md)].
 
-### How do I convert legacy system views?
+### Jak převést starší systémové pohledy?
 
-Legacy system views are list views that were created by developers in older versions of [!INCLUDE[prod_short](includes/prod_short.md)] by placing them on the Role Center page. These views are now displayed directly on the list page but offer a degraded experience and fewer options. You can convert a legacy system view to a personal view that is fully customizable, simply by saving that legacy view as a new view. Similarly, administrators can choose to convert role-specific legacy system views by customizing the user role and saving the legacy view as a new role-specific view.
+Legacy system views are list views that were created by developers in older versions of [!INCLUDE[prod_short](includes/prod_short.md)] by placing them on the Role Center page. These views are now displayed directly on the list page but offer a degraded experience and fewer options. Starší systémové pohledy můžete převést na osobní pohledy, které jsou plně přizpůsobitelné, jednoduše uložením tohoto staršího pohledu jako nového. Podobně se správci mohou rozhodnout převést starší systémové pohledy specifické pro roli přizpůsobením uživatelem a uložením staršího pohledu jako nového pro specifickou roli.
 
 Legacy system views will be discontinued in a future update to [!INCLUDE[prod_short](includes/prod_short.md)].
 
-### Others in my organization need similar list views as standard. What can I do?
+### Ostatní v mé organizaci potřebují podobné pohledy jako standard. Co můžu dělat?
 
 Working with personal views is quick and effective, but [!INCLUDE[prod_short](includes/prod_short.md)] provides other tools to define list views needed by specific user roles or all users in the organization.
-- Developers can customize the environment and create list views in extensions for all users in the organization.
+- Vývojáři mohou přizpůsobit prostředí a vytvořit zobrazení seznamu rozšíření pro všechny uživatele v organizaci.
 - Non-coders such as administrators or department managers, can create role-specific list views when customizing a role from the **Profiles (Roles)** page.
 
-### I work with multiple languages: how do I translate the name of the view?
+### Pracuji s několika jazyky: jak přeložím název seznamu?
 
-When saving a new view or renaming an existing view, you must enter a recognizable and meaningful name for that view. The name is saved for your current language and will be displayed also when you or other users work with [!INCLUDE[prod_short](includes/prod_short.md)] in different languages. To provide translated view names, switch the language by using the **My Settings** page. Then rename the view, which will store the translated name in the new language.
+Při ukládání nového seznamu nebo přejmenování existujícího je nutné zadat rozpoznatelný a smysluplný název tohoto seznamu. The name is saved for your current language and will be displayed also when you or other users work with [!INCLUDE[prod_short](includes/prod_short.md)] in different languages. To provide translated view names, switch the language by using the **My Settings** page. Then rename the view, which will store the translated name in the new language.
 
-### Do views with expressions work in all languages?
+### Fungují seznamy se výrazy ve všech jazycích?
 
 Expressions that only use symbols, such as `|` or `..` are considered safe for users to access in any language. Any views with expressions that include letters, keywords, or filter tokens will only work for the language in which they were authored.
 

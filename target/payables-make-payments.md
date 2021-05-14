@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: print check, vendor payment, creditor, debt, balance due, AP
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -27,7 +27,7 @@ After the payments are made at your bank, you must apply them to their related o
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Understand basic functions of the **Payment Journal** page, which is a based on the general journal, to prepare to post payments to vendors or employees. | [Working with General Journals](ui-work-general-journals.md) |
 | Post payments to vendors or employees and refunds to customers, and optionally apply the payments to the related unpaid invoices/credit memos to close them as paid. | [Record Payments and Refunds](payables-how-post-payments-refunds.md) |

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 11/03/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -25,7 +25,7 @@ Multiple locations allows companies to manage their inventory in multiple locati
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Responsibility Centers**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    If you are using responsibility centers to administer your company, it can be useful to have a default responsibility center for your company.
 4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.

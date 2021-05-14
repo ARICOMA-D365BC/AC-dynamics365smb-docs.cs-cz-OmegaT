@@ -8,7 +8,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365, collaborate, collaboration, teamwork
-ms.date: 01/20/2021
+ms.date: 04/01/2021
 ms.author: jswymer
 ---
 
@@ -18,7 +18,7 @@ ms.author: jswymer
 
 [!INCLUDE [prod_short](includes/prod_short.md)] offers an app that connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)], so you can quickly share details across team members and respond faster to inquiries. In this article, you'll learn how to use the app to share [!INCLUDE [prod_short](includes/prod_short.md)] data with coworkers in a Teams conversation.
 
-## Overview
+## Přehled
 
 The [!INCLUDE [prod_short](includes/prod_short.md)] app lets you:
 

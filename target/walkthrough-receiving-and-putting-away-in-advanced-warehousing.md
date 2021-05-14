@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -19,7 +19,7 @@
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the inbound processes for receiving and putting away can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
-| Metoda | Inbound process | Bins | Receipts | Put-aways | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Inbound process | Přihrádky | Receipts | Put-aways | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
 |------------|---------------------|----------|--------------|----------------|--------------------------------------------------------------------------------------------------------------------|  
 | A | Post receipt and put-away from the order line | X | 2 |
 | B | Post receipt and put-away from an inventory put-away document | X | 3 |
@@ -30,7 +30,7 @@ For more information, see [Design Details: Inbound Warehouse Flow](design-detail
 
 The following walkthrough demonstrates method D in the previous table.
 
-## Návod
+## O tomto návodu
 In advanced warehouse configurations where your location is set up to require receiving processing in addition to put-away processing, you use the **Warehouse Receipt** page to record and post the receipt of items on multiple inbound orders. When the warehouse receipt is posted, one or more warehouse put-away documents are created to instruct warehouse workers to take the received item and place them in designated places according to bin setup or in other bins. The specific placement of the items is recorded when the warehouse put-away is registered. The inbound source document can be a purchase order, sales return order, inbound transfer order, or assembly or production order with output that is ready to be put away. If the receipt is created from an inbound order, more than one inbound source document can be retrieved for the receipt. By using this method you can register many items arriving from different inbound orders with one receipt.
 
 This walkthrough demonstrates the following tasks.
@@ -90,8 +90,8 @@ Purchase orders are the most common type of inbound source document.
 
    | Zboží | Location code | Množství |
    |----------|-------------------|--------------|  
-   | 70200 | WHITE | 100 KS |
-   | 70201 | WHITE | 50 KS |
+   | 70200 | BÍLÝ | 100 KS |
+   | 70201 | BÍLÝ | 50 KS |
 
    Proceed to notify the warehouse that the purchase order is ready for warehouse handling when the delivery arrives.
 
@@ -104,8 +104,8 @@ Purchase orders are the most common type of inbound source document.
 
    | Zboží | Location code | Množství |
    |----------|-------------------|--------------|  
-   | 70100 | WHITE | 10 CAN |
-   | 70101 | WHITE | 12 CAN |
+   | 70100 | BÍLÝ | 10 CAN |
+   | 70101 | BÍLÝ | 12 CAN |
 
    Vyberte akci **Vydat**.
 

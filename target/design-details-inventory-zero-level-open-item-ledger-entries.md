@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -126,7 +126,7 @@ U obou scénářů identifikujte příslušné vyrovnání nákladů následovn�
 
    Podívejte se na následující příklad položky vyrovnání zboží.
 
-   | Číslo položky | Číslo položky zboží | Vyrovnává položku číslo | Vyrovnáno položkou číslo | Množství | Zúčtovací datum | Vyrovnání nákladů |
+   | Číslo položky | Číslo položky zboží | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Zúčtovací datum | Vyrovnání nákladů |
    |---------|---------------------|----------------------|-----------------------|--------|------------|----------------|  
    | 299 | 334 | 334 | 333 | 1 | 01/28/2018 | Ano |
 <!--![Why is inventory zero 8](media/helene/TechArticleInventoryZero8.png "Whyisinventoryzero\_8")  -->

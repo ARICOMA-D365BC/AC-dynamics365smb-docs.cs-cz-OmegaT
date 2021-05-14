@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -25,7 +25,7 @@ Po přiřazení služby přepravce k řádku prodejní objednávky bude doba dod
 
 ## Nastavení přepravce
 1. Vyberte ikonu ![Žárovku, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Přepravci** a poté vyberte související odkaz.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
+2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
 3. Vyberte akci **Služby přepravce**.
 4. Na stránce **Služby přepravce**, vyplňte pole podle potřeby.
 
@@ -40,7 +40,7 @@ Po přiřazení služby přepravce k řádku prodejní objednávky bude doba dod
 [Nastavení správy skladu](warehouse-setup-warehouse.md)       
 [Správa montáže](assembly-assemble-items.md)      
 [Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)    
-[Práce s [! INCLUDE[​​prod_short](includes/prod_short.md)]] (ui-work-product.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: Record Billable and Budgeted Usage of Job Resources| Microsoft Docs
+title: Record Consumption or Usage of Job Resources and Items
 description: Describes how to record the consumption or usage of items or resources on jobs to facilitate project management.
 author: SorenGP
 
@@ -9,26 +9,27 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project management, consumption
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Record Usage for Jobs
+# Record Consumption or Usage for Jobs
 
-On the **Job Planning Lines** page, you can review and record usage on various parts of your job, which is automatically updated as you modify and transfer information between jobs and job journals or job invoices. This requires that you have set up a job so that the **Apply Usage Link by Default** is turned on. For more information, see [Set Up Jobs](projects-how-setup-jobs.md).
+On the **Job Planning Lines** page, you can review and record usage on various parts of your job, which is automatically updated as you modify and transfer information between jobs and job journals or job invoices. This requires that you have set up a job so that the **Apply Usage Link** is turned on. For more information, see [Set Up Jobs](projects-how-setup-jobs.md).
 
-For example, for planning lines of type **Budget**, you can enter the quantity of a resource, and indicate what quantity to transfer to the job journal. If the type of the planning line is **Billable**, you can enter the quantity of the resource, and indicate what quantity to transfer to an invoice. By comparing the quantity that has been transferred to the journal or invoice with the remaining quantity, you can quickly review usage information.
+For example, for planning lines of type **Budget**, you can enter the quantity of a resource, and indicate what quantity to transfer to the job journal. If the type of the planning line is **Billable**, you can enter the quantity of the resource, and indicate what quantity to transfer to an invoice. For more information about invoicing the customer, see [Invoice Jobs](projects-how-invoice-jobs.md). By comparing the original quantity, remaining quantity, or posted quantity you can quickly review usage information. For information about estimating budgeted values during planning, see [Manage Job Budgets](projects-how-manage-budgets.md).
 
-The following procedures describe how to record actual (billable) or budgeted job prices and costs. For information about estimating budgeted values during planning, see [Manage Job Budgets](projects-how-manage-budgets.md).
-
-> [!TIP]
-> In the following sections, we use the term *record usage* to cover two tasks: Record job planning lines and invoice the customer accordingly.
+The following procedures describe how to record actual (budgeted) quantities and costs with job journal. Alternatively you can use purchase documents to record purchase for a job. For more information, see [Manage Job Supplies](projects-how-manage-project-supplies.md).
 
 ## To record usage for a job planning line of type Budget
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
 2. Select the relevant job, and then choose the **Job Planning Lines** action.
 3. Select a job planning line of type **Budget** or **Both Budget and Billable** for which you want to record usage.
+
+   > [!NOTE]
+   > You can also record usage for a job planning line of type **Billable**. Typically, you use this lines to create invoices, but you can also transfer it to a journal. For more information, see [Invoice Jobs](projects-how-invoice-jobs.md) <!--However, when you do that, a job planning line of type **Budget** is created to match the billable line. For more information, see [Manage Job Budgets](projects-how-manage-budgets.md).-->
+
 4. V poli **Množ. To Transfer to Journal** field, enter the number that you want to transfer. The default quantity is the value that you enter in the **Quantity** field.
 
    The **Remaining Quantity** field shows the quantity that remains to complete the job and be transferred to the journal.
@@ -42,40 +43,6 @@ The following procedures describe how to record actual (billable) or budgeted jo
 9. On the **Job Planning Lines** page, review the recorded usage by observing the **Quantity**, **Remaining Quantity**, and **Qty. To Transfer to Journal** fields.
 10. Repeat steps 3 through 8 to record additional usage.
 
-## To record usage for a job planning line of type Billable
-
-In the next task, you also record usage, but for a job planning line of type **Billable**. Typically, in this case, you invoice your usage, but you can also transfer it to a journal. However, when you do that, a job planning line of type **Budget** is created to match the billable line. For more information, see [Manage Job Budgets](projects-how-manage-budgets.md).
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
-2. Select the relevant job, and then choose the **Job Planning Lines** action.
-3. Select a job planning line of type **Billable** for which you want to record usage.
-4. V poli **Množ. To Transfer to Invoice** field, enter the number that you want to transfer. The default quantity is the value that you enter in the **Quantity** field.
-
-   The **Quantity to Invoice** field shows the quantity that remains to complete the job and be invoiced.
-5. Choose the **Create Sales Invoice** action.
-
-   > [!TIP]
-   > If you are going to add more job planning lines for this job, wait with this step until you have added all job planning lines.
-6. On the **Job Transfer to Sales Invoice** page, fill in the fields as necessary, and then choose the **OK** button.
-7. Review the recorded usage by observing the **Quantity**, **Quantity to Invoice**, **Qty. To Transfer to Invoice** fields, and, if the sales invoice is posted, the **Qty. Invoiced** fields.
-8. Repeat steps 3 through 7 to record additional usage.
-9. To review a related posted sales invoice, choose the **Sales Invoices/Credit Memos** action.
-
-   If more than one invoice exists for this job, you must choose the relevant invoice on the **Job Invoices** page, and then choose the **Open Sales Invoice/Credit Memo** action.
-
-## To create job journal lines from job planning lines
-
-When you are ready to post financial information for jobs, you must create job journal lines that you can post.
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
-2. Select a relevant open job, and then choose the **Job Planning Lines** action.
-3. On the **Job Planning Lines** page, on a relevant job planning line, in the **Qty. to Transfer to Journal** field, enter the quantity that you want to transfer to a job journal.
-4. Choose the **Create Job Journal Lines** action.
-5. On the **Job Transfer Job Planning Line** page, fill in the fields as necessary.
-6. Zvolte tlačítko **OK**. Job journal lines are created.
-7. To verify the transfer, open the relevant job journal batch and check the entries.
-8. When the job journal lines are complete, choose the **Post** action.
-
 ## To create job journal lines manually
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
@@ -83,12 +50,29 @@ When you are ready to post financial information for jobs, you must create job j
 3. On a new line, enter document number, job number, job task number, type, and the quantity of the type being consumed.
 4. When the job journal lines are complete, choose the **Post** action.
 
+## Náhled odhadů využití projektů a průběžné účtování
+
+V jednom kroku můžete zobrazit využití prjektů až do dokončení projektu. To do so, you use the **Job Calc. Remaining Usage** batch job for all the tasks up to and including the end of a job.
+
+To vám umožní sledovat a porovnávat původní odhady se skutečnými výsledky a podle potřeby provádět úpravy nebo přidávat nové položky. Můžete například odhadnout, že úloha vyžaduje 10 hodin a k dnešnímu dni to trvalo 15 hodin. Můžete přidat dalších pět hodin do existujícího řádku deníku nebo vytvořit nový řádek deníku pro vykazování těchto pěti hodin jako přesčas, jako jiný typ práce. Jsou vypočteny příslušné náklady a cena, kdy následně můžete účtovat v deníku.
+
+> [!NOTE]  
+> Řádky se zbožím vytvoří položky zboží a sníží množství v zásobách. The **Post Inventory Cost to G/L** batch job transfers the cost from inventory to the general ledger. Zdroje vytvářejí položky zdrojů.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
+2. Select a relevant job journal, and then choose the **Calc. zbývajícího použití**.
+3. Na stránce **Výpočet zbývajícího  Remaining Usage** page, enter the document number and posting date that is to be inserted in the journal, and then choose the **OK** button.
+4. Aktualizujte deník s případnými potřebnými úpravami.
+5. Choose the **Post**.
+
+
+
 ## To review planning lines for a job ledger entry
 
 After you have posted job journal lines, you can see the planning lines that are associated with the job journal entries that have been posted.
 
 > [!NOTE]  
-> This requires that the **Apply Usage Link by Default** check box has been selected for the job, or is the default setting for all jobs in your organization. For more information, see [Set Up Jobs](projects-how-setup-jobs.md).
+> This requires that the **Apply Usage Link** check box has been selected for the job. For more information, see [Set Up Jobs](projects-how-setup-jobs.md).
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
 2. Select a relevant job journal, and then choose the **Ledger Entries** action.

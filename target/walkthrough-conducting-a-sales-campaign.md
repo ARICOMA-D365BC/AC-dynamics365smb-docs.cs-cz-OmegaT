@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -20,7 +20,7 @@ Tyto funkce v oblasti Prodeje a marketingu používáte k pečlivému plánován
 
 Funkce Kampaně a segmentu s automatizovanými procesy umožňují plánovat, organizovat a sledovat vaše marketingové aktivity. Tím se zvýší šance na získání nových zákazníků a udržení stávajících zákazníků.
 
-## Návod
+## O tomto návodu
 Tento návod ukazuje proces sledování veletrhu a cílení na potenciální zákazníky (kontakty) v následné kampani.
 
 Návod představuje funkci správy kampaní a segmentů v oddělení prodeje a marketingu. Tento návod ilustruje následující úkoly:

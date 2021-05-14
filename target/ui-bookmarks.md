@@ -9,70 +9,70 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 ---
 
-# Bookmark a Page or Report on Your Role Center
-Using the bookmark icon, you can add an action that opens a page or report from the navigation menu of your Role Center. This allows you to quickly reach your favorite content or business tasks. You add the bookmark from the target page or report, meaning the screen that you want the link on the Role Center to open.
+# Záložka stránky nebo sestavy v Centru rolí
+Pomocí ikony záložky můžete přidat akci, která otevře stránku nebo sestavu z navigační nabídky Centra rolí. To vám umožní rychle dosáhnout vašeho oblíbeného obsahu nebo obchodních úkolů. Záložku přidáte z cílové stránky nebo sestavy, což znamená obrazovku, která se má otevřít z odkazu v Centru rolí.
 
-The bookmark icon is shown in the top right corner of a page and also in the **Tell Me** window where you can efficiently bookmark multiple pages or reports. If a bookmark already exists for the page, then the icon is dark, and the tooltip says "Bookmarked".
+The bookmark icon is shown in the top right corner of a page and also in the **Tell Me** window where you can efficiently bookmark multiple pages or reports. Pokud záložka již pro stránku existuje, ikona je tmavá a popis s nápisem "Uloženo jako záložka".
 
-## To bookmark the target page
-1. Open any page that you want a link for on your Role Center.
-2. Choose the ![Bookmark](media/ui_bookmark_icon.png "Bookmark") icon.
+## Uložení cílové stránky jako záložky
+1. Otevřete jakoukoli stránku, na kterou chcete odkaz ve svém Centru rolí.
+2. Zvolte ikonu ![Záložky](media/ui_bookmark_icon.png "Přidat záložku do svého centra rolí") .
 
-An action named after the page is now added to the navigation menu on your Role Center.
+Akce pojmenovaná po stránce je nyní přidána do navigační nabídky v Centru rolí.
 
-## To bookmark the target report
-1. Open any report request page that you want a link for on your Role Center.
-2. Choose the ![Bookmark](media/ui_bookmark_icon.png "Bookmark") icon.
+## Uložení vybrané sestavy jako záložky
+1. Otevřete libovolnou stránku před spuštěním sestavy, kterou chcete v Centru rolí odkazovat.
+2. Zvolte ikonu ![Záložky](media/ui_bookmark_icon.png "Přidat záložku do svého centra rolí") .
 
-An action named after the report is now added to the navigation menu on your Role Center.
+Akce pojmenovaná po sestavě je nyní přidána do navigační nabídky v Centru rolí.
 
-## To bookmark a page or report from the Tell Me window
+## Vytvoření záložky stránky nebo sestavy z okna Řekněte mi
 1. Open the **Tell Me** window and enter, for example, **Sales Orders**.
 2. Hover over the search result for the **Sales Orders** page or report, and then choose the ![Bookmark](media/ui_bookmark_icon.png "Bookmark") icon.
 
-An action named after the page or report is now added to the navigation menu on your Role Center.
+Akce pojmenovaná po stránce nebo sestavě je nyní přidána do navigační nabídky v Centru rolí.
 
 
-## Frequently Asked Questions
+## Často kladené otázky
 
 - **Can I reorganize my bookmarks?**  
    Yes. You can personalize your Role Center and move actions into a more optimal sequence or move them into existing groups or subgroups.  
    Learn how to [Personalize Your Workspace](ui-personalization-user.md).
 
 - **How do I remove a bookmark?**  
-   On the target page or report, choose the bookmark icon again to remove the involved action from your Role Center. You can also personalize your Role Center and temporarily hide actions without fully removing them.
+   On the target page or report, choose the bookmark icon again to remove the involved action from your Role Center. Centrum rolí můžete také přizpůsobit a dočasně skrýt akce, aniž byste je zcela odstranili.
 
 - **Where do I find my bookmarks?**  
    When adding a bookmark to a page or report, the new action is added to the top navigation menu on your current home screen (Role Center). If you happen to have many actions, you may need to activate the **More** button to display all of them because the new action is always appended at the end of those actions.
 <!-- Should we add a screenshot here? -->
 
 - **I don't have a bookmark icon. Is something wrong?**  
-   The ability to bookmark a page or report is one of many user personalization features in Business Central. If the bookmark icon is not displayed, it is likely that your administrator has disabled personalization.
+   The ability to bookmark a page or report is one of many user personalization features in Business Central. Pokud není ikona záložky zobrazena je pravděpodobné, že správce zakázal přizpůsobení.
 
 - **Why can't I bookmark certain pages or reports?**  
-   Not all pages and reports can be bookmarked. When a page or report is run within some special context governed by the business application, the bookmark icon is not displayed. For example, pages that cannot be found in the **Tell Me** window but are launched from elsewhere will not display a bookmark icon. Similarly, report request pages that are only used to collect filters without running the report will not display a bookmark icon.
+   Not all pages and reports can be bookmarked. Pokud je stránka nebo sestava spuštěna v nějakém zvláštním kontextu, která se řídí obchodní aplikací, ikona záložky se nezobrazí. For example, pages that cannot be found in the **Tell Me** window but are launched from elsewhere will not display a bookmark icon. Podobně stránky návrhu sestavy, které se používají pouze ke shromažďování filtrů bez spuštění sestavy, nezobrazí ikonu záložky.
 
-See technical details about [RunRequestPage](https://docs.microsoft.com/dynamics365/business-central/dev-itpro/developer/methods-auto/report/reportinstance-runrequestpage-method) and [FilterPageBuilder](https://docs.microsoft.com/dynamics365/business-central/dev-itpro/developer/methods-auto/filterpagebuilder/filterpagebuilder-data-type).
+See technical details about [RunRequestPage](/dynamics365/business-central/dev-itpro/developer/methods-auto/report/reportinstance-runrequestpage-method) and [FilterPageBuilder](/dynamics365/business-central/dev-itpro/developer/methods-auto/filterpagebuilder/filterpagebuilder-data-type).
 
 - **When clearing my personalization, will my bookmarks also be cleared?**  
-   Yes. Bookmarks reside in the navigation menu. If you clear changes to the navigation menu from any page, or clear all personalization on the Role Center, all your new actions will be permanently removed.
+   Yes. Záložky jsou umístěny v navigační nabídce. Pokud odstraníte změny v navigační nabídce na jakékoli stránce nebo zrušíte veškerou personalizaci v Centru rolí, budou všechny vaše záložky trvale odstraněny.
 
 - **Why does the bookmark icon continue to indicate it is still not bookmarked?**  
-   When you add a bookmark, the new action is added to the navigation menu on the Role Center and subsequent visits to the page or report show a dark bookmark icon. If you personalize your Role Center and reorganize your actions by moving them into groups, the bookmark icon will no longer be dark and you can add another bookmark to that same page or report. This allows you add multiple actions to the same page or report and categorize them into different groups.
+   When you add a bookmark, the new action is added to the navigation menu on the Role Center and subsequent visits to the page or report show a dark bookmark icon. Pokud centrum rolí přizpůsobíte a změníte uspořádání akcí přesunutím do skupin, ikona záložky už nebude tmavá a na stejnou stránku nebo sestavu můžete přidat další záložku. To umožňuje přidat více akcí na stejnou stránku nebo sestavu a kategorizovat je do různých skupin.
 
 - **Why does my link to a report display a different report?**  
-   Some reports may be substituted by other reports after applying an extension to Business Central. When substitution occurs, the text of the new action is not updated and will continue to display the name of the original report, but navigate to the newer report. To correct the text of the new action, you can remove the new action and add it again.
+   Some reports may be substituted by other reports after applying an extension to Business Central. Dojde-li k nahrazení, text nové akce není aktualizován a bude nadále zobrazovat název původní sestavy, ale přejde do novější sestavy. Chcete-li opravit text nové akce, můžete novou akci odebrat a přidat ji znovu.
 <!-- For more information on report substitution, see this link UNAVAILABLE AT THIS TIME -->
 
 - **Is bookmarking available for XMLports?**  
-   No. At this time, adding actions to open XMLports is not possible from the user interface.
+   No. V současné době není z uživatelského rozhraní možné přidávat akce k otevření XMLportů.
 
 - **Will my bookmarks be translated when I change my language in Business Central?**  
-   When you add a new action, any translated text that was available at the time is used when bookmarking. If new translated text is added later, then the new action will not include the newer translations.
+   When you add a new action, any translated text that was available at the time is used when bookmarking. Pokud je později přidán nový přeložený text, nová akce nebude obsahovat novější překlady.
 
 
 ## Viz také

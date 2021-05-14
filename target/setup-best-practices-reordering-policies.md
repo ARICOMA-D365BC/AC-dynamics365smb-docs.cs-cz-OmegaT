@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -18,7 +18,7 @@ The **Reordering Policy** field on item cards offers four different planning met
 
 One best-practice foundation for selecting a reordering policy is the item’s ABC classification. When you use ABC classification for inventory control and supply planning, items are managed according to three different classes depending on their value and volume relative to the total stock. The value-volume distribution of the three classes is shown in the following table.
 
-| Class | Percent of total stock volume | Percent of total stock value |
+| Třída | Percent of total stock volume | Percent of total stock value |
 |-----|-----------------------------|----------------------------|
 | A | 10-20 | 50-70 |
 | B | 20 | 20 |
@@ -30,7 +30,7 @@ The ABC classification states that effort and money can be saved by applying loo
 
 The following table provides best practices for selecting between the four policies.
 
-| Setup option | Best practice | Comment |
+| Setup option | Best practice | Komentář |
 |------------------|-------------------|-------------|  
 | **Zakázka** | Use for A items.<br /><br /> Use for make-to-order items.<br /><br /> In manufacturing, use for top-level items and for expensive components and subassemblies.<br /><br /> Use for items that are purchased as drop shipments and special orders.<br /><br /> Do not use if you do not accept automatic reservation. | A items, such as leather couches in a furniture store, are high-value items with low and irregular order velocity where inventory is unacceptable, or the required attributes vary. The best reordering policy is therefore one that plans specifically for each demand. |
 | **Dávka-pro-dávku** | Use for B items.<br /><br /> In manufacturing, use for components that occur in multiple BOMs. This ensures that purchase orders are combined for the same vendor, so better prices can be negotiated.<br /><br /> Use if you are not sure about which reordering policy to select. | B items, such as dining chairs, have a regular and fairly high order velocity, but also high carrying costs. The best reordering policy for B items is therefore one that is economical by bundling demand in the reorder cycle.<br /><br /> 80 percent of items can use this policy.<br /><br /> Can be used successfully without planning parameters. |

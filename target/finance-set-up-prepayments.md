@@ -6,7 +6,7 @@ author: edupont04
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords: prepayment
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -44,13 +44,13 @@ If you have not already set up general ledger accounts for prepayments, you can 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. On the **Sales & Receivables Setup** page, fill in the following fields:
 
-   - **Posted Prepmt. zál.  Nos.**
+   - **Posted Prepmt. Zásoby Nos.**
    - **Posted Prepmt. zál.  Memo Nos.**
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
 2. On the **Purchases & Payables Setup** page, fill in the following fields:
 
-   - **Posted Prepmt. zál.  Nos.**
+   - **Posted Prepmt. Zásoby Nos.**
    - **Posted Prepmt. zál.  Memo Nos.**
 
 > [!NOTE]  

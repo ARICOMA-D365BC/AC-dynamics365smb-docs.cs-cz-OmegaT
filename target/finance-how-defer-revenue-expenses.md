@@ -10,7 +10,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: postpone
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -30,7 +30,7 @@ For both types of deferral, select **Balance Sheet** in the **Type** field, and 
 ## To set up a deferral template
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Deferral Templates**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby.
+3. Podle potřeby vyplňte pole.
 4. In the **Calc. Method** field, specify how the **Amount** field for each period on the **Deferral Schedule** page is calculated. You can choose between the following options:
 
    * **Straight-Line**: The periodic deferral amounts are calculated according to the number of periods, distributed according to period length.

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -90,7 +90,7 @@ When you receive more goods than you ordered, you may want to receive them inste
 
 You must define a percentage by which you allow the ordered quantity to be exceeded when receiving. You define this under an over-receipt code, which contains the percentage in the **Over-Receipt Tolerance %** field. You then assign the code to the cards of relevant items and/or vendors.
 
-The following describes how to set up and assign an over-receipt code to an item. The steps are similar for a vendor.
+The following describes how to set up and assign an over-receipt code to an item. Kroky jsou podobné pro dodavatele.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Open the card for an item that you suspect may sometimes be delivered with a higher quantity than ordered.

@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: journals, recurring, accrual
-ms.date: 02/15/2021
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -78,7 +78,7 @@ With a recurring journal, entries that will be posted regularly need to be typed
 
 This field determines how the amount on the journal line is treated after posting. For example, if you will use the same amount every time you post the line, you can let the amount remain. If you will use the same accounts and text on the line but the amount will vary every time you post, you can choose to delete the amount after posting.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | F Fixed | The amount on the journal line will remain after posting. |
 | V Variable | The amount on the journal line will be deleted after posting. |
@@ -95,7 +95,7 @@ This field determines how the amount on the journal line is treated after postin
 ### Recurring Frequency field
 This field determines how often the entry on the journal line will be posted. It is a date formula field, and it must be filled in for recurring journal lines. For more information, see [Using Date Formulas](ui-enter-date-ranges.md#using-date-formulas).
 
-#### Examples
+#### Příklady
 If the journal line must be posted every month, enter "1M". After every posting, the date in the **Posting Date** field will be updated to the same date in the next month.
 
 If you want to post an entry on the last day of every month, you can do one of the following:

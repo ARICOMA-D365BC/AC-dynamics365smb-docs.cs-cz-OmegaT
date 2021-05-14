@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
@@ -50,9 +50,9 @@ The following table shows the inventory increases and decreases that the example
 
 | Zúčtovací datum | Množství | Číslo položky |
 |------------------|--------------|---------------|  
-| 1.1.2020 | 1 | 1 |
-| 1.1.2020 | 1 | 2 |
-| 1.1.2020 | 1 | 3 |
+| 01.01.20 | 1 | 1 |
+| 01.01.20 | 1 | 2 |
+| 01.01.20 | 1 | 3 |
 | 1.2.2020 | -1 | 4 |
 | 1.3.2020 | -1 | 5 |
 | 04-01-20 | -1 | 6 |
@@ -69,9 +69,9 @@ The following table shows how inventory increases are valued for all costing met
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
 |------------------|--------------|----------------------------|---------------|  
-| 1.1.2020 | 1 | 10,00 | 1 |
-| 1.1.2020 | 1 | 20,00 | 2 |
-| 1.1.2020 | 1 | 30.00 | 3 |
+| 01.01.20 | 1 | 10,00 | 1 |
+| 01.01.20 | 1 | 20,00 | 2 |
+| 01.01.20 | 1 | 30.00 | 3 |
 
 **Standard**
 
@@ -81,9 +81,9 @@ The following table shows how inventory increases are valued for the **Standard*
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
 |------------------|--------------|----------------------------|---------------|  
-| 1.1.2020 | 1 | 15.00 | 1 |
-| 1.1.2020 | 1 | 15.00 | 2 |
-| 1.1.2020 | 1 | 15.00 | 3 |
+| 01.01.20 | 1 | 15.00 | 1 |
+| 01.01.20 | 1 | 15.00 | 2 |
+| 01.01.20 | 1 | 15.00 | 3 |
 
 ### Effect of Costing Methods on Valuing Inventory Decreases
 **FIFO**

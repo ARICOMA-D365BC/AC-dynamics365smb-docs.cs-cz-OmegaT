@@ -9,52 +9,52 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Inventory Valuation
-Inventory valuation is the determination of the cost that is assigned to an inventory item, as expressed by the following equation.
+# Detaily návrhu: Hodnota zásob
+Hodnota zásob je stanovení nákladů, které jsou přiřazeny skladové položce, vyjádřené následující rovnicí.
 
-Ending inventory = beginning inventory + net purchases – cost of goods sold
+Koncové zásoby = počáteční zásoby + čisté nákupy – náklady na prodané zboží
 
-The calculation of inventory valuation uses the **Cost Amount (Actual)** field of the value entries for the item. The entries are classified according to the entry type that corresponds to the cost components, direct cost, indirect cost, variance, revaluation, and rounding. For more information, see [Design Details: Cost Components](design-details-cost-components.md).
+Výpočet hodnoty zásob používá pole **Částka nákladů (skutečná)** položek ocenění pro zboží. Položky jsou klasifikovány podle typu položky, který odpovídá komponentám nákladů, přímým nákladům, nepřímým nákladům, odchylkám, přecenění a zaokrouhlování. Pro více informací navštivte [Detaily návrhu: Náklady komponent](design-details-cost-components.md).
 
-Entries are applied against each other, either by the fixed application or according to the general cost-flow assumption defined by the costing method. One entry of inventory decrease can be applied to more than one increase entry with different posting dates and possibly different acquisition costs. Pro více informací navštivte [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md). Therefore, calculation of the inventory value for a given date is based on summing up positive and negative value entries.
+Položky se vyrovnávají proti sobě, buď pevným vyrovnáním, nebo podle obecného předpokladu toku nákladů definovaného metodou ocenění. Jeden záznam snížení zásob lze použít na více než jeden záznam zvýšení s různými daty zaúčtování a případně různými pořizovacími náklady. Pro více informací navštivte [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md). Výpočet hodnoty zásob pro dané datum je proto založen na sečtení položek kladné a záporné hodnoty.
 
-## Inventory Valuation report
-To calculate the inventory value in the **Inventory Valuation** report, the report begins by calculating the value of the item’s inventory at a given starting date. It then adds the value of inventory increases and subtracts the value of inventory decreases up to a given ending date. The end result is the inventory value on the ending date. The report calculates these values by summing the values in the **Cost Amount (Actual)** field in the value entries, using the posting dates as filters.
+## Sestava hodnoty zásob
+Pro výpočet hodnoty zásob v sestavě **Hodnota zásob** začíná sestava výpočtem hodnoty zásob zboží k danému počátečnímu datu. Poté přidá hodnotu zvýšení zásob a odečte hodnotu snížení zásob až do daného data ukončení. Konečným výsledkem je hodnota zásob k datu ukončení. Sestava vypočítá tyto hodnoty sečtením hodnot v poli **Částka nákladů (skutečná)** v položkách ocenění, přičemž jako filtry použije data zaúčtování.
 
-The printed report always shows actual amounts, that is, the cost of entries that have been posted as invoiced. The report will also print the expected cost of entries that have posted as received or shipped, if you select the Include Expected Cost field on the Options FastTab.
-
-> [!IMPORTANT]  
-> Values in the **Inventory Valuation** report is reconciled with the Inventory account in the general ledger, meaning the value entries in question have been posted to the general ledger.
+Tištěná sestava vždy zobrazuje skutečné částky, tj. náklady na položky, které byly zaúčtovány jako fakturované. Sestava také vytiskne očekávané náklady na položky, které byly zaúčtovány jako přijaté nebo odeslané, pokud vyberete pole Včetně oček.nákladů na záložce Možnosti.
 
 > [!IMPORTANT]  
-> Amounts in the **Value** columns of the report are based on the posting date of transactions for an item.
+> Hodnoty v sestavě **Hodnota zásob** jsou odsouhlaseny s účtem zásob v hlavní knize, což znamená, že příslušné položky ocenění byly zaúčtovány do hlavní knihy.
 
-## Inventory Valuation - WIP report
-A manufacturing company needs to determine the value of three types of inventory:
+> [!IMPORTANT]  
+> Částky ve sloupcích sestavy **Hodnota** vycházejí z data zaúčtování transakcí pro zboží.
 
-* Raw Materials inventory
-* WIP inventory
-* Finished Goods inventory
+## Sestava Hodnota zásob vlastní výroby
+Výrobní společnost musí určit hodnotu tří typů zásob:
 
-The value of WIP inventory is determined by the following equation:
+* Zásoby surovin
+* Zásoby nedokončené výroby
+* Zásoby hotových výrobků
 
-* Ending WIP inventory = Beginning WIP inventory + manufacturing costs – cost of goods manufactured
+Hodnota zásob nedokončené výroby je určena následující rovnicí:
 
-As for purchased inventory, the value entries provide the basis of the inventory valuation. The calculation is made using the values in the **Cost Amount (Actual)** field of the item and capacity value entries associated with a production order.
+* Konečné zásoby NV = počáteční zásoby NV + výrobní náklady – náklady na vyrobené zboží
 
-The purpose of WIP inventory valuation is to determine the value of the items whose manufacturing has not yet been completed on a given date. Therefore the WIP inventory value is based on the value entries related to the consumption and capacity ledger entries. Consumption ledger entries must be completely invoiced at the date of the valuation. Therefore, the **Inventory Valuation – WIP** report shows the costs representing the WIP inventory value in two categories: consumption and capacity.
+Pokud jde o nakoupené zásoby, položky ocenění poskytují základ ocenění zásob. Výpočet se provádí pomocí hodnot v poli **Částka nákladů (skutečná)** zboží a položek ocenění kapacity přidružených k výrobní zakázce.
+
+Účelem ocenění zásob NV je určit hodnotu zboží, kterého výroba ještě nebyla k danému datu dokončena. Hodnota zásob NV je proto založena na položkách ocenění souvisejících s položkami spotřeby a kapacity. Položky spotřeby musí být k datu ocenění zcela fakturovány. Proto sestava  **Hodnota zásob vlastní výroby** zobrazuje náklady představující hodnotu zásob NV ve dvou kategoriích: spotřeba a kapacita.
 
 ## Viz také
-[Design Details: Reconciliation with the General Ledger](design-details-reconciliation-with-the-general-ledger.md)   
-[Design Details: Revaluation](design-details-revaluation.md)   
-[Design Details: Production Order Posting](design-details-production-order-posting.md)
-[Managing Inventory Costs](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md)     
+[Detaily návrhu: Přecenění](design-details-revaluation.md)     
+[Detaily návrhu: Účtování prodejní zakázky](design-details-production-order-posting.md)  
+[Správa nákladů zásob](finance-manage-inventory-costs.md)    
+[Finance](finance.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

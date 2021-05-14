@@ -6,7 +6,7 @@ author: edupont04
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords:
-ms.date: 01/21/2021
+ms.date: 04/01/2021
 ms.author: edupont
 ---
 # Set Up Payment Terms
@@ -24,7 +24,7 @@ If you want to send your customers reminders of overdue payments, you must set u
 ## To set up payment terms
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Terms**, and then choose the related link.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 After you set up the payment terms, you assign them to customers and vendors. Optionally, assign payment terms to your payment methods.
 

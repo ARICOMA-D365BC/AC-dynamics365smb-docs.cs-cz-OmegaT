@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ You can record all the interactions that you have with your contacts in order to
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up your system to record interactions. | [Set Up Contacts](marketing-setup-contacts.md) |
 | Create interactions to record all the interactions and communications you have with your contacts and segments, such as emailing. | [Create Interactions on Contacts and Segments](marketing-how-create-interactions.md) |

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
@@ -40,7 +40,7 @@ You can view information about the items, resource hours, and costs to be invoic
 ### Analyze service order lines
 You can analyze the information by the types of service lines included in the service order. The amounts are shown separately for:
 
-* Items
+* Zboží
 * Resources
 * Costs and general ledger accounts
 
@@ -51,7 +51,7 @@ See the balance on the customer's account, in addition to the maximum credit tha
 On the **Service Item Statistics** page, you can see up-to-date information about a service item based the following service ledger entry types:
 
 * Resources
-* Items
+* Zboží
 * Service cost
 * Service contracts
 * Celkem

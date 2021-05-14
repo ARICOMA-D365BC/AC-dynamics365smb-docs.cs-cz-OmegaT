@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: remove, delete
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -19,7 +19,7 @@ If you want to stop using [!INCLUDE[prod_short](includes/prod_short.md)], you ca
 
 ## Closing your free trial of [!INCLUDE[prod_short](includes/prod_short.md)]
 
-If you signed up for the free trial and do not want to continue with [!INCLUDE[prod_short](includes/prod_short.md)], you can close your account at any time. We recommend that you export any data before you close your account.
+If you signed up for the free trial and do not want to continue with [!INCLUDE[prod_short](includes/prod_short.md)], you can close your account at any time. Před uzavřením účtu doporučujeme exportovat veškerá data.
 
 You must ask your Microsoft 365 administrator to remove the trial subscription from your company's account in the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
@@ -34,10 +34,10 @@ If your company wants to unsubscribe from [!INCLUDE[prod_short](includes/prod_sh
 User accounts and licenses are managed in the [Microsoft 365 admin center](https://admin.microsoft.com/). Only administrators can remove [!INCLUDE[prod_short](includes/prod_short.md)] licenses from user accounts or remove the subscription from your company's account.
 
 ## Removing [!INCLUDE[prod_short](includes/prod_short.md)] from your app launcher
-If you want to hide [!INCLUDE[prod_short](includes/prod_short.md)] from your app launcher, you can quite simply unpin it. This does not remove any data, and it does not cancel your subscription.
+If you want to hide [!INCLUDE[prod_short](includes/prod_short.md)] from your app launcher, you can quite simply unpin it. Nedojde tak k odebrání dat a zrušení předplatného.
 
 ## Viz také
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Creating New Companies](about-new-company.md)  
 [Exporting Your Business Data to Excel](about-export-data.md)  
 [Microsoft 365 admin center](https://admin.microsoft.com/)  

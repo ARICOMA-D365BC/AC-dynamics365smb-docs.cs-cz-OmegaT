@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -20,7 +20,7 @@ Signing up for [!INCLUDE[prod_short](includes/prod_short.md)] is easy and can be
 
 If you try to sign up with a personal email address, you will get a message indicating to use a work or school email address.
 
-## Troubleshooting
+## Řešení potíží
 In many cases, registering for [!INCLUDE[prod_short](includes/prod_short.md)] can be achieved by following the sign-up process. However, there are several reasons why you may not be able to complete self-service signup. The table below summarizes some of the most common reasons you may not be able to complete signup and ways you can workaround these issues.
 
 | Symptom/Error Message | Cause and Workaround |

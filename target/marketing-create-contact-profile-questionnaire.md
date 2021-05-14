@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: contacts, profiles
 ms.author: edupont
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ---
 
 # Use Profile Questionnaires to Classify Business Contacts
@@ -21,7 +21,7 @@ You can also run the questionnaire to answer some of the questions based on cont
 ## To add a profile questionnaire
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Questionnaire Setup**, and then choose the related link.
 2. Choose the **New** Action.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## To add questions to a profile questionnaire
 1. Choose the relevant profile questionnaire, and then choose the **Edit Questionnaire Setup** action.

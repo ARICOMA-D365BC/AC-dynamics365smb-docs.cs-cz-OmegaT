@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: find
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -17,7 +17,7 @@ ms.author: bholtorf
 This topic answers questions that our advanced users often ask about the Tell Me feature.
 
 ### Are all actions from my current page discoverable in Tell Me?
-Číslo Actions in parts, such as the Sales Lines part or FactBoxes, are not displayed in Tell Me.
+Ne. Actions in parts, such as the Sales Lines part or FactBoxes, are not displayed in Tell Me.
 
 ### Are the results in Tell Me filtered by permissions?
 If the user does not have AccessByPermissions then actions are not displayed. However, pages and reports appear in the results but require that the user has permission to access them. A message will display if the user does not have permission to view the object.

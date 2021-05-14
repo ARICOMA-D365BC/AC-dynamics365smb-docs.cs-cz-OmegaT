@@ -69,7 +69,7 @@ Chcete-li se dozvědět více o nabídkách poradenských služeb Microsoft AppS
 
 [AppSource - Nabídka konzultantských služeb](https://appsource.microsoft.com/marketplace/consulting-services)  
 [Způsobilost partnera](https://smp-cdn-prod.azureedge.net/documents/Microsoft%20AppSource%20Partner%20Listing%20Guidelines.pdf)  
-[Formulář pro jmenování partnera](https://appsource.microsoft.com/partners/list-consulting-service)  
+[Formulář pro jmenování partnera](https://appsource.microsoft.com/partners/list-consulting-service)
 
 ## Program - Ready to Go
 

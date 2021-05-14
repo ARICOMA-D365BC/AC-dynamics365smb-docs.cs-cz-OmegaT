@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms. search.keywords: app, add-in, manifest, customize, budget
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ Inventory management is a trade-off between customer service and managing your c
 In [!INCLUDE[prod_short](includes/prod_short.md)], the connection to [Azure AI](https://azure.microsoft.com/overview/ai-platform/) is already set up for you. But you can configure the forecast to use a different type of period to report by, such as changing from forecasting by month to forecasting by quarter. You can also choose the number of periods to calculate the forecast by, depending on how granular you want the forecast to be. We suggest that you forecast by month and with a 12 month horizon for the forecast.
 
 > [!TIP]  
-> Consider the length of the periods that the service will use in its calculations. The more data you provide, the more accurate the predictions will be. Also, watch out for large variances in periods. They will also impact predictions. If Azure AI does not find enough data, or the data varies a lot, the service will not make a prediction.
+> Zvažte délku období, které služba použije při svých výpočtech. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
 
 ## Using the Forecasts
 The extension uses Azure AI to predict future sales based on your sales history to help you avoid inventory shortage. For example, when you choose an item on the **Items** page, the chart in the **Item Forecast** pane shows the estimated sales of this item in the coming period. This way you can see if you are likely to run out of stock of the item soon.
@@ -45,13 +45,13 @@ To make predictions about future sales, the web service requires quantitative da
 Before using the web service [!INCLUDE[prod_short](includes/prod_short.md)] compresses transactions by **Item No.** and **Posting Date** based on the value in the **Period Type** field in the **Sales and Inventory Forecast Setup** page.
 
 ## <a name="AnchorText"> </a>Create and use your own predictive web service for sales and inventory forecasts
-You can also create your own predictive web service based on a public model named **Forecasting model for Microsoft Business Central**. This predictive model is available online in the Azure AI Gallery. To use the model, follow these steps:
+You can also create your own predictive web service based on a public model named **Forecasting model for Microsoft Business Central**. Tento prediktivní model je k dispozici online v AI Azure Gallery. Chcete-li model použít, postupujte takto:
 
 1. Open a browser and go to the [Azure AI Gallery](https://go.microsoft.com/fwlink/?linkid=828352).
 2. Search for **Forecasting Model for Microsoft Business Central**, and then open the model in Azure Machine Learning Studio.
-3. Use your Microsoft account to sign up for a workspace, and then copy the model.
-4. Run the model, and publish it as a web service.
-5. Make a note of the API URL and API key. You will use these credentials for a cash flow setup.
+3. Použijte svůj účet Microsoft k registraci pracovního prostoru a potom zkopírujte model.
+4. Spusťte model a publikujte jej jako webovou službu.
+5. Poznamenejte si API URL a API klíč. Tyto přihlašovací údaje použijete pro nastavení cash flow.
 6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales and Inventory Forecast Setup**, and then choose the related link.
 7. Expand the **General** FastTab, and then fill in the API URL and API key fields.
 

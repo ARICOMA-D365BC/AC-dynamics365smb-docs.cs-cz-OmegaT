@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 ---
 
@@ -26,9 +26,9 @@ The following table describes the information provided for each table:
 | Column | Popis |
 |------|-----------|
 | Company Name | The name of the company, if any, that the table belongs to. |
-| Table Name | The name of the table. |
-| Table No. | The ID of the table |
-| Číslo of Records | The total number of records stored in the table. |
+| Název tabulky | The name of the table. |
+| Číslo tabulky | The ID of the table |
+| Ne. of Records | The total number of records stored in the table. |
 | Record Size | The average record size in KB/record. The value is calculated using the following formula: 1024(Size)/(No. of Records)`. |
 
 ## Viz také

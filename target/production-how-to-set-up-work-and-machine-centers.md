@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -34,7 +34,7 @@ The following primarily describes how to set up a work center. The steps to set 
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Work Centers**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. In the **Work Center Group** field, select the higher-level resource grouping that the work center is organized under, if relevant. Choose the **New** action in the drop-down list.
 5. Select the **Blocked** field if you want to prevent the work center from being used in any processing. This means that output cannot be posted for an item that is produced at the work center. For more information, see [Post Production Output](production-how-to-post-output-quantity.md).
 6. In the **Direct Unit Cost** field, enter the cost of producing one unit of measure at this work center, excluding any other cost elements. This cost is often referred to as the *direct labor rate*.
@@ -95,7 +95,7 @@ When planning with capacity-constrained resources, the system ensures that no re
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Capacity Constrained Resources**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby.
+3. Podle potřeby vyplňte pole.
 
 > [!NOTE]
 > Operations on work centers or machine centers that are set up as constrained resources will always be planned serially. This means that if a constrained resource has multiple capacities, then those capacities can only be planned in sequence, not in parallel as they would be if the work or machine center was not set up as a constrained resource. In a constrained resource, the Capacity field on the work center or machine center is greater than 1.

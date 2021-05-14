@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: incoming document
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -45,7 +45,7 @@ To enter a  line in an intercompany general journal, follow these steps.
    7. In the **Balance Account No.** field, choose the G/L account to which to post the amount you receive from the intercompany partner.
    1. In the **Amount** field, enter the amount of the invoice to allocate to the intercompany partner.
    1. In the **IC Partner G/L Acc. No.** field, choose the G/L account that you want to post the amount to for the intercompany partner.
-   1. Fill in the remaining fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Repeat these steps for each intercompany partner who should share in the cost.
+   1. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Repeat these steps for each intercompany partner who should share in the cost.
 1. To post the document and allocate the costs, choose **Post**.
 
 ## To allocate costs using a purchase document
@@ -63,7 +63,7 @@ The following procedure describes how to allocate costs using a purchase invoice
 1. In the **IC Partner Ref. Type** choose the G/L account to use for the allocation. This account will map the expense to an account in the intercomany partner's chart of accounts.
 1. In the **Quantity** field, specify the number of units to charge to the intercompany partner.
 1. In the **Direct Unit Cost Excl. VAT (or Incl. VAT)** field, enter the cost per item to charge to the intercompany partner.
-1. Fill in the remaining fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 1. To post the purchase order, choose **Post**.
 
 ## To send the allocated costs to intercompany partners

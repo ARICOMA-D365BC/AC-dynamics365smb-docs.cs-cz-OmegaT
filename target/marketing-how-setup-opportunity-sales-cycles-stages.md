@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
@@ -36,7 +36,7 @@ Repeat these steps to set up as many stages as you want within the sales cycle.
 After you add the opportunities stage cycle, you can start to add sales opportunities, and then assign the stage cycle to opportunities by setting the **Sales Cycle Code** field. For more information, see [Create Sales Opportunities](marketing-how-create-opportunities.md).
 
 ## To set up activities with tasks
-You can combine multiple task, for example tasks that each represent a step, in activities. Activity tasks are related to each other by a date formula. You can assign activities to opportunities, salespeople, or contacts.
+Můžete kombinovat více činností, například úkoly, z nichž každý představuje krok, v aktivitách. Úkoly aktivity jsou vzájemně propojeny pomocí vzorcem data. You can assign activities to opportunities, salespeople, or contacts.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Activities**, and then choose the related link.
 2. Choose the **New** action, and fill in the fields as necessary.

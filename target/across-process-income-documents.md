@@ -11,22 +11,22 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Processing Incoming Documents
-To record an external document in [!INCLUDE[prod_short](includes/prod_short.md)], you must first create or complete an incoming document record. You can do this manually, or you can take a photo of the external document and then create the incoming document record with the image file attached.
+# Zpracování došlých dokladů
+To record an external document in [!INCLUDE[prod_short](includes/prod_short.md)], you must first create or complete an incoming document record. Můžete to udělat ručně, nebo můžete vyfotografovat externí doklad a pak vytvořit záznam došlého dokladu s připojeným obrázkovým souborem.
 
-From PDF or image files that you receive from your trading partners, you can have an external OCR service (Optical Character Recognition) generate electronic documents that can be converted to document records in [!INCLUDE[prod_short](includes/prod_short.md)]. For example, when you receive an invoice in PDF format from your vendor, you can send it to the OCR service from the **Incoming Documents** page. Alternatively, you can send the file to the OCR service by email. Then, when you receive the electronic document back, a related incoming document record is created automatically. After some seconds, you receive the file back from the OCR service as an electronic invoice that can be converted to a purchase invoice for the vendor.
+From PDF or image files that you receive from your trading partners, you can have an external OCR service (Optical Character Recognition) generate electronic documents that can be converted to document records in [!INCLUDE[prod_short](includes/prod_short.md)]. For example, when you receive an invoice in PDF format from your vendor, you can send it to the OCR service from the **Incoming Documents** page. Případně můžete soubor odeslat službě OCR e-mailem. Poté, když obdržíte elektronický dokument zpět, automaticky se vytvoří související záznam příchozího dokladu. Po několika sekundách obdržíte soubor zpět ze služby OCR jako elektronickou fakturu, kterou lze převést na nákupní fakturu pro dodavatele.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
-| Create incoming document records manually or automatically by taking a photo of a paper receipt, for example. | [Create Incoming Document Records](across-how-create-income-document-records.md) |
-| Use an OCR service to turn PDF and image files into electronic documents that can be converted to purchase invoices in [!INCLUDE[prod_short](includes/prod_short.md)], for example. Train the OCR service to avoid errors next time it processes similar data. | [Use OCR to Turn PDF and Image Files into Electronic Documents](across-how-use-ocr-pdf-images-files.md) |
-| Connect or remove incoming document records for any non-posted sales or purchase document and to any customer, vendor, or general ledger entry from the document or entry. | [Create Incoming Document Records Directly from Documents and Entries](across-how-connect-disconnect-income-document-records.md) |
+| Vytvářejte evidenci došlých dokladů ručně nebo automaticky například fotografováním účtenek. | [Create Incoming Document Records](across-how-create-income-document-records.md) |
+| Use an OCR service to turn PDF and image files into electronic documents that can be converted to purchase invoices in [!INCLUDE[prod_short](includes/prod_short.md)], for example. Učení služby OCR, aby se zabránilo chybám při příštím zpracování podobných dat. | [Use OCR to Turn PDF and Image Files into Electronic Documents](across-how-use-ocr-pdf-images-files.md) |
+| Připojte nebo odeberte příchozí záznamy dokladů pro jakýkoli nezveřejněný prodejní nebo nákupní doklad a ke každému zákazníkovi, dodavateli nebo položce z dokladu nebo záznamu. | [Create Incoming Document Records Directly from Documents and Entries](across-how-connect-disconnect-income-document-records.md) |
 | From the **Chart of Accounts** and **General Ledger Entries** pages, use a search function to find general ledger entries for posted documents that do not have incoming document records and then centrally link to existing records or create new ones with attached document files. | [Find Posted Documents without Incoming Document Records](across-how-find-posted-documents-without-income-document-records.md) |
-| Get better overview by setting incoming document records to Processed to remove them from the default view. | [Manage Many Incoming Document Records](across-how-manage-many-income-document-records.md) |
+| Lepší přehled získáte nastavením záznamů došlých dokladů na Zpracováno, abyste je odstranili z výchozího zobrazení. | [Manage Many Incoming Document Records](across-how-manage-many-income-document-records.md) |
 
 ## Viz také
 [Incoming Documents](across-income-documents.md)  

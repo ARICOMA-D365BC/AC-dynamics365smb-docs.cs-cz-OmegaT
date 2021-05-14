@@ -10,7 +10,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: stock
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ You can view the availability of all items per location, and you can view the av
 > [!NOTE]  
 > Availability views by location require that you maintain inventory at more than one location. For more information, see [Set Up Locations](inventory-how-setup-locations.md).
 
-If you use warehousing functionality, availability varies depending on allocations at the bin level when warehouse activities such as picks and movements occur and when the inventory reservation system imposes restrictions to comply with. A rather complex algorithm verifies that all conditions are met before allocating quantities to picks for outbound flows. For more information see [Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md).
+If you use warehousing functionality, availability varies depending on allocations at the bin level when warehouse activities such as picks and movements occur and when the inventory reservation system imposes restrictions to comply with. Poměrně složitý algoritmus ověřuje, že jsou splněny všechny podmínky před přidělením množství vyskladnění pro odchozí dodávky. For more information see [Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md).
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], availability figures are typically shown in two different fields, each with a different definition:
 

@@ -7,7 +7,7 @@ ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.workload: na
 ms.search.keywords: projects
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -18,7 +18,7 @@ Before you can use [!INCLUDE[prod_short](includes/prod_short.md)] to manage proj
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Create jobs, assign job tasks, and prepare job planning lines. | [Create Jobs](projects-how-create-jobs.md) |
 | Allocate resources to jobs and manage resource prices. | [Use Resources for Jobs](projects-how-use-resources.md) |

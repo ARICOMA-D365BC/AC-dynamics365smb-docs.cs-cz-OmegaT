@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: personnel, people, employee, staff, HR
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -24,7 +24,7 @@ To start using the Human Resources functionality, you must set up employees and 
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Register new employees or edit records for existing employees, and attach related information, such as contracts and articles. | [Register Employees](hr-how-register-employees.md) |
 | Record employees' absence and view absence statistics by various filters. | [Manage Employee Absence](hr-how-manage-absence.md) |

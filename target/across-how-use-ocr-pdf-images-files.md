@@ -10,16 +10,16 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
 # Use OCR to Turn PDF and Image Files into Electronic Documents
 From PDF or image files that you receive from your trading partners, you can have an external OCR service (Optical Character Recognition) generate electronic documents that can be converted to document records in [!INCLUDE[prod_short](includes/prod_short.md)]. For example, when you receive an invoice in PDF format from your vendor, you can send it to the OCR service from the **Incoming Documents** page. This is described in the first procedure.
 
-As an alternative to sending the file from the **Incoming Documents** page, you can send the file to the OCR service by email. Then, when you receive the electronic document back, a related incoming document record is created automatically. This is described in the second procedure.
+As an alternative to sending the file from the **Incoming Documents** page, you can send the file to the OCR service by email. Poté, když obdržíte elektronický dokument zpět, automaticky se vytvoří související záznam příchozího dokladu. This is described in the second procedure.
 
-After some seconds, you receive the file back from the OCR service as an electronic invoice that can be converted to a purchase invoice for the vendor. This is described in the third procedure.
+Po několika sekundách obdržíte soubor zpět ze služby OCR jako elektronickou fakturu, kterou lze převést na nákupní fakturu pro dodavatele. This is described in the third procedure.
 
 Because OCR is based on optical recognition, it is likely that the OCR service will interpret characters in your PDF or image files wrongly when it first processes a certain vendor’s documents, for example. It may not interpret the company logo as the vendor’s name or it may misinterpret the total amount on a receipt because of its layout. To avoid these errors going forward, you can correct the errors in a separate version of the **Incoming Document** page. Then you send the corrections back to the OCR service to train it to interpret the specific characters correctly next time it processes a PDF or image document for the same vendor. For more information, see [To train the OCR service to avoid errors](across-how-use-ocr-pdf-images-files.md#to-train-the-ocr-service-to-avoid-errors).
 

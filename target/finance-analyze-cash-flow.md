@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: money flow, expense and income, liquidity, cash receipts minus cash payments, Cartera
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -20,9 +20,9 @@ The charts on the Accountant Role Center provide insights that can help you make
 
 | To answer questions like these | Use this chart |
 | --- | --- |
-| How long does the sales process tie up my cash?</br> Should I increase or reduce inventory levels? | Cash Cycle |
-| When did cash move in and out of my company?</br> Are some periods better than others? | Cash Flow |
-| Do the numbers seem off for a period?</br> Should I investigate? | Income & Expense |
+| How long does the sales process tie up my cash?</br> Should I increase or reduce inventory levels? | Data pro graf Hotovostní Cyklus |
+| When did cash move in and out of my company?</br> Are some periods better than others? | Data pro graf Cash Flow |
+| Do the numbers seem off for a period?</br> Should I investigate? | Data pro graf Náklady a Výnosy |
 | When might a cash surplus or deficit happen?</br> Should I pay down debt, or borrow to meet upcoming expenses? | Cash Flow Forecasts |
 
 On the Accountant Role Center, under **Finance Performance**, the **Cash Cycle**, **Cash Flow**, and **Income & Expense** charts offer ways to analyze cash flow:

@@ -8,7 +8,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: find
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 ---
 # Finding Related Entries for Posted Documents
@@ -21,7 +21,7 @@ In this article, you learn how to find documents and entries that are related to
 
 This feature is useful for finding the ledger entries that resulted from certain transactions. When you search by document number, you can print the summary from the Document Entries report.
 
-## Get started
+## Začínáme
 
 The find entries feature is readily available on most pages that display posted documents or posted documents entries - for both lists and cards. So the first step is open one of these pages. Then, either choose the **Find Entries** action or press the Alt+G keys.
 

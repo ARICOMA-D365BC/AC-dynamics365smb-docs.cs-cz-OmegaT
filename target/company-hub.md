@@ -6,7 +6,7 @@ author: edupont04
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords: accountant, accounting, financial report
-ms.date: 10/29/2020
+ms.date: 04/01/2021
 ms.author: edupont
 ---
 
@@ -59,9 +59,9 @@ The **My User Tasks** list helps you prioritize your day by showing more informa
 
 You can sort by due date, for example, or any other type of data that helps you prioritize your day. By default, the list shows all tasks that are assigned to you, but you can set up filters to only show tasks that are marked as high priority, for example.
 
-To pick up a task, simply choose it from the list of pending user tasks. In the ribbon, the link **Go to Task Item** opens the page where you can do the work.
+Chcete-li úlohu vybrat, jednoduše ji vyberte ze seznamu čekajících uživatelských úloh. In the ribbon, the link **Go to Task Item** opens the page where you can do the work.
 
-When you have completed a task, simply mark it as completed.
+Po dokončení úlohy ji jednoduše označte jako dokončenou.
 
 For more information about companies and environments, see [Environment links](company-hub-add-company.md#environment-links).
 

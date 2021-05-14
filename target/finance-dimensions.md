@@ -1,17 +1,15 @@
 ---
-title: Work with Dimensions| Microsoft Docs
-description: You use dimensions to categorize entries, for example, by department or project, so you can easily track and analyze data.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+title: Working with Dimensions to Track and Analyze Data Easily
+description: You use dimensions to categorize entries, for example by department or project, so you can easily track and analyze data to help you make good business decisions.
+author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: analysis, history, track
-ms.date: 10/01/2020
+ms.search.keywords: analysis, history, track, business intelligence
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -33,11 +31,14 @@ Dimensions play an important role in business intelligence, such as when definin
 > [!TIP]
 > A quick way to analyze transactional data by dimensions is to use the **Set Dimension Filter** action filter totals by dimensions in the chart of accounts and on pages for entries.
 
-## Dimension Sets
-<!--we describe what they are, but not their value.-->
-A dimension set is a unique combination of dimension values. It is stored as dimension set entries in the database. Each dimension set entry represents a single dimension value. The dimension set is identified by a common dimension set ID that is assigned to each dimension set entry that belongs to the dimension set.
+> [!NOTE]
+> Analysis views often use data from dimensions. If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. That will help keep your financial reports and analyses accurate. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)
 
-When you create a journal line, document header, or document line, you can specify a combination of dimension values. Instead of explicitly storing each dimension value in the database, a dimension set ID is assigned to the journal line, document header, or document line to specify the dimension set.
+## Sady dimenzí
+<!--we describe what they are, but not their value.-->
+Sada dimenzí je jedinečná kombinace hodnot dimenzí. Je uložena jako položky sady dimenzí v databázi. Každá položka sady dimenzí představuje jednu hodnotu dimenze. Sada dimenzí je identifikována společným ID sady dimenzí, které je přiřazeno každé položce sady dimenzí, která patří do sady dimenzí.
+
+When you create a journal line, document header, or document line, you can specify a combination of dimension values. Namísto explicitního ukládání každé hodnoty dimenze v databázi je k řádku deníku, hlavičce dokladu nebo řádku dokladu přiřazeno ID sady dimenzí k určení sady dimenzí.
 
 ## Setting Up Dimensions
 You can define the dimensions and dimension values to categorize journals and documents, such as sales orders and purchase orders. You set up dimensions on the **Dimensions** page, where you create one line for each dimension, such as *Project*, *Department*, *Area*, and *Salesperson*.
@@ -138,23 +139,23 @@ Let's say that your company wants to track transactions based on organizational 
 * **AREA**
 * **DEPARTMENT**
 
-| Code | Name | Code Caption | Filter Caption |
+| Kód | Name | Code Caption | Filter Caption |
 | --- | --- | --- | --- |
 | AREA | Area | Area Code | Area Filter |
 | DEPARTMENT | Department | Department Code | Department Filter |
 
 For **AREA**, you add the following dimension values:
 
-| Code | Name | Dimension Value Type |
+| Kód | Name | Dimension Value Type |
 | --- | --- | --- |
 | 10 | Americas | Od-součet |
-| 20 | North America | Standard |
-| 30 | Pacific | Standard |
-| 40 | South America | Standard |
+| 20 | North America | Standardní |
+| 30 | Pacific | Standardní |
+| 40 | South America | Standardní |
 | 50 | Americas, Total | Do-součet |
 | 60 | Europe | Od-součet |
-| 70 | EU | Standard |
-| 80 | Non-EU | Standard |
+| 70 | EU | Standardní |
+| 80 | Non-EU | Standardní |
 | 90 | Europe, Total | Do-součet |
 
 For the two main geographic areas, Americas and Europe, you add subcategories for regions by indenting the dimension values. This will let you report on sales or expenses in regions, and get totals for the larger geographic areas. You could also choose to use countries or regions as your dimension values, or counties or cities, depending on your business.
@@ -164,11 +165,11 @@ For the two main geographic areas, Americas and Europe, you add subcategories fo
 
 For **DEPARTMENT**, you add the following dimension values:
 
-| Code | Name | Dimension Value Type |
+| Kód | Name | Dimension Value Type |
 | --- | --- | --- |
-| ADMIN | Administration | Standard |
-| PROD | Production | Standard |
-| SALES | Sales | Standard |
+| ADMIN | Administration | Standardní |
+| PROD | Výroba | Standardní |
+| SALES | Prodej | Standardní |
 
 With this set up, you can add your two dimensions as the two global dimensions on the **General Ledger Setup** page. This means that you can use AREA and DEPARTMENT as filters for general ledger entries, as well as on all reports and account schedules. Both global dimensions are also automatically available for use on entry lines and document headers as shortcut dimensions.
 
@@ -202,26 +203,6 @@ In a ledger entry page, you can see whether there are global dimensions for the 
 
 > [!NOTE]  
 > The **Ledger Entry Dimensions** page displays the dimensions for one ledger entry at a time. As you scroll through the ledger entries, the content on the **Ledger Entry Dimensions** page changes accordingly.
-
-## Troubleshooting Dimensions Errors
-When you post documents or journal lines that contain dimensions, various errors may occur that are typically related to wrong dimension setup or assignment.
-
-> [!NOTE]
-> In the following list of potential error messages, the *%X* codes are placeholders for the data variables that the actual message will contain in the UI depending on the context. For example, *%1 %2 is blocked.* could appear in the UI as "Dimension Code AREA is blocked.".
-
-| Issue | Error Message | Possible Solution |
-|-----|-------------|-----------------|
-| Blocked dimension | %1 %2 is blocked. | -Find non-posted documents containing the dimension set with the blocked dimension and unblock it.<br />-Remove the dimension set line for the blocked dimension. |
-| Deleted dimension | %1 %2 can't be found. | -Restore the missing dimension.<br />-Find non-posted documents containing the dimension set with the missing dimension and add it.<br />-Remove the dimension set line for the missing dimension. |
-| Blocked dimension value | %1 %2 - %3 is blocked. | -Find non-posted documents containing the dimension set with the blocked dimension value and unblock it.<br />-Remove the dimension set line for the blocked dimension value. |
-| Deleted dimension value | %1 for %2 is missing. | -Restore the missing dimension value.<br />-Find non-posted documents containing the dimension set with the missing dimension value and add it.<br />-Remove the dimension set line for the missing dimension value. |
-| Disallowed dimension value | Dimension Value Type for %1 %2 - %3 must not be %4. | -Change the **Dimension Value Type** field on the **Dimension Values** page to **Standard** or **Begin-Total**.<br />-Remove the dimension set line for the blocked dimension value. |
-| Blocked dimension combination | Dimensions %1 and %2 can't be used concurrently. | -Find non-posted documents containing the dimension set with the blocked dimension combination and unblock it.<br />-Modify one of the conflicting permission set line for the dimension combination. |
-| Blocked dimension value Combination | Dimension combinations %1 - %2 and %3 - %4 can't be used concurrently. | -Find non-posted documents containing the dimension set with the blocked dimension value combination and unblock it.<br />-Modify one of the conflicting permission set line for the dimension value combination. |
-| Blank dimension value code for default dimension where the **Value Posting** field contains **Code Mandatory** | -Select a %1 for the %2 %3.<br />-Select a %1 for the %2 %3 for %4 %5. | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Enter a non-blank dimension value for the conflicting dimension in the dimension set. |
-| Wrong dimension value code for default dimension where the **Value Posting** field contains **Same Code** | -Select %1 %2 for the %3 %4.<br />-Select %1 %2 for the %3 %4 for %5 %6 | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Enter the required dimension value for the conflicting dimension in the dimension set. |
-| Non-blank dimension value code for blank default dimension where the **Value Posting** field contains **Same Code** | -%1 %2 must be blank.<br />-%1 %2 must be blank for %3 %4. | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Enter a blank dimension value code for the conflicting dimension in the dimension set. |
-| Unexpected dimension value for default dimension where the **Value Posting** field contains **No Code** | -%1 %2 must not be mentioned.<br />-%1 %2 must not be mentioned for %3 %4 | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Remove the conflicting line from the dimension set. |
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/dimensions-dynamics-365-business-central/index)
 

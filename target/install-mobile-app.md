@@ -9,13 +9,13 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: phone, tablet
-ms.date: 10/15/2020
+ms.date: 04/01/2021
 ms.author: edupont
 ---
 
-# Getting Business Central on Your Mobile Device
+# Získání Business Central pro mobilní zařízení
 
-Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile device. You can navigate through your business data, use features such as send to Excel or Office 365, view up-to-date charts and KPIs, email sales quotes and invoices, and shoot and attach pictures with your camera. Follow the steps below to download the app and get started.
+Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile device. You can navigate through your business data, use features such as send to Excel or Microsoft 365, view up-to-date charts and KPIs, email sales quotes and invoices, and shoot and attach pictures with your camera. Chcete-li stáhnout aplikaci a začít, postupujte podle následujících pokynů.
 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4Arje?rel=0]
 
@@ -26,7 +26,7 @@ Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile
    - [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848) (PC only)
    - [App Store](https://go.microsoft.com/fwlink/?LinkId=734847)
    - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
-2. Launch the app from your mobile device.
+2. Spusťte aplikaci na mobilním zařízení.
 3. Enter your user name and password that you created during sign-up for [!INCLUDE[prod_short](includes/prod_short.md)] and follow the instructions on the screen.
 
    If your [!INCLUDE [prod_short](includes/prod_short.md)] has more than one production environment, then you will be asked to choose the environment that you want to access (requires Business Central 2020 release wave 2 and later).
@@ -45,7 +45,7 @@ If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you 
    - [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848) (PC only)
    - [App Store](https://go.microsoft.com/fwlink/?LinkId=734847)
    - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
-2. Launch the app from your mobile device.
+2. Spusťte aplikaci na mobilním zařízení.
 3. Instead of entering an email address on the **Welcome** page, choose the **Advanced options** button, and then choose the **On-premises** sign-in option.
 4. On the next page, in the **Service name** box, enter the web address that you use to open [!INCLUDE[prod_short](includes/prod_short.md)], such as *https://mybusinesscentral:443/BC170*. If you're not sure, ask your administrator.
 5. Next, enter your user name and password for accessing Business Central.
@@ -60,7 +60,7 @@ If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you 
 ## Viz také
 
 [Mobile Apps FAQ](ui-mobile-faq.md)  
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: online payment
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -25,7 +25,7 @@ The Microsoft Pay, PayPal Payments Standard, and WorldPay Payments Standard exte
 2. On the **Payment Services** page, choose the **New** action.
 3. Select the payment service, and then close the page.
 4. On the **Payment Services** page, choose the **Setup** action.
-5. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+5. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 6. Zavřete stránku.
 
 ## To select a payment service on a sales invoice

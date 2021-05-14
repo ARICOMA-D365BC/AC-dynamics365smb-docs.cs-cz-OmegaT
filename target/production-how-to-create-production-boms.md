@@ -9,28 +9,28 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 01/05/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Create Production BOMs
+# Vytvoření výrobních kusovníků
 
-A production bill of material (BOM) holds master data that describes the components and subassemblies used in the production of a parent item. Once a production order is created for that parent item, its production BOM will govern the calculation of material requirements as represented on the **Prod. Order Components** page.
+Výrobní kusovník uchovává hlavní data popisující komponenty a sestavení použité při výrobě nadřízeného zboží. Once a production order is created for that parent item, its production BOM will govern the calculation of material requirements as represented on the **Prod. Order Components** page.
 
-[!INCLUDE[prod_short](includes/prod_short.md)]  also support assembly BOMs. You use assembly orders for making end items from components in a simple process that can be performed by one or more basic resources, which are not machine or work centers, or without any resources. For example, an assembly process could be to pick two wine bottles and one coffee sack and then pack them as a gift item. For more information, see [Assembly BOMs or Production BOMs](inventory-how-work-boms.md#assembly-boms-or-production-boms).
+[!INCLUDE[prod_short](includes/prod_short.md)]  also support assembly BOMs. You use assembly orders for making end items from components in a simple process that can be performed by one or more basic resources, which are not machine or work centers, or without any resources. Proces montáže by například mohl být, z výběru dvou láhví vína a jednoho pytlíku kávy a následného zabalení jako dárek. For more information, see [Assembly BOMs or Production BOMs](inventory-how-work-boms.md#assembly-boms-or-production-boms).
 
-Before you can set up a routing, the following must be in place:
+Dříve než můžete TNG postup založit, musí být nastaveno následující:
 
-- Item cards are created for parent items that take part in manufacturing. For more information, see [Register New Items](inventory-how-register-new-items.md).
-- Production resources are set up. For more information, see [Set Up Work Centers and Machine Centers](production-how-to-set-up-work-and-machine-centers.md).
+- Karty zboží se vytvářejí pro nadřazené položky, které se podílejí na výrobě. For more information, see [Register New Items](inventory-how-register-new-items.md).
+- Jsou nastaveny výrobní zdroje. For more information, see [Set Up Work Centers and Machine Centers](production-how-to-set-up-work-and-machine-centers.md).
 
-## To create a production BOM
+## Vytvoření výrobních kusovníků
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Production BOM**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. To edit the BOM, set the **Status** field to **New** or **Under Development**. To activate it, set the **Status** field to **Certified**.
 
-   Proceed to fill in the production BOM lines.
+   Pokračujte vyplněním řádků výrobního kusovníku.
 5. In the **Type** field, select whether the item on this BOM line is an ordinary item or a production BOM. If the item on the line is a production BOM, then it must already exist as a certified production BOM.
 6. In the **No.** field, look up and select the item or production BOM in question, or type it in the field.
 7. In the **Quantity Per** field, enter how many units of the item go into the parent item, for example, 4 wheels for 1 car.
@@ -41,22 +41,22 @@ Before you can set up a routing, the following must be in place:
 
 9. In the **Routing Link Code** field, enter a code to connect the component to a specific operation. For more information, see [To create routing links](production-how-to-create-routings.md#to-create-routing-links).
 10. To copy lines from an existing production BOM, choose the **Copy BOM** action to select existing lines.
-11. Certify the production BOM.
-12. You can now attach the new production BOM to the card of the parent item in question. For more information, see [Register New Items](inventory-how-register-new-items.md).
+11. Certifikace výrobního kusovníku
+12. Nyní můžete připojit nový výrobní kusovník ke kartě příslušného nadřazeného zboží. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
 > [!NOTE]  
 > [!INCLUDE [bom-standard-cost](includes/bom-standard-cost.md)] To recalculate the item's standard cost from the item card, choose the **Manufacturing** action, and then choose the **Calc. Standard Cost** action.
 
-## To create a new versions of a production BOM
-New versions of production BOMs are used when, for example, an item is replaced by another item, or when a customer requires a special version of a product. The version principle enables various versions of a production BOM to be managed. The structure of the production BOM version corresponds to the structure of the production BOM. The basic difference is in the time validity of the versions. The validity is defined by the starting date.
+## Vytvoření nových verzí výrobního kusovníku
+Nové verze výrobních kusovníků se používají například tehdy, když je zboží nahrazeno jinou položkou, nebo když zákazník vyžaduje speciální verzi produktu. Princip verze umožňuje spravovat různé verze výrobního kusovníku. Struktura verze výrobního kusovníku odpovídá struktuře výrobního kusovníku. Základní rozdíl je v době platnosti verzí. Platnost je definována počátečním datem.
 
-The starting date indicates the start of the period in which this version is valid. For all other considerations, the starting date is a filter criterion for calculations and evaluations. The BOM version is valid until the next version becomes valid for its starting date.
+Počáteční datum označuje začátek období, ve kterém je tato verze platná. Pro všechny ostatní úvahy je počáteční datum filtrovacím kritériem pro výpočty a vyhodnocení. Verze kusovníku je platná až do doby, kdy další verze začne platit pro nové počáteční datum.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Production BOM**, and then choose the related link.
 2. Select the production BOM to be copied, and then choose the **Versions** action.
 3. Vyberte akci **Nový**.
-4. Vyplňte pole podle potřeby.
-5. In the **Version Code** field, enter the unique identification of the version. Any combination of numbers and letters is permitted.
+4. Podle potřeby vyplňte pole.
+5. In the **Version Code** field, enter the unique identification of the version. Je povolena jakákoli kombinace číslic a písmen.
 
    The newly created version is automatically assigned the status **New**.
 6. When the BOM version is completed, setting the **Status** field to **Certified**.
@@ -68,23 +68,23 @@ The time validity of the version is specified by the **Starting Date** field.
 >
 > Select the **Production BOM** option if you want to use a phantom production BOM on the line.
 >
-> Phantom production BOMs serve for structuring products. This production BOM type never leads to a finished product, but is used exclusively for determining the dependent demand. Phantom production BOMs do not have their own item master data.
+> Fantom kusovníky slouží ke strukturování produktů. Tento typ výrobního kusovníku nikdy nevede k hotovému produktu, ale používá se výhradně k určení závislého požadavku. Fantom kusovníky nemají vlastní kmenová data zboží.
 
-## Quantity Calculation Formula on Production BOMs
-The quantity is calculated taking into consideration different dimensions which are also entered on the production BOM lines. The dimensions refer to an order unit of the respective item. The length, width, depth and weight can be entered as dimensions.
+## Vzorec pro výpočet množství na kusovnících
+Množství se počítá s přihlédnutím k různým rozměrům, které jsou také zadávány na výrobních kusovnících. Rozměry se vztahují k objednávkové jednotce příslušného zboží. Délku, šířku, hloubku a hmotnost lze zadat jako rozměry.
 
-The Calculation Formula, Length, Width, Depth and Weight columns are not displayed, because they are only used by some users. If you wish to use the calculation of the quantity, you must first display these columns.
+Sloupce vzorec výpočtu, délka, šířka, hloubka a hmotnost nejsou zobrazeny, protože je používají pouze někteří uživatelé. Pokud chcete použít výpočet množství, musíte tyto sloupce nejprve zobrazit.
 
-The relation of the individual components is defined by the calculation formula. The following possibilities are available as a calculation formula:
+Vztah jednotlivých komponent je definován vzorcem výpočtu. Jako vzorec pro výpočet jsou k dispozici následující možnosti:
 
-- **Empty** - No consideration of dimensions. (Quantity = Quantity per.)
+- **Empty** - No consideration of dimensions. (Množství = Množství za)
 - **Length** - Quantity = Quantity per * Length
 - **Length x Width** - Quantity = Quantity per * Length x Width
 - **Length x Width x Depth** - Quantity = Quantity per x Length x Width x Depth
 - **Weight** - Quantity = Quantity per x Weight
 
 ### Příklad
-In a production BOM, seventy metal parts with the dimensions length = 0.20 m and width = 0.15 m are required. The values are entered as follows: Calculation Formula = Length x Width, Length = 20, Width = 15, Quantity per = 70. The quantity is given by the Quantity per x Length * Width, that is, Quantity = 70 x 0.20 m x 0.15 m = 2.1 m2.
+Ve výrobním kusovníku je vyžadováno sedmdesát kovových dílů s rozměry: Délka = 0,20m na Šířka = 0,15m. Hodnoty se zadávají následovně: Vzorec výpočtu = délka x šířka, délka = 20, šířka = 15, množství = 70. Množství je dáno množstvím za * délka * šířka, tj. Množství = 70 x 0,20 m x 0,15 m = 2,1 m2.
 
 ## Viz také
 [Create Routings](production-how-to-create-routings.md)   

@@ -9,11 +9,11 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: trade, sell
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Sales
+# Prodej
 You create a sales invoice or sales order to record your agreement with a customer to sell certain products on certain delivery and payment terms.
 
 You must use sales orders if your sales process requires that you can ship parts of an order quantity, for example, because the full quantity is not available at once. If you sell items by delivering directly from your vendor to your customer, as a drop shipment, then you must also use sales orders. In all other aspects, sales orders work the same way as sales invoices. With sales orders, you can also use the Order Promising functionality to communicate certain delivery dates to your customers.
@@ -34,7 +34,7 @@ For all sales processes, you can incorporate an approval workflow, for example, 
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Vytvořte zákaznickou kartu pro každého zákazníka, kterému prodáváte. | [Registrace nového zákazníka](sales-how-register-new-customers.md) |
 | Create a sales quote where you offer products on negotiable terms before converting the quote to a sales invoice. | [Make Sales Quotes](sales-how-make-offers.md) |
@@ -48,10 +48,9 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Perform an action on an unpaid posted sales invoice to automatically create a credit memo and either cancel the sales invoice or recreate it so you can make corrections. | [Correct or Cancel Unpaid Sales Invoices](sales-how-correct-cancel-sales-invoice.md) |
 | Create a sales credit memo to revert a specific posted sales invoice to reflect which products the customer returns and which payment amount you will refund. | [Process Sales Returns or Cancellations](sales-how-process-sales-returns-cancellations.md) |
 | Manage your customer's commitment to purchase large quantities delivered in several shipments over time. | [Work with Blanket Sales Orders](sales-how-to-create-blanket-sales-orders.md) |
-| Prodej zboží montáže, které momentálně není k dispozici vytvořením propojení montáže na zakázku pro dodání úplného nebo částečného množství prodejní objednávky. | [Prodejn zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md) |
+| Prodej zboží montáže, které momentálně není k dispozici vytvořením propojení montáže na zakázku pro dodání úplného nebo částečného množství prodejní objednávky. | [Prodej zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md) |
 | Invoice a customer once for multiple shipments by combining the shipments on one invoice. | [Combine Shipments on a Single Invoice](sales-how-to-combine-shipments-on-a-single-invoice.md) |
 | Inform your customers of order delivery dates by calculating either the capable-to-promise date or the available-to-promise date. | [Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md) |
-| Register your estimates for future sales, specified by item and by period, to function mainly as input to production planning. | [Create a Forecast](production-how-to-create-a-forecast.md) |
 | Resolve confusion when two or more records exist for the same customer. | [Merge Duplicate Records](sales-how-merge-duplicate-records.md) |
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/sell-items-services-dynamics-365-business-central/)

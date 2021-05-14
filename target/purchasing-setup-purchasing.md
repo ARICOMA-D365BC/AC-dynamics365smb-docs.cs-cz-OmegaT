@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement, supply, vendor order
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ A separate series of tasks related to registering new vendors is to record any s
 
 Finance-related purchase setup, such as payment methods and currencies, are covered in the Finance Setup section. Pro více informací navštivte [Nastavení financí](finance-setup-finance.md).
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Create a vendor card for each vendor that you purchase from | [Register New Vendors](purchasing-how-register-new-vendors.md) |
 | Enter the different discounts and special prices that vendors grant you depending on item, quantities, and/or date | [Record Purchase Price, Discount, and Payment Agreements](purchasing-how-record-purchase-price-discount-payment-agreements.md) |

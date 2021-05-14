@@ -9,49 +9,49 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Archive Documents
-You can archive sales and purchase orders, quotes, return orders, and blanket orders, for example because you want to save a copy of a document for reuse later. You can archive a sales or purchase document several times, saving a different archived version each time.
+# Archivování dokladů
+Můžete archivovat prodejní a nákupní objednávky, nabídky, objednávky vratky a hromadné objednávky, například proto, že chcete uložit kopii dokumentu pro pozdější použití. Prodejní nebo nákupní doklad můžete archivovat několikrát a pokaždé uložit jinou archivovanou verzi.
 
-For archived documents where the original still exists and is not posted, you can use the **Restore** function to overwrite the original with the archived version of the document. This is practical if you need to restore the contents of a document to an earlier state.
+For archived documents where the original still exists and is not posted, you can use the **Restore** function to overwrite the original with the archived version of the document. To je praktické, pokud potřebujete obnovit obsah dokladu do dřívějšího stavu.
 
 For archived documents where the original is deleted, you can only reuse the content by copying the data, for example with the **Copy from Document** function.
 
-## To set up automatic document archiving
-You can set up automatic archiving of sales and purchase orders, quotes, blanket orders, and return orders, before you delete documents.
+## Nastavení automatické archivace dokladu
+Před odstraněním dokladů můžete nastavit automatickou archivaci prodejních a nákupních objednávek, nabídek, hromadných objednávek a objednávek vratek.
 
-The following procedure describes how to set up automatic archiving of sales documents. The steps are similar for purchase documents.
+Následující postup popisuje, jak nastavit automatickou archivaci prodejních dokladů. Kroky jsou podobné i pro nákupní dokumenty.
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. On the **Sales & Receivables Setup** page, fill in the fields as follows.
 
 | Pole | Popis |
 |-----|-----------|
 | **Archiving Sales Quotes** | **Never** to never archive sales quotes when they are deleted. **Question** to prompt the user to choose whether to archive sales quotes when they are deleted. **Always** to archive sales quotes automatically when they are deleted. |
-| **Archiving Blanket Sales Orders** | Select to archive blanket sales orders automatically each time they are deleted. |
-| **Arch. Orders and Ret. Orders** | Select to automatically archive sales orders each time they are deleted. |
+| **Archiving Blanket Sales Orders** | Vyberte, chcete-li automaticky archivovat hromadné prodejní objednávky při každém odstranění. |
+| **Arch. objednávky a objednávky Orders** | Vyberte, chcete-li automaticky archivovat prodejní objednávky pokaždé, když jsou odstraněny. |
 
-## To archive a sales order
-The following procedure describes how to archive a sales order. The steps are similar for all orders, blanket orders, return orders, and quotes.
+## Archivace prodejní objednávky
+Následující postup popisuje, jak archivovat prodejní objednávku. Postup je podobný jako u všech objednávek, hromadných objednávek, objednávek vratek a nabídek.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
-2. Open a sales order that you want to archive.
+2. Otevřete prodejní objednávku, kterou chcete archivovat.
 3. Choose the **Archive Document** action.
 
-The sales order is archived. You can view it on the **Archived Sales Orders** page.
+Prodejní objednávka je archivována. You can view it on the **Archived Sales Orders** page.
 
-## To restore a non-posted sales order from the archive
-The following procedure describes how to bring the contents of an archived sales order back to the original sales order. This is only possible when the original document has not been posted. The steps are similar for all orders, blanket orders, return orders, and quotes.
+## Obnovení nezaúčtované prodejní objednávky z archivu
+Následující postup popisuje, jak přenést obsah archivované prodejní objednávky zpět na původní prodejní objednávku. To je možné pouze tehdy, pokud původní dokument nebyl zaúčtován. Postup je podobný jako u všech objednávek, hromadných objednávek, objednávek vratek a nabídek.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Archived Sales Orders**, and then choose the related link.
 2. Select the archived sales order, or version of it, that you want to restore, and then choose the **Restore** action.
 
-The contents of the original sales order is replaced with that of the selected archived version.
+Obsah původní prodejní objednávky bude nahrazen textem vybrané archivované verze.
 
-## To delete archived sales orders
-The following procedure describes how to delete archived sales orders. The steps are similar for other archived sales and purchase documents.
+## Odstranění archivovaných prodejních objednávek
+Následující postup popisuje, jak odstranit archivované prodejní objednávky. Postup je podobný ostatním archivovaným prodejním a nákupním dokladům.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Delete Archived Sales Order Versions**, and then choose the related link.
 2. On the **Delete Archived Sales Order Versions** page, select the appropriate filters.

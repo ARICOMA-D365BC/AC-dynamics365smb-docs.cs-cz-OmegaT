@@ -8,15 +8,15 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: migration, Excel
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Importing Business Data from Other Finance Systems
+# Import obchodních dat z jiných finančních systémů.
 
-When you sign up for [!INCLUDE[prod_short](includes/prod_short.md)], you can choose to create an empty company so that you can upload your own data and to test your new [!INCLUDE[prod_short](includes/prod_short.md)] company. Depending on the finance solution that your business uses today, you can transfer information about customers, vendors, inventory, and bank accounts.
+When you sign up for [!INCLUDE[prod_short](includes/prod_short.md)], you can choose to create an empty company so that you can upload your own data and to test your new [!INCLUDE[prod_short](includes/prod_short.md)] company. V závislosti na finančním řešení, které vaše firma používá dnes, můžete přenášet informace o zákaznících, dodavatelích, zásobách a bankovních účtech.
 
-From the Role Center, you can start an assisted setup guide that helps you transfer the business data from an Excel file or from other formats. The type of files you can upload depends on the extensions that are available. For example, you can migrate data from QuickBooks because [!INCLUDE[prod_short](includes/prod_short.md)] includes an extension that handles the conversion from QuickBooks. If you want to migrate data from other finance solutions, you must either check if an extension is available for that solution or import from Excel.
+V Centru rolí můžete spustit průvodce nastavením, který vám pomůže přenášet obchodní data ze souboru Excel nebo z jiných formátů. Typ souborů, které můžete nahrát, závisí na dostupných příponách. For example, you can migrate data from QuickBooks because [!INCLUDE[prod_short](includes/prod_short.md)] includes an extension that handles the conversion from QuickBooks. Pokud chcete migrovat data z jiných finančních programů, musíte buď zkontrolovat, zda je pro toto řešení k dispozici rozšíření, nebo importovat z aplikace Excel.
 
 [!INCLUDE[prod_short](includes/prod_short.md)] includes templates for accounts, customers, vendors, and inventory items that you can choose to apply when you import your data.
 
@@ -26,54 +26,54 @@ You can import master data and some transactional data from other finance system
 > We recommend that you use data migration wizards to import data from Dynamics GP, Dynamics NAV, or QuickBooks. For more information, see [Migrating On-Premises Data to Business Central Online](/dynamics365/business-central/dev-itpro/administration/migrate-data) in the administration content, or [QuickBooks Data Migration](ui-extensions-quickbooks-data-migration.md).
 
 > [!NOTE]  
-> For larger implementation work, you can use RapidStart Services for [!INCLUDE[prod_short](includes/prod_short.md)], which is an extensive toolkit for setting up new solutions based on customers' business requirements and setup data. RapidStart Services also offers functionality for import of business data. For more information, see [Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md).
+> For larger implementation work, you can use RapidStart Services for [!INCLUDE[prod_short](includes/prod_short.md)], which is an extensive toolkit for setting up new solutions based on customers' business requirements and setup data. RapidStart Services také nabízí funkce pro import obchodních dat. For more information, see [Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md).
 
 To import item pictures, you can use a dedicated function on the **Inventory Setup** page. For more information, see [Import Multiple Item Pictures](inventory-how-import-item-pictures.md).
 
-## Importing Data from Configuration Packages
-[!INCLUDE[prod_short](includes/prod_short.md)] includes a configuration package that you can export to Excel and set up your data there. Then, you can import the data from Excel again. The package consists of 27 tables, including master data such as customers, vendors, items, and accounts, other basic setup tables such as shipping methods, and transactions tables such as sales header and lines.
+## Import dat z konfiguračních balíčků
+[!INCLUDE[prod_short](includes/prod_short.md)] includes a configuration package that you can export to Excel and set up your data there. Potom můžete data importovat znovu z aplikace Excel. Balíček se skládá z 27 tabulek, včetně hlavních dat, jako jsou zákazníci, dodavatelé, zboží a obchodní vztahy, dalších základních tabulek nastavení, jako jsou způsoby expedice a tabulek transakcí, jako je prodejní hlavička a řádky.
 
 > [!NOTE]  
-> Working with configuration packages is advanced functionality, and we recommend that you contact your administrator. For more information, see [Importing Data from Legacy Accounting Software using a Configuration Package](across-import-data-configuration-packages.md).
+> Práce s konfiguračními balíčky je pokročilá funkce a doporučujeme vám kontaktovat správce. For more information, see [Importing Data from Legacy Accounting Software using a Configuration Package](across-import-data-configuration-packages.md).
 
-## Working with Data in Excel
-When you export the default configuration package to Excel, the generated workbook contains a worksheet for each table in the package. To simplify your tasks, you can take advantage of the XML manipulation tools that are built into Excel. You can also use Excel built-in functions to help with data formatting and to put data in the correct cell. For example, add a blank worksheet and copy the legacy data to it. Then make an Excel formula to map data in the transformation worksheet between the fields in the exported worksheet and customer legacy data. After you have mapped all of the data, copy the range of data onto the table worksheet.
+## Práce s daty v Excelu
+Při exportu výchozího konfiguračního balíčku do Excelu vygenerovaný sešit obsahuje list pro každou tabulku v balíčku. Pro zjednodušení vašich úkolů můžete využít mapovací nástroje XML, které jsou zabudovány do Excelu. Můžete také použít vestavěné funkce aplikace Excel, které vám pomohou s formátováním dat a vložením dat do správné buňky. Například, přidání prázdného listu a zkopírování starších dat. Potom vytvořte vzorec aplikace Excel pro mapování dat v transformačním listu mezi poli v exportovaném listu a staršími daty zákazníků. Po namapování všech dat zkopírujte oblast dat do listu tabulky.
 
 > [!IMPORTANT]  
-> Do not change the columns in the worksheets. If they are moved, changed, or deleted, the worksheet cannot be imported into [!INCLUDE[prod_short](includes/prod_short.md)].
+> Neměňte sloupce v listech. If they are moved, changed, or deleted, the worksheet cannot be imported into [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!NOTE]
-> Fields of type Blob cannot be exported/imported using Excel.
+> Pole typu Blob nelze exportovat/importovat pomocí Excelu.
 
-## Tables in the Default Configuration Package
-The default configuration package supports the following tables:
+## Tabulky ve Výchozím konfiguračním balíčku
+Výchozí konfigurační balíček podporuje následující tabulky:
 
-- Payment Terms
-- Customer Price Group
-- Shipment Method
-- Salesperson/Purchaser
+- Platební podmínky
+- Cenová skupina zákazníka
+- Způsob dodávky
+- Prodejci/Nákupčí
 - Lokace
-- GL Account
+- Účet hlavní knihy
 - Zákazník
-- Vendor
+- Dodavatele
 - Zboží
-- Sales Header
-- Sales Line
-- Purchase Header
-- Purchase Line
-- Obecná  Journal Line
-- Item Journal Line
-- Customer Posting Group
-- Vendor Posting Group
+- Prodejní hlavička
+- Prodejní řádek
+- Nákupní hlavička
+- Nákupní řádek
+- Obecné finančího deníku
+- Řádek deníku zboží
+- Účto skupiny zákazníků
+- Účto skupiny dodavatele
 - Účto skupiny zboží
-- Unit of Measure
-- Obecná  Business Posting Group
-- Obecná  Product Posting Group
-- General Posting Setup
-- Territory
-- Item Category
-- Sales Price
-- Purchase Price
+- Měrné jednotky
+- Obecné obchodní účto skupiny
+- Obecné účto skupiny zboží
+- Nastavení obecného účtování
+- Teritoria
+- Kategorie zboží
+- Prodejní ceny
+- Nákupní ceny
 
 ## Viz také
 [Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  

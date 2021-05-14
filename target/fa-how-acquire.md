@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: purchase fixed asset
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -62,7 +62,7 @@ The following procedure describes how to acquire a fixed asset manually by creat
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA G/L Journals**, and then choose the related link.
 2. On the **Fixed Asset G/L Journal** page, in the **FA Posting Type** field, select **Acquisition Cost**.
-3. Fill in the remaining fields as necessary.
+3. Podle potřeby vyplňte zbývající pole.
 4. Vyberte akci **Zaúčtovat**.
 
 > [!TIP]  
@@ -77,7 +77,7 @@ For example, if you post an acquisition with the wrong date, you must correct it
 > You cannot use the **Reverse Transactions** function for fixed asset entries.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cancel FA Entries**, and then choose the related link.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. Zvolte tlačítko **OK** pro spuštění dávkové úlohy.
 4. When the incorrect entry or entries are canceled, proceed to post the correct acquisition cost.
 
@@ -98,7 +98,7 @@ You can post the salvage value together with the acquisition cost from a fixed a
 [Fixed Assets](fa-manage.md)  
 [Setting Up Fixed Assets](fa-setup.md)  
 [Finance](finance.md)  
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

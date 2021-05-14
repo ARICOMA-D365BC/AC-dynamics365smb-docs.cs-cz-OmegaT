@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: projects
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -20,7 +20,7 @@ Then you can create jobs and schedule resources for projects as well as manage b
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up project management. | [Set general information for jobs](projects-how-setup-jobs.md#to-set-general-information-for-jobs) |
 | Set up your resources and the related costs and prices, either for individual resources, resource groups, or for all available resources of the company. | [Set Up Resources](projects-how-setup-resources.md) |

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 02/16/2021
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -17,7 +17,7 @@
 
 Tento návod popisuje, jak můžete pomocí účetních schémat provádět prognózy cashflow. Účetní schémata provádějí výpočty, které nelze provést přímo v grafu účtů cashflow. V účetních schématech můžete nastavit mezisoučty pro příjemky a výdaje cashflow. Tyto mezisoučty mohou být zahrnuty do nových součtů, které pak lze použít při vytváření prognóz cashflow.
 
-## Návod
+## O tomto návodu
 
 Tento návod popisuje následující úkoly:
 

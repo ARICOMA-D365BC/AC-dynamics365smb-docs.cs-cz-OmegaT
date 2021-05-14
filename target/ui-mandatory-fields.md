@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: solsen
 
 ---
-# Detecting Mandatory Fields
-When you enter data on pages in [!INCLUDE[prod_short](includes/prod_short.md)], certain fields are marked with a red asterisk. The red asterisk means that the field must be filled to complete a certain process that uses the field, such as posting a transaction that uses the value in the field.
+# Detekce povinných polí
+When you enter data on pages in [!INCLUDE[prod_short](includes/prod_short.md)], certain fields are marked with a red asterisk. Červená hvězdička znamená, že pole musí být vyplněno, aby bylo možné dokončit určitý proces, který toto pole používá, například zaúčtování transakce, která používá hodnotu v poli.
 
-Even though the field contains a red asterisk, you are not forced to fill in the field before you continue to other fields or close the page. The red asterisk only serves as a reminder that you will be blocked from completing a certain process.
+Přestože pole obsahuje červenou hvězdičku, není nutné pole vyplňovat dříve, než budete pokračovat v jiných polích nebo stránku zavřít. Červená hvězdička slouží pouze jako připomenutí, že vám bude zablokováno dokončení určitého procesu.
 
-## Examples
+## Příklady
 On the **Customer Card** page, the red asterisk appears in the **Name** field, in the **Tax Area Code** field, and in the posting group fields to indicate that you cannot post a sales transaction for the customer unless the fields are filled.
 
 On the **Item Card** page, the red asterisk appears in the **Description** field to indicate that you cannot enter the item on a document line, such as a sales order, unless this field is filled.

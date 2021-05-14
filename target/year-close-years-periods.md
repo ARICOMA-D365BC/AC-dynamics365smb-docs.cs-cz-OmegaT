@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: year closing, close accounting period, close fiscal year, bank account detailed trial balance
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
@@ -19,7 +19,7 @@ At the end of a fiscal year, there are a number of administrative tasks that you
 
 The following table provides an overview of tasks that you typically perform to close a year and period.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Define your fiscal year, and divide it into time periods for which to report financial performance. | [Working with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md) |
 | Specify system-wide and user-specific posting date ranges. Depending on your business needs, you may want to restrict user posting date ranges at the start of the period-end process or after it. | [Specify Posting Periods](finance-how-specify-posting-periods.md) |

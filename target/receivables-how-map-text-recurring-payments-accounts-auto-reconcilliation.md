@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: account linking, direct payment posting, automatic payment processing, reconcile payment, recurring expense, recurring cash receipt
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -27,7 +27,7 @@ On a payment reconciliation journal line where the payment has been set to posti
 
 ## To map text on recurring payments to accounts for automatic reconciliation
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.
-2. Open a payment reconciliation journal. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
+2. Otevřete deník odsouhlasení plateb. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
 3. Choose the **Map Text to Account** action. The **Text-to-Account Mapping** page opens.
 4. In the **Mapping Text** field, enter any text that occurs on payments that you want to post to specified accounts without applying to an open entry. You can enter up to 50 characters.
 
@@ -48,7 +48,7 @@ Next time you import a bank statement file or choose the **Apply Automatically**
 
 To always post expenses that are related to fees from a specific bank, MyBank, to the general ledger account for bank charges and fees (account 60400), fill a line on the **Text-to-Account Mapping** page as follows.
 
-| Mapping Text | Debit Acc. Číslo | Credit Acc. Číslo | Bal. Source Type | Bal. Číslo původu |
+| Mapping Text | Debit Acc. Ne. | Credit Acc. Ne. | Bal. Source Type | Bal. Číslo původu |
 | --- | --- | --- | --- | --- |
 | MyBank | BLANK | 60400 | Finanční účet | BLANK |
 

@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms. search.keywords: app, add-in, manifest, customize, import, implement
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 ---
 
@@ -22,10 +22,10 @@ For more information, see [Importing Business Data from Other Finance Systems](a
 
 You can import the following data from QuickBooks Online to Business Central:
 
-- Customers
-- Vendors
-- Items
-- Chart of Accounts
+- Zákazníci
+- Dodavatelé
+- Zboží
+- Účetní osnova
 - Beginning Balance transactions in General Ledger
 - On-hand Quantities for Inventory Items
 - Open documents for customers and vendors, such as invoices, credit memos and payments

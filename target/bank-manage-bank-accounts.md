@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: reconcile
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -26,7 +26,7 @@ Before you can manage your bank accounts within [!INCLUDE[prod_short](includes/p
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Reconcile bank accounts as a separate task on the **Bank Acc. Reconciliation** page. | [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md) |
 | Reconcile bank accounts in connection with payment processing on the **Payment Reconciliation Journal** page. | [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md) |

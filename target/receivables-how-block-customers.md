@@ -8,25 +8,25 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Block Customers
-You can block a customer, for example because of insolvency, so that the customer cannot be added to sales documents or so that no transactions can be posted for the customer.
+# Blokace zákazníků
+Zákazníka můžete zablokovat například z důvodu platební neschopnosti, aby jej nebylo možné přidat do prodejních dokladů nebo na zákazníka nemohly být zaúčtovány žádné transakce.
 
-In addition to blocking a customer, you can set receivable transactions for the customer to be on hold in connection with reminders. For more information, see [Collect Outstanding Balances](receivables-collect-outstanding-balances.md).
+Kromě blokování zákazníka můžete nastavit transakce pohledávek, aby byl zákazník v souvislosti s upomínkami pozastaven. For more information, see [Collect Outstanding Balances](receivables-collect-outstanding-balances.md).
 
-The following table describes the options for blocking customers.
+Následující tabulka popisuje možnosti blokování zákazníků.
 
 | Možnost | Popis |
 |--------------------|------------|  
-| **Blank** | Transactions are allowed for this customer. |
-| **Ship** | New orders and new shipments cannot be created for this customer. Existing shipments not yet invoiced can be invoiced. |
-| **Invoice** | New orders, new shipments, and new invoices cannot be created for this customer. Existing shipments not yet invoiced cannot be invoiced. You can still send reminders and finance charge memos to the customer. |
-| **All** | No transaction is allowed for this customer, including payments. |
+| **Blank** | Transakce jsou pro tohoto zákazníka povoleny. |
+| **Ship** | Pro tohoto zákazníka nelze vytvořit nové objednávky ani nové dodávky. Existující dodávky, které ještě nebyly fakturovány, lze fakturovat. |
+| **Invoice** | Pro tohoto zákazníka nelze vytvořit nové objednávky, nové dodávky ani nové faktury. Existující dodávky, které ještě nebyly fakturovány, nelze fakturovat. Zákazníkovi můžete stále posílat upomínky a penále. |
+| **All** | Pro tohoto zákazníka není povolena žádná transakce, včetně plateb. |
 
-## To block a customer
+## Zablokování zákazníka
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Select a customer, and then choose the **Edit** action.
 3. In the **Blocked** field, choose what to block, as described in the table above.

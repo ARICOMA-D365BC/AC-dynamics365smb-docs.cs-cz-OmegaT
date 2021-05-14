@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: vendor payment, creditor, debt, balance due, AP
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -17,13 +17,13 @@ ms.author: edupont
 
 A big part of managing accounts payable is paying your vendors, or reimbursing your employees for expenses. You can use functions to add payments lines for purchase invoices that are due on the **Payment Journal** page. To send transactions to your bank, you can export multiple payment journal lines to a file, and then upload the file to your bank. You can also make payments by check, including transmitting checks as electronic payments.
 
-Another typical task is to apply outgoing payments to their related vendor or employee ledger entries in order to close purchase invoices, purchase credit memos, or employee accounts as paid. You can do this on the **Payment Reconciliation Journal** page by importing a bank statement file to register the payments. The payments are applied to open vendor, customer, or employee ledger entries by matching payment text and entry information. There are various ways to review and change the matches before you post the journal. You can choose to close any open bank account ledger entries related to the applied ledger entries when you post the journal. The bank account is automatically reconciled when all payments are applied.
+Another typical task is to apply outgoing payments to their related vendor or employee ledger entries in order to close purchase invoices, purchase credit memos, or employee accounts as paid. You can do this on the **Payment Reconciliation Journal** page by importing a bank statement file to register the payments. The payments are applied to open vendor, customer, or employee ledger entries by matching payment text and entry information. There are various ways to review and change the matches before you post the journal. Při zaúčtování deníku můžete zavřít všechny otevřené položky bankovního účtu související s vyrovnanými položami. Bankovní účet je automaticky vyrovnán, když jsou vyrovnány všechny platby.
 
 Alternatively, you can apply outgoing payments manually on the **Payment Journal** page or from the related vendor or employee ledger entries.
 
 The following table describes a sequence of tasks within accounts payable, with links to the topics that describe them.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Generate due vendor payments or employee reimbursements, prepare check payments, and export payments to a bank file when posting. | [Making Payments](payables-make-payments.md) |
 | Apply vendor payments automatically to unpaid purchase invoices by importing a bank statement file. | [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md) |

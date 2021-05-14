@@ -9,52 +9,52 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Migrate Customer Data
+# Migrace zákaznických dat
 
-You can migrate existing customer data from an existing ERP system to [!INCLUDE[prod_short](includes/prod_short.md)] using the data migration tools of RapidStart Services. You can use Excel files as the data carrier. You can also manually move the data by entering it directly in the company.
+You can migrate existing customer data from an existing ERP system to [!INCLUDE[prod_short](includes/prod_short.md)] using the data migration tools of RapidStart Services. Jako datový nosič můžete použít soubory aplikace Excel. Data můžete také přesunout ručně tak, že je zadáte přímo do společnosti.
 
 > [!NOTE]
-> Fields of type Blob cannot be exported/imported using Excel.
+> Pole typu Blob nelze exportovat/importovat pomocí Excelu.
 
-The **Migration Overview** and **Config. Worksheet** pages provide access to the functions and views to perform all the tasks that relate to data migration. We recommend that you migrate one table at a time, to handle dependencies in your data. In migration, you will also touch the master data tables, which contain information about customers, vendors, items, contacts, and the general ledger.
+The **Migration Overview** and **Config. Worksheet** pages provide access to the functions and views to perform all the tasks that relate to data migration. Doporučujeme migrovat vždy jednu tabulku, abyste mohli zpracovat závislosti na datech. Při migraci se také dotknete tabulek hlavních dat, které obsahují informace o zákaznících, dodavatelích, zboží, kontaktech a financích.
 
-## To import configuration packages
-When you create a new company, you can import company settings for the new company. You import the settings from a .rapidstart file, which delivers the package contents in a compressed format. A corresponding set of default data migration tables are imported. The data set contains master data tables and the setup data tables. Your first task in data migration is to evaluate if the default migration setup meets the needs of the new company.
+## Import konfiguračních balíčků
+Když vytvoříte novou společnost, můžete importovat nastavení společnosti pro novou společnost. Importujete nastavení ze souboru .rapidstart, který dodává obsah balíčku v komprimovaném formátu. Bude importována odpovídající sada výchozích tabulek migrace dat. Datová sada obsahuje tabulky hlavních dat a tabulky nastavení. Prvním úkolem při migraci dat je vyhodnotit, zda výchozí nastavení migrace splňuje požadavky nové společnosti.
 
 > [!NOTE]  
-> You cannot rename a file that is not already a RapidStart Services configuration package as a .rapidstart configuration package file and then try to import it. If you try to do so, you will receive an error message.
+> You cannot rename a file that is not already a RapidStart Services configuration package as a .rapidstart configuration package file and then try to import it. Pokud se o to pokusíte, zobrazí se chybová zpráva.
 
 Before you start, you must make sure that you have permission to run the RapidStart Services objects. For example, you can have the SUPER or D365 RAPIDSTART permission sets. We also recommend that you are on a Role Center with links to RapidStart Services, such as the Administration Role Center. For more information, see [To change the role](ui-change-basic-settings.md#to-change-the-role).
 
 > [!IMPORTANT]  
-> When exporting and importing configuration packages between two company databases, the databases should have the same schema to make sure that all data is transferred successfully. This means that the databases should have the same table and field structure, in which the tables have the same primary keys and fields have the same IDs and data types.
+> When exporting and importing configuration packages between two company databases, the databases should have the same schema to make sure that all data is transferred successfully. To znamená, že databáze by měly mít stejnou tabulku a strukturu polí, ve kterých tabulky mají stejné primární klíče a pole mají stejné ID a datové typy.
 >
-> You can import a configuration package that has been exported from a database that has a different schema than that target database. However, any tables or fields in the configuration package that are missing in the target database will not be imported.
+> Můžete importovat konfigurační balíček, který byl exportován z databáze s jiným schématem, než je cílová databáze. Všechny tabulky nebo pole v konfiguračním balíčku, které chybí v cílové databázi nebudou importovány.
 >
-> Tables that have different primary keys and fields that have different data types will also not be successfully imported. For example, if the configuration pack includes table **50000 Customer** that has primary key **Code20** and the database to which you import the pack includes table **50000 Customer Bank Account** that has the primary key **Code20 + Code 20**, data will not be imported.
+> Tabulky, které mají různé primární klíče a pole s odlišnými datovými typy, nebudou také úspěšně importovány. For example, if the configuration pack includes table **50000 Customer** that has primary key **Code20** and the database to which you import the pack includes table **50000 Customer Bank Account** that has the primary key **Code20 + Code 20**, data will not be imported.
 
-1. Open the new company.
+1. Otevřete novou společnost.
 2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Packages**, and then choose the related link.
-3. Choose the **Import Package** action. Navigate to the .rapidstart package file that you want to import, and then choose the **Open** action. During import, the package contents are decompressed and the package record is created.
+3. Choose the **Import Package** action. Navigate to the .rapidstart package file that you want to import, and then choose the **Open** action. Během importu je obsah balíčku dekomprimován a je vytvořen záznam balíčku.
 
    When the import is complete, you can see the number of configuration tables that have been imported in the **No. of Tables** field.
 4. To review the list of configuration tables, choose the **View** action.
 5. To apply the package, choose the **Apply Package** action.
 
    > [!NOTE]  
-   > The data migration information is based on configuration templates, if you specify one. You must update the template first to change the list of fields.
+   > The data migration information is based on configuration templates, if you specify one. Chcete-li změnit seznam polí, musíte nejprve aktualizovat šablonu.
 
-6. To review the field selections, select a table, and then, on the **Lines** tab, choose the **Fields** action. Compare and review the number of fields that are available to the number of fields whose data has been applied.
+6. To review the field selections, select a table, and then, on the **Lines** tab, choose the **Fields** action. Porovnejte a zkontrolujte počet polí, která jsou k dispozici s počtem polí, jejichž data byla použita.
 
-If the selection of tables does not meet your needs, you can create one or more new data migration files. If the files are sufficient, you can continue with the data migration using Excel or XML files.
+Pokud výběr tabulek nevyhovuje vašim potřebám, můžete vytvořit jeden nebo více nových souborů migrace dat. Pokud jsou soubory dostatečné, můžete pokračovat v migraci dat pomocí souborů aplikace Excel nebo XML.
 
-## To create a data migration file
+## Vytvoření souboru migrace dat
 
-You can create new data migration files and customize them to support your business.
+Můžete vytvořit nové soubory pro migraci dat a přizpůsobit je tak, aby podporovaly vaše podnikání.
 
 > [!TIP]
 > A file can only be used to migrate a field that has its **FieldClass** property set to **Normal**.
@@ -66,24 +66,24 @@ You can create new data migration files and customize them to support your busin
 5. Clear the **Include Field** check box for any field that you do not want to import, and then choose the **Set Included** or the **Clear Included** action.
 
 > [!IMPORTANT]  
-> If the **Include Field** check box is selected by default, that field is part of the primary key. The selection should not be cleared, or errors will be introduced and the record cannot be imported.
+> If the **Include Field** check box is selected by default, that field is part of the primary key. Výběr by neměl být vymazán, nebo se objeví chyby a záznam nepůjde importovat.
 >
-> If you include a field that has a relationship with another table, the **Validate Field** check box is automatically selected. Validation can result in the update of other fields in this and other tables and is executed in the order of the field number.
+> If you include a field that has a relationship with another table, the **Validate Field** check box is automatically selected. Ověření může mít za následek aktualizaci dalších polí v této a dalších tabulkách a provádí se v pořadí podle čísla pole.
 
-A new migration table is created.
+Je vytvořena nová migrační tabulka.
 
-## To export data migration files
-When you have determined the tables that you want to transfer customer data to, you export the files.
+## Export souborů migrace dat
+Po stanovení tabulek, do kterých chcete přenést data zákazníků, exportujte soubory.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Packages**, and then choose the related link.
-2. Select and open the package that you want to use for export.
+2. Vyberte a otevřete balíček, který chcete použít pro export.
 3. Select the table or tables that you want to export, and then choose the **Export to Excel** action.
-4. Save the exported Excel file.
-5. Repeat this procedure for all the relevant data migration tables. If you select multiple tables at the same time, the export of their data is into a common workbook.
+4. Uložte exportovaný soubor aplikace Excel.
+5. Opakujte tento postup pro všechny příslušné tabulky migrace dat. Pokud vyberete více tabulek současně, bude export jejich dat do společného sešitu.
 
-If the table is empty, the resulting data migration file contains empty cells for the fields you selected when you chose or created migration tables for your new company. If the selected data migration table contains data, it will be exported.
+Pokud je tabulka prázdná, výsledný soubor migrace dat obsahuje prázdné buňky pro pole, která jste vybrali při výběru nebo vytvoření migračních tabulek pro novou společnost. Pokud vybraná migrační tabulka dat obsahuje data, bude exportována.
 
-## To map values to be used during import
+## Mapování hodnot, které mají být použity během importu
 When you apply data that you have imported from Excel or from a RapidStart package, [!INCLUDE[prod_short](includes/prod_short.md)] treats and handles the mapping based on table relations:
 
 - If you define a mapping directly for a field in a table, then [!INCLUDE[prod_short](includes/prod_short.md)] uses it.
@@ -132,7 +132,7 @@ When you have run the batch job, use the following procedure to process the data
 3. To apply the mapping that you have set up, choose the **Apply Data** action.
 
 ## To migrate customer data
-When you have exported a migration table, your next step is to enter the customer's legacy data. To simplify your tasks, you can take advantage of the XML manipulation tools that are built into Excel. You can also use Excel built-in functions to help with data formatting and to put data in the correct cell.
+When you have exported a migration table, your next step is to enter the customer's legacy data. Pro zjednodušení vašich úkolů můžete využít mapovací nástroje XML, které jsou zabudovány do Excelu. Můžete také použít vestavěné funkce aplikace Excel, které vám pomohou s formátováním dat a vložením dat do správné buňky.
 
 For assistance with XML, enable the **Developer** tab of the Excel ribbon, and then choose the **Source** action to see the XML schema of your migration table as represented in Excel.
 

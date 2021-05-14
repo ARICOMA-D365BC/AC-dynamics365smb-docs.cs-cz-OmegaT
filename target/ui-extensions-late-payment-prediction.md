@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: customer, payment, invoice, sales, invoice, quote
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -23,7 +23,7 @@ When you open a posted sales document, a notification will display at the top of
 To enable the extension manually, follow these steps:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Late Payment Prediction Setup**, and then choose the related link.
-2. Vyplňte pole podle potřeby.
+2. Podle potřeby vyplňte pole.
 
 > [!Note]
 > If you decide to enable the extension manually, be aware that [!INCLUDE[prod_short](includes/prod_short.md)] will not allow you to do so if the quality of the model is low. The quality of the model indicates how accurate the model's predictions are likely to be. Several factors can impact the quality of a model. For example, there might not have been enough data, or the data did not contain enough variation. You can view the quality of the model you are currently using on the **Late Payment Prediction Setup** page. You can also specify a minimum threshold for the model quality.
@@ -92,19 +92,19 @@ If it appears that your processes do not match the standard model, you still can
 3. Choose the **Create My Model** action, to train model on your data.
 
 ## <a name="AnchorText"> </a>Create and use your own predictive web service for late payment prediction
-You can also create your own predictive web service based on a public model named **Prediction Experiment for Dynamics 365 Business Central**. This predictive model is available online in the Azure AI Gallery. To use the model, follow these steps:
+You can also create your own predictive web service based on a public model named **Prediction Experiment for Dynamics 365 Business Central**. Tento prediktivní model je k dispozici online v AI Azure Gallery. Chcete-li model použít, postupujte takto:
 
 1. Open a browser and go to the [Azure AI Gallery](https://go.microsoft.com/fwlink/?linkid=2086310).
 2. Search for **Prediction Experiment for Dynamics 365 Business Central**, and then open the model in Azure Machine Learning Studio.
-3. Use your Microsoft account to sign up for a workspace, and then copy the model.
-4. Run the model, and publish it as a web service.
-5. Make a note of the API URL and API key. You will use these credentials for a cash flow setup.
+3. Použijte svůj účet Microsoft k registraci pracovního prostoru a potom zkopírujte model.
+4. Spusťte model a publikujte jej jako webovou službu.
+5. Poznamenejte si API URL a API klíč. Tyto přihlašovací údaje použijete pro nastavení cash flow.
 6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Late Payment Prediction Setup**, and then choose the related link.
 7. Choose the **Use My Azure Subscription** check box.
 8. On the **My Model Credentials** FastTab, enter the API URL and API key for your model.  .
 
 ## Viz také
-[Azure Machine Learning Studio Documentation](https://go.microsoft.com/fwlink/?linkid=861765)  
+[Azure Machine Learning Studio Documentation](/azure/machine-learning/classic/)  
 [Customizing Business Central Using Extensions](ui-extensions.md)  
 [Welcome to [!INCLUDE[prod_long](includes/prod_long.md)]](index.md)
 

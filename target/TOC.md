@@ -24,7 +24,7 @@
 
 ### Podrobnosti návrhu
 #### [Application Design Details Overview](design-details-application-design.md)
-#### Design Details: Supply Planning
+#### Detaily návrhu: Plánování dodávek
 ##### [Supply Planning Overview](design-details-supply-planning.md)
 ##### [Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)
 ##### [Design Details: Reservation, Order Tracking, and Action Messaging](design-details-reservation-order-tracking-and-action-messaging.md)
@@ -34,7 +34,7 @@
 ##### [Design Details: Planning Assignment Table](design-details-planning-assignment-table.md)
 ##### [Design Details: Demand at Blank Location](design-details-demand-at-blank-location.md)
 ##### [Design Details: Transfers in Planning](design-details-transfers-in-planning.md)
-#### Design Details: Inventory Costing
+#### Detaily návrhu: Ocenění zásob
 ##### [Costing Overview](design-details-inventory-costing.md)
 ##### [Design Details: Costing Methods](design-details-costing-methods.md)
 ##### [Design Details: Change the Costing Method for Items](design-details-changing-costing-methods.md)
@@ -55,7 +55,7 @@
 ##### [Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md)
 ##### [Design Details: Inventory Valuation](design-details-inventory-valuation.md)
 ##### [Design Details: Revaluation](design-details-revaluation.md)
-#### Design Details: Warehouse Management
+#### Detaily návrhu: Správa skladu
 ##### [Warehouse Management Overview](design-details-warehouse-management.md)
 ##### [Design Details: Warehouse Overview](design-details-warehouse-overview.md)
 ##### [Design Details: Warehouse Setup](design-details-warehouse-setup.md)
@@ -64,7 +64,7 @@
 ##### [Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md)
 ##### [Design Details: Outbound Warehouse Flow](design-details-outbound-warehouse-flow.md)
 ##### [Design Details: Integration with Inventory](design-details-integration-with-inventory.md)
-#### Design Details: Item Tracking
+#### Detaily návrhu: Sledování zboží
 ##### [Item Tracking Overview](design-details-item-tracking.md)
 ##### [Design Details: Item Tracking Design](design-details-item-tracking-design.md)
 ##### [Design Details: Item Tracking Posting Structure](design-details-item-tracking-posting-structure.md)
@@ -74,22 +74,21 @@
 ##### [Design Details: Item Tracking and Planning](design-details-item-tracking-and-planning.md)
 ##### [Design Details: Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)
 ##### [Design Details: Item Tracking in the Warehouse](design-details-item-tracking-in-the-warehouse.md)
-#### Design Details: General Journal Post Line
+#### Detaily návrhu: Účtování řádku finančního deníku
 ##### [General Journal Post Line](design-details-general-journal-post-line.md)
 ##### [General Journal Post Line Overview](design-details-general-journal-post-line-overview.md)
 ##### [Design Details: Posting Interface Structure](design-details-posting-interface-structure.md)
 ##### [Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)
 ##### [Design Details: Codeunit 12 Changes: Mapping Global Variables for General Journal Post Line](design-details-codeunit-12-changes-mapping-global-variables-for-general-journal-post-line.md)
 ##### [Design Details: Codeunit 12 Changes: Changes in General Journal Post Procedures](design-details-codeunit-12-changes-changes-in-general-journal-post-procedures.md)
-#### Design Details: Dimension Set Entries
-##### [Dimension Set Entries Overview](design-details-dimension-set-entries.md)
+#### Detaily návrhu: Položky sady dimenzí
 ##### [Design Details: Dimension Set Entries Overview](design-details-dimension-set-entries-overview.md)
 ##### [Design Details: Searching for Dimension Combinations](design-details-searching-for-dimension-combinations.md)
 ##### [Design Details: Table Structure](design-details-table-structure.md)
 
 ## Try
 ### [Trials and Subscriptions](across-preview.md)
-### [Getting Started with Business Central](product-get-started.md)
+### [Getting Ready for Doing Business](ui-get-ready-business.md)
 ### [Troubleshooting Self-Service Sign-Up](ui-troubleshoot-self-signup.md)
 ### [Extending Your Trial Version](admin-extend-trial.md)
 ### [Unsubscribe or Remove Business Central](admin-cancel.md)
@@ -98,7 +97,7 @@
 
 <!--setup-->
 ## Setting Up Business Central
-### [Setting Up Business Central](setup.md)
+### [Overview of Tasks](setup.md)
 ### Setting Up Finance
 #### [Setting Up Finance](finance-setup-finance.md)
 #### [Set Up Payment Methods](finance-payment-methods.md)
@@ -110,6 +109,7 @@
 #### [Set Up Reminder Terms and Levels](finance-setup-reminders.md)
 #### [Set Up Finance Charge Terms](finance-setup-finance-charges.md)
 #### [Set Up Value-Added Tax (VAT)](finance-setup-vat.md)
+#### [Set Up Calculations and Posting Methods for Value-Added Tax (VAT)](finance-setup-vat.md)
 #### [Set Up Unrealized VAT for Cash-Based Accounting](finance-setup-unrealized-vat.md)
 #### [Validate VAT Registration Numbers](finance-how-validate-vat-registration-number.md)
 #### [Setting Up Source Codes and Reason Codes for Audit Trails](finance-setup-trail-codes.md)
@@ -239,44 +239,54 @@
 #### [Migrate Customer Data](admin-migrate-customer-data.md)
 #### [Create Custom Company Configuration Packages](admin-how-to-create-custom-company-configuration-packages.md)
 #### [Tips and Tricks: RapidStart Services](admin-tips-and-tricks-rapidstart-services.md)
-### Using Outlook with Business Central
-#### [Using Business Central as Your Business Inbox in Outlook](admin-outlook.md)
-#### [Synchronize with Contacts in Microsoft Outlook](admin-synchronize-outlook-contacts.md)
-#### [Using Business Central Without Outlook](admin-no-outlook.md)
-### Using Microsoft Teams with Business Central
-#### [Overview](across-teams-overview.md)
-#### [Managing Teams Integration](admin-teams-integration.md)
-#### [Installing Business Central App for Teams](across-install-app-for-teams.md)
-#### [Working with Business Central Data in Teams](across-working-with-teams.md)
-#### [Teams FAQ](teams-faq.md)
-#### [Troubleshooting](admin-teams-troubleshooting.md)
-### Using Power BI with Business Central
-#### [Introduction](admin-powerbi.md)
-#### Administrator
-##### [Integration Overview](admin-powerbi-overview.md)
-##### [Enabling Power BI Integration](admin-powerbi-setup.md)
-#### Designer
-##### [Getting Started Building Reports](across-how-use-financials-data-source-powerbi.md)
-##### [Creating Reports for Displaying List Data](across-how-use-powerbi-reports-factbox.md)
-#### Consumer
-##### [Working with Power BI Reports in Business Central](across-working-with-powerbi.md)
-##### [Working with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md)
-##### [Using the Business Central Apps in Power BI](across-powerbi-business-central-apps.md)
-### Using Power Automate with Business Central
-#### [Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md)
-### Using Power Apps with Business Central
-#### [Connecting to Your Business Central Data to Build a Business App Using Power Apps](across-how-use-financials-data-source-powerapps.md)
-### [Changing from a QuickBooks App to Business Central](across-quickbooks-to-business-edition.md)
-### [Getting Business Central on Your Mobile Device](install-mobile-app.md)
-### [Bulk Invoicing for Microsoft Bookings](finance-bookings.md)
-### [Using the same Microsoft 365 account in Business Central and in Microsoft Invoicing](about-reuse-company-invoicing.md)
-### [Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)
-### [Set Up Email](admin-how-setup-email.md)
+### Setting Up Email
+#### [Set Up Email](admin-how-setup-email.md)
+#### Set Up Your Business Inbox in Outlook
+##### [Using Business Central as Your Business Inbox in Outlook](admin-outlook.md)
+##### [Synchronize with Contacts in Microsoft Outlook](admin-synchronize-outlook-contacts.md)
+##### [Using Business Central Without Outlook](admin-no-outlook.md)
+### Setting Up Reports
+#### [Report Selection](across-report-selections.md)
+### Setting Up Connections
+#### Using Business Central as Your Business Inbox in Outlook
+##### [Overview](admin-outlook.md)
+##### [Synchronize with Contacts in Microsoft Outlook](admin-synchronize-outlook-contacts.md)
+##### [Using Business Central Without Outlook](admin-no-outlook.md)
+#### Using Microsoft Teams with Business Central
+##### [Overview](across-teams-overview.md)
+##### [Managing Teams Integration](admin-teams-integration.md)
+##### [Installing Business Central App for Teams](across-install-app-for-teams.md)
+##### [Searching for Customers, Vendors, and Contacts](across-search-contacts-teams.md)
+##### [Working with Business Central Data in Teams](across-working-with-teams.md)
+##### [Changing Company and Other Settings](across-teams-settings.md)
+##### [Teams FAQ](teams-faq.md)
+##### [Troubleshooting](admin-teams-troubleshooting.md)
+#### Using Power BI with Business Central
+##### [Introduction](admin-powerbi.md)
+##### Administrator
+###### [Integration Overview](admin-powerbi-overview.md)
+###### [Enabling Power BI Integration](admin-powerbi-setup.md)
+##### Designer
+###### [Getting Started Building Reports](across-how-use-financials-data-source-powerbi.md)
+###### [Creating Reports for Displaying List Data](across-how-use-powerbi-reports-factbox.md)
+##### Consumer
+###### [Working with Power BI Reports in Business Central](across-working-with-powerbi.md)
+###### [Working with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md)
+###### [Using the Business Central Apps in Power BI](across-powerbi-business-central-apps.md)
+##### [FAQ](power-bi-faq.md)
+#### Using Power Automate with Business Central
+##### [Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md)
+#### Using Power Apps with Business Central
+##### [Connecting to Your Business Central Data to Build a Business App Using Power Apps](across-how-use-financials-data-source-powerapps.md)
+#### [Changing from a QuickBooks App to Business Central](across-quickbooks-to-business-edition.md)
+#### [Bulk Invoicing for Microsoft Bookings](finance-bookings.md)
+#### [Import Business Data from Other Finance Systems](across-import-data-configuration-packages.md)
 ### [Create Number Series](ui-create-number-series.md)
-### [Report Selection](across-report-selections.md)
 ### [Set Up Base Calendars](across-how-to-assign-base-calendars.md)
+### [Set Up Printers](ui-specify-printer-selection-reports.md)
+### [Get Business Central on Your Mobile Device](install-mobile-app.md)
 
-## Frequently Asked Questions
+## Často kladené otázky
 ### [Frequently Asked Questions](across-faq.md)
 ### [Tell Me FAQ](ui-search-faq.md)
 ### [Searching and Filtering FAQ](ui-search-filter-faq.md)
@@ -289,7 +299,6 @@
 
 ## Help and Support
 ### [Resources for Help and Support](product-help-and-support.md)
-### [Help System](/dynamics365/business-central/dev-itpro/user-assistance?toc=/dynamics365/business-central/toc.json)
 ### [Visit Our Video Library](across-videos.md)
 ### [Technical Support](/dynamics365/business-central/dev-itpro/technical-support?toc=/dynamics365/business-central/toc.json)
 <!--## Learn
@@ -298,10 +307,10 @@
 ### [Business Functionality Learning Paths](/learn/browse/?products=dynamics-business-central&roles=business-user&resource_type=learning%20path)
 ### Resources for a Business Decision Maker
 #### [Learning catalog](readiness/readiness-learning-bus-decision-makers.md)
-#### [Documentation](product-get-started.md)
+#### [Getting Ready for Doing Business](ui-get-ready-business.md)
 ### Resources for a Business User
 #### [Learning catalog](readiness/readiness-learning-bus-users.md)
-#### [Documentation](product-get-started.md)
+#### [Getting Ready for Doing Business](ui-get-ready-business.md)
 ### Resources for a Developer
 #### [Learning catalog](readiness/readiness-learning-developers.md)
 #### [Documentation](/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview?toc=/dynamics365/business-central/toc.json)-->
@@ -348,14 +357,14 @@
 ### [Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md)
 ### [Add Fields to a Word Report Layout](ui-how-add-fields-word-report-layout.md)
 ### [Available Fonts](ui-fonts.md)
-## Using Keyboard Shortcuts
-### [Accessibility and Keyboard Shortcuts](ui-accessibility.md)
+## Accessibility, Keyboard Shortcuts, and Touch Gestures
+### [Accessibility](ui-accessibility.md)
 ### [Keyboard Shortcuts](keyboard-shortcuts.md)
 ### [Keyboard Quick Reference - PC Only](keyboard-shortcuts-cheatsheet.md)
+### [Touch and Pen Gestures](touch-gestures.md)
 ## [Troubleshooting: Accessing Camera and Location](ui-troubleshooting-camera-location.md)
-## [Your Access to the Intelligent Cloud with Business Central](about-intelligent-cloud.md)
-## [Walkthrough: Tracing Serial/Lot Numbers](walkthrough-tracing-serial-lot-numbers.md)
-# Business Functionality
+## [Intelligent Insights (online only)](about-intelligent-cloud.md)
+# Obchodní funkcionality
 ## [Overview of Business Functionality](across-business-functionality.md)
 <!--general-->
 ## General Business Functionality
@@ -375,10 +384,10 @@
 ### [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md)
 ### [Letting Business Central Suggest Values](ui-let-system-suggest-values.md)
 
-### Incoming Documents
+### Došlé doklady
 #### [Incoming Documents Overview](across-income-documents.md)
 #### [Set Up Incoming Documents](across-how-setup-income-documents.md)
-#### Processing Incoming Documents
+#### Zpracování došlých dokladů
 ##### [Process Incoming Documents](across-process-income-documents.md)
 ##### [Create Incoming Document Records](across-how-create-income-document-records.md)
 ##### [Use OCR to Turn PDF and Image Files into Electronic Documents](across-how-use-ocr-pdf-images-files.md)
@@ -422,9 +431,10 @@
 ##### [Set Up the Bank Statement Service](bank-how-setup-bank-statement-service.md)
 ##### [Set Up Bank Accounts](bank-how-setup-bank-accounts.md)
 ##### [Use XML Schemas to Prepare Data Exchange Definitions](across-how-to-use-xml-schemas-to-prepare-data-exchange-definitions.md)
-##### [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md)
+
 #### Exchanging Data
 ##### [Exchange Data](across-exchange-data.md)
+##### [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md)
 ##### [Send Electronic Documents](sales-how-to-send-electronic-documents.md)
 ##### [Use OCR to Turn PDF and Image Files into Electronic Documents](across-how-use-ocr-pdf-images-files.md)
 ##### [Receive and Convert Electronic Documents](purchasing-how-to-receive-and-convert-electronic-documents.md)
@@ -440,7 +450,7 @@
 ### [Financial Reports](finance-reports.md)
 ### Managing Receivables
 #### [Receivables Overview](receivables-manage-receivables.md)
-#### Applying Payments Automatically and Reconciling Bank Accounts
+#### Automatické vyrovnávání plateb a odsouhlasení bankovních účtů
 ##### [Payment Application Overview](receivables-apply-payments-auto-reconcile-bank-accounts.md)
 ##### [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md)
 ##### [Review or Apply Payments Manually after Automatic Application](receivables-how-review-apply-payments-auto-application.md)
@@ -466,7 +476,7 @@
 ##### [Making Payments with AMC Banking 365 Fundamentals extension or SEPA Credit Transfer](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md)
 ##### [Settle Purchase Invoices Promptly](finance-how-to-settle-purchase-invoices-promptly.md)
 ##### [Export a Positive Pay file](finance-how-positive-pay.md)
-#### Applying Payments Automatically and Reconciling Bank Accounts
+#### Automatické vyrovnávání plateb a odsouhlasení bankovních účtů
 ##### [Payments Application Overview](receivables-apply-payments-auto-reconcile-bank-accounts.md)
 ##### [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md)
 ##### [Review or Apply Payments Manually after Automatic Application](receivables-how-review-apply-payments-auto-application.md)
@@ -543,6 +553,7 @@
 #### [Set Up Company Consolidation](finance-consolidated-company-reporting-setup.md)
 ### [Understanding the General Ledger and the COA](finance-general-ledger.md)
 ### [Working with Dimensions](finance-dimensions.md)
+### [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md)
 ### [Create G/L Budgets](finance-how-create-budgets.md)
 ### [Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md)
 ### [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md)
@@ -560,6 +571,7 @@
 ### [Analyzing Financial Statements in Excel](finance-analyze-excel.md)
 ### [Transfer Bank Funds](bank-how-transfer-bank-funds.md)
 ### [Accountant Experiences in Business Central](finance-accounting.md)
+### [Multi-Site and International Organizations](finance-multi-site-organizations.md)
 
 ## Business Intelligence and Financial Reporting
 ### [Business Intelligence and Financial Reporting Overview](bi.md)
@@ -572,7 +584,7 @@
 ### [Create Reports with XBRL](bi-create-reports-with-xbrl.md)
 ### [Manage Database Access Intent](admin-data-access-intent.md)
 
-## Sales
+## Prodej
 ### [Sales Overview](sales-manage-sales.md)
 ### [Walkthrough: Conducting a Sales Campaign](walkthrough-conducting-a-sales-campaign.md)
 ### [Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)
@@ -617,12 +629,12 @@
 ### [Categorize Items](inventory-how-categorize-items.md)
 ### [Work with Item Attributes](inventory-how-work-item-attributes.md)
 ### [Work with Catalog Items](inventory-how-work-nonstock-items.md)
-### [Count Inventory Using Documents](inventory-how-count-inventory-with-documents.md)
+### [Count and Adjust Inventory Using Documents](inventory-how-count-inventory-with-documents.md)
 ### [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md)
 ### [View the Availability of Items](inventory-how-availability-overview.md)
 ### [Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md)
 ### [Reserve Items](inventory-how-to-reserve-items.md)
-### [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md)
+### [Track Items with Serial, Lot, and Package Numbers](inventory-how-work-item-tracking.md)
 ### [Use Item Cross References](inventory-how-use-item-cross-refs.md)
 ### [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md)
 ### [Block Items](inventory-how-block-items.md)
@@ -698,6 +710,8 @@
 ### [Run Full Planning, MPS or MRP](production-how-to-run-mps-and-mrp.md)
 ### [Replan or Refresh Production Orders Directly](production-how-to-replan-refresh-production-orders.md)
 ### [Track Relations Between Demand and Supply](production-how-track-demand-supply.md)
+### [Walkthrough: Planning Supplies Manually](walkthrough-planning-supplies-manually.md)
+### [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md)
 <!--## [Modify Planning Suggestions in a Graphical View](production-how-to-modify-planning-suggestions-in-a-graphical-view.md)-->
 
 ## Správa montáže
@@ -705,7 +719,7 @@
 ### [Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md)
 ### [Nabídka prodeje montáže na zakázku](assembly-how-to-quote-an-assemble-to-order-sale.md)
 ### [Montáž zboží](assembly-how-to-assemble-items.md)
-### [Prodejn zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md)
+### [Prodej zboží montáže na zakázku](assembly-how-to-sell-items-assembled-to-order.md)
 ### [Prodej skladového zboží podle montáže na zakázku](assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.md)
 ### [Prodej zboží montáže na zakázku a skladového zboží dohromady](assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.md)
 ### [Vytvoření hromadné montážní zakázky](assembly-how-to-create-blanket-assembly-orders.md)
@@ -734,12 +748,10 @@
 ### Zaskladnění zboží
 #### [Put Items Away](warehouse-put-away-items.md)
 #### [Zaskladnění zboží pomocí zaskladnění zásob](warehouse-how-to-put-items-away-with-inventory-put-aways.md)
-#### [Zaskladnění zboží pomocí zaskladněními](warehouse-how-to-put-items-away-with-warehouse-put-aways.md)
+#### [Zaskladnění zboží pomocí zaskladnění](warehouse-how-to-put-items-away-with-warehouse-put-aways.md)
 #### [Zaskladnění výroby nebo montáže](warehouse-how-to-put-away-production-output.md)
 #### [Plan Put-Aways in Worksheets](warehouse-how-to-plan-put-aways-in-worksheets.md)
 #### [Vyskladnění a zaskladnění bez původního dokladu](warehouse-how-to-create-put-aways-from-internal-put-aways.md)
-#### [Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-receiving-and-putting-away-in-basic-warehousing.md)
-#### [Walkthrough: Receiving and Putting Away in Advanced Warehouse Configurations](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md)
 ### Přesouvání zboží
 #### [Move Items](warehouse-move-items.md)
 #### [Move Items Ad Hoc in Basic Warehouse Configurations](warehouse-how-to-move-items-ad-hoc-in-basic-warehousing.md)
@@ -763,8 +775,6 @@
 ### [Use Automated Data Capture Systems (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md)
 ### [Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-picking-and-shipping-in-basic-warehousing.md)
 ### [Walkthrough: Receiving and Putting Away in Advanced Warehouse Configurations](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md)
-### [Walkthrough: Planning Supplies Manually](walkthrough-planning-supplies-manually.md)
-### [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md)
 
 ## Service Management
 ### [Service Management](service-service.md)
@@ -864,34 +874,27 @@
 ##### [Set Up Declaration Types](LocalFunctionality/Belgium/how-to-set-up-declaration-types.md)
 ##### [Export Intrastat Third-Party Declarations](LocalFunctionality/Belgium/how-to-export-intrastat-third-party-declararations.md)
 #### Banking & Payments
-##### [Set Up Bank Accounts for CODA](LocalFunctionality/Belgium/how-to-set-up-bank-accounts-for-coda.md)
-##### [Apply CODA Statements](LocalFunctionality/Belgium/how-to-apply-coda-statements.md)
-##### [Automatically Transfer and Post CODA Statements](LocalFunctionality/Belgium/how-to-automatically-transfer-and-post-coda-statements.md)
-##### [CODA Bank Statements](LocalFunctionality/Belgium/coda-bank-statements.md)
-##### [Belgian Electronic Banking](LocalFunctionality/Belgium/belgian-electronic-banking.md)
-##### [Set Up Electronic Banking](LocalFunctionality/Belgium/how-to-set-up-electronic-banking.md)
+##### [Electronic Banking (BE)](LocalFunctionality/Belgium/belgian-electronic-banking.md)
+##### [Electronic Payments (BE)](LocalFunctionality/Belgium/belgian-electronic-payments.md)
 ##### [Set Up Export Protocols](LocalFunctionality/Belgium/how-to-set-up-export-protocols.md)
-##### [Belgian Electronic Payments](LocalFunctionality/Belgium/belgian-electronic-payments.md)
-##### [Set Up IBLC-BLWI Transaction Codes](LocalFunctionality/Belgium/how-to-set-up-iblc-blwi-transaction-codes.md)
+##### [Summarizing Payment Lines and General Journal Lines](LocalFunctionality/Belgium/summarizing-payment-lines-and-general-journal-lines.md)
 ##### [Set Up Vendors for Automatic Payment Suggestions](LocalFunctionality/Belgium/how-to-set-up-vendors-for-automatic-payment-suggestions.md)
 ##### [Create Payment Journal Templates and Batches](LocalFunctionality/Belgium/how-to-create-payment-journal-templates-and-batches.md)
 ##### [Test Electronic Payments](LocalFunctionality/Belgium/how-to-test-electronic-payments.md)
-##### [Generate Payment Suggestions](LocalFunctionality/Belgium/how-to-generate-payment-suggestions.md)
-##### [Import CODA Statements](LocalFunctionality/Belgium/how-to-import-coda-statements.md)
-##### [Manage Electronic Payment Lines](LocalFunctionality/Belgium/how-to-manage-electronic-payment-lines.md)
-##### [Manually Transfer and Post CODA Statements](LocalFunctionality/Belgium/how-to-manually-transfer-and-post-coda-statements.md)
 ##### [Print Payment Files](LocalFunctionality/Belgium/how-to-print-payment-files.md)
-##### [SEPA Payments](LocalFunctionality/Belgium/sepa-payments.md)
 ##### [Activate SEPA Payments](LocalFunctionality/Belgium/how-to-activate-sepa-payments.md)
 ##### [File Non-Euro SEPA Payments](LocalFunctionality/Belgium/how-to-file-non-euro-sepa-payments.md)
-##### [File SEPA Payments](LocalFunctionality/Belgium/how-to-file-sepa-payments.md)
 ##### [Direct Debit Using Domiciliation](LocalFunctionality/Belgium/direct-debit-using-domiciliation.md)
 ##### [Set Up Domiciliations](LocalFunctionality/Belgium/how-to-set-up-domiciliations.md)
 ##### [Edit and Delete Domiciliation Lines](LocalFunctionality/Belgium/how-to-edit-and-delete-domiciliation-lines.md)
 ##### [Test Domiciliations](LocalFunctionality/Belgium/how-to-test-domiciliations.md)
 ##### [Export and Post Domiciliations](LocalFunctionality/Belgium/how-to-export-and-post-domiciliations.md)
 ##### [Generate Domiciliation Suggestions](LocalFunctionality/Belgium/how-to-generate-domiciliation-suggestions.md)
-##### [Summarizing Payment Lines and General Journal Lines](LocalFunctionality/Belgium/summarizing-payment-lines-and-general-journal-lines.md)
+##### [CODA Bank Statements](LocalFunctionality/Belgium/coda-bank-statements.md)
+##### [Apply CODA Statements](LocalFunctionality/Belgium/how-to-apply-coda-statements.md)
+##### [Automatically Transfer and Post CODA Statements](LocalFunctionality/Belgium/how-to-automatically-transfer-and-post-coda-statements.md)
+##### [Manually Transfer and Post CODA Statements](LocalFunctionality/Belgium/how-to-manually-transfer-and-post-coda-statements.md)
+##### [Import CODA Statements](LocalFunctionality/Belgium/how-to-import-coda-statements.md)
 #### Core Finance
 ##### [Apply and Unapply General Ledger Entries](LocalFunctionality/Belgium/how-to-apply-and-unapply-general-ledger-entries.md)
 ##### [Create Financial Journals](LocalFunctionality/Belgium/how-to-create-financial-journals.md)
@@ -917,6 +920,8 @@
 
 ### Czech Republic
 #### [Local Functionality in the Czech Version](LocalFunctionality/Czech/czech-local-functionality.md)
+#### [Core Localization Pack for Czech (Extension)](LocalFunctionality/Czech/ui-extensions-core-localization-pack-cz.md)
+#### [Advanced Localization Pack for Czech (Extension)](LocalFunctionality/Czech/ui-extensions-advanced-localization-pack-cz.md)
 #### Core Finance
 ##### [Finance](LocalFunctionality/Czech/finance.md)
 ##### [Year Close Operations](LocalFunctionality/Czech/year-close-operations.md)
@@ -927,6 +932,7 @@
 ##### [VAT Control Report](LocalFunctionality/Czech/vat-control-report.md)
 #### Fixed Assets
 ##### [Fixed Assets](LocalFunctionality/Czech/fixed-assets.md)
+##### [Fixed Asset Localization for Czech (Extension)](LocalFunctionality/Czech/ui-extensions-fixed-asset-localization-cz.md)
 #### Banking and Payments
 ##### [Bank Feature](LocalFunctionality/Czech/bank-feature.md)
 ##### [Cash Desk Management](LocalFunctionality/Czech/cash-desk-management.md)
@@ -942,7 +948,6 @@
 #### General
 ##### [Extended User Control](LocalFunctionality/Czech/general.md)
 ##### [Best Practices](LocalFunctionality/Czech/best-practices.md)
-##### [Core Localization Pack for Czech (Extension)](LocalFunctionality/Czech/ui-extensions-core-localization-pack-cz.md)
 
 ### Denmark
 #### [Local Functionality in the Danish Version](LocalFunctionality/Denmark/denmark-local-functionality.md)
@@ -1125,6 +1130,16 @@
 ###### [GST E-Way Bill](LocalFunctionality/India/GST-E-Way-Bill.md)
 ###### [GST Input Cedit Adjustment](LocalFunctionality/India/GST-Input-Tax-Credit-Adjustment.md)
 ###### [GST Settlement](LocalFunctionality/India/GST-Settelement.md)
+###### [GST E-Invoice](LocalFunctionality/India/GST-E-Invoice.md)
+##### GST Cess
+###### [GST Cess Basic Setup](LocalFunctionality/India/GST-Cess-Basic-Setup.md)
+###### [GST Cess Calculation](LocalFunctionality/India/GST-Cess-Calculations.md)
+##### GST on Service Management
+###### [GST on Serviec Management](LocalFunctionality/India/GST-Service-Management.md)
+##### GST Input Service Distribution
+###### [GST Input Service Distribution Overview](LocalFunctionality/India/GST-Input-Service-Distribution-Overview.md)
+###### [GST Input Service Distribution Process](LocalFunctionality/India/GST-Input-Service-Distribution-Process.md)
+###### [GST Input Service Distribution Transaction](LocalFunctionality/India/GST-Input-Service-Distribution-Transaction.md)
 #### TDS
 ##### [TDS Overview](LocalFunctionality/India/TDS-Overview.md)
 ##### [TDS Transactions](LocalFunctionality/India/TDS-Transactions.md)
@@ -1142,9 +1157,23 @@
 ##### [TCS Threshold](LocalFunctionality/India/TCS-Threshold.md)
 ##### [TCS Adjustment Entry](LocalFunctionality/India/TCS-Adjustment-Entries.md)
 ##### [TCS Payment to Authority](LocalFunctionality/India/TCS-Payment-to-Authority.md)
+##### [206C-1H-Overview](LocalFunctionality/India/TCS-206C-1H-Overview.md)
+##### [206C-1H-Transaction](LocalFunctionality/India/TCS-206C-1H-Transactions.md)
 #### Voucher Interface
 ##### [Voucher Interface Overview](LocalFunctionality/India/Vouche-Interface-Overview.md)
 ##### [Voucher Interface Transaction](LocalFunctionality/India/Voucher-Interface-Transactions.md)
+#### Fixed Asset
+##### [Fixed Asset Overview](LocalFunctionality/India/FA_Overview.md)
+##### [Fixed Asset Depreciation](LocalFunctionality/India/FA_Depreciation.md)
+#### Gate Entry
+##### [Gate Entry Overview](LocalFunctionality/India/Gate-Entry-001-Basic-Setup.md)
+##### [Gate Entry Inward Transaction](LocalFunctionality/India/Gate-Entry-Inward_Transactions.md)
+##### [Gate Entry Outward Transaction](LocalFunctionality/India/Gate-Entry-Outward_Transactions.md)
+#### Subcontracting
+##### [Subcontracting Overview](LocalFunctionality/India/Subcontracting-001-Basic-Setup.md)
+##### [Subcontracting Transactions](LocalFunctionality/India/Subcontracting-Transactions.md)
+##### [Create GST Liability](LocalFunctionality/India/Subcontracting-Create-GST-Liability.md)
+##### [Subcontracting Report](LocalFunctionality/India/Subcontracting-Reports.md)
 
 ### Italy
 #### [Local Functionality in the Italian Version](LocalFunctionality/Italy/italy-local-functionality.md)
@@ -1535,7 +1564,7 @@
 
 # Security, Privacy, Compliance
 ## Security and Protection
-### [Security and Protection Overview](/dynamics365/business-central/dev-itpro/security/security-and-protection?toc=/dynamics365/business-central/toc.json)
+### [Security and Protection Overview (in English only)](/dynamics365/business-central/dev-itpro/security/security-and-protection?toc=/dynamics365/business-central/toc.json)
 ## Privacy
 ### [Privacy (microsoft.com)](https://www.microsoft.com/en-us/trust-center/privacy)
 ## Compliance
@@ -1543,6 +1572,7 @@
 ### [Application Compliance](compliance/compliance-application-compliance.md)
 ### [Service Compliance](compliance/compliance-service-compliance.md)
 ### [Certifications](compliance/compliance-certifications.md)
+## [Service Overview (in English only)](/dynamics365/business-central/dev-itpro/service-overview?toc=/dynamics365/business-central/toc.json)
 
 # Development and Administration
 ## [Get started with development and administration documentation](/dynamics365/business-central/dev-itpro/index?toc=/dynamics365/business-central/toc.json)
@@ -1583,8 +1613,8 @@
 #### [Envestnet Yodlee Bank Feeds](ui-extensions-yodlee-bank-feeds.md)
 #### [Essential Business Insights](ui-extensions-essential-business-insights.md)
 #### [Image Analyzer](ui-extensions-image-analyzer.md)
-#### [Intelligent Cloud](ui-extensions-data-replication.md)
-#### [Intelligent Cloud Base](ui-extensions-intelligent-cloud.md)
+#### [Cloud Migration Extensions](ui-extensions-data-replication.md)
+#### [Cloud Migration Base](ui-extensions-intelligent-cloud.md)
 #### [Late Payment Predictions](ui-extensions-late-payment-prediction.md)
 #### [Microsoft Pay](ui-extensions-microsoft-pay-payments.md)
 #### [PayPal Payments Standard](ui-extensions-paypal-payments-standard.md)
@@ -1620,7 +1650,7 @@
 ### [Migrating from Business Central On-Premises](/dynamics365/business-central/dev-itpro/administration/migrate-business-central-on-premises?toc=/dynamics365/business-central/toc.json)
 ### [Migrating from Dynamics GP](/dynamics365/business-central/dev-itpro/administration/migrate-dynamics-gp?toc=/dynamics365/business-central/toc.json)
 ### [Migrating from Dynamics NAV](/dynamics365/business-central/dev-itpro/upgrade/Upgrade-Considerations#online?toc=/dynamics365/business-central/toc.json)
-### [FAQ about Connecting to the Intelligent Cloud](/dynamics365/business-central/dev-itpro/administration/faq-intelligent-cloud?toc=/dynamics365/business-central/toc.json)
+### [FAQ about Migrating to the Cloud](/dynamics365/business-central/dev-itpro/administration/faq-intelligent-cloud?toc=/dynamics365/business-central/toc.json)
 ## [Administration of Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration?toc=/dynamics365/business-central/toc.json)
 ## [Development](/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview?toc=/dynamics365/business-central/toc.json)
 ## [Security and Protection](/dynamics365/business-central/dev-itpro/security/security-and-protection?toc=/dynamics365/business-central/toc.json)

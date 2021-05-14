@@ -9,55 +9,55 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: analysis, reporting, financial report, business intelligence, BI, Excel
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
 # Export vašich obchodních dat do Excelu
 If you want to work with your data from [!INCLUDE[prod_short](includes/prod_short.md)] in Excel, you can open all lists in Excel and work with it there. Similarly, if you want to cancel your subscription for [!INCLUDE[prod_short](includes/prod_short.md)], you can export your data to Excel so that you can take it with you.
 
-## Opening Lists in Excel
-You can open data in Excel from any journal, list, or worksheet. You just open the page that you want, and then choose **Open in Excel**. For example, open the list of customers (search for **Customers**), and then choose **Open in Excel**. Your browser will prompt you to open or save the generated Excel workbook.
+## Otevření seznamů v aplikaci Excel
+Data můžete otevírat v Excelu z libovolného deníku, seznamu nebo sešitu. You just open the page that you want, and then choose **Open in Excel**. For example, open the list of customers (search for **Customers**), and then choose **Open in Excel**. Váš prohlížeč vás vyzve k otevření nebo uložení vygenerovaného sešitu aplikace Excel.
 
 > [!NOTE]
 > Use this option when you do not want to make changes and publish those changes back to [!INCLUDE[prod_short](includes/prod_short.md)].
 
-Each list includes a number of columns, and the export to Excel will include any columns that are in your current view. If you want to add or remove columns before you open the list in Excel, you simply open the shortcut menu for any column and then specify which columns that you want to see. This list of columns is different for most lists, and it reflects the structure in the database where your data is stored. If you are not sure what type of data a certain column contains, you can add it to your view and then decide if you want to remove it again.
+Každý seznam obsahuje několik sloupců a export do Excelu bude zahrnovat všechny sloupce, které jsou v aktuálním zobrazení. Chcete-li přidat nebo odebrat sloupce před otevřením seznamu v aplikaci Excel, stačí otevřít místní nabídku pro libovolný sloupec a určit, které sloupce chcete zobrazit. Tento seznam sloupců se u většiny seznamů liší a odráží strukturu databáze, ve které jsou data uložena. Pokud si nejste jisti, jaký typ dat určitý sloupec obsahuje, můžete je přidat do svého zobrazení a pak se rozhodnout, zda je chcete znovu odebrat.
 
-### Edit Data in Excel
+### Úpravy dat v Excelu
 Your [!INCLUDE[prod_short](includes/prod_short.md)] experience includes an add-in for Excel so you can edit data in Excel. For more information, see [Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md).
 
-## Exporting Data to Other Finance Systems
+## Export dat do jiných finančních systémů
 If you decide to cancel your subscription for [!INCLUDE[prod_short](includes/prod_short.md)], you can export your data to Excel and take it with you to your next finance system.
 
-You can export all pages, of course, but that might be more than you really need. So consider exporting the following essential pages, and remember to add all columns as described earlier:
+Samozřejmě můžete exportovat všechny stránky, ale to může být více, než skutečně potřebujete. Zvažte export následujících základních tabulek a nezapomeňte přidat všechny sloupce, jak je popsáno výše:
 
-* Chart of Accounts
-* Customers
-* Vendors
-* Banks
-* Items
+* Účetní osnova
+* Zákazníci
+* Dodavatelé
+* Banky
+* Zboží
 
-If you want all your financial transactions as well, this is a large amount of data, so the export will often take more than a few minutes of time. The financial transactions are shown on the **General Ledger Entries** page.
+Pokud chcete také všechny své finanční transakce, jedná se o velké množství dat, takže export bude často trvat déle než několik minut. The financial transactions are shown on the **General Ledger Entries** page.
 
-We recommend that you also consider exporting data from the following pages:
+Doporučujeme také zvážit export dat z následujících stránek:
 
-* Customer Ledger Entries
-* Vendor Ledger Entries
-* Bank Account Ledger Entries
-* Item Ledger Entries
-* General Posting Setup
-* Customer Posting Groups
-* Vendor Posting Groups
-* Item Posting Groups
-* Bank Posting Group
-* G/L Budgets
-* G/L Budget Entries
-* Sales Quotes
-* Sales Invoices
-* Purchase Invoices
-* Contacts
-* Salespeople
+* Položky zákazníka
+* Položky dodavatele
+* Položky bankovního účtu
+* Položky zboží
+* Nastavení obecného účtování
+* Účto skupiny zákazníků
+* Účto skupiny dodavatele
+* Účto skupiny zboží
+* Účto skupiny bankovního účtu
+* Finanční rozpočty
+* Položky finančního rozpočtu
+* Prodejní nabídky
+* Prodejní faktury
+* Nákupní faktury
+* Kontakty
+* Prodejci
 
 > [!NOTE]  
 > If you have set up more than one company in [!INCLUDE[prod_short](includes/prod_short.md)], you must export the relevant data from each company.

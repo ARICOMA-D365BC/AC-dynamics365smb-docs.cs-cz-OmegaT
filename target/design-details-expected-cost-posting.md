@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -32,13 +32,13 @@ Zaúčtujete nákupní objednávku tak, jak byla přijata. Očekávaná cena je 
 
 **Položky ocenění**
 
-| Zúčtovací datum | Typ položky | Částka nákladů (očekávaná) | Zaúčtované očekávané náklady | Očekávané náklady | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Typ položky | Částka nákladů (očekávaná) | Očekávané náklady zaúčtované do hlavní knihy | Očekávané náklady | Číslo položky zboží | Číslo položky |
 |------------------|----------------|------------------------------|----------------------------------|-------------------|---------------------------|---------------|  
-| 1.1.2020 | Přímé náklady | 95,00 | 95,00 | Ano | 1 | 1 |
+| 01.01.20 | Přímé náklady | 95,00 | 95,00 | Ano | 1 | 1 |
 
 **Vazba položek v tabulce Vazba věcná pol. - pol. zboží**
 
-| Číslo věcné položky | Č. položky ocenění | Číslo finančního žurnálu |
+| Číslo věcné položky. | Číslo položky ocenění. | Číslo finančního žurnálu. |
 |--------------------|---------------------|-----------------------|  
 | 1 | 1 | 1 |
 | 2 | 1 | 1 |
@@ -47,20 +47,20 @@ Zaúčtujete nákupní objednávku tak, jak byla přijata. Očekávaná cena je 
 
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------------|------------------|---------------------------------|------------|---------------|  
-| 1.1.2020 | Účet časového rozlišení zásob (dočasné) | 5530 | -95,00 | 2 |
-| 1.1.2020 | Účet zásob (dočasné) | 2131 | 95,00 | 1 |
+| 01.01.20 | Účet časového rozlišení zásob (dočasné) | 5530 | -95,00 | 2 |
+| 01.01.20 | Účet zásob (dočasné) | 2131 | 95,00 | 1 |
 
 Později zaúčtujete nákupní objednávku jako fakturovanou. Fakturované náklady jsou 100,00 CZK.
 
 **Položky ocenění**
 
-| Zúčtovací datum | Částka nákladů (skutečná) | Částka nákladů (očekávaná) | Zaúčtované náklady | Očekávané náklady | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Částka nákladů (skutečná) | Částka nákladů (očekávaná) | Náklady zaúčtované do Hlavní finančí knihy | Očekávané náklady | Číslo položky zboží | Číslo položky |
 |------------------|----------------------------|------------------------------|-------------------------|-------------------|---------------------------|---------------|  
-| 15.1.2020 | 100,00 | -95,00 | 100,00 | Ne | 1 | 2 |
+| 15.01.20 | 100,00 | -95,00 | 100,00 | Ne | 1 | 2 |
 
 **Vazba položek v tabulce Vazba věcná pol. - pol. zboží**
 
-| Číslo věcné položky | Č. položky ocenění | Číslo finančního žurnálu |
+| Číslo věcné položky. | Číslo položky ocenění. | Číslo finančního žurnálu. |
 |--------------------|---------------------|-----------------------|  
 | 3 | 2 | 2 |
 | 4 | 2 | 2 |
@@ -71,10 +71,10 @@ Později zaúčtujete nákupní objednávku jako fakturovanou. Fakturované nák
 
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------------|------------------|---------------------------------|------------|---------------|  
-| 15.1.2020 | Účet časového rozlišení zásob (dočasné) | 5530 | 95,00 | 4 |
-| 15.1.2020 | Účet zásob (dočasné) | 2131 | -95,00 | 3 |
-| 15.1.2020 | Účet použitých přímých nákl. | 7291 | -100 | 6 |
-| 15.1.2020 | Účet zásob | 2130 | 100 | 5 |
+| 15.01.20 | Účet časového rozlišení zásob (dočasné) | 5530 | 95,00 | 4 |
+| 15.01.20 | Účet zásob (dočasné) | 2131 | -95,00 | 3 |
+| 15.01.20 | Účet použitých přímých nákl. | 7291 | -100 | 6 |
+| 15.01.20 | Skladový účet | 2130 | 100 | 5 |
 
 ## Viz také
 [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     

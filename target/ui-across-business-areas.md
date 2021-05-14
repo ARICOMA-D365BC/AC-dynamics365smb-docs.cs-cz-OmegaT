@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: feature overview, functionality
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -25,14 +25,14 @@ To support those business area-specific tasks, you can use a variety of general 
 
 The following table lists these general business areas with links to topics that describe them.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Add extra information to accounts, customers cards, or sales orders to communicate agreements, such as a special price or delivery method, to other users. | [Add Comments to Cards and Documents](across-how-use-comments.md) |
 | View ongoing, posted, or archived documents that are related to sales and purchase order lines. | [Track Document Lines](across-how-to-track-document-lines.md) |
 | Communicate the contents of business documents quickly to your business partners, such as the payment information on sales documents to customers. | [Send Documents by Email](ui-how-send-documents-email.md) |
 | Archive sales and purchase orders, quotes, return orders, and blanket orders, and you use the archived document to recreate the document that it was archived from. | [Archive Documents](across-how-to-archive-documents.md) |
 | Set up standard text codes so you can extend standard text by adding extra lines, and set up conditions for use of the extra lines. | [Add Extended Item Text](ui-how-define-ext-text.md) |
-| Create tasks to remind you of work to be done. You can create tasks for yourself, but you can also assign tasks to others or be assigned a task by someone else in your organization. | [Define User Tasks](across-user-tasks.md) |
+| Create tasks to remind you of work to be done. Úlohy si můžete vytvořit sami, ale můžete je také přiřadit ostatním, nebo jim může úkol přiřadit někdo jiný ve vaší firmě. | [Define User Tasks](across-user-tasks.md) |
 | Work with your Business Central data in Excel. | [Exporting Your Business Data to Excel](about-export-data.md) |
 | Understand what happens when you choose the **Post** action. | [Posting Documents and Journals](ui-post-documents-journals.md) |
 | Post multiple sales or purchase documents together, immediately or as scheduled. | [Post Multiple Documents at the Same Time](ui-batch-posting.md) |
@@ -42,7 +42,7 @@ The following table lists these general business areas with links to topics that
 | Schedule a report to run at a specific date and time. | [Scheduling a Report to Run](ui-work-report.md#ScheduleReport) |
 | Let the system help you complete tasks quicker and more correctly by prefilling fields or complete lines with data that you would otherwise have to calculate and enter yourself. | [Letting Business Central Suggest Values](ui-let-system-suggest-values.md) |
 | Record external documents, including their file attachments, and then manually create the related documents or automatically convert the files to electronic documents. | [Incoming Documents](across-income-documents.md) |
-| Set up and use workflows that connect tasks performed by different users or by the system, such as automatic posting. Requesting and granting approval to create or post documents are typical workflow steps. | [Workflow](across-workflow.md) |
+| Nastavení a používání workflow, které spojují úkoly prováděné různými uživateli nebo systémem, například automatické účtování. Typickým krokem workflow je vyžádání a udělení schválení k vytvoření nebo účtování dokladů. | [Workflow](across-workflow.md) |
 | Set up data exchange definitions so you can send and receive electronic documents. | [Exchanging Data Electronically](across-data-exchange.md) |
 
 ## Viz také

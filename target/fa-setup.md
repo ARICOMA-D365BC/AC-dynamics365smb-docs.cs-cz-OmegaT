@@ -10,7 +10,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: machinery, buildings
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -29,7 +29,7 @@ When you enable a fixed asset activity in the **G/L Integration** section on the
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up default G/L accounts, allocation keys, journal templates and batches for fixed asset posting, and set up fixed asset classes and subclasses, such as Tangible and Intangible. | [Set Up General Fixed Assets Information](fa-how-setup-general.md) |
 | Create depreciation books, define various depreciation methods, integrate with the general ledger, and enable duplication of entries in several depreciation books. | [Set Up Fixed Asset Depreciation](fa-how-setup-depreciation.md) |
@@ -40,7 +40,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 ## Viz také
 [Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

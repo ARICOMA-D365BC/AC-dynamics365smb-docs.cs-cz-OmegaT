@@ -9,40 +9,40 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.reviewer: edupont
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Edit Posted Documents
+# Úprava účtovaných dokladů
 
-Sometimes you have to update a posted document because information that is relevant to the document has changed. On a posted sales document, this can be the shipping agent's package tracking number, for example. On a posted purchase document, this can be a payment reference text.
+Někdy je nutné zaúčtovaný doklad aktualizovat, protože se změnily informace vztahující se k dokladu. Na zaúčtovaném prodejním dokladu se může jednat například o číslo sledování zásilky pro přepravce. V zaúčtovaném nákupním dokladu se může jednat o referenční text platby.
 
-You perform the change on an editable version of the original document, indicated by "**- Update**" in the page title. The page contains a subset of the fields on the original document, of which some are non-editable fields that are shown for information only.
+You perform the change on an editable version of the original document, indicated by "**- Update**" in the page title. Stránka obsahuje podmnožinu polí v původním dokumentu, z nichž některá jsou neupravitelná pole, která jsou zobrazena pouze pro informaci.
 
 The functionality is available for the following documents across all supported markets:
 
-- Posted Sales Shipment
-- Posted Purchase Invoice
-- Posted Return Shipment
-- Posted Return Receipt
+- Účtované prodejní dodávky
+- Účtované nákupní faktury
+- Účtované dodávky nákupní vratky
+- Účtovaná příjemka vratky
 
 The following additional documents can be edited in the specified countries or regions:
 
-- ES: Posted Sales Invoice, Posted Sales Credit Memo, Posted Purchase Credit Memo
-- APAC: Posted Sales Credit Memo, Posted Purchase Credit Memo
-- RU: Posted Sales Credit Memo
-- IT: Posted Transfer Shipment, Posted Service Shipment
+- ES: Účtované nákupní faktury, Zaúčtovaný prodejní dobropis, Zaúčtovaný nák.dobropis
+- APAC: Účtované prodejní dobropisy, Účtované nákupní dobropisy
+- RU: Účtovaný prodejní dobropis
+- IT: Účt. dodávky transferu, Zaúčtovaná dodávka servisu
 
-## To edit a posted sales shipment
+## Úprava zaúčtované prodejní dodávky
 
-The following explains how to edit a posted sales shipment. The steps are similar for the other supported documents.
+V následujícím tématu je vysvětleno, jak lze upravit účtovanou prodejní dodávku. Kroky jsou podobné i pro ostatní podporované doklady.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Shipments**, and then choose the related link.
-2. Select the document that you want to edit, and then choose the **Update Document** action. Alternatively, open the document and then choose the action.
+2. Select the document that you want to edit, and then choose the **Update Document** action. Můžete také otevřít dokument a vybrat funkci.
 3. On the **Posted Sales Shipment - Update** page, edit the **Package Tracking No.** field, for example.
 4. Zvolte tlačítko **OK**.
 
-The posted sales shipment is updated.
+Zaúčtovaná prodejní dodávka je aktualizována.
 
 ## Viz také
 

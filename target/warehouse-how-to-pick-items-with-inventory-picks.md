@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -20,7 +20,7 @@ When your location is set up to require pick processing but not shipment process
 > [!NOTE]  
 > Components for assembly orders cannot be picked or posted with inventory picks. Instead, use the **Inventory Movement** page. For more information, see [Move Components to an Operation Area in Basic Warehousing](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md).
 >
-> When picking and shipping sales line quantities that are assembled to the order, you must follow certain rules when creating the inventory pick lines. For more information, see the [Handling Assemble-to-Order Items with Inventory Picks](#handling-assemble-to-order-items-with-inventory-picks) section.
+> Při Vyskladnění a odesílání prodejních řádků, které jsou smontovány pro objednávku, musíte při vytváření řádků vyskladnění zásob dodržet určitá pravidla. For more information, see the [Handling Assemble-to-Order Items with Inventory Picks](#handling-assemble-to-order-items-with-inventory-picks) section.
 
 You can create an inventory pick in three ways:
 

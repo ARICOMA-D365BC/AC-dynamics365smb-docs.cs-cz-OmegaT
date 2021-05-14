@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -19,7 +19,7 @@
 
 Tento návod ukazuje proces plánování dodávek na uspokojení nové poptávky. Plánování dodávek můžete iniciovat v pevných intervalech, například každé ráno nebo každé pondělí, nebo když jste upozorněni prodejem nebo výrobou v závislosti na typu poptávky. V tomto návodu použijete stránku **Plánování objednávek**, jednoduchý nástroj pro plánování zásobování, který je založen na manuálním rozhodování místo na automatickém plánování založeném na parametrech.
 
-## Návod
+## O tomto návodu
 Tento návod ilustruje následující úkoly:
 
 - Plánování nákupní objednávky pro výrobu komponentů.
@@ -37,7 +37,7 @@ Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatels
 Než začnete s tímto návodem, musíte si nainstalovat [!INCLUDE[prod_short](includes/prod_short.md)]. V databázi musí být provedeny následující změny:
 
 - Odstraňte všechny existující prodejní objednávky jízdních kol.
-- Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokalitu EAST.
+- Vytvořte jednu prodejní objednávku na 10 jízdních kol na lokaci EAST.
 - Odstraňte všechny plánované a pevně plánované výrobní zakázky. Neodstraňujte spuštěné objednávky s položkami, které jsou již zaúčtovány.
 
 Zpravidla použijte navrhovaná data v tomto návodu, protože tato data mají potřebné záznamy.
@@ -91,11 +91,11 @@ V tomto postupu vytvoříte nákupní objednávku pro potřebné výrobní kompo
 ### Plánování nákupní objednávky pro splnění potřeby komponent ve výrobě
 
 1. Rozbalte první řádek (vyberte symbol +).
-2. Vyberte první řádek poptávky se zbožím **LSU-15** a poté vyberte akci **Zobrazit doklad** action.
+2. Vyberte první řádek poptávky se zbožím **LSU-15** a poté vyberte akci **Zobrazit doklad**.
 3. Zavřete otevřenou výrobní zakázku a vraťte se na stránku **Plánování objednávek**.
 4. V poli **Systém doplnění** vyberte **Nákup**.
 
-   Výchozí hodnota je z karty zboží nebo karty SKU, ale můžete ji změnit na jednu z následujících možností:
+   Výchozí hodnota je z karty zboží nebo karty SKJ, ale můžete ji změnit na jednu z následujících možností:
 
    - **Nákup** – Chcete-li vytvořit nákupní objednávku.
    - **Transfer** – Chcete-li vytvořit objednávku transferu.
@@ -133,7 +133,7 @@ V tomto postupu naplánujte poptávku z prodejní objednávky. Řádky poptávky
 1. Přesuňte ukazatel na plánovací řádek pro objednávku **2008**.
 2. Rozbalte řádek a přesuňte ukazatel na řádek poptávky.
 
-   Prodejní objednávka **2008** je pro deset reproduktorů, zboží **LS-120**, objednané společností John Haddock Insurance Co.
+   Prodejní objednávka **2008** je pro deset reproduktorů, zboží **LS-120**, objednané společností UNIVERSAL-TREND a.s.
 
    Zobrazí se definovaný doplňovací systém zboží a výchozího prodejce.
 
@@ -223,7 +223,7 @@ Jako plánovač výroby nyní musíte naplánovat konkrétní výrobní zakázku
 
 13. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. zakázky** a poté vyberte související odkaz.
 
-   Na stránce **Pevně plánovaná výr. zakázka** zkontrolujte, jak jsou podle struktury produktu naplánovány počáteční a konečné časy jednotlivých objednávek. Komponenty nejnižší úrovně jsou vyráběny jako první. Proto je nutné naplánovat víceúrovňové objednávky, jak je znázorněno v tomto pracovním postupu plánování.
+   Přejděte na stránku **Pevně plánovaná výr. zakázka** zkontrolujte, jak jsou podle struktury produktu naplánovány počáteční a konečné časy jednotlivých objednávek. Komponenty nejnižší úrovně jsou vyráběny jako první. Proto je nutné naplánovat víceúrovňové objednávky, jak je znázorněno v tomto pracovním postupu plánování.
 
 ## Viz také
 [Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)     

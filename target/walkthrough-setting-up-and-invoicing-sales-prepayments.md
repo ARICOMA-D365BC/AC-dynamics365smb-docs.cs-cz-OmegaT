@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -21,7 +21,7 @@ Zálohy jsou platby, které jsou fakturovány a zaúčtovány na prodejní nebo 
 
 Požadavky na zálohu lze definovat pro zákazníka nebo dodavatele pro všechny zboží nebo jenom pro vybrané zboží. Po dokončení požadovaného nastavení můžete generovat zálohové faktury z prodejních a nákupních objednávek pro vypočtenou částku zálohy. Výchozí částky na faktuře můžete podle potřeby změnit. Můžete například poslat další zálohové faktury, pokud jsou k objednávce přidány další položky.
 
-## Návod
+## O tomto návodu
 Tento návod vás provede následujícími scénáři:
 
 - Nastavení záloh
@@ -65,7 +65,7 @@ Následující postupy popisují, jak splnit úkoly Phyllis:
 #### Nastavení číselných řad pro zálohy
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. Na stránce **Nastavení prodeje a pohledávek** rozbalte záložku **Číslování**.
-3. Ověřte, že číselná řada pro zaúčtované zálohové faktury v poli **Čísla účtovaných  zál.  faktur** je stejná jako u zaúčtovaných prodejních faktur (**Čísla zaúčtovaných faktur**) a číselné řady zaúčtovaných dobropisů zálohy (**Čísla účtovaných  zál.  dobropisů**) je stejné jako u zaúčtovaných dobropisů (**Čísla zaúčtovaných dobropisů**).
+3. Ověřte, že číselná řada pro zaúčtované zálohové faktury v poli **Čísla účtovaných  Zásoby faktur** je stejná jako u zaúčtovaných prodejních faktur (**Čísla zaúčtovaných faktur**) a číselné řady zaúčtovaných dobropisů zálohy (**Čísla účtovaných  zál.  dobropisů**) je stejné jako u zaúčtovaných dobropisů (**Čísla zaúčtovaných dobropisů**).
 
 #### Blokování zásilek pro nezaplacenou zálohu
 1. Na stránce **Nastavení prodeje a pohledávek** na záložce **Obecné** zaškrtněte políčko **Zkontrolovat zálohu při účtování**.
@@ -98,7 +98,7 @@ Phyllis vyžaduje, aby všem zákazníkům byla fakturována 20% záloha za polo
 
 #### Určení účtu pro prodejní zálohy v nastavení obecného účtování
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
-2. Vyberte řádek, kde je pole **Obecná  obch. účto skupina** nastaveno na **EXPORT** a pole **Obecná  účto  skupina zboží** je nastaveno na **RETAIL** a poté vyberte akci **Upravit**.
+2. Vyberte řádek, kde je pole **Obecná  účto  účto skupina** nastaveno na **EXPORT** a pole **Obecná  účto  skupina zboží** je nastaveno na **RETAIL** a poté vyberte akci **Upravit**.
 3. Na stránce **Karta nastavení obecného účto.** v poli **Účet záloh výnosů** zadejte příslušný účet.
 4. Zvolte tlačítko **OK**.
 
@@ -164,7 +164,7 @@ Následující den zákazník zavolá Susan a provede změny v objednávce. Zák
 1. Na stránce **Prodejní objednávka** vyberte akci **Znovu otevřít**.
 2. Na řádku pro zboží **1100** zadejte do pole **Množství** hodnotu **2**.
 
-   Posunutím zobrazíte pole zálohy. Pole **Částka řádku zálohy bez  DPH** nyní obsahuje  **630** a pole **Fakt.  částka  zál.  bez  DPH** obsahuje **315**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
+   Posunutím zobrazíte pole zálohy. Pole **Částka řádku zálohy bez  DPH** nyní obsahuje  **630** a pole **Fakt.  částka  Zásoby bez  DPH** obsahuje **315**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
 3. Chcete-li zaúčtovat fakturu s další částkou zálohy, vyberte akci **Zaúčtovat zálohovou fakturu**.
 
 ## Uplatnění záloh

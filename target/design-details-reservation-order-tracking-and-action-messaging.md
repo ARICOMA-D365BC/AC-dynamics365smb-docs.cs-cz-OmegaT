@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, replenishment, reordering
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -30,7 +30,7 @@ The reservations system also forms the structural foundation for the item tracki
 > [!NOTE]
 > [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
-## Reservation
+## Rezervace
 A reservation is a firm link that connects a specific demand and a specific supply to each other. This link directly affects the subsequent inventory transaction and ensures the proper application of item entries for costing purposes. A reservation overrides the default costing method of an item. For more information, see [Design Details: Item Tracking](design-details-item-tracking.md).
 
 The **Reservation** page is accessible from all order lines of both demand and supply type. In this page, the user can specify which demand or supply entry to create a reservation link to. The reservation consists of a pair of records that share the same entry number. One record has a negative sign and points to the demand. The other record has a positive sign and points to the supply. These records are stored in the **Reservation Entry** table with status value **Reservation**. The user can view all reservations on the **Reservation Entries** page.

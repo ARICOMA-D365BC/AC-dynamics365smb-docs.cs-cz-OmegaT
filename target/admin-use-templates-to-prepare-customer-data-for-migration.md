@@ -9,15 +9,15 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
 # Prepare to Migrate Customer Data with Templates
 
-After you import and apply setup data in the new database, you can start migrating the customer's existing master data, such as item and customer numbers and names. To make sure that this data is created quickly and accurately in the new company, you should use templates to structure the data.
+After you import and apply setup data in the new database, you can start migrating the customer's existing master data, such as item and customer numbers and names. Chcete-li se ujistit, že se tato data v nové společnosti vytvářejí rychle a přesně, měli byste je strukturovat pomocí šablon.
 
-Typically, you create data templates for the following master data tables:
+Obvykle vytvoříte datové šablony pro následující tabulky hlavních dat:
 
 - **Contact**
 - **Zákazník**
@@ -27,39 +27,39 @@ Typically, you create data templates for the following master data tables:
 However, you can create a template structure for and apply it to any table in [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!TIP]  
-> You can also use data templates for daily operations to create new records that are based on templates. These data templates only work for the supported master data tables. For more information, see, for example, [Register New Items](inventory-how-register-new-items.md).
+> You can also use data templates for daily operations to create new records that are based on templates. Tyto datové šablony fungují pouze pro podporované tabulky hlavních dat. For more information, see, for example, [Register New Items](inventory-how-register-new-items.md).
 
-When you import customer data, such as for items, from a file, the mandatory field data that you have specified is taken from the linked data template. When you create a new item, you only enter general information such as item name, description, and price and then collect the rest of the mandatory field data from a selected data template.
+Při importu zákaznických dat, například u zboží, ze souboru jsou povinná pole, která jste zadali, převzata z propojené datové šablony. Když vytvoříte nové zboží, zadáte pouze obecné informace, jako je název, popis a cena, a poté shromáždíte zbývající data povinného pole z vybrané datové šablony.
 
-When you create a new master data record, such as a customer card, some fields are mandatory and must be filled in. You can group most mandatory fields, such as posting groups and payment terms, to make creating master data records easier and more stable. For example, you can group mandatory fields for table 18, **Customer**, as **Domestic**, **Foreign**, or **Export** types.
+Při vytváření nového záznamu kmenových dat, například zákaznické karty, jsou některá pole povinná a musí být vyplněna. Můžete seskupovat většinu povinných polí, jako jsou například účto skupiny a platební podmínky, aby bylo vytváření záznamů hlavních dat snazší a stabilnější. For example, you can group mandatory fields for table 18, **Customer**, as **Domestic**, **Foreign**, or **Export** types.
 
 > [!NOTE]
-> Fields of type Blob cannot be exported/imported using Excel.
+> Pole typu Blob nelze exportovat/importovat pomocí Excelu.
 
-## To select a data template
+## Výběr datové šablony
 
-When you select an existing data template, you must evaluate if the templates that you created for the new company are sufficient for the customer. Review the provided fields and values to determine which templates are appropriate for a new company.
+Když vyberete existující datovou šablonu, musíte posoudit, zda šablony, které jste vytvořili pro novou společnost, jsou pro zákazníka dostačující. Zkontrolujte poskytnutá pole a hodnoty a určete, které šablony jsou vhodné pro novou společnost.
 
 > [!TIP]  
-> You can also use data templates to create new records quickly. Use them for faster and more accurate data creation. For more information, see [Register New Items](inventory-how-register-new-items.md).
+> You can also use data templates to create new records quickly. Používejte je k rychlejšímu a přesnějšímu vytváření dat. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
 2. On the **Configuration Templates** page, select a data template from the list, and then choose the **Edit** action.
 
-If the default templates do not meet your needs, you can create new templates or add fields to an existing template. If the default templates are sufficient, you can use them to create records based on master data templates.
+Pokud výchozí šablony nesplňují vaše potřeby, můžete vytvořit nové šablony nebo přidat pole do existující šablony. Pokud jsou výchozí šablony dostatečné, můžete je použít k vytvoření záznamů na základě šablon kmenových dat.
 
-## To create a new data template
+## Vytvoření nové datové šablony
 
-You can create a new data template if the default templates do not meet the needs of your new company.
+Pokud výchozí šablony neodpovídají potřebám nové společnosti, můžete vytvořit novou datovou šablonu.
 
 > [!TIP]
 > If you are creating more than one, you may find it useful to adopt a naming convention for the **Code** field.
 
-Each template consists of a header and a line for each field to include in the template. When you create a template, you can specify which fields to always apply to data of a certain type. For example, you can create different customer templates to apply to different customer types. When you create the customer using a template, you can use template data to prepopulate certain fields.
+Each template consists of a header and a line for each field to include in the template. Když vytvoříte šablonu, můžete určit, která pole mají být vždy použita pro data určitého typu. Můžete například vytvořit různé šablony zákazníků, které se použijí na různé typy zákazníků. Když vytvoříte zákazníka pomocí šablony, můžete použít data šablony k předběžnému vyplnění určitých polí.
 
-### To copy an existing data template
+### Kopírování existující datové šablony
 
-You can quickly create a new data template by copying information from an existing data template, which you then edit.
+Novou šablonu dat můžete rychle vytvořit zkopírováním informací z existující šablony dat, kterou potom upravíte.
 
 1. Open the **Configuration Templates** page.
 2. Vyberte akci **Nový**.
@@ -67,20 +67,20 @@ You can quickly create a new data template by copying information from an existi
 4. Choose the **Copy Config. Template** action.
 5. On the **Configuration Templates** page, select an existing template to copy, and then choose the **OK** button.
 
-The table ID, table name, and lines of the existing data template are inserted in the new template.
+ID tabulky, název tabulky a řádky existující šablony dat jsou vloženy do nové šablony.
 
-### To create a data template header manually
+### Ruční vytvoření záhlaví šablony dat
 
 1. Open the **Configuration Templates** page.
 2. Vyberte akci **Nový**.
 3. Fill in the **Code** field.
 4. In the **Table ID** field, enter the table to which this template applies. The **Table Name** field is automatically filled in when the **Table ID** field is set.
 
-### To create a data template line manually
+### Ruční vytvoření řádku šablony dat
 
 1. On the first line, select the **Field Name** field. The **Field List** page displays the list of fields in the table.
 2. Select a field, and then choose the **OK** button. The **Field Caption** field is filled in with the field name.
-3. In the **Default Value** field, enter an appropriate value. In some cases, you may want to use a value that is not a value that is available in the database. In that case, you can select the **Skip Relation Check** check box, to make it possible to apply data without error.
+3. In the **Default Value** field, enter an appropriate value. V některých případech je vhodné použít hodnotu, která není hodnotou dostupnou v databázi. In that case, you can select the **Skip Relation Check** check box, to make it possible to apply data without error.
 
    > [!TIP]  
    > Since the **Default Value** field does not have a look up to the corresponding [!INCLUDE[prod_short](includes/prod_short.md)] field options, you copy and paste the value that you want from the related page into the template.
@@ -88,66 +88,66 @@ The table ID, table name, and lines of the existing data template are inserted i
 4. Select the **Mandatory** check box if users must fill in the field in question.
 
    > [!NOTE]
-   > The check box is informational only. No business logic is enforced. For example, ushers cannot post an invoice if posting groups have not been set up. You can select the **Mandatory** check box for those fields to have the user fill them in and thereby avoid a posting error later.
+   > The check box is informational only. Není vynucena žádná obchodní logika. Například uživatelé nemohou zaúčtovat fakturu, pokud nebyly vytvořeny účto skupny. You can select the **Mandatory** check box for those fields to have the user fill them in and thereby avoid a posting error later.
 5. In the **Reference** field, enter information about the field as needed.
 6. Choose the **OK** button
 
-## To export to a template in Excel
+## Export do šablony do aplikace Excel
 
-You can create an Excel workbook to serve as a template that is based on the structure of an existing database table quickly. You can then use the template to gather together customer data in a consistent format for later import into [!INCLUDE[prod_short](includes/prod_short.md)].
+Můžete vytvořit sešit aplikace Excel, který bude sloužit jako šablona, která se rychle zakládá na struktuře existující databázové tabulky. You can then use the template to gather together customer data in a consistent format for later import into [!INCLUDE[prod_short](includes/prod_short.md)].
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Worksheet**, and then choose the related link.
-2. Add a table to the list, or select an existing table. For more information, see [Manage Company Configuration in a Worksheet](admin-how-to-manage-company-configuration-in-a-worksheet.md).
+2. Přidejte tabulku do seznamu nebo vyberte existující tabulku. For more information, see [Manage Company Configuration in a Worksheet](admin-how-to-manage-company-configuration-in-a-worksheet.md).
 3. Choose the **Shows Fields** action to define the fields from the table that you want to include in the template.
 4. Choose the **Export to Template** action.
-5. Name and save the Excel file. The Excel workbook is automatically opened.
+5. Pojmenujte a uložte soubor aplikace Excel. Sešit aplikace Excel se automaticky otevře.
 
-You can now enter customer data in the Excel worksheet. If you have exported multiple tables, each table will be on its own worksheet. Save the workbook before you continue with the next procedure.
+Nyní můžete zadat údaje o zákaznících do sešitu aplikace Excel. Pokud jste exportovali více tabulek, bude každá tabulka na samostatném listu. Před dalším postupem uložte sešit.
 
 > [!NOTE]  
 > You may encounter the following error when you run an English version of Excel, but have your regional settings configured for a non-English language: "Old format or invalid type library." To fix this error, make sure that the language pack for the non-English language is installed.
 
-## To import from a template in Excel
+## Import ze šablony v aplikaci Excel
 
 1. On the **Configuration Worksheet** page, and then choose the **Import from Template** action.
 2. Navigate to the template worksheet that you have created, and then choose the **Open** action.
 3. To add the collected customer data to the database, choose the **Apply Data** action.
 
-When you apply data from a template in Excel to a table that also has a configuration template linked to it in the configuration package, the default field values from the configuration template are also applied.
+Použijete-li data ze šablony aplikace Excel do tabulky, ve které je také Šablona konfigurace s touto šablonou propojena v konfiguračním balíčku, budou použity také výchozí hodnoty polí z šablony konfigurace.
 
-Any record whose data is applied in this manner is complete, because it consists of data entered by a user in Excel, plus the default values specified by the configuration template.
+Každý záznam, jehož data jsou použita tímto způsobem, je úplný, protože se skládá z dat zadaných uživatelem v Excelu plus výchozích hodnot určených konfigurační šablonou.
 
 > [!NOTE]
 > If the data in the tables in the configuration package contains dates, for example, posting dates on invoices, the dates are considered in the time zone specified in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-## To create a record from a configuration template
+## Vytvoření záznamu z konfigurační šablony
 
-You can use the structure of data that is contained in the data templates to convert your information into records in the database, one-by-one. To do so, you use the **Create Instance** function. This is a miniature version of the data migration process and can be useful for prototyping or treating smaller data creation tasks.
+Strukturu dat obsaženou v šablonách dat můžete použít k převedení informací na záznamy v databázi, jeden po jednom. To do so, you use the **Create Instance** function. Jedná se o miniaturní verzi procesu migrace dat, která může být užitečná při vytváření prototypů nebo zpracování menších úloh vytvoření dat.
 
-The following steps illustrate how to create an item card from an item data template. You can create a record from any data template using the same procedure.
+Následující kroky popisují, jak vytvořit kartu zboží z šablony zboží. Stejným postupem můžete vytvořit záznam z libovolné datové šablony.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
 2. Select the **Item** template, and then choose the **Edit** action. For more information, see [To create a data template](admin-use-templates-to-prepare-customer-data-for-migration.md#to-create-a-new-data-template).
-3. Choose the **Create Instance** action. An item card is created.
+3. Choose the **Create Instance** action. Vytvoří se karta zboží.
 4. Zvolte tlačítko **OK**.
 5. To review the new item card, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
-6. Open the new item card.
-7. Expand various FastTabs, and verify that the information was created correctly on them.
+6. Otevřete novou kartu zboží.
+7. Rozbalte záložky s náhledem a ověřte, zda byly informace na nich správně vytvořeny.
 
-## To use a configuration template on a record
+## Použití konfigurační šablony na záznamu
 
-You can apply a data template to any record that is in [!INCLUDE[prod_short](includes/prod_short.md)] and use this technique to change or modify a record. However, when you do this, you overwrite existing values in the record with those of the template. Consequently, you should be careful when you apply a template to existing records.
+You can apply a data template to any record that is in [!INCLUDE[prod_short](includes/prod_short.md)] and use this technique to change or modify a record. Když to však uděláte, přepíšete stávající hodnoty v záznamu hodnotami šablony. Proto byste měli být opatrní při použití šablony nad existujícími záznamy.
 
 > [!WARNING]  
-> The **Apply Template** function overwrites existing data in a record. If this function is used in master data migration, it will overwrite the imported data when you create records.
+> The **Apply Template** function overwrites existing data in a record. Pokud je tato funkce použita při migraci kmenových dat, přepíše importovaná data při vytváření záznamů.
 
-The following procedure is based on a new customer card.
+Následující postup je založen na nové kartě zákazníka.
 
-1. Create a customer. For more information, see [Register New Customers](sales-how-register-new-customers.md).
+1. Vytvoření zákazníka. For more information, see [Register New Customers](sales-how-register-new-customers.md).
 2. On the **Customer Card** page, choose the **Apply Template** action.
 3. On the **Customer Templates** page, select one of the templates, and then choose the **OK** button.
 
-The default values from the chosen customer template are inserted on the customer card.
+Výchozí hodnoty z vybrané zákaznické šablony jsou vloženy na kartu zákazníka.
 
 ## Viz také
 

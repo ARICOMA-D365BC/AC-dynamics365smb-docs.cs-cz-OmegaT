@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment due, debt, overdue, fee, charge
-ms.date: 12/03/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -38,7 +38,7 @@ Additionally, each term in the Finance Charge Terms table is linked to a subtabl
 ### To set up finance charge terms
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Terms**, and then choose the related link.
-2. Vyplňte pole podle potřeby.
+2. Podle potřeby vyplňte pole.
 3. To use more than one combination of finance charge terms, set up a code for each one.
 
    For each finance charge term, you can specify individual conditions that can include additional fees in both LCY and in foreign currency. You can define additional fees in foreign currencies for each term on the **Finance Charge Terms** page.

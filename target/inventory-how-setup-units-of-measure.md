@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: UOM
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ You can set up multiple units of measure for an item so that you can assign unit
 - Assign a base unit of measure on the item's item card to define how it is stored in inventory and to serve as the conversion basis for alternate units of measure.
 - Assign alternate units of measure to purchase, production, or sales documents to specify how many units of the base unit of measure you handle at a time in those processes. For example, you may buy the item on pallets and only use single pieces in your production.
 
-If an item is stocked in one unit of measure but produced in another, a production order is created that uses a manufacturing batch unit of measure to calculate the correct quantity of the components during the **Refresh Production Order** batch job. An example of a manufacturing batch unit of measure calculation is when a manufactured item is stocked in pieces but produced in tons. For more information, see [Work with Manufacturing Batch Units of Measure](production-how-to-use-the-manufacturing-batch-unit-of-measure.md).
+If an item is stocked in one unit of measure but produced in another, a production order is created that uses a manufacturing batch unit of measure to calculate the correct quantity of the components during the **Refresh Production Order** batch job. Příkladem výpočtu měrné jednotky výrobní dávky je, když je vyrobeno zboží skladované v kusech, ale vyrobené v tunách. For more information, see [Work with Manufacturing Batch Units of Measure](production-how-to-use-the-manufacturing-batch-unit-of-measure.md).
 
 ## To set up units of measure
 

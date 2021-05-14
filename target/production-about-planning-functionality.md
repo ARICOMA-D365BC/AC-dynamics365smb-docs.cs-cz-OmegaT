@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -61,7 +61,7 @@ The following planning parameters exist on the item or SKU card:
 - Období kumulace dávky
 - Období přeplánování
 - Reorder Quantity
-- Bezpečná průběžná doba
+- Bezpečnostní dodací lhůta
 - Minimální zásoby
 - Assembly Policy
 - Manufacturing Policy

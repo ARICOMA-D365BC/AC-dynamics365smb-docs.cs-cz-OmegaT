@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Warehouse Setup
+# Detaily návrhu: Nastavení skladu
 
-Warehouse functionality in [!INCLUDE[prod_short](includes/prod_short.md)] contains different levels of complexity, as defined by license permissions in the offered granules. The level of complexity in a warehouse solution is largely defined by the bin setup on location cards, which in turn is license-controlled so that access to bin setup fields is defined by the license. In addition, the application objects in the license govern which UI document to use for the supported warehouse activities.
+Funkčnost skladu v [!INCLUDE[prod_short](includes/prod_short.md)] obsahuje různé úrovně složitosti, jak jsou definovány licenčními oprávněními v nabízených granulích. Úroveň složitosti řešení skladu je do značné míry definována nastavením přihrádky na kartách lokací, která je zase řízena licencí, takže přístup k polím nastavení přihrádky je definován licencí. Kromě toho objekty aplikace v licenci určují, který dokument uživatelského rozhraní se má použít pro podporované aktivity skladu.
 <!--
 The following warehouse-related granules exist:  
 
@@ -32,111 +32,111 @@ The following warehouse-related granules exist:
 
 For more information about each granule, see [[!INCLUDE[prod_short](includes/prod_short.md)] Price Sheets](https://go.microsoft.com/fwlink/?LinkId=238341) (requires PartnerSource account). -->
 
-The following table shows which granules are required to define different warehouse complexity levels, which UI documents support each level, and which location codes reflect these levels in the [!INCLUDE[prod_short](includes/prod_short.md)] demonstration database.
+Následující tabulka ukazuje, které granule jsou nutné k definování různých úrovní složitosti skladu, které dokumenty uživatelského rozhraní podporují každou úroveň a které kódy lokace odrážejí tyto úrovně v [!INCLUDE[prod_short](includes/prod_short.md)] demonstrační databázi.
 
 [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
-| Complexity Level | Popis | UI Document | Example Location | Minimum Granule Requirement |
+| Úroveň složitosti | Popis | Dokument uživatelského rozhraní | Příklad lokace | Minimální požadavek na granule |
 |----------------|-----------|-----------|---------------|---------------------------|  
-| 1 | No dedicated warehouse activity.<br /><br /> Receive/ship posting from orders. | Pořadí | MODRÝ | Basic Inventory |
-| 2 | No dedicated warehouse activity.<br /><br /> Receive/ship posting from orders.<br /><br /> Bin code is required. | Order, with bin code | SILVER | Basic Inventory/Bin |
-| 3 <br /><br /> **NOTE**: Even though the settings are called **Require Pick** and **Require Put-away**, you can still post receipts and shipments directly from the source business documents at locations where you select these check boxes. | Basic warehouse activity, order-by-order.<br /><br /> Receive/ship posting from inventory put-away/pick documents. <br /><br /> Bin code is required. | Inventory Put-away/Inventory Movement/Inventory Pick, with bin code | (SILVER + Require Put-away or Require Put-away) | Basic Inventory/Bin/Put Away/Pick |
-| 4 | Advanced warehouse activity, for multiple orders.<br /><br /> Consolidated receive/ship posting based on warehouse put-away/pick registrations. | Warehouse Receipt/Warehouse Put-away/Warehouse Pick/Warehouse Shipment/Pick Worksheet | GREEN | Basic Inventory/Warehouse Receipt/Put Away/Pick/Warehouse Shipment |
-| 5 | Advanced warehouse activity, for multiple orders.<br /><br /> Consolidated receive/ship posting based on warehouse put-away/pick registrations.<br /><br /> Bin code is required. | Warehouse Receipt/Warehouse Put-away/Warehouse Pick/Warehouse Shipment/Pick Worksheet/Put-away Worksheet, with bin code | (GREEN + Bin Mandatory) | Basic Inventory/Bin/Warehouse Receipt/Put Away/Pick/Warehouse Shipment |
-| 6 <br /><br /> **Note**: This level is referred to as "WMS", since it requires the most advanced granule, Warehouse Management Systems. | Advanced warehouse activity, for multiple orders<br /><br /> Consolidated receive/ship posting based on warehouse put-away/pick registrations<br /><br /> Bin code is required.<br /><br /> Zone/Class code is optional.<br /><br /> Warehouse workers directed by workflow<br /><br /> Bin replenishment planning<br /><br /> Bin ranking<br /><br /> Bin setup by capacity<br /><br /> Slotting <!-- Hand-held device integration --> | Warehouse Receipt/Warehouse Put-away/Warehouse Pick/Warehouse Shipment/Warehouse Movement/Pick Worksheet/Put-away Worksheet/Internal Whse. Pick/Internal Warehouse Put-away, with bin/class/zone code<br /><br /> Various worksheets for bin management<br /><br /> ADCS screens | WHITE | Basic Inventory/Bin/Put Away/Warehouse Receipt/Pick/Warehouse Shipment/Warehouse Management Systems/Internal Picks and Put-aways/Bin Setup/<!-- Automated Data Capture System/ -->Bin Setup |
+| 1 | Žádná vyhrazená aktivita skladu.<br /><br /> Účtování příjmu/dodávky z objednávek. | Pořadí | MODRÝ | Základní zásoby |
+| 2 | Žádná vyhrazená aktivita skladu.<br /><br /> Účtování příjmu/dodávky z objednávek.<br /><br /> Je vyžadován kód přihrádky. | Objednávka s kódem přihrádky | STŘÍBRNÝ | Základní zásoby/přihrádky |
+| 3 <br /><br /> **NOTE**: I když se nastavení nazývá **Vyžadovat vyskladnění** a **Vyžadovat zaskladnění**, stále můžete účtovat příjemky a dodávky přímo ze zdrojových obchodních dokladů na místech, kde zaškrtnete tato políčka. | Základní aktivita skladu, zakázka-na-zakázku.<br /><br /> Účtování příjmu/dodávky z dokladu zaskladnění/vyskladnění zásob. <br /><br /> Je vyžadován kód přihrádky. | Zaskladnění zásob/Přesun zásob/Vyskladnění zásob s kódem přihrádky | (STŘÍBRNÝ + Vyžadovat zaskladnění nebo Vyžadovat zaskladnění) | Základní zásoby/Přihrádka/Zaskladnění/Vyskladnění |
+| 4 | Pokročilá aktivita skladu pro více objednávek.<br /><br /> Konsolidované účtování příjmu/dodávky na základě registrací zaskladnění/vyskladnění. | Příjemka na sklad/Zaskladnění/Vyskladnění/Dodávka ze skladu/Sešit vyskladnění | ZELENÁ | Základní zásoby/Příjemka na sklad/Zaskladnění/Vyskladnění/Dodávka ze skladu |
+| 5 | Pokročilá aktivita skladu pro více objednávek.<br /><br /> Konsolidované účtování příjmu/dodávky na základě registrací zaskladnění/vyskladnění.<br /><br /> Je vyžadován kód přihrádky. | Příjemka na sklad/Zaskladnění/Vyskladnění/Dodávka ze skladu/Sešit vyskladnění/Sešit zaskladnění s kódem přihrádky | (ZELENÁ + Přihrádka povinná) | Základní zásoby/Přihrádka/Příjemka na sklad/Zaskladnění/Vyskladnění/Dodávka ze skladu |
+| 6 <br /><br /> **Note**: Tato úroveň se označuje jako "SSS", protože vyžaduje nejpokročilejší granule, Systém správy skladu. | Pokročilá aktivita skladu pro více objednávek<br /><br /> Konsolidované účtování příjmu/dodávky na základě registrací zaskladnění/vyskladnění<br /><br /> Kód přihrádky je vyžadován.<br /><br /> Kód zóny/třídy je nepovinný.<br /><br /> Pracovníci skladu řízeni pomocí workflow<br /><br /> Plánování doplnění přihrádky<br /><br /> Pořadí přihrádky<br /><br /> Nastavení přihrádky podle kapacity<br /><br /> Drážkování <!-- Hand-held device integration --> | Příjemka na sklad/Zaskladnění/Vyskladnění/Dodávka ze skladu/Skladový přesun/Sešit vyskladnění/Sešit zaskladnění/Interní  vyskladnění/Interní zaskladnění s kódem přihrádky/třídy/zóny<br /><br /> Různé sešity pro správu přihrádek<br /><br /> ADCS obrazovky | BÍLÝ | Základní zásoby/Přihrádka/Zaskladnění/Příjemka na sklad/Vyskladnění/Dodávka ze skladu/Systém správy skladu/Interní vyskladnění a zaskladnění/Nastavení přihrádky/<!-- Automated Data Capture System/ -->Nastavení přihrádky |
 
-For examples of how the UI documents are used per warehouse complexity level, see [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md).
+Příklady použití dokladů uživatelského rozhraní na úrovni složitosti skladu naleznete v tématu [Detaily návrhu: Vstupní procesy skladu](design-details-inbound-warehouse-flow.md).
 
-## Bin and Bin Content
+## Přihrádky a jejich obsah
 
-A bin is a storage device designed to contain discrete parts. It is the smallest container unit in [!INCLUDE[prod_short](includes/prod_short.md)]. Item quantities in bins are referred to as bin content. A lookup from the **Item** field or **Bin Code** field on any warehouse-related document line displays the calculated availability of the item in the bin.
+Přihrádka je úložné zařízení určené k tomu, aby obsahovalo samostatné součásti. Jedná se o nejmenší kontejnerovou jednotku v [!INCLUDE[prod_short](includes/prod_short.md)]. Množství zboží v přihrádce se označuje jako obsah přihrádky. Vyhledávání v poli **Zboží** nebo **Kód přihrádky** na libovolném řádku dokladu souvisejícího se skladem zobrazuje vypočítanou dostupnost zboží v přihrádce.
 
-A bin content can be given a property of Fixed, Dedicated, or Default to define how the bin content can be used. Bins with none of these properties are referred to as floating bins.
+Obsah přihrádky může být dán vlastností Pevná, Vyhrazená nebo Výchozí, která definuje, jak lze obsah přihrádky použít. Přihrádky s žádnou z těchto vlastností se označují jako plovoucí přihrádky.
 
-A fixed bin holds items that are assigned to the bin code in question. The Fixed bin property ensures that even if the bin content is momentarily emptied, the bin content does not disappear, and the bin is therefore selected again as soon as it has been replenished.
+Pevná přihrádka obsahuje zboží, které je přiřazeno k danému kódu přihrádky. Vlastnost Pevná přihrádka zajišťuje, že i když je obsah přihrádky na okamžik vyprázdněn, obsah přihrádky nezmizí, a přihrádka je proto znovu vybrána, jakmile je doplněna.
 
-A dedicated bin holds bin content that can only be picked for the dedicated resource, such as a machine center, that uses the bin in question. Other non-pick content, such as quantities outbound on a shipment posting, can still be consumed from a dedicated bin. Only bin content considered by the **Create Pick** algorithm is protected in a dedicated bin.
+Vyhrazená přihrádka obsahuje obsah přihrádky, který lze vybrat pouze pro vyhrazený prostředek, jako je například strojové centrum, které používá danou přihrádku. Další obsah, který není vyskladnění, například odchozí množství při zaúčtování dodávky, lze stále spotřebovat z vyhrazené přihrádky. Ve vyhrazené přihrádce je chráněn pouze obsah přihrádky považován za algoritmus **Vytvořit vyskladnění**.
 
-The Default bin property is used by the system to suggest bins for warehouse activities. At WMS locations, the Default bin property is not used. At locations where bins are required, the property is used in inbound flows to specify where to place items. In outbound flows, the property is used to specify where to take items from.
+Vlastnost Výchozí přihrádka používá systém k navrhování přihrádek pro činnosti skladu. Na lokacách SSS se nepoužívá vlastnost Výchozí přihrádka. V lokacích, kde jsou požadovány přihrádky, se vlastnost používá v příchozích tocích k určení umístění zboží. V odchozích tocích se vlastnost používá k určení, odkud má být zboží odváděno.
 
 > [!NOTE]  
-> If the outbound items are placed in several bins, then items are first taken from the non-default bins, to empty that bin content, and then the remaining items are taken from the default bin.
+> Pokud je odchozí zboží umístěno v několika přihrádkách, pak je zboží nejprve převzato z jiných než výchozích přihrádek, aby se vyprázdnil obsah přihrádky, a pak je zbývající zboží převzato z výchozí přihrádky.
 
-There can only be one default bin per item per location.
+Na zboží na lokaci může být pouze jedna výchozí přihrádka.
 
-## Bin Type
+## Typ přihrádky
 
-In WMS installations, you can restrict the warehouse activities that are allowed for a bin by assigning a bin type to it. The following bin types exist:
+V instalacích SSS můžete omezit aktivity skladu, které jsou pro přihrádku povoleny, tak, že ji přiřadíte typ přihrádky. Existují následující typy přihrádek:
 
-| Bin Type | Popis |
+| Typ přihrádky | Popis |
 |------------------|---------------------------------------|  
-| RECEIVE | Items posted as received but not yet put away. |
-| SHIP | Items picked for warehouse shipment lines but not yet posted as shipped. |
-| PUT AWAY | Typically, items to be stored in large units of measure but that you do not want to access for picking purposes. Because these bins are not used for picking, either for production orders or shipments, your use of a Put Away type bin might be limited, but this bin type could be useful if you have purchased a large quantity of items. Bins of this type should always have a low bin-ranking, so that when received items are put away, other higher-ranking PUTPICK bins fixed to the item are put away first. If you are using this type of bin, you must regularly perform bin replenishment so that the items stored in these bins are also available in PUTPICK or PICK type bins. |
-| VYSKL | Items to be used for picking only. The replenishment of these bins can only be made by movement, not by put-away. |
-| PUTPICK | Items in bins that are suggested for both the put-away and pick functions. Bins of this type probably have different bin rankings. You can set up your bulk storage bins as this type of bin with low bin rankings compared to your ordinary pick bins or forward picking area bins. |
-| QC | This bin is used for inventory adjustments if you specify this bin on the location card in the **Adjustment Bin Code** field. You can also set up bins of this type for defective items and items being inspected. You can move items to this type of bin if you want to make them inaccessible to the usual item flow. **Note:**  Unlike all other bin types, the **QC** bin type has none of the item handling check boxes selected by default. This indicates that any content you place in a QC bin is excluded from item flows. |
+| PŘÍJEM | Zboží zaúčtované jako přijaté, ale dosud nezaskladněné. |
+| DODÁVKA | Zboží vybrané pro skladové řádky, ale dosud nebyly zaúčtovány jako dodávané. |
+| VYSKL | Typicky zboží, které má být uloženo ve velkých měrných jednotkách, ale které nechcete zpřístupňovat pro vyskladnění. Protože se tyto přihrádky nepoužívají k vyskladnění, a to ani u výrobních objednávek a ani u zásilek, může být používání přihrádky typu Zaskladnění omezené, ale tento typ přihrádky může být užitečný, pokud jste zakoupili velké množství zboží. Přihrádky tohoto typu by měly mít vždy nižší pořadí přihrádek, takže když jsou přijaté položky zaskladněny, jsou nejprve vyřazeny další přihrádky ZASKLVYSKL s vyšším pořadím. Pokud používáte tento typ přihrádky, musíte pravidelně provádět doplňování přihrádky tak, aby položky uložené v těchto přihrádkách byly také k dispozici v přihrádkách typu ZASKLVYSKL nebo VYSKL. |
+| VYSKL | Zboží, které má být použito pouze pro vyskladnění. Doplnění těchto přihrádek lze uskutečnit pouze přesunem, nikoli zaskladněním. |
+| VYSKLZASKL | Zboží v přihrádkách, které jsou navrženy pro funkce vyskladněni a zaskladnění. Přihrádky tohoto typu pravděpodobně mají rozdílné pořadí přihrádek. Můžete nastavit své přihrádky jako objemné s nížším pořadím přihrádek ve srovnání s běžnými přihrádkami nebo přihrádkami pro vyskladnění. |
+| KVAL | Tato přihrádka se používá pro úpravy zásob, pokud tuto přihrádku zadáte na kartě lokace v poli **Kód adjustační přihrádky**. Můžete také nastavit přihrádky tohoto typu pro vadné předměty a kontrolované položky. Položky můžete přesunout do tohoto typu přihrádky, pokud chcete, aby byly nepřístupné pro obvyklý tok položek. **Note:** Na rozdíl od všech ostatních typů přihrádek nemá typ přihrádky **KVAL** ve výchozím nastavení žádné zaškrtávací políčko pro manipulaci se zbožím. To znamená, že veškerý obsah, který umístíte do přihrádky KVAL, je z toků zboží vyloučen. |
 
-For all bin types, except PICK, PUTPICK, and PUTAWAY, no other activity is allowed for the bin than what is defined by its bin type. For example, a bin of type **Receive** can only be used to receive items into or pick items from.
-
-> [!NOTE]  
-> Only movement can be made to bins of type RECEIVE and QC. Similarly, only movements can be made from bins of type SHIP and QC.
-
-## Bin Ranking
-
-In advanced warehousing, you can automate and optimize how items are collected in put-away and pick worksheets by ranking bins so that items are suggested taken or placed according to rank criteria to use warehouse space optimally.
-
-Put-away processes are optimized according to bin ranking by suggesting higher-ranking bins before lower-ranking bins. Similarly, pick processes are optimized by first suggesting items from bin content with high bin ranking. Furthermore, bin replenishments are suggested from lower-ranking bins to higher-ranking bins.
-
-Bin ranking together with bin content information are the basic properties that allow users to slot items in the warehouse.
-
-## Bin Setup
-In advanced warehousing, bins can be set up with capacity values, such as quantity, total cubage, and weight to control which and how items are stored in the bin.
-
-On each item card, you can assign a unit of measure (UOM) for the item, such as pieces, pallets, liters, grams, or boxes. You can also have a base UOM for an item and specify larger UOMs that are based on it. For example, you can define a pallet to equal 16 pieces, the latter being the base UOM.
-
-If you want to set a maximum quantity of a specific item to be stored in an individual bin and the item has more than one UOM, then you must set the maximum quantity for every UOM that exists on the item card. Accordingly, if an item has been set up to be handled in pieces and pallets, then the **Max. Qty.** field on the **Bin Content** page for that item must also be in pieces and pallets. Otherwise, the allowed quantity for that bin is not calculated correctly.
-
-Before you set capacity restrictions for bin contents on a bin, you must first make sure that the UOM and dimensions of the item have been set up on the item card.
+Pro všechny typy přihrádek, s výjimkou VYSKL, VYSKLZASKL a ZASKL, není pro přihrádku povolena žádná jiná aktivita, než je definována typem přihrádky. Například přihrádku typu  **K příjmu** lze použít pouze k přijímání zboží nebo k vyskladnění zboží.
 
 > [!NOTE]  
-> It is only possible to operate with multiple UOMs in WMS installations. I all other configurations, bin contents can only be in the base UOM. In all transactions with a UOM higher than the item's base UOM, the quantity is converted to the base UOM.
+> Lze provést pouze přesun do přihrádek typu K PŘÍJMU a KVAL. Podobně lze z přihrádek typu DODÁVKA a KVAL uskutechovat pouze pohyby.
 
-## Zone
+## Pořadí přihrádky
 
-In advanced warehousing, bins can be grouped in zones to manage how the workflow of warehouse activities is directed.
+V pokročilém skladu můžete automatizovat a optimalizovat způsob sběru zboží v sešitech zaskladnění a vyskladnění podle přihrádek pro řazení, aby bylo zboží navrženo k sebraní nebo umístění podle kritérií pořadí pro optimální využití skladového prostoru.
 
-A zone could be a receiving zone or a stocking zone, and each zone can consist of one or several bins.
+Procesy zaskladnění jsou optimalizovány podle pořadí přihrádek navržením přihrádek s vyšším pořadím před přihrádky s nižším pořadím. Podobně jsou procesy vyskladnění optimalizovány tak, že nejprve navrhují zboží z obsahu přihrádky s vysokým pořadím přihrádky. Kromě toho se navrhuje doplňování přihrádek z přihrádek s nižším pořadím do přihrádek s vyšším pořadím.
 
-Most properties assigned to a zone will by default be assigned to the bin that is created from that zone.
+Pořadí přihrádek spolu s informacemi o obsahu přihrádky jsou základní vlastnosti, které uživatelům umožňují ukládat zboží ve skladu.
 
-## Class
-In advanced warehousing, you can assign warehouse class codes to items, bins, and zones to control where different item classes are stored, such as frozen goods. You can divide a zone into several warehouse classes. For example, items in the receiving zone can be stored as frozen, hazardous, or other class.
+## Nastavení přihrádky
+V pokročilém nastavení skladu lze přihrádky nastavit s hodnotami kapacity, jako je množství, celkový objem a hmotnost, aby bylo možné řídit, které zboží a jak je tohl zboží uloženo v přihrádce.
 
-When you work with warehouse classes and a default receiving/shipping bin, you must manually fill in the appropriate bins in the warehouse receipt and shipment lines.
+Na každé kartě zboží můžete přiřadit měrnou jednotku (MJ) pro zboží, jako jsou kusy, palety, litry, gramy nebo krabice. Můžete mít také základní MJ pro zboží a zadat větší MJ, která je na ní založena. Můžete například definovat paletu, která se rovná 16 kusům, z toho kus je základní MJ.
 
-In inbound flows, the class code is only highlighted on inbound lines where the item class code does not match the default receiving bin. If the correct default bins are not assigned, then the quantity cannot be received.
+Chcete-li nastavit maximální množství určitého zboží, které má být uloženo v jednotlivé přihrádce, a zboží má více než jednu MJ, musíte nastavit maximální množství pro každou MJ, která existuje na kartě zboží. V souladu s tím, pokud bylo zboží nastaveno tak, aby se s ním nakládalo po kusech a paletách, pak pole **Max.  množství** na stránce **Obsah přihrádky** pro toto zboží musí být také v kusech a paletách. V opačném případě není povolené množství pro tuto přihrádku vypočteno správně.
+
+Před nastavením omezení kapacity pro obsah přihrádky se musíte nejprve ujistit, že na kartě zboží byla nastavena MJ a dimenze zboží.
+
+> [!NOTE]  
+> Pouze v instalacích SSS le možné pracovat s více MJ. U všech ostatních konfigurací může být obsah přihrádky pouze v základní MJ. Ve všech transakcích s MJ vyšší než základní MJ zboží se množství převede na základní MJ.
+
+## Zóna
+
+V pokročilých nastaveních skladu lze přihrádky seskupovat do zón, aby bylo možné řídit workflow skladových činností.
+
+Zónou může být přijímací zóna nebo zóna skladování a každá zóna se může skládat z jedné nebo více přihrádek.
+
+Většina vlastností přiřazených zóně bude ve výchozím nastavení přiřazena k přihrádce vytvořené z této zóny.
+
+## Třída
+V pokročilém nastavení skladu můžete přiřadit kódy tříd skladu ke zboží, přihrádkám a zónám, abyste mohli řídit, kde jsou uloženy různé třídy zboží, například zmrazené zboží. Zónu můžete rozdělit do několika tříd skladu. Například zboží v přijímající zóně může být uloženo jako zmrazené, nebezpečné nebo může mít jinou třídu.
+
+Při práci s třídami skladu a výchozí přihrádkou pro příjem/dodávku je nutné ručně vyplnit příslušné přihrádky v řádcích příjemky a dodávky skladu.
+
+U příchozích toků je kód třídy zvýrazněn pouze na příchozích řádcích, kde kód třídy zboží neodpovídá výchozí přihrádce příjmu. Pokud nejsou přiřazeny správné výchozí přihrádky, nelze množství přijmout.
 
 ## Lokace
 
-A location is a physical structure or place where inventory is received, stored, and shipped, potentially organized in bins. A location can be a warehouse, service car, showroom, plant, or an area in a plant.
+Lokace je fyzická struktura nebo místo, kde jsou zásoby přijímány, skladovány a odesílány, případně uspořádány do přihrádek. Lokací může být sklad, služební vůz, předváděcí místnost, závod nebo plocha v závodě.
 
-## First Expired First Out
+## FEFO (První expiruje, první ven)
 
-If you select the **Pick According to FEFO** check box on the **Bin Policies** FastTab on the location card, then item-tracked items are picked according to their expiration date. The items with the earliest expiration dates are picked first.
+Pokud zaškrtnete políčko **Vybrat na základě metody FEFO** na záložce **Použití přihrádek** na kartě lokace, budou položky sledování zboží vyskladněny podle data vypršení platnosti. Zboží s nejbližšími daty vypršení platnosti je vyskladněno jako první.
 
-Warehouse activities in all pick and movement documents are sorted according to FEFO, unless the items in question already have serial/lot numbers assigned. If only a part of the quantity on the line already has serial/lot numbers assigned, then the remaining quantity to be picked is sorted according to FEFO.
+Aktivity skladu ve všech dokladech vyskladnění a přesunu jsou seřazeny podle FEFO, pokud předmětné zboží již nemá přiřazená sériová čísla/čísla šarží. Pokud již má sériové číslo/číslo šarže přiřazeno část množství na řádku, zbývající množství, které se má vyskladnit, je tříděno podle FEFO.
 
-When picking by FEFO, the available items that expire first are gathered in a temporary item tracking list based on the expiration date. If two items have the same expiration date, then the item with the lowest lot or serial number is picked first. If the lot or serial numbers are the same, then the item that was registered first is selected first. Standard criteria for selecting items in pick bins, such as Bin Ranking and Break Bulk, are applied to this temporary FEFO item tracking list.
+Při vyskladnění podle FEFO je dostupné zboží, kterého platnost vyprší jako první a toto zboží je shromážděno v dočasném seznamu sledování zboží na základě data vypršení platnosti. Pokud mají dva zboží stejné datum vypršení platnosti, je nejprve vybráno zboží s nejnižší šarží nebo sériovým číslem. Pokud jsou čísla šarže nebo sériová čísla stejná, bude nejprve vybráno zboží, které bylo zaregistrováno jako první. Pro tento dočasný seznam sledování zboží FEFO se použijí standardní kritéria pro výběr zboží v přihrádce vyskladnění, například Pořadí přihrádek a Hromadné přerušení.
 
-## Put-away Template
+## Šablona pro zaskladnění
 
-The put-away template can be assigned to an item and to a location. The put-away template specifies a set of prioritized rules that must be respected when creating put-aways. For example, a put-away template may require that the item is placed in a bin with bin content that matches the UOM, and if a similar bin with enough capacity cannot be found, then the item must be placed in an empty bin.
+Šablonu pro zaskladnění lze přiřadit ke zboží a lokaci. Šablona pro zaskladnění určuje sadu pravidel s prioritou, která musí být respektována při vytváření zaskladnění. Šablona pro zaskladnění může například vyžadovat, aby bylo zboží umístěno do přihrádky s obsahem přihrádky, který odpovídá MJ, a pokud nelze najít podobnou přihrádku s dostatečnou kapacitou, musí být zboží umístěno do prázdné přihrádky.
 
 ## Viz také
 
-[Design Details: Warehouse Management](design-details-warehouse-management.md)   
-[Design Details: Availability in the Warehouse](design-details-availability-in-the-warehouse.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)     
+[Detaily návrhu: Dostupnost ve skladu](design-details-availability-in-the-warehouse.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

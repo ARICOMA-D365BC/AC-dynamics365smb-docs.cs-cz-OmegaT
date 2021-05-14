@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: item, finished good, component, raw material, assembly item
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -58,7 +58,7 @@ If you want to use this item card as a template when you create new item cards, 
 ### To save the item card as a template
 
 1. On the **Item Card** page, choose the **Save as Template** action. The **Item Template** page opens showing the item card as a template.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. To reuse dimensions in templates, choose the **Dimensions** action. The **Dimension Templates** page opens showing any dimension codes that are set up for the item.
 4. Edit or enter dimension codes that will apply to new item cards created by using the template.
 5. When you have completed the new item template, choose the **OK** button.

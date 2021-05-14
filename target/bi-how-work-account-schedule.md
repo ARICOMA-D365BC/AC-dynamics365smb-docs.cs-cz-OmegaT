@@ -9,68 +9,68 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Prepare Financial Reporting with Account Schedules and Account Categories
+# Příprava finančních výkazů s účetními schématy a kategoriemi účtů
 
-Use account schedules to get insight into the financial data stored in your chart of accounts. Account schedules analyze figures in G/L accounts, and compare general ledger entries with general ledger budget entries. The results display in charts on your Role Center, such as the Cash Flow chart, and in reports, such as the Income Statement and the Balance Sheet reports.
+Pomocí účetních schémat získáte přehled o finančních datech uložených v účetní osnově. Účetní schémata analyzují údaje v účetních závěrkách a porovnávají položky hlavní knihy s položkami rozpočtu hlavní knihy. Výsledky se zobrazují v grafech v Centru rolí, například v grafu cashflow a v sestavách, jako je rozvaha výsledovka.
 
 You access these two reports, for example, with the **Financials Statements** action on the Business Manager and Accountant Role Centers.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] provides a few sample account schedules that you can use right away, or you can set up your own rows and columns to specify the figures to compare. For example, you can create account schedules to calculate profit margins on dimensions like departments or customer groups. You can create as many customized financial statements as you want.
+[!INCLUDE[prod_short](includes/prod_short.md)] provides a few sample account schedules that you can use right away, or you can set up your own rows and columns to specify the figures to compare. Můžete například vytvořit účetní schémata pro výpočet ziskových marží pro dimenze, jako jsou oddělení nebo skupiny zákazníků. Můžete vytvořit tolik vlastních finančních výkazů, kolik chcete.
 
-Setting up account schedules requires an understanding of the financial data in the chart of accounts. For example, you can view general ledger entries as percentages of budget entries. This requires that budgets are created. For more information, see [Create G/L Budgets](finance-how-create-budgets.md).
+Nastavení účetních schémat vyžaduje pochopení finančních dat v účetní osnově. Můžete například zobrazit položky hlavní knihy jako procenta položek rozpočtu. To vyžaduje vytvoření rozpočtů. For more information, see [Create G/L Budgets](finance-how-create-budgets.md).
 
-## Account Schedules
+## Účetní schémata
 
-Account schedules are used to arrange accounts listed in the chart of accounts in ways suited for presentation of information about those accounts. You can set up various layouts to define the information that you want to extract from the chart of accounts. One of the main functions of account schedules is to provide a place for calculations that cannot be made directly in the chart of accounts, such as creating subtotals for groups of accounts, which can be included in new totals and can then be used in other totals. For example, users can create account schedules to calculate profit margins on such dimensions as departments or customer groups. In addition, general ledger entries and general ledger budget entries can be filtered, for example, by net change or debit amount.
+Účetní schémata se používají k uspořádání účtů uvedených v účetní osnově způsobem, který je vhodný pro prezentaci informací o těchto účtech. Můžete nastavit různá rozvržení pro definování informací, které chcete získat z účetní osnovy. Jednou z hlavních funkcí účetních schémat je poskytnout místo pro výpočty, které nelze provést přímo v účetní osnově, jako je například vytváření mezisoučtů pro skupiny účtů, které mohou být zahrnuty do nových součtů a pak mohou být použity v jiných součtech. Uživatelé mohou například vytvářet účetní schémata pro výpočet ziskových marží pro takové dimenze, jako jsou oddělení nebo skupiny zákazníků. Kromě toho lze filtrovat položky hlavní knihy a položky rozpočtu hlavní knihy, například podle čisté změny nebo částky Má dáti.
 
-You can also compare two or more account schedules and column layouts by using formulas. This kind of comparison provides the ability to:
+Pomocí vzorců můžete také porovnat dvě nebo více účetních schémat a rozložení sloupců. Tento druh porovnání poskytuje možnost:
 
-* Create customized financial reports.
-* Create as many account schedules as needed, each with a unique name.
-* Set up various report layouts and print the reports with the current figures.
+* Vytvářet vlastní finanční sestavy.
+* Vytvářet tolik účetních schémat kolik bude potřeba, každý s jedinečným názvem.
+* Nastavit různá rozvržení sestav a tisk sestavy s aktuálními čísly.
 
-## G/L Account Categories
+## Kategorie finančního účtu
 
-You can use G/L account categories to change the layout of your financial statements. After you set up your account categories on the **G/L Account Categories** page, and you choose the **Generate Account Schedules** action, the underlying account schedules for the core financial reports are updated. The next time you run one of these reports, such as the **Balance Statement** report, new totals and subentries are added, based on your changes.
+Kategorie finančních účtů můžete použít ke změně rozvržení finančních výkazů. After you set up your account categories on the **G/L Account Categories** page, and you choose the **Generate Account Schedules** action, the underlying account schedules for the core financial reports are updated. The next time you run one of these reports, such as the **Balance Statement** report, new totals and subentries are added, based on your changes.
 
 > [!NOTE]
 > The top-level account categories, such as the **Liabilities** node are fixed and you cannot add your own. However, you can delete and add account categories at lower levels and change their structure to define how the related account schedule appears in reports.
 >
 > It is recommended to create and structure your own lower-level G/L account categories from scratch, in a hierarchy if needed, rather than try to rearrange the existing ones. For example, you can restructure the **Liabilities** node to contain a new **Equity** node followed by the **Current Liabilities** and **Long Term Liabilities** nodes.
 
-## To create a new account schedule
+## Vytvoření nového účetního schématu
 
-You use account schedules to analyze figures in general ledger accounts or to compare general ledger entries with general ledger budget entries. For example, you can view the general ledger entries as percentages of the budget entries.
+Účetní schémata slouží k analýze číselných údajů na účtech hlavní knihy nebo k porovnání položek hlavní knihy s položkami rozpočtu hlavní knihy. Můžete například zobrazit položky hlavní knihy jako procenta položek rozpočtu.
 
-The account schedules in the standard version of [!INCLUDE[prod_short](includes/prod_short.md)] are the basis of the standard financial reports, which may not suit the needs of your business. To quickly create your own financial reports, you can start by copying an existing account schedule. See step 3 below.
+The account schedules in the standard version of [!INCLUDE[prod_short](includes/prod_short.md)] are the basis of the standard financial reports, which may not suit the needs of your business. Chcete-li rychle vytvořit vlastní finanční sestavy, můžete začít kopírováním existujícího účetního schématu. Viz krok 3 níže.
 
 The **Acc. Schedule Overview** page is where you preview the financial report that the account schedule defines. In the following, it is important to understand that what you set up as account schedule rows and columns can only be seen and validated on the **Acc. Schedule Overview** page, which you open from an account schedule by choosing the **Overview** action. The **Account Schedule** page itself is only a setup area.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
 2. On the **Account Schedules** page, choose the **New** action to create a new account schedule name.
 3. Alternatively, choose the **Copy Account Schedule** action, fill in the two fields, and then choose the **OK** button.
-4. Vyplňte pole podle potřeby. In the **Default Column Layout** field select an existing layout. You can edit it later if you want.
+4. Podle potřeby vyplňte pole. In the **Default Column Layout** field select an existing layout. Pokud chcete, můžete jej upravit později.
 
-   You use column layouts to define columns for different parameters by which the financial data on the rows are shown. For example, you can design a column layout to compare net change and balance for the same period this year and last year, with four columns. For more information, see [To edit a column layout](bi-how-work-account-schedule.md#to-edit-a-column-layout).
+   Rozložení sloupců slouží k definování sloupců pro různé parametry, podle kterých jsou zobrazena finanční data na řádcích. Můžete například navrhnout rozložení sloupce pro porovnání čisté změny a zůstatku za stejné období letošního a minulého roku ve čtyřech sloupcích. For more information, see [To edit a column layout](bi-how-work-account-schedule.md#to-edit-a-column-layout).
 
 5. Choose the **Edit Account Schedule** action.
-6. Create a row for each financial element that you want to appear in the report, such as one row for current assets and another row for fixed assets. For inspiration, see existing account schedules in the CRONUS demonstration company.
+6. Vytvořte řádek pro každý finanční prvek, který chcete v přehledu zobrazit, například jeden řádek pro aktuální aktiva a druhý řádek pro dlouhodobá aktiva. Inspiraci najdete v existujících účetních schématech v demonstrační společnosti CRONUS.
 7. Choose the **Overview** action to see the resulting financial report.
 8. Na stránce **Náhled  Schedule Overview** page, in the **Column Layout Name** field, select another column layout to see the financial data by other parameters.
 9. Zvolte tlačítko **OK**.
 
-You have now defined the basis of the account schedule, the rows of financial data to be displayed, and an existing layout of columns to show the data on the rows per different parameters. If the default column layout that you selected in step 4 does not suit your purpose, follow the next procedure.
+Nyní jste definovali základ účetního schématu, řádky finančních dat, která mají být zobrazena a existující rozložení sloupců, které zobrazí data na řádcích podle různých parametrů. Pokud výchozí rozložení sloupců, které jste vybrali v kroku 4, nevyhovuje vašemu účelu, postupujte podle následujícího postupu.
 
-### To edit a column layout
+### Úprava rozložení sloupců
 
-You use column layouts to define what columns should be included in the resulting report. For example, you can design a layout to compare net change and balance for the same period this year and last year.
+Rozložení sloupců slouží k definování sloupců, které mají být zahrnuty do výsledné sestavy. Můžete například navrhnout rozložení pro porovnání čisté změny a zůstatku za stejné období tohoto roku a loňského roku.
 
 > [!NOTE]
-> A printed/previewed/saved version of an account schedule can display a maximum of five columns. If the account schedule is only meant for analysis on the **Acc. Schedule Overview** page, you can create as many columns as you want.
+> Tištěná/náhledová/uložená verze účetního schématu může zobrazit maximálně pět sloupců. If the account schedule is only meant for analysis on the **Acc. Schedule Overview** page, you can create as many columns as you want.
 
 1. On the **Account Schedules** page, select the relevant account schedule, and then choose the **Edit Column Layout Setup** action.
 2. On the **Column Layouts** page, create a row for each column by which financial data is shown in the financial report. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
@@ -80,22 +80,22 @@ You use column layouts to define what columns should be included in the resultin
 > [!NOTE]
 > The columns that you define on each row represent columns 3 and up on the **Acc. Schedule Overview** page. The first two columns, **Row No.** and **Description**, are fixed.
 
-### To create a column that calculates percentages
+### Vytvoření sloupce, který vypočítává procenta
 
-Sometimes you may want to include a column in an account schedule to calculate percentages of a total. For example, if you have a number of rows that break down sales by dimension, you may want a column to indicate the percentage of total sales that each row represents.
+Někdy můžete chtít zahrnout sloupec do účetního schématu pro výpočet procent z celkového počtu. Například, pokud máte několik řádků, které rozdělují tržby podle dimenzí, můžete chtít, aby sloupec označil procento z celkových prodejů, které každý řádek představuje.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
 2. On the **Account Schedule Names** page, select an account schedule.
 3. Choose the **Edit Account Schedule** action to set up an account schedule row to calculate the total on which the percentages will be based.
-4. Insert a line immediately above the first row for which you want to display a percentage.
+4. Vložte řádek bezprostředně nad první řádek, pro který chcete zobrazit procento.
 5. Fill in the fields on the line as follows: In the **Totaling Type** field, enter **Set Base for Percent**. In the **Totaling** field, enter a formula for the total that the percentage will be based on. For example, if row 11 contains the total sales, enter **11**.
 6. Choose the **Edit Column Layout Setup** action to set up a column.
 7. Fill in the fields on the line as follows: In the **Column Type** field, select **Formula**. In the **Formula** field, enter a formula for the amount that you want to calculate a percentage for, followed by %. For example, if column number N contains the net change, enter **N%**.
-8. Repeat steps 4 through 7 for each group of rows that you want to break down by percentage.
+8. Opakujte kroky 4 až 7 pro každou skupinu řádků, které chcete rozdělit podle procent.
 
-## To set up account schedules with overviews
+## Nastavení účetních schémat s náhledy
 
-You can use an account schedule to create a statement comparing general ledger figures and general leger budget figures.
+Účetní schémata můžete použít k vytvoření výkazu porovnávajícího čísla hlavní knihy a obecné údaje o rozpočtu.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
 2. On the **Account Schedule Names** page, select an account schedule.
@@ -104,44 +104,44 @@ You can use an account schedule to create a statement comparing general ledger f
 5. Choose the **Insert Accounts** action.
 6. Select the accounts that you want to include in your statement, and then choose the **OK** button.
 
-   The accounts are now inserted into your account schedule. If you want you can also change the column layout.
+   Účty jsou nyní vloženy do vašeho účetního schématu. Pokud chcete, můžete také změnit rozložení sloupce.
 7. Choose the **Overview** action.
 8. Na stránce **Náhled  Schedule Overview** page, on the **Dimension Filters** FastTab, set the budget filter to the desired filter name.
 9. Zvolte tlačítko **OK**.
 
-Now you can copy and paste your budget statement into a spreadsheet.
+Nyní můžete zkopírovat a vložit výkaz rozpočtu do tabulky.
 
-## Comparing Accounting Periods using Period Formulas
+## Porovnání účetních období pomocí vzorců za období
 
-Your account schedule can compare the results of different accounting periods, such as this month versus same month last year. To do that, open the **Column Layout** page, and personalize it by adding the **Comparison Period Formula** field as a column. Více informací viz [Přizpůsobení pracovního prostoru](ui-personalization-user.md). You can then set that field to a period formula.
+Účetní schéma může porovnat výsledky různých účetních období, například tento měsíc oproti stejnému měsíci loňského roku. To do that, open the **Column Layout** page, and personalize it by adding the **Comparison Period Formula** field as a column. Více informací viz [Přizpůsobení pracovního prostoru](ui-personalization-user.md). You can then set that field to a period formula.
 
-An accounting period does not have to match the calendar, but each fiscal year must have the same number of accounting periods, even though each period can be different in length.
+Účetní období nemusí odpovídat kalendáři, ale každý fiskální rok musí mít stejný počet účetních období, i když každé období se může lišit délkou.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] uses the period formula to calculate the amount from the comparison period in relation to the period represented by the date filter on the report request. The comparison period is based on the period of the start date of the date filter. The abbreviations for period specifications are:
+[!INCLUDE[prod_short](includes/prod_short.md)] uses the period formula to calculate the amount from the comparison period in relation to the period represented by the date filter on the report request. Období srovnání je založeno na období počátečního data filtru data. Zkratky pro specifikace období jsou:
 
-| Abbreviation | Popis |
+| Zkratka | Popis |
 | ------------ | ------------------------------------------------------------------------------------- |
-| P | Period |
+| P | Období |
 | LP | Last period of a fiscal year, half-year, or quarter. |
 | CP | Current period of a fiscal year, half-year, or quarter. Use CP in formulas to set the period that starts or ends the formula. For example, FY\[1..CP\] denotes the time from the beginning of the current fiscal year to the current period. |
-| FY | Fiscal year. For example, FY\[1..3\] denotes first quarter of the current fiscal year |
+| FY | Fiskální rok. For example, FY\[1..3\] denotes first quarter of the current fiscal year |
 
-Examples of formulas:
+Příklady vzorců:
 
 | Vzorec | Popis |
 | --------------- | ----------------------------------------------------------------------------------------------- |
-| \<Blank\> | Current period |
-| \-1P | Previous period |
-| \-1FY\[1..LP\] | Entire previous fiscal year |
-| \-1FY | Current period in previous fiscal year |
-| \-1FY\[1..3\] | First quarter of previous fiscal year |
+| \<Blank\> | Aktuální období |
+| \-1P | Předchozí období |
+| \-1FY\[1..LP\] | Celý předchozí fiskální rok |
+| \-1FY | Aktuální období v předchozím fiskálním roce |
+| \-1FY\[1..3\] | První čtvrtletí předchozího fiskálního roku |
 | \-1FY\[1..CP\] | From the beginning of previous fiscal year to current period in previous fiscal year, including both periods |
 | \-1FY\[CP..LP\] | From current period in previous fiscal year to last period of previous fiscal year, including both periods |
 
 If you want to calculate by regular time periods, you must enter a formula in the **Comparison Date Formula** field instead. For example, if the field is set to -1Y, [!INCLUDE [prod_short](includes/prod_short.md)] compares to the same period 1 year earlier.
 
 > [!NOTE]
-> It is not always transparent which periods you are comparing because you can set a date filter on a report that spans different dates than the accounting periods that are reflected in the data in the chart of accounts. For example, you create an account schedule where you want to compare this period with the same period last year, so you set the **Comparison Date Formula** field to *-1FY*. Then, you run the report on February 28th and set the date filter to January and February. As a result, the account schedule compares January and February this year to January last year, which is the only completed accounting period of the two for last year.
+> Není vždy transparentní, která období porovnáváte, protože můžete nastavit filtr data v sestavě, která zahrnuje jiná data než účetní období, která se odráží v datech v účtové osnově. For example, you create an account schedule where you want to compare this period with the same period last year, so you set the **Comparison Date Formula** field to *-1FY*. Poté spustíte sestavu 28. února a nastavíte filtr data na leden a únor. V důsledku toho účetní schéma porovnává leden a únor letošního roku s lednem loňského roku, což je jediné dokončené účetní období dvou za loňský rok.
 
 For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
 

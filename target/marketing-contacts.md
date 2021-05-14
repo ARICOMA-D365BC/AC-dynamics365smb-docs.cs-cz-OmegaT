@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -21,7 +21,7 @@ Use the **Contacts** list to manage your contacts. From there, you can create op
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up contact management prior to creating contacts. | [Set Up Contacts](marketing-setup-contacts.md) |
 | Create a contact card for each new person or company that you interact with, such as a customer or vendor. | [Create Contacts](marketing-create-contact-companies.md) |

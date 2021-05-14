@@ -9,34 +9,34 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Tips and Tricks: RapidStart Services
+# Tipy a triky: Služby RapidStart
 
-When you configure companies using RapidStart Services, there are some tips and tricks that you can take advantage of to help your implementation go smoothly.
+Pokud konfigurujete společnosti pomocí služby RapidStart Services, existuje několik tipů a triků, které můžete využít pro bezproblémovou implementaci.
 
-## Take advantage of configuration templates
+## Využijte konfiguračních šablon
 
-Configuration templates can help you streamline your implementation process. By using them, you can include similar customers in segments and then develop an implementation protocol that treats all customers in a segment in a similar manner. In that way, you can apply a level of preconfiguration to each segment and continue with a rapid implementation.
+Konfigurační šablony vám mohou pomoci zefektivnit proces implementace. Jejich použitím můžete zahrnout podobné zákazníky do segmentů a poté vytvořit protokol implementace, který zachází se všemi zákazníky v segmentu podobným způsobem. Tímto způsobem můžete pro každý segment použít úroveň přednastavení a pokračovat v rychlém provádění.
 
-## Configuration questionnaires
+## Konfigurační dotazníky
 
-To aid the process of filling out a configuration questionnaire, consider defining default answers to indicate best practices.
+Chcete-li usnadnit proces vyplňování konfiguračního dotazníku, zvažte vymezení výchozích odpovědí, abyste uvedli osvědčené postupy.
 
-## Batch creation of journal lines
+## Dávkové vytvoření řádků deníku
 
-We recommend that you use the data migration tools provided to migrate journal entries. Otherwise, if you use a batch job to create journal lines, that has a limited scope and only generates pre-default fields into a journal. The rest of the journal then has to be completed manually.
+K migraci položek deníku doporučujeme použít dodané nástroje pro migraci dat. V opačném případě, pokud použijete dávkovou úlohu k vytvoření řádků deníku, který má omezený rozsah a také generuje pouze předvolená pole do deníku. Zbytek deníku pak musí být vyplněn ručně.
 
-## Migrating transactions
+## Migrace transakcí
 
-We recommend that you migrate opening balances in the following order. <!--Be aware that you cannot insert ledger entries directly. Instead you must use journals to post the journal lines-->
+Doporučujeme migrovat počáteční zůstatky v následujícím pořadí. <!--Be aware that you cannot insert ledger entries directly. Instead you must use journals to post the journal lines-->
 
-1. Migrate general ledger opening balances without using the general ledger account subledgers. Use specific opening balance offsetting accounts, one set up for each subledger. Set up the offsetting accounts to enable direct postings.
-2. Migrate open customer ledger entries.  <!--work on these-->
-3. Migrate open item ledger entries.
-4. Migrate open fixed asset entries.
+1. Přeneste počáteční zůstatky hlavní knihy bez použití účetních položek finančního účtu. Použijte specifické protiúčty počátečního stavu, které jsou nastaveny pro každou dílčí knihu. Chcete-li povolit přímé účtování, nastavte vyrovnávací účty.
+2. Migrujte položky zákazníků.  <!--work on these-->
+3. Migrujte položky zboží.
+4. Migrovat položky dlouhodobého majetku
 
 ## Make each package manageable
 

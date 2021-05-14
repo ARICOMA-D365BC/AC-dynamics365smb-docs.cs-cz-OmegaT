@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: design, items, ledger entries, posting, inventory
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -63,9 +63,9 @@ When you post an inventory increase, then a simple item application entry is rec
 ### Příklad
 The following table shows the item application entry that is created when you post a purchase receipt of 10 units.
 
-| Zúčtovací datum | Vyrovnává položku číslo | Vyrovnáno položkou číslo | Množství | Číslo položky zboží |
+| Zúčtovací datum | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Číslo položky zboží |
 |------------------|----------------------------------------------|-----------------------------------------------|--------------|---------------------------------------------|  
-| 1.1.2020 | 1 | 0 | 10 | 1 |
+| 01.01.20 | 1 | 0 | 10 | 1 |
 
 ## Inventory Decrease
 When you post an inventory decrease, an item application entry is created that links the inventory decrease to an inventory increase. This link is created by using the item's costing method as a guideline. For items using FIFO, Standard, and Average costing methods, the linking is based on the first-in-first-out principle. The inventory decrease is applied to the inventory increase with the earliest posting date. For items using the LIFO costing method, the linking is based on the last-in-first-out principle. The inventory decrease is applied to the inventory increase with the most recent posting date.
@@ -77,9 +77,9 @@ The following example shows the item application entry that is created when you 
 
 The following table shows the two item application entries that result from the inventory increase and the inventory decrease, respectively.
 
-| Zúčtovací datum | Vyrovnává položku číslo | Vyrovnáno položkou číslo | Množství | Číslo položky zboží |
+| Zúčtovací datum | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Číslo položky zboží |
 |------------------|----------------------------------------------|-----------------------------------------------|--------------|---------------------------------------------|  
-| 1.1.2020 | 1 | 0 | 10 | 1 |
+| 01.01.20 | 1 | 0 | 10 | 1 |
 | 3.1.2020 | 1 | 2 | -5 | 2 |
 
 ## Fixed Application
@@ -106,7 +106,7 @@ Because a fixed application is made from the purchase return to the second purch
 
 The following table shows the item application entry that results from the fixed application.
 
-| Zúčtovací datum | Vyrovnává položku číslo | Vyrovnáno položkou číslo | Množství | Číslo položky zboží |
+| Zúčtovací datum | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Číslo položky zboží |
 |------------------|----------------------------------------------|-----------------------------------------------|--------------|---------------------------------------------|  
 | 01-06-20 | 2 | 3 | 10 | 3 |
 
@@ -127,11 +127,11 @@ The following table shows the result of the scenario on the item's value entries
 
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-to Item Entry | Valued by Average Cost | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|--------------------------------------------|-------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 1.1.2020 | Nákup | 1 | 200.00 | Ne | 1 | 1 |
-| 1.1.2020 | Nákup | 1 | 1000.00 | Ne | 2 | 2 |
-| 1.1.2020 | Nákup | -1 | -1000 | 2 | Ne | 3 | 3 |
-| 1.1.2020 | Nákup | 1 | 100,00 | Ne | 4 | 4 |
-| 1.1.2020 | Prodej | -2 | -300.00 | Ano | 5 | 5 |
+| 01.01.20 | Nákup | 1 | 200.00 | Ne | 1 | 1 |
+| 01.01.20 | Nákup | 1 | 1000.00 | Ne | 2 | 2 |
+| 01.01.20 | Nákup | -1 | -1000 | 2 | Ne | 3 | 3 |
+| 01.01.20 | Nákup | 1 | 100,00 | Ne | 4 | 4 |
+| 01.01.20 | Prodej | -2 | -300.00 | Ano | 5 | 5 |
 
 If the user had not made the fixed application between the purchase credit memo and the purchase with the incorrect direct unit cost (step 2 in the previous scenario), then the cost would have been adjusted differently.
 
@@ -139,11 +139,11 @@ The following table shows the result on the item's value entries if step 2 in th
 
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-to Item Entry | Valued by Average Cost | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|--------------------------------------------|-------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 1.1.2020 | Nákup | 1 | 200.00 | Ne | 1 | 1 |
-| 1.1.2020 | Nákup | 1 | 1000.00 | Ne | 2 | 2 |
-| 1.1.2020 | Nákup | -1 | 433,33 | Ano | 3 | 3 |
-| 1.1.2020 | Nákup | 1 | 100,00 | Ne | 4 | 4 |
-| 1.1.2020 | Prodej | -2 | 866,67 | Ano | 5 | 5 |
+| 01.01.20 | Nákup | 1 | 200.00 | Ne | 1 | 1 |
+| 01.01.20 | Nákup | 1 | 1000.00 | Ne | 2 | 2 |
+| 01.01.20 | Nákup | -1 | 433,33 | Ano | 3 | 3 |
+| 01.01.20 | Nákup | 1 | 100,00 | Ne | 4 | 4 |
+| 01.01.20 | Prodej | -2 | 866,67 | Ano | 5 | 5 |
 
 In entry number 3, the value in the **Cost Amount (Actual)** field is valued by average and therefore includes the erroneous posting of 1000.00. Accordingly, it becomes -433,33, which is an inflated cost amount. The calculation is 1300 / 3 = .-433,33.
 
@@ -166,7 +166,7 @@ The following table shows the result of scenario steps 1 through 3 on the item's
 
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 1.1.2020 | Nákup | 1 | 1000.00 | 1 | 1 |
+| 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
 | 1.2.2020 | Prodej | -1 | 1000.00 | 2 | 2 |
 | 1.3.2020 | Sale (Credit Memo) | 1 | 1000 | 2 | 3 | 3 |
 
@@ -180,7 +180,7 @@ The following table shows the effect of the exact cost reversal on the item's va
 
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 1.1.2020 | Nákup | 1 | 1000.00 | 1 | 1 |
+| 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
 | 1.2.2020 | Prodej | -1 | 1100.00 | 2 | 2 |
 | 1.3.2020 | Sale (Credit Memo) | 1 | 1100.00 | 2 | 3 | 3 |
 | 04-01-20 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
@@ -207,9 +207,9 @@ The following table shows the effect of the transfer on the item's value entries
 
 | Zúčtovací datum | Typ položky zboží | Kód lokace | Oceněné množství | Částka nákladů (skutečná) | Číslo položky |
 |-------------------------------------|-----------------------------------------------|--------------------------------------|-----------------------------------------|------------------------------------------------|----------------------------------|  
-| 1.1.2020 | Nákup | VÝCHOD | 1 | 10,00 | 1 |
-| 1.1.2020 | Nákup | VÝCHOD | 1 | 20,00 | 2 |
-| 1.2.2020 | Transfer | VÝCHOD | -1 | 15.00 | 3 |
+| 01.01.20 | Nákup | EAST | 1 | 10,00 | 1 |
+| 01.01.20 | Nákup | EAST | 1 | 20,00 | 2 |
+| 1.2.2020 | Transfer | EAST | -1 | 15.00 | 3 |
 | 1.2.2020 | Transfer | WEST | 1 | 15.00 | 4 |
 
 ### Example – Standard Costing Method
@@ -222,8 +222,8 @@ The following table shows the effect of the transfer on the item's value entries
 
 | Zúčtovací datum | Typ položky zboží | Kód lokace | Oceněné množství | Částka nákladů (skutečná) | Číslo položky |
 |-------------------------------------|-----------------------------------------------|--------------------------------------|-----------------------------------------|------------------------------------------------|----------------------------------|  
-| 1.1.2020 | Nákup | VÝCHOD | 1 | 10,00 | 1 |
-| 1.2.2020 | Transfer | VÝCHOD | -1 | 10,00 | 2 |
+| 01.01.20 | Nákup | EAST | 1 | 10,00 | 1 |
+| 1.2.2020 | Transfer | EAST | -1 | 10,00 | 2 |
 | 1.2.2020 | Transfer | WEST | 1 | 10,00 | 3 |
 
 Since the value of the original inventory increase is LCY 10.00, the transfer is valued at that cost, not at LCY 12.00.

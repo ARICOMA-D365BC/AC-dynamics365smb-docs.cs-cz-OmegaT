@@ -9,123 +9,123 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Outbound Warehouse Flow
+# Detaily návrhu: Výstupní procesy skladu
 
-The outbound flow in the warehouse begins with a request from released source documents to bring the items out of the warehouse location, either to be shipped to an external party or to another company location. From the storage area, warehouse activities are performed at different complexity levels to bring the items out to the shipping docks.
+Výstupní tok ve skladu začíná požadavkem vydaných zdrojových dokladů na vydání zboží ze skladu, které má být dodáno externí straně nebo do jiného skladu společnosti. Z oblasti skladování se různé skladové činnosti provádějí na jistých úrovních složitosti, aby se zboží dostalo do přepravních doků.
 
-Each item is identified and matched to a corresponding inbound source document. The following outbound source documents exist:
+Každá položka je identifikována a spárována s odpovídajícím vstupním zdrojovým dokladem. Existují následující výstupní zdrojové doklady:
 
-- Sales order
-- Outbound transfer order
-- Purchase return order
-- Service order
+- Prodejní objednávka
+- Výstupní objednávka transferu
+- Objednávka nákupní vratky
+- Servisní zakázka
 
-In addition, the following internal source documents exist that function like outbound sources:
+Kromě toho existují následující interní zdrojové doklady, které fungují jako výstupní zdroje:
 
-- Production order with component need
-- Assembly order with component need
+- Výrobní zakázka s potřebou komponent
+- Montážní zakázka s potřebou komponent
 
-The last two documents represent outbound flows from the warehouse to internal operation areas. For more information about warehouse handling for internal inbound and outbound processes, see [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md).
+Poslední dva doklady představují odchozí toky ze skladu do interních provozních oblastí. For more information about warehouse handling for internal inbound and outbound processes, see [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md).
 
-Processes and UI documents in outbound warehouse flows are different for basic and advanced warehouse configurations. The main difference is that activities are performed order-by-order in basic warehouse configurations, and they are consolidated for multiple orders in advanced warehouse configurations. For more information about different warehouse complexity levels, see [Design Details: Warehouse Overview](design-details-warehouse-setup.md).
+Procesy a doklady uživatelského rozhraní v odchozích tocích skladu se liší pro základní a pokročilé nastavení skladu. Hlavním rozdílem je, že aktivity jsou zpracovány po objednávkách v základních konfiguracích skladu a jsou konsolidovány pro více objednávek v pokročilých konfiguracích skladu. For more information about different warehouse complexity levels, see [Design Details: Warehouse Overview](design-details-warehouse-setup.md).
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the outbound processes of picking and shipping can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
-| Metoda | Outbound Process | Bins | Picks | Shipments | Complexity Level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Odchozí proces | Přihrádky | Vyskladnění | Dodávky | Complexity Level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
 |------|----------------|----|-----|---------|-------------------------------------------------------------------------------------|  
-| A | Post pick and shipment from the order line | X | 2 |
-| B | Post pick and shipment from an inventory pick document | X | 3 |
-| C | Post pick and shipment from a warehouse shipment document | X | 4/5/6 |
-| D | Post pick from a warehouse pick document and post shipment from a warehouse shipment document | X | X | 4/5/6 |
+| A | Zaúčtování vyskladnění a dodávky z řádku objednávky | X | 2 |
+| B | Zaúčtování vyskladnění a dodávky z dokladu vyskladnění zásob | X | 3 |
+| C | Zaúčtování vyskladnění a dodávky z dokladu dodávky ze skladu | X | 4/5/6 |
+| D | Zaúčtování vyskladnění z dokladu vyskladnění a zaúčtování dodávky z dokladu dodávky ze skladu | X | X | 4/5/6 |
 
-Selecting an approach depends on the company's accepted practices and the level of their organizational complexity. In an order-by-order environment with straightforward processes and simple bin structure, method A, picking and shipping from the order line is appropriate. In other order-by-order companies where items for one order line might come from more than one bin or where warehouse workers cannot work with order documents, the use of separate pick documents is appropriate, method B. Where a company's picking and shipping processes involve multiple order handling and therefore require greater control and overview, the company might choose to use a warehouse shipment document and warehouse pick document to separate the picking and shipping tasks, methods C and D.
+Výběr přístupu závisí na přijatých postupech společnosti a na úrovni jejich organizační složitosti. V prostředí zpracování objednávek po objednávce s přímočarými procesy a jednoduchou strukturou přihrádek je vhodná metoda A, vychystávání a dodávka z řádku objednávky. V jiných společnostech typu „objednávka po objednávce“, kde zboží pro jeden řádek objednávky může pocházet z více než jedné přihrádky nebo kde pracovníci skladu nemohou pracovat s doklady objednávky, je vhodné použít samostatné doklady vyskladnění, metoda B. Pokud procesy vyskladnění a expedice společnosti zahrnují více zpracování objednávek, a proto vyžadují větší kontrolu a přehled, může se společnost rozhodnout použít doklady dodávky ze skladu a vyskladnění k oddělení výdejních a dodacích úkolů, metod C a Dodávky ze skladu.
 
-In methods A, B, and C, the actions of picking and shipping are combined in one step when posting the corresponding document as shipped. In method D, the pick is first registered, and then the shipment is posted at a later time from a different document.
+V metodách A, B a C jsou akce vyskladnění a dodávky kombinovány v jednom kroku při zaúčtování odpovídajícího dokladu jako dodaný. V metodě D je vyskladnění nejprve zapsáno a poté je dodávka zaúčtována z jiného dokladu.
 
-## Basic Warehouse Configurations
+## Základní konfigurace skladu
 
-The following diagram illustrates the outbound warehouse flows by document type in basic warehouse configurations. The numbers in the diagram correspond with the steps in the sections following the diagram.
+Následující diagram znázorňuje výstupní toky ze skladu podle typu dokladu v základním nastavení skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Outbound flow in basic warehouse configurations](media/design_details_warehouse_management_outbound_basic_flow.png "Outbound flow in basic warehouse configurations")
+![Výstupní tok v základním nastavení skladu](media/design_details_warehouse_management_outbound_basic_flow.png "Čísla v diagramu odpovídají krokům v následujících částech diagramu.")
 
-### 1: Release Source Document / Create Inventory Pick or Movement
+### 1: Vydání zdrojového dokladu / Vytvoření vyskladění nebo přesunu
 
-When a user who is responsible for source documents, such as a sales order processor or production planner, is ready for the outbound warehouse activity, he or she releases the source document to signal to warehouse workers that sold items or components can be picked and placed in the specified bins. Alternatively, the user creates inventory pick or movement documents for the individual order lines, in a push fashion, based on specified bins and quantities to handle.
+Pokud je uživatel, který je zodpovědný za zdrojové doklady, například zpracovatel prodejních objednávek nebo plánovač výroby, připraven na výstupního aktivitu skladu, vydá zdrojový doklad, aby dal pracovníkům skladu signál, že prodané zboží nebo komponenty lze vyskladní a umístit do zadaných přihrádek. Alternativně uživatel vytvoří doklady vyskladnění nebo přesunu zásob pro jednotlivé řádky objednávky nabízeným způsobem na základě zadaných přihrádek a množství, která mají být zpracovávána.
 
 > [!NOTE]  
-> Inventory movements are used to move items to internal operation areas in basic warehouse configurations, based on source documents or on an ad hoc basis.
+> Pohyby zásob se používají k přesunu zboží do interních provozních oblastí v základním nastavení skladu na základě zdrojových dokladů nebo na základě ad hoc přesunutí.
 
-### 2: Create Outbound Request
+### 2: Vytvoření odchozího požadavku
 
-When the outbound source document is released, an outbound warehouse request is created automatically. It contains references to the source document type and number and is not visible to the user.
+Po vydání výstupního zdrojového dokladu je automaticky vytvořen výstupní požadavek skladu. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný.
 
-### 3: Create Inventory Pick or Movement
+### 3: Vytvoření vyskaladnění nebo přesunu
 
-In the **Inventory Pick** or **Inventory Movement** page, the warehouse worker retrieves, in a pull fashion, the pending source document lines based on outbound warehouse requests. Alternatively, the inventory pick lines are already created, in a push fashion, by the user who is responsible for the source document.
+In the **Inventory Pick** or **Inventory Movement** page, the warehouse worker retrieves, in a pull fashion, the pending source document lines based on outbound warehouse requests. Případně jsou řádky vyskladnění zásob již vytvořené uživatelem, který je zodpovědný za zdrojový doklad.
 
-### 4: Post Inventory Pick or Register Inventory Movement
+### 4: Zápis vyskladnění nebo zaevidování Přesunu zásob
 
-On each line for items that have been picked or moved, partially or fully, the warehouse worker fills in the **Quantity** field, and then posts the inventory pick or registers the inventory movement. Source documents related to the inventory pick are posted as shipped or consumed. Source documents related to inventory movements are not posted.
+On each line for items that have been picked or moved, partially or fully, the warehouse worker fills in the **Quantity** field, and then posts the inventory pick or registers the inventory movement. Zdrojové doklady související s vyskladněním zásob jsou zaúčtovány jako dodané nebo spotřebované. Zdrojové doklady související s přesuny zásob nejsou zaúčtovány.
 
-For inventory picks, negative item ledger entries are created, warehouse entries are created, and the pick request is deleted, if fully handled. For example, the **Quantity Shipped** field on the outbound source document line is updated. A posted shipment document is created  that reflects the sales order, for example, and the shipped items.
+Pro vyskladnění zásob jsou vytvořeny záporné položky zboží, vytvořeny položky skladu a odstraněn požadavek na vyskladnění, pokud je plně zpracován. For example, the **Quantity Shipped** field on the outbound source document line is updated. Vytvoří se zaúčtovaný doklad dodávky, který odráží například prodejní objednávku a dodané zboží.
 
-## Advanced Warehouse Configurations
+## Pokročílé nastavení skladu
 
-The following diagram illustrates the outbound warehouse flow by document type in advanced warehouse configurations. The numbers in the diagram correspond with the steps in the sections following the diagram.
+Následující diagram znázorňuje výstupní tok ze skladu podle typu dokladu při pokročilém nastavení skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Outbound flow in advanced warehouse configurations](media/design_details_warehouse_management_outbound_advanced_flow.png "Outbound flow in advanced warehouse configurations")
+![Výstupní tok v pokročilém nastavení skladu](media/design_details_warehouse_management_outbound_advanced_flow.png "Výstupní tok v pokročilém nastavení skladu")
 
-### 1: Release Source Document
+### 1: Vydání zdrojového dokladu
 
-When a user who is responsible for source documents, such as a sales order processor or production planner, is ready for the outbound warehouse activity, he or she releases the source document to signal to warehouse workers that sold items or components can be picked and placed in the specified bins.
+Pokud je uživatel, který je zodpovědný za zdrojové doklady, například zpracovatel prodejních objednávek nebo plánovač výroby, připraven na výstupního aktivitu skladu, vydá zdrojový doklad, aby dal pracovníkům skladu signál, že prodané zboží nebo komponenty lze vyskladní a umístit do zadaných přihrádek.
 
-### 2: Create Outbound Request (2)
+### 2: Vytvoření výstupního požadavku (2)
 
-When the outbound source document is released, an outbound warehouse request is created automatically. It contains references to the source document type and number and is not visible to the user.
+Po vydání výstupního zdrojového dokladu je automaticky vytvořen výstupní požadavek skladu. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný.
 
-### 3: Create Warehouse Shipment
+### 3: Vytvoření dodávky ze skladu
 
-On the **Warehouse Shipment** page, the shipping worker who is responsible retrieves pending source document lines based on the outbound warehouse request. Several source document lines can be combined in one warehouse shipment document.
+On the **Warehouse Shipment** page, the shipping worker who is responsible retrieves pending source document lines based on the outbound warehouse request. Několik řádků zdrojového dokladu lze kombinovat v jednom dokladu dodávky ze skladu.
 
-### 4: Release Shipment / Create Warehouse Pick
+### 4: Vydání dodávky ze skladu / Vytvoření vyskladnění
 
-The shipping worker who is responsible releases the warehouse shipment, so that warehouse workers can  create or coordinate warehouse picks for the shipment in question.
+Odpovědný pracovník expedice vydá dodávku ze skladu, aby pracovníci skladu mohli vytvořit nebo koordinovat vyskladnění pro příslušnou dodávku.
 
-Alternatively, the user creates warehouse pick document for individual shipment lines, in a push fashion, based on specified bins and quantities to handle.
+Alternativně může uživatel vytvořit doklad vyskladnění pro jednotlivé řádky dodávky nabízeným způsobem na základě zadaných přihrádek a množství, které má být zpracováno.
 
-### 5: Release Internal Operation / Create Warehouse Pick
+### 5: Vydání interní operace / Vytvoření vyskladnění
 
-The user who is responsible for internal operations releases an internal source document, such as a production and assembly order, so that warehouse workers can create or coordinate warehouse picks for the internal operation in question.
+Uživatel odpovědný za interní operace vydá interní zdrojový doklad, například výrobní a montážní zakázku, aby pracovníci skladu mohli vytvářet nebo koordinovat vyskladnění pro interní operaci.
 
-Alternatively, the user creates warehouse pick documents for the individual production or assembly order, in a push fashion, based on specified bins and quantities to handle.
+Alternativně uživatel vytvoří doklady vyskladnění pro jednotlivé výrobní nebo montážní zakázky nabízeným způsobem na základě zadaných přihrádek a množství, která mají být zpracována.
 
-### 6: Create Pick Request
+### 6: Vytvoření požadavku vyskladnění
 
-When the outbound source document is released, a warehouse pick request is created automatically. It contains references to the source document type and number and is not visible to the user. Depending on the setup, consumption from a production and assembly order also creates a pick request to pick the needed components from inventory.
+Po vydání výstupního zdrojového dokladu se automaticky vytvoří požadavek na vyskladnění. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný. V závislosti na nastavení se vytvoří spotřeba z výrobní a montážní zakázky a také požadavek na vyskladnění potřebných komponent ze skladu.
 
-### 7: Generate Pick Worksheet Lines
+### 7: Generování řádků sešitu vyskladnění
 
-The user who is responsible for coordinating picks, retrieves warehouse pick lines in the **Pick Worksheet** based on pick requests from warehouse shipments or internal operations with component consumption. The user selects the lines to be picked and prepares the picks by specifying which bins to take from, which bins to place in, and how many units to handle. The bins may be predefined by setup of the warehouse location or operation resource.
+The user who is responsible for coordinating picks, retrieves warehouse pick lines in the **Pick Worksheet** based on pick requests from warehouse shipments or internal operations with component consumption. Uživatel vybere řádky, které mají být vyskladněné a připraví vyskladnění určením přihrádek, ze kterých se má odebírat a vkládat a kolik jednotek má být manipulováno. Přihrádky mohou být předdefinovány nastavením skladu nebo zdroje.
 
-The user specifies picking methods for optimized warehouse handling and then uses a function to create the corresponding warehouse pick documents, which are assigned to different warehouse workers who perform warehouse picks. When the warehouse picks are fully assigned, the lines in the **Pick Worksheet** are deleted.
+Uživatel určuje metody vyskladnění pro optimalizované zpracování skladu a potom pomocí funkce vytvoří odpovídající doklady vyskladnění, které jsou přiřazeny různým pracovníkům skladu, kteří provádějí vyskladnění. When the warehouse picks are fully assigned, the lines in the **Pick Worksheet** are deleted.
 
-### 8: Create Warehouse Pick Documents
+### 8: Vytvoření dokladů vyskladnění
 
-The warehouse worker who perform picks create a warehouse pick document, in a pull fashion, based on the released source document. Alternatively, the warehouse pick document is created and assigned to the warehouse worker in a push fashion.
+Pracovník skladu, který provádí vyskladnění, vytvoří doklad vyskladnění na základě vydaméjp zdrojové dokladu. Alternativně je doklad vyskladnění vytvořen a přiřazen pracovníkovi skladu nabízeným způsobem.
 
-### 9: Register Warehouse Pick
+### 9: Zápis vyskladnění
 
 On each line for items that have been picked, partially or fully, the warehouse worker fills in the **Quantity** field on the **Warehouse Pick** page and then registers the warehouse pick.
 
-Warehouse entries are created, and the warehouse pick lines are deleted, if fully handled. The warehouse pick document remains open until the full quantity of the related warehouse shipment is registered. **Množství Picked** field on the warehouse shipment lines is updated accordingly.
+Položky skladu jsou vytvořeny a řádky vyskladnění jsou odstraněny, pokud jsou plně zpracovány. Doklad vyskladnění zůstane otevřený, dokud není zapsáno celé množství související dodávky ze skladu. **Množství Picked** field on the warehouse shipment lines is updated accordingly.
 
-### 10: Post Warehouse Shipment
+### 10: Účtování dodávky ze skladu
 
-When all items on the warehouse shipment document are registered as picked to the specified shipment bins, the shipping worker who is responsible posts the warehouse shipment. Negative item ledger entries are created. For example, the **Quantity Shipped** field on the outbound source document line is updated.
+Když jsou všechny položky v dokladu dodávky ze skladu zapsané jako vyskladněné do určených přihrádek, pracovník, který je zodpovědný za zaúčtování dodávky ze skladu dodávku zaúčtuje. Vytvoří se záporné položky zboží. For example, the **Quantity Shipped** field on the outbound source document line is updated.
 
 ## Viz také
 

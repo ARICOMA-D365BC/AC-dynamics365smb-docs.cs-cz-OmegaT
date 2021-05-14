@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: VAT, sales, purchases,
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
@@ -17,6 +17,9 @@
 If your country or region requires you to calculate value-added tax (VAT) on sales and purchase transactions so that you can report the amounts to a tax authority, you can set up [!INCLUDE[prod_short](includes/prod_short.md)] to calculate VAT automatically on sales and purchase documents. For more information, see [Setting Up to Calculations and Posting Methods for Value-Added Tax](finance-setup-vat.md).
 
 There are, however, some VAT-related tasks that you can do manually. For example, you might need to correct a posted amount if you discover that a vendor uses a different rounding method.
+
+> [!TIP]
+> You can let [!INCLUDE[prod_short](includes/prod_short.md)] validate VAT registration numbers and other company information when you create or update documents. For more information, see [Validate VAT Registration Numbers](finance-how-validate-vat-registration-number.md).
 
 ## Calculating and Displaying VAT Amounts in Sales and Purchase Documents
 You can calculate and display VAT amounts in sales and purchase documents differently, depending on the type of customer or vendor that you are dealing with. You can also override the calculated VAT amount to match the VAT amount calculated by your vendor on a given transaction.
@@ -39,7 +42,7 @@ The following table provides an overview of how application calculates the unit 
 |-----------------------------------------------|----------------------------------------------------|--------------------------|  
 | No check mark | No check mark | The **Unit Price** on the Item Card is copied to **Unit Price Excl. VAT** field on the sales lines. |
 | No check mark | Check mark | The application calculates the VAT amount per unit and adds to the **Unit Price** on the Item Card. This total Unit Price is then entered in the **Unit Price Incl. VAT field** on the sales lines. |
-| Check mark | No check mark | The application calculates the VAT amount included in the **Unit Price** on the Item Card using the VAT% related to the VAT Bus. Posting Gr. (Price) and the VAT Prod. Posting Group combination. The **Unit Price** on the Item Card, reduced by the VAT amount, is then entered in the **Unit Price Excl. VAT** field in the sales lines. |
+| Check mark | No check mark | The application calculates the VAT amount included in the **Unit Price** on the Item Card using the VAT% related to the VAT Bus. Posting Gr. (Price) and the VAT Prod. zboží a jejich kombinace. The **Unit Price** on the Item Card, reduced by the VAT amount, is then entered in the **Unit Price Excl. VAT** field in the sales lines. |
 | Check mark | Check mark | The **Unit Price** on the Item Card is copied to **Unit Price Incl. VAT** field on the sales lines. |
 
 ## Correcting VAT Amounts Manually in Sales and Purchase Documents
@@ -87,17 +90,17 @@ You must perform the following steps before you manually enter VAT in a sales or
 Instead of using journals to post an import VAT invoice, you can use a purchase invoice.
 
 ### To set up purchasing for posting import VAT invoices
-1. Set up a vendor card for the import authority that sends you the import VAT invoice. The **Gen. obch. Posting Group** and **VAT Bus. Posting Group** must be set up in the same way as the general ledger account for the import VAT.
+1. Set up a vendor card for the import authority that sends you the import VAT invoice. The **Gen. účto  Posting Group** and **VAT Bus. Posting Group** must be set up in the same way as the general ledger account for the import VAT.
 2. Create a **Gen. Product Posting Group** for the import VAT and set up an import VAT **Def. VAT Product Posting Group** for the related **Gen. Product Posting Group**.
 3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtovní osnova** a poté vyberte související odkaz.
 4. Select the import VAT general ledger account, and then choose the **Edit** action.
 5. On the **Posting** FastTab, select the **Gen. účto  Posting Group** setup for import VAT. [!INCLUDE[prod_short](includes/prod_short.md)] automatically fills in the **VAT Prod. Posting Group** field.
 6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
-7. Create a combination of the **Gen. obch. Posting Group** for the VAT authority and the **Gen. účto  Posting Group** for import VAT. For this new combination, in the **Purchase Account** field, choose the import VAT general ledger account.
+7. Create a combination of the **Gen. účto  Posting Group** for the VAT authority and the **Gen. účto  Posting Group** for import VAT. For this new combination, in the **Purchase Account** field, choose the import VAT general ledger account.
 
 ### To create a new invoice for the import authority vendor once you have completed the setup
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. Create a new purchase invoice.
+2. Vytvořte novou nákupní fakturu.
 3. In the **Buy-from Vendor No.** field, choose the import authority vendor, and then choose the **OK** button.
 4. In the purchase line, in the **Type** field, choose **G/L Account**, and in the **No.** field, choose the import VAT general ledger account.
 5. In the **Quantity** field, type **1**.
@@ -176,8 +179,9 @@ To view a group of certificates, you start from the **Certificates of Supply** p
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
 
 ## Viz také
-[Setting Up to Calculations and Posting Methods for Value-Added Tax](finance-setup-vat.md)   
-[Report VAT to a Tax Authority](finance-how-report-vat.md)
 
+[Setting Up Calculations and Posting Methods for Value-Added Tax](finance-setup-vat.md)  
+[Report VAT to a Tax Authority](finance-how-report-vat.md)  
+[Validate a VAT Registration Number](finance-how-validate-vat-registration-number.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

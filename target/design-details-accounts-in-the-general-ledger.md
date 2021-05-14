@@ -9,85 +9,85 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Accounts in the General Ledger
-To reconcile inventory and capacity ledger entries with the general ledger, the related value entries are posted to different accounts in the general ledger. Pro více informací navštivte [Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md).
+# Detaily návrhu: Účty hlavní knihy
+Chcete-li odsouhlasit položky zásob a kapacit s věcnými položkami, jsou související položky ocenění zaúčtovány na různé účty v hlavní finanční knize. Pro více informací navštivte [Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md).
 
-## From the Inventory Ledger
-The following table shows the relationship between different types of inventory value entries and the accounts and balancing accounts in the general ledger.
+## Z položek zásob
+Následující tabulka ukazuje vztah mezi různými typy položek hodnot zásob a účty a protiúčty v hlavní knize.
 
 | **Typ položky zboží** | **Value Entry Ttype** | **Variance Type** | **Expected Cost** | **Account** | **Balancing Account** |
 |--------------------------------|--------------------------|-----------------------|-----------------------|-----------------|---------------------------|  
-| Nákup | Přímé náklady | Ano | Inventory  (Interim) | Invt. Accrual Acc. (Interim) |
-| Nákup | Přímé náklady | Ne | Zásoby | Direct Cost Applied |
-| Nákup | Indirect Cost | Ne | Zásoby | Overhead Applied |
-| Nákup | Variance | Nákup | Ne | Zásoby | Purchase Variance |
-| Nákup | Přecenění | Ne | Zásoby | Inventory Adjmt. |
-| Nákup | Rounding | Ne | Zásoby | Inventory Adjmt. |
-| Prodej | Přímé náklady | Ano | Inventory  (Interim) | COGS (Interim) |
+| Nákup | Přímé náklady | Ano | Zásoby (dočasné) | Invt. Accrual Acc. (Dočasné) |
+| Nákup | Přímé náklady | Ne | Zásoby | Použité přímé náklady |
+| Nákup | Nepřímé náklady | Ne | Zásoby | Vyrvonaná režie |
+| Nákup | Odchylka | Nákup | Ne | Zásoby | Odchylka nákupu |
+| Nákup | Přecenění | Ne | Zásoby | Oprava zásob |
+| Nákup | Zaokrouhlení | Ne | Zásoby | Oprava zásob |
+| Prodej | Přímé náklady | Ano | Zásoby (dočasné) | COGS (Interim) |
 | Prodej | Přímé náklady | Ne | Zásoby | COGS |
-| Prodej | Přecenění | Ne | Zásoby | Inventory Adjmt. |
-| Prodej | Rounding | Ne | Zásoby | Inventory Adjmt. |
-| Positive Adjmt.,Negative Adjmt., Transfer | Přímé náklady | Ne | Zásoby | Inventory Adjmt. |
-| Positive Adjmt.,Negative Adjmt., Transfer | Přecenění | Ne | Zásoby | Inventory Adjmt. |
-| Positive Adjmt.,Negative Adjmt., Transfer | Rounding | Ne | Zásoby | Inventory Adjmt. |
-| (Production) Consumption | Přímé náklady | Ne | Zásoby | WIP |
-| (Production) Consumption | Přecenění | Ne | Zásoby | Inventory Adjmt. |
-| (Production) Consumption | Rounding | Ne | Zásoby | Inventory Adjmt. |
-| Assembly Consumption | Přímé náklady | Ne | Zásoby | Inventory Adjmt. |
-| Assembly Consumption | Přímé náklady | Ne | Direct Cost Applied | Inventory Adjmt. |
-| Assembly Consumption | Indirect Cost | Ne | Overhead Applied | Inventory Adjmt. |
-| (Production) Output | Přímé náklady | Ano | Inventory  (Interim) | WIP |
-| (Production) Output | Přímé náklady | Ne | Zásoby | WIP |
-| (Production) Output | Indirect Cost | Ne | Zásoby | Overhead Applied |
-| (Production) Output | Variance | Material | Ne | Zásoby | Material Variance |
-| (Production) Output | Variance | Capacity | Ne | Zásoby | Capacity Variance |
-| (Production) Output | Variance | Subcontracted | Ne | Zásoby | Subcontracted Variance |
-| (Production) Output | Variance | Capacity Overhead | Ne | Zásoby | Cap. Overhead Variance |
-| (Production) Output | Variance | Manufacturing Overhead | Ne | Zásoby | Mfg. Overhead Variance |
-| (Production) Output | Přecenění | Ne | Zásoby | Inventory Adjmt. |
-| (Production) Output | Rounding | Ne | Zásoby | Inventory Adjmt. |
-| Assembly Output | Přímé náklady | Ne | Zásoby | Inventory Adjmt. |
-| Assembly Output | Přecenění | Ne | Zásoby | Inventory Adjmt. |
-| Assembly Output | Indirect Cost | Ne | Zásoby | Overhead Applied |
-| Assembly Output | Variance | Material | Ne | Zásoby | Material Variance |
-| Assembly Output | Variance | Capacity | Ne | Zásoby | Capacity Variance |
-| Assembly Output | Variance | Capacity Overhead | Ne | Zásoby | Cap. Overhead Variance |
-| Assembly Output | Variance | Manufacturing Overhead | Ne | Zásoby | Mfg. Overhead Variance |
-| Assembly Output | Rounding | Ne | Zásoby | Inventory Adjmt. |
+| Prodej | Přecenění | Ne | Zásoby | Oprava zásob |
+| Prodej | Zaokrouhlení | Ne | Zásoby | Oprava zásob |
+| Příjem, Výdej, Transfer | Přímé náklady | Ne | Zásoby | Oprava zásob |
+| Příjem, Výdej, Transfer | Přecenění | Ne | Zásoby | Oprava zásob |
+| Příjem, Výdej, Transfer | Zaokrouhlení | Ne | Zásoby | Oprava zásob |
+| Spotřeba (Výroby) | Přímé náklady | Ne | Zásoby | Nedokončená výroba |
+| Spotřeba (Výroby) | Přecenění | Ne | Zásoby | Oprava zásob |
+| Spotřeba (Výroby) | Zaokrouhlení | Ne | Zásoby | Oprava zásob |
+| Spotřeba montáže | Přímé náklady | Ne | Zásoby | Oprava zásob |
+| Spotřeba montáže | Přímé náklady | Ne | Použité přímé náklady | Oprava zásob |
+| Spotřeba montáže | Nepřímé náklady | Ne | Vyrvonaná režie | Oprava zásob |
+| Výstup (Výroby) | Přímé náklady | Ano | Zásoby (dočasné) | Nedokončená výroba |
+| Výstup (Výroby) | Přímé náklady | Ne | Zásoby | Nedokončená výroba |
+| Výstup (Výroby) | Nepřímé náklady | Ne | Zásoby | Vyrvonaná režie |
+| Výstup (Výroby) | Odchylka | Materiál | Ne | Zásoby | Odchylka materiálu |
+| Výstup (Výroby) | Odchylka | Kapacita | Ne | Zásoby | Odchylka kapacit |
+| Výstup (Výroby) | Odchylka | Subdodávky | Ne | Zásoby | Odchylka subdodávky |
+| Výstup (Výroby) | Odchylka | Režie kapacit | Ne | Zásoby | Odchylka režie kapacity |
+| Výstup (Výroby) | Odchylka | Režie výroby | Ne | Zásoby | Mfg. režie kapacity |
+| Výstup (Výroby) | Přecenění | Ne | Zásoby | Oprava zásob |
+| Výstup (Výroby) | Zaokrouhlení | Ne | Zásoby | Oprava zásob |
+| Výstup montáže | Přímé náklady | Ne | Zásoby | Oprava zásob |
+| Výstup montáže | Přecenění | Ne | Zásoby | Oprava zásob |
+| Výstup montáže | Nepřímé náklady | Ne | Zásoby | Vyrvonaná režie |
+| Výstup montáže | Odchylka | Materiál | Ne | Zásoby | Odchylka materiálu |
+| Výstup montáže | Odchylka | Kapacita | Ne | Zásoby | Odchylka kapacit |
+| Výstup montáže | Odchylka | Režie kapacit | Ne | Zásoby | Odchylka režie kapacity |
+| Výstup montáže | Odchylka | Režie výroby | Ne | Zásoby | Mfg. režie kapacity |
+| Výstup montáže | Zaokrouhlení | Ne | Zásoby | Oprava zásob |
 
-## From the Capacity Ledger
-The following table shows the relationship between different types of capacity value entries and the accounts and balancing accounts in the general ledger. Capacity ledger entries represent labor time consumed in assembly or production work.
+## Z položek kapacity
+Následující tabulka ukazuje vztah mezi různými typy položek ocenění kapacity, účtů a protiúčtů v hlavní knize. Položky kapacity představují pracovní dobu spotřebovou při montážních nebo výrobě.
 
 | **Work Type** | **Capacity Ledger Entry Type** | **Value Entry Type** | **Account** | **Balancing Account** |
 |-------------------|------------------------------------|--------------------------|-----------------|---------------------------|  
-| Montáž | Zdroj | Přímé náklady | Direct Cost Applied | Inventory Adjmt. |
-| Montáž | Zdroj | Indirect Cost | Overhead Applied | Inventory Adjmt. |
-| Production | Machine Center/Work Center | Přímé náklady | WIP Account | Direct Cost Applied |
-| Production | Machine Center/Work Center | Indirect Cost | WIP Account | Overhead Applied |
+| Montáž | Zdroj | Přímé náklady | Použité přímé náklady | Oprava zásob |
+| Montáž | Zdroj | Nepřímé náklady | Vyrvonaná režie | Oprava zásob |
+| Výroba | Strojní centra/Pracovní centra | Přímé náklady | Účet nedokončené výroby | Použité přímé náklady |
+| Výroba | Strojní centra/Pracovní centra | Nepřímé náklady | Účet nedokončené výroby | Vyrvonaná režie |
 
-## Assembly Costs are Always Actual
-As shown in the table above, assembly postings are not represented in interim accounts. This is because the concept of work in process (WIP) does not apply in assembly output posting, unlike in production output posting. Assembly costs are only posted as actual cost, never as expected cost.
+## Náklady na montáž jsou vždy skutečné
+Jak je uvedeno ve výše uvedené tabulce, účtování montáže není v průběžných účtech reprezentováno. Důvodem je, že koncept nedokončené výroby (NV) se na účtování výstupu montáže nevztahuje, na rozdíl od účtování výstupu výroby. Náklady na motnáž jsou zaúčtovány pouze jako skutečné náklady, nikdy jako očekávané náklady.
 
 Pro více informací navštivte [Podrobnosti návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md).
 
-## Calculating the Amount to Post to the General Ledger
+## Výpočet částky zaúčtované do hlavní finanční knihy
 The following fields in the **Value Entry** table are used to calculate the expected cost amount that is posted to the general ledger:
 
 - Částka nákladů (skutečná)
-- Zaúčtované náklady
+- Náklady zaúčtované do Hlavní finančí knihy
 - Částka nákladů (očekávaná)
-- Zaúčtované očekávané náklady
+- Očekávané náklady zaúčtované do hlavní knihy
 
-The following table shows how the amounts to post to the general ledger are calculated for the two different cost types.
+Následující tabulka ukazuje, jak se částky, které mají být zaúčtované do hlavní knihy, počítají pro dva různé typy nákladů.
 
-| Cost Type | Calculation |
+| Typ nákladů | Výpočet |
 |---------------|-----------------|  
-| Actual Cost | Cost Amount (Actual) – Cost Posted to G/L |
-| Očekávané náklady | Cost Amount (Expected) –  Expected Cost Posted to G/L |
+| Skutečné náklady | Částka nákladů (skutečná) – náklady zaúčtované do hlavní knihy |
+| Očekávané náklady | Částka nákladů (očekávaná) - očekávané náklady účtované do hlavní knihy |
 
 ## Viz také
 [Design Details: Inventory Costing](design-details-inventory-costing.md)   

@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -25,7 +25,7 @@ The Dimensions functionality plays an important role in business intelligence. A
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | View actual amounts compared to budgeted amounts for all accounts and for several periods. | [Analyze Actual Amounts Versus Budgeted Amounts](bi-how-analyze-actual-versus-budget.md) |
 | Create new account schedules to define financial statements for reporting or for display as charts. | [Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md) |

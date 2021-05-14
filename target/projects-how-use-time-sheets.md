@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project management, capacity, staff, resource
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -29,7 +29,7 @@ You can use the **Create Time Sheets** batch job to set up time sheets for a spe
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Time Sheets**, and then choose the related link.
 2. On the **Time Sheet List** page, choose the **Create Time Sheets** action.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]  
    > The **Use Time Sheet** and **Time Sheet Owner User ID** fields must be filled in on the card for the resource of the time sheet.
@@ -136,7 +136,7 @@ After you have approved time sheet entries for a resource, you can post them to 
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resource Journal**, and then choose the related link.
 2. Choose the **Suggest Lines from Time Sheets** action.
-3. Vyplňte pole podle potřeby.
+3. Podle potřeby vyplňte pole.
 4. Zvolte tlačítko **OK**. Entries for usage are created in the resource journal, where you can modify the information as needed.
 5. Vyberte akci **Zaúčtovat**.
 6. To verify the posting, choose the **Ledger Entries** action. The **Resource Ledger Entries** page opens showing the result of posting the resource journal.
@@ -146,7 +146,7 @@ After you have approved time sheet entries for a job, you can post them to the r
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Journal**, and then choose the related link.
 2. Choose the **Suggest Lines from Time Sheets** action.
-3. Vyplňte pole podle potřeby.
+3. Podle potřeby vyplňte pole.
 4. Zvolte tlačítko **OK**. Entries for usage are created in the job journal, where you can modify the information as needed.
 
    > [!NOTE]  

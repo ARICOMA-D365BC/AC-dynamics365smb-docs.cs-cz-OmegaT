@@ -9,18 +9,18 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, item tracking, posting, inventory
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Item Tracking Posting Structure
-To align with inventory costing functionality and to obtain a simpler and more robust solution, item ledger entries are used as the primary carrier of item tracking numbers.
+# Detaily návrhu: Struktura účtování sledování zboží
+Pro sladění s funkcemi kalkulace zásob a pro získání jednoduššího a robustnějšího řešení se jako hlavní nosič používají položky sledování zboží k přenášení informací o číslech sledování zboží.
 
-Item tracking numbers on order network entities and non-order network entities are specified in the **Reservation Entry** table (T337). Item tracking numbers that are related to historical information are retrieved directly from the item ledger entries that are related to the transaction in question. This means that item ledger entries reflect the item tracking specification of the posted order line.
+Item tracking numbers on order network entities and non-order network entities are specified in the **Reservation Entry** table (T337). Čísla sledování zboží, která souvisejí s historickými informacemi, jsou načtena přímo z položek zboží, které souvisejí s danou transakcí. To znamená, že položky zboží odrážejí specifikaci sledování zboží zaúčtovaného řádku objednávky.
 
 The **Item Tracking Lines** page retrieves the information from T337 and the item ledger entries and shows it through the temporary table, **Tracking Specification** (T336). T336 also hold the temporary data in the **Item Tracking Lines page** for item tracking quantities that remain to be invoiced.
 
-## One-to-Many Relation
+## Vztah 1:M
 The **Item Entry Relation** table, which is used to link a posted document line with its related item ledger entries, consists of two main parts:
 
 * A pointer to the posted document line, the **Order Line No.** field.
@@ -28,18 +28,18 @@ The **Item Entry Relation** table, which is used to link a posted document line 
 
 The functionality of the existing **Entry No.** field, which relates an item ledger entry to a posted document line, handles the typical one-to-one relation when no item tracking numbers exist on the posted document line. If item tracking numbers exist, then the **Entry No.** field is left blank, and the one-to-many relation is handled by the **Item Entry Relation** table. If the posted document line carries item tracking numbers but only relates to a single item ledger entry, then the **Entry No.** field handles the relation, and the no record is created in the **Item Entry Relation** table.
 
-## Codeunits 80 and 90
-To split the item ledger entries during posting, the code in codeunit 80 and codeunit 90, is encircled by loops that run through global temporary record variables. This code calls codeunit 22 with an item journal line. These variables are initialized when item tracking numbers exist for the document line. To keep the code simple, this looping structure is always used. If no item tracking numbers exist for the document line, then a single record is inserted, and the loop runs only once.
+## Codeunity 80 a 90
+Chcete-li rozdělit položky zboží během účtování, kód v codeunitě 80 a 90, obsahuje smyčky, které prochází globálními dočasnými proměnnými záznamu. Tento kód volá codeunitu 22 s řádkem deníku zboží. Tyto proměnné jsou inicializovány, pokud pro řádek dokladu existují čísla sledování zboží. Aby byl kód jednoduchý, vždy se používá tato struktura opakování. Pokud pro řádek dokladu neexistují žádná čísla sledování zboží, vloží se jeden záznam a smyčka se spustí pouze jednou.
 
-## Posting the Item Journal
-Item tracking numbers are transferred via the reservation entries that relate to the item ledger entry, and the looping through item tracking numbers occurs in codeunit 22. This concept works in the same way when an item journal line is used indirectly to post a sale or purchase order as when an item journal line is used directly. When the item journal is used directly, the **Source Row ID** field points to the item journal line itself.
+## Účtování deníku zboží
+Čísla sledování zboží jsou převedeny prostřednictvím položek rezervace, které se vztahují k položce zboží a opakování prostřednictvím čísel sledování zboží pomocí codeunity 22. Tento koncept funguje stejným způsobem, když se řádek deníku zboží používá nepřímo k zaúčtování prodejní nebo nákupní objednávky, jako když je řádek deníku zboží použit přímo. When the item journal is used directly, the **Source Row ID** field points to the item journal line itself.
 
-## Code Unit 22
-Codeunits 80 and 90 loop the call of codeunit 22 during the invoice posting of item tracking numbers and during the invoicing of existing shipments or receipts.
+## Code unita 22
+Codeunity 80 a 90 opakují volání procedury 22 během zaúčtování čísel sledování zboží faktry a při fakturaci existujicích dodávek nebo příjemek.
 
-During quantity posting of item tracking numbers, codeunit 22 retrieves item tracking numbers from the entries in T337 that relate to the posting. These entries are placed directly on the item journal line.
+Během účtování množství čísel sledování zboží načte Codeunita 22 čísla sledování zboží z položek v T337, které se vztahují k účtování. Tyto položky jsou umístěny přímo na řádku deníku zboží.
 
-Codeunit 22 loops through the item tracking numbers and splits the posting into the respective item ledger entries that carry the item tracking numbers. Information about which item ledger entries are created is returned to T337 by using a temporary T336 record, which is called by a procedure in codeunit 22. This procedure is triggered when codeunit 22 has finished its run because at that point, the codeunit 22 object contains the information. When the temporary T336 record is retrieved, codeunits 80 and 90 create records in the **Item Entry Relation** table to link the created item ledger entries to the created shipment or receipt line. Codeunits 80 or codeunit 90 then converts the temporary T336 records to real T336 records that are related to the line in question. However, this conversion occurs only if the posted document line is not deleted, because it is only partially posted.
+Codeunit 22 prochází čísly sledování zboží a rozdělí účtování na příslušné položky zboží, které nesou čísla sledování zboží. Informace o tom, které položky zboží jsou vytvořeny, jsou vráceny do  tabulky T337 pomocí dočasného záznamu v tabulce T336, které jsou volány procedurou codeunitě 22. Tento postup se spustí, když codeunita 22 dokončí jeho spuštění, protože v tomto okamžiku codeunita 22 obsahuje informace. When the temporary T336 record is retrieved, codeunits 80 and 90 create records in the **Item Entry Relation** table to link the created item ledger entries to the created shipment or receipt line. Codeunita 80 nebo 90 pak převede dočasné záznamy v T336 na skutečné záznamy v T336, které souvisejí s daným řádkem. K tomuto převodu však dochází, pouze pokud není odstraněn řádek zaúčtovaného dokladu, protože je zaúčtován pouze částečně.
 
 ## Viz také
 [Design Details: Item Tracking](design-details-item-tracking.md)   

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: service, cost, service order
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -24,7 +24,7 @@ Before you can work with contracts, you must set up the following:
 
 ## To set up a service contract group
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contract Groups**, and then choose the related link.
-2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. Choose the **Disc. on Contr. Orders Only** check box if you want contract or service discounts to be valid only for contract service orders, such as maintenance.
 
 ## To set up a service contract account group
@@ -49,7 +49,7 @@ Before you can work with contracts, you must set up the following:
 2. Create a new customer template card.
 3. On the **General** FastTab, enter a code and a description for the customer template in the **Code** and **Description** fields respectively.
 4. To define search criteria, fill in the other fields, such as **Country/Region Code**, **Territory Code**, and **Language Code**.
-5. Fill in the **Gen. obch. Posting Group** and **Customer Posting Group** fields.
+5. Fill in the **Gen. účto  Posting Group** and **Customer Posting Group** fields.
 
 ## Viz také
 [Setting Up Service Management](service-setup-service.md)

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: bholtorf
 
 ---
@@ -46,9 +46,9 @@ The process of creating and importing a configuration package involves the follo
 
 ### Database Schema
 
-When exporting and importing configuration packages between two company databases, the databases should have the same schema to ensure that all data is transferred successfully. This means that the databases should have the same table and field structure, in which the tables have the same primary keys and fields have the same IDs and data types.
+When exporting and importing configuration packages between two company databases, the databases should have the same schema to ensure that all data is transferred successfully. To znamená, že databáze by měly mít stejnou tabulku a strukturu polí, ve kterých tabulky mají stejné primární klíče a pole mají stejné ID a datové typy.
 
-You can import a configuration package that has been exported from a database that has a different schema than that target database. However, any tables or fields in the configuration package that are missing in the target database will not be imported. Tables with different primary keys and fields with different data types will also not successfully import. For example, if the configuration pack includes table **50000, Customer** that has primary key **Code20** and the database to which you import the pack includes table **50000, Customer Bank Account** that has the primary key **Code20 + Code 20**, then data will not be imported.
+Můžete importovat konfigurační balíček, který byl exportován z databáze s jiným schématem, než je cílová databáze. Všechny tabulky nebo pole v konfiguračním balíčku, které chybí v cílové databázi nebudou importovány. Tables with different primary keys and fields with different data types will also not successfully import. For example, if the configuration pack includes table **50000, Customer** that has primary key **Code20** and the database to which you import the pack includes table **50000, Customer Bank Account** that has the primary key **Code20 + Code 20**, then data will not be imported.
 
 ## To create a configuration package
 
@@ -141,16 +141,16 @@ After you have defined the tables that you want to treat as part of your configu
 
 ## To review or customize existing database data
 
-As you create a configuration package for a solution, you can view and customize the available database data to suit your customer needs. The database table must have an associated page.
+Při vytváření konfiguračního balíčku pro řešení si můžete prohlížet a přizpůsobovat dostupná databázová data podle svých potřeb. The database table must have an associated page.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Worksheet**, and then choose the related link.
 2. In the configuration worksheet, identify the tables whose data that you want to view or customize.
 
    > [!NOTE]  
-   > Make sure that each table has a page ID assigned to it. For standard [!INCLUDE[prod_short](includes/prod_short.md)] tables, this value is automatically filled in. For custom tables, you must provide the ID.
+   > Make sure that each table has a page ID assigned to it. For standard [!INCLUDE[prod_short](includes/prod_short.md)] tables, this value is automatically filled in. U vlastních tabulek musíte uvést ID.
 
 3. Choose the **Database Data** action. The page for the related page opens.
-4. Review the available information. Modify it as necessary by deleting records that are not relevant or by adding new ones.
+4. Kontrola dostupných informací. Upravte data podle potřeby odstraněním záznamů, které nejsou relevantní, nebo přidáním nových.
 
 ## To copy data from a test environment to a production environment
 
@@ -170,7 +170,7 @@ After you have vetted and tested all your setup information, you can proceed to 
 [Set Up Company Configuration](admin-set-up-company-configuration.md)  
 [Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  
 [Administration](admin-setup-and-administration.md)  
-[Analyzing Configuration Package Trace Telemetry](/dynamics365smb-devitpro/dev-itpro/administration/telemetry-configuration-package-trace)
+[Analyzing Configuration Package Trace Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-configuration-package-trace)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

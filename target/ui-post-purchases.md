@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.reviewer: edupont
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -31,7 +31,7 @@ For each purchase line, the following entries will be created:
 - An entry in the **G/L Entry** table if the purchase lines is of type **G/L Account**
 - An entry in the **Resource Ledger Entry** table if the purchase line is of type **Resource**.
 
-In addition, purchase documents are always recorded in the **Purch. Recpt. Header** and **Purch. zál.  Header** tables.
+In addition, purchase documents are always recorded in the **Purch. Recpt. Header** and **Purch. Zásoby Header** tables.
 
 Before you start to post, you can print a test report that contains all the information in the purchase order and indicates any errors there. To print the report, choose **Posting**, and then choose **Test Report**.
 

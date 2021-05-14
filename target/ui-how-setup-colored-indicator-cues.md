@@ -26,17 +26,17 @@ Chcete-li nastavit označení, určete až dvě prahové hodnoty, které definuj
 ## <a name="to-set-up-colored-indicators-on-cues"></a>Nastavení barevných označení v Hromádkách
 1. V části **Aktivity** v Centru rolí zvolte **Nastavit hromádky**.  
    Zobrazí se stránka **Nastavení hromádky**. Na stránce jsou uvedené označení, které jsou aktuálně nastaveny v Hromádce.
-2. Chcete-li upravit označení, upravte pole a upravte například hodnoty pro různé prahové hodnoty.  
+2. Chcete-li upravit označení, upravte pole a upravte například hodnoty pro různé prahové hodnoty.
 
 V následující tabulce jsou uvedeny barvy, které odpovídají možnostem polí **Styl pro nízké hodnoty**, **Styl pro střední hodnoty** a **Styl pro vysoké hodnoty**.
 
 | Možnost | Barva |
 | --- | --- |
-| **Žádný** |Žádná barva (stejná barva jako Hromádka)|
-| **Příznivý** |Zelená |
-| **Nepříznivý** |Červená |
-| **Neutrální** |Žlutá |
-| **Nevýznamný** |Šedá |
+| **Žádný** | Žádná barva (stejná barva jako Hromádka) |
+| **Příznivý** | Zelená |
+| **Nepříznivý** | Červená |
+| **Neutrální** | Žlutá |
+| **Nevýznamný** | Šedá |
 
 ## <a name="see-also"></a>Viz také
 [Práce s [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

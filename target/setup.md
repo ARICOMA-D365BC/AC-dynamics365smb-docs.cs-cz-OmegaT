@@ -9,11 +9,11 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: configure, initialize
-ms.date: 01/18/2021
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]
+# Overview of Tasks to Set Up [!INCLUDE[prod_short](includes/prod_short.md)]
 
 [!INCLUDE[prod_short](includes/prod_short.md)] includes standard configurations for most business processes, but you can change the configuration to suit the needs of your organization.
 
@@ -21,9 +21,12 @@ For example, your chart of accounts is prefilled with a number of posting accoun
 
 From the ![Sprocket icon to open the Settings menu](media/ui-experience/settings_icon_small.png) menu, you can access assisted setup guides that help you configure certain scenarios and add features to [!INCLUDE[prod_short](includes/prod_short.md)]. For information about how to access all assisted and manual setup pages, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
+> [!NOTE]
+> [!INCLUDE [ua-checklist](includes/ua-checklist.md)]
+
 Some functionality, either general or for specific business processes, can be set up manually in addition to the assisted setup guide. The following lists some of functionality that can you can set up manually.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up payment methods, currencies, and the chart of accounts, and define rules and defaults for managing financial transactions. | [Setting Up Finance](finance-setup-finance.md) |
 | Set up your own and your vendors' bank accounts and enable services for importing and exporting bank files. | [Setting Up Banking](bank-setup-banking.md) |
@@ -69,7 +72,7 @@ Some areas require you to be an administrator in your [!INCLUDE[prod_short](incl
 [Warehouse Management](warehouse-manage-warehouse.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md)  
-[Getting Started](product-get-started.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

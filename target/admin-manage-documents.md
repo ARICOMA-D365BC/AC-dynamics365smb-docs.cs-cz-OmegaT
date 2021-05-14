@@ -5,7 +5,7 @@ author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -43,9 +43,15 @@ You can compress the following types of data in [!INCLUDE [prod_short](includes/
    After the compression, with the **Retain Field Contents** facility, you can retain the contents of the **Document No., Our Contact**, **Global Dimension 1 Code**, and **Global Dimension 2 Code** fields.
 * Vendor ledger entries
 
-   After the compression, the contents of the following fields are always retained: **Posting Date**, **Vendor No.**, **Document Type**, **Currency Code**, **Posting Group**, **Amount**, **Remaining Amount**, **Original Amt. (LCY)**, **Remaining Amt. (LCY)**, **Amount (LCY)**, **Purchase (LCY)**, **Inv. Discount (LCY)**, **Pmt. Disc. Given (LCY)**, and **Pmt. Disc. Possible**.
+> [!NOTE]
+> Compressed entries for customers, vendors, bank, and FA subledgers are posted slightly differently than standard posting. This is to reduce the number of new general ledger entries created by date compression, and is especially important when you keep information such as dimensions and document numbers. Date compression creates new entries as follows:
+> * On the **General Ledger Entries** page, new entries are created with new entry numbers for the compressed entries. The **Description** field contains **Date Compressed** so that the compressed entries are easy to identify.
+> * On ledger pages, such as the **Customer Ledger Entries** page, one or more entries are created with new entry numbers.
+>    The posting process creates gaps in the number series for entries on the **General Ledger Entries** page. Those numbers are assigned to the entries on the ledger pages only. The number range that was assigned to the entries is available on the **G/L Register page**  in the **From Entry No.** and **To Entry No.** fields.
 
-   With the **Retain Field Contents** facility, you can also retain the contents of these additional fields: **Document No.**, **Buy-from Vendor No.**, **Purchaser Code**, **Global Dimension 1 Code**, and **Global Dimension 2 Code**.
+After the compression, the contents of the following fields are always retained: **Posting Date**, **Vendor No.**, **Document Type**, **Currency Code**, **Posting Group**, **Amount**, **Remaining Amount**, **Original Amt. (LCY)**, **Remaining Amt. (LCY)**, **Amount (LCY)**, **Purchase (LCY)**, **Inv. Discount (LCY)**, **Pmt. skonta Given (LCY)**, and **Pmt. skonta Possible**.
+
+With the **Retain Field Contents** facility, you can also retain the contents of these additional fields: **Document No.**, **Buy-from Vendor No.**, **Purchaser Code**, **Global Dimension 1 Code**, and **Global Dimension 2 Code**.
 
 > [!NOTE]
 > After you run date compression, all accounts in the ledger are locked. For example, you cannot un-apply vendor or bank ledger entries for any accounts during the period for which dates are compressed.
@@ -82,7 +88,7 @@ The following table lists the fields on the **Options** FastTab that are availab
 | Pole | Popis |
 |-------|-------------|
 | Počáteční datum | Enter the first date to be included in the date compression. The compression will affect all entries from this date to the Ending Date. |
-| Datum ukončení | Enter the last date to be included in the date compression. The compression will affect all entries from the Starting Date to this date. |
+| Koncové datum | Enter the last date to be included in the date compression. The compression will affect all entries from the Starting Date to this date. |
 | Period Length | Select the length of the period whose entries will be combined. Choose the field to see the options. If you selected the period length *Quarter*, *Month*, or *Week*, only entries with a common accounting period are compressed. |
 | Retain Field Contents | Place check marks in the boxes if you want to retain the contents of certain fields even though the entries are compressed. The more fields you select, the more detailed the compressed entries will be. If you do not select any of these fields, the batch job will create one entry per day, week, or another period, according to the period selected in the **Period Length** field. |
 

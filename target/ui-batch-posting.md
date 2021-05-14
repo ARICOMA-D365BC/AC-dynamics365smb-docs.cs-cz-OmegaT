@@ -9,33 +9,33 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.reviewer: edupont
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Post Multiple Documents at the Same Time
+# Dávkové zaúčtování dokladů
 
-Instead of posting individual documents one by one, you can select multiple non-posted documents in a list for immediate posting or for batch posting according to a schedule, such as at the end of the day. This may be useful if only a supervisor can post documents created by other users or to avoid system performance issues from posting during work hours.
+Namísto účtování jednotlivých dokladů jeden po druhém můžete vybrat více nezaúčtovaných dokladů v seznamu pro okamžité zaúčtování nebo pro dávkové zaúčtování podle plánu, například na konci dne. To může být užitečné, pokud může pouze nadřízený zaúčtovat doklady vytvořené jinými uživateli nebo, aby se zabránilo problémům s výkonem systému z účtování během pracovní doby.
 
-## To post multiple purchase orders immediately
+## Okamžité hmoradné zaúčtování nákupních objednávek
 
-The following procedure explains how to post multiple purchase orders immediately. The steps are similar for all purchase and sales documents.
+Následující postup vysvětluje, jak okamžitě zaúčtovat více nákupních objednávek. Postup je podobný pro všechny nákupní a prodejní doklady.
 
 1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 2. On the **Purchase Orders** page, proceed to select all orders to be posted:
 3. In the **No.** field, choose the three vertical dots to open the context menu, and then choose the **Select More** action.
-4. Select the check box for all the lines representing orders that you want to post at the same time.
+4. Zaškrtněte políčko u všech řádků představujících objednávky, které chcete zaúčtovat současně.
 5. Choose the **Posting** action, and then choose the **Post** action.
 6. Choose the **Yes** button on the confirmation message.
 
-## To batch post multiple purchase orders
+## Dávkově zaúčtování více nákupních objednávek
 
-The following procedure explains how to batch post purchase orders. The steps are similar for all purchase and sales documents where the **Batch Post** action is available.
+Následující postup vysvětluje, jak dávkově zaúčtovat nákupní objednávky. The steps are similar for all purchase and sales documents where the **Batch Post** action is available.
 
 1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 2. On the **Purchase Orders** page, proceed to select all orders to be posted:
 3. In the **No.** field, choose the three vertical dots to open the context menu, and then choose the **Select More** action.
-4. Select the check box for all the lines representing orders that you want to post at the same time.
+4. Zaškrtněte políčko u všech řádků představujících objednávky, které chcete zaúčtovat současně.
 5. Choose the **Posting** action, and then choose the **Post Batch** action.
 6. On the **Batch Post Purchase Order** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 7. Zvolte tlačítko **OK**.
@@ -44,39 +44,39 @@ The following procedure explains how to batch post purchase orders. The steps ar
 > [!NOTE]
 > Posting of multiple documents might take some time and block other users. Consider enabling background posting. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
 
-## To set up background posting with job queues
-Job queues are an effective tool to schedule the running of business processes in the background, such as when multiple users are trying to post sales orders, but only one order can be processed at a time.
+## Nastavení účtování na pozadí pomocí fronty úloh
+Fronta úloh je účinným nástrojem pro plánování chodu obchodních procesů na pozadí, například když se více uživatelů pokouší zaúčtovat prodejní objednávky, ale současně lze zpracovat pouze jednu objednávku.
 
-The following procedure explains how to set up background posting of sales orders. The steps are similar for purchasing.
+Následující postup vysvětluje, jak nastavit účtování prodejních objednávek na pozadí. The steps are similar for purchasing.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. On the **Sales & Receivables Setup** page, choose the **Post with Job Queue** check box.
 3. Choose the **Job Queue Category Code** field, and then specify the **SALESPOST** code.
 
    > [!NOTE]
-   > Some jobs change the same data and should not run at the same time because that can cause conflicts. For example, background jobs for sales documents will try to modify the same data at the same time. Job queue categories help prevent these kinds of conflicts by ensuring that when one job is running, another job that belongs to the same job queue category will not run until it finishes. For example, a job that belongs to a Sales job queue category will wait until all other sales related jobs are done. You specify a job queue category on the **Background Posting** FastTab on the **Sales & Receivables Setup** page.
+   > Některé úlohy mění stejná data a neměly by se spouštět současně, protože to může způsobit konflikty. Například úlohy na pozadí pro prodejní doklady se pokusí upravit stejná data současně. Kategorie fronty úloh pomáhají předcházet těmto konfliktům tím, že zajišťují, že při spuštění jedné úlohy se další úloha, která patří do stejné kategorie front úloh nespustí, dokud nedokončí. Například úloha, která patří do kategorie fronty prodejních úloh, bude čekat, dokud nebudou provedeny všechny ostatní úlohy související s prodejem. You specify a job queue category on the **Background Posting** FastTab on the **Sales & Receivables Setup** page.
    >
-   > [!INCLUDE[prod_short](includes/prod_short.md)] provides job queue categories for sales, purchase, and general ledger posting. We recommend that one of these, or one that you create, is always specified. If you experience failures due to conflicts, consider setting up a category for all sales, purchase, and general ledger background posting.
+   > [!INCLUDE[prod_short](includes/prod_short.md)] provides job queue categories for sales, purchase, and general ledger posting. Doporučujeme, abyste vždy určili jeden z nich nebo ten, který vytvoříte. Pokud dojde k selhání v důsledku konfliktů, zvažte nastavení kategorie pro všechno účtování prodeje, nákupu a hlavní knihy na pozadí.
 
    If you also want sales documents to be printed when they are posted, select the **Post & Print with Job Queue** check box on the **Sales & Receivables Setup** page.  
    If you select **PDF** in the **Report Output Type** field, successfully posted purchase orders will be available in the **Report Inbox** part on your Role Center.
 
    > [!IMPORTANT]  
-   > If you set up a job that will post and print documents, and the printer displays a dialog box, such as a request for credentials or a warning about low printer ink, your document is posted but not printed. The corresponding job queue entry eventually times out and the **Status** field is set to **Error**. Accordingly, we recommend that you do not use a printer setup that requires interaction with the display of printer dialog boxes in conjunction with background posting.
+   > Pokud nastavíte úlohu, která bude účtovat a tisknout dokumenty a tiskárna zobrazí dialogové okno, například žádost o přihlašovací údaje nebo upozornění na nedostatek inkoustu v tiskárně, bude váš dokument zaúčtován, ale nevytisknut. The corresponding job queue entry eventually times out and the **Status** field is set to **Error**. Proto doporučujeme nepoužívat nastavení tiskárny, které vyžaduje interakci se zobrazením dialogových oken tiskárny ve spojení s odesíláním na pozadí.
 
    Next time that you post sales documents, [!INCLUDE [prod_short](includes/prod_short.md)] automatically creates a job queue entry for each document and run the jobs in the background, one by one.
 
-4. To verify that the job queue is working as expected, post a sales order. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
+4. Chcete-li ověřit, zda fronta úloh funguje podle očekávání, zaúčtujte prodejní objednávku. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
    The sales order will now be added to a dedicated job queue entry, which defines when the documents are posted.
 
-### To view status from a sales or purchase document
+### Zobrazení stavu z prodejního nebo nákupního dokladu
 If the job queue cannot post the sales order, the status is changed to **Error** and the sales order is added to the list of sales orders that the user must handle manually.
 1. From the document that you have tried to post with background posting, choose the **Job Queue Status** field, which will contain **Error**.
-2. Review the error message and fix the problem.
+2. Zkontrolujte chybovou zprávu a problém vyřešte.
 
 Alternativelly you can review on the **Job Queue Log Entries** page if the sales order was posted successfully. For more information, see [To view status or errors in the job queue](admin-job-queues-schedule-tasks.md#to-view-status-or-errors-in-the-job-queue).
 
-## To create a job queue entry for batch posting of sales orders
+## Vytvoření položky fronty úlohy pro dávkové účtování prodejních objednávek
 
 Alternatively, you can postpone postings for when it is convenient for your organization. For example, in your business it might make sense to run certain routines when most of the data entry for the day has concluded. You can achieve this by setting the job queue up to run various batch-posting reports, such as the **Batch Post Sales Orders**, **Batch Post Sales Invoices**, and similar reports. [!INCLUDE[prod_short](includes/prod_short.md)] supports background posting for all sales, purchasing, and service documents.
 

@@ -9,16 +9,16 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, supply, planning, reordering, replenishment
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Design Details: Supply Planning
+# Detaily návrhu: Plánování dodávek
 This documentation provides detailed technical insight to the concepts and principles that are used within the Supply Planning features in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-It explains how the planning system works and how to adjust the algorithms to meet planning requirements in different environments. It first introduces central solution concepts and then describes the logic of the central mechanism, supply balancing, before proceeding to explain how inventory planning is performed with the use of reordering policies.
+Vysvětluje, jak systém plánování funguje a jak upravit algoritmy tak, aby splňovaly požadavky na plánování v různých prostředích. Nejprve zavádí koncepty centrálního řešení a poté popisuje logiku centrálního mechanismu, vyrovnávání dodávek, a poté vysvětluje, jak se provádí plánování zásob s použitím zásad přiobjednání.
 
-## In This Section
+## V této části
 [Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)  
 [Design Details: Reservation, Order Tracking, and Action Messaging](design-details-reservation-order-tracking-and-action-messaging.md)  
 [Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md)  

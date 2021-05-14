@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -34,7 +34,7 @@ Errors that are related to how the integration is set up typically require an ad
 * The integration user's password is set to require a change when the user signs in.
 * The exchange rates for currencies are not specified in one or the other app.
 
-You must manually resolve the errors, but there are a few ways in which the page helps you. For example:
+You must manually resolve the errors, but there are a few ways in which the page helps you. Například:
 
 * The **Source** and **Destination** fields may contain links to the row where the error was found. Click the link to investigate the error.
 * The **Delete Entries Older than 7 Days** and the **Delete All Entries** actions will clean up the list. Typically, you use these actions after you have resolved the cause of an error that affects many records. Use caution, however. These actions might delete errors that are still relevant.

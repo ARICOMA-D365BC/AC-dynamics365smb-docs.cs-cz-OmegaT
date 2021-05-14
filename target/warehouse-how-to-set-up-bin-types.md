@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -30,14 +30,14 @@ The bin type determines only how a bin is used when processing the flow of items
 
 The bin types that you can create are listed below.
 
-| Bin Type | Popis |
+| Typ přihrádky | Popis |
 |------------------|---------------------------------------|  
-| RECEIVE | Items registered as posted receipts but not yet put away. |
-| SHIP | Items picked for warehouse shipment lines but not yet posted as shipped. |
-| PUT AWAY | Typically, items to be stored in large units of measure but that you do not want to access for picking purposes. Because these bins are not used for picking, either for production orders or shipments, your use of a Put Away type bin might be limited, but this bin type could be useful if you have purchased a large quantity of items. Bins of this type should always have a low bin-ranking, so that when received items are put away, other higher-ranking PUTPICK bins fixed to the item are put away first. If you are using this type of bin, you must regularly perform bin replenishment so that the items stored in these bins are also available in PUTPICK or PICK type bins. |
+| PŘÍJEM | Items registered as posted receipts but not yet put away. |
+| DODÁVKA | Zboží vybrané pro skladové řádky, ale dosud nebyly zaúčtovány jako dodávané. |
+| VYSKL | Typicky zboží, které má být uloženo ve velkých měrných jednotkách, ale které nechcete zpřístupňovat pro vyskladnění. Protože se tyto přihrádky nepoužívají k vyskladnění, a to ani u výrobních objednávek a ani u zásilek, může být používání přihrádky typu Zaskladnění omezené, ale tento typ přihrádky může být užitečný, pokud jste zakoupili velké množství zboží. Přihrádky tohoto typu by měly mít vždy nižší pořadí přihrádek, takže když jsou přijaté položky zaskladněny, jsou nejprve vyřazeny další přihrádky ZASKLVYSKL s vyšším pořadím. Pokud používáte tento typ přihrádky, musíte pravidelně provádět doplňování přihrádky tak, aby položky uložené v těchto přihrádkách byly také k dispozici v přihrádkách typu ZASKLVYSKL nebo VYSKL. |
 | VYSKL | Items to be used only for picking, for example, for items with an approaching expiration date that you have moved into this type of bin. You would place a high bin ranking on these bins so they are suggested for picking first. |
-| PUTPICK | Items in bins that are suggested for both the put-away and pick functions. Bins of this type probably have different bin rankings. You can set up your bulk storage bins as this type of bin with low bin rankings compared to your ordinary pick bins or forward picking area bins. |
-| QC | This bin is used for inventory adjustments if you specify this bin on the location card in the **Adjustment Bin Code** field. You can also set up bins of this type for defective items and items being inspected. You can move items to this type of bin if you want to make them inaccessible to the usual item flow.<br /><br /> **NOTE:** Unlike all other bin types, the **QC** bin type has none of the item handling check boxes selected by default. This indicates that any content you place in a QC bin is excluded from item flows. |
+| VYSKLZASKL | Zboží v přihrádkách, které jsou navrženy pro funkce vyskladněni a zaskladnění. Přihrádky tohoto typu pravděpodobně mají rozdílné pořadí přihrádek. Můžete nastavit své přihrádky jako objemné s nížším pořadím přihrádek ve srovnání s běžnými přihrádkami nebo přihrádkami pro vyskladnění. |
+| KVAL | Tato přihrádka se používá pro úpravy zásob, pokud tuto přihrádku zadáte na kartě lokace v poli **Kód adjustační přihrádky**. Můžete také nastavit přihrádky tohoto typu pro vadné předměty a kontrolované položky. You can move items to this type of bin if you want to make them inaccessible to the usual item flow.<br /><br /> **NOTE:** Unlike all other bin types, the **QC** bin type has none of the item handling check boxes selected by default. To znamená, že veškerý obsah, který umístíte do přihrádky KVAL, je z toků zboží vyloučen. |
 
 ## Viz také
 [Správa skladu](warehouse-manage-warehouse.md)    

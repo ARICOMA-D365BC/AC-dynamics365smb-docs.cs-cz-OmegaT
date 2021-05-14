@@ -13,19 +13,19 @@ ms.author: bholtorf
 ---
 
 # <a name="the-getaddressio-uk-postcodes-extension"></a>Rozšíření GetAddress.io UK Postcodes
-Rozšíření GetAddress.io UK Postcodes vám může ušetřit čas a zabránit chybám při zadávání adres pro entity, jako jsou zákazníci, dodavatelé, bankovní účty a zaměstnanci. Například při vytváření zákazníka stačí vybrat PSČ a [!INCLUDE[d365fin](includes/d365fin_md.md)] zobrazí seznam adres. Vyberte požadovanou adresu a pole adresy budou vyplněna.  
+Rozšíření GetAddress.io UK Postcodes vám může ušetřit čas a zabránit chybám při zadávání adres pro entity, jako jsou zákazníci, dodavatelé, bankovní účty a zaměstnanci. Například při vytváření zákazníka stačí vybrat PSČ a [!INCLUDE[d365fin](includes/d365fin_md.md)] zobrazí seznam adres. Vyberte požadovanou adresu a pole adresy budou vyplněna.
 
-##<a name="to-use-the-getaddressio-uk-postcodes-extension-when-you-enter-an-address"></a>Pro použití rozšíření GetAddress.io UK Postcodes při zadávání adresy
-1. Pod polem **Adresa** zvolte **Vyhledat adresu z PSČ**.  
+## <a name="to-use-the-getaddressio-uk-postcodes-extension-when-you-enter-an-address"></a>Pro použití rozšíření GetAddress.io UK Postcodes při zadávání adresy
+1. Pod polem **Adresa** zvolte **Vyhledat adresu z PSČ**.
 
-    > [!NOTE]  
-    >   Možnost **Vyhledat adresu z PSČ** je dostupná pouze pokud je pole **Kód země/oblasti
-** prázdné, nebo obsahuje **GB**.
-2. Na stránce **Vyhledat PSČ** v poli **PSČ** zadejte nebo vyberte PSČ.  
-3. Na stránce **Výběr adresy** vyberte adresu.  
+   > [!NOTE]  
+   > Možnost **Vyhledat adresu z PSČ** je dostupná pouze pokud je pole **Kód země/oblasti
+   > ** prázdné, nebo obsahuje **GB**.
+2. Na stránce **Vyhledat PSČ** v poli **PSČ** zadejte nebo vyberte PSČ.
+3. Na stránce **Výběr adresy** vyberte adresu.
 
 > [!TIP]  
->   Pokud znáte číslo ulice, můžete adresy filtrovat zadáním části nebo celého čísla do pole **Místo dodání**.
+> Pokud znáte číslo ulice, můžete adresy filtrovat zadáním části nebo celého čísla do pole **Místo dodání**.
 
 
 ## <a name="see-also"></a>Viz také

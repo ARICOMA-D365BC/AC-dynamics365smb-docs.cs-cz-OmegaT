@@ -6,7 +6,7 @@ ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.reviewer: edupont04
 ms.search.keywords: keyboarding, productivity, how do i, filter pane
-ms.date: 11/16/2020
+ms.date: 04/01/2021
 ms.author: mikebc
 ---
 
@@ -14,7 +14,7 @@ ms.author: mikebc
 This article answers common questions you might have about searching and filtering.
 
 ## Is there a difference between searching and filtering?
-Yes.
+Ano.
 - Search is simple and broad: it matches records that contain the search text across any visible fields on the page, and is case insensitive.
 - Filtering is highly flexible and can be applied to specific fields, including those not visible on the page: it displays records with exact, case-sensitive matches, but can be adjusted with powerful search symbols, tokens, and formulas. For more information on how to use these features, see [Sorting, Searching, and Filtering](ui-enter-criteria-filters.md).
 
@@ -54,7 +54,7 @@ At Microsoft, we're constantly listening to feedback from our diverse community 
 [Sorting, Searching, and Filtering](ui-enter-criteria-filters.md)  
 [Finding Pages and Information with Tell Me](ui-search.md)  
 [Finding Pages with the Role Explorer](ui-role-explorer.md)  
-[Getting Started](product-get-started.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

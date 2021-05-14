@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -91,18 +91,18 @@ Když spustíte dávkovou úlohu **Adjustace nákladů položek zboží** máte 
 
 ### Příklad
 
-Následující příklad ukazuje, zda zaúčtujete nakoupené zboží jako přijaté a fakturované dne 1.1.2020. Později zaúčtujete prodané zboží jako dodané a fakturované dne 15.1.2020. Potom spusťte dávkové úlohy **Adjustace nákladů položek zboží** a **Účtování nákladů na zboží**. Budou vytvořeny následující položky.
+Následující příklad ukazuje, zda zaúčtujete nakoupené zboží jako přijaté a fakturované dne 1.1.2020. Později zaúčtujete prodané zboží jako dodané a fakturované dne 15.1.2020. Potom spusťte dávkové úlohy **Adjustace nákladů položek zboží** a **Účtování nákladů na zboží**. Vytvoří se následující položky.
 
-#### Položky ocenění (1)
+#### Položky oenení (1)
 
-| Zúčtovací datum | Typ položky zboží | Částka nákladů (skutečná) | Zaúčtované náklady | Fakturované množství | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Fakturované množství | Číslo položky |
 |------------|----------------------|--------------------|------------------|-----------------|---------|  
-| 1.1.2020 | Nákup | 10,00 | 10,00 | 1 | 1 |
-| 15.1.2020 | Prodej | -10,00 | -10,00 | -1 | 2 |
+| 01.01.20 | Nákup | 10,00 | 10,00 | 1 | 1 |
+| 15.01.20 | Prodej | -10,00 | -10,00 | -1 | 2 |
 
 #### Vazba položek v tabulce Vazba věcná pol. - pol. zboží (1)
 
-| Číslo věcné položky | Č. položky ocenění | Číslo finančního žurnálu |
+| Číslo věcné položky. | Číslo položky ocenění. | Číslo finančního žurnálu. |
 |-------------|---------------|----------------|  
 | 1 | 1 | 1 |
 | 2 | 1 | 1 |
@@ -113,23 +113,23 @@ Následující příklad ukazuje, zda zaúčtujete nakoupené zboží jako přij
 
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------------|------------------|---------------------------------|------------|---------------|  
-| 1.1.2020 | [Účet zásob] | 2130 | 10,00 | 1 |
-| 1.1.2020 | [Účet použitých přímých nákl.] | 7291 | -10,00 | 2 |
-| 15.1.2020 | [Účet zásob] | 2130 | -10,00 | 3 |
-| 15.1.2020 | [Účet nákladů na prod.zboží] | 7290 | 10,00 | 4 |
+| 01.01.20 | [Účet zásob] | 2130 | 10,00 | 1 |
+| 01.01.20 | [Účet vyrovnaných přímých nákladů] | 7291 | -10,00 | 2 |
+| 15.01.20 | [Účet zásob] | 2130 | -10,00 | 3 |
+| 15.01.20 | [Účet COGS] | 7290 | 10,00 | 4 |
 
 Později účtujete související poplatek za nákupené zboží za 2,00 CZK fakturovaný dne 10.2.2020. Spusťte dávkovou úlohu **Adjustace nákladů položek zboží** a potom spusťte dávkovou úlohu **Účtování nákladů na zboží**. Dávková úloha Adjustace nákladů odpovídajícím způsobem upraví náklady prodeje o -2,00 CZK a dávková úloha **Účtování nákladů na zboží** zaúčtuje nové položky ocenění do hlavní knihy. Výsledek je následující.
 
 #### Položky ocenění (2)
 
-| Zúčtovací datum | Typ položky zboží | Částka nákladů (skutečná) | Zaúčtované náklady | Fakturované množství | Adjustace | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Fakturované množství | Adjustace | Číslo položky |
 |------------|----------------------|--------------------|------------------|-----------------|----------|---------|  
 | 10.2.2020 | Nákup | 2,00 | 2,00 | 0 | Ne | 3 |
-| 15.1.2020 | Prodej | -2,00 | -2,00 | 0 | Ano | 4 |
+| 15.01.20 | Prodej | -2,00 | -2,00 | 0 | Ano | 4 |
 
 #### Vazba položek v tabulce Vazba věcná pol. - pol. zboží (2)
 
-| Číslo věcné položky | Č. položky ocenění | Číslo finančního žurnálu |
+| Číslo věcné položky. | Číslo položky ocenění. | Číslo finančního žurnálu. |
 |-------------|---------------|----------------|  
 | 5 | 3 | 2 |
 | 6 | 3 | 2 |
@@ -141,9 +141,9 @@ Později účtujete související poplatek za nákupené zboží za 2,00 CZK fak
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------|-----------|------------------------|------|---------|  
 | 10.2.2020 | [Účet zásob] | 2130 | 2,00 | 5 |
-| 10.2.2020 | [Účet použitých přímých nákl.] | 7291 | -2,00 | 6 |
-| 15.1.2020 | [Účet zásob] | 2130 | -2,00 | 7 |
-| 15.1.2020 | [Účet nákladů na prod.zboží] | 7290 | 2,00 | 8 |
+| 10.2.2020 | [Účet vyrovnaných přímých nákladů] | 7291 | -2,00 | 6 |
+| 15.01.20 | [Účet zásob] | 2130 | -2,00 | 7 |
+| 15.01.20 | [Účet COGS] | 7290 | 2,00 | 8 |
 
 ## Automatická adjustace nákladů
 

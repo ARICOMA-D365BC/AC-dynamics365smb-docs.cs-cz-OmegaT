@@ -9,14 +9,14 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
 # Design Details: Assembly Order Posting
 Assembly order posting is based on the same principles as when posting the similar activities of sales orders and production consumption/output. However, the principles are combined in that assembly orders have their own posting UI, like that for sales orders, while the actual entry posting happens in the background as direct item and resource journal postings, like that for production consumption, output, and capacity.
 
-Similarly to production order posting, the consumed components and the used resources are converted and output as the assembly item when the assembly order is posted. Pro více informací navštivte [Detaily návrhu: Účtování prodejní zakázky](design-details-production-order-posting.md). However, the cost flow for assembly orders is less complex, especially because assembly cost posting only occurs once and therefore does not generate work-in-process inventory.
+Similarly to production order posting, the consumed components and the used resources are converted and output as the assembly item when the assembly order is posted. Pro více informací navštivte [Detaily návrhu: Účtování prodejní zakázky](design-details-production-order-posting.md). Tok nákladů pro montážní zakázky je však méně složitý, zejména proto, že účtování nákladů na montáž probíhá pouze jednou a nevytváří zásoby v procesu práce.
 
 The following journal postings occur during assembly order posting:
 
@@ -80,8 +80,8 @@ The spreading of detected adjustments from material and resource costs onto the 
 
 For information about how costs from assembly and production are posted to the general ledger, see [Design Details: Inventory Posting](design-details-inventory-posting.md).
 
-## Assembly Costs are Always Actual
-The concept of work in process (WIP) does not apply in assembly order posting. Assembly costs are only posted as actual cost, never as expected cost. For more information, see [Design Details: Expected Cost Posting](design-details-expected-cost-posting.md).
+## Náklady na montáž jsou vždy skutečné
+The concept of work in process (WIP) does not apply in assembly order posting. Náklady na motnáž jsou zaúčtovány pouze jako skutečné náklady, nikdy jako očekávané náklady. For more information, see [Design Details: Expected Cost Posting](design-details-expected-cost-posting.md).
 
 This is enabled by the following data structure.
 
@@ -90,11 +90,11 @@ This is enabled by the following data structure.
 
 In addition, posting group fields on the assembly order header and assembly order lines are populated by default as follows.
 
-| Entity | Typ | skupina zboží | Obecná  účto  skupina zboží |
+| Entity | Typ | skupina zboží | Obecné účto  skupina zboží |
 |------------|----------|-------------------|------------------------------|  
-| Assembly Order Header | Zboží | Účto skupiny zboží | Obecná  účto  skupina zboží |
-| Řádek montážní zakázky | Zboží | Účto skupiny zboží | Obecná  účto  skupina zboží |
-| Řádek montážní zakázky | Zdroj | Obecná  účto  skupina zboží |
+| Assembly Order Header | Zboží | Účto skupiny zboží | Obecné účto  skupina zboží |
+| Řádek montážní zakázky | Zboží | Účto skupiny zboží | Obecné účto  skupina zboží |
+| Řádek montážní zakázky | Zdroj | Obecné účto  skupina zboží |
 
 Accordingly, only actual costs are posted to the general ledger, and no interim accounts are populated from assembly order posting. For more information, see [Design Details: Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md)
 

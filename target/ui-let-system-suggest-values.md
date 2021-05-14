@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
 # Letting [!INCLUDE[prod_short](includes/prod_short.md)] Suggest Values
-[!INCLUDE[prod_short](includes/prod_short.md)] can help you complete tasks quicker and more correctly by prefilling fields or complete lines with data that you would otherwise have to calculate and enter yourself. Although such automatic data entry is always correct, you can change it afterwards if you want to.
+[!INCLUDE[prod_short](includes/prod_short.md)] can help you complete tasks quicker and more correctly by prefilling fields or complete lines with data that you would otherwise have to calculate and enter yourself. Ačkoli je automatické zadávání dat vždy správné, můžete je později v případě potřeby změnit.
 
-Functionality that enters field values for you is typically offered for tasks where you enter large volumes of transactional data and want to avoid errors and save time. This topic contains a selection of such functionality. More sections will be added in future updates of [!INCLUDE[prod_short](includes/prod_short.md)].
+Funkce, které zadávají hodnoty polí, jsou obvykle nabízeny pro úkoly, do kterých zadáváte velké objemy transakčních dat a chcete předejít chybám a ušetřit čas. Toto téma obsahuje výběr takových funkcí. More sections will be added in future updates of [!INCLUDE[prod_short](includes/prod_short.md)].
 
 ## The **Suggest Balancing Amount** check box on the **General Journal Batches** page
 When, for example, you are entering general journal lines for multiple expenses that must all be posted to the same bank account, then each time you enter a new journal line for an expense, you can have the **Amount** field on the bank account line automatically updated to the amount that balances the expenses. For more information about working with general journals, see [Working with General Journals](ui-work-general-journals.md).
@@ -23,7 +23,7 @@ When, for example, you are entering general journal lines for multiple expenses 
 ### To have the **Amount** field on balancing general journal lines filled automatically
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journals**, and then choose the related link.
 2. On the line for your preferred general journal batch, choose the **Suggest Balancing Amount** check box.
-3. Open the general journal and proceed to register and post transactions using the described functionality for automatic entry of a field value.
+3. Otevřete finanční deník a pokračujte v evidenci a zaúčtování transakcí pomocí popsané funkce pro automatické zadávání hodnoty pole.
 
 For information about how to set up a personal general journal batch, for example, for expense handling, see [Working with General Journals](ui-work-general-journals.md).
 

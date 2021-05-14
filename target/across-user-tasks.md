@@ -9,15 +9,15 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: tasks, work
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Define User Tasks
+# Definice uživatelských úloh
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], you can create tasks to remind you of work to be done. You can create tasks for yourself, but you can also assign tasks to others or be assigned a task by someone else in your organization.
+In [!INCLUDE[prod_short](includes/prod_short.md)], you can create tasks to remind you of work to be done. Úlohy si můžete vytvořit sami, ale můžete je také přiřadit ostatním, nebo jim může úkol přiřadit někdo jiný ve vaší firmě.
 
-## Managing User Tasks
+## Správa úloh uživatele
 
 The **User Tasks** page shows all tasks, and you can easily create and assign new tasks. When you create a task, you can specify the start date and due date, and you can add a link to the page or report in [!INCLUDE[prod_short](includes/prod_short.md)] where the user must do the work.
 
@@ -30,15 +30,15 @@ For example, you can create a task for yourself or a coworker to view all posted
 >
 > You can link to any page, but you cannot link to individual entries, so make the description as explicit as possible, such as writing "Please take a look at customer no. 10000 and make sure they don't have overdue payments.".
 
-### Picking Up User Tasks
+### Vybírání uživatelských úloh
 
-In the Business Manager, Bookkeeper, and Accountant Role Centers, a tile shows pending tasks that are assigned to that user. To pick up a task, simply choose it from the list of pending user tasks. In the ribbon, the link **Go to Task Item** opens the page where you can do the work.
+V centrech obchodní manažer, účetní a hlavní účetní jsou zobrazeny nevyřízené úlohy přiřazené vybranému uživateli. Chcete-li úlohu vybrat, jednoduše ji vyberte ze seznamu čekajících uživatelských úloh. In the ribbon, the link **Go to Task Item** opens the page where you can do the work.
 
-When you have completed a task, simply mark it as completed.
+Po dokončení úlohy ji jednoduše označte jako dokončenou.
 
-### Deleting User Tasks
+### Odstranění uživatelských úloh
 
-If you want to bulk delete all or some user tasks, you can use the **Delete User Tasks** report. In the request page, you can set filters to determine which tasks must be deleted.
+If you want to bulk delete all or some user tasks, you can use the **Delete User Tasks** report. Na stránce požadavku můžete nastavit filtry, abyste určili, které úkoly je třeba odstranit.
 
 ## Viz také
 

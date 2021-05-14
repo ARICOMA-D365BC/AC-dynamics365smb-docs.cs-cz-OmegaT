@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -30,9 +30,9 @@ The following table shows definitions of the key terms in cost accounting.
 | Cost object | Cost objects are products, product groups or services of a company, the finished goods of a company, that in the end carry the costs. Cost objects can be synchronized with dimensions in the general ledger. It is also possible to add new cost objects and define their own sorting with subtotals. |
 | Cost allocation | Cost allocation is a process of allocating costs to cost centers or cost objects. For example, the wage of the truck driver of the sales department is allocated to the sales department cost center. It is not necessary to allocate the wage cost to other cost centers. Another example is that the cost of an expensive computer system is allocated to the products of the company that use the system. |
 | Dynamic allocation | Dynamic allocations are dependent on changeable allocation bases, for example, the number of department employees, or the sales revenue of the project within a certain period of time. There are nine predefined dynamic allocation bases that users can define by using five filters. |
-| Direct cost | Direct costs are the costs that can be directly allocated to a cost object, for example, material purchase for a specific product. |
+| Přímé náklady | Direct costs are the costs that can be directly allocated to a cost object, for example, material purchase for a specific product. |
 | Fixed cost | Fixed costs are the costs that are not dependent on the level of goods or services produced by the company. They tend to be time-related, such as salary or rent being paid per month. They are in contrast to variable costs, which are volume-related, and are paid per quantity produced. |
-| Indirect cost | Indirect costs are not directly accountable to a cost object, such as a particular function or product. Indirect costs may be either fixed or variable. Indirect costs can be tax, administration, personnel, and security costs and are also known as overhead costs. |
+| Nepřímé náklady | Indirect costs are not directly accountable to a cost object, such as a particular function or product. Indirect costs may be either fixed or variable. Indirect costs can be tax, administration, personnel, and security costs and are also known as overhead costs. |
 | Level | Level is used to define allocation order. Level is defined as a number between 1 and 99. The allocation posting follows the order of the levels. For example, level ensures that first administration is allocated to workshop before workshop is allocated to vehicle and production. |
 | Static allocation | Static allocations are based on a fixed set of values, for example, the square meters used, or an established allocation ratio, such as 5:2:4. |
 | Operational cost | Operational costs are the recurring expenses which are related to the operation of a business, a device, and a component. |

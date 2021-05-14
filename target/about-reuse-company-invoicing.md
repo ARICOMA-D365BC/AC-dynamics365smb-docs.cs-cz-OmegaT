@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: Invoicing, Microsoft 365
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -18,14 +18,14 @@ When you sign up for a trial with [!INCLUDE[prod_short](includes/prod_short.md)]
 
 Microsoft Invoicing is no longer available, but if you need to sign into Invoicing to retrieve your data, you might see a message that you cannot access Microsoft Invoicing because your account is used in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-You see a similar message if you install the mobile app for Invoicing.
+Podobnou zprávu uvidíte pokud nainstalujete mobilní aplikaci Invoicing.
 
-## Workaround
+## Řešení
 Invoicing and [!INCLUDE[prod_short](includes/prod_short.md)] have a shared platform. That means that you are recognized as an existing user of [!INCLUDE[prod_short](includes/prod_short.md)] when you click Invoicing in the Microsoft 365 admin center. The reason is that Invoicing cannot use the same company as [!INCLUDE[prod_short](includes/prod_short.md)].
 
-So you will have to sign in to [!INCLUDE[prod_short](includes/prod_short.md)] and rename your existing company, and then create a new company that you can then use in Invoicing. No data is moved or overwritten during this workaround.
+So you will have to sign in to [!INCLUDE[prod_short](includes/prod_short.md)] and rename your existing company, and then create a new company that you can then use in Invoicing. Během tohoto zástupného řešení nejsou přesunuta ani přepsána žádná data.
 
-### To rename your company
+### Přejmenování společnosti
 1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)].
 2. In the top right corner, choose the **Settings** icon ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center"), and then choose **My Settings**.
 3. In the **Company** field, choose a different company.
@@ -33,16 +33,16 @@ So you will have to sign in to [!INCLUDE[prod_short](includes/prod_short.md)] an
 5. On the **Companies** page, choose **Edit List**.
 6. Change the name of the *My Company* entry to something else.
 
-   Wait a number of minutes. We’ll be making a number of changes in the underlying database, and that takes a while.
+   Počkejte několik minut V základní databázi provedeme řadu změn a to chvíli potrvá.
 7. When the system is ready again, choose the **Create New Company** button.
 8. In the dialog that appears, specify the name as *My Company*, and choose the **Production – Setup Data Only** option.
 
-This again takes a number of minutes. When the process completes, you will be able to access Invoicing as part of your Microsoft 365 Business Standard experience. but only to export data since the Invoicing app is deprecated.
+To opět trvá několik minut. Po dokončení procesu budete mít přístup k Invoicing jako součást prostředí Microsoft 365 Business Standard. ale pouze pro export dat, protože aplikace Invoicing je zastaralá.
 
-### What about my data?
+### A co moje data?
 When you rename the original My Company, the database tables that store your existing [!INCLUDE[prod_short](includes/prod_short.md)] data are renamed, but the data itself is not touched.
 
-If you use both Invoicing and [!INCLUDE[prod_short](includes/prod_short.md)], the data is stored in two different containers (the two companies). Nothing is shared, so you'll have to manage customers and items in both companies.
+If you use both Invoicing and [!INCLUDE[prod_short](includes/prod_short.md)], the data is stored in two different containers (the two companies). Nic není sdíleno, takže budete muset spravovat zákazníky a zboží v obou společnostech.
 
 ## Viz také
 [Frequently Asked Questions](across-faq.md)  

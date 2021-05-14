@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ As an administrator or Microsoft partner, you can use the framework in new integ
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 |--------|---------|  
 | Learn how the Data Exchange Framework works. | [About the Data Exchange Framework](across-about-the-data-exchange-framework.md) |
 | Prepare to exchange data in a file by reusing the file’s XML schema. Set up data exchange definitions. Set up master data for electronic document sending. Set up various bank import/export fields. | [Setting Up Data Exchange](across-set-up-data-exchange.md) |

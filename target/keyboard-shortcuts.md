@@ -8,7 +8,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accessibility, shortcuts, keyboarding, keys
-ms.date: 11/26/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 ---
 
@@ -22,7 +22,7 @@ For an overview of the most popular keyboard shortcuts, see [Keyboard Shortcuts 
 > For a graphical view of the most used shortcuts, choose the following image and download the PDF file.  
 > [![Icon for the PDF file](media/keyboard_shortcut_inline.png)](media/keyboard_shortcuts.pdf "Icon that opens a PDF")
 
-## Overview
+## Přehled
 
 Keyboard shortcuts aid accessibility and can make it easier and more efficient to navigate to different areas and elements on a page. They're supported by most web browsers, however, the behavior may vary slightly.
 
@@ -224,7 +224,7 @@ Role explorer gives you an overview and quick access to all the business feature
 
 [Keyboard Quick Reference - PC Only](keyboard-shortcuts-cheatsheet.md)  
 [Assistive Features](ui-accessibility.md)  
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Frequently Asked Questions](across-faq.md)  
 [Find Entries](ui-find-entries.md)

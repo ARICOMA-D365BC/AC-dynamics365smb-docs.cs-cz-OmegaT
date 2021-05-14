@@ -9,38 +9,38 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: dimension
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Dimension Set Entries Overview
+# Přehled položek sad dimenzí
 This topic describes how dimension set entries are stored and posted in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-## Dimension Sets
-A dimension set is a unique combination of dimension values. It is stored as dimension set entries in the database. Each dimension set entry represents a single dimension value. The dimension set is identified by a common dimension set ID that is assigned to each dimension set entry that belongs to the dimension set.
+## Sady dimenzí
+Sada dimenzí je jedinečná kombinace hodnot dimenzí. Je uložena jako položky sady dimenzí v databázi. Každá položka sady dimenzí představuje jednu hodnotu dimenze. Sada dimenzí je identifikována společným ID sady dimenzí, které je přiřazeno každé položce sady dimenzí, která patří do sady dimenzí.
 
-The following example shows a dimension set that has three dimension set entries. The dimension set is identified by a dimension set ID, which is 108.
+Následující příklad ukazuje sadu dimenzí, která má tři položky sady dimenzí. Sada dimenzí je identifikována ID sady dimenzí, což je 108.
 
-| Dimension Set ID | Dimension Code | Dimension Value Code | Dimension Value Name |
+| ID sady dimenzí | Kód dimenze | Kód hodnoty dimenze | Název hodnoty dimenze |
 |----------------------|--------------------|--------------------------|--------------------------|  
-| 108 | AREA | 70 | America North |
-| 108 | BUSINESSGROUP | HOME | Home |
-| 108 | DEPARTMENT | SALES | Sales |
+| 108 | AREA | 70 | Severní Amerika |
+| 108 | BUSINESSGROUP | HOME | Domácí |
+| 108 | DEPARTMENT | SALES | Prodej |
 
-## Dimension Set Entries
+## Položky sady dimenzí
 Dimension sets are stored in the **Dimension Set Entry** table as dimension set entries with the same dimension set ID.
 
-![Flow of dimension set entries](media/dimensionentrynav7.png "Flow of dimension set entries")
+![Tok položek sady dimenzí](media/dimensionentrynav7.png "Tok položek sady dimenzí")
 
-When you create a new journal line, document header, or document line, you can specify a combination of dimension values. Instead of explicitly storing each dimension value in the database, a dimension set ID is assigned to the journal line, document header, or document line to specify the dimension set.
+Když vytvoříte nový řádek deníku, hlavičku dokladu nebo řádek dokladu, můžete zadat kombinaci hodnot dimenze. Namísto explicitního ukládání každé hodnoty dimenze v databázi je k řádku deníku, hlavičce dokladu nebo řádku dokladu přiřazeno ID sady dimenzí k určení sady dimenzí.
 
-When you edit and close the **Edit Dimension Set Entries** page, a check is performed to see whether the combination of dimension values exists as a dimension set in the table. If the combination occurs in the table, then the corresponding dimension set ID is assigned to the journal line, document header, or document line. Otherwise, a new dimension set is added to the table, and the new dimension set ID is assigned to the journal line, document header, or document line.
+When you edit and close the **Edit Dimension Set Entries** page, a check is performed to see whether the combination of dimension values exists as a dimension set in the table. Pokud k kombinaci dojde v tabulce, bude odpovídající ID sady dimenzí přiřazeno řádku deníku, hlavičce dokladu nebo řádku dokladu. V opačném případě je do tabulky přidána nová sada dimenzí a nové ID sady dimenzí je přiřazeno řádku deníku, hlavičce dokladu nebo řádku dokladu.
 
-## Codeunit 408 Dimension Management
-Codeunit 408, Dimension Management, is a function library that handles common tasks that are related to dimensions, such as copying from one table to another or from one document to another.
+## Codeunita 408 Správa dimenzí
+Codeunita 408, Správa dimenzí, je knihovna funkcí, která zpracovává běžné úkoly, které souvisejí s dimenzemi, jako je kopírování z jedné tabulky do druhé nebo z jednoho dokumentu do druhého.
 
-## Performance Improvement
-By storing dimension sets once in the database, database space is preserved and overall performance is improved.
+## Zlepšení výkonu
+Uložením sad dimenzí jednou v databázi se zachová databázový prostor a zlepší se celkový výkon.
 
 ## Viz také
 [Design Details: Searching for Dimension Combinations](design-details-searching-for-dimension-combinations.md)   

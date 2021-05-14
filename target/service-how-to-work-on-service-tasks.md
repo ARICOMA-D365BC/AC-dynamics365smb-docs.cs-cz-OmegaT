@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -69,7 +69,7 @@ When you service a service item that is composed of components, you may need to 
 3. Enter a new service line.
 4. In the **Type** field, choose **Item**.
 5. In the **No.** field, choose the component to replace.
-6. Press **Enter**. A dialog box opens with three options: **Replace Component**, **New Component**, and **Ignore**. The following table describes the options.
+6. Press **Enter**. A dialog box opens with three options: **Replace Component**, **New Component**, and **Ignore**. Následující tabulka popisuje možnosti.
 
    | Možnost | Popis |
    |----------------------------------|---------------------------------------|  

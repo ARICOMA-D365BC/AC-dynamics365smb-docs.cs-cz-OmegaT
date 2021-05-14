@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -19,12 +19,12 @@
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the outbound processes for picking and shipping can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
-| Metoda | Inbound process | Bins | Picks | Shipments | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Inbound process | Přihrádky | Vyskladnění | Dodávky | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
 |------------|---------------------|----------|-----------|---------------|--------------------------------------------------------------------------------------------------------------------|  
-| A | Post pick and shipment from the order line | X | 2 |
-| B | Post pick and shipment from an inventory pick document | X | 3 |
-| C | Post pick and shipment from a warehouse shipment document | X | 4/5/6 |
-| D | Post pick from a warehouse pick document and post shipment from a warehouse shipment document | X | X | 4/5/6 |
+| A | Zaúčtování vyskladnění a dodávky z řádku objednávky | X | 2 |
+| B | Zaúčtování vyskladnění a dodávky z dokladu vyskladnění zásob | X | 3 |
+| C | Zaúčtování vyskladnění a dodávky z dokladu dodávky ze skladu | X | 4/5/6 |
+| D | Zaúčtování vyskladnění z dokladu vyskladnění a zaúčtování dodávky z dokladu dodávky ze skladu | X | X | 4/5/6 |
 
 For more information, see [Design Details: Outbound Warehouse Flow](design-details-outbound-warehouse-flow.md).
 
@@ -33,7 +33,7 @@ The following walkthrough demonstrates method B in the previous table.
 > [!NOTE]
 > [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
-## Návod
+## O tomto návodu
 
 In basic warehouse configurations where your location is set up to require pick processing but not ship processing, you use the **Inventory Pick** page to record and post pick and ship information for your outbound source documents. The outbound source document can be a sales order, purchase return order, outbound transfer order, or a production order with component need.
 
@@ -75,8 +75,8 @@ K dokončení tohoto návodu budete potřebovat:
 
       | Typ položky | Item Number | Kód lokace | Bin Code | Množství |
       |----------------|-----------------|-------------------|--------------|--------------|  
-      | Positive Adjmt. | LS-81 | SILVER | S-01-0001 | 20 |
-      | Positive Adjmt. | LS-81 | SILVER | S-01-0002 | 20 |
+      | Positive Adjmt. | LS-81 | STŘÍBRNÝ | S-01-0001 | 20 |
+      | Positive Adjmt. | LS-81 | STŘÍBRNÝ | S-01-0002 | 20 |
 
    3. Choose the **Post** action, and then select the **Yes** button.
 
@@ -106,7 +106,7 @@ Sales orders are the most common type of outbound source document.
 
    | Zboží | Kód lokace | Množství |
    |----|-------------|--------|  
-   | LS_81 | SILVER | 30 |
+   | LS_81 | STŘÍBRNÝ | 30 |
 
    Proceed to notify the warehouse that the sales order is ready for warehouse handling.
 

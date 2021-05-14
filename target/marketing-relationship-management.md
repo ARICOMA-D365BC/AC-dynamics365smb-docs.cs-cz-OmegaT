@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: contact, prospect, client
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ Good sales and marketing practices are all about how to make the best decisions 
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Define default settings for the use of contacts and interactions and set up number series. | [Setting Up Relationship Management](marketing-setup-marketing.md) |
 | Define the external entities that you have business relations with, such as customers, prospective customers, vendors, lawyers, and consultants, either as Person type or Company type. | [Managing Contacts](marketing-contacts.md) |

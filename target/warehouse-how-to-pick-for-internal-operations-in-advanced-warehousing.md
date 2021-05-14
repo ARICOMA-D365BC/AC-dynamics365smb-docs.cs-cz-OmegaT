@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -45,10 +45,10 @@ To create pick requests, both for pull and for push scenarios, the source docume
 
 If the internal operation area, such as a production shop floor, is set up with a default bin for placement of components to be used in the operation, then that bin code is inserted in the Place lines on the warehouse pick document to instruct warehouse workers where to place the items. For more information, see the **To-Production Bin Code** or the **To-Assembly Bin Code** field.
 
-## Filling the Consumption Bin
+## Plnění spotřební přihrádky
 This flow chart shows how the **Bin Code** field on production order component lines is filled according to your location setup.
 
-![Bin flow chart](media/binflow.png "BinFlow")
+![Vývojový diagram toku přihrádky](media/binflow.png "BinFlow")
 
 ## Viz také
 [Správa skladu](warehouse-manage-warehouse.md)    

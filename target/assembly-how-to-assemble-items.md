@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: kit, kitting
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -39,7 +39,7 @@ In this procedure, you create and process an assembly order for items that are a
 ## To assemble an item
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Montážní zakázky** a poté zvolte související odkaz.
 2. Vyberte akci **Nový**. The **New Assembly Order** page opens.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. In the **Item No.** field, select the assembly item that you want to process. The field is filtered to show only items that are set up for assembly, which means that they have assembly BOMs assigned.
 5. In the **Quantity** field, enter how many units of the item that you want assembled.
 

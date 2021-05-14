@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 ---
 
@@ -167,7 +167,7 @@ Another way to multitask, is to open [!INCLUDE[prod_short](includes/prod_short.m
 
 When entering numbers into quantity fields, such as the **Quantity** field on an item journal line, you can enter the formula instead of the sum quantity.
 
-### Examples
+### Příklady
 
 - If you enter 19+19, the field is calculated to 38.
 
@@ -213,7 +213,7 @@ You can also enter a date as a weekday followed by a week number. Or, you can en
 
 Instead of entering a specific date, you can enter one of these codes.
 
-| Code | Result |
+| Kód | Result |
 |--------------|----------------|  
 | t | Specifies today's date (the system date for the computer). |
 | p | Specifies an accounting period, where p means the first accounting period, p2 means the second accounting period, and so on. |
@@ -238,34 +238,9 @@ The following table lists the various ways in which times can be entered and how
 
 You enter two digits for each unit of time if you don't enter a separator.
 
-## Entering Datetimes
+## Entering Combined Datetimes
 
-When you enter datetimes, you must enter a space between the date and the time.
-
-The following table lists the various ways in which you can enter datetimes and how they're interpreted.
-
-| Entry | Interpretation |
-|---------------|------------------------|  
-| `131202` 132455 | 13-12-02 13:24:55 |
-| 1-12-02 10 | 01-12-02 10:00:00 |
-| 1.12.02 5 | 01-12-02 05:00:00 |
-| 1.12.02 | 01-12-02 00:00:00 |
-| 11 12 | 11-current month-current year 12:00:00 |
-| 1112 12 | 11-12-current year 12:00:00 |
-| t or today | today's date 00:00:00 |
-| t time | today's date actual time |
-| t 10:30 | today's date 10:30:00 |
-| t 3:3:3 | today's date 03:03:03 |
-| w or workdate | the working date 00:00:00 |
-| m or Monday | Monday of the current week 00:00:00 |
-| tu or Tuesday | Tuesday of the current week 00:00:00 |
-| we or Wednesday | Wednesday of the current week 00:00:00 |
-| th or Thursday | Thursday of the current week 00:00:00 |
-| f or Friday | Friday of the current week 00:00:00 |
-| s or Saturday | Saturday of the current week 00:00:00 |
-| su or Sunday | Sunday of the current week 00:00:00 |
-| tu 10:30 | Tuesday of the current week 10:30:00 |
-| tu 3:3:3 | Tuesday of the current week 03:03:03 |
+[!INCLUDE [datetimes](includes/datetimes.md)]
 
 ## Entering Duration
 

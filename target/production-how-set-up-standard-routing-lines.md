@@ -9,25 +9,25 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Set Up Standard Routing Lines
+# Nastavení řádků standardního TNG postupu
 
-The use of standard tasks simplifies the creation and maintenance of routings. They allow you to quickly attach extra information to recurring operations.
+Použití standardních úloh zjednodušuje vytváření a údržbu TNG postupů. Umožňují rychlé připojení dodatečných informací k opakovaným operacím.
 
-## To set up a standard task
+## Nastavení standardní úlohy
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Standard Tasks**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Choose the **Tools**, **Personnel**, **Description**, or **Tools** action, and then, on the page that opens, add the relevant entry.
 
-## To add a standard task to an operation
+## Přidání standardní úlohy k operaci
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
-2. Open the relevant routing.
+2. Otevřete příslušný TNG postup.
 3. Select a relevant routing line, choose the **Operations** action, and then choose the **Tools**, **Personnel**, **Description**, or **Tools** action.
 
 When you print the routing sheeting, you can choose to include the elements from the standard task that you added to the routing lines.

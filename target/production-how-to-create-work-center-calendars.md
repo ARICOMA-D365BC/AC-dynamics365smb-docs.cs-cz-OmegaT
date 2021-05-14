@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -35,7 +35,7 @@ Even if your work centers do not work in different work shifts, enter at least o
 4. Choose the **Working Days** action.
 5. On the **Shop Calendar Working Days** page, define a complete work week, with the start and end times for each day.
 
-   In the **Work Shift Code** field, select one of the shifts that you previously defined. Add a line for every working day and every shift. For example:
+   In the **Work Shift Code** field, select one of the shifts that you previously defined. Add a line for every working day and every shift. Například:
 
    Monday  07:00 15:00 1   
    Tuesday 07:00 15:00 1
@@ -52,7 +52,7 @@ Even if your work centers do not work in different work shifts, enter at least o
    When all the working days of a week are defined, you can close the **Shop Calendar Working Days** page and proceed to enter holidays.
 
 6. On the **Shop Calendars** page, select the shop calendar, and then choose the **Holidays** action.
-7. On the **Shop Calendar Holidays** page, define the holidays of the year by entering the start date and time, the end time, and description of each holiday on individual lines. For example:
+7. On the **Shop Calendar Holidays** page, define the holidays of the year by entering the start date and time, the end time, and description of each holiday on individual lines. Například:
 
    04/07/14 0:00:00 23:59:00 Summer Holiday  
    05/07/14 0:00:00 23:59:00 Summer Holiday  
@@ -93,7 +93,7 @@ The calculated work center calendar will now define when and how much capacity i
 ## To record work center absence
 1. On the **Work Center Calendar** page, choose the **Show Matrix** action.
 2. On the **Work Center Calendar Matrix** page, select the work center and calendar day when the absence time should be recorded, and then choose the **Absence** action.
-3. On the **Absence** page, define the starting time, ending time, and description of that day’s absence. For example:
+3. On the **Absence** page, define the starting time, ending time, and description of that day’s absence. Například:
 
    25/01/01 08:00 10:00 Maintenance
 

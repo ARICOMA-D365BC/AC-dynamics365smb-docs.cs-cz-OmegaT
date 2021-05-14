@@ -11,42 +11,42 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: crm, sales, couple, decouple, synchronize
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
 
 # Coupling and Synchronizing
-This topic describes how to couple one or more records in [!INCLUDE[prod_short](includes/prod_short.md)] with records in Dataverse or [!INCLUDE[crm_md](includes/crm_md.md)]. Coupling records lets you view Dataverse information from [!INCLUDE[prod_short](includes/prod_short.md)], and vice versa. The coupling also enables you to synchronize data between the records. You can couple existing records, or create and couple new records.
+This topic describes how to couple one or more records in [!INCLUDE[prod_short](includes/prod_short.md)] with records in Dataverse or [!INCLUDE[crm_md](includes/crm_md.md)]. Coupling records lets you view Dataverse information from [!INCLUDE[prod_short](includes/prod_short.md)], and vice versa. Spojení také umožňuje synchronizovat data mezi záznamy. Můžete spárovat existující záznamy nebo vytvářet a spárovat nové záznamy.
 
 > [!Note]
-> Coupling and synchronizing data is available only if your system administrator has created a connection between [!INCLUDE[prod_short](includes/prod_short.md)] and Dataverse or [!INCLUDE[crm_md](includes/crm_md.md)]. A quick way to check is to open the **Customer** card and look for the **Set Up Coupling** action. If the action is available, the apps are connected.
+> Coupling and synchronizing data is available only if your system administrator has created a connection between [!INCLUDE[prod_short](includes/prod_short.md)] and Dataverse or [!INCLUDE[crm_md](includes/crm_md.md)]. A quick way to check is to open the **Customer** card and look for the **Set Up Coupling** action. Pokud je akce k dispozici, aplikace jsou připojené.
 
-## Video Example
+## Video příklad
 
 > [!VIDEO https://go.microsoft.com/fwlink/?linkid=2098376]
 
-## To couple a record
-1. In [!INCLUDE[prod_short](includes/prod_short.md)], open the card for the record you want to couple. For example, the Customer or Contact card.
+## Párování záznamů
+1. In [!INCLUDE[prod_short](includes/prod_short.md)], open the card for the record you want to couple. Například, karta zákazníka nebo kontaktu.
 
-   You can also just open the list page and select the record that you want to couple.
+   Můžete také otevřít stránku se seznamem a vybrat záznam, který chcete spárovat.
 
 2. Choose the **Set Up Coupling** action.
 3. Fill in the fields, and then choose **OK**.
 
-## To synchronize a single record
-1. In [!INCLUDE[prod_short](includes/prod_short.md)], open the card for the record you want to couple. For example, the Customer or Contact card.
+## Synchronizace jednoho záznamu
+1. In [!INCLUDE[prod_short](includes/prod_short.md)], open the card for the record you want to couple. Například, karta zákazníka nebo kontaktu.
 2. Choose the **Synchronize Now** action.
 3. If a record can be synchronized in one direction, select the option that specifies the direction of data update, and then choose **OK**.
 
 ## To synchronize a single record from [!INCLUDE[crm_md](includes/crm_md.md)]
-1. In [!INCLUDE[crm_md](includes/crm_md.md)], open the form for the record you want to couple. For example, the Account card or Contact card form.
+1. In [!INCLUDE[crm_md](includes/crm_md.md)], open the form for the record you want to couple. Například, karta účtu nebo karta kontaktu.
 2. Choose the **[!INCLUDE[prod_short](includes/prod_short.md)]** action in the ribbon to open and couple record automatically.
 
 > [!Note]
 > You can synchronize a single record from [!INCLUDE[crm_md](includes/crm_md.md)] automatically only when **Sync. Only Coupled Records** is disabled and the synchronization direction is set to Bidirectional or From Integration Table on the **Integration Table Mapping** page for the record. For more information, see [Mapping the Tables and Fields to Synchronize](admin-how-to-modify-table-mappings-for-synchronization.md#creating-new-records).
 
-## To synchronize multiple records
+## Synchronizace více záznamů
 1. In [!INCLUDE[prod_short](includes/prod_short.md)], open the list page for the record, such as the Customers or Contacts list pages.
 2. Select the records that you want to synchronize, and then choose the **Synchronize Now** action.
 3. If records can be synchronized in one direction, select the option that specifies the direction, and then choose **OK**.

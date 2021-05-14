@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -59,9 +59,9 @@ The following table shows which filters are possible for different allocation ba
 | **Base** | **Číselná  Filter** | **Date Filter Code** | **Cost Center Filter** | **Cost Object Filter** | **Group Filter** |
 |--------------|----------------------------------------|----------------------------------------------|------------------------------------------------|------------------------------------------------|------------------------------------------|  
 | G/L Entries | Finanční účet | Ano | Ano | Ano | N/A |
-| G/L Budget Entries | Finanční účet | Ano | Ano | Ano | G/L Budget Name |
-| Cost Type Entries | Cost Type | Ano | Ano | Ano | N/A |
-| Cost Budget Entries | Cost Type | Ano | Ano | Ano | Budget Name |
+| Položky finančního rozpočtu | Finanční účet | Ano | Ano | Ano | G/L Budget Name |
+| Cost Type Entries | Typ nákladů | Ano | Ano | Ano | N/A |
+| Cost Budget Entries | Typ nákladů | Ano | Ano | Ano | Budget Name |
 | No of Employees | N/A | Ano | Ano | Ano | N/A |
 | Items Sold (Qty) | Číslo zboží | Ano | Ano | Ano | Účto skupiny zboží |
 | Items Purchased (Qty) | Číslo zboží | Ano | Ano | Ano | Účto skupiny zboží |

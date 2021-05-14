@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
@@ -22,7 +22,7 @@ Before you can start using opportunity management, you must set up sales cycles 
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Set up the sales cycles that you usually follow, and the different stages within each opportunity sales cycle. | [Set Up Opportunity Sales Cycles and Cycle Stages](marketing-how-setup-opportunity-sales-cycles-stages.md) |
 | Create sales opportunities that you have from your contacts. | [Create Opportunities](marketing-how-create-opportunities.md) |

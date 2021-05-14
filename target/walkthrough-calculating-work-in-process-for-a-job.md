@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -19,7 +19,7 @@
 
 Pomocí projektů můžete naplánovat využití zdrojů vaší společnosti a sledovat různé náklady spojené s využitím zdrojů na konkrétním projektu. Projekty zahrnují spotřebu hodin zaměstnanců, hodin strojů, inventárních položek a dalších typů využití, které je třeba sledovat při postupu projektu. Pokud projekt běží delší dobu, možná budete chtít tyto náklady převést na účet Nedokončené výroby (NV) v rozvaze, zatímco se projekt dokončuje. Pokud je to vhodné, můžete na svých účtech ve výkazu zisku a ztráty uznat náklady a tržby.
 
-## Návod
+## O tomto návodu
 Tento návod ilustruje následující úkoly:
 
 - Výpočet NV.
@@ -37,7 +37,7 @@ Tento návod používá jako osobu člena projektového týmu (Tricia).
 Než budete moci provést úkoly v tomto návodu, musí být ve vašem počítači nainstalován [!INCLUDE[prod_short](includes/prod_short.md)].
 
 ## Příběh
-Tento návod se zaměřuje na CRONUS International Ltd., projekční a poradenskou firmu, která navrhuje a upravuje nové infrastruktury, jako jsou konferenční sály a kanceláře s nábytkem, doplňky a skladovací jednotky. Většina práce v CRONUS je zaměřena na projekt a Tricia, členka projektového týmu, používá úlohy k získání přehledu o každém probíhajícím projektu, který CRONUS zahájil, a také o dokončených projektech. Některé z těchto prací mohou být velmi zdlouhavé a mohou trvat měsíce. Tricia může použít účet NV k zaznamenání nedokončené výroby a ke sledování nákladů v rámci projektu.
+Tento návod se zaměřuje na CRONUS CZ s.r.o., projekční a poradenskou firmu, která navrhuje a upravuje nové infrastruktury, jako jsou konferenční sály a kanceláře s nábytkem, doplňky a skladovací jednotky. Většina práce v CRONUS je zaměřena na projekt a Tricia, členka projektového týmu, používá úlohy k získání přehledu o každém probíhajícím projektu, který CRONUS zahájil, a také o dokončených projektech. Některé z těchto prací mohou být velmi zdlouhavé a mohou trvat měsíce. Tricia může použít účet NV k zaznamenání nedokončené výroby a ke sledování nákladů v rámci projektu.
 
 ## Výpočet NV
 CRONUS přijal zdlouhavý projekt, který se nyní rozšířil na sledovaná období. Tricia, členka projektového týmu, vypočítává nedokončenou výrobu (NV), aby se ujistila, že finanční výkaz společnosti bude přesný.
@@ -54,7 +54,7 @@ Následující tabulka popisuje tři možnosti.
 
 V následujícím návodu Tricia použije metodu Hodnota nákladů, její firemní standard, k výpočtu nedokončené výroby. Určuje, která část projektu bude zahrnuta do výpočtu NV přiřazením hodnot Celkem NV různým řádkům projektu.
 
-### Výpočet NV
+### Výpočet Nedokončené výroby
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
 2. V seznamu **Projekty** vyberte projekt **Domov** a poté vyberte akci **Upravit**. Tím se karta projektu otevře v režimu úprav.
@@ -104,7 +104,7 @@ Po skončení účetního období musí Tricia přepočítat NV, aby do tohoto b
 3. Zavřete stránku.
 
 > [!NOTE]  
-> Nedokončená výroba a Deaktivace se pouze počítá. Není zaúčtováno do věcných položek. Chcete-li tak učinit, musíte po výpočtu Nedokončené výroby a Deaktivace spustit dávkovou úlohu **Zaúčtovat NV**.
+> Nedokončená výroba a Deaktivace se pouze počítá. Nejedná se o účtování. Chcete-li tak učinit, musíte po výpočtu Nedokončené výroby a Deaktivace spustit dávkovou úlohu **Zaúčtovat NV**.
 
 ## Zaúčtování NV do věcných položek
 Nyní, když Tricia pro tuto práci vypočítala NV, může ji zaúčtovat do věcných položek.

@@ -8,7 +8,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
@@ -18,7 +18,7 @@ You can print an inventory picking list directly from a sales order, a sales inv
 This report is typically used in companies without dedicated functionality for warehouse management, so that an inventory worker can simply view or print the picking list from the related sales document. In companies with higher volume or more complex processes, picking is planned and performed in dedicated warehouse documents. For more information, see [Pick Items](warehouse-pick-items.md).
 
 ## To print a picking list from a sales order
-The following procedure is based on a sales order. The steps are similar for all sales documents that can be used to initiate shipment of items.
+Následující postup je založen na prodejní objednávce. The steps are similar for all sales documents that can be used to initiate shipment of items.
 
 1. Choose the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Sales Orders**, and then choose the related link.
 2. Open the sales order that you want to pick items for.

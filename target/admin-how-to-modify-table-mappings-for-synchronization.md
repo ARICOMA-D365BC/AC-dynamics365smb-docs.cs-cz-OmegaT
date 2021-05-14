@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: sales, crm, integration, sync, synchronize, table mapping
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -50,7 +50,7 @@ Mapping tables is only the first step. You must also map the fields on the table
 Sometimes the values in the fields that you want to map are different. For example, in [!INCLUDE[crm_md](includes/crm_md.md)] the language code for the United States is "U.S.," but in [!INCLUDE[prod_short](includes/prod_short.md)] it's "US." That means you must transform the value when you synchronize data. This happens through transformation rules that you define for the fields. You define transformation rules on the **Integration Table Mappings** page by choosing **Mapping**, and then **Fields**. Predefined rules are provided, but you can also create your own. For more information, see [Transformation Rules](across-how-to-set-up-data-exchange-definitions.md#transformation-rules).
 
 ### Handling Missing Option Values in Mapping
-[!INCLUDE[prod_short](includes/cds_long_md.md)] contains option set columns that provide values that you can map to [!INCLUDE[prod_short](includes/prod_short.md)] fields of the type **Option** for automatic synchronization. During synchronization, non-mapped options are ignored and the missing options are appended to the related [!INCLUDE[prod_short](includes/prod_short.md)] table and added to the **CDS Option Mapping** system table to be handled manually later. For example, by adding the missing options in either product and then updating the mapping. For more information, see [Handling Missing Option Values](admin-cds-missing-option-values.md).
+[!INCLUDE[prod_short](includes/cds_long_md.md)] contains option set columns that provide values that you can map to [!INCLUDE[prod_short](includes/prod_short.md)] fields of the type **Option** for automatic synchronization. During synchronization, non-mapped options are ignored and the missing options are appended to the related [!INCLUDE[prod_short](includes/prod_short.md)] table and added to the **CDS Option Mapping** system table to be handled manually later. Například přidáním chybějících možností v obou produktech a aktualizací mapování. For more information, see [Handling Missing Option Values](admin-cds-missing-option-values.md).
 
 ## Coupling Records
 Coupling links rows in [!INCLUDE[prod_short](includes/cds_long_md.md)] to records in [!INCLUDE[prod_short](includes/prod_short.md)]. For example, accounts in [!INCLUDE[prod_short](includes/cds_long_md.md)] are typically coupled with customers in [!INCLUDE[prod_short](includes/prod_short.md)]. Coupling records offers the following benefits:

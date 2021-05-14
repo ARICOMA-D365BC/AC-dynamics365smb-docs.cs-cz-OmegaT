@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -21,7 +21,7 @@ Practically every document and journal in [!INCLUDE[prod_short](includes/prod_sh
 
 The following table describes related tasks, with links to the topics that describe them.
 
-| Viz | také |
+| Viz | Také |
 | --- | --- |
 | Learn about posting purchase documents. | [Posting Purchases](ui-post-purchases.md) |
 | Learn about posting sales documents. | [Posting Sales](ui-post-sales.md) |

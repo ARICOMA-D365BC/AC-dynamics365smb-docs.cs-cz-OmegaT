@@ -9,29 +9,29 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 10/01/2020
+    ms.date: 04/01/2021
     ms.author: edupont
 
 ---
-# Create Custom Company Configuration Packages
-As you grow your business, you will likely come to rely on a set of company types that you use with most of your customers. You can streamline your implementation process by turning these types into company configuration packages that are available for reuse.
+# Vytvoření vlastních konfiguračních balíčků společnosti
+Při růstu vašeho podniku se pravděpodobně budete spoléhat na sadu typů společností, které používáte u většiny svých zákazníků. Proces implementace můžete zefektivnit tak, že tyto typy změníte do konfiguračních balíčků společnosti, které jsou k dispozici pro opakované použití.
 
-In general, create a configuration package per functional area, for example, create a package for your manufacturing functionality. That lets you apply and set up new areas in a company as you need them
+Obecně vytvořte konfigurační balíček pro každou funkční oblast, například balíček pro nastavení výroby. To umožňuje použít a nastavit nové oblasti ve společnosti podle potřeby.
 
-Another approach would be to create a package that includes the tables that define setup, such as the following:
+Dalším přístupem by bylo vytvoření balíčku, který bude obsahovat tabulky definující nastavení, například následující:
 
-- Fixed Asset Setup
-- General Ledger Setup
-- Inventory Setup
-- Manufacturing Setup
-- Purchases and Payables Setup
-- Marketing Setup
-- Service Setup
-- Sales and Receivables Setup
-- Warehouse Setup
-- General Posting Setup
-- VAT Posting Setup
-- Inventory Posting Setup
+- Nastavení dlouhodobého majetku
+- Nastavení financí
+- Nastavení zásob
+- Nastavení výroby
+- Nastavení nákupů a závazků
+- Nastavení marketingu
+- Nastavení služby
+- Nastavení prodeje a pohledávek
+- Nastavení skladu
+- Nastavení obecného účtování
+- Nastavení účtování DPH
+- Nastavení účtování zásob
 
 To see a complete list of setup tables, Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Manual Setup**, and then choose the related link.
 
@@ -40,15 +40,15 @@ To see a complete list of setup tables, Choose the ![Lightbulb that opens the Te
 >
 > The XML processor accepts only some special characters, and will remove those it does not. If removing a special character, such as the % sign in "Field 1%," results in two or more tables or fields with the same name an error will occur when you export or import a configuration package.
 
-## To create a custom company configuration package
-1. Create a new company. For more information, see [Creating New Companies in Business Central](about-new-company.md).
-3. Set up the new company in the way you need. Fill in all required setup tables.
-4. Open the new company.
+## Vytvoření vlastního konfiguračního balíčku společnosti
+1. Vytvoření nové společnosti. For more information, see [Creating New Companies in Business Central](about-new-company.md).
+3. Založte novou společnost tak, jak potřebujete. Vyplňte všechny požadované tabulky nastavení.
+4. Otevřete novou společnost.
 5. Open the **Configuration Worksheet** page.
-6. Add the tables that you want to transfer to another company to the worksheet. Assign the worksheet lines to the package.
-7. Create a questionnaire for the most frequently used setup tables.
-8. Create configuration templates to make it easier to create master data, such as customers or items.
-9. Export your package as a .rapidstart file.
+6. Přidejte do sešitu tabulky, které chcete přenést do jiné společnosti. Přiřaďte řádky sešitu k balíčku.
+7. Vytvořte dotazník pro nejčastěji používané tabulky nastavení.
+8. Vytvořte konfigurační šablony, které usnadní vytváření kmenových dat, jako jsou zákazníci nebo zboží.
+9. Exportujte balíček jako soubor .rapidstart.
 
 ## Viz také
 [Setting Up a Company With RapidStart Services](admin-set-up-a-company-with-rapidstart.md)  

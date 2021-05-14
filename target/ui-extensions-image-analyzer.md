@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: API, extension, Cognitive Services, image, computer vision, attribute, tag, recognition
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
@@ -38,7 +38,7 @@ There are a few requirements for the images:
 
 ## To enable Image Analyzer
 
-The Image Analyzer extension is built-in to [!INCLUDE[prod_short](includes/prod_short.md)]. You just need to turn it on.
+The Image Analyzer extension is built-in to [!INCLUDE[prod_short](includes/prod_short.md)]. Stačí jej pouze zapnout.
 
 > [!NOTE]  
 > To enable the Image Analyzer extension, you must be an administrator. Make sure that you are assigned the **SUPER** user permission set.
@@ -100,7 +100,7 @@ You can view the number of analyses you've done, and how many you can still do, 
 
 [Work with Item Attributes](inventory-how-work-item-attributes.md)  
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Getting Started](product-get-started.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

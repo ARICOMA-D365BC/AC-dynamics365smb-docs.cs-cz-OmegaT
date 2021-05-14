@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Viewing Database Locks
+# Prohlížení zámku databáze
 
-Database locking controls access by multiple users to the same data at the same time. To protect a transaction against other transactions modifying the same data, the first transaction puts a lock on the data. The lock remains until the transaction's done.
+Uzamykání databáze řídí přístup uživatelů ke stejným datům současně. Aby byly transakce chráněny před jinými transakcemi upravujícími stejná data, první transakce zamkne data. Zámek zůstává, dokud není transakce dokončena.
 
-Users may be blocked from completing transactions on the locked data. They'll typically get a message that indicates the lock condition.
+Uživatelé mohou být blokováni v provádění transakcí na uzamčených datech. Obvykle se jim zobrazí zpráva, která označuje stav uzamčení.
 
-## To view database locks
+## Zobrazení zámků databáze
 
 Choose the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Database Locks**, and then choose the related link.
 

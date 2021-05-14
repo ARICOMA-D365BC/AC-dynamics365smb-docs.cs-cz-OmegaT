@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/01/2020
+ms.date: 04/01/2021
 ms.author: edupont
 
 ---
@@ -65,7 +65,7 @@ You can combine multiple fixed assets into one fixed asset, for example when you
 ## To view changed depreciation book values due to fixed asset reclassification
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Book Value 02**, and then choose the related link.
-2. Vyplňte pole podle potřeby.
+2. Podle potřeby vyplňte pole.
 3. Choose the **Print** or **Preview** button.
 
 ## Viz také
@@ -73,7 +73,7 @@ You can combine multiple fixed assets into one fixed asset, for example when you
 [Fixed Assets](fa-manage.md)  
 [Setting Up Fixed Assets](fa-setup.md)  
 [Finance](finance.md)  
-[Getting Started](product-get-started.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
