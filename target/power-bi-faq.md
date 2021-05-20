@@ -24,7 +24,7 @@ Yes, because the reports are embedded from Power BI.
 <!-- 3 -->
 ### Are the Business Central apps for Power BI available in languages other than English?
 
-Ne. These apps are currently only available in English.
+Číslo  These apps are currently only available in English.
 
 <!-- 24 -->
 ### Once a report is published on my powerbi.com workspace, can I download its pbix?
@@ -34,7 +34,7 @@ Ano. For more information, see [Download a report from the Power BI service to P
 <!-- 27 -->
 ### Can I download the apps as pbix files?
 
-Ne. Currently, we don’t offer downloading pbix files for the official Power BI apps, because they're published on AppSource.
+Číslo  Currently, we don’t offer downloading pbix files for the official Power BI apps, because they're published on AppSource.
 
 ## [License](#tab/license)
 
@@ -42,7 +42,7 @@ Ne. Currently, we don’t offer downloading pbix files for the official Power BI
 ### Do I need a Power BI Pro license to publish reports?
 
 <!-- todo What does " or for every user that consults the published report" mean? fixed -->
-Ne. A Pro license isn't needed to publish reports. The standard (free) Power BI license is enough. For more information, see [Power BI Licensing](admin-powerbi-setup.md#license).
+Číslo  A Pro license isn't needed to publish reports. The standard (free) Power BI license is enough. For more information, see [Power BI Licensing](admin-powerbi-setup.md#license).
 
 <!-- 15 -->
 ### Is there anything I can't do with the free license?
@@ -121,7 +121,7 @@ Ano. We have it in our plans to add support for shared workspaces, but we don't 
 <!-- 10 -->
 ### From Power BI, besides using a query, is there another way to get data from Business Central tables that don't have an associated page? For example, like the *Item Attributes Value Mapping* table.
 
-Ne. Not at this point.
+Číslo  Not at this point.
 
 <!-- 12 -->
 ### Are published queries faster to use than published pages?
@@ -138,7 +138,7 @@ Not yet. But when the new connector is available in June 2021, a developer can c
 <!-- 28 -->
 ### Can I connect Power BI to a read-only database server of Business Central online?
 
-Ne. But we have this feature on our long-term roadmap.
+Číslo  But we have this feature on our long-term roadmap.
 
 ## [Performance](#tab/performance)
 
@@ -151,12 +151,12 @@ Ano. Our tests indicate that API pages are up to 25% more performant than web se
 <!-- 18 -->
 ### Are there plans to have a mirror on the Azure SQL Database instance, which I can connect to directly?
 
-Ne. Not at this point. You can only communicate with Business Central through APIs.
+Číslo  Not at this point. You can only communicate with Business Central through APIs.
 
 <!-- 19 -->
 ### Loading data from Business Central web services seems slow. Is there any way to get data directly from the SQL database table?
 
-Ne. Direct access to the database isn't possible, but switching to API pages (when the new connector available) will help greatly.
+Číslo  Direct access to the database isn't possible, but switching to API pages (when the new connector available) will help greatly.
 
 ## [Advanced](#tab/advanced)
 <!-- 1 -->

@@ -19,12 +19,12 @@
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the inbound processes for receiving and putting away can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
-| Metoda | Inbound process | Přihrádky | Receipts | Put-aways | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Inbound process | Přihrádky | Příjmy | Vyskladnění | Complexity level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
 |------------|---------------------|----------|--------------|----------------|--------------------------------------------------------------------------------------------------------------------|  
-| A | Post receipt and put-away from the order line | X | 2 |
-| B | Post receipt and put-away from an inventory put-away document | X | 3 |
-| C | Post receipt and put-away from a warehouse receipt document | X | 4/5/6 |
-| D | Post receipt from a warehouse receipt document and post put-away from a warehouse put-away document | X | X | 4/5/6 |
+| A | Zaúčtujte příjemku a zaskladněte zboží z řádku objednávky | X | 2 |
+| B | Zaúčtujte příjemku a zaskladněte zboží z dokladu zaskladnění zásob | X | 3 |
+| C | Zaúčtujte příjemku a zaskladněte zboží z příjemky skladu | X | 4/5/6 |
+| D | Zaúčtujte příjemku z příjemky skladu a zaskladnění z dokladu zaskladnění skladu | X | X | 4/5/6 |
 
 For more information, see [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md).
 

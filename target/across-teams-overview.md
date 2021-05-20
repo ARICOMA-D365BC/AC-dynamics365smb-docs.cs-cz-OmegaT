@@ -12,50 +12,50 @@ ms.date: 04/12/2021
 ms.author: jswymer
 ---
 
-# Business Central and Microsoft Teams Integration
+# Integrace Business Central a Microsoft Teams
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams) is a Microsoft 365 product that lets you connect with others, collaborate seamlessly, and simplify work. [!INCLUDE [prod_short](includes/prod_short.md)] offers an app that connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)] so you can quickly share details across team members, look up contacts, and respond faster to inquiries.
+[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams) je produkt Microsoft 365, který vám umožní spojení se s ostatními, bezproblémovou spolupráci a zjednodušení práce. [!INCLUDE [prod_short](includes/prod_short.md)] nabízí aplikaci, která propojuje Microsoft Teams s vašimi obchodními daty v [!INCLUDE [prod_short](includes/prod_short.md)] tak, abyste mohli rychle sdílet podrobnosti mezi členy týmu, hledat kontakty a rychleji odpovídat na dotazy.
 
-The app is available on the Teams marketplace, and you can use it with the Teams desktop, mobile app, or web.
+Aplikace je dostupná na Teams marketplace a můžete ji používat s desktopovou a mobilní aplikací nebo webovým klientem aplikace Teams.
 
-## Features overview
+## Přehled funkcí
 
-The [!INCLUDE [prod_short](includes/prod_short.md)] app for Teams offers the following features.
+Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams nabízí následující funkce.
 
-### Look up details of customers, vendors, and other contacts
+### Vyhledávání podrobností o zákaznících, dodavatelích a dalších kontaktech
 
-No matter where you are in Teams, you can look up details about customers, vendors, and other [!INCLUDE [prod_short](includes/prod_short.md)] contacts. This feature not only lets you view general information about contacts, but also gives access to interaction history, related documents, and more.
+Bez ohledu na to, kde se v Teams nacházíte, můžete si prohlédnout podrobnosti o zákaznících, dodavatelích, kontaktech a dalších v [!INCLUDE [prod_short](includes/prod_short.md)]. Tato funkce umožňuje nejen zobrazit obecné informace o kontaktech, ale také poskytuje přístup k historii interakcí, souvisejícím dokumentům a dalším.
 
-[![Look up Business Central contacts from Teams command box](media/teams-contacts-overview.png)](media/teams-contacts-overview.png#lightbox)
+[![Vyhledávání kontaktů Business Central z příkazového pole v Teams](media/teams-contacts-overview.png)](media/teams-contacts-overview.png#lightbox)
 
-You can also share contact details in a conversation. From there, participants have access to even more details about the contact as well.
+V konverzaci můžete také sdílet kontaktní údaje. Odtud mají spolupracovníci přístup k ještě více podrobnostem o kontaktu.
 
-[![Look up Business Central contacts from Teams compose box](media/teams-contacts.png)](media/teams-contacts.png#lightbox)
+[![Vyhledávání kontaktů Business Central z psacího pole v Teams](media/teams-contacts.png)](media/teams-contacts.png#lightbox)
 
-For more information, see [Searching for Contacts from Microsoft Teams](across-search-contacts-teams.md).
+Pro více informací navštivte[Vyhledávání kontaktů z Microsoft Teams](across-search-contacts-teams.md).
 
-### Share records in conversations
+### Sdílení záznamů v konverzacích
 
-Copy a link to any Business Central record and paste it into a Teams conversation to share with your coworkers. The app will then expand the link into a compact, interactive card that displays information about the record.
+Zkopírujte odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
 
-[![Teams integration with Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+[![Teams integrace s Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
 
-Once in the conversation, you and coworkers can view more details about the record, edit data, and take action - without leaving Teams.
+Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
 
-For more information, see [Working with Business Central Data in Microsoft Teams](across-working-with-teams.md).
+Pro více informací, navštivte [Práce s daty Business Central v Microsoft Teams](across-working-with-teams.md).
 
-## Get Started
+## Začínáme
 
-1. A [!INCLUDE [prod_short](includes/prod_short.md)] online user account is required for [!INCLUDE [prod_short](includes/prod_short.md)] app for Teams.
+1. Je vyžadován online uživatelský účet [!INCLUDE [prod_short](includes/prod_short.md)] pro [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams.
 
-   If you’re not sure whether you have an account, or if you don’t know your credentials for signing in, contact your company administrator to help you get started.
+   Pokud si nejste jisti, zda máte účet nebo neznáte přihlašovací údaje pro přihlášení, obraťte se na správce společnosti, který Vám pomůže začít.
 
    > [!TIP]
    > If your organization doesn't have a [!INCLUDE [prod_short](includes/prod_short.md)] subscription, you can sign up for a free trial. For more information, see [Getting Started with a Trial](across-preview.md#getting-started-with-a-trial).
 
-2. As an administrator, see [Managing Microsoft Teams Integration with Business Central](admin-teams-integration.md) for information about getting users set up to work with [!INCLUDE [prod_short](includes/prod_short.md)] and Teams.
+2. Jako administrátor běžte na [Správa Integrace Microsoft Teams s Business Central](admin-teams-integration.md) , kde jsou informace o nastavení uživatelských skupin v [!INCLUDE [prod_short](includes/prod_short.md)] a Teams.
 3. Install [!INCLUDE [prod_short](includes/prod_short.md)] app in Teams. See [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md).
 4. Once the app is installed, you're ready to go. See [Working with Business Central Data in Teams](across-working-with-teams.md).
 

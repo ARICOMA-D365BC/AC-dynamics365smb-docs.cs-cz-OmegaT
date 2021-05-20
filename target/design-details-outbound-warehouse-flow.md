@@ -17,7 +17,7 @@
 
 Výstupní tok ve skladu začíná požadavkem vydaných zdrojových dokladů na vydání zboží ze skladu, které má být dodáno externí straně nebo do jiného skladu společnosti. Z oblasti skladování se různé skladové činnosti provádějí na jistých úrovních složitosti, aby se zboží dostalo do přepravních doků.
 
-Každá položka je identifikována a spárována s odpovídajícím vstupním zdrojovým dokladem. Existují následující výstupní zdrojové doklady:
+Každé zboží je identifikováno a spárováno s odpovídajícím vstupním zdrojovým dokladem. Existují následující výstupní zdrojové doklady:
 
 - Prodejní objednávka
 - Výstupní objednávka transferu
@@ -29,13 +29,13 @@ Kromě toho existují následující interní zdrojové doklady, které fungují
 - Výrobní zakázka s potřebou komponent
 - Montážní zakázka s potřebou komponent
 
-Poslední dva doklady představují odchozí toky ze skladu do interních provozních oblastí. For more information about warehouse handling for internal inbound and outbound processes, see [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md).
+Poslední dva doklady představují odchozí toky ze skladu do interních provozních oblastí. Další informace o manipulaci se sklady pro interní příchozí a odchozí procesy najdete v [Detaily návrhu: Interní procesy skladu](design-details-internal-warehouse-flows.md).
 
-Procesy a doklady uživatelského rozhraní v odchozích tocích skladu se liší pro základní a pokročilé nastavení skladu. Hlavním rozdílem je, že aktivity jsou zpracovány po objednávkách v základních konfiguracích skladu a jsou konsolidovány pro více objednávek v pokročilých konfiguracích skladu. For more information about different warehouse complexity levels, see [Design Details: Warehouse Overview](design-details-warehouse-setup.md).
+Procesy a doklady uživatelského rozhraní v odchozích tocích skladu se liší pro základní a pokročilé nastavení skladu. Hlavním rozdílem je, že aktivity jsou zpracovány po objednávkách v základních konfiguracích skladu a jsou konsolidovány pro více objednávek v pokročilých konfiguracích skladu. Další informace o různých úrovních složitosti skladu najdete v [Detaily návrhu: Přehled skladu](design-details-warehouse-setup.md).
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the outbound processes of picking and shipping can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
-| Metoda | Odchozí proces | Přihrádky | Vyskladnění | Dodávky | Complexity Level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Odchozí proces | Přihrádky | Vyskladnění | Dodávky | Úroveň složitosti (Viz [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md)) |
 |------|----------------|----|-----|---------|-------------------------------------------------------------------------------------|  
 | A | Zaúčtování vyskladnění a dodávky z řádku objednávky | X | 2 |
 | B | Zaúčtování vyskladnění a dodávky z dokladu vyskladnění zásob | X | 3 |

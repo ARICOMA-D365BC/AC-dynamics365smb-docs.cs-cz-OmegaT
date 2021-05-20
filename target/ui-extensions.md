@@ -94,7 +94,7 @@ This also applies to some functionality in the base application, such as the fol
 * Dataverse connections
 * OCR Service
 * Online Map
-* EU VAT Reg. Ne. Service
+* EU VAT Reg. Číslo  Service
 
 ## Viz také
 

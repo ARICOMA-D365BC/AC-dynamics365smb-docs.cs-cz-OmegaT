@@ -23,7 +23,7 @@ Power BI reports give you insight into your [!INCLUDE[prod_short](includes/prod_
 
 ![Power BI part in Business Central](./media/power-bi-part.png)
 
-## Get Started
+## Začínáme
 
 ### Předpoklady
 

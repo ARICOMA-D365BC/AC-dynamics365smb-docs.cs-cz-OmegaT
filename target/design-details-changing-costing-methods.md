@@ -125,7 +125,7 @@ When creating assembly orders, use the information from the Physical Invt. journ
 | Pole | Value to enter |
 |---------|---------|
 | Typ | Zboží |
-| Ne. | The number of the original item. |
+| Číslo  | The number of the original item. |
 | Množství za | 1 |
 | Variant Code | The same as in physical inventory journal. |
 | Kód lokace | The same as in physical inventory journal. |

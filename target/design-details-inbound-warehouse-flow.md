@@ -14,38 +14,38 @@
 
 ---
 # Detaily návrhu: Vstupní procesy skladu
-Vstuoní procesy ve skladu začínají, když zboží dorazí do skladu v sídle společnosti, buď je přijaté z externích zdrojů, nebo z jiného sídla společnosti. Zaměstnanec zboží zaregistruje, obvykle naskenováním čárového kódu. Z přijímacího doku se skladové činnosti provádějí na různých úrovních složitosti, aby se zboží přeneslo do skladovací oblasti.
+Vstupní procesy ve skladu začínají, když zboží dorazí do skladu v sídle společnosti, buď je přijaté z externích zdrojů, nebo z jiného sídla společnosti. Zaměstnanec zboží zaregistruje, obvykle naskenováním čárového kódu. Z přijímacího doku se skladové činnosti provádějí na různých úrovních složitosti, aby se zboží přeneslo do skladovací oblasti.
 
-Každá položka je identifikována a spárována s odpovídajícím vstupním zdrojovým dokladem. The following inbound source documents exist:
+Každé zboží je identifikováno a spárováno s odpovídajícím vstupním zdrojovým dokladem. Existují následující vstupní zdrojové doklady:
 
-- Purchase order
-- Inbound transfer order
-- Sales return order
+- Nákupní objednávka
+- Objednávka příchozího transferu
+- Objednávka prodejní vratky
 
-In addition, the following internal source documents exist that function like inbound sources:
+Kromě toho existují následující interní zdrojové doklady, které fungují jako vstupní zdroje:
 
-- Production order with output posting
-- Assembly order with output posting
+- Účtování výrobní zakázka s výstupem
+- Účtování montážní zakázky s výstupem
 
-The last two represent inbound flows to the warehouse from internal operation areas. For more information about warehouse handling for internal inbound and outbound processes, see [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md).
+Poslední dva představují příchozí toky do skladu z interních provozních oblastí. Další informace o manipulaci se sklady pro interní příchozí a odchozí procesy najdete v [Detaily návrhu: Interní procesy skladu](design-details-internal-warehouse-flows.md).
 
-Processes and UI documents in inbound warehouse flows are different for basic and advanced warehouse configurations. Hlavním rozdílem je, že aktivity jsou zpracovány po objednávkách v základních konfiguracích skladu a jsou konsolidovány pro více objednávek v pokročilých konfiguracích skladu. For more information about different warehouse complexity levels, see [Design Details: Warehouse Overview](design-details-warehouse-setup.md).
+Procesy a doklady uživatelského rozhraní v příchozích tocích skladu se liší pro základní a pokročilé konfigurace skladu. Hlavním rozdílem je, že aktivity jsou zpracovány po objednávkách v základních konfiguracích skladu a jsou konsolidovány pro více objednávek v pokročilých konfiguracích skladu. Další informace o různých úrovních složitosti skladu najdete v [Detaily návrhu: Přehled skladu](design-details-warehouse-setup.md).
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], the inbound processes of receiving and putting away can be performed in four ways using different functionalities depending on the warehouse complexity level.
+V [!INCLUDE[prod_short](includes/prod_short.md)] příchozí procesy příjmu a zaskladnění lze provádět čtyřmi způsoby pomocí různých funkcí v závislosti na úrovni složitosti skladu.
 
-| Metoda | Inbound Process | Přihrádky | Receipts | Put-aways | Complexity Level (See [Design Details: Warehouse Setup](design-details-warehouse-setup.md)) |
+| Metoda | Příchozí proces | Přihrádky | Příjmy | Vyskladnění | Úroveň složitosti (Viz [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md)) |
 |------------|---------------------|----------|--------------|----------------|--------------------------------------------------------------------------------------------------------------------|  
-| A | Post receipt and put-away from the order line | X | 2 |
-| B | Post receipt and put-away from an inventory put-away document | X | 3 |
-| C | Post receipt and put-away from a warehouse receipt document | X | 4/5/6 |
-| D | Post receipt from a warehouse receipt document and post put-away from a warehouse put-away document | X | X | 4/5/6 |
+| A | Zaúčtujte příjemku a zaskladněte zboží z řádku objednávky | X | 2 |
+| B | Zaúčtujte příjemku a zaskladněte zboží z dokladu zaskladnění zásob | X | 3 |
+| C | Zaúčtujte příjemku a zaskladněte zboží z příjemky skladu | X | 4/5/6 |
+| D | Zaúčtujte příjemku z příjemky skladu a zaskladnění z dokladu zaskladnění skladu | X | X | 4/5/6 |
 
-Výběr přístupu závisí na přijatých postupech společnosti a na úrovni jejich organizační složitosti. In an order-by-order warehouse environment, where most of the warehouse staff works directly with order documents, a company might decide to use method A. An order-by-order warehouse that has a more complex put-away process, or where there are dedicated warehouse staff to perform warehousing functions, might decide to separate their put-away functions from the order document, method B. Additionally, companies that need to plan the handling of multiple orders may find it helpful to use warehouse receipt documents, methods C and D.
+Výběr přístupu závisí na přijatých postupech společnosti a na úrovni jejich organizační složitosti. V prostředí skladu se spracováním zboží po objednávkách, kde většina zaměstnanců skladu pracuje přímo s doklady objednávky, se společnost může rozhodnout použít metodu A. U skladu spracování zboží po objednávkách, který má složitější proces zaskladnění nebo kde jsou vyhrazení zaměstnanci skladu k provádění skladových funkcí, se může firma rozhodnout oddělit své funkce zaskladnění od dokladu objednávky, metoda B. Pro společnosti, které potřebují naplánovat zpracování více objednávek, může být užitečné použít doklady příjemky skladu, metoda C a D.
 
-In methods A, B, and C, the actions of receiving and putting away are combined in one step when posting the corresponding documents as received. In method D, the receipt is posted first to recognize the increase of inventory and that items are available for sale. The warehouse worker then registers the put-away to make items available to pick.
+V metodách A, B a C jsou akce příjmu a zaskladnění kombinovány v jednom kroku při zaúčtování odpovídajících dokladů jako přijatých. V metodě D je příjem zaúčtován jako první, aby bylo možné rozpoznat nárůst zásob a to, že zboží je k dispozici k prodeji. Pracovník skladu poté zaregistruje zaskladnění zboží, aby bylo dostupné pro vyskladnění.
 
 ## Základní konfigurace skladu
-The following diagram illustrates the inbound warehouse flows by document type in basic warehouse configurations. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
+Následující diagram znázorňuje toky vstupního skladu podle typu dokladu v základních konfiguracích skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
 ![Inbound flow in basic warehouse configurations](media/design_details_warehouse_management_inbound_basic_flow.png "Inbound flow in basic warehouse configurations")
 

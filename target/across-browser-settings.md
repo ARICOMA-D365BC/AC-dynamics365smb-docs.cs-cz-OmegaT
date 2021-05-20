@@ -11,42 +11,42 @@ ms.search.keywords: Teams, web client, troubleshooting, errors
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Setting Up and Troubleshooting Your Browser to Work With Business Central Web Client
+# Nastavení a řešení potíží s prohlížečem pro práci s webovým klientem Business Central
 
-This article explains how to set up your browser so that the [!INCLUDE[web_client](includes/web_client.md)] and all its features work properly. Read this article if you're having problems opening the [!INCLUDE[web_client](includes/web_client.md)], because some problems may be caused by your browser's settings.
+Tento článek vysvětluje, jak nastavit prohlížeč tak, aby [!INCLUDE[web_client](includes/web_client.md)] a všechny jeho funkce fungovaly správně. Přečtěte si tento článek, pokud máte potíže s otevřením [!INCLUDE[web_client](includes/web_client.md)], protože některé problémy mohou být způsobeny nastavením prohlížeče.
 
-The article provides details for setting up Microsoft Edge, but the requirements for JavaScript, cookies, and pop-ups are the same for all supported browsers. For other browsers, refer to the instructions provided by the manufacturer.
+Článek obsahuje podrobnosti o nastavení Microsoft Edge, ale s požadavky na JavaScript, Cookies a vyskakovací okna, které jsou všechny prohlížeče stejné. Pro další prohlížeče naleznete v instrukcích od výrobce.
 
-## Use a supported browser
+## Použití podporovaného prohlížeče
 
-Make sure to use a one of the supported browsers. See [Minimum Requirements for Using Business Central](product-requirements.md#browsers).
+Ujistěte se, že používáte jeden z podporovaných prohlížečů. Pro ověření běžte na [Minimální požadavky na používání Business Central](product-requirements.md#browsers).
 
-## Allow JavaScript from Business Central
+## Povolení JavaScript z Business Central
 
-*Problem:*
+*Problém:*
 
-If the browser doesn't allow JavaScript, you'll see **NotSupported/DisabledJavaScript** in the address bar and an **HTTP Error 404.0 - Not Found** message when you try to open [!INCLUDE[prod_short](includes/prod_short.md)], and the
+Pokud prohlížeč nepodporuje JavaScript, uvidíte **Nepodporovaný/VypnutýJavaScript** v adresním poli a **HTTP Error 404.0 - Not Found** hlášku, když zkusíte otevřít [!INCLUDE[prod_short](includes/prod_short.md)].
 
 <!-- http://localhost:8080/NotSupported/DisabledJavaScript HTTP Error 404.0 - Not Found
 The resource you are looking for has been removed, had its name changed, or is temporarily unavailable. -->
 
-*Fix:*
+*Oprava:*
 
-1. In Microsoft Edge, go to **Settings** > **Cookies and site permissions** > **JavaScript**.
-2. Do one of the following steps. Choose the step that is recommended by your organization:
+1. V Microsoft Endge, běžte do **Nastavení** > **Cookies a opránění stránek** > **JavaScript**.
+2. Udělejte jeden z následujích kroků. Zvolte krok doporučený vaší organizací:
 
-   - Move the **Allowed** toggle to the left (Off). Then, select **Add** and type the address (URL) for [!INCLUDE[prod_short](includes/prod_short.md)] in the **Site** box. Select **Add** when done.
-   - Move the **Allowed** toggle to the right (On).
+   - Posuňte přepínač **Povoleno** doleva (Vypnuto). Poté, vyberte **Přidat** a zadejte adresu (URL) pro [!INCLUDE[prod_short](includes/prod_short.md)] v poli **webu**. Vyberte **Přidat** jakmile to bude hotové.
+   - Posuňte posuvník **Povoleno** doprava (Zapnuto).
 
-## Allow cookies from Business Central
+## Povolte soubory cookies z Business Central
 
-*Problem:*
+*Problém:*
 
 If the browser doesn't allow cookies, you'll get the following error:
 
 **Sorry, the page could not be found. Please check the address and try again.**
 
-*Fix:*
+*Oprava:*
 
 1. In Microsoft Edge, go to **Settings** > **Cookies and site permissions** > **Cookies and site data**.
 2. Move the **Allow sites to save and read cookie data** toggle to the right (On).
@@ -55,7 +55,7 @@ If the browser doesn't allow cookies, you'll get the following error:
 
 [!INCLUDE[prod_short](includes/prod_short.md)] integrates with several products. In some cases, like with Microsoft Teams, [!INCLUDE[prod_short](includes/prod_short.md)] opens, or "pop-ups", within the product. This capability requires that your browser allows pop-ups from [!INCLUDE[prod_short](includes/prod_short.md)].
 
-*Problem:*
+*Problém:*
 
 If pop-ups for [!INCLUDE[prod_short](includes/prod_short.md)] are being blocked, you get a message similar to the following message:
 
@@ -70,11 +70,11 @@ If these settings are managed for your organization, you should contact your adm
 
 Try again
 -->
-*Fix:*
+*Oprava:*
 
 1. In Microsoft Edge, go to **Settings** > **Cookies and site permissions** > **Pop-ups and redirects**.
 2. Move the **Blocked** toggle to the right (On).
-3. Select **Add**. In the **Site** box, type `https://businesscentral.dynamics.com`, then select **Add**.
+3. Vyberte **Přidat**. In the **Site** box, type `https://businesscentral.dynamics.com`, then select **Add**.
 
 ## Viz také
 

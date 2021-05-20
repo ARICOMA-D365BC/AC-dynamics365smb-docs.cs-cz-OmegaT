@@ -48,7 +48,7 @@ Next time you import a bank statement file or choose the **Apply Automatically**
 
 To always post expenses that are related to fees from a specific bank, MyBank, to the general ledger account for bank charges and fees (account 60400), fill a line on the **Text-to-Account Mapping** page as follows.
 
-| Mapping Text | Debit Acc. Ne. | Credit Acc. Ne. | Bal. Source Type | Bal. Číslo původu |
+| Mapping Text | Debit Acc. Číslo  | Credit Acc. Číslo  | Bal. Source Type | Bal. Číslo původu |
 | --- | --- | --- | --- | --- |
 | MyBank | BLANK | 60400 | Finanční účet | BLANK |
 

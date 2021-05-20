@@ -31,7 +31,7 @@ Můžete si zobrazit informace o předmětech, zdrojích nebo nákladech, které
 ### Zobrazit podrobnosti zakázky
 You can view information about the items, resource hours, and costs to be invoiced and consumed. The following table describes this information.
 
-| Column | Popis |
+| Sloupec | Popis |
 |------------|---------------------------------------|  
 | **Invoicing** | Displays amounts that are to be posted as invoiced from the service order. |
 | **Consuming** | Displays the quantity and cost of items, or resources that will be posted as consumed. |

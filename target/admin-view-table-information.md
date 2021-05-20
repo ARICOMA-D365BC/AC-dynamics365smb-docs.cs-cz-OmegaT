@@ -11,30 +11,30 @@ ms.date: 04/01/2021
 ms.author: jswymer
 ---
 
-# Viewing Table Information
+# Zobrazení informací tabulky
 
-The page **8700 Table Information** provides information about all system and business tables in a Business Central solution. In particular, the page displays information about the amount of data the tables contain.
+Stránka **8700 Informace tabulky** poskytuje informace o všech systémových a obchodních tabulkách v  Business Central. Stránka zobrazuje zejména informace o množství dat, která tabulky obsahují.
 
-This information is useful for troubleshooting performance problems, because let's you see the distribution of data size across tables.
+Tyto informace jsou užitečné při řešení problémů s výkonem, protože se zde můžete podívat na rozložení velikosti dat mezi tabulkami.
 
-## Viewing table information
+## Zobrazení infomací tabulky
 
-To open this page, select the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Table Information**, and then choose the related link.
+Pro otevření teté stránky zvolte ikonu ![Vyhledat stránku nebo sestavu](media/ui-search/search_small.png "Ikona Vyhledat stránku nebo sestavu") zadejte **Informace o tabulce** a zvolte související odkaz.
 
-The following table describes the information provided for each table:
+Následující tabulka popisuje inforace pro každou tabulku.
 
-| Column | Popis |
+| Sloupec | Popis |
 |------|-----------|
-| Company Name | The name of the company, if any, that the table belongs to. |
-| Název tabulky | The name of the table. |
-| Číslo tabulky | The ID of the table |
-| Ne. of Records | The total number of records stored in the table. |
-| Record Size | The average record size in KB/record. The value is calculated using the following formula: 1024(Size)/(No. of Records)`. |
+| Název společnosti | Název společnosti, pokud nějaká společnost existuje, ke které tabulka patří. |
+| Název tabulky | Název tabulky. |
+| Číslo tabulky | ID tabulky |
+| Číslo  záznamu | Celkový počet záznamů uložených v tabulce. |
+| Velikost záznamu | Průměrná velikost záznamu v KB/záznam. Hodnota se vypočítá pomocí následujícího vzorce: 1024(velikost)/(Číslo Záznamu). |
 
 ## Viz také
 
-[Inspecting Pages](across-inspect-page.md)  
-[Performance Articles For Developers](/dynamics365/business-central/dev-itpro/performance/performance-developer)
+[Procházení stránek](across-inspect-page.md)  
+[Články o výkonu pro vývojáře](/dynamics365/business-central/dev-itpro/performance/performance-developer)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

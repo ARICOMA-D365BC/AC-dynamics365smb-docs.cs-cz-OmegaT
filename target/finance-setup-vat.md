@@ -46,7 +46,7 @@ Chcete-li zajistit, aby lidé zadávali platná DIČ, můžete definovat formát
 Pro nastavení DIČ postupujte takto:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Countries/Regions**.
-2. Choose the country or region, and then choose the **VAT Reg. Ne. Formats** action.
+2. Choose the country or region, and then choose the **VAT Reg. Číslo  Formats** action.
 3. In the **Formats** field, define the format by entering one or more of the following characters:
 
 * **#** Requires a single-digit number.
