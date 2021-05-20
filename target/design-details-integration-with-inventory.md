@@ -17,7 +17,7 @@
 Oblast aplikace Správa skladu a Zásob vzájemně komunikují pomocí fyzických inventur a v úpravách zásob nebo skladu.
 
 ## Fyzická inventura
-The **Whse. Phys. Inventory Journal** page is used with the **Phys. Inventory Journal** page for all advanced warehouse locations. Zásoby na úrovni přihrádky se vypočítají a pro zaměstnance skladu je následně k dispozici vytištěný seznam. Seznam ukazuje, v které přihrádce musí být zboží spočítáno.
+Stránka **Whse. Phys. Inventory Journal** page is used with the **Phys. Inventory Journal** page for all advanced warehouse locations. Zásoby na úrovni přihrádky se vypočítají a pro zaměstnance skladu je následně k dispozici vytištěný seznam. Seznam ukazuje, v které přihrádce musí být zboží spočítáno.
 
 The warehouse employee enters the counted quantity on the **Whse. Phys. Inventory Journal** page and then posts the journal.
 

@@ -12,25 +12,25 @@ ms.date: 04/01/2021
 ms.author: jswymer
 ---
 
-# Working with Business Central Data in Microsoft Teams
+# Práce s daty Business Central Data v Microsoft Teams
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-[!INCLUDE [prod_short](includes/prod_short.md)] offers an app that connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)], so you can quickly share details across team members and respond faster to inquiries. In this article, you'll learn how to use the app to share [!INCLUDE [prod_short](includes/prod_short.md)] data with coworkers in a Teams conversation.
+[!INCLUDE [prod_short](includes/prod_short.md)] nabízí aplikaci, která propojuje Microsoft Teams s vašimi obchodními daty v  [!INCLUDE [prod_short](includes/prod_short.md)], abyste mohli rychle sdílet podrobnosti mezi členy týmu a rychleji reagovat na dotazy. V tomto článku se naučíte, jak pomocí aplikace sdílet data [!INCLUDE [prod_short](includes/prod_short.md)] se spolupracovníky v konverzaci Teams.
 
 ## Přehled
 
-The [!INCLUDE [prod_short](includes/prod_short.md)] app lets you:
+Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 
-- Zkopírujte odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
-- Once in the conversation, you and coworkers can view more details about the record, edit data, and take action&mdash;without leaving Teams.
+- Kopírovat odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
+- Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
 
 [![Teams integrace s Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
 
 ## Předpoklady
 
-- You have access to Microsoft Teams.
-- You've installed the [!INCLUDE [prod_short](includes/prod_short.md)] app in Teams. For more information, see [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)
+- Máte přístup do Microsoft Teams.
+- Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. For more information, see [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)
 
 > [!NOTE]
 > All participants in a Teams conversation will be able to view cards for Business Central records that you submit to the conversation. But to view more details about records, by using the **Details** or **Pop out** buttons on a card, they'll need access to [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Managing Microsoft Teams Integration](admin-teams-integration.md#minimum-requirements-1).

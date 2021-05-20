@@ -47,62 +47,62 @@ V metodách A, B a C jsou akce příjmu a zaskladnění kombinovány v jednom kr
 ## Základní konfigurace skladu
 Následující diagram znázorňuje toky vstupního skladu podle typu dokladu v základních konfiguracích skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Inbound flow in basic warehouse configurations](media/design_details_warehouse_management_inbound_basic_flow.png "Inbound flow in basic warehouse configurations")
+![Příchozí tok v základních konfiguracích skladu](media/design_details_warehouse_management_inbound_basic_flow.png "Příchozí tok v základních konfiguracích skladu")
 
-### 1: Release Source Document / Create Inventory Put-Away
-When items are received in the warehouse, the user who is responsible for receiving releases the source document, such as a purchase order or an inbound transfer order, to signal to warehouse workers that the received items can be put away in inventory. Alternatively, the user creates inventory put-away documents for individual order lines, in a push fashion, based on specified bins and quantities to handle.
+### 1: Vydání zdrojového dokladu / Vytvoření zaskladnění zásob
+Když je zboží přijato ve skladu, uživatel, který je zodpovědný za příjem, vydá zdrojový doklad, například nákupní objednávku nebo vstupní objednávku transferu, aby signalizoval pracovníkům skladu, že přijaté zboží může být zaskladněné ve skladu. Alternativně uživatel vytvoří doklady zaskladnění zásob pro jednotlivé řádky objednávky nabízeným způsobem na základě zadaných přihrádek a množství, které je možné zpracovat.
 
-### 2: Create Inbound Request
-When the inbound source document is released, an inbound warehouse request is created automatically. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný.
+### 2: Vytvoření vstupního požadavku
+Po vydání vstupního zdrojového dokladu se automaticky vytvoří vstupní požadavek skladu. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný.
 
-### 3: Create Inventory Put-Away
-On the **Inventory Put-away** page, the warehouse worker retrieves, in a pull fashion, the pending source document lines based on inbound warehouse requests. Alternatively, the inventory put-away lines are already created, in a push fashion, by the user who is responsible for the source document.
+### 3: Vytvoření zaskladnění zásob
+Na stránce **Zaskladnění zásob** pracovník skladu načte vyžádaně řádky čekajícího zdrojového dokladu na základě vstupního požadavku skladu. Případně jsou řádky zaskladnění zásob již vytvořeny způsobem Doručení bez vyžádání uživatelem, který je zodpovědný za zdrojový doklad.
 
-### 4: Post Inventory Put-Away
-On each line for items that have been put away, partially or fully, the warehouse worker fills in the **Quantity** field, and then posts the inventory put-away. Source documents that are related to the inventory put-away are posted as received.
+### 4: Účtování zaskladnění zásob
+Na každém řádku pro zboží, které bylo zaskladněno, částečně nebo úplně, pracovník skladu vyplní pole **Množství** a pak zaúčtuje zaskladnění zásob. Zdrojové doklady, které souvisejí se zaskladněním zásob, jsou zaúčtovány jako přijaté.
 
-Positive item ledger entries are created, warehouse entries are created, and the put-away request is deleted, if fully handled. For example, the **Quantity Received** field on the inbound source document line is updated. A posted receipt document is created that reflects the purchase order, for example, and the received items.
+Vytvoří se kladné položky zbož a položky skladu a odstraní se požadavek na zaskladnění, pokud je plně zpracován. Například je aktualizováno pole **Přijaté množství** na řádku vstupního zdrojového dokladu. Vytvoří se zaúčtovaný doklad o přijetí, který odráží například nákupní objednávku a přijaté zboží.
 
-## Advanced warehouse configurations
-The following diagram illustrates the inbound warehouse flow by document type in advanced warehouse configurations. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
+## Pokročílé nastavení skladu
+Následující diagram znázorňuje tok vstupního skladu podle typu dokladu v pokročilých konfiguracích skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Inbound flow in advanced warehouse configurations](media/design_details_warehouse_management_inbound_advanced_flow.png "Inbound flow in advanced warehouse configurations")
+![Příchozí tok v pokročilých konfiguracích skladu](media/design_details_warehouse_management_inbound_advanced_flow.png "Příchozí tok v pokročilých konfiguracích skladu")
 
 ### 1: Vydání zdrojového dokladu
-When items are received in the warehouse, the user who is responsible for receiving releases the source document, such as a purchase order or an inbound transfer order, to signal to warehouse workers that the received items can be put away in inventory.
+Když je zboží přijato ve skladu, uživatel, který je zodpovědný za příjem, vydá zdrojový doklad, například nákupní objednávku nebo vstupní objednávku transferu, aby signalizoval pracovníkům skladu, že přijaté zboží může být zaskladněné ve skladu.
 
-### 2: Create Inbound Request
-When the inbound source document is released, an inbound warehouse request is created automatically. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný.
+### 2: Vytvoření vstupního požadavku
+Po vydání vstupního zdrojového dokladu se automaticky vytvoří vstupní požadavek skladu. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný.
 
-### 3: Create Warehouse Receipt
-On the **Warehouse Receipt** page, the user who is responsible for receiving items retrieves the pending source document lines based on the inbound warehouse request. Several source document lines can be combined in one warehouse receipt document.
+### 3: Vytvoření příjemky na sklad
+Na stránce **Příjemka na sklad** uživatel, který je zodpovědný za příjem zboží, načte čekající řádky zdrojového dokladu na základě vstupního požadavku skladu. Několik řádků zdrojového dokladu lze kombinovat v jednom dokladu příjemky na sklad.
 
-The user fills in the **Qty. to Handle** field and selects the receiving zone and bin, if required.
+Uživatel vyplní pole **Množ. ke zpracování** fa v případě potřeby vybere přijímací zónu a přihrádku.
 
-### 4: Post Warehouse Receipt
-The user posts the warehouse receipt. Positive item ledger entries are created. For example, the **Quantity Received** field on the inbound source document line is updated.
+### 4: Zaúčtování příjemky na sklad
+Uživatel zaúčtuje příjemku na sklad. Vytvoří se kladné položky zboží. Například je aktualizováno pole **Přijaté množství** na řádku vstupního zdrojového dokladu.
 
-### 5: Create Warehouse Internal Put-Away
-The user who is responsible for putting away from internal operations creates a warehouse internal put-away for items that have to be put away in the warehouse, such as production or assembly output. The user specifies quantity, zone, and bin from where the items should be put away, potentially with the **Get Bin Content** function. The user releases the warehouse internal put-away, which creates an inbound warehouse request so that the task can be retrieved in warehouse put-away documents or in the put-away worksheet.
+### 5: Vytvoření interního zaskladnění skladu
+Uživatel, který je zodpovědný za zaskladnění z interních operací, vytvoří interní zaskladnění skladu pro zboží, které musí být zaskladněno ve skladu, jako je výroba nebo výstup sestavy. Uživatel určuje množství, zónu a přihrádku, ze které má být zboží zaskladněno, případně to může udělat pomocí funkce **Načíst obsah přihrádky**. Uživatel vydá interní zaskladnění skladu, který vytvoří požadavek příchozího skladu, aby bylo možné úlohu načíst v dokladech zaskladnění skladu nebo v sešitu zaskladnění.
 
-### 6: Create Put-away Request
-When the inbound source document is posted, a warehouse put-away request is created automatically. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný. Depending on the setup, output from a production order also creates a put-away request to put the finished items away in inventory.
+### 6: Vytvoření požadavku na zaskladnění
+Při zaúčtování vstupního zdrojového dokladu je automaticky vytvořen požadavek na zaskladnění. Obsahuje odkazy na typ a číslo zdrojového dokladu a není pro uživatele viditelný. V závislosti na nastavení vytvoří výstup z výrobní zakázky také požadavek na zaskladnění dokončeného zboží do skladu.
 
-### 7: Generate Put-away Worksheet Lines (Optional)
-The user who is responsible for coordinating put-aways retrieves warehouse put-away lines in the **Put-away Worksheet** based on posted warehouse receipts or internal operations with output. The user selects the lines to be put-away and prepares the put-aways by specifying which bins to take from, which bins to place in, and how many units to handle. The bins may be predefined by the setup of the warehouse location or operation resource.
+### 7: Generování řádků sešitu zaskladnění (Volitelné)
+Uživatel, který je zodpovědný za koordinaci zaskladnění, načte řádky zaskladnění skladu v **Sešitu zaskladnění** na základě zaúčtování příjemek na sklad nebo interních operací s výstupem. Uživatel vybere řádky, které mají být zaskladněny, a připraví zaskladnění určením, ze kterých přihrádek se má zboží vzít, do kterých přihrádek umístit a kolik jednotek má být spracováno. Přihrádky mohou být předdefinovány nastavením lokace skladu nebo provozního zdroje.
 
-When all put-aways are planned and assigned to warehouse workers, the user generates the warehouse put-away documents. Fully assigned put-aways lines are deleted from the **Put-away Worksheet**.
+Když jsou všechny doklady zaskladnění naplánovány a přiřazeny pracovníkům skladu, uživatel vygeneruje doklady zaskladnění skladu. Plně přiřazené řádky zaskladnění jsou ze **Sešitu zaskladnění** odstraněny.
 
 > [!NOTE]  
-> If the **Use Put-away Worksheet** field is not selected on the location card, then warehouse put-away documents are created directly based on posted warehouse receipts. In that case, step 7 is omitted.
+> Pokud na kartě lokace není vybráno pole **Použít sešit zaskladnění**, budou doklady zaskladnění skladu vytvořeny přímo na základě zaúčtovaných příjemek ze skladu. V takovém případě je krok 7 vynechán.
 
-### 8: Create Warehouse Put-away Document
-The warehouse worker who performs put-aways creates a warehouse put-away document in a pull fashion, based on the posted warehouse receipt. Alternatively, the warehouse put-away document is created and assigned to a warehouse worker in a push fashion.
+### 8: Vytvoření dokladu zaskladnění skladu
+Pracovník skladu, který provádí zaskladnění, vytvoří doklad zaskladnění na základě zaúčtované příjemky na sklad. Alternativně je vytvořen doklad zaskladnění skladu, který je přiřazen skladníkovi formou Doručit bez vyžádání.
 
-### 9: Register Warehouse Put-Away
-On each line for items that have been put away, partially or fully, the warehouse worker fills in the **Quantity** field on the **Warehouse Put-away** page, and then registers the warehouse put-away.
+### 9: Zaregistrace zaskladnění skladu
+Na každém řádku pro zboží, které bylo zaskladněno, částečně nebo úplně, pracovník skladu vyplní pole **Množství** na stránce **Zaskladnění** a poté zaregistruje zaskladněné zboží.
 
-Warehouse entries are created, and the warehouse put-away lines are deleted, if fully handled. The warehouse put-away document remains open until the full quantity of the related posted warehouse receipt is registered. **Množství Put Away** field on the warehouse receipt order lines is updated.
+Jsou vytvořeny položky skladu a řádky zaskladnění skladu jsou odstraněny, pokud jsou plně zpracovány. Doklad o vyskladnění skladu zůstává otevřený, dokud není zaregistrováno celé množství souvisejícího zaúčtovaného skladového dokladu. Pole **Zaskladněné  množství** na řádcích objednávky příjemky ze skladu je aktualizováno.
 
 ## Viz také
 [Detaily návrhu: Správa skladu](design-details-warehouse-management.md)

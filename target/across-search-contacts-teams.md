@@ -24,8 +24,8 @@ ms.author: jswymer
 
 ## Předpoklady
 
-- You have access to Microsoft Teams.
-- You've installed the [!INCLUDE [prod_short](includes/prod_short.md)] app in Teams. For more information, see [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)
+- Máte přístup do Microsoft Teams.
+- Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. For more information, see [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)
 - You've got a [!INCLUDE [prod_short](includes/prod_short.md)] account with access to contacts in at least one company.
 
 > [!NOTE]

@@ -38,7 +38,7 @@ Pro více informací navštivte[Vyhledávání kontaktů z Microsoft Teams](acro
 
 ### Sdílení záznamů v konverzacích
 
-Zkopírujte odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
+Kopírovat odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
 
 [![Teams integrace s Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
 
@@ -56,14 +56,14 @@ Pro více informací, navštivte [Práce s daty Business Central v Microsoft Tea
    > If your organization doesn't have a [!INCLUDE [prod_short](includes/prod_short.md)] subscription, you can sign up for a free trial. For more information, see [Getting Started with a Trial](across-preview.md#getting-started-with-a-trial).
 
 2. Jako administrátor běžte na [Správa Integrace Microsoft Teams s Business Central](admin-teams-integration.md) , kde jsou informace o nastavení uživatelských skupin v [!INCLUDE [prod_short](includes/prod_short.md)] a Teams.
-3. Install [!INCLUDE [prod_short](includes/prod_short.md)] app in Teams. See [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md).
-4. Once the app is installed, you're ready to go. See [Working with Business Central Data in Teams](across-working-with-teams.md).
+3. Nainstalujte aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md).
+4. Jakmile je aplikace nainstalovaná, můžete začít. Víice informací naleznete v [Práce s daty Business Central v Teams](across-working-with-teams.md).
 
 ## Viz také
 
 [Teams FAQ](teams-faq.md)  
-[Troubleshooting Teams](admin-teams-troubleshooting.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Řešení problémů v Teams](admin-teams-troubleshooting.md)  
+[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 
