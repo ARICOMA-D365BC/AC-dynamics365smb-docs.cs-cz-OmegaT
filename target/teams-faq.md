@@ -29,7 +29,7 @@ To sign out of your current user identity in Teams used to connect to [!INCLUDE 
 
 ### Does the app for Teams connect to [!INCLUDE [prod_short.md](includes/prod_short.md)] on premises?
 
-Ne. The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams only works with [!INCLUDE [prod_short.md](includes/prod_short.md)] online. There are no plans to support [!INCLUDE [prod_short.md](includes/prod_short.md)] deployment types&mdash;like on-premises, hybrid cloud, or private cloud&mdash;that Microsoft doesn't host or manage directly.
+Číslo  The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams only works with [!INCLUDE [prod_short.md](includes/prod_short.md)] online. There are no plans to support [!INCLUDE [prod_short.md](includes/prod_short.md)] deployment types&mdash;like on-premises, hybrid cloud, or private cloud&mdash;that Microsoft doesn't host or manage directly.
 
 ### Does the app work with multiple companies and environments?
 
@@ -76,7 +76,7 @@ Ano. The [!INCLUDE [prod_short.md](includes/prod_short.md)] app can be installed
 
 ### Is the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams the same as the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for iOS and Android?
 
-Ne. The app for Teams is an add-in to Microsoft Teams and exclusively designed for collaborative experiences that light up within Teams. On the other hand, the [!INCLUDE [prod_short.md](includes/prod_short.md)] mobile app delivers a rich experience for you to work with [!INCLUDE [prod_short.md](includes/prod_short.md)] data on your mobile devices.
+Číslo  The app for Teams is an add-in to Microsoft Teams and exclusively designed for collaborative experiences that light up within Teams. On the other hand, the [!INCLUDE [prod_short.md](includes/prod_short.md)] mobile app delivers a rich experience for you to work with [!INCLUDE [prod_short.md](includes/prod_short.md)] data on your mobile devices.
 
 Mobile users are encouraged to install both the mobile app and the app for Teams to get the most out of [!INCLUDE [prod_short.md](includes/prod_short.md)]. With both installed, you can choose the **Pop out** action on a card in Teams to open the card details in the [!INCLUDE [prod_short.md](includes/prod_short.md)] mobile app. For information about installing the [!INCLUDE [prod_short.md](includes/prod_short.md)] and Teams mobile apps, see:
 
@@ -85,7 +85,7 @@ Mobile users are encouraged to install both the mobile app and the app for Teams
 
 ### Does the [!INCLUDE [prod_short.md](includes/prod_short.md)] app work in all Teams clients?
 
-Ne. The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams isn't supported when installed as a package for macOS or Linux. On these platforms, you can access Teams using a supported browser instead.
+Číslo  The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams isn't supported when installed as a package for macOS or Linux. On these platforms, you can access Teams using a supported browser instead.
 
 For minimum requirements in [!INCLUDE [prod_short.md](includes/prod_short.md)], see [Minimum Requirements for Using Business Central](product-requirements.md#teams).
 
@@ -197,7 +197,7 @@ Ano. Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] repre
 
 ### Does [!INCLUDE [prod_short.md](includes/prod_short.md)] synchronize contacts with Teams?
 
-Ne. Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] remain separate from your contacts stored in Teams.
+Číslo  Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] remain separate from your contacts stored in Teams.
 There are currently no plans to synchronize the two lists together.
 
 ### What is the minimum version of [!INCLUDE [prod_short.md](includes/prod_short.md)] for contact search?
@@ -255,7 +255,7 @@ Deleting a message that contains a card doesn't delete or affect any data in [!I
 
 ### Do cards always show up-to-date information?
 
-Ne. The field values on a card in Teams, including any images, are based on the data available when that card was sent to the chat. [!INCLUDE [prod_short.md](includes/prod_short.md)] cards don't automatically refresh in Teams.
+Číslo  The field values on a card in Teams, including any images, are based on the data available when that card was sent to the chat. [!INCLUDE [prod_short.md](includes/prod_short.md)] cards don't automatically refresh in Teams.
 
 ### Will others see my card if they don’t have the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams?
 
@@ -273,7 +273,7 @@ If you work across [!INCLUDE [prod_short.md](includes/prod_short.md)] companies,
 
 ### If I choose to view details for a card, will other users see my details window?
 
-Ne. While everyone in the chat or meeting can view the card itself, the details window only appears for you on your device when you choose **Details**. Other users must choose **Details** if they would like to view the details window on their device.
+Číslo  While everyone in the chat or meeting can view the card itself, the details window only appears for you on your device when you choose **Details**. Other users must choose **Details** if they would like to view the details window on their device.
 
 ### Can I start a Teams call from the details window in Teams?
 

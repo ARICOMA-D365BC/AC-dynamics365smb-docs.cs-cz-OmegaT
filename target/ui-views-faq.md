@@ -59,7 +59,7 @@ Odebráním pohledu se toto zobrazení trvale odstraní. Hiding a view allows yo
 
 ### Mohu vyhledávat přehledy v okně Řekněte mi?
 
-Ne. The **Tell Me** window only displays search results for the page, but you're only a step away from getting to your favorite view once you navigate to the page.
+Číslo  The **Tell Me** window only displays search results for the page, but you're only a step away from getting to your favorite view once you navigate to the page.
 
 ### Co je sdílené rozvržení?
 

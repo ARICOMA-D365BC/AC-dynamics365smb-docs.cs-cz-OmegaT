@@ -180,9 +180,9 @@ You can either post the journal line to update the total on the balancing accoun
 If you leave the journal line unposted, it will add to the value in the **Unposted Balance** field at the bottom of the **Payment Registration** page.
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek  [
+  Prodej[<x6/>
+[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

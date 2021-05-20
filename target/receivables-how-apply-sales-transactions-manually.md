@@ -152,9 +152,9 @@ When you correct an application, correcting entries that are identical to the or
 > If an entry has been applied by more than one application entry, you must unapply the latest application entry first.
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek  [
+  Prodej[<x6/>
+[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

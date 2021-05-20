@@ -15,7 +15,7 @@ ms.author: edupont
 
 ---
 # Ruční kontrola nebo vyrovnání plateb po automatickém vyrovnání
-For each journal line representing a payment on the **Payment Reconciliation Journal** page, you can open the **Payment Application** page to see all candidate open entries for the payment and view detailed information for each entry about the data matching that a payment application is based on. Zde můžete ručně vyrovnat platby nebo znovu vyrovnat platby, které byly automaticky vyrovnány na nesprávnou položku. For more information about automatic application, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
+U každého řádku deníku představujícího platbu na stránce **Deníky odsouhlasení plateb** můžete otevřít stránku  **Vyrovnání plateb** a zobrazit všechny kandidátní otevřené položky pro platbu a zobrazit detailní informace o každé položce o spolehlivosti párování, na které je založeno vyrovnání platby. Zde můžete ručně vyrovnat platby nebo znovu vyrovnat platby, které byly automaticky vyrovnány na nesprávnou položku. Další informace o automatickém vyrovnání nalezenete na [Odsouhlasení plateb pomocí automatického vyrovnání](receivables-how-reconcile-payments-auto-application.md).
 
 > [!IMPORTANT]  
 > When the bank account that you are reconciling payments for is set up for the local currency, then the **Payment Application** page will show all open entries in the local currency, including open entries for documents that were originally invoiced in foreign currencies. Payments applied to entries with converted currencies may therefore be posted with different amounts than on the original document because of the potentially different exchange rates used by the bank and [!INCLUDE[prod_short](includes/prod_short.md)] respectively.
@@ -40,16 +40,16 @@ Any gains-and-loss adjustment required due to currency conversions is not handle
 4. Select the **Applied** check box on the line for the open entry that you want to apply the payment to.
 5. The payment amount, which is also shown in the **Transaction Amount** field on the **Payment Application** page, is inserted in the **Applied Amount** field, but you can modify the field, for example if you want to apply the amount to several open entries.
 6. To apply a part of the paid amount to another open entry for the account, for example to apply a lump-sum payment, select the **Applied** check box for the line. Vyrovnaná částka se automaticky odečte od částky transakcí, aby odrážela rozdělení na dvě otevřené položky.
-7. Chcete-li část platby vyrovnat na jednu nebo více otevřených položek, které v databázi neexistují, vytvořte nový řádek pod řádkem pro stejný účet. In the **Applied Amount** field, enter the amount to apply on the new line, and then adjust the **Applied Amount** field on the existing line.
+7. Chcete-li část platby vyrovnat na jednu nebo více otevřených položek, které v databázi neexistují, vytvořte nový řádek pod řádkem pro stejný účet. V poli **Vyrovnaná částka**, zadejte částku, která se má vyrovnat na nový řádek, a poté upravte pole **Vyrovnaná částka** na existujícím řádku.
 8. Opakujte kroky 5, 6, nebo 7 pro další otevřené položky, u které chcete vyronat celou nebo část částky platby.
 9. When you have reviewed a payment application or manually applied to one or more open entries, choose the **Accept Application** action.
 
 The **Payment Application** page  closes, and on the **Payment Reconciliation Journal** page, the value in the **Match Confidence** field is changed to **Accepted** to indicate to you that you have reviewed or manually applied the payment.
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek  [
+  Prodej[<x6/>
+[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

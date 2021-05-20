@@ -22,10 +22,10 @@ ms.author: jswymer
 
 The [!INCLUDE [prod_short](includes/prod_short.md)] app lets you:
 
-- Copy a link to any Business Central record and paste it into a Teams conversation to share with your coworkers. The app will then expand the link into a compact, interactive card that displays information about the record.
+- Zkopírujte odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
 - Once in the conversation, you and coworkers can view more details about the record, edit data, and take action&mdash;without leaving Teams.
 
-[![Teams integration with Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+[![Teams integrace s Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
 
 ## Předpoklady
 

@@ -202,7 +202,7 @@ Následující tabulka ukazuje položky ocenění, které existují pro položku
 
 ## Viz také
 [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
-[[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)     
+[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)     
 [Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)     
 [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md)    
 [Správa nákladů zásob](finance-manage-inventory-costs.md)    

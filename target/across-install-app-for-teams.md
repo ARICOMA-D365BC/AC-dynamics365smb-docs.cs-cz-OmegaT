@@ -12,59 +12,59 @@ ms.date: 04/12/2021
 ms.author: jswymer
 ---
 
-# Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams
+# Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-In this article, you learn how to install the [!INCLUDE [prod_short](includes/prod_short.md)] App for [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams). The app is available on the Teams marketplace, and you can use it with the Teams web, desktop, or mobile app.
+V tomto článku se dozvíte, jak nainstalovat aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] pro [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams). Aplikace je dostupná na Teams marketplace a můžete ji používat s webovou, desktopovou nebo mobilní aplikací Teams.
 
 ## Předpoklady
 
-- A [!INCLUDE [prod_short](includes/prod_short.md)] online user account is required for [!INCLUDE [prod_short](includes/prod_short.md)] app for Teams.
+- Je vyžadován online uživatelský účet [!INCLUDE [prod_short](includes/prod_short.md)] pro [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams.
 
-   If you’re not sure whether you have an account, or if you don’t know your credentials for signing in, contact your company administrator to help you get started.
+   Pokud si nejste jisti, zda máte účet nebo neznáte přihlašovací údaje pro přihlášení, obraťte se na správce společnosti, který Vám pomůže začít.
 
-- Access to the Teams desktop app or Teams in the browser. You can't install the [!INCLUDE [prod_short](includes/prod_short.md)] by using Teams mobile app.
+- Přístup k desktopové aplikaci Teams nebo v prohlížeči. Nemůžete nainstalovat [!INCLUDE [prod_short](includes/prod_short.md)] pomocí aplikace Teams pro telefony.
 
-- Your organization's policies allow you to install apps in Microsoft Teams.
+- Zásady vaší organizace musí umožňovat instalaci aplikace v Microsoft Teams.
 
-## Add the Business Central app to Teams
+## Přidání aplikace Business Central do Teams
 
-There are two ways to install the Business Central app:
+Aplikaci Business Central lze nainstalovat dvěma způsoby:
 
-**Option 1**
+**Možnost 1**
 
-This option is the quickest way to install the app.
+Tato možnost je nejrychlejší způsob instalace aplikace.
 
-1. Select this link: [https://teams.microsoft.com/l/app/84c2de91-84e8-4bbf-b15d-9ef33245ad29](https://teams.microsoft.com/l/app/84c2de91-84e8-4bbf-b15d-9ef33245ad29).
+1. Kliknětě na odkaz: [https://teams.microsoft.com/l/app/84c2de91-84e8-4bbf-b15d-9ef33245ad29](https://teams.microsoft.com/l/app/84c2de91-84e8-4bbf-b15d-9ef33245ad29).
 
-2. Wait for the Business Central app to appear.
+2. Počkejte, až se zobrazí aplikace Business Central.
 
-   ![Install Business Central app in Teams](media/teams-install-app.png)
+   ![Instalace aplikace Business Central v Teams](media/teams-install-app.png)
 
-3. Select **Add**.
+3. Vyberte **Přidat**.
 
-**Option 2**
+**Možnost 2**
 
-1. Open and sign in to Teams.
-2. In the left side, select **Apps**.
-3. Search for **Business Central**.
-4. Select the app when you find it.
-5. Select **Add**.
+1. Otevřete a přihlaste se k Teams.
+2. Na levé straně vyberte **Aplikace**.
+3. Vyhledejte **Business Central**.
+4. Jakmile ji najdete, vyberte aplikaci.
+5. Vyberte **Přidat**.
 
 > [!NOTE]
 > With either option, You may be asked to sign in to [!INCLUDE [prod_short](includes/prod_short.md)]. Select the **sign in** link, and follow the instructions to enter sign-in name and password for [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## Next step
+## Další krok
 
-You're now ready to use the app in Teams to share Business Central data. For more information, see [Working with Business Central Data in Microsoft Teams](across-working-with-teams.md).
+Nyní jste připraveni používat aplikaci v Teams ke sdílení dat Business Central. Pro více informací, navštivte [Práce s daty Business Central v Microsoft Teams](across-working-with-teams.md).
 
 ## Viz také
 
-[Business Central and Microsoft Teams Integration Overview](across-teams-overview.md)  
+[Přehled Integrace Business Central a Microsoft Teams](across-teams-overview.md)  
 [Teams FAQ](teams-faq.md)  
-[Troubleshooting Teams](admin-teams-troubleshooting.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Řešení problémů v Teams](admin-teams-troubleshooting.md)  
+[Vývoj pro integrace Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 
