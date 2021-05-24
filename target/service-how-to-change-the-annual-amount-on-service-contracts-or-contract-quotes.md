@@ -49,7 +49,7 @@ V servisní smlouvě, která obsahuje tři řádky smlouvy s takovými informace
 
 | Zboží | Náklady na řádku | Hodnota na řádku | % řádkové slevy | Částka řádkové slevy | Částka na řádku | Zisk |
 |----------|---------------|----------------|---------------------|--------------------------|-----------------|------------|  
-| Zboží 1 | 30.00 | 40,00 | 0.00 | 0.00 | 40,00 | 10,00 |
+| Zboží 1 | 30.00 | 40,00 | 0,00 | 0,00 | 40,00 | 10,00 |
 | Zboží 2 | 40,00 | 50.00 | 10,00 | 5.00 | 45.00 | 5.00 |
 | Zboží 3 | 50.00 | 70.00 | 10,00 | 7.00 | 63.00 | 13.00 |
 
@@ -63,7 +63,7 @@ Nakonec budou řádky smlouvy obsahovat tyto údaje.
 |----------|---------------|----------------|---------------------|--------------------------|-----------------|------------|  
 | Zboží 1 | 30.00 | 40,00 | 7.50 | 3.00 | 37.00 | 7.00 |
 | Zboží 2 | 40,00 | 50.00 | 16.00 | 8,00 | 42.00 | 2,00 |
-| Zboží 3 | 50.00 | 70.00 | 14.29 | 10,00 | 60.00 | 10,00 |
+| Zboží 3 | 50.00 | 70.00 | 14.29 | 10,00 | 60,00 | 10,00 |
 
 ### Rozdělení na základě Částky na řádku
 Pokud změníte roční částku servisní smlouvy nebo nabídky smlouvy, možná budete chtít rozdělit rozdíl mezi její novou a vypočítanou roční částkou na řádcích smlouvy. Rozdělení založené na částce na řádku je automatická metoda, která vám může pomoci rozložit rozdíl mezi novými a vypočítanými ročními částkami mezi částky řádků na řádcích smlouvy. Toto rozdělení bude provedeno úměrně jejich podílům na častkách řádku ve vypočítané roční částce. Následující seznam kroků postupu rozdělení pro každý řádek smlouvy popisuje hlavní myšlenku této metody:
@@ -84,7 +84,7 @@ V servisní smlouvě, která obsahuje tři řádky smlouvy s takovými informace
 | Zboží | Náklady na řádku | Hodnota na řádku | % řádkové slevy | Částka řádkové slevy | Částka na řádku | Zisk |
 |----------|---------------|----------------|---------------------|--------------------------|-----------------|------------|  
 | Zboží 1 | 15.00 | 17.00 | 3.00 | 0.51 | 25.00 | 1.49 |
-| Zboží 2 | 20,00 | 23.00 | Žádné | 0.00 | 55.10 | 3.00 |
+| Zboží 2 | 20,00 | 23.00 | Žádné | 0,00 | 55.10 | 3.00 |
 | Zboží 3 | 24.00 | 27.00 | 3.00 | 0.81 | 112.70 | 2.19 |
 
 Hodnota pole **Roční částka** se rovná obsahu pole**Vypočítaná roční částka**, které je vždy nastaveno na součet částek řádků. V tomto případě se rovná následujícímu: 16,49 + 23,00 + 26,19 = 65,68.
@@ -121,7 +121,7 @@ V servisní smlouvě, která obsahuje tři řádky smlouvy s takovými informace
 
 | Zboží | Náklady na řádku | Hodnota na řádku | % řádkové slevy | Částka řádkové slevy | Částka na řádku | Zisk |
 |----------|---------------|----------------|---------------------|--------------------------|-----------------|------------|  
-| Zboží 1 | 20,00 | 25.00 | 0.00 | 0.00 | 25.00 | 5.00 |
+| Zboží 1 | 20,00 | 25.00 | 0,00 | 0,00 | 25.00 | 5.00 |
 | Zboží 2 | 50.00 | 58.00 | 5.00 | 2.90 | 55.10 | 5.10 |
 | Zboží 3 | 100,00 | 115.00 | 2,00 | 2.30 | 112.70 | 12.70 |
 

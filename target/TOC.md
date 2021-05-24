@@ -284,7 +284,7 @@
 ### [Create Number Series](ui-create-number-series.md)
 ### [Set Up Base Calendars](across-how-to-assign-base-calendars.md)
 ### [Set Up Printers](ui-specify-printer-selection-reports.md)
-### [Get Business Central on Your Mobile Device](install-mobile-app.md)
+### [Získání Business Central pro mobilní zařízení](install-mobile-app.md)
 
 ## Často kladené otázky
 ### [Frequently Asked Questions](across-faq.md)

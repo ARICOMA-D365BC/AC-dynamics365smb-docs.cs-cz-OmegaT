@@ -12,29 +12,29 @@ ms.date: 04/12/2021
 ms.author: jswymer
 ---
 
-# Changing Company and Other Settings in Teams
+# Změna společnosti a ostatních nastavení v Teams
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-The [!INCLUDE [prod_short](includes/prod_short.md)] app for Teams includes a **Settings** page that lets you view and change information about your connection to [!INCLUDE [prod_short](includes/prod_short.md)]. For example, you switch the [!INCLUDE [prod_short](includes/prod_short.md)] environment and company you're connected to. You can also see which account you're using to access [!INCLUDE [prod_short](includes/prod_short.md)], and sign out and in again as needed.
+Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams obsahuje stránku **nastavení**, která Vám umožní zobrazit a změnit informace o vašem připojení k [!INCLUDE [prod_short](includes/prod_short.md)]. Například přepnutí prostředí [!INCLUDE [prod_short](includes/prod_short.md)] a společnost, ke které jste připojeni. Můžete také zjistit, který účet používáte pro přístup [!INCLUDE [prod_short](includes/prod_short.md)] a podle potřeby se odhlásit a znovu přihlásit.
 
-There are two ways to open the **Settings** page: 1) from the message compose box or 2) from the command box.
+ Stránku **Nastavení** můžete otevřít dvěma způsoby: 1) z pole pro psaní zprávy nebo 2) z příkazového pole.
 
-1. Beneath the message compose box, right-click the [!INCLUDE [prod_short](includes/prod_short.md)] app icon, then select **Settings**.
+1. Pod rámečkem pro psaní zprávy klikněte pravým tlačítkem na ikonu aplikace [!INCLUDE [prod_short](includes/prod_short.md)] a vyberte **Nastavení**.
 
-   ![Settings for Business Central from command box](media/teams-settings-message-box.png)
+   ![Nastavení pro Business Central z příkazového pole](media/teams-settings-message-box.png)
 
-2. From the command box at the top, search for **@Business Central**, select **... (More options)**, then select **Settings**.
+2. V příkazovém poli nahoře vyhledejte **@Business Central**, vyberte **... (Více možností)**, a zvolte **Nastavení**.
 
-   ![Settings for Business Central from message box](media/teams-settings-command-box.png)
+   ![Nastavení pro Business Central ze zprávy](media/teams-settings-command-box.png)
 
 ## Viz také
 
-[Business Central and Microsoft Teams Integration Overview](across-teams-overview.md)  
-[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
+[Přehled integrace Business Central a Microsoft Teams](across-teams-overview.md)  
+[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Troubleshooting Teams](admin-teams-troubleshooting.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Řešení problémů Teams](admin-teams-troubleshooting.md)  
+[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

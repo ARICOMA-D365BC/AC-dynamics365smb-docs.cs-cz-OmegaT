@@ -13,172 +13,172 @@
     ms.author: edupont
 
 ---
-# Design Details: Revaluation
-You can revalue the inventory based on the valuation base that most accurately reflects the inventory value. You can also backdate a revaluation, so that the cost of goods sold (COGS) is correctly updated for items that have already been sold. Items using the Standard costing method that have not been completely invoiced can also be revalued.
+# Detaily návrhu: Přecenění
+Zásoby můžete přeceněnit na základě ocenění základu, který nejpřesnější odráží hodnotu zásob. Můžete také zpětně datovat přecenění, aby byly náklady na prodané zboží (NNPZ) správně aktualizovány pro zboží, které již bylo prodáno. Zboží používá metodu standardních nákladů a to které nebylo zcela fakturováno, lze také přecenět.
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], the following flexibility is supported regarding revaluation:
+V [!INCLUDE[prod_short](includes/prod_short.md)], je podporována následující flexibilita, pokud jde o přecenění:
 
-- The revaluable quantity can be calculated for any date, also back in time.
-- For items using Standard costing method, expected cost entries are included in revaluation.
-- Inventory decreases affected by revaluation are detected.
+- Přeceněné množství lze vypočítat pro libovolné datum, také zpět v čase.
+- U zboží, které používá metodu standardních nákladů jsou položky očekávaných nákladů zahrnuty do přecenění.
+- Jsou zjištěny poklesy zásob ovlivněné přeceněním.
 
-## Calculating the Revaluable Quantity
-The revaluable quantity is the remaining quantity on inventory that is available for revaluation on a given date. It is calculated as the sum total of the quantities of completely invoiced item ledger entries that have a posting date equal to or earlier than the revaluation posting date.
+## Výpočet přeceněného množství
+Přeceněné množství je zbývající množství na skladě, které je k dispozici k přecenění k danému datu. Vypočítá se jako součet množství zcela fakturovaných položek zboží, které mají zúčtovací datum stejný nebo dřívější než zúčtovací datum přecenění.
 
 > [!NOTE]  
-> Items using the Standard costing method are treated differently when calculating the revaluable quantity per item, location, and variant. The quantities and values of item ledger entries that are not completely invoiced are included in the revaluable quantity.
+> Se zbožím, které používá standardní metodu ocenění se při výpočtu přeceněného množství podle zboží, lokace a variantu zaobchází odlišně. Množství a hodnoty položek zboží, které nejsou zcela fakturovány, jsou zahrnuty do přeceněného množství.
 
-After a revaluation has been posted, you can post an inventory increase or decrease with a posting date that comes before the revaluation posting date. However, this quantity will not be affected by the revaluation. To balance the inventory, only the original revaluable quantity is considered.
+Po zaúčtování přecenění můžete zaúčtovat zvýšení nebo snížení zásob s datem zaúčtování, které předchází datu zaúčtování přecenění. Toto množství však přehodnocení neovlivní. Pro vyvážení zásob se uvažuje pouze původní přeceněné množství.
 
-Because revaluation can be made on any date, you must have conventions for when an item is considered part of inventory from a financial point of view. For example, when the item is on inventory and when the item is work in process (WIP).
+Vzhledem k tomu, že přecenění lze použít k libovolnému datu, musíte mít znalosti o tom, kdy je zboží z finančního hlediska považováno za součást zásob. Například kdy je zboží na skladě a kdy je zboží v procesu práce (NV).
 
 ### Příklad
-The following example illustrates when a WIP item transitions to become part of inventory. The example is based on the production of a chain with 150 links.
+Následující příklad ilustruje, kdy zboží NV přechází a stává se součásti zásob. Příklad je založen na výrobě řetězu se 150 částmi.
 
-![WIP inventory and revaluation](media/design_details_inventory_costing_10_revaluation_wip.png "WIP inventory and revaluation")
+![Zásoby a přecenění NV](media/design_details_inventory_costing_10_revaluation_wip.png "Zásoby a přecenění NV")
 
-**1Q**: The user posts the purchased links as received. The following table shows the resulting item ledger entry.
+**1Q**: Uživatel zaúčtuje zakoupené části jako přijaté. V následující tabulce je uvedena výsledná položka zboží.
 
 | Zúčtovací datum | Zboží | Typ položky | Množství | Číslo položky |
 |------------------|----------|----------------|--------------|---------------|  
-| 01.01.20 | LINK | Nákup | 150 | 1 |
+| 01.01.20 | ČÁST | Nákup | 150 | 1 |
 
 > [!NOTE]  
-> Now an item using the Standard costing method is available for revaluation.
+> Nyní je pro přecenění k dispozici zboží používající metodu standardního ocenění.
 
-**1V**: The user posts the purchased links as invoiced and the links become part of inventory, from a financial point of view. Následující tabulka ukazuje výsledné hodnoty.
+**1V**: Uživatel zaúčtuje zakoupené části řetězu jako fakturované a tyto části se z finančního hlediska stanou součástí zásob. Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|----------------|--------------------|----------------------------|---------------------------|---------------|  
-| 15.01.20 | Přímé náklady | 01.01.20 | 150.00 | 1 | 1 |
+| 15.01.20 | Přímé náklady | 01.01.20 | 15000 | 1 | 1 |
 
-**2Q + 2V**: The user posts the purchased links as consumed for the production of the iron chain. From a financial point of view, the links become part of WIP inventory.  The following table shows the resulting item ledger entry.
+**2Q + 2V**: Uživatel zaúčtuje zakoupené části řetězu jako spotřebované pro výrobu železného řetězu. Z finančního hlediska se části stávají součástí zásob nedokončené výroby.  V následující tabulce je uvedena výsledná položka zboží.
 
 | Zúčtovací datum | Zboží | Typ položky | Množství | Číslo položky |
 |------------------|----------|----------------|--------------|---------------|  
-| 1.2.2020 | LINK | Consumption | -150 | 1 |
+| 1.2.2020 | ČÁST | Spotřeba | -150 | 1 |
 
-The following table shows the resulting value entry.
+Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|----------------|--------------------|----------------------------|---------------------------|---------------|  
-| 1.2.2020 | Přímé náklady | 1.2.2020 | -150.00 | 2 | 2 |
+| 1.2.2020 | Přímé náklady | 1.2.2020 | -150,00 | 2 | 2 |
 
-The valuation date is set to the date of the consumption posting (02-01-20), as a regular inventory decrease.
+Datum ocenění je nastaveno na datum účtování spotřeby (02-01-20) jako pravidelné snížení zásob.
 
-**3Q**: The user posts the chain as output and finishes the production order. The following table shows the resulting item ledger entry.
+**3Q**: Uživatel zaúčtuje řetěz jako výstup a dokončí výrobní zakázku. V následující tabulce je uvedena výsledná položka zboží.
 
 | Zúčtovací datum | Zboží | Typ položky | Množství | Číslo položky |
 |------------------|----------|----------------|--------------|---------------|  
-| 15.2.2020 | CHAIN | Output | 1 | 3 |
+| 15.2.2020 | ŘETĚZ | Výstup | 1 | 3 |
 
-**3V**: The user runs the **Adjust Cost - Item Entries** batch job, which posts the chain as invoiced to indicate that all material consumption has been completely invoiced. From a financial point of view, the links are no longer part of WIP inventory when the output is completely invoiced and adjusted. Následující tabulka ukazuje výsledné hodnoty.
+**3V**: Uživatel spustí dávkovou úlohu **Adjustace nákladů položek zboží**, která zaúčtuje řetěz jako fakturovanou, což znamená, že veškerá spotřeba materiálu byla zcela fakturována. Z finančního hlediska již části řetězu nejsou součástí zásob nedokončené výroby, pokud je výstup zcela fakturován a adjustován. Následující tabulka ukazuje výsledné hodnoty.
 
 | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |------------------|----------------|--------------------|----------------------------|---------------------------|---------------|  
-| 15.01.20 | Přímé náklady | 01.01.20 | 150.00 | 2 | 2 |
-| 1.2.2020 | Přímé náklady | 1.2.2020 | -150.00 | 2 | 2 |
-| 15.2.2020 | Přímé náklady | 15.2.2020 | 150.00 | 3 | 3 |
+| 15.01.20 | Přímé náklady | 01.01.20 | 15000 | 2 | 2 |
+| 1.2.2020 | Přímé náklady | 1.2.2020 | -150,00 | 2 | 2 |
+| 15.2.2020 | Přímé náklady | 15.2.2020 | 15000 | 3 | 3 |
 
-## Expected Cost in Revaluation
-The revaluable quantity is calculated as the sum of the quantity for completely invoiced item ledger entries with a posting date equal to or earlier than the revaluation date. This means that when some items are received/shipped but not invoiced, their inventory value cannot be calculated. Items that use the Standard costing method are not limited in this respect.
+## Očekávané náklady při přecenění
+Přeceněné množství se vypočítá jako součet množství pro zcela fakturované položky zboží se zúčtovacím datem rovnajícím se datu přecenění nebo dřívějšímu datu. To znamená, že pokud je některé zboží přijato/dodáno, ale není fakturováno, nelze vypočítat jeho hodnotu zásob. Zboží, které používají metodu standardního ocenění, nejsou v tomto ohledu omezeny.
 
 > [!NOTE]  
-> Another type of expected cost that can be revalued is WIP inventory, within certain rules. For more information, see [WIP Inventory Revaluation](design-details-revaluation.md#wip-inventory-revaluation).
+> Dalším typem očekávaných nákladů, které lze přecenit, jsou zásoby NV v rámci určitých pravidel. Pro více informací navštivte [Přecenění zásob NV](design-details-revaluation.md#wip-inventory-revaluation).
 
-When calculating the re-valuable quantity for items using the Standard costing method, item ledger entries that have not been completely invoiced are included in the calculation. These entries are then revalued when you post the revaluation. When you invoice the revalued entry, the following value entries are created:
+Při výpočtu přeceněného množství pro zboží pomocí metody standardního ocenění jsou do výpočtu zahrnuty položky zboží, které nebyly zcela fakturovány. Tyto položky jsou pak při zaúčtování přecenění přeceněny. Při fakturaci přeceněné položky se vytvoří následující položky ocenění:
 
-- The usual invoiced value entry with an entry type of **Direct Cost**. The cost amount on this entry is the direct cost from the source line.
-- A value entry with an entry type of **Variance**. This entry records the difference between the invoiced cost and the revalued standard cost.
-- A value entry with an entry type of **Revaluation**. This entry records the reversal of the revaluation of the expected cost.
+- Obvyklá fakturovaná položka ocenění s typem položky **Přímé náklady**. Výše nákladů na tento záznam je přímým nákladem ze zdrojového řádku.
+- Položka ocenění s typem položky **Odchylka**. Tato položka zaznamenává rozdíl mezi fakturovanou cenou a přeceněnou standardní cenou.
+- Položka ocenění s typem položky **Přecenění**. Tato položka zaznamenává stornování přecenění očekávaných nákladů.
 
 ### Příklad
-The following example, which is based on the production of the chain in the previous example, illustrates how the three types of entries are created. Je založen na následujícím scénáři:
+Následující příklad, který je založen na výrobě řetězu v předchozím příkladu, ilustruje, jak jsou vytvořeny tři typy položek. Je založen na následujícím scénáři:
 
-1. The user posts the purchased links as received with a unit cost of LCY 2.00.
-2. The user then posts a revaluation of the links with a new unit cost of LCY 3.00, updating the standard cost to LCY 3.00.
-3. The user posts the original purchase of the links as invoiced, which creates the following:
+1. Uživatel zaúčtuje zakoupené části řetězu jako přijaté s jednotkovou cenou 2,00 CZK.
+2. Uživatel poté zaúčtuje přecenění částí s novými jednotkovými náklady ve výši 3,00 CZK a aktualizuje standardní náklady na 3,00 CZK.
+3. Uživatel zaúčtuje původní nákup částí jako fakturovaný, což vytváří následující:
 
-   1. An invoiced value entry with an entry type of **Direct Cost**.
-   2. A value entry with an entry type of **Revaluation** to record the reversal of the revaluation of the expected cost.
-   3. A value entry with an entry type of Variance, recording the difference between the invoiced cost and the revalued standard cost.  
-      The following table shows the resulting value entries.
+   1. Fakturovaná položka ocenění s typem položky **Přímé náklady**.
+   2. Položka ocenění s typem položky **Přecenění** pro záznam stornování přecenění očekávaných nákladů.
+   3. Položka ocenění s typem položky Odchylka, zaznamenávající rozdíl mezi fakturovanou cenou a přeceněnou standardní cenou.  
+      Následující tabulka ukazuje výsledné hodnoty.
 
-| Step | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (očekávaná) | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
+| Krok | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (očekávaná) | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |----------|------------------|----------------|--------------------|------------------------------|----------------------------|---------------------------|---------------|  
-| 1. | 15.01.20 | Přímé náklady | 15.01.20 | 300.00 | 0.00 | 1 | 1 |
-| 2. | 01-20-20 | Přecenění | 01-20-20 | 150.00 | 0.00 | 1 | 2 |
-| 3.a. | 15.01.20 | Přímé náklady | 15.01.20 | -300.00 | 0.00 | 1 | 3 |
-| 3.b. | 15.01.20 | Přecenění | 01-20-20 | -150.00 | 0.00 | 1 | 4 |
-| 3.c. | 15.01.20 | Odchylka | 15.01.20 | 0.00 | 450.00 | 1 | 5 |
+| 1. | 15.01.20 | Přímé náklady | 15.01.20 | 300,00 | 0,00 | 1 | 1 |
+| 2. | 20.01.2020 | Přecenění | 20.01.2020 | 15000 | 0,00 | 1 | 2 |
+| 3.a. | 15.01.20 | Přímé náklady | 15.01.20 | -300,00 | 0,00 | 1 | 3 |
+| 3.b. | 15.01.20 | Přecenění | 20.01.2020 | -150,00 | 0,00 | 1 | 4 |
+| 3.c. | 15.01.20 | Odchylka | 15.01.20 | 0,00 | 450,00 | 1 | 5 |
 
-## Determining Whether an Inventory Decrease is Affected by Revaluation
-The date of the posting or the revaluation is used to determine if an inventory decrease is affected by a revaluation.
+## Určení, zda je snížení zásob ovlivněno přeceněním
+Datum zaúčtování nebo přecenění se používá k určení, zda je pokles zásob ovlivněn přeceněním.
 
-The following table shows the criteria that is used for an item that does not use the Average costing method.
+V následující tabulce jsou uvedena kritéria používaná pro zboží, které nepoužívá metodu průměrného ocenění.
 
-| Scénář | Číslo položky | Timing | Affected by revaluation |
+| Scénář | Číslo položky | Načasování | Ovlivněno přeceněním |
 |--------------|---------------|------------|-----------------------------|  
-| A | Earlier than revaluation entry number | Earlier than revaluation posting date | Ne |
-| B | Earlier than revaluation entry no. | Equal to revaluation posting date | Ne |
-| C | Earlier than revaluation entry no. | Later than revaluation posting date | Ano |
-| D | Later than revaluation entry no. | Earlier than revaluation posting date | Ano |
-| E | Later than revaluation entry no. | Equal to revaluation posting date | Ano |
-| F | Later than revaluation entry no. | Later than revaluation posting date | Ano |
+| A | Číslo položky před přeceněním | Zaúčtovací datum dřívější než přecenění | Ne |
+| B | Číslo položky dřívější než přecenění | Rovno zúčtovacímu datu přecenění | Ne |
+| C | Číslo položky dřívější než přecenění | Pozdější než zúčtovací datum přecenění | Ano |
+| D | Později než číslo položky přecenění | Zaúčtovací datum dřívější než přecenění | Ano |
+| E | Později než číslo položky přecenění | Rovno zúčtovacímu datu přecenění | Ano |
+| F | Později než číslo položky přecenění | Pozdější než zúčtovací datum přecenění | Ano |
 
 ### Příklad
-The following example, which illustrates revaluation of an item that uses the FIFO costing method, is based on the following scenario:
+Následující příklad, který ilustruje přecenění zboží, které používá metodu ocenění FIFO, je založen na následujícím scénáři:
 
-1. On 01-01-20, the user posts a purchase of 6 units.
-2. On 02-01-20, the user posts a sale of 1 unit.
-3. On 03-01-20, the user posts a sale of 1 unit.
-4. On 04-01-20, the user posts a sale of 1 unit.
-5. On 03-01-20, the user calculates the inventory value for the item, and posts a revaluation of the item’s unit cost from LCY 10.00 to LCY 8.00.
-6. On 02-01-20, the user posts a sale of 1 unit.
-7. On 03-01-20, the user posts a sale of 1 unit.
-8. On 04-01-20, the user posts a sale of 1 unit.
-9. The user runs the **Adjust Cost - Item Entries** batch job.
+1. Uživatel 01.01.20 zaúčtuje nákup 6 jednotek.
+2. Dne 01.02.20 zaúčtuje uživatel prodej 1 jednotky.
+3. Dne 01.03.20 zaúčtuje uživatel prodej 1 jednotky.
+4. Dne 01.04.20 zaúčtuje uživatel prodej 1 jednotky.
+5. Dne 01.03.20 uživatel vypočítá hodnotu zásob pro zboží a zaúčtuje přecenění jednotkových nákladů zboží z 10,00 CZK na 8,00 CZK.
+6. Dne 01.02.20 zaúčtuje uživatel prodej 1 jednotky.
+7. Dne 01.03.20 zaúčtuje uživatel prodej 1 jednotky.
+8. Dne 01.04.20 zaúčtuje uživatel prodej 1 jednotky.
+9. Uživatel spustí dávkovou úlohu **Adjustace nákladů položek zboží**.
 
 Následující tabulka ukazuje výsledné hodnoty.
 
 | Scénář | Zúčtovací datum | Typ položky | Datum ocenění | Oceněné množství | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |--------------|------------------|----------------|--------------------|---------------------|----------------------------|---------------------------|---------------|  
-|  | 01.01.20 | Nákup | 01.01.20 | 6 | 60.00 | 1 | 1 |
-|  | 1.3.2020 | Přecenění | 1.3.2020 | 4 | -8.00 | 1 | 5 |
+|  | 01.01.20 | Nákup | 01.01.20 | 6 | 60,00 | 1 | 1 |
+|  | 1.3.2020 | Přecenění | 1.3.2020 | 4 | -8,00 | 1 | 5 |
 | A | 1.2.2020 | Prodej | 1.2.2020 | -1 | -10,00 | 2 | 2 |
 | B | 1.3.2020 | Prodej | 1.3.2020 | -1 | -10,00 | 3 | 3 |
-| C | 04-01-20 | Prodej | 04-01-20 | -1 | -10,00 | 4 | 4 |
-|  | 04-01-20 | Prodej | 04-01-20 | -1 | 2,00 | 4 | 9 |
+| C | 01.04.01 | Prodej | 01.04.01 | -1 | -10,00 | 4 | 4 |
+|  | 01.04.01 | Prodej | 01.04.01 | -1 | 2,00 | 4 | 9 |
 | D | 1.2.2020 | Prodej | 1.3.2020 | -1 | -10,00 | 5 | 6 |
 |  | 1.2.2020 | Prodej | 1.3.2020 | -1 | 2,00 | 5 | 10 |
 | E | 1.3.2020 | Prodej | 1.3.2020 | -1 | -10,00 | 6 | 7 |
 |  | 1.3.2020 | Prodej | 1.3.2020 | -1 | 2,00 | 6 | 11 |
-| F | 04-01-20 | Prodej | 04-01-20 | -1 | -10,00 | 7 | 8 |
-|  | 04-01-20 | Prodej | 04-01-20 | -1 | 2,00 | 7 | 12 |
+| F | 01.04.01 | Prodej | 01.04.01 | -1 | -10,00 | 7 | 8 |
+|  | 01.04.01 | Prodej | 01.04.01 | -1 | 2,00 | 7 | 12 |
 
-## WIP Inventory Revaluation
-Revaluation of WIP inventory implies revaluing components that are registered as part of WIP inventory at the time of the revaluation.
+## Přecenění zásob NV
+Přecenění zásob NV znamená přecenění komponent, které jsou v době přecenění registrovány jako součást zásob nedokončené výroby.
 
-With this in mind, it is important to establish conventions as to when an item is considered part of the WIP inventory from a financial point of view. In [!INCLUDE[prod_short](includes/prod_short.md)], the following conventions exist:
+S ohledem na to je důležité stanovit konvence, kdy je zboží z finančního hlediska považováno za součást zásob NV. V [!INCLUDE[prod_short](includes/prod_short.md)], existují následující konvence:
 
-- A purchased component becomes part of the raw material inventory from the time of posting a purchase as invoiced.
-- A purchased/sub-assembled component becomes part of the WIP inventory from the time of posting its consumption in connection with a production order.
-- A purchased/sub-assembled component remains part of the WIP inventory until the time when a production order (manufactured item) is invoiced.
+- Zakoupená komponenta se stává součástí zásob suroviny od zaúčtování nákupu jako fakturovaného.
+- Nakoupená/podsestavovaná komponenta se stává součástí zásob nedokončené výroby od zaúčtování spotřeby v souvislosti s výrobní zakázkou.
+- Nakoupená/podsestavovaná komponenta zůstává součástí zásob nedokončené výroby až do doby, kdy je fakturována výrobní zakázka (vyrobené zboží).
 
-The way the valuation date for the value entry of consumption is set, follows the same rules as for non-WIP inventory. For more information, see [Determining Whether an Inventory Decrease is Affected by Revaluation](design-details-revaluation.md#determining-whether-an-inventory-decrease-is-affected-by-revaluation).
+Způsob, jakým je nastaveno datum ocenění pro zadání hodnoty spotřeby, se řídí stejnými pravidly jako u zásob jiných než NV. Pro více informací navštivte [Určení, zda je snížení zásob ovlivněno přeceněním](design-details-revaluation.md#determining-whether-an-inventory-decrease-is-affected-by-revaluation).
 
-WIP inventory can be revalued as long as the revaluation date is not later than the posting date of the corresponding item ledger entries of type Consumption and as long as the corresponding production order has not been invoiced yet.
+Zásoby nedokončené výroby lze přecenit, pokud datum přecenění není pozdější než zúčtovací datum odpovídajících položek zboží typu Spotřeba a pokud odpovídající výrobní zakázka ještě nebyla fakturována.
 
 > [!CAUTION]  
-> The **Inventory Valuation - WIP** report shows the value of posted production order entries and may therefore be a little confusing for WIP items that have been revalued.
+> Sestava **Hodnota zásob – vl.výroba** zobrazuje hodnotu zaúčtovaného zboží výrobní zakázky, a proto může být trochu matoucí pro zboží NV, které bylo přeceněné.
 
 ## Viz také
-[Design Details: Inventory Costing](design-details-inventory-costing.md)   
-[Design Details: Costing Methods](design-details-costing-methods.md)   
-[Design Details: Inventory Valuation](design-details-inventory-valuation.md)
-[Managing Inventory Costs](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
+[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)     
+[Detaily návrhu: Hodnota zásob](design-details-inventory-valuation.md)  
+[Správa nákladů zásob](finance-manage-inventory-costs.md)    
+[Finance](finance.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

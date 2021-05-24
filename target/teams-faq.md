@@ -11,81 +11,81 @@ ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365
 ms.date: 04/12/2021
 ms.author: jswymer
 ---
-# Teams FAQ
+# Teams Nejčastěji pokládané otázky a odpovědi
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-This article answers some of the questions you may have about working with Teams and [!INCLUDE [prod_short](includes/prod_short.md)].
+Tento článek odpovídá na některé z vašich otázek ohledně práce s Teams a [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## [General](#tab/general)
+## [Obecné](#tab/general)
 
-### How do I sign in to the [!INCLUDE [prod_short.md](includes/prod_short.md)] app in Teams?
+### Jak se přihlásím k aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] v Teams?
 
-After installing the app, you'll be asked to sign in the first time you use the app, when you paste a [!INCLUDE [prod_short.md](includes/prod_short.md)] link into Teams chat or choose the **Details** action on a card in Teams. Depending on your Teams client, you may have to enter your credentials that you use to access [!INCLUDE [prod_short.md](includes/prod_short.md)].
+Po instalaci aplikace budete požádáni o přihlášení při prvním použití, když vložíte odkaz z [!INCLUDE [prod_short.md](includes/prod_short.md)] do chatu Teams nebo při volbě tlačítka **Detaily** na kartě v Teams. V závislosti na vašem klientovi Teams možná budete muset zadat své přihlašovací údaje, které používáte pro přístup do [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-### How do I sign out of the [!INCLUDE [prod_short.md](includes/prod_short.md)] app in Teams?
+### Jak se odhlásím z aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] v Teams?
 
-To sign out of your current user identity in Teams used to connect to [!INCLUDE [prod_short.md](includes/prod_short.md)], go to any chat compose box, right-click the [!INCLUDE [prod_short.md](includes/prod_short.md)] icon underneath, then choose **Settings**. When the window appears, check your currently signed in identity and then choose **Sign out**.
+Chcete-li se odhlásit ze své aktuální identity uživatele v Teams použitých k připojení k [!INCLUDE [prod_short.md](includes/prod_short.md)], přejděte do libovolného pole pro psaní chatu, klikněte pravým tlačítkem dole na ikonu [!INCLUDE [prod_short.md](includes/prod_short.md)] a poté zvolte **Nastavení**. Po zobrazení okna zkontrolujte aktuálně přihlášenou identitu a zvolte **Odhlásit**.
 
-### Does the app for Teams connect to [!INCLUDE [prod_short.md](includes/prod_short.md)] on premises?
+### Připojuje se aplikace pro Teams k [!INCLUDE [prod_short.md](includes/prod_short.md)] on premises?
 
-Číslo  The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams only works with [!INCLUDE [prod_short.md](includes/prod_short.md)] online. There are no plans to support [!INCLUDE [prod_short.md](includes/prod_short.md)] deployment types&mdash;like on-premises, hybrid cloud, or private cloud&mdash;that Microsoft doesn't host or manage directly.
+Ne.  Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams pracuje pouze s [!INCLUDE [prod_short.md](includes/prod_short.md)] online. Neexistují žádné plány na podporu [!INCLUDE [prod_short.md](includes/prod_short.md)] pro &mdash; on-premises, hybrid cloud nebo privátní cloud&mdash;, který společnost Microsoft přímo nehostuje ani nespravuje
 
-### Does the app work with multiple companies and environments?
+### Funguje aplikace s více společnostmi a prostředími?
 
-Ano. To search for contacts in a different company, go to [Settings](across-teams-settings.md). When the [!INCLUDE [prod_short.md](includes/prod_short.md)] app expands a link into a card, the link must contain the environment and company names for the app to match the record in the right company. You can paste links to any companies and environments you have access to within your organization and from the [!INCLUDE [prod_short.md](includes/prod_short.md)] account you used to sign in. Participants in the chat will see the card. But they can't view the card details unless they have permissions to the company or environment where that record is stored.
+Ano. Chcete-li vyhledat kontakty v jiné společnosti, přejděte do [Nastavení](across-teams-settings.md). Když aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] rozbalí odkaz na kartu, odkaz musí obsahovat prostředí a názvy společností aplikace, aby odpovídaly záznamu ve správné společnosti. Můžete vložit odkazy na jakékoli společnosti a prostředí, ke kterým máte ve své organizaci přístup a z účtu [!INCLUDE [prod_short.md](includes/prod_short.md)], který jste použili k přihlášení. Účastníkům chatu se karta zobrazí. Nemohou však zobrazit podrobnosti o kartě, pokud nemají oprávnění pro společnost nebo prostředí, kde je tento záznam uložen.
 
-### In which countries or regions is the [!INCLUDE [prod_short.md](includes/prod_short.md)] app available?
+### Ve kterých zemích nebo regionech je aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] k dispozici?
 
-The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams isn't restricted by country or region. The app is available in all markets currently supported by the Teams marketplace.
+Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro není omezena podle země nebo regionu. Aplikace je k dispozici na všech trzích, které aktuálně podporuje Teams marketplace.
 
-### Does the [!INCLUDE [prod_short.md](includes/prod_short.md)] app work with any localization of [!INCLUDE [prod_short.md](includes/prod_short.md)]?
+### Funguje aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] s jakoukoli lokalizací [!INCLUDE [prod_short.md](includes/prod_short.md)]?
 
-Ano. The app is intended to work with any localization of [!INCLUDE [prod_short.md](includes/prod_short.md)], whether that localization is offered directly from Microsoft or through a partner. For more information, see [Country/regional availability and supported languages](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json).
+Ano. Aplikace je určena pro práci s jakoukoli lokalizací [!INCLUDE [prod_short.md](includes/prod_short.md)], ať už je tato lokalizace nabízena přímo od Microsoftu nebo prostřednictvím partnera. Pro více informací navštivte [Dostupnost Země/Oblasti a podporované jazyky](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json).
 
-### <a name="language"></a>Which languages does the [!INCLUDE [prod_short.md](includes/prod_short.md)] app support?
+### <a name="language"></a>Jaký jazyk aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] podporuje?
 
-Two things determine the language used for cards and card details in Teams:
+Jazyk používaný pro karty a detaily karet v Teams určují dvě věci:
 
-1. Your language in Teams, which you can see from your account settings in Teams.
-2. Your language in [!INCLUDE [prod_short.md](includes/prod_short.md)], which you can see the [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client (see [Change Basic Setting - Language](ui-change-basic-settings.md#language)).
+1. Váš jazyk v Teams, který můžete vidět z nastavení účtu v Teams.
+2. Váš jazyk v [!INCLUDE [prod_short.md](includes/prod_short.md)], který můžete videt ve webovém klientu [!INCLUDE [prod_short.md](includes/prod_short.md)] (Bežte na [Změna základního nastavení - Jazyk](ui-change-basic-settings.md#language)).
 
-The following table explains how the experience differs for message authors and recipients, depending on language settings and availability of languages.
+Následující tabulka vysvětluje, jak se prostředí liší pro autory a příjemce zpráv v závislosti na jazykovém nastavení a dostupnosti jazyků.
 
-|Who|Card|Card details |
+|Kdo|Karta|Detaily karty|
 |-|----|--------------|
-|Message author |Displays in the language that's specified for you in Teams. If [!INCLUDE [prod_short.md](includes/prod_short.md)] doesn't offer that same language, the card is displayed in English. |Displayed in the language that's specified for you in [!INCLUDE [prod_short.md](includes/prod_short.md)].  which may include languages from language apps provided by partners. |
-|Message recipient |Displays in the language of the message author. |Displays in the language that's specified for you in [!INCLUDE [prod_short.md](includes/prod_short.md)]. |
+|Autor zprávy|Zobrazuje se v jazyku, který je pro Vás nastaven v Teams. Pokud [!INCLUDE [prod_short.md](includes/prod_short.md)] nenabízí stejný jazyk, karta se zobrazí v angličtině. |Zobrazí se v jazyce, který je pro vás nastaven v [!INCLUDE [prod_short.md](includes/prod_short.md)].  Můžou zde být zahrnuté jazyky poskytnuté partnery |
+|Adresát zprávy |Zobrazuje se v jazyce autora zprávy. |Zobrazí se v jazyce, který je pro vás nastaven v [!INCLUDE [prod_short.md](includes/prod_short.md)]. |
 
-For the list of supported languages for [!INCLUDE [prod_short.md](includes/prod_short.md)], see [Supported languages](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json#supported-languages).
+Pro seznam podporovaných jazyků pro [!INCLUDE [prod_short.md](includes/prod_short.md)], bežte na [Podporované jazyky](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json#supported-languages).
 
-### Does the [!INCLUDE [prod_short.md](includes/prod_short.md)] app work with industry solutions?
+### Podporuje aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] práci s průmyslovými řešeními?
 
-Ano. But only some features of the app work with [Embed apps](/dynamics365/business-central/dev-itpro/deployment/embed-app-overview):
+Ano. Jen pouze některé funkce aplikace fungují s [Vloženými aplikacemi](/dynamics365/business-central/dev-itpro/deployment/embed-app-overview):
 
-- The app works with links based on the **\*.bc.dynamics.com** pattern that's typically used with Embed apps.
-- Contact search isn't available for Embed apps that replace the base application from Microsoft.
+- Aplikace pracuje s odkazy založenými na **\*.bc.dynamics.com**, které se obvykle používají ve Vložených aplikacích.
+- Vyhledávání kontaktů není k dispozici pro vložené aplikace, které nahrazují základní aplikaci od společnosti Microsoft.
 
-### Where can I find Teams integration inside the [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client?
+### Kde můžu najít integraci Teams ve webovém klientu [!INCLUDE [prod_short.md](includes/prod_short.md)]?
 
-There's currently no embedding of Teams controls or presence of Teams features inside the [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client or other clients.
+V současné době není do webového klienta [!INCLUDE [prod_short.md](includes/prod_short.md)] možné vkládat ovládací prvky Teams nebo jeho funkce.
 
-### Does [!INCLUDE [prod_short.md](includes/prod_short.md)] work with the Teams mobile app?
+### Pracuje [!INCLUDE [prod_short.md](includes/prod_short.md)] s mobilní aplikací Teams?
 
-Ano. The [!INCLUDE [prod_short.md](includes/prod_short.md)] app can be installed from the Teams desktop app or browser, or by an administrator for all users. Once installed, the [!INCLUDE [prod_short.md](includes/prod_short.md)] app is automatically available in Teams for iOS and Android. On mobile devices, you can only view cards sent by others, access details, or pop out the card to the full experience in the [!INCLUDE [prod_short.md](includes/prod_short.md)] mobile app. You can't paste links that expand into cards when composing messages or search for contacts. For minimum requirements for mobile, see [Minimum Requirements for Using Business Central](product-requirements.md).
+Ano. Aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] lze nainstalovat z desktopové aplikace nebo prohlížeče Teams nebo administrátorem pro všechny uživatele. Po instalaci je aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] automaticky dostupná v Teams pro iOS a Android. Na mobilních zařízeních můžete v mobilní aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] zobrazit pouze karty odeslané ostatními, přistupovat k detailům karty nebo kartu otevřít. Nelze vkládat odkazy, které se při psaní zprávy nebo hledání kontaktů rozbalí na karty. Minimální požadavky na mobilní zařízení naleznete v [Minimální požadavky na používání Business Central](product-requirements.md).
 
-### Is the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams the same as the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for iOS and Android?
+### Je aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams stejná jako aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro iOS a Android?
 
-Číslo  The app for Teams is an add-in to Microsoft Teams and exclusively designed for collaborative experiences that light up within Teams. On the other hand, the [!INCLUDE [prod_short.md](includes/prod_short.md)] mobile app delivers a rich experience for you to work with [!INCLUDE [prod_short.md](includes/prod_short.md)] data on your mobile devices.
+Ne.  Aplikace pro Teams je doplňkem Microsoft Teams a je určena výhradně pro prostředí spolupráce, která se v Teams rozvíjí. Na druhou stranu mobilní aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] poskytuje bohaté prostředí pro práci s daty [!INCLUDE [prod_short.md](includes/prod_short.md)] na vašich mobilních zařízeních.
 
-Mobile users are encouraged to install both the mobile app and the app for Teams to get the most out of [!INCLUDE [prod_short.md](includes/prod_short.md)]. With both installed, you can choose the **Pop out** action on a card in Teams to open the card details in the [!INCLUDE [prod_short.md](includes/prod_short.md)] mobile app. For information about installing the [!INCLUDE [prod_short.md](includes/prod_short.md)] and Teams mobile apps, see:
+Uživatelům mobilních zařízení se doporučuje, aby si nainstalovali mobilní aplikaci i desktopovou aplikaci Teams, aby z [!INCLUDE [prod_short.md](includes/prod_short.md)] vytěžili maximum. S oběma nainstalovanými můžete zvolit **Vyskakovací okno** na kartě v Teams a otevřít podrobnosti o kartě v mobilní aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)]. pro více informaí o instalaci [!INCLUDE [prod_short.md](includes/prod_short.md)] a mobilní aplikaci Teams, bežte na:
 
-- [Get Business Central on Your Mobile Device](install-mobile-app.md)
-- [Get the Teams mobile app](https://support.microsoft.com/office/download-the-mobile-app-for-teams-5940ebdc-0082-4fb1-83c4-751edc23dcb5) on Microsoft Support
+- [Získání Business Central pro mobilní zařízení](install-mobile-app.md)
+- [Získání mobilní aplikace Teams](https://support.microsoft.com/office/download-the-mobile-app-for-teams-5940ebdc-0082-4fb1-83c4-751edc23dcb5) na stránkách podpory Microsoftu
 
-### Does the [!INCLUDE [prod_short.md](includes/prod_short.md)] app work in all Teams clients?
+### Funguje aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] se všemi Teams klienty?
 
-Číslo  The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams isn't supported when installed as a package for macOS or Linux. On these platforms, you can access Teams using a supported browser instead.
+Ne.  Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams není podporována, pokud je nainstalována jako balíček pro macOS nebo Linux. On these platforms, you can access Teams using a supported browser instead.
 
 For minimum requirements in [!INCLUDE [prod_short.md](includes/prod_short.md)], see [Minimum Requirements for Using Business Central](product-requirements.md#teams).
 
@@ -197,7 +197,7 @@ Ano. Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] repre
 
 ### Does [!INCLUDE [prod_short.md](includes/prod_short.md)] synchronize contacts with Teams?
 
-Číslo  Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] remain separate from your contacts stored in Teams.
+Ne.  Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] remain separate from your contacts stored in Teams.
 There are currently no plans to synchronize the two lists together.
 
 ### What is the minimum version of [!INCLUDE [prod_short.md](includes/prod_short.md)] for contact search?
@@ -255,7 +255,7 @@ Deleting a message that contains a card doesn't delete or affect any data in [!I
 
 ### Do cards always show up-to-date information?
 
-Číslo  The field values on a card in Teams, including any images, are based on the data available when that card was sent to the chat. [!INCLUDE [prod_short.md](includes/prod_short.md)] cards don't automatically refresh in Teams.
+Ne.  The field values on a card in Teams, including any images, are based on the data available when that card was sent to the chat. [!INCLUDE [prod_short.md](includes/prod_short.md)] cards don't automatically refresh in Teams.
 
 ### Will others see my card if they don’t have the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams?
 
@@ -273,7 +273,7 @@ If you work across [!INCLUDE [prod_short.md](includes/prod_short.md)] companies,
 
 ### If I choose to view details for a card, will other users see my details window?
 
-Číslo  While everyone in the chat or meeting can view the card itself, the details window only appears for you on your device when you choose **Details**. Other users must choose **Details** if they would like to view the details window on their device.
+Ne.  While everyone in the chat or meeting can view the card itself, the details window only appears for you on your device when you choose **Details**. Other users must choose **Details** if they would like to view the details window on their device.
 
 ### Can I start a Teams call from the details window in Teams?
 

@@ -30,7 +30,7 @@ The following table lists the fields in [!INCLUDE[prod_short](includes/prod_shor
 | Sender Bank BIC | SWIFT Code | Bank Account | The SWIFT identifier of the sender bank account |
 | Sender Bank Account Currency | Currency Code | Bank Account | The sender bank account Currency Code |
 | Číslo dokladu | Číslo dokladu | General Journal Line | The document number of the payment line |
-| Applies-to Ext. Doc. Číslo  | Applies-to Ext. Doc. Číslo  | General Journal Line | The external document number of the invoice or credit memo that the payment line is applied to |
+| Applies-to Ext. Doc. Ne.  | Applies-to Ext. Doc. Ne.  | General Journal Line | The external document number of the invoice or credit memo that the payment line is applied to |
 | Recipient ID | Číslo účtu | General Journal Line | The customer or vendor number that is specified on the payment line |
 | Payment Type | Bank Data Conversion Pmt. Typ | Payment Method | The type of bank transfer, such as domestic or international |
 | Payment Reference | Payment Reference | General Journal Line | The payment reference of the payment line |
@@ -39,7 +39,7 @@ The following table lists the fields in [!INCLUDE[prod_short](includes/prod_shor
 | Recipient Name | Name | Customer/Vendor | The recipient name that is specified on the customer or vendor card |
 | Recipient Country/Region Code | Country/Region Code | Customer/Vendor | The recipient country/region code that is specified on the customer or vendor card |
 | Recipient Post Code | Post Code | Customer/Vendor | The recipient post code that is specified on the customer or vendor card |
-| Recipient Bank Acc. Číslo  | Bank Account No./IBAN | Customer Bank Account/Vendor Bank Account | The recipient bank account number (IBAN or other) that is specified on the customer or vendor bank account card |
+| Recipient Bank Acc. Ne.  | Bank Account No./IBAN | Customer Bank Account/Vendor Bank Account | The recipient bank account number (IBAN or other) that is specified on the customer or vendor bank account card |
 | Recipient Bank Clearing Code | Bank Clearing Standard | Customer Bank Account/Vendor Bank Account | The national bank names register used for the recipient bank account |
 | Recipient Bank Clearing Std. | Bank Clearing Code | Customer Bank Account/Vendor Bank Account | The identifier of the recipient bank account in relation to the bank names register that is used |
 | Recipient Email Address | E-Mail | Customer/Vendor | The email address of the recipient |

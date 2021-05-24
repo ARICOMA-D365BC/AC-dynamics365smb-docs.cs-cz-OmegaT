@@ -30,63 +30,63 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 ## Předpoklady
 
 - Máte přístup do Microsoft Teams.
-- Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. For more information, see [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)
+- Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)
 
 > [!NOTE]
 > All participants in a Teams conversation will be able to view cards for Business Central records that you submit to the conversation. But to view more details about records, by using the **Details** or **Pop out** buttons on a card, they'll need access to [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Managing Microsoft Teams Integration](admin-teams-integration.md#minimum-requirements-1).
 
-## Include a Business Central card in a Teams conversation
+## Zahrnutí karty Business Central do konverzace Teams
 
-1. Sign in to [!INCLUDE [prod_short](includes/prod_short.md)] using your browser.
-2. Open the record that you want to share.
+1. Přihlašte se do [!INCLUDE [prod_short](includes/prod_short.md)] pomocí Vašeho prohližeče.
+2. Otevřete záznam, který chcete sdílet.
 
-   The app is designed to display card type pages from [!INCLUDE [prod_short](includes/prod_short.md)]. So open a page that displays a single record, like an item, customer, or sales order. You can't use it for role centers or pages that display several records in a list.
+   Aplikace je navržena tak, aby zobrazovala stránky typu karta z [!INCLUDE [prod_short](includes/prod_short.md)]. Otevřete stránku, která zobrazuje jeden záznam, například Zboží, Zákazníka nebo Pprodejní objednávku. Nelze jej použít pro centra rolí nebo stránky, které zobrazují několik záznamů v seznamu.
 
-3. Copy the entire URL from the browser's address bar.
+3. Zkopírujte celou adresu URL z adresního řádku prohlížeče.
 
-   ![Copy Business Central URL from browser](media/teams-url-v2.png)
-4. Go to Teams and start a conversation, which can be chat with a person, group of persons, or a team channel.
+   ![Kopírování URL Business Central z prohlížeče](media/teams-url-v2.png)
+4. Přejděte do Teams a začněte konverzaci, pomocí které můžete chatovat s osobou, skupinou osob nebo týmovám kanálem.
 
    <!--Teams imposes a few limitations here eg. you cannot unfurl a link during a Voice/Video call :/ We should probably only mention this in a Troubleshooting section (and i hope it will also be fixed soon)-->
-5. Paste the URL in the message box where you compose a message.
+5. Vložíte URL adresu do okna se zprávou, kde ji píšete.
 
-   ![Paste Business Central URL in Teams](media/teams-paste-url-v2.png)
-6. The first time you paste a link into a conversation, you'll be asked to sign in to [!INCLUDE [prod_short](includes/prod_short.md)] and give consent for the app to retrieve data. Just follow the on-screen instructions.
+   ![Vložení URL Business Central do Teams](media/teams-paste-url-v2.png)
+6. Při prvním vložení odkazu do konverzace budete požádáni, abyste se přihlásili k [!INCLUDE [prod_short](includes/prod_short.md)] a udělili aplikaci souhlas k načtení dat. Postupujte podle pokynů na obrazovce.
 
    > [!NOTE]
    > You'll only have to do this step once.
 
-7. Wait a moment while a card is generated in the message box.
+7. Chvilku počkejte, než se karta vygeneruje v okně se zprávou.
 
-8. When the card appears, review the contents of the card carefully for any sensitive information before sending the message. This step is important because once you send the message, everyone in the conversation can see the card.
+8. Když se karta zobrazí, před odesláním zprávy pečlivě zkontrolujte její obsah, zda neobsahuje citlivé informace. Tento krok je důležitý, protože jakmile zprávu odešlete, všichni v konverzaci kartu uvidí.
 
-9. If the card looks good, select **Send** to submit it to the conversation.
+9. Pokud karta vypadá dobře, pomocí **Odeslat** ji přidáte do konverzace.
 
    > [!TIP]
    > After the card appears, and before you select **Send**, you can delete the pasted URL if you like.
 
-10. To view more details or make changes to the record shown in the card, select **Details**. For more information, see the next section.
+10. Chcete-li zobrazit další podrobnosti nebo provést změny záznamu zobrazeném na kartě, vyberte možnost **Podrobnosti**. Další informace naleznete v následující části.
 
-## View card details
+## Zobrazení podrobností karty
 
-Once a card's been sent to a conversation, all participants with the [proper permissions](admin-teams-integration.md#permissions) can select **Details** to open a window that displays more information about the record&mdash;and possibly make changes to the record. It doesn't matter if you're the one sending the card or the one receiving the card. The **Details** feature is especially useful to recipients, because it quickly provides them with concise, targeted information about the record, as opposed to having to scan the full record.
+Po odeslání karty do konverzace mohou všichni účastníci se [správnými oprávněními](admin-teams-integration.md#permissions) vybrat **Detaily** a otevřít okno, které zobrazuje další informace o záznamu a případně provést změny záznamu. Nezáleží na tom, jestli jste ten, kdo kartu posílá, nebo ten, kdo kartu přijímá. Funkce **Podrobnosti** je obzvláště užitečná pro příjemce, protože jim rychle poskytuje stručné a cílené informace o záznamu, na rozdíl od toho, že musí zobrazovat celý záznam.
 
-The details window is similar to what you'd see in [!INCLUDE [prod_short](includes/prod_short.md)] the record. But it's slightly trimmed for Teams. When you're finished viewing and making changes, close the window to return to the Teams conversation.
+Okno podrobností je podobné tomu, co byste viděli v záznamu [!INCLUDE [prod_short](includes/prod_short.md)]. Ale pro Teams je to trošku ořezáné. Až dokončíte prohlížení a provádění změn, zavřete okno a vraťte se do konverzace Teams.
 
-Here are a couple things to keep in mind when working with the card details:
+Při práci s údaji na kartě je na paměti několik věcí:
 
-- To open the card details, users must have permission on the page and its data in [!INCLUDE [prod_short](includes/prod_short.md)].
-- Cards in Teams chats aren't automatically updated to changes. Any changes you save to a record in the details window are saved in [!INCLUDE [prod_short](includes/prod_short.md)]. But the card in Teams won't show the changes in the conversion, until you paste the link again.
+- K otevření karty musí mít uživatelé oprávnění ke stránce a jejím údajům v [!INCLUDE [prod_short](includes/prod_short.md)].
+- Karty v chatu Teams se automaticky neaktualizují podle změn. Všechny změny, které provedete na záznamu v okně podrobností, jsou uloženy v  [!INCLUDE [prod_short](includes/prod_short.md)]. Karta v Teams nezobrazí změn v konverzaci, dokud nevložíte odkaz znovu.
 
-To learn more about working with cards and card details, see [Teams FAQ](teams-faq.md).
+Další informace o práci s kartami a jejich údaji naleznete v [Teams FAQ](teams-faq.md).
 
 ## Viz také
 
-[Business Central and Microsoft Teams Integration Overview](across-teams-overview.md)  
-[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
+[Přehled integrace Business Central a Microsoft Teams](across-teams-overview.md)  
+[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Troubleshooting Teams](admin-teams-troubleshooting.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Řešení problémů Teams](admin-teams-troubleshooting.md)  
+[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

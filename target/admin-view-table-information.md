@@ -28,7 +28,7 @@ Následující tabulka popisuje inforace pro každou tabulku.
 | Název společnosti | Název společnosti, pokud nějaká společnost existuje, ke které tabulka patří. |
 | Název tabulky | Název tabulky. |
 | Číslo tabulky | ID tabulky |
-| Číslo  záznamu | Celkový počet záznamů uložených v tabulce. |
+| Ne.  záznamu | Celkový počet záznamů uložených v tabulce. |
 | Velikost záznamu | Průměrná velikost záznamu v KB/záznam. Hodnota se vypočítá pomocí následujícího vzorce: 1024(velikost)/(Číslo Záznamu). |
 
 ## Viz také

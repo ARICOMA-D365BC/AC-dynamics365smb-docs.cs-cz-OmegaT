@@ -190,7 +190,7 @@ The following types of documents are useful for managing your warehouse:
 You can print these documents at any stage, release and reopen them, and assign common values, including dimensions, in the header. If you want to reprint the documents after they have been posted, you can do that on the **Posted Inventory Receipt** and **Posted Inventory Shipment** pages.
 
 > [!NOTE]
-> Before you can use these documents you must specify a number series to create their identifiers. For more information, see the next section.
+> Before you can use these documents you must specify a number series to create their identifiers. Další informace naleznete v následující části.
 
 ### To set up numbering for inventory documents
 The following procedure shows how to set up numbering for inventory documents.

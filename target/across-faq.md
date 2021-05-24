@@ -84,7 +84,7 @@ If you try to sign up with a personal email address, you will get a message indi
 If you want to deploy [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, then you can use other authentication methods. For more information, see [Deployment of Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/deployment).
 
 ## Do I have to buy Microsoft 365?
-Číslo  But if you want to experience [!INCLUDE[prod_short](includes/prod_short.md)] as fully integrated with Microsoft 365, you can sign up for a 1-month free trial of Microsoft 365 [here](https://products.office.com/try).
+Ne.  But if you want to experience [!INCLUDE[prod_short](includes/prod_short.md)] as fully integrated with Microsoft 365, you can sign up for a 1-month free trial of Microsoft 365 [here](https://products.office.com/try).
 
 If the account you sign up with is a non-Microsoft 365 work account (such as joe@mysolution.com), and you have a Microsoft 365 subscription, then you can associate your domain (*mysolution.com*) with the Microsoft 365 subscription. For more information, see [What is a domain?](/microsoft-365/admin/get-help-with-domains/what-is-a-domain?view=o365-worldwide&preserve-view=true) in the Microsoft 365 content.
 

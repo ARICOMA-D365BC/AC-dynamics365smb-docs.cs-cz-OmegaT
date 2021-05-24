@@ -195,7 +195,7 @@ The fixed asset ledger entries look like this:
 | 06/30/26 | Depreciation | 180 | -3,955.08 | 11,865.22 SL |
 | 12/31/26 | Depreciation | 180 | -3,955.07 | 7,910.15 SL |
 | 06/30/27 | Depreciation | 180 | -3,955.08 | 3,955.07 SL |
-| 12/31/27 | Depreciation | 180 | -3,955.07 | 0.00 SL |
+| 12/31/27 | Depreciation | 180 | -3,955.07 | 0,00 SL |
 
 `SL` after the book value means that the straight-line method has been used.
 
@@ -315,7 +315,7 @@ The fixed asset ledger entries look like this:
 | 12/31/22 | Depreciation | 360 | -20,000.00 | 50,000.00 |
 | 12/31/23 | Depreciation | 360 | -20,000.00 | 30,000.00 |
 | 12/31/24 | Depreciation | 360 | -20,000.00 | 10,000.00 |
-| 12/31/25 | Depreciation | 180 | -10,000.00 | 0.00 |
+| 12/31/25 | Depreciation | 180 | -10,000.00 | 0,00 |
 
 ## Example - DB1/SL Depreciation Using Half-Year Convention
 
@@ -331,7 +331,7 @@ The fixed asset ledger entries look like this:
 | 12/31/22 | Depreciation | 360 | -19,200.00 | 28,800.00 |
 | 12/31/23 | Depreciation | 360 | -11,520.00 | 17,280.00 |
 | 12/31/24 | Depreciation | 360 | -11,520.00 | 5,760.00 SL |
-| 12/31/25 | Depreciation | 180 | -5,760.00 | 0.00 SL |
+| 12/31/25 | Depreciation | 180 | -5,760.00 | 0,00 SL |
 
 `SL` after the book value means that the straight-line method has been used.
 

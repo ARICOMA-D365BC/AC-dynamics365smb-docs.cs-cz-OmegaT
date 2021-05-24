@@ -30,7 +30,7 @@ V následující tabulce jsou uvedeny položky zboží, na kterých je příklad
 | 01.01.20 | 3 | 1 |
 | 1.2.2020 | -1 | 2 |
 | 1.3.2020 | -1 | 3 |
-| 04-01-20 | -1 | 4 |
+| 01.04.01 | -1 | 4 |
 
 U položky používající metodu průměrných nákladů se zaokrouhlení zbytku (1/300) vypočítá s prvním snížením (číslo položky 2) a přenese se do položky číslo 3. Proto má položka číslo 3 hodnotu –3,34.
 
@@ -41,7 +41,7 @@ Následující tabulka ukazuje výsledné hodnoty.
 | 01.01.20 | 3 | 10 | 1 | 1 |
 | 1.2.2020 | -1 | -3.33 | 2 | 2 |
 | 1.3.2020 | -1 | -3.34 | 3 | 3 |
-| 04-01-20 | -1 | -3.33 | 4 | 4 |
+| 01.04.01 | -1 | -3.33 | 4 | 4 |
 
 U zboží, které používá jinou metodu ocenění než Průměr, se zaokrouhlení zbytkové hodnoty (0,01) vypočítá, pokud je zbývající množství pro zvýšení zásob nulové. Zbytek zaokrouhlování má samostatný záznam (číslo 5).
 
@@ -52,7 +52,7 @@ Následující tabulka ukazuje výsledné hodnoty.
 | 01.01.20 | 3 | 10 | 1 | 1 |
 | 1.2.2020 | -1 | -3.33 | 2 | 2 |
 | 1.3.2020 | -1 | -3.33 | 3 | 3 |
-| 04-01-20 | -1 | -3.33 | 4 | 4 |
+| 01.04.01 | -1 | -3.33 | 4 | 4 |
 | 01.01.20 | 0 | -0.01 | 1 | 5 |
 
 ## Viz také
