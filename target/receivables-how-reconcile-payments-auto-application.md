@@ -18,7 +18,7 @@ ms.author: edupont
 The **Payment Reconciliation Journal** page specifies payments, either incoming or outgoing, that have been recorded as transactions on your online bank account or on a payment service and that you can apply to their related open customer, vendor, and bank account ledger entries. Řádky v deníku lze vyplnit importem bankovního výpisu, který je jako bankovního zdroj nebo pomocí ručního zadání transakcí, které v platební službě provádíte.
 
 > [!NOTE]
-> Stránka nabízí funkci automatického párování, která vyrovnává platby na jejich související otevřené položky na základě shody dat na řádku bankovního výpisu (řádek deníku) s daty na jedné nebo více otevřených položkách. Všimněte si, že navrhované automatické vyrovnání můžete přepsat a můžete se rozhodnout, zda automatické vyrovnání vůbec použijete. Další informace naleznete v kroku 7.
+> The page offers automatic matching functionality that applies payments to their related open entries based on a matching of data on a bank statement line (journal line) with data on one or more open entries. Všimněte si, že navrhované automatické vyrovnání můžete přepsat a můžete se rozhodnout, zda automatické vyrovnání vůbec použijete. Další informace naleznete v kroku 7.
 
 A payment reconciliation journal is related to one bank account in [!INCLUDE[prod_short](includes/prod_short.md)] that reflects the online bank account where the payment transactions are recorded. Any open bank account ledger entries related to the applied customer or vendor ledger entries will be closed when you choose the **Post Payments and Reconcile Bank Account** action. To znamená, že bankovní účet je automaticky odsouhlasen pro platby, které zaúčtujete do deníku.
 

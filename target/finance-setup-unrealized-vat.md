@@ -39,11 +39,11 @@ Chcete-li použít účty pro nerealizovanou DPH, postupujte takto:
 6. In the **Sales VAT Unreal. Account** field, choose the account for unrealized sales VAT.
 
    > [!NOTE]  
-   > Částka DPH bude zaúčtována na tento účet a zůstane na účtě, dokud nebude zaúčtována platba zákazníka. Částka je poté převedena na účet prodejní DPH.
+   > The VAT amount will be posted to this account, and stay there until the customer payment is posted. Částka je poté převedena na účet prodejní DPH.
 7. In the **Purch.  nereal. Account** field, enter the general ledger account for unrealized purchase VAT.
 
 > [!NOTE]  
-> Částka DPH bude zaúčtována na tento účet a zůstane na účtě, dokud nebude zaúčtována platba zákazníka. Částka je poté převedena na účet nákupní DPH.
+> The VAT amount will be posted to this account, and stay there until the customer payment is posted. Částka je poté převedena na účet nákupní DPH.
 
 ## Viz také
 [Set Up Calculations and Posting Methods for Value Added Tax](finance-setup-vat.md)

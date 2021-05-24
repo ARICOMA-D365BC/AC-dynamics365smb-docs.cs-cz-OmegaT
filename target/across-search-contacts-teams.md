@@ -1,5 +1,5 @@
 ---
-title: Searching for Contacts from Microsoft Teams
+title: Searching for Contacts from Microsoft Teams 
 description: Learn how to look up Business Central customers, vendors, and other contacts from Microsoft Teams.
 author: jswymer
 ms.service: dynamics365-business-central
@@ -29,7 +29,7 @@ ms.author: jswymer
 - Máte účet [!INCLUDE [prod_short](includes/prod_short.md)] s přístupem ke kontaktům alespoň v jedné společnosti.
 
 > [!NOTE]
-> Whether you searching from the command box or message compose box, you may be asked to sign in or set up the app the first time. Tento krok je nezbytný k vyhledání kontaktů ve správné Business Central společnosti. For information about setting up the app to choose your company, see [Changing Company and Other Settings in Teams](across-teams-settings.md).
+> Ať už hledáte z příkazového pole nebo pole pro psaní zpráv, můžete být vyzváni k prvnímu přihlášení nebo nastavení aplikace. Tento krok je nezbytný k vyhledání kontaktů ve správné Business Central společnosti. Informace o nastavení aplikace pro výběr vaší společnosti najdete v tématu [Změna společnosti a ostatních nastavení v Teams](across-teams-settings.md).
 
 ## Vyhledávání kontaktů z příkazového pole
 
@@ -72,7 +72,7 @@ Výhodou použití pole pro psaní zprávy je, že můžete přidat kartu kontak
    Karta kontaktu se zobrazí v poli pro psaní zprávy.
 
    > [!NOTE]
-   > The contact card isn't sent to the conversation right away for others to see. Máte možnost zkontrolovat obsah karty a přidat text před nebo za něj, podle toho jak chcete. Až budete připraveni, odešlete zprávu do chatu.
+   > Karta kontaktu se do konverzace neodešle ihned. Máte možnost zkontrolovat obsah karty a přidat text před nebo za něj, podle toho jak chcete. Až budete připraveni, odešlete zprávu do chatu.
 
 ### Je zde další způsob
 
@@ -89,7 +89,7 @@ Tlačítko **Detaily** otevře okno v Teams, které zobrazuje více informací o
 Karta kontaktu funguje stejně jako karty pro záznamy, jako je Zboží, Zákazníci nebo Prodejní objednávky. Pro více informací navštivte [Zobrazení podporbností karty](across-working-with-teams.md#view-card-details).
 
 > [!NOTE]
-> All participants in a Teams conversation will be able to view cards for Business Central contact that you submit to a conversation. But to view more details about records, by using the **Details** or **Pop out** buttons on a card, they'll need access to [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Managing Microsoft Teams Integration](admin-teams-integration.md#minimum-requirements-1).
+> Všichni účastníci konverzace v Teams si budou moci prohlédnout kartu pro kontakt Business Central, kterou pošlete do konverzace. Chcete-li zobrazit více podrobností o záznamech pomocí **Detaily** nebo **Vyskakovacího okna** na katě, musíte mít přístup do [!INCLUDE [prod_short](includes/prod_short.md)]. Pro více informací navštivte [Správa integrace Microsoft Teams](admin-teams-integration.md#minimum-requirements-1).
 
 ## Viz také
 

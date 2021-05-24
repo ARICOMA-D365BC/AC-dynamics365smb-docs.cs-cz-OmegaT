@@ -25,7 +25,7 @@ Následující postup platí pro doklady skladu, jako je zaskladnění, přesun 
 4. Přiřaďte tomuto novému řádku příslušnou přihrádku, pokud používáte zónu řízeného zaskladnění a vyskladnění, nebo pokračujte v rozdělování řádku podle potřeby, dokud nenajdete vhodné přihrádky pro celé množství.
 
 > [!NOTE]  
-> Pokud lokace používá řízené zaskladnění a vyskladnění a rozdělujete řádky, musíte být obeznámeni a mít možnost vybrat si přihrádku, která odpovídá požadavkům na skladování zboží a splňuje obecné požadavky dokladu skladu. Například byste nerozdělili řádek na dokladu vyskladnění a neuložili by jste některé položky do hromadného úložiště.
+> If the location uses directed put-away and pick and you split the lines, you must be familiar with the warehouse and be able to choose a bin that matches the storage requirements of the item and that fulfills the general requirements of the warehouse document. Například byste nerozdělili řádek na dokladu vyskladnění a neuložili by jste některé položky do hromadného úložiště.
 
 ## Viz také
 [Správa skladu](warehouse-manage-warehouse.md)    

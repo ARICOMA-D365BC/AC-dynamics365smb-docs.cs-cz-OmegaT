@@ -33,7 +33,7 @@ Můžete zvolit zobrazení upozornění, které je založeno na různých situac
 - Druhé upozornění je pro odchylku platby. Budete informováni, že všechny položky mohou být uzavřeny, protože rozdíl je v součtu maximální tolerance platby pro vyrovnané položky. Poté můžete zvolit, zda chcete přijmout toleranci k částce platby.
 
 > [!NOTE]
-> Aktivace varovné zprávy umožní zvolit způsob zpracování plateb, které jsou v rámci tolerance. Pokud zprávu nepovolíte a je zadána úroveň tolerance, budou faktury s částkami, které jsou v rámci tolerance, automaticky uzavřeny a zbývající částku nelze ponechat.
+> Enabling the warning message will let choose how to process payments that are within tolerance. Pokud zprávu nepovolíte a je zadána úroveň tolerance, budou faktury s částkami, které jsou v rámci tolerance, automaticky uzavřeny a zbývající částku nelze ponechat.
 
 For more information, see [To enable or disable payment tolerance warning](finance-payment-tolerance-and-payment-discount-tolerance.md#to-enable-or-disable-payment-tolerance-warnings).
 
@@ -54,10 +54,10 @@ To set up tolerance you have to set up various tolerance accounts, specify both 
 11. On the **Change Payment Tolerance** page, fill in the **Payment Tolerance %** and **Max Payment Tolerance Amount** fields, and then choose the **OK** button.
 
 > [!IMPORTANT]  
-> Nyní jste nastavili toleranci pouze pro místní měnu. If you want [!INCLUDE[prod_short](includes/prod_short.md)] to handle tolerance on payments, credit memos, and refunds in a foreign currency, you must run the **Change Payment Tolerance** batch job with a value in the **Currency Code** field.
+> You have now set up tolerance for local currency only. If you want [!INCLUDE[prod_short](includes/prod_short.md)] to handle tolerance on payments, credit memos, and refunds in a foreign currency, you must run the **Change Payment Tolerance** batch job with a value in the **Currency Code** field.
 
 > [!NOTE]  
-> Pokud chcete, aby se upozornění o odchylce platby dostalo pokaždé, když zaúčtujete vyrovnání do ochylky, musíte aktivovat varování o odchylce plateb. For more information, see [To enable or disable payment tolerance warning](finance-payment-tolerance-and-payment-discount-tolerance.md#to-enable-or-disable-payment-tolerance-warnings) section.
+> If you want to get a payment tolerance warning every time that you post an application in the tolerance, you must activate the payment tolerance warning. For more information, see [To enable or disable payment tolerance warning](finance-payment-tolerance-and-payment-discount-tolerance.md#to-enable-or-disable-payment-tolerance-warnings) section.
 >
 > Chcete-li deaktivovat odchylku pro odběratele nebo dodavatele, musíte zablokovat odchylky na příslušné kartě zákazníka nebo dodavatele. For more information, see [To block payment tolerance for customers](finance-payment-tolerance-and-payment-discount-tolerance.md#to-block-payment-tolerance-for-customers).
 >
@@ -78,7 +78,7 @@ Výchozí nastavení pro odchylku platby je povoleno. Chcete-li zakázat platebn
 2. On the **Payments** FastTab, select the **Block Payment Tolerance** check box.
 
 > [!NOTE]  
-> Pokud má zákazník nebo prodejce otevřené položky, musíte nejprve odstranit odchlyky plateb z položek, které jsou aktuálně otevřené.
+> If the customer or vendor has open entries, you must first remove payment tolerance from entries that are currently open.
 
 ## Příklad 1 - Výpočty odchylek pro jeden doklad
 Následuje několik příkladů scénářů zobrazujících očekávané výpočty odchylky a účtování, ke kterým dochází v různých situacích.

@@ -53,7 +53,7 @@ Pro více informací, navštivte [Práce s daty Business Central v Microsoft Tea
    Pokud si nejste jisti, zda máte účet nebo neznáte přihlašovací údaje pro přihlášení, obraťte se na správce společnosti, který Vám pomůže začít.
 
    > [!TIP]
-   > If your organization doesn't have a [!INCLUDE [prod_short](includes/prod_short.md)] subscription, you can sign up for a free trial. For more information, see [Getting Started with a Trial](across-preview.md#getting-started-with-a-trial).
+   > Pokud vaše organizace nemá předplatné [!INCLUDE [prod_short](includes/prod_short.md)] můžete se zaregistrovat k bezplatné zkušební verzi. Pro více infomací běžte na [Začínáme se zkušební verzí](across-preview.md#getting-started-with-a-trial).
 
 2. Jako administrátor běžte na [Správa Integrace Microsoft Teams s Business Central](admin-teams-integration.md) , kde jsou informace o nastavení uživatelských skupin v [!INCLUDE [prod_short](includes/prod_short.md)] a Teams.
 3. Nainstalujte aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md).

@@ -82,7 +82,7 @@ The following procedure describes how to set up the connection manually on the *
 
 3. In the **Ownership Model** field, choose whether you want a team table in [!INCLUDE[cds_long_md](includes/cds_long_md.md)] to own new records, or one or more specific users. If you choose **Person**, you must specify each user. If you choose **Team**, the default business unit will display in the **Coupled Business Unit** field.
 
-   <!--Need to verify the details in this table, are these specific to Sales maybe?  IK: No they are not and no longer relevant
+   <!--Need to verify the details in this table, are these specific to Sales maybe?  IK: No they are not and no longer relevant 
        Enter the following advanced settings.-->
 
    <!-- |Field|Description|
@@ -99,7 +99,7 @@ The following procedure describes how to set up the connection manually on the *
 ## Show Me the Process
 
 The following video shows the steps to connect [!INCLUDE[prod_short](includes/prod_short.md)] and [!INCLUDE[cds_long_md](includes/cds_long_md.md)]. <br>
-
+  
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ArlP]
 
 -->

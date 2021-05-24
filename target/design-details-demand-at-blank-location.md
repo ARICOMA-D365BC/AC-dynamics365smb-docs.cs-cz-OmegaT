@@ -49,7 +49,7 @@ Pokud ne, pak:
 Zboží je plánováno podle: Způsob přiobjednání = Dávka-pro-Dávku, Včetně zásob = Ano, všechny ostatní parametry plánování = Prázdný, položky využívající Způsoby přiobjednání = Objednávka zůstane pomocí objednávky spolu s ostatními nastaveními.
 
 > [!NOTE]
-> Výjimečné nastavení plánování, které je výstupem jako poslední reakce ve výše uvedeném kroku 3, je dále označováno jako „minimální alternativa“. Toto nastavení plánování pokrývá pouze přesnou poptávku a všechny ostatní parametry plánování jsou ignorovány.
+> The exceptional planning setup that is output as the last reaction in step 3 above is referred to in the following as the “minimal alternative”. Toto nastavení plánování pokrývá pouze přesnou poptávku a všechny ostatní parametry plánování jsou ignorovány.
 
 Informace o variantách této logiky plánování naleznete níže, v části Scénáře.
 

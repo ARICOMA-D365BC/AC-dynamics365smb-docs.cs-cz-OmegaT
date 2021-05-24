@@ -28,10 +28,10 @@ Pro výpočet hodnoty zásob v sestavě **Hodnota zásob** začíná sestava vý
 Tištěná sestava vždy zobrazuje skutečné částky, tj. náklady na položky, které byly zaúčtovány jako fakturované. Sestava také vytiskne očekávané náklady na položky, které byly zaúčtovány jako přijaté nebo odeslané, pokud vyberete pole Včetně oček.nákladů na záložce Možnosti.
 
 > [!IMPORTANT]  
-> Hodnoty v sestavě **Hodnota zásob** jsou odsouhlaseny s účtem zásob v hlavní knize, což znamená, že příslušné položky ocenění byly zaúčtovány do hlavní knihy.
+> Values in the **Inventory Valuation** report is reconciled with the Inventory account in the general ledger, meaning the value entries in question have been posted to the general ledger.
 
 > [!IMPORTANT]  
-> Částky ve sloupcích sestavy **Hodnota** vycházejí z data zaúčtování transakcí pro zboží.
+> Amounts in the **Value** columns of the report are based on the posting date of transactions for an item.
 
 ## Sestava Hodnota zásob vlastní výroby
 Výrobní společnost musí určit hodnotu tří typů zásob:

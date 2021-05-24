@@ -55,7 +55,7 @@ Následující diagram ukazuje, jak jsou vytvářeny vyrovnání množství.
 Všimněte si výše, že položka zboží 1 (Nákup) je dodavatelem zboží i zdrojem nákladů pro položku zboží 2 (prodej).
 
 > [!NOTE]  
-> Pokud je výstupní položka zboží oceněna průměrnými náklady, pak použitá vstupní položka zboží není jedinečným zdrojem nákladů. Hraje pouze roli při výpočtu průměrných nákladů za období.
+> If the outbound item ledger entry is valued by average cost, then the applied inbound item ledger entry is not the unique cost source. Hraje pouze roli při výpočtu průměrných nákladů za období.
 
 ### Vyrovnání nákladů
 Vyrovnání nákladů je vytvořeno pouze pro příchozí transakce, kde je vyplněno pole **Vyrovnáno položkou zboží** aby bylo možné poskytnout pevné vyrovnání. K tomu obvykle dochází v souvislosti s prodejním dobropisem nebo scénářem vrácení dodávky. Vyrovnání nákladů zajišťuje, že zboží znovu vstupuje do zásob se stejnými náklady, jako když byla dodána.
@@ -112,7 +112,7 @@ U scénáře 2 identifikujte problém jedním z následujících způsobů:
 - Na stránce **Účtovaná prodejní dodávka** vyhledejte v poli **Vyrovnáno položkou zboží**, zda je pole vyplněno, a v takovém případě, ke které položce zboží je účtována příjemka vratky.
 
 > [!NOTE]  
-> Na stránce **Vyrovnané položky zboží** nelze identifikovat vyrovnání nákladů, protože tato stránka zobrazuje pouze vyrovnání množství.
+> Cost applications cannot be identified on the **Applied Item Entries** page because that page only shows quantity applications.
 
 U obou scénářů identifikujte příslušné vyrovnání nákladů následovně:
 

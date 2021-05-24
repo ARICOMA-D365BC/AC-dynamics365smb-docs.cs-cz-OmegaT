@@ -21,7 +21,7 @@ Dostupnost se liší v závislosti na alokacích na úrovni přihrádek, když d
 Pokud není splněna jedna nebo více podmínek, mohou se zobrazit různé chybové zprávy, včetně obecné zprávy "Není co zpracovat". The "Nothing to handle." message can occur for many different reasons, both in outbound and inbound flows, where a directly or indirectly involved document line contains the **Qty. to Handle** field.
 
 > [!NOTE]
-> Brzy zde budou zveřejněny informace o možných důvodech hlášky „Není co řešit.“
+> Information will soon be published here about possible reasons and solutions for the "Nothing to handle." message.
 
 ## Obsah přihrádky a rezervace
 V každé instalaci správy skladu existuje množství zboží jako položky skladu, v oblasti aplikace Sklad, tak jako položky zboží v oblasti zásob. Tyto dva typy položek obsahují různé informace o tom, kde položky existují a zda jsou k dispozici. Položky skladu definují dostupnost zboží podle přihrádky a typu přihrádky, který se nazývá obsah přihrádky. Položky zboží definují dostupnost zboží podle jeho rezervace k odchozím dokladům.
@@ -34,7 +34,7 @@ Pokud například algoritmus vyskladnění nezváží množství zboží, které
 The result is displayed in the **Available Qty. to Pick** field on the **Pick Worksheet** page, where the field is calculated dynamically. Hodnota se také vypočítá, když uživatelé vytvoří vyskladnění přímo pro výstupní doklady. Such outbound documents could be sales orders, production consumption, or outbound transfers, where the result is reflected in the related quantity fields, such as **Qty. to Handle**.
 
 > [!NOTE]  
-> Pokud jde o prioritu rezervací, množství k rezervaci se odečte od množství, které je k dispozici k výběru. Pokud je například množství dostupné v přihrádce vyskladnění 5 jednotek, ale 100 jednotek je v přihrádce zaskladnění, pak při pokusu o rezervaci více než 5 jednotek pro jinou objednávku se zobrazí chybová zpráva, protože dodatečné množství musí být k dispozici v přihrádce vyskladnění.
+> Concerning the priority of reservations, the quantity to reserve is subtracted from the quantity available to pick. Pokud je například množství dostupné v přihrádce vyskladnění 5 jednotek, ale 100 jednotek je v přihrádce zaskladnění, pak při pokusu o rezervaci více než 5 jednotek pro jinou objednávku se zobrazí chybová zpráva, protože dodatečné množství musí být k dispozici v přihrádce vyskladnění.
 
 ### Výpočet množství, které je k dispozici k vyskladnění
 Množství, které je k dispozici k vyskladnění se vypočítá takto:

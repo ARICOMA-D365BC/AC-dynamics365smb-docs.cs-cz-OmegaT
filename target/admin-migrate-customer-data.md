@@ -18,7 +18,7 @@
 You can migrate existing customer data from an existing ERP system to [!INCLUDE[prod_short](includes/prod_short.md)] using the data migration tools of RapidStart Services. Jako datový nosič můžete použít soubory aplikace Excel. Data můžete také přesunout ručně tak, že je zadáte přímo do společnosti.
 
 > [!NOTE]
-> Pole typu Blob nelze exportovat/importovat pomocí Excelu.
+> Fields of type Blob cannot be exported/imported using Excel.
 
 The **Migration Overview** and **Config. Worksheet** pages provide access to the functions and views to perform all the tasks that relate to data migration. Doporučujeme migrovat vždy jednu tabulku, abyste mohli zpracovat závislosti na datech. Při migraci se také dotknete tabulek hlavních dat, které obsahují informace o zákaznících, dodavatelích, zboží, kontaktech a financích.
 

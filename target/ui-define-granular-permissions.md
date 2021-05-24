@@ -38,7 +38,7 @@ Sada oprávnění je kolekce oprávnění pro konkrétní databázové objekty. 
 A [!INCLUDE[prod_short](includes/prod_short.md)] solution contains a number of predefined permission sets that are added by Microsoft or by your solution provider. Můžete také přidat nové sady oprávnění přizpůsobené potřebám vaší organizace. For more information, see [To create or edit a permission set](ui-define-granular-permissions.md#to-create-or-modify-a-permission-set).
 
 > [!NOTE]
-> Pokud nechcete omezit přístup uživatele více než stanoveno licencí, můžete uživateli přiřadit speciální sadu oprávnění s názvem SUPER. This permission set ensures that the user can access all objects specified in the license.
+> If you do not want to restrict a user's access more than already defined by the license, you can assign a special permission set called SUPER to the user. This permission set ensures that the user can access all objects specified in the license.
 >
 > A user with the Essential license and the SUPER permission set has access to more functionality than users with the Team Member license and the SUPER permission set.
 
@@ -86,7 +86,7 @@ Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
 5. To edit individual permissions within the permission set, choose the value in the **Permission Set** field to open the **Permissions** page. Follow the steps described in [To create or edit permissions](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).
 
 > [!NOTE]  
-> Při úpravě sady oprávnění se změny projeví také u ostatních uživatelů, kterým byla sada oprávnění přiřazena.
+> When you edit a permission set, the changes will also apply to other users that have the permission set assigned.
 
 ## Vytvoření nebo úprava sady oprávnění
 
@@ -109,7 +109,7 @@ Sady oprávnění fungují jako kontejnery oprávnění, takže můžete snadno 
 Funkci kopírování můžete také použít k rychlému přenesení všech oprávnění jiného oprávnění nastaveného na novou sadu oprávnění.
 
 > [!NOTE]  
-> Pokud se změní systémová oprávnění, která jste zkopírovali, budete upozorněni (v závislosti na vašem výběru), abyste mohli zvážit, zda jsou změny relevantní pro kopírování nebo zápis do vaší uživatelem definované sady oprávnění.
+> If a System permission set that you have copied is changed, you will be notified (depending on your selection), so that you can consider if the changes are relevant to copy or write into your user-defined permission set.
 
 1. On the **Permission Sets** page, select the line for a permission set that you want to copy, and then choose the **Copy Permission Set** action.
 2. On the **Copy Permission Set** page, specify the name of the new permission set, and then choose the **OK** button.
@@ -143,7 +143,7 @@ Sady oprávnění jsou importovány.
 Tento postup vysvětluje, jak ručně přidat nebo upravit oprávnění. Můžete také mít oprávnění generována automaticky z vašich akcí v uživatelském rozhraní. For more information, see [To create or modify permissions by recording your actions](ui-define-granular-permissions.md#to-create-or-modify-permissions-by-recording-your-actions).
 
 > [!NOTE]
-> Když upravíte oprávnění a tím související sadu oprávnění, změny se budou vztahovat také na ostatní uživatele, kterým je sada oprávnění přiřazena.
+> When you edit a permission and thereby the related permission set, the changes will also apply to other users that have the permission set assigned.
 
 1. On the **Permission Sets** page, select the line for a permission set, and then choose the **Permissions** action.
 2. On the **Permissions** page, create a new line or edit the fields on an existing line.
@@ -204,7 +204,7 @@ Následující postup vysvětluje, jak vytvořit skupiny uživatelů ručně. To
 Chcete-li rychle definovat novou skupinu uživatelů, můžete zkopírovat všechny sady oprávnění z existující skupiny uživatelů do nové skupiny uživatelů.
 
 > [!NOTE]
-> Členové skupiny uživatelů nejsou zkopírováni do nové skupiny uživatelů. Poté je musíte přidat ručně. For more information, see [To group users in user groups](ui-define-granular-permissions.md#to-group-users-in-user-groups).
+> The user group members are not copied to the new user group. Poté je musíte přidat ručně. For more information, see [To group users in user groups](ui-define-granular-permissions.md#to-group-users-in-user-groups).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
 2. Select the user group that you want to copy, and then choose the **Copy User Group** action.

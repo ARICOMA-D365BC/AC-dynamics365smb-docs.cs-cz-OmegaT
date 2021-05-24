@@ -85,132 +85,132 @@ Uživatelům mobilních zařízení se doporučuje, aby si nainstalovali mobiln�
 
 ### Funguje aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] se všemi Teams klienty?
 
-Ne.  Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams není podporována, pokud je nainstalována jako balíček pro macOS nebo Linux. On these platforms, you can access Teams using a supported browser instead.
+Ne.  Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams není podporována, pokud je nainstalována jako balíček pro macOS nebo Linux. Na těchto platformách můžete místo toho přistupovat k Teams pomocí podporovaného prohlížeče.
 
-For minimum requirements in [!INCLUDE [prod_short.md](includes/prod_short.md)], see [Minimum Requirements for Using Business Central](product-requirements.md#teams).
+Pro minimální požadavky na [!INCLUDE [prod_short.md](includes/prod_short.md)], bežte na [Minimální požadavky na používání Business Central](product-requirements.md#teams).
 
-For information about the choice of Teams clients and how to install them, see [Get clients for Microsoft Teams](/microsoftteams/get-clients) in the Teams documentation.
+Informace o výběru klientů Teams a o tom, jak je nainstalovat, najdete v tématu [Získání klientů pro Microsoft Teams](/microsoftteams/get-clients) v dokumentaci Teams.
 
-### Which Teams client is best for [!INCLUDE [prod_short.md](includes/prod_short.md)]?
+### Který klient Teams je nejlepší pro [!INCLUDE [prod_short.md](includes/prod_short.md)]?
 
-There are only minor differences and limitations between Teams clients that may affect your experience with the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams. When choosing a Teams client, consider:
+Mezi klienty Teams existují pouze drobné rozdíly a omezení, které mohou ovlivnit vaši práci s aplikací [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams. Při výběru klienta Teams berte v úvahu:
 
-- The camera and location can't be accessed from the details window in the Teams desktop app.
-- Phone numbers can't be activated from the details window in Teams for iOS, Teams for Android, or Teams in the browser.
-- Using Microsoft Edge with the Teams in the browser let's you easily work across multiple identities and accounts by signing in to Teams from different profiles. To learn about using profiles in Microsoft Edge, see [Sign in and create multiple profiles in Microsoft Edge](https://support.microsoft.com/office/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435) on Microsoft Support.
+- Ke kameře a umístění nelze získat přístup z okna detailů v desktopové aplikaci Teams.
+- Telefonní čísla se nemůžou aktivovat z okna detailu v Teams pro iOS, Teams pro Android nebo Teams v prohlížeči.
+- Pomocí Microsoft Edge s Teams (v prohlížeči) můžete snadno pracovat napříč s více účty přihlášením do Teams z různých profilů. Další informace o používání profilů v Microsoft Edge najdete v [Přihlášení a vytvoření více profilů v Microsoft Edge](https://support.microsoft.com/office/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435) na stránkách podpory Microsoft.
 
-### What is the best way for me to demonstrate [!INCLUDE [prod_short.md](includes/prod_short.md)] and Microsoft Teams to prospective customers?
+### Jaký je nejlepší způsob, jak demonstrovat [!INCLUDE [prod_short.md](includes/prod_short.md)] a Microsoft Teams potencionálním zákazníkům?
 
-If you're a reselling partner, you might want to have an environment that you can show prospects as part of pre-sales demonstrations. To avoid affecting Microsoft Teams in your organization, you can get a Microsoft 365 demo account at [https://aka.ms/CDX](https://aka.ms/CDX). This account gives you full control of an independent Azure organization that includes Microsoft Teams and [!INCLUDE [prod_short.md](includes/prod_short.md)]. For more information, see [Preparing Demonstration Environments of Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/administration/demo-environment).
+Pokud jste prodejním partnerem, možná budete chtít mít prostředí, na kterém můžete ukazovat předprodejní ukázky. Abyste se vyhnuli zásahu do Microsoft Teams ve vaší organizaci, můžete získat demo účet Microsoft 365 na [https://aka.ms/CDX](https://aka.ms/CDX). Tento účet vám poskytuje plnou kontrolu nad nezávislou organizací Azure, která zahrnuje Microsoft Teams a [!INCLUDE [prod_short.md](includes/prod_short.md)]. Pro více informací navštivte [Příprava demonstračních prostředí Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/administration/demo-environment).
 
-### Does the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams cater for my customization and personalization?
+### Zajišťuje aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams mé úpravy a přizpůsobení?
 
-The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams can display cards for links to customer pages and tables in [!INCLUDE [prod_short.md](includes/prod_short.md)], such as those pages and tables originating from your own custom extensions or from AppSource.
+Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams může zobrazit karty pro odkazy na stránky zákazníků a tabulky v [!INCLUDE [prod_short.md](includes/prod_short.md)], například stránky a tabulky pocházející z vlastních rozšíření nebo z AppSource
 
-The fields shown on a card in Teams can also be affected by [!INCLUDE [prod_short.md](includes/prod_short.md)] customizations installed for your organization. Cards don't consider any role-specific customizations or user personalization. However, the card details window shows record details as you would see them in [!INCLUDE [prod_short.md](includes/prod_short.md)], including any extensions, role customizations, and user personalization.
+Na pole zobrazená na kartě v Teams mohou mít vliv také [!INCLUDE [prod_short.md](includes/prod_short.md)] přizpůsobení nainstalované pro vaší organizaci. Karty nezohledňují žádná přizpůsobení specifická pro roli nebo personalizaci uživatele. Okno s podrobnostmi o kartě však zobrazuje podrobnosti o záznamu tak, jak byste je viděli v [!INCLUDE [prod_short.md](includes/prod_short.md)],včetně všech rozšíření, přizpůsobení rolí a přizpůsobení uživatelů.
 
-When you search for contacts, the fields that are matched in the **Contacts** table and fields shown in the search results aren't affected by any customization or personalization.
+Při hledání kontaktů nejsou pole přizpůsobená v tabulce **Kontakty** a pole zobrazená ve výsledcích vyhledávání nijak ovlivněna žádným přizpůsobením ani přizpůsobením.
 
-### How do the permissions required by the app affect my privacy?
+### Jak oprávnění požadovaná aplikací ovlivňují mé soukromí?
 
-Before installing the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams, you can review the minimum permissions required for the app to function. By installing the app, you agree that the app has permission to receive messages and data that you provide it, and Teams has permission to store and process those messages.
+Před instalací aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams, můžete zkontrolovat minimální oprávnění požadovaná pro fungování aplikace. Instalací aplikace souhlasíte s tím, že aplikace má oprávnění přijímat zprávy a data, která mu poskytnete a Teams má oprávnění tyto zprávy ukládat a zpracovávat.
 
-Also, some [!INCLUDE [prod_short.md](includes/prod_short.md)] features require opening external links or access to your camera or geographic location. For example, suppose you wanted to capture a photo of a purchase invoice for processing. The [!INCLUDE [prod_short.md](includes/prod_short.md)] app doesn't use these capabilities without your consent and they're only used by specific features in the **Details** window. When you use one of these features for the first time, Teams will display a dialog box asking you to grant access to the required device capabilities.
+Také některé funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] vyžadují otevření externích odkazů, přístup ke kameře nebo zeměpisné údaje o poloze. Předpokládejme například, že chcete vytvořit fotografii nákupní faktury k následnému zpracování. Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)]tyto funkce bez vašeho souhlasu nepoužívá a používají je pouze konkrétní funkce v okně **Detaily**. Když poprvé použijete jednu z těchto funkcí, Teams zobrazí dialogové okno s žádostí o udělení přístupu k požadovaným možnostem zařízení.
 
-- In Teams desktop, you review and adjust app permissions from the **Settings** window. Select your profile picture at the top of the app, select **Settings** > **Permissions**, then select the [!INCLUDE [prod_short.md](includes/prod_short.md)] app.
+- V desktopové aplikaci Teams, zkontrolujete a upravíte oprávnění aplikace z okna **Nastavení**. Vyberte svůj profilový obrázek v horní části aplikace a vyberte **Nastavení** > **Oprávnění apliakce** a zvolte aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-- For Teams in the browser and Teams for iOS or Android, you can review or adjust permissions from your browser or device settings.
+- U Teams v prohlížeči a Teams pro iOS nebo Android můžete zkontrolovat nebo upravit oprávnění z nastavení prohlížeče nebo zařízení.
 
 > [!NOTE]
-> Exactly which [!INCLUDE [prod_short.md](includes/prod_short.md)] features prompt you for permissions depends on the add-on apps and customizations applied to the [!INCLUDE [prod_short.md](includes/prod_short.md)] environment that you connect to.
+> Přesně ty funkce [!INCLUDE [prod_short.md](includes/prod_short.md)], které vás vyzývají k povolení závisí na doplňkových aplikacích a přizpůsobeních použitých v prostředí [!INCLUDE [prod_short.md](includes/prod_short.md)], ke kterému se připojujete.
 
-### Where can I learn about my privacy?
+### Kde se mohu dozvědět o svém soukromí?
 
-You can learn about how Microsoft handles your data in the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2030602).
+Informace o tom, jak společnost Microsoft na zpracovává vaše data, se dozvíte v [Prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=2030602).
 
-Contact your administrator to learn how your organization handles the privacy of your data.
+Požádejte svého správce, aby zjistil, jak vaše organizace zachází s ochranou osobních údajů.
 
-### How do I uninstall the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams?
+### Jak odinstalovat aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams?
 
-To remove the app that you installed for yourself, go to any chat compose box, find the [!INCLUDE [prod_short.md](includes/prod_short.md)] icon underneath, right-click the icon and choose **Uninstall**.
+Chcete-li odebrat aplikaci, kterou jste si nainstalovali sami, přejděte do libovolného pole pro psaní chatu, najděte ikonu [!INCLUDE [prod_short.md](includes/prod_short.md)] klepněte na ni pravým tlačítkem a vyberte **Odinstalovat**.
 
-### Will Microsoft continue to improve the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams?
+### Bude Microsoft i nadále vylepšovat aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams?
 
-At Microsoft, we're constantly listening to feedback from our diverse user community and acting upon the top suggestions. To learn about what is next for the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams, see the [Dynamics 365 release plan](/dynamics365-release-plan/2021wave1/).
+Ve společnosti Microsoft neustále nasloucháme zpětné vazbě od naší rozmanité komunity uživatelů a jednáme na základě nejlepších návrhů. Další informace o tom, co bude následovat pro aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams, bežte na [Plán vydání Dynamics 365](/dynamics365-release-plan/2021wave1/).
 
-If you want to participate in improving the app for Teams, or have an idea that would help simplify your work or collaborative experiences in Teams, add an idea or vote for existing ideas at [https://aka.ms/BusinessCentralIdeas](https://aka.ms/BusinessCentralIdeas).
+Pokud se chcete podílet na vylepšování aplikace pro Teams nebo máte nápad, který by vám pomohl zjednodušit práci nebo spolupráci v Teams, přidejte nápad nebo hlasujte na [https://aka.ms/BusinessCentralIdeas](https://aka.ms/BusinessCentralIdeas).
 
-## [Searching for Contacts](#tab/contacts)
+## [Vyhledávání kontaktů](#tab/contacts)
 
-### Which tables does the app search in?
+### Ve kterých tabulkách aplikace vyhledává?
 
-When searching for contacts from the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams, your search terms are matched against records in the **Contacts** table in [!INCLUDE [prod_short.md](includes/prod_short.md)].
+Při hledání kontaktů z aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams, vaše hledané výrazy jsou porovnány se záznamy v tabulce **Kontakty** v [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-### Which fields in the contacts table can I search?
+### Ve kterých polích v tabulce kontaktů mohu vyhledávat?
 
-As you type your search terms in the search box, the terms are matched against most fields in the **Contacts** table. The fields include, for example, the **No.**, **Name**, **Address** fields, **Phone No.** or **Mobile Phone No.**, and **Email**.
+Při psaní hledaných výrazů do vyhledávacího pole jsou termíny porovnány s většinou polí v tabulce **Kontaktů**. Mezi tato pole patří například pole **Číslo**, **Jméno**, **Adresa**, **Telefonní číslo**, **Mobil**, a **Email**.
 
-### Do search results include companies and persons?
+### Zahrnují výsledky vyhledávání společnosti a osoby?
 
-Ano. In [!INCLUDE [prod_short.md](includes/prod_short.md)], contacts can be of type **Company** or type **Person**, where one or more persons may be associated with a company. In the search results, companies and persons have different icons.
+Ano. V [!INCLUDE [prod_short.md](includes/prod_short.md)] mohou být kontakty typu **Společnost** nebo **Osoba**, kde může být jedna nebo více osob přidružena ke společnosti. Ve výsledcích vyhledávání mají společnosti a osoby různé ikony.
 
-### Do contacts of any business relationship appear in the results?
+### Objevují se ve výsledcích kontakty jakéhokoli obchodního vztahu?
 
-Ano. Some contacts may represent customers or vendors, or both. Other contacts with no defined business relation typically represent prospective customers. Contacts with other business relations, including any custom relations you've configured in [!INCLUDE [prod_short.md](includes/prod_short.md)], will also be displayed in the search results.
+Ano. Některé kontakty mohou představovat zákazníky, dodavatele nebo obojí. Další kontakty bez definovaného obchodního vztahu obvykle představují potenciální zákazníky. Kontakty s jinými obchodními vztahy, včetně všech vlastních vztahů, které jste nakonfigurovali v [!INCLUDE [prod_short.md](includes/prod_short.md)], se také zobrazí ve výsledcích hledání.
 
-### Can I look up contact details during meetings?
+### Mohu si během schůzky vyhledat kontaktní údaje?
 
-Ano. You can look up contact information, history of interaction, and related documents for your customer or vendor during a Teams meeting or call while the meeting is happening, without leaving Teams.
+Ano. Během schůzky nebo hovoru v Teams, aniž byste opustili Teams, můžete pro svého zákazníka nebo dodavatele najít kontaktní informace, historii interakcí a související doklady.
 
-In fact, you can look up contact details from anywhere in Teams by using the command box. You can, for example, look up contact details from the Teams calendar to help you set up meetings.
+Kontaktní údaje můžete ve skutečnosti zobrazit odkudkoli v Teams pomocí příkazového pole. Můžete si například najít kontaktní údaje z kalendáře Teams, které vám pomůžou zakládat schůzky.
 
-### How do I view my last interactions with a contact?
+### Jak zobrazím své poslední interakce s kontaktem?
 
-The details window for a contact displays interaction log entries. The interaction log entries provide the history of interactions that your organization has had with the specific contact. The interactions may include emails you've exchanged, calls you've received, or documents you've sent.
+Okno podrobností kontaktu zobrazuje položky protokolu interakce. Položky protokolu interakce poskytují historii interakcí, které vaše organizace měla s konkrétním kontaktem. Interakce mohou zahrnovat e-maily, které jste si vyměnili, přijaté hovory nebo doklady, které jste odeslali.
 
-For interactions to be displayed, [!INCLUDE [prod_short.md](includes/prod_short.md)] must be configured to track interactions. To learn more about logging interactions, see [Record Interactions With Contacts](marketing-interactions.md).
+Aby se interakce mohly zobrazovat, [!INCLUDE [prod_short.md](includes/prod_short.md)] musí být nakonfigurován pro sledování interakcí. Další informace o protokolování interakcí najdete v [Záznam interakcí s kontakty](marketing-interactions.md).
 
-### How do I register a Teams call or meeting as an interaction?
+### Jak zaeviduji hovor nebo schůzku Teams jako interakci?
 
-From the details window for a contact, find the **Create Interaction** action, and choose from the incoming or outgoing calls as interaction templates. You can also create your own custom interaction templates specifically for use with Teams conversations.
+V okně podrobností kontaktu najděte tlačítko  **Vytvořit Interakci** a vyberete si z příchozích nebo odchozích hovorů jako šablon interakce. Můžete si také vytvořit vlastní šablony interakce speciálně pro použití s konverzacemi v Teams.
 
-### Can I call a contact from the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams?
+### Mohu zavolat kontaktu z aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams?
 
-[!INCLUDE [prod_short.md](includes/prod_short.md)] has limited integration to Teams calling capabilities. It isn't possible to instantly start a VOIP call from the contact card or contact details window. However, when you view the contact details in the Teams desktop app, you can select the phone number field to dial that number if Teams is set up as your default dialing app on your device. To dial landlines or mobile phone numbers using PSTN, the traditional phone system, Teams requires that you have the Microsoft 365 Business Voice app. To learn more, see [What is Microsoft 365 Business Voice?](/MicrosoftTeams/business-voice/whats-business-voice).
+[!INCLUDE [prod_short.md](includes/prod_short.md)] má omezenou integraci na možnosti volání Teams. Z karty kontaktu nebo okna s podrobnostmi kontaktu nelze okamžitě zahájit VOIP volání. Když si však zobrazíte kontaktní údaje v desktopové aplikaci Teams, můžete vybrat pole telefonní číslo pro vytočení, pokud jsou Teams nastaveny jako výchozí aplikace pro vytáčení telefonu na vašem zařízení. Chcete-li vytočit pevné linky nebo čísla mobilních telefonů pomocí tradičního telefonního systému PSTN, Teams vyžaduje, abyste měli aplikaci Microsoft 365 Business Voice. Pro více informací navštivte [Co je Microsoft 365 Business Voice?](/MicrosoftTeams/business-voice/whats-business-voice).
 
-### How do I view recent documents for a customer or vendor?
+### Jak zobrazím poslední doklady pro zákazníka nebo dodavatele?
 
-[!INCLUDE [prod_short.md](includes/prod_short.md)] typically relates a contact with a customer or vendor record that in turn is related to business transaction records, such as sales quotes or purchase invoices. To view related documents for a contact, go to the details window for the contact, choose the **Business Relation** field value or use the actions to navigate to the associated customer or vendor. On the customer or vendor page, expand the FactBox pane to reveal statistics for various documents that you can drill down into. Your experience may differ based on your customizations and personalization.
+[!INCLUDE [prod_short.md](includes/prod_short.md)] obvykle spojuje kontakt se záznamem zákazníka nebo dodavatele, který zase souvisí se záznamy obchodních transakcí, jako jsou prodejní nabídky nebo nákupní faktury. Chcete-li zobrazit související doklady pro kontakt, přejděte do okna podrobností kontaktu, vyberte pole **Obchodní vztah** nebo použijte akce k navigaci k přidruženému zákazníkovi nebo dodavateli. Na stránce zákazníka nebo dodavatele rozbalte podokno - Okna s fakty a zobrazte statistiky pro různé doklady, na kterých můžete přejít k podrobnostem. Vaše prostředí se může lišit v závislosti na vlastním nastavení a přizpůsobení.
 
-### How do I search for contacts using special characters?
+### Jak mohu vyhledat kontakty pomocí speciálních znaků?
 
-You can enter search criteria using almost any unicode characters. However, [!INCLUDE [prod_short.md](includes/prod_short.md)] reserves the following symbols for other uses: **=**, **.**, **\***, and **@**. Using these symbols in your search terms may not return the expected results. If you don't see the expected results, enclose the symbols in your search terms in single quotes, for example, **Contoso'='2**.
+Kritéria hledání můžete zadat téměř pomocí libovolných znaků unicode. Nicméně, [!INCLUDE [prod_short.md](includes/prod_short.md)] si však vyhrazuje následující symboly pro další použit: **=**, **.**, **\***, and **@**. Použití těchto symbolů ve vyhledávacích dotazech nemusí vrátit očekávané výsledky. Pokud nevidíte očekávané výsledky, přiložíte symboly do hledaných výrazů do jednotlivých uvozovek, například, **Contoso'='2**.
 
-### How can I search contacts stored in a different company?
+### Jak mohu vyhledávat kontakty uložené v jiné společnosti?
 
-The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams can search for customers, vendors, and other contacts in one company at a time.  
-To search for contacts stored in a different [!INCLUDE [prod_short.md](includes/prod_short.md)] company, open [Settings](across-teams-settings.md), then change the environment and company from there.
+Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] může vyhledávat zákazníky, dodavatele a další kontakty v jedné společnosti najednou.  
+Chcete-li vyhledat kontakty uložené v jiné [!INCLUDE [prod_short.md](includes/prod_short.md)] společnosti, otevřete [Nastavení](across-teams-settings.md) a odtud změňte prostředí a společnost.
 
-### Are [!INCLUDE [prod_short.md](includes/prod_short.md)] contacts different than the ones in the Teams contacts screen?
+### Jsou [!INCLUDE [prod_short.md](includes/prod_short.md)] kontakty jiné než ty na obrazovce kontaktů v Teams?
 
-Ano. Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] represent business contacts available to your organization. They're contacts with which you have an established and well-defined business relationship, or contacts that represent prospective customers. These contacts are typically external contacts. In comparison, the contacts shown in the Teams Calling contacts list are your own contacts. These contacts aren't necessarily shared with others in your organization, and they typically represent contacts internal to your organization.
+Ano. Kontakty uložené v [!INCLUDE [prod_short.md](includes/prod_short.md)] představují obchodní kontakty dostupné vaší organizaci. Jsou to kontakty, se kterými máte zavedený a dobře definovaný obchodní vztah, nebo kontakty, které představují potenciální zákazníky. Tyto kontakty jsou obvykle externí. Ve srovnání s tím jsou kontakty zobrazené v seznamu kontaktů Teams Calling vaše vlastní kontakty. Tyto kontakty nemusí být nutně sdíleny s ostatními ve vaší organizaci a obvykle představují interní kontakty pro vaši organizaci.
 
-### Does [!INCLUDE [prod_short.md](includes/prod_short.md)] synchronize contacts with Teams?
+### Synchronizuje [!INCLUDE [prod_short.md](includes/prod_short.md)] kontakty s Teams?
 
-Ne.  Contacts stored in [!INCLUDE [prod_short.md](includes/prod_short.md)] remain separate from your contacts stored in Teams.
-There are currently no plans to synchronize the two lists together.
+Ne.  Kontakty uložené v [!INCLUDE [prod_short.md](includes/prod_short.md)] zůstávají oddělené od vašich kontaktů uložených v Teams.
+V současné době nejsou žádné plány na synchronizaci obou seznamů dohromady.
 
-### What is the minimum version of [!INCLUDE [prod_short.md](includes/prod_short.md)] for contact search?
+### Jaká je minimální verze [!INCLUDE [prod_short.md](includes/prod_short.md)] pro vyhledávání kontaktů?
 
-Contact search requires that you've installed the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams version 1.0.4 or later, and you're connecting to [!INCLUDE [prod_short.md](includes/prod_short.md)] environments of version 18 or later.
+Vyhledávání kontaktů vyžaduje, abyste si nainstalovali aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams verze 1.0.4 nebo novější a být připojení k prostředí [!INCLUDE [prod_short.md](includes/prod_short.md)]  verze 18 a novější.
 
-### Can I search from my mobile device?
+### Mohu vyhledávat ze svého mobilního zařízení?
 
-Contact search isn't available from Teams for iOS and Teams for Android at this time.
+Vyhledávání kontaktů není v současné době k dispozici v Teams pro iOS a Teams pro Android.
 
-### Which permissions do I need for contact search?
+### Jaká oprávnění potřebuji pro vyhledávání kontaktů?
 
-To search for contacts, you need object-level permission to the **Contacts** table within the [!INCLUDE [prod_short.md](includes/prod_short.md)] company being searched. To view the details window for a contact, you need at least read permission to the **Contact** page within the [!INCLUDE [prod_short.md](includes/prod_short.md)] company, and any other related objects.
+Chcete-li hledat kontakty, potřebujete oprávnění na úrovni objektu k tabulce **Kontakty** v rámci společnosti v [!INCLUDE [prod_short.md](includes/prod_short.md)]. To view the details window for a contact, you need at least read permission to the **Contact** page within the [!INCLUDE [prod_short.md](includes/prod_short.md)] company, and any other related objects.
 
 ### Can I use contact search if I'm a delegated admin?
 

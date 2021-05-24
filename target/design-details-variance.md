@@ -21,7 +21,7 @@ skutečné náklady – standardní náklady = odchylka
 Pokud se skutečné náklady změní například proto, že účtujete poplatek za zboží k pozdějšímu datu, bude odchylka odpovídajícím způsobem aktualizována.
 
 > [!NOTE]  
-> Přecenění neovlivní výpočet odchylky, protože přeceněním se změní pouze hodnota zásob.
+> Revaluation does not affect the variance calculation, because revaluation only changes the inventory value.
 
 ## Příklad
 Následující příklad ilustruje, jak se vypočítává odchylka u koupeného zboží. Je založen na následujícím scénáři:
