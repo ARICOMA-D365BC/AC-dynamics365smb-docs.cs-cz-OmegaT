@@ -19,7 +19,7 @@ Očekávané náklady představují odhad například nákladů na zakoupené zb
 Očekávané náklady můžete zaúčtovat do zásob a do financí. Když zaúčtujete množství, které je pouze přijato nebo odesláno, ale není fakturováno, vytvoří se položka ocenění s očekávanými náklady. Tyto očekávané náklady ovlivňují hodnotu zásob, ale nejsou zaúčtovány do financí, pokud k tomu nenastavíte systém.
 
 > [!NOTE]  
-> Expected costs are only managed for item transactions. Očekávané náklady neplatí pro nehmotné typy transakcí, jako jsou poplatky za kapacitu a zboži.
+> Očekávané náklady jsou spravovány pouze u transakcí za zboží. Očekávané náklady neplatí pro nehmotné typy transakcí, jako jsou poplatky za kapacitu a zboži.
 
 Pokud byla zaúčtována pouze část množství, která zvyšuje zásoby, hodnota zásob ve financích se nezmění, pokud jste na stránce **Nastavení zásob** nezaškrtli políčko **Účtování oček.nákladů do fin.**. V takovém případě se očekávané náklady zaúčtují na mezitímní účty v okamžiku přijetí. Poté, co byla příjemka plně fakturována, jsou prozatímní účty vyrovnány a skutečné náklady jsou zaúčtovány na účet zásob.
 

@@ -26,7 +26,7 @@ V [!INCLUDE[prod_short](includes/prod_short.md)], je podporována následující
 Přeceněné množství je zbývající množství na skladě, které je k dispozici k přecenění k danému datu. Vypočítá se jako součet množství zcela fakturovaných položek zboží, které mají zúčtovací datum stejný nebo dřívější než zúčtovací datum přecenění.
 
 > [!NOTE]  
-> Items using the Standard costing method are treated differently when calculating the revaluable quantity per item, location, and variant. Množství a hodnoty položek zboží, které nejsou zcela fakturovány, jsou zahrnuty do přeceněného množství.
+> Se zbožím, které používá standardní metodu ocenění se při výpočtu přeceněného množství podle zboží, lokace a variantu zaobchází odlišně. Množství a hodnoty položek zboží, které nejsou zcela fakturovány, jsou zahrnuty do přeceněného množství.
 
 Po zaúčtování přecenění můžete zaúčtovat zvýšení nebo snížení zásob s datem zaúčtování, které předchází datu zaúčtování přecenění. Toto množství však přehodnocení neovlivní. Pro vyvážení zásob se uvažuje pouze původní přeceněné množství.
 
@@ -44,7 +44,7 @@ Následující příklad ilustruje, kdy zboží NV přechází a stává se sou�
 | 01.01.20 | ČÁST | Nákup | 150 | 1 |
 
 > [!NOTE]  
-> Now an item using the Standard costing method is available for revaluation.
+> Nyní je pro přecenění k dispozici zboží používající metodu standardního ocenění.
 
 **1V**: Uživatel zaúčtuje zakoupené části řetězu jako fakturované a tyto části se z finančního hlediska stanou součástí zásob. Následující tabulka ukazuje výsledné hodnoty.
 
@@ -84,7 +84,7 @@ Datum ocenění je nastaveno na datum účtování spotřeby (02-01-20) jako pra
 Přeceněné množství se vypočítá jako součet množství pro zcela fakturované položky zboží se zúčtovacím datem rovnajícím se datu přecenění nebo dřívějšímu datu. To znamená, že pokud je některé zboží přijato/dodáno, ale není fakturováno, nelze vypočítat jeho hodnotu zásob. Zboží, které používají metodu standardního ocenění, nejsou v tomto ohledu omezeny.
 
 > [!NOTE]  
-> Another type of expected cost that can be revalued is WIP inventory, within certain rules. For more information, see [WIP Inventory Revaluation](design-details-revaluation.md#wip-inventory-revaluation).
+> Dalším typem očekávaných nákladů, které lze přecenit, jsou zásoby NV v rámci určitých pravidel. Pro více informací navštivte [Přecenění zásob NV](design-details-revaluation.md#wip-inventory-revaluation).
 
 Při výpočtu přeceněného množství pro zboží pomocí metody standardního ocenění jsou do výpočtu zahrnuty položky zboží, které nebyly zcela fakturovány. Tyto položky jsou pak při zaúčtování přecenění přeceněny. Při fakturaci přeceněné položky se vytvoří následující položky ocenění:
 
@@ -170,7 +170,7 @@ Způsob, jakým je nastaveno datum ocenění pro zadání hodnoty spotřeby, se 
 Zásoby nedokončené výroby lze přecenit, pokud datum přecenění není pozdější než zúčtovací datum odpovídajících položek zboží typu Spotřeba a pokud odpovídající výrobní zakázka ještě nebyla fakturována.
 
 > [!CAUTION]  
-> The **Inventory Valuation - WIP** report shows the value of posted production order entries and may therefore be a little confusing for WIP items that have been revalued.
+> Sestava **Hodnota zásob – vl.výroba** zobrazuje hodnotu zaúčtovaného zboží výrobní zakázky, a proto může být trochu matoucí pro zboží NV, které bylo přeceněné.
 
 ## Viz také
 [Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     

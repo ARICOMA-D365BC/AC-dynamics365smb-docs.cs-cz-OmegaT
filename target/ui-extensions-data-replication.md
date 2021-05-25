@@ -32,7 +32,7 @@ Pokud používáte on-premises nasazení [!INCLUDE[prod_short](includes/prod_sho
 Pokud používáte Dynamics GP, získejte rozšíření **Intelligent Cloud Base** a **Dynamics GP Intelligent Cloud** a poté spusťte průvodce nastavením **Nastavení migrace do cloudu**.
 
 > [!IMPORTANT]
-> Migrating from Dynamics GP using the **Cloud Migration Setup** assisted setup guide is currently only supported for the following markets: United States, Canada, United Kingdom.
+> Migrace z Dynamics GP pomocí průvodce asistovaným nastavením **Nastavení migrace do cloudu** je aktuálně podporována pouze pro následující trhy: USA, Kanada, Spojené království.
 
 ## Dynamics SL
 

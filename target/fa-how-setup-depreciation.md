@@ -44,7 +44,7 @@ For example, if you dispose of a fixed asset where the depreciation book does no
 5. Alternatively, choose the **Depreciation Books** action to specify one or more fixed asset depreciation books.
 
    > [!NOTE]  
-   > When you use the manual depreciation method, you must enter depreciation manually in the fixed asset G/L journal. The **Calculate Depreciation** function omits fixed assets that use the manual depreciation method. Tuto metodu můžete použít pro majetek, který nepodléhá odpisům, například pozemky.
+   > Pokud používáte metodu ručního odpisování, musíte do deníku deníky dlouhodobého majetku zadávat odpisy ručně. The **Calculate Depreciation** function omits fixed assets that use the manual depreciation method. Tuto metodu můžete použít pro majetek, který nepodléhá odpisům, například pozemky.
 
 ## Přiřazení knihy odpisů k více DM pomocí dávkové úlohy
 If you want to assign a depreciation book to several fixed assets, you can use the **Create FA Depreciation Books** batch job to create fixed asset depreciation books.

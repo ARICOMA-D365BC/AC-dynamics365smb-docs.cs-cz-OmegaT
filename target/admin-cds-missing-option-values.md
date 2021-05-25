@@ -102,8 +102,7 @@ enumextension 50100 "CDS Payment Terms Code Extension" extends "CDS Payment Term
 > [!IMPORTANT]  
 > Do not use the ","  character in the enum values and captions. This is currently not supported by the [!INCLUDE[prod_short](includes/prod_short.md)] runtime.
 
-> [!NOTE]
-> The first ten characters of the new option value names and captions must be unique. Například dvě možnosti s názvem "Převod 20 pracovních dnů" a "Převod 20 kalendářních dnů" způsobí chybu, protože obě mají stejné první 10 znaků, "Transfer 2". Pojmenujte je například "TRF20 WD" a "TRF20 CD."
+> Prvních deset znaků nových názvů hodnot a titulků musí být jedinečné. Například dvě možnosti s názvem "Převod 20 pracovních dnů" a "Převod 20 kalendářních dnů" způsobí chybu, protože obě mají stejné první 10 znaků, "Transfer 2". Pojmenujte je například "TRF20 WD" a "TRF20 CD."
 
 ### Update [!INCLUDE[prod_short](includes/cds_long_md.md)] Option Mapping
 Now you can recreate the mapping between [!INCLUDE[prod_short](includes/cds_long_md.md)] options and [!INCLUDE[prod_short](includes/prod_short.md)] records.

@@ -31,7 +31,7 @@ Vytvořte kartu projektu a poté pro ni vytvořte úlohy projektu a řádky plá
 3. To specify the job with information on other jobs, choose the **Copy Job** action, fill in the fields as necessary, and then choose the **OK** button.
 
 > [!NOTE]  
-> If you are using time sheets with your job, you must also designate a person responsible. Tato osoba může schválit pracovní výkazy pro úlohy zaměstnance přidružené k projektu. For more information, see [Set Up Timesheets](projects-how-setup-time-sheets.md).
+> Pokud ve svých projektech používáte pracovní výkazy, musíte také určit odpovědnou osobu. Tato osoba může schválit pracovní výkazy pro úlohy zaměstnance přidružené k projektu. For more information, see [Set Up Timesheets](projects-how-setup-time-sheets.md).
 
 ## Vytvoření úlohy projektu
 Klíčovou součástí vytvoření projektu je určení různých úkolů, které se v projektu vyskytují. You do this by adding new lines on the **Tasks** FastTab on the **Job Card** page, one task per line. Každý projekt musí mít alespoň jednu úlohu.

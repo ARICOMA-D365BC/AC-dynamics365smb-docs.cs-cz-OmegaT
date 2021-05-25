@@ -33,7 +33,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 - Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)
 
 > [!NOTE]
-> Všichni účastníci konverzace v Teams si budou moci prohlédnout karty záznamů Business Central, které do konverzace odešlete. Chcete-li zobrazit více podrobností o záznamech pomocí **Detaily** nebo **Vyskakovacího okna** na katě, musíte mít přístup do [!INCLUDE [prod_short](includes/prod_short.md)]. Pro více informací navštivte [Správa integrace Microsoft Teams](admin-teams-integration.md#minimum-requirements-1).
+> All participants in a Teams conversation will be able to view cards for Business Central records that you submit to the conversation. But to view more details about records, by using the **Details** or **Pop out** buttons on a card, they'll need access to [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Managing Microsoft Teams Integration](admin-teams-integration.md#minimum-requirements-1).
 
 ## Zahrnutí karty Business Central do konverzace Teams
 
@@ -54,7 +54,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 6. Při prvním vložení odkazu do konverzace budete požádáni, abyste se přihlásili k [!INCLUDE [prod_short](includes/prod_short.md)] a udělili aplikaci souhlas k načtení dat. Postupujte podle pokynů na obrazovce.
 
    > [!NOTE]
-   > Tento krok budete muset udělat pouze jednou.
+   > You'll only have to do this step once.
 
 7. Chvilku počkejte, než se karta vygeneruje v okně se zprávou.
 
@@ -63,7 +63,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 9. Pokud karta vypadá dobře, pomocí **Odeslat** ji přidáte do konverzace.
 
    > [!TIP]
-   > Jakmile se karta objeví a před tím, než zvolíte **Send** můžete smazat URL, které jste vložili.
+   > After the card appears, and before you select **Send**, you can delete the pasted URL if you like.
 
 10. Chcete-li zobrazit další podrobnosti nebo provést změny záznamu zobrazeném na kartě, vyberte možnost **Podrobnosti**. Další informace naleznete v následující části.
 

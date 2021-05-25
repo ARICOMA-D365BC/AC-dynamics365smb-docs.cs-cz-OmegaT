@@ -1,6 +1,6 @@
 ---
     title: Business Process Walkthroughs | Microsoft Docs
-    description: This selection of walkthroughs provides step-by-step, end-to-end business processes that you can perform using the CRONUS International Ltd. demonstration company. 
+    description: This selection of walkthroughs provides step-by-step, end-to-end business processes that you can perform using the CRONUS International Ltd. demonstration company.
     author: SorenGP
 
     ms.service: dynamics365-business-central

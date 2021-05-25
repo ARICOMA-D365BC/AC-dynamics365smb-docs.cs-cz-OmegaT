@@ -39,7 +39,7 @@ Dávkové úlohy Intrastat obsahují pouze položky zboží, nikoli finanční p
 Položky můžete exportovat do souboru, který můžete odeslat orgánům Intrastatu. Můžete také vytisknout zprávu, ručně zadat informace do formulářů od svých úřadů a poté tyto informace odeslat.
 
 > [!Note]
-> We recommended that you set up an Intrastat journal batch for each month.
+> Doporučujeme nastavit dávkovou úlohu instrastatu každý měsíc..
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journal Templates**, and then choose the related link.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]. Vytvořte šablonu pro každý formulář Intrastat.
@@ -61,7 +61,7 @@ Všechny zboží, které nakupujete nebo prodáváte, musí mít kód komodity.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!Tip]
-> If you frequently use a particular transaction nature code, you can make it the default. To do this, go to the **Intrastat Setup** page, and choose the code.
+> Pokud často používáte určitý kód povahy transakce, můžete jej nastavit jako výchozí. To do this, go to the **Intrastat Setup** page, and choose the code.
 
 ### Nastavení typů přepravy
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transport Methods**, and then choose the related link.

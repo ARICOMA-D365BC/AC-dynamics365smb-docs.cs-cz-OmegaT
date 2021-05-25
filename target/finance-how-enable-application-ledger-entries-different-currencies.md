@@ -35,8 +35,7 @@ The following procedure describes how to set this up for vendor ledger entries o
 ## Nastavení účtů účetní osnovy pro rozdíly zaokrouhlení při měnovém vyrovnání
 Pokud vyrovnáte položky v různých měnách, musíte nastavit účty hlavní knihy, na které chcete zaúčtovat rozdíly zaokrouhlování.
 
-> [!NOTE]  
-> You must set up the general ledger accounts before you complete the task. For more information, see [Understanding the General Ledger and the Chart of Accounts](finance-general-ledger.md).
+> Před tím, než dokončíte vyrovnávání musítě mít tyto účty založeny a nastaveny. For more information, see [Understanding the General Ledger and the Chart of Accounts](finance-general-ledger.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer Posting Groups**, and then choose the related link.
 2. In the **Debit Curr. zaok. vyrovnání Acc.** and **Credit Curr. zaok. vyrovnání Acc.** fields, enter the relevant general ledger accounts to post rounding differences.

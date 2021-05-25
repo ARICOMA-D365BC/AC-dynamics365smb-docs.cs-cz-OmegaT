@@ -93,15 +93,15 @@ Následující tabulky ukazují výsledek vyrovnání transakcí zásob v tomto 
 
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------|-----------|------------------------|------|---------|  
-| 01.01.20 | [Inventory Account] | 2130 | 70.00 | 1 |
-| 01.01.20 | [Direct Cost Applied Account] | 7291 | -70.00 | 2 |
-| 01.01.20 | [Inventory Account] | 2130 | 10,00 | 3 |
-| 01-01-07 | [Overhead Applied Account] | 7292 | -10,00 | 4 |
-| 15.01.20 | [Inventory Account] | 2130 | -80.00 | 5 |
-| 15.01.20 | [COGS Account] | 7290 | 80.00 | 6 |
+| 01.01.20 | [Účet zásob] | 2130 | 70.00 | 1 |
+| 01.01.20 | [Účet vyrovnaných přímých nákladů] | 7291 | -70.00 | 2 |
+| 01.01.20 | [Účet zásob] | 2130 | 10,00 | 3 |
+| 01-01-07 | [Účet režijních nákladů] | 7292 | -10,00 | 4 |
+| 15.01.20 | [Účet zásob] | 2130 | -80.00 | 5 |
+| 15.01.20 | [Účet COGS] | 7290 | 80.00 | 6 |
 
 > [!NOTE]  
-> The posting date of the general ledger entries is the same as for the related value entries.
+> Datum zaúčtování položek hlavní knihy je stejné jako u souvisejících položek ocenění.
 >
 > The **Cost Posted to G/L** field in the **Value Entry** table is filled.
 

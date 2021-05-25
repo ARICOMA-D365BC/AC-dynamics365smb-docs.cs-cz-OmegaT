@@ -52,7 +52,7 @@ Pokud jste přihlášeni jako vy, nastavte Alicii jako uživatele schválení, j
 2. On the **Approval User Setup** page, choose the **New** action.
 
    > [!NOTE]  
-   > You must set up an approver before you can set up users who require that approver's approval. Proto musíte nejdříve nastavut sebe před nastavením Alicie.
+   > Nejdříve musíte nastavit schvalovatele, než nastavíte uživatele schvalování, který potřebuje svého schvalovatele. Proto musíte nejdříve nastavut sebe před nastavením Alicie.
 
 3. Nastavte dva uživatele schvalování tak, že vyplníte pole podle popisu v následující tabulce.
 

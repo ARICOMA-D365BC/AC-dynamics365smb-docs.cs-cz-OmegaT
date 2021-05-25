@@ -26,7 +26,7 @@ Fakturu nelze vytvořit bez čísla zákazníka. To platí, i když provedete ho
 Nyní jste vytvořili zákazníka, který obsahuje dostatečné informace pro fakturaci.
 
 > [!NOTE]  
-> You may have chosen a posting group that is also used for domestic credit sales. Pokud si chcete zachovat samostatné údaje o hotovostním prodeji, například se zvláštním účtem prodeje nebo pohledávek, můžete pro tento účel zřídit zvláštní účtovací skupinu.
+> Možná jste si vybrali skupinu účtování, která se také používá pro domácí úvěrový prodej. Pokud si chcete zachovat samostatné údaje o hotovostním prodeji, například se zvláštním účtem prodeje nebo pohledávek, můžete pro tento účel zřídit zvláštní účtovací skupinu.
 >
 > Musíte zadat číslo účtu pohledávek pro účtovací skupinu, i když zůstatek na tomto účtu bude po odeslání faktury vždy 0.
 

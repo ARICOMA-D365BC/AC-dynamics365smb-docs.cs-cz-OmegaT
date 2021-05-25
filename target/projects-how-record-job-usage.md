@@ -57,7 +57,7 @@ V jednom kroku můžete zobrazit využití prjektů až do dokončení projektu.
 To vám umožní sledovat a porovnávat původní odhady se skutečnými výsledky a podle potřeby provádět úpravy nebo přidávat nové položky. Můžete například odhadnout, že úloha vyžaduje 10 hodin a k dnešnímu dni to trvalo 15 hodin. Můžete přidat dalších pět hodin do existujícího řádku deníku nebo vytvořit nový řádek deníku pro vykazování těchto pěti hodin jako přesčas, jako jiný typ práce. Jsou vypočteny příslušné náklady a cena, kdy následně můžete účtovat v deníku.
 
 > [!NOTE]  
-> Item entries create item ledger entries and reduce the inventory quantity. The **Post Inventory Cost to G/L** batch job transfers the cost from inventory to the general ledger. Zdroje vytvářejí položky zdrojů.
+> Řádky se zbožím vytvoří položky zboží a sníží množství v zásobách. The **Post Inventory Cost to G/L** batch job transfers the cost from inventory to the general ledger. Zdroje vytvářejí položky zdrojů.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
 2. Select a relevant job journal, and then choose the **Calc. zbývajícího použití**.

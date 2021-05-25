@@ -51,7 +51,7 @@ In this example, a new EUR (Europe) root business unit is created in [!INCLUDE[p
 Synchronizace určuje, který tým má vlastnit záznamy. This is controlled by the **Default owning team** field on the BCI - <ID> row. Když BCI - <ID> record is enabled for synchronization we automatically create the associated business unit and owner team (if it doesn't already exist), and set the **Default owning team** field. When synchronization is enabled for an table, administrators can change the owning team, but a team must always be assigned.
 
 > [!NOTE]
-> Records become read-only after a company is added and saved, so be sure to choose the correct company.
+> Po přidání a uložení společnosti se záznamy stávají jen pro čtení, proto si vyberte správnou společnost.
 
 ## Výběr jiné obchodní jednotky
 Výběr obchodní jednotky můžete změnit, pokud používáte model vlastnictví Týmů. Pokud používáte model vlastnictví osoby, je vždy vybrána výchozí obchodní jednotka.

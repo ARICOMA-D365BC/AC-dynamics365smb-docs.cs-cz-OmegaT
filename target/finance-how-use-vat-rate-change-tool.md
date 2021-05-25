@@ -29,7 +29,7 @@ Pro změnu sazby DPH se navrhuje následující přístup
 
 
 > [!NOTE]  
-> We are currently updating the VAT Rate Change tool. Níže uvedené funkce nemusí odpovídat funkcím ve vašem prostředí. Aktualizace proběhne do 1.7.2020 a nebude pravidelnou měsíční aktualizací. Místo toho budou všechna prostředí aktualizována automaticky (oprava hotfix). Po dokončení této aktualizace se tato zpráva již nezobrazí.
+> Aktuálně aktualizujeme nástroj pro změnu sazby DPH.. Níže uvedené funkce nemusí odpovídat funkcím ve vašem prostředí. Aktualizace proběhne do 1.7.2020 a nebude pravidelnou měsíční aktualizací. Místo toho budou všechna prostředí aktualizována automaticky (oprava hotfix). Po dokončení této aktualizace se tato zpráva již nezobrazí.
 
 ## Nástroj pro změnu sazby DPH
 
@@ -86,7 +86,7 @@ Nástroj pro změnu sazby DPH slouží ke správě změn základní sazby DPH. P
 * Změny jsou implementovány do účtů hlavní knihy, zákazníků, dodavatelů, otevřených dokladů, řádků deníku atd.
 
 > [!IMPORTANT]  
-> Before you perform VAT rate change conversion, you can test the conversion. To do so, follow the steps below, but make sure to clear the **Perform Conversion** and **VAT Rate Change Tool Completed** check boxes. During test conversion, the **Converted** field in the **VAT Rate Change Log Entry** table is cleared and the **Converted Date** field in the **VAT Rate Change Log Entry** table is blank. After the conversion is complete, choose **VAT Rate Change Log Entries** to view the results of the test conversion. Před provedením převodu ověřte každou položku. Ověřte zejména transakce, které používají starou sazbu DPH.
+> Před provedením převodu na změnu sazby DPH můžete tuto konverzi otestovat. To do so, follow the steps below, but make sure to clear the **Perform Conversion** and **VAT Rate Change Tool Completed** check boxes. During test conversion, the **Converted** field in the **VAT Rate Change Log Entry** table is cleared and the **Converted Date** field in the **VAT Rate Change Log Entry** table is blank. After the conversion is complete, choose **VAT Rate Change Log Entries** to view the results of the test conversion. Před provedením převodu ověřte každou položku. Ověřte zejména transakce, které používají starou sazbu DPH.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Rate Change**, and then choose the **VAT Rate Change Setup** link.
 2. Ověřte, zda jste již nastavili převod DPH účto skupiny zboží nebo převod obecné účto skupiny zboží.

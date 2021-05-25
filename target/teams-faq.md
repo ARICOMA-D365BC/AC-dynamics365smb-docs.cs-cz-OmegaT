@@ -122,7 +122,7 @@ Také některé funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] vyžad
 - U Teams v prohlížeči a Teams pro iOS nebo Android můžete zkontrolovat nebo upravit oprávnění z nastavení prohlížeče nebo zařízení.
 
 > [!NOTE]
-> Přesně ty funkce [!INCLUDE [prod_short.md](includes/prod_short.md)], které vás vyzývají k povolení závisí na doplňkových aplikacích a přizpůsobeních použitých v prostředí [!INCLUDE [prod_short.md](includes/prod_short.md)], ke kterému se připojujete.
+> Exactly which [!INCLUDE [prod_short.md](includes/prod_short.md)] features prompt you for permissions depends on the add-on apps and customizations applied to the [!INCLUDE [prod_short.md](includes/prod_short.md)] environment that you connect to.
 
 ### Kde se mohu dozvědět o svém soukromí?
 
@@ -210,74 +210,74 @@ Vyhledávání kontaktů není v současné době k dispozici v Teams pro iOS a 
 
 ### Jaká oprávnění potřebuji pro vyhledávání kontaktů?
 
-Chcete-li hledat kontakty, potřebujete oprávnění na úrovni objektu k tabulce **Kontakty** v rámci společnosti v [!INCLUDE [prod_short.md](includes/prod_short.md)]. To view the details window for a contact, you need at least read permission to the **Contact** page within the [!INCLUDE [prod_short.md](includes/prod_short.md)] company, and any other related objects.
+Chcete-li hledat kontakty, potřebujete oprávnění na úrovni objektu k tabulce **Kontakty** v rámci společnosti v [!INCLUDE [prod_short.md](includes/prod_short.md)]. Chcete-li zobrazit okno podrobností kontaktu, potřebujete alespoň oprávnění ke čtení na stránce **Kontakty** ve společnosti [!INCLUDE [prod_short.md](includes/prod_short.md)] a dalším souvisejícím objektům
 
-### Can I use contact search if I'm a delegated admin?
+### Mohu použít vyhledávání kontaktů, pokud jsem pověřený správce?
 
-Ano. You can also look up contacts and contact details if you have a delegated admin role in an organization.
+Ano. Kontakty a kontaktní údaje můžete také zobrazit, pokud máte v organizaci delegované role správce.
 
-### Is contact search affected by API limits?
+### Je vyhledávání kontaktů ovlivněno omezeními rozhraní API?
 
-Ano. Searching for contacts from Teams is based on [!INCLUDE [prod_short.md](includes/prod_short.md)] v2.0 APIs and subject to any API limits that manage usage. You can learn more about the limits at [Current API Limits](/dynamics-nav/api-reference/v2.0/dynamics-current-limits).
+Ano. Hledání kontaktů z Teams je založeno na [!INCLUDE [prod_short.md](includes/prod_short.md)] v2.0 API a podléhá jakýmkoli limitům rozhraní API, které spravují využití. Další informace o limitech se dozvíte na [Aktuální API Limity](/dynamics-nav/api-reference/v2.0/dynamics-current-limits).
 
-### Why does it sometimes ask me to set up the app?
+### Proč jsem někdy požádán o nastavení aplikace?
 
-After you sign in to the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams for the first time, the app will attempt to determine your preferred company in [!INCLUDE [prod_short.md](includes/prod_short.md)]. If the app can't determine the company, you might have to go to the **Settings** and choose the company you wish to search in. This situation happens, for example, if you have access to multiple companies across environments in your organization. In this case, you'll have to choose a company before you can start searching.
+Po prvním přihlášení do aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams se aplikace se pokusí určit preferovanou společnost v [!INCLUDE [prod_short.md](includes/prod_short.md)]. Pokud aplikace nemůže určit společnost, možná budete muset přejít do **Nastavení** a vybrat společnost, ve které chcete hledat. K této situaci dochází například v případě, že máte přístup k více společnostem napříč prostředími ve vaší organizaci. V takovém případě si budete muset vybrat společnost, než začnete hledat.
 
-The app may also ask you to visit the **Settings** if you don't have a [!INCLUDE [prod_short.md](includes/prod_short.md)] subscription, there are no [!INCLUDE [prod_short.md](includes/prod_short.md)] environments, or your account doesn't have a [!INCLUDE [prod_short.md](includes/prod_short.md)] license.
+Aplikace vás také může požádat abyste navštívili **Nastavení** pokud nemáte předplatné [!INCLUDE [prod_short.md](includes/prod_short.md)] a pokud neexistují žádné [!INCLUDE [prod_short.md](includes/prod_short.md)] prostředí, nebo váš účet nemá licenci [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-### I’d like to search for items or records from other tables. Can I do this from Teams?
+### Chci vyhledat položky nebo záznamy z jiných tabulek. Mohu to udělat z Teams?
 
-Searching in other tables isn't possible at this time. The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams searches only in the [!INCLUDE [prod_short.md](includes/prod_short.md)] contacts list, which may include vendors, customers, and other contacts.
+Hledání v jiných tabulkách není v tuto chvíli možné. Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams yhledává pouze v seznamu kontaktů [!INCLUDE [prod_short.md](includes/prod_short.md)],který může zahrnovat dodavatele, zákazníky a další kontakty.
 
-If you'd like to see the search capabilities evolve to include other tables, we encourage our community to add an idea or vote for existing ideas at https://aka.ms/BusinessCentralIdeas.
+Pokud chcete, aby se možnosti vyhledávání vyvíjely tak, aby zahrnovaly další tabulky, doporučujeme naší komunitě, aby přidala nápad nebo hlasovala pro existující nápady na adrese  https://aka.ms/BusinessCentralIdeas.
 
-## [Working with cards](#tab/cards)
+## [Práce s kartami](#tab/cards)
 
-### Which types of links does the app support?
+### Jaké typy odkazů aplikace podporuje?
 
-The [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams reacts to most [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client links. When the link refers to a single record on a page, the card will display fields for that record. The supported page types include:
+Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams eaguje na většinu [!INCLUDE [prod_short.md](includes/prod_short.md)] odkazů Webového klienta. Pokud odkaz odkazuje na jeden záznam na stránce, karta zobrazí pole pro tento záznam. Mezi podporované typy stránek patří:
 
-- Card pages, such as the Item card
-- Document pages, such as the Sales Order document
-- ListPlus pages that represent a single record composed of other records, such as a Bank Account Reconciliation statement
-- Simple list pages where a record doesn't offer the ability to drill down into a separate details page, such as the Zip codes list
+- Stránky karet, například Karta zboží
+- Stránky dokladu, například doklad prodejní objednávky
+- Stránky ListPlus, které představují jeden záznam složený z dalších záznamů, například výpisu odsouhlasení bankovního účtu
+- Stránky jednoduchého seznamu, kde záznam nenabízí možnost přejít k podrobnostem na samostatnou stránku podrobností, například seznam PSČ
 
-When pasting a link to the root Web client Url, such as https://businesscentral.dynamics.com, the card instead displays information to help new users get started with accessing [!INCLUDE [prod_short.md](includes/prod_short.md)].
+Při vkládání odkazu na kořenovou adresu URL webového klienta, například https://businesscentral.dynamics.com, se na kartě místo toho zobrazí informace, které pomáhají novým uživatelům začít s přístupem k [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-### How do I delete a card I sent to a chat?
+### Jak odstraním kartu odeslanou do chatu?
 
-You can't delete a card that you've already sent to chat. But you can delete the entire message that the card is a part of.
+Kartu, kterou jste již odeslali do chatu, nemůžete smazat. Můžete však odstranit celou zprávu, jejíž součástí je karta.
 
-As the message author, you can delete any messages you sent to chats with a person, group, or channel&mdash;unless your administrator has set up policies that prevent deleting messages. If you moderate a channel as a channel owner, your administrator may have also granted you permission to delete any messages in the channel, including those messages sent by other users.
+Jako autor zprávy můžete odstranit všechny zprávy odeslané do chatů s osobou, skupinou nebo kanálem, pokud správce nenastaví zásady, které brání odstranění zpráv. Pokud moderujete kanál jako vlastník kanálu, může vám správce také udělit oprávnění k mazání všech zpráv v kanálu, včetně zpráv odeslaných jinými uživateli.
 
-Deleting a message that contains a card doesn't delete or affect any data in [!INCLUDE [prod_short.md](includes/prod_short.md)].
+Smazáním zprávy, která obsahuje kartu, se neodstraní ani neovlivní žádná data v [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-### Do cards always show up-to-date information?
+### Mají karty vždy aktuální informace?
 
-Ne.  The field values on a card in Teams, including any images, are based on the data available when that card was sent to the chat. [!INCLUDE [prod_short.md](includes/prod_short.md)] cards don't automatically refresh in Teams.
+Ne.  Hodnoty polí na kartě v Teams, včetně všech obrázků, jsou založeny na datech dostupných při odeslání této karty do chatu. Karty [!INCLUDE [prod_short.md](includes/prod_short.md)] se v Teams automaticky neobnovují.
 
-### Will others see my card if they don’t have the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams?
+### Uvidí ostatní moji kartu, pokud nemají aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams?
 
-When you compose and send a message to chat that includes a card, all users will see the card&mdash;even if they haven't installed the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams.
+Když vytvoříte a odešlete zprávu do chatu, která obsahuje kartu, uvidí ji všichni uživatelé - i když si nenainstalovali aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams.
 
-### How do I find out which company a card in Teams belongs to?
+### Jak zjistím, ke které společnosti karta v Teams patří?
 
-If you work across [!INCLUDE [prod_short.md](includes/prod_short.md)] companies, talk to your administrator about enabling a company badge for each company. When enabled, this eye-catching hint appears in any details window inside Teams, and displays the company and environment that record belongs to. To learn how to set up company badge, see [To display a company badge for quick access to company information](ui-change-basic-settings.md#badge).
+Pokud pracujete napříč společnostmi [!INCLUDE [prod_short.md](includes/prod_short.md)], promluvte se svým správcem o povolení odznaku společnosti pro každou společnost. Pokud je tato nápověda povolená, zobrazí se v okně podrobností v Teams, zobrazí společnost a prostředí, do které záznam patří. Informace o tom, jak nastavit odznáček společnosti naleznete v [Zobrazení firemního odznaku pro rychlý přístup k informacím o společnosti](ui-change-basic-settings.md#badge).
 
-## [Working with card details](#tab/carddetails)
+## [Práce s podrobnostmi karty](#tab/carddetails)
 
-### Where is the save button in the details window in Teams?
+### Kde je tlačítko uložit v okně podrobností v Teams?
 
-[!INCLUDE [prod_short.md](includes/prod_short.md)] automatically saves changes you make to any field as soon as you leave the field. To leave a field, click/tap anywhere outside the field or use the Tab key to move to the next field. When data appears in a dialog within the details window, you may need to choose the **OK** button to have [!INCLUDE [prod_short.md](includes/prod_short.md)] save your changes.
+[!INCLUDE [prod_short.md](includes/prod_short.md)] automaticky uloží změny provedené v libovolném poli, jakmile opustíte pole. Chcete-li pole opustit, klepněte na libovolné místo mimo pole nebo se pomocí klávesy tabulátor přesuňte do dalšího pole. Když se data zobrazí v dialogovém okně podrobností, možná budete muset zvolit **OK**, aby se v [INCLUDE [prod_short.md](includes/prod_short.md)] uložily změny.
 
-### If I choose to view details for a card, will other users see my details window?
+### Pokud se rozhodnu zobrazit podrobnosti karty, uvidí ostatní uživatelé okno s mými podrobnostmi?
 
-Ne.  While everyone in the chat or meeting can view the card itself, the details window only appears for you on your device when you choose **Details**. Other users must choose **Details** if they would like to view the details window on their device.
+Ne.  Zatímco všichni v chatu nebo na schůzce mohou zobrazit samotnou kartu, okno podrobností se zobrazí pouze na vašem zařízení, když zvolíte **Podrobnosti**. Ostatní uživatelé musí zvolit **Podrobnosti**, pokud si chtějí na svém zařízení prohlédnout okno s podrobnostmi.
 
-### Can I start a Teams call from the details window in Teams?
+### Můžu Teams hovor zahájit z okna podrobností?
 
-Ano. If you're using the Teams desktop app, start a call by choosing the linked number in a phone number field, like the **Mobile Phone No.** field on the **Contact** card. Teams must be your designated dialing app.
+Ano. Pokud používáte desktopovou aplikaci Teams, začněte hovor výběrem propojeného čísla v poli telefonního čísla jako je pole **Mobil** na kartě **Kontaktu**. Teams must be your designated dialing app.
 
 To call local or international landlines and mobile phones, Teams requires that you have a Business Voice license for enterprise calling. Also, you must set up Teams as your call solution. To learn more, see [Plan your Teams voice solution](/microsoftteams/cloud-voice-landing-page) in the Teams documentation.
 

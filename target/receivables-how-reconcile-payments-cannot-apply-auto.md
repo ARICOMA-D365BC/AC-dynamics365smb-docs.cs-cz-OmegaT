@@ -29,7 +29,7 @@ Platby, které nelze vyrovnat se mohou na řádcích deníku odsouhlasení zobra
 To reconcile such payments, you can choose the **Transfer Difference to Account** action and then specify to which account the amount in the **Difference** field will be posted when you post the payment reconciliation journal. You can do this either from the **Payment Reconciliation Journal** page or from the **Payment Application Review** page that you open by choosing the value in the **Match Confidence** field or by choosing the **Difference** field.
 
 > [!TIP]  
-> Similar functionality exists to set up automatic reconciliation of recurring payments that cannot be applied to related open customer, vendor, or bank account ledger entries. For more information, see [Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md).
+> Podobné funkce existují pro nastavení automatického odsouhlasení opakujících se plateb, které nelze vyrovnat na související otevřené položky zákazníka, dodavatele nebo bankovního účtu. For more information, see [Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md).
 
 ## Odsouhlasení plateb, které nelze vyronávat automaticky
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.

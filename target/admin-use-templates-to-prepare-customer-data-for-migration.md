@@ -34,14 +34,14 @@ Při importu zákaznických dat, například u zboží, ze souboru jsou povinná
 Při vytváření nového záznamu kmenových dat, například zákaznické karty, jsou některá pole povinná a musí být vyplněna. Můžete seskupovat většinu povinných polí, jako jsou například účto skupiny a platební podmínky, aby bylo vytváření záznamů hlavních dat snazší a stabilnější. For example, you can group mandatory fields for table 18, **Customer**, as **Domestic**, **Foreign**, or **Export** types.
 
 > [!NOTE]
-> Fields of type Blob cannot be exported/imported using Excel.
+> Pole typu Blob nelze exportovat/importovat pomocí Excelu.
 
 ## Výběr datové šablony
 
 Když vyberete existující datovou šablonu, musíte posoudit, zda šablony, které jste vytvořili pro novou společnost, jsou pro zákazníka dostačující. Zkontrolujte poskytnutá pole a hodnoty a určete, které šablony jsou vhodné pro novou společnost.
 
 > [!TIP]  
-> You can also use data templates to create new records quickly. Používejte je k rychlejšímu a přesnějšímu vytváření dat. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
+> You can also use data templates to create new records quickly. Používejte je k rychlejšímu a přesnějšímu vytváření dat. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
 2. On the **Configuration Templates** page, select a data template from the list, and then choose the **Edit** action.

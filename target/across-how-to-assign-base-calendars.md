@@ -31,10 +31,10 @@ When you make an entry, the **Nonworking** field is selected. You can choose to 
 When you return to the base calendar card, you will observe that the nonworking day entries that you made have been updated. These entries now appear in red and the **Nonworking** field is selected.
 
 > [!NOTE]  
-> When setting up a new base calendar, you can select and copy lines from an existing calendar. You do this in the relevant **Base Calendar Changes** page.
+> Při nastavování nového základního kalendáře můžete vybírat a kopírovat řádky z existujícího kalendáře. You do this in the relevant **Base Calendar Changes** page.
 
 > [!IMPORTANT]  
-> Any base calendar defined for the vendor or the location affects how the dates are calculated and rounded to working days.
+> Jakýkoli základní kalendář definovaný pro dodavatele nebo lokaci ovlivňuje způsob výpočtu dat a zaokrouhlování na pracovní dny.
 > Určuje vzorec data pro čas potřebný k doplnění zboží. It is used to calculate the **Planned Receipt Date** field, if calculating forward, and **Order Date** field, if calculating backwards. See [Lead Time Calculation](across-how-to-assign-base-calendars.md#lead-time-calculation).
 
 ## Výpočet průběžné doby
@@ -49,7 +49,7 @@ Jakýkoli základní kalendář definovaný pro dodavatele nebo místo ovlivňuj
 > In addition to the lead time calculation that affects the planned receipt date and order date, as shown in the above table, warehouse handling time and safety lead time may be added to the formulas to make up the value in the **Expected Receipt Date** field, as follows: Planned Receipt Date + Safety Lead Time + Inbound Warehouse Handling Time = Expected Receipt Date.
 
 > [!Important]
-> If your location uses a significantly different calendar than your vendors do, then it is important that you set up specific calendars for those vendors, to calculate optimal vendor lead times. For information about how to set up vendor calendars, see [To assign a base calendar](across-how-to-assign-base-calendars.md#to-assign-a-base-calendar).
+> Pokud vaše lokace používá výrazně odlišný kalendář než vaši dodavatelé, je důležité pro tyto dodavatele nastavit konkrétní kalendáře, abyste mohli vypočítat optimální dodací lhůty dodavatele. For information about how to set up vendor calendars, see [To assign a base calendar](across-how-to-assign-base-calendars.md#to-assign-a-base-calendar).
 
 The contents of the **Lead Time Calculation** field is copied from either the item card or the SKU card, if the lead time is defined for the item, or on the **Item Vendor Catalog** page, if the lead time is defined for the vendor.
 
@@ -84,7 +84,7 @@ On the Location card, you will observe that the **Customized Calendar** field co
 If you do not fill in the **Shipping Agent Code** field on the order line, your company’s calendar is used.
 
 > [!NOTE]  
-> If you make changes to a base calendar for which customized calendar changes exist, all existing customized calendars are updated automatically.
+> Pokud provedete změny základního kalendáře, pro který existují přizpůsobené změny kalendáře, automaticky se aktualizují všechny existující přizpůsobené kalendáře.
 
 ## Přiřazení základního kalendáře
 Následující postup ukáže příklad jak naplánovat datum dodání na řádcích prodejních objednávek pro určitého zákazníka.
@@ -106,7 +106,7 @@ Základní kalendáře jsou přiřazeny k vaší vlastní společnosti, zákazn�
 > - Jakýkoli základní kalendář definovaný pro dodavatele nebo místo ovlivňuje způsob výpočtu dat a zaokrouhlování na pracovní dny.
 
 > [!NOTE]  
-> Before you can make customized calendar entries, you must first assign a base calendar to the company.
+> Předím než upravíte položky kalendáře, musíte nejdříve přiřadit základní kalendář společnosti.
 
 ## Viz také
 [Purchasing](purchasing-manage-purchasing.md)  

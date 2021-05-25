@@ -97,11 +97,11 @@ Předpoklady:
 
 Nastavení zásob:
 
-- Automatické účtování nákladů = Ano
+- Automatické účtování nákladů=Ano
 
 - Automatická adjustace nákladů=Vždy
 
-- Typ výpočtu prům.poř. ceny=zboží
+- Typ výpočtu prům.poř. ceny=Zboží
 
 - Období průměrných nákladů=Den
 
@@ -196,11 +196,11 @@ Předpoklady:
 
 Nastavení zásob:
 
-- Automatické účtování nákladů = Ano
+- Automatické účtování nákladů=Ano
 
 - Automatická adjustace nákladů=Vždy
 
-- Typ výpočtu prům.poř. ceny=zboží
+- Typ výpočtu prům.poř. ceny=Zboží
 
 - Období průměrných nákladů=Den
 

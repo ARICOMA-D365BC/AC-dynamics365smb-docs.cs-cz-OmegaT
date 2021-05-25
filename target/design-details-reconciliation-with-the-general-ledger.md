@@ -99,7 +99,7 @@ Následující tabulka ukazuje, jak je pracovní centrum nastaveno na kartě pra
       ![Výsledky zaúčtování výstupu na finanční účty](media/design_details_inventory_costing_3_gl_posting_output.png "Výsledky zaúčtování výstupu na finanční účty")
 
       > [!NOTE]  
-      > For the sake of simplicity, only one variance account is shown. Ve skutečnosti existuje pět různých účtů:
+      > Kvůli zjednodušení je zobrazen pouze jeden účet odchylky. Ve skutečnosti existuje pět různých účtů:
       >
       > * Odchylka materiálu
       > * Odchylka kapacit

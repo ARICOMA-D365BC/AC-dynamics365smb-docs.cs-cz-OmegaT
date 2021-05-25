@@ -25,13 +25,13 @@ Therefore, we recommend that you look for foreign currency codes in the **Curren
 Any gains-and-loss adjustment required due to currency conversions is not handled automatically by [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!NOTE]  
-> You cannot apply entries with a different sign than the sign on the payment. Chcete-li například uzavřít dobropis se záporným znaménkem a související fakturu s kladným, musíte nejprve vyrovnat dobropis na fakturu a poté vyrovnat platbu na fakturu se sníženou zbývající částkou.
+> Nelze vyrovnat položky s rozdílným známénkem, než je na na platbě. Chcete-li například uzavřít dobropis se záporným znaménkem a související fakturu s kladným, musíte nejprve vyrovnat dobropis na fakturu a poté vyrovnat platbu na fakturu se sníženou zbývající částkou.
 
 > [!WARNING]  
 > If you use payment discounts, and if the payment date is before the payment due date, then the **Remaining Amt. včetně Discount** field on the **Payment Application** page will be used for matching. Otherwise, the value in the **Remaining Amount** field will be used. Pokud byla platba provedena se zlevněnou částkou po datu splatnosti platby nebo byla vyplacena celá částka, ale byla poskytnuta sleva, částka nebude spárována.
 
 > [!NOTE]  
-> You can only apply a payment to one account. Pokud chcete vyrovnání rozdělit na více otevřených položek, například chcete-li vyrovnat jednorázovou platbu, musí být otevřená položka pro stejný účet. Pro více informací se podívejte na kroky 7 a 8 v postupu tohoto tématu.
+> Platbu můžete vyrovnat pouze na jeden účet. Pokud chcete vyrovnání rozdělit na více otevřených položek, například chcete-li vyrovnat jednorázovou platbu, musí být otevřená položka pro stejný účet. Pro více informací se podívejte na kroky 7 a 8 v postupu tohoto tématu.
 
 ## Kontrola nebo vyrovnání plateb po automatickém vyrovnání
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.

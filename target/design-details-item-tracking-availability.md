@@ -36,7 +36,7 @@ Jak je popsáno v předchozí tabulce, dostupnost daného sériového čísla ne
 Celkové množství k dispozici = Množství ve skladu  – (všechny požadavky + množství dosud nezapsáno v databázi)
 
 > [!IMPORTANT]  
-> This formula implies that the serial or lot number availability calculation considers only inventory and ignores projected receipts. Proto dodávka, která ještě není zaúčtována do zásob, nemá vliv na dostupnost sledování zboží, na rozdíl od běžné dostupnosti zboží, kde jsou zahrnuty předpokládané příjmy.
+> Tento vzorec znamená, že výpočet dostupnosti sériového čísla nebo čísla šarže zohledňuje pouze zásoby a ignoruje předpokládané příjmy.. Proto dodávka, která ještě není zaúčtována do zásob, nemá vliv na dostupnost sledování zboží, na rozdíl od běžné dostupnosti zboží, kde jsou zahrnuty předpokládané příjmy.
 
 ## Viz také
 [Detaily návrhu: Sledování zboží](design-details-item-tracking.md)
