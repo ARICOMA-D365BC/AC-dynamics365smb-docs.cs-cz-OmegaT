@@ -167,8 +167,8 @@ The following table shows the result of scenario steps 1 through 3 on the item's
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
 | 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
-| 1.2.2020 | Prodej | -1 | 1000.00 | 2 | 2 |
-| 1.3.2020 | Sale (Credit Memo) | 1 | 1000 | 2 | 3 | 3 |
+| 01.02.20 | Prodej | -1 | 1000.00 | 2 | 2 |
+| 01.03.20 | Sale (Credit Memo) | 1 | 1000 | 2 | 3 | 3 |
 
 The following table shows the value entry resulting from scenario step 4, posting the item charge.
 
@@ -181,8 +181,8 @@ The following table shows the effect of the exact cost reversal on the item's va
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
 | 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
-| 1.2.2020 | Prodej | -1 | 1100.00 | 2 | 2 |
-| 1.3.2020 | Sale (Credit Memo) | 1 | 1100.00 | 2 | 3 | 3 |
+| 01.02.20 | Prodej | -1 | 1100.00 | 2 | 2 |
+| 01.03.20 | Sale (Credit Memo) | 1 | 1100.00 | 2 | 3 | 3 |
 | 01.04.01 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
 
 When you run the **Adjust Cost - Item Entries** batch job, the increased cost of the purchase entry, due to the item charge, is forwarded to the sales entry (entry number 2). The sales entry then forwards this increased cost to the sales credit entry (entry number 3). The final result is that the cost is correctly reversed.
@@ -209,8 +209,8 @@ The following table shows the effect of the transfer on the item's value entries
 |-------------------------------------|-----------------------------------------------|--------------------------------------|-----------------------------------------|------------------------------------------------|----------------------------------|  
 | 01.01.20 | Nákup | EAST | 1 | 10,00 | 1 |
 | 01.01.20 | Nákup | EAST | 1 | 20,00 | 2 |
-| 1.2.2020 | Transfer | EAST | -1 | 15.00 | 3 |
-| 1.2.2020 | Transfer | WEST | 1 | 15.00 | 4 |
+| 01.02.20 | Transfer | EAST | -1 | 15.00 | 3 |
+| 01.02.20 | Transfer | WEST | 1 | 15.00 | 4 |
 
 ### Example – Standard Costing Method
 The following example, which illustrates how transfer entries are applied, is based on the following scenario for an item using Standard costing method and an average cost period of Day.
@@ -223,8 +223,8 @@ The following table shows the effect of the transfer on the item's value entries
 | Zúčtovací datum | Typ položky zboží | Kód lokace | Oceněné množství | Částka nákladů (skutečná) | Číslo položky |
 |-------------------------------------|-----------------------------------------------|--------------------------------------|-----------------------------------------|------------------------------------------------|----------------------------------|  
 | 01.01.20 | Nákup | EAST | 1 | 10,00 | 1 |
-| 1.2.2020 | Transfer | EAST | -1 | 10,00 | 2 |
-| 1.2.2020 | Transfer | WEST | 1 | 10,00 | 3 |
+| 01.02.20 | Transfer | EAST | -1 | 10,00 | 2 |
+| 01.02.20 | Transfer | WEST | 1 | 10,00 | 3 |
 
 Since the value of the original inventory increase is LCY 10.00, the transfer is valued at that cost, not at LCY 12.00.
 

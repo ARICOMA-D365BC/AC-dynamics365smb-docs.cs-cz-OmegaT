@@ -53,8 +53,8 @@ The following table shows the inventory increases and decreases that the example
 | 01.01.20 | 1 | 1 |
 | 01.01.20 | 1 | 2 |
 | 01.01.20 | 1 | 3 |
-| 1.2.2020 | -1 | 4 |
-| 1.3.2020 | -1 | 5 |
+| 01.02.20 | -1 | 4 |
+| 01.03.20 | -1 | 5 |
 | 01.04.01 | -1 | 6 |
 
 > [!NOTE]  
@@ -96,8 +96,8 @@ The following table shows how inventory decreases are valued for the **FIFO** co
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
 |------------------|--------------|----------------------------|---------------|  
-| 1.2.2020 | -1 | -10,00 | 4 |
-| 1.3.2020 | -1 | -20,00 | 5 |
+| 01.02.20 | -1 | -10,00 | 4 |
+| 01.03.20 | -1 | -20,00 | 5 |
 | 01.04.01 | -1 | -30,00 | 6 |
 
 **LIFO**
@@ -110,8 +110,8 @@ The following table shows how inventory decreases are valued for the **LIFO** co
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
 |------------------|--------------|----------------------------|---------------|  
-| 1.2.2020 | -1 | -30,00 | 4 |
-| 1.3.2020 | -1 | -20,00 | 5 |
+| 01.02.20 | -1 | -30,00 | 4 |
+| 01.03.20 | -1 | -20,00 | 5 |
 | 01.04.01 | -1 | -10,00 | 6 |
 
 **Average**
@@ -122,8 +122,8 @@ The following table shows how inventory decreases are valued for the **Average**
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
 |------------------|--------------|----------------------------|---------------|  
-| 1.2.2020 | -1 | -20,00 | 4 |
-| 1.3.2020 | -1 | -20,00 | 5 |
+| 01.02.20 | -1 | -20,00 | 4 |
+| 01.03.20 | -1 | -20,00 | 5 |
 | 01.04.01 | -1 | -20,00 | 6 |
 
 **Standard**
@@ -134,8 +134,8 @@ The following table shows how inventory decreases are valued for the **Standard*
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
 |------------------|--------------|----------------------------|---------------|  
-| 1.2.2020 | -1 | -15,00 | 4 |
-| 1.3.2020 | -1 | -15,00 | 5 |
+| 01.02.20 | -1 | -15,00 | 4 |
+| 01.03.20 | -1 | -15,00 | 5 |
 | 01.04.01 | -1 | -15,00 | 6 |
 
 **Specific**
@@ -148,8 +148,8 @@ The following table shows how inventory decreases are valued for the **Specific*
 
 | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Applies-to Entry | Číslo položky |
 |------------------|--------------|----------------------------|-----------------------|---------------|  
-| 1.2.2020 | -1 | -20,00 | **2** | 4 |
-| 1.3.2020 | -1 | -10,00 | **1** | 5 |
+| 01.02.20 | -1 | -20,00 | **2** | 4 |
+| 01.03.20 | -1 | -10,00 | **1** | 5 |
 | 01.04.01 | -1 | -30,00 | **3** | 6 |
 
 ## Viz také

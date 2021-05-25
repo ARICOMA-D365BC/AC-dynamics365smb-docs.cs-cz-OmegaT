@@ -77,7 +77,7 @@ Po vydání vstupního zdrojového dokladu se automaticky vytvoří vstupní po�
 ### 3: Vytvoření příjemky na sklad
 Na stránce **Příjemka na sklad** uživatel, který je zodpovědný za příjem zboží, načte čekající řádky zdrojového dokladu na základě vstupního požadavku skladu. Několik řádků zdrojového dokladu lze kombinovat v jednom dokladu příjemky na sklad.
 
-Uživatel vyplní pole **Množ. ke zpracování** fa v případě potřeby vybere přijímací zónu a přihrádku.
+Uživatel vyplní pole **Množ. ke zpracování** a v případě potřeby vybere přijímací zónu a přihrádku.
 
 ### 4: Zaúčtování příjemky na sklad
 Uživatel zaúčtuje příjemku na sklad. Vytvoří se kladné položky zboží. Například je aktualizováno pole **Přijaté množství** na řádku vstupního zdrojového dokladu.

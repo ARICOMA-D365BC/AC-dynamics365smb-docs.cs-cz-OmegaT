@@ -56,9 +56,9 @@ V následující tabulce jsou uvedeny položky zboží pro vzorovou položku s p
 | 01.01.20 | Nákup | 1 | 20,00 | 1 |
 | 01.01.20 | Nákup | 1 | 40,00 | 2 |
 | 01.01.20 | Prodej | -1 | -20,00 | 3 |
-| 1.2.2020 | Prodej | -1 | -40,00 | 4 |
-| 2.2.2020 | Nákup | 1 | 100,00 | 5 |
-| 3.2.2020 | Prodej | -1 | -100,00 | 6 |
+| 01.02.20 | Prodej | -1 | -40,00 | 4 |
+| 02.02.20 | Nákup | 1 | 100,00 | 5 |
+| 03.02.20 | Prodej | -1 | -100,00 | 6 |
 
 > [!NOTE]  
 > Protože k úpravě nákladů dosud nedošlo, hodnoty v poli **Částka nákladů (skutečná)** se snižují, což odpovídá nárůstu zásob, na který se vztahují.
@@ -68,9 +68,9 @@ Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  pr
 | **Číslo zboží** | **Kód varianty** | **Kód lokace** | **Datum ocenění** | **Náklady jsou adjustovány** |
 |-------------------------------------|-----------------------------------------|------------------------------------------|-------------------------------------------|---------------------------------------------|  
 | ZBOŽÍ1 | MODRÝ | 01.01.20 | Ne |
-| ZBOŽÍ1 | MODRÝ | 1.2.2020 | Ne |
-| ZBOŽÍ1 | MODRÝ | 2.2.2020 | Ne |
-| ZBOŽÍ1 | MODRÝ | 3.2.2020 | Ne |
+| ZBOŽÍ1 | MODRÝ | 01.02.20 | Ne |
+| ZBOŽÍ1 | MODRÝ | 02.02.20 | Ne |
+| ZBOŽÍ1 | MODRÝ | 03.02.20 | Ne |
 
 V následující tabulce jsou stejné položky zboží po spuštění dávkové úlohy **Adjustace nákladů položek zboží**. Průměrné náklady za den se počítají a aplikují na snížení zásob.
 
@@ -79,9 +79,9 @@ V následující tabulce jsou stejné položky zboží po spuštění dávkové 
 | 01.01.20 | Nákup | 1 | 20,00 | 1 |
 | 01.01.20 | Nákup | 1 | 40,00 | 2 |
 | 01.01.20 | Prodej | -1 | -30,00 | 3 |
-| 1.2.2020 | Prodej | -1 | -30,00 | 4 |
-| 2.2.2020 | Nákup | 1 | 100,00 | 5 |
-| 3.2.2020 | Prodej | -1 | -100,00 | 6 |
+| 01.02.20 | Prodej | -1 | -30,00 | 4 |
+| 02.02.20 | Nákup | 1 | 100,00 | 5 |
+| 03.02.20 | Prodej | -1 | -100,00 | 6 |
 
 ### Příklad: Období průměrných nákladů = Měsíc
 Následující příklad ukazuje účinek výpočtu průměrných nákladů na základě průměrných nákladů jednoho měsíce. Pole **Typ výpočtu prům.poř. ceny** na stránce **Nastavení zásob** je nastaveno na **Zboží**.
@@ -95,9 +95,9 @@ V následující tabulce jsou uvedeny položky zboží pro vzorovou položku s p
 | 01.01.20 | Nákup | 1 | 20,00 | 1 |
 | 01.01.20 | Nákup | 1 | 40,00 | 2 |
 | 01.01.20 | Prodej | -1 | -20,00 | 3 |
-| 1.2.2020 | Prodej | -1 | -40,00 | 4 |
-| 2.2.2020 | Nákup | 1 | 100,00 | 5 |
-| 3.2.2020 | Prodej | -1 | -100,00 | 6 |
+| 01.02.20 | Prodej | -1 | -40,00 | 4 |
+| 02.02.20 | Nákup | 1 | 100,00 | 5 |
+| 03.02.20 | Prodej | -1 | -100,00 | 6 |
 
 > [!NOTE]  
 > Protože k úpravě nákladů ještě nedošlo, hodnoty v poli **Částka nákladů (skutečná)** se snižují, což odpovídá zvýšení zásob, na které se vztahují.
@@ -106,8 +106,8 @@ Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  pr
 
 | **Číslo zboží** | **Kód varianty** | **Kód lokace** | **Datum ocenění** | **Náklady jsou adjustovány** |
 |-------------------------------------|-----------------------------------------|------------------------------------------|-------------------------------------------|---------------------------------------------|  
-| ZBOŽÍ1 | MODRÝ | 31.1.2020 | Ne |
-| ZBOŽÍ1 | MODRÝ | 28.2.2020 | Ne |
+| ZBOŽÍ1 | MODRÝ | 31.01.20 | Ne |
+| ZBOŽÍ1 | MODRÝ | 28.02.20 | Ne |
 
 > [!NOTE]  
 > Datum ocenění je nastaveno na poslední den v období průměrných nákladů, což je v tomto případě poslední den měsíce.
@@ -119,9 +119,9 @@ V následující tabulce jsou stejné položky zboží po spuštění dávkové 
 | 01.01.20 | Nákup | 1 | 20,00 | 1 |
 | 01.01.20 | Nákup | 1 | 40,00 | 2 |
 | 01.01.20 | Prodej | -1 | -30,00 | 3 |
-| 1.2.2020 | Prodej | -1 | -65,00 | 4 |
-| 2.2.2020 | Nákup | 1 | 100,00 | 5 |
-| 3.2.2020 | Prodej | -1 | -65,00 | 6 |
+| 01.02.20 | Prodej | -1 | -65,00 | 4 |
+| 02.02.20 | Nákup | 1 | 100,00 | 5 |
+| 03.02.20 | Prodej | -1 | -65,00 | 6 |
 
 Průměrné náklady položky číslo 3 se počítají v období průměrných nákladů za leden a průměrné náklady pro položky 4 a 6 se počítají v období průměrných nákladů za únor.
 
@@ -146,9 +146,9 @@ Následující tabulka položek ocenění ilustruje různé scénáře.
 |--------------|-------------------------------------|-----------------------------------------------|-----------------------------------------|-----------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
 | 1 | 01.01.20 | Nákup | 01.01.20 | 2 | 20,00 | 1 | 1 |
 | 2 | 15.01.20 | (Poplatek za zboží) | 01.01.20 | 2 | 8,00 | 1 | 2 |
-| 3 | 1.2.2020 | Prodej | 1.2.2020 | -1 | -14,00 | 2 | 3 |
-| 4 | 1.3.2020 | (Přecenění) | 1.3.2020 | 1 | -.4,00 | 1 | 4 |
-| 5 | 1.2.2020 | Prodej | 1.3.2020 | -1 | -10,00 | 3 | 5 |
+| 3 | 01.02.20 | Prodej | 01.02.20 | -1 | -14,00 | 2 | 3 |
+| 4 | 01.03.20 | (Přecenění) | 01.03.20 | 1 | -.4,00 | 1 | 4 |
+| 5 | 01.02.20 | Prodej | 01.03.20 | -1 | -10,00 | 3 | 5 |
 
 > [!NOTE]  
 > V položce číslo 5 v předchozí tabulce uživatel zadal prodejní objednávku s datem zaúčtování (1.2.2020), které nastane před posledním datem ocenění použitých položek ocenění (1.3.2020). Pokud byla pro tuto položku použita odpovídající hodnota v poli **Částka nákladů (skutečná)** pro toto datum (1.2.2020), bude to 14,00. To by znamenalo situaci, kdy je množství na skladě nulové, ale hodnota zásob je –4,00.
