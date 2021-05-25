@@ -185,7 +185,7 @@ V následující tabulce jsou uvedeny položky ocenění, které existují pro z
 |-----------------------------------------|--------------------------------|------------------------------------------------|----------------------------------|  
 | 01.01.20 | 1 | 10,00 | 1 |
 | 2.1.2020 | 1 | 20,00 | 2 |
-| 15.2.2020 | -1 | -15,00 | 3 |
+| 15.02.20 | -1 | -15,00 | 3 |
 | 16.2.2020 | -1 | -15,00 | 4 |
 
 Uživatel zaúčtuje zvýšení zásob (číslo položky 5) s datem ocenění (3.1.2020), které předchází snížení jednoho nebo více zásob. Pro vyvážení zásob je nutné přepočítat průměrné náklady a upravit je na 17,00.
@@ -197,7 +197,7 @@ Následující tabulka ukazuje položky ocenění, které existují pro položku
 | 01.01.20 | 1 | 10,00 | 1 |
 | 2.1.2020 | 1 | 20,00 | 2 |
 | 3.1.2020 | 1 | 21,00 | 5 |
-| 15.2.2020 | -1 | -17,00 | 3 |
+| 15.02.20 | -1 | -17,00 | 3 |
 | 16.2.2020 | -1 | -17,00 | 4 |
 
 ## Viz také

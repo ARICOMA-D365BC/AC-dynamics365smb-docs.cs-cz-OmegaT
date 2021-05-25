@@ -70,7 +70,7 @@ Datum ocenění je nastaveno na datum účtování spotřeby (02-01-20) jako pra
 
 | Zúčtovací datum | Zboží | Typ položky | Množství | Číslo položky |
 |------------------|----------|----------------|--------------|---------------|  
-| 15.2.2020 | ŘETĚZ | Výstup | 1 | 3 |
+| 15.02.20 | ŘETĚZ | Výstup | 1 | 3 |
 
 **3V**: Uživatel spustí dávkovou úlohu **Adjustace nákladů položek zboží**, která zaúčtuje řetěz jako fakturovanou, což znamená, že veškerá spotřeba materiálu byla zcela fakturována. Z finančního hlediska již části řetězu nejsou součástí zásob nedokončené výroby, pokud je výstup zcela fakturován a adjustován. Následující tabulka ukazuje výsledné hodnoty.
 
@@ -78,7 +78,7 @@ Datum ocenění je nastaveno na datum účtování spotřeby (02-01-20) jako pra
 |------------------|----------------|--------------------|----------------------------|---------------------------|---------------|  
 | 15.01.20 | Přímé náklady | 01.01.20 | 15000 | 2 | 2 |
 | 01.02.20 | Přímé náklady | 01.02.20 | -150,00 | 2 | 2 |
-| 15.2.2020 | Přímé náklady | 15.2.2020 | 15000 | 3 | 3 |
+| 15.02.20 | Přímé náklady | 15.02.20 | 15000 | 3 | 3 |
 
 ## Očekávané náklady při přecenění
 Přeceněné množství se vypočítá jako součet množství pro zcela fakturované položky zboží se zúčtovacím datem rovnajícím se datu přecenění nebo dřívějšímu datu. To znamená, že pokud je některé zboží přijato/dodáno, ale není fakturováno, nelze vypočítat jeho hodnotu zásob. Zboží, které používají metodu standardního ocenění, nejsou v tomto ohledu omezeny.
@@ -107,9 +107,9 @@ Následující příklad, který je založen na výrobě řetězu v předchozím
 | Krok | Zúčtovací datum | Typ položky | Datum ocenění | Částka nákladů (očekávaná) | Částka nákladů (skutečná) | Číslo položky zboží | Číslo položky |
 |----------|------------------|----------------|--------------------|------------------------------|----------------------------|---------------------------|---------------|  
 | 1. | 15.01.20 | Přímé náklady | 15.01.20 | 300,00 | 0,00 | 1 | 1 |
-| 2. | 20.01.2020 | Přecenění | 20.01.2020 | 15000 | 0,00 | 1 | 2 |
+| 2. | 20.01.20 | Přecenění | 20.01.20 | 15000 | 0,00 | 1 | 2 |
 | 3.a. | 15.01.20 | Přímé náklady | 15.01.20 | -300,00 | 0,00 | 1 | 3 |
-| 3.b. | 15.01.20 | Přecenění | 20.01.2020 | -150,00 | 0,00 | 1 | 4 |
+| 3.b. | 15.01.20 | Přecenění | 20.01.20 | -150,00 | 0,00 | 1 | 4 |
 | 3.c. | 15.01.20 | Odchylka | 15.01.20 | 0,00 | 450,00 | 1 | 5 |
 
 ## Určení, zda je snížení zásob ovlivněno přeceněním
@@ -147,14 +147,14 @@ Následující tabulka ukazuje výsledné hodnoty.
 |  | 01.03.20 | Přecenění | 01.03.20 | 4 | -8,00 | 1 | 5 |
 | A | 01.02.20 | Prodej | 01.02.20 | -1 | -10,00 | 2 | 2 |
 | B | 01.03.20 | Prodej | 01.03.20 | -1 | -10,00 | 3 | 3 |
-| C | 01.04.01 | Prodej | 01.04.01 | -1 | -10,00 | 4 | 4 |
-|  | 01.04.01 | Prodej | 01.04.01 | -1 | 2,00 | 4 | 9 |
+| C | 01.04.20 | Prodej | 01.04.20 | -1 | -10,00 | 4 | 4 |
+|  | 01.04.20 | Prodej | 01.04.20 | -1 | 2,00 | 4 | 9 |
 | D | 01.02.20 | Prodej | 01.03.20 | -1 | -10,00 | 5 | 6 |
 |  | 01.02.20 | Prodej | 01.03.20 | -1 | 2,00 | 5 | 10 |
 | E | 01.03.20 | Prodej | 01.03.20 | -1 | -10,00 | 6 | 7 |
 |  | 01.03.20 | Prodej | 01.03.20 | -1 | 2,00 | 6 | 11 |
-| F | 01.04.01 | Prodej | 01.04.01 | -1 | -10,00 | 7 | 8 |
-|  | 01.04.01 | Prodej | 01.04.01 | -1 | 2,00 | 7 | 12 |
+| F | 01.04.20 | Prodej | 01.04.20 | -1 | -10,00 | 7 | 8 |
+|  | 01.04.20 | Prodej | 01.04.20 | -1 | 2,00 | 7 | 12 |
 
 ## Přecenění zásob NV
 Přecenění zásob NV znamená přecenění komponent, které jsou v době přecenění registrovány jako součást zásob nedokončené výroby.

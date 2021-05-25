@@ -174,7 +174,7 @@ The following table shows the value entry resulting from scenario step 4, postin
 
 | Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 01.04.01 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
+| 01.04.20 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
 
 The following table shows the effect of the exact cost reversal on the item's value entries.
 
@@ -183,7 +183,7 @@ The following table shows the effect of the exact cost reversal on the item's va
 | 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
 | 01.02.20 | Prodej | -1 | 1100.00 | 2 | 2 |
 | 01.03.20 | Sale (Credit Memo) | 1 | 1100.00 | 2 | 3 | 3 |
-| 01.04.01 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
+| 01.04.20 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
 
 When you run the **Adjust Cost - Item Entries** batch job, the increased cost of the purchase entry, due to the item charge, is forwarded to the sales entry (entry number 2). The sales entry then forwards this increased cost to the sales credit entry (entry number 3). The final result is that the cost is correctly reversed.
 

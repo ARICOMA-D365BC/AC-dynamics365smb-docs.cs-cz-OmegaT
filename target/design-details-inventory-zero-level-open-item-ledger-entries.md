@@ -29,8 +29,8 @@ Typické projevu problému, kdy je úroveň skladového minima nulová, i když 
 
    | Číslo položky | Zúčtovací datum | Typ položky | Typ dokladu | Číslo dokladu | Číslo zboží | Kód lokace | Množství | Částka nákladů (skutečná) | Fakturované množství | Zbývající množství | Otevřít |
    |---------|------------|----------|-------------|------------|--------|-------------|--------|------------------------|-----------------|------------------|----|  
-   | 333 | 01/28/2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | -1 | -10 | -1 | -1 | Ano |
-   | 334 | 01/28/2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | 1 | 10 | 1 | 1 | Ano |
+   | 333 | 28.01.2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | -1 | -10 | -1 | -1 | Ano |
+   | 334 | 28.01.2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | 1 | 10 | 1 | 1 | Ano |
 
 ## Základy vyrovnání zboží
 Pro každou skladovou transakci se vytvoří položka vyrovnání zboží, která propojí příjemce nákladů se zdrojem nákladů, takže lze náklady předat podle metody ocenění. Pro více informací navštivte [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md).
@@ -64,8 +64,8 @@ Následující diagram ukazuje, jak se vytvářejí vyrovnání nákladů.
 
 | Číslo položky | Zúčtovací datum | Typ položky | Typ dokladu | Číslo dokladu | Číslo zboží | Kód lokace | Množství | Částka nákladů (skutečná) | Fakturované množství | Zbývající množství | Otevřít |
 |---------|------------|----------|-------------|------------|--------|-------------|--------|------------------------|-----------------|------------------|----|  
-| 333 | 01/28/2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | -1 | -10 | -1 | -1 | Ano |
-| 334 | 01/28/2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | 1 | 10 | 1 | 1 | Ano |
+| 333 | 28.01.2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | -1 | -10 | -1 | -1 | Ano |
+| 334 | 28.01.2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | 1 | 10 | 1 | 1 | Ano |
 
 Všimněte si výše, že vstuoní položka zboží 3 (Prodejní vratka) je příjemcem nákladů pro původní výstupní položku zboží 2 (Prodej).
 
@@ -106,8 +106,8 @@ U scénáře 2 identifikujte problém jedním z následujících způsobů:
 
 | Číslo položky | Zúčtovací datum | Typ položky | Typ dokladu | Číslo dokladu | Číslo zboží | Kód lokace | Množství | Částka nákladů (skutečná) | Fakturované množství | Zbývající množství | Otevřít | Oprava |
 |---------|------------|----------|-------------|------------|--------|-------------|--------|------------------------|-----------------|------------------|----|---------|
-| 333 | 01/28/2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | -1 | -10 | -1 | -1 | Ano | Ne |
-| 334 | 01/28/2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | 1 | 10 | 1 | 1 | Ano | **Ano** |
+| 333 | 28.01.2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | -1 | -10 | -1 | -1 | Ano | Ne |
+| 334 | 28.01.2018 | Prodej | Prodejní dodávka | 102043 | TEST | MODRÝ | 1 | 10 | 1 | 1 | Ano | **Ano** |
 
 - Na stránce **Účtovaná prodejní dodávka** vyhledejte v poli **Vyrovnáno položkou zboží**, zda je pole vyplněno, a v takovém případě, ke které položce zboží je účtována příjemka vratky.
 
@@ -128,7 +128,7 @@ U obou scénářů identifikujte příslušné vyrovnání nákladů následovn�
 
    | Číslo položky | Číslo položky zboží | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Zúčtovací datum | Vyrovnání nákladů |
    |---------|---------------------|----------------------|-----------------------|--------|------------|----------------|  
-   | 299 | 334 | 334 | 333 | 1 | 01/28/2018 | Ano |
+   | 299 | 334 | 334 | 333 | 1 | 28.01.2018 | Ano |
 <!--![Why is inventory zero 8](media/helene/TechArticleInventoryZero8.png "Whyisinventoryzero\_8")  -->
 
 Všimněte si výše, že u vstupní položky zboží 334 jsou náklady použité na výstupní položku zboží 333.
