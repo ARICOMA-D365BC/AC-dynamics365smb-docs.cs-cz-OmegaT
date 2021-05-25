@@ -80,7 +80,7 @@ V následujícím návodu Tricia použije metodu Hodnota nákladů, její firemn
 9. Zvolte tlačítko **OK** pro spuštění dávkové úlohy. Zobrazí se zpráva. Pokračujte kliknutím na tlačítko **OK**. Zavžete stránku **Řádky úlohy projektu**.
 
    > [!NOTE]  
-   > Zpráva uvádí, že s výpočtem NV jsou spojena varování. Upozornění si projdete v dalším postupu.
+   > The message states that there are warnings associated with the WIP calculation. Upozornění si projdete v dalším postupu.
 
 10. Na karte **Projekt** rozbalte záložku **NV a deaktivace** abyste zhodnotili vypočtené hodnoty. Můžete také zobrazit **Zúčtovací datum NV** a hodnoty, které byly zaúčtovány do věcných položek, pokud existují.
 
@@ -104,7 +104,7 @@ Po skončení účetního období musí Tricia přepočítat NV, aby do tohoto b
 3. Zavřete stránku.
 
 > [!NOTE]  
-> Nedokončená výroba a Deaktivace se pouze počítá. Nejedná se o účtování. Chcete-li tak učinit, musíte po výpočtu Nedokončené výroby a Deaktivace spustit dávkovou úlohu **Zaúčtovat NV**.
+> Work in Process and Recognition is only calculated. Nejedná se o účtování. To do so, you must run **Post WIP to G/L** batch job after you have calculated the WIP and Recognition.
 
 ## Zaúčtování NV do věcných položek
 Nyní, když Tricia pro tuto práci vypočítala NV, může ji zaúčtovat do věcných položek.
@@ -149,7 +149,7 @@ Tricia určuje, že projektoví úkoly, které byly vyloučeny z výpočtu NV, m
 13. Pro projekt otevřete **Řádky úlohy projektu**, zahrňte části projektu, které by měly být ve výpočtu NV, a poté přepočítejte a zaúčtujte novou hodnotu do věcných položek.
 
    > [!NOTE]  
-   > Předpokládejme, že Tricia vypočítá a zaúčtuje NV pro úlohu s nesprávnými daty. Podle metody, která byla popsána dříve, může stornovat nesprávné účtování, opravovat data a znovu zaúčtovat do věcných položek.
+   > Suppose Tricia calculated and posted WIP for a job with incorrect dates. Podle metody, která byla popsána dříve, může stornovat nesprávné účtování, opravovat data a znovu zaúčtovat do věcných položek.
 
 ## Další kroky
 Tento návod vás provedl kroky výpočtu NV v [!INCLUDE[prod_short](includes/prod_short.md)]. U větších úloh může být užitečné pravidelně převádět náklady na účet NV, zatímco se úloha dokončuje. Tento návod ukázal, jak vyloučit řádky úkolu z výpočtu. To také ukazuje, kdy budete muset přepočítat. A nakonec tento návod ukazuje, jak zaúčtovat NV do věcných položek. Součástí je také příklad, jak stornovat zaúčtování nedokončené výroby do věcných položek.

@@ -25,7 +25,7 @@ Spotřebitelé a podniky platí daň z přidané hodnoty (DPH) při nákupu zbo�
 Výpočty DPH můžete nastavit ručně, ale to může být složité a časově náročné. To make it easy, we provide an assisted setup guide named **VAT Setup** that will help you with the steps. K nastavení DPH doporučujeme použít průvodce nastavením.
 
 > [!NOTE]  
-> Průvodce můžete použít pouze v případě, že jste vytvořili společnost a neúčtovali jste transakce, které zahrnují DPH. V opačném případě by bylo velmi snadné omylem použít různé sazby DPH a učinit sestavy související s DPH nepřesnými.
+> You can use the guide only if you have created a My Company, and have not posted transactions that include VAT. V opačném případě by bylo velmi snadné omylem použít různé sazby DPH a učinit sestavy související s DPH nepřesnými.
 
 Pokud si chcete sami stanovit výpočty DPH nebo se chcete o každém kroku dozvědět, toto téma obsahuje popisy jednotlivých kroků.
 
@@ -54,7 +54,7 @@ Pro nastavení DIČ postupujte takto:
 * **?** Allows any character.
 
    > [!Tip]
-   > Můžete použít i jiné znaky, pokud jsou ve formátu vybrané země nebo oblasti.. Pokud například potřebujete zahrnout tečku nebo pomlčku mezi sadami čísel, můžete formát definovat jako ##.######## nebo @@@-###-####.
+   > You can use other characters as long as they are always present in the country or region format. Pokud například potřebujete zahrnout tečku nebo pomlčku mezi sadami čísel, můžete formát definovat jako ##.######## nebo @@@-###-####.
 
 ## Nastavení DPH obchodních účto skupin
 Obchodní DPH účto skupiny by měly představovat trhy, na kterých obchodujete se zákazníky a prodejci, dále skupiny určijí, jak vypočítat a účtovat DPH na každém trhu. Examples of VAT business posting groups are **Domestic** and **European Union (EU)**.
@@ -162,10 +162,10 @@ Pro nastavení kódů pro importní DPH postupujte takto:
 Některé společnosti musí při obchodování s jinými společnostmi používat vratnou DPH. Toto pravidlo se například vztahuje na nákupy ze zemí nebo oblastí EU a prodej do zemí nebo oblastí EU.
 
 > [!NOTE]  
-> Toto pravidlo platí při obchodování se společnostmi, které jsou registrovány jako plátce DPH v jiné zemi EU. Pokud obchodujete přímo se spotřebiteli v jiných zemích nebo oblastech EU, měli byste se obrátit na svůj daňový úřad s žádostí o příslušná pravidla DPH.
+> This rule applies when trading with companies that are registered as VAT liable in another EU country/region. Pokud obchodujete přímo se spotřebiteli v jiných zemích nebo oblastech EU, měli byste se obrátit na svůj daňový úřad s žádostí o příslušná pravidla DPH.
 
 > [!TIP]  
-> Ověřením, že společnost je registrována jako plátce DPH v jiné zemi EU, použijte službu ověřování DIČ v EU. The service is available for free in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see the section titled _Verify VAT registration numbers_ in this topic.
+> You can verify that a company is registered as VAT liable in another EU country by using the EU VAT Registration Number Validation service. The service is available for free in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see the section titled _Verify VAT registration numbers_ in this topic.
 
 ### Prodej do zemí EU
 DPH se nepočítá z prodeje společnostem povinným k DPH v jiných zemích nebo oblastech EU. Hodnotu těchto prodejů musíte nahlásit do zemí EU samostatně ve svém daňovém přiznání.

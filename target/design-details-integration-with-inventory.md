@@ -35,7 +35,7 @@ You use the **Item Journal** page and the **Calculate Whse. Adjustment** functio
 Výchozí adjustační přihrádka eviduje zboží ve skladu při zaúčtování zvýšení zásob. Pokud však zaúčtujete snížení, sníží se také množství ve výchozí adjustační přihrádce. V obou případech se vytvoří položky zboží a položky skladu.
 
 > [!NOTE]  
-> Adjustační přihrádka není započítana do kalkulace dostupnosti.
+> The adjustment bin is not included in the availability calculation.
 
 Chcete-li upravit obsah přihrádky, můžete použít deník zboží skladu, ze kterého můžete zadat číslo zboží, kód zóny, kód přihrádky a množství, které chcete upravit.
 

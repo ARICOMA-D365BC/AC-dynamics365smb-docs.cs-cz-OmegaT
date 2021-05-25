@@ -80,7 +80,8 @@ Položka kapacity je záznam času stráveného k výrobě zboží. Souvisejíc�
 ## Náklady výrobní zakázky
 K řízení zásob a výrobních nákladů musí výrobní společnost měřit náklady výrobních zakázek, protože předem stanovené standardní náklady na každou vyrobenou položku jsou kapitalizovány v rozvaze. For information about why produced items use the Standard costing method, see [Design Details: Costing Methods](design-details-costing-methods.md).
 
-> V prostředích, která nepoužívají standardní metodu ocenění se v rozvaze kapitalizují skutečné, nikoli standardní náklady na vyrobené položky.
+> [!NOTE]  
+> In environments that do not use the Standard costing method, the actual rather than the standard cost of produced items is capitalized on the balance sheet.
 
 Skutečné náklady výrobní zakázky se skládají z následujících nákladových složek:
 
@@ -97,7 +98,7 @@ V prostředí se standardními náklady je nákladování výrobní zakázky zal
    Tyto náklady se rovnají výstupnímu množství, které je zaúčtováno do deníku výstupu vynásobené standardními náklady, které jsou zkopírovány z karty zboží. Náklady jsou považovány za očekávané náklady, dokud není výrobní zakázka dokončena. For more information, see [Design Details: Expected Cost Posting](design-details-expected-cost-posting.md).
 
    > [!NOTE]  
-   > To se liší od zaúčtování montáží zakázky, ktera vždy zaúčtuje skutečné náklady. For more information, see [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md).
+   > This differs from assembly order posting, which always posts actual costs. For more information, see [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md).
 2. When the production order is set to **Finished**, the order is invoiced by running the **Adjust Cost-Item Entries** batch job. V důsledku toho se celkové náklady objednávky počítají na základě standardních nákladů spotřebovaných materiálů a kapacity. Rozdíly mezi vypočtenými standardními náklady a skutečnými výrobními náklady se počítají a zaúčtují.
 
 ## Viz také

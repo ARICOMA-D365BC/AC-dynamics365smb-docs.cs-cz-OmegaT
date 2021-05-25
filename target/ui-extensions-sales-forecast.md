@@ -22,7 +22,7 @@ Inventory management is a trade-off between customer service and managing your c
 In [!INCLUDE[prod_short](includes/prod_short.md)], the connection to [Azure AI](https://azure.microsoft.com/overview/ai-platform/) is already set up for you. But you can configure the forecast to use a different type of period to report by, such as changing from forecasting by month to forecasting by quarter. You can also choose the number of periods to calculate the forecast by, depending on how granular you want the forecast to be. We suggest that you forecast by month and with a 12 month horizon for the forecast.
 
 > [!TIP]  
-> Zvažte délku období, které služba použije při svých výpočtech. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
+> Consider the length of the periods that the service will use in its calculations. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
 
 ## Using the Forecasts
 The extension uses Azure AI to predict future sales based on your sales history to help you avoid inventory shortage. For example, when you choose an item on the **Items** page, the chart in the **Item Forecast** pane shows the estimated sales of this item in the coming period. This way you can see if you are likely to run out of stock of the item soon.

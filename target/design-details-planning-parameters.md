@@ -37,7 +37,7 @@ Pole **Interval dostupnosti** je používáno bodem přiobjednání(**Pevné př
  Poprvé segment začíná v den zahájení plánování.
 
 > [!NOTE]  
-> Při výpočtu intervalů dostupnosti plánovací systém ignoruje všechny pracovní kalendáře, které jsou definovány v poli **Kód základního kalendáře** na stránkách **Informace o společnosti** a **Karta lokace**.
+> When calculating time buckets, the planning system ignores any working calendars that are defined in the **Base Calendar Code** field in the **Company Information** and **Location Card** pages.
 
 Výchozí Bezpečná průběžná doba na stránce **Nastavení výroby**, by měla být nastavena alespoň na jeden den. Datum splatnosti poptávky může být známo, ale ne termín splatnosti. Plány plánují pozpátku, aby uspokojily hrubou poptávku, a pokud není definována žádná bezpečná průběžná doba, může zboží dorazit příliš pozdě na to, aby uspokojila poptávku.
 
@@ -75,7 +75,7 @@ Chcete-li získat racionální plán dodávek, plánovač doladí parametry plá
 | **Období shromáždění šarží** | Se zásadou přiobjednání Šarže pro šarži se toto pole používá k akumulaci více potřeb dodávek do jedné objednávky dodávek. Od první plánované dodávky systém akumuluje všechny potřeby dodávek v následujícím období shromáždění šarže do jedné dodávky, která je umístěna v den první dodávky. Poptávka mimo období akumulace šarže není touto dodávkou kryta. |
 | **Období prodlevy** | Toto pole se používá, aby se zabránilo menším přeplánování stávající dodávky v čase. Změny od data dodávky do jednoho období tlumení od data dodání negenerují žádné akce hlášení. <br /><br /> Období prodlevy určuje dobu, po kterou nechcete, aby plánovací systém navrhl přeplánování stávajících objednávek dodávek dopředu. To omezuje počet nevýznamných přeplánování stávající nabídky na pozdější datum, pokud je přeplánované datum v období prodlevy.<br /><br /> Výsledkem je pozitivní delta mezi navrhovaným novým datem dodávky a původním datem dodávky bude vždy větší než období prodlevy. |
 > [!NOTE]
-> S způsobem přiobjednání Dávka-pro-dávku, hodnota pole **Období kumulace dávky** musí být rovna nebo větší než hodnota pole **Období prodlevy**. Jinak se během plánovací rutiny období prodlevy automaticky sníží, aby odpovídala době akumulace dávky.
+> With the reordering policy Lot-for-Lot, the value of the **Lot Accumulation Period** field must be equal to or larger than the value of the **Dampener Period** field. Jinak se během plánovací rutiny období prodlevy automaticky sníží, aby odpovídala době akumulace dávky.
 
 Načasování období přeplánování, období prodlevy a období kumulace dávky je založeno na datu dodávky. Intervaly dostupnosti začínají datem zahájení plánování, jak je znázorněno na následujícím obrázku.
 

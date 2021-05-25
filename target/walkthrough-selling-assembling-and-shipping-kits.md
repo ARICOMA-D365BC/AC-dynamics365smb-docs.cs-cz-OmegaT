@@ -172,7 +172,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    | **Způsob přiobjednání** | Dávka-pro-dávku |
 
    > [!NOTE]  
-   > Sada A je obvykle dodána pomocí montáže na sklad, a proto má způsob přiobjednání na to, aby se stala součástí obecného plánování zásobování.
+   > Kit A is typically supplied by assembly to stock and therefore has a reordering policy to make it part of general supply planning.
 
 4. Vyberte akci **Montáž** a poté vyberte **Kusovník montáže**.
 5. Definujte kusovník montáže pro sadu A s následujícími informacemi.
@@ -195,7 +195,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    | **Způsob montáže** | Montáž-na-zakázku |
 
    > [!NOTE]  
-   > Sada B je obvykle dodávána pomocí montáže na zakázku, a proto nemá spůsob přiobjednání, protože by neměla být součástí obecného plánování zásobování.
+   > Kit B is usually supplied by assembly to order and therefore does not have a reordering policy, because it should not be part of general supply planning.
 
 7. Vyberte akci **Montáž** a poté vyberte **Kusovník montáže**.
 8. Definujte kusovník montáže pro sadu B s následujícími informacemi.
@@ -219,7 +219,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    | Zboží | Sada A – Základní PC | 15 | 5 | 27. ledna |
 
    > [!NOTE]  
-   > Pro řádek prodejní objednávky pro sadu B existuje následující problém s dostupností:
+   > The following availability issue exists for the sales order line for Kit B:
    >
    > - Součást montáže 80210 není k dispozici. To znamená, že tři zadané jednotky sady B nelze sestavit, jsou označeny hodnotou **0** v poli **Schopen montáže** na stránce **Dostupnost montáže**.
    >
@@ -283,7 +283,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávka ze skladu** a poté vyberte související odkaz.
 
    > [!NOTE]  
-   > V této části je osoba odpovědná za přepravu odpovědná za zaznamenávání dokončených montážních prací MNO na řádku dodávky ze skladu. K tomuto pracovnímu postupu může dojít v prostředích, kde montážní práce provádí osoba odpovědná za dopravu nebo montážní pracovníci v oblasti expedice.
+   > In this section, the person who is responsible for shipping is in charge of recording the completed ATO assembly work on the warehouse shipment line. K tomuto pracovnímu postupu může dojít v prostředích, kde montážní práce provádí osoba odpovědná za dopravu nebo montážní pracovníci v oblasti expedice.
    >
    > V této části se akce na montážní zakázce provádějí nepřímo z řádku dodávky ze skladu. Pro více informací o přímém zpracování montážní objednávky navštivte "Zboží montáže do skladu" v tomto návodu.
 
@@ -345,7 +345,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    Všimněte si, že objednávka MNO pro dodané jednotky sady B je stále v seznamu, i když pole **Zbývající množství** je prázdné. Je to proto, že propojená prodejní objednávka stále není plně fakturována.
 
    > [!NOTE]  
-   > V této části je montážní pracovník zodpovědný za zaznamenávání dokončených montážních prací MNO na řádku dodávky ze skladu. K tomuto pracovnímu postupu může dojít v prostředích, kde jsou montážní práce prováděny v samostatném montážním oddělení a montážní pracovníci jsou oprávněni změnit řádek dodávky ze skladu.
+   > In this section, the assembly worker is responsible for recording the completed ATO assembly work on the warehouse shipment line. K tomuto pracovnímu postupu může dojít v prostředích, kde jsou montážní práce prováděny v samostatném montážním oddělení a montážní pracovníci jsou oprávněni změnit řádek dodávky ze skladu.
 
 2. Otevřete montážní zakázku MNO pro pět jednotek sady A.
 

@@ -60,7 +60,7 @@ The **Cash Flow Forecast** chart uses cash flow accounts, cash flow setups, and 
 Cash flow forecasts can use Azure AI to predict future documents. The result is a more comprehensive forecast. Připojení k Azure AI je již přednastaveno. Stačí jej pouze zapnout. When you sign in to [!INCLUDE[prod_short](includes/prod_short.md)], a notification displays in a blue bar, and provides a link to the default cash flow setup. Oznámení se zobrazí pouze jednou. Pokud ho zavřete, ale rozhodnete se zapnout Azure AI, můžete použít průvodce asistovaným nastavením nebo ručně.
 
 > [!NOTE]  
-> Případně můžete použít vlastní prediktivní webovou službu. For more information, see [Create and use your own predictive web service for cash flow forecasts](#AnchorText).
+> Alternatively, you can use your own predictive web service. For more information, see [Create and use your own predictive web service for cash flow forecasts](#AnchorText).
 
 Použití průvodce asistovaným nastavením:
 
@@ -77,7 +77,7 @@ Použití ručního procesu:
 4. On the **Cash Flow Forecast** page, choose the **Recalculate Forecast** action.
 
 > [!TIP]  
-> Zvažte délku období, které služba použije při svých výpočtech. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
+> Consider the length of the periods that the service will use in its calculations. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
 
 ## Design details
 Subscriptions for [!INCLUDE[prod_short](includes/prod_short.md)] come with access to several predictive web services in all regions where [!INCLUDE[prod_short](includes/prod_short.md)] is available. For more information, see the Microsoft Dynamics 365 Business Central Licensing Guide. The guide is available for download on the [Business Central](https://dynamics.microsoft.com/en-us/business-central/overview/) website.

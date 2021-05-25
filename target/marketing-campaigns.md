@@ -32,7 +32,7 @@ When you have set up your campaign, decided what segments you want the campaign 
 Pokud jste nastavili prodejní ceny/řádkové slevy a segmenty na kartě kampaně, musíte je aktivovat, aby se ceny/slevy kampaně projevily na řádcích.
 
 > [!NOTE]  
-> Chcete-li aktivovat prodejní ceny/řádkové slevy, musíte určit, zda jsou cílem kampaně celý segment nebo pouze některé kontakty. If the sales prices/line discounts covers all the contacts in the segment, select the **Campaign Target** field on the **Campaign** FastTab of the **Segment** card.
+> In order to activate the sales prices/line discounts, you must specify if the whole segment or only some contacts are targets of the campaign. If the sales prices/line discounts covers all the contacts in the segment, select the **Campaign Target** field on the **Campaign** FastTab of the **Segment** card.
 
 If the sales prices/line discounts are not to be offered to all the contacts in the segment, you can clear the **Campaign Target** field for the relevant contacts. Pokud toto pole nevidíte, můžete jej přidat do svého pohledu. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
 

@@ -53,7 +53,7 @@ Tato možnost je nejrychlejší způsob instalace aplikace.
 5. Vyberte **Přidat**.
 
 > [!NOTE]
-> With either option, You may be asked to sign in to [!INCLUDE [prod_short](includes/prod_short.md)]. Select the **sign in** link, and follow the instructions to enter sign-in name and password for [!INCLUDE [prod_short](includes/prod_short.md)].
+> U obou možností můžete být požádáni o přihlášení k [!INCLUDE [prod_short](includes/prod_short.md)]. Vyberte odkaz k **přihlášení** a podle pokynů zadejte přihlašovací jméno a heslo pro [!INCLUDE [prod_short](includes/prod_short.md)].
 
 ## Další krok
 

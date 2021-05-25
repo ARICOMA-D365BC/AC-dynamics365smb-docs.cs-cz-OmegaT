@@ -46,7 +46,7 @@ Existují následující toky montáže.
 | Montáž-na-zakázku | Komponenty jsou potřebné na montážní zakázce, která je spojena s prodejní objednávkou, která je dodána a sestavena při zaúčtování objednávky. |
 
 > [!NOTE]  
-> Pokud je zboží sestaveno na objednávku, poté vyskladnění řádku propojených s prodejní objednávkou spustí pohyb zásob pro všechny komponenty montáže, nejen pro prodané zboží.
+> If items are assembled to order, then the inventory pick of the linked sales order triggers an inventory movement for all the involved assembly components, not just for the sold item as when shipping inventory items.
 
 The **To-Assembly Bin Code**, **From-Assembly Bin Code**, and **Asm.-to-Order Shpt. Bin Code** fields on the location card define default flows to and from assembly areas.
 
@@ -76,7 +76,7 @@ The main integration between assembly orders and advanced warehouse activities i
 I když pro zaskladování položek montáže neexistují žádné specifické funkce skladu, kód přihrádky v hlavičce objednávky montáže může být nastaven na výchozí přihrádku, který je nastavena pro vyskladnění. Zaúčtování montážní zakázky pak funguje jako účtování vyskladnění. The warehouse activity to move assembly items into the warehouse can be managed on the **Movement Worksheet** page or the **Whse. Internal Put-away** page, with no relation to the assembly order.
 
 > [!NOTE]  
-> Pokud je zboží smontováno na zakázku, potom skladová dodávka propojené prodejní objednávky aktivuje výběr vyskladnění pro všechny komponenty montáže, nejen pro prodanou položku, jako při klasické expedici zboží.
+> If items are assembled to order, then the warehouse shipment of the linked sales order triggers a warehouse pick for all the involved assembly components, not just for the sold item as when shipping inventory items.
 
 The **To-Assembly Bin Code** and **From-Assembly Bin Code** fields on the location card define default flows to and from assembly areas.
 
@@ -102,7 +102,7 @@ Následující kroky popisují související akce různých uživatelů a odpov�
 5. Pracovník skladu zapíše vyskladnění. Množství se odečte z přihrádek pro vyskladnění a přidá se do přihrádky spotřeby. **Množství Picked** field on the component list for all picked items is updated.
 
    > [!NOTE]  
-   > Spotřebovat lze pouze vyskladněné množství.
+   > Only the quantity that is picked can be consumed.
 
 6. Obsluha stroje informuje vedoucího výroby, že koncové zboží je hotovo.
 7. The shop floor supervisor uses the consumption journal or production journal to post the consumption of component items that use either **Manual** flushing method or **Forward** or **Pick + Forward** flushing methods together with routing link codes.

@@ -122,7 +122,7 @@ Také některé funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] vyžad
 - U Teams v prohlížeči a Teams pro iOS nebo Android můžete zkontrolovat nebo upravit oprávnění z nastavení prohlížeče nebo zařízení.
 
 > [!NOTE]
-> Exactly which [!INCLUDE [prod_short.md](includes/prod_short.md)] features prompt you for permissions depends on the add-on apps and customizations applied to the [!INCLUDE [prod_short.md](includes/prod_short.md)] environment that you connect to.
+> Přesně ty funkce [!INCLUDE [prod_short.md](includes/prod_short.md)], které vás vyzývají k povolení závisí na doplňkových aplikacích a přizpůsobeních použitých v prostředí [!INCLUDE [prod_short.md](includes/prod_short.md)], ke kterému se připojujete.
 
 ### Kde se mohu dozvědět o svém soukromí?
 
@@ -277,48 +277,48 @@ Ne.  Zatímco všichni v chatu nebo na schůzce mohou zobrazit samotnou kartu, o
 
 ### Můžu Teams hovor zahájit z okna podrobností?
 
-Ano. Pokud používáte desktopovou aplikaci Teams, začněte hovor výběrem propojeného čísla v poli telefonního čísla jako je pole **Mobil** na kartě **Kontaktu**. Teams must be your designated dialing app.
+Ano. Pokud používáte desktopovou aplikaci Teams, začněte hovor výběrem propojeného čísla v poli telefonního čísla jako je pole **Mobil** na kartě **Kontaktu**. Teams musí být Vaše výchozí aplikaci pro volání.
 
-To call local or international landlines and mobile phones, Teams requires that you have a Business Voice license for enterprise calling. Also, you must set up Teams as your call solution. To learn more, see [Plan your Teams voice solution](/microsoftteams/cloud-voice-landing-page) in the Teams documentation.
+Pro volání na místní nebo mezinárodní pevné linky a mobilní telefony teams vyžaduje, abyste měli licenci Business Voice pro podnikové volání. Navíc musíte mít nastaveny Teams jako řešení pro volání. Pro více informací navštivte [Plánování hlasového řešení v Teams](/microsoftteams/cloud-voice-landing-page) v dokumetaci Teams.
 
-### Can I print documents from the details window in Teams?
+### Můžu tisknout doklady z okna podrobností v Teams?
 
-Ano. You print reports and other documents using standard [!INCLUDE [prod_short.md](includes/prod_short.md)] printing functionality and any cloud-enabled printer configured in the **Printer Management** page in [!INCLUDE [prod_short.md](includes/prod_short.md)]. You can't print from Teams to local printers known to your client device, such as printers that you'd typically print to from your browser. For this reason, you can't print from the report preview window, but only from the main report request page, directly to your cloud printers.
+Ano. Sestavy a další doklady tisknete pomocí standardní funkce pro tisk v [!INCLUDE [prod_short.md](includes/prod_short.md)] a libovolné cloudové tiskárny nakonfigurované na stránce **Správa tiskáren** v [!INCLUDE [prod_short.md](includes/prod_short.md)]. Z Teams nemůžete tisknout na místních tiskárnách známých vašemu klientskému zařízení, například na tiskárny, na které byste obvykle tiskli z vašeho prohlížeče. Z tohoto důvodu nemůžete tisknout z okna náhledu sestavy, ale pouze ze stránky požadavku na sestavu, přímo do cloudových tiskáren.
 
-For more information about setting up cloud printers, see [Set Up Printers](ui-specify-printer-selection-reports.md).
+Pro více informací o cloudovém tisku navštivte [Nastavení tiskáren](ui-specify-printer-selection-reports.md).
 
-### Can I access the camera from the details window in Teams?
+### Můžu ke kameře přistupovat z okna podrobností v Teams?
 
-Ano. Any [!INCLUDE [prod_short.md](includes/prod_short.md)] features in the details window that use the camera are available on all Teams clients.
+Ano. Veškeré funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] v okně podrobností, které používají kameru, jsou k dispozici všem klientům Teams.
 
-### <a name="location"></a>Can I access my location from the details window in Teams?
+### <a name="location"></a>Mohu získat přístup ke své poloze z okna podrobností v Teams?
 
-If you’re using functionality in [!INCLUDE [prod_short.md](includes/prod_short.md)] that accesses your current location coordinates, such as with maps, you must use Teams in the browser or the Teams mobile app. Location isn't available when using the Teams desktop app.
+Pokud používáte funkce v [!INCLUDE [prod_short.md](includes/prod_short.md)], které přistupují k vašim aktuálním souřadnicím polohy, například s mapami, musíte teams používat v prohlížeči nebo v mobilní aplikaci Teams. Poloha není k dispozici při použití desktopové aplikace Teams.
 
-## [Collaborating with guests](#tab/collaborating)
+## [Spolupráce s hosty](#tab/collaborating)
 
-### Can I share cards with users outside my organization?
+### Mohu sdílet karty s uživateli mimo organizaci?
 
-Ano. When you compose and send a message that includes a card, all recipients in the chat will see the card&mdash;even if they're guests or external to your organization. Guests can also open the details window if they've been granted permissions to access that data in [!INCLUDE [prod_short.md](includes/prod_short.md)].
+Ano. Když vytvoříte a odešlete zprávu, která obsahuje kartu, všichni příjemci v chatu uvidí kartu, i když jsou hosty nebo jsou pro vaší organizaci externí. Hosté mohou také otevřít okno s podrobnostmi, pokud jim byla udělena oprávnění pro přístup k těmto datům v [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
-### Is the experience any different for users that are guests?
+### Liší se prostředí pro uživatele, kteří jsou hosty?
 
-Ano. Inviting guest users from outside your organization to participate in chat or a channel gives them a similar, but not identical experience compared to users within your organization. When a guest receives a message that includes a card, they can view it. Guests can also open the details window if they have been granted permissions to access that data in [!INCLUDE [prod_short.md](includes/prod_short.md)] and assigned a [!INCLUDE [prod_short.md](includes/prod_short.md)] license within your organization. When a guest composes a message, links to their [!INCLUDE [prod_short.md](includes/prod_short.md)] or yours won't expand into cards.
+Ano. Pozvání uživatelů typu host ze zemí mimo vaši organizaci k účasti na chatu nebo kanálu jim poskytuje podobné, ale ne totožné prostředí ve srovnání s uživateli ve vaší organizaci. Když host obdrží zprávu, která obsahuje kartu, může ji zobrazit. Hosté mohou také otevřít okno podrobností, pokud jim byla udělena oprávnění k přístupu k těmto údajům v [!INCLUDE [prod_short.md](includes/prod_short.md)] a přiřadit [!INCLUDE [prod_short.md](includes/prod_short.md)] v rámci vaší organizace Když host napíše zprávu, odkazy na jeho [!INCLUDE [prod_short.md](includes/prod_short.md)] nebo vaše se nerozbalí na karty.
 
-To learn about other similarities and differences between guests and team members, see [Guest experience in Teams](/MicrosoftTeams/guest-experience) in the Teams documentation.
+Další podobnosti a rozdíly mezi hosty a členy týmu najdete v tématu [Zkušenosti hostů v Teams](/MicrosoftTeams/guest-experience) v dokumentaci Teams.
 
-### How does a guest user install the [!INCLUDE [prod_short.md](includes/prod_short.md)] app?
+### Jak si hostující uživatel nainstaluje aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)]?
 
-Guests don't have access to the app marketplace to install apps themselves. However, the app can be automatically installed for them based on your organization’s policies. Another way for a guest user to install the [!INCLUDE [prod_short.md](includes/prod_short.md)] app is when they receive a chat message that includes a [!INCLUDE [prod_short.md](includes/prod_short.md)] card. In this case, the user chooses the **Details** button or the menu on the card, then installs the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for use with your organization. After installing the app, a user doesn't automatically receive any permissions to access data from your [!INCLUDE [prod_short.md](includes/prod_short.md)].
+Hosté nemají přístup k tržišti aplikací, aby si mohli instalovat aplikace sami. Aplikaci však lze pro ně automaticky nainstalovat na základě zásad vaší organizace. Další způsob, jak může uživatel typu host nainstalovat aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] je, když obdrží chatovou zprávu, která obsahuje kartu [!INCLUDE [prod_short.md](includes/prod_short.md)] card. V tomto případě uživatel zvolí tlačítko **Podrobnosti** nebo nabídku na kartě a poté nainstaluje aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro použití s vaší organizací. Po instalaci aplikace uživatel automaticky neobdrží žádná oprávnění pro přístup k datům z vašeho [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
 ---
 
 ## Viz také
 
-[[!INCLUDE [prod_short](includes/prod_short.md)] and Microsoft Teams Integration Overview](across-teams-overview.md)  
-[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
-[Troubleshooting Teams](admin-teams-troubleshooting.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Přehled integrace [!INCLUDE [prod_short](includes/prod_short.md)] a Microsoft Teams](across-teams-overview.md)  
+[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
+[Řešení problémů Teamss](admin-teams-troubleshooting.md)  
+[Vývoj pro integraci Teamsn](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[d365fin](includes/free_trial_md.md)]
 

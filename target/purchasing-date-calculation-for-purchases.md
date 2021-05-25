@@ -31,7 +31,7 @@ If there is a requested receipt date on the purchase order line, then that date 
 If you entered a requested receipt date on the purchase order header, then that date is copied to the corresponding field on all the lines. You can change this date on any of the lines, or you can remove the date on the line.
 
 > [!NOTE]
-> If your process is based on backward calculation, for example, if you use the requested receipt date to get the order date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. Více informací o datových vzorcích viz [Práce s daty a časy kalendáře](ui-enter-date-ranges.md).
+> If your process is based on backward calculation, for example, if you use the requested receipt date to get the order date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
 
 ## Calculating without a requested delivery date
 
