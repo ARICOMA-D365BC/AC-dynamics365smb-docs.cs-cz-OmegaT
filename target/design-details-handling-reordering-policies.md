@@ -97,7 +97,7 @@ Koncept intervalu dostupnosti odráží manuální proces kontroly úrovně zás
 ## Pobyt pod úrovní přetečení
 Při použití Maximálního množství a způsob Pevného přiobj.množ., systém plánování se zaměřuje pouze na předpokládané zásoby v daném časovém intervalu. To znamená, že plánovací systém může navrhnout nadbytečnou nabídku, když dojde k negativní poptávce nebo pozitivní změny nabídky mimo daný časový interval. Pokud je z tohoto důvodu navržena nadbytečná dodávka, plánovací systém vypočítá, na jaké množství by měla být dodávka snížena (nebo zrušena), aby se zabránilo nadbytečné nabídce. Tomuto množství se říká „úroveň přetečení“. Přetečení je sděleno jako plánovací řádek s akci **Změnit množství. (Úbytek)** nebo **Zrušit** na následující varovné zprávě:
 
-*Upozornění: Předpokládané zásoby [xx] jsou větší než úroveň přetečení[xx] v den splatnosti [xx].*
+*Attention: The projected inventory [xx] is higher than the overflow level [xx] on the Due Date [xx].*
 
 ![Úroveň přetečení zásob](media/supplyplanning_2_overflow1_new.png "Úroveň přetečení zásob")
 
@@ -108,13 +108,13 @@ Při použití Maximálního množství a způsob Pevného přiobj.množ., syst�
 Úroveň přetečení = Maximální zásoby
 
 > [!NOTE]  
-> Pokud existuje minimální množství objednávky, bude přidáno následovně: Úroveň přetečení = Maximální zásoba + Minimální množství objednávky.
+> If a minimum order quantity exists, then it will be added as follows: Overflow level = Maximum Inventory + Minimum Order Quantity.
 
 #### Pevné přiobj.množ. způsob přiobjednání
 Úroveň přetečení = Množství přiobjednání + Bod přiobjednání
 
 > [!NOTE]  
-> Pokud je minimální objednané množství vyšší než bod přiobjednávání, nahradí se pak takto: Úroveň přetečení = Množství přiobjednání + Minimální množství objednávky
+> If the minimum order quantity is higher than the reorder point, then it will replace as follows: Overflow Level = Reorder Quantity + Minimum Order Quantity
 
 #### Násobek objednávky
 Pokud existuje násobek objednávky, pak upraví úroveň přetečení pro obě maximální množství a způsob Pevného přiobj.množ., způsobu přiobjednávání.
@@ -125,8 +125,8 @@ Když existující nabídka způsobí, že předpokládané zásoby budou na kon
 #### Výpočet množství řádku plánování
 Množství řádku plánování = Současné množství nabídky – (Předpokládané zásoby – Úroveň přetečení)
 
-> <x1 />! POZNÁMKA <x2 /> <x3 />
-> Stejně jako u všech varovných řádků bude jakékoli maximální / minimální množství objednávky nebo násobek objednávky ignorováno.
+> [!NOTE]  
+> As with all warning lines, any maximum/minimum order quantity or order multiple will be ignored.
 
 #### Definování typu hlášení akce
 
@@ -178,7 +178,7 @@ Jeden řádek plánování (upozornění) je vytvořen pro snížení nákupu z 
 ![Plán podle úrovně přetečení](media/nav_app_supply_planning_2_overflow2.png "Plán podle úrovně přetečení")
 
 > [!NOTE]  
-> Bez funkce Přetečení se nevytvoří žádné varování, pokud je úroveň plánované zásoby vyšší než maximální inventář. To by mohlo způsobit nadbytečnou zásobu 30.
+> Without the Overflow feature, no warning is created if the projected inventory level is above maximum inventory. To by mohlo způsobit nadbytečnou zásobu 30.
 
 ## Zpracování předpokládaných negativních zásob
 Bod přiobjednání vyjadřuje očekávanou poptávku během doby realizace zboží. Když je předán bod přiobjednávání, je čas objednat více. Předpokládané zásoby však musí být dostatečně velké, aby pokryly poptávku, dokud nebude přijata nová objednávka. Mezitím by se měly pojistné zásoby postarat o výkyvy v poptávce až na cílenou úroveň služeb.
@@ -206,7 +206,7 @@ Na následujícím obrázku nabídka D představuje nouzový příkaz k úpravě
 9. Závěrečná kontrola: Neexistují žádné nevyřízené upomínky na úrovni zásob.
 
 > [!NOTE]  
-> Krok 4 odráží, jak systém reaguje ve verzích starších než Microsoft Dynamics NAV 2009 SP1.
+> Step 4 reflects how the system reacts in versions earlier than Microsoft Dynamics NAV 2009 SP1.
 
 Tím se uzavírá popis hlavních zásad týkajících se plánování zásob na základě způsobu přiobjednání. Následující část popisuje vlastnosti čtyř podporovaných zásad způsobu přiobjednání.
 

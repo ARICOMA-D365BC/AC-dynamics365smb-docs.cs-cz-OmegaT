@@ -107,7 +107,7 @@ The following are examples of how Send As and Send on Behalf are used in [!INCLU
 * Když vaše workflow odešle žádost o schválení e-mailem pomocí e-mailové adresy žadatele.
 
 > [!Note]
-> Adresy odesílatelů můžete nahradit pouze jedním účtem. To znamená, že nemůžete mít jednu náhradní adresu pro nákupní procesy a jinou pro prodejní procesy.
+> You can only use one account to substitute sender addresses. To znamená, že nemůžete mít jednu náhradní adresu pro nákupní procesy a jinou pro prodejní procesy.
 
 ### Nastavení náhradní adresy odesílatele pro všechny odchozí e-mailové zprávy
 1. In the **Exchange admin center** for your Microsoft 365 account, find the mailbox to use as the substitute address, and then copy or make a note of the address. Pokud potřebujete novou adresu, přejděte do Centra pro správu Microsoftu 365 a vytvořte nového uživatele a nastavte jeho poštovní schránku.

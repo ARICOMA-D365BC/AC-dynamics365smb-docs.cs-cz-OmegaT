@@ -122,7 +122,7 @@ Také některé funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] vyžad
 - U Teams v prohlížeči a Teams pro iOS nebo Android můžete zkontrolovat nebo upravit oprávnění z nastavení prohlížeče nebo zařízení.
 
 > [!NOTE]
-> Exactly which [!INCLUDE [prod_short.md](includes/prod_short.md)] features prompt you for permissions depends on the add-on apps and customizations applied to the [!INCLUDE [prod_short.md](includes/prod_short.md)] environment that you connect to.
+> Přesně ty funkce [!INCLUDE [prod_short.md](includes/prod_short.md)], které vás vyzývají k povolení závisí na doplňkových aplikacích a přizpůsobeních použitých v prostředí [!INCLUDE [prod_short.md](includes/prod_short.md)], ke kterému se připojujete.
 
 ### Kde se mohu dozvědět o svém soukromí?
 

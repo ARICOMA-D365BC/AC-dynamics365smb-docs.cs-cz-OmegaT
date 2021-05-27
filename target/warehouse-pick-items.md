@@ -20,7 +20,7 @@ Aktivita skladu vyskladnění zboží před jeho dodáním nebo spotřebou se pr
 Pokud se rozhodnete uspořádat a zaznamenat svou aktivitu vyskladnění pomocí dokladů skladu, zaškrtnete políčko **Vyžadovat vyskladnění** na kartě lokace. To naznačuje, že když máte zboží, které je třeba vyskladnit pro odchozí zdrojový doklad, chcete, aby vyskladnění tohoto zboží bylo řízené systémem. Výstupním původním dokladem může být prodejní objednávka, objednávka nákupní vratky, výstupní objednávka transferu, servisní zakázka nebo výrobní zakázka, jejíž komponenty by měly být vyskladněny.
 
 > [!NOTE]
-> I když se toto nastavení nazývá **Vyžadovat vyskladnění**, stále můžete odesílat zásilky přímo z původního obchodního dokladu na místo, kde toto políčko zaškrtnete.
+> Even though the setting is called **Require Pick**, you can still post shipments directly from the source business document at location where you select this check box.
 
 Pokud je vaša lokace nastavena tak, aby vyžadovala zpracování vyskladnění, ale nikoli zpracování zásilky, můžete pomocí stránky **Vyskladnění zásob** uspořádat informace o vyskladnění, vytisknout informace o vyskladnění, zadat výsledek vyskladnění a odeslat informace o vyskladnění, pomocí kterých následně zaúčtujete zásilku zboží. V případě vyskladnění komponent pro výrobní zakázku zaúčtování vyskladnění také zaúčtuje spotřebu.
 

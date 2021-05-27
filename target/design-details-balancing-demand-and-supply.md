@@ -81,7 +81,7 @@ Plán dodávek musí být vypočítán pro kombinaci dimenzí položky, jako je 
 Plánovací systém to řídí spuštěním profilu zásob Když je nalezena nová kombinace, aplikace vytvoří záznam interního řízení přístupu, který obsahuje skutečné informace o kombinaci. Aplikace vloží SKJ jako řídící záznam nebo vnější smyčku. Ve výsledku jsou nastaveny správné plánovací parametry podle kombinace varianty a umístění a aplikace může pokračovat do vnitřní smyčky.
 
 > [!NOTE]  
-> Aplikace nevyžaduje, aby uživatel zadával záznam SKJ při zadávání poptávky, nebo nabídky pro konkrétní kombinaci varianty a lokací. Proto pokud skladová položka neexistuje pro danou kombinaci, aplikace vytvoří vlastní dočasný záznam SKJ na základě dat karty zboží. Pokud je na stránce Nastavení zásob nastaveno Lokace nutná na Ano, pak musí být vytvořena SKJ nebo pole Komponenty na lokaci nastaveno na Ano. Pro více informací navštivte [Detaily návrhu: Poptávka v prázdném skladu](design-details-demand-at-blank-location.md).
+> The application does not require the user to enter a SKU record when entering demand and/or supply for a particular combination of variant and location. Proto pokud skladová položka neexistuje pro danou kombinaci, aplikace vytvoří vlastní dočasný záznam SKJ na základě dat karty zboží. Pokud je na stránce Nastavení zásob nastaveno Lokace nutná na Ano, pak musí být vytvořena SKJ nebo pole Komponenty na lokaci nastaveno na Ano. For more information, see [Design Details: Demand at Blank Location](design-details-demand-at-blank-location.md).
 
 ### Načítání sériových čísel a čísel šarží podle úrovně zadání
 Atributy ve formě sériových čísel a čísel šarží jsou načteny do profilů zásob spolu s poptávkou a nabídkou, ke které jsou přiřazeny.
@@ -89,7 +89,7 @@ Atributy ve formě sériových čísel a čísel šarží jsou načteny do profi
 Atributy poptávky a nabídky jsou seřazeny podle priority objednávky a úrovně jejich specifikace. Vzhledem k tomu, že shody sériových čísel a čísel šarže odrážejí úroveň specifikace, bude konkrétnější poptávka, například číslo šarže vybraná speciálně pro řádek prodeje, hledat shodu před méně specifickou poptávkou, například prodej z libovolného vybraného čísla šarže.
 
 > [!NOTE]  
-> Pro sériové čísla a čísla šarží poptávky a nabídky neexistují žádná speciální pravidla upřednostňování, kromě úrovně specifikace definované jejich kombinací sériových čísel a čísel šarží a nastavení sledování položek u příslušných položek.
+> There are no dedicated prioritization rules for serial/lot-numbered demand and supply, other than the level of specification defined by their combinations of serial and lot numbers and the item tracking setup of the involved items.
 
 Během vyrovnávání považuje plánovací systém dodávku, která nese sériová čísla nebo čísla šarží, za nepružnou a nebude se pokoušet tyto objednávky na objednávku zvýšit nebo přeplánovat (pokud nejsou použity ve vztahu mezi zakázka na zakázku). Viz Propojení zakázky na zakázku není nikdy zrušeno). To chrání dodávky z přijímání několika, možná konfliktních, zpráv akcí při dodání, když nese různé atributy – například kolekce různých sériových čísel.
 
@@ -105,10 +105,10 @@ Poptávka a nabídka zakázky na zakázku se musí přesně vyvážit. Systém p
 Toto vyvažování také ovlivňuje časování. Omezený horizont, který je dán intervalem dostupnosti, se nebere v potaz; pokud se změní načasování poptávky, bude nabídka přeplánována. Doba prodlevy však bude respektována a zabrání naplánování dodávek zakázek na zakázku, s výjimkou interních dodávek víceúrovňové výrobní zakázky (projektová objednávka).
 
 > [!NOTE]  
-> Sériová čísla a čísla šarží lze také určit na základě poptávky zakázky na zakázku. V takovém případě není dodávka standardně považována za nepružnou, jako je tomu obvykle u sériových čísel a čísel šarží. V tomto případě se systém bude zvyšovat a snižovat podle změn v poptávce. Kromě toho, pokud jedna poptávka nese různá sériová čísla, nebo čísla šarží, například více než jedno číslo šarže, bude pak navržena jedna objednávka dodávky na šarži.
+> Serial/lot numbers can also be specified on order-to-order demand. V takovém případě není dodávka standardně považována za nepružnou, jako je tomu obvykle u sériových čísel a čísel šarží. V tomto případě se systém bude zvyšovat a snižovat podle změn v poptávce. Kromě toho, pokud jedna poptávka nese různá sériová čísla, nebo čísla šarží, například více než jedno číslo šarže, bude pak navržena jedna objednávka dodávky na šarži.
 
 > [!NOTE]  
-> Prognózy by neměly vést k vytváření objednávek na dodávky, které jsou vázány odkazem zakázky na zakázku. Pokud se použije prognóza, měla by se použít pouze jako generátor závislé poptávky ve výrobním prostředí.
+> Forecasts should not lead to creating supply orders that are bound by an order-to-order link. Pokud se použije prognóza, měla by se použít pouze jako generátor závislé poptávky ve výrobním prostředí.
 
 ### Potřeba komponenty je načtena podle změn výrobní zakázky
 Při zpracování výrobních zakázek musí plánovací systém, před jejich načtením do profilu poptávky, sledovat potřebné součásti. Řádky komponent, které jsou výsledkem pozměněné výrobní zakázky, nahradí řádky původní objednávky. Tím je zajištěno, že systém plánování stanoví, že řádky plánování pro potřebu komponenty nejsou nikdy duplikovány.
@@ -151,7 +151,7 @@ Načtená poptávka a nabídka přispívají k předpokládanému profilu zásob
 9. Prognóza (která ještě nebyla spotřebována jinými prodejními objednávkami)
 
 > [!NOTE]  
-> Výnosy z nákupu obvykle nejsou zahrnuty do plánování dodávek; vždy by si měli být vyhrazeni ze šarže, která se má vrátit. Pokud nejsou rezervovány, tak nákupní vratky hrají roli v dostupnosti a jsou vysoce upřednostňovány, aby se zabránilo tomu, že plánovací systém navrhne objednávku dodávky, aby sloužila jako nákupní vratka.
+> Purchase returns are usually not involved in supply planning; they should always be reserved from the lot that is going to be returned. Pokud nejsou rezervovány, tak nákupní vratky hrají roli v dostupnosti a jsou vysoce upřednostňovány, aby se zabránilo tomu, že plánovací systém navrhne objednávku dodávky, aby sloužila jako nákupní vratka.
 
 ### Priority na straně nabídky
 1. Již v zásobách: Položky zboží (Pružnost plánování = Žádná)
@@ -221,17 +221,17 @@ Obecně platí, že všechny dodávky mají pružnost plánování, která je om
    - Leží mimo stránku přeplánování definovanou časovým segmentem.
 
 > [!NOTE]  
-> Při plánování položky pomocí bodu přiobjednání lze v případě potřeby vždy naplánovat objednávku dodávky. To je běžné u dopředu naplánovaných objednávek dodávek spuštěných bodem přiobjednání.
+> When planning an item using a reorder point, the supply order can always be scheduled in if necessary. To je běžné u dopředu naplánovaných objednávek dodávek spuštěných bodem přiobjednání.
 
 - **Zvýšit množství**: Množství existující objednávky může být zvýšeno, aby byla uspokojována poptávka, pokud není objednávka dodávky přímo spojena s poptávkou propojením objednávky na objednávku.
 
 > [!NOTE]  
-> I když je možné zvýšit objednávku dodávky, může být omezena kvůli definovanému maximálnímu množství objednávky.
+> Even though it is possible to increase the supply order, it may be limited due to a defined maximum order quantity.
 
 - **Snížení množství**: Existující objednávka dodávky s přebytkem ve srovnání se stávající poptávkou může být snížena, aby uspokojila poptávku.
 
 > [!NOTE]  
-> I když je možné množství snížit, stále může existovat určitý přebytek ve srovnání s poptávkou kvůli definovanému minimálnímu množství objednávky nebo násobku objednávky.
+> Even though the quantity could be decreased, there may still be some surplus compared to the demand due to a defined minimum order quantity or order multiple.
 
 - **Zrušení**: Jako speciální událost akce snížení množství může být objednávka dodávky zrušena, pokud byla snížena na nulu.
 - **Nový**: Pokud již neexistuje žádná objednávka na dodávku nebo nelze stávající změnit, aby splňovala potřebné množství v požadovaném termínu splatnosti, je navržena nová objednávka na dodávku.
@@ -262,7 +262,7 @@ V průběhu času se odkazy na dynamické sledování objednávek nevyrovnají, 
 Před vyrovnáním nabídky podle poptávky aplikace odstraní všechna existující propojení sledování objednávek. Pak během postupu vyrovnávání, když je uzavřena událost poptávky nebo nabídky, vytvoří nové propojení sledování objednávek mezi poptávkou a nabídkou.
 
 > [!NOTE]  
-> I když položka není nastavena pro dynamické sledování objednávek, plánovaný systém vytvoří vyvážené odkazy pro sledování objednávek, jak je vysvětleno výše.
+> Even if the item is not set up for dynamic order tracking, the planned system will create balanced order tracking links as explained above.
 ## Uzavření poptávky a nabídky
 Po provedení postupů vyvážení dodávek existují tři možné koncové situace:
 

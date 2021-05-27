@@ -18,7 +18,7 @@ Před zaúčtováním zálohových faktur musíte nastavit účty v hlavní kniz
 Můžete definovat procento částky řádku, která bude fakturována za zálohu pro zákazníka nebo dodavatele, pro všechno zboží nebo vybrané zboží. Po dokončení nastavení můžete vygenerovat zálohové faktury z prodejních a nákupních objednávek. Můžete použít výchozí procenta pro každý prodejní nebo nákupní řádek nebo můžete podle potřeby změnit částky na faktuře. Můžete například určit celkovou částku za celou objednávku.
 
 > [!NOTE]
-> Doporučujeme nepoužívat procento zálohy ve výši 100 % v následujících případech:
+> We recommend that you do not use a prepayment percentage of 100% in the following cases:
 > * Pokud se nacházíte v Severní Americe. Vzhledem k tomu, jak se daně počítají, může procento zálohy ve výši 100 % vést k problémům s fakturami za platbu předem.
 > * Ve všech oblastech, pokud ručně odečtete skonto z faktury. Procento zálohy ve výši 100 % automaticky nezanechá částku, ze které lze slevu odečíst.
 
@@ -35,7 +35,7 @@ Vzhledem k tomu, že předplacená částka patří kupujícímu, dokud neobdrž
    - **Nákupní  účet záloh**
 
 > [!TIP]
-> Pokud pole na stránce **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
+> If you cannot see the fields in the **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
 
 If you have not already set up general ledger accounts for prepayments, you can open the **G/L Account List** page from the relevant account field.
 

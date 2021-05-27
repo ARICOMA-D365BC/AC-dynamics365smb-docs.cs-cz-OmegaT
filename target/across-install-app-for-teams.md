@@ -53,11 +53,11 @@ Tato možnost je nejrychlejší způsob instalace aplikace.
 5. Vyberte **Přidat**.
 
 > [!NOTE]
-> With either option, You may be asked to sign in to [!INCLUDE [prod_short](includes/prod_short.md)]. Select the **sign in** link, and follow the instructions to enter sign-in name and password for [!INCLUDE [prod_short](includes/prod_short.md)].
+> U obou možností můžete být požádáni o přihlášení k [!INCLUDE [prod_short](includes/prod_short.md)]. Vyberte odkaz k **přihlášení** a podle pokynů zadejte přihlašovací jméno a heslo pro [!INCLUDE [prod_short](includes/prod_short.md)].
 
 ## Další krok
 
-You're now ready to use the app in Teams to search for contacts or share Business Central records. For more information, see [Searching for Customers, Vendors, and Other Contacts from Microsoft Teams](across-search-contacts-teams.md) or [Share Records in Microsoft Teams](across-working-with-teams.md).
+Teď jste připraveni použít aplikaci v Teams k vyhledávání kontaktů nebo sdílení záznamů Business Central. Pro více informací navštivte [Hledání zákazníků, dodavatelů a dalších kontaktů v Microsoft Teams](across-search-contacts-teams.md) nebo [Sdílení záznamů v Microsoft Teams](across-working-with-teams.md).
 
 ## Viz také
 

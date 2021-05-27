@@ -30,7 +30,8 @@ U nákupních i prodejních dokladů můžete poplatek za zboží přiřadit dv�
 - V dokladu, kde je uvedeno zboží, ke kterému se poplatek za zboží vztahuje. To obvykle děláte pro doklady, které ještě nejsou plně zaúčtovány.
 - Na samostatné faktuře propojením poplatku za zboží se zaúčtovanou příjemkou nebo dodávkou, kde je uvedeno zboží, ke kterému se poplatek za zboží vztahuje.
 
-> K objednávkám, fakturám a dobropisům můžete přiřadit poplatky za zboží a to jak pro prodej, tak i pro nákup. Následující postupy popisují, jak pracovat s poplatky za zboží v nákupní faktuře. Kroky jsou podobné pro všechny ostatní nákupní a prodejní doklady.
+> [!NOTE]  
+> You can assign item charges to orders, invoices, and credit memos, for both sales and purchases. Následující postupy popisují, jak pracovat s poplatky za zboží v nákupní faktuře. Kroky jsou podobné pro všechny ostatní nákupní a prodejní doklady.
 
 ## Příklad
 Toto video ukazuje, jak zpracovat dodatečné náklady na dopravu v rámci nákladů zásob.

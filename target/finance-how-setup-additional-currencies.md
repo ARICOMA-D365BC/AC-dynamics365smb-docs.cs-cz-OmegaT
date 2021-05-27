@@ -20,8 +20,8 @@ Vzhledem k tomu, že společnosti působí ve stále více zemích nebo oblastec
 
 Finance jsou nastaveny tak, aby používaly lokální měnu (LM), ale můžete je nastavit tak, aby používaly i jinou měnu s přiřazeným aktuálním směnným kurzem. By designating a second currency as a so-called additional reporting currency, [!INCLUDE[prod_short](includes/prod_short.md)] will automatically record amounts in both LCY and this additional reporting currency on each G/L entry and other entries, such as VAT entries.
 
-> [!WARNING]
-> Funkce doplňkové měny vykazování by neměla být použita jako základ pro účetní závěrky. Nejedná se o nástroj, který může provádět převody zahraničních dceřiných účetních závěrek v rámci konsolidace společnosti. Přídavnou měnu pro hlášení lze použít pouze k přípravě sestav v jiné měně, jako by tato měna byla lokální měnou společnosti.
+> [!Warning]
+> The Additional Reporting Currency functionality should not be used as a basis for financial statement translation. Nejedná se o nástroj, který může provádět převody zahraničních dceřiných účetních závěrek v rámci konsolidace společnosti. Přídavnou měnu pro hlášení lze použít pouze k přípravě sestav v jiné měně, jako by tato měna byla lokální měnou společnosti.
 
 ## Zobrazení sestav a částek v přídavné měně
 Použití přídavné měny pro hlášení může pomoci procesu vykazování pro společnost v následujících případech:
