@@ -13,7 +13,7 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Setting Up Data Exchange
+# Nastavení výměny dat
 Before you can send and receive electronic documents or import and export bank files, you must set up the data exchange framework to process the involved files. In addition, you must set up related areas, such as the customers that you send electronic invoices to, or the AMC Banking 365 Fundamentals extension if you use the external service provider to convert your bank files. For more information, see [Exchanging Data Electronically](across-data-exchange.md).
 
 When [!INCLUDE[prod_short](includes/prod_short.md)] is set up to exchange data with external files, users can use the setup in common business tasks, such as sending and receiving electronic documents and importing and exporting bank files.

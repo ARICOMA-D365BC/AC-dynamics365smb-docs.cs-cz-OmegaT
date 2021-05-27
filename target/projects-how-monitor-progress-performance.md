@@ -32,7 +32,7 @@ Chcete-li zobrazit výsledek jinou metodou, můžete metodu změnit a znovu vypo
 Můžete vytvořit projekt s nedokončenou výrobou, který bude odrážet potřeby Vaší společnosti. Po vytvoření můžete nastavit nedokončenou výrobu jako výchozí metodu kalkulace projektu, která bude použita ve Vaší společnosti.
 
 > [!NOTE]
-> After you have used your new method to create WIP entries, you cannot delete the method or modify it.
+> Jakmile použijete novou metodu nedokončené výroby na položky, není možné tuto metodu smazat nebo měnit.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Methods**, and then choose the related link.
 2. Choose the **New** action, and then fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
@@ -56,7 +56,7 @@ Můžete určit částku nedokončené výroby, která má být zaúčtována na
 4. Zvolte tlačítko **OK**.
 
 > [!NOTE]  
-> The batch job only calculates the WIP. Nejedná se o účtování. To do so, you must run the **Post WIP to G/L** batch job when you have calculated the WIP. Další informace naleznete v následujícím postupu.
+> Úloha počítá pouze nedokončenou výrobu. Nejedná se o účtování. To do so, you must run the **Post WIP to G/L** batch job when you have calculated the WIP. Další informace naleznete v následujícím postupu.
 
 ## Účtování Nedokončené výroby
 Když jste vypočítali nedokončenou výrobu, můžete jí zaúčtovat na rozvahové účty pro vykazování konce období. You use the **Job Post WIP to G/L** batch job to do this.

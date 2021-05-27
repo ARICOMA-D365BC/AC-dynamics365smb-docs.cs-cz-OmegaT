@@ -57,7 +57,7 @@ Následující diagram znázorňuje výstupní toky ze skladu podle typu dokladu
 Pokud je uživatel, který je zodpovědný za zdrojové doklady, například zpracovatel prodejních objednávek nebo plánovač výroby, připraven na výstupního aktivitu skladu, vydá zdrojový doklad, aby dal pracovníkům skladu signál, že prodané zboží nebo komponenty lze vyskladní a umístit do zadaných přihrádek. Alternativně uživatel vytvoří doklady vyskladnění nebo přesunu zásob pro jednotlivé řádky objednávky nabízeným způsobem na základě zadaných přihrádek a množství, která mají být zpracovávána.
 
 > [!NOTE]  
-> Inventory movements are used to move items to internal operation areas in basic warehouse configurations, based on source documents or on an ad hoc basis.
+> Pohyby zásob se používají k přesunu zboží do interních provozních oblastí v základním nastavení skladu na základě zdrojových dokladů nebo na základě ad hoc přesunutí.
 
 ### 2: Vytvoření odchozího požadavku
 

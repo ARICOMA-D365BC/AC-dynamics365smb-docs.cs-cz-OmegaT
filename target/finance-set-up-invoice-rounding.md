@@ -17,7 +17,7 @@
 Pokud potřebujete při vytváření faktur zaokrouhlit částky faktur, můžete použít funkci automatického zaokrouhlování. Při zaokrouhlování faktury se přidá další řádek se zaokrouhlovací částkou a zaúčtuje se s ostatními řádky faktury.
 
 > [!NOTE]  
-> Local regulations or local custom may require the invoice to be rounded in a specific way, for example, to an amount divisible by 0.05.
+> Místní předpisy nebo místní zvyklosti mohou vyžadovat, aby byla faktura zaokrouhlena zvláštním způsobem, například na částku dělitelnou 0,05.
 
 Chcete-li použít automatické zaokrouhlování faktur, musíte:
 
@@ -26,7 +26,7 @@ Chcete-li použít automatické zaokrouhlování faktur, musíte:
 * Aktivujte funkci.
 
 > [!NOTE]  
-> In addition to the invoice rounding features, you can round amounts on invoices by the unit-amount rounding feature and the amount rounding feature.
+> Kromě funkcí zaokrouhlování faktur můžete zaokrouhlit částky na fakturách pomocí funkce zaokrouhlení jednotkové ceny a funkce zaokrouhlování částky.
 
 ## Nastavení účtů hlavní knihy pro rozdíly zaokrouhlení faktur
 Chcete-li použít funkci automatického zaokrouhlování faktur, musíte nastavit účet hlavní knihy nebo účty, na kterých budou zaúčtovány rozdíly zaokrouhlování. Než to budete moci provést, musíte nastavit DPH účto skupiny zboží. For more information, see [Set up VAT](finance-setup-vat.md).

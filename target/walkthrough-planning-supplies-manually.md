@@ -109,7 +109,7 @@ V tomto postupu vytvoříte nákupní objednávku pro potřebné výrobní kompo
    Pokud pole není vyplněno, zobrazí se při pokusu o vytvoření zásobovacích objednávek chybová zpráva.
 
    > [!NOTE]  
-   > If the components have a default vendor number set up on the item cards, the lines will be preset.
+   > Pokud mají komponenty na kartách položek nastaveno výchozí číslo dodavatele, budou řádky přednastaveny.
 
 6. Vyberte pole **Dodávka od**.
 7. Na stránce **Katalog dodavatelů zboží** vyberte akci **Nový** a poté vyberte dodavatele **30000**.
@@ -138,13 +138,13 @@ V tomto postupu naplánujte poptávku z prodejní objednávky. Řádky poptávky
    Zobrazí se definovaný doplňovací systém zboží a výchozího prodejce.
 
    > [!NOTE]  
-   > At the bottom of the page, there are four information fields. In the **Earliest Date Available** field, the ten pieces that are needed will be available, on an inbound supply order, nine days later than the current due date. If this is too late for the customer, the **Available for Transfer** field shows 13 pieces of the item at another location. Tuto akci budete chtít naplánovat.
+   > Ve spodní části stránky jsou čtyři informační pole. V poli **Nejbližší dostupné datum** bude k dispozici deset kusů, které jsou potřeba, u příchozí objednávky dodávky, o devět dní později než aktuální datum splatnosti. Pokud je pro zákazníka příliš pozdě, pole **K dispozici pro transfer** zobrazuje 13 kusů zboží na jiné lokaci. Tuto akci budete chtít naplánovat.
 
 3. Vyberte pole **K dispozici pro transfer** a otevřete stránku **Získat alternativní dodávku**.
 4. Kliknutím na tlačítko **OK** zarezervujete deset dostupných položek.
 
    > [!NOTE]  
-   > In the demand line, the suggested purchase has been exchanged with a transfer from MAIN location. The **Make Orders** function creates a transfer order from MAIN to the demanded location. The **Substitutes Exists** field works in the same way.
+   > V řádku poptávky byl navržený nákup vyměněn s převodem z HLAVNÍ lokace. Funkce **Vytvořit objednávky** vytvoří převodní příkaz z HLAVNÍ do požadované lokace. Pole **Existuje náhrada** funguje stejným způsobem.
 
 5. Vyberte akci **Vytvořit objednávky**. Otevře se stránka **Vytvořit objednávky dodávek**.
 6. Na záložce **Plánování objednávek** vyberte v poli **Vytvořit objednávky pro** možnost **Aktivní objednávka**.

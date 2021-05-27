@@ -49,7 +49,6 @@ If you're already using [!INCLUDE[prod_short](includes/prod_short.md)] and have 
 > If you have customizations that rely on the legacy SMTP email setup, there is a chance that something will go wrong with your customizations if you start using email extensions. We recommend that you set up and test the extensions before you turn on the feature switch for enhanced email capabilities.
 
 > [!IMPORTANT]
-> If you are using [!INCLUDE[prod_short](includes/prod_short.md)] online, you cannot use the OAuth 2.0 authentication method.<br>
 > If you are using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you can use the OAuth 2.0 for authentication but you must create an application registration in the Azure portal, and then run the **Set up Azure Active Directory** assisted setup guide in [!INCLUDE[prod_short](includes/prod_short.md)] to connect to Azure AD. For more information, see [Create an App Registration for Business Central in Azure Portal](admin-how-setup-email.md#create-an-app-registration-for-business-central-in-azure-portal).
 
 ## Add Email Accounts
@@ -108,7 +107,7 @@ The following are examples of how Send As and Send on Behalf are used in [!INCLU
 * Když vaše workflow odešle žádost o schválení e-mailem pomocí e-mailové adresy žadatele.
 
 > [!Note]
-> You can only use one account to substitute sender addresses. To znamená, že nemůžete mít jednu náhradní adresu pro nákupní procesy a jinou pro prodejní procesy.
+> Adresy odesílatelů můžete nahradit pouze jedním účtem. To znamená, že nemůžete mít jednu náhradní adresu pro nákupní procesy a jinou pro prodejní procesy.
 
 ### Nastavení náhradní adresy odesílatele pro všechny odchozí e-mailové zprávy
 1. In the **Exchange admin center** for your Microsoft 365 account, find the mailbox to use as the substitute address, and then copy or make a note of the address. Pokud potřebujete novou adresu, přejděte do Centra pro správu Microsoftu 365 a vytvořte nového uživatele a nastavte jeho poštovní schránku.

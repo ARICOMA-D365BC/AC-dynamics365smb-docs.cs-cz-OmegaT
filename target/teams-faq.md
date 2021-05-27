@@ -8,7 +8,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365, collaborate, collaboration, teamwork, faq, errors
-ms.date: 04/12/2021
+ms.date: 05/19/2021
 ms.author: jswymer
 ---
 # Teams Nejčastěji pokládané otázky a odpovědi
@@ -122,7 +122,7 @@ Také některé funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] vyžad
 - U Teams v prohlížeči a Teams pro iOS nebo Android můžete zkontrolovat nebo upravit oprávnění z nastavení prohlížeče nebo zařízení.
 
 > [!NOTE]
-> Přesně ty funkce [!INCLUDE [prod_short.md](includes/prod_short.md)], které vás vyzývají k povolení závisí na doplňkových aplikacích a přizpůsobeních použitých v prostředí [!INCLUDE [prod_short.md](includes/prod_short.md)], ke kterému se připojujete.
+> Exactly which [!INCLUDE [prod_short.md](includes/prod_short.md)] features prompt you for permissions depends on the add-on apps and customizations applied to the [!INCLUDE [prod_short.md](includes/prod_short.md)] environment that you connect to.
 
 ### Kde se mohu dozvědět o svém soukromí?
 
@@ -149,6 +149,8 @@ Při hledání kontaktů z aplikace [!INCLUDE [prod_short.md](includes/prod_shor
 ### Ve kterých polích v tabulce kontaktů mohu vyhledávat?
 
 Při psaní hledaných výrazů do vyhledávacího pole jsou termíny porovnány s většinou polí v tabulce **Kontaktů**. Mezi tato pole patří například pole **Číslo**, **Jméno**, **Adresa**, **Telefonní číslo**, **Mobil**, a **Email**.
+
+Search terms aren't matched against any custom fields added to the **Contacts** table by apps and extensions.
 
 ### Zahrnují výsledky vyhledávání společnosti a osoby?
 

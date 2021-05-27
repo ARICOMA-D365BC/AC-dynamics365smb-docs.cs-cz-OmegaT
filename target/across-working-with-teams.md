@@ -1,5 +1,5 @@
 ---
-title: Working with Business Central Data in Microsoft Teams| Microsoft Docs
+title: Sharing Business Central Records in Microsoft Teams
 description: Learn how to use the Business Central app for Microsoft Teams.
 author: jswymer
 ms.service: dynamics365-business-central
@@ -7,16 +7,16 @@ ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365, collaborate, collaboration, teamwork
-ms.date: 04/01/2021
+ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365, collaborate, collaboration, teamwork, share records
+ms.date: 05/19/2021
 ms.author: jswymer
 ---
 
-# Práce s daty Business Central Data v Microsoft Teams
+# Sharing Business Central Records in Microsoft Teams
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-[!INCLUDE [prod_short](includes/prod_short.md)] nabízí aplikaci, která propojuje Microsoft Teams s vašimi obchodními daty v  [!INCLUDE [prod_short](includes/prod_short.md)], abyste mohli rychle sdílet podrobnosti mezi členy týmu a rychleji reagovat na dotazy. V tomto článku se naučíte, jak pomocí aplikace sdílet data [!INCLUDE [prod_short](includes/prod_short.md)] se spolupracovníky v konverzaci Teams.
+[!INCLUDE [prod_short](includes/prod_short.md)] nabízí aplikaci, která propojuje Microsoft Teams s vašimi obchodními daty v  [!INCLUDE [prod_short](includes/prod_short.md)], abyste mohli rychle sdílet podrobnosti mezi členy týmu a rychleji reagovat na dotazy. In this article, you'll learn how to use the app to share [!INCLUDE [prod_short](includes/prod_short.md)] records, like a customer, sales order, or invoice, with coworkers in a Teams conversation.
 
 ## Přehled
 
@@ -33,7 +33,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 - Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)
 
 > [!NOTE]
-> Všichni účastníci konverzace v Teams si budou moci prohlédnout karty záznamů Business Central, které do konverzace odešlete. Chcete-li zobrazit více podrobností o záznamech pomocí **Detaily** nebo **Vyskakovacího okna** na katě, musíte mít přístup do [!INCLUDE [prod_short](includes/prod_short.md)]. Pro více informací navštivte [Správa integrace Microsoft Teams](admin-teams-integration.md#minimum-requirements-1).
+> All participants in a Teams conversation will be able to view cards for Business Central records that you submit to the conversation. But to view more details about records, by using the **Details** or **Pop out** buttons on a card, they'll need access to [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Managing Microsoft Teams Integration](admin-teams-integration.md#minimum-requirements-1).
 
 ## Zahrnutí karty Business Central do konverzace Teams
 
@@ -54,7 +54,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 6. Při prvním vložení odkazu do konverzace budete požádáni, abyste se přihlásili k [!INCLUDE [prod_short](includes/prod_short.md)] a udělili aplikaci souhlas k načtení dat. Postupujte podle pokynů na obrazovce.
 
    > [!NOTE]
-   > Tento krok budete muset udělat pouze jednou.
+   > You'll only have to do this step once.
 
 7. Chvilku počkejte, než se karta vygeneruje v okně se zprávou.
 
@@ -63,7 +63,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 9. Pokud karta vypadá dobře, pomocí **Odeslat** ji přidáte do konverzace.
 
    > [!TIP]
-   > Jakmile se karta objeví a před tím, než zvolíte **Send** můžete smazat URL, které jste vložili.
+   > After the card appears, and before you select **Send**, you can delete the pasted URL if you like.
 
 10. Chcete-li zobrazit další podrobnosti nebo provést změny záznamu zobrazeném na kartě, vyberte možnost **Podrobnosti**. Další informace naleznete v následující části.
 

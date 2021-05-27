@@ -19,7 +19,7 @@ If you require your customers to submit payment before you ship an order to them
 
 You can start the prepayment process when you create a sales or purchase order. If you have a default prepayment percentage for this customer or vendor, that will be included automatically in the resulting prepayment invoice. You can also specify a prepayment percentage to the entire document.
 
-After you create a sales or purchase order, you can create a prepayment invoice. You can use the default percentages for each sales or purchase line, or you can adjust the amount as necessary. For example, you can specify a total amount for the entire order.
+After you create a sales or purchase order, you can create a prepayment invoice. You can use the default percentages for each sales or purchase line, or you can adjust the amount as necessary. Můžete například určit celkovou částku za celou objednávku.
 
 The following procedure describes how to invoice a prepayment for a sales order. The steps are similar for purchase orders.
 

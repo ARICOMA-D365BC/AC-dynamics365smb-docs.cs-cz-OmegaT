@@ -30,7 +30,7 @@ Po přiřazení služby přepravce k řádku prodejní objednávky bude doba dod
 4. Na stránce **Služby přepravce**, vyplňte pole podle potřeby.
 
 > [!NOTE]  
-> If you delete the shipping agent on the order line, the shipping agent service code is also deleted. Obsah polí, která byla částečně založena na službě přepravce, se přepočítá.
+> Pokud na řádku objednávky odstraníte přepravce, odstraní se také kód služby přepravce. Obsah polí, která byla částečně založena na službě přepravce, se přepočítá.
 
 ## Viz také
 [Nastavení způsobu přepravy](sales-how-set-up-shipment-methods.md)    

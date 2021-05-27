@@ -85,7 +85,7 @@ Marketingový manažer vytvoří segment pro výběr kontaktů, se kterými chce
    Stránka **Segment** nyní obsahuje seznam kontaktů na základě vámi zadaného filtru. Na záložce **Obecné** v poli **Počet  řádků** můžete na první pohled vidět počet kontaktů, které splňují tato kritéria.
 
    > [!NOTE]  
-   > You can save your segmentation criteria to be reused at a later stage.
+   > Kritéria segmentace můžete uložit, abyste je mohli později znovu použít.
 
    1. Na stránce **Segment** vyberte akci **Segment** a poté vyberte akci **Uložit kritéria**.
    2. Na stránce **Uložit kritéria segmentu** zadejte kód segmentu. Do pole **Popis** zadejte popis kritérií segmentu.
@@ -102,7 +102,7 @@ Marketingový manažer se blíže podívá na segmentovaný seznam kontaktů a u
    Stránka **Segment** nyní obsahuje omezený seznam kontaktů a v poli **Počet  řádků** můžete vidět počet kontaktů, které nyní splňují tato nová kritéria.
 
    > [!NOTE]  
-   > If you have to reverse this removal of a group of contacts, you can do this using the **Go Back** function. Jinými slovy, můžete vrátit zpět poslední segmentaci.
+   > Pokud musíte toto odebrání skupiny kontaktů zvrátit, můžete to provést pomocí funkce **Zpět**. Jinými slovy, můžete vrátit zpět poslední segmentaci.
    >
    > Na stránce **Segment** vyberte akci **Segment** a poté vyberte akci **Zpět**.
    >
@@ -126,7 +126,7 @@ Marketingový zaměstnanec pomáhá marketingovému manažerovi rozesílat budou
 3. Do pole **Předmět (výchozí)** zadejte následující ukázkový text: **Děkujeme vám za návštěvu veletrhu**.
 
    > [!NOTE]  
-   > This template consists of more than one attachment document, each of them written in a different language. Mezi příklady jazyků patří angličtina a dánština.
+   > Tato šablona se skládá z více než jednoho dokumentu přílohy, každý z nich je napsán v jiném jazyce. Mezi příklady jazyků patří angličtina a dánština.
 
 4. Vyberte pole **Kód jazyka (výchozí)** a otevřete stránku **Jazyky segmentu interakce**. Vyberte kód jazyka a poté klikněte na tlačítko **OK**.
 5. Dokument můžete zobrazit ve vybraném jazyce. Vyberte akci **Příloha** a poté vyberte akci **Otevřít**.

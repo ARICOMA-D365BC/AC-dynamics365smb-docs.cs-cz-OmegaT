@@ -18,7 +18,7 @@ ms.author: edupont
 Existují různé způsoby, jak přizpůsobit aplikaci tak, aby vám a vašim kolegům umožnila přístup k vlastnostem, funkcím a datům, které potřebujete nejvíce, a to způsobem, který nejlépe vyhovuje vaší každodenní práci. Ti, kteří vidí změny, budou záviset na vašich akcích, jak popisuje tato tabulka.
 
 > [!NOTE]
-> In addition to what administrators can customize, users can personalize their pages by adding, moving, or removing fields, freeze panes, parts, and more. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+> Kromě toho, co mohou přizpůsobit administrátoři, mohou uživatelé přizpůsobit své stránky přidáním, přesunem nebo odebráním polí, ukotvením podoken, dílů a dalších. Více informací viz [Přizpůsobení pracovního prostoru](ui-personalization-user.md).
 
 | Co můžete udělat | Popis | Kdo vidí změny | Více informací |
 |-----|---------------|---------|-------|

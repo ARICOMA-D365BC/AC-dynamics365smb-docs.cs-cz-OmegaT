@@ -18,7 +18,7 @@
 You can make a correction to an order after you have posted a prepayment invoice for the order. You can add new lines to an order after issuing a prepayment, and then you can post another prepayment invoice, but you cannot delete a line from an order after a prepayment has been invoiced for the line.
 
 > [!TIP]
-> If you have posted a prepayment invoice for a sales invoice that you then correct or cancel, you must correct or cancel the prepayment as well.
+> Pokud jste účtovali zálohovou fakturu pro prodejní fakturu, kterou poté opravíte nebo zrušíte, musíte také opravit nebo zrušit platbu předem.
 
 ## To correct a prepayment
 

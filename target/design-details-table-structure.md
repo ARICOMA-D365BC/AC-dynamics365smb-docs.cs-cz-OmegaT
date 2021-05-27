@@ -91,12 +91,12 @@ Pole 480 nelze upravovat v následujících tabulkách.
 | 113 | **Sales Invoice Line** |
 | 114 | **Sales Cr.Memo Header** |
 | 115 | **Sales Cr.Memo Line** |
-| 120 | **Purch. Rcpt. Header** |
-| 121 | **Purch. Rcpt. Line** |
-| 122 | **Purch. Zásoby Header** |
-| 123 | **Purch. Zásoby Line** |
-| 124 | **Purch. zál.  Memo Hdr.** |
-| 125 | **Purch. zál.  Memo Line** |
+| 120 | **Nákupní  Rcpt. Header** |
+| 121 | **Nákupní  Rcpt. Line** |
+| 122 | **Nákupní  Zásoby Header** |
+| 123 | **Nákupní  Zásoby Line** |
+| 124 | **Nákupní  zál.  Memo Hdr.** |
+| 125 | **Nákupní  zál.  Memo Line** |
 | 169 | **Job Ledger Entry** |
 | 203 | **Res. Ledger Entry** |
 | 271 | **Bank Account Ledger Entry** |

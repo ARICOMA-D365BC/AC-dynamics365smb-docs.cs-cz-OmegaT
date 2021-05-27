@@ -10,32 +10,32 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Prepayments
-If you require your customers to submit payment before you ship an order to them, or if your vendor requires you to submit payment before they ship an order to you, you can use the Prepayment functionality. The functionality enables you to invoice and collect deposits required from customers or to remit deposits to vendors, and to ensure that all partial payments are posted against an invoice. For more information, see [Create Prepayment Invoices](finance-how-to-create-prepayment-invoices.md).
+# Nastavení záloh
+Pokud požadujete, aby vaši zákazníci odeslali platbu před odesláním objednávky, nebo pokud váš dodavatel vyžaduje, abyste platbu odešleli před odesláním objednávky, můžete použít funkci Záloha. Tato funkce umožňuje fakturovat a vybírat zálohy požadované od zákazníků nebo převádět vklady dodavatelům a zajistit, aby všechny částečné platby byly zaúčtovány na fakturu. Pro více informací navštivte [Vytvoření zálohové faktury](finance-how-to-create-prepayment-invoices.md).
 
-Before you can post prepayment invoices, you have to set up the posting accounts in the general ledger, and you have to set up number series for prepayment documents. You must specify an account for prepayments related to sales and an account for prepayments related to purchasing. You can specify the same posting accounts to be used for all prepayments related to all general business posting groups or general product posting groups, or you can specify specific accounts for specific posting groups for sales and purchasing, respectively. This depends on your company's requirements for tracking prepayments.
+Před zaúčtováním zálohových faktur musíte nastavit účty v hlavní knize a nastavit číselné řady pro zálohové doklady. Je nutné zadat účet pro zálohy související s prodejem a účet pro zálohy související s nákupem. Můžete určit stejné účtovací účty, které se použijí pro všechny platby spojené se všemi obecnými obchodními účto skupinami nebo obecnými skupinami účtování produktů, nebo můžete určit konkrétní účty pro konkrétní účto skupiny pro prodej a nákup. To závisí na požadavcích vaší společnosti na sledování záloh.
 
-You can define the percentage of the line amount that will be invoiced for prepayment, for a customer or vendor, for all items or selected items. After you complete the setup, you can generate prepayment invoices from sales and purchase orders. You can use the default percentages for each sales or purchase line, or you can change the amounts on the invoice as needed. For example, you can specify a total amount for the entire order.
+Můžete definovat procento částky řádku, která bude fakturována za zálohu pro zákazníka nebo dodavatele, pro všechno zboží nebo vybrané zboží. Po dokončení nastavení můžete vygenerovat zálohové faktury z prodejních a nákupních objednávek. Můžete použít výchozí procenta pro každý prodejní nebo nákupní řádek nebo můžete podle potřeby změnit částky na faktuře. Můžete například určit celkovou částku za celou objednávku.
 
 > [!NOTE]
-> We recommend that you do not use a prepayment percentage of 100% in the following cases:
-> * If you are located in North America. Due to how taxes are calculated, a prepayment percentage of 100% can lead to issues with prepayment invoices.
-> * In all regions, if you manually deduct a payment discount from the invoice. A prepayment percentage of 100% will not automatically leave an amount from which to deduct the discount.
+> Doporučujeme nepoužívat procento zálohy ve výši 100 % v následujících případech:
+> * Pokud se nacházíte v Severní Americe. Vzhledem k tomu, jak se daně počítají, může procento zálohy ve výši 100 % vést k problémům s fakturami za platbu předem.
+> * Ve všech oblastech, pokud ručně odečtete skonto z faktury. Procento zálohy ve výši 100 % automaticky nezanechá částku, ze které lze slevu odečíst.
 
-Because the prepaid amount belongs to the buyer until they have received the goods or services, you need to set up general ledger accounts to hold the prepayment amounts until the final invoice is posted. Sales prepayments must be recorded in a liabilities account until the items are shipped. Purchase prepayments must be recorded in an assets account until the items are received. In addition, you must set up a separate general ledger account for each VAT identifier.
+Vzhledem k tomu, že předplacená částka patří kupujícímu, dokud neobdržel zboží nebo služby, je nutné nastavit účty hlavní knihy, aby se částky zálohy zadržovaly, dokud nebude zaúčtována konečná faktura. Platby za prodej musí být zaznamenány na účtu závazků, dokud nebudou položky odeslány. Zálohy na nákup musí být zaznamenány na účtu majetku, dokud není zboží přijato. Kromě toho je nutné pro každý identifikátor DPH nastavit samostatný účet hlavní knihy.
 
 [!INCLUDE[local-func-setup-link](includes/local-func-setup-link.md)]
 
-## To add prepayment accounts to the general posting setup
+## Přidání účtů záloh k obecnému nastavení účtování
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
-2. On the **General Posting Setup** page, fill in the following fields:
+2. Na stránce **Nastavení obecného účtování** vyplňte následující pole:
 
-   - **Sales Prepayments Account**
-   - **Purch. Prepayments Account**
+   - **Účet záloh výnosů**
+   - **Nákupní  účet záloh**
 
 > [!TIP]
-> If you cannot see the fields in the **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
+> Pokud pole na stránce **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
 
 If you have not already set up general ledger accounts for prepayments, you can open the **G/L Account List** page from the relevant account field.
 

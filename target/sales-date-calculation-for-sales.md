@@ -28,8 +28,8 @@ Pokud zadáte požadované datum dodání na řádku prodejní objednávky, stan
 
 Pokud je zboží dostupné k vyskladnění k datu dodávky, může proces prodeje pokračovat. Jinak se zobrazí varování o vyprodání zásob.
 
-> [!Note]
-> If your process is based on backward calculation, for example, if you use the requested delivery date to get the planned shipment date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
+> [!Poznámka ]
+> Pokud je váš proces založen na zpětném výpočtu, například pokud k získání plánovaného data dodávky použijete požadované datum dodání, doporučujeme vám použít datové vzorce s pevnou dobou trvání, například „5D“ pro dobu pěti dnů nebo „1W“ pro jeden týden. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. Více informací o datových vzorcích viz [Práce s daty a časy kalendáře](ui-enter-date-ranges.md).
 
 ## Výpočet nejbližšího možného data dodání
 Pokud na řádku prodejní objednávky nezadáte požadované datum dodání nebo pokud požadované datum dodání nelze splnit, vypočítá se nejbližší možné datum, kdy bude zboží k dispozici. Toto datum se poté zadá do pole Datum dodávky na řádku a datum, kdy plánujete zboží odeslat, stejně jako datum, kdy budou zákazníkovi dodány, se vypočítá podle následujících vzorců.

@@ -21,8 +21,7 @@ Koncept "Pozdní vazby" zajišťuje, že nespecifická rezervace sériového č�
 
 Nespecifická rezervace je rezervace, ve které se uživatel nestará o to, která konkrétní položka je vybrána, a konkrétní rezervace je rezervace, ve které se uživatel ví, kterou chce.
 
-> [!NOTE]  
-> The Late Binding functionality relates only to items that are set up with specific item tracking, and it applies only to reservations against inventory, not against inbound supply orders.
+> Funkce Pozdní vazba se týká pouze položek, které jsou nastaveny se sledováním konkrétního zboží a vztahuje se pouze na rezervace proti zísobám, nikoli proti příchozím objednávkám.
 
 Rezervace čísel sledování zboží spadá do dvou kategorií, jak je znázorněno v následující tabulce.
 
@@ -53,7 +52,7 @@ Vzhledem ke struktuře rezervačního systému musí systém při umistování n
 Systém ve skutečnosti stále rezervuje proti konkrétním položkám, ale pak používá mechanismus přessunutí, kdykoli je v nespecifické rezervaci specifická poptávka po šarži nebo sériovém čísle. To může být případ, kdy účtujete transakci poptávky, například prodejní objednávku, deník spotřeby nebo objednávku transferu pro sériové číslo nebo číslo šarže nebo při pokusu o konkrétní rezervaci sériového čísla nebo čísla šarže. Systém přesunuje rezervace tak, aby byla šarže nebo sériové číslo k dispozici poptávce nebo konkrétní rezervaci, čímž se do nespecifické rezervace umístí jiné číslo šarže nebo sériové číslo. Pokud zásoby mají nedostatečné množství, systém provede co největší přesunutí a zobrazí se chyba dostupnosti, pokud v době zaúčtování stále není dostatečné množství.
 
 > [!NOTE]  
-> On a nonspecific reservation the lot number or serial number field is blank in the reservation entry that points at the demand, such as the sale.
+> U nespecifické rezervace jsou pole čísla šarže nebo sériového čísla prázdné v záznamu rezervace, který ukazuje na poptávku, jako je prodej.
 
 ## Přesunutí
 Když uživatel zaúčtuje odchozí doklad po výběru nesprávného sériového čísla nebo čísla šarže, ostatní nespecifické rezervace se přesunou tak, aby odrážely skutečné sériové číslo nebo číslo šarže, které je vyskladněno. To uspokojí účtovací modul pevným vyrovnání mezi nabídkou a poptávkou.

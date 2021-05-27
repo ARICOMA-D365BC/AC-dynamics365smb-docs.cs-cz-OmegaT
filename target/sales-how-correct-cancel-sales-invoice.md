@@ -17,8 +17,8 @@ ms.author: edupont
 
 You can correct or cancel an unpaid posted sales invoice, provided that it has not been fully shipped. This is useful if you make a mistake or if the customer requests a change before the shipment is complete. In all other scenarios, we recommend that you create a corrective sales credit memo directly. For more information, see [To create a sales credit memo from a posted sales invoice](sales-how-process-sales-returns-cancellations.md#to-create-a-sales-credit-memo-from-a-posted-sales-invoice).
 
-> [!NOTE]  
-> After a posted sales invoice has been partially or fully paid, you cannot correct or cancel it from the posted sales invoice itself. Místo toho musíte ručně vytvořit dobropis prodeje, který zruší prodej a odškodní zákazníka, případně je to možné udělat objednávkou prodejní vratky. For more information, see [Process Sales Returns or Cancellations](sales-how-process-sales-returns-cancellations.md).
+> [!POZNÁMKA]  
+> Poté, co byla účtovaná prodejní faktura částečně nebo plně zaplacena, ji nemůžete opravit ani zrušit ze samotné účtované prodejní faktury. Místo toho musíte ručně vytvořit dobropis prodeje, který zruší prodej a odškodní zákazníka, případně je to možné udělat objednávkou prodejní vratky. Více informací viz [Provádění vrácení nebo zrušení prodeje](sales-how-process-sales-returns-cancellations.md).
 
 The difference between canceling or correcting a posted sales invoice that has not been paid or shipped is described in the following table.
 
@@ -30,15 +30,15 @@ The difference between canceling or correcting a posted sales invoice that has n
 Při opravě nebo zrušení zaúčtované prodejní faktury je opravný prodejní dobropis aplikován na všechny věcné a skladové položky, které byly vytvořeny při účtování původní prodejní faktury. To obrátí účtovanou prodejní fakturu ve vašich finančních záznamech a ponechá účtovaný opravný prodejní dobropis pro vaši auditní stopu.
 
 > [!TIP]
-> If you have posted a prepayment invoice for a sales invoice that you then correct or cancel, you must correct or cancel the prepayment as well. For more information, see [Correct Prepayments](finance-how-to-correct-prepayments.md).
+> Pokud jste účtovali zálohovou fakturu pro prodejní fakturu, kterou poté opravíte nebo zrušíte, musíte také opravit nebo zrušit platbu předem. Více informací viz [Oprava plateb předem](finance-how-to-correct-prepayments.md).
 
 ## Pro zrušení účtované prodejní faktury
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účtované prodejní faktury** a poté vyberte související odkaz.
 2. Vyberte účtovanou prodejní fakturu, kterou chcete zrušit.
 
-   > [!NOTE]  
-   > If the **Canceled** check box is selected, then you cannot cancel the posted sales invoice because it has already been canceled or corrected.
+   > [!POZNÁMKA]  
+   > Pokud je zaškrtnuto políčko **Zrušeno** , nelze zaúčtovanou prodejní fakturu zrušit, protože již byla zrušena nebo opravena.
 3. Na stránce **Účtovaná prodejní faktura** vyberte akci **Zrušit**.
 
    Prodejní dobropis je automaticky vytvořen a účtován pro zrušení původní účtované prodejní faktury. Pole **Zrušeno** na původní účtované prodejní faktuře se změní na **Ano**.
@@ -53,8 +53,8 @@ Pokud zrušení souvisí s částečným účtováním faktury, je původní ř�
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účtované prodejní faktury** a poté vyberte související odkaz.
 2. Vyberte účtovanou prodejní fakturu, kterou chcete opravit.
 
-   > [!NOTE]  
-   > If the **Canceled** check box is selected, then you cannot correct the posted sales invoice because it has already been corrected or canceled.
+   > [!POZNÁMKA ]  
+   > Pokud je zaškrtnuto políčko **Zrušeno** , nelze účtovanou prodejní fakturu opravit, protože již byla opravena nebo zrušena.
 3. Na stránce **Účtovaná prodejní faktura** vyberte akci **Opravit**.
 
    > [!NOTE]

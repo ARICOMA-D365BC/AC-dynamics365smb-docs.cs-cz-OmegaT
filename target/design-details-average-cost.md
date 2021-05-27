@@ -27,7 +27,7 @@ Následující tabulka popisuje dvě pole na stránce **Nastavení zásob**, kte
 | **Typ výpočtu prům.poř. ceny** | Určuje způsob výpočtu průměrných nákladů. Existují následující možnosti:<br /><br /> -   **Zboží**<br />-   **Zboží, Varianta a Lokace**<br />     S touto možností se průměrné náklady počítají pro každé zboží, pro každou lokaci a pro každou variantu zboží. To znamená, že průměrné náklady na tuto položku závisí na tom, kde je uložena a jakou variantu zboží jste vybrali, například barvu. |
 
 > [!NOTE]  
-> You can only use one average cost period and one average cost calculation type in a fiscal year.
+> Ve fiskálním roce můžete použít pouze jedno období průměrných nákladů a jeden typ výpočtu průměrných nákladů.
 >
 > Stránka **Účetní období** zobrazuje, které období průměrných nákladů a jaký typ výpočtu průměrných nákladů je v tomto období pro každé účetní období.
 
@@ -35,7 +35,7 @@ Následující tabulka popisuje dvě pole na stránce **Nastavení zásob**, kte
 Když zaúčtujete transakci pro zboží, které používá metodu průměrného výpočtu nákladů, vytvoří se položka v tabulce **Místo  zadání úpravy  průměrné ceny**. Tato položka obsahuje číslo transakce zboží, kód varianty a kód lokace. Položka také obsahuje pole **Datum ocenění**, které určuje poslední datum období průměrných nákladů, ve kterém byla transakce zaúčtována.
 
 > [!NOTE]  
-> This field should not be confused with the **Valuation Date** field in the **Value Entry** table, which shows the date when the value takes effect and is used to determine the average cost period in which the value entry belongs.
+> Toto pole by nemělo být zaměňováno s polem **Datum ocenění** v tabulce **Položka ocenění**, které zobrazuje datum, kdy hodnota nabývá účinku, a slouží k určení období průměrných nákladů, do kterého hodnota patří.
 
 Průměrné náklady transakce se vypočítají, když se upraví cena zboží. Pro více informací navštivte [Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md). Úprava nákladů používá položky v tabulce **Místo  zadání úpravy  průměrné ceny** pro určení zboží (nebo zboží, lokací a variant) pro výpočet průměrných nákladů. Pro každou položku s náklady, které nebyly upraveny, používá úprava nákladů k určení průměrných nákladů následující:
 
@@ -61,7 +61,7 @@ V následující tabulce jsou uvedeny položky zboží pro vzorovou položku s p
 | 03.02.20 | Prodej | -1 | -100,00 | 6 |
 
 > [!NOTE]  
-> Because cost adjustment has not yet occurred, the values in the **Cost Amount (Actual)** field of the inventory decreases corresponding to the inventory increases that they are applied to.
+> Protože k úpravě nákladů dosud nedošlo, hodnoty v poli **Částka nákladů (skutečná)** se snižují, což odpovídá nárůstu zásob, na který se vztahují.
 
 Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  průměrné ceny**, které se vztahují na položky ocenění vyplývající z položek zboží v předchozí tabulce.
 
@@ -100,7 +100,7 @@ V následující tabulce jsou uvedeny položky zboží pro vzorovou položku s p
 | 03.02.20 | Prodej | -1 | -100,00 | 6 |
 
 > [!NOTE]  
-> Because cost adjustment has not occurred yet, the values in the **Cost Amount (Actual)** field of the inventory decreases corresponding to the inventory increases that they are applied to.
+> Protože k úpravě nákladů ještě nedošlo, hodnoty v poli **Částka nákladů (skutečná)** se snižují, což odpovídá zvýšení zásob, na které se vztahují.
 
 Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  průměrné ceny**, které se vztahují na položky ocenění vyplývající z položek zboží v předchozí tabulce.
 
@@ -110,7 +110,7 @@ Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  pr
 | ZBOŽÍ1 | MODRÝ | 28.02.20 | Ne |
 
 > [!NOTE]  
-> The valuation date is set to the last day in the average cost period, which in this case is the last day of the month.
+> Datum ocenění je nastaveno na poslední den v období průměrných nákladů, což je v tomto případě poslední den měsíce.
 
 V následující tabulce jsou stejné položky zboží po spuštění dávkové úlohy **Adjustace nákladů položek zboží**. Průměrné náklady za měsíc se počítají a aplikují na snížení zásob.
 
@@ -151,12 +151,12 @@ Následující tabulka položek ocenění ilustruje různé scénáře.
 | 5 | 01.02.20 | Prodej | 01.03.20 | -1 | -10,00 | 3 | 5 |
 
 > [!NOTE]  
-> In entry number 5 in the preceding table, the user has entered a sales order with a posting date (02-01-20) that comes before the latest valuation date of applied value entries (03-01-20). If the corresponding value in the **Cost Amount (Actual)** field for this date (02-01-20) were used for this entry, then it would be 14.00. To by znamenalo situaci, kdy je množství na skladě nulové, ale hodnota zásob je –4,00.
+> V položce číslo 5 v předchozí tabulce uživatel zadal prodejní objednávku s datem zaúčtování (1.2.2020), které nastane před posledním datem ocenění použitých položek ocenění (1.3.2020). Pokud byla pro tuto položku použita odpovídající hodnota v poli **Částka nákladů (skutečná)** pro toto datum (1.2.2020), bude to 14,00. To by znamenalo situaci, kdy je množství na skladě nulové, ale hodnota zásob je –4,00.
 >
 > Aby se předešlo takovému nesouladu mezi hodnotou a množstvím, je datum ocenění nastaveno tak, aby se rovnalo poslednímu dni ocenění použitých položek ocenění (1.3.2020). Hodnota v poli **Částka nákladů (skutečná)** se změní na 10,00 (po přecenění), což znamená, že množství na skladě je nulové a hodnota zásob je také nulová.
 
 > [!CAUTION]  
-> Because the **Inventory Valuation** report is based on posting date, the report will reflect any quantity-value mismatches in scenarios as in the above example. For more information, see [Design Details: Inventory Valuation](design-details-inventory-valuation.md).
+> Protože sestava **Hodnota zásob** je založena na datu zaúčtování, bude tato sestava odrážet případné neshody mezi hodnotou a množstvím ve scénářích jako ve výše uvedeném příkladu. Pro více informací navštivte [Detaily návrhu: Hodnota zásob](design-details-inventory-valuation.md).
 
 Pokud je množství na skladě po zaúčtování snížení zásob menší než nula, je datum ocenění nejprve nastaveno na zúčtovací datum snížení zásob. Toto datum může být později změněno podle pravidel popsaných v poznámce dříve v této části, když se použije zvýšení zásob.
 
@@ -170,7 +170,7 @@ Jak je znázorněno v příkladech v tomto tématu, datum ocenění je definová
 - Obnovit nesprávné zaúčtování.
 
 > [!NOTE]  
-> Another reason for this flexibility is fixed application. For more information about fixed application, see [Design Details: Item Application](design-details-item-application.md).
+> Dalším důvodem této flexibility je pevné vyrovnání. Další informace o pevném vyrovnání naleznete v tématu [Detaily návrhu: Vyrovnání zboží](design-details-item-application.md).
 
 Z důvodu této flexibility může být možné, že budete muset přepočítat průměrné náklady po souvisejícím zaúčtování. Pokud například zaúčtujete zvýšení nebo snížení zásob s datem ocenění, které předchází snížení jednoho nebo více zásob. K přepočtu průměrných nákladů dojde automaticky při spuštění dávkové úlohy **Adjustace nákladů položek zboží**.
 

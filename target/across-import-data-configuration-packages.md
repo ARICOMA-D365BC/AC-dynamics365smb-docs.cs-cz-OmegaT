@@ -34,16 +34,16 @@ To import item pictures, you can use a dedicated function on the **Inventory Set
 [!INCLUDE[prod_short](includes/prod_short.md)] includes a configuration package that you can export to Excel and set up your data there. Potom můžete data importovat znovu z aplikace Excel. Balíček se skládá z 27 tabulek, včetně hlavních dat, jako jsou zákazníci, dodavatelé, zboží a obchodní vztahy, dalších základních tabulek nastavení, jako jsou způsoby expedice a tabulek transakcí, jako je prodejní hlavička a řádky.
 
 > [!NOTE]  
-> Working with configuration packages is advanced functionality, and we recommend that you contact your administrator. For more information, see [Importing Data from Legacy Accounting Software using a Configuration Package](across-import-data-configuration-packages.md).
+> Práce s konfiguračními balíčky je pokročilá funkce a doporučujeme vám kontaktovat správce. For more information, see [Importing Data from Legacy Accounting Software using a Configuration Package](across-import-data-configuration-packages.md).
 
 ## Práce s daty v Excelu
 Při exportu výchozího konfiguračního balíčku do Excelu vygenerovaný sešit obsahuje list pro každou tabulku v balíčku. Pro zjednodušení vašich úkolů můžete využít mapovací nástroje XML, které jsou zabudovány do Excelu. Můžete také použít vestavěné funkce aplikace Excel, které vám pomohou s formátováním dat a vložením dat do správné buňky. Například, přidání prázdného listu a zkopírování starších dat. Potom vytvořte vzorec aplikace Excel pro mapování dat v transformačním listu mezi poli v exportovaném listu a staršími daty zákazníků. Po namapování všech dat zkopírujte oblast dat do listu tabulky.
 
 > [!IMPORTANT]  
-> Do not change the columns in the worksheets. If they are moved, changed, or deleted, the worksheet cannot be imported into [!INCLUDE[prod_short](includes/prod_short.md)].
+> Neměňte sloupce v listech. If they are moved, changed, or deleted, the worksheet cannot be imported into [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!NOTE]
-> Fields of type Blob cannot be exported/imported using Excel.
+> Pole typu Blob nelze exportovat/importovat pomocí Excelu.
 
 ## Tabulky ve Výchozím konfiguračním balíčku
 Výchozí konfigurační balíček podporuje následující tabulky:

@@ -66,7 +66,7 @@ Po nastavení názvu účetního schématu Ken definuje každý řádek, který 
 2. Na stránce **Účetní schéma** zadejte jednotlivé řádky, jak je znázorněno v následující tabulce.
 
    > [!TIP]  
-   > Using the **Insert CF Accounts** function, you can quickly mark the cash flow accounts from the chart of cash flow accounts and copy them to account schedule lines.
+   > Pomocí funkce **Vložit účty CF** můžete rychle označit účty cashflow z tabulky účtů peněžních toků a zkopírovat je do řádků účetního schématu.
 
    | Číslo řady | Popis | Typ součtu | Součet | Typ řady | Typ částky | Zobrazení |
    |---------|--------------------------|--------------------------|----------|------------|-------------|------|
@@ -94,7 +94,7 @@ Po nastavení názvu účetního schématu Ken definuje každý řádek, který 
    | R70 | Celkové cashflow | Vzorec | R50+R60 | Pohyb | Netto částka | Ano |
 
    > [!NOTE]
-   > The row number R10 is used to capture the account totals for receivables. Číslo řádku R20 se používá k výpočtu součtu všech peněžních příjmů. Řádek číslo R30 se používá k zachycení součtu účtů za závazky. Číslo řádku R40 se používá k výpočtu součtu všech výdajů hotovosti. Číslo řádku R50 se používá k zachycení součtu přebytku hotovosti. Číslo řádku R60 se používá k zachycení penězných fondů. Číslo řádku R70 se používá k výpočtu předpokládaného cashflow.
+   > Číslo řádku R10 se používá k zachycení součtu pohledávek na účtu. Číslo řádku R20 se používá k výpočtu součtu všech peněžních příjmů. Řádek číslo R30 se používá k zachycení součtu účtů za závazky. Číslo řádku R40 se používá k výpočtu součtu všech výdajů hotovosti. Číslo řádku R50 se používá k zachycení součtu přebytku hotovosti. Číslo řádku R60 se používá k zachycení penězných fondů. Číslo řádku R70 se používá k výpočtu předpokládaného cashflow.
 
 ## Nastavení nového rozvržení sloupce
 
@@ -110,7 +110,7 @@ Než bude moci Ken vytisknout prognózu cashflow, musí vytvořit rozložení sl
 1. V okně **Názvy účetních schémat** vyberte nový název účetního schématu **Prognóza**, který jste vytvořili. Na kartě **Domů** ve skupině **Proces** zvolte **Nastavit rozložení sloupců**.
 
    > [!TIP]
-   > You can find the same action in the **Account Schedule** page if you are still editing the **Forecast** account schedule there.
+   > Stejnou akci najdete na stránce **Účetní schéma**, pokud tam stále upravujete plán účtu **Prognóza**.
 
 2. Vytvořte nové rozložení sloupce s názvem **Cashflow**.
 

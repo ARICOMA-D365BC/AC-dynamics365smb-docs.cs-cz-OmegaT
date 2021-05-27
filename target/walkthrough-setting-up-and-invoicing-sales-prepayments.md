@@ -92,7 +92,7 @@ Phyllis vyžaduje, aby všem zákazníkům byla fakturována 20% záloha za polo
    | **Všichni zákazníci** | **1100** | **20** |
 
    > [!IMPORTANT]  
-   > Depending on your country/region, you must also specify a tax group code on the **Invoicing** FastTab for items 1000 and 1100.
+   > V závislosti na vaší zemi/regionu musíte také uvést kód daňové skupiny na záložce **Fakturace** pro zboží 1000 a 1100.
 
 9. Zavřete všechny stránky.
 
@@ -134,7 +134,7 @@ Susan vytvoří zálohovou fakturu a odešle ji zákazníkovi.
    V tomto scénáři byla Susan instruována, aby navrhla celkovou zálohu 2000 za objednávku.
 
    > [!IMPORTANT]  
-   > Depending on your country/region, the following step might not apply.
+   > V závislosti na vaší zemi/regionu nemusí následující krok platit.
 10. Změňte částku v poli **Částka  řádku zálohy bez  DPH** na **2000** a potom stránku zavřete.
 11. Ověřte pole **Záloha %** na prodejních řádcích a uvidíte, že bylo přepočítáno na **40,81625**.
 
@@ -154,7 +154,7 @@ Po zadání správných hodnot zálohy na objednávce vytvoří Susan zálohovou
 1. Na stránce **Prodejní objednávka** vyberte akci **Zaúčtovat zálohovou fakturu**.
 
 > [!NOTE]  
-> Susan would select **Post and Print Prepmt. Invoice** and mail the invoice to the customer.
+> Susan by vybrala **Zaúčtovat a vytisknout zálohovou  fakturu** a fakturu by zaslala zákazníkovi.
 
 ## Vytvoření dodatečné zálohové faktury
 Následující den zákazník zavolá Susan a provede změny v objednávce. Zákazník chce dva zboží 1100. Susan znovu otevře a aktualizuje objednávku a pak vytvoří druhou zálohovou fakturu na objednávce a odešle ji zákazníkovi.
@@ -197,7 +197,7 @@ Nyní byla Arnie informována, že položky v objednávce byly odeslány a že o
 2. Vyberte akci **Dodat a fakturovat** a poté klikněte na tlačítko **OK**.
 
 > [!NOTE]  
-> Normally, the shipping department would have already posted the shipment.
+> Za normálních okolností by přepravní oddělení zásilku již zaúčtovalo.
 
 Arnie může zobrazit historii a ověřit, zda byla prodejní faktura vytvořena tak, jak bylo zamýšleno.
 

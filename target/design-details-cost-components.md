@@ -34,7 +34,7 @@ V následující tabulce jsou uvedeny různé komponenty nákladů a všechny po
 | Zaokrouhlení | zbytky způsobené způsobem výpočtu snížení hodnoty zásob. |
 
 > [!NOTE]  
-> Freight and insurance costs are item charges that can be added to an item’s cost at any time. When you run the **Adjust Cost - Item Entries** batch job, the value of any related inventory decreases are updated accordingly.
+> Náklady na dopravu a pojištění jsou poplatky za zboží, které lze kdykoli přidat k ceně zboží. When you run the **Adjust Cost - Item Entries** batch job, the value of any related inventory decreases are updated accordingly.
 
 ## Viz také
 [Design Details: Inventory Costing](design-details-inventory-costing.md)   

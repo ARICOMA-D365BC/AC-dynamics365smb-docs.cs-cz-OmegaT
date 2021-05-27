@@ -82,7 +82,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
    | Závodní rám | KS | SUROVINY | DPH19 | SUROVINY | DÁVKAVŠE |
 
    > [!NOTE]  
-   > To enter the base unit of measure, choose the **New** button, and then select **PSC** on the **Item Units of Measure** page.
+   > Chcete-li zadat základní měrnou jednotku, zvolte tlačítko **Nový** a poté na stránce **Měrné jednotky zboží** vyberte **KS**.
 
 4. Všechna ostatní pole mají přijatelná výchozí data nebo nemusí být vyplněna.
 5. Zvolte tlačítko **OK** a vytvořte první novou kartu položky, 2000.
@@ -94,7 +94,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
    | Závodní kolo | KS | OBCHOD | DPH19 | DOKONČENÉ | výr. zakázky | SČVŠE |
 
    > [!NOTE]  
-   > To enter the base unit of measure, choose the **New** button, and then select **PSC** on the **Item Units of Measure** page.
+   > Chcete-li zadat základní měrnou jednotku, zvolte tlačítko **Nový** a poté na stránce **Měrné jednotky zboží** vyberte **KS**.
 
    Dále definujte nastavení výroby položky.
 
@@ -221,7 +221,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 11. Chcete-li zadat sériové číslo, na záložce **Řádky** ve skupině **Řádek** vyberte akci **Řádky sledování zboží** a poté číslo v poli **Sériové číslo** na stránce **Řádky sledování zboží**.
 
    > [!NOTE]  
-   > Do not post the last sales order for five racing frames.
+   > Neúčtujte poslední prodejní objednávku pro pět závodních rámů.
 
    Tím je dokončena příprava dat k předvedení funkcí trasování zboží a hledání položek.
 
@@ -250,7 +250,7 @@ Od obchodního oddělení kontrolor kvality ví, že vrácené závodní kolo, p
    Kontrolér kvality nyní zjistil, které závodní rámy byly vadné, a může vyhledat poslední stopu, aby zjistil, který prodejce je dodal, konkrétně Custom Metals Incorporated.
 
    > [!NOTE]  
-   > Do not make any additional modifications to the trace result, as you will use it in the next section.
+   > Neprovádějte žádné další úpravy výsledku sledování, protože ho použijete v další části.
 
    Tím je dokončena první úloha správy vad pomocí stránky **Trasování zboží**. Kontrolor kvality musí nyní určit, zda ostatní zaúčtované dokumenty zpracovávaly závodní rámy ze ŠARŽE1.
 

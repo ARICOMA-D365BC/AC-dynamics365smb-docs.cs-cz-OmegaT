@@ -94,7 +94,7 @@ Uživatel, který je zodpovědný za koordinaci zaskladnění, načte řádky za
 Když jsou všechny doklady zaskladnění naplánovány a přiřazeny pracovníkům skladu, uživatel vygeneruje doklady zaskladnění skladu. Plně přiřazené řádky zaskladnění jsou ze **Sešitu zaskladnění** odstraněny.
 
 > [!NOTE]  
-> If the **Use Put-away Worksheet** field is not selected on the location card, then warehouse put-away documents are created directly based on posted warehouse receipts. V takovém případě je krok 7 vynechán.
+> Pokud na kartě lokace není vybráno pole **Použít sešit zaskladnění**, budou doklady zaskladnění skladu vytvořeny přímo na základě zaúčtovaných příjemek ze skladu. V takovém případě je krok 7 vynechán.
 
 ### 8: Vytvoření dokladu zaskladnění skladu
 Pracovník skladu, který provádí zaskladnění, vytvoří doklad zaskladnění na základě zaúčtované příjemky na sklad. Alternativně je vytvořen doklad zaskladnění skladu, který je přiřazen skladníkovi formou Doručit bez vyžádání.
