@@ -87,7 +87,7 @@ Nové úpravy a zaokrouhlování hodnot mají datum zaúčtování související
 Když spustíte dávkovou úlohu **Adjustace nákladů položek zboží** máte možnost spustit dávkovou úlohu pro všechno zboží nebo pouze pro určité zboží nebo kategorie.
 
 > [!NOTE]  
-> We recommend that you always run the batch job for all items and only use the filtering option to reduce the runtime of the batch job, or to fix the cost of a certain item.
+> Doporučujeme vždy spustit dávkovou úlohu pro všechno zboží a použít možnost filtrování pouze ke snížení doby běhu dávkové úlohy nebo k opravě nákladů na určitém zboží.
 
 ### Příklad
 
@@ -113,10 +113,10 @@ Následující příklad ukazuje, zda zaúčtujete nakoupené zboží jako přij
 
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------------|------------------|---------------------------------|------------|---------------|  
-| 01.01.20 | [Inventory Account] | 2130 | 10,00 | 1 |
-| 01.01.20 | [Direct Cost Applied Account] | 7291 | -10,00 | 2 |
-| 15.01.20 | [Inventory Account] | 2130 | -10,00 | 3 |
-| 15.01.20 | [COGS Account] | 7290 | 10,00 | 4 |
+| 01.01.20 | [Skladový účet] | 2130 | 10,00 | 1 |
+| 01.01.20 | [Účet vyrovnaných přímých nákladů] | 7291 | -10,00 | 2 |
+| 15.01.20 | [Skladový účet] | 2130 | -10,00 | 3 |
+| 15.01.20 | [Účet NNPZ] | 7290 | 10,00 | 4 |
 
 Později účtujete související poplatek za nákupené zboží za 2,00 CZK fakturovaný dne 10.2.2020. Spusťte dávkovou úlohu **Adjustace nákladů položek zboží** a potom spusťte dávkovou úlohu **Účtování nákladů na zboží**. Dávková úloha Adjustace nákladů odpovídajícím způsobem upraví náklady prodeje o -2,00 CZK a dávková úloha **Účtování nákladů na zboží** zaúčtuje nové položky ocenění do hlavní knihy. Výsledek je následující.
 
@@ -140,10 +140,10 @@ Později účtujete související poplatek za nákupené zboží za 2,00 CZK fak
 
 | Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
 |------------|-----------|------------------------|------|---------|  
-| 10.2.2020 | [Inventory Account] | 2130 | 2,00 | 5 |
-| 10.2.2020 | [Direct Cost Applied Account] | 7291 | -2,00 | 6 |
-| 15.01.20 | [Inventory Account] | 2130 | -2,00 | 7 |
-| 15.01.20 | [COGS Account] | 7290 | 2,00 | 8 |
+| 10.2.2020 | [Skladový účet] | 2130 | 2,00 | 5 |
+| 10.2.2020 | [Účet vyrovnaných přímých nákladů] | 7291 | -2,00 | 6 |
+| 15.01.20 | [Skladový účet] | 2130 | -2,00 | 7 |
+| 15.01.20 | [Účet NNPZ] | 7290 | 2,00 | 8 |
 
 ## Automatická adjustace nákladů
 
