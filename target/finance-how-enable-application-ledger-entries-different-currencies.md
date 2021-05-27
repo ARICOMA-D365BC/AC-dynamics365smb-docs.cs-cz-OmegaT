@@ -23,7 +23,7 @@ Stejně tak, pokud prodáváte zákazníkovi v jedné měně a obdržíte platbu
 The following procedure describes how to set this up for vendor ledger entries on the **Purchases & Payables Setup** page. The setup is similar for customer ledger entries on the **Sales & Receivables Setup** page.
 
 ## Povolení vyrovnávání položek dodavatele v různých měnách
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
 2. In the **Appln. between Currencies** field, select one of the following options.
 
 | Možnost | Popis |

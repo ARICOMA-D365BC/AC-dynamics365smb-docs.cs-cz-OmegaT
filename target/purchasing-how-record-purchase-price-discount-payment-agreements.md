@@ -86,7 +86,7 @@ When you post a purchase invoice that includes one or more discounts, you can ch
 
 Before you can do this, you must have already set up the necessary accounts for posting discount amounts in the chart of accounts. You must also check that you have entered the correct account numbers in the general posting setup in the **Purch. Line Disc. Account** and **Purch. Zásoby skonta Account** fields.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
 2. In the **Discount Posting** field, choose one of the following principles for posting discounts.
 
 | **Discount Posting Principle** | **Invoice Discount** | **Line Discount** |

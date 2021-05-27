@@ -18,7 +18,7 @@ Před zaúčtováním zálohových faktur musíte nastavit účty v hlavní kniz
 Můžete definovat procento částky řádku, která bude fakturována za zálohu pro zákazníka nebo dodavatele, pro všechno zboží nebo vybrané zboží. Po dokončení nastavení můžete vygenerovat zálohové faktury z prodejních a nákupních objednávek. Můžete použít výchozí procenta pro každý prodejní nebo nákupní řádek nebo můžete podle potřeby změnit částky na faktuře. Můžete například určit celkovou částku za celou objednávku.
 
 > [!NOTE]
-> We recommend that you do not use a prepayment percentage of 100% in the following cases:
+> Doporučujeme nepoužívat procento zálohy ve výši 100 % v následujících případech:
 > * Pokud se nacházíte v Severní Americe. Vzhledem k tomu, jak se daně počítají, může procento zálohy ve výši 100 % vést k problémům s fakturami za platbu předem.
 > * Ve všech oblastech, pokud ručně odečtete skonto z faktury. Procento zálohy ve výši 100 % automaticky nezanechá částku, ze které lze slevu odečíst.
 
@@ -35,61 +35,60 @@ Vzhledem k tomu, že předplacená částka patří kupujícímu, dokud neobdrž
    - **Nákupní  účet záloh**
 
 > [!TIP]
-> If you cannot see the fields in the **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
+> Pokud pole na stránce **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
 
-If you have not already set up general ledger accounts for prepayments, you can open the **G/L Account List** page from the relevant account field.
+Pokud jste ještě nenastavili účty hlavní knihy pro platby záloh, můžete v příslušném poli účtu otevřít stránku **Přehled účtů**.
 
-## To set up number series for prepayment documents
+## Nastavení číselných řad pro doklady záloh
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
-2. On the **Sales & Receivables Setup** page, fill in the following fields:
+2. Na stránce **Nastavení prodeje a pohledávek** vyplňte následující pole:
 
-   - **Posted Prepmt. Zásoby Nos.**
-   - **Posted Prepmt. zál.  Memo Nos.**
+   - **Čísla účtovaných  zál.  faktur**
+   - **Čísla účtovaných  zál.  dobropisů**
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
-2. On the **Purchases & Payables Setup** page, fill in the following fields:
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
+2. Na stránce **Nastavení nákupu a závazků** vyplňte následující pole:
 
-   - **Posted Prepmt. Zásoby Nos.**
-   - **Posted Prepmt. zál.  Memo Nos.**
+   - **Čísla účtovaných  zál.  faktur**
+   - **Čísla účtovaných  zál.  dobropisů**
 
 > [!NOTE]  
-> You can use the same number series for prepayment invoices and regular invoices, or you can use different number series. If you use different series, they must not overlap because there must not be any numbers that exist in both series.
+> Stejnou číselnou řadu můžete použít pro zálohové faktury a běžné faktury, nebo můžete použít různé číselné řady. Pokud používáte různé řady, nesmí se překrývat, protože v obou řadách nesmí existovat stejná čísla.
 
-## To set up prepayment percentages for items, customers, and vendors
-For an item, you can set up a default prepayment percentage for all customers, a specific customer, or a customer price group.
+## Nastavení procent záloh pro zboží, zákazníky a dodavatele
+Pro zboží můžete nastavit výchozí procento zálohy pro všechny zákazníky, konkrétního zákazníka nebo cenovou skupinu zákazníka.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
-2. Select an item, and then choose the **Prepayment Percentages** action.
-3. On the **Sales Prepayment Percentages** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyberte zboží a pak zvolte akci **Procentní části zálohy**.
+3. Na stránce **Procentní části prodejní zálohy** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-For a customer or vendor, you can set up one default prepayment percentage for all items and all types of sales lines. You enter this on the customer or vendor card.
+Pro zákazníka nebo dodavatele můžete nastavit jedno výchozí procento zálohy pro všechny zboží a všechny typy prodejních řádků. Toto zadáte na kartě zákazníka nebo dodavatele.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Open the card for a customer.
-3. Fill in the **Prepayment %** field.
-4. Repeat the steps for other customers or for vendors.
+2. Otevřete kartu pro zákazníka.
+3. Vyplňte pole **Záloha v %**.
+4. Opakujte kroky pro ostatní zákazníky nebo pro dodavatele.
 
-### To determine which prepayment percentage has first priority
+### Určení, které procento zálohy má první prioritu
 
-An order may have a prepayment percentage on the sales header, and a different percentage for the items on the lines. To determine which prepayment percentage applies to each sale line, the system looks for the prepayment percentage in the following order and will apply the first default that it finds:
+Objednávka může mít procento zálohy v prodejní hlavičce a jiné procento pro zboží na řádcích. Chcete-li určit, které procento zálohy se vztahuje na každý řádek prodeje, systém vyhledá procento zálohy v následujícím pořadí a použije první výchozí hodnotu, kterou najde:
 
-1. A prepayment percentage for the item on the line and the customer that the order is for.
-2. A prepayment percentage for the item on the line and the customer price group that the customer belongs to.
-3. A prepayment percentage for the item on the line for all customers.
-4. The prepayment percentage on the sales or purchase header.
+1. Procento zálohy za zboží na řádku a na kartě zákazníka, pro kterého je objednávka určena.
+2. Procento zálohy pro zboží na řádku a cenovou skupinu zákazníka, do které zákazník patří.
+3. Procento zálohy pro zboží na řádku pro všechny zákazníky.
+4. Procento zálohy v prodejní nebo nákupní hlavičce.
 
-In other words, the prepayment percentage on the customer card will only apply if there is no prepayment percentage set up for the item. However, if you change the contents of the **Prepayment Percentage** field on the sales or purchase header after you create the lines, the prepayment percentage on all of the lines will be updated. This makes it easy to create an order with a fixed prepayment percentage, regardless of the percentage set up on items.
+Jinými slovy, procento zálohy na kartě zákazníka se použije pouze v případě, že pro zboží není nastaveno procento zálohy. Pokud však po vytvoření řádků změníte obsah pole **Procento zálohy** v prodejní nebo nákupní hlavičce, bude procento zálohy na všech řádcích aktualizováno. To usnadňuje vytvoření objednávky s pevným procentem zálohy bez ohledu na procento nastavené na kartě zboží.
 
 ## Viz také
 
-[Invoicing Prepayments](finance-invoice-prepayments.md)  
-[Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
-[Calculate Goods and Services Tax on Prepayments in Australia](LocalFunctionality/Australia/how-to-calculate-goods-and-services-tax-on-prepayments.md)  
-[Calculate Goods and Services Tax on Prepayments in New Zealand](LocalFunctionality/NewZealand/how-to-calculate-goods-and-services-tax-on-prepayments.md)  
-[Understanding the General Ledger and the COA](finance-general-ledger.md)  
-[Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Fakturace záloh](finance-invoice-prepayments.md)    
+[Návod: Nastavení a fakturace prodejních záloh](walkthrough-setting-up-and-invoicing-sales-prepayments.md)    
+[Výpočet daně ze zboží a služeb při platbách záloh](LocalFunctionality/Australia/how-to-calculate-goods-and-services-tax-on-prepayments.md)    
+[Znalost o hlavní knize a certifikátu pravosti](finance-general-ledger.md)    
+[Finance](finance.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
