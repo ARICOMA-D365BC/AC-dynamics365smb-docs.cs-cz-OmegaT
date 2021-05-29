@@ -18,11 +18,11 @@ You can make your [!INCLUDE[prod_long](includes/prod_long.md)] data available as
 
 This article describes how to get started using Power BI Desktop to create reports that display [!INCLUDE[prod_long](includes/prod_long.md)] data.  After you create reports, you can publish them to your Power BI service, or share them with all users in your organization. Once these reports are in the Power BI service, users that are set up for it, can then view the reports in [!INCLUDE[prod_long](includes/prod_long.md)].
 
-## Get ready
+## Připravit se
 
-- Sign up for the Power BI service.
+- Zaregistrujte se ke službě Power BI.
 
-   If you haven't already signed up, go to [https://powerbi.microsoft.com](https://powerbi.microsoft.com). When you sign up, use your work email address and password.
+   IPokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
 
 - Download [Power BI Desktop](https://powerbi.microsoft.com/desktop/).
 

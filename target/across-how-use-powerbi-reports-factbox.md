@@ -94,7 +94,7 @@ If you want the background of the report to blend with the background color of t
 
 With Power BI, you can create a single report with multiple pages. However, for reports that will display with list pages, we recommend that they don't have more than one page. The Power BI FactBox will only show the first page of your report.
 
-## Fixing problems
+## Řešení problémů
 
 This section explains how to fix problems that you might run into when you try to view a Power BI report for a list page in [!INCLUDE[prod_short](includes/prod_short.md)].
 

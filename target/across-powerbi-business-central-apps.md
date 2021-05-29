@@ -11,11 +11,11 @@ ms.search.keywords: account schedule, analysis, reporting, financial report, bus
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Using the [!INCLUDE [prod_short](includes/prod_short.md)] Apps in Power BI
+# Použití [!INCLUDE [prod_short](includes/prod_short.md)] Apps v Power BI
 
-> **APPLIES TO:** [!INCLUDE [prod_long](includes/prod_long.md)] online
+> **PLATÍ PRO:** [!INCLUDE [prod_long](includes/prod_long.md)] online
 
-[!INCLUDE [prod_long](includes/prod_long.md)] publishes the following Power BI apps, which provide detailed dashboards for viewing data:
+[!INCLUDE [prod_long](includes/prod_long.md)] publikuje následující aplikace Power BI, které poskytují podrobné řídicí panely pro prohlížení dat:
 
 - [!INCLUDE [prod_long](includes/prod_long.md)] - CRM
 - [!INCLUDE [prod_long](includes/prod_long.md)] - Finance
@@ -23,147 +23,147 @@ ms.author: jswymer
 
 ## Přehled
 
-Each app includes several reports that you can drill into for data, including the following features:
+Každá aplikace obsahuje několik sestav, do kterých můžete přejít a zobrazit podrobnosti o datech, včetně následujících funkcí:
 
-- Choose any visual on the dashboard to bring up one of the underlying reports.
-- Filter the report or add fields that you want to monitor.
-- Pin a customized view to the dashboard to continue tracking.  
-   You can refresh data manually, and you can set up a refresh schedule. For more information, see [Configuring scheduled refresh](/power-bi/refresh-scheduled-refresh).
+- Můžete vybrat jakýkoli vizuální prvek na řídícím panelu a nadnést jednu ze základních sestav
+- Filtrovat sestavy nebo přidat pole, které chcete sledovat.
+- Chcete-li pokračovat ve sledování, připněte na řídicí panel přizpůsobené zobrazení.   
+   Data můžete aktualizovat ručně a můžete nastavit plán obnovy. Pro více informací navštivte [Konfigurace naplánované aktualizace](/power-bi/refresh-scheduled-refresh).
 
-The apps are designed to work with data from any company in [!INCLUDE[prod_short](includes/prod_short.md)]. When you install the Power BI app, you specify one or more parameters to connect to your [!INCLUDE [prod_short](includes/prod_short.md)].
+Aplikace jsou navrženy tak, aby pracovaly s daty od jakékoli společnosti v [!INCLUDE[prod_short](includes/prod_short.md)]. Když nainstalujete aplikaci Power BI, zadejte jeden nebo více parametrů pro připojení k [!INCLUDE [prod_short](includes/prod_short.md)].
 
 > [!NOTE]
-> You can also build your own reports and dashboards in Power BI based on your [!INCLUDE[prod_short](includes/prod_short.md)] data. For more information, see [Connecting Your Business Data to Power BI](across-how-use-financials-data-source-powerbi.md).
+> Můžete si také vytvořit vlastní sestavy a řídicí panely v Power BI na základě vašich dat [!INCLUDE[prod_short](includes/prod_short.md)]. Pro více informací navštivte [Připojení obchodních dat k Power BI](across-how-use-financials-data-source-powerbi.md).
 
 ## Předpoklady
 
-Power BI apps require permissions to the tables where data is retrieved from and the web services used to retrieve data. The following table lists the web services required for each Power BI app:
+Aplikace Power BI vyžadují oprávnění k tabulkám, ze kterých se načítají data, a k webovým službám používaným k načítání dat. V následující tabulce jsou uvedeny webové služby požadované pro každou aplikaci Power BI:
 
-| App | Web services |
+| Aplikace | Webové služby |
 |----|-------------|
-| [!INCLUDE[prod_short](includes/prod_short.md)] – CRM | <ul><li>Sales Opportunities</li><li>Excel Template View Company Information</li><li>Power BI Report Labels</li></ul> |
-| [!INCLUDE[prod_short](includes/prod_short.md)] – Finance | <ul><li>PowerBIFinance</li><li>Excel Template View Company Information</li><li>Power BI Report Labels</li></ul> |
-| [!INCLUDE[prod_short](includes/prod_short.md)] – Sales | <ul><li>Item Sales by Customer</li><li>Sales Dashboard</li><li>Excel Template View Company Information</li><li>Power BI Report Labels</li></ul> |
+| [!INCLUDE[prod_short](includes/prod_short.md)] – CRM | <ul><li>Prodejní příležitosti</li><li>Informace o společnosti v šabloně aplikace Excel</li><li>Popisky sestavy Power BI</li></ul> |
+| [!INCLUDE[prod_short](includes/prod_short.md)] – Finance | <ul><li>PowerBIFinance</li><li>Informace o společnosti v šabloně aplikace Excel</li><li>Popisky sestavy Power BI</li></ul> |
+| [!INCLUDE[prod_short](includes/prod_short.md)] – Prodej | <ul><li>Prodej zboží podle Zákazníka</li><li>Řídicí panel prodeje</li><li>Informace o společnosti v šabloně aplikace Excel</li><li>Popisky sestavy Power BI</li></ul> |
 
 > [!TIP]
-> An easy way to find the web services is to search for *web services* in [!INCLUDE[prod_short](includes/prod_short.md)]. In the **Web Services** page, make sure that the **Publish** field is selected for the web services listed above. For more information, see [Publishing a Web Service](across-how-publish-web-service.md).
+> Snadný způsob, jak najít webové služby, je vyhledat *Webové služby* v [!INCLUDE[prod_short](includes/prod_short.md)]. Na stránce **Webové služby** zkontrolujte, zda je pro výše uvedené webové služby vybráno pole **Publikovat**. Pro více informací navštivte [Publikování webové služby](across-how-publish-web-service.md).
 
-## Get ready
+## Připravit se
 
-Sign up for the Power BI service. If you haven't already signed up, go to [https://powerbi.microsoft.com](https://powerbi.microsoft.com). When you sign up, use your work email address and password.
+Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
 
-## Install a [!INCLUDE[prod_short](includes/prod_short.md)] app in Power BI
+## Nainstalujte si aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] v Power BI
 
-1. Open your browser, navigate to [https://powerbi.microsoft.com](https://powerbi.microsoft.com), and sign into your account.
-2. Select **Get Data** at the bottom of the left navigation pane.
+1. Otevřete prohlížeč, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com) a přihlaste se ke svému účtu.
+2. V dolní části levého navigačního podokna vyberte možnost **Získat data**.
 
-   ![Navigating to Get Data](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-get-data.png)
+   ![Navigace k získání dat](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-get-data.png)
 
-   You can also get starting from within [!INCLUDE [prod_short](includes/prod_short.md)]. From your Home page, navigate to **Report Selection** in the Power BI section. Select either **Service** or **My Organization** from the ribbon. Either the Organization gallery in Power BI or Microsoft AppSource opens, filtered to only display apps related to [!INCLUDE[prod_short](includes/prod_short.md)].
+   Můžete také začít od [!INCLUDE [prod_short](includes/prod_short.md)]. Na domovské stránce přejděte na **Výběr sestavy** v sekci Power BI. Z pásu karet vyberte buď **Služba** nebo **Moje organizace**. Otevře se galerie Organizace v Power BI nebo Microsoft AppSource, filtrovaná tak, aby zobrazovala jenom aplikace související s [!INCLUDE[prod_short](includes/prod_short.md)].
 
-3. In the **Services** box, select **Get**.
+3. V poli **Služby** vyberte **Získat**.
 
-   This step opens the **Power BI Apps** page, which lets you browse for Power BI app available in **AppSource**.
+   Tento krok otevře stránku **Aplikace Power BI**, která vám umožní procházet aplikaci Power BI dostupnou v **AppSource**.
 
-4. In the **Search** box, enter **Dynamics 365 Business Central**.
-5. Select app that you want to use, select **Get it now**, and then **Install**.
+4. Do pole **Hledat** zadejte **Dynamics 365 Business Central**.
+5. Vyberte aplikaci, kterou chcete použít, vyberte **Získat teď** a poté **Instalovat**.
 
-   When completed, the app will be available from **Apps** on the navigation menu in Power BI.
+   Po dokončení bude aplikace dostupná z **Aplikace** v navigační nabídce v Power BI.
 
-## Connect the [!INCLUDE[prod_short](includes/prod_short.md)] app to your data
+## Připojte ke svým datům aplikaci  [!INCLUDE[prod_short](includes/prod_short.md)]
 
-1. Under **Apps**, select the Business Central app, then **Connect**.
-2. When prompted, fill in the **Company Name** and **Environment** with information about the [!INCLUDE[prod_short](includes/prod_short.md)] instance that you want to connect to.
+1. V části **Aplikace** vyberte aplikaci Business Central a poté **Připojit**.
+2. Po zobrazení výzvy vyplňte **Název společnosti** a **Prostředí** informacemi o instanci [!INCLUDE[prod_short](includes/prod_short.md)], ke které se chcete připojit.
 
-   - For **Company Name**, make sure to use the full name, not the display name. You can find the company name in the **Companies** page in [!INCLUDE[prod_short](includes/prod_short.md)].
-   - For **Environment**, if you haven't created multiple environments, enter **Production**.
+   - Pro **Název společnosti** nezapomeňte použít celé jméno, nikoli zobrazované jméno. Název společnosti najdete na stránce **Společnosti** v [!INCLUDE[prod_short](includes/prod_short.md)].
+   - Pokud jste pro **Prostředí** nevytvořili více prostředí, zadejte **Produkce**.
 
-3. Select **Next**.
-4. Select **Sign-in**.
-5. When prompted, enter the user name and password for signing into [!INCLUDE[prod_short](includes/prod_short.md)].
-6. Once connected, a dashboard and reports are added to your Power BI workspace. When completed, the tiles show data from your [!INCLUDE[prod_short](includes/prod_short.md)] company.
+3. Vyberte **Další**.
+4. Vyberte **Přihlásit se**.
+5. Po zobrazení výzvy zadejte uživatelské jméno a heslo pro přihlášení do [!INCLUDE[prod_short](includes/prod_short.md)].
+6. Po připojení se do vašeho pracovního prostoru, Power BI přidá řídicí panel a sestavy. Po dokončení se zobrazí data z vaší společnosti [!INCLUDE[prod_short](includes/prod_short.md)].
 
-   ![Select Dynamics 365 Business Central  and select Get it now](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-workspace-dashboard-report-dataset.png)
+   ![Zvolte Dynamics 365 Business Central a vyberte Získat nyní](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-workspace-dashboard-report-dataset.png)
 
-## Fixing problems
+## Řešení problémů
 
-The Power BI dashboard relies on the published web services that are listed above. It shows data from the demonstration company or your own company if you import data from your current finance solution. However, if something goes wrong, this section provides a workaround for the most typical issues.
+Řídicí panel Power BI závisí na publikovaných webových službách, které jsou uvedeny výše. Zobrazuje data z demonstrační společnosti nebo vaší vlastní společnosti, pokud importujete data z aktuálního finančního řešení. Pokud se však něco pokazí, tato část poskytuje řešení pro nejtypičtější problémy.
 
-### You don't have a Power BI account
+### Nemáte účet Power BI
 
-A Power BI account hasn't been set up. You must have a license to get a valid Power BI account. Also, you must have previously signed into Power BI to create your Power BI workspace.
+Účet Power BI nebyl nastaven. Abyste získali platný účet Power BI, musíte mít licenci. Musíte mít dříve přihlášení k Power BI, abyste pak mohli vytvořit svůj pracovní prostor Power BI.
 
-### Message: There are no enabled reports. Choose Select Report to see a list of reports that you can display.
+### Zpráva: Nejsou povoleny žádné sestavy. Zvolte Vybrat sestavu, chcete-li zobrazit seznam sestav, které můžete zobrazit.
 
-This message appears if the default report failed to deploy to your Power BI workspace. Or the report deployed but didn't successfully refresh. If this problem happens, navigate to the report in your Power BI workspace, select **Dataset**, **Settings**, and then manually update the credentials. Once the dataset successfully refreshes, navigate back to [!INCLUDE[prod_short](includes/prod_short.md)] and manually select the report from the **Select Reports** page.
+Tato zpráva se zobrazí, pokud se výchozí sestavě nepodařilo nasadit do vašeho pracovního prostoru Power BI. Nebo se zpráva nasadila, ale nebyla úspěšně aktualizována. Pokud k tomuto problému dojde, přejděte do sestavy v pracovním prostoru Power BI, vyberte **Sada dat**, **Nastavení** a pak ručně aktualizujte přihlašovací údaje. Jakmile se datová sada úspěšně aktualizuje, přejděte zpět na [!INCLUDE[prod_short](includes/prod_short.md)] a ručně vyberte sestavu ze stránky **Vyberte sestavy**.
 
-### You need a Power BI Pro license to install the [!INCLUDE[prod_short](includes/prod_short.md)] app in Power BI
+### K instalaci aplikace [!INCLUDE[prod_short](includes/prod_short.md)] v Power BI potřebujete licenci Power BI Pro
 
-You need a [Power BI Pro license](/power-bi/service-features-license-type) to share your content, and the people you share it with do too. The content must be in a workspace in a [Premium capacity](/power-bi/service-premium-what-is). For more information, see [Ways to share your work in Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports).
+Ke sdílení vašeho obsahu potřebujete licenci [Power BI Pro](/power-bi/service-features-license-type) a lidé, se kterou tento obsah sdílíte, licenci potřebují také. Obsah musí být v pracovním prostoru s [kapacitou Premium](/power-bi/service-premium-what-is). Pro více informací navštivte [Způsoby sdílení práce v Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports).
 
-### "Parameter validation failed, please make sure all parameters are valid"
+### "Ověření parametrů se nezdařilo, zkontrolujte, zda jsou všechny parametry platné“
 
-This error indicates that one more of the parameters aren't valid.
+Tato chyba označuje, že jeden z parametrů není platný.
 
-- The specified environment parameter doesn't match any existing [!INCLUDE[prod_short](includes/prod_short.md)] production or sandbox environment.
-- The specified company parameter doesn't match any existing [!INCLUDE[prod_short](includes/prod_short.md)] companies. Verify the company name in the **Companies** page in [!INCLUDE[prod_short](includes/prod_short.md)].
-- If connecting to [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you entered a URL that isn't valid. You can verify the URL in the **Web Services** page in [!INCLUDE[prod_short](includes/prod_short.md)]
-- A port isn't open to allow the request through your firewall.
+- Zadaný parametr prostředí neodpovídá žádnému existujícímu produkčnímu nebo sandboxovému prostředí [!INCLUDE[prod_short](includes/prod_short.md)].
+- Zadaný parametr společnosti neodpovídá žádným existujícím společnostem [!INCLUDE[prod_short](includes/prod_short.md)]. Ověřte název společnosti na stránce **Společnosti** v [!INCLUDE[prod_short](includes/prod_short.md)].
+- Pokud se připojujete k [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, zadali jste adresu URL, která není platná. Adresu URL můžete ověřit na stránce **Webové služby** v [!INCLUDE[prod_short](includes/prod_short.md)]
+- Není otevřen port, který by umožňoval požadavek prostřednictvím brány firewall.
 
-### Can't sign in
+### Nelze se přihlásit
 
-If you get a "login failed" error after using your [!INCLUDE[prod_short](includes/prod_short.md)] user credentials to sign in, then you're probably experiencing one of the following issues:
+Pokud se po použití přihlašovacích údajů uživatele [!INCLUDE[prod_short](includes/prod_short.md)] zobrazí chyba „přihlášení se nezdařilo“, pravděpodobně dochází k jednomu z následujících problémů:
 
-- The account that you're using doesn't have permissions to retrieve the [!INCLUDE[prod_short](includes/prod_short.md)] data from your account. Verify that you have permissions to the required data in [!INCLUDE[prod_short](includes/prod_short.md)] and try again.
-- You've selected an authentication type other than Basic, if connecting to [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.
-- You haven't entered a valid user name or password.
+- Účet, který používáte, nemá oprávnění k načtení dat [!INCLUDE[prod_short](includes/prod_short.md)] z vašeho účtu. Ověřte, zda máte oprávnění k požadovaným datům v [!INCLUDE[prod_short](includes/prod_short.md)] a akci opakujte.
+- Vybrali jste jiný typ ověřování než Základní, pokud se připojujete k [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.
+- Nezadali jste platné uživatelské jméno nebo heslo.
 
-### Message: Your data source can't be refreshed because the credentials are invalid. Please update your credentials and try again
+### Zpráva: Váš zdroj dat nelze aktualizovat, protože přihlašovací údaje jsou neplatné. Aktualizujte své přihlašovací údaje a zkuste to znovu
 
-For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, the problem might be that the OData URL is only exposed to the local network.
+Pro [!INCLUDE[prod_short](includes/prod_short.md)] on-premises může být problém v tom, že adresa URL OData je vystavena pouze místní síti.
 
-### Incorrect company name
+### Nesprávný název společnosti
 
-A common mistake is to enter the company display name instead of the company name. To find the company name search for **Companies**. Then use the **Name** field when entering your company name.
+Běžnou chybou je zadání zobrazovaného názvu společnosti namísto celého názvu společnosti. Chcete-li najít název společnosti, hledejte **Společnosti**. Při zadávání názvu společnosti použijte pole **Název**.
 
-### The key didn't match any rows in the table
+### Klíč neodpovídal žádným řádkům v tabulce
 
-If you enter a non-valid company name during the connection process, you may get the error message "The key didn't match any rows in the table". Provide the correct company name and try connecting again.
+Pokud během procesu připojení zadáte neplatný název společnosti, může se zobrazit chybová zpráva „Klíč neodpovídá žádným řádkům v tabulce“. Zadejte správný název společnosti a zkuste se znovu připojit.
 
-### Historical data appears to be missing
+### Zdá se, že chybí historická data
 
-Once the Power BI app installs and your data show in Power BI, you notice that not all your data displays. The datasets are filtered to only return the previous 365 days of data. This default is in place to help make the reports faster.
+Jakmile se aplikace Power BI nainstaluje a vaše data se zobrazí v Power BI, zjistíte, že se nezobrazí všechna vaše data. Datové sady jsou filtrovány tak, aby vracely pouze data z předchozích 365 dnů. Toto výchozí nastavení je zavedeno, aby bylo možné sestavy zrychlit.
 
-### I only see data for a single company
+### Vidím pouze data pro jednu společnost
 
-The Power BI app will only display data from the [!INCLUDE[prod_short](includes/prod_short.md)] company that was defined when the Power BI app was installed. Data from additional companies can be added to the reports by adding new queries that use different companies as the data source.
+Aplikace Power BI zobrazí pouze data od společnosti [!INCLUDE[prod_short](includes/prod_short.md)], která byla definována při instalaci aplikace Power BI. Data od dalších společností lze do sestav přidat přidáním nových dotazů, které používají jako zdroj dat různé společnosti.
 
-### What Now?
+### Co teď?
 
-- Try [asking a question in the Q&A box](/power-bi/service-q-and-a-tips) at the top of the dashboard.
-- [Change the tiles](/power-bi/service-dashboard-edit-tile) in the dashboard.
-- [Select a tile](/power-bi/service-dashboard-tiles) to open the underlying report.
-- By default, your dataset isn't scheduled to refresh. You can change the refresh schedule or try refreshing it on demand using **Refresh Now**. For more information, see [Configuring scheduled refresh](/power-bi/refresh-scheduled-refresh).
+- Zkuste [Zadání dotazu v poli Q&A](/power-bi/service-q-and-a-tips) v horní části řídicího panelu.
+- [Změna dlaždic](/power-bi/service-dashboard-edit-tile) v řídicím panelu.
+- [Vyberte dlaždici](/power-bi/service-dashboard-tiles) pro otevření zdrojové sestavy.
+- Ve výchozím nastavení není aktualizace datové sady naplánována. Plán aktualizace můžete změnit nebo jej můžete na vyžádání aktualizovat pomocí příkazu **Aktualizovat**. Pro více informací navštivte [Konfigurace naplánované aktualizace](/power-bi/refresh-scheduled-refresh).
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central and Power BI](admin-powerbi.md)  
-[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
-[Working with [!INCLUDE [prod_short](includes/prod_short.md)] Data in Power BI](across-working-with-business-central-in-powerbi.md)  
-[Building Power BI Reports to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md)  
-[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
-[The 'new look' of the Power BI service](/power-bi/service-new-look)  
-[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
-[Power BI documentation](/power-bi/)  
-[Business Intelligence](bi.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central a Power BI](admin-powerbi.md)    
+[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
+[Práce s daty [!INCLUDE [prod_short](includes/prod_short.md)] v Power BI](across-working-with-business-central-in-powerbi.md)    
+[Vytváranie zostáv Power BI na zobrazenie dát [!INCLUDE [prod_long](includes/prod_long.md)]](across-how-use-financials-data-source-powerbi.md)    
+[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
+[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
+[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
+[Dokumentace Power BI](/power-bi/)    
+[Business Intelligence](bi.md)    
+[Příprava na podnikání](ui-get-ready-business.md)    
+[Import podnikových dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
+[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroj dat Power BI](across-how-use-financials-data-source-powerbi.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroj dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 

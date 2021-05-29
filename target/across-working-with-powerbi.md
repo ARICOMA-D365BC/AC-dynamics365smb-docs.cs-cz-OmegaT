@@ -34,7 +34,7 @@ If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, it m
 
 ### Sign up Power BI
 
-Before you can use Power BI with [!INCLUDE[prod_short](includes/prod_short.md)], you'll need to sign up for the Power BI service. If you haven't already signed up, go to [https://powerbi.microsoft.com](https://powerbi.microsoft.com). When you sign up, use your work email address and password.
+Before you can use Power BI with [!INCLUDE[prod_short](includes/prod_short.md)], you'll need to sign up for the Power BI service. If you haven't already signed up, go to [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
 
 ## <a name="connect"></a>Connect to Power BI - one time only
 
@@ -106,17 +106,17 @@ After the report uploads to your Power BI workspace, it automatically uploads to
 > [!NOTE]
 > Uploading a report requires that you have SUPER user permissions in [!INCLUDE[prod_short](includes/prod_short.md)]. Also, you can't upload reports with [!INCLUDE [prod_short](includes/prod_short.md)] on-premises. With on-premises, you upload reports directly to your Power BI workspace. For more information, see [Working with [!INCLUDE [prod_short](includes/prod_short.md)] Data In Power BI](across-working-with-business-central-in-powerbi.md).
 
-## Fixing problems
+## Řešení problémů
 
-However, if something goes wrong, this section provides a workaround for the most typical issues.
+Pokud se však něco pokazí, tato část poskytuje řešení pro nejtypičtější problémy.
 
-### You don't have a Power BI account
+### Nemáte účet Power BI
 
-A Power BI account hasn't been set up. To get a valid Power BI account, you must have a license, and you must have previously signed into Power BI to create a Power BI workspace.
+Účet Power BI nebyl nastaven. To get a valid Power BI account, you must have a license, and you must have previously signed into Power BI to create a Power BI workspace.
 
-### Message: There are no enabled reports. Choose Select Report to see a list of reports that you can display.
+### Zpráva: Nejsou povoleny žádné sestavy. Zvolte Vybrat sestavu, chcete-li zobrazit seznam sestav, které můžete zobrazit.
 
-This message appears if the default report failed to deploy to your Power BI workspace. Or it deployed but didn't refresh successfully. Navigate to the report in your Power BI workspace, select **Dataset**, **Settings**, and then manually update the credentials. Once the dataset successfully refreshes, navigate back to [!INCLUDE[prod_short](includes/prod_short.md)] and manually select the report from the **Select Reports** page.
+Tato zpráva se zobrazí, pokud se výchozí sestavě nepodařilo nasadit do vašeho pracovního prostoru Power BI. Or it deployed but didn't refresh successfully. Navigate to the report in your Power BI workspace, select **Dataset**, **Settings**, and then manually update the credentials. Jakmile se datová sada úspěšně aktualizuje, přejděte zpět na [!INCLUDE[prod_short](includes/prod_short.md)] a ručně vyberte sestavu ze stránky **Vyberte sestavy**.
 
 #### You can't see a report on the Select Report page on a list page
 

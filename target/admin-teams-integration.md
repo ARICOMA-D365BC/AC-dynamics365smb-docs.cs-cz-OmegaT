@@ -58,7 +58,7 @@ For more information, see the following articles in the Microsoft Teams document
 
 - Codeunit **2718 Page Summary Provider** is published as a web service:
 
-   This codeunit is published as a web service by default. The codeunit is part of the [!INCLUDE [prod_short](includes/prod_short.md)] system application. It's used to get the field data for a [!INCLUDE [prod_short](includes/prod_short.md)] page added to a Teams conversation. For information about publishing web services, see [Publish a Web Service](across-how-publish-web-service.md).
+   This codeunit is published as a web service by default. The codeunit is part of the [!INCLUDE [prod_short](includes/prod_short.md)] system application. It's used to get the field data for a [!INCLUDE [prod_short](includes/prod_short.md)] page added to a Teams conversation. Informace o publikování webových služeb naleznete v tématu [Publikování Webové Služby](across-how-publish-web-service.md).
 
 - <a name="permissions"></a>User permissions:
 

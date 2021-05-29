@@ -12,89 +12,89 @@ ms.date: 04/12/2021
 ms.author: jswymer
 ---
 
-# Troubleshooting Microsoft Teams Integration with [!INCLUDE [prod_short](includes/prod_short.md)]
+# Odstraňování problémů s integrací Microsoft Teams a [!INCLUDE [prod_short](includes/prod_short.md)]
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-This article provides information on how to identify and fix problems you may experience when using Microsoft Teams with [!INCLUDE [prod_short](includes/prod_short.md)], as a typical user or administrator.
+Tento článek obsahuje informace o tom, jak identifikovat a opravit problémy, ke kterým může dojít při používání Microsoft Teams s [!INCLUDE [prod_short](includes/prod_short.md)] jako typický uživatelem nebo správcem.
 
-## The sign-in link doesn't work
+## Přihlašovací odkaz nefunguje
 
-If you try to sign in to the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams immediately after installing the app, and the sign-in link doesn't react, it may be because the app hasn't fully completed installation. To try to fix the issue, sign out of your Teams client and then sign in again.
+Pokud se pokusíte přihlásit k aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams ihned po instalaci aplikace a přihlašovací odkaz nereaguje, může to být proto, že aplikace ještě nedokončila úplně instalaci. Pokud se chcete problém pokusit vyřešit, odhlaste se z klienta Teams a pak se znovu přihlaste.
 
-## The Settings page is empty
+## Stránka Nastavení je prázdná
 
-You must first sign in to reach your settings. To sign into the app, either paste a link to a [!INCLUDE [prod_short.md](includes/prod_short.md)] record, or try to search for contacts. Both of these actions will lead you through a sign-up experience, after which you can use the **Settings** page.
+Chcete-li dosáhnout nastavení, musíte se nejprve přihlásit. Chcete-li se do aplikace přihlásit, vložte odkaz záznamu v [!INCLUDE [prod_short.md](includes/prod_short.md)] nebo zkuste vyhledat kontakty. Obě tyto akce vás povedou k přihlašení, po kterém můžete jít na stránku **Nastavení**.
 
-## I changed company but it didn't seem to work
+## Změnil jsem společnost, ale nezdálo se mi, že by to fungovalo
 
-After you change the company on the **Settings** page, you might notice that the command box drop-down indicates you're still searching the previous company. This issue happens when you open the **Settings** page directly from the command box. In this case, the company was successfully changed, and you'll in fact search the company you switched to. The problem is that the command box drop-down just hasn't been updated yet. For the drop-down accurately reflect the company you'll search in, close or unpin [!INCLUDE [prod_short.md](includes/prod_short.md)] from the command box, and then open the app again.
+Po změně společnosti na stránce **Nastavení** si můžete všimnout, že rozbalovací seznam příkazového pole označuje, že stále hledáte v předchozí společnosti. K tomuto problému dochází, když otevřete stránku **Nastavení** přímo z příkazového pole. V tomto případě byla společnost úspěšně změněna a ve skutečnosti budete vyhledávat ve společnosti, na kterou jste se přepli. Problém je v tom, že rozevírací seznam příkazového pole ještě nebyl aktualizován. Rozbalovací nabídka přesně odráží společnost, ve které budete hledat, zavírat nebo odepínat [!INCLUDE [prod_short.md](includes/prod_short.md)] z příkazového pole, a poté znovu otevřete aplikaci.
 
 
 <!--When you change company from the **Settings** page that you reach from the command box, returning to the command box drop-down continues to show the previous company even though the company was successfully changed. For the drop-down accurately reflect the company you'll search in, you must close or unpin [!INCLUDE [prod_short.md](includes/prod_short.md)] from the command box and then find it again.-->
 
-## "Something went wrong" error when searching for contacts
+## Při hledání kontaktů došlo k chybě „Něco se pokazilo“
 
-You may experience this error when you search in a company that hasn't been initialized or is in an unresponsive state. For example, you can't search in a new trial company that hasn't yet accepted the terms of use. To resolve this issue, try to sign in to the [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client, and act on or dismiss any initial dialogs that appear.
+K této chybě může dojít při hledání ve společnosti, která nebyla inicializována nebo nereaguje. Například nemůžete hledat v nové zkušební společnosti, ve které dosud nebyly přijaty podmínky použití. Chcete-li tento problém vyřešit, pokuste se přihlásit k webovému klientu [!INCLUDE [prod_short.md](includes/prod_short.md)] a proklikejte všechna dialogová okna, která se zobrazí.
 
-## "Cannot find the contact/contact summary API" error when searching for contacts
+## Při hledání kontaktů došlo k chybě „Nelze najít rozhraní API kontaktů/souhrných kontaktů“
 
-This problem can be caused by customizations or industry solutions that affect or modify [!INCLUDE [prod_short.md](includes/prod_short.md)], or they don't provide a contact or contact summary API. If the problem continues, contact your administrator or supporting partner.
+Tento problém může být způsoben přizpůsobením nebo průmyslovými řešeními, která ovlivňují nebo upravují [!INCLUDE [prod_short.md](includes/prod_short.md)] nebo neposkytují rozhraní API pro kontakty nebo souhrné kontakty. Pokud problém přetrvává, obraťte se na správce nebo partnera, který poskytuje podporu.
 
-## None of my links expand into a card
+## Žádný z mých odkazů se nerozbalí na kartu
 
-If you're experiencing this problem, here are a few things to try:
+Pokud máte tento problém, je třeba vyzkoušet několik věcí:
 
-1. First, make sure that the [!INCLUDE [prod_short](includes/prod_short.md)] app for Teams is installed.
+1. Nejprve se ujistěte, že aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams nainstalovaná.
 
-   To check, sign in to the Teams desktop app or Teams in the browser. Then, on the left side, select **Apps**, and search for **[!INCLUDE [prod_short](includes/prod_short.md)]**. When you find the **[!INCLUDE [prod_short](includes/prod_short.md)]** app, select it to open the app details page. If the **Add for me** button is shown, then the [!INCLUDE [prod_short](includes/prod_short.md)] app isn't installed. For more information about how to install the app, see [Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md).
+   Chcete-li to zkontrolovat, přihlaste se k desktopové aplikaci Teams nebo Teams v prohlížeči. Pak na levé straně vyberte **Aplikace**nebo vyhledejte **[!INCLUDE [prod_short](includes/prod_short.md)]**. Když najdete aplikaci **[!INCLUDE [prod_short](includes/prod_short.md)]**, vyberte ji a otevřete stránku s podrobnostmi o aplikaci. Pokud je zobrazeno tlačítko **Přidat pro mě**, pak aplikace [!INCLUDE [prod_short](includes/prod_short.md)] není naistalovaná. Další informace o instalaci aplikace naleznete v tématu [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md).
 
    > [!NOTE]
-   > Guest users can't immediately install apps. For more information about guest users, see our FAQ about collaborating with guests.
+   > Hostující uživatelé nemohou ihned instalovat aplikaci. Další informace o uživatelích typu host najdete v nejčastějších dotazech v tématu spolupráci s hosty.
 
-2. Next, check that you've signed in with the correct identity.
+2. Dále zkontrolujte, zda jste se přihlásili se správnou identitou.
 
-   In Teams, go to any chat, and under the message compose box, right-click the [!INCLUDE [prod_short](includes/prod_short.md)] icon, then choose **Settings**. When the window appears, check whether the user it says that you're connected as matches what you use to connect to [!INCLUDE [prod_short](includes/prod_short.md)].
+   V Teams přejděte na libovolný chat a v poli pro psaní zpráv klikněte pravým tlačítkem myši na ikonu [!INCLUDE [prod_short](includes/prod_short.md)] a zvolte **Nastavení**. Když se zobrazí okno, zkontrolujte, zda se uživatel, který říká, že jste připojeni, shoduje s tím, co používáte pro připojení k [!INCLUDE [prod_short](includes/prod_short.md)].
 
-3. Make sure codeunit 2718 **Page Summary Provider** is published as a web service.
+3. Ujistěte se, že proedura 2718 **Page Summary Provider** je vypublikovaná jako webová služba.
 
-   Teams connects to [!INCLUDE [prod_short](includes/prod_short.md)] using an endpoint to this codeunit on the [!INCLUDE [prod_short](includes/prod_short.md)] service. For information about publishing web services, see [Publish a Web Service](across-how-publish-web-service.md).
+   Teams se připojí k [!INCLUDE [prod_short](includes/prod_short.md)] pomocí koncového bodu k této procedury ve službě [!INCLUDE [prod_short](includes/prod_short.md)] service. Informace o publikování webových služeb naleznete v tématu [Publikování Webové Služby](across-how-publish-web-service.md).
 
-4. Your organization may also restrict you from pasting links that expand into cards. Contact your administrator to understand the Teams organizational policies that may apply to you.
+4. Vaše organizace může také omezit vkládání odkazů, které se rozbalují na karty. Obraťte se na správce k porozumění zásadám organizace Teams, které se na vás mohou vztahovat.
 
-## My link sometimes doesn’t expand into a card
+## Můj odkaz se někdy nerozbalí na kartu
 
-A link won't expand into a card in the following situations:
+Odkaz se nerozbalí na kartu v následujících situacích:
 
-- The link targets a page that (at a technical level) isn't connected to a source table in [!INCLUDE [prod_short](includes/prod_short.md)]. You can check whether a page has a source table by using the page inspection pane in the Web client in [!INCLUDE [prod_short](includes/prod_short.md)]. For more information about page inspection, see [Inspecting Pages](across-inspect-page.md).
-- Teams doesn't support link previews in some of its features. For example, when you pop out a chat, or you're a guest to another organization.
-- Teams silently abandons trying to display the card after 15 seconds, for example, because of network issues.
-- Teams may not expand the link if you've already pasted a link into the same message compose box and deleted the card.
+- Odkaz cílí na stránku, která (na technické úrovni) není připojena ke zdrojové tabulce v [!INCLUDE [prod_short](includes/prod_short.md)]. Můžete zkontrolovat, zda má stránka zdrojovou tabulku, pomocí podokna kontroly stránky ve webovém klientovi v [!INCLUDE [prod_short](includes/prod_short.md)]. Další informace o kontrole stránek najdete v tématu [Prohlížení dat stránky](across-inspect-page.md).
+- Teams nepodporuje náhledy odkazů v některých jeho funkcích. Například když vyskočíte z chatu nebo jste hostem jiné organizace.
+- Teams se na pozadí vzdají pokusu o zobrazení karty po 15 sekundách, například kvůli problémům se sítí.
+- Teams nemusí rozšířit odkaz, pokud jste již vložíly odkaz do stejného pole pro psaní zpráv a kartu jste již odstranili.
 
-The link must also contain all the necessary information to locate the record and display the corresponding card. This information includes:
+Odkaz musí také obsahovat všechny potřebné informace k vyhledání záznamu a zobrazení odpovídající karty. Tyto informace zahrnují:
 
-- The environment name, by including it in the URL path. If you don't specify the environment name, Teams assumes you're attempting to reach the environment named "Production".
-- The company name, by using the *company=* parameter
-- The page identifier, by using the *page=* parameter
-- The bookmark to the record, by using the *bookmark=* parameter
+- Název prostředí jeho, včetně URL cesty. Pokud nezadáte název prostředí, Teams předpokládá, že se pokoušíte dostat do prostředí "Produkčního".
+- Název společnosti pomocí parametru *company=*
+- Identifikátor stránky pomocí parametru *page=* 
+- Záložka záznamu pomocí parametru *bookmark=* 
 
 Například:
 
 `https://businesscentral.dynamics.com/?environmentname=Production&company=CRONUS%20USA%2C%20Inc.&page=21&dc=0&bookmark=21%3bEgAAAAJ7BTEAMAAwADAAMA%3d%3d`
 
-For technical details about [!INCLUDE [prod_short](includes/prod_short.md)] URLs, see [Web Client URL](/dynamics365/business-central/dev-itpro/developer/devenv-web-client-urls) in the [!INCLUDE [prod_short](includes/prod_short.md)] Developer and IT Pro Help.
+Technické podrobnosti o URL adresách [!INCLUDE [prod_short](includes/prod_short.md)] bežte na [Web Client URL](/dynamics365/business-central/dev-itpro/developer/devenv-web-client-urls) v [!INCLUDE [prod_short](includes/prod_short.md)] Developer a IT Pro Help.
 
-## The details window opens, but shows an error before details are shown
+## Otevře se okno s podrobnostmi, ale před zobrazením podrobností se zobrazí chyba
 
-This problem can be caused by a couple things: lack of permissions in [!INCLUDE [prod_short](includes/prod_short.md)] or browser settings (when using Teams in the browser).
+Tento problém může být způsoben několika věcmi: nedostatkem oprávnění v [!INCLUDE [prod_short](includes/prod_short.md)] nebo nastavením prohlížeče (když používáte Teams ve webovém prohlížeči).
 
-1. Verify your permissions in [!INCLUDE [prod_short](includes/prod_short.md)].
+1. Ověřte svá oprávnění v [!INCLUDE [prod_short](includes/prod_short.md)].
 
-   To view details for a card, [!INCLUDE [prod_short](includes/prod_short.md)] checks your license and permissions to view that specific record and page in the specific company and environment. If you aren't authorized for any of these things, standard [!INCLUDE [prod_short](includes/prod_short.md)] error messages about permissions appear in the details window.
+   Chcete-li zobrazit podrobnosti karty, [!INCLUDE [prod_short](includes/prod_short.md)] zkontroluje vaši licenci a oprávnění k zobrazení konkrétního záznamu a stránky v konkrétní společnosti a prostředí. Pokud nemáte oprávnění pro žádnou z těchto věcí, zobrazí se v okně podrobností standardní [!INCLUDE [prod_short](includes/prod_short.md)] chybové zprávy o oprávněních.
 
-   For more information about permissions, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md)
+   Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md)
 
-2. Check your browser settings if using Teams in the browser.
+2. Pokud používáte Teams v prohlížeči, zkontrolujte nastavení prohlížeče.
 
    - Your browser's pop-up blocker must be either turned off or set to allow pop-ups from the *businesscentral.dynamics.com* or *bc.dynamics.com* domains. For information about allowing pop-ups for [!INCLUDE [prod_short](includes/prod_short.md)], see [Setting Up Your Browser](across-browser-settings.md#popup).
    - Your browser must have access to local browser storage for cookies and preferences as you work.
