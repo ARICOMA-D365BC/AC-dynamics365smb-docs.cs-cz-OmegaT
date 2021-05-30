@@ -46,7 +46,7 @@ For more information, see [Configure scheduled refresh](/power-bi/connect-data/r
 
 ## <a name="upload"></a>Upload reports from files
 
-Power BI Reports can be distributed among users as .pbix files. If you have a .pbix file, you can upload the file to a workspace. To upload a report, do the following steps:
+Sestavy Power BI lze mezi uživatele distribuovat jako soubory PBIX. If you have a .pbix file, you can upload the file to a workspace. To upload a report, do the following steps:
 
 1. In your new workspace, select **Get Data**.
 

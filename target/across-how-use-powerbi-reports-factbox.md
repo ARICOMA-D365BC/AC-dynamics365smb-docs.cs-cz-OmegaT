@@ -104,7 +104,7 @@ By default, the Power BI FactBox is hidden from view. To show the FactBox on a p
 
 ### You can't see the report in the Select Report pane
 
-The report's name doesn't contain the name of the list page that's being shown. Clear the filter to get a full list of Power BI reports available.
+The report's name doesn't contain the name of the list page that's being shown. Vymažte filtr a získejte úplný seznam dostupných sestav Power BI.
 
 ### Report is loaded but blank, not filtered, or filtered incorrectly
 

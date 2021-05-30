@@ -11,100 +11,100 @@ ms.search.keywords: account schedule, analysis, reporting, financial report, bus
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Working with Power BI Reports in [!INCLUDE [prod_short](includes/prod_short.md)]
+# Práce se sestavami Power BI v [!INCLUDE [prod_short](includes/prod_short.md)]
 
-In this article, you learn some of the basics about viewing Power BI reports in [!INCLUDE [prod_short](includes/prod_short.md)].
+V tomto článku se dozvíte některé základy o zobrazení sestav Power BI v [!INCLUDE [prod_short](includes/prod_short.md)].
 
 ## Přehled
 
-Power BI reports give you insight into your [!INCLUDE[prod_short](includes/prod_short.md)]. Various pages in [!INCLUDE [prod_short](includes/prod_short.md)] include a Power BI reports part that can display Power BI reports. The role center is a typical page where you'll see a Power BI reports part. Some list pages, like **Items**, also include a Power BI part.
+Sestavy Power BI vám poskytnou přehled ve vašem [!INCLUDE[prod_short](includes/prod_short.md)]. Různé stránky v [!INCLUDE [prod_short](includes/prod_short.md)] obsahují část sestav Power BI, která může zobrazovat sestavy Power BI. Centrum rolí je typická stránka, kde uvidíte část sestav Power BI. Některé stránky se seznamem, například **Zboží**, obsahují také část Power BI.
 
-[!INCLUDE [prod_short](includes/prod_short.md)] works together with the Power BI service. Reports for displaying in [!INCLUDE [prod_short](includes/prod_short.md)] are stored in a Power BI service. In [!INCLUDE [prod_short](includes/prod_short.md)], you can switch the report displayed in the Power BI part to any Power BI report available in your Power BI service. The first time you sign into [!INCLUDE [prod_short](includes/prod_short.md)], and until you connect to a Power BI service, parts will be empty, as shown here:
+[!INCLUDE [prod_short](includes/prod_short.md)] funguje společně se službou Power BI. Sestavy pro zobrazení v [!INCLUDE [prod_short](includes/prod_short.md)] jsou uloženy ve službě Power BI. V [!INCLUDE [prod_short](includes/prod_short.md)] můžete přepnout sestavu zobrazenou v části Power BI na libovolnou sestavu Power BI dostupnou ve vaší službě Power BI. Po prvním přihlášení do [!INCLUDE [prod_short](includes/prod_short.md)] a dokud se nepřipojíte ke službě Power BI, části budou prázdné, jak je znázorněno zde:
 
-![Power BI part in Business Central](./media/power-bi-part.png)
+![Část Power BI v Business Central](./media/power-bi-part.png)
 
 ## Začínáme
 
 ### Předpoklady
 
-If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, it must be enabled for Power BI integration. This task is typically done by an administrator. For more information, see [Set up [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for Power BI integration](admin-powerbi-setup.md#setup).
+Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, musí být povolena pro integraci Power BI. Tuto úlohu obvykle provádí správce. Pro více informací navštivte [Set up [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for Power BI integration](admin-powerbi-setup.md#setup).
 
 > [!NOTE]
-> [!INCLUDE[prod_short](includes/prod_short.md)] online is already set up to integrate with Power BI.
+> [!INCLUDE[prod_short](includes/prod_short.md)] online je již nastaven na integraci s Power BI.
 
-### Sign up Power BI
+### Registrace Power BI
 
-Before you can use Power BI with [!INCLUDE[prod_short](includes/prod_short.md)], you'll need to sign up for the Power BI service. If you haven't already signed up, go to [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
+Než budete moci používat Power BI s [!INCLUDE[prod_short](includes/prod_short.md)], budete se muset zaregistrovat ke službě Power BI. Pokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
 
-## <a name="connect"></a>Connect to Power BI - one time only
+## <a name="connect"></a>Připojení k Power BI - pouze jednou
 
-When you first sign into [!INCLUDE [prod_short](includes/prod_short.md)], you'll probably see an empty Power BI part (as shown in the previous figure) on various pages. The first thing to do is to connect to your Power BI account. Once connected, you can see reports. You only have to do this step once.
+Když se poprvé přihlásíte do [!INCLUDE [prod_short](includes/prod_short.md)], pravděpodobně se vám na různých stránkách zobrazí prázdná část Power BI (jak je znázorněno na předchozím obrázku). První věcí, kterou musíte udělat, je připojit se k vašemu účtu Power BI. Po připojení se zobrazí sestavy. Tento krok musíte provést pouze jednou.
 
-1. Select the **Get Started with Power BI** link in the **Power BI Reports** part.
-2. The **Set Up Power BI Reports in Business Central** assisted setup starts. Select **Next** to continue.
-3. On the **Check your Power BI License** page. Do one of the following steps:
+1. Vyberte odkaz **Začínáme s Power BI** v části **Sestavy Power BI**.
+2. Spustí se asistované nastavení **Nastavení sestav Power BI v Business Central**. Chcete-li pokračovat, vyberte **Další**.
+3. Na stránce **Zkontrolujte svou licenci Power BI**. Udělejte jeden z následujích kroků.
 
-   - If you haven't yet signed up for Power BI, select the [Go to Power BI homepage](https://powerbi.microsoft.com). Sign up for an account, then come back to [!INCLUDE[prod_short](includes/prod_short.md)] and finish the set up.
+   - Pokud jste se do Power BI ještě nepřihlásili, vyberte [Přejít na domovskou stránku Power BI](https://powerbi.microsoft.com). Zaregistrujte si účet a poté se vraťte na stránku [!INCLUDE[prod_short](includes/prod_short.md)] a dokončete nastavení.
 
-   - If you already have a license, select **Next**.
-4. In the next page, [!INCLUDE[prod_short](includes/prod_short.md)] will now upload a demo report to Power BI. This will take a few minutes, so it's done in the background. To complete the setup, select **Next**, then **Finish**.
+   - Pokud již licenci máte, vyberte **Další**.
+4. Na další stránce, [!INCLUDE[prod_short](includes/prod_short.md)] teď nahraje demo sestavu do Power BI. Bude to trvat několik minut, takže se to dělá v pozadí. Chcete-li dokončit nastavení, vyberte **Další** a poté **Dokončit**.
 
-The connection process starts. During the process, [!INCLUDE [prod_short](includes/prod_short.md)] communicates with the Power BI service to determine if you have a valid Power BI account and license. Once your license is verified, the default Power BI report displays on the page. If there a report isn't shown, you can select a report from the part.
+Spustí se proces připojení. Během procesu, [!INCLUDE [prod_short](includes/prod_short.md)] komunikuje se službou Power BI a určuje, jestli máte platný účet a licenci Power BI. Jakmile je vaše licence ověřena, zobrazí se na stránce výchozí sestava Power BI. Pokud se sestava nezobrazí, můžete ji vybrat z dané části.
 
 > [!TIP]
-> With [!INCLUDE [prod_short](includes/prod_short.md)] online, this this step will automatically upload default Power BI reports used in [!INCLUDE [prod_short](includes/prod_short.md)] to your Power BI workspace.
+> S [!INCLUDE [prod_short](includes/prod_short.md)] tento krok automaticky nahraje výchozí sestavy Power BI použité v [!INCLUDE [prod_short](includes/prod_short.md)] do vašeho pracovního prostoru Power BI.
 
-#### From [!INCLUDE [prod_short](includes/prod_short.md)] on-premises
+#### Z [!INCLUDE [prod_short](includes/prod_short.md)] on-premises
 
-Connecting to Power BI from [!INCLUDE [prod_short](includes/prod_short.md)] is similar to online. However, you might be prompted on the **AZURE ACTIVE DIRECTORY SERVICE PERMISSIONS** page to grant access to Power BI Services. To grant access, select **Authorize Azure Services**, and then **Accept**.
+Připojení k Power BI z [!INCLUDE [prod_short](includes/prod_short.md)] je podobné jako online. Na stránce **OPRÁVNĚNÍ K AZURE ACTIVE DIRECTORY SERVICE** však můžete být vyzváni k udělení přístupu ke službám Power BI. Chcete-li udělit přístup, vyberte **Služby autorizace Azure** a poté **Přijmout**.
 
-Once connected, you can select a report from the Power BI part on pages.
+Po připojení můžete vybrat sestavu z části Power BI na stránkách.
 
-## Working with Power BI reports
+## Práce se sestavou Power BI
 
-### Show reports on list pages
+### Zobrazení sestavy na stránkách seznamu
 
-[!INCLUDE[prod_long](includes/prod_long.md)] includes a Power BI FactBox on several key list pages. This FactBox provides additional insight into the data in the list. As you move between rows in the list, the report is updated and filtered for the selected entry. If you don't see this part, then from the action bar, select **Actions** > **Display** > **Show/Hide Power BI Reports**.
+[!INCLUDE[prod_long](includes/prod_long.md)] obsahuje na několika stránkách se seznamami záložku Power BI. Tato záložka poskytuje další pohled na data v seznamu. Při přechodu mezi řádky v seznamu se sestava aktualizuje a filtruje pro vybranou položku. Pokud tuto část nevidíte, vyberte na panelu akcí možnost **Akce** > **Zobrazit** > **Zobrazit/Skrýt sestavy Power BI**.
 
-To learn how to create reports for list pages, see [Creating Power BI Reports for Displaying List Data in [!INCLUDE[prod_short](includes/prod_short.md)]](across-how-use-powerbi-reports-factbox.md).
+Informace o vytváření sestav pro stránky seznamů najdete v tématu [Vytváření sestav Power BI pro zobrazení dat seznamu v [!INCLUDE[prod_short](includes/prod_short.md)]](across-how-use-powerbi-reports-factbox.md).
 
-### Switch reports
+### Přepínání sestav
 
-A Power BI part on a page can display any Power BI report that's available to you. To switch to view another report, choose the **Select Report** action from the drop-down command list at the top of the part.
+Součást Power BI na stránce může zobrazovat všechny sestavy Power BI, které máte k dispozici. Chcete-li přepnout a zobrazit jinou sestavu, zvolte akci **Vybrat sestavu** z rozevíracího seznamu příkazů v horní části.
 
-The **Power BI Reports Selection** page shows a list of all the Power BI reports that you have access to. This list is retrieved from your Power BI workspace. Select the **Enable** box for each report that you want to display on the page, and then choose **OK**. You'll return to the page, and the last report you enabled will appear. Using the drop-down command list, use the **Previous** and **Next** commands to navigate between reports.
+Stránka **Výběr sestav Power BI** zobrazuje seznam všech sestav Power BI, ke kterým máte přístup. Tento seznam se načte z pracovního prostoru Power BI. Zaškrtněte políčko **Povolit** pro každou sestavu, kterou chcete zobrazit na stránce, a pak zvolte **OK**. Když se vrátíte na stránku, zobrazí se poslední povolená sestava. Pomocí rozevírací nabídky použijte příkazy **Předchozí** a **Další** k navigaci mezi sestavami.
 
-### Get more reports
+### Získání dalších sestav
 
-If you don't see any reports on the **Power BI Reports Selection** page, or don't see the report you want, choose **Get Reports**. This action lets you look for reports from two locations: *My Organization* or from *Services*.
+Pokud na stránce **Výběr sestav Power BI** nevidíte žádné sestavy nebo nevidíte sestavu, kterou chcete, zvolte **Získat sestavy**. Tato akce umožňuje hledat sestavy ze dvou míst: z *Mojí organizace* nebo ze *Služeb*.
 
-- Choose **My Organization** to go to the Power BI services. From here, you can view the reports within your organization that you've been given rights to view. You can then add them to your workspace.
-- Choose **Services** to go to Microsoft AppSource where you can install Power BI apps.
+- Zvolte **Moje organizace**, chcete-li přejít na služby Power BI. Zde si můžete prohlédnout sestavy v rámci vaší organizace, ke kterým jste dostali práva. Poté je můžete přidat do pracovního prostoru.
+- Zvolte **Služby** abyste se dostali do Microsoft AppSource, kde můžete nainstalovat aplikaci Power BI.
 
 > [!TIP]
-> If you have Power BI Desktop, you can also create new Power BI reports. Then, once those reports are published to your Power BI workspace, they will appear on the **Power BI Reports Selection** page.
+> Pokud máte Power BI Desktop, můžete také vytvářet nové sestavy Power BI. Po publikování těchto sestav do pracovního prostoru Power BI se pak zobrazí na stránce **Výběr sestav Power BI**.
 
-### Manage and modify reports
+### Správa a úpravy sestav
 
-You can make changes to a report in the Power BI part. The changes that you make will then be published to the Power BI service. If the report is shared with other users, they'll also see the changes, unless you save the changes to a new report.
+V sestavě v části Power BI můžete provádět změny. Provedené změny pak budou publikovány ve službě Power BI. Pokud je sestava sdílena s ostatními uživateli, změny se jim také zobrazí, pokud je neuložíte do nové sestavy.
 
-To modify a report, choose the **Manage Report** action from the drop-down command list in the Power BI part. Then start making changes. Once you finish making changes, select **File** > **Save**. If it's a shared report, and you don't want to make the change for all users, select **Save As** to avoid making this change for all users.
+Chcete-li sestavu upravit, zvolte akci **Spravovat sestavu** z rozevírací nabídky v části Power BI. Pak začnite dělat změny. Po dokončení změn vyberte možnost **Soubor** > **Uložit**. Pokud se jedná o sdílenou sestavu a nechcete tuto změnu provést pro všechny uživatele, vyberte **Uložit jako**, abyste se vyhnuli provedení této změny pro všechny uživatele.
 
-When you return to the role center, the updated report will appear. If you used **Save As**, you'll have to choose **Select Report**, and then enable the new report to see it.
-
-> [!NOTE]
-> This capability is not available with [!INCLUDE [prod_short](includes/prod_short.md)] on-premises.
-
-### <a name="upload"></a>Upload reports
-
-Power BI Reports can be distributed among users as .pbix files. If you have any .pbix files, you can upload and share them with all users of [!INCLUDE [prod_short](includes/prod_short.md)]. The reports are shared within each company in [!INCLUDE [prod_short](includes/prod_short.md)].
-
-To upload a report, select the **Upload Report** action from the drop-down command list on the **Power BI Reports** part. Then, locate the .pbix file that defines the reports that you want to share. You can change the default name of the file.
-
-After the report uploads to your Power BI workspace, it automatically uploads to other users' Power BI workspaces.
+Po návratu do centra rolí se zobrazí aktualizovaná sestava. Pokud jste použili možnost **Uložit jako**, budete muset zvolit **Vybrat sestavu** a potom povolit, aby se nová sestava zobrazila.
 
 > [!NOTE]
-> Uploading a report requires that you have SUPER user permissions in [!INCLUDE[prod_short](includes/prod_short.md)]. Also, you can't upload reports with [!INCLUDE [prod_short](includes/prod_short.md)] on-premises. With on-premises, you upload reports directly to your Power BI workspace. For more information, see [Working with [!INCLUDE [prod_short](includes/prod_short.md)] Data In Power BI](across-working-with-business-central-in-powerbi.md).
+> Tato funkce není povolena pro [!INCLUDE [prod_short](includes/prod_short.md)] on-premises.
+
+### <a name="upload"></a>Nahrání sestav
+
+Sestavy Power BI lze mezi uživatele distribuovat jako soubory PBIX. Pokud máte nějaké .pbix soubory, můžete je nahrát a sdílet se všemi uživateli [!INCLUDE [prod_short](includes/prod_short.md)]. Sestavy jsou sdíleny v rámci každé společnosti v [!INCLUDE [prod_short](includes/prod_short.md)].
+
+Pokud chcete sestavu odeslat, vyberte akci **Odeslat sestavu** z rozevíracího seznamu příkazů v části **Sestavy Power BI**. Potom vyhledejte soubor .pbix, který definuje sestavy, které chcete sdílet. Můžete změnit výchozí název souboru.
+
+Po nahrání sestavy do pracovního prostoru Power BI se tato sestava automaticky nahraje do pracovních prostorů Power BI jiných uživatelů.
+
+> [!NOTE]
+> Nahrání sestavy vyžaduje, abyste měli uživatelská oprávnění SUPER v [!INCLUDE[prod_short](includes/prod_short.md)]. Nahrávat sestavy nemůžete také pomocí [!INCLUDE [prod_short](includes/prod_short.md)] on-premises. V on-premises prostředí nahráváte sestavy přímo do pracovního prostoru Power BI. Pro další informace navštivte [Práce s [!INCLUDE [prod_short](includes/prod_short.md)] Data In Power BI](across-working-with-business-central-in-powerbi.md).
 
 ## Řešení problémů
 
@@ -112,35 +112,35 @@ Pokud se však něco pokazí, tato část poskytuje řešení pro nejtypičtěj�
 
 ### Nemáte účet Power BI
 
-Účet Power BI nebyl nastaven. To get a valid Power BI account, you must have a license, and you must have previously signed into Power BI to create a Power BI workspace.
+Účet Power BI nebyl nastaven. Chcete-li získat platný účet Power BI, musíte mít licenci a abyste vytvořili pracovní prostor Power BI, musíte se do Power BI předem registrovat.
 
 ### Zpráva: Nejsou povoleny žádné sestavy. Zvolte Vybrat sestavu, chcete-li zobrazit seznam sestav, které můžete zobrazit.
 
-Tato zpráva se zobrazí, pokud se výchozí sestavě nepodařilo nasadit do vašeho pracovního prostoru Power BI. Or it deployed but didn't refresh successfully. Navigate to the report in your Power BI workspace, select **Dataset**, **Settings**, and then manually update the credentials. Jakmile se datová sada úspěšně aktualizuje, přejděte zpět na [!INCLUDE[prod_short](includes/prod_short.md)] a ručně vyberte sestavu ze stránky **Vyberte sestavy**.
+Tato zpráva se zobrazí, pokud se výchozí sestavě nepodařilo nasadit do vašeho pracovního prostoru Power BI. Nebo se nasadilo, ale neproběhlo úspešné obnovení. Přejděte do sestavy v pracovním prostoru Power BI, vyberte **Sada dat**, **Nastavení** a pak ručně aktualizujte přihlašovací údaje. Jakmile se datová sada úspěšně aktualizuje, přejděte zpět na [!INCLUDE[prod_short](includes/prod_short.md)] a ručně vyberte sestavu ze stránky **Vyberte sestavy**.
 
-#### You can't see a report on the Select Report page on a list page
+#### Na stránce seznamu „Vybrat sestavu“ není vidět sestava.
 
-It's probably because the report's name doesn't contain the name of the list page. Clear the filter to get a full list of Power BI reports available.
+Je to pravděpodobně proto, že název sestavy neobsahuje název stránky seznamu. Vymažte filtr a získejte úplný seznam dostupných sestav Power BI.
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central and Power BI](admin-powerbi.md)  
-[Building Power BI Reports to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md)  
-[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
-[Working with [!INCLUDE [prod_short](includes/prod_short.md)] Data in Power BI](across-working-with-business-central-in-powerbi.md)  
-[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
-[The 'new look' of the Power BI service](/power-bi/service-new-look)  
-[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
-[Power BI documentation](/power-bi/)  
-[Business Intelligence](bi.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central a Power BI](admin-powerbi.md)    
+[Vytváření sestav Power BI k zobrazení dat [!INCLUDE [prod_long](includes/prod_long.md)]](across-how-use-financials-data-source-powerbi.md)    
+[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
+[Práce s daty [!INCLUDE [prod_short](includes/prod_short.md)] v Power BI](across-working-with-business-central-in-powerbi.md)    
+[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
+[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
+[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
+[Dokumentace Power BI](/power-bi/)    
+[Business Intelligence](bi.md)    
+[Připravte se na podnikání](ui-get-ready-business.md)    
+[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
+[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 
