@@ -11,83 +11,83 @@ ms.search.keywords: account schedule, analysis, reporting, financial report, bus
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Enabling Power BI Integration With [!INCLUDE[prod_short](includes/prod_short.md)]
+# Povolení integrace Power BI s [!INCLUDE[prod_short](includes/prod_short.md)]
 
-This article describes how to get [!INCLUDE[prod_short](includes/prod_short.md)] ready for integration with Power BI. [!INCLUDE[prod_short](includes/prod_short.md)] online is already enabled for integration, although there's some information about licensing that you might want to read. For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you'll have set up your environment to connect to Power BI before users can work with it.
+Tento článek popisuje, jak získat [!INCLUDE[prod_short](includes/prod_short.md)] připraven k integraci s Power BI. [!INCLUDE[prod_short](includes/prod_short.md)] online je již povolen pro integraci, i když existují některé informace o licencování, které byste si mohli chtít přečíst. Pro [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, budete mít nastavené prostředí pro připojení k Power BI, než s ním budou uživatelé moci pracovat.
 
-## <a name="license"></a>Power BI Licensing
+## <a name="license"></a>Licencování Power BI
 
-With [!INCLUDE[prod_short](includes/prod_short.md)], users get a free Power BI license that provides access to the most common features in [!INCLUDE[prod_short](includes/prod_short.md)] and Power BI. You can also purchase a Power BI Pro license that provides access to additional features. The following table provides an overview of the features available with each license.
+S [!INCLUDE[prod_short](includes/prod_short.md)], uživatelé získají bezplatnou licenci Power BI, která poskytuje přístup k nejběžnějším funkcím v [!INCLUDE[prod_short](includes/prod_short.md)] a Power BI. Můžete si také zakoupit licenci Power BI Pro, která poskytuje přístup k dalším funkcím. Následující tabulka obsahuje přehled funkcí dostupných s každou licencí.
 
-|Power License|View reports|Create reports|Share reports|Refresh reports| [!INCLUDE[prod_short](includes/prod_short.md)] Apps|
+|Licence pro spuštění|Zobrazení sestav|Vytváření sestav|Sdílení sestav|Aktualizace sestav| Aplikace [!INCLUDE[prod_short](includes/prod_short.md)]|
 |-------------|--------||
-|Power BI free|![a checkmark](media/check.png)|![another checkmark](media/check.png)|(limited)|(limited)||
-|Power BI Pro|![yet another checkmark](media/check.png)|![it's a checkmark](media/check.png)|![again a checkmark](media/check.png)|(extensive)|![last checkmark](media/check.png)|
+|Power BI zdarma|![zaškrtnutí](media/check.png)|![další zaškrtnutí](media/check.png)|(limitované)|(limitované)||
+|Power BI Pro|![ještě další zaškrtnutí](media/check.png)|![je to zaškrtnutí](media/check.png)|![opět zaškrtnutí](media/check.png)|(rozsáhlý)|![poslední zaškrtnutí](media/check.png)|
 
-For more information, see [Licensing the Power BI service for users in your organization](/power-bi/admin/service-admin-licensing-organization) or [Sign up for the Power BI service as an individual](/power-bi/fundamentals/service-self-service-signup-for-power-bi).
+Pro více informací navštivte [Licencování služby Power BI pro uživatele ve vaší organizaci](/power-bi/admin/service-admin-licensing-organization) nebo [Registrace ke službě Power BI jako jednotlivci](/power-bi/fundamentals/service-self-service-signup-for-power-bi).
 
-## <a name="setup"></a>Set up [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for Power BI integration
+## <a name="setup"></a>Nastavení [!INCLUDE[prod_short](includes/prod_short.md)] on-premises pro integraci Power BI
 
-This section explains the requirements for a [!INCLUDE[prod_short](includes/prod_short.md)] on-premises deployment to integrate with Power BI.
+Tato část vysvětluje požadavky na nasazení [!INCLUDE[prod_short](includes/prod_short.md)] on-premises pro integraci s Power BI.
 
-1. Configure either NavUserPassword or Azure Active Directory Authentication for the deployment.
+1. Nakonfigurujte pro nasazení ověřování NavUserPassword nebo Azure Active Directory.
 
-   Power BI integration doesn't support Windows authentication.
+   Integrace Power BI nepodporuje ověřování windows.
 
-2. Enable OData web services and the ODataV4 endpoint.
+2. Povolte webové služby OData a koncový bod ODataV4.
 
-   OData web service must be enabled on the [!INCLUDE[server](includes/server.md)], and OData port opened in firewall. For more information, see [Configuring Business Central Server - OData Web Services](/dynamics365/business-central/dev-itpro/administration/configure-server-instance#ODataServices).
+   Webová služba OData musí být povolena na [!INCLUDE[server](includes/server.md)], a port OData se otevřel v bráně firewall. Pro více informací, navštivte [Konfigurace webové služby Business Central Server - OData](/dynamics365/business-central/dev-itpro/administration/configure-server-instance#ODataServices).
 
-   The local server must be accessible from the Internet.
+   Místní server musí být přístupný z Internetu.
 
-3. Give [!INCLUDE[prod_short](includes/prod_short.md)] user accounts a web service access key.
+3. Dejte uživatelským účtům [!INCLUDE[prod_short](includes/prod_short.md)] přístupový klíč webové služby.
 
-   A web service access key is only needed to view [!INCLUDE[prod_short](includes/prod_short.md)] data in Power BI. You can assign a web service access key to each user account. Or instead, create a specific account with a web service access key for use by all users. For more information, see [Web Services Authentication](/dynamics365/business-central/dev-itpro/webservices/web-services-authentication#generate-a-web-service-access-key).
+   Přístupový klíč webové služby je potřeba pouze k zobrazení dat [!INCLUDE[prod_short](includes/prod_short.md)] v Power BI. Každému uživatelskému účtu můžete přiřadit přístupový klíč webové služby. Nebo místo toho vytvořte konkrétní účet s přístupovým klíčem webové služby pro použití všemi uživateli. Pro více informací navštivte [Ověřování webových služeb](/dynamics365/business-central/dev-itpro/webservices/web-services-authentication#generate-a-web-service-access-key).
 
    <!--
        > [!IMPORTANT]
        > With [!INCLUDE[prod_short](../developer/includes/prod_short.md)] online, the use of access keys (Basic Auth) for web service authentication is [deprecated](../upgrade/deprecated-features-w1.md#accesskeys). We recommend that you use OAuth2 instead. For more information, see [Using OAuth to Authorize Business Central Web Services](../webservices/authenticate-web-services-using-oauth.md).-->
 
-4. Create an application registration for [!INCLUDE[prod_short](includes/prod_short.md)] in Microsoft Azure.
+4. Vytvořte registraci přihlášky pro [!INCLUDE[prod_short](includes/prod_short.md)] v Microsoft Azure.
 
-   To view Power BI reports embedded in [!INCLUDE[prod_short](includes/prod_short.md)] pages, an application must be registered for [!INCLUDE[prod_short](includes/prod_short.md)] in Microsoft Azure The registered application needs permission to Power BI services. For more information, see [Registering [!INCLUDE[prod_short](includes/prod_short.md)] On-Premises in Azure AD for Integrating with Other Services](/dynamics365/business-central/dev-itpro/administration/register-app-azure).
+   Pro zobrazení sestav Power BI vložených na stránky [!INCLUDE[prod_short](includes/prod_short.md)], musí být přihláška zaregistrována pro [!INCLUDE[prod_short](includes/prod_short.md)] v Microsoft Azure. Registrovaná aplikace potřebuje oprávnění ke službám Power BI. Pro více informací navštivte [Registrace [!INCLUDE[prod_short](includes/prod_short.md)] On-Premises v Azure AD pro integraci s jinými službami](/dynamics365/business-central/dev-itpro/administration/register-app-azure).
 
    > [!NOTE]
-   > If your deployment uses NavUserPassword authentication, [!INCLUDE[prod_short](includes/prod_short.md)] connects to the same Power BI service for all users. You'll specify this service account as part of registering the application. With Azure AD authentication, [!INCLUDE[prod_short](includes/prod_short.md)] connects to the Power BI service associated with the individual user accounts.
+   > Pokud vaše nasazení používá ověřování NavUserPassword, [!INCLUDE[prod_short](includes/prod_short.md)] se připojuje ke stejné službě Power BI pro všechny uživatele. Tento účet služby zadáte jako součást registrace aplikace. S ověřováním Azure AD, se [!INCLUDE[prod_short](includes/prod_short.md)] připojuje ke službě Power BI přidružené k jednotlivým uživatelským účtům.
 
    <!-- Windows authentication can also be used but you can't get data from BC in Power BI -->
-5. Make the initial connection from Business Central to Power BI.
+5. Propojte počáteční připojení z Business Central do Power BI.
 
-   Before end-users can use Power BI in [!INCLUDE[prod_short](includes/prod_short.md)], an Azure application administrator will have to give consent to the Power BI service.
+   Než budou koncoví uživatelé moci používat Power BI v [!INCLUDE[prod_short](includes/prod_short.md)], správce aplikace Azure bude muset udělit souhlas se službou Power BI.
 
-   To make the initial connection, open [!INCLUDE[prod_short](includes/prod_short.md)], and run **Get Started with Power BI** from the role center. This action will lead you through the consent process, and check your Power BI license. When prompted sign in using an Azure admin account. For more information, see [Connect to Power BI - one time only](across-working-with-powerbi.md#connect).
+   Chcete-li vytvořit počáteční připojení, otevřete [!INCLUDE[prod_short](includes/prod_short.md)] a z centra rolí spusťte funkci **Začínáme s Power BI**. Tato akce vás povede procesem souhlasu a zkontroluje vaši licenci Power BI. Když se zobrazí výzva k přihlášení pomocí účtu správce Azure. Pro více informací navštivte [Připojení k Power BI - pouze jednou](across-working-with-powerbi.md#connect).
 
-## Publish data as web services
+## Publikujte data jako webové služby
 
-Kódové jednotky, stránky a dotazy, které chcete použít jako zdroj dat v sestavách Power BI, musí být publikovány jako webové služby. Ve výchozím nastavení je publikováno mnoho webových služeb. Snadný způsob, jak najít webové služby, je vyhledat *webové služby* v [!INCLUDE[prod_short](includes/prod_short.md)]. In the **Web Services** page, make sure the **Publish** field is selected for the web services listed above. Tento úkol je obvykle administrativní.
+Kódové jednotky, stránky a dotazy, které chcete použít jako zdroj dat v sestavách Power BI, musí být publikovány jako webové služby. Ve výchozím nastavení je publikováno mnoho webových služeb. Snadný způsob, jak najít webové služby, je vyhledat *webové služby* v [!INCLUDE[prod_short](includes/prod_short.md)]. Na stránce **Webové služby** zkontrolujte, zda je pro výše uvedené webové služby vybráno pole **Publikovat**. Tento úkol je obvykle administrativní.
 
 Pro více informací o publikování webových služeb navštivte [Publikování webové služby](across-how-publish-web-service.md).
 
 > [!TIP]
-> To learn about what you can do to ensure the best performance of web services, as seen from the Business Central server (the endpoint) and from the consumer (the client), read [Writing efficient Web Services](/dynamics365/business-central/dev-itpro/performance/performance-developer#writing-efficient-web-services).
+> Chcete-li se dozvědět, co můžete udělat pro zajištění nejlepšího výkonu webových služeb, jak je vidět ze serveru Business Central (koncový bod) a od spotřebitele (klienta), přečtěte si [Psaní efektivních webových služeb](/dynamics365/business-central/dev-itpro/performance/performance-developer#writing-efficient-web-services).
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/Configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central and Power BI](admin-powerbi.md)  
-[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
-[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
-[The 'new look' of the Power BI service](/power-bi/service-new-look)  
-[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
-[Power BI documentation](/power-bi/)  
-[Business Intelligence](bi.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central a Power BI](admin-powerbi.md)    
+[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
+[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
+[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
+[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
+[Dokumentace Power BI](/power-bi/)    
+[Business Intelligence](bi.md)    
+[Připravte se na podnikání](ui-get-ready-business.md)    
+[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
+[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 
