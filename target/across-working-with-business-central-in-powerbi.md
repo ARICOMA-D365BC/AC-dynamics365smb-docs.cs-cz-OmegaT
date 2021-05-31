@@ -12,84 +12,84 @@ ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
-# Working with [!INCLUDE [prod_short](includes/prod_short.md)] Data in Power BI
+# Práce s daty [!INCLUDE [prod_short](includes/prod_short.md)] v Power BI
 
-In this article, you learn some of the basics about working with reports and dashboards in Power BI that use [!INCLUDE [prod_short](includes/prod_short.md)] as a data source. The article discusses some aspects that will help you get started as a [!INCLUDE[prod_short](includes/prod_short.md)] user. For general guidelines and instructions about using Power BI, see [Power BI documentation for consumers](/power-bi/consumer).
+V tomto článku se dozvíte některé základy práce se sestavami a řídicími panely v Power BI, které používají [!INCLUDE [prod_short](includes/prod_short.md)] jako zdroj dat. Článek pojednává o některých aspektech, které vám pomohou začít jako uživatel [!INCLUDE[prod_short](includes/prod_short.md)]. Obecné pokyny a pokyny k používání Power BI najdete v dokumentaci [Power BI pro spotřebitele](/power-bi/consumer).
 
 ## Připravit se
 
-Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). When you sign up, use a work email address and password.
+Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při registraci použijte pracovní e-mailovou adresu a heslo.
 
 ## Začínáme
 
-Once you have a Power BI account, you can sign in at [https://powerbi.microsoft.com/](https://powerbi.microsoft.com/).
+Jakmile máte účet Power BI, můžete se přihlásit na [https://powerbi.microsoft.com/](https://powerbi.microsoft.com/).
 
-The Power BI service hosts all the reports available to you. To see the report, select **My Workspace** > **Reports**. Then just select the report that you want to view.
+Služba Power BI je hostitelem všech sestav, které máte k dispozici. Chcete-li zobrazit sestavu, vyberte možnost **Můj pracovní prostor** > **Sestavy**. Pak stačí vybrat sestavu, kterou chcete zobrazit.
 
-With [!INCLUDE[prod_short](includes/prod_short.md)] online, you'll automatically have a set of default reports on your workspace. If you want to create your own reports, you can use Power BI Desktop to create reports, and then publish them to your workspace. For more information, see [Getting Started Building Reports in Power BI Desktop to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md).
+S [!INCLUDE[prod_short](includes/prod_short.md)] online, budete mít automaticky sadu výchozích sestav v pracovním prostoru. Pokud chcete vytvořit vlastní sestavy, můžete k vytváření sestav použít Power BI Desktop a pak je publikovat do pracovního prostoru. Pro další informace navštivte [Začínáme vytvářet sestavy v Power BI Desktop k zobrazení dat [!INCLUDE [prod_long](includes/prod_long.md)]](across-how-use-financials-data-source-powerbi.md).
 
-If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you'll have to start from scratch by using Power BI Desktop. Optionally, Power BI reports can be distributed as files, that you can upload.
+Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, budete muset začít od začátku pomocí Power BI Desktop. Volitelně lze sestavy Power BI distribuovat jako soubory, které můžete nahrát.
 
-## Get the latest data
+## Získání nejnovějších dat
 
-Each Power BI report is based on a dataset that gets data from the [!INCLUDE[prod_short](includes/prod_short.md)] sources. You want to make sure that the data in your Power BI reports is up to date with the data in [!INCLUDE[prod_short](includes/prod_short.md)]. This concept is referred to as *refreshing*.  Depending on how your organization has set up Power BI, refreshing might not happen automatically. There are two ways to refresh data: manually or by scheduling a refresh. Manual refreshing is done on-demand, as needed. Scheduled refreshing lets you refresh automatically at defined time intervals.
+Každá sestava Power BI je založena na datové sadě, která získává zdrojová data z [!INCLUDE[prod_short](includes/prod_short.md)]. Chcete se ujistit, že data v sestavách Power BI jsou aktuální s daty v [!INCLUDE[prod_short](includes/prod_short.md)]. Tento koncept se označuje jako *Aktualizace*.  V závislosti na tom, jak vaše organizace nastavila Power BI, nemusí být aktualizace prováděná automaticky. Data lze aktualizovat dvěma způsoby: ručně nebo naplánováním aktualizace. Ruční aktualizace se provádí podle potřeby na vyžádání. Plánovaná aktualizace umožňuje automatickou aktualizaci v definovaných časových intervalech.
 
-### Refresh manually
+### Ruční aktualizace
 
-In the navigation pane, under **Datasets**, select **More options (...)** next to the dataset, then select **Refresh now**.
+V navigačním podokně vyberte v části **Sada dat** vedle datové sady možnost **Další možnosti (...)** a pak vyberte **Obnovit nyní**.
 
-### Schedule a refresh
+### Naplánování aktualizace
 
-In the navigation pane, under Datasets, select More options (...) next to the dataset, then select **Schedule refresh**. Fill in the information under the **Schedule refresh** section, and select **Apply**.
+V navigačním podokně vyberte v části Sady dát vedle datové sady Další možnosti (...) a pak vyberte **Naplánovat aktualizaci**. Vyplňte informace v části **Naplánovat aktualizaci** a vyberte **Použít**.
 
-For more information, see [Configure scheduled refresh](/power-bi/connect-data/refresh-scheduled-refresh)
+Pro více informací navštivte [Konfigurace naplánované aktualizace](/power-bi/connect-data/refresh-scheduled-refresh).
 
-## <a name="upload"></a>Upload reports from files
+## <a name="upload"></a>Nahrávání sestav ze souborů
 
-Sestavy Power BI lze mezi uživatele distribuovat jako soubory PBIX. If you have a .pbix file, you can upload the file to a workspace. To upload a report, do the following steps:
+Sestavy Power BI lze mezi uživatele distribuovat jako soubory PBIX. Pokud máte soubor .pbix, můžete soubor nahrát do pracovního prostoru. Chcete-li sestavu odeslat, vykonejte následující kroky:
 
-1. In your new workspace, select **Get Data**.
+1. V novém pracovním prostoru vyberte **Získat data**.
 
-2. In the Files box, select **Get**.
+2. V poli Soubory vyberte **Získat**.
 
-3. Select **Local File**, navigate to where you saved the file, and select **Open**.
+3. Vyberte **Místní soubor**, přejděte na místo, kam jste soubor uložili, a vyberte **Otevřít**.
 
-For more information, see [Upload the report to the service](/power-bi/paginated-reports/paginated-reports-quickstart-aw#upload-the-report-to-the-service).
+Pro více informací navštivte [Nahrání sestavy do služby](/power-bi/paginated-reports/paginated-reports-quickstart-aw#upload-the-report-to-the-service).
 
 > [!NOTE]
-> Uploading a report requires that you have a [Premium capacity](/power-bi/service-premium-what-is) work space. For more information, see [Managing Premium capacities](/power-bi/admin/service-premium-capacity-manage).
+> Nahrání sestavy vyžaduje, abyste měli pracovní prostor s [kapacitou Premium](/power-bi/service-premium-what-is). Pro více informací navštivte [Správa kapacit Premium](/power-bi/admin/service-premium-capacity-manage).
 
 > [!TIP]
-> If you're using [!INCLUDE[prod_short](includes/prod_short.md)] online, you can also upload a report from within [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Working with Power BI Reports in [!INCLUDE [prod_short](includes/prod_short.md)] - Upload Reports](across-working-with-powerbi.md#upload).
+> Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] online, můžete také nahrát zprávu zevnitř [!INCLUDE[prod_short](includes/prod_short.md)]. Pro více informací navštivte [Práce se sestavami Power BI v [!INCLUDE [prod_short](includes/prod_short.md)] - Nahrát sestavy](across-working-with-powerbi.md#upload).
 
-## <a name="share"></a>Share reports with others
+## <a name="share"></a>Sdílení sestav s ostatními
 
-Once a report is in your workspace, you can share it with others in your organization.
+Jakmile je sestava ve vašem pracovním prostoru, můžete ji sdílet s ostatními ve vaší organizaci.
 
-To share a report, in a list reports, or in an open report, select **Share**. In the **Share report** pane, enter the full email addresses for individuals or distribution groups you want to share with. Follow the instructions on screen to complete the sharing. For more information, see [Share a dashboard or report](/power-bi/collaborate-share/service-share-dashboards#share-a-dashboard-or-report).
+Chcete-li sdílet sestavu, vyberte v seznamu sestav nebo v otevřené sestavě možnost **Sdílet**. V ppodokně **Sdílet sestavu** zadejte úplné e-mailové adresy jednotlivců nebo distribučních skupin, se kterými chcete sestavu sdílet. Sdílení dokončete podle pokynů na obrazovce. Pro více informací navštivte [Sdílení řídicího panelu nebo sestavy](/power-bi/collaborate-share/service-share-dashboards#share-a-dashboard-or-report).
 
 > [!NOTE]
-> You must have  [Power BI Pro license](/power-bi/service-features-license-type), and the people you share with do too. The content must be in a workspace in a [Premium capacity](/power-bi/service-premium-what-is). For more information, see [Ways to share your work in Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports).
+> Musíte mít licenci [Power BI Pro](/power-bi/service-features-license-type) a také jí musí mít lidé, se kterými chcete sestavu sdílet sdílíte. Obsah musí být v pracovním prostoru s  [kapacitou Premium](/power-bi/service-premium-what-is). Pro více informací navštivte [Způsoby sdílení práce v Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports).
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central and Power BI](admin-powerbi.md)  
-[Building Power BI Reports to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md)  
-[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
-[Working with Power BI Reports in [!INCLUDE [prod_short](includes/prod_short.md)]](across-working-with-powerbi.md)  
-[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
-[The 'new look' of the Power BI service](/power-bi/service-new-look)  
-[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
-[Power BI documentation](/power-bi/)  
-[Business Intelligence](bi.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central a Power BI](admin-powerbi.md)    
+[Vytváření sestav Power BI k zobrazení dat [!INCLUDE [prod_long](includes/prod_long.md)]](across-how-use-financials-data-source-powerbi.md)    
+[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
+[Práce se sestavami Power BI v [!INCLUDE [prod_short](includes/prod_short.md)]](across-working-with-powerbi.md)    
+[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
+[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
+[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
+[Dokumentace Power BI](/power-bi/)    
+[Business Intelligence](bi.md)    
+[Připravte se na podnikání](ui-get-ready-business.md)    
+[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
+[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 
