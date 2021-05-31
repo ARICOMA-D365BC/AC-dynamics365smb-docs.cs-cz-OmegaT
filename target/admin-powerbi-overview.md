@@ -13,68 +13,68 @@ ms.date: 04/01/2021
 ms.author: jswymer
 
 ---
-# Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]
+# Integrace komponent Power BI a přehledu architertur pro [!INCLUDE[prod_short](includes/prod_short.md)]
 
-In this article, you'll learn about the different aspects of Power BI integration with [!INCLUDE[prod_short](includes/prod_short.md)] to help you understand its implementation and use.
+V tomto článku se dozvíte o různých aspektech integrace Power BI s [!INCLUDE[prod_short](includes/prod_short.md)], čo vám pomůže pochopit jeho implementaci a použití.
 
-## Components
+## Komponenty
 
-The following table describes the major components involved with Power BI integration.
+Následující tabulka popisuje hlavní komponenty, které jsou součástí integrace Power BI.
 
-| Component | Popis |
+| Komponenta | Popis |
 |---------|-----------|
-| Power BI | A cloud-based report hosting and management service. |
-| Power BI Desktop | An authoring tool for building reports and dashboards, and allows you to run reports. It's available as a free download on Microsoft Store and is installed locally. |
-| [!INCLUDE[prod_short](includes/prod_short.md)] | Online or on-premises solution with connectors exposed to Power BI and the ability to embed a Power BI part. |
+| Power BI | Cloudová služba pro hostování a správu sestav. |
+| Power BI Desktop | Vývojový nástroj pro vytváření sestav a řídicích panelů, který umožňuje spouštět sestavy. Je k dispozici ke stažení zdarma v Microsoft Store a je nainstalován lokálně. |
+| [!INCLUDE[prod_short](includes/prod_short.md)] | Online nebo lokální řešení s konektory vystavenými Power BI a možností vložit část Power BI. |
 
-## What's available from the start
+## Co je k dispozici od začátku
 
-The following table describes available features.
+Následující tabulka popisuje dostupné funkce.
 
-| Funkce | [!INCLUDE[prod_short](includes/prod_short.md)] online or on-premises support |
+| Funkce | Podpora [!INCLUDE[prod_short](includes/prod_short.md)] online nebo on-premises |
 |-------|---------------------|
-| Power BI connectors | Both. Different connectors for online and on-premises. Same connector used for Power BI Desktop and Power BI Service |
-| Embedded experience for viewing a given report inside a FactBox in [!INCLUDE[prod_short](includes/prod_short.md)] | Both. Requires configuration to display reports for on-premises. |
-| Power BI report management from [!INCLUDE[prod_short](includes/prod_short.md)] | Online |
-| Default Power BI reports on role centers deployed to Power BI | Online |
-| Power BI Apps on Microsoft AppSource | Online. |
+| Konektory Power BI | Oba Různé konektory pro online a on-premises. Stejný konektor používaný pro Power BI Desktop a Power BI Service |
+| Vložené prostředí pro zobrazení dané sestavy uvnitř okna s faktami v [!INCLUDE[prod_short](includes/prod_short.md)] | Oba Vyžaduje konfiguraci pro zobrazení sestav pro prostředí on-premises. |
+| Správa sestav Power BI od [!INCLUDE[prod_short](includes/prod_short.md)] | Online |
+| Výchozí sestavy Power BI o centrech rolí nasazených do Power BI | Online |
+| Aplikace Power BI na Microsoft AppSource | Online. |
 
-## Architecture
+## Architektura
 
-[!INCLUDE[prod_short](includes/prod_short.md)] integrates with Power BI through a connector using OData. The data source for Power BI reports is exposed as OData web services.
+[!INCLUDE[prod_short](includes/prod_short.md)] se integruje s Power BI prostřednictvím konektoru pomocí OData. Zdroj dat pro sestavy Power BI je vystaven jako webové služby OData.
 
-![Power BI architecture for integration with Business Central](./media/power-bi-architecture.png)
+![Architektura Power BI pro integraci s Business Central](./media/power-bi-architecture.png)
 
-## General Flow
+## Obecný tok
 
-The following diagram illustrates the basic workflow for users when connecting [!INCLUDE[prod_short](includes/prod_short.md)] to Power BI.
+Následující diagram znázorňuje základní workflow pro uživatele při připojování [!INCLUDE[prod_short](includes/prod_short.md)] do Power BI.
 
-![Power BI workflow  for integration with Business Central](./media/power-bi-flow.png)
+![Workflow Power BI pro integraci s Business Central](./media/power-bi-flow.png)
 
-1. User signs up for a Power BI account.
-2. User connects to Power BI from [!INCLUDE[prod_short](includes/prod_short.md)].
-3. [!INCLUDE[prod_short](includes/prod_short.md)] verifies the license.
-4. [!INCLUDE[prod_short](includes/prod_short.md)] deploys default reports to the Power BI service. This step only happens for [!INCLUDE[prod_short](includes/prod_short.md)] online.
-5. [!INCLUDE[prod_short](includes/prod_short.md)] makes reports in Power BI available for selection in [!INCLUDE[prod_short](includes/prod_short.md)]. Default reports are automatically displayed in Power BI parts.
-6. User creates a report in Power BI Desktop.
-7. User publishes the report to the Power BI service. The reports are then available for selection in [!INCLUDE[prod_short](includes/prod_short.md)].
+1. Uživatel se zaregistruje k účtu Power BI.
+2. Uživatel se připojuje k Power BI z [!INCLUDE[prod_short](includes/prod_short.md)].
+3. [!INCLUDE[prod_short](includes/prod_short.md)] ověřuje licenci.
+4. [!INCLUDE[prod_short](includes/prod_short.md)] nasadí výchozí sestavy do služby Power BI. Tento krok se děje pouze pro [!INCLUDE[prod_short](includes/prod_short.md)] online.
+5. [!INCLUDE[prod_short](includes/prod_short.md)] zpřístupní sestavy v Power BI pro výběr v [!INCLUDE[prod_short](includes/prod_short.md)]. Výchozí sestavy se automaticky zobrazují v částech Power BI.
+6. Uživatel vytvoří sestavu v Power BI Desktop.
+7. Uživatel publikuje sestavu do služby Power BI. Sestavy jsou pak k dispozici pro výběr v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central and Power BI](admin-powerbi.md)  
-[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
-[The 'new look' of the Power BI service](/power-bi/service-new-look)  
-[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
-[Power BI documentation](/power-bi/)  
-[Business Intelligence](bi.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central a Power BI](admin-powerbi.md)    
+[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
+[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
+[Rychlý start: Připojení k datům v Power BI Desktopu](/power-bi/desktop-quickstart-connect-to-data)    
+[Dokumentace Power BI](/power-bi/)    
+[Business Intelligence](bi.md)    
+[Připravte se na podnikání](ui-get-ready-business.md)    
+[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
+[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
+[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
