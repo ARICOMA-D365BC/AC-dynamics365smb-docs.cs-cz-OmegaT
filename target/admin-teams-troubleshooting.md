@@ -96,61 +96,61 @@ Tento problém může být způsoben několika věcmi: nedostatkem oprávnění 
 
 2. Pokud používáte Teams v prohlížeči, zkontrolujte nastavení prohlížeče.
 
-   - Your browser's pop-up blocker must be either turned off or set to allow pop-ups from the *businesscentral.dynamics.com* or *bc.dynamics.com* domains. For information about allowing pop-ups for [!INCLUDE [prod_short](includes/prod_short.md)], see [Setting Up Your Browser](across-browser-settings.md#popup).
-   - Your browser must have access to local browser storage for cookies and preferences as you work.
-   - Avoid using guest or private browsing unless necessary, because they discard or block certain content in some browsers.
+   - Blokování automaticky otevíraných okna v prohlížeči musí být vypnuto nebo nastaveno tak, aby umožňovaly automaticky otevíraná okna z domén *businesscentral.dynamics.com* nebo *bc.dynamics.com*. Informace o povolení vyskakovacích oken pro [!INCLUDE [prod_short](includes/prod_short.md)], najdete v [Nastavení Vašeho prohližeče](across-browser-settings.md#popup).
+   - Váš prohlížeč musí mít při práci přístup k místnímu úložišti prohlížeče pro soubory cookies a předvolby.
+   - Pokud to není nutné, nepoužívejte hostování ani anonymní prohlížení, protože v některých prohlížečích zahodí nebo zablokuje určitý obsah.
 
-   For more information about minimum browser requirements, see [Minimum Requirements for Using [!INCLUDE [prod_short](includes/prod_short.md)]](product-requirements.md#browsers)
+   Další informace o minimálních požadavcích prohlížeče naleznete v tématu [Minimální požadavky pro používání [!INCLUDE [prod_short](includes/prod_short.md)]](product-requirements.md#browsers)
 
-## I'm having problems with the camera or location in Teams
+## Mám problémy s kamerou nebo lokací v Teams
 
-When using [!INCLUDE [prod_short](includes/prod_short.md)] features in the details window that require access to your location or device camera, you must first give your consent for Teams to access these device capabilities.
+Při použití funkcí [!INCLUDE [prod_short](includes/prod_short.md)] v okně podrobností, které vyžadují přístup k vaší poloze nebo kameře zařízení, musíte nejprve udělit souhlas s přístupem k těmto možnostem zařízení.
 
-- For Teams in the browser, make sure that your browser settings allow access to camera and location for https://teams.microsoft.com.
+- U Teams v prohlížeči se ujistěte, že nastavení prohlížeče umožňuje přístup ke kameře a umístění pro https://teams.microsoft.com.
 
-- For Teams for iOS or Android, make sure that your device settings allow access to camera and location for the Teams mobile app.
+- U Teams pro iOS nebo Android se ujistěte, že nastavení vašeho zařízení umožňuje přístup k fotoaparátu a umístění pro mobilní aplikaci Teams.
 
-For help about changing these settings, see [My camera isn't working in Teams](https://support.microsoft.com/office/my-camera-isn-t-working-in-teams-9581983b-c6f9-40e3-b0d8-122857972ade?ns=msftteams&version=16&ui=en-us&rs=en-us&ad=us) on Microsoft Support.
+Nápovědu ke změně těchto nastavení najdete v [Nefunguje mi kamera v Teams](https://support.microsoft.com/office/my-camera-isn-t-working-in-teams-9581983b-c6f9-40e3-b0d8-122857972ade?ns=msftteams&version=16&ui=en-us&rs=en-us&ad=us) na stránkách podpory Microsoft.
 
-The [!INCLUDE [prod_short](includes/prod_short.md)] app doesn't support location in the Teams desktop app. For more information about location, see the [Teams FAQ](teams-faq.md#location).
+Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] nepodporuje informace o poloze v desktopové aplikaci Teams. Další informace o poloze najdete v [Nejčastějších dotazech Teams](teams-faq.md#location).
 
-Some browsers, such as the new Microsoft Edge, allow you to choose which device camera to use when your device supports multiple cameras.
+Některé prohlížeče, například nový Microsoft Edge, Vám umožňují zvolit, kterou kameru zařízení použít, když vaše zařízení podporuje více kamer.
 
-## Teams displays mixed languages for my cards and card details
+## Teams zobrazuje pro mé karty podrobností a karty smíšené jazyky
 
-For cards and card details to display consistently in the same language in Teams, the language of your Teams client and the language you use in [!INCLUDE [prod_short](includes/prod_short.md)] Web client must match.
+Aby se karty a údaje o kartě zobrazovaly konzistentně ve stejném jazyce v Teams, jazyk vašeho klienta Teams a jazyk, který používáte ve webovém klientu [!INCLUDE [prod_short](includes/prod_short.md)] musí být stejný. 
 
-- To learn about changing the language in Teams, see [Change settings in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) on Microsoft Support.
+- Další informace o změně jazyka v Teams najdete v tématu [Změna nastavení v Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) na stránkách podpory Microsoft.
 
-- To learn about changing the language in [!INCLUDE [prod_short](includes/prod_short.md)], see [Change Basic Settings - Language](ui-change-basic-settings.md#language).
+- Další informace o změně jazyka v [!INCLUDE [prod_short](includes/prod_short.md)] naleznete v  [Změna základního nastavení - Jazyky](ui-change-basic-settings.md#language).
 
-For more information on how languages work between Teams and [!INCLUDE [prod_short](includes/prod_short.md)], see [Teams FAQ](teams-faq.md#language).
+Další informace o tom, jak jazyky fungují mezi Teams a [!INCLUDE [prod_short](includes/prod_short.md)], najdete v [Nejčastěji pokládané otázky a odpovědi Teams](teams-faq.md#language).
 
-## I edited a field in the details window, but my change wasn't saved
+## Upravil jsem pole v okně podrobností, ale moje změna nebyla uložena
 
-Changes you make to a field in the details windows are automatically saved when you leave the field. Before you close the window after changing a field, be sure to press the Tab key or click/tap outside the field.
+Změny provedené v poli v podrobných oknech se automaticky uloží, když pole opustíte. Před zavřením okna po změně pole nezapomeňte stisknout klávesu Tab nebo kliknout/klepnout mimo pole.
 
-## A new tile appeared in the App Launcher. How do I remove it?
+## Ve spouštěči aplikace se objevila nová dlaždice. Jak ji odstraním?
 
-When you view your apps on the Office 365 home page (https://home.office.com) or in the app launcher, a new tile named "Business Central Teams Integration Service Connector" will appear after installing the [!INCLUDE [prod_short](includes/prod_short.md)] app for Teams. This tile provides no value in itself and can be safely hidden.
+Když si prohlížíte své aplikace na domovské stránce Office 365 (https://home.office.com) nebo ve spouštěči aplikací, po instalaci "Business Central Teams Integration Service Connector" se objeví aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams. Tato dlaždice sama o sobě neposkytuje žádnou hodnotu a lze ji bezpečně skrýt.
 
-As an administrator, who has Azure Active Directory admin permissions, you can hide the tile by doing the following steps:
+Jako správce, který má oprávnění správce Azure Active Directory, můžete dlaždici skrýt provedením následujících kroků:
 
-1. Sign in to the [Azure Active Directory admin center](https://aad.portal.azure.com/).
-2. Select **Enterprise apps**, then select **Business Central Teams Integration Service Connector**.
-3. Select **Properties**, then set the **Visible To Users** switch to **No**.
-4. Select **Save**.
+1. Přihlaste se do [Centra pro správu Azure Active Directory](https://aad.portal.azure.com/).
+2. Vyberte **Enterprise apps**, a poté zvolte **Business Central Teams Integration Service Connector**.
+3. Vyberte **Vlastnosti**, a poté nastavte **Viditelné uživatelům** na **Ne**.
+4. Zvolte **Uložit**.
 
 > [!NOTE]
-> It will be a while before this change takes effect.
+> Než se tato změna projeví, bude to chvíli trvat.
 
 
 ## Viz také
 
 [[!INCLUDE [prod_short](includes/prod_short.md)] and Microsoft Teams Integration Overview](across-teams-overview.md)  
-[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
+[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[d365fin](includes/free_trial_md.md)]
 

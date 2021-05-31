@@ -12,99 +12,99 @@ ms.date: 04/12/2021
 ms.author: jswymer
 ---
 
-# Managing Microsoft Teams Integration with [!INCLUDE [prod_short](includes/prod_short.md)]
+# Správa integrace Microsoft Teams s [!INCLUDE [prod_short](includes/prod_short.md)]
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-This article provides an overview of what you can do as an administrator to control Microsoft Teams integration with [!INCLUDE [prod_short](includes/prod_short.md)].
+Tento článek obsahuje přehled toho, co můžete jako správce udělat pro řízení integrace Microsoft Teams s [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## In Microsoft Teams
+## v Microsoft Teams
 
-### Minimum requirements
+### Minimální požadavky
 
-This section describes the minimum requirements for the [!INCLUDE [prod_short](includes/prod_short.md)] app features to work in Teams.
+Tato část popisuje minimální požadavky na aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] pro práci v Teams.
 
-- Required licenses
+- Požadované licence
 
-   This table gives you an overview of the licenses needed for the [!INCLUDE [prod_short](includes/prod_short.md)] app features to work in Teams.
+   Tato tabulka poskytuje přehled licencí potřebných pro aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] pro práci v Teams.
 
-   | What | Teams license | [!INCLUDE [prod_short](includes/prod_short.md)] license |
+   | Co | Licence Teams | [!INCLUDE [prod_short](includes/prod_short.md)] licence |
    |----|---|---|
-   | Search for [!INCLUDE [prod_short](includes/prod_short.md)] contacts. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
-   | Paste a link to a [!INCLUDE [prod_short](includes/prod_short.md)] record into a conversation, and send it as a card. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
-   | View a card of a [!INCLUDE [prod_short](includes/prod_short.md)] record in a conversation. | ![check mark](media/check.png "check") |
-   | View more details of card for a [!INCLUDE [prod_short](includes/prod_short.md)] record in a conversation. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   | Vyhledávání [!INCLUDE [prod_short](includes/prod_short.md)] kontaktů. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   | Vložení odkazu na záznam [!INCLUDE [prod_short](includes/prod_short.md)] do konverzace a odelsání jako karty. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   | Zobrazení karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") |
+   | Zobrazení podrobností karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
 
-- Allow URL previews
+- Povolit náhledy URL adres
 
-   **Allow URL previews** policy setting must be turned on. Otherwise, a card can't be generated for [!INCLUDE [prod_short](includes/prod_short.md)] links pasted into a Teams conversation. For more information about this setting, see [Manage messaging policies in Teams](/microsoftteams/messaging-policies-in-teams).
+   Musí být zapnuto nastavení zásad **Povolit náhledy URL adres**. V opačném případě nelze kartu vygenerovat pro [!INCLUDE [prod_short](includes/prod_short.md)] vkládáné do konverzace Teams. Další informace o tomto nastavení najdete v tématu [Správa zásad zasílání zpráv v Teams](/microsoftteams/messaging-policies-in-teams).
 
-### Managing the [!INCLUDE [prod_short](includes/prod_short.md)] app (optional)
+### Správa aplikace [!INCLUDE [prod_short](includes/prod_short.md)] (volitelné)
 
-As a Teams administrator, you can manage all apps for your organization, including the [!INCLUDE [prod_short](includes/prod_short.md)] app. You can approve or install the [!INCLUDE [prod_short](includes/prod_short.md)] app for your organization, block user's from installing the app, and more.
+Jako správce Teams můžete spravovat všechny aplikace pro vaši organizaci, včetně aplikace [!INCLUDE [prod_short](includes/prod_short.md)]. Můžete schválit nebo nainstalovat aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] pro vaši organizaci, zablokovat uživatelům instalaci aplikace a další.
 
-For more information, see the following articles in the Microsoft Teams documentation:
+Další informace najdete v následujících článcích v dokumentaci Microsoft Teams:
 
-- [Manage your apps in the Microsoft Teams admin center](/MicrosoftTeams/manage-apps)
-- [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies)
+- [Správa aplikací v Centru pro správu Microsoft Teams](/MicrosoftTeams/manage-apps)
+- [Správa zásad nastavení aplikací v Microsoft Teams](/microsoftteams/teams-app-setup-policies)
 
-## In [!INCLUDE [prod_short](includes/prod_short.md)]
+## V [!INCLUDE [prod_short](includes/prod_short.md)]
 
-### Minimum requirements
+### Minimální požadavky
 
-- [!INCLUDE [prod_short](includes/prod_short.md)] version:
+- [!INCLUDE [prod_short](includes/prod_short.md)] verze:
 
-   [!INCLUDE [prod_short](includes/prod_short.md)] 2021 release wave 1 or later. Teams integration is only supported for [!INCLUDE [prod_short](includes/prod_short.md)] online; not on-premises.
+   [!INCLUDE [prod_short](includes/prod_short.md)] 2021 release wave 1 nebo novější. Integrace Teams je podporována pouze pro [!INCLUDE [prod_short](includes/prod_short.md)] online; ne on-premises.
 
-- Codeunit **2718 Page Summary Provider** is published as a web service:
+- Procedura **2718 Page Summary Provider** je publikovaná jako webová služba:
 
-   This codeunit is published as a web service by default. The codeunit is part of the [!INCLUDE [prod_short](includes/prod_short.md)] system application. It's used to get the field data for a [!INCLUDE [prod_short](includes/prod_short.md)] page added to a Teams conversation. Informace o publikování webových služeb naleznete v tématu [Publikování Webové Služby](across-how-publish-web-service.md).
+   Tato procedura je ve výchozím nastavení publikována jako webová služba. Procedura je součástí systémové aplikace [!INCLUDE [prod_short](includes/prod_short.md)]. Používá se k získání dat z políček pro stránky [!INCLUDE [prod_short](includes/prod_short.md)] přidaných do konverzace Teams. Informace o publikování webových služeb naleznete v tématu [Publikování Webové Služby](across-how-publish-web-service.md).
 
-- <a name="permissions"></a>User permissions:
+- <a name="permissions"></a>Uživatelská oprávnění:
 
-   For the most part, the contact search, pages, and data that users can view and edit in a Teams conversation is controlled by their permissions in [!INCLUDE [prod_short](includes/prod_short.md)].
+   Vyhledávání kontaktů, stránek a dat, která mohou uživatelé zobrazit a upravovat v konverzaci Teams, jsou většinou řízeny jejich oprávněními v [!INCLUDE [prod_short](includes/prod_short.md)].
 
-   - To search for contacts, users must have at least read permission to the **Contacts** table.
-   - To paste a [!INCLUDE [prod_short](includes/prod_short.md)] link into a Teams conversation and have it expand into a card, users must have at least read permission on the page and its data.
-   - Once a card is submitted into a conversation, any user in that conversation can view that card without permission to [!INCLUDE [prod_short](includes/prod_short.md)].
-   - To view more details for a card or open the record in [!INCLUDE [prod_short](includes/prod_short.md)], users must have read permission on the page and its data.
-   - To change data, user's need modify permissions.
+   - Chcete-li vyhledat kontakty, musí mít uživatelé alespoň oprávnění ke čtení tabulky **Kontakty**.
+   - Pro vkládání odkazů [!INCLUDE [prod_short](includes/prod_short.md)] do konverzace Teams a jeho rozbalení na kartu, uživatelé musí mít alespoň oprávnění ke čtení na stránce a jejích datech.
+   - Jakmile je karta odeslána do konverzace, každý uživatel v této konverzaci může tuto kartu zobrazit bez povolení [!INCLUDE [prod_short](includes/prod_short.md)].
+   - Chcete-li zobrazit další podrobnosti o kartě nebo otevřít záznam v [!INCLUDE [prod_short](includes/prod_short.md)], uživatelé musí mít oprávnění ke čtení na stránce a jejích datech.
+   - Chcete-li změnit data, je potřeba upravit oprávnění uživatele.
 
-   For information about permissions, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
+   Informace o oprávněních najdete v části [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
-## Managing privacy and compliance
+## Správa ochrany osobních údajů a dodržování předpisů
 
-Microsoft Teams provides extensive controls for compliance and management of sensitive or personally identifiable data&mdash;including data added to chats and channels by the [!INCLUDE [prod_short](includes/prod_short.md)] app.
+Microsoft Teams poskytuje rozsáhlé ovládací prvky pro dodržování a správu citlivých nebo osobně identifikovatelných dat - včetně dat přidaných do chatů a kanálů aplikace [!INCLUDE [prod_short](includes/prod_short.md)].
 
-### Understanding where [!INCLUDE [prod_short](includes/prod_short.md)] cards are stored
+### Pochopení kde jsou karty [!INCLUDE [prod_short](includes/prod_short.md)] uloženy
 
-After a card is sent to a chat, the card and the fields shown on the card are copied to Teams. This information is subject to the Teams policies for your organization, such as data retention policies. When displaying card details, none of the data in the details window is stored in Teams. The data remains stored in [!INCLUDE [prod_short](includes/prod_short.md)] and will only be retrieved by Teams when the user chooses to view the details.
+Po odeslání karty do chatu se karta a pole zobrazená na kartě zkopírují do Teams. Na tyto informace se vztahují zásady Teams pro vaši organizaci, například zásady uchovávání dat. Při zobrazování podrobností o kartě se žádná data v okně s podrobnostmi neuloží v Teams. Data zůstávají uložena v [!INCLUDE [prod_short](includes/prod_short.md)] a Teams je načte pouze v případě, že se uživatel rozhodne zobrazit podrobnosti.
 
-- To learn more about where Teams stores that data, see [Location of data in Microsoft Teams](/microsoftteams/location-of-data-in-teams).
-- To learn more about retention policies in Teams, see [Retention policies in Microsoft Teams](/microsoftteams/retention-policies).
+- Další informace o tom, kam Teams ukládá tato data, najdete v tématu [Umístění dat v Microsoft Teams](/microsoftteams/location-of-data-in-teams).
+- Další informace o zásadách uchovávání informací v Teams naleznete v tématu [Zásady uchovávání informací v Microsoft Teams](/microsoftteams/retention-policies).
 
-### Restricting sharing of cards
+### Omezení sdílení karet
 
-You prevent specific users or groups from sending cards to chats or channels by setting up messaging policies that turn off the **URL Previews** setting. For more information about this setting, see [Manage messaging policies in Teams](/microsoftteams/messaging-policies-in-teams).
+Nastavením zásad zasílání zpráv, které vypnou nastavení náhledů adres URL, zabráníte určitým uživatelům nebo skupinám v nastavení **Náhledů URL**. Další informace o tomto nastavení najdete v tématu [Správa zásad zasílání zpráv v Teams](/microsoftteams/messaging-policies-in-teams).
 
-You can also use information barriers to prevent individuals or groups from communicating with each other. To learn more, see [Information barriers in Microsoft Teams](/microsoftteams/information-barriers-in-teams).
+Můžete také použít informační bariéry, abyste zabránili jednotlivcům nebo skupinám ve vzájemné komunikaci. Další informace najdete v tématu [Informační bariéry v Microsoft Teams](/microsoftteams/information-barriers-in-teams).
 
-Data loss prevention features in the Microsoft 365 Security & Compliance Center can't be applied specifically to cards. But they can be applied to the chat messages that contain the cards. <!-- To track upcoming advanced features that include enabling DLP for cards, see [https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=67093](https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=67093).-->
+Funkce prevence ztráty dat v Centru zabezpečení a dodržování předpisů Microsoftu 365 nelze použít konkrétně na karty. Lze je však použít na chatovací zprávy, které obsahují karty. <!-- To track upcoming advanced features that include enabling DLP for cards, see [https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=67093](https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=67093).-->
 
-### Responding to data requests
+### Odpověď na žádosti o data
 
-You allow team members and team owners to delete messages that contain sensitive cards by setting up messaging policies, like: **Owners can delete sent messages** and **Users can delete sent messages**. For more information, see [Manage messaging policies in Teams](/microsoftteams/messaging-policies-in-teams).
+Členům týmu a vlastníkům týmu umožníte odstraňovat zprávy obsahující citlivé karty nastavením zásad zasílání zpráv, například: **Vlastníci mohou mazat odeslané zprávy** a **Uživatelé mohou smazat odeslané zprávy**. Další informace najdete v tématu [Správa zásad zasílání zpráv v Teams](/microsoftteams/messaging-policies-in-teams).
 
-Content search and eDiscovery compliance features in the Microsoft 365 Security & Compliance Center can also be applied to cards.
+Funkce vyhledávání obsahu a dodržování předpisů eDiscovery v Centru zabezpečení a dodržování předpisů Microsoftu 365 lze také použít na karty.
 
-Because card data in Teams is a copy of data in [!INCLUDE [prod_short](includes/prod_short.md)], you can also use [!INCLUDE [prod_short](includes/prod_short.md)] features to export a customer’s data if requested. For more information about privacy in [!INCLUDE [prod_short](includes/prod_short.md)], see [Privacy FAQ for Business Central Customers](/dynamics365/business-central/dev-itpro/security/privacyfaq).
+Protože data karty v Teams jsou kopií dat ve službě [!INCLUDE [prod_short](includes/prod_short.md)], můžete na požádání exportovat data zákazníka také pomocí funkcí [!INCLUDE [prod_short](includes/prod_short.md)]. Další informace o ochraně osobních údajů naleznete v [!INCLUDE [prod_short](includes/prod_short.md)] v části [Časté dotazy k ochraně osobních údajů pro zákazníky v Business Central](/dynamics365/business-central/dev-itpro/security/privacyfaq).
 
 ## Viz také
-[[!INCLUDE [prod_short](includes/prod_short.md)] and Microsoft Teams Integration Overview](across-teams-overview.md)  
-[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
+[Přehled integrace [!INCLUDE [prod_short](includes/prod_short.md)] a Microsoft Teams](across-teams-overview.md)  
+[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Troubleshooting Teams](admin-teams-troubleshooting.md)  
-[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Řešení problémů Teams](admin-teams-troubleshooting.md)  
+[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 
