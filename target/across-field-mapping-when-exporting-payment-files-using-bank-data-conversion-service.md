@@ -36,7 +36,7 @@ The following table lists the fields in [!INCLUDE[prod_short](includes/prod_shor
 | Payment Reference | Payment Reference | General Journal Line | The payment reference of the payment line |
 | Recipient Address | Address | Customer/Vendor | The recipient address that is specified on the customer or vendor card |
 | Recipient City | City | Customer/Vendor | The recipient city that is specified on the customer or vendor card |
-| Recipient Name | Name | Customer/Vendor | The recipient name that is specified on the customer or vendor card |
+| Recipient Name | Jméno | Customer/Vendor | The recipient name that is specified on the customer or vendor card |
 | Recipient Country/Region Code | Country/Region Code | Customer/Vendor | The recipient country/region code that is specified on the customer or vendor card |
 | Recipient Post Code | Post Code | Customer/Vendor | The recipient post code that is specified on the customer or vendor card |
 | Recipient Bank Acc. Ne.  | Bank Account No./IBAN | Customer Bank Account/Vendor Bank Account | The recipient bank account number (IBAN or other) that is specified on the customer or vendor bank account card |
@@ -51,12 +51,12 @@ The following table lists the fields in [!INCLUDE[prod_short](includes/prod_shor
 | Invoice Date | Document Date | Customer/Vendor Ledger Entry | The invoice date on the entry that the payment is applied to |
 | Recipient Bank Address | Address | Customer Bank Account/Vendor Bank Account | The recipient bank account address that is specified on the customer or vendor bank account card |
 | The recipient bank account address that is specified on the customer or vendor bank account card | City | Customer Bank Account/Vendor Bank Account | The recipient bank account city that is specified on the customer or vendor bank account card |
-| Recipient Bank Name | Name | Customer Bank Account/Vendor Bank Account | The recipient bank account name that is specified on the customer or vendor bank account card |
+| Recipient Bank Name | Jméno | Customer Bank Account/Vendor Bank Account | The recipient bank account name that is specified on the customer or vendor bank account card |
 | Recipient Bank Country/Region | Country/Region Code | Customer Bank Account/Vendor Bank Account | The recipient bank account country/region that is specified on the customer or vendor bank account card |
 | Recipient Bank Post Code | Post Code | Customer Bank Account/Vendor Bank Account | The recipient bank account post code that is specified on the customer or vendor bank account card |
 | Sender Bank Address | Address | Bank Account | The sender bank account address that is specified on the bank account card |
 | Sender Bank City | City | Bank Account | The sender bank account city that is specified on the bank account card |
-| Sender Bank Name | Name | Bank Account | The sender bank account name that is specified on the bank account card |
+| Sender Bank Name | Jméno | Bank Account | The sender bank account name that is specified on the bank account card |
 | Sender Bank Country/Region | Country/Region Code | Bank Account | The sender bank account country/region that is specified on the bank account card |
 | Sender Bank Post Code | Post Code | Bank Account | The sender bank account post code that is specified on the bank account card |
 | General Journal Template | Journal Template Name | General Journal Line | The general journal template that is used for the payment line |

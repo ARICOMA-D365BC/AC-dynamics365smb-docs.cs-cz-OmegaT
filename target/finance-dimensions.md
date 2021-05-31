@@ -139,14 +139,14 @@ Let's say that your company wants to track transactions based on organizational 
 * **AREA**
 * **DEPARTMENT**
 
-| Kód | Name | Code Caption | Filter Caption |
+| Kód | Jméno | Code Caption | Filter Caption |
 | --- | --- | --- | --- |
 | AREA | Area | Area Code | Area Filter |
 | DEPARTMENT | Department | Department Code | Department Filter |
 
 For **AREA**, you add the following dimension values:
 
-| Kód | Name | Dimension Value Type |
+| Kód | Jméno | Dimension Value Type |
 | --- | --- | --- |
 | 10 | Americas | Od-součet |
 | 20 | North America | Standardní |
@@ -165,7 +165,7 @@ For the two main geographic areas, Americas and Europe, you add subcategories fo
 
 For **DEPARTMENT**, you add the following dimension values:
 
-| Kód | Name | Dimension Value Type |
+| Kód | Jméno | Dimension Value Type |
 | --- | --- | --- |
 | ADMIN | Administration | Standardní |
 | PROD | Výroba | Standardní |

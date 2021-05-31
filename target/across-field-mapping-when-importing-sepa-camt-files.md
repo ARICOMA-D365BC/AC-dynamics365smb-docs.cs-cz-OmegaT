@@ -28,7 +28,7 @@ For information about creating or adjusting a data exchange definition, see [Set
 | Stmt/Ntry/CdtDbtInd | CreditDebitIndicator | Text | Indicates whether the entry is a credit or a debit entry | DBIT | 13 | Částka |
 | Stmt/Ntry/BookgDt/Dt |   |   | The date when an entry is posted to an account on the account servicer's books | 5 | Zúčtovací datum |
 | Stmt/Ntry/BookgDt/DtTm | DateTime | DateTime | The date and time when an entry is posted to an account on the account servicer's books | 5 | Zúčtovací datum |
-| Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm | Name | Text | The name of the party that owes an amount of money to the (ultimate) creditor | 1221 | Payer Information |
+| Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm | Jméno | Text | The name of the party that owes an amount of money to the (ultimate) creditor | 1221 | Payer Information |
 | Stmt/Ntry/NtryDtls/TxDtls/RmtInf/Ustrd | Unstructured | Text | Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts-receivable system, in an unstructured form | 8 | Popis |
 | Stmt/Ntry/AddtlNtryInf | AdditionalEntryInformation | Text | Additional information about the entry | 1222 | Transaction Information |
 
@@ -49,7 +49,7 @@ For information about creating or adjusting a data exchange definition, see [Set
 | Stmt/Ntry/BookgDt/DtTm | DateTime | DateTime | The date and time when an entry is posted to an account on the account servicer's books | 5 | Transaction Date |
 | Stmt/Ntry/ValDt/Dt |   |   | The date when assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit entry | 12 | Value Date |
 | Stmt/Ntry/ValDt/DtTm | DateTime | DateTime | The date and time when assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit entry | 12 | Value Date |
-| Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm | Name | Text | The name of the party that owes an amount of money to the (ultimate) creditor | 15 | Payer Information |
+| Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm | Jméno | Text | The name of the party that owes an amount of money to the (ultimate) creditor | 15 | Payer Information |
 | Stmt/Ntry/NtryDtls/TxDtls/RmtInf/Ustrd | Unstructured | Text | Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts-receivable system, in an unstructured form | 6 | Popis |
 | Stmt/Ntry/AddtlNtryInf | AdditionalEntryInformation | Text | Additional information about the entry | 16 | Transaction Information |
 

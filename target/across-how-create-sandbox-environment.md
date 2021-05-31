@@ -61,7 +61,7 @@ The sandbox environment is not least useful because it includes a couple of hand
 
 * [Advanced user experience](#advanced-user-experience)
 * [Complete sample data](#complete-sample-data)
-* [Designer](#designer)
+* [Návrhář](#designer)
 
 ### Advanced user experience
 

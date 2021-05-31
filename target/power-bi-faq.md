@@ -11,198 +11,198 @@ ms.search.keywords: Power BI, reports, faq, errors
 ms.date: 04/22/2021
 ms.author: jswymer
 ---
-# Power BI  FAQ
+# Nejčastější dotazy Power BI
 
-This article answers some of the questions you may have about working with Power BI and [!INCLUDE [prod_short](includes/prod_short.md)].
+Tento článek odpovídá na některé otázky, které můžete mít ohledně práce s Power BI a [!INCLUDE [prod_short](includes/prod_short.md)].
 
 ## [Obecné](#tab/general)
 <!-- 26 -->
-### I've selected a report for my role center in Business Central. If I later make changes to the report's visuals online, will the role center automatically update to my changes?
+### Vybral jsem sestavu pro své centrum rolí v Business Central. Pokud později provádím změny vizuálů sestavy online, bude centrum rolí automaticky aktualizovat mé změny?
 
-Yes, because the reports are embedded from Power BI.
+Ano, protože sestavy jsou vložené z Power BI.
 
 <!-- 3 -->
-### Are the Business Central apps for Power BI available in languages other than English?
+### Jsou aplikace Business Central pro Power BI dostupné v jiných jazycích než v angličtině?
 
-Ne.  These apps are currently only available in English.
+Ne.  Tyto aplikace jsou v současné době k dispozici pouze v angličtině.
 
 <!-- 24 -->
-### Once a report is published on my powerbi.com workspace, can I download its pbix?
+### Jakmile je sestava publikována na mém powerbi.com pracovním prostoru, mohu si stáhnout její pbix?
 
-Ano. For more information, see [Download a report from the Power BI service to Power BI Desktop](/power-bi/create-reports/service-export-to-pbix).
+Ano. Pro více informací navštivte [Stažení sestavy ze služby Power BI do Power BI Desktop](/power-bi/create-reports/service-export-to-pbix).
 
 <!-- 27 -->
-### Can I download the apps as pbix files?
+### Mohu si stáhnout aplikace jako soubory pbix?
 
-Ne.  Currently, we don’t offer downloading pbix files for the official Power BI apps, because they're published on AppSource.
+Ne.  V současné době nenabízíme stahování souborů pbix pro oficiální aplikace Power BI, protože jsou publikovány v AppSource.
 
-## [License](#tab/license)
+## [Licence](#tab/license)
 
 <!-- 14 -->
-### Do I need a Power BI Pro license to publish reports?
+### Potřebuji k publikování sestav licenci Power BI Pro?
 
 <!-- todo What does " or for every user that consults the published report" mean? fixed -->
-Ne.  A Pro license isn't needed to publish reports. The standard (free) Power BI license is enough. For more information, see [Power BI Licensing](admin-powerbi-setup.md#license).
+Ne.  K publikování sestav není potřeba licence Pro. Stačí standardní (bezplatná) licence Power BI. Pro více informací navštivte [Licencování Power BI](admin-powerbi-setup.md#license).
 
 <!-- 15 -->
-### Is there anything I can't do with the free license?
+### Je něco, co nemůžu udělat s licencí zdarma?
 
-You can't share reports or install the Business Central apps for Power BI. Other than that, the free license allows you to create almost all variations of charts and reports.
+Nemůžete sdílet sestavy ani instalovat aplikace Business Central pro Power BI. Kromě toho vám bezplatná licence umožňuje vytvářet téměř všechny varianty grafů a sestav.
 
 <!-- 16 -->
-### If someone shares a report with another person, then that person needs a Pro license to see the report. Are there plans to make this capability possible with the free license?
+### Pokud někdo sdílí sestavu s jinou osobou, pak tato osoba potřebuje licenci Pro, aby ji viděla. Existují plány, jak tuto možnost umožnit pomocí bezplatné licence?
 
-We don't have control over this requirement. This requirement is set by Power BI. For more information, see [Share Power BI dashboards and reports with coworkers and others](/power-bi/collaborate-share/service-share-dashboards).
+Nad tímto požadavkem nemáme kontrolu. Tento požadavek je nastaven pomocí Power BI. Pro více informací navštivte [Sdílení řídicích panelů a sestav Power BI se spolupracovníky a dalšími](/power-bi/collaborate-share/service-share-dashboards).
 
-## [Designer](#tab/designer)
+## [Návrhář](#tab/designer)
 
 <!-- 7 -->
-### Does the connector work with API pages?
+### Funguje konektor se stránkami rozhraní API?
 
-Not yet. But starting in June 2021, the new Power BI connector will support both Business Central web services and API pages. For more information, see [Enable Power BI connector to work with Business Central APIs, instead of with web services only](/dynamics365-release-plan/2021wave1/smb/dynamics365-business-central/enable-power-bi-connector-work-business-central-apis-instead-web-services-only).
+Zatím ne. Od června 2021 však bude nový konektor Power BI podporovat webové služby Business Central i stránky rozhraní API. Pro více informací navštivte [Povolení práce s rozhraními API Business Central pomocí konektoru Power BI, nikoli pouze s webovými službami](/dynamics365-release-plan/2021wave1/smb/dynamics365-business-central/enable-power-bi-connector-work-business-central-apis-instead-web-services-only).
 
 <!-- 11 -->
-### Is it possible to choose which Business Central environment to get data from for Power BI, for example, like a sandbox or production environment?
+### Je možné zvolit, ze kterého prostředí Business Central chcete získat data pro Power BI, například sandbox nebo produkční prostředí?
 
-Ano. It can be easily chosen. When you connect to Business Central using the connector, you have to choose the environment and company name.
+Ano. Lze jej snadno vybrat. Když se připojíte k Business Central pomocí konektoru, musíte zvolit prostředí a název společnosti.
 
 <!-- 6 -->
-### Can I merge data from several production environments of the same tenant?
+### Mohu sloučit data z několika produkčních prostředí stejného tenanta?
 
-Ano. In Power BI, just run the get data operation again and choose the environment you want.
+Ano. V Power BI spusťte znovu operaci získat data a vyberte prostředí, které chcete.
 
 <!-- 25 -->
 ### Which pages in Business Central have the Power BI Report part?
 
-Currently, there are a few selected pages that have a FactBox with a **Power BI Reports** part for displaying a report.
+V současné době existuje několik vybraných stránek, které mají panel s fakty s částí **Sestavy Power BI** pro zobrazení sestavy.
 
-On list pages, the **Power BI Reports** part is filtered to show reports that pertain to data in the list. Here's the list type pages that include the **Power BI Reports** part:
+Na stránkách se seznamy je část **Sestavy Power BI** filtrována tak, aby zobrazovala sestavy, které se týkají dat v seznamu. Tady jsou stránky typu seznam, které obsahují část **Sestavy Power BI**:
 
-| Page ID | Name |
+| ID stránky | Jméno |
 |-------|----|
-| 22 | Customer List |
-| 27 | Vendor List |
-| 31 | Item List |
-| 9305 | Sales Order List |
+| 22 | Přehled zákazníků |
+| 27 | Přehled dodavatelů |
+| 31 | Přehled zboží |
+| 9305 | Seznam prodejních objednávek |
 | 9308 | Nákupní faktury |
 
-Here are other pages that contain the larger, non-filtered **Power BI Reports** part:
+Tady jsou další stránky, které obsahují větší část **Sestav Power BI**:
 
-| Page ID | Name |
+| ID stránky | Jméno |
 |-------|----|
-| 1156 | Company Detail |
+| 1156 | Podrobnosti o společnosti |
 | 4013 | Intelligent Cloud Insights |
-| 9006 | Order Processor Role Center |
-| 9008 | Whse. Basic Role Center |
-| 9010 | Production Planner Role Center |
-| 9015 | Job Project Manager RC |
-| 9016 | Service Dispatcher Role Center |
-| 9022 | Business Manager Role Center |
-| 9024 | Security Admin Role Center |
-| 9026 | Sales & Relationship Mgr. RC |
-| 9027 | Accountant Role Center |
+| 9006 | Centrum rolí Zpracovatel objednávek |
+| 9008 | Centrum  rolí Skladník |
+| 9010 | Centrum rolí Výrobní plánovač |
+| 9015 | Centrum rolí Vedoucí projektuC |
+| 9016 | Centrum rolí Správce servisu |
+| 9022 | Centrum rolí Obchodní ředitel |
+| 9024 | Centrum rolí Správce zabezpečení |
+| 9026 | Centrum rolí Manažer prodeje a vztahů   |
+| 9027 | Centrum rolí Účtárna |
 
 > [!TIP]
-> We don't have plans to add it to all list pages at the moment. However, you can create a simple page extension that adds the **Power BI Reports** part in a FactBox. For more information, see [Adding Power BI Report Parts to Pages](/dynamics365/business-central/dev-itpro/developer/devenv-power-bi-report-parts) in the Developer and IT Pro help.
+> V tuto chvíli nemáme v plánu přidat jej na všechny stránky seznamu. Můžete však vytvořit jednoduchou extension stránky, která přidá část **Sestavy Power BI** do okna s fakty. Pro více informací navštivte [Přidání částí sestav Power BI na stránky](/dynamics365/business-central/dev-itpro/developer/devenv-power-bi-report-parts) v nápovědě vývojáře a IT Pro.
 
 <!-- 5 -->
-### Is there any way to filter a dataset from Business Central *before* I pull it into Power BI, instead of applying filters afterwards?
+### Existuje nějaký způsob, jak filtrovat datovou sadu z Business Central *dříve* než ji vytáhnu do Power BI, místo toho, abych potom použil filtry přímo v Power BI?
 
-To filter larger datasets, the easiest way is to set a filter on your Power BI report by editing directly the Power Query formula. Most of the filters you set this way will be passed on to Business Central through query folding. See [Incremental refresh for datasets](/power-bi/admin/service-premium-incremental-refresh).
+Chcete-li filtrovat větší datové sady, nejjednodušším způsobem je nastavit filtr v sestavě Power BI přímo úpravou vzorce Power Query. Většina filtrů, které nastavíte tímto způsobem, bude předána do Business Central prostřednictvím skládání dotazů. Viz [Inkrementální aktualizace pro datové sady](/power-bi/admin/service-premium-incremental-refresh).
 
-There's currently no way of setting a filter for the web service data from within Business Central. If your application needs to set a filter from within Business Central, you'll have to create a custom Business Central App for this purpose.
+V současné době neexistuje žádný způsob, jak nastavit filtr pro data webové služby z Business Central. Pokud vaše aplikace potřebuje nastavit filtr z Business Central, budete si pro tento účel muset vytvořit vlastní aplikaci Business Central.
 
 <!-- 8 and 9 -->
 
-### For embedding reports in Business Central pages, right now it's only possible to get reports from *My Workspace* in Power BI. Are there plans to make it possible to get them from custom workspaces?
+### Pro vkládání sestav na stránky Business Central je teď možné získat sestavy jenom z *mého pracovního prostoru* v Power BI. Existují plány, které by umožnily jejich získání z vlastních pracovních prostorů?
 
-Ano. We have it in our plans to add support for shared workspaces, but we don't yet have a timeline to give you.
+Ano. Máme v plánu přidat podporu pro sdílené pracovní prostory, ale ještě nemáme časovou osu, kterou bychom vám mohli poskytnout.
 
 <!-- 10 -->
-### From Power BI, besides using a query, is there another way to get data from Business Central tables that don't have an associated page? For example, like the *Item Attributes Value Mapping* table.
+### Existuje z Power BI kromě použití dotazu i jiný způsob, jak získat data z tabulek Business Central, které nemají přidruženou stránku? Například jako tabulka *Atributy zboží mapování hodnot*.
 
-Ne.  Not at this point.
+Ne.  V tuhle chvíli ne.
 
 <!-- 12 -->
-### Are published queries faster to use than published pages?
+### Jsou publikované dotazy rychlejší než publikované stránky?
 
-When it comes to web services, published queries are usually faster than equivalent published pages. The reason is that queries are optimized for reading data and don’t contain expensive triggers like OnAfterGetRecord.
+Pokud jde o webové služby, publikované dotazy jsou obvykle rychlejší než ekvivalentní publikované stránky. Důvodem je, že dotazy jsou optimalizovány pro čtení dat a neobsahují triggery, jako je OnAfterGetRecord.
 
-When the new connector is available in June 2021, you're encouraged to use API pages over queries published as web services.
+Až bude nový konektor k dispozici v červnu 2021, doporučujeme používat stránky rozhraní API na dotazy publikované jako webové služby.
 
 <!-- 13 -->
-### Is there a way for an end user to create a web service with a column that's in a Business Central table, but not a page? Or will developer have to create a custom query?
+### Existuje způsob, jak může koncový uživatel vytvořit webovou službu se sloupcem, který je v tabulce Business Central, ale ne na stránce? Nebo bude muset vývojář vytvořit vlastní dotaz?
 
-Not yet. But when the new connector is available in June 2021, a developer can create a new API page to meet this requirement.
+Zatím ne. Ale když bude v červnu 2021 k dispozici nový konektor, vývojář bude moci vytvořit novou stránku rozhraní API, která tento požadavek splní.
 
 <!-- 28 -->
-### Can I connect Power BI to a read-only database server of Business Central online?
+### Můžu Power BI připojit k databázi Business Central online jen pro čtení?
 
-Ne.  But we have this feature on our long-term roadmap.
+Ne.  Ale tuto funkci máme v našem dlouhodobém plánu.
 
-## [Performance](#tab/performance)
+## [Výkon](#tab/performance)
 
 <!-- 17 -->
 
-### Is it faster to get data using API pages than using web services?
+### Je rychlejší získat data pomocí stránek ROZHRANÍ API než pomocí webových služeb?
 
-Ano. Our tests indicate that API pages are up to 25% more performant than web services.
+Ano. Naše testy ukazují, že stránky API jsou až o 25 % výkonnější než webové služby.
 
 <!-- 18 -->
-### Are there plans to have a mirror on the Azure SQL Database instance, which I can connect to directly?
+### Existují plány na zrcadlení instance Azure SQL Database, ke které se mohu připojit přímo?
 
-Ne.  Not at this point. You can only communicate with Business Central through APIs.
+Ne.  V tuhle chvíli ne. S Business Central můžu komunikovat pouze prostřednictvím rozhraní API.
 
 <!-- 19 -->
-### Loading data from Business Central web services seems slow. Is there any way to get data directly from the SQL database table?
+### Načítání dat z webových služeb Business Central se zdá být pomalé. Existuje nějaký způsob, jak získat data přímo z databázové tabulky SQL?
 
-Ne.  Direct access to the database isn't possible, but switching to API pages (when the new connector available) will help greatly.
+Ne.  Přímý přístup k databázi není možný, ale přechod na stránky rozhraní API (když je k dispozici nový konektor) výrazně pomůže.
 
-## [Advanced](#tab/advanced)
+## [Pokročilé](#tab/advanced)
 <!-- 1 -->
 
-### Are there plans for the Power BI connector to support the incremental refresh features in the Power BI Service?
+### Existují plány pro konektor Power BI, který podporuje přírůstkové funkce aktualizace ve službě Power BI?
 
-Ano. It's on our roadmap.
+Ano. Je to v našem plánu.
 
 <!-- 2 -->
-### If a Business Central on-premises solution doesn't have internet access, can I still use Power BI?
+### Pokud řešení Business Central on-premises nemá přístup k internetu, můžu pořád používat Power BI?
 <!-- todo: please explain this one-->
 
-Ano. In this case, you use Power BI Desktop locally and connect to the Business Central on-premises. Once connected, can create and view reports, but you just can't publish them to the Power BI Service.
+Ano. V takovém případě používáte Power BI Desktop lokálně a připojujete se k Business Central on-premises. Po připojení můžete vytvářet a prohlížet si sestavy, ale nemůžete je publikovat do služby Power BI.
 <!-- 20 -->
-### Are there any plans to make it possible to replicate Business Central online databases so they're accessible for read-only SQL queries? This capability would support incremental refresh and be a lot faster than API's or web services.
+### Existují nějaké plány, které by umožnily replikaci online databází Business Central, aby byly přístupné pro dotazy SQL jen pro čtení? Tato funkce by podporovala přírůstkovou aktualizaci a byla by mnohem rychlejší než rozhraní API nebo webové služby.
 
 <!-- todo: what does "BC-Saas-DB-replicated DB accessible" mean? fixe-->
-Ano. We have this feature on our long-term roadmap.
+Ano. Tuto funkci máme v našem dlouhodobém plánu.
 
 <!-- 21 -->
-### If I use Azure Data Factory to get data from Business Central and consume it on Power BI, will that help in increase in performance?
+### Když použiju Azure Data Factory k získání dat z Business Central a jejich využití v Power BI, pomůže to zvýšit výkon?
 
-Ano. This advanced scenario will help Business Central stay performant, because the data access would be done via the Azure Data Factory.
+Ano. Tento pokročilý scénář pomůže Business Central zůstat výkonným, protože přístup k datům se bude provádět prostřednictvím Azure Data Factory.
 
 <!-- 22 -->
-### Are there any plans to support Power BI deployment pipelines or a way to build deployment pipelines for PBI reports, similar to extensions? Or maybe even a simple API in the Business Admin Center?
+### Existují nějaké plány na podporu kanálů nasazení Power BI nebo způsob, jak vytvořit kanály nasazení pro sestavy PBI, podobně jako rozšíření? Nebo možná i jednoduché rozhraní API v Centru pro správu?
 
-We're looking into this feature. Power BI offers rich APIs to control report deployments. For more information, see [Introduction to deployment pipelines](/power-bi/create-reports/deployment-pipelines-overview).
+Prověřujeme tuto funkci. Power BI nabízí bohatá rozhraní API pro řízení nasazení sestav. Pro více informací navštivte [Úvod do nasazení kanálů](/power-bi/create-reports/deployment-pipelines-overview).
 
-### I've tried the preview of the new connector, which will be live in June 2021. I see some values like "_x0020_" when connecting to API v2.0. What are these values?
+### Vyzkoušel jsem náhled nového konektoru, který bude v červnu 2021. Při připojování k rozhraní API v2.0 se zobrazí některé hodnoty jako "_x0020_". Co znamenají tyto hodnoty?
 
-The upcoming version of the Power BI connector enables you to connect to the Business Central API pages, including API v2.0. These pages include a few fields based on [AL Enum objects](/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums). Fields based on AL Enum objects must have names that are consistent and always the same, so that filters on the report always work&mdash;no matter the language or operating system you're using. For this reason, the fields based on AL Enums aren't translated and are encoded to avoid any special character, including the space. In particular, whenever there's an empty option in the AL Enum object, it's encoded to "_x0020_". You can always apply a transformation to your data on Power BI if you want to display some different value for these fields, for example "Empty".
+Nadcházející verze konektoru Power BI umožňuje připojení k stránkám rozhraní Business Central API, včetně rozhraní API v2.0. yto stránky obsahují několik polí založených na objektech [AL Enum](/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums). Pole založená na objektech AL Enum musí mít názvy, které jsou konzistentní a vždy stejné, aby filtry v sestavě vždy fungovaly bez ohledu na jazyk nebo operační systém, který používáte. Z tohoto důvodu nejsou pole založená na AL Enums přeložena a jsou kódována, aby se zabránilo jakémukoli speciálnímu znaku, včetně mezery. Zejména vždy, když je v objektu AL Enum prázdná možnost, je zakódována na "_x0020_". Transformaci dat v Power BI můžete použít vždy, pokud chcete pro tato pole zobrazit jinou hodnotu, například "Prázdná".
 
 
 ---
 
 ## Viz také
 
-[Power BI Licensing](admin-powerbi-setup.md#license)
-[Business Central and Power BI Introduction](admin-powerbi.md)  
-[Power BI Integration Overview](admin-powerbi-overview.md)  
-[Enabling Power BI in Business Central](admin-powerbi-setup.md)  
-[Working with Power BI Reports in Business Central](across-working-with-powerbi.md)  
-[Working with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md)  
-[Building Power BI Reports to Display Business Central Data](across-how-use-financials-data-source-powerbi.md)    
-[Power BI documentation](/power-bi/)
+[Licence Power BI](admin-powerbi-setup.md#license)  
+[Úvod Business Central a Power BI](admin-powerbi.md)    
+[Přehled integrace Power BI](admin-powerbi-overview.md)    
+[Povolení Power BI v Business Central](admin-powerbi-setup.md)    
+[Práce se sestavami Power BI v Business Central](across-working-with-powerbi.md)    
+[Práce s daty Business Central v Power BI](across-working-with-business-central-in-powerbi.md)    
+[Vytvážení sestav Power BI pro zobrazení dat Business Central](across-how-use-financials-data-source-powerbi.md)      
+[Dokumentace Power BI](/power-bi/)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
