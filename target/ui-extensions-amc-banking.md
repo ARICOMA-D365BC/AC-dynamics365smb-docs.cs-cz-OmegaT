@@ -47,7 +47,7 @@ For each new permission set, grant only the **Read** permission for the **AMC Ba
 1. Get a module and a service plan for AMC Banking. To do that, visit the [AMC License](https://license.amcbanking.com/register) page.
 2. In [!INCLUDE[prod_short](includes/prod_short.md)], choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **AMC Banking Setup**, and then choose the related link.
 3. On the **AMC Banking Setup** page, choose the **Assisted Setup** action.
-4. Complete the steps in the assisted setup guide.
+4. Proveďte kroky v průvodci asistovanou instalaci.
 
 ### To connect bank accounts to the extension
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
@@ -82,8 +82,8 @@ Using this extension is just a matter of exporting data on the **Payment Journal
    [!INCLUDE[prod_short](includes/prod_short.md)] will create a new payment reconciliation journal that contains the data in the file. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
 
 ## Viz také
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)
+[Úprava [!INCLUDE[prod_short](includes/prod_short.md)] pomocí rozšíření](ui-extensions.md)  
+[Příprava na podnikání](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

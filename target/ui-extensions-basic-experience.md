@@ -14,39 +14,39 @@
 
 
 ---
-# The Basic Experience Extension
-If you have been using Microsoft Dynamics C5, Microsoft partners can help you transition to a more modern solution that is based on [!INCLUDE[prod_short](includes/prod_short.md)], so you can continue to enjoy the same streamlined capabilities as Dynamics C5.
+# Rozšíření Basic Experience
+Pokud používáte Microsoft Dynamics C5, mohou vám partneři společnosti Microsoft s přechodem na modernější řešení založené na [!INCLUDE[prod_short](includes/prod_short.md)], takže si můžete i nadále užívat stejné zjednodušené funkce jako Dynamics C5 .
 
-This extension is intended for small businesses and can support up to three users. If you need more users you must upgrade to a [!INCLUDE[prod_short](includes/prod_short.md)] license and uninstall this extension.
+Toto rozšíření je určeno pro malé firmy a může podporovat až tři uživatele. Pokud potřebujete více uživatelů, musíte upgradovat na [!INCLUDE[prod_short](includes/prod_short.md)] a odinstalujte toto rozšíření.
 
 > [!NOTE]
-> As of now, this extension is available only for customers in Denmark and Iceland.
+> Od této chvíle je toto rozšíření k dispozici pouze pro zákazníky v Dánsku a na Islandu.
 
-## What's Available
-The following table describes the capabilities that are available if you install the Basic Experience extension.
+## Co je k dispozici
+Následující tabulka popisuje možnosti, které jsou k dispozici při instalaci rozšíření Basic Experience.
 
-| Area | Functionality |
+| Oblasti | Funkcionalita |
 |---------|---------|
-| **General Ledger** | Basic Finance, Account Schedules, Fixed Assets, Bank Management, Bank Reconciliation, Payments, Direct Debit, Dimensions, Multiple Currencies, Budgets, Workflow, Document Management/OCR, Consolidation, Unlimited Companies |
-| **Account Receivables/Sales** | Basic Receivables, Sales Invoicing, Sales Discounts, Pricing, Sales Tax, Contact Management |
-| **Account Payables/Purchase** | Basic Payables, Purchase Invoicing |
-| **Project Management** | Jobs, Job Pricing, Time Sheets, Assignment, Tasks, Resources |
-| **Inventory** | Basic Inventory, Item Substitutions, Item Cross Reference |
+| **Hlavní kniha** | Základní finance, Účetní schémata, Dlouhodobý majetek, Správa banky, Vyrovnávání banky, Platby, Inkaso, Dimenze, Více měn, Rozpočty, Workflow, Správa dokladů/OCR, Konsolidace, Neomezené společnosti |
+| **Pohledávky/Prodej** | Základní pohledávky, fakturace prodeje, prodejní slevy, ceny, DPH, správa kontaktů |
+| **Závazky/Nakup** | Základní závazky, Fakturace nákupu |
+| **Správa projektů** | Projekty, Ocenění projektu, Pracovní výkazy, Přiřazení, Úkoly, Zdroje |
+| **Zásoby** | Základní zásoby, náhrady zboží, křížové odkazy zboží |
 
-## Getting Started
-This extension is a bit different than most, and you will need help from a Microsoft partner to install and set it up. Just so that you know what to expect, here's a high-level view of what the Microsoft partner will do.
+## Začínáme
+Toto rozšíření se trochu liší od většiny a při jeho instalaci a nastavení budete potřebovat pomoc od partnera společnosti Microsoft. Jen abyste věděli, co můžete očekávat, zde je pohled na vysokou úroveň toho, co partner Microsoftu udělá.
 
-1. Create a new [!INCLUDE[prod_short](includes/prod_short.md)] tenant. This can be either a trial or a CSP version.
-2. Add at least one user who is assigned to a Basic Experience license in your Azure Active Directory account.
-3. Remove all companies, including the sample Cronus company.
-4. Create a new company that does not contain any sample data or setups.
-5. Add the **Demo RapidStart** package. <!--what does the pockage contain?-->
-6. Download and install the Basic Experience extension from AppSource.
+1. Vytvoří nového [!INCLUDE[prod_short](includes/prod_short.md)] tenanta. Může to být buď zkušební verze, nebo verze CSP.
+2. Přidání alespoň jednoho uživatele do účtu Azure Active Directory, který je přiřazen k licenci Basic Experience.
+3. Odebere všechny společnosti, včetně ukázkové společnosti Cronus.
+4. Vytvoří novou společnost, která neobsahuje žádná ukázková data ani nastavení.
+5. Přidá balíček **Demo RapidStart**. <!--what does the pockage contain?-->
+6. Stáhněte si a nainstalujte rozšíření Basic Experience ze služby AppSource.
 
-## Migrating Data
-Bring your Dynamics C5 data along. After your Microsoft partner installs the Basic Experience extension you will have an empty company. An easy way to move your data from Dynamics C5 to Basic Experience is to use the C5 Data Migration extension, which is included in [!INCLUDE[prod_short](includes/prod_short.md)]. The extension migrates customers, vendors, items, and your general ledger accounts and their entries.
+## Migrace dat
+Převeďte svá data Dynamics C5. Po instalaci rozšíření Basic Experience bude mít partner společnosti Microsoft prázdnou společnost. Snadný způsob, jak přesunout data z Dynamics C5 do Basic Experience, je použít rozšíření Migrace dat C5, které je součástí [!INCLUDE[prod_short](includes/prod_short.md)]. Rozšíření migruje zákazníky, dodavatele, zboží a vaše hlavní účty a jejich položky.
 
 ## Viz také
-[The C5 Data Migration Extension](ui-extensions-c5-data-migration.md)
+[Rozšíření C5 Data Migration
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -24,8 +24,8 @@ ms.author: edupont
 | Získávání přehledu o výkonu obchodních aktivit prostřednictvím rozpočtů, plánů účtů a analýzy. | [Business Intelligence](bi.md) |
 | Správa prodejních procesů a informací, jako jsou nabídky, objednávky, vratky, zákaznické účty a provádění přímých dodávek. | [Sales](sales-manage-sales.md) |
 | Správa nákupních procesů a informací, jako jsou faktury, objednávky, vratky a účty dodavatele a položky nákupu z prodejních dokladů | [Purchasing](purchasing-manage-purchasing.md) |
-| Evidence nových zásob nebo služeb, třídění zboží pro snadné vyhledávání, úprava úrovně zásob a provádění běžných úloh kalkulace zásob. | [Inventory](inventory-manage-inventory.md) |
-| Vytváření úloh a plánování zdrojů pro projekty, správa rozpočtů, sledování pokroku, hodin strojů a zaměstanců. | [Project Management](projects-manage-projects.md) |
+| Evidence nových zásob nebo služeb, třídění zboží pro snadné vyhledávání, úprava úrovně zásob a provádění běžných úloh kalkulace zásob. | [Zásoby](inventory-manage-inventory.md) |
+| Vytváření úloh a plánování zdrojů pro projekty, správa rozpočtů, sledování pokroku, hodin strojů a zaměstanců. | [Správa projektů](projects-manage-projects.md) |
 | Uspořádání dlouhodobého majektu, zajištění správných periodických odpisů a sledování nákladů na údržbu. | [Fixed Assets](fa-manage.md) |
 | Správa a podpodpora prodejního úsilí a zaměření interakcí na preferované zákazníky a kontakty. | [Relationship Management](marketing-relationship-management.md) |
 | Udržování podrobných záznamů o zaměstnancích a evidence nepřítomnosti pro účely analýzy. | [Human Resources](hr-manage-human-resources.md) |

@@ -21,8 +21,8 @@ The list of the extensions by other companies grows each month. So keep an eye o
 
 ## Viz také
 
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)
+[Úprava [!INCLUDE[prod_short](includes/prod_short.md)] pomocí rozšíření](ui-extensions.md)  
+[Příprava na podnikání](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

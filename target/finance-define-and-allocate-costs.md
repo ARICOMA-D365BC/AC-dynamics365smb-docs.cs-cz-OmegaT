@@ -58,7 +58,7 @@ The following table shows which filters are possible for different allocation ba
 
 | **Base** | **Číselná  Filter** | **Date Filter Code** | **Cost Center Filter** | **Cost Object Filter** | **Group Filter** |
 |--------------|----------------------------------------|----------------------------------------------|------------------------------------------------|------------------------------------------------|------------------------------------------|  
-| G/L Entries | Finanční účet | Ano | Ano | Ano | N/A |
+| Věcné položky | Finanční účet | Ano | Ano | Ano | N/A |
 | Položky finančního rozpočtu | Finanční účet | Ano | Ano | Ano | G/L Budget Name |
 | Cost Type Entries | Typ nákladů | Ano | Ano | Ano | N/A |
 | Cost Budget Entries | Typ nákladů | Ano | Ano | Ano | Budget Name |

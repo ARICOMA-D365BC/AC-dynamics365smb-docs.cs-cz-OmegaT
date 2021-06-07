@@ -13,56 +13,56 @@ ms.date: 04/01/2021
 ms.author: edupont
 ---
 
-# Mobile Apps FAQ
+# Nejčastější dotazy k mobilní aplikací
 
-This article answers questions that our advanced users often ask about the mobile apps for [!INCLUDE [prod_short](includes/prod_short.md)].
+Tento článek odpovídá na otázky, které naši pokročilí uživatelé často kladou ohledně mobilní aplikace pro [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## Is there an app for my device?
+## Existuje aplikace pro mé zařízení?
 
-Probably! Install the [!INCLUDE[prod_short](includes/prod_short.md)] app on your mobile device by downloading the app from the Windows Store, App Store, or Google Play.
+Pravděpodobně! Nainstalujte si do svého mobilního zařízení aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] stažením aplikace z Windows Store, App Store nebo Google Play.
 
 - [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848) (PC only)
 - [App Store](https://go.microsoft.com/fwlink/?LinkId=734847)
 - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
 
-## Is it the same experience in the apps as in the browser?
+## Je stejné prostředí v aplikacích jako v prohlížeči?
 
-No, not exactly. For example, we show only the **Home** activity group due to the limited screen size on mobile devices. Similarly, the keyboard shortcuts are not available because you mainly use touch rather than a keyboard to navigate on mobile devices.
+Ne tak docela. Například z důvodu omezené velikosti obrazovky v mobilních zařízeních zobrazujeme pouze skupinu aktivit **Domů**. Podobně klávesové zkratky, ty nejsou k dispozici, protože k navigaci na mobilních zařízeních používáte spíše dotyk než klávesnici.
 
-The following table describes some of the most common differences and limitations that you might experience when using [!INCLUDE [prod_short](includes/prod_short.md)] on mobile devices, compared to the browser.
+Následující tabulka popisuje některé z nejčastějších rozdílů a omezení, se kterými se můžete setkat při používání [!INCLUDE [prod_short](includes/prod_short.md)] na mobilních zařízeních ve srovnání s prohlížečem.
 
-| Concept | On tablets | On phones | Example from the browser |
+| Koncept | Na tabletech | Na telefonech | Příklad z prohlížeče |
 |--|--|--|--|
-| Activity groups | Only the **Home** activity group is shown. | Only the **Home** activity group is shown. | **Home** and **Posted Documents** on the `Sales Order Processor` Role Center. |  |
-| Selecting multiple records in lists | Not available. | Not available. | `Ctrl+A` or `Ctrl+Click` on rows in a list in the browser. |
-| Actions in the action bar | Only Promoted actions are shown. | Only Promoted actions are shown. |  |
-| FactBoxes | Not shown on List pages or Worksheet pages. | Not shown on List pages or Worksheet pages. | `Customer` list on the `Small Business` Role Center. |
-| Advanced filters | No column-specific filtering is available. | No column-specific filtering is available. | On the `Customer` list page. |
-| Tell Me | Not available yet. | Not available yet. | See [Finding Pages and Information with Tell Me](ui-search.md). |  |
-| Role Explorer | Not available yet. | Not available yet. | See [Finding Pages with the Role Explorer](ui-role-explorer.md). |
-| Fields in FastTabs | Fields in FastTabs on list pages are not shown. Only the repeater control is shown in the content area of the page. | Not available. |  |
-| Select from full list | Not available on lookups. Users are not able to run actions on a lookup page, and they cannot access the full set of records. | Not available on lookups. Users are not able to run actions on a lookup page, and they cannot access the full set of records. | On the `Item Card` when selecting the **Base Units of Measure**. |
-| Search across list columns | Partly supported. Search will not include FlowFields. | Partly supported. Search will not include FlowFields. | See examples on the `Customers` list page. |
-| Lookups | Available. | Available, with the difference that advanced and simple lookups behave similarly on the phone. The lookup will not bring up the card, show FactBoxes, or any field groups. | See examples on the `Customer Card` page. |
-| Matrix controls | Not available. | Not available. | See example in `G/L Budget`. |
-| File download | Available. Cannot download multiple files at the same time. | Available. Cannot download multiple files at the same time. | `Trial Balance` report in the **Print to Excel** check box. |
-| Worksheet pages | Available. | Not available; an error message is displayed. | `Sales Price` Worksheet or `Cash Flow` Worksheet. |
-| Lists | Available. | Available, with the difference that these are displayed in a brick layout. | Customers or Sales Orders pages. |
-| Indentation in repeater controls | Available. | Not available. The repeater control will be rendered as a regular flat brick layout. | Chart of Accounts and Contacts List pages. |
-| Automatic input focus on first editable field of a page | Not available. | Not available. | `Customer Card` page.<BR /><BR />In the browser, focus will automatically be on the first editable field (such as the `Name` field), enabling you to change the value right away.<BR /><BR />In the tablet and phone apps, this field will not be in focus; instead, you will have to manually select the field first in order to make changes.|
+| Skupiny činností | Zobrazena je pouze skupina aktivit **Domů**. | Zobrazena je pouze skupina aktivit **Domů**. | **Domů** a **Účtované doklady** v centru rolí `Zpracovatel prodejních objednávek`. |  |
+| Výběr více záznamů v seznamech  | Není k dispozici. | Není k dispozici. | `Ctrl+A` nebo `Ctrl+Click` na řádcích v seznamu v prohlížeči. |
+| Akce na panelu akcí | Zobrazeny jsou pouze zvýrazněné akce. | Zobrazeny jsou pouze zvýrazněné akce. |  |
+| Informační okna | Nezobrazují se na stránkách seznamu ani na stránkách sešitů. | Nezobrazují se na stránkách seznamu ani na stránkách sešitů. | Seznam `Zákazníků` v centru rolí `Malá společnost`. |
+| Pokročilé filtry | Není k dispozici žádné filtrování. | Není k dispozici žádné filtrování. | Na přehledu `Zákazníků`. |
+| Řekněte mi | Zatím není k dispozici. | Zatím není k dispozici | Viz [Vyhledávání stránek a informací pomocí Řekněte mi](ui-search.md). |  |
+| Průzkumník rolí | Zatím není k dispozici | Zatím není k dispozici | Viz [Vyhledávání stránek pomocí Průzkůmníka rolí](ui-role-explorer.md). |
+| Políčka v záložkách | Políčka v záložkách nejsou zobrazena. V oblasti obsahu stránky se zobrazí pouze ovládací prvek opakovač. | Není k dispozici. |  |
+| Výběr z celého seznamu | Není k dispozici v náhledu. Uživatelé nemohou spouštět akce na vyhledávací stránce a nemají přístup k úplné sadě záznamů. | Není dosupné v náhledech. Uživatelé nemohou spouštět akce na vyhledávací stránce a nemají přístup k úplné sadě záznamů. | Na stránce `Karta zboží` při výběru **Základní měrna jednotka**. |
+| Prohledávání sloupců | Částečně podporováno. Hledání nezahrnuje FlowFieldy. | Částečně podporováno. Hledání nezahrnuje FlowFieldy. | Příklady najdete na přehledu `Zboží`. |
+| Vyhledávání | K dispozici. | K dispozici s tím rozdílem, že pokročilé a jednoduché vyhledávání se chová podobně jako v telefonu. Vyhledávání nezobrazí kartu, ani FactBoxy nebo ani skupiny polí. | Podívejte se na příklady na stránce `Karta zákazníka`. |
+| Maticové ovládací prvky | Nejsou k dispozici. | Není k dispozici. | Vuz příklad `Finanční rozpočty`. |
+| Stažení souboru | K dispozici. Nelze stáhnout více souborů současně. | K dispozici. Nelze stáhnout více souborů současně. | Sestava `Předvahy` v zaškrtávacím poli **Otebřít v Excelu**. |
+| Stránk sešitu | K dispozii. | Není k dispozici; zobrazí se chybová zpráva. | Sešit `Prodejních cen` nebo sešit `Cash Flow`. |
+| Seznamy | K dispozici. | K dispozici s tím rozdílem, že jsou zobrazeny v rozvržení dlaždic. | Zákazníci nebo Prodejní objednávky. |
+| Odsazení v ovládacích prvcích opakovače | K dispozici. | Není k dispozici. Ovládací prvek opakovače bude vykreslen jako běžné rozložení plochých dlaždic. | Stránky Účetní osnovy a Seznamu kontaktů. |
+| Automatické zaměření vstupu na první editovatelné pole stránky | Není k dispozici. | Není k dispozici. | Stránka `Karta zákazníka`.<BR /><BR />V prohlížeči bude automaticky zaměřeno na první upravitelné pole (například pole `Název`), což vám umožní ihned změnit hodnotu.<BR /><BR />V aplikacích pro tablety a telefony nebude toto pole zaostřeno; místo toho budete muset nejprve ručně vybrat pole, abyste mohli provádět změny.|
 
-## Is it the same experience on tables and phones?
+## Je stejné prostředí na tabletech a telefonech?
 
-Almost, but not quite. See the list in the [Is it the same experience in the apps as in the browser?](#is-it-the-same-experience-in-the-apps-as-in-the-browser) section.
+Téměř, ale ne tak docela. Podívejte se v sekci [Je aplikace stejná jako v prohlížeči?](#is-it-the-same-experience-in-the-apps-as-in-the-browser).
 
-## Can I connect the app to our on-premises solution?
+## Mohu aplikaci připojit k našemu on-premises řešení?
 
-Yes, you can! It's a slightly different way to signing in, that's all. For more information, see [Using Business Central on-premises?](install-mobile-app.md#using-business-central-on-premises).
+Ano, můžete! Pouze je zde trochu jiný způsob přihlášení. Další informace najdete v části [Použití Business Central jako on-premises?](install-mobile-app.md#using-business-central-on-premises).
 
 ## Viz také
 
-[Getting Business Central on Your Mobile Device](install-mobile-app.md)  
-[Install the Business Central App for Microsoft Teams](across-install-app-for-teams.md)
+[Získání Business Central na Vašem mobilní zařízení](install-mobile-app.md)  
+[Instalace aplikace pro Business Central App pro Microsoft Teams](across-install-app-for-teams.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

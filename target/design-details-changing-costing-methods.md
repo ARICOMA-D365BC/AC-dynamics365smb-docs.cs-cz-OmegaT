@@ -73,7 +73,7 @@ After you create the new items and transfer the master data, assign the correct 
 
 To make the new items fully useful you must manually copy some master data from other areas, as described in the following table.
 
-| Area | What to copy | How to copy it |
+| Oblasti | What to copy | How to copy it |
 |---------|---------|---------|
 | Zásoby | Stock-keeping units (SKUs) | Check whether a SKU is specified for the original item. If planning parameters have been entered for each SKU card, then you must manually create the SKU for the new item. If the parameters are not specified, you can use the **Create Stockkeeping Unit** batch job from the **Item Card** page to create the data. |
 |     | Item substitutions | Check whether any item substitutions are defined for the original item. If there are, transfer that data to the new item. To view substitute items, use the **Substitutions** action on the **Item Card** page. |
@@ -86,7 +86,7 @@ To make the new items fully useful you must manually copy some master data from 
 | Service | Service resource skill | Check whether service resource skills are defined for the original item and transfer that data to the new item. To view resource skills, use the **Resource Skills** action on the **Item Card** page. |
 |     | Service item components | Check whether components are defined for the original service item and transfer that data to the new item. To view service item components, on the **Item Card** page use the **Service Item** action to open the list of related service items, and then choose the **Components** action. |
 | Výroba | Production BOMs | Check whether any production BOMs contain the original item and replace it with the new item. To replace the original item, on the **Production BOMs** page, choose the **Exchange Production BOM Item** action. |
-| Montáž | Assembly BOMs | Check whether any assembly BOMs contain the original item and manually replace it with the new item. |
+| Montáž | Kusovníky montáže | Check whether any assembly BOMs contain the original item and manually replace it with the new item. |
 
 > [!IMPORTANT]
 > If the new costing method is Standard you should enter a value in the **Standard Cost** field on the **Item Card** page. You can use the **Standard Cost Worksheet** page to set the cost shares accordingly. For more information, see [Update Standard Costs](finance-how-to-update-standard-costs.md).
@@ -149,7 +149,7 @@ There are 1000 pcs. in inventory, and 20 pcs. are reserved for a sales order tha
 
 The following table lists functional areas where there might be outstanding quantities.
 
-| Area | Where to look for outstanding quantities |
+| Oblasti | Where to look for outstanding quantities |
 |---------|---------|
 | Prodej | Sales documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
 | Zásoby | Item journals, reservations, item tracking, and standard cost worksheet |

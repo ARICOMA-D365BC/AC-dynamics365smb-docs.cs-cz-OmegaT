@@ -16,7 +16,7 @@ ms.author: bholtorf
 # The Late Payment Prediction Extension
 Effectively managing receivables is important to the overall financial health of a business. The Late Payment Prediction extension can help you reduce outstanding receivables and fine-tune your collections strategy by predicting whether sales invoices will be paid on time. For example, if a payment is predicted to be late, you might decide to adjust the terms of payment or the payment method for the customer.
 
-## Getting Started
+## Začínáme
 
 When you open a posted sales document, a notification will display at the top of the page. To use the Late Payment Prediction Extension you can opt in by choosing **Enable** in the notification. Alternatively, you can set up the extension manually. For example, if you regret dismissing the notification.
 

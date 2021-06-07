@@ -1,6 +1,6 @@
 ﻿# [Welcome to Business Central](index.md)
 # [New and Planned](product-news.md)
-# Getting Started
+# Začínáme
 ## [Overview of Business Functionality](across-business-functionality.md)
 <!--### [Getting Ready for Doing Business](ui-get-ready-business.md)-->
 ## Learn
@@ -945,7 +945,7 @@
 ##### [Intrastat](LocalFunctionality/Czech/intrastat.md)
 ##### [Compensations Localization for Czech (Extension)](LocalFunctionality/Czech/ui-extensions-compensations-localization-cz.md)
 #### Zásoby
-##### [Inventory](LocalFunctionality/Czech/inventory.md)
+##### [Zásoby](LocalFunctionality/Czech/inventory.md)
 #### General
 ##### [Extended User Control](LocalFunctionality/Czech/general.md)
 ##### [Best Practices](LocalFunctionality/Czech/best-practices.md)
@@ -1002,7 +1002,7 @@
 ##### [Payment Management](LocalFunctionality/France/payment-management.md)
 ##### [Post Payment Slips](LocalFunctionality/France/how-to-post-payment-slips.md)
 #### Core Finance
-##### [General Ledger](LocalFunctionality/France/general-ledger.md)
+##### [Hlavní kniha](LocalFunctionality/France/general-ledger.md)
 ##### [Apply General Ledger Entries](LocalFunctionality/France/how-to-apply-general-ledger-entries.md)
 ##### [Unapply General Ledger Entries](LocalFunctionality/France/how-to-unapply-general-ledger-entries.md)
 ##### [Print General Ledger Reports](LocalFunctionality/France/how-to-print-general-ledger-reports.md)

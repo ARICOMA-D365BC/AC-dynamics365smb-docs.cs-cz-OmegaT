@@ -11,25 +11,25 @@ ms.search.keywords: find
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Finding Related Entries for Posted Documents
+# Hledání souvisejících položek pro zaúčtovaných dokladů
 
-In this article, you learn how to find documents and entries that are related to each other based on a common information, like:
+V tomto článku se dozvíte, jak najít doklady a položky, které spolu souvisejí, na základě běžných informací, jako jsou:
 
-- Document number or posting date
-- Business contact type, number, or external document number
-- Item serial number or lot number
+- Číslo dokladu nebo zúčtovací datum
+- Typ obchodního kontaktu, číslo nebo číslo externího dokladu
+- Sériové číslo zboží nebo číslo šarže
 
-This feature is useful for finding the ledger entries that resulted from certain transactions. When you search by document number, you can print the summary from the Document Entries report.
+Tato funkce je užitečná pro vyhledání položek, které byly výsledkem určitých transakcí. Při hledání podle čísla dokladu můžete vytisknout souhrn ze sestavy Položky dokladu.
 
 ## Začínáme
 
-The find entries feature is readily available on most pages that display posted documents or posted documents entries - for both lists and cards. So the first step is open one of these pages. Then, either choose the **Find Entries** action or press the Alt+G keys.
+Funkce hledání položek je snadno dostupná na většině stránek, které zobrazují zaúčtované doklady nebo zaúčtované položky dokladů - pro seznamy i karty. Prvním krokem je tedy otevření jedné z těchto stránek. Potom vyberte akci **Najít položky** nebo zmáčkněte klávesy Alt+G.
 
-The **Find Entries** page  includes all related documents and entries based on the document no. and posting date. The page is divided into three sections:
+Stránka **Najít položky** obsahuje všechny související doklady a položky založené na čísle dokladu a zúčtovacím datu. Stránka je rozdělena do tří částí:
 
-- The top section displays fields and actions that you use for filtering your search.
-- The middle section displays related documents based on the search.
-- The bottom section displays information about the source document that was found by searching.
+- V horní části jsou zobrazena pole a akce, které používáte k filtrování hledání.
+- Prostřední část zobrazuje související doklady na základě vyhledávání.
+- V dolní části jsou zobrazeny informace o zdrojovém dokladu, který byl nalezen vyhledáváním.
 
 
 <!--
@@ -48,28 +48,28 @@ The **Find Entries** page  includes all related documents and entries based on t
     > If you are on a page that has the **Find Entries** action, press crtl+G to open the **Find Entries** page directly. 
 -->
 
-## Search for entries
+## Vyhledávání položek
 
-You can search for entries based on information about either the document, business contact, or item reference. To change the search, select **Actions**, **Find By**, then one of the following actions:
+Záznamy můžete hledat na základě informací o dokladu, obchodním kontaktu nebo odkazu na položku. Chcete-li změnit hledání,  vybrte **Akce**, **Hledat podle** poté jednu z následujících akcí:
 
 | Akce | Popis |
 |------|-----------|
-| Find by Document | View entries based on a specific document number or posting date. |
-| Business Contact | View entries based on a specific contact type, contact number, anr/or external document number. You can enter document information that was assigned by a vendor or a customer. Use the available fields to search for vendor documents by using the numbers that the vendor has assigned the documents. |
-| Item reference | View entires based on a serial number or lot number. You can enter the lot number or serial number, or filter on the lot number or serial number that you want to search for. This action is useful to see where a specific item tracking number was used, what vendor it came from, or what customer it was sold to. |
+| Hledat podle dokladu | Zobrazte záznamy na základě konkrétního čísla dokladu nebo data zaúčtování. |
+| Hledat podle obchodního vztahu | Zobrazí položky na základě konkrétního typu kontaktu, čísla kontaktu a/nebo podle čísla externího dokladu. Můžete zadat informace o dokladu přiřazené dodavatelem nebo zákazníkem. Dostupná pole použijte k vyhledání dokladů dodavatele pomocí čísel, která dodavatel přiřadil dokladům. |
+| Hledat podle odkazu zboží | Zobrazení položek na základě sériového čísla nebo čísla šarže. Můžete zadat číslo šarže nebo sériové číslo nebo filtrovat podle čísla šarže nebo sériového čísla, které chcete vyhledat. Tato akce je užitečná pro zjištění, kde bylo použito konkrétní sledovací číslo zboží, od kterého dodavatele pochází nebo kterému zákazníkovi bylo prodáno. |
 
-After you make a selection, enter the relevant search information in the fields at the top. Use the tooltips on the fields to help. When you're finished, choose **Find** to start the search. If you change any of the filters, you have to choose **Find** again.
+Po provedení výběru zadejte příslušné vyhledávací informace do polí v horní části. Chcete-li pomoci, použijte tooltipy. Po dokončení spusťte vyhledávání pomocí tlačítka **Najít**. Pokud změníte některý z filtrů, musíte znovu použít funkci **Najít**.
 
 > [!TIP]
-> For a couple examples about using **Find Entries**, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md) and [Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md).
+> Několik příkladů použití **Najít položky** naleznete v [Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md) a [Návod:Sledování zboží - Sledované zboží](walkthrough-tracing-serial-lot-numbers.md).
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Working with Business Central](ui-work-product.md)  
-[Add a Page Action to Your Role Center](ui-bookmarks.md)  
-[Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md)
+[Práce s Business Central](ui-work-product.md)  
+[Přidání tlačítka na stránku ve Vašem Centru rolí](ui-bookmarks.md)  
+[Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
