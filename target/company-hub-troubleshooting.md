@@ -13,39 +13,39 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Troubleshooting Your Company Hub
+# Odstraňování problémů s Company Hub (Centrem společností)
 
-Adding companies to the company hub dashboard is easy enough, but this article addresses issues that you may have on the way.
+Přidání společností na řídicí panel centra společnosti je dostatečně snadné, ale tento článek řeší problémy, které mohou nastat při nastavení.
 
-## Check errors
+## Kontrola chyb
 
-Use the **Check Errors** action to view a list of recent errors. You can see additional details for each error, and you can clean up the log by deleting older entries.
+Použijte akci **Zkontrolovat chyby** pro zobrazení posledních chyb. Můžete zobrazit další podrobnosti o každé chybě a protokol můžete vyčistit odstraněním starších položek.
 
-## Connection failed
+## Připojení se nezdařilo.
 
-There can be a couple of reasons why you cannot connect to a company, including the following:
+Existuje několik důvodů, proč se nemůžete připojit ke společnosti, včetně následujících důvodů:
 
-- The URL in the **Environment Link** field is not valid
+- URL adresa v poli **Odkaz na prostředí** je neplatná
 
-   Go to the **Environment Links** page, open the environment that you cannot connect to, and then choose the **Test the connection** action.
-- The client's company is currently offline, for example if it being upgraded
+   Přejděte na stránku **Odkaz na prostředí** otevřete prostředí, ke kterému se nemůžete připojit, a poté vyberte akci **Test spojení**.
+- Společnost klienta je aktuálně offline, například pokud je upgradována.
 
-   In your dashboard, choose the **Tools** menu item, and then choose **Check Errors**. This opens a list with technical details, so you might want to contact your administrator if you're seeing errors. For example, the error message "*The server has rejected the client credentials*" suggests that you do not have access.
-- You do not have access to all companies in the environment that you are trying to connect to
+   Na řídicím panelu zvolte položku menu **Nástroje** a poté vyberte **Zkontrolovat chyby**. Tím se otevře seznam s technickými podrobnostmi, takže pokud se vám zobrazí chyby, možná budete chtít kontaktovat svého správce. Například chybová zpráva "*Server odmítl pověření klienta*" čím se například naznačuje, že nemáte přístup.
+- V prostředí, ke kterému se pokoušíte připojit, nemáte přístup ke všem společnostem.
 
-   In [!INCLUDE [prod_short](includes/prod_short.md)], an organization can have multiple business units called companies, and you might not have access to all companies. Work with your administrator or client to make sure that you have access to the companies that you have to work in.
+   V [!INCLUDE [prod_short](includes/prod_short.md)] může mít organizace více obchodních jednotek zvaných společnosti a vy nemusíte mít přístup ke všem společnostem. Spolupracujte se svým správcem nebo klientem a ujistěte se, že máte přístup ke společnostem, ve kterých musíte pracovat.
 
-## Data does not refresh
+## Data se neaktualizují
 
-When you add a company or request a refresh of the data, [!INCLUDE [prod_short](includes/prod_short.md)] fetches the data. But you must refresh the page yourself, such as choosing the **Reload all companies** action, refresh the browser page, navigate away from the dashboard and then back again, or similar.
+Když přidáte společnost nebo požádáte o aktualizaci dat, [!INCLUDE [prod_short](includes/prod_short.md)] načte data.. Musíte si ale stránku obnovit sami, například zvolit akci **Načíst všechny společnosti** obnovit stránku prohlížeče, odejít z řídicího panelu a pak zase zpět nebo podobně.
 
-If you've added a company but it is not displaying in the list, you can also use the **Reload all companies** action to update the list.
+Pokud jste přidali společnost, ale ta se v seznamu nezobrazuje, můžete také aktualizovat seznam pomocí akce **Načíst všechny společnosti** k aktualizaci seznamu.
 
 ## Viz také
 
-[Manage Work across Multiple Companies in the Company Hub](company-hub.md)  
-[Add companies to your company hub](company-hub-add-company.md)  
-[Accountant Experiences in Business Central](finance-accounting.md)
+[Spravujte práci napříč více společnostmi v centru společnosti](company-hub.md)  
+[Přidání společností do Company hubu](company-hub-add-company.md)  
+[Účetní zkušenosti v Business Central](finance-accounting.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

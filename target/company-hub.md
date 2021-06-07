@@ -26,12 +26,12 @@ Pokud používáte roli **Centrum společnosti**, na domovské stránce se zobra
 > [!TIP]
 > Chcete-li získat přístup ke konkrétní společnosti v [!INCLUDE [prod_short](includes/prod_short.md)], vyberte název společnosti nebo zvolte položku nabídky **Přejít na společnost**, do které jste automaticky přihlášení na nové záložce.
 
-:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Actions for a company that is listed in the company hub":::
+:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Akce pro společnost, která je uvedena v centru společnosti":::
 
 Můžete přidat nové společnosti, například když dostanete nového klienta nebo když vaše společnost přidá novou dceřinou společnost. Další informace naleznete v [Přidání společností do centra vaší společnosti](company-hub-add-company.md).
 
 > [!TIP]
-> In order to refresh the data in the company hub, you must have access to the data in the companies that the data comes from.
+> Aby bylo možné aktualizovat data ve Centru společností, musíte mít přístup k datům ve společnostech, ze kterých data pocházejí.
 
 <!--## Company details
 

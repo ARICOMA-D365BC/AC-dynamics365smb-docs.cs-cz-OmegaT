@@ -10,39 +10,39 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Přidání společnosti do Company Hub
+# Přidání společnosti do Company Hub (Centra společností)
 
-With the company hub, you can access your work from across multiple companies from multiple [!INCLUDE [prod_short](includes/prod_short.md)] environments. You can add a environments and companies manually, if your companies do not show up automatically in the company hub.
+S centrem společnosti můžete přistupovat ke své práci z více společností z různých prostředí [!INCLUDE [prod_short](includes/prod_short.md)]. Prostředí a společnosti můžete přidat ručně, pokud se vaše společnosti nezobrazí automaticky v centru společnosti.
 
-Right in the company hub landing page, you find the **Setup** menu, from where you can access the **Environment Links** page. Simply choose **New**, and then fill in the fields. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+Přímo na vstupní stránce centra společnosti najdete nabídku **Nastavneí** odkud máte přístup ke stránce **Odkazy na prostředí**. Jednoduše vyberte **Nový** a poté vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
 > [!NOTE]
 > Centra společnosti můžete připojit k tolika společnostem, kolik jich potřebujete. Centrum společnosti však můžete připojit pouze ke společnostem, které jsou hostovány v [!INCLUDE [prod_short](includes/prod_short.md)] online.
 
-## Environment links
+## Propojení prostředí
 
-An environment link is a card where you specify the [!INCLUDE [prod_short](includes/prod_short.md)] environment that hosts one or more companies that you do work in. The data in the card for each environment is specified by you, and you can change it as needed. However, the **Environment Link** field is critical - this is how you can access each company in [!INCLUDE [prod_short](includes/prod_short.md)]. Use the **Test the connection** action in the ribbon to test that you entered the right link. The link that you must enter points at environment that hosts the company that you are adding, and it must include the Azure Active Directory (Azure AD) ID, or the organization's domain name. For example, if they have specified a domain such as MyBusiness.com, then the link to their [!INCLUDE [prod_short](includes/prod_short.md)] is ```https://businesscentral.dynamics.com/mybusiness.com?redirectedfromsignup=1```. Otherwise, it will look something like this: ```https://businesscentral.dynamics.com/1a23b456-789c-0123-45de-678910fg12h/production?redirectedfromsignup=1```
+Odkaz na prostředí je karta, na které určíte prostředí [!INCLUDE [prod_short](includes/prod_short.md)], které hostí jednu nebo více společností, ve které pracujete. Data na kartě pro každé prostředí zadáváte vy a můžete je podle potřeby změnit. Pole **Odkaz na prostředí** je však zásadní - takto můžete přistupovat ke každé společnosti v [!INCLUDE [prod_short](includes/prod_short.md)]. Pomocí akce **Test spojení** na pásu karet otestujte, že jste zadali správný odkaz. Odkaz, který musíte zadat, je v prostředí, které hostí společnost, kterou přidáváte, a musí obsahovat ID Azure Active Directory (Azure AD) nebo název domény organizace. Pokud například zadali doménu, jako je MyBusiness.com, pak odkaz na jejich [!INCLUDE[prod_short](includes/prod_short.md)] je ```https://businesscentral.dynamics.com/mybusiness.com?redirectedfromsignup=1```. Jinak to bude vypadat asi takto: ```https://businesscentral.dynamics.com/1a23b456-789c-0123-45de-678910fg12h/production?redirectedfromsignup=1```
 
-The link is used when you choose the company in the company hub.
+Odkaz se používá, když zvolíte společnost v centru společnosti.
 
-:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Actions for a company that is listed in the company hub":::
+:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Akce pro společnost, která je uvedena v centru společnosti":::
 
 > [!TIP]
-> If you're working in the free trial version of [!INCLUDE [prod_short](includes/prod_short.md)], it is easy to add the companies in your tenant. You can find the environment link by copying the Azure Active Directory ID from the **Troubleshooting** section of the Help & Support page. The environment name is probably the default value, PRODUCTION. Add this information to the **Environment Link** field, such as ```https://businesscentral.dynamics.com/1a23b456-789c-0123-45de-678910fg12h/production?redirectedfromsignup=1```, and then choose **Test the connection**. The evaluation company will be added to the list.
+> Pokud pracujete ve zkušební verzi [!INCLUDE [prod_short](includes/prod_short.md)], je snadné přidat společnosti k vašemu tenantu. Odkaz na prostředí můžete najít zkopírováním ID Azure Active Directory z části **Řešení problémů** na stránce nápovědy a podpory. Název prostředí je pravděpodobně ve výchozí hodnotě PRODUCTION. Přidejte tyto informace do pole **Odkaz na prostředí**, jako je ```https://businesscentral.dynamics.com/1a23b456-789c-0123-45de-678910fg12h/production?redirectedfromsignup=1``` a poté zkuste **Test spojení**. Hodnotící společnost bude přidána na seznam.
 >
-> If you have moved to the thirty-day trial company, My Company, you can add that to the list by choosing the **Reload / Reload all Companies** action in the list.
+> Pokud jste se přesunuli do třicetidenní zkušební společnosti , Má Společnost, můžete ji přidat do seznamu výběrem **Znovu načíst / Znovu načíst všechny společnosti**.
 
-## Load companies
+## Načtení společnosti
 
-When you have added your environments, your companies show up automatically. However, if you know that a new company has been added to an environment, you can choose the **Reload all companies** action to refresh the list. Use the same action to refresh data from across your companies.
+Když jste přidali svá prostředí, vaše společnosti se zobrazí automaticky. Pokud však víte, že do prostředí byla přidána nová společnost, můžete výběrem tlačítka **Načíst všechny společnosti** aktualizovat seznam. Stejnou akci použijte k aktualizaci dat z různých společností.
 
 > [!TIP]
-> In order to refresh the data in the company hub, you must have access to the data in the companies that the data comes from.
+> Aby bylo možné aktualizovat data ve Centru společností, musíte mít přístup k datům ve společnostech, ze kterých data pocházejí.
 
 ## Viz také
 
-[Manage Work across Multiple Companies in the Company Hub](company-hub.md)  
-[Resources for Help and Support](product-help-and-support.md)
+[Spravujte práci napříč více společnostmi v centru společnosti](company-hub.md)  
+[Zdroje nápovědy a podpory](product-help-and-support.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
