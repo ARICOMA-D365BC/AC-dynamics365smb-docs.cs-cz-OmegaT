@@ -9,24 +9,24 @@ ms.search.keywords: setup, wizard, checklist
 ms.date: 04/01/2021
 ms.author: edupont
 ---
-# Onboard Users with Checklists
+# Vstup uživatelů pomocí kontrolního seznamu
 
-The first time a user signs into a new [!INCLUDE [prod_short](includes/prod_short.md)] company, they can see a banner that encourages them to start the **Get started** checklist to help them set up key information and get ready for business. As the administrator or reselling partner, you can customize the predefined checklists, and you can set up your own steps.
+Když se uživatel poprvé přihlásí do nové společnosti v [!INCLUDE [prod_short](includes/prod_short.md)] může se mu zobrazit banner, který ho vybízí ke spuštění kontrolního seznamu **Začínáme**, který mu pomůže nastavit klíčové informace a připravit se na podnikání. Jako správce nebo prodávající partner můžete přizpůsobit předdefinované kontrolní seznamy a můžete si nastavit i vlastní kroky.
 
-## To add an item to the checklist
+## Přidání položky do kontrolního seznamu
 
-1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)] at [https://businesscentral.dynamics.com/](https://businesscentral.dynamics.com/).
+1. Přihlaste se do [!INCLUDE[prod_short](includes/prod_short.md)] na [https://businesscentral.dynamics.com/](https://businesscentral.dynamics.com/).
 
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Checklist Administration**, and choose the related link.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Správa kontrolního seznamu<x5/> a poté vyberte související odkaz.
 
-3. Choose the **New** action, and then choose **Create checklist item**.
+3. Zvolte tlačítko **Nový** a vyberte **Vytvořit položku kontrolního seznamu**.
 
-4. Specify what you want to add to the checklist. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+4. Zadejte, co chcete přidat do kontrolního seznamu. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
    > [!TIP]
-   > If the step is for a setup guide, the **Task** field specifies the setup guide. If the step is for learning more, the **Task** field specifies the link to the article or e-learning module.
+   > Pokud se jedná o průvodce nastavením, pole **Úkol** určuje průvodce nastavením. Pokud jde o krok, kde se dozvíte více, pole **Úkol** určuje odkaz na článek nebo modul e-learningu.
 
 ## Viz také
 
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Administration](admin-setup-and-administration.md)
+[Příprava na podnikání](ui-get-ready-business.md)  
+[Administrace](admin-setup-and-administration.md)

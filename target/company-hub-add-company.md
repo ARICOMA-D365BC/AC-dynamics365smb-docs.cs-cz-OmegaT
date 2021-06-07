@@ -10,14 +10,14 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Add Companies to Your Company Hub
+# Přidání společnosti do Company Hub
 
 With the company hub, you can access your work from across multiple companies from multiple [!INCLUDE [prod_short](includes/prod_short.md)] environments. You can add a environments and companies manually, if your companies do not show up automatically in the company hub.
 
 Right in the company hub landing page, you find the **Setup** menu, from where you can access the **Environment Links** page. Simply choose **New**, and then fill in the fields. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
 > [!NOTE]
-> You can connect the company hub to as many companies as you need. However, you can only connect the company hub to companies that are hosted in [!INCLUDE [prod_short](includes/prod_short.md)] online.
+> Centra společnosti můžete připojit k tolika společnostem, kolik jich potřebujete. Centrum společnosti však můžete připojit pouze ke společnostem, které jsou hostovány v [!INCLUDE [prod_short](includes/prod_short.md)] online.
 
 ## Environment links
 

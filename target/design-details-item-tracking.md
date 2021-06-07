@@ -14,7 +14,7 @@
 
 ---
 # Detaily návrhu: Sledování zboží
-As the flow of goods in today's supply chain becomes more and more complex, the ability to keep track of items is increasingly important to the companies involved. Monitoring an item's transaction flow is a legal requirement in the business of medical and chemical supply, but other businesses may want to monitor products with warranties or expiration dates for customer service reasons.
+Vzhledem k tomu, že tok zboží v dnešním dodavatelském řetězci je stále složitější, je pro zúčastněné společnosti stále důležitější schopnost sledovat zboží. Monitoring an item's transaction flow is a legal requirement in the business of medical and chemical supply, but other businesses may want to monitor products with warranties or expiration dates for customer service reasons.
 
 Systém sledování zboží by měl společnosti poskytnout snadnou manipulaci se sériovými čísly a čísly šarží s ohledem na každý jedinečný kus zboží: kdy a kde byl přijat, kde byl skladován, kdy a kde prodán. [!INCLUDE[prod_short](includes/prod_short.md)] has gradually expanded its coverage of this business requirement and today provides application-wide functionality and a solid core on which to develop extensions.
 

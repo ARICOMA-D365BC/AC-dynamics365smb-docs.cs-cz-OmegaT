@@ -128,7 +128,7 @@
 #### [Set Up Bank Accounts](bank-how-setup-bank-accounts.md)
 #### [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)
 #### [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md)
-#### [Select a Check Layout](finance-how-define-check-layouts.md)
+#### [Výběr rozvržení šeků](finance-how-define-check-layouts.md)
 ### Nastavení Prodeje
 #### [Setting Up Sales](sales-setup-sales.md)
 #### [Registrace nového zákazníka](sales-how-register-new-customers.md)
@@ -1025,7 +1025,7 @@
 ### Germany
 #### [Local Functionality in the German Version](LocalFunctionality/Germany/germany-local-functionality.md)
 #### VAT
-##### [Set Up Reports for VAT and Intrastat](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md)
+##### [Nastavení sestav pro DPH a intrastat](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md)
 ##### [Set Up VAT Reports](LocalFunctionality/Germany/how-to-set-up-vat-reports.md)
 ##### [VAT Reporting](LocalFunctionality/Germany/vat-reporting.md)
 ##### [Create VAT Reports](LocalFunctionality/Germany/how-to-create-vat-reports.md)

@@ -10,25 +10,25 @@ ms.date: 04/01/2021
 ms.author: edupont
 ---
 
-# Manage Work across Multiple Companies in the Company Hub
+# Správa práce napříč více společnostmi v centru společnosti
 
-Some people work in multiple companies in [!INCLUDE [prod_short](includes/prod_short.md)], and some also work in more than one organization, such as external accountants, or employees and managers of corporations with multiple subsidiaries. For these users, and many others, the company hub serves as a landing page for managing work across the various environments that they work in, across companies, environments, and regions.
+Někteří lidé pracují ve více společnostech v [!INCLUDE [prod_short](includes/prod_short.md)] a někteří také pracují ve více než jedné organizaci, jako jsou externí účetní nebo zaměstnanci a manažeři společností s více dceřinými společnostmi. Pro tyto uživatele a mnoho dalších slouží centrum společnosti jako vstupní stránka pro správu práce v různých prostředích, ve kterém pracují, napříč společnostmi, prostředími a oblastmi.
 
-You can access the company hub by switching to the **Company Hub** role in My Settings, or by opening the **Company Hub** page directly. You can do the same work in both places, but actions are placed slightly different in menus.
+K centru společnosti můžete přistupovat přepnutím na roli **Centra společnosti** v Mých nastaveníchnebo přímo otevřením stránky **Centra společnosti**. Stejnou práci můžete dělat na obou místech, ale akce jsou v nabídkách umístěny mírně odlišně.
 
 > [!NOTE]
-> You can connect the company hub to as many companies as you need. However, you can only connect the company hub to companies that are hosted in [!INCLUDE [prod_short](includes/prod_short.md)] online.
+> Centra společnosti můžete připojit k tolika společnostem, kolik jich potřebujete. Centrum společnosti však můžete připojit pouze ke společnostem, které jsou hostovány v [!INCLUDE [prod_short](includes/prod_short.md)] online.
 
-## Company hub home page
+## Domovská stránka centra společnosti
 
-If you use the **Company Hub** role, your home page shows a list of companies that you have access to, including information about key point of interest (KPI) data, and links to open each company. <!--You can customize the dashboard to show the data points that you want to see by adding or removing columns. For example, you might want to see taxes that are due, how many open sales documents each company has, or the number of purchase invoices that are due next week. You can configure the view to suit your needs. If you have added many companies, you can use filters to sort your view.--> Choose the **Company Hub** action to open the company hub, where you can work more closely with each company.
+Pokud používáte roli **Centrum společnosti**, na domovské stránce se zobrazí seznam společností, ke kterým máte přístup, včetně informací o KPI a odkazy na otevření každé společnosti. <!--You can customize the dashboard to show the data points that you want to see by adding or removing columns. For example, you might want to see taxes that are due, how many open sales documents each company has, or the number of purchase invoices that are due next week. You can configure the view to suit your needs. If you have added many companies, you can use filters to sort your view.--> Vyberte tlačítko **Centrum společnosti** k otevření centra společnosti, kde můžete s každou společností úzce spolupracovat.
 
 > [!TIP]
-> To access a specific company in [!INCLUDE [prod_short](includes/prod_short.md)], choose the name of the company, or choose the **Go To Company** menu item - you are logged in automatically in a new browser tab.
+> Chcete-li získat přístup ke konkrétní společnosti v [!INCLUDE [prod_short](includes/prod_short.md)], vyberte název společnosti nebo zvolte položku nabídky **Přejít na společnost**, do které jste automaticky přihlášení na nové záložce.
 
 :::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Actions for a company that is listed in the company hub":::
 
-You can add new companies, such as when you get a new client, or when your corporation adds a new subsidiary. For more information, see [Add Companies to Your Company Hub](company-hub-add-company.md).
+Můžete přidat nové společnosti, například když dostanete nového klienta nebo když vaše společnost přidá novou dceřinou společnost. Další informace naleznete v [Přidání společností do centra vaší společnosti](company-hub-add-company.md).
 
 > [!TIP]
 > In order to refresh the data in the company hub, you must have access to the data in the companies that the data comes from.
@@ -76,7 +76,7 @@ If you cannot find the company hub, and you know that you have been granted acce
 
 ## Set up the company hub
 
-To start using the company hub, you must add one or more companies to your dashboard. For more information, see [Add Companies to Your Company Hub](company-hub-add-company.md).
+To start using the company hub, you must add one or more companies to your dashboard. Další informace naleznete v [Přidání společností do centra vaší společnosti](company-hub-add-company.md).
 
 But to add a company, you must have been given access to one or more instances of [!INCLUDE [prod_short](includes/prod_short.md)] in addition to the company that you use the company hub in.
 

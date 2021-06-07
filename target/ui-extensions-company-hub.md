@@ -13,22 +13,22 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# The Company Hub for Business Central Extension
+# Rozšíření Company Hub pro Business Central
 
-This application provides a dashboard with summary data for each company that the user has access to across all [!INCLUDE [prod_short](includes/prod_short.md)] online, such as the many clients of an accountant. The home page displays financial KPIs as well as a direct link to the individual environments and companies so that users can.
+Tato aplikace poskytuje řídicí panel se souhrnnými daty pro každou společnost, ke které má uživatel přístup v [!INCLUDE [prod_short](includes/prod_short.md)] online, jako je mnoho klientů účetního. Domovská stránka zobrazuje finanční KPI a přímý odkaz na jednotlivá prostředí a společnosti.
 
-The dashboard is a highly specialized Role Center for a better overview of your work.
+Řídicí panel je vysoce specializované Centrum rolí pro lepší přehled o vaší práci.
 
-When you first install the extension, a sample company helps you get started. You can delete the sample company at any time.
+Při první instalaci rozšíření vám ukázková společnost pomůže začít. Ukázkovou společnost můžete kdykoli odstranit.
 
-## Installing the Extension
+## Instalace rozšíření
 
-When you install the extension in your [!INCLUDE [prod_short](includes/prod_short.md)], you will be asked if you want to use it now. If you do, then you must sign out and sign in again, because the extension replaces your current Role Center and adds permissions to your user profile.
+Při instalaci rozšíření do [!INCLUDE [prod_short](includes/prod_short.md)], budete dotázáni, zda jej chcete nyní použít. Pokud tak učiníte, musíte se odhlásit a znovu přihlásit, protože rozšíření nahradí vaše aktuální Centrum rolí a přidá oprávnění k vašemu uživatelskému profilu.
 
 ## Viz také
 
-[Manage Work across Multiple Companies in the Company Hub](company-hub.md)  
-[Accountant Experiences in Business Central](finance-accounting.md)  
+[Spravujte práci napříč více společnostmi v centru společnosti](company-hub.md)  
+[Účetní zkušenosti v Business Central](finance-accounting.md)  
 [Finance](finance.md)
 
 

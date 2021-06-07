@@ -9,17 +9,17 @@ ms.date: 04/01/2021
 ms.author: mikebc
 ---
 
-# Enabling Upcoming Features Ahead of Time
+# Povolení nadcházejících funkcí předem
 
-Some new features can be enabled ahead of time, letting you take advantage of them as early as possible. Enabling features early gives you the time to test and prepare your organization for change.
+Některé nové funkce lze povolit předem, což vám umožňuje využít je co nejdříve. Včasné povolení funkcí vám dává čas otestovat a připravit organizaci na změnu.
 
-When Microsoft releases features or feature design improvements as part of minor updates, some of the features aren't immediately enabled. Administrators can enable each feature from the **Feature Management** page. After a feature is enabled, it becomes available for all users on that environment no matter how they access [!INCLUDE[prod_short](includes/prod_short.md)]. Features can be safely turned off again. These features are only optional for a while.
+Když společnost Microsoft vydá funkce nebo vylepšení designu funkcí jako součást menších aktualizací, některé funkce nebudou okamžitě povoleny. Správci mohou jednotlivé funkce povolit na stránce **Správa funkcí** page. Po povolení funkce bude k dispozici všem uživatelům v tomto prostředí bez ohledu na to, jak přistupují [!INCLUDE[prod_short](includes/prod_short.md)]. Funkce lze znovu bezpečně vypnout. Tyto funkce jsou volitelné pouze na chvíli.
 
-Learn more about [Feature Management](/dynamics365/business-central/dev-itpro/administration/feature-management).
+Další informace o [Správě funkcí](/dynamics365/business-central/dev-itpro/administration/feature-management).
 
 ## Viz také
 
-[New and planned features](/dynamics365-release-plan/2021wave1/)
+[Nové a plánované funkce](/dynamics365-release-plan/2021wave1/)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

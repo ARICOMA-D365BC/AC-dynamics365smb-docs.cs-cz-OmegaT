@@ -22,7 +22,7 @@ Extending the trial period yourself is a one time-thing though. You cannot exten
 
 ## To extend your trial period
 
-1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)] at [https://businesscentral.dynamics.com/](https://businesscentral.dynamics.com/).
+1. Přihlaste se do [!INCLUDE[prod_short](includes/prod_short.md)] na [https://businesscentral.dynamics.com/](https://businesscentral.dynamics.com/).
 
    Sign in with the email account that you used when you signed up for the trial.
 

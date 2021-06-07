@@ -10,60 +10,60 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Report Selection in Business Central
+# Výber sestav v Business Central
 
-You can set up default reports that will be used to print the various documents for sales and purchases, such as orders, quotes, invoices, and credit memos. For example, if you have a specific layout for sales invoices, you can specify that report in the **Report Selections - Sales** page so that it will be used to send or print sales invoices.
+Můžete nastavit výchozí sestavy, které se použijí k tisku různých dokladů pro nákup a prodej, jako jsou například objednávky, nabídky, faktury a dobropisy. Máte-li například určité rozložení pro prodejní faktury, můžete tuto sestavu zadat na stránce **Výběr sestav - prodej**, aby bylo použito rozložení k odesílání nebo tisku prodejních faktur.
 
-The **Report Selections** pages specify which report will be printed in different situations. [!INCLUDE [prod_short](includes/prod_short.md)] includes default configurations, but of course you can change these defaults. You can also add reports to the **Report Selection** pages if you want to print more than one report per document type, for example.
+Stránky **Výběry sestav** určují, které sestavy se vytisknou v různých situacích. [!INCLUDE [prod_short](includes/prod_short.md)] obsahuje výchozí konfiguraci, ale tyto výchozí hodnoty samozřejmě můžete změnit. Můžete například přidat sestavy na stránky **Výběry sestav**, pokud chcete, například, vytisknout více než jednu sestavu za každý typ dokladu.
 
-## Available report selections
+## Dostupné výběry sestav
 
-[!INCLUDE [prod_short](includes/prod_short.md)] includes different **Report Selection** pages for different areas. The following tables describes where you can find information about the different pages.
+[!INCLUDE [prod_short](includes/prod_short.md)] obsahuje růžné **Výběry sestav** pro různé oblasti. Následující tabulky popisují, kde najdete informace o různých stránkách.
 
-| Area or task | Learn more |
+| Oblast nebo úkol | Zjistěte více |
 |--------------|----------|
-| Example of how report selection works (Sales) | [Report selection for sales documents](#example-report-selection-for-sales-documents) |
-| Default layout for emails with sales and purchase documents | [Set Up Reusable Email Texts and Layouts for Sales and Purchase Documents](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts-for-sales-and-purchase-documents) |
-| Define check layouts | [Select a Check Layout](finance-how-define-check-layouts.md) |
-| Define reports for VAT reporting (Germany) | [Set Up Reports for VAT and Intrastat](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md) |
+| Příklad, jak fungují Výběry sestav (Prodej) | [Výběry sestav pro prodejní doklady](#example-report-selection-for-sales-documents) |
+| Výchozí rozložení e-mailů s prodejními a nákupními doklady | [Nastavení opakovaně použitelných e-mailů a rozvržení pro prodejní a nákupní doklady](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts-for-sales-and-purchase-documents) |
+| Definice rozvržení šeků | [Výběr rozvržení šeků](finance-how-define-check-layouts.md) |
+| Definice sestavy pro vykazování DPH (Německo) | [Nastavení sestav pro DPH a intrastat](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md) |
 
 > [!TIP]
-> Your [!INCLUDE [prod_short](includes/prod_short.md)] can include additional **Report Selection** pages, depending on your location and industry, for example. You can always check your setup by choosing the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, entering **Report Selections**, and then choose the relevant link.
+> Váš [!INCLUDE [prod_short](includes/prod_short.md)] může zahrovat další stránky **Výběrů sestav** v závislosti na Vaší lokalitě a odvětví. Nastavení můžete kdykoli zkontrolovat tak, že vyberete ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") , zadejte **Výběry sestav** a poté vyberte související odkaz.
 
-The default version of [!INCLUDE [prod_short](includes/prod_short.md)] includes the following **Report Section** pages:
+Výchozí verze [!INCLUDE [prod_short](includes/prod_short.md)] obsahuje následující stránky **Výběrů sestav**:
 
-* **Report Selection - Sales**
-* **Report Selection - Purchase**
-* **Report Selection - Inventory**
-* **Report Selection - Cash Flow**
-* **Report Selection - Warehouse**
-* **Report Selection - Bank Account**
-* **Report Selections Reminder/Finance Charge**
+* **Výběr sestav - prodej**
+* **Výběr sestav - nákup**
+* **Výběr sestav - zásoby**
+* **Výběr sestav - cash flow**
+* **Výběr sestav - sklad**
+* **Výběry sestav bankovního účtu**
+* **Výběr sestav - upomínka/penále**
 
-## Example: Report selection for sales documents
+## Příklad: Výběr sestavy pro prodejní doklady
 
-The **Report Selection - Sales** page defines the default reports to use in different scenarios for each related document type. Choose a document type in the **Usage** field, and then add or review the report selection. You can set up more than one report and the order of sequence that the reports must be sent or printed in.
+Stránka **Výběr sestav - prodej** definuje výchozí sestavy, které se mají použít v různých scénářích pro každý související typ dokladu. Vyberte typ dokladu v poli **Použití** a pak přidejte nebo zkontrolujte výběr sestavy. Můžete nastavit více sestav a pořadí, ve které budou sestavy odeslány nebo vytištěny.
 
 [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
-Some types of document can be sent as email attachments, and others cannot. Each **Report Selection** page shows additional fields if the type support email out of the box.
+Některé typy dokladů lze odeslat jako přílohy e-mailu a jiné ne. každá stránka **Výběru sestav** zobrazuje další pole, pokud jsou podporovány pro e-maily.
 
-For example, in the **Report Selection - Sales** and **Report Selection - Purchase** pages, the following fields help you set up emailing:
+Například, na stránkách **Výběr sestav - nákup** a **Výběr sestav - nákup** vám následující pole pomohou nastavit e-maily:
 
 | Název pole | Popis |
 |-----------|-------------|
-| **Use for Email Body** | Specifies that summarized information, such as invoice number, due date, and payment service link, will be inserted in the body of the email that you send. |
-| **Use for Email Attachment** | Specifies that the related document will be attached to the email. |
-| **Email Body Layout Description** | Specifies the email body layout that is used, typically a custom report layout. |
+| **Použít pro tělo e-mailu** | Určuje, že souhrnné informace, například číslo faktury, datum splatnosti a odkaz na platební bránu, budou vloženy do těla odesílaného e-mailu |
+| **Použití pro přílohu e-mailu** | Určuje, že související doklad bude připojen k e-mailu. |
+| **Popis rozvržení těla e-mailu** | Určuje použité rozvržení těla e-mailu, obvykle vlastní rozvržení sestavy. |
 
 ## Viz také
 
-[Set Up Reusable Email Texts and Layouts for Sales and Purchase Documents](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts-for-sales-and-purchase-documents)  
-[Select a Check Layout](finance-how-define-check-layouts.md)  
-[Set Up Reports for VAT and Intrastat (Germany)](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md)  
-[Managing Report and Document Layouts](ui-manage-report-layouts.md)  
-[Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md)  
-[Set Up Printers](ui-specify-printer-selection-reports.md)
+[Nastavení opakovaně používaných e-mailů a rozvržení pro prodejní a nákupní doklady](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts-for-sales-and-purchase-documents)  
+[Výběr rozvržení šeku](finance-how-define-check-layouts.md)  
+[Nastavení sestav pro DPH a intrastat (Germany)](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md)  
+[Správa rozvržení sestav a dokladů](ui-manage-report-layouts.md)  
+[Definice rozvržení dokladů pro zákazníky a dodavatele](ui-define-customer-vendor-document-layouts.md)  
+[Nastavení tiskáren](ui-specify-printer-selection-reports.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
