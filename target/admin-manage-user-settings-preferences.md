@@ -49,37 +49,36 @@ Stránka **Karta nastavení uživatelů** je podobný jako stránka **Má nastav
 
 - **Oblast**
 
-   Definuje způsob, jakým jsou data a čísla prezentována v klientu [!INCLUDE[prod_short](includes/prod_short.md)] například zda použít evropské nebo americké formáty data nebo jak zobrazit desetinné znaménko a oddělovače tisíců v částkách. If [!INCLUDE[prod_short](includes/prod_short.md)] users are synchronized from Microsoft 365, the regional settings from Microsoft 365 are used, assuming that the user wants to use the same settings in Office products and [!INCLUDE[prod_short](includes/prod_short.md)]. An administrator or user can change these settings manually in [!INCLUDE[prod_short](includes/prod_short.md)], but they will be reset to the value from Microsoft 365 once the next synchronization is performed.
+   Definuje způsob, jakým jsou data a čísla prezentována v klientu [!INCLUDE[prod_short](includes/prod_short.md)] například zda použít evropské nebo americké formáty data nebo jak zobrazit desetinné znaménko a oddělovače tisíců v částkách. If [!INCLUDE[prod_short](includes/prod_short.md)] users are synchronized from Microsoft 365, the regional settings from Microsoft 365 are used, assuming that the user wants to use the same settings in Office products and [!INCLUDE[prod_short](includes/prod_short.md)]. Správce nebo uživatel může tato nastavení změnit ručně v aplikaci [!INCLUDE[prod_short](includes/prod_short.md)], ale po provedení další synchronizace se obnoví na hodnotu z Microsoft 365.
 
-- **Time zone**
+- **Časové pásmo**
 
-   Defines the time zone in which the user is located. Currently this is not synchronized from Microsoft 365 and must be set manually.
+   Definuje časové pásmo, ve kterém se uživatel nachází. V současné době to není synchronizováno z Microsoft 365 a musí být nastaveno ručně.
 
-- **Teaching tips**
+- **Výukové tipy**
 
-   [!INCLUDE [ua-teachingtips](includes/ua-teachingtips.md)] As an administrator, you can switch off teaching tips for all users, such as if you are in process of onboarding users who are already familiar with [!INCLUDE [prod_short](includes/prod_short.md)].
+   [!INCLUDE [ua-teachingtips](includes/ua-teachingtips.md)]  Jako administrátor můžete vypnout výukové tipy pro všechny uživatele, například když právě připojujete uživatele, kteří již [!INCLUDE [prod_short](includes/prod_short.md)] znají.
 
-> [!NOTE]
-> If a Microsoft 365 user synchronization is made while users are logged into [!INCLUDE[prod_short](includes/prod_short.md)], these users must refresh the browser or log out and back in to [!INCLUDE[prod_short](includes/prod_short.md)] to see a potential different language set by the synchronization action.
+> Pokud je synchronizace uživatelů Microsoft 365 provedena v době, kdy jsou uživatelé přihlášeni do [!INCLUDE[prod_short](includes/prod_short.md)], musí tito uživatelé obnovit prohlížeč nebo se odhlásit a znovu přihlásit do [!INCLUDE[prod_short](includes/prod_short.md)], aby viděli případný jiný jazyk nastavený synchronizační akcí.
 
-## Overview of all user-specific changes
+## Přehled všech změn specifických pro uživatele
 
-As the administrator, you can get an overview of individual changes to [!INCLUDE [prod_short](includes/prod_short.md)] that each user might have made to various pages in [!INCLUDE [prod_short](includes/prod_short.md)]. As users make changes to their experience in [!INCLUDE [prod_short](includes/prod_short.md)], these changes will be reflected in the **User Personalizations** list. <!--Administrators can also set these settings for users before they log in the first time, so users do not have to do it themselves, providing them a better *getting started* experience.-->
+Jako správce můžete získat přehled o jednotlivých změnách v [!INCLUDE [prod_short](includes/prod_short.md)], které mohl každý uživatel provést na různých stránkách v [!INCLUDE [prod_short](includes/prod_short.md)]. Jakmile uživatelé provedou změny ve svých prostředích v [!INCLUDE [prod_short](includes/prod_short.md)], tyto změny se projeví v seznamu **Přizpůsobení uživatele**. <!--Administrators can also set these settings for users before they log in the first time, so users do not have to do it themselves, providing them a better *getting started* experience.-->
 
 <!-- >[!NOTE]
 > User personalizations do not have anything to do with the *personal* lightweight changes a user can make to the user experience.-->
 
-## To review or delete user personalizations
+## Kontrola nebo odstranění individuálních nastavení uživatelů
 
-1. Choose the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Personalized Pages**, and then choose the related link.
-2. This shows the list of users and their personalized pages. To clear a user's personalization, click the relevant row, or choose **Manage**, and then choose **Delete**.
+1. Vyberte ikonu ![Hledat stránku nebo sestavu](media/ui-search/search_small.png "Hledat ikonu stránky nebo sestavy"), zadejte **Přizpůsobené stránky** a poté vyberte související odkaz.
+2. Zobrazí se seznam uživatelů a jejich přizpůsobené stránky. Chcete-li vymazat personalizaci uživatele, klikněte na příslušný řádek nebo zvolte **Spravovat**a poté zvolte **Odstranit**.
 
-This deletes the personalization, and the user's experience of the relevant page returns to the default state.
+Tím se odstraní přizpůsobení a uživatelské prostředí příslušné stránky se vrátí do výchozího stavu.
 
 ## Viz také
 
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Country/regional availability and supported languages](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations)  
-[Changing Language and Locale](about-locale-language.md)
+[Příprava na podnikání](ui-get-ready-business.md)  
+[Dostupnost pro jednotlivé země a regiony a podporované jazyky](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations)  
+[Změna jazyka a oblasti](about-locale-language.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
