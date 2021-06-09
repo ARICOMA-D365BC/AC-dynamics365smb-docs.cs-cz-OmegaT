@@ -12,28 +12,28 @@
     ms.author: edupont
 
 ---
-# Print the Picking List
-You can print an inventory picking list directly from a sales order, a sales invoice, or any other document that initiates shipment of items.
+# Tisk přehledu vyskladnění
+Přehled vyskladnění můžete vytisknout přímo z prodejní objednávky, prodejní faktury nebo jiného dokladu, který iniciuje dodávku zboží.
 
-This report is typically used in companies without dedicated functionality for warehouse management, so that an inventory worker can simply view or print the picking list from the related sales document. In companies with higher volume or more complex processes, picking is planned and performed in dedicated warehouse documents. For more information, see [Pick Items](warehouse-pick-items.md).
+Tato sestava se obvykle používá ve společnostech bez vyhrazených funkcí pro správu skladu, takže skladový pracovník může jednoduše zobrazit nebo vytisknout vyskladnění ze souvisejícího prodejního dokladu. Ve společnostech s vyšším objemem nebo složitějšími procesy je vyskladnění plánováno a prováděno ve specializovaných skladových dokumentech. Pro více informací navštivte [Vyskladnění zboží](warehouse-pick-items.md).
 
-## To print a picking list from a sales order
-Následující postup je založen na prodejní objednávce. The steps are similar for all sales documents that can be used to initiate shipment of items.
+## Tisk přehledu vyskladnění z prodejní objednávky
+Následující postup je založen na prodejní objednávce. Tyto kroky jsou podobné pro všechny prodejní doklady, které lze použít k zahájení dodávání zboží.
 
-1. Choose the ![Search for Page or Report](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Sales Orders**, and then choose the related link.
-2. Open the sales order that you want to pick items for.
-3. Choose the **Report** action, and then choose the **Picking List by Order** action.
-4. Choose the **Print** button to print the picking list or choose the **Preview** button to view it on the screen.
+1. Vyberte ikonu ![Hledat stránku nebo sestavu](media/ui-search/search_small.png "Hledat ikonu stránky nebo sestavy"), zadejte **Prodejní objednávky** a poté vyberte související odkaz.
+2. Otevřete prodejní objednávku, pro kterou chcete vyskladňovat zboží.
+3. Vyberte akci **Sestavy** a poté vyberte akci **Přehled vyskladnění za objednávku**.
+4. Zvolte tlačítko **Tisk** chcete-li vytisknout vyskladnění nebo vyberte tlačítko **Náhled**k náhledu sestavy.
 
-You can also save the picking list as a document, for example, to send to someone or to add as an attachment to the sales order. For more information, see [Manage Attachments, Links, and Notes on Cards and Documents](ui-how-add-link-to-record.md).
+Přehled vyskladnění můžete také uložit jako dokument, například k odeslání nebo k přidání jako přílohu k prodejní objednávce. Pro více informací navštivte [Správa příloh, odkazů a poznámek ke kartám a dokladům](ui-how-add-link-to-record.md).
 
 > [!NOTE]
-> If you used the **Explode BOM** function on the sales order, then only the components of the related assembly item are shown in the report. For more information, see [Work with Bills of Material](inventory-how-work-BOMs.md).
+> Pokud jste na prodejní objednávce použili funkci **Rozbalit kusovník** pak se v sestavě zobrazí pouze komponenty související se zbožím. Pro více informací navštivte [Práce s Kusovníkem ](inventory-how-work-BOMs.md).
 
 ## Viz také
-[Inventory](inventory-manage-inventory.md)  
-[Pick Items](warehouse-pick-items.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Zásoby](inventory-manage-inventory.md)  
+[Vyskladnění zboží](warehouse-pick-items.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

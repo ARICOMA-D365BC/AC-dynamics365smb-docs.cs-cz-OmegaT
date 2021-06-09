@@ -9,35 +9,35 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Warnings and Error Messages in Dynamics 365 Business Central
+# Varování a chybové zprávy v Dynamics 365 Business Central
 
-During your work day, you might see notifications in [!INCLUDE [prod_short](includes/prod_short.md)] that something went wrong, or that it was not possible to post something, for example. In many cases, the notification makes it easy to resolve the matter, or to roll back any changes that you made. In other cases, you might not have have the information that you need to get unblocked. This article provides tips on how to make progress.
+Během pracovního dne můžete v [!INCLUDE [prod_short](includes/prod_short.md)] vidět oznámení, že se něco pokazilo nebo, že se například nepodařilo zaúčtovat nějaký doklad. V mnoha případech oznámení usnadňuje vyřešení problému nebo vrácení všech změn, které jste provedli. V ostatních případech možná nebudete mít informace, které potřebujete k odblokování. Tento článek obsahuje tipy, jak dosáhnout pokroku.
 
-## In-product user assistance
+## Pomoc uživatelům v produktu
 
-The default version of [!INCLUDE [prod_short](includes/prod_short.md)] includes descriptions for most fields, columns, and actions that can be accessed when you choose the name. In combination with teaching tips for important pages, descriptive captions, and instructional text, these tooltips, or callouts, are our current implementation of *embedded user assistance*, which is an important principle in today's world of software design.
+Výchozí verze [!INCLUDE [prod_short](includes/prod_short.md)] obsahuje popisy většiny polí, sloupců a akcí, ke kterým lze přistupovat, když vyberete název. V kombinaci s výukou tipů pro důležité stránky, popisných titulků a instruktážním textem jsou tyto popisky nebo tooltipy naší současnou *integrovanou uživatelskou pomocí*, což je důležitý princip v dnešním světě designu softwaru.
 
-If you have a question about a field or another element of the user interface, choose the name, and a short description will appear. Choose the *Learn more* link if that is not enough.
+Pokud máte dotaz ohledně pole nebo jiného prvku uživatelského rozhraní, zvolte název a zobrazí se krátký popis. Pokud to nestačí, vyberte odkaz *Zjistěte více*.
 
-For more information, see [Dynamics 365 Business Central User Assistance Model](/dynamics365/business-central/dev-itpro/user-assistance) in the administration content for [!INCLUDE [prod_short](includes/prod_short.md)].
+Další informace najdete v [Dynamics 365 Business Central modelu pomoci uživateli](/dynamics365/business-central/dev-itpro/user-assistance) v obsahu pro správu [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## Help and Support page
+## Stránka Nápovědy a Podpory
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], the Help menu item (the question mark in the top right corner) gives you access to the **Help and Support** page, where you can find links to resources that can help you find answers to your questions. For more information, see [Resources for Help and Support](product-help-and-support.md).
+V [!INCLUDE[prod_short](includes/prod_short.md)], tpoložka nabídky Nápověda (otazník v pravém horním rohu) vám umožňuje přístup na stránku **Nápovědy a podpory**, kde najdete odkazy ke zdrojům, které vám pomohou najít odpovědi na vaše otázky. Další informace naleznete v tématu [Zdroje pro nápovědu a podporu](product-help-and-support.md).
 
-## Help others
+## Pomoc ostatním
 
-If you are an administrator or superuser, you can help others by looking up error messages in the **Error Message Register** page or in the administration center. In many cases, the warning or error message is about setup or lack of permission and similar issues that the superuser or administrator can easily help with. In other cases, you might have to inspect pages to identify the cause. For more information, see [Finding technical information](/dynamics365/business-central/dev-itpro/administration/manage-technical-support#finding-technical-information) in the administration content for [!INCLUDE [prod_short](includes/prod_short.md)].
+Pokud jste administrátor nebo superuživatel, můžete ostatním pomoci vyhledáním chybových zpráv na stránce **Registr chybových zpráv** nebo v centru pro správu. V mnoha případech se varovná nebo chybová zpráva týká nastavení nebo nedostatku oprávnění a podobných problémů, se kterými může superuživatel nebo správce snadno pomoci. V ostatních případech možná budete muset zkontrolovat stránky, abyste zjistili příčinu. Pro více informací navštivte [Vyhledání technických informací](/dynamics365/business-central/dev-itpro/administration/manage-technical-support#finding-technical-information) v obsahu správy pro [!INCLUDE [prod_short](includes/prod_short.md)].
 
 ## Viz také
 
-[Resources for Help and Support](product-help-and-support.md)  
-[Frequently Asked Questions](across-faq.md)  
-[Tell Me FAQ](ui-search-faq.md)  
-[Searching and Filtering FAQ](ui-search-filter-faq.yml)  
-[Copy and Paste FAQ](faq-copy-paste.yml)  
-[Change Basic Settings](ui-change-basic-settings.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)
+[Zdroje pro nápovědu a podporu](product-help-and-support.md)  
+[Často kladené otázkys](across-faq.md)  
+[Řekně te mi - Často kladené otázky](ui-search-faq.md)  
+[Časté dotazy k vyhledávání a filtrování](ui-search-filter-faq.yml)  
+[Časté dotazy o kopírování a vkládání](faq-copy-paste.yml)  
+[Změna základního nastavení](ui-change-basic-settings.md)  
+[Příprava na podnikání](ui-get-ready-business.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

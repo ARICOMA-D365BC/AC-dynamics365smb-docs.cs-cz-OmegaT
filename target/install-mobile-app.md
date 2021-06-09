@@ -15,11 +15,11 @@ ms.author: edupont
 
 # Získání Business Central pro mobilní zařízení
 
-Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile device. You can navigate through your business data, use features such as send to Excel or Microsoft 365, view up-to-date charts and KPIs, email sales quotes and invoices, and shoot and attach pictures with your camera. Chcete-li stáhnout aplikaci a začít, postupujte podle následujících pokynů.
+Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile device. Můžete procházet obchodní data, používat funkce, jako je odesílání do Excelu nebo Microsoftu 365, zobrazení aktuálních grafů a KPI, e-mailové prodejní nabídky a faktury a fotografování a připojování obrázků fotoaparátem. Chcete-li stáhnout aplikaci a začít, postupujte podle následujících pokynů.
 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4Arje?rel=0]
 
-## Get the app on my mobile device
+## Stáhněte si aplikaci do svého mobilního zařízení
 
 1. Nainstalujte si do svého mobilního zařízení aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] stažením aplikace z Windows Store, App Store nebo Google Play.
 
@@ -27,18 +27,18 @@ Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile
    - [App Store](https://go.microsoft.com/fwlink/?LinkId=734847)
    - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
 2. Spusťte aplikaci na mobilním zařízení.
-3. Enter your user name and password that you created during sign-up for [!INCLUDE[prod_short](includes/prod_short.md)] and follow the instructions on the screen.
+3. Zadejte své uživatelské jméno a heslo, které jste vytvořili při registraci [!INCLUDE[prod_short](includes/prod_short.md)] a postupujte podle pokynů na obrazovce.
 
-   If your [!INCLUDE [prod_short](includes/prod_short.md)] has more than one production environment, then you will be asked to choose the environment that you want to access (requires Business Central 2020 release wave 2 and later).
+   Pokud váš [!INCLUDE [prod_short](includes/prod_short.md)] má více než jedno produkční prostředí, budete požádáni, abyste vybrali prostředí, ke kterému chcete připojit (vyžaduje Business Central 2020 verze 2 a vyšší).
 
-You should now have access to [!INCLUDE[prod_short](includes/prod_short.md)] and can view and edit data.
+Nyní byste měli mít přístup k [!INCLUDE[prod_short](includes/prod_short.md)] a měli byste mít možnost prohlížet a upravovat data.
 
 > [!TIP]
-> If you want to connect the app to a sandbox environment, choose the **Advanced options** button, and then choose the **Cloud sandbox** sign-in option. Then, if you have more than one sandbox environment, choose the relevant environment.
+> Pokud chcete aplikaci připojit k sandboxovému prostředí, zvolte akci **Pokročilé nastavení** a poté vyberte možnost přihlášení **Cloud sandbox**. Pak, pokud máte více než jedno prostředí sandboxu, vyberte příslušné prostředí.
 
-## Using Business Central on-premises?
+## používáte Business Central on-premises?
 
-If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you can also enjoy the benefits of the mobile app. The installation is similar, but with a couple exceptions.
+Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, budete muset začít od začátku pomocí Power BI Desktop. Instalace je podobná, ale až na pár výjimek.
 
 1. Nainstalujte si do svého mobilního zařízení aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] stažením aplikace z Windows Store, App Store nebo Google Play.
 
@@ -47,21 +47,21 @@ If you're using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you 
    - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
 2. Spusťte aplikaci na mobilním zařízení.
 3. Instead of entering an email address on the **Welcome** page, choose the **Advanced options** button, and then choose the **On-premises** sign-in option.
-4. On the next page, in the **Service name** box, enter the web address that you use to open [!INCLUDE[prod_short](includes/prod_short.md)], such as *https://mybusinesscentral:443/BC170*. If you're not sure, ask your administrator.
-5. Next, enter your user name and password for accessing Business Central.
+4. Na další stránce zadejte do pole **Název služby** webovou adresu, kterou používáte k otevření [!INCLUDE[prod_short](includes/prod_short.md)], například jako *https://mybusinesscentral:443/BC170*. Pokud si nejste jisti, zeptejte se svého správce.
+5. Dále zadejte své uživatelské jméno a heslo pro přístup do Business Central.
 
-   When completed, the Business Central App will open.
+   Po dokončení se otevře aplikace Business Central.
 
 > [!NOTE]
-> If you're having problems getting the app to work properly, talk with your administrator. It could be a missing prerequisite or an incomplete configuration. For more information, see  [Preparing the environment for the mobile app](/dynamics365/business-central/dev-itpro/deployment/install-business-central-app#prereqs) or [Troubleshooting the Business Central Mobile App On-Premises](/dynamics365/business-central/dev-itpro/developer/devenv-troubleshooting-the-mobile-app).
+> Pokud máte potíže se správným fungováním aplikace, obraťte se na svého správce. Může se stát, že se jedná o chybějící předpoklad nebo neúplnou konfiguraci. Další informace najdete v [Příprava prostředí pro mobilní aplikaci](/dynamics365/business-central/dev-itpro/deployment/install-business-central-app#prereqs) nebo [Řešení potíží s mobilní aplikací Business Central On-Premises](/dynamics365/business-central/dev-itpro/developer/devenv-troubleshooting-the-mobile-app).
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Mobile Apps FAQ](ui-mobile-faq.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nejčastější otázky Mobilní aplikace](ui-mobile-faq.md)  
+[Příprava na podnikání](ui-get-ready-business.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
