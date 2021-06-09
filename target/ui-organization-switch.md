@@ -11,40 +11,40 @@ ms.author: bholtorf
 
 ---
 
-# Switching to Another Company or Environment
+# Přepnutí do jiné společnosti nebo prostředí
 
-[!INCLUDE [company_environment](includes/company_environment.md)] For more information, see [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).
+[!INCLUDE [company_environment](includes/company_environment.md)] Další informace naleznete v tématu [Vytváření nových společností v [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).
 
 > [!TIP]
-> If you often switch between companies, or work with [!INCLUDE[prod_short](includes/prod_short.md)] from within another app like Microsoft Teams, it can be easy to lose track of where you are. To help you keeping track, you can add a badge that will display the company name, so you can quickly verify that you're in the right place. For more information, see [To display a company badge for quick access to company information](ui-change-basic-settings.md#badge).
+> Pokud často přepínáte mezi společnostmi nebo pracujete s aplikací [!INCLUDE[prod_short](includes/prod_short.md)] z jiné aplikace, jako je Microsoft Teams, může být snadné ztratit přehled o tom, kde jste. Abyste si udrželi přehled, můžete přidat odznak, který bude zobrazovat název společnosti, abyste mohli rychle ověřit, že jste na správném místě. Další informace naleznete v tématu [Zobrazení firemního odznaku pro rychlý přístup k informacím o společnosti](ui-change-basic-settings.md#badge).
 
-## Switch to Another Environment
+## Přepnutí do jiného prostředí
 
-When you're signed in to [!INCLUDE[prod_short](includes/prod_short.md)], the environments that you can access are available on the Dynamics 365 Home page. You can open the page by choosing the **App Launcher** icon ![App Launcher](media/app-launcher-icon.png "The App Launcher provides access to more features") and choosing **Dynamics 365**. To go to your default company in that environment, choose the tile. There will be one tile for each type of environment. If you have more than one environment of a certain type, when you choose the tile you can choose the environment to access.
+Když jste přihlášeni k [!INCLUDE[prod_short](includes/prod_short.md)], prostředí, ke kterým máte přístup, jsou k dispozici na domovské stránce Dynamics 365. Stránku můžete otevřít výběrem ikony **Spouštěč aplikací**  ![Spouštěč aplikací](media/app-launcher-icon.png "Spouštěč aplikací poskytuje přístup k dalším funkcím") a vybráním **Dynamics 365**. Chcete-li přejít na výchozí společnost v tomto prostředí, vyberte dlaždici. Pro každý typ prostředí bude k dispozici jedna dlaždice. Pokud máte více než jedno prostředí určitého typu, můžete při výběru dlaždice zvolit prostředí, ke kterému chcete přistupovat.
 
-The following image shows tiles for accessing production and sandbox environments on the Dynamics 365 Home page.
+Následující obrázek znázorňuje dlaždice pro přístup k produkčním a sandboxovým prostředím na domovské stránce Dynamics 365.
 
-:::image type="content" source="media/app-picker-environments.png" alt-text="The Dynamics 365 Home page showing production and sandbox environments.":::
+:::image type="content" source="media/app-picker-environments.png" alt-text="Domovská stránka Dynamics 365 zobrazující produkční a sandboxové.":::
 
-## Switch to Another Company
+## Přepnutí do jiné společnosti
 
-When you're signed in to [!INCLUDE[prod_short](includes/prod_short.md)], you can quickly switch to another company. After you make the switch, the company you choose becomes your default company and will display the next time you sign in.
+Když jste přihlášeni k účtu [!INCLUDE[prod_short](includes/prod_short.md)], můžete rychle přejít na jinou společnost. Po přechodu se vybraná společnost stane výchozí společností a zobrazí se při příštím přihlášení.
 
-1. In the top-right corner, choose the **Settings** icon ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center"), and then choose the **My Settings** action.
+1. V pravém horním rohu vyberte ikonu **Nastavení** ![Nastavení](media/ui-experience/settings_icon_small.png "Ikona nastavení pro centrum rolí") a poté vyberte tlačítko **Má nastavení**.
 
    > [!TIP]
-   > You can also use the Alt+T keyboard shortcut to quickly open the My Settings page.
+   > Stránku Má nastavení můžete také rychle otevřít pomocí klávesové zkratky Alt + T..
 
-2. On the **My Settings** page, in the **Company** field, select the company.
+2. Na stránce **Má nastavení** v poli **Společnost** vyberte společnost.
 3. Zvolte tlačítko **OK**.
 
 > [!TIP]
-> A good way to go directly to your default company when you sign in, and avoid having to specify an environment, is to add the the URL to your list of favorites after you sign in.
+> Dobrým způsobem, jak po přihlášení přejít přímo do výchozí společnosti a vyhnout se nutnosti zadávat prostředí, je přidat adresu URL do seznamu oblíbených stránek po přihlášení.
 
 ## Viz také
 
-[The Business Central Administration Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center)  
-[Change Basic Settings](ui-change-basic-settings.md)
+[Administrace Dynamics Central](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center)  
+[Změna základního nastavení](ui-change-basic-settings.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

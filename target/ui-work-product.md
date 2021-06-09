@@ -47,7 +47,7 @@ The following table lists some of the general functionality with links to topics
 | Get notified about certain events or changes in status, such as when you are about to invoice a customer who has an overdue balance. | [Manage Notifications](ui-smart-notifications.md) |
 | Change which and where UI elements are shown to fit your preferences. | [Personalize Your Workspace](ui-personalization-user.md) |
 | Define, preview, print, or save reports and define and run batch jobs. | [Working with Reports, Batch Jobs, and XMLports](ui-work-report.md) |
-| Manage the content and format of reports and documents, including which data fields of a report dataset appear on the report and how they are arranged, text style, images, and more. | [Managing Report and Document Layouts](ui-manage-report-layouts.md) |
+| Manage the content and format of reports and documents, including which data fields of a report dataset appear on the report and how they are arranged, text style, images, and more. | [Správa rozvržení sestav a dokladů](ui-manage-report-layouts.md) |
 | Learn about features and capabilities that make [!INCLUDE[prod_short](includes/prod_short.md)] readily available to people with disabilities. | [Accessibility and Keyboard Shortcuts](ui-accessibility.md) |
 
 ## Getting Around in Business Central

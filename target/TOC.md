@@ -350,7 +350,7 @@
 ### [View Test Reports Before Posting](ui-how-view-test-reports-posting.md)
 ### [Run Batch Jobs and XML ports](ui-how-run-batch-jobs.md)
 ## Changing the Look of Externally-Facing Documents
-### [Managing Report and Document Layouts](ui-manage-report-layouts.md)
+### [Správa rozvržení sestav a dokladů](ui-manage-report-layouts.md)
 ### [Change the Current Report Layout](ui-how-change-layout-currently-used-report.md)
 ### [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)
 ### [Import and Export Custom Report Layouts](ui-how-import-and-export-report-layout.md)
