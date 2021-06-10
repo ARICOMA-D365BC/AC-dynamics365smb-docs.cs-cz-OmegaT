@@ -14,38 +14,38 @@ ms.date: 04/01/2021
 ms.author: solsen
 ---
 
-# Installing and Uninstalling Extensions in Business Central
+# Instalace a odinstalování rozšíření v Business Central
 
-You can change [!INCLUDE[prod_short](includes/prod_short.md)] by installing extensions that, for example, add functionality, changes behavior, or gives you access to new online services. For more information, see [Customizing Business Central Using Extensions](ui-extensions.md).
+Můžete změnit [!INCLUDE[prod_short](includes/prod_short.md)] instalací rozšíření, která například přidají funkčnost, změní chování nebo vám poskytnou přístup k novým online službám. Další informace naleznete v tématu [Přizpůsobení Business Central pomocí rozšíření](ui-extensions.md).
 
 > [!NOTE]
-> To install extensions from AppSource or add per-tenant extensions, you must have the right permissions. You must either be a member of the D365 EXTENSION MGT user group or you must have the D365 EXTENSION MGT permission set. If you are an administrator, you can assign user groups and permissions to other users in your company.
+> Chcete-li nainstalovat rozšíření z AppSource nebo přidat rozšíření na tenanta, musíte mít správná oprávnění. Musíte být buď členem skupiny uživatelů D365 EXTENSION MGT, nebo musíte mít sadu oprávnění D365 EXTENSION MGT. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti.
 >
-> To use the functionality that is provided by an extension, such as opening pages, running reports, selecting actions, and so on, you must be assigned the permission sets that are installed as part of the extension.
+> Chcete-li použít funkce poskytované rozšířením, jako je otevírání stránek, spouštění sestav, výběr akcí a další, musíte mít přiřazené sady oprávnění, které jsou nainstalovány jako součást rozšíření.
 
-## Installing an Extension
+## Instalace rozšíření
 
-You manage extensions on the **Extension Management** page. You can access this page from Home. Alternatively, choose the **Search for Page or Report** icon ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") in the top right corner, enter **Extension**, and then choose the related link.
+Rozšíření spravujete na stránce **Správa rozšíření** Na tuto stránku se dostanete z Domovské stránky. Případně vyberte ikonu **Hledat stránku nebo sestavu** Žárovku, která otevře funkci Řekněte mi ![](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") v pravém horním rohu zadejte **Rozšíření** a poté vyberte související odkaz.
 
-You can get new extensions from the marketplace at [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646). Here, you can see all available extensions for [!INCLUDE[prod_short](includes/prod_short.md)], and you can get apps, extensions, and content packs for other Microsoft products. Set the relevant filters, take a look at the information for each extension, and get an extension for your [!INCLUDE[prod_short](includes/prod_short.md)].
+Nová rozšíření můžete získat na [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646). Zde si můžete pro zobrazit všechna dostupná rozšíření pro [!INCLUDE[prod_short](includes/prod_short.md)] a můžete získat aplikace, rozšíření a balíčky obsahu pro další produkty společnosti Microsoft. Nastavte příslušné filtry, podívejte se na informace o každém rozšíření a získejte rozšíření pro Váš [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!NOTE]  
-> Sign in to [AppSource.microsoft.com](https://appsource.microsoft.com/) using the email account that you use for [!INCLUDE[prod_short](includes/prod_short.md)]. Use the same email account for other services and products for a smooth experience.
+> Přihlaste se na [AppSource.microsoft.com](https://appsource.microsoft.com/) pomocí e-mailového účtu, který používáte pro [!INCLUDE[prod_short](includes/prod_short.md)]. Pro bezproblémové používání prostředí používejte stejný e-mailový účet.
 
-You can also get to the marketplace from inside [!INCLUDE[prod_short](includes/prod_short.md)]. On the **Extension Management** page, you can see the extensions that are currently installed, and you can open the **Extension Marketplace** page that shows the [!INCLUDE[prod_short](includes/prod_short.md)] extensions that are currently available in AppSource. If you choose the *More apps* link, you are taken to [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646).
+Na marketplace se můžete také dostat z [!INCLUDE[prod_short](includes/prod_short.md)]. Na stránce **Správa rozšíření** uvidíte rozšíření, která jsou aktuálně nainstalována, a můžete otevřít stránku **Tržiště rozšíření**, která zobrazuje [!INCLUDE[prod_short](includes/prod_short.md)] rozšíření, která jsou aktuálně dostupná v AppSource. Pokud zvolíte odkaz *Více aplikací* budete přesměrováni na [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646).
 
-If you choose an extension, you can read about what the extension does, and you can access Help for the extension to learn more. When you choose to get an extension, you must agree to the terms of use. If you get the extension from the AppSource website, you will be signed in to [!INCLUDE[prod_short](includes/prod_short.md)] to complete the installation.
+Pokud vyberete rozšíření, můžete si přečíst, co rozšíření dělá, a můžete získat přístup k nápovědě k rozšíření a dozvědět se více. Pokud se rozhodnete získat rozšíření, musíte souhlasit s podmínkami použití. Pokud získáte rozšíření z webu AppSource, budete pro dokončení instalace přihlášeni k [!INCLUDE[prod_short](includes/prod_short.md)].
 
-When you install an extension, you might have to set it up, such as specifying an account for use with the **PayPal Payments Standard for [!INCLUDE[prod_short](includes/prod_short.md)]** extension.
-Other extensions simply add fields to an existing page, or they add a new page, for example.
+Když nainstalujete rozšíření, budete jej možná muset nastavit, například zadat účet pro použití s rozšířením **Platební standard PayPal pro [!INCLUDE[prod_short](includes/prod_short.md)]**.
+Jiná rozšíření jednoduše přidají pole na existující stránku nebo například přidají novou stránku.
 
-If you uninstall an extension, and you then change your mind, you can install it again. When you uninstall an extension that you have been using, the data is preserved so that if you install the extension again, your data is still available. There are some extensions that are required. You are prevented from uninstalling these from the **Extension Management** page. If you try, an error message appears.
+Pokud odinstalujete rozšíření a poté změníte názor, můžete ji nainstalovat znovu. Pokud odinstalujete rozšíření, které používáte, data se zachotá, takže pokud rozšíření znovu nainstalujete, budou data stále k dispozici. Jsou požadována některá rozšíření. Nelze je odinstalovat ze stránky **Správa rozšíření**. Pokud to zkusíte, zobrazí se chybová zpráva.
 
-Some extensions are provided by Microsoft, and other extensions are provided by [other companies](ui-extensions-other.md). All extensions are tested before they are made available to you, but we recommend that you access the links that are provided with each extension to learn more about the extension before you choose to install it.
+Některá rozšíření poskytuje společnost Microsoft a jiná rozšíření poskytují [jiné společnosti](ui-extensions-other.md). Všechna rozšíření jsou testována před tím, než jsou k dispozici, ale doporučujeme abyste před instalací prošli odkazy, které jsou k dispozici, abyste se o rozšíření dozvěděli více, než se rozhodnete jej nainstalovat.
 
-Microsoft provides the following extensions:
+Společnost Microsoft poskytuje následující rozšíření:
 
-* [AMC Banking 365 Fundamentals Extension](ui-extensions-amc-banking.md)
+* [Rozšíření AMC Banking 365 Fundamentals](ui-extensions-amc-banking.md)
 * [Ceridian Payroll](ui-extensions-ceridian-payroll.md)
 * [Company Hub](ui-extensions-company-hub.md)
 * [Dynamics GP Data Migration](ui-extensions-dynamicsgp-data-migration.md)
@@ -69,24 +69,24 @@ Microsoft provides the following extensions:
 * [The GetAddress.io UK Postcodes Extension](LocalFunctionality/UnitedKingdom/ui-extensions-getaddressio.md)
 * [US/CA/UK/AU/NZ/ZA - Send Remittance Advice](ui-extensions-send-remittance-advice.md)
 
-## Uninstalling an Extension
+## Odinstalace rozšíření
 
-You uninstall an extension using the **Extension Management** page. If you uninstall an extension, and you then change your mind, you can install the extension again. When you uninstall an extension that you have been using, data is by default preserved so that if you install the extension again. You can instead choose to delete the data with the extension. This is controlled by the **Delete Extension Data** checkbox. By default, this checkbox is *not enabled*.
+Rozšíření odinstalujete pomocí stránky **Správa rozšíření**. Pokud rozšíření odinstalujete a pak si to rozmyslíte, můžete rozšíření nainstalovat znovu. Odinstalujete-li rozšíření, které používáte, data jsou ve výchozím nastavení zachována, takže pokud rozšíření znovu nainstalujete. Můžete toho namísto smazat data zároveň s rozšířením. Ovládá se to zaškrtávacím políčkem **Odstranit data rozšíření**. Ve výchozím nastavení není toto políčko *povoleno*.
 
 > [!IMPORTANT]  
-> If you enable the **Delete Extension Data** checkbox, you will get a confirmation dialog and you must choose **OK**. With the **Delete Extension Data** checkbox enabled, you can now uninstall the extension, and you will be asked to reconfirm that you want to uninstall the extension and delete the data. The action cannot be undone.
-> Some extensions are required. You are prevented from uninstalling these from the **Extension Management** page. If you try, an error message appears.
+> Pokud zaškrtnete políčko **Odstranit data rozšíření**, zobrazí se potvrzovací dialogové okno a musíte zvolit **OK**. Je-li zaškrtnuto políčko **Odstranit data rozšíření**, můžete nyní rozšíření odinstalovat a budete požádáni o opětovné potvrzení, že chcete rozšíření odinstalovat, a data smazat. Akci nelze vrátit zpět.
+> Některá rozšíření jsou nutná. Nelze je odinstalovat ze stránky **Správa rozšíření**. Pokud to zkusíte, zobrazí se chybová zpráva.
 
 ## Viz také
 
-[Customize Business Central](ui-customizing-overview.md)  
-[Business Central Extensions by Other Providers](ui-extensions-other.md)  
-[Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)  
-[Enable Customer Payment Through PayPal](sales-how-enable-payment-service-extensions.md)  
-[Migrating Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Setting Up the GetAddress.io UK Postal Code extension](LocalFunctionality/UnitedKingdom/uk-setup-postal-code-service.md)  
-[[!INCLUDE[prod_short](includes/prod_short.md)] Extensions by Other Providers](ui-extensions-other.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)
+[Přizpůsobení Business Central](ui-customizing-overview.md)  
+[Rozšíření Business Central od ostatních poskytovatelů](ui-extensions-other.md)  
+[Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md)  
+[Povolit platbu zákazníka prostřednictvím služby PayPal](sales-how-enable-payment-service-extensions.md)  
+[Migrace obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)  
+[Nastavení rozšíření GetAddress.io UK Postal Code extension](LocalFunctionality/UnitedKingdom/uk-setup-postal-code-service.md)  
+[[!INCLUDE[prod_short](includes/prod_short.md)] Rozšíření od jiných poskytovatelů](ui-extensions-other.md)  
+[Příprava na podnikání](ui-get-ready-business.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

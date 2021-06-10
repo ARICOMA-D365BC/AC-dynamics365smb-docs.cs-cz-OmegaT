@@ -72,7 +72,7 @@ In order to access the company hub, you must have access through either the *D36
 > [!IMPORTANT]
 > The company hub is a company-wide list, so any user who is granted access to the company hub will be able to see all companies in their own [!INCLUDE [prod_short](includes/prod_short.md)] tenant, and all KPIs for the companies that they have access to.
 
-If you cannot find the company hub, and you know that you have been granted access to it, then check with your administrator if the company hub is listed in the **Extension Management** page. For more information, see [Customizing Business Central Using Extensions](ui-extensions.md).
+If you cannot find the company hub, and you know that you have been granted access to it, then check with your administrator if the company hub is listed in the **Extension Management** page. Další informace naleznete v tématu [Přizpůsobení Business Central pomocí rozšíření](ui-extensions.md).
 
 ## Set up the company hub
 

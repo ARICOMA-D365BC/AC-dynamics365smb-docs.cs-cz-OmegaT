@@ -1608,7 +1608,7 @@
 ### [Set Up a Colored Indicator on Cues](admin-how-set-up-colored-indicator-on-cues.md)
 ### Customize Using Extensions
 #### [Extensions Overview](ui-extensions.md)
-#### [AMC Banking 365 Fundamentals Extension](ui-extensions-amc-banking.md)
+#### [Rozšíření AMC Banking 365 Fundamentals](ui-extensions-amc-banking.md)
 #### [Ceridian Payroll](ui-extensions-ceridian-payroll.md)
 #### [Company Hub](ui-extensions-company-hub.md)
 #### [Dynamics GP Data Migration](ui-extensions-dynamicsgp-data-migration.md)
