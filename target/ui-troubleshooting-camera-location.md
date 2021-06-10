@@ -12,46 +12,46 @@ ms.topic: conceptual
 ms.service: "dynamics365-business-central"
 ---
 
-# Troubleshooting: Accessing Camera and Location
+# Poradce při potížích: Přístup ke kameře a umístění
 
-You might come across some issues when trying to access the camera and location information of a device from [!INCLUDE[prod_short](includes/prod_short.md)]. You can find the possible causes behind these problems and how to work around them listed below.
+Při pokusu o přístup ke kameře a informacím o poloze zařízení z [!INCLUDE[prod_short](includes/prod_short.md)] se můžete setkat s některými problémy. Možné příčiny těchto problémů a jejich řešení můžete najít níže.
 
-## Device must have Camera and Location Capabilities
+## Zařízení musí mít možnosti kamery a umístění
 
-In order to access the camera or a user's location from a device, the device must have a physical camera or the capability to retrieve location information, respectively.
+Pro přístup ke kameře nebo poloze uživatele ze zařízení musí mít zařízení fyzickou kameru nebo schopnost načíst informace o poloze.
 
-If your device has camera and location capabilities but you still encounter problems, it is possible that some drivers need updating or reinstalling. Even if you are unsure, we always recommend you update your device operating system, drivers, and browser to the latest version for the best experience.
+Pokud má vaše zařízení možnosti fotoaparátu a umístění, ale stále narazíte na problémy, je možné, že některé ovladače potřebují aktualizaci nebo přeinstalaci. I když si nejste jisti, vždy doporučujeme aktualizovat operační systém, ovladače a prohlížeč zařízení na nejnovější verzi pro nejlepší zážitek.
 
-## Access Permissions not Enabled
+## Přístupová oprávnění nejsou povolena
 
-You must enable general access to camera and location from your device's privacy settings and explicitly give permission to  [!INCLUDE[prod_short](includes/prod_short.md)] to access them. For example, to see or change permissions for a device running on Windows, go to **Settings**, choose **Privacy**, and then **App permissions**.
+Musíte povolit obecný přístup ke kameře a poloze z nastavení ochrany osobních údajů vašeho zařízení a výslovně dát oprávnění [!INCLUDE[prod_short](includes/prod_short.md)]. Chcete-li například zobrazit nebo změnit oprávnění pro zařízení se systémem Windows, přejděte do **Nastavení**, vyberte **Soukromí** a poté **Oprávnění aplikace**.
 
-For mobile devices, you must give camera and location access permissions to the [!INCLUDE[prod_short](includes/prod_short.md)] Mobile App. To do so for an iOS device, go to **Settings**, choose **Privacy**, and then **Camera** or **Location**. For Android devices go to **Settings**, choose **Apps & Notifications**, **Advanced**, **Permission Manager**, and then **Camera** or **Location**.
+U mobilních zařízení musíte mobilní aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] udělit přístup k fotoaparátu a poloze. Chcete-li tak učinit pro zařízení se systémem iOS, přejděte do **Nastavení**, vyberte **Soukromí**, a poté vyberte **Fotoaparát** nebo **Polohové služby**. Pro zařízení s Android přejděte **Nastavení**, vyberte **Aplikace a uporozrnění**, **Pokročilé**, **Správce oprávnění** a poté **Fotoaparát** nebo **Umístění**.
 
-In addition, if you are using [!INCLUDE[prod_short](includes/prod_short.md)] in a browser, you must also grant the [!INCLUDE[prod_short](includes/prod_short.md)] site permission to access the camera or location information. To see or change a site's permissions in the Microsoft Edge browser, go to **Settings**, choose **Site Permissions**, and then **Camera** or **Location**. Note that this might be different for other browsers.
+Kromě toho, pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)]  prohlížeči, musíte také udělit webu [!INCLUDE[prod_short](includes/prod_short.md)] přístup k informacím o kameře nebo poloze. Chcete-li zobrazit nebo změnit oprávnění webu v prohlížeči Microsoft Edge, přejděte do **Nastavení**, vyberte **Oprávnění webu** a poté **Fotoaparát** nebo **Umístění**. U jiných prohlížečů se to může lišit.
 
-By default, the device or browser will pop up a request to access these capabilities when the user activates them for the first time.
+Ve výchozím nastavení zařízení nebo prohlížeč zobrazí požadavek na přístup k těmto funkcím, když je uživatel poprvé aktivuje.
 
 > [!NOTE]  
-> Some old browsers do not grant access to camera and location. For example, camera is not available in Internet Explorer or the legacy Edge browser.
+> Některé staré prohlížeče neudělují přístup ke kameře a poloze. Například kamera není k dispozici v prohlížeči Internet Explorer nebo ve starším prohlížeči Edge.
 
-## Web Client Connection not Secure
+## Připojení webového klienta není zabezpečeno.
 
-The camera and location capabilities are only available when accessing the Web Client through SSL secured HTTP connections, using the `https://` URI scheme.
+Funkce kamery a umístění jsou k dispozici pouze při přístupu k webovému klientovi prostřednictvím zabezpečeného připojení HTTP pomocí protokolu SSL pomocí URI schématu `https://`.
 
-The only exception is connecting to `http://localhost`, used for development and test purposes.
+Jedinou výjimkou je připojení k `http://localhost`, které se používají pro vývojové a testovací účely.
 
 
-## Working with Virtualization Technologies
+## Práce s virtualizačními technologiemi
 
-When connecting to [!INCLUDE[prod_short](includes/prod_short.md)] through Remote Desktop or another virtualization, the access to camera or location might not be available. If this is the case, use the physical system instead.
+Při připojování k [!INCLUDE[prod_short](includes/prod_short.md)] prostřednictvím vzdálené plochy nebo jiné virtualizace nemusí být přístup k fotoaparátu nebo umístění k dispozici. V takovém případě použijte místo toho fyzický systém.
 
-## Antivirus Software
-Some antivirus software block access to camera and location by default. Remember to check your antivirus software settings.
+## Antivirový software
+Některý antivirový software ve výchozím nastavení blokuje přístup ke fotoaparátu a umístění. Nezapomeňte zkontrolovat nastavení antivirového softwaru.
 
 ## Viz také
-[Implementing the Camera in AL](/dynamics365/business-central/dev-itpro/developer/devenv-implement-camera-al)  
-[Implementing the Location in AL](/dynamics365/business-central/dev-itpro/developer/devenv-implement-location-al)
+[Imlementace Fotoaparátu v AL](/dynamics365/business-central/dev-itpro/developer/devenv-implement-camera-al)  
+[Imlementace Umístění v AL](/dynamics365/business-central/dev-itpro/developer/devenv-implement-location-al)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
