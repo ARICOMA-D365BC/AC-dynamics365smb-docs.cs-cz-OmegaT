@@ -13,7 +13,7 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Setting Up Source Codes and Reason Codes for Audit Trails
+# Nastavení kódu přičiny a kódy důvodů pro auditní záznamy
 
 All posted entries are automatically assigned a source code so that transactions can be traced to their origin. If you want to give entries a supplementary source code, you can use reason codes. Reason codes are used to indicate why an entry was created. When you set up reason codes, you can assign them to entire journal templates and journal batches, and you can assign them to individual journal lines and documents.
 

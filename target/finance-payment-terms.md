@@ -9,39 +9,39 @@ ms.search.keywords:
 ms.date: 04/01/2021
 ms.author: edupont
 ---
-# Set Up Payment Terms
+# Nastavení platebních podmínek
 
-Payment terms determine how you manage due dates and payment discounts. You can set up any number of payment term codes and use date formulas to define the payment terms. When you first sign up for [!INCLUDE [prod_short](includes/prod_short.md)], the demonstration company provides a few payment methods that businesses often use. You can, however, add as many as you need.
+Platební podmínky určují, jak spravujete splatnost a platební slevy. Můžete nastavit libovolný počet kódů platebních podmínek a definovat platební podmínky pomocí vzorců data. Když se poprvé zaregistrujete do [!INCLUDE [prod_short](includes/prod_short.md)], demonstrační společnost poskytuje několik platebních metod, které firmy často používají. Můžete si však přidat tolik, kolik jich potřebujete.
 
-You can assign payment terms to customers and vendors so that the same terms are always used on the sales and purchase documents you create for them. If needed, you can change the terms on the sales or purchase document, such as if you want a particular customer to pay you within 7 days rather than the default 14 days. This does not change the default payment term assigned to the customer. The same payment terms are available for sales and purchase documents.
+Zákazníkům a prodejcům můžete přiřadit platební podmínky, aby se na prodejních a nákupních dokumentech, které pro ně vytvoříte, vždy používaly stejné podmínky. V případě potřeby můžete změnit podmínky na prodejním nebo nákupním dokladu, například pokud chcete, aby vám konkrétní zákazník zaplatil do 7 dnů, nikoli do 14 dnů. Tím se nezmění výchozí platební doba přiřazená zákazníkovi. Stejné platební podmínky jsou k dispozici pro prodejní a nákupní doklady.
 
-Then, when you post an invoice, [!INCLUDE [prod_short](includes/prod_short.md)] calculates the payment discounts based on the payment terms. The payment discount date, that is, the latest date on which the customer can pay and receive a discount on the payment, will also be calculated at that time.
+Když poté zaúčtujete fakturu, [!INCLUDE [prod_short](includes/prod_short.md)] vypočítá platební slevy na základě platebních podmínek. V té době se také vypočítá datum slevy na platbu, tj. poslední datum, kdy může zákazník zaplatit a získat slevu na platbu.
 
-Similarly, when you post a credit memo, [!INCLUDE [prod_short](includes/prod_short.md)] calculates possible payment discounts based on the payment terms. The discount on credit memos is calculated according to the same principles as payment discounts on invoices. Where a credit memo is applied to an invoice, the possible payment discount amount for the invoice will be reduced by the payment discount amount for the credit memo.
+Podobně, když zaúčtujete dobropis, [!INCLUDE [prod_short](includes/prod_short.md)] vypočítá možné skonto na základě platebních podmínek. Sleva z dobropisu se počítá podle stejných zásad jako slevy na platbách na fakturách. Pokud je na fakturu použit dobropis, bude případná částka slevy na platbě na faktuře snížena o částku slevy na platbě na dobropis.
 
-If you want to send your customers reminders of overdue payments, you must set up reminder levels and terms. For more information, see [Set Up Reminder Terms and Levels](finance-setup-reminders.md).
+Chcete-li svým zákazníkům zasílat upomínky na platby po splatnosti, musíte nastavit úrovně připomenutí a podmínky. Další informace naleznete v tématu [Nastavení podmínek upomínek a úrovní upomínky](finance-setup-reminders.md).
 
-## To set up payment terms
+## Nastavení platebních podmínek
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Terms**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Platební podmínky<x5/> a vyberte související odkaz.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-After you set up the payment terms, you assign them to customers and vendors. Optionally, assign payment terms to your payment methods.
+Po nastavení platebních podmínek je přiřadíte zákazníkům a dodavatelům. Volitelně můžete svým platebním metodám přiřadit platební podmínky.
 
 > [!TIP]
-> In the base version of [!INCLUDE [prod_short](includes/prod_short.md)], payment terms with partial payments are not supported. Instead, you must use the prepayments functionality. For more information, see [Set Up Prepayments](finance-set-up-prepayments.md).
+> V základní verzi [!INCLUDE [prod_short](includes/prod_short.md)] nejsou platební podmínky s částečnými platbami podporovány. Místo toho je nutné použít funkci záloh. Další informace naleznete v tématu [Nastavení záloh](finance-set-up-prepayments.md).
 >
-> In certain countries, you *can* set up payment terms with partial payments. To learn if this capability is supported in your country, see the **Local Functionality** section in the navigation pane on the left side on the [Docs.microsoft.com](about-localization.md) site.
+> V některých zemích *můžete* nastavit platební podmínky s částečnými platbami. Chcete-li zjistit, zda je tato funkce ve vaší zemi podporována, přečtěte si část **Lokální funkcionality** v navigačním podokně na levé straně webu [Docs.microsoft.com](about-localization.md).
 
 ## Viz také
 
-[Set Up Payment Methods](finance-payment-methods.md)  
-[Set Up Prepayments](finance-set-up-prepayments.md)  
-[Setting Up Finance](finance-setup-finance.md)  
-[Register New Customers](sales-how-register-new-customers.md)  
-[Register New Vendors](purchasing-how-register-new-vendors.md)  
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)
+[Nastavení platebních metod](finance-payment-methods.md)  
+[Nastavení záloh](finance-set-up-prepayments.md)  
+[Nastavení Financí](finance-setup-finance.md)  
+[Evidence nového zákazníka](sales-how-register-new-customers.md)  
+[Evidence nového dodavatele](purchasing-how-register-new-vendors.md)  
+[Prodej](sales-manage-sales.md)  
+[Nakupování](purchasing-manage-purchasing.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

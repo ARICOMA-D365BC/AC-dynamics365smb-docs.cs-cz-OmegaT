@@ -19,7 +19,7 @@ ms.author: bholtorf
 
 You can synchronize [!INCLUDE[prod_short](includes/prod_short.md)] with [!INCLUDE[cds_long_md](includes/cds_long_md.md)] on scheduled intervals by setting up jobs in the job queue. The synchronization jobs synchronize data in [!INCLUDE[prod_short](includes/prod_short.md)] records and [!INCLUDE[cds_long_md](includes/cds_long_md.md)] records that have been previously coupled together. Or for records that are not already coupled, depending on the synchronization direction and rules, the synchronization jobs can create and couple new records in the destination system.
 
-There are several synchronization jobs that are available out-of-the-box. The jobs are run in the following order to avoid coupling dependencies between tables. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+There are several synchronization jobs that are available out-of-the-box. The jobs are run in the following order to avoid coupling dependencies between tables. Další informace naleznete v tématu [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md).
 
 1. CURRENCY - Common Data Service synchronization job.
 2. VENDOR - Common Data Service synchronization job.

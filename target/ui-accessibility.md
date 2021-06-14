@@ -60,7 +60,7 @@ Tooltips are accessed in different ways, depending on the client (web or mobile)
 | Element | Mouse action for web client | Keyboard shortcut for web client | Touch gesture on tablet/phone for mobile app | Screen reader support |
 |-------|-----------------|------------|--------------------------|---------------------|
 | Page fields and column headings | Hover over or click the field caption or column heading | Move focus to the field or column heading, and press Alt+Up Arrow keys | Tap the field caption | yes |
-| Charts elements, like a bar, line, pie slice | Hover over the element | Move focus to element, for example, by using arrow keys | Tap and hold the element | yes |
+| Charts elements, like a bar, line, pie slice | Hover over the element | Move focus to element, for example, by using arrow keys | Klepněte a podržte prvek | yes |
 | Actions | Hover over the action | none | none | no |
 | Cue tiles | Hover over the tile | none | none | no |
 

@@ -20,7 +20,7 @@ A batch job is a routine that processes data in batches, for example the **Adjus
 
 A batch job is like a report, except the batch job uses the result of its work to update information directly, instead of printing the results.
 
-You can schedule when a batch job runs. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+You can schedule when a batch job runs. Další informace naleznete v tématu [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md).
 
 ## To run a batch job
 1. To open the request page for the relevant batch job, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter the name of the batch job, and then choose the related link.

@@ -12,79 +12,79 @@ ms.date: 04/01/2021
 ms.author: bholtorf
 ---
 
-# Keyboard Quick Reference - PC Only
+# Klávesové zkratky - pouze pro PC
 
-#### General
+#### Obecné
 
-|Press these keys|To do this|  
+|Stiskněte tyto klávesy|Chcete-li provést|  
 |-|-|
-|Alt+F2|Show and hide the FactBox pane|
-|Alt+N|Create a new record|
-|Alt+Shift+N|Close a newly created record and create a new one|
-|Alt+O|Add a new note for the selected record|
-|Alt+Q|Open **Tell me**|
-|Alt+Up|Open tooltip or validation error|
-|Alt+Down Arrow|Open a drop-down or look up|
-|Alt+T|Open the **My Settings** page|
-|Alt+Shift+W|Open the current card or document in a new window|
-|Ctrl+Insert|Insert a new line on a document|
-|Ctrl-Delete|Delete the line on a document, journal, or worksheet|
-|Ctrl+Shift+F12|Maximize the line items part on a document page|
-|Ctrl+F1|Open help for the page<br />Navigate when personalizing and customizing|
-|Ctrl+Click|Navigate when personalizing and customizing|
-|Shift+F12|Open the role explorer, a feature overview|
-|F5/Ctrl+F5|Refresh/reload page|
-|Tab/Shift+Tab|Move focus to the next/previous element|
-|F6/Shift+F6|Move to next FastTab/part|
+|Alt+F2|Zobrazení a skrytí informačního okna|
+|Alt+N|Pro vytvoření nového záznamu|
+|Alt+Shift+N|Zavřete nově vytvořený záznam a vytvořte nový|
+|Alt+O|Přidá novou poznámku pro vybraný záznam|
+|Alt+Q|Otevře **Řekněte mi**|
+|Alt+Up|Otevře tooltip nebo chybu ověření|
+|Alt+Down Arrow|Otevřete rozevírací nabídku nebo vyhledávání|
+|Alt+T|Otevře stránku **Má nastavení**|
+|Alt+Shift+W|Otevřít aktuální kartu nebo doklad v novém okně|
+|Ctrl+Insert|Vloží nový řádek do dokladu|
+|Ctrl-Delete|Odstraní řádek v dokladu, deníku nebo seznamu|
+|Ctrl+Shift+F12|Maximalizujte část řádkových položek na stránce dokladu|
+|Ctrl+F1|Otevře nápovědu pro stránku<br />Navigace při přizpůsobení|
+|Ctrl+Click|Navigovat při přizpůsobení|
+|Shift+F12|Otevře průzkumníka rolí, přehled funkcí|
+|F5/Ctrl+F5|Obnovit/znovu načíst stránku|
+|Tab/Shift+Tab|Přesunout fokus na další/předchozí prvek|
+|F6/Shift+F6|Přejít na další záložku/část|
 
-#### Navigate & Select Rows
+#### Navigace a Výběr řádků
 
-|Press these keys|To do this|
+|Stiskněte tyto klávesy|Chcete-li provést|
 |-|-|
-|Home/End|Go to first/last field|
-|Ctrl+Home/End |Go to first/last row|
-|Ctrl+Up/Down|Navigate without losing selection|
-|Ctrl+A |Select all|
-|Ctrl+Space|Toggle row selection|
-|Ctrl/Shift+Click|Add the row/rows to the selection|
-|Shift+Up/Down|Add row above/below to selection|
-|Shift+Page Up/Down|Select visible rows above/below|
-|Ctrl+Enter|Focus out of the list|
+|Home/End|Přejít na první/poslední pole|
+|Ctrl+Home/End |Přejít na první/poslední řádek|
+|Ctrl+ šipka nahoru/dolů|Navigace bez ztráty výběru|
+|Ctrl+A |Označit vše|
+|Ctrl+Mezerník|Přepnout výběr řádků|
+|Ctrl/Shift+Click|Přidat řádek/řádky do výběru|
+|Shift+šipka nahoru/dolů|Přidat k výběru řádek nad/pod|
+|Shift+Page Up/Down|Vybere viditelné řádky nad/pod|
+|Ctrl+Enter|Vybrané pole mimo seznam|
 
-#### Copy & Paste
+#### Kopírovat a vložit
 
-|Press these keys|To do this|
+|Stiskněte tyto klávesy|Chcete-li provést|
 |-|-|
-|Ctrl+C/V|Copy/paste rows|
-|F8|Copy field above into current row|
+|Ctrl+C/V|Kopírovat/vložit řádky|
+|F8|Kopírovat hodnotu pole z řádku nad|
 
-#### Search, Filter, & Sort
+#### Hledání, filtrování a řazení
 
-|Press these keys|To do this|
+|Stiskněte tyto klávesy|Chcete-li provést|
 |-|-|
-|Alt+F7|Sort column in ascending/descending order|
-|F3|Toggle search|
-|Shift+F3|Toggle filter pane; focus on field filters|
-|Alt+F3|Filter on selected cell value|
-|Shift+Alt+F3|Add filter on selected field|
-|Ctrl+Alt+Shift+F3|Reset filters|
+|Alt+F7|Seřazení sloupec vzestupně/sestupně|
+|F3|Přepnutí vyhledávání|
+|Shift+F3|Přepnutí podokna filtru; zaměření na filtry polí|
+|Alt+F3|Filt na vybranou hodnotu|
+|Shift+Alt+F3|Přidání filtrů do vybraného pole|
+|Ctrl+Alt+Shift+F3|Reset filterů|
 
-#### Quick Entry
+#### Rychlý vstup
 
-|Press these keys|To do this|
+|Stiskněte tyto klávesy|Chcete-li provést|
 |-|-|
-|Ctrl+Shift+Enter|Go to next Quick Entry field outside a list|
-|Enter/Shift+Enter|Go to next/previous Quick Entry field|
-##### Report Preview
+|Ctrl+Shift+Enter|Přejít na další pole pro rychlé zadání mimo seznam|
+|Enter/Shift+Enter|Přejít na další/předchozí pole pro rychlé zadání|
+##### Náhled sestavy
 
-|Press these keys|To do this|
+|Stiskněte tyto klávesy|Chcete-li provést|
 |-|-|
-|Ctrl+Home/End|Go to the first/last page|
+|Ctrl+Home/End|Přejít na první/poslední stránku|
 
 > [!TIP]
-> For a graphical, print-friendly version, choose the following image and download the PDF file.
+> Pro grafickou verzi vhodnou pro tisk vyberte následující obrázek a stáhněte soubor PDF.
 >
-> [![Icon that opens a PDF](media/keyboard_shortcut_inline.png)](media/keyboard_shortcuts.pdf)
+> [![Ikona, která otevře PDF](media/keyboard_shortcut_inline.png)](media/keyboard_shortcuts.pdf)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

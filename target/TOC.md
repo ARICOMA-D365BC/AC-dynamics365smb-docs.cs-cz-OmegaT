@@ -836,7 +836,7 @@
 ##### [Print Balance Sheet Reports](LocalFunctionality/Australia/how-to-print-balance-sheet-reports.md)
 ##### [Print Income Statements](LocalFunctionality/Australia/how-to-print-income-statements.md)
 ##### [Calculating Distribution Amounts](LocalFunctionality/Australia/calculating-distribution-amounts.md)
-#### General
+#### Obecné
 ##### [Addresses](LocalFunctionality/Australia/addresses.md)
 ##### [Determine Sales Price by Cost Plus Percentage](LocalFunctionality/Australia/how-to-determine-sales-price-by-cost-plus-percentage.md)
 ##### [Australian Business Numbers and Adjustment Notes](LocalFunctionality/Australia/australian-business-numbers-and-adjustment-notes.md)
@@ -858,7 +858,7 @@
 ##### [Create Delivery Reminders Manually](LocalFunctionality/Austria/how-to-create-delivery-reminders-manually.md)
 ##### [Issue Delivery Reminders](LocalFunctionality\Austria\how-to-issue-delivery-reminders.md)
 ##### [Print Test Reports for Delivery Reminders](LocalFunctionality/Austria/how-to-print-test-reports-for-delivery-reminders.md)
-#### General
+#### Obecné
 ##### [Print General Ledger Setup Information](LocalFunctionality/Austria/how-to-print-general-ledger-setup-information.md)
 
 ### Belgium
@@ -900,7 +900,7 @@
 ##### [Apply and Unapply General Ledger Entries](LocalFunctionality/Belgium/how-to-apply-and-unapply-general-ledger-entries.md)
 ##### [Create Financial Journals](LocalFunctionality/Belgium/how-to-create-financial-journals.md)
 ##### [Export to Accon](LocalFunctionality/Belgium/how-to-export-to-accon.md)
-#### General
+#### Obecné
 ##### [Enterprise Numbers and Branch Numbers](LocalFunctionality/Belgium/enterprise-numbers-and-branch-numbers.md)
 ##### [Limit the Posting Period](LocalFunctionality/Belgium/how-to-limit-the-posting-period.md)
 ##### [Set the Work Date as the Posting Date](LocalFunctionality/Belgium/how-to-set-the-work-date-as-the-posting-date.md)
@@ -915,7 +915,7 @@
 #### Banking & Payments
 ##### [Create Deposits](LocalFunctionality/Canada/how-to-create-deposits.md)
 ##### [Make Electronic Payments](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)
-#### General
+#### Obecné
 ##### [Print Troubleshooting Reports](LocalFunctionality/Canada/how-to-print-troubleshooting-reports.md)
 ##### [Work With GIFI Codes](LocalFunctionality/Canada/work-gifi-codes.md)
 
@@ -946,7 +946,7 @@
 ##### [Compensations Localization for Czech (Extension)](LocalFunctionality/Czech/ui-extensions-compensations-localization-cz.md)
 #### Zásoby
 ##### [Zásoby](LocalFunctionality/Czech/inventory.md)
-#### General
+#### Obecné
 ##### [Extended User Control](LocalFunctionality/Czech/general.md)
 ##### [Best Practices](LocalFunctionality/Czech/best-practices.md)
 
@@ -1052,7 +1052,7 @@
 ##### [Generate Delivery Reminders](LocalFunctionality/Germany/how-to-generate-delivery-reminders.md)
 ##### [Issue Delivery Reminders](LocalFunctionality/Germany/how-to-issue-delivery-reminders.md)
 ##### [Print Test Reports for Delivery Reminders](LocalFunctionality/Germany/how-to-print-test-reports-for-delivery-reminders.md)
-#### General
+#### Obecné
 ##### [Currency Exchange Rates](LocalFunctionality/Germany/currency-exchange-rates.md)
 ##### [EU Sales List in Germany](LocalFunctionality/Germany/eu-sales-list-in-germany.md)
 ##### [Include Company Registration Numbers on Sales Reports and Purchase Reports](LocalFunctionality/Germany/how-to-include-company-registration-numbers-on-sales-reports-and-purchase-reports.md)
@@ -1066,7 +1066,7 @@
 ##### [Special Data Output and Reports for the Tax Authority](LocalFunctionality/Iceland/special-data-output-and-reports-for-the-tax-authority.md)
 #### Electronic Invoicing
 ##### [Electronic Invoicing Requirement: Issuing Single Copy Invoice](LocalFunctionality/Iceland/electronic-invoicing-requirement-issuing-single-copy-invoice.md)
-#### General
+#### Obecné
 ##### [Map IRS Numbers to the Chart of Accounts](LocalFunctionality/Iceland/how-to-map-irs-numbers-to-chart-of-accounts.md)
 ##### [Deleting Posted Invoices and Credit Memos](LocalFunctionality/Iceland/deleting-posted-invoices-and-credit-memos.md)
 
@@ -1208,7 +1208,7 @@
 ##### [Set Up Alternate Depreciation Methods](LocalFunctionality/Italy/how-to-set-up-alternate-depreciation-methods.md)
 ##### [Create Multiple Fixed Asset Cards](LocalFunctionality/Italy/how-to-create-multiple-fixed-asset-cards.md)
 ##### [Print Depreciation Book Reports](LocalFunctionality/Italy/how-to-print-depreciation-book-reports.md)
-#### General
+#### Obecné
 ##### [Set Up Company Information](LocalFunctionality/Italy/how-to-set-up-company-information.md)
 ##### [Italian Subcontracting](LocalFunctionality/Italy/italian-subcontracting.md)
 ##### [Set Up Journal Templates and Batches](LocalFunctionality/Italy/how-to-set-up-journal-templates-and-batches.md)
@@ -1230,7 +1230,7 @@
 ##### [Generate Electronic Invoices](LocalFunctionality/Mexico/how-to-generate-electronic-invoices.md)
 ##### [Electronic Accounting Regulations in Mexico](LocalFunctionality/Mexico/electronic-accounting-regulations.md)
 ##### [Make Electronic Payments](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)
-#### General
+#### Obecné
 ##### [Set Up PAC Web Services](LocalFunctionality/Mexico/how-to-set-up-pac-web-services.md)
 ##### [Print Troubleshooting Reports](LocalFunctionality/Mexico/how-to-print-troubleshooting-reports.md)
 
@@ -1265,7 +1265,7 @@
 ##### [Check Purchase Amounts](LocalFunctionality/Netherlands/check-purchase-amounts.md)
 ##### [Edit Document Amounts in Purchase Invoices and Credit Memos](LocalFunctionality/Netherlands/how-to-edit-document-amounts-in-purchase-invoices-and-credit-memos.md)
 ##### [Set Up Validation of Purchase Amounts](LocalFunctionality/Netherlands/how-to-set-up-validation-of-purchase-amounts.md)
-#### General
+#### Obecné
 ##### [CMR Notes](LocalFunctionality/Netherlands/cmr-notes.md)
 ##### [Dutch Postal Codes](LocalFunctionality/Netherlands/dutch-post-codes.md)
 ##### [Import Postal Codes](LocalFunctionality/Netherlands/how-to-import-post-codes.md)
@@ -1296,7 +1296,7 @@
 ##### [Calculating Distribution Amounts](LocalFunctionality/NewZealand/calculating-distribution-amounts.md)
 ##### [Print Balance Sheet Reports](LocalFunctionality/NewZealand/how-to-print-balance-sheet-reports.md)
 ##### [Print Income Statements](LocalFunctionality/NewZealand/how-to-print-income-statements.md)
-#### General
+#### Obecné
 ##### [Addresses](LocalFunctionality/NewZealand/addresses.md)
 ##### [Determine Sales Price by Cost Plus Percentage](LocalFunctionality/NewZealand/how-to-determine-sales-price-by-cost-plus-percentage.md)
 ##### [Enter New Zealand Business Numbers](LocalFunctionality/NewZealand/how-to-enter-new-zealand-business-numbers.md)
@@ -1340,7 +1340,7 @@
 ##### [Print the OCR Journal Test Report](LocalFunctionality/Norway/how-to-print-the-ocr-journal-test-report.md)
 #### Core Finance
 ##### [Apply General Ledger Entries in Closed Periods](LocalFunctionality/Norway/how-to-apply-general-ledger-entries-in-closed-periods.md)
-#### General
+#### Obecné
 ##### [Recurring Orders](LocalFunctionality/Norway/recurring-orders.md)
 ##### [Create Recurring Orders](LocalFunctionality/Norway/how-to-create-recurring-orders.md)
 ##### [Set Up Recurring Groups](LocalFunctionality/Norway/how-to-set-up-recurring-groups.md)
@@ -1468,7 +1468,7 @@
 ##### [Print Sales and Purchase Invoice Books](LocalFunctionality/Spain/how-to-print-sales-and-purchase-invoice-books.md)
 ##### [Transaction Numbers](LocalFunctionality/Spain/transaction-numbers.md)
 ##### [Print and Post All Transactions for a Period](LocalFunctionality/Spain/how-to-post-and-print-all-transactions-for-a-period.md)
-#### General
+#### Obecné
 ##### [Corrective Invoices](LocalFunctionality/Spain/corrective-invoices.md)
 ##### [Calculating Due Dates](LocalFunctionality/Spain/calculating-due-dates.md)
 ##### [Set Up Operation Codes](LocalFunctionality/Spain/how-to-set-up-operation-codes.md)
@@ -1523,7 +1523,7 @@
 #### Zásoby
 ##### [Swiss Inventory Management](LocalFunctionality/Switzerland/swiss-inventory-management.md)
 ##### [Print an Inventory Picking List from a Sales Order](LocalFunctionality/Switzerland/how-to-print-an-inventory-picking-list-from-a-sales-order.md)
-#### General
+#### Obecné
 ##### [Import Swiss Post Codes](LocalFunctionality/Switzerland/how-to-import-swiss-post-codes.md)
 ##### [Swiss Purchase Documents and Sales Orders](LocalFunctionality/Switzerland/swiss-purchase-documents-and-sales-documents.md)
 
@@ -1540,7 +1540,7 @@
 ##### [Print Remittance Advice](LocalFunctionality/UnitedKingdom/how-to-print-remittance-advice.md)
 #### Fixed Assets
 ##### [Define Accounting Periods for Straight Line Depreciation of Fixed Assets](LocalFunctionality/UnitedKingdom/how-to-define-accounting-periods-for-straight-line-depreciation-of-fixed-assets.md)
-#### General
+#### Obecné
 ##### [Set Up a Posting Date Warning](LocalFunctionality/UnitedKingdom/how-to-set-up-a-posting-date-warning.md)
 ##### [Enter Statutory Information](LocalFunctionality/UnitedKingdom/how-to-enter-statutory-information.md)
 ##### [The GetAddress.io UK Postcodes Extension](LocalFunctionality/UnitedKingdom/ui-extensions-getaddressio.md)
@@ -1559,7 +1559,7 @@
 ##### [Create Deposits](LocalFunctionality/UnitedStates/how-to-create-deposits.md)
 ##### [Reconcile Bank Accounts](LocalFunctionality/UnitedStates/how-to-reconcile-bank-accounts.md)
 ##### [Make Electronic Payments](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)
-#### General
+#### Obecné
 ##### [Print Troubleshooting Reports](LocalFunctionality/UnitedStates/how-to-print-troubleshooting-reports.md)
 ### [Submit Regulatory Alerts](submit-regulatory-alerts.md)
 

@@ -12,18 +12,18 @@ ms.date: 04/29/2021
 ms.author: jswymer
 ---
 
-# Touch and Pen Gestures for Tablet and Phones
+# Gesta dotykem a perem pro tablety a telefony
 
-This article provides some of the special gestures that you can use when working with [!INCLUDE[prod_short](includes/prod_short.md)] from a tablet or phone.
+Tento článek obsahuje některá ze speciálních gest, která můžete použít při práci [!INCLUDE[prod_short](includes/prod_short.md)] z tabletu nebo telefonu.
 
-| Feature area | What do you want to do | Gesture | Tablet support | Phone support |
+| Oblast funkcí | Co chcete udělat | Gesto | Podpora tabletu | Podpora telefonu |
 |------------|----------------------|-------|--------------|-------------|
-| Charts | See a tooltip for a visual element of a chart, like a bar in a bar chart or slice in a pie chart. | Tap and hold the element | Ano | Ano |
-| Lists | Scroll a list horizontally to move columns in and out of view | Swipe left or right on the list | Ano | Ne |
-|  | Open the options menu on a tile | Tap and hold the tile | Ano | Ano |
-|  | Take action on a tile or open a menu of swipe actions | Swipe left or right on the tile | Ne | Ano |
-| Power BI Reports | Enable a report from the **Power BI Report Selection** page | Swipe left on the report tile | Ne | Ano |
-|  | Disable a report from the **Power BI Report Selection** page | Swipe right on the report tile | Ne | Ano |
+| Grafy | Podívejte se na popis vizuálního prvku grafu, jako je pruh v pruhovém grafu nebo výseč v koláčovém grafu. | Klepněte a podržte prvek | Ano | Ano |
+| Seznamy | Posouvejte seznam vodorovně a přesouvejte sloupce dovnitř a ven ze zobrazení | Přejeďte v seznamu doleva nebo doprava | Ano | Ne |
+|  | Otevření nabídky možností na dlaždici | Klepnutí a podržení dlaždice | Ano | Ano |
+|  | Proveďte akci na dlaždici nebo otevřete nabídku akcí přejetím prstem | Přejeďte prstem doleva nebo doprava na dlaždici | Ne | Ano |
+| Power BI Reports | Povolení sestavy na stránce **Výběr sestav Power BI** | Přejeďte prstem doleva na dlaždici sestavy | Ne | Ano |
+|  | Zakázání sestavy na stránce** Výběr sestav Power BI** | Přejeďte prstem doprava po dlaždici sestavy | Ne | Ano |
 
 <!-- ## Charts
 
@@ -33,8 +33,8 @@ Business Central built-in charts display useful information about business data 
 
 ## Viz také
 
-[Keyboard Quick Reference - PC Only](keyboard-shortcuts-cheatsheet.md)  
-[Assistive Features](ui-accessibility.md)  
-[Getting Started](product-get-started.md)
+[Rychlý průvodce klávesnicí - pouze pro PC](keyboard-shortcuts-cheatsheet.md)  
+[Pomocné funkce](ui-accessibility.md)  
+[Začínáme](product-get-started.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

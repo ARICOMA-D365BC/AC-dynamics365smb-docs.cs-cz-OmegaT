@@ -13,55 +13,55 @@
     ms.author: bholtorf
 
 ---
-# Define Retention Policies
-Administrators can define retention policies to specify how frequently they want [!INCLUDE[prod_short](includes/prod_short.md)] to delete outdated data in tables that contain log entries and archived records. For example, cleaning up log entries can make it easier to work with the data that's actually relevant. Policies can include all data in the tables that is past the expiration date, or you can add filter criteria that will include only certain expired data in the policy.
+# Definování zásad uchovávání informací
+Správci mohou definovat zásady uchovávání a určit, jak často chtějí [!INCLUDE[prod_short](includes/prod_short.md)] mazat zastaralá data v tabulkách, které obsahují položky protokolu a archivované záznamy. Například vyčištění položek protokolu může usnadnit práci s daty, která jsou skutečně relevantní. Zásady mohou zahrnovat všechna data v tabulkách, které jsou po datu vypršení platnosti, nebo můžete přidat kritéria filtru, která budou do zásad zahrnovat pouze určitá data, jejichž platnost vypršela.
 
-## Required Setups and Permissions
-Before you can create retention policies, you must set up the following.
+## Požadovaná nastavení a oprávnění
+Před vytvořením zásad uchovávání informací je nutné nastavit následující.
 
-| Setup | Popis |
+| Nastavení | Popis |
 |---------|---------|
-| **Allowed Tables** | We provide a list of the tables that can be included in retention policies. However, if you want to add tables from an extension to a retention policy a developer must add their tables to the list. For more information, see [Including Your Extension in a Retention Policy](admin-data-retention-policies.md#including-your-extension-in-a-retention-policy-requires-help-from-a-developer). |
-| **Retention Periods** | Specify periods of time for which to keep data in the tables in a policy. The periods determine how often data will be deleted. |
+| **Povolené tabulky** | Poskytujeme seznam tabulek, které mohou být zahrnuty do zásad uchovávání informací. Pokud však chcete přidat tabulky z rozšíření k zásadám uchovávání, musí vývojář přidat své tabulky do seznamu. Další informace naleznete v tématu [Zahrnutí rozšíření do zásad uchovávání informací](admin-data-retention-policies.md#including-your-extension-in-a-retention-policy-requires-help-from-a-developer). |
+| **Období uchování** | Určete časové období, po které se budou v zásadách uchovávat data v tabulkách. Období určují, jak často budou data mazána. |
 
-Additionally, you must have the SUPER user permissions or the Retention Policy Setup permission set. Users who are granted the Retention Policy Setup permission set can define retention policies for tables, even if they do not have Read and Delete permissions for those tables. The job queue entry must run as a user with permissions to read and delete the data. We recommend that you do not grant the Retention Policy Setup permission set to users who should not be allowed to delete data.
-
-> [!NOTE]
-> If you are using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, and you want to try out retention policies in the the Cronus demonstration database, there are a few things you need to do. The demonstration company does not contain tables that you can use with retention policies, so you need to add them. To do that, create a new, blank company in the demonstration database. In the new company, import the RapidStart configuration package for your country that corresponds to the standard NAV17.0.W1.ENU.STANDARD.rapidstart package. The setup data for retention policies will be available in the new company.
-
-### To create retention periods
-Retention periods can be as long or as short as you want. To create retention periods, on the **Retention Policies** page, use the **Retention Period** action. The periods you define will be available for all policies.
+Kromě toho musíte mít nastavena SUPER uživatelská oprávnění nebo oprávnění k nastavení zásad zachování. Uživatelé, kterým byla udělena sada oprávnění Nastavení zásad uchovávání, mohou definovat zásady uchovávání pro tabulky, i když pro tyto tabulky nemají oprávnění Číst a Odstranit. Položka fronty úloh musí být spuštěna jako uživatel s oprávněními ke čtení a odstraňování dat. Doporučujeme neudělit sadu oprávnění Nastavení zásad uchovávání informací uživatelům, kterým by nemělo být povoleno odstraňovat data.
 
 > [!NOTE]
-> For compliance reasons, we have defined a minimum retention period for some tables. If you set a retention period that is shorter than minimum required, a message will display the mandatory period.
+> Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premise a chcete si vyzkoušet zásady uchovávání v ukázkové databázi Cronus, musíte udělat několik věcí. Demonstrační společnost neobsahuje tabulky, které můžete použít se zásadami uchovávání informací, takže je je třeba přidat. Chcete-li to udělat, vytvořte novou prázdnou společnost v demo databázi. V nové společnosti importujte konfigurační balíček RapidStart pro vaši zemi, který odpovídá standardnímu balíčku NAV17.0.W1.ENU.STANDARD.rapidstart package. Data nastavení zásad uchovávání budou k dispozici v nové společnosti.
 
-### Set up a retention policy
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Retention Policies**, and choose the related link.
-2. In the **Table ID** field, choose the table that you want to include in the policy.
-3. In the **Retention Period** field, specify the length of time for which to keep the data in the table.
-4. Optional: To apply the policy to specific data in a table, turn off the Apply to all records toggle. The Record Retention Policy FastTab will display, where you can set filters to create subsets of data for each line. For more information, see [Filtering](ui-enter-criteria-filters.md#filtering).
+### Vytvoření Období uchování
+Doby uchování mohou být dlouhé nebo krátké, jak chcete. Chcete-li vytvořit období uchovávání informací běžte na stránku **Zásady uchovávání informací** použijte tlačítko **Doba uchovávání**. Období, která definujete, budou k dispozici pro všechny zásady.
+
+> [!NOTE]
+> Z důvodu dodržování předpisů jsme pro některé tabulky definovali minimální dobu uchování. Pokud nastavíte dobu uchovávání, která je kratší než minimální požadovaná doba, zobrazí se povinná doba.
+
+### Nastavení zásad uchovávání informací
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zásady uchovávání informací<x5/> a poté vyberte související odkaz.
+2. V Poli **ID tabulky** yberte tabulku, kterou chcete zahrnout do zásad.
+3. V poli **Doba uchovávání** určete dobu, po kterou mají být data v tabulce uchováváná.
+4. Volitelné: Chcete-li zásadu použít na konkrétní data v tabulce, vyberte přepínač Použít na všechny záznamy. Zobrazí se záložka Záznam uchování záznamů, kde můžete nastavit filtry pro vytváření podmnožin dat pro každý řádek. Další informace naleznete v tématu [Filtrování](ui-enter-criteria-filters.md#filtering).
 
    > [!NOTE]
-   > Each line has its own retention period. If you specify different retention periods for the same data, the longest period will be used. Also, some tables contain filters that you cannot change or remove. To help you identify these filters, they appear in a lighter color font.
+   > Každý řádek má své vlastní retenční období. Pokud pro stejná data zadáte různá období uchovávání, bude použito nejdelší období. Některé tabulky také obsahují filtry, které nelze změnit ani odebrat. Abychom vám tyto filtry pomohli identifikovat, zobrazí se světlejším písmem.
 
-## Applying Retention Policies
-You can use a job queue entry to apply retention policies to delete data automatically, or you can manually apply policies.
+## Použití zásad uchovávání informací
+Pomocí položky fronty úloh můžete použít zásady uchování k automatickému odstranění dat, nebo můžete zásady použít ručně.
 
-To apply a retention policy automatically, just create and enable a policy. When you enable a policy we create a job queue entry that will apply retention policies according to the retention period you specify. All retention policies will use the same job queue entry. By default, the job queue entry applies the policy every day at 0200. You can change the default, but if you do we recommend that it runs outside business hours. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+Chcete-li automaticky použít zásady uchovávání, stačí vytvořit a povolit zásadu. Když povolíte zásadu, vytvoříme položku fronty úloh, na které budou platit zásady uchovávání informací podle doby uchovávání. Všechny zásady uchovávání informací budou používat stejnou položku fronty úloh Ve výchozím nastavení položka fronty úloh používá zásady každý den v 02:00. Výchozí nastavení můžete změnit, ale pokud tak stane, doporučujeme, aby byla spuštěna mimo pracovní dobu. Další informace naleznete v tématu [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md).
 
-You can manually apply a policy by using the **Apply Manually** action on the **Retention Policies** page. If you want to always apply a policy manually, turn on the **Manual** toggle. The job queue entry will disregard the policy when it runs.
+Zásadu můžete použít ručně pomocí akce **Použít ručně** na stránce **Zásady uchovávání**. Pokud chcete zásady vždy použít ručně, zapněte přepínač **Ručně**. Položka fronty úloh nebude při spuštění zásady ignorovat.
 
-## Viewing Retention Policy Log Entries
-You can view activity related to retention policies in the **Retention Policy Log** page. For example, entries are created when when a policy is applied, or if errors occurred when that happened.
+## Zobrazení záznamů protokolu zásad uchovávání dat
+Aktivitu související se zásadami uchovávání informací můžete zobrazit na stránce **Protokol zásad uchovávání informací** . Například položky se vytvářejí, když se uplatní zásada, nebo pokud došlo k chybám, když k tomu došlo.
 
-## Including Your Extension in a Retention Policy (Requires Help from a Developer)
-By default, retention policies cover only tables that are included in the list of [!INCLUDE[prod_short](includes/prod_short.md)] tables that we provide. You can remove default tables from the list, and you can add tables that you own. That is, you cannot add a table that you did not create yourself. For example, you cannot add other tables from [!INCLUDE[prod_short](includes/prod_short.md)] or from an extension that you have purchased.
+## Zahrnutí vašeho rozšíření do zásad uchovávání informací (vyžaduje pomoc od vývojáře)
+Ve výchozím nastavení se zásady uchovávání informací týkají pouze tabulek, které jsou zahrnuty v seznamu tabulek [!INCLUDE[prod_short](includes/prod_short.md)], které poskytujeme. Výchozí tabulky můžete ze seznamu odebrat a můžete přidat tabulky, které vlastníte. To znamená, že nelze přidat tabulku, kterou jste sami nevytvořili. Nemůžete například přidat další tabulky z [!INCLUDE[prod_short](includes/prod_short.md)] nebo z rozšíření, které jste zakoupili.
 
-To add your tables to the list of allowed tables, a developer must add some code, for example to the installer codeunit for the extension (a codeunit with the *install* subtype).
+Chcete-li přidat své tabulky do seznamu povolených tabulek, musí vývojář přidat nějaký kód, například do codeunity pro rozšíření (codeunita s podtypem *install*).
 
-When a developer adds a table, they can specify mandatory and default filters. Mandatory filters cannot be removed or modified later when you add tables to define a retention policy. Default filters are just friendly suggestions.
+Když vývojář přidá tabulku, může určit povinné a výchozí filtry. Povinné filtry nelze později odebrat nebo upravit, když přidáte tabulky k definování zásad uchování. Výchozí filtry jsou jen návrhy.
 
-The following are examples of how to add a table to the list of allowed tables with, and without, mandatory or default filters. For a more complex example, see codeunit 3999 "Reten. Pol. Install - BaseApp".
+Následují příklady přidání tabulky do seznamu povolených tabulek s povinnými nebo výchozími filtry a bez nich. Složitější příklad najdete v proceduře 3999 "Reten. Pol. Install - BaseApp".
 
 ```al
  trigger OnInstallAppPerCompany()
@@ -72,7 +72,7 @@ The following are examples of how to add a table to the list of allowed tables w
     end;
 ```
 
-The following example includes a mandatory filter.
+Následující příklad obsahuje povinný filtr.
 
 ```al
  trigger OnInstallAppPerCompany()
@@ -95,14 +95,14 @@ The following example includes a mandatory filter.
     end;
 ```
 
-After a developer has added tables to the list, an administrator can include them in a retention policy.
+Poté, co vývojář přidá tabulky do seznamu, může je správce zahrnout do zásad uchovávání.
 
 ## Viz také
 
-[Analyzing Retention Policy Trace Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-retention-policy-trace)  
-[Auditing Changes in Business Central](across-log-changes.md)  
-[Filtering](ui-enter-criteria-filters.md#filtering)  
-[Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Analýza telemetrie sledování zásad uchovávání](/dynamics365/business-central/dev-itpro/administration/telemetry-retention-policy-trace)  
+[Audit změny v Business Cenral](across-log-changes.md)  
+[Filtrování](ui-enter-criteria-filters.md#filtering)  
+[Použití front úloh k plánování úloh](admin-job-queues-schedule-tasks.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

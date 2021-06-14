@@ -124,7 +124,7 @@ The following table lists the rules that control the synchronization between [!I
 
 ### Synchronization Jobs for a Sales Integration
 
-The jobs are run in the following order to avoid coupling dependencies between tables. There are additional jobs available from Dataverse. For more information, see [Use Job Queues to Schedule Tasks](./admin-job-queues-schedule-tasks.md).
+The jobs are run in the following order to avoid coupling dependencies between tables. There are additional jobs available from Dataverse. Další informace naleznete v tématu [Použití fronty úloh na plánování úloh](./admin-job-queues-schedule-tasks.md).
 
 1. UNITOFMEASURE - Dynamics 365 Sales synchronization job
 2. RESOURCE-PRODUCT - Dynamics 365 Sales synchronization job

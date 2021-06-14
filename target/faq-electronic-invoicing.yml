@@ -9,7 +9,7 @@ summary: |
   This FAQ answers some of the key questions about electronic invoicing.  
 
 sections:
-  - name: General
+  - name: Obecné
     questions:
       - question: What is the problem?
         answer: The built-in support of PEPPOL uses an API provided by TradeShift. But that API does not support newer versions of PEPPOL.

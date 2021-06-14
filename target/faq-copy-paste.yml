@@ -8,7 +8,7 @@ summary: |
 
   In short, to copy, you press CTRL+C (cmd+C in macOS) on your keyboard. To paste, you press CTRL+V (cmd+V in macOS). There are several other keyboard shortcuts for copying and pasting that help you save time when entering data. For more information about these, see [Keyboard Shortcuts](keyboard-shortcuts.md#CopyRows). This article answers common questions you might have about copying and pasting.  
 sections:
-  - name: General
+  - name: Obecné
     questions:
       - question: What can I copy and paste?
         answer: |

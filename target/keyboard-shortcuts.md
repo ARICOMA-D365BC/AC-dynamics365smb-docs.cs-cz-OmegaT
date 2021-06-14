@@ -72,7 +72,7 @@ The following table describes the keyboard shortcuts that you can use on a list 
 > [!Note]
 > In the table that follows, the term *actionable field* refers to a field on which you can do something, like change a value or link to another page. In general, the shortcuts will skip over fields that display information that you cannot change from the list (in other words, fields that are read-only).
 -->
-### General
+### Obecné
 
 | Press these keys<br />(in macOS) | To do this in a list view | To do this in a tile view |
 |--------------------------------|-------------------------|--------------------------|

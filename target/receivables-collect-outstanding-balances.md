@@ -34,7 +34,7 @@ From the customer card, you can create a statement with that customer's transact
 
 ## Reminders
 
-Before you can create reminders, you must set up reminder terms and assign them to your customers. For more information, see [Set Up Reminder Terms and Levels](finance-setup-reminders.md). [!INCLUDE [reminder-terms](includes/reminder-terms.md)] The contents of the **Finance Charge Terms** page determines whether interest is calculated on the reminder.
+Before you can create reminders, you must set up reminder terms and assign them to your customers. Další informace naleznete v tématu [Nastavení podmínek upomínek a úrovní upomínky](finance-setup-reminders.md). [!INCLUDE [reminder-terms](includes/reminder-terms.md)] The contents of the **Finance Charge Terms** page determines whether interest is calculated on the reminder.
 
 You can periodically run the **Create Reminders** batch job to create reminders for all customers with overdue balances, or you can manually create a reminder for a specific customer and have the lines calculated and filled in automatically.
 
