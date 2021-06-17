@@ -51,7 +51,7 @@ From the **Report Settings** page, you can:
 > The Saved Settings feature is available only on reports where the [SaveValues property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-savevalues-property) of the report's request page is set to **Yes**. The **SaveValues** property is set in the development environment.
 
 ## Viz také
-[Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)
+[Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

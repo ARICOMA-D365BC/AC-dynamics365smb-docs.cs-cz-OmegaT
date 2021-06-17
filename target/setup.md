@@ -44,7 +44,7 @@ Some functionality, either general or for specific business processes, can be se
 | Transfer customers, vendors, inventory, and bank accounts information from another system into [!INCLUDE[prod_short](includes/prod_short.md)] | [Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md). |
 | Use Business Central Outlook add-ins to see financial data related to customers and vendors or create and send financial documents, such as quotes and invoices. | [Using Business Central as Your Business Inbox in Outlook](admin-outlook.md) |
 | Get insights into your Business Central data with Power BI and the Business Central content packs. | [Enabling Your Business Data for Power BI](admin-powerbi.md) |
-| Use your Business Central data as part of a workflow in Power Automate. | [Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md) |
+| Use your Business Central data as part of a workflow in Power Automate. | [Použití nástroje Business Central s automatizovaným workflow ](across-how-use-financials-data-source-flow.md) |
 | Make your Business Central data available as a data source in Power Apps. | [Connecting to Your Business Central Data to Build a Business App Using Power Apps](across-how-use-financials-data-source-powerapps.md) |
 | Use dedicated Quickbooks migration guides. | [Changing from a QuickBooks App to Business Central](across-quickbooks-to-business-edition.md) |
 | Access your Business Central data from your mobile device. | [Getting Business Central on Your Mobile Device](install-mobile-app.md) |

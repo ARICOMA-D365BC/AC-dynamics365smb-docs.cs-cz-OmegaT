@@ -24,7 +24,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 |------------|-------------|  
 | Set up the preconfigured document exchange service to enable sending and receiving electronic documents from and to [!INCLUDE[prod_short](includes/prod_short.md)]. | [Set Up a Document Exchange Service](across-how-to-set-up-a-document-exchange-service.md) |
 | Set up the preconfigured OCR service to turn PDF or image files into electronic documents that can be converted to document records in [!INCLUDE[prod_short](includes/prod_short.md)] | [Set Up Incoming Documents](across-how-setup-income-documents.md) |
-| Set up one of two preconfigured services for updated exchange rates to get the latest currency exchange rates into the **Currencies** page. | [Update Currency Exchange Rates](finance-how-update-currencies.md) |
+| Set up one of two preconfigured services for updated exchange rates to get the latest currency exchange rates into the **Currencies** page. | [Aktualizace směnných kurzů](finance-how-update-currencies.md) |
 | Set up various master data, such as company information, customers, vendors, items, and units of measure, related to mapping data in [!INCLUDE[prod_short](includes/prod_short.md)] | [Set Up Electronic Document Sending and Receiving](across-how-to-set-up-electronic-document-sending-and-receiving.md) |
 | Set up a bank account, a vendor, and a payment journal for SEPA credit transfer. | [Set Up SEPA Credit Transfer](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#setting-up-sepa-credit-transfer) |
 | Prepare bank account formats, payment methods, and customer agreements for SEPA direct debit. | [Collect Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md) |

@@ -20,12 +20,12 @@ The following table describes a number of reports that may be useful in this pro
 
 | Viz | See this report |
 | --- | --- |
-| Print a trial balance report with balances and net changes for general ledger accounts. | **Trial Balance** |
+| Print a trial balance report with balances and net changes for general ledger accounts. | **Předvaha** |
 | Get an overview of accounts receivable, with the age of amounts receivable calculated from the due date, posting date, or document date. | **Aged Accounts Receivable** |
 | Get an overview of accounts payable, with the age of amounts payable calculated from the due date, posting date or document date. | **Aged Accounts Payable** |
-| Compare the trial balance with a budget. | **Trial Balance/Budget** |
-| Print a trial balance report with balances and net changes for general ledger accounts calculated for a series of periods. | **Trial Balance by Period** |
-| Print an account schedule to analyze figures in general ledger accounts or compare actual general ledger entries with general ledger budget entries. | **Account Schedule** |
+| Compare the trial balance with a budget. | **Předvaha/Rozpočet** |
+| Print a trial balance report with balances and net changes for general ledger accounts calculated for a series of periods. | **Předvaha podle období** |
+| Print an account schedule to analyze figures in general ledger accounts or compare actual general ledger entries with general ledger budget entries. | **Účetní schémata** |
 | Check whether customer and vendor ledger entries balance with corresponding general ledger entries. | **Reconcile Cust. and Vend. Accs** |
 
 To see a report, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, type the name as it appears in the table, and then choose the related link.

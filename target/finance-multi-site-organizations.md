@@ -14,100 +14,102 @@
 
 ---
 
-# Business Central for Multi-Site and International Organizations
-Organizations that have multiple sites often use a hub-and-spoke business model where a parent company, or headquarters, manages the overall operations of the business while each site functions as a single, standalone entity. Sites are often geographically distributed and have different needs for sharing information with the headquarter company. Additionally, sites typically don't need the same level of complexity, and often lack the resources to maintain a large system.
+# Business Central pro organizace s více pracovišti a mezinárodní organizace
+Organizace, které mají více poboček, často používají obchodní model "hub-and-spoke", kdy mateřská společnost nebo centrála řídí celkový provoz podniku, zatímco každá pobočka funguje jako samostatný subjekt. Jednotlivé pobočky jsou často geograficky rozmístěny a mají různé potřeby pro sdílení informací s ústředím společnosti. Kromě toho pobočky obvykle nepotřebují stejnou úroveň složitosti a často nemají prostředky na údržbu velkého systému.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] gives small and mid-sized businesses a business management solution that's easy-to-use and maintain at a low cost of ownership.
+[!INCLUDE[prod_short](includes/prod_short.md)] poskytuje malým a středním podnikům řešení pro řízení podniku, které se snadno používá a udržuje s nízkými náklady na vlastnictví.
 
-This article introduces some of the ways in which [!INCLUDE[prod_short](includes/prod_short.md)] supports a hub-and-spoke business model.
+Tento článek představuje některé způsoby, kterými [!INCLUDE[prod_short](includes/prod_short.md)] podporuje obchodní model hub-and-spoke.
 
-## Integrating the Headquarter Company and the Sites
+## Integrace ústředí společnosti a poboček
 
-[!INCLUDE[prod_short](includes/prod_short.md)] can integrate with the headquarter company's accounting system while meeting the varying needs of different sites, regardless of size, location, or type of business.
+[!INCLUDE[prod_short](includes/prod_short.md)] lze integrovat s účetním systémem ústředí společnosti a zároveň vyhovět různým potřebám různých pracovišť bez ohledu na jejich velikost, umístění nebo typ podnikání.
 
-The following diagram is an example of different sites integrated with a headquarter company.
+Následující schéma je příkladem různých lokalit integrovaných s ústředím společnosti.
 
 ![Diagram Description automatically generated](media/multisite-headquarter-sites.png)
 
-## Meet the Needs of Domestic and International Sites
+## Splnění potřeb domácích a mezinárodních lokalit
 
-Business needs at sites often differ based on industry, business methods, or their relationship to the headquarter company. [!INCLUDE[prod_short](includes/prod_short.md)] can be easily adapted and extended for various types of businesses and locales. Microsoft AppSource offers a wealth of apps from Microsoft and our partners, and partners can quickly deploy [!INCLUDE[prod_short](includes/prod_short.md)] with minimal disruption to daily operations.
+Obchodní potřeby na pracovištích se často liší podle odvětví, obchodních metod nebo jejich vztahu k ústředí společnosti. [!INCLUDE[prod_short](includes/prod_short.md)] lze snadno přizpůsobit a rozšířit pro různé typy podniků a lokalit. Microsoft AppSource nabízí velké množství aplikací od společnosti Microsoft a našich partnerů a partneři mohou rychle nasadit [!INCLUDE[prod_short](includes/prod_short.md)] s minimálním narušením každodenního provozu.
 
-For multi-national organizations, [!INCLUDE[prod_short](includes/prod_short.md)] supports local legal requirements and business practices.
+U nadnárodních organizací podporuje [!INCLUDE[prod_short](includes/prod_short.md)] místní právní požadavky a obchodní postupy.
 
-* For online versions, there are more than [40 localized country versions](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json) that you can install as extensions from Microsoft AppSource.
-* For on-premises versions, [country versions](/azure/architecture/solution-ideas/articles/business-central) are available either as Microsoft-localized versions or partner-led add-on localizations.
+* Pro online verze existuje více než [40 lokalizovaných verzí pro jednotlivé země](/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json), které si můžete nainstalovat jako rozšíření ze služby Microsoft AppSource.
+* Pro on-premises verze jsou [verze pro jednotlivé země](/azure/architecture/solution-ideas/articles/business-central) k dispozici buď jako verze lokalizované společností Microsoft, nebo jako přídavné lokalizace od partnerů.
 
-A network of more than 4,000 Microsoft partners world-wide provides local expertise.
+Síť více než 4 000 partnerů společnosti Microsoft po celém světě poskytuje místní odborné znalosti.
 
-| **Business requirement** | **How Business Central supports it** | **Learn more** |
+| **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
-| Tailor the system to fit the business. | Enjoy a system that was designed from the start for mid-sized businesses. | [Overview](https://dynamics.microsoft.com/business-central/overview/) |
-| Address regulatory and local practices. | Comply with local legal requirements and business practices. | [Local Functionality](about-localization.md) |
-| Access multiple companies from a single page. | Get quick access to any Business Central company in your organization. | [Company Hub](ui-extensions-company-hub.md) |
-| Handle multiple languages and currencies. | Support for multiple languages and currencies helps meet local needs. | [Multi-language capabilities](about-locale-language.md)<br></br>[Multi-currency capabilities](finance-how-setup-additional-currencies.md) |
+| Přizpůsobte systém na míru danému podniku. | Využijte systém, který byl od počátku navržen pro středně velké podniky. | [Přehled](https://dynamics.microsoft.com/business-central/overview/) |
+| Řešení regulačních a místních postupů. | Dodržování místních právních požadavků a obchodních postupů. | [Místní funkcionality](about-localization.md) |
+| Přístup k více společnostem z jedné stránky. | Získejte rychlý přístup ke kterékoli společnosti Business Central ve vaší organizaci. | [Company Hub](ui-extensions-company-hub.md) |
+| Práce s více jazyky a měnami. | Podpora více jazyků a měn pomáhá uspokojit místní potřeby. | [Mnohojazyčné funkce](about-locale-language.md)<br></br>[Více měnové funkce](finance-how-setup-additional-currencies.md) |
 
 
-## Consolidate Financial Data
+## Konsolidace finančních údajů
 
-A core facet of the hub-and-spoke business model is the ability for the headquarter company and sites to exchange financial data, even when the headquarter company and sites use different systems, accounting structures, languages, and currencies.
+Základním aspektem obchodního modelu hub-and-spoke je schopnost ústřední společnosti a poboček vyměňovat si finanční údaje, i když ústřední společnost a pobočky používají různé systémy, účetní struktury, jazyky a měny.
 
-| **Business requirement** | **How Business Central supports it** | **Learn more** |
+| **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
-| Consolidate financial data from sites. | Consolidate financial statements for sites, regardless of whether they're running Business Central or another application, into a single business entity (company). | [Consolidating Financial Data from Multiple Companies](finance-consolidated-company-reporting.md) |
-| Integrate accounting structures. | Transfer consolidation data from different accounting structures to your own. Built-in file format for F&O (Available with Wave 2, 2020) | [Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)<br></br>[Prepare general ledger accounts for consolidation](finance-consolidated-company-reporting-setup.md#glacc) |
-| Transact in multiple currencies. | Help ensure that financial statements in different currencies are accurate and use correct exchange rates. | [Update Currency Exchange Rates](finance-how-update-currencies.md) |
+| Konsolidace finančních údajů z poboček | Konsolidace finančních výkazů pro pobočky bez ohledu na to, zda na nich běží aplikace Business Central nebo jiná aplikace, do jediného obchodního subjektu (společnosti). | [Konsolidování finančních dat z několika společností](finance-consolidated-company-reporting.md) |
+| Integrace účetních struktur. | Přenos konsolidačních dat z různých účetních struktur do vlastní. Vestavěný formát souborů pro F&O (k dispozici ve Wave 2, 2020) | [Import podnikových dat z jiných finančních systémů](across-import-data-configuration-packages.md)<br></br>[Příprava účtů hlavní knihy pro konsolidaci](finance-consolidated-company-reporting-setup.md#glacc). |
+| Transakce ve více měnách. | Pomáhají zajistit, aby finanční výkazy v různých měnách byly přesné a používaly správné směnné kurzy. | [Aktualizace směnných kurzů](finance-how-update-currencies.md) |
 
-## Share Business Insight with Integrated Analytics
+## Sdílení obchodních informací pomocí integrované analýzy
 
-Align the organization with your business goals by providing a common understanding of the current reality. Integrated analytics can help people base their decisions on the same set of facts.
+Sladění organizace s vašimi obchodními cíli díky společnému chápání současné reality. Integrovaná analytika může lidem pomoci zakládat svá rozhodnutí na stejném souboru faktů.
 
-| **Business requirement** | **How Business Central supports it** | **Learn more** |
+| **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
-| Share insights with sites without extensive IT support. | Create KPIs and business intelligence dashboards in Power BI based on your data. | [Working with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md) |
-| Develop custom financial reports. | Generate parameter-based financial reports. | [Business Intelligence](bi.md) |
-| Align on the facts. | Generate, view, and share reports with internal and external stakeholders. | [Financial Reports](finance-reports.md) |
-| Analyze data in Excel. | Fact-find, troubleshoot, and do ad hoc analyses in Microsoft Excel. | [Analyze Financial Statements in Excel](finance-analyze-excel.md) |
+| Sdílejte poznatky s pracovišti bez rozsáhlé podpory IT. | Vytvářejte klíčové ukazatele výkonnosti a panely Business Intelligence v aplikaci Power BI na základě svých dat.
+ | [Práce s daty Business Central v Power BI](across-working-with-business-central-in-powerbi.md) |
+| Vytváření vlastních finančních výkazů. | Generování finančních výkazů na základě parametrů. | [Business Intelligence](bi.md) |
+| Srovnání s fakty. | Vytvářet, zobrazovat a sdílet sestavy s interními a externími zúčastněnými stranami. | [Finanční sestavy](finance-reports.md) |
+| Analýza dat v Excelu | Zjišťování faktů, řešení problémů a provádění ad hoc analýz v aplikaci Microsoft Excel. | [Analýza finančních výkazů v aplikaci Excel](finance-analyze-excel.md) |
 
 
-## Exchange Data Using APIs and XMLports
+## Výměna dat pomocí rozhraní API a portů XML
 
-APIs and XMLports simplify the process of connecting instances of [!INCLUDE[prod_short](includes/prod_short.md)], including those that have been customized for each site.
+Rozhraní API a XML porty zjednodušují proces připojování instancí [!INCLUDE[prod_short](includes/prod_short.md)], včetně těch, které byly přizpůsobeny pro jednotlivé weby.
 
-| **Business requirement** | **How Business Central supports it** | **Learn more** |
+| **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
-| Connect customized versions among sites and the headquarter company. | API Pages can expose any representation of an entity, including its customizations. | [Enabling APIs for Business Central](/dynamics-nav/enabling-apis-for-dynamics-nav) |
-| Versioning and security. | APIs use ODataV4, which provides versioning, and webhooks and change tracking. | [Security and protection](/dynamics365/business-central/dev-itpro/security/security-and-protection) |
-| Post and import XML documents. | Codeunits can be exposed as unbound actions to support posting and ingestion of XML documents. For processing XML documents, XMLports can be applied. Unbound actions are also capable of generating an XML or JSON document. | [XMLport Objects](/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object) |
-| Make maintenance easier through electronic data exchange. | An electronic data exchange solution can be added to serve as an integration layer between the headquarter company and sites. | [Data Exchange Framework](across-about-the-data-exchange-framework.md) |
-| Exchange data between different systems. | Use XMLports to create XML documents, which can then be exchanged between a headquarter company that uses one system and sites that use Business Central. | [XMLport Overview](/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-overview) |
-| Orchestrate complex data exchanges. | Use a combination of XMLports with Business Central and Microsoft BizTalk Server to meet unique needs at your sites.</br>For complex needs, use an electronic data exchange solution based on BizTalk Server and Commerce Gateway in Business Central in combination with the XMLports. | [Working with Reports, Batch Jobs, and XMLports](ui-work-report.md) |
-| Connect to 3<sup>rd</sup> party solutions and services. | APIs establish a point-to-point connection between Business Central and 3<sup>rd</sup> party solutions and services. | [API v2.0](/dynamics-nav/api-reference/v2.0/) |
+| Propojení přizpůsobených verzí mezi pobočkami a ústředím společnosti. | API stránky mohou zobrazovat libovolnou reprezentaci entity, včetně jejích přizpůsobení. | [Povolení rozhraní API pro Business Central](/dynamics-nav/enabling-apis-for-dynamics-nav) |
+| Verzování a zabezpečení. | Rozhraní API používají ODataV4, která zajišťují verzování, webové háčky a sledování změn. | [Bezpečnost a ochrana](/dynamics365/business-central/dev-itpro/security/security-and-protection) |
+| Účotávní a import XML dokumentů .
+ | Jednotky kódu lze vystavit jako nevázané akce pro podporu odesílání a přijímání dokumentů XML. Pro zpracování dokumentů XML lze použít XMLports. Nesvázané akce jsou také schopny generovat dokument XML nebo JSON. | [Objekty XMLport](/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object) |
+| Usnadnění údržby prostřednictvím elektronické výměny dat. | Jako integrační vrstva mezi centrálou a pobočkami může být přidáno řešení pro elektronickou výměnu dat. | [Framework pro výměnu dat](across-about-the-data-exchange-framework.md) |
+| Výměna dat mezi různými systémy. | Pomocí XMLportů můžete vytvářet dokumenty, které si pak mohou vyměňovat ústředí společnosti, jež používá jeden systém, a pracoviště, která používají Business Central. | [Přehled XMLport](/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-overview) |
+| Organizace složitých výměn dat. | Pro splnění jedinečných potřeb na vašich pracovištích použijte kombinaci XMLportů s Business Central a Microsoft BizTalk Server.</br> Pro komplexní potřeby použijte řešení elektronické výměny dat založené na BizTalk Server a Commerce Gateway v Business Central v kombinaci s XMLports. | [Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md) |
+| Připojení k řešením a službám třetích stran. | API rozhraní vytvářejí spojení mezi Business Central a řešeními a službami třítách stran. | [API v2.0](/dynamics-nav/api-reference/v2.0/) |
 
 
-## Promote an Efficient Intercompany Supply Chain
+## Podpora efektivního mezipodnikového dodavatelského řetězce
 
-Sites often need access to the supply chain, and the ability to manage certain aspects of it. For example, sites might use the same vendor, but manage their assets and physical locations separately.
+Pobočky často potřebují přístup k dodavatelskému řetězci a schopnost řídit určité jeho aspekty. Například pobočky mohou používat stejného dodavatele, ale spravovat svá aktiva a fyzická umístění odděleně.
 
-| **Business requirement** | **How Business Central supports it** | **Learn more** |
+| **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
-| Treat inter-divisional transactions as normal sales and purchase transactions. | Use inter-company postings to create sales and purchase documents and general ledger entries for entire workflows, and for more than one company at a time to eliminate duplicate data entry. | [Managing Inter-company Transactions](intercompany-manage.md) |
-| Use paperless processes. | Avoid the cost of sending, receiving, and printing documents. | [Incoming Documents](across-income-documents.md)<br><br> [Manage Attachments, Links, and Notes on Cards and Documents](ui-how-add-link-to-record.md) |
+| K transakcím mezi divizemi přistupujte jako k běžným prodejním a nákupním transakcím. | Pomocí mezipodnikových zaúčtování můžete vytvářet prodejní a nákupní doklady a záznamy v hlavní knize pro celé workflow a pro více společností najednou, abyste eliminovali duplicitní zadávání dat. | [Správa vnitropodnikových transakcí](intercompany-manage.md) |
+| Používejte bezpapírové procesy. | Vyhnete se nákladům na odesílání, přijímání a tisk dokladů. | [Došlé doklady](across-income-documents.md)<br><br> [Správa příloh, odkazů a poznámek na kartách a v dokumentech](ui-how-add-link-to-record.md) |
 
-## Respond Quickly to New Business Conditions
+## Rychlá reakce na nové obchodní podmínky
 
-The headquarter company must be able to react quickly to business changes at each site. Combined with Power Automate, [!INCLUDE[prod_short](includes/prod_short.md)] can serve as an early warning mechanism.
+Ústředí společnosti musí být schopno rychle reagovat na obchodní změny v jednotlivých lokalitách. V kombinaci s nástrojem Power Automate může [!INCLUDE[prod_short](includes/prod_short.md)] sloužit jako mechanismus včasného varování.
 
-![A screenshot of a social media post Description automatically generated](media/multisite-apps.png)
+![Snímek obrazovky příspěvku na sociální síti](media/multisite-apps.png)
 
-| **Business requirement** | **How Business Central supports it** | **Learn more** |
+| **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
-| Automatically generate email alerts. | Set up alerts in Power Automate that will generate emails to inform you of critical business conditions at sites or supply chain partners. | [Business Central and Power BI](admin-powerbi.md) |
-| Use standard or custom alerts. | Use 12 different templates included for Business Central or set up your own alerts to suit your business. | [Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md) |
+| Automatické generování e-mailových upozornění. | V aplikaci Power Automate můžete nastavit upozornění, která budou generovat e-maily informující o kritických obchodních podmínkách na pracovištích nebo u partnerů v dodavatelském řetězci. | [Business Central a Power BI](admin-powerbi.md) |
+| Použijte standardní nebo vlastní upozornění. | Použijte 12 různých šablon, které jsou součástí aplikace Business Central, nebo si nastavte vlastní upozornění, která budou vyhovovat vašemu podnikání. | [Použití nástroje Business Central s automatizovaným workflow ](across-how-use-financials-data-source-flow.md) |
 
 ## Viz také
-[Administration of Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Administrace Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

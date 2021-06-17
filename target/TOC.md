@@ -103,7 +103,7 @@
 #### [Set Up Payment Methods](finance-payment-methods.md)
 #### [Set Up Payment Terms](finance-payment-terms.md)
 #### [Setting Up Posting Groups](finance-posting-groups.md)
-#### [Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md)
+#### [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md)
 #### [Work with Payment Tolerances and Payment Discount Tolerances](finance-payment-tolerance-and-payment-discount-tolerance.md)
 #### [Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)
 #### [Set Up Reminder Terms and Levels](finance-setup-reminders.md)
@@ -115,7 +115,7 @@
 #### [Setting Up Source Codes and Reason Codes for Audit Trails](finance-setup-trail-codes.md)
 #### [Enable Application of Ledger Entries in Different Currencies](finance-how-enable-application-ledger-entries-different-currencies.md)
 #### [Set Up an Additional Reporting Currency](finance-how-setup-additional-currencies.md)
-#### [Update Currency Exchange Rates](finance-how-update-currencies.md)
+#### [Aktualizace směnných kurzů](finance-how-update-currencies.md)
 #### [Set Up Multiple Interest Rates](finance-how-to-set-up-multiple-interest-rates.md)
 #### [Set Up Invoice Rounding](finance-set-up-invoice-rounding.md)
 #### [Setting Up the Chart of Accounts](finance-setup-chart-accounts.md)
@@ -250,11 +250,11 @@
 #### [Report Selection](across-report-selections.md)
 ### Setting Up Connections
 #### Using Business Central as Your Business Inbox in Outlook
-##### [Overview](admin-outlook.md)
+##### [Přehled](admin-outlook.md)
 ##### [Synchronize with Contacts in Microsoft Outlook](admin-synchronize-outlook-contacts.md)
 ##### [Using Business Central Without Outlook](admin-no-outlook.md)
 #### Using Microsoft Teams with Business Central
-##### [Overview](across-teams-overview.md)
+##### [Přehled](across-teams-overview.md)
 ##### [Managing Teams Integration](admin-teams-integration.md)
 ##### [Installing Business Central App for Teams](across-install-app-for-teams.md)
 ##### [Searching for Customers, Vendors, and Contacts](across-search-contacts-teams.md)
@@ -272,11 +272,11 @@
 ###### [Creating Reports for Displaying List Data](across-how-use-powerbi-reports-factbox.md)
 ##### Consumer
 ###### [Working with Power BI Reports in Business Central](across-working-with-powerbi.md)
-###### [Working with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md)
+###### [Práce s daty Business Central v Power BI](across-working-with-business-central-in-powerbi.md)
 ###### [Using the Business Central Apps in Power BI](across-powerbi-business-central-apps.md)
 ##### [FAQ](power-bi-faq.md)
 #### Using Power Automate with Business Central
-##### [Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md)
+##### [Použití nástroje Business Central s automatizovaným workflow ](across-how-use-financials-data-source-flow.md)
 #### Using Power Apps with Business Central
 ##### [Connecting to Your Business Central Data to Build a Business App Using Power Apps](across-how-use-financials-data-source-powerapps.md)
 #### [Changing from a QuickBooks App to Business Central](across-quickbooks-to-business-edition.md)
@@ -330,7 +330,7 @@
 ## [Detecting Mandatory Fields](ui-mandatory-fields.md)
 ## [Changing Language and Region](about-locale-language.md)
 ## [Viewing and Editing in Excel](across-work-with-excel.md)
-## [Manage Attachments, Links, and Notes on Cards and Documents](ui-how-add-link-to-record.md)
+## [Správa příloh, odkazů a poznámek na kartách a v dokumentech](ui-how-add-link-to-record.md)
 ## [Change Basic Settings](ui-change-basic-settings.md)
 ## [Switching to Another Company or Environment](ui-organization-switch.md)
 ## [Manage Notifications](ui-smart-notifications.md)
@@ -343,7 +343,7 @@
 ### [Bookmark a Page or Report on Your Role Center](ui-bookmarks.md)
 ### [Displaying Lists in Different Ways](across-display-lists-different-views.md)
 ## Printing Reports and Running Batch Jobs and XMLports
-### [Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)
+### [Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md)
 ### [Set Up Printers](ui-specify-printer-selection-reports.md)
 ### [Schedule a Report to Run](ui-work-report.md#ScheduleReport)
 ### [Manage Saved Settings for Reports and Batch Jobs](reports-saving-reusing-settings.md)
@@ -425,7 +425,7 @@
 ##### [Set Up Data Exchange](across-set-up-data-exchange.md)
 ##### [Set Up a Document Exchange Service](across-how-to-set-up-a-document-exchange-service.md)
 ##### [Set Up Incoming Documents](across-how-setup-income-documents.md)
-##### [Update Currency Exchange Rates](finance-how-update-currencies.md)
+##### [Aktualizace směnných kurzů](finance-how-update-currencies.md)
 ##### [Set Up Electronic Document Sending and Receiving](across-how-to-set-up-electronic-document-sending-and-receiving.md)
 #### [Collect Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md)
 ##### [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md)
@@ -443,12 +443,12 @@
 ##### [Export Payments to a Bank File](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)
 ##### [Making Payments with AMC Banking 365 Fundamentals extension or SEPA Credit Transfer](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md)
 ##### [Collecting Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md)
-##### [Update Currency Exchange Rates](finance-how-update-currencies.md)
+##### [Aktualizace směnných kurzů](finance-how-update-currencies.md)
 ##### [Field Mapping When Importing SEPA CAMT Files](across-field-mapping-when-importing-sepa-camt-files.md)
 ##### [Field Mapping for the AMC Banking 365 Fundamentals Extension](across-field-mapping-when-exporting-payment-files-using-bank-data-conversion-service.md)
 ## Finance
 ### [Finance Overview](finance.md)
-### [Financial Reports](finance-reports.md)
+### [Finanční sestavy](finance-reports.md)
 ### Managing Receivables
 #### [Receivables Overview](receivables-manage-receivables.md)
 #### Automatické vyrovnávání plateb a odsouhlasení bankovních účtů
@@ -540,7 +540,7 @@
 #### [Working with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)
 #### [Specify Posting Periods](finance-how-specify-posting-periods.md)
 #### [Closing Periods](year-how-complete-period-end-processes.md)
-#### [Update Currency Exchange Rates](finance-how-update-currencies.md)
+#### [Aktualizace směnných kurzů](finance-how-update-currencies.md)
 #### [Allocate Costs and Income](year-allocate-costs-income.md)
 #### [Report VAT to Tax Authorities](finance-how-report-vat.md)
 #### [Preparing Pre-Closing Reports](year-prepare-preclose-reports.md)
@@ -561,7 +561,7 @@
 ### [Allocate Costs and Income](year-allocate-costs-income.md)
 ### [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md)
 ### [Defer Revenues and Expenses](finance-how-defer-revenue-expenses.md)
-### [Update Currency Exchange Rates](finance-how-update-currencies.md)
+### [Aktualizace směnných kurzů](finance-how-update-currencies.md)
 ### [Import Payroll Transactions](finance-how-import-payroll-transactions.md)
 ### [Work with VAT on Sales and Purchases](finance-work-with-vat.md)
 ### [Report VAT to Tax Authorities](finance-how-report-vat.md)
@@ -576,14 +576,14 @@
 
 ## Business Intelligence and Financial Reporting
 ### [Business Intelligence and Financial Reporting Overview](bi.md)
-### [Financial Reports](finance-reports.md)
-### [Analyze Actual Amounts Versus Budgeted Amounts](bi-how-analyze-actual-versus-budget.md)
-### [Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md)
-### [Set Up and Publish KPI Web Services Based on Account Schedules](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md)
-### [Analyze Data by Dimensions](bi-how-analyze-data-dimension.md)
-### [Create Analysis Reports](bi-how-create-analysis-views-reports.md)
-### [Create Reports with XBRL](bi-create-reports-with-xbrl.md)
-### [Manage Database Access Intent](admin-data-access-intent.md)
+### [Finanční sestavy](finance-reports.md)
+### [Analáza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md)
+### [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md)
+### [Nastavení a publikování webových služeb klíčových ukazatelů výkonu na základě účetních plánů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md)
+### [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md)
+### [Vytváření sestav analýz](bi-how-create-analysis-views-reports.md)
+### [Vytváření sestav pomocí XBRL](bi-create-reports-with-xbrl.md)
+### [Správa přístupu databáze](admin-data-access-intent.md)
 
 ## Prodej
 ### [Sales Overview](sales-manage-sales.md)
@@ -1071,9 +1071,9 @@
 ##### [Deleting Posted Invoices and Credit Memos](LocalFunctionality/Iceland/deleting-posted-invoices-and-credit-memos.md)
 
 ### India
-#### [Overview](LocalFunctionality/India/india-local-functionality.md)
+#### [Přehled](LocalFunctionality/India/india-local-functionality.md)
 #### Tax Engine
-##### [Overview](LocalFunctionality/India/TaxEngine-001-Overview.md)
+##### [Přehled](LocalFunctionality/India/TaxEngine-001-Overview.md)
 ##### [Tax Engine Import Export configuration](LocalFunctionality/India/TaxEngine-002-Import-Export-Configuration.md)
 ##### Tax Engine Configuration
 ###### [Configuration of Tax Type and Tax Rate](LocalFunctionality/India/TaxEngine-003-Tax-Configuration.md)

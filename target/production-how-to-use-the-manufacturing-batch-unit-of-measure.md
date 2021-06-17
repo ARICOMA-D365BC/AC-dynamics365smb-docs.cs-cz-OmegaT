@@ -18,7 +18,7 @@ If an item is stocked in one unit of measure but produced in another, a producti
 
 ## Vytvoření výrobního kusovníku pomocí měrné jednotky dávky
 1. The manufacturing batch unit of measure is set up as an alternative unit of measure on the **Item Units of Measure** page on the item to be produced. Měrná jednotka dávky nenahrazuje základní měrnou jednotku zboží.
-2. Vytvořte výrobní kusovník pro položku nastavenou s měrnou jednotkou výrobní dávky. For more information, see [Create Production BOMs](production-how-to-create-production-boms.md).
+2. Vytvořte výrobní kusovník pro položku nastavenou s měrnou jednotkou výrobní dávky. Další informace naleznete v tématu [Vytváření výrobních kusovníků](production-how-to-create-production-boms.md).
 3. In the **Unit of Measure Code** field, select the manufacturing batch unit of measure.
 4. For each production BOM line, in the **Quantity Per** field, enter the quantity of this component item that is required to create this batch unit of measure.
 5. Open the **Item Card** for the related item.

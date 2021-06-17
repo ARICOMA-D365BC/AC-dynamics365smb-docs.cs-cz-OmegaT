@@ -31,7 +31,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Analyze the costs of running your business by allocating actual and budgeted costs of operations, departments, products, and projects to cost centers. | [Accounting for Costs](finance-manage-cost-accounting.md) |
 | Manage inventory and manufacturing costs, report costs, and reconcile costs with the general ledger. | [Managing Inventory Costs](finance-manage-inventory-costs.md) |
 | Understand the general ledger and the chart of accounts. | [Understanding the General Ledger and the COA](finance-general-ledger.md) |
-| Combine general ledger entries from multiple companies in one virtual consolidated company for financial analysis. | [Consolidating Financial Data from Multiple Companies](finance-consolidated-company-reporting.md) |
+| Combine general ledger entries from multiple companies in one virtual consolidated company for financial analysis. | [Konsolidování finančních dat z několika společností](finance-consolidated-company-reporting.md) |
 | Add dimensions for richer business intelligence. | [Working with Dimensions](finance-dimensions.md) |
 | Create G/L budgets to forecast different financial activities and assign dimensions for business intelligence purposes. | [Create G/L Budgets](finance-how-create-budgets.md) |
 | Record income or expenses directly in the general ledger without posting dedicated business documents. | [Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md) |
@@ -41,7 +41,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Post employees' personal expenses for business-related activities and reimburse employees by making payment to their bank account. | [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md) |
 | Recognize revenues and expenses in other periods than when the transactions were posted. | [Defer Revenues and Expenses](finance-how-defer-revenue-expenses.md) |
 | Learn about the available options to automate sending subscription invoices to your customers and register recurring revenue. | [Recurring (subscription) Revenue](finance-recurring-invoicing.md) |
-| Learn how to use additional currencies and update currency exchange rates automatically. | [Update Currency Exchange Rates](finance-how-update-currencies.md) |
+| Learn how to use additional currencies and update currency exchange rates automatically. | [Aktualizace směnných kurzů](finance-how-update-currencies.md) |
 | Import salary transactions from your payroll provider into the general ledger. | [Import Payroll Transactions](finance-how-import-payroll-transactions.md) |
 | Use functions to calculate value-added tax (VAT) on sales and purchase transactions so that you can report the amounts to the tax authorities. | [Work with VAT on Sales and Purchases](finance-work-with-vat.md) |
 | Prepare a report that lists VAT from sales, and submit the report to tax authorities in the EU. | [Report VAT to Tax Authorities](finance-how-report-vat.md) |
