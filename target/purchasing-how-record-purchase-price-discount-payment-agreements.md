@@ -15,42 +15,42 @@ ms.author: bholtorf
 ---
 # Record Special Purchase Prices and Discounts
 > [!NOTE]
-> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. If you're a new customer using that version, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. For more information, see [Enabling Upcoming Features Ahead of Time](/dynamics365/business-central/dev-itpro/administration/feature-management).
+> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. Pokud jste nový zákazník a používáte tuto verzi, používáte nové prostředí. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management).
 
 The different price and discount agreements that apply when you buy from different vendors must be defined so that the agreed rules and values are applied to purchase documents that you create for the vendors.
 
-When you have recorded special prices and line discounts for sales and purchases, [!INCLUDE[prod_short](includes/prod_short.md)] ensures that your profit on item trade is always optimal by automatically calculating the best price on sales and purchase documents and on job and item journal lines. For more information, see [Best Price Calculation](purchasing-how-record-purchase-price-discount-payment-agreements.md#best-price-calculation).
+When you have recorded special prices and line discounts for sales and purchases, [!INCLUDE[prod_short](includes/prod_short.md)] ensures that your profit on item trade is always optimal by automatically calculating the best price on sales and purchase documents and on job and item journal lines. Pro více informací navštivte [Výpočet nejlepší ceny](purchasing-how-record-purchase-price-discount-payment-agreements.md#best-price-calculation).
 
 Concerning prices, you can have a special purchase price inserted on purchase lines if a certain combination of vendor, item, minimum quantity, unit of measure, or starting/ending date exists.
 
 Concerning discounts, you can set up and use two types of purchase discounts:
 
-| Discount Type | Popis |
+| Typ slevy | Popis |
 | --- | --- |
 | **Purchase Line Discount** | An amount discount that is inserted on purchase lines if a certain combination of vendor, item, minimum quantity, unit of measure, or starting/ending date exists. This works in the same way as for purchase prices. |
-| **Invoice Discount** | A percentage discount that is subtracted from the document total if the value amount of all lines on a purchase document exceeds a certain minimum. |
+| **Fakturační sleva** | A percentage discount that is subtracted from the document total if the value amount of all lines on a purchase document exceeds a certain minimum. |
 
 Because purchase line discounts and purchase prices are based on a combination of item and vendor, you can also enter this configuration from the item card, where the rules and values are defined. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
 ## To set up a special purchase price for a vendor
 
-#### [Current Experience](#tab/current-experience)
+#### [Aktuální zkušenosti](#tab/current-experience)
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
 2. Open the relevant vendor card, and then choose the **Prices** action.
-3. Fill in the fields on the line as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Fill a line for each combination for which the vendor grants you a purchase line discount.
 
-#### [New Experience](#tab/new-experience)
+#### [Po novu](#tab/new-experience)
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
 2. Choose the vendor, and then choose the **Sales Price Lists** action.
 3. Choose **New** to create a new purchase price list.
-4. On the **General** and **Tax** FastTabs, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-5. To add items to the list, do one of the following:
-   * To add many items, choose **Suggest Lines**, and then enter filter criteria to specify the types of items to add. Optionally, you can also enter some additional settings for the items that are specific to the price list. You can change these later, if needed.
-   * To copy items from another price list, choose **Copy Lines**, and then choose the price list to copy.
-   * To add items manually, in the grid, in the **Product Type** field, choose the type of product that the price list is for. Depending on your selection, fill in the remaining fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-6. To start using the price list, in the **Status** field, choose **Active**.
+4. Na záložkáck **Obecné** a **Daň** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+5. Chcete-li přidat zboží do seznamu, proveďte jednu z následujících akcí:
+   * Chcete-li přidat více položek, vyberte možnost **Navrhnout řádky** a poté zadejte kritéria filtru, abyste určili typy položek, které chcete přidat. Volitelně můžete také zadat některá další nastavení položek, která jsou specifická pro daný ceník. V případě potřeby je můžete později změnit.
+   * Chcete-li zkopírovat položky z jiného ceníku, zvolte **Kopírovat řádky** a poté vyberte ceník, který chcete zkopírovat.
+   * To add items manually, in the grid, in the **Product Type** field, choose the type of product that the price list is for. V závislosti na výběru vyplňte zbývající pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+6. Chcete-li ceník začít používat, vyberte v poli **Stav** možnost **Aktivní**.
 
 ---
 
@@ -59,7 +59,7 @@ Because purchase line discounts and purchase prices are based on a combination o
 2. Open the relevant vendor card, and then choose the **Line Discounts** action.
 
    The **Purchase Type** field is prefilled with **Vendor**, and the **Purchase Code** field is prefilled with the vendor number.
-3. Fill in the fields on the line as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Fill a line for each combination for which the vendor grants you a purchase line discount.
 
 ## To set up an invoice discount for a vendor
@@ -67,16 +67,16 @@ When your vendors have informed you which invoice discounts they grant, enter th
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
 2. Open the vendor card for a vendor that will be eligible for invoice discounts.
-3. In the **Invoice Disc. Code** field, select a code for the relevant invoice discount terms to use to calculate invoice discounts for the vendor.
+3. Do pole **Kód fakturační Code** field, select a code for the relevant invoice discount terms to use to calculate invoice discounts for the vendor.
 
    > [!NOTE]  
    > Invoice discount codes are represented by existing vendor cards. This enables you to quickly assign invoice discount terms to vendors by picking the name of another vendors who will have the same terms.
 
    Proceed to set up new the purchase invoice discount terms.
-4. On the **Vendor Card** page, choose the **Invoice Discounts** action. The **Vend. Invoice Discounts** page opens.
-5. In the **Currency Code** field, enter the code for a currency that the invoice discount terms on the line applies to. Leave the field blank to set up invoice discount terms in USD.
-6. In the **Minimum Amount** field, enter the minimum amount that an invoice must have to be eligible for the discount.
-7. In the **Discount %** field, enter the invoice discount as a percentage of the invoice amount.
+4. On the **Vendor Card** page, choose the **Invoice Discounts** action. The **Vend. slevy zákazníka** se otevře.
+5. Do pole **Kód měny** zadejte kód měny, na kterou se vztahují podmínky slevy na faktuře na řádku. Chcete-li nastavit podmínky fakturační slevy v USD, ponechte pole prázdné.
+6. Do pole **Minimální částka** zadejte minimální částku, kterou musí mít faktura nárok na slevu.
+7. Do pole **Procento slevy** zadejte fakturační slevu jako procento částky faktury.
 8. Repeat steps 5 through 7 for each currency that the vendor will receive a different invoice discount for.
 
 The invoice discount is now set up and assigned to the vendor in question. When you select the vendor code in the **Invoice Disc. Code** field on other vendor cards, the same invoice discount is assigned to those vendor.
@@ -89,7 +89,7 @@ Before you can do this, you must have already set up the necessary accounts for 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
 2. In the **Discount Posting** field, choose one of the following principles for posting discounts.
 
-| **Discount Posting Principle** | **Invoice Discount** | **Line Discount** |
+| **Discount Posting Principle** | **Fakturační sleva** | **Řádková sleva** |
 |------------------------------------|--------------------------|-----------------------|  
 | **All Discounts** | Posted separately | Posted separately |
 | **Invoice Discounts** | Posted separately | Subtracted |

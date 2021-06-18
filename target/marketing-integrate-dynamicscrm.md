@@ -94,14 +94,14 @@ When the customer payment is received for the sales invoice in [!INCLUDE[prod_sh
 
 ## Handling Sales Prices
 > [!NOTE]
-> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. If you're a new customer using that version, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. For more information, see [Enabling Upcoming Features Ahead of Time](/dynamics365/business-central/dev-itpro/administration/feature-management).
+> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. Pokud jste nový zákazník a používáte tuto verzi, používáte nové prostředí. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management).
 
 The steps to complete this process differ, depending on whether your administrator has enabled the new pricing experience.
 
 > [!NOTE]
 > If the standard price synchronization does not work for you, we recommend using integration customization capabilities. For more information, see [Customizing an Integration with Microsoft Dataverse](/dynamics365/business-central/dev-itpro/administration/administration-custom-cds-integration).
 
-#### [Current Experience](#tab/current-experience/)
+#### [Aktuální zkušenosti](#tab/current-experience/)
 In the current pricing experience, [!INCLUDE[prod_short](includes/prod_short.md)] synchronizes sales prices that:
 
 * Apply to all customers. Default sales price lists are created based on the price in the **Unit Price** field on the **Item Card** page for the items.
@@ -112,7 +112,7 @@ In the current pricing experience, [!INCLUDE[prod_short](includes/prod_short.md)
 
 :::image type="content" source="media/customer-price-group.png" alt-text="Customer Price Group page":::
 
-#### [New Experience](#tab/new-experience/)
+#### [Po novu](#tab/new-experience/)
 
 The new pricing experience synchronizes price lists that meet the following criteria:
 

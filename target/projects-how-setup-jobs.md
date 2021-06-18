@@ -46,11 +46,11 @@ If job usage tracking is not enabled and the **Line Type** field on the job jour
 
 ## To set up prices for resources, items, and general ledger accounts for jobs
 > [!NOTE]
-> In 2020 release wave 2, we released new processes for setting up and managing prices and discounts. If you're a new customer, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. For more information, see [Enabling Upcoming Features Ahead of Time](/dynamics365/business-central/dev-itpro/administration/feature-management).
+> In 2020 release wave 2, we released new processes for setting up and managing prices and discounts. If you're a new customer, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management).
 
 You can set up prices for the items, resources, and general ledger accounts related to a job.
 
-#### [Current Experience](#tab/current-experience)
+#### [Aktuální zkušenosti](#tab/current-experience)
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
 2. Select the job, and then choose the **Resource**, **Item**, or **G/L Account** action.
 3. On the **Job Resource Prices**, **Job Item Prices**, or **Job G/L Account Prices** pages, fill in the fields as necessary.
@@ -64,7 +64,7 @@ The following table shows how the information in the optional fields will be use
 | **General Ledger Accounts** | The information in the **Job Task No.**, **Currency Code**, **Line Discount %**, **Unit Cost Factor**, and **Unit Cost** fields will be used on the job planning lines and job journals when this general ledger account is entered and added to a job. The value in the **Unit Price** field for the general ledger job expense will be used on the job planning lines and job journals when this general ledger account is entered. |
 
 ---
-#### [New Experience](#tab/new-experience)
+#### [Po novu](#tab/new-experience)
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
 2. Select the relevant job, and then choose the **Sales Price Lists** action.
 

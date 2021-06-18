@@ -15,29 +15,29 @@ ms.author: bholtorf
 ---
 # Record Special Sales Prices and Discounts
 > [!NOTE]
-> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. If you're a new customer using that version, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. For more information, see [Enabling Upcoming Features Ahead of Time](/dynamics365/business-central/dev-itpro/administration/feature-management).
+> In 2020 release wave 2 we released streamlined processes for setting up and managing prices and discounts. Pokud jste nový zákazník a používáte tuto verzi, používáte nové prostředí. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management).
 
 The price and discount agreements that apply when selling to customers must be defined so that the agreed rules and values are applied to sales documents.
 
-When you have recorded special prices and line discounts for sales and purchases, [!INCLUDE[prod_short](includes/prod_short.md)] ensures that your profit on item trade is always optimal by automatically calculating the best price on sales and purchase documents and on job and item journal lines. For more information, see [Best Price Calculation](sales-how-record-sales-price-discount-payment-agreements.md#best-price-calculation).
+When you have recorded special prices and line discounts for sales and purchases, [!INCLUDE[prod_short](includes/prod_short.md)] ensures that your profit on item trade is always optimal by automatically calculating the best price on sales and purchase documents and on job and item journal lines. Pro více informací navštivte [Výpočet nejlepší ceny](sales-how-record-sales-price-discount-payment-agreements.md#best-price-calculation).
 
 Concerning prices, you can have a special sales price inserted on sales lines if a certain combination of customer, item, minimum quantity, unit of measure, or starting/ending date exists. For more information, see the [To set up a sales price for a customer](#to-set-up-a-sales-price-for-a-customer) and [Best Price Calculation](#best-price-calculation) sections.
 
 Concerning discounts, you can set up and use two types of sales discounts:
 
-| Discount Type | Popis |
+| Typ slevy | Popis |
 | --- | --- |
 | **Sales Line Discount** | An amount discount that is inserted on sales lines if a certain combination of customer, item, minimum quantity, unit of measure, or starting/ending date exists. This works in the same way as for sales prices. |
-| **Invoice Discount** | A discount percentage that is subtracted from the sales document total if the sum of all lines on the document exceeds a certain minimum. |
+| **Fakturační sleva** | A discount percentage that is subtracted from the sales document total if the sum of all lines on the document exceeds a certain minimum. |
 
-Because sales prices and sales line discounts are based on a combination of item and customer, you can also perform this configuration from the item page of the item where the rules and values apply.
+Protože prodejní ceny a slevy na prodejních položkách jsou založeny na kombinaci položky a zákazníka, můžete tuto konfiguraci provést také na stránce položky, kde se pravidla a hodnoty použijí.
 
 > [!TIP]  
-> If an item should never be sold with a discount, leave the discount fields on the item page empty, and do not include the item in any line discount setups.
+> Pokud by zboží nemělo být nikdy prodáváno se slevou, ponechte pole pro slevu na stránce položky prázdné a nezařazujte zboží do žádných nastavení řádkových slev.
 
 The **Applies-to Type** and **Applies-to No.** fields let you choose what this price list will apply to, such as customer or customer price group. Using **View Columns for**, you can show or hide columns relevant for setting prices, discounts or prices and discounts.
 
-You can set up price list lines manually or you can use, for example, the **Suggest Lines** action to create new prices for selected items, item discount groups, resources, and other product types. If you choose Suggest Lines, the Price Lines - Create New page allows you to set filters to select products for which you want to create new price list lines. You can also specify whether to consider a minimum quantity when calculating prices, the adjustment factor to apply for new price list lines, and the rounding method to apply for prices. The **Copy Lines** action allows you to copy existing price list lines between price lists.
+You can set up price list lines manually or you can use, for example, the **Suggest Lines** action to create new prices for selected items, item discount groups, resources, and other product types. If you choose Suggest Lines, the Price Lines - Create New page allows you to set filters to select products for which you want to create new price list lines. Můžete také určit, zda se má při výpočtu cen vzít v úvahu minimální množství, faktor úpravy, který se má použít pro nové řádky ceníku, a metoda zaokrouhlení, která se má použít pro ceny. The **Copy Lines** action allows you to copy existing price list lines between price lists.
 
 By default, the status of new price lists is Draft. When you're done adding lines and want the price calculation engine to include it, you can change the status to Active.
 
@@ -45,25 +45,25 @@ To review price lists and prices that apply for specific customers or vendors, o
 
 ## To set up a sales price for a customer
 
-These steps differ, depending on whether your administrator has turned on the **New sales pricing experience** feature update.
+Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové prodejní ceny**.
 
-#### [Current Experience](#tab/current-experience/)
-
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Choose the customer, and then choose the **Prices** action.
-3. Fill in the fields on the line as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Fill a line for each combination that will grant a special sales price to the customer.
-
-#### [New Experience](#tab/new-experience/)
+#### [Aktuální zkušenosti](#tab/current-experience/)
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Choose the customer, and then choose the **Sales Price Lists** action.
-3. Choose **New** to create a new sales price list.
-4. On the **General** and **Tax** FastTabs, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-5. To add items to the list, do one of the following:
-   * To add many items, choose **Suggest Lines**, and then enter filter criteria to specify the types of items to add. Optionally, you can also enter some additional settings for the items that are specific to the price list. You can change these later, if needed.
-   * To copy items from another price list, choose **Copy Lines**, and then choose the price list to copy.
-   * To add items manually, in the grid, in the **Product Type** field, choose the type of product that the price list is for. Depending on your selection, fill in the remaining fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-6. To start using the price list, in the **Status** field, choose **Active**.
+2. Vyberte zákazníka a poté vyberte akci **Ceny**.
+3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Vyplňte řádek pro každou kombinaci, která zákazníkovi poskytne speciální prodejní cenu.
+
+#### [Po novu](#tab/new-experience/)
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+2. Vyberte zákazníka a poté zvolte akci **Prodejní ceníky**.
+3. Chcete-li vytvořit nový prodejní ceník, zvolte **Nový**.
+4. Na záložkáck **Obecné** a **Daň** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+5. Chcete-li přidat zboží do seznamu, proveďte jednu z následujících akcí:
+   * Chcete-li přidat více položek, vyberte možnost **Navrhnout řádky** a poté zadejte kritéria filtru, abyste určili typy položek, které chcete přidat. Volitelně můžete také zadat některá další nastavení položek, která jsou specifická pro daný ceník. V případě potřeby je můžete později změnit.
+   * Chcete-li zkopírovat položky z jiného ceníku, zvolte **Kopírovat řádky** a poté vyberte ceník, který chcete zkopírovat.
+   * To add items manually, in the grid, in the **Product Type** field, choose the type of product that the price list is for. V závislosti na výběru vyplňte zbývající pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+6. Chcete-li ceník začít používat, vyberte v poli **Stav** možnost **Aktivní**.
 
 ---
 
@@ -77,11 +77,11 @@ Before you can use invoice discounts with sales, you must specify certain inform
 
 If you want invoice discounts to be calculated automatically, you can specify this on the **Sales & Receivables Setup** page.
 
-For each customer, you can specify whether you will grant invoice discounts if the requirement is satisfied (that is, if the invoice amount is large enough). You can define the terms of the invoice discount in local currency for domestic customers and in foreign currency for foreign customers.
+U každého zákazníka můžete zadat, zda při splnění požadavku (tj. při dostatečně vysoké fakturované částce) poskytnete slevu na faktuře. Podmínky fakturační slevy můžete definovat v místní měně pro tuzemské zákazníky a v cizí měně pro zahraniční zákazníky.
 
 You link discount percentages to specific invoice amounts in the **Cust. Invoice Discounts** page for each customer. You can enter any number of percentages. Each customer can have its own page, or you can link several customers to the same page.
 
-In addition to (or instead of) a discount percentage, you can link a service charge amount to a specific invoice amount.
+Kromě (nebo namísto) procenta slevy můžete propojit částku poplatku za službu s určitou částkou faktury.
 
 > [!TIP]  
 > Before you start entering this information, it is a good idea to prepare an outline of the discount structure that you want to use. This makes it easier to see which customers can be linked to the same invoice discount page. The fewer pages you have to set up, the faster you can enter the basic information.
@@ -92,118 +92,118 @@ For training in discounts in sales, see [Set up discounts for your customers](/l
 
 [!INCLUDE [sales-invoice-discounts](includes/sales-invoice-discounts.md)]
 
-## To set up a sales line discount for a customer
-These steps differ, depending on whether your administrator has turned on the **New sales pricing experience** feature update.
+## Nastavení slevy na prodejní řádek pro zákazníka
+Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové prodejní ceny**.
 
-#### [Current Experience](#tab/current-experience/)
+#### [Aktuální zkušenosti](#tab/current-experience/)
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Open the relevant customer card, and then choose the **Line Discounts** action.
-3. Fill in the fields on the line as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Fill a line for each combination that will grant a sales line discount to the customer.
+2. Otevřete příslušnou kartu zákazníka a poté zvolte akci **Řádkové slevy**.
+3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Vyplňte řádek pro každou kombinaci, která zákazníkovi poskytne slevu na prodejní řádek.
 
 > [!Note]
-> When you open the **Sales Prices** and **Sales Line Discounts** pages from a specific customer, the **Sales Type Filter** and **Sales Code Filter** fields are set for the customer and cannot be changed or removed.
+> Při otevření stránek **Prodejní ceny** a **Prodejní řádkové slevy** od konkrétního zákazníka jsou pole **Filtr typu prodeje** a **Filtr kódu prodejního** nastavena pro daného zákazníka a nelze je změnit ani odstranit.
 >
-> To set up prices or line discounts for all customers, a customer price group, or a campaign, you must open the pages from an item card. Alternatively, for sales prices, use the **Sales Price Worksheet** page. For more information, see [To bulk update item prices](sales-how-record-sales-price-discount-payment-agreements.md#to-bulk-update-item-prices).
+> Chcete-li nastavit ceny nebo řádkové slevy pro všechny zákazníky, cenovou skupinu zákazníků nebo kampaň, musíte otevřít stránky z karty položky. Alternativně můžete pro prodejní ceny použít stránku **Sešit prodejní ceny**. Další informace naleznete v tématu [Hromadná aktualizace cen zboží](sales-how-record-sales-price-discount-payment-agreements.md#to-bulk-update-item-prices).
 
-#### [New Experience](#tab/new-experience/)
+#### [Po novu](#tab/new-experience/)
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Choose the customer, and then choose the **Sales Price Lists** action.
-3. Open the price list for which to specify the line discount.
-4. Turn on the **Allow Line Disc.** toggle.
-5. Create a new line, or choose an existing line, and then fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-6. In the **Defines** field, choose either **Price & Discount**, or just **Discount**.
-7. In the **Line Discount %** field, specify the discount percentage.
+2. Vyberte zákazníka a poté zvolte akci **Prodejní ceníky**.
+3. Otevřete ceník, pro který chcete zadat řádkovou slevu.
+4. Zapněte přepínač **Povolit řádkovou slevu**.
+5. Vytvořte nový řádek nebo vyberte existující řádek a vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+6. V poli **Definování** zvolte buď **Cena a sleva**, nebo pouze **Sleva**.
+7. V poli **Řádková sleva %** zadejte procento slevy.
 
    > [!TIP]
-   > If you're editing an existing line, you can filter the lines by choosing the appropriate option in the **View Columns for** field.
+   > Pokud upravujete existující řádek, můžete filtrovat řádky výběrem příslušné možnosti v poli **Zobrazit sloupce pro**.
 
    > [!NOTE]  
-   > Invoice discount codes are represented by existing customer cards. This enables you to quickly assign invoice discount terms to customers by picking the name of another customer who will have the same terms. To set up customer-specific invoice discount terms, set the **Invoice Disc. Code** field to the customer's customer code, and then proceed to the next step.
+   > Kódy fakturačních slev jsou reprezentovány existujícími zákaznickými kartami. To vám umožní rychle přiřadit podmínky fakturační slevy zákazníkům výběrem jména jiného zákazníka, který bude mít stejné podmínky. To set up customer-specific invoice discount terms, set the **Invoice Disc. Code** field to the customer's customer code, and then proceed to the next step.
 
-8. On the **Customer Card** page, choose the **Invoice Discounts** action. The **Cust. Invoice Discounts** page opens.
-9. In the **Currency Code** field, enter the code for a currency that the invoice discount terms on the line applies to. Leave the field blank to set up invoice discount terms in USD.
+8. On the **Customer Card** page, choose the **Invoice Discounts** action. Stránka **Fakturační slevy zákazníka** se otevře.
+9. Do pole **Kód měny** zadejte kód měny, na kterou se vztahují podmínky slevy na faktuře na řádku. Chcete-li nastavit podmínky fakturační slevy v USD, ponechte pole prázdné.
 10. Optionally, in the **Minimum Amount** field, enter the minimum amount that an invoice must have to be eligible for the discount.
-11. In the **Discount %** field, enter the invoice discount as a percentage of the invoice amount.
-12. Repeat steps 5 through 7 for each currency that the customer will receive a different invoice discount for.
+11. Do pole **Procento slevy** zadejte fakturační slevu jako procento částky faktury.
+12. Opakujte kroky 5 až 7 pro každou měnu, pro kterou zákazník obdrží jinou fakturační slevu.
 
-The invoice discount is now set up and assigned to the customer. When you select the customer code in the **Invoice Disc. Code** field on other customer cards, the same invoice discount is assigned to those customers.
+The invoice discount is now set up and assigned to the customer. Když vyberete kód zákazníka v poli **Kód fakturační slevy** na jiných kartách zákazníka, je těmto zákazníkům přiřazena stejná fakturační sleva.
 
 ---
 
-## To set up an invoice discount for a customer
+## Nastavení fakturační slevy pro zýkazníka
 When you have decided which customers are eligible for invoice discounts, enter the invoice discount code on the customer cards and set up the terms for each code.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Open the customer page for a customer that will be eligible for invoice discounts.
-3. In the **Invoice Disc. Code** field, select a code for the relevant invoice discount terms to use to calculate invoice discounts for the customer. <!--Looks like I can only choose customers in this list-->
+2. Otevřete stránku zákazníka pro zákazníka, který bude mít nárok na fakturační slevy.
+3. Do pole **Kód fakturační slevy** vyberte kód pro příslušné podmínky fakturační slevy, které se mají použít k výpočtu fakturních slev pro zákazníka. <!--Looks like I can only choose customers in this list-->
 
 > [!NOTE]  
-> Invoice discount codes are represented by existing customer cards. This enables you to quickly assign invoice discount terms to customers by picking the name of another customer who will have the same terms.
+> Kódy fakturačních slev jsou reprezentovány existujícími zákaznickými kartami. To vám umožní rychle přiřadit podmínky fakturační slevy zákazníkům výběrem jména jiného zákazníka, který bude mít stejné podmínky.
 
-Proceed to set up new the sales invoice discount terms.
+Pokračujte nastavením nových podmínek slevy prodejní faktury.
 
-1. On the **Customers** page, choose the **Invoice Discounts** action. The **Cust. Invoice Discounts** page opens.
-2. In the **Currency Code** field, enter the code for a currency that the invoice discount terms on the line applies to. Leave the field blank to set up invoice discount terms in USD.
-3. In the **Minimum Amount** field, enter the minimum amount that an invoice must have to be eligible for the discount.
-4. In the **Discount %** field, enter the invoice discount as a percentage of the invoice amount.
-5. Repeat steps 5 through 7 for each currency that the customer will receive a different invoice discount for.
+1. Na stránce **Zákazníci** zvolte akci **Fakturační slevy** . Stránka **Fakturační slevy zákazníka** se otevře.
+2. Do pole **Kód měny** zadejte kód měny, na kterou se vztahují podmínky slevy na faktuře na řádku. Chcete-li nastavit podmínky fakturační slevy v USD, ponechte pole prázdné.
+3. Do pole **Minimální částka** zadejte minimální částku, kterou musí mít faktura nárok na slevu.
+4. Do pole **Procento slevy** zadejte fakturační slevu jako procento částky faktury.
+5. Opakujte kroky 5 až 7 pro každou měnu, pro kterou zákazník obdrží jinou fakturační slevu.
 
-## To copy sales prices
-These steps differ, depending on whether your administrator has turned on the **New sales pricing experience** feature update.
+## Kopírování prodejních cen
+Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové prodejní ceny**.
 
-#### [Current Experience](#tab/current-experience/)
+#### [Aktuální zkušenosti](#tab/current-experience/)
 
-If you want to copy sales prices, such as an individual customer's sales prices to use for a customer price group, you must run the **Suggest Sales Price on Wksh.** batch job on the **Sales Price Worksheet** page.
+Chcete-li kopírovat prodejní ceny, například prodejní ceny jednotlivých zákazníků, které chcete použít pro cenovou skupinu zákazníka, je nutné spustit dávkovou úlohu **Navrhnout cenu z ceny** v sešitu **Sešit prodejní ceny**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Price Worksheet**, and then choose the related link.
-2. Choose the **Suggest Sales Price on Wksh.** action.
-3. On the **Sales Prices** FastTab, fill in the **Sales Type** and **Sales Code** fields with the original sales prices you want to copy.
-4. In the top section of the request page, fill in the **Sales Type** and **Sales Code** fields with the type and name you want the sales prices copied to.
-5. If you want the batch job to create new prices, select the **Create New Prices** check box.
-6. Choose the **OK** button to fill in the lines on the **Sales Price Worksheet** page with the suggested new prices, indicating that they are valid for the selected sales type.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Sešit prodejní ceny** a poté vyberte související odkaz.
+2. Vyberte akci **Navrhnout cenu z ceny**.
+3. V záložce **Prodejní ceny** vyplňte pole **Typ prodeje** a **Kód prodeje** původními prodejními cenami, které chcete zkopírovat.
+4. V horní části stránky požadavku vyplňte pole **Typ prodeje** a **Kód prodeje** typem a názvem, do které chcete zkopírovat prodejní ceny.
+5. Pokud chcete, aby dávková úloha vytvářela nové ceny, zaškrtněte políčko **Vytvořit nové ceny**.
+6. Vyberte tlačítko **OK** pro vyplnění řádků na stránce **Sešitu prodejní ceny** navrhovanými cenami, které označují, že jsou platné pro vybraný typ prodeje.
 
    > [!NOTE]  
-   > This batch job only creates suggestions and it does not implement the suggested changes. If you are satisfied with the suggestions and want to implement them, that is insert them on the **Sales Prices** page, choose the **Implement Price Changes** action on the **Sales Price Worksheet** page.
+   > Tato dávková úloha vytváří pouze návrhy a neimplementuje navrhované změny. Pokud jste s návrhy spokojeni a chcete je implementovat, to znamená vložit je na stránku **Prodejní ceny**, zvolte akci **Provést změnu ceny** na stránce **Sešit prodejní ceny**.
 
-#### [New Experience](#tab/new-experience/)
+#### [Po novu](#tab/new-experience/)
 
-The status of the price list must be **Draft**.
+Stav ceníku musí být **Koncept**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Price Lists**, and then choose the related link.
-2. Choose the price list to copy, and then choose **Copy Lines**.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Sešit prodejní ceny** a poté vyberte související odkaz.
+2. Vyberte ceník, který chcete zkopírovat, a poté zvolte **Kopírovat řádky**.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]
-   > You cannot have two lines that have the same settings but different prices. If that happens, a message will display when you activate a price list. You can choose the price to use by opening the list and deleting the incorrect price.
+   > Nemůžete mít dva řádky, které mají stejné nastavení, ale různé ceny. Pokud k tomu dojde, zobrazí se při aktivaci ceníku zpráva. Cenu, kterou chcete použít, můžete zvolit otevřením seznamu a odstraněním nesprávné ceny.
 
 ---
 
-## To bulk update item prices
-These steps differ, depending on whether your administrator has turned on the **New sales pricing experience** feature update.
+## Hromadná aktualizace cen zboží
+Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové prodejní ceny**.
 
-#### [Current Experience](#tab/current-experience/)
+#### [Aktuální zkušenosti](#tab/current-experience/)
 
-If you want to bulk update item prices, such as increase all item prices by some percentage, you must run the **Suggest Item Price on Wksh.** batch job. You can find a link to the batch job on the **Sales Price Worksheet** page.
+Chcete-li hromadně aktualizovat ceny zboží, například zvýšit všechny ceny zboží o určité procento, je nutné spustit dávkovou úlohu **Navrhnout cenu ze zboží**. Odkaz na dávkovou úlohu najdete na stránce **Sešit prodejní ceny**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Price Worksheet**, and then choose the related link.
-2. Choose the **Suggest Item Price on Wksh.** action.
-3. On the **Item** FastTab, fill in the **No.** or **Inventory Posting Group** or other fields with the original item prices you want to update.
-4. In the top section of the request page, fill in the **Sales Type** and **Sales Code** with the type and name you want the sales prices copied to.
-5. If you want the batch job to automatically adjust suggested item prices, enter adjustment in **Adjustment Factor** field. For example, you would enter 1.15 in **Adjustment Factor** for 15% increase in item price.
-6. If you want the batch job to create new prices, select the **Create New Prices** field.
-7. Choose the **OK** button to fill in the lines on the **Sales Price Worksheet** page with the suggested new prices, indicating that they are valid for the selected **Item**.
-
-> [!NOTE]
-> This batch job only creates suggestions and it does not implement the suggested changes. If you are satisfied with the suggestions and want to implement them, that is insert them in the **Sales Prices** table, you can use the **Implement Price Changes** batch job, which is found on the **Actions** tab, in the **Functions** group, on the **Sales Price Worksheet** page.
-
-#### [New Experience](#tab/new-experience/)
-
-To update prices for multiple items, you must create a new price list, and then copy the lines from an existing price list. When you copy the lines you can use filters to specify what to copy, and you can specify an integer or decimal number in the **Adjustment Factor** field to increase or decrease prices. The price list must be in the **Draft** status. If needed, you can then deactivate the old price list.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Sešit prodejní ceny** a poté vyberte související odkaz.
+2. Zvolte akci **Navrhnout cenu zboží**.
+3. V záložce **Zboží** vyplňte pole **Číslo** nebo **Účto skupina zboží** nebo jiná pole s původními cenami zboží, které chcete aktualizovat.
+4. V horní části stránky požadavku vyplňte **Typ prodeje** a **Kód prodeje** typem a názvem, do kterého chcete prodejní ceny zkopírovat.
+5. Pokud chcete, aby dávková úloha automaticky zpravovala ceny navrhovaných položek, zadejte úpravu do pole **Faktor úpravy**. Například pokud zadáte 1,15 do **faktoru úpravy** pro 15% zvýšení ceny zboží.
+6. Pokud chcete, aby dávková úloha vytvořila nové ceny, vyberte pole **Vytvořit nové ceny**.
+7. Vyberte tlačítko **OK** pro vyplnění řádků na stránce **Sešitu prodejní ceny** navrhovanými cenami, které označují, že jsou platné pro vybrané **Zboží**
 
 > [!NOTE]
-> You cannot have two lines that have the same settings but different prices. If that happens, a message will display when you activate a price list. You can choose the price to use by opening the list and deleting the incorrect price.
+> Tato dávková úloha vytváří pouze návrhy a neimplementuje navrhované změny. Pokud jste s návrhy spokojeni a chcete je implementovat, to znamená vložit je do tabulky **Prodejní ceny**, můžete použít dávkovou úlohu **Provést změnu ceny**, která se nachází na ve skupině **Akce** v záložce **Funkce** na stránce **Sešit prodejní ceny**.
+
+#### [Po novu](#tab/new-experience/)
+
+Chcete-li aktualizovat ceny pro více položek, je nutné vytvořit nový ceník a potom zkopírovat řádky z existujícího ceníku. Při kopírování řádků můžete pomocí filtrů určit, co se má kopírovat, a v poli **Faktor úpravy** můžete zadat celé číslo nebo desetinné číslo pro zvýšení nebo snížení cen. Ceník musí být ve stavu **Koncept.**. V případě potřeby můžete starý ceník deaktivovat.
+
+> [!NOTE]
+> Nemůžete mít dva řádky, které mají stejné nastavení, ale různé ceny. Pokud k tomu dojde, zobrazí se při aktivaci ceníku zpráva. Cenu, kterou chcete použít, můžete zvolit otevřením seznamu a odstraněním nesprávné ceny.
 
 ---
 
