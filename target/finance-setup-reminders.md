@@ -13,92 +13,92 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Reminder Terms and Levels
+# Nastavení podmínek a úrovní upomínek
 
-You can use reminders to remind customers about overdue amounts. [!INCLUDE [reminder-terms](includes/reminder-terms.md)]
+Pomocí připomenutí můžete zákazníkům připomenout částky po splatnosti. [!INCLUDE [reminder-terms](includes/reminder-terms.md)]
 
-## Reminder terms
+## Podmínky upomínky
 
-If customers have overdue payments, you must decide when and how to send them a reminder. In addition, you may want to debit their accounts for interest or fees. You can set up any number of reminder terms.
+Pokud mají zákazníci platby po splatnosti, musíte se rozhodnout, kdy a jak jim zaslat upomínku. Kromě toho můžete z jejich účtů odepsat úroky nebo poplatky. Můžete nastavit libovolný počet podmínek upomínky.
 
 > [!NOTE]
-> If you want to calculate interest on overdue payments, you can do so when you create reminders. If, however, you just want to calculate interest and inform your customers about this without sending reminders, you should use [finance charge memos](finance-setup-finance-charges.md). For more information, see [Reminders](receivables-collect-outstanding-balances.md#reminders) or [Finance Charges](receivables-collect-outstanding-balances.md#finance-charges), respectively.
+> Chcete-li vypočítat úrok z prodlení s platbami po splatnosti, můžete tak učinit při vytváření upomínek. Pokud však chcete pouze vypočítat úroky a informovat o tom své zákazníky bez zasílání upomínky, měli byste použít [Penále](finance-setup-finance-charges.md). Další informace naleznete v tématu [Upomínky](receivables-collect-outstanding-balances.md#reminders) nebo [Finanční poplatky](receivables-collect-outstanding-balances.md#finance-charges).
 
-### To set up reminder terms
+### Nastavení podmínek upomínky
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky upomínky** a vyberte související odkaz.
 2. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
-3. To use more than one combination of reminder terms, set up a code for each one.
+3. Chcete-li použít více než jednu kombinaci podmínky upomínky, nastavte pro každou z nich vlastní kód.
 
-## Reminder levels
+## Úrovně upomínky
 
-For each reminder terms code, you can define an unlimited number of reminder levels. The first time a reminder is created for a customer, the setting from level 1 is used. When the reminder is issued, the level number is registered on the reminder entries that are created and linked to the individual customer ledger entries. If it is necessary to remind the customer again, all reminder entries linked to open customer ledger entries are checked to locate the highest level number. The conditions from the next level number will then be used for the new reminder.
+Pro každý kód podmínek upomínky můžete definovat neomezený počet úrovní upomínky. Při prvním vytvoření upomínky pro zákazníka se používá nastavení z úrovně 1. Při vystavení upomínky je číslo úrovně zaznamenáno v položkách upomínky, které jsou vytvořeny a propojeny s jednotlivými položkami zákazníka. Pokud je nutné zákazníkovi znovu připomenout, jsou všechny položky upomínky spojené s otevřenými položkami zákazníka zkontrolovány, aby bylo vyhledání nejvyššího čísla úrovně. Pro nové upomínky budou poté použity podmínky z čísla další úrovně.
 
-If you create more reminders than you have defined levels for, the conditions for the highest level will be used. You can create as many reminders as are allowed by the **Max. No of Reminders** field in the reminder terms.
+Pokud vytvoříte více upomínek, než jste definovali úrovně, budou použity podmínky pro nejvyšší úroveň. Můžete vytvořit tolik upomínek, kolik povoluje pole **Maximální počet upomínek** v podmínkách upomínek.
 
-### To set up reminder levels
+### Nastavení úrovní upomínek
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
-2. On the **Reminder Terms** page, select the line with the terms you want to set up levels for, and then choose **Levels** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky upomínky** a vyberte související odkaz.
+2. Na stránce **Podmínky upomínky** vyberte řádek s podmínkami, pro které chcete nastavit úrovně, a poté vyberte akci **Úrovně**.
 3. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
    > [!TIP]
-   > The setting of the **Calculate Interest** field determines if interest will appear on the reminder when the reminder is issued. However, the **Post Interest** field in the **Reminder Terms** page determines if the calculated interest must be posted to G/L and customer accounts.
+   > Nastavením polí **Vypočítat penále** určuje, zda se úrok zobrazí na upomínce při vystavení upomínky. Pole **Účtovat úrok** na stránce **Podmínky upomínky** určuje, zda musí být vypočtený úrok zaúčtován na zápočty a účty odběratelů.
    >
-   > To indicate that interest should be calculated, choose the **Calculate Interest** field.
+   > Chcete-li označit, že úroky mají být vypočteny, zvolte pole **Výpočet penále**.
 
-   Optionally, for each reminder level, specify additional fees in both LCY and in foreign currency. You can define many additional fees in foreign currencies for each code on the **Reminder Levels** page.
+   Volitelně pro každou úroveň upomínky zadejte další poplatky v CZK i v cizí měně. Pro každý kód můžete na stránce **Úrovně upomínky** definovat mnoho dalších poplatků v cizích měnách.
 
-   The additional fees can be calculated in three different ways that are defined by the value of the **Add. Fee Calculation Type** field.
+   Dodatečné poplatky lze vypočítat třemi různými způsoby, které jsou definovány hodnotou v poli **Typ výpočtu poplatku**.
 
-   - **Fixed**
+   - **Pevný**
 
-      Fees are calculated based on the values of the **Additional Fee** fields on the line for the reminder level itself.
-   - **Single Dynamic**
+      Poplatky se počítají na základě hodnoty pole **Poplatek** na řádku pro samotnou úroveň upomínky.
+   - **Jednoduchý dynamický**
 
-      Fees are calculated based on the values of the fields on the relevant line in the **Additional Fee Setup** page for that reminder level.
-   - **Accumulated Dynamic**
+      Poplatky se počítají na základě hodnot polí na příslušném řádku na stránce **Nastavení poplatku** pro tuto úroveň připomenutí.
+   - **Kumulovaný dynamický**
 
-      Fees are calculated based on the values of the fields on the combined lines in the **Additional Fee Setup** page for that reminder level.
+      Poplatky se počítají na základě hodnot polí na kombinovaných řádcích na stránce **Nastavení poplatku** pro tuto úroveň připomenutí.
 
-4. Choose the **Currencies** action.
-5. On the **Currencies for Reminder Levels** page, define for each reminder level code and corresponding reminder level number a currency code and an additional fee.
+4. Vyberte akci **Měny**.
+5. Na stránce **Měna pro úroveň upomínky**, definujte pro každý kód úrovně upomínky a odpovídající číslo upomínky kód měny a další poplatek.
 
    > [!NOTE]  
-   > When you create reminders in a foreign currency, the foreign currency conditions that you set up here will be used to create reminders. If there are no foreign currency reminder conditions set up, the LCY reminder conditions that are set up on the **Reminder Levels** page will be used and then converted to the relevant currency.
+   > Když vytváříte upomínky v cizí měně, pak budou vytvoření připomenutí použity podmínky v cizí měně, které zde nastavíte. Pokud nejsou nastaveny žádné podmínky upomínky v cizí měně, budou použity podmínky upomínky v CZK, které jsou nastaveny na stránce **Úrovně upomínky** a poté převedeny na příslušnou měnu.
 
-   For each reminder level, you can specify text that will be printed before (**Beginning Text**) or after (**Ending Text**) on the entries on the reminder.
+   Pro každou úroveň upomínky můžete zadat text, který bude vytištěn před (**Text na začátku**) nebo (**Text na konci**) u položek na upomínce.
 
-6. Choose the **Beginning Text** or **Ending Text** actions respectively, and fill in the **Reminder Text** page.
-7. To automatically insert related values in the resulting reminder text, enter the following placeholders in the **Text** field .
+6. Zvolte akce **Text na začátku** nebo **Text na konci** a vyplňte stránku **Text upomínky**
+7. Chcete-li automaticky vložit související hodnoty do výsledného textu upomínky, zadejte do pole **Text** následující symboly .
 
-   | Placeholder | Hodnota |
+   | Zástupný symbol | Hodnota |
    |-----------------|-----------|  
-   | %1 | Content of the **Document Date** field on the reminder header |
-   | %2 | Content of the **Due Date** field on the reminder header |
-   | %3 | Content of the **Interest Rate** field on the related finance charge terms |
-   | %4 | Content of the **Remaining Amount** field on the reminder header |
-   | %5 | Content of the **Interest Amount** field on the reminder header |
-   | %6 | Content of the **Additional Fee** field on the reminder header |
-   | %7 | The total amount of the reminder |
-   | %8 | Content of the **Reminder Level** field on the reminder header |
-   | %9 | Content of the **Currency Code** field on the reminder header |
-   | %10 | Content of the **Posting Date** field on the reminder header |
-   | %11 | The company name |
-   | %12 | Content of the **Add. Fee per Line** field on the reminder header |
+   | %1 | Obsah pole **Datum dokladu** v záhlaví upomínky |
+   | %2 | Obsah pole **Datum splatnosti** v záhlaví upomínku |
+   | %3 | Obsah pole **Úroková sazba** v souvisejících podmínkách penále |
+   | %4 | Obsah pole **Zbývající částka** v záhlaví upomínky |
+   | %5 | Obsah pole **Částka úroku** v záhlaví upomínek |
+   | %6 | Obsah pole **Poplatek** hlavičce upomínky |
+   | %7 | Celková částka upomínky |
+   | %8 | Obsah pole **Úroveň připomenutí** v záhlaví upomínky |
+   | %9 | Obsah pole **Kód měny** v záhlaví upomínky |
+   | %10 | Obsah pole **Zúčtovací datum** v hlavičce upomínky |
+   | %11 | Název společnosti |
+   | %12 | Obsah pole **Poplatek řádku** v hlavičce upomínky |
 
-   For example, if you write **You owe %9 %7 due on %2.**, then the resulting reminder will contain the following text: **You owe USD 1.200,50 due on 02-02-2014.**.
+   Například pokud napíšete **Dlužíte % 9 %7 z důvodu %2.**, výsledná upomínka bude obsahovat následující text: **Dlužíte 1 200,50 USD splatného 02-02- 2014**.
 
    > [!NOTE]
-   > The due date is calculated according to the date formula that you enter. For more information, see [Using Date Formulas](ui-enter-date-ranges.md#using-date-formulas).
+   > Datum splatnosti se počítá podle zadaného vzorce data. Pro více informací navštivte [Použití vzorců dat](ui-enter-date-ranges.md#using-date-formulas).
 
-After you have set up the reminder terms, with additional levels and text, enter one of the codes on each of the customer cards. For more information, see [Register New Customers](sales-how-register-new-customers.md).
+Po nastavení podmínek upomínky s dalšími úrovněmi a textem zadejte jeden z kódů na každé kartě zákazníka. Pro více informací navštivte <x3/>Evidence nového zákazníka<x4/>.
 
 ## Viz také
 
-[Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
-[Set Up Finance Charge Terms](finance-setup-finance-charges.md)  
-[Setting Up Finance](finance-setup-finance.md)
+[Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)  
+[Nastavení podmínek penále](finance-setup-finance-charges.md)  
+[Nastavení financí](finance-setup-finance.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

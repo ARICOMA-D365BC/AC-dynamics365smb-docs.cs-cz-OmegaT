@@ -143,7 +143,7 @@ You can apply a data template to any record that is in [!INCLUDE[prod_short](inc
 
 Následující postup je založen na nové kartě zákazníka.
 
-1. Vytvoření zákazníka. For more information, see [Register New Customers](sales-how-register-new-customers.md).
+1. Vytvoření zákazníka. Pro více informací navštivte <x3/>Evidence nového zákazníka<x4/>.
 2. On the **Customer Card** page, choose the **Apply Template** action.
 3. On the **Customer Templates** page, select one of the templates, and then choose the **OK** button.
 

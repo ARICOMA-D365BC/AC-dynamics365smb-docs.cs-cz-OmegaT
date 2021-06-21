@@ -29,7 +29,7 @@ You can fill customer fields on the sales quote in two ways depending on whether
 3. In the **Customer** field, enter the name of the new customer.
 4. In the dialog box about registering the new customer, choose the **Yes** button.
 5. On the **Select a template for a new customer** page, choose a template to base the new customer card on, and then choose the **OK** button.
-6. A new customer card displays the information on the selected customer template. Fill in the remaining fields. For more information, see [Register New Customers](sales-how-register-new-customers.md).
+6. A new customer card displays the information on the selected customer template. Fill in the remaining fields. Pro více informací navštivte <x3/>Evidence nového zákazníka<x4/>.
 7. When you have completed the customer card, choose the **OK** button to return to the **Sales Quote** page.
 
    Several fields on the sales quote are now filled with information that you specified on the new customer card.

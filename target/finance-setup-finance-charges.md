@@ -42,7 +42,7 @@ Additionally, each term in the Finance Charge Terms table is linked to a subtabl
 3. To use more than one combination of finance charge terms, set up a code for each one.
 
    For each finance charge term, you can specify individual conditions that can include additional fees in both LCY and in foreign currency. You can define additional fees in foreign currencies for each term on the **Finance Charge Terms** page.
-4. Choose the **Currencies** action.
+4. Vyberte akci **Měny**.
 5. On the **Currencies for Fin. Chrg. Terms** page, define for each term a currency code and an additional fee.
 
    > [!NOTE]  
@@ -52,15 +52,15 @@ Additionally, each term in the Finance Charge Terms table is linked to a subtabl
 6. Choose the **Beginning Text** or **Ending Text** actions respectively, and fill on the **Finance Charge Text** page.
 7. To automatically insert related values in the resulting finance charge text, enter the following placeholders in the **Text** field.
 
-| Placeholder | Hodnota |
+| Zástupný symbol | Hodnota |
 |-----------------|-----------|  
 | %1 | Content of the **Document Date** field on the finance charge memo header |
 | %2 | Content of the **Due Date** field on the finance charge memo header |
-| %3 | Content of the **Interest Rate** field on the related finance charge terms |
+| %3 | Obsah pole **Úroková sazba** v souvisejících podmínkách penále |
 | %4 | Content of the **Remaining Amount** field on the finance charge memo header |
 | %5 | Content of the **Interest Amount** field on the finance charge memo header |
 | %6 | Content of the **Additional Fee** field on the finance charge memo header |
-| %7 | The total amount of the reminder |
+| %7 | Celková částka upomínky |
 | %8 | Content of the **Currency Code** field on the finance charge memo header |
 | %9 | Content of the **Posting Date** field on the finance charge memo header |
 

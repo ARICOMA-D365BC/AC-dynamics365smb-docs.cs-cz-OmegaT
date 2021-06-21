@@ -48,7 +48,7 @@ You can fill customer fields on the sales order in two ways depending on whether
 5. On the **Select a template for a new customer** page, choose a template to base the new customer card on, and then choose the **OK** button.
 
    A new customer card opens, prefilled with the information on the selected customer template. The **Name** field is prefilled with the new customer's name that you entered on the sales order.
-6. Proceed to fill in the remaining fields on the customer card. For more information, see [Register New Customers](sales-how-register-new-customers.md).
+6. Proceed to fill in the remaining fields on the customer card. Pro více informací navštivte <x3/>Evidence nového zákazníka<x4/>.
 7. When you have completed the customer card, choose the **OK** button to return to the **Sales Order** page.
 
    Several fields on the sales order are now filled with information that you specified on the new customer card.
@@ -76,7 +76,7 @@ You can fill customer fields on the sales order in two ways depending on whether
 13. Repeat steps 9 through 12 for every item that you want to sell to the customer.
 
    The totals under the lines are automatically calculated as you create or modify lines.
-14. A new customer card displays the information on the selected customer template. Fill in the remaining fields. For more information, see [Register New Customers](sales-how-register-new-customers.md).
+14. A new customer card displays the information on the selected customer template. Fill in the remaining fields. Pro více informací navštivte <x3/>Evidence nového zákazníka<x4/>.
 15. When you have completed the customer card, choose the **OK** button to return to the **Sales Order** page.
 
    Several fields on the sales order are now filled with information that you specified on the new customer card.

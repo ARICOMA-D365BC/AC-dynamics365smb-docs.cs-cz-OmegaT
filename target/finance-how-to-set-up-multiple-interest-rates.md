@@ -24,7 +24,7 @@ Při vytváření podmínek penále a upomínek pro zpožděné platby penále m
 2. On the **Finance Charge Terms** page, select the required finance term, and then choose the **Interest Rates** action.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Zvolte tlačítko **OK**.
-5. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky upomínky** a vyberte související odkaz.
 6. On the **Reminder Terms** page, select the required reminder term, and then choose the **Levels** action.
 7. On the **Reminder Levels** page, select the **Calculate Interest** field.
 
