@@ -1,13 +1,13 @@
 ---
-    title: Settle Purchase Invoices Promptly
-    description: If you need to pay the vendor by cash or check, you can have the necessary posting done when you post the invoice.
-    author: bholtorf
+title: Settle Purchase Invoices Promptly
+description: If you need to pay the vendor by cash or check, you can have the necessary posting done when you post the invoice.
+author: bholtorf
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: bholtorf
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.search.form: 51, 9308
+ms.date: 04/01/2021
+ms.author: bholtorf
 
 ---
 # Settle Purchase Invoices Promptly
@@ -19,7 +19,7 @@ If you need to pay the vendor by cash or check, you can post the payment when yo
 
 ## To settle purchase invoices promptly
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.  
 2. Choose the **New** action.  
 3. To pay either in cash or by bank transfer, enter the number of the general ledger cash account or the bank account in the **Bal. Account No.** field.  
 

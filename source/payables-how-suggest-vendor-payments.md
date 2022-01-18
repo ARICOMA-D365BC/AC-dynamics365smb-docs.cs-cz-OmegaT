@@ -1,8 +1,6 @@
 ---
-title: Use the Suggest Vendor Payments Batch Job| Microsoft Docs
+title: Suggest Vendor Payments Batch Job
 description: You can specify vendor payment settings to get suggestions or proposals for payments that are due soon or where a discount is available.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -11,11 +9,13 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: vendor payment, creditor, debt, balance due, AP
+ms.search.form: 256
 ms.date: 04/01/2021
 ms.author: edupont
 
 ---
 # Suggest Vendor Payments
+
 On the **Payment Journal** page, you can use the **Suggest Vendor Payments** batch job to suggest payment lines. Lines for payments that are due soon or payments where a payment discount is available are suggested based on your settings.
 
 To benefit fully from payment suggestions, you must first prioritize your vendors. For more information, see [Prioritize Vendors](purchasing-how-prioritize-vendors.md).  
@@ -30,7 +30,7 @@ To benefit fully from payment suggestions, you must first prioritize your vendor
     * Open vendor entries that qualify for payment discounts, arranged by vendor number.  
 
 ## To use the Suggest Vendor Payments function
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.  
 2. Open the relevant journal, and then choose the **Suggest Vendor Payments** action.  
 3. Fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 4. Choose the **OK** button.  

@@ -1,6 +1,6 @@
 ---
-    title: Electronic documents in Business Central   | Microsoft Docs
-    description: Introduction to sending and receiving electronic documents in Business Central.
+    title: Electronic documents in Business Central
+    description: This is an overview of how to use the Data Exchange Framework to manage the exchange of data in business documents like bank files and currency exchange rates.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -8,8 +8,8 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.keywords: Data exchange framework, data files, data exchange, electronic document, invoice, Business Central, business document, standard-compliant file
+    ms.date: 06/10/2021
     ms.author: edupont
 
 ---
@@ -17,9 +17,9 @@
 # Exchanging Data Electronically
 You can use the Data Exchange Framework to manage the exchange of business documents, bank files, currency exchange rates, and any other data files with your business partners.
 
-In the standard version of [!INCLUDE[prod_short](includes/prod_short.md)], the Data Exchange Framework is used in features, such as Electronic Documents, Bank File Import/Export, and Currency Exchange Rates Update. For more information, see [About the Data Exchange Framework](across-about-the-data-exchange-framework.md).
+In the standard version of [!INCLUDE[prod_short](includes/prod_short.md)], the Data Exchange Framework is used in processes such as exchanging electronic documents, importing and exporting bank files, and updating exchange rates for currencies. For more information, see [About the Data Exchange Framework](across-about-the-data-exchange-framework.md).
 
-As an administrator or Microsoft partner, you can use the framework in new integration features by setting up which data to exchange and how. For more information, see [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md).
+As an administrator or Microsoft partner, you can use the framework in new integration features by specifying the data to exchange, and how to exchange it. For more information, see [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md).
 
 The following table describes a sequence of tasks, with links to the topics that describe them.  
 

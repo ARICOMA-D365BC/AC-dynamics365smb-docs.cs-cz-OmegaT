@@ -1,17 +1,19 @@
 ---
-title: Set Up Prepayments | Microsoft Docs
-description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. You might require a deposit before you manufacture items to order, or you might require payment before you ship items to a customer. The prepayments functionality enables you to invoice and collect deposits required from customers or to remit deposits to vendors. Thus, you can ensure that all payments are posted against an invoice.
+title: Set Up Prepayments
+description: Learn how to configure Business Central so that you can use prepayments to invoice and collect deposits from customers and remit deposits to vendors.
 author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
-ms.search.keywords: prepayment
-ms.date: 04/01/2021
+ms.search.keyword: prepayment
+ms.search.form: 314, 459, 460, 664
+ms.date: 10/27/2021
 ms.author: edupont
 
 ---
 # Set Up Prepayments
-If you require your customers to submit payment before you ship an order to them, or if your vendor requires you to submit payment before they ship an order to you, you can use the Prepayment functionality. The functionality enables you to invoice and collect deposits required from customers or to remit deposits to vendors, and to ensure that all partial payments are posted against an invoice. For more information, see [Create Prepayment Invoices](finance-how-to-create-prepayment-invoices.md).
+
+If you require your customers to submit payment before you ship an order to them, or if your vendor requires you to submit payment before they ship an order to you, you can use the Prepayment functionality. The prepayments functionality enables you to invoice and collect deposits required from customers or to remit deposits to vendors, to ensure that all partial payments are posted against an invoice. For more information, see [Create Prepayment Invoices](finance-how-to-create-prepayment-invoices.md).
 
 Before you can post prepayment invoices, you have to set up the posting accounts in the general ledger, and you have to set up number series for prepayment documents. You must specify an account for prepayments related to sales and an account for prepayments related to purchasing. You can specify the same posting accounts to be used for all prepayments related to all general business posting groups or general product posting groups, or you can specify specific accounts for specific posting groups for sales and purchasing, respectively. This depends on your company's requirements for tracking prepayments.  
 
@@ -19,6 +21,7 @@ You can define the percentage of the line amount that will be invoiced for prepa
 
 > [!NOTE]
 > We recommend that you do not use a prepayment percentage of 100% in the following cases:
+>
 > * If you are located in North America. Due to how taxes are calculated, a prepayment percentage of 100% can lead to issues with prepayment invoices.
 > * In all regions, if you manually deduct a payment discount from the invoice. A prepayment percentage of 100% will not automatically leave an amount from which to deduct the discount. 
 
@@ -28,11 +31,11 @@ Because the prepaid amount belongs to the buyer until they have received the goo
 
 ## To add prepayment accounts to the general posting setup  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.
-2. On the **General Posting Setup** page, fill in the following fields:  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.
+2. On the **General Posting Setup** page, for the relevant lines, fill in the following fields:  
 
-    - **Sales Prepayments Account**  
-    - **Purch. Prepayments Account**  
+    * **Sales Prepayments Account**  
+    * **Purch. Prepayments Account**  
 
 > [!TIP]
 > If you cannot see the fields in the **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.  
@@ -41,34 +44,38 @@ If you have not already set up general ledger accounts for prepayments, you can 
 
 ## To set up number series for prepayment documents  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
-2. On the **Sales & Receivables Setup** page, fill in the following fields:  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+2. On the **Sales & Receivables Setup** page, on the **Number Series** FastTab, fill in the following fields:  
 
-   - **Posted Prepmt. Inv. Nos.**
-   - **Posted Prepmt. Cr. Memo Nos.**
+   * **Posted Prepmt. Inv. Nos.**
+   * **Posted Prepmt. Cr. Memo Nos.**
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
-2. On the **Purchases & Payables Setup** page, fill in the following fields:
+3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
+4. On the **Purchases & Payables Setup** page, on the **Number Series** FastTab, fill in the following fields:
 
-    - **Posted Prepmt. Inv. Nos.**
-    - **Posted Prepmt. Cr. Memo Nos.**
+    * **Posted Prepmt. Inv. Nos.**
+    * **Posted Prepmt. Cr. Memo Nos.**
 
 > [!NOTE]  
 > You can use the same number series for prepayment invoices and regular invoices, or you can use different number series. If you use different series, they must not overlap because there must not be any numbers that exist in both series.  
 
-## To set up prepayment percentages for items, customers, and vendors  
-For an item, you can set up a default prepayment percentage for all customers, a specific customer, or a customer price group.  
+## To set up prepayment percentages for items, customers, and vendors
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+For an item, you can set up a default prepayment percentage for all customers, a specific customer, or a customer price group. If you do not want to apply the same prepayment percentage to all customers, you must specify which customers or which customer price groups the prepayment percentage applies to.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Select an item, and then choose the **Prepayment Percentages** action.  
 3. On the **Sales Prepayment Percentages** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-For a customer or vendor, you can set up one default prepayment percentage for all items and all types of sales lines. You enter this on the customer or vendor card.
+For a customer or vendor, you can set up one default prepayment percentage for all items and all types of sales lines. You enter this on the customer or vendor card. The following procedure shows how to specify a prepayment percentage for a customer, but similar steps apply to vendors.  
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
 2. Open the card for a customer.
 3. Fill in the **Prepayment %** field.
 4. Repeat the steps for other customers or for vendors.  
+
+> [!TIP]
+> You can also access the **Sales Prepayment Percentages** page from the customer or vendor card.
 
 ### To determine which prepayment percentage has first priority  
 

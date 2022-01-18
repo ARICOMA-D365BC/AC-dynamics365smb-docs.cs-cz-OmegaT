@@ -1,13 +1,13 @@
 ---
-    title: Workflow Notifications
-    description: Many workflow responses are about notifying a user that an event has occurred that they must act on. For example, on one workflow step, the event can be that User 1 requests approval of a new record, and the response is that a notification is sent to User 2, the approver. On the next workflow step, the event can be that User 2 approves the record, and the response is that a notification is sent to User 3 to start a related processing of the approved record. For workflow steps that are about approval, each notification is tied to an approval entry.
+    title: Setting up Workflow Notifications
+    description: This topic tells you how to set up workflow notifications to alert a user that an event has occurred that they must react to; a workflow response is required. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
     ms.topic: conceptual
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/11/2021
     ms.author: edupont
 
 ---
@@ -36,6 +36,10 @@ You set up different aspects of workflow notifications in the following places:
 * Customize the email notifications
 
     If you want, you can customize the content of the email notification by modifying report 1320, Notification Email. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).  
+
+    > [!NOTE]
+    > If you want to use email as the notification method, you must set up email for both the sender and the receiver in [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Set up Email](admin-how-setup-email.md).
+
 * Response options
 
     You set up specific content and rules of a workflow notification when you create the workflow in question. You do this by selecting options on the **Workflow Response Options** page for the workflow response that represents the notification. For more information, see step 9 in [Create Workflows](across-how-to-create-workflows.md).  

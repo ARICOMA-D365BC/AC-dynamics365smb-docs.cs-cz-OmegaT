@@ -1,6 +1,6 @@
 ---
-title: Overview of Tasks to Configure Sales Processes | Microsoft Docs
-description: Outlines tasks to set up rules and values to define your sales policies and processes.
+title: Overview of Tasks to Configure Sales Processes
+description: Overview of tasks required to set up rules and values that define your sales policies and processes including general set-up and finance related sales set-up.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -9,16 +9,17 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: trade, sell, configure
-ms.date: 04/01/2021
+ms.search.form: 170, 172, 300, 301, 428, 459, 1401
+ms.date: 06/23/2021
 ms.author: edupont
 
 ---
 # Setting Up Sales
 Before you can manage sales processes, you must configure the rules and values that define the company's sales policies.
 
-You must define the general setup, such as which sales documents are required and how their values are posted. This general setup is typically performed once during the initial implementation.
+You must define the general setup on the **Sales & Receivables** page, such as which sales documents are required, how their values are posted, and the type of lines to create by default. This general setup is typically performed once during the initial implementation.
 
-A separate series of tasks related to registering new customers is to record any special price or discount agreements that you have with each customer.
+A separate series of tasks related to registering new customers is to record any special price or discount agreements that you have with each customer. For more information, see [Record Special Sales Prices and Discounts](sales-how-record-sales-price-discount-payment-agreements.md).
 
 Finance-related sales setup, such as payment methods and currencies, are covered in the Finance Setup section. For more information, see [Setting Up Finance](finance-setup-finance.md).
 

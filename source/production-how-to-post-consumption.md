@@ -1,16 +1,16 @@
 ---
-    title: Batch Post Consumption
-    description: If the flushing method is Manual, you must post the components manually, using a consumption journal.
-    author: SorenGP
+title: Batch Post Consumption
+description: If the flushing method is Manual, you must post the components manually, using a consumption journal.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 99000846, 99000850
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Batch Post Production Consumption
@@ -24,7 +24,7 @@ You can also set up [!INCLUDE[prod_short](includes/prod_short.md)] to automatica
 
 ## To post consumption for one or more production order lines
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Consumption Journal**, and then choose the related link.  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Consumption Journal**, and then choose the related link.  
 2. Fill in the fields with the production order data and the consumption data. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]  
 
     Use the **Calc. Consumption** action to generate journal lines from production orders based on the actual output (the quantity of finished goods that you have reported) or on the expected output (the quantity of finished goods that you expect to produce).

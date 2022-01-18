@@ -1,6 +1,6 @@
 ---
-    title: About Cost Accounting | Microsoft Docs
-    description: Cost accounting can help you understand the costs of running a business.
+    title: About Cost Accounting
+    description: Cost accounting can help you understand the costs of running a business. Cost accounting information is designed to analyze various issues.  
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -8,8 +8,8 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.form: 1101, 1103, 1105, 1108, 1111, 1112, 1124
+    ms.date: 06/16/2021
     ms.author: edupont
 
 ---
@@ -33,7 +33,7 @@ Cost accounting has the following main components:
 
 The following diagram shows the workflow in cost accounting.  
 
-![Cost Accounting overview](media/costaccountingoverview.png "CostAccountingOverview")  
+![Cost Accounting overview.](media/costaccountingoverview.png "CostAccountingOverview")  
 
 ## Cost Types, Cost Centers, and Cost Objects  
 You define cost types, cost centers, and cost objects to analyze what the costs are, where the costs come from, and who should bear the costs.  

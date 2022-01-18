@@ -1,8 +1,6 @@
 ---
-title: Set Up and Manage a Budget for a Job| Microsoft Docs
+title: Set Up and Manage a Budget for a Job
 description: Describes how to plan resources and forecast and control the costs of a project by setting up a budget for each job.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -11,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project budget, forecast
+ms.search.form: 1002, 1007
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -23,7 +22,7 @@ The following procedure describes how to estimate budgeted costs during planning
 ## <a name="JobBudgetCosts"></a> To estimate the budgeted costs for a job
 When a customer wants to know the price of a job that will be invoiced based on usage, you must have to determine the budgeted costs for the job. You use the **Job Task Lines** page to do this.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.  
 2. Open a relevant job.
 3. Select a task line of type Posting, and then choose the **Job Planning Lines** action.
 4. On a new line, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]   

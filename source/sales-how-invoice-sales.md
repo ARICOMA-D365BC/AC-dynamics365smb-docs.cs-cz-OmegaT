@@ -9,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bill, sale, invoice, order
+ms.search.form: 42, 43, 48, 9301, 9305
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -37,7 +38,7 @@ You can fill customer fields on the sales invoice in two ways depending on wheth
 
 ### To create a sales invoice
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.  
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.  
 2. In the **Customer** field, enter the name of an existing customer.
 
    Other fields on the **Sales Invoice** page contain standard information about the selected customer. If the customer is not registered, follow these steps:
@@ -117,6 +118,10 @@ You can even create directly-paid invoices for non-registered customers by first
 
 > [!TIP]
 > If you want to send your customers reminders of overdue payments, you must set up reminder levels and terms. For more information, see [Set Up Reminder Terms and Levels](finance-setup-reminders.md).  
+
+## External document numbers
+
+[!INCLUDE [ext-doc-no-sales](includes/ext-doc-no-sales.md)]
 
 ## See Related Training at [Microsoft Learn](/learn/modules/invoicing-customers-dynamics-365-business-central/index)
 

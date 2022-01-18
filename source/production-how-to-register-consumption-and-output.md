@@ -1,6 +1,6 @@
 ---
-    title: Register Consumption and Output for One Production Order | Microsoft Docs
-    description: This execution task is performed on the **Production Journal** page. The journal combines the functions of the separate consumption journal and output journals into one journal. The combined journal is accessed directly from a released production order. Its main purpose is to manually post the consumption of components, the quantity of end items produced, and the time spent in operations.
+    title: Register Consumption Output for Prod Order
+    description: This topic explains how to register consumption and output for a released production order line viewed on the Production Journal page.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -8,12 +8,13 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.form: 5510
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
 # Register Consumption and Output for One Released Production order line
+
 This execution task is performed on the **Production Journal** page. The journal combines the functions of the separate consumption journal and output journals into one journal. The combined journal is accessed directly from a released production order. Its main purpose is to manually post the consumption of components, the quantity of end items produced, and the time spent in operations. The values are posted to ledger entries under the released production order. Consumption quantities are posted as negative item ledger entries, output quantities are posted as positive ledger entries, and times spent are posted as capacity ledger entries. Such posted values can also be viewed at the bottom of the journal as actual quantities.  
 
 > [!NOTE]  
@@ -23,7 +24,7 @@ This execution task is performed on the **Production Journal** page. The journal
 >  Components without routing link codes are listed first in the journal.  
 
 ## To register consumption and output  
-1.  Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon enter **Released Prod. Orders**, and then choose the related link.  
+1.  Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon enter **Released Prod. Orders**, and then choose the related link.  
 2.  Open a released production order line that is ready for registration, and then on the **Lines** FastTab, choose the **Line** action, and then choose the **Production Journal** action.  
 
     The **Production Journal** page opens showing journal lines for the production order line according to the **Prod. Order Component** and **Prod. Order Routing** pages. These lines originate from the production BOM and routing assigned to the item that is being produced. For more information, see [Create Production BOMs](production-how-to-create-routings.md).  

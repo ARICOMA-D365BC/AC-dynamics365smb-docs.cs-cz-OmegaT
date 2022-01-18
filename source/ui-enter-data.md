@@ -1,18 +1,16 @@
 ---
-title: How to Enter Data in Business Central| Microsoft Docs
-description: Learn about general features that help you enter data in fields.
-author: SorenGP
-
+title: How to Enter Data in Business Central
+description: There are many general features that help you enter data easier, faster, and more precise. The basic principles and advanced features are described here.
+author: jswymer
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords:
-ms.date: 04/01/2021
-ms.author: edupont
+ms.search.keywords: decimal separator, data entry, focus
+ms.date: 10/01/2021
+ms.author: jswymer
 ---
-
 # Entering Data
 
 There are many general features that help you enter data easier, faster, and more precise. The basic principles and advanced features for entering data are described in this article.  
@@ -31,7 +29,6 @@ Some editable fields provide a picker to help you specify a value.
 |Dropdown          |Dropdowns provide a choice of fixed values or reference records from another table|
 |Switch or Checkbox|Some fields provide a simple choice of *Yes* or *No* values. The switch is used to specify this value, and is always displayed as a checkbox in lists|
 |Assist edit       |Some fields provide custom pickers that are suited to looking up and choosing the best value for that field, such as popup window|
-
 
 ### Modifying a field value
 
@@ -54,7 +51,6 @@ When the cursor is shown at the end of the field value:
 
 > [!NOTE]
 > After you specify a value, Business Central will only check that it's valid after you click outside the field or set focus to another element, such as the next field.  
-
 
 ## Keyboard Shortcuts
 
@@ -89,7 +85,7 @@ The following list provides some useful information about using Quick Entry.
 
 To set up Quick Entry on fields, you use personalization.
 
-1. Start personalization by selecting the ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center") icon, and then the **Personalize** action.
+1. Start personalization by selecting the ![Settings.](media/ui-experience/settings_icon_small.png "Settings icon for role center") icon, and then the **Personalize** action.
 2. Select a field that you want change. In lists, select the corresponding column heading. Then, choose either **Include in Quick Entry** or **Exclude from Quick Entry**.
 
 For more information about personalization, see [Personalize Your Workspace](ui-personalization-user.md).
@@ -132,9 +128,9 @@ You'll benefit particularly when you work with large line item lists and you wan
 
 ### Switching the Focus On and Off
 
-To focus on lines items, select anywhere in the line item part, and then choose ![Focus Mode icon](media/focus-mode.png "Focus mode icon") in the upper right corner, or press Ctrl+Shift+F12.
+To focus on lines items, select anywhere in the line item part, and then choose ![Focus Mode icon.](media/focus-mode.png "Focus mode icon") in the upper right corner, or press Ctrl+Shift+F12.
 
-To switch back to the normal view, choose ![Focus Mode icon](media/focus-mode.png "Focus mode icon") or press Ctrl+Shift+F12 again.
+To switch back to the normal view, choose ![Focus Mode icon.](media/focus-mode.png "Focus mode icon") or press Ctrl+Shift+F12 again.
 
 ## Multitasking Across Multiple Pages
 
@@ -144,15 +140,15 @@ You can open a card or document page in a new window. Opening a new window lets 
 - Manage interruptions to the current task, such as taking an incoming call.
 - Keep a window open for an ongoing task while you start or complete another task in windows.
 
-To open the current card or document in a new window, choose ![Open New Window](media/open-new-window-icon.png "Open new window icon") in the upper right corner, or press Alt+Shift+W.
+To open the current card or document in a new window, choose ![Open New Window.](media/open-new-window-icon.png "Open new window icon") in the upper right corner, or press Alt+Shift+W.
 
 <!--
 When working on multiple tasks at a time or when managing interruptions to the current task, such as taking an incoming call, you can open a card or document page in a new window. This allows you to keep a window open for an ongoing task while you start or complete another task in one or more other windows.
 -->
-To open the current card or document in a new window, choose ![Open New Window](media/open-new-window-icon.png "Open new window icon") in the upper right corner, or press Alt+Shift+W.
+To open the current card or document in a new window, choose ![Open New Window.](media/open-new-window-icon.png "Open new window icon") in the upper right corner, or press Alt+Shift+W.
 
 > [!NOTE]
-> When you open other pages from a card or document that is opened in a new window, those pages will open in a new window even though you don't choose ![Open New Window](media/open-new-window-icon.png "Open new window icon").
+> When you open other pages from a card or document that is opened in a new window, those pages will open in a new window even though you don't choose ![Open New Window.](media/open-new-window-icon.png "Open new window icon").
 
 > [!NOTE]
 > If you work in the Safari browser, a pop-up blocker may cause the new window to not open. If this is the case, specify the product URL as an allowed website. For information see, [Change preferences in Safari](https://go.microsoft.com/fwlink/?LinkId=2102965).<br /><br />
@@ -263,9 +259,16 @@ Here are some examples.
 
  The number 5 is converted to 5 hrs, if the unit of measure is hours.  
 
-## See Also  
- [Sorting, Searching, and Filtering Lists](ui-enter-criteria-filters.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+## <a name="decimal"></a>Setting the decimal separator used by numeric keyboards
+
+When using the decimal separator key of numeric keyboard to enter data, the actual decimal separator that's entered in the field is determined by the region setting of your Business Central. You set the region in Business Central on the **My Settings** page.
+
+For example, suppose you're using a numeric keyboard that uses a point (.) as the decimal separator key. But, you're entering data for a regional language that uses a comma (**,**) for the decimal separator, like Danish (Denmark) or French (France). So, you want decimals like "1.23" to be entered as "1,23". In this case, you can go to the **My Settings** page and set the **Region** to the target regional language, like **Danish (Denmark)** or **French (France)**. For more information, see [Change Basic Settings](ui-change-basic-settings.md#region).
+
+## See Also
+
+[Sorting, Searching, and Filtering Lists](ui-enter-criteria-filters.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
