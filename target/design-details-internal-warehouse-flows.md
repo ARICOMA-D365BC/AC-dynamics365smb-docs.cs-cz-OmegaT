@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Internal Warehouse Flows | Microsoft Docs
-    description: The flow of items between bins at a company location centers on picking components and putting away end items for assembly or production orders and ad-hoc movements, such as bin replenishments, without a relation to source documents.
+    title: Design Details - Internal Warehouse Flows
+    description: Flow between bins centers on picking components and putting away end items for assembly or production orders and ad-hoc movements, without source documents.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -110,7 +110,7 @@ Následující kroky popisují související akce různých uživatelů a odpov�
 
 The following illustration shows when the **Bin Code** field on the component list is filled according to your location or machine/work center setup.
 
-![Přehled, kdy a jak je vyplněno pole Kód přihrádky](media/binflow.png "Přehled, kdy a jak je vyplněno pole Kód přihrádky")
+![Overview of when/how the Bin Code field is filled in.](media/binflow.png "Overview of when/how the Bin Code field is filled in")
 
 ## Viz také
 [Detaily návrhu: Správa skladu](design-details-warehouse-management.md)

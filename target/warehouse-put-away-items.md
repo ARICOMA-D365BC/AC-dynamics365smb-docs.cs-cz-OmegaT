@@ -1,19 +1,20 @@
 ---
-    title: Put Items Away | Microsoft Docs
-    description: The warehouse activity of putting items away after they are received or output is performed in different ways depending on how warehouse management features are configured.
-    author: SorenGP
+title: Put Items Away
+description: Putting items away after they are received or output is performed in different ways depending on how warehouse management features are configured.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 5770, 5783, 5784, 5786, 5795, 7334, 7352, 7354, 7356, 7375, 7379, 7390, 7394, 7396, 9312, 9315, 9343
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Zaskladnění zboží
+
 Činnost skladu zaskladnění zboží po jeho přijetí nebo vyskladnění se provádí různými způsoby v závislosti na tom, jak jsou nakonfigurovány funkce správy skladu. Složitost se může řadit od žádných funkcí skladu, přes základní konfigurace skladu pro zpracování objednávek pouze v jedné nebo více aktivitách, až po pokročilé konfigurace, kde všechny aktivity skladu musí být prováděny v směrovaném workflow. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 Pokud se rozhodnete, že chcete uspořádat a zaznamenat údaje o zaskladnění pomocí dokumentů skladu, zaškrtněte políčko **Vyžadovat zaskladnění** na kartě lokace. To znamená, že když máte zboží přicházející do skladu prostřednictvím vstupního původního dokladu, chcete, aby bylo zaskladnění tohoto zboží řízeno systémem. Vstupní původní dokument může být nákupní objednávka, objednávka prodejní vratky, vstupní objednávka transferu nebo výrobní zakázka, jejíž výstup je připraven k zaskladnění.
@@ -36,12 +37,13 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Získání okamžitého přístupu k zaskladněným položkám, které jsou vám přiřazeny jako skladníkovi. | [Najděte svá přiřazení skladu](warehouse-how-to-find-your-warehouse-assignments.md) |
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)
+[Assembly Management](assembly-assemble-items.md)
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

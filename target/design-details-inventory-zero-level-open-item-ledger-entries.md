@@ -1,6 +1,6 @@
 ---
-title: open item ledger entries
-description: Learn why the inventory level is zero although open item ledger entries exist.
+title: Inventory Zero Open Item Ledger Entries
+description: This article addresses an issue where the inventory level is zero although open item ledger entries exist.
 author: edupont04
 
 ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 04/01/2021
+ms.date: 06/15/2021
 ms.author: edupont
 
 ---
@@ -50,7 +50,7 @@ Vyrovnání množství se vytvářejí pro všechny skladové transakce a vytvá
 
 Následující diagram ukazuje, jak jsou vytvářeny vyrovnání množství.
 
-![Tok úpravy nákladů od nákupu k prodeji](media/helene/TechArticleInventoryZero2.png "Tok úpravy nákladů od nákupu k prodeji")
+![Flow of cost adjustment from purchase to sale.](media/helene/TechArticleInventoryZero2.png "Flow of cost adjustment from purchase to sale")
 
 Všimněte si výše, že položka zboží 1 (Nákup) je dodavatelem zboží i zdrojem nákladů pro položku zboží 2 (prodej).
 
@@ -74,7 +74,7 @@ Předpokládejme kompletní tok nákladů, kde je zboží přijato, odesláno a 
 
 Následující diagram ilustruje tok nákladů.
 
-![Tok úpravy nákladů od prodeje po prodejní vratku](media/helene/TechArticleInventoryZero4.png "Tok úpravy nákladů od prodeje po prodejní vratku")
+![Flow of cost adjustment from sale to sales return.](media/helene/TechArticleInventoryZero4.png "Flow of cost adjustment from sale to sales return")
 
 Všimněte si výše, že náklady jsou předány do položky zboží 2 (Prodej), pak do položky zboží 3 (Prodejní vratka) a nakonec do položky zboží 4 (Prodej 2).
 
@@ -87,7 +87,7 @@ Problém, kdy je úroveň skladového minima nulová, přestože existují otev�
 
 Následující diagram ukazuje, jak jsou vyrovnání zboží vytvářeny v obou scénářích.
 
-![ok úpravy nákladů probíhá oběma směry](media/helene/TechArticleInventoryZero6.png "ok úpravy nákladů probíhá oběma směry")
+![Flow of cost adjustment goes in both directions.](media/helene/TechArticleInventoryZero6.png "Flow of cost adjustment goes in both directions")
 
 Výše uvedené upozornění, že je vytvořeno vyrovnání nákladů (reprezentovano modrými šipkami), aby se zajistilo, že položce zboží 2 (Prodejní vratka) budou přiřazeny stejné náklady jako položce zboží 1 (Prodej 1), která je stornována. Vyrovnání množství (reprezentované červenými šipkami) se však nevytváří.
 
@@ -129,7 +129,7 @@ U obou scénářů identifikujte příslušné vyrovnání nákladů následovn�
    | Číslo položky | Číslo položky zboží | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Zúčtovací datum | Vyrovnání nákladů |
    |---------|---------------------|----------------------|-----------------------|--------|------------|----------------|  
    | 299 | 334 | 334 | 333 | 1 | 28.01.2018 | Ano |
-<!--![Why is inventory zero 8](media/helene/TechArticleInventoryZero8.png "Whyisinventoryzero\_8")  -->
+<!--![Why is inventory zero 8.](media/helene/TechArticleInventoryZero8.png "Whyisinventoryzero\_8")  -->
 
 Všimněte si výše, že u vstupní položky zboží 334 jsou náklady použité na výstupní položku zboží 333.
 

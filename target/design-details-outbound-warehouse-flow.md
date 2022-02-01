@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Outbound Warehouse Flow | Microsoft Docs
-    description: The outbound flow in the warehouse begins with a request from released source documents to bring the items out of the warehouse location, either to be shipped to an external party or to another company location. From the storage area, warehouse activities are performed at different complexity levels to bring the items out to the shipping docks.
+    title: Design Details - Outbound Warehouse Flow
+    description: This topic talks about the sequence of the outbound warehouse flow from released source documents to ready-to-ship items.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -50,7 +50,7 @@ V metodách A, B a C jsou akce vyskladnění a dodávky kombinovány v jednom kr
 
 Následující diagram znázorňuje výstupní toky ze skladu podle typu dokladu v základním nastavení skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Výstupní tok v základním nastavení skladu](media/design_details_warehouse_management_outbound_basic_flow.png "Čísla v diagramu odpovídají krokům v následujících částech diagramu.")
+![Outbound flow in basic warehouse configurations.](media/design_details_warehouse_management_outbound_basic_flow.png "Outbound flow in basic warehouse configurations")
 
 ### 1: Vydání zdrojového dokladu / Vytvoření vyskladění nebo přesunu
 
@@ -77,7 +77,7 @@ Pro vyskladnění zásob jsou vytvořeny záporné položky zboží, vytvořeny 
 
 Následující diagram znázorňuje výstupní tok ze skladu podle typu dokladu při pokročilém nastavení skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Výstupní tok v pokročilém nastavení skladu](media/design_details_warehouse_management_outbound_advanced_flow.png "Výstupní tok v pokročilém nastavení skladu")
+![Outbound flow in advanced warehouse configurations.](media/design_details_warehouse_management_outbound_advanced_flow.png "Outbound flow in advanced warehouse configurations")
 
 ### 1: Vydání zdrojového dokladu
 

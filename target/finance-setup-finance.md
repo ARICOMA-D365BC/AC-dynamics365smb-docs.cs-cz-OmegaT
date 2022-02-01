@@ -1,6 +1,6 @@
 ---
-title: Set Up Financial Processes| Microsoft Docs
-description: Learn about the tasks to set up finance in your business to suit all your accounting, auditing, or bookkeeping needs.
+title: Set Up Financial Processes
+description: Learn about the tasks required to set up finance in your business to suit all your accounting, auditing, or bookkeeping needs.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accounting, auditing, bookkeeping
-ms.date: 04/01/2021
+ms.date: 06/16/2021
 ms.author: edupont
 
 ---
@@ -46,7 +46,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Set up Intrastat reporting, and submit the report to an authority | [Set Up and Report Intrastat](finance-how-setup-report-intrastat.md) |
 | Make sure an entry in a general journal is allocated to several different accounts when you post the journal, either quantity, percentage, or amount. | [Use Allocation Keys in General Journals](ui-how-use-allocation-keys-general-journals.md) |
 | Set up source codes and reason codes that you can use to track audit trails | [Setting Up Source Codes and Reason Codes for Audit Trails](finance-setup-trail-codes.md) |
-| Zadejte výchozí sestavy, které se mají použít pro různé typy dokladů. | [Výběr sestavy v Business Central](across-report-selections.md) |
+| Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
 > [!TIP]
 > Depending on your geographical location, some pages can contain fields that are not described in the articles that are listed here because they apply to local functionality or customizations. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]

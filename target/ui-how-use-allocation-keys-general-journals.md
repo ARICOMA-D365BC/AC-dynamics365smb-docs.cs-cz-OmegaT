@@ -1,6 +1,6 @@
 ---
-title: 'Use Allocation Keys in General Journals | Microsoft Docs'
-description: Learn how you can use allocation keys in journals.
+title: Use Allocation Keys in General Journals
+description: You can allocate an entry in a general journal to several different accounts when you post the journal.
 services: project-madeira
 documentationcenter: ''
 author: edupont04
@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cost accounting
-ms.date: 04/01/2021
+ms.date: 06/29/2021
 ms.author: edupont
 
 ---
@@ -19,7 +19,7 @@ ms.author: edupont
 Při účtování deníku můžete přiřadit položku ve finančním deníku několika různým účtům. Přidělení lze vytvořit podle množství, procenta nebo částky.
 
 ## Nastavení alokačních klíčů
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
 2. Choose the **Batch Name** field to open the **General Journal Batches** page.
 3. Můžete buď upravit již existující přidělení v listech děníku, nebo vytvořit nový deník s patřičným přidělením.
    * To create a new batch, choose the **New** action, and go to the next step.
@@ -34,7 +34,7 @@ Při účtování deníku můžete přiřadit položku ve finančním deníku n�
 11. Zaúčtujte deník.
 
 ## Změna již nastaveného alokačního klíče
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
 2. On the **Recurring General Journal** page, select the journal with the allocation.
 3. Choose the line with the allocation, and then choose **Allocations** action.
 4. Change the relevant fields, and then choose the **OK** button.

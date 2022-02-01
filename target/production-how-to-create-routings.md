@@ -1,6 +1,6 @@
 ---
-    title: How to Create Routings | Microsoft Docs
-    description: A routing holds master data that captures the process requirements of a given produced item. Once a production order is created for that item, its routing will govern the scheduling of operations as represented on the Prod. Order Routing page under the production order.
+    title: Create Routings
+    description: This topic gives an overview of the different ways to create routings including prerequisites required and how to create routing links.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -8,8 +8,8 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.form: 99000764, 99000765, 99000766, 99000767, 99000794, 99000796, 99000798, 99000806, 99000808, 99000810, 99000817, 99000834, 99000835, 99000836, 99000837, 99000840, 99000841, 99000844, 99000845
+    ms.date: 06/22/2021
     ms.author: edupont
 
 ---
@@ -28,7 +28,7 @@ Dříve než můžete TNG postup založit, musí být nastaveno následující:
 
 ## Vytvoření TNG postupů
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. In the **Type** field, select **Serial** to calculate the production routing according to the value in the **Operation No.** field.  
@@ -60,7 +60,7 @@ Můžete vytvořit řádky TNG postupu propojené s komponenty a určitými oper
 
 Another important benefit is that linked components and operations are displayed in a logical process structure when you use the **Production Journal** page for output and consumption posting.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Otevřete TNG postup obsahující operace, které chcete propojit.
 
    Make sure the routing status is **Under Development**.
@@ -92,7 +92,7 @@ Vybrané komponenty budou nyní propojeny s vybranými operacemi, když vytvoř�
 
 Požadujete-li pracovníky s kvalifikací, speciálními znalostmi nebo speciálním oprávněním pro operaci, můžete tyto osoby přiřadit k operaci. Kromě toho můžete k operaci přiřadit nástroje a požadavky na kvalitu. Tento postup popisuje přiřazení zaměstnanců. Postup je podobný jako u jiných typů informací o operacích.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Otevřete příslušný TNG postup.
 3. On the **Lines** FastTab, select the line that you want to process, choose the **Operations** action, and then choose the **Personnel** action.
 4. Fill in the fields on the **Routing Personnel** page.
@@ -102,7 +102,7 @@ Požadujete-li pracovníky s kvalifikací, speciálními znalostmi nebo speciál
 
 Princip verze umožňuje spravovat několik verzí TNG postupu. Struktura verze TNG postupu odpovídá struktuře technologického postupu skládajícího se z hlavičky a z řádků verzovaného TNG postupu. Základní rozdíl je definován počátečním datem.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Select the routing to be copied, and then choose the **Versions** action.
 3. On the **Routing Versions** page, choose the **New** action.
 4. Podle potřeby vyplňte pole.

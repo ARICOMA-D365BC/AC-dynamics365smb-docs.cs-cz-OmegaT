@@ -1,8 +1,6 @@
 ---
-title: Setting up Cash Flow Analysis| Microsoft Docs
-description: Set up the charts on the Accounts Role Center to help analyze the flow of money in your business, including expenses and income, liquidity, and cash receipts minus cash payments.
-services: project-madeira
-documentationcenter: ''
+title: Setting up Cash Flow Analysis (contains video)
+description: Use Accounts Role Center charts to analyze the flow of money in your business, including expenses and income, liquidity, and cash receipts minus cash payments.
 author: bholtorf
 
 ms.service: dynamics365-business-central
@@ -11,7 +9,8 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: money flow, expense and income, liquidity, cash receipts minus cash payments, Cartera, funds
-ms.date: 04/01/2021
+ms.search.form: 846, 847, 849, 855, 862, 869, 1818
+ms.date: 06/16/2021
 ms.author: bholtorf
 
 ---
@@ -66,14 +65,14 @@ Použití průvodce asistovaným nastavením:
 
 1. In the Accountant Role Center, under the **Cash Flow Forecast** chart, choose the **Open Assisted Setup** action.
 2. Vyplňte pole v každém kroku průvodce.
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Forecast**, and then choose the related link.
+3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Forecast**, and then choose the related link.
 4. On the **Cash Flow Forecast** page, choose the **Recalculate Forecast** action.
 
 Použití ručního procesu:
 
 1. In the Accountant Role Center, search for **Cash Flow Setup**, and then choose the related link.
 2. Expand the **Azure AI** FastTab, and then choose the **Azure AI Enabled** check box.
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Forecast**, and then choose the related link.
+3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Forecast**, and then choose the related link.
 4. On the **Cash Flow Forecast** page, choose the **Recalculate Forecast** action.
 
 > [!TIP]  
@@ -119,12 +118,13 @@ You can also create your own predictive web service based on a public model name
 3. Použijte svůj účet Microsoft k registraci pracovního prostoru a potom zkopírujte model.
 4. Spusťte model a publikujte jej jako webovou službu.
 5. Poznamenejte si API URL a API klíč. Tyto přihlašovací údaje použijete pro nastavení cash flow.
-6. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Setup**, and then choose the related link.
+6. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Flow Setup**, and then choose the related link.
 7. Expand the **Azure AI** FastTab, and then fill in the fields.
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)
 
 ## Viz také
+
 [Analyzing Cash Flow in Your Company](finance-analyze-cash-flow.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)

@@ -33,7 +33,7 @@ In [!INCLUDE[prod_short](includes/prod_short.md)] online, the **Intelligent Clou
 Vedle grafů KPI získáte přehled o potenciálních oblastech zájmu, včetně plateb po splatnosti. Zvolte si přehled, který vám umožní zkoumat data.
 
 > [!div class="mx-imgBorder"]
-> ![Intelligent cloud insights](media/across-intelligent-cloud/intelligentcloudApril19.png "Shows the Intelligent Cloud Insights page in Business Central online")
+> ![Intelligent cloud insights.](media/across-intelligent-cloud/intelligentcloudApril19.png "Shows the Intelligent Cloud Insights page in Business Central online")
 
 Stránka se také připojuje k Power BI pro ještě větší přehledy. Optionally, connect to Azure AI for even more intelligent insights. For more information, see [The Sales and Inventory Forecast Extension](ui-extensions-sales-forecast.md).
 

@@ -59,8 +59,20 @@ Nad tímto požadavkem nemáme kontrolu. Tento požadavek je nastaven pomocí Po
 <!-- 7 -->
 ### Funguje konektor se stránkami rozhraní API?
 
-Zatím ne. Od června 2021 však bude nový konektor Power BI podporovat webové služby Business Central i stránky rozhraní API. Pro více informací navštivte [Povolení práce s rozhraními API Business Central pomocí konektoru Power BI, nikoli pouze s webovými službami](/dynamics365-release-plan/2021wave1/smb/dynamics365-business-central/enable-power-bi-connector-work-business-central-apis-instead-web-services-only).
+Ano. Starting in June 2021, the new Power BI connector supports both Business Central web services and API pages. Pro více informací navštivte [Povolení práce s rozhraními API Business Central pomocí konektoru Power BI, nikoli pouze s webovými službami](/dynamics365-release-plan/2021wave1/smb/dynamics365-business-central/enable-power-bi-connector-work-business-central-apis-instead-web-services-only).
 
+### Can I build a Power BI report using the Sales Invoice Lines or Journal Lines APIs?
+
+The most commonly used line records are available in the [Business Central APIs v2.0](/dynamics365/business-central/dev-itpro/api-reference/v2.0/)). So you can use them to build reports in Power BI by selecting them in the **Dynamics 365 Business Central** connector. However, the **Lines** APIs are designed to be used only with some very specific filters, and might not work in your scenario. You might get an error similar to "You must specify an Id or a Document Id to get the lines". To fix this problem, do the following steps when getting data from Business Central for the report in Power BI Desktop:
+
+1. Instead of including the data source for the lines entity, add the parent data source. For example, add **Sales Invoice** instead of **Sales Invoice Lines**.
+2. Select **Transform Data** in the Power BI Desktop action bar.
+3. Select the query you just added, for example **Sales Invoices**.
+4. Apply any needed filtering on the records to reduce the amount of records loaded in your report.
+5. Scroll to the right until you find a column named as the lines, for example **SalesInvoiceLines**.
+6. Select the expand button in the header of the column, next to the column name.
+
+   :::image type="content" source="media/saleinvoicelines.png" alt-text="Shows the SalesInvoiceLines column in Power BI Desktop.":::
 <!-- 11 -->
 ### Je možné zvolit, ze kterého prostředí Business Central chcete získat data pro Power BI, například sandbox nebo produkční prostředí?
 
@@ -93,7 +105,7 @@ Tady jsou další stránky, které obsahují větší část **Sestav Power BI**
 | 1156 | Podrobnosti o společnosti |
 | 4013 | Intelligent Cloud Insights |
 | 9006 | Centrum rolí Zpracovatel objednávek |
-| 9008 | Centrum  rolí Skladník |
+| 9008 | Whse. rolí Skladník |
 | 9010 | Centrum rolí Výrobní plánovač |
 | 9015 | Centrum rolí Vedoucí projektuC |
 | 9016 | Centrum rolí Správce servisu |
@@ -112,12 +124,6 @@ Chcete-li filtrovat větší datové sady, nejjednodušším způsobem je nastav
 
 V současné době neexistuje žádný způsob, jak nastavit filtr pro data webové služby z Business Central. Pokud vaše aplikace potřebuje nastavit filtr z Business Central, budete si pro tento účel muset vytvořit vlastní aplikaci Business Central.
 
-<!-- 8 and 9 -->
-
-### Pro vkládání sestav na stránky Business Central je teď možné získat sestavy jenom z *mého pracovního prostoru* v Power BI. Existují plány, které by umožnily jejich získání z vlastních pracovních prostorů?
-
-Ano. Máme v plánu přidat podporu pro sdílené pracovní prostory, ale ještě nemáme časovou osu, kterou bychom vám mohli poskytnout.
-
 <!-- 10 -->
 ### Existuje z Power BI kromě použití dotazu i jiný způsob, jak získat data z tabulek Business Central, které nemají přidruženou stránku? Například jako tabulka *Atributy zboží mapování hodnot*.
 
@@ -131,14 +137,23 @@ Pokud jde o webové služby, publikované dotazy jsou obvykle rychlejší než e
 Až bude nový konektor k dispozici v červnu 2021, doporučujeme používat stránky rozhraní API na dotazy publikované jako webové služby.
 
 <!-- 13 -->
-### Existuje způsob, jak může koncový uživatel vytvořit webovou službu se sloupcem, který je v tabulce Business Central, ale ne na stránce? Nebo bude muset vývojář vytvořit vlastní dotaz?
+### Existuje způsob, jak může koncový uživatel vytvořit webovou službu se sloupcem, který je v tabulce Business Central, ale ne na stránce? Or will the developer have to create a custom query?
 
-Zatím ne. Ale když bude v červnu 2021 k dispozici nový konektor, vývojář bude moci vytvořit novou stránku rozhraní API, která tento požadavek splní.
+Ano. With the release of the new connector in June 2021, a developer can create a new API page to meet this requirement.
 
 <!-- 28 -->
 ### Můžu Power BI připojit k databázi Business Central online jen pro čtení?
 
 Ne.  Ale tuto funkci máme v našem dlouhodobém plánu.
+
+### <a name="perms"></a>How do I change or clear the user account I'm currently using to connect to Business Central from Power BI Desktop?
+
+In Power BI Desktop, do the following steps:
+
+1. In the File menu, select **Options and settings** > **Data source settings**.
+2. Select **Dynamics Business Central** from the list, then select **Clear permissions** > **Delete**.
+
+Then next time you connect to Business Central to get data, you'll be asked to sign in.
 
 ## [Výkon](#tab/performance)
 

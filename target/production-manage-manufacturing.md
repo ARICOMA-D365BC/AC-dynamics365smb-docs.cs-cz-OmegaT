@@ -1,19 +1,20 @@
 ---
-    title: Execute Production | Microsoft Docs
-    description: When demand is planned for and the materials have been issued according to production BOMs, then the actual production operations can start and be executed in the sequence defined by the production order routing.
-    author: SorenGP
+title: Execute Production
+description: When demand is planned for and the materials have been issued according to production BOMs, then the actual production operations can start and be executed in the sequence defined by the production order routing.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 5406, 5407, 5728, 8903, 9011, 9012, 9013, 9041, 9044, 9047, 9323, 9324, 9325, 9326, 9327, 99000784, 99000785
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Manufacturing
+
 > [!NOTE]
 > Functionality described in this topic and sub topics is only visible in the user interface if you have the **Premium** experience. For more information, see [Change Which Features are Displayed](ui-experiences.md).
 
@@ -42,8 +43,9 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Calculate and adjust the cost of finished production items and consumed components for financial reconciliation. | [About Finished Production Order Costs](finance-about-finished-production-order-costs.md) |
 
 ## Viz také
+
 [Setting Up Manufacturing](production-configure-production-processes.md)  
-[Planning](production-planning.md)      
+[Planning](production-planning.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)

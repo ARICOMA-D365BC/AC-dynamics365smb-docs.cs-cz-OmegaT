@@ -27,9 +27,9 @@ So you will have to sign in to [!INCLUDE[prod_short](includes/prod_short.md)] an
 
 ### Přejmenování společnosti
 1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)].
-2. In the top right corner, choose the **Settings** icon ![Settings](media/ui-experience/settings_icon_small.png "Settings icon for role center"), and then choose **My Settings**.
+2. In the top right corner, choose the **Settings** icon ![Settings.](media/ui-experience/settings_icon_small.png "Settings icon for role center"), and then choose **My Settings**.
 3. In the **Company** field, choose a different company.
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Companies**, and then choose the related link.
+4. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Companies**, and then choose the related link.
 5. On the **Companies** page, choose **Edit List**.
 6. Change the name of the *My Company* entry to something else.
 
@@ -45,7 +45,7 @@ When you rename the original My Company, the database tables that store your exi
 If you use both Invoicing and [!INCLUDE[prod_short](includes/prod_short.md)], the data is stored in two different containers (the two companies). Nic není sdíleno, takže budete muset spravovat zákazníky a zboží v obou společnostech.
 
 ## Viz také
-[Frequently Asked Questions](across-faq.md)  
+[Frequently Asked Questions](across-faq.yml)  
 [Administration](admin-setup-and-administration.md)
 
 

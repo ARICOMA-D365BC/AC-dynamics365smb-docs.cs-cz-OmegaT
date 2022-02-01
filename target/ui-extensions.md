@@ -1,12 +1,12 @@
 ---
 title: Installing Extensions to Customize Business Central
-description: Learn about adding functionality and customizing Business Central by installing extensions.
+description: Learn all about adding functionality and customizing Business Central by installing extensions here.
 author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords: app, add-in, manifest, customize
-ms.date: 04/01/2021
+ms.date: 08/25/2021
 ms.author: edupont
 
 ---
@@ -15,9 +15,12 @@ ms.author: edupont
 You can change [!INCLUDE[prod_short](includes/prod_short.md)] online by installing extensions that add functionality, changes behavior, or gives you access to new online services, for example.
 
 > [!NOTE]
-> Chcete-li nainstalovat rozšíření z AppSource nebo přidat rozšíření na tenanta, musíte mít správná oprávnění. Musíte být buď členem skupiny uživatelů D365 EXTENSION MGT, nebo musíte mít sadu oprávnění D365 EXTENSION MGT. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti.
+> To install or uninstall extensions from AppSource or add per-tenant extensions, you must have the right permissions. You must either be a member of the EXTEND. MGT. - ADMIN user group or you must have the EXTEND. MGT. - ADMIN permission set. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti.
+>
+> Chcete-li použít funkce poskytované rozšířením, jako je otevírání stránek, spouštění sestav, výběr akcí a další, musíte mít přiřazené sady oprávnění, které jsou nainstalovány jako součást rozšíření.
 
-Chcete-li použít funkce poskytované rozšířením, jako je otevírání stránek, spouštění sestav, výběr akcí a další, musíte mít přiřazené sady oprávnění, které jsou nainstalovány jako součást rozšíření.
+> [!NOTE]  
+> The **EXTEND. MGT. - ADMIN** permission set was introduced in Business Central 2021 release wave 1 as a replacement for the **D365 EXTENSION MGT** permission set in earlier versions.
 
 > [!IMPORTANT]  
 > The upload of per-tenant extensions and the installation of AppSource extensions is not supported through the **Extension Management** page for on-premise installations. You cannot install AppSource extensions on-premises, including in Docker-based deployments.
@@ -46,39 +49,13 @@ Pokud odinstalujete rozšíření a poté změníte názor, můžete ji nainstal
 
 Některá rozšíření poskytuje společnost Microsoft a jiná rozšíření poskytují [jiné společnosti](ui-extensions-other.md). Všechna rozšíření jsou testována před tím, než jsou k dispozici, ale doporučujeme abyste před instalací prošli odkazy, které jsou k dispozici, abyste se o rozšíření dozvěděli více, než se rozhodnete jej nainstalovat.
 
-Společnost Microsoft poskytuje následující rozšíření:
-
-* [Rozšíření AMC Banking 365 Fundamentals](ui-extensions-amc-banking.md)
-* [Ceridian Payroll](ui-extensions-ceridian-payroll.md)
-* [Company Hub](ui-extensions-company-hub.md)
-* [Dynamics GP Data Migration](ui-extensions-dynamicsgp-data-migration.md)
-* [Envestnet Yodlee Bank Feeds](ui-extensions-yodlee-bank-feeds.md)
-* [Essential Business Insights](ui-extensions-essential-business-insights.md)
-* [Image Analyzer](ui-extensions-image-analyzer.md)
-* [Intelligent Cloud](ui-extensions-data-replication.md)
-* [Intelligent Cloud Base](ui-extensions-intelligent-cloud.md)
-* [Late Payment Predictions](ui-extensions-late-payment-prediction.md)
-* [Microsoft Pay](ui-extensions-microsoft-pay-payments.md)
-* [PayPal Payments Standard](ui-extensions-paypal-payments-standard.md)
-* [QuickBooks Data Migration](ui-extensions-quickbooks-data-migration.md)
-* [QuickBooks Online Data Migration](ui-extensions-quickbooks-online-data-migration.md)
-* [Quickbooks Payroll File Import](ui-extensions-quickbooks-payroll.md)
-* [Sales and Inventory Forecast](ui-extensions-sales-forecast.md)
-* [VAT Group](ui-extensions-vat-group.md)
-* [WorldPay Payments Standard](ui-extensions-worldpay-payments-standard.md)
-* [DK - C5 Data Migration](ui-extensions-c5-data-migration.md)
-* [DK - Payments and Reconciliations](ui-extensions-payments-reconciliation-formats-dk.md)
-* [DK - Tax File Formats](ui-extensions-tax-file-formats-dk.md)
-* [The GetAddress.io UK Postcodes Extension](LocalFunctionality/UnitedKingdom/ui-extensions-getaddressio.md)
-* [US/CA/UK/AU/NZ/ZA - Send Remittance Advice](ui-extensions-send-remittance-advice.md)
-
 > [!NOTE]  
 > You can keep an eye out for new extensions from Microsoft and other suppliers at [AppSource.microsoft.com](https://appsource.microsoft.com/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1).
 
 
 ## Extensions and data transfer
 
-As the following extensions are communicating with other services they may transfer data out of the geography of the [!INCLUDE[prod_short](includes/prod_short.md)] environment:
+Because the following extensions communicate with other services, they might transfer data out of the geography of the [!INCLUDE[prod_short](includes/prod_short.md)] environment:
 
 * AMC Banking 365 Fundamentals Extension
 * Image Analyzer
@@ -95,6 +72,12 @@ This also applies to some functionality in the base application, such as the fol
 * OCR Service
 * Online Map
 * EU VAT Reg. Ne.  Service
+
+## Recommended Apps
+Microsoft partners and resellers can create an extensions that they can use to compile lists of apps that they often recommend to their customers. If they do, and have deployed the extension to your tenant, the apps will be available on the **Recommended Apps** page. There you can read about each app and decide whether to install them.
+
+> [!NOTE]
+> If you are a Microsoft partner or reseller, and you're interested in providing a list of recommended apps, see [Recommend Apps from AppSource](/dynamics365/business-central/dev-itpro/administration/recommend-apps).
 
 ## Viz také
 

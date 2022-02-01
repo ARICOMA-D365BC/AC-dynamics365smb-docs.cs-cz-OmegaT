@@ -13,55 +13,55 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Transfer Inventory Between Locations
-You can transfer inventory items between locations by creating transfer orders. Alternatively, you can use the item reclassification journal.
+# Převádění zásob mezi lokacemi
+Nyní můžete převádět skladové zboží mezi dvěma lokacemi pomocí objednávek transferu. Případně můžete použít deník přeřazení zboží.
 
-With transfer orders, you ship the outbound transfer from one location and receive the inbound transfer at the other location. This allows you to manage the involved warehouse activities and provides more certainty that inventory quantities are updated correctly.
+Pomocí objednávek transferu můžete odesílat odchozí převod z jedné lokace a příjmout na lokací druhé. To umožňuje řídit související skladové činnosti a poskytuje větší jistotu, že množství zásob je správně aktualizováno.
 
-With the reclassification journal, you simply fill in the **Location Code** and the **New Location Code** fields. When you post the journal, the item ledger entries are adjusted at the locations in question. With this method, warehouse activities are not managed.
+Pomocí deníku přeřazení zboží jednoduše vyplníte pole **Kód lokace** a **Nový kód lokace**. Po zaúčtování deníku se upraví položky zboží na příslušných lokacích. Při této metodě nejsou řízeny skladové aktivity.
 
 > [!NOTE]  
-> If you have items recorded in your inventory without a location code, for example from a time when you only had one warehouse, then you cannot transfer those items using transfer orders. Instead, you must use the reclassification journal to reclassify the items from a blank location code to an actual location code.  For more information, see step 3 in [To transfer items with the item reclassification journal](inventory-how-transfer-between-locations.md#to-transfer-items-with-the-item-reclassification-journal).
+> Pokud máte v zásobách evidováno zboží bez kódu lokace, například z doby, kdy jste měli pouze jeden sklad, nemůžete potom takové zboží převádět pomocí objednávek transferu. Místo toho musíte použít deník přeřazení zboží k přeřazení zboží z prázdného kódu lokace na skutečné skladové místo.  Další informace naleznete v kroku 3 v [Převod zboží pomocí deníku přeřazení zboží](inventory-how-transfer-between-locations.md#to-transfer-items-with-the-item-reclassification-journal).
 
-To transfer items, locations and transfer routes must be set up. For more information, see [Set Up Locations](inventory-how-setup-locations.md).
+Pro transfer zboží je třeba nastavit lokace a trasy transferu. Pro více informací navštivte [Nastavení lokace](inventory-how-setup-locations.md).
 
-## To transfer items with a transfer order
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transfer orders**, and then choose the related link.
-2. On the header of the **Transfer Order** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-
-   > [!NOTE]  
-   > If you have filled in the **In-Transit Code**, **Shipping Agent Code**, and **Shipping Agent Service** fields on the **Trans. Route Spec.** page when you set up the transfer route, then the corresponding fields on the transfer order are filled in automatically.
-
-   When you fill in the **Shipping Agent Service** field, the receipt date at the transfer-to location is calculated by adding the shipping time of the shipping agent service to the shipment date.
-
-3. To fill in the lines, either enter them manually or choose one of the following options on the under the **Functions** action:
-   - Choose the **Get Bin Content** action to select existing items from a specific bin at the location.
-   - Choose the **Get Receipt Lines** to select items that have just arrived at the transfer-from location.
-
-   As a warehouse worker at the transfer-from location, proceed to ship the items.
-4. Choose the **Post** action, choose the **Ship** option, and then choose the **OK** button.
-
-   The items are now in transit between the specified locations, according to the specifies transfer route.
-
-   As a warehouse worker at the transfer-from location, proceed to receive the items. The transfer order lines are the same as when shipped and cannot be edited.
-5. Choose the **Post** action, choose the **Receive** option, and then choose the **OK** button.
-
-## To transfer items with the item reclassification journal
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Reclass. Journals**, and then choose the related link.
-2. On the **Item Reclass. Journal** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. In the **Location Code** field, enter the location where the items are currently stored.
+## Převod zboží pomocí objednávek transferu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky transferu** a poté zvolte související odkaz.
+2. V hlavičce **Objednávky transferu** vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]  
-   > To transfer items that have no location code, leave the **Location Code** field blank.
-4. In the **New Location Code** field, enter the location that you want to transfer the items to.
-5. Vyberte akci **Zaúčtovat**.
+   > Pokud jste vyplnili pole **Kód na cestě**, **Kód přepravce** a **Kód služby přepravce** na stránce **Trans. spec.transferu.** při nastavování trasy transferu se automaticky vyplní odpovídající pole na objednávce transferu.
+
+   Když vyplníte pole **Služba přepravce** datum přijetí se na lokaci do-kód vypočítá přidáním doby expedice služby přepravce k datu expedice.
+
+3. Chcete-li řádky vyplnit, zadejte je ručně nebo vyberte jednu z následujících možností v tlačítku **Funkce**:
+   - Pokud chcete načíst specifické zboží z určité přihrádky použijte funkci **Načíst obsah přihrádky**.
+   - Vyberte **Kopie řádků příjemky** pro výběr zboží, které právě přije na lokaci Transfer do-kód.
+
+   Jako skladník na místě transferu pokračujte v odeslání zboží.
+4. Zvolte tlačítko **Účtovat** a vyberte možnost **Dodat** a poté zvolte **OK**.
+
+   Zboží je nyní na cestě mezi určenými místy podle zadané trasy transferu.
+
+   Jako pracovník skladu na místě transferu pokračujte v přijímání zboží. Řádky objednávyk transferu jsou stejné jako při expedici a nelze je upravovat.
+5. zvolte tlačítko **Účtovat** a vyberte možnost **Příjmout** a poté zvolte **OK**.
+
+## Transfer zboží pomocí deníku přeřazení zboží
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky  přeřazení zboží** a poté vyberte související odkaz.
+2. Na stránce <f0>Deníku přeřazení zboží** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. V poli **Kód lokace** zadejte umístění, kde je zboží momentálně uloženy.
+
+   > [!NOTE]  
+   > Chcete-li převést položky, které nemají kód lokace, ponechte pole **Kód lokace** prázdné.
+4. Do pole **Kód nové lokace** zadejte lokaci, kam chcete zboží převést.
+5. Vyberte tlačítko **Zaúčtovat**.
 
 ## Viz také
-[Manage Inventory](inventory-manage-inventory.md)  
-[Set Up Locations](inventory-how-setup-locations.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[General Business Functionality](ui-across-business-areas.md)
+[Správa zásob](inventory-manage-inventory.md)  
+[Nastavení skladu](inventory-how-setup-locations.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Změna zobrazovaných funkcí](ui-experiences.md)  
+[Obecné obchodní funkcionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

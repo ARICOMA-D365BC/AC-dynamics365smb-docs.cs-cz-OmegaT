@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -43,7 +43,7 @@ dostupné množství k vyskladnění = množství ve vyskladňovacích přihrád
 
 Následující diagram ukazuje různé prvky výpočtu.
 
-![Dostupné množství s překrýváním rezervací](media/design_details_warehouse_management_availability_2.png "Dostupné množství s překrýváním rezervací")
+![Available to pick with reservation overlap.](media/design_details_warehouse_management_availability_2.png "Available to pick with reservation overlap")
 
 ## Množství dostupné k rezervaci
 Vzhledem k tomu, že koncept obsahu přihrádky a rezervace existují společně, musí být množství zboží, které je k dispozici k rezervaci, přiřazeno ve výstupních dokladech skladu.
@@ -68,7 +68,7 @@ dostupné množství k rezervaci = celkové množství zásob - množství na vy
 
 Následující diagram ukazuje různé prvky výpočtu.
 
-![Dostupnost rezervací přes alokaci sklad](media/design_details_warehouse_management_availability_3.png "Dostupnost rezervací přes alokaci skladu")
+![Avaliable to reserve per warehouse allocation.](media/design_details_warehouse_management_availability_3.png "Avaliable to reserve per warehouse allocation")
 
 ## Viz také
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  

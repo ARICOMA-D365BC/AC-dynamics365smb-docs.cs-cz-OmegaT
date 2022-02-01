@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Calculating Work in Process for a Job | Microsoft Docs
-    description: With jobs, you can schedule the usage of your company's resources and keep track of the various costs associated with the usage of resources on a specific project. Jobs involve the consumption of employee hours, machine hours, inventory items, and other types of usage that have to be tracked as a job progresses.
+    title: Walkthrough - Calculating Work in Process for a Job
+    description: Jobs involve the consumption of employee hours, machine hours, inventory items, and other types of usage that have to be tracked as a job progresses.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -15,7 +15,7 @@
 ---
 # Návod: Výpočet nedokončené výroby projektu
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
 
 Pomocí projektů můžete naplánovat využití zdrojů vaší společnosti a sledovat různé náklady spojené s využitím zdrojů na konkrétním projektu. Projekty zahrnují spotřebu hodin zaměstnanců, hodin strojů, inventárních položek a dalších typů využití, které je třeba sledovat při postupu projektu. Pokud projekt běží delší dobu, možná budete chtít tyto náklady převést na účet Nedokončené výroby (NV) v rozvaze, zatímco se projekt dokončuje. Pokud je to vhodné, můžete na svých účtech ve výkazu zisku a ztráty uznat náklady a tržby.
 
@@ -48,7 +48,7 @@ Následující tabulka popisuje tři možnosti.
 
 | Pole | Popis |
 |-------------------------------------|---------------------------------------|  
-| **<blank>** | Ponechejte prázdné, pokud je úkol projektu součástí skupiny úkolů. |
+| **\<blank\>** | Ponechejte prázdné, pokud je úkol projektu součástí skupiny úkolů. |
 | **Celkem** | Definuje rozsah nebo skupinu úkolů, které jsou zahrnuty do výpočtu NV a deaktivace. Ve skupině bude jakýkoli úkol projektu s **Typ úlohy projektu** nastavený na **Účtování** zahrnut do Celkem NV, pokud není pole **Celkem NV** nastaveno na **Kromě**. |
 | **Kromě** | Platí pouze pro úkol s  **Typem úlohy projektu** **Účtování**. Úkol není zahrnut při výpočtu nedokončené výroby a deaktivaci. |
 
@@ -56,7 +56,7 @@ V následujícím návodu Tricia použije metodu Hodnota nákladů, její firemn
 
 ### Výpočet Nedokončené výroby
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. V seznamu **Projekty** vyberte projekt **Domov** a poté vyberte akci **Upravit**. Tím se karta projektu otevře v režimu úprav.
 
    NV lze vypočítat na základě hodnoty nákladů, hodnoty prodeje, nákladů na prodej, procenta dokončení nebo dokončené smlouvy. V tomto příkladu používá CRONUS metodu Hodnota nákladů.
@@ -88,7 +88,7 @@ Všimněte si, že hodnota pro **Uzn.  částka nákladů** je 215,60 ve sloupci
 
 ### Kontrola upozornění NV
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vypočítat NV projektu** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Cockpit**, and then choose the related link.
 2. Vyberte projekt **Domov** a poté vyberte akci **Zobrazit upozornění**.
 3. Na stránce **Upozornění NV projektu** zkontrolujte varování spojené s projektem.
 

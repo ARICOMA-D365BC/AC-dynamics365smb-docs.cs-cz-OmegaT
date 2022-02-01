@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Managing Projects with Jobs | Microsoft Docs
-    description: This walkthrough introduces you to the project management features in jobs. Jobs are a way for you to schedule the usage of your company's resources and to keep track of the various costs associated with the resources on a specific project. Jobs involves the consumption of employee hours, machine hours, inventory items, and other types of usage that you may want to track as a job progresses.
+    title: Walkthrough - Managing Projects with Jobs
+    description: This walkthrough introduces you to the project management features in jobs which allow you to schedule the usage of your company's resources and more.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
 # Návod: Správa projektů pomocí úloh
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
 
 Tento návod vás seznámí s funkcemi řízení projektů v úlohách. Úlohy jsou způsob, jak naplánovat využití zdrojů vaší společnosti a sledovat různé náklady spojené se zdroji v konkrétním projektu. Úlohy zahrnují spotřebu hodin zaměstnanců, strojních hodin, skladového zboží a dalších typů využití, které můžete chtít sledovat v průběhu projektu.
 
@@ -60,11 +60,11 @@ Tento návod obsahuje úkoly pro následující role:
 ## Předpoklady
 Před provedením úkolů v návodu je nutné provést následující kroky:
 
-- Instalace CRONUS CZ s.r.o. demonstrační databáze.
+- Install the CRONUS demonstration database.
 - Vytvoření ukázkových dat pomocí kroků v následující části.
 
 ## Příběh
-Tento návod se zaměřuje na CRONUS CZ s.r.o., projekční a poradenskou firmu, která navrhuje a upravuje nové infrastruktury, jako jsou konferenční sály a kanceláře s nábytkem, doplňky a skladovací jednotky. Většina jeho práce je zaměřena na projekt. Prakash je projektový manažer ve společnosti CRONUS. Projekty mu poskytují přehled o každé probíhající úloze, kterou CRONUS zahájil, a také o dokončených úlohách. Obvykle je to ten, kdo uzavírá dohody se zákazníky a vstupuje do jádra úlohy, kterou jsou kromě cen také úkoly a plánování, do [!INCLUDE[prod_short](includes/prod_short.md)]. Zjistil, že vytváření, udržování a kontrola informací je jednoduchá. Prakash má také rád způsob, jakým [!INCLUDE[prod_short](includes/prod_short.md)] umožňuje kopírování úloh a platby na splátky.
+This walkthrough focuses on CRONUS, a design and consultancy firm that designs and fits new infrastructures, such as conference halls and offices, with furniture, accessories, and storage units. Většina jeho práce je zaměřena na projekt. Prakash je projektový manažer ve společnosti CRONUS. Projekty mu poskytují přehled o každé probíhající úloze, kterou CRONUS zahájil, a také o dokončených úlohách. Obvykle je to ten, kdo uzavírá dohody se zákazníky a vstupuje do jádra úlohy, kterou jsou kromě cen také úkoly a plánování, do [!INCLUDE[prod_short](includes/prod_short.md)]. Zjistil, že vytváření, udržování a kontrola informací je jednoduchá. Prakash má také rád způsob, jakým [!INCLUDE[prod_short](includes/prod_short.md)] umožňuje kopírování úloh a platby na splátky.
 
 Tricia, členka projektového týmu, která se hlásí k Prakashovi, je odpovědná za každodenní sledování práce. Kromě práce techniků na každém úkolu vykonává i svou vlastní práci. Zaznamenává zboží, které použili, a náklady, které jim vznikly.
 
@@ -73,7 +73,7 @@ Chcete-li se na tento návod připravit, musíte přidat Tricii jako nový zdroj
 
 ### Připravit ukázková data
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zdroje** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resources**, and then choose the related link.
 2. Zvolte akci **Nový** a vytvořte novou kartu zdroje.
 3. Na záložce **Obecné** zadejte následující informace:
 
@@ -96,7 +96,7 @@ V dalším postupu vytvoříte list deníku projektu pro Tricii, abyste mohli za
 
 ### Vytvoření listu deníku projektů
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Journals**, and then choose the related link.
 2. Na stránce **Deníky projektů** vyberte pole **Název listu**. Otevře se stránka **Listy deníku projektů**.
 3. Zvolte akci **Nový** a vytvořte nový řádek s následujícími informacemi:
 
@@ -111,7 +111,7 @@ V tomto scénáři CRONUS získal smlouvu se zákazníkem, Progressive Home Furn
 
 ### Nastavení projektu
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Zvolte akci **Nový** a vytvořte novou kartu.
 3. Na záložce **Obecné** zadejte následující informace:
 
@@ -204,7 +204,7 @@ Tricia, členka týmového projektu, na této práci nějakou dobu pracuje a chc
 
 ### Výpočet zbývajícího využití
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Journals**, and then choose the related link.
 2. Na stránce  **Deník projektů** v poli **Název listu** otevřete seznam **List deníku projektů**. Vyberte List deníku projektů **Tricia**.
 3. Vyberte akci **Výpočet  zbývajícího použití**.
 4. Na stránce **Výpočet zbývajícího  použití projektu** na záložce **Úloha projektu** vyberte pole **Číslo projektu** a vyberte příslušné číslo úlohy, obvykle úlohu J00010.
@@ -221,7 +221,7 @@ Dále může Tricia vytvořit novou fakturu pro celý projekt nebo pro část pr
 
 ### Vytvoření prodejní faktury projektu
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Vyberte úlohu, kterou jste vytvořili dříve, a poté vyberte akci **Vytvořit prodejní fakturu projektu**.
 3. Na záložce **Úloha projektu** zrušte filtr na **Číslo úlohy projektu**, abyste mohli úlohu fakturovat. V poli **Číslo projektu** vyberte příslušný projekt.
 4. Na záložce **Možnosti** vyplňte datum zaúčtování a definujte, zda chcete vytvořit jednu fakturu na úkol nebo jen jednu fakturu pro všechny úkoly.
@@ -231,9 +231,9 @@ Poté, co Tricia vytvoří fakturu, má k ní například přístup z Centra rol
 
 ### Zaúčtování nové prodejní faktury
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní faktury** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.
 2. Otevřete fakturu pro zákazníka č. 01445544. Informace zadané z řádků plánování můžete zobrazit.
-3. Vyberte akci **Zaúčtovat**. Vyberte **Ano** pro potvrzení odeslání.
+3. Vyberte tlačítko **Zaúčtovat**. Vyberte **Ano** pro potvrzení odeslání.
 
 ### Zobrazení zaúčtované faktury
 
@@ -245,7 +245,7 @@ Tricia má otázku ohledně cen, nákladů a zisků, které jsou relevantní pro
 
 ### Otevření stránky Statistika
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Vyberte akci **Statistika**. Můžete si prohlédnout podrobné informace o cenách pracovních míst, nákladech a ziscích v místní i zahraniční měně.
 3. Kliknutím na tlačítko **Zavřít** zavřete stránku **Statistika projektu**.
 
@@ -254,7 +254,7 @@ CRONUS má smlouvu na zřizování konferenčních místností. Jako projektový
 
 ### Správa pevných cen v projektech
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Vyberte číslo projektu **AB** a poté vyberte akci **Řádky úlohy projektu**.
 3. Vyberte řádek 1120 a v poli **Rozpočet (Náklady celkem)** klikněte pravým tlačítkem na částku a vyberte **Přejít k podrobnostem**.
 
@@ -274,7 +274,7 @@ Poté, co byla Tricia přidána do plánu pro tento řádek úkolu, pracuje v pr
 
 ### Zadání hodin do deníku projektů
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky projektů** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Journals**, and then choose the related link.
 2. Na nový řádek zadejte následující informace:
 
    - **Typ řádku**: **(prázdný)**
@@ -286,7 +286,7 @@ Poté, co byla Tricia přidána do plánu pro tento řádek úkolu, pracuje v pr
    - **Číslo**: **Tricia**
    - **Množství**: **25**
 
-3. Vyberte akci **Zaúčtovat**.
+3. Vyberte tlačítko **Zaúčtovat**.
 
    O pár dní později Tricia pracuje dalších 10 hodin v práci. Nyní odpracovala celkem 35 hodin. Vzhledem k tomu, že smlouva se zákazníkem je uzavřena po dobu 30 hodin, bude zákazníkovi účtováno pouze pět z těchto hodin. Tricia ručně přidá dalších pět hodin, které odpracovala, do rozvrhu.
 
@@ -316,7 +316,7 @@ Poté, co byla Tricia přidána do plánu pro tento řádek úkolu, pracuje v pr
 
    Použitím typu řádku **Rozpočet** existují aktualizace plánovaných nákladů a cen, ale žádné aktualizace smluvních nákladů a cen, které jsou fakturovány zákazníkovi.
 
-9. Vyberte akci **Zaúčtovat**. Stránku zavřete kliknutím na tlačítko **OK**.
+9. Vyberte tlačítko **Zaúčtovat**. Stránku zavřete kliknutím na tlačítko **OK**.
 10. Otevřete seznam **Projektů**.
 11. Vyberte projekt AB a potom v části **Řádky úlohy projektu** vyberte řádek 1120 a v poli **Rozpočet (celkové náklady)** klikněte pravým tlačítkem na částku. Chcete-li zobrazit informace, zvolte **Přejít k podrobnostem**.
 
@@ -335,7 +335,7 @@ Na stránce **Kopírovat projekt** můžete vybrat řádky úloh a úkoly, kter�
 
 ### Kopírování projektu
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Vyberte akci **Nový** a vytvořte nový projekt. Zadejte následující informace:
 
    - **Popis**: **Nastavení 10 konferenčních místností**
@@ -361,7 +361,7 @@ CRONUS právě dokončil velký projekt, který bude trvat rok. Vzhledem k tomu,
 
 ### Nastavení nového účtu
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtovní osnova** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
 2. Na stránce **Účetní osnova** vyberte akci **Nový** a vytvořte novou kartu.
 3. Na kartě **Nový finanční účet** zadejte následující informace:
 

@@ -1,6 +1,6 @@
 ---
-    title: Set Up Directed Put-away and Pick | Microsoft Docs
-    description: When you set up a warehouse location for directed put-away and pick, you have new functionality available to you to help run the warehouse in the most efficient way possible.
+    title: Set Up Directed Put-away and Pick
+    description: Set up warehouse locations for directed put-away and pick, which gives you new functionality to ensure you run the warehouse in the most efficient way possible.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/25/2021
     ms.author: edupont
 
 ---
@@ -17,7 +17,7 @@
 Když nastavíte lokaci pro řízené zaskladnění a vyskladnění, máte k dispozici nové funkce, které vám pomohou spustit sklad co nejefektivnějším způsobem. Chcete-li tuto funkci plně využít, zadejte další informace o zboží, které pak pomohou provést výpočty nezbytné k tomu, aby navrhli nejúčinnější způsoby provádění skladových aktivit. Pro více informací navštivte [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md).
 
 ## Nastavení zboží pro řízené zaskladnění a vyskladnění
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Otevřete kartu zboží, které chcete nastavit pro řízené zaskladnění a vyskladnění.
 3. On the **Warehouse** FastTab of the item card, fill in the fields to define how the item should be handled in the warehouse.
 4. Choose the **Units of Measure** action.
@@ -29,7 +29,7 @@ Když nastavíte lokaci pro řízené zaskladnění a vyskladnění, máte k dis
 Řízené zaskladnění a vyskladnění umožňuje přístup k rozšířeným funkcím konfigurace skladu, které mohou výrazně zvýšit efektivitu a spolehlivost dat. Abyste mohli tuto funkci využívat, musíte nejprve nastavit několik parametrů ve vašem skladu.
 
 Chcete-li použít funkci řízeného zaskladnění a vyskladnění, musíte aktivovat funkčnost na kartě lokace.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
 2. Select the location where you want to use directed put-away and pick, and then choose the **Edit** action.
 3. On the **Warehouse** FastTab, select the **Directed Put-away and Pick** check box.
 
@@ -45,7 +45,7 @@ Můžete také definovat kódy tříd skladu, pokud sklad přepravuje zboží, k
 Nyní jste připraveni nastavit zóny, pokud je chcete provozovat ve skladu. Použití zón snižuje počet polí, která je třeba vyplnit při nastavování přihrádek, protože přihrádky vytvořené v rámci zón dědí z této zóny několik vlastností. Zóny mohou také usnadnit novým nebo dočasným zaměstnancům orientaci ve vašem skladu. Všimněte si, že tok je řízen přihrádkami, proto je možné pracovat s přihrádkami a pouze s jednou zónou.
 
 ## Nastavení zóny ve skladu
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
 2. Select the location where you want to set up zone and open the location card, and then choose the **Zones** action.
 3. On the **Zones** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 

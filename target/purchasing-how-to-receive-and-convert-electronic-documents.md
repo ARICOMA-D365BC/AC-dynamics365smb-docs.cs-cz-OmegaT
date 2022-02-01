@@ -1,19 +1,21 @@
 ---
-    title: Receive and Convert Electronic Documents | Microsoft Docs
-    description: You can receive electronic documents directly from trading partners or from an OCR service.
-    author: SorenGP
+title: Receive and Convert Electronic Documents
+description: This topic describes how to receive electronic documents directly from trading partners or from an OCR service.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 189, 190, 191 
+ms.date: 06/23/2021
+ms.author: edupont
 
 ---
 # Receive and Convert Electronic Documents
+
 The generic version of [!INCLUDE[prod_short](includes/prod_short.md)] supports receiving electronic invoices and credit memos in the PEPPOL format, which is supported by the largest providers of document exchange services. To receive an invoice from a vendor as an electronic PEPPOL document, you process the document in the Incoming Documents page to convert it to a purchase invoice or general journal line in [!INCLUDE[prod_short](includes/prod_short.md)].
 
 In addition to receiving electronic documents directly from trading partners, you can receive electronic documents from an OCR service that has turned your PDF or image files into electronic documents.
@@ -27,9 +29,9 @@ The traffic of electronic documents in and out of [!INCLUDE[prod_short](includes
 You can either start the conversion of electronic documents manually, as described in this procedure, or you can enable a workflow to convert electronic documents automatically when they are received. The generic version of [!INCLUDE[prod_short](includes/prod_short.md)] includes a workflow template, *From Incoming Electronic through OCR to Open Purchase Invoice Workflow*, which is ready to be copied to a workflow and enabled. For more information, see [Workflow](across-workflow.md).
 
 > [!NOTE]  
-> When you convert electronic documents received from the OCR service to documents or journal lines in [!INCLUDE[prod_short](includes/prod_short.md)], multiple lines on the source document will be summed on one line. The single line will be of type G/L Account and the **Description** and (G/L account) **No.** fields will be empty. The value in the **Amount** field will equal the total amount excluding VAT of all lines in the source document.
+> When you convert electronic documents received from the OCR service to documents or journal lines in [!INCLUDE[prod_short](includes/prod_short.md)], multiple lines on the source document will be summed on one line. The single line will be of type G/L Account and the **Description** and (G/L account) **No.** fields will be empty. The value in the **Amount** field will equal the total amount excluding VAT of all lines in the source document.
 >
-> To make sure that the **Description** and **No.** fields are filled, you can choose the **Map Text to Account** button on the **Incoming Documents** page to define that a certain invoice text is always mapped to a certain debit or credit account in the general ledger. Going forward, the **Description** field on document or journal lines created from an electronic document for that vendor or customer will be filled with the text in question and the (G/L account) **No.** field with the account in question.
+> To make sure that the **Description** and **No.** fields are filled, you can choose the **Map Text to Account** button on the **Incoming Documents** page to define that a certain invoice text is always mapped to a certain debit or credit account in the general ledger. Going forward, the **Description** field on document or journal lines created from an electronic document for that vendor or customer will be filled with the text in question and the (G/L account) **No.** field with the account in question.
 >
 > Instead of mapping to a G/L account, you can also map to a bank account. This is practical, for example, for electronic documents for expenses that are already paid where you want to create a general journal line that is ready to post to a bank account.
 
@@ -37,7 +39,7 @@ The following procedure describes how to receive a vendor invoice and convert it
 
 ### To receive and convert an electronic invoice to a purchase invoice
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
 
 2. Select the line for the incoming document record that represents a new incoming electronic invoice, and then choose the **Edit** action.
 
@@ -56,6 +58,7 @@ The following procedure describes how to receive a vendor invoice and convert it
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/electronic-documents-dynamics-365-business-central/index)
 
 ## Viz také
+
 [Managing Payables](payables-manage-payables.md)  
 [Incoming Documents](across-income-documents.md)  
 [Set Up Electronic Document Sending and Receiving](across-how-to-set-up-electronic-document-sending-and-receiving.md)  

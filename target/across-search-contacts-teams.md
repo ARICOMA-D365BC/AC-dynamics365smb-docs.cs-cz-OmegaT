@@ -37,13 +37,13 @@ Příkazové pole je v horní části každé obrazovky v Teams. Toto pole umož
 
 1. Do příkazového pole zadejte **@Business Central**, a poté z výsledků vyberte aplikaci Business Central.
 
-   ![Otevření aplikace Business Central pro hledání kontaktů z příkazového pole](media/teams-contacts-command-1.png)
+   ![Open Business Central app  to search for contacts from command box.](media/teams-contacts-command-1.png)
 
 2. Do pole **Business Central** začněte psát hledaný text, například jméno, adresu nebo telefonní číslo.
 
    Během psaní se zobrazí odpovídající výsledky.
 
-   ![Hledání kontaktů Business Central z příkazového pole v Teams](media/teams-contacts-command-2.png)
+   ![Search Business Central contacts from command box in Teams.](media/teams-contacts-command-2.png)
 3. Vyberte kontakt z výsledků.
 
    Karta kontaktu se zobrazí pod příkazovým polem.
@@ -60,13 +60,13 @@ Výhodou použití pole pro psaní zprávy je, že můžete přidat kartu kontak
 
    Pokud nevidíte ikonu **Business Central**, vyberte **... (rozšíření zpráv)**.
 
-   ![Otevření aplikace Business Central pro hledání kontaktů z okna pro psaní zpráv](media/teams-contacts-message-box.png)
+   ![Open Business Central app to search for contacts from message box.](media/teams-contacts-message-box.png)
 
 2. Do pole **Business Central** začněte psát hledaný text, například jméno, adresu nebo telefonní číslo.
 
    Během psaní se zobrazí odpovídající výsledky.
 
-   ![Hledání kontaktů Business Central z okna pro psaní zpráv](media/teams-contacts-5.png)
+   ![Search for Business Central contacts from message box.](media/teams-contacts-5.png)
 3. Vyberte kontakt z výsledků.
 
    Karta kontaktu se zobrazí v poli pro psaní zprávy.
@@ -93,11 +93,13 @@ Karta kontaktu funguje stejně jako karty pro záznamy, jako je Zboží, Zákazn
 
 ## Viz také
 
-[Přehled integrace Business Central a Microsoft Teams](across-teams-overview.md)  
-[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
+[Business Central and Microsoft Teams Integration Overview](across-teams-overview.md)  
+[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Řešení problémů Teams](admin-teams-troubleshooting.md)  
-[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Changing Company and Other Settings in Teams](across-teams-settings.md)  
+[Share Records in Microsoft Teams](across-working-with-teams.md)  
+[Troubleshooting Teams](admin-teams-troubleshooting.md)  
+[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

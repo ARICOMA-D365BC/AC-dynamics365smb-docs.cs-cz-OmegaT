@@ -1,6 +1,6 @@
 ---
 title: Depreciation Methods for Fixed Assets
-description: Learn about the different built-in methods to depreciate or write-down fixed assets in the default version of Business Central.
+description: Learn about the different built-in methods to depreciate or write-down fixed assets in the default version of Business Central which includes eight methods.
 author: edupont04
 
 ms.service: dynamics365-business-central
@@ -9,33 +9,33 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: write down
-ms.date: 04/01/2021
+ms.date: 07/05/2021
 ms.author: edupont
 
 ---
-# Depreciation Methods for Fixed Assets
+# Metody odpisů dlouhodobého majetku
 
-There are eight methods of depreciation available in the default version of [!INCLUDE [prod_short](includes/prod_short.md)]:
+Ve výchozí verzi [!INCLUDE [prod_short](includes/prod_short.md)] je k dispozici osm metod odpisování:
 
-* Straight-Line
-* Declining-Balance 1
-* Declining-Balance 2
-* DB1/SL
-* DB2/SL
-* User-defined
-
-   > [!NOTE]  
-   > Specify your own depreciation method by defining depreciation tables.
-* Manual
+* Lineární
+* Zrychlený 1
+* Zrychlený 2
+* ZR1/LI
+* ZR2/LI
+* Definováno uživatelem
 
    > [!NOTE]  
-   > Use this method for assets that are not subject to depreciation, for example, land. You must enter depreciation in the fixed asset G/L journal. The **Calculate Depreciation** batch job omits fixed assets that use this depreciation method.
-* Half-Year Convention
+   > Určete vlastní metodu odpisu definováním tabulek odpisů. For information about applying a user defined depreciation method, see [Set Up User-Defined Depreciation Method](fa-how-setup-user-defined-depreciation-method.md).
+* Manuální
 
    > [!NOTE]  
-   > When you use this method, a fixed asset is depreciated by the same amount each year.
+   > Tuto metodu použijte pro aktiva, která nepodléhají odpisům, například pozemky. Do deníku dlouhodobého majetku je nutné zadat odpisy. Dávková úloha **Výpočet odpisů** vynechá dlouhodobá aktiva, která používají tuto metodu odpisování.
+* Pololetní konvence
 
-## Straight-Line Depreciation
+   > [!NOTE]  
+   > Při použití této metody se dlouhodobý majetek odpisuje každý rok stejnou částkou.
+
+## Lineární odpisy
 
 When you use the straight-line method, you must specify one of the following options in the fixed asset depreciation book:
 
@@ -217,84 +217,15 @@ Calculation method:
 
    The straight-line amount is used because it is the greater amount.
 
-## User-defined Depreciation
-
-The application has a facility that allows you to set up user-defined depreciation methods.
-
-With a user-defined method, you use the **Depreciation Tables** page, where you must enter a depreciation percentage for each period (month, quarter, year, or accounting period). Then, when you assign a depreciation book with a user-defined method to a fixed asset, you must set the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields on the **FA Depreciation Books** page for the specific fixed asset.
-
-The formula for calculating the depreciation amounts is:
-
-*Depreciation Amount = (Depreciation % x Number of Depreciation Days x Depr. Basis) / (100 x 360)*
-
-### Depreciation Based on Number of Units
-
-This user-defined method can also be used to depreciate based on number of units, for example, in the case of production machines with an established lifetime capacity. On the **Depreciation Tables** page, you can enter the number of units that can be produced in each period (month, quarter, year,or accounting period).
-
-### To set up user-defined depreciation methods
-
-On the **Depreciation Table** page, you can set up user-defined depreciation methods. For example, you can set up depreciation based on number of units.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Tables**, and then choose the related link.
-2. On the **Depreciation Table List** page, choose the **New** action.
-3. **Depreciation Table Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-
-> [!TIP]
-> Use the **Create Sum of Digits Table** function to define a depreciation table based on the *Sum of Digits* method.
-
-With the *Sum of Digits* method, if a fixed asset is depreciated over 4 years, then the depreciation for each year is calculated in the following way:
-
-Sum of Digits = 1 + 2 + 3 + 4 = 10
-Depreciation:
-
-* Year 1 = 4/10
-* Year 2 = 3/10
-* Year 3 = 2/10
-* Year 4 = 1/10
-
-### Example - User-defined Depreciation
-
-You use a depreciation method that allows you to depreciate assets in an accelerated manner for income tax purposes.
-
-You would use the following depreciation rates for a fixed asset with a three-year lifetime for tax purposes:
-
-* Year 1: 25%
-* Year 2: 38%
-* Year 3: 37%
-
-The acquisition cost is LCY 100,000, and the depreciable lifetime is five years. Depreciation is calculated annually.
-
-|   | FA Posting Type | Days | Částka | Book Value |
-| --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 12/31/20 | Depreciation | 360 | -25,000.00 | 75,000.00 |
-| 12/31/21 | Depreciation | 360 | -38,000.00 | 37,000.00 |
-| 12/31/22 | Depreciation | 360 | -37,000.00 | 0 |
-| 12/31/23 | Depreciation | Žádné | Žádné | 0 |
-| 12/31/24 | Depreciation | Žádné | Žádné | 0 |
-
-If you use a user-defined method, the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields must be filled in on the **FA Depreciation Books** page for the specific fixed asset. The **First User-Defined Depr. Date** field and the contents in the **Period Length** field on the **Depreciation Tables** page are used to determine the time intervals to be used for depreciation calculations. This ensures that application will start using the specified percentage on the same day for all assets. The **Depreciation Starting Date** field is used to calculate the number of depreciation days.
-
-In the previous example, both the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields would be set to 01/01/20 in the **FA Depreciation Books** page for the specific fixed asset. If, however, the **First User-Defined Depr. Date** field contained 01/01/20 and the **Depreciation Starting Date** field contained 04/01/20, the result would be:
-
-|   | FA Posting Type | Days | Částka | Book Value |
-| --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 12/31/20 | Depreciation | 270 | -18,750.00 | 81,250.00 |
-| 12/31/21 | Depreciation | 360 | -38,000.00 | 42,250.00 |
-| 12/31/22 | Depreciation | 360 | -37,000.00 | 6,250.00 |
-| 12/31/23 | Depreciation | 90 | -6,250.00 | 0 |
-| 12/31/24 | Depreciation | Žádné | Žádné | 0 |
-
 ## Half-Year Convention Depreciation
 
 The Half-Year Convention method will only be applied if you have placed a check mark in the **Use Half-Year Convention** field in the fixed **FA Depreciation Book** page.
 
 This depreciation method can be used in conjunction with the following depreciation methods in application:
 
-* Straight-Line
-* Declining-Balance 1
-* DB1/SL
+* Lineární
+* Zrychlený 1
+* ZR1/LI
 
 When you apply the Half-Year Convention, a fixed asset has six months of depreciation in the first fiscal year, regardless of the contents of the **Depreciation Starting Date** field.
 

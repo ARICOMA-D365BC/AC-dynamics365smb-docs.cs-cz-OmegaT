@@ -1,16 +1,16 @@
 ---
-    title: Setup Best Practices - Costing Method
-    description: The Costing Method on the item card defines item's cost flow is recorded and whether an actual or budgeted value is capitalized and used in the cost calculation.
-    author: SorenGP
+title: Setup Best Practices - Costing Method
+description: The Costing Method on the item card defines item's cost flow is recorded and whether an actual or budgeted value is capitalized and used in the cost calculation.
+author: edupont04
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 30, 42, 43
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Setup Best Practices: Costing Method
@@ -30,8 +30,9 @@ The following table provides best practices on how to set up the **Costing Metho
 | Standardní | Use where cost control is critical.<br /><br /> Use in repetitive manufacturing, to value the costs of direct material, direct labor, and manufacturing overhead.<br /><br /> Use where there is discipline and staff to maintain standards. | An item's unit cost is preset based on estimated.<br /><br /> When the actual cost is realized later, the standard cost must be adjusted to the actual cost through variance values. |
 
 ## Viz také
-[Design Details: Costing Methods](design-details-costing-methods.md)   
-[Design Details: Inventory Costing](design-details-inventory-costing.md)   
+
+[Design Details: Costing Methods](design-details-costing-methods.md)  
+[Design Details: Inventory Costing](design-details-inventory-costing.md)  
 [Set Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 

@@ -1,7 +1,6 @@
 ---
-title: Importing Many Item Pictures from a ZIP File| Microsoft Docs
-description: You can import multiple item pictures in one go. Simply name your picture files with names corresponding to your item numbers, compress them to a zip file, and then use the Import Item Pictures page to manage which item pictures to import.
-documentationcenter: ''
+title: Importing Many Item Pictures from a ZIP File
+description: To import multiple item pictures give picture files names corresponding to item numbers, compress them to a ZIP file, and use the Import Item Pictures page.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -10,12 +9,13 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: product, image
-ms.date: 04/01/2021
+ms.search.form: 30, 461
+ms.date: 06/16/2021
 ms.author: edupont
 
 ---
 # Hromadný import obrázků zboží
-Můžete hromadně importovat obrázky zboží. Simply name your picture files with names corresponding to your item numbers, compress them to a ZIP file, and then use the **Import Item Pictures** page to manage which item pictures to import.
+Můžete hromadně importovat obrázky zboží. Simply name your picture files with names corresponding to your item numbers, compress them to a zip file, and then use the Import Item Pictures page to manage which item pictures to import.
 
 Podporovány jsou všechny běžné formáty souborů.
 
@@ -31,7 +31,7 @@ Podporovány jsou všechny běžné formáty souborů.
 2. Seskupte všechny soubory do jednoho souboru ZIP. For example, in Windows Explorer, select the files, and then choose **Send to**, **Compressed (zipped) folder**.
 
 ## Import obrázků zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení zásob** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Setup**, and then choose the related link.
 2. Choose the **Import Item Pictures** action.
 3. In the **Select a ZIP file** field, select the relevant ZIP folder, and then choose the **Open** button.
 

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ Table 481 **Dimension Set Tree Node** is used when [!INCLUDE[prod_short](include
 ### Příklad 1
 Následující diagram představuje vyhledávací strom se šesti sadami dimenzí. V diagramu je zobrazena pouze položka rozlišovací sady dimenzí.
 
-![Příklad struktury stromu dimenzí](media/nav2013_dimension_tree.png "Příklad struktury stromu dimenzí")
+![Example of dimension tree structure.](media/nav2013_dimension_tree.png "Example of dimension tree structure")
 
 Následující tabulka popisuje úplný seznam položek sady dimenzí, které tvoří každou sadu dimenzí.
 
@@ -41,7 +41,7 @@ This example shows how [!INCLUDE[prod_short](includes/prod_short.md)] evaluates 
 
 First, [!INCLUDE[prod_short](includes/prod_short.md)] also updates the **Dimension Set Tree Node** table to make sure that the search tree looks like the following diagram. Sada dimenzí 7 se tak stává podřízenou sadou dimenzí 5.
 
-![Příklad struktury stromu dimenzí v NAV 2013](media/nav2013_dimension_tree_example2.png "Příklad struktury stromu dimenzí v NAV 2013")
+![Example of dimension tree structure in NAV 2013.](media/nav2013_dimension_tree_example2.png "Example of dimension tree structure in NAV 2013")
 
 ### Hledání ID sady dimenzí
 At a conceptual level, **Parent ID**, **Dimension**, and **Dimension Value**, in the search tree, are combined and used as the primary key because [!INCLUDE[prod_short](includes/prod_short.md)] traverses the tree in the same order as the dimension entries. Funkce GET (záznam) se používá k vyhledání ID sady dimenzí. Následující příklad kódu ukazuje, jak najít ID sady dimenzí, pokud existují tři hodnoty dimenze.
@@ -70,7 +70,6 @@ EXIT(DimSet.ID);
 
 ## Viz také
 
-[GET Function (Record)](/dynamics-nav/GET-Function--Record-)    
 [Design Details: Dimension Set Entries](design-details-dimension-set-entries.md)   
 [Dimension Set Entries Overview](design-details-dimension-set-entries-overview.md)   
 [Design Details: Table Structure](design-details-table-structure.md)

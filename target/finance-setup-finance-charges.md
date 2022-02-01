@@ -9,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment due, debt, overdue, fee, charge
+ms.search.form: 6, 494
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -37,7 +38,7 @@ Additionally, each term in the Finance Charge Terms table is linked to a subtabl
 
 ### To set up finance charge terms
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Terms**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Terms**, and then choose the related link.
 2. Podle potřeby vyplňte pole.
 3. To use more than one combination of finance charge terms, set up a code for each one.
 

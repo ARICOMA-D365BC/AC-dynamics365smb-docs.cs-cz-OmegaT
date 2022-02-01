@@ -15,59 +15,59 @@ ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Allocate Costs to Intercompany Partners
-When you use intercompany postings to transfer documents between partner companies, the VAT-related settings (primarily the VAT business posting group) assigned to the customer or vendor accounts (associated with the intercompany Partner) control whether, and how, VAT is calculated and registered.
-You can also do cost distributions directly from a purchase order to partner companies. For example, if you register a purchase invoice from an external vendor and you want to distribute some or all of the costs to one or more intercompany partners.
+# Přidělení nákladů mezipodnikových partnerům
+Při použití vnitropodnikového účtování pro přenos dokladů mezi partnerskými společnostmi ovlivňují nastavení týkající se DPH (především DPH účto skupina) přiřazená k účtům zákazníka nebo dodavatele (souvisejícím s vnitropodnikovým partnerem), zda a jak DPH registrováno a vypočítáno.
+Můžete také provádět distribuci nákladů přímo z objednávky partnerským společnostem. Pokud například zaevidujete nákupní fakturu od externího dodavatele a chcete distribuovat některé nebo všechny náklady jednomu nebo více mezipodnikových partnerům.
 
-You can allocate costs can be to one or more intercompany partners using the following:
+Náklady můžete přidělit jednomu nebo více mezipodnikových partnerů pomocí následujících možností:
 
-* **Intercompany General Journals** - These journals are useful when a service is purchased. For example, when a parent company hires a service to set up computer systems in two subsidiaries. The invoice is sent to the parent company, but the costs are allocate to the intercompany partners. For more information, see [Work with Intercompany Documents and Journals](intercompany-how-work-documents-journals.md).
-* Purchase orders and invoices - Using purchase documents is useful when the purchasing functions of, for example, operating expenses, are centralized in one company and then allocated to the intercompany partners.
+* **Vnitropodnikové finanční deníky** - tyto deníky jsou užitečné při nákupu služby. Například když si mateřská společnost najme službu pro nastavení počítačových systémů ve dvou dceřiných společnostech. Faktura je odeslána mateřské společnosti, ale náklady jsou přiděleny mezipodnikovým partnerům. Další informace naleznete v tématu [Práce s mezipodnikovým doklady a deníky](intercompany-how-work-documents-journals.md).
+* Nákupní objednávky a faktury - Použití nákupních dokladů je užitečné, pokud jsou nákupní funkce například provozních nákladů centralizovány v jedné společnosti a poté přiděleny mezipodnikových partnerům.
 
-## To allocate costs using an intercompany general journal
+## Přidělení nákladů pomocí vnitropodnikových finančních deníků
 To enter a  line in an intercompany general journal, follow these steps.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany General Journal** , and then choose the related link.
-2. If required, in the **External Document No.** field, enter the document number on the invoice from the vendor.
-3. In the **Document Type** field, choose **Invoice**.
-4. In the **Account Type** field, choose **Vendor**.
-5. In the **Account No.** field, choose the vendor.
-6. In the **Amount** field, enter a negative amount equal to the amount on the invoice.
-7. In the **Bal. Account Type** field, choose **G/L Account**.
-8. In the **Bal. Account No.** field, choose the balancing account to use.
-9. To allocate costs to intercompany partners, follow these steps:
-   1. Create a new line.
-   2. Leave the **Document Type** field, choose the option that leaves the field blank.
-   3. In the **Document No.** field, enter a number that is different than the number in the **External Document No.** field. The cost allocation is considered a different transaction.
-   4. In the **Account Type** field, choose **IC Partner**.
-   5. In the **Account No.** field, choose the intercompany partner to allocate the cost to.
-   6. In the **Balance Account Type** field, choose **G/L Account**.
-   7. In the **Balance Account No.** field, choose the G/L account to which to post the amount you receive from the intercompany partner.
-   1. In the **Amount** field, enter the amount of the invoice to allocate to the intercompany partner.
-   1. In the **IC Partner G/L Acc. No.** field, choose the G/L account that you want to post the amount to for the intercompany partner.
-   1. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Repeat these steps for each intercompany partner who should share in the cost.
-1. To post the document and allocate the costs, choose **Post**.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany General Journal** , and then choose the related link.
+2. V případě potřeby zadejte do pole **Číslo externího dokladu** číslo dokladu faktury od dodavatele.
+3. V poli **Typ dokladu** vyberte **Faktura**.
+4. V poli **Typ účtu** vyberte **Dodavatel**.
+5. V poli **Číslo účtu** vyberte dodavatele.
+6. V poli **Částka** zadejte zápornou částku rovnající se částce na faktuře.
+7. V poli **Číslo protiúčtu** a vyberte **Účet**.
+8. V poli **Číslo protiúčtu** vyberte vyrovnávací účet, který chcete použít.
+9. Chcete-li přidělit náklady vnitropodnikovým partnerům, postupujte takto:
+   1. Vytvořte nový řádek.
+   2. V poli **Typ dokladu** zvolte možnost, která ponechá pole prázdné.
+   3. V poli **Číslo dokladu**  zadejte číslo, které se liší od čísla v poli **Číslo externího dokladu**. Alokace nákladů je považována za jinou transakci.
+   4. V poli **Typ účtu** zvolte **Vnitropodnik. partner**.
+   5. V poli **Číslo účtu** vyberte vnitropodnikového partnera, ke kterému chcete přiřadit náklady.
+   6. V poli **Typ protiúčtu** vyberte **Účet**.
+   7. V poli **Číslo protiúčtu** vyberte účet, na který chcete zaúčtovat částku, kterou obdržíte od vnitropodnikového partnera.
+   1. V poli **Částka** zadejte částku faktury, která má být přidělena vnitropodnikovému partnerovi.
+   1. V poli **Číslo finančního účtu vnitropodnikového partnera** vyberte účet, na který chcete zaúčtovat částku pro vnitropodnikového partnera.
+   1. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Opakujte tyto kroky pro každého vnitropodnikového partnera, který by se měl podílet na nákladech.
+1. Chcete-li dokument zaúčtovat a přidělit náklady, zvolte **Účtovat**.
 
-## To allocate costs using a purchase document
-The following procedure describes how to allocate costs using a purchase invoice. The steps are the same for purchase orders.
+## Rozdělení nákladů pomocí nákupního dokladu
+Následující postup popisuje, jak přidělit náklady pomocí nákupní faktury. Kroky jsou stejné i pro nákupní objednávky.
 
 > [!NOTE]
-> To complete these steps you must personalize the **Purchase Invoice** page by adding the **IC Partner Code**, **IC Partner Ref. Type**, and **IC Partner** fields. For more information, see [To start personalizing a page through the Personalizing banner](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).
+> Chcete-li tyto kroky provést, musíte personalizovat stránku **Nákupní faktura** přidáním polí **Kód vnitropodnikového partnera**, **Typ odkazu na vnitropod. partnera** a **Vnitropodnikový partner**. Další informace naleznete v tématu [Přizpůsobení stránky pomocí pásu Přizpůsobení](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoice** , and then choose the related link.
-2. In the **Type** field, choose **G/L Account**.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoice** , and then choose the related link.
+2. V poli **Typ** vyberte **Účet**.
 
-   G/L Account is the only option you can use to allocate costs.
-1. In the **No.** field, choose the G/L account to post to.
-1. In the **IC Partner Code** field, choose the intercompany partner to allocate the cost to.
-1. In the **IC Partner Ref. Type** choose the G/L account to use for the allocation. This account will map the expense to an account in the intercomany partner's chart of accounts.
+   Finanční účet je jediná možnost, kterou můžete použít k přidělení nákladů.
+1. V poli **Číslo** vyberte účet, na který chcete účtovat.
+1. Do pole **Kód vnitropodnikového partnera**vyberte vnitropodnikového partnera, ke kterému chcete přiřadit náklady.
+1. Do pole **Typ odkazu na vnitropod. partnera** vyberte účet, který chcete použít pro přidělení. This account will map the expense to an account in the intercomany partner's chart of accounts.
 1. In the **Quantity** field, specify the number of units to charge to the intercompany partner.
 1. In the **Direct Unit Cost Excl. VAT (or Incl. VAT)** field, enter the cost per item to charge to the intercompany partner.
 1. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 1. To post the purchase order, choose **Post**.
 
 ## To send the allocated costs to intercompany partners
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **IC Outbox Transactions**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **IC Outbox Transactions**, and then choose the related link.
 2. Choose lines to send, and then choose the **Send to IC Partner** action.
 3. To allocate the costs, choose the **Complete Line Actions** action.
 

@@ -1,8 +1,6 @@
 ---
-title: Assign Item Charges to Sales and Purchases| Microsoft Docs
-description: 'If you want your inventory items to carry added costs, such as freight, physical handling, insurance, and transportation that you incur when purchasing or selling items, you can use the Item Charges feature.'
-services: project-madeira
-documentationcenter: ''
+title: Assign Item Charges to Sales and Purchases (contains video)
+description: Assign item charges when you need inventory items to carry added costs, such as freight and physical handling that you incur when purchasing or selling items.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -11,7 +9,8 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: transportation, added cost, landed cost
-ms.date: 04/01/2021
+ms.search.form: 5709, 5800, 5805, 5814
+ms.date: 06/22/2021
 ms.author: edupont
 
 ---
@@ -22,7 +21,7 @@ Kromě zaznamenání přidaných nákladů do hodnoty zásob můžete použít f
 
 - Určete náklady na vyložené zboží pro přesnější rozhodování o optimalizaci distribuční sítě.
 - Pro účely analýzy rozdělte pořizovací cenu nebo jednotkovou cenu zboží.
-- Zahrňte povolenky na nákup a prdej do jednotkové ceny.
+- Include purchase allowances into the unit cost and sales allowances into the unit price.
 
 Před přiřazením poplatků za zboží je nutné nastavit čísla poplatků za zboží pro různé typy poplatků za zboží, včetně nákladů na účty souvisejících s prodejem, nákupy a úpravami zásob. Číslo poplatku za zboží obsahuje kombinaciobecné účto skupiny zboží, daňové skupiny, DPH účto skupiny zboží a poplatku zboží. dyž zadáte číslo poplatku za zboží na nákupním nebo prodejním dokladu, příslušný účet se načte na základě nastavení čísla poplatku za zboží a informací v dokladu.
 
@@ -41,14 +40,14 @@ Toto video ukazuje, jak zpracovat dodatečné náklady na dopravu v rámci nákl
 ## Nastavení čísel poplatků za zboží
 Čísla poplatků za zboží slouží k rozlišení mezi různými druhy poplatků za zboží, které se používají ve vaší společnosti.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Charges**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Charges**, and then choose the related link.
 2. On the **Item Charges** page, choose the **New** action to create a new line.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Přiřazení poplatku za zboží přímo k nákupní faktuře za zboží
 Pokud znáte poplatek za zboží v době, kdy účtujete nákupní fakturu za zboží, postupujte podle tohoto postupu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
 2. Vytvořte novou nákupní fakturu. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 3. Ujistěte se, že nákupní faktura má jeden nebo více řádků typu Zboží.
 4. On a new line, in the **Type** field, select **Charge (Item)**.

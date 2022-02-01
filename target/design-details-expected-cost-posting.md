@@ -1,5 +1,5 @@
 ---
-    title: Design Details - Expected Cost Posting | Microsoft Docs
+    title: Design Details - Expected Cost Posting
     description: Expected costs represent the estimation of, for example, a purchased item’s cost that you record before you receive the invoice for the item.
     author: SorenGP
 
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 07/20/2021
     ms.author: edupont
 
 ---
@@ -25,8 +25,20 @@ Pokud byla zaúčtována pouze část množství, která zvyšuje zásoby, hodno
 
 Pro podporu odsouhlasení a sledovatelnosti práce zobrazuje zaúčtovaná položka ocenění očekávanou částku nákladů, která byla zaúčtována k vyrovnání mezitímních účtů.
 
+## Prerequisites for posting expected costs
+
+To make it possible to post expected costs you need to do the following:
+1. On the **Inventory Setup** page, select the **Automatic Cost Posting** check box and the **Expected Cost Posting to G/L** check box.
+2. Set up which interim accounts to use during the expected cost posting process.
+
+On the **Inventory Posting Setup** page, verify the **Inventory Account** and the **Inventory Account (Interim)** fields for the **Location Code and Invt. Posting Group Code** of the item you will be purchasing. To learn more about these accounts see [Design Details - Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md).
+3. On the **General Posting Setup** page, verify the **Invt. Accrual Acc. (Interim)** field for the **Gen. účto  Posting Group** and the **Gen. účto  Posting Group** you will be using.
+4. When you create a purchase order the default is that the **Vendor Invoice No.** field is required. You need to turn that off on the **Purchase & Payables Setup** page, by unselecting the **Ext. Doc. Ne.  Mandatory** field.
+
 ## Příklad
-Následující příklad ukazuje očekávané náklady, pokud jsou na stránce **Nastavení zásob** zaškrtnuta políčka **Automatické účtování nákladů** a **Účtování oček.nákladů do fin.**.
+
+> [!NOTE]  
+> The account numbers used in this example are there for reference only, and will be different in your system. Set them up as directed in the Prerequisites above.
 
 Zaúčtujete nákupní objednávku tak, jak byla přijata. Očekávaná cena je 95,00 CZK.
 
@@ -69,7 +81,7 @@ Později zaúčtujete nákupní objednávku jako fakturovanou. Fakturované nák
 
 **Věcné položky**
 
-| Zúčtovací datum | Finanční účet | Číslo účtu (En-US Demo) | Částka | Číslo položky |
+| Zúčtovací datum | Finanční účet | Číslo účtu (Examples only!) | Částka | Číslo položky |
 |------------------|------------------|---------------------------------|------------|---------------|  
 | 15.01.20 | Účet časového rozlišení zásob (dočasné) | 5530 | 95,00 | 4 |
 | 15.01.20 | Účet zásob (dočasné) | 2131 | -95,00 | 3 |

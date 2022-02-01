@@ -1,19 +1,20 @@
 ---
-    title: Configure Warehouse Processes | Microsoft Docs
-    description: A company's distribution strategy is reflected in the configuration of its warehouse processes. This includes defining how different items are handled in different warehouse locations, such as the degree of bin control and the extend of workflow required between warehouse activities.
-    author: SorenGP
+title: Configure Warehouse Processes
+description: A company's distribution strategy is reflected in the configuration of its warehouse processes, for example the warehouse locations.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 5775, 7300, 7301, 7302, 7303, 7304, 7305, 7306, 7307, 7308, 7325, 7344, 7346, 7347, 7353, 7366
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Setting Up Warehouse Management
+
 A company's distribution strategy is reflected in the configuration of its warehouse processes. This includes defining how different items are handled in different warehouse locations, such as the degree of bin control and the extend of workflow required between warehouse activities.
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
@@ -36,12 +37,13 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Set up the warehouse to automatically suggest items to be picked that expire first. | [Enable Picking by FEFO](warehouse-picking-by-fefo.md) |
 | Get tips on how to reorganize locations, bins, or zones to obtain more efficient warehouse activities. | [Restrukturalizace skladů](warehouse-how-to-restructure-warehouses.md) |
 | Integrate bar code readers to your warehouse management solution. Only for on-premise deployment. | [Use Automated Data Capture Systems (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md) |
-| Zadejte výchozí sestavy, které se mají použít pro různé typy dokladů. | [Výběr sestavy v Business Central](across-report-selections.md) |
+| Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
 ## Viz také
+
 [Warehouse Management](warehouse-manage-warehouse.md)  
 [Inventory](inventory-manage-inventory.md)  
-[Assembly Management](assembly-assemble-items.md)    
+[Assembly Management](assembly-assemble-items.md)
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 

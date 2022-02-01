@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: CDS, , integration, sync
+ms.search.keywords: CDS, Dataverse, integration, sync
 ms.date: 04/01/2021
 ms.author: bholtorf
 
@@ -36,11 +36,11 @@ The following image shows an example of this data setup in [!INCLUDE[prod_short]
 
 ![Kořenová organizační jednotka je nahoře, týmy jsou uprostřed a pak jsou společnosti dole.](media/cds_bu_team_company.png)
 
-V této konfiguraci budou záznamy, které souvisejí se společností Cronus US, vlastněny týmem, který je propojen s cronus US <ID> business unit in [!INCLUDE[prod_short](includes/cds_long_md.md)]. Users who can access that business unit through a security role that is set to business unit–level visibility in [!INCLUDE[prod_short](includes/cds_long_md.md)] can now see those records. Následující příklad ukazuje, jak pomocí týmů poskytnout přístup k těmto záznamům.
+In this configuration, records that are related to the Cronus US company will be owned by a team that is linked to the Cronus US business unit in [!INCLUDE[prod_short](includes/cds_long_md.md)]. Users who can access that business unit through a security role that is set to business unit–level visibility in [!INCLUDE[prod_short](includes/cds_long_md.md)] can now see those records. Následující příklad ukazuje, jak pomocí týmů poskytnout přístup k těmto záznamům.
 
 * Role Manažera prodeje je přiřazena členům amerického prodejního týmu Cronus.
 * Uživatelé, kteří mají roli Správce prodeje, mají přístup k záznamům účtů pro členy stejné organizační jednotky.
-* Tým prodeje společnosti Cronus v USA je propojen s obchodní jednotkou Cronus v USA, která byla zmíněna výše. Členové amerického prodejního týmu Cronus mohou vidět jakýkoli účet, který je vlastněn společností Cronus US, <ID> user, which would have come from the Cronus US company table in [!INCLUDE[prod_short](includes/prod_short.md)].
+* Tým prodeje společnosti Cronus v USA je propojen s obchodní jednotkou Cronus v USA, která byla zmíněna výše. Members of the Cronus US Sales team can see any account that is owned by the Cronus US user, which would have come from the Cronus US company table in [!INCLUDE[prod_short](includes/prod_short.md)].
 
 Mapování 1:1 mezi organizační jednotkou, společností a týmem je však pouze výchozím bodem, jak je znázorněno na následujícím obrázku.
 
@@ -48,7 +48,7 @@ Mapování 1:1 mezi organizační jednotkou, společností a týmem je však pou
 
 In this example, a new EUR (Europe) root business unit is created in [!INCLUDE[prod_short](includes/cds_long_md.md)] as the parent for both Cronus DE (Gernamy) and Cronus ES (Spain). Obchodní jednotka EUR nesouvisí se synchronizací. However, it can give members of the EUR Sales team access to account data in both Cronus DE and Cronus ES by setting the data visibility to **Parent/Child BU** on the associated security role in [!INCLUDE[prod_short](includes/cds_long_md.md)].
 
-Synchronizace určuje, který tým má vlastnit záznamy. This is controlled by the **Default owning team** field on the BCI - <ID> row. Když BCI - <ID> record is enabled for synchronization we automatically create the associated business unit and owner team (if it doesn't already exist), and set the **Default owning team** field. When synchronization is enabled for an table, administrators can change the owning team, but a team must always be assigned.
+Synchronizace určuje, který tým má vlastnit záznamy. This is controlled by the **Default owning team** field on the BCI row. When a BCI record is enabled for synchronization we automatically create the associated business unit and owner team (if it doesn't already exist), and set the **Default owning team** field. When synchronization is enabled for an table, administrators can change the owning team, but a team must always be assigned.
 
 > [!NOTE]
 > Records become read-only after a company is added and saved, so be sure to choose the correct company.

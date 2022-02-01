@@ -1,6 +1,6 @@
 ---
-    title: How to Subcontract Manufacturing | Microsoft Docs
-    description: When the purchase order has been created from the subcontractor worksheet, then it can be posted.
+    title: Subcontract Manufacturing
+    description: This topic gives an extended overview of the extended funtionality of subcontracting in Business Central including work center fields and routing.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -8,12 +8,13 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.keywords: 99000886
+    ms.date: 06/22/2021
     ms.author: edupont
 
 ---
 # Subdodavatelská výroba
+
 V mnoha výrobních společnostech je subdodavatelská výroba dodavateli běžná. Subdodávky mohou být vzácným jevem nebo mohou být nedílnou součástí všech výrobních procesů.
 
 [!INCLUDE[prod_short](includes/prod_short.md)] provides several tools for managing subcontract work:
@@ -48,7 +49,7 @@ The **Subcontracting Worksheet** page functions like the **Planning Worksheet** 
 > Only production orders with status **Released** can be accessed and used from a subcontracting worksheet.
 
 ### Výpočet sešitu subdodavatelů
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Subcontracting Worksheet**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Subcontracting Worksheet**, and then choose the related link.
 2. To calculate the worksheet, choose the **Calculate Subcontracts** action.
 3. On the **Calculate Subcontracts** page, set filters for the subcontracted operations, or the work centers where they are performed, to calculate only the relevant production orders.
 4. Zvolte tlačítko **OK**.
@@ -56,7 +57,7 @@ The **Subcontracting Worksheet** page functions like the **Planning Worksheet** 
    Review the lines on the **Subcontracting Worksheet** page. Informace v tomto sešitě pocházejí z výrobní zakázky a řádků TNG postupu výrobní zakázky a načíta se do nákupní objednávky při vytvoření tohoto dokladu. Řádek můžete odstranit zesešitu bez ovlivnění původních informací, stejně jako u ostatních sešitů. The information will reappear the next time you run the **Calculate Subcontracts** function.
 
 ### Vytvoření nákupní objednávky subdodávky
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Subcontracting Worksheet**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Subcontracting Worksheet**, and then choose the related link.
 2. Vyberte akci **Provést hlášené akce**.
 3. Select the **Print Orders** field to print the purchase order as it is created.
 4. Zvolte tlačítko **OK**.
@@ -69,12 +70,12 @@ Pokud jsou všechny subdodavatelské operace odeslány do stejné lokace dodavat
 Jakmile byly vytvořeny nákupní objednávky subdodavatele, lze je zaúčtovat. Přijetí objednávky zaúčtuje záznam výrobní kapacity do výrobní zakázky a fakturace objednávky zaúčtuje přímé náklady na objednávku do výrobní zakázky.
 
 ## Zaúčtování nákupní objednávky subdodávek
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then select the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then select the related link.
 2. Otevřete nákupní objednávku vytvořenou ze sešitu subdodavatelů.
 
    Na řádcích objednávek se zobrazují stejné informace jako v sešitu. The **Prod. Order No.**, **Prod. Order Line No.**, **Operation No.**, and **Work Center No.** fields are filled in with the information from the source production order.
 
-3. Vyberte akci **Zaúčtovat**.
+3. Vyberte tlačítko **Zaúčtovat**.
 
 Když je nákup zaúčtován tak, jak byl přijat, je výstupní položka deníku automaticky zaúčtována pro výrobní zakázku. Toto platí pouze v případě, že operace subdodávek je poslední operací na TNG postupu výrobní zakázky.
 

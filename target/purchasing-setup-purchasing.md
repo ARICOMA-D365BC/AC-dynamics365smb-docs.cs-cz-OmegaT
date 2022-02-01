@@ -1,5 +1,5 @@
 ---
-title: Overview of Tasks to Set Up Purchasing | Microsoft Docs
+title: Overview of Tasks to Set Up Purchasing
 description: Describes the tasks to define your company's procurement policies and set up your purchasing processes.
 author: SorenGP
 
@@ -9,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement, supply, vendor order
+ms.search.form: 175, 176, 177, 178, 460, 5727, 5729
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -28,10 +29,14 @@ Finance-related purchase setup, such as payment methods and currencies, are cove
 | Enter the different discounts and special prices that vendors grant you depending on item, quantities, and/or date | [Record Purchase Price, Discount, and Payment Agreements](purchasing-how-record-purchase-price-discount-payment-agreements.md) |
 | Prioritize vendors | [Prioritize Vendors](purchasing-how-prioritize-vendors.md) |
 | Set up purchasers | [Set Up Purchasers](purchasing-how-setup-purchasers.md) |
-| Zadejte výchozí sestavy, které se mají použít pro různé typy dokladů. | [Výběr sestavy v Business Central](across-report-selections.md) |
+| Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
 > [!TIP]
 > Depending on your geographical location, some pages can contain fields that are not described in the articles that are listed here because they apply to local functionality or customizations. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+
+## External document number
+
+[!INCLUDE [ext-doc-no-purch](includes/ext-doc-no-purch.md)]
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 

@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, reconciliation, general ledger, inventory
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -78,16 +78,16 @@ Následující tabulka ukazuje, jak je pracovní centrum nastaveno na kartě pra
    1. Pozatímní účty jsou vymazány. (Prodej)
    2. Náklady na prodané zboží (NNPZ) jsou zaúčtovány. (Prodej)
 
-      ![Výsledky zaúčtování prodeje na finanční účty](media/design_details_inventory_costing_3_gl_posting_sales.png "Výsledky zaúčtování prodeje na finanční účty")
+      ![Results of sales posting to GL accounts.](media/design_details_inventory_costing_3_gl_posting_sales.png "Results of sales posting to GL accounts")
 5. Uživatel zaúčtuje spotřebu 150 částí, což je počet částí použitých k vytvoření jednoho řetězce. (Spotřeba, Materiál)
 
-   ![Výsledky zaúčtování materiálu na finanční účty](media/design_details_inventory_costing_3_gl_posting_material.png "Výsledky zaúčtování materiálu na finanční účty")
+   ![Results of material posting to GL accounts.](media/design_details_inventory_costing_3_gl_posting_material.png "Results of material posting to GL accounts")
 6. Pracovní centrum využilo na výrobu řetězu 60 minut. Uživatel zaúčtuje náklady převodu. (Spotřeba, Kapacita)
 
    1. Přímé náklady jsou zaúčtovány. (Spotřeba, Kapacita)
    2. Nepřímé náklady se vypočítají a zaúčtují. (Spotřeba, Kapacita)
 
-      ![Výsledky účtování kapacity na finanční účty](media/design_details_inventory_costing_3_gl_posting_capacity.png "Výsledky účtování kapacity na finanční účty")
+      ![Results of capacity posting to GL accounts.](media/design_details_inventory_costing_3_gl_posting_capacity.png "Results of capacity posting to GL accounts")
 7. Uživatel zaúčtuje očekávané náklady na jeden řetězec. (Výstup)
 8. Uživatel dokončí výrobní zakázku a spustí dávkovou úlohu **Adjustace nákladů položek zboží**. (Výstup)
 
@@ -96,7 +96,7 @@ Následující tabulka ukazuje, jak je pracovní centrum nastaveno na kartě pra
    3. Nepřímé náklady (režijní náklady) se převádí z účtu nepřímých nákladů na účet zásob. (Výstup)
    4. Výsledkem je částka odchylky 157,00 LM. Odchylky se počítají pouze u položek se standardními náklady. (Výstup)
 
-      ![Výsledky zaúčtování výstupu na finanční účty](media/design_details_inventory_costing_3_gl_posting_output.png "Výsledky zaúčtování výstupu na finanční účty")
+      ![Results of output posting to GL accounts.](media/design_details_inventory_costing_3_gl_posting_output.png "Results of output posting to GL accounts")
 
       > [!NOTE]  
       > Kvůli zjednodušení je zobrazen pouze jeden účet odchylky. Ve skutečnosti existuje pět různých účtů:
@@ -109,7 +109,7 @@ Následující tabulka ukazuje, jak je pracovní centrum nastaveno na kartě pra
 
 9. Uživatel přehodnocuje řetězec z 150,00 LM na 140,00 LM. (Adjustace/Přecenění/Zaokrouhlení/Transfer)
 
-   ![Výsledky zaúčtování adjustace na finanční účty](media/design_details_inventory_costing_3_gl_posting_adjustment.png "Výsledky zaúčtování adjustace na finanční účty")
+   ![Results of adjustment posting to GL accounts.](media/design_details_inventory_costing_3_gl_posting_adjustment.png "Results of adjustment posting to GL accounts")
 
 Pro více informací o vztahu mezi typy účtů a různými typy položek ocenění navštivte [Detaily návrhu: Účty hlavní knihy](design-details-accounts-in-the-general-ledger.md).
 

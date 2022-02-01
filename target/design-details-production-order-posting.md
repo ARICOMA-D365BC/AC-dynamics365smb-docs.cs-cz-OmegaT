@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -54,11 +54,11 @@ Zaúčtování výrobních objednávek do Nedokončené výroby zahrnuje výstup
 
 Následující diagram znázorňuje princip účtování v codeunitě 22.
 
-![Postupy účtování výrobní zakázky](media/design_details_inventory_costing_14_production_posting_1.png "Postupy účtování výrobní zakázky")
+![Production order posting routines.](media/design_details_inventory_costing_14_production_posting_1.png "Production order posting routines")
 
 Následující diagram znázorňuje spojení mezi výslednými položkami a nositeli nákladů.
 
-![Vstupní tok výroby](media/design_details_inventory_costing_14_production_posting_2.png "Vstupní tok výroby")
+![Production entry flow.](media/design_details_inventory_costing_14_production_posting_2.png "Production entry flow")
 
 Položka kapacity popisuje spotřebu kapacity z hlediska časových jednotek, zatímco související položka ocenění popisuje hodnotu specifické spotřeby kapacity.
 

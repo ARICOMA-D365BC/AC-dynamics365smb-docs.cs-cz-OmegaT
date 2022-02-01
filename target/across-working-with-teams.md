@@ -12,22 +12,38 @@ ms.date: 05/19/2021
 ms.author: jswymer
 ---
 
-# Sharing Business Central Records in Microsoft Teams
+# Sharing Business Central Records and Page Links in Microsoft Teams
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-[!INCLUDE [prod_short](includes/prod_short.md)] nabízí aplikaci, která propojuje Microsoft Teams s vašimi obchodními daty v  [!INCLUDE [prod_short](includes/prod_short.md)], abyste mohli rychle sdílet podrobnosti mezi členy týmu a rychleji reagovat na dotazy. In this article, you'll learn how to use the app to share [!INCLUDE [prod_short](includes/prod_short.md)] records, like a customer, sales order, or invoice, with coworkers in a Teams conversation.
+[!INCLUDE [prod_short](includes/prod_short.md)] offers a couple ways to share data from Business Central directly in a Microsoft Teams conversation:
 
-## Přehled
+<!-- 
+## Overview
+In this article, you'll learn how to use the app to share [!INCLUDE [prod_short](includes/prod_short.md)] records, like a customer, sales order, or invoice, with coworkers in a Teams conversation.
+The [!INCLUDE [prod_short](includes/prod_short.md)] app lets you:
+[!INCLUDE [prod_short](includes/prod_short.md)] offers an app that connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)], so you can quickly share details across team members and respond faster to inquiries. In this article, you'll learn how to use the app to share [!INCLUDE [prod_short](includes/prod_short.md)] records, like a customer, sales order, or invoice, with coworkers in a Teams conversation.
 
-Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
+-->
+- With the [!INCLUDE [prod_short](includes/prod_short.md)] app installed in Teams, you can include an interactive card of Business Central record in a Teams conversation.
 
-- Kopírovat odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
-- Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
+<!--   Copy a link from any Business Central record, like a customer or sales order, then paste the link into a Teams conversation. The app connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)]. It then expands the link into a compact, interactive card that displays information about the record. Once in the conversation, you and coworkers can view more details about the record, edit data, and take action&mdash;without leaving Teams.
 
-[![Teams integrace s Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+  [![Teams integration with Business Central.](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)-->
 
-## Předpoklady
+- With or without the [!INCLUDE [prod_short](includes/prod_short.md)] app installed, you can share a link from pages in Business Central to a Teams conversation.
+
+   <!-- ![!The Share menu displayed on a card.](media/teams-share-link.png "The Share menu displayed on a card.")-->
+
+The following sections describe the different ways in detail.
+
+## Include and view a Business Central card in a Teams conversation
+
+With the Business Central app for Teams, you can copy a link from any Business Central record, like a customer or sales order, and paste the link into a Teams conversation. The app connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)]\. It then expands the link into a compact, interactive card that displays information about the record. Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
+
+[![Teams integration with Business Central.](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+
+### Předpoklady
 
 - Máte přístup do Microsoft Teams.
 - Nainstalovali jste aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)
@@ -35,22 +51,22 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 > [!NOTE]
 > Všichni účastníci konverzace v Teams si budou moci prohlédnout karty záznamů Business Central, které do konverzace odešlete. Chcete-li zobrazit více podrobností o záznamech pomocí **Detaily** nebo **Vyskakovacího okna** na katě, musíte mít přístup do [!INCLUDE [prod_short](includes/prod_short.md)]. Pro více informací navštivte [Správa integrace Microsoft Teams](admin-teams-integration.md#minimum-requirements-1).
 
-## Zahrnutí karty Business Central do konverzace Teams
+### Zahrnutí karty Business Central do konverzace Teams
 
 1. Přihlašte se do [!INCLUDE [prod_short](includes/prod_short.md)] pomocí Vašeho prohližeče.
 2. Otevřete záznam, který chcete sdílet.
 
-   Aplikace je navržena tak, aby zobrazovala stránky typu karta z [!INCLUDE [prod_short](includes/prod_short.md)]. Otevřete stránku, která zobrazuje jeden záznam, například Zboží, Zákazníka nebo Pprodejní objednávku. Nelze jej použít pro centra rolí nebo stránky, které zobrazují několik záznamů v seznamu.
+   The app is designed to display card type pages from [!INCLUDE [prod_short](includes/prod_short.md)]\. Otevřete stránku, která zobrazuje jeden záznam, například Zboží, Zákazníka nebo Pprodejní objednávku. Nelze jej použít pro centra rolí nebo stránky, které zobrazují několik záznamů v seznamu.
 
 3. Zkopírujte celou adresu URL z adresního řádku prohlížeče.
 
-   ![Kopírování URL Business Central z prohlížeče](media/teams-url-v2.png)
+   ![Copy Business Central URL from browser.](media/teams-url-v2.png)
 4. Přejděte do Teams a začněte konverzaci, pomocí které můžete chatovat s osobou, skupinou osob nebo týmovám kanálem.
 
    <!--Teams imposes a few limitations here eg. you cannot unfurl a link during a Voice/Video call :/ We should probably only mention this in a Troubleshooting section (and i hope it will also be fixed soon)-->
 5. Vložíte URL adresu do okna se zprávou, kde ji píšete.
 
-   ![Vložení URL Business Central do Teams](media/teams-paste-url-v2.png)
+   ![Paste Business Central URL in Teams.](media/teams-paste-url-v2.png)
 6. Při prvním vložení odkazu do konverzace budete požádáni, abyste se přihlásili k [!INCLUDE [prod_short](includes/prod_short.md)] a udělili aplikaci souhlas k načtení dat. Postupujte podle pokynů na obrazovce.
 
    > [!NOTE]
@@ -67,7 +83,7 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] Vás nechá:
 
 10. Chcete-li zobrazit další podrobnosti nebo provést změny záznamu zobrazeném na kartě, vyberte možnost **Podrobnosti**. Další informace naleznete v následující části.
 
-## Zobrazení podrobností karty
+### Zobrazení podrobností karty
 
 Po odeslání karty do konverzace mohou všichni účastníci se [správnými oprávněními](admin-teams-integration.md#permissions) vybrat **Detaily** a otevřít okno, které zobrazuje další informace o záznamu a případně provést změny záznamu. Nezáleží na tom, jestli jste ten, kdo kartu posílá, nebo ten, kdo kartu přijímá. Funkce **Podrobnosti** je obzvláště užitečná pro příjemce, protože jim rychle poskytuje stručné a cílené informace o záznamu, na rozdíl od toho, že musí zobrazovat celý záznam.
 
@@ -75,18 +91,38 @@ Okno podrobností je podobné tomu, co byste viděli v záznamu [!INCLUDE [prod_
 
 Při práci s údaji na kartě je na paměti několik věcí:
 
-- K otevření karty musí mít uživatelé oprávnění ke stránce a jejím údajům v [!INCLUDE [prod_short](includes/prod_short.md)].
-- Karty v chatu Teams se automaticky neaktualizují podle změn. Všechny změny, které provedete na záznamu v okně podrobností, jsou uloženy v  [!INCLUDE [prod_short](includes/prod_short.md)]. Karta v Teams nezobrazí změn v konverzaci, dokud nevložíte odkaz znovu.
+- To open the card details, users must have permission on the page and its data in [!INCLUDE [prod_short](includes/prod_short.md)]\.
+- Karty v chatu Teams se automaticky neaktualizují podle změn. Any changes you save to a record in the details window are saved in [!INCLUDE [prod_short](includes/prod_short.md)]\. Karta v Teams nezobrazí změn v konverzaci, dokud nevložíte odkaz znovu.
 
 Další informace o práci s kartami a jejich údaji naleznete v [Teams FAQ](teams-faq.md).
 
+## <a name="share-link"></a>Share a link to page from Business Central to Teams
+
+Directly from most collection pages, like the **Items** page, and details pages, like the **Items** card, you can send a link to the page to specific recipients in a Teams conversation. For example, you can share a link to a filtered view of your records. Recipients can then select the link to open the page in [!INCLUDE [prod_short](includes/prod_short.md)]\.
+
+![!The Share menu displayed on a card.](media/teams-share-link.png "The Share menu displayed on a card.")
+
+### Předpoklady
+Máte přístup do Microsoft Teams.
+
+### Share a link
+
+1. In [!INCLUDE [prod_short](includes/prod_short.md)]\, open the page that you want to share.
+2. At the top of the page, choose the ![!Share to other apps action on pages.](media/share-icon.png) icon, then **Share to Teams**.
+3. If you're asked, sign in to Teams with your user name and password.
+4. In the **Share to Teams** page, type a name of a person, group, or channel that you want send the message to.
+5. The message box will include a link to the page. Add any more information if you like, then choose **Share**.
+6. The link has now been shared. If you want to go to the conversation, choose **Go to Teams**.
+
 ## Viz také
 
-[Přehled integrace Business Central a Microsoft Teams](across-teams-overview.md)  
-[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
+[Business Central and Microsoft Teams Integration Overview](across-teams-overview.md)  
+[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Řešení problémů Teams](admin-teams-troubleshooting.md)  
-[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Searching for Customers, Vendors, and Other Contacts from Microsoft Teams](across-search-contacts-teams.md)  
+[Changing Company and Other Settings in Teams](across-teams-settings.md)  
+[Troubleshooting Teams](admin-teams-troubleshooting.md)  
+[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

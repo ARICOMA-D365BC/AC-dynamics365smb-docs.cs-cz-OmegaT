@@ -27,7 +27,7 @@ In database terms, this feature is commonly known as *read scale-out*. For more 
 
 ## Změna přístupu k databázi
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Database Access Intent List**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Database Access Intent List**, and then choose the related link.
 
    Na stránce jsou uvedeny všechny sestavy, stránky a dotazy. The **Access Intent** column includes one of the following values:
 

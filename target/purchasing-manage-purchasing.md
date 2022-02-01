@@ -1,8 +1,6 @@
 ---
-title: Overview of Tasks to Manage Purchasing | Microsoft Docs
+title: Overview of Tasks to Manage Purchasing 
 description: Outlines tasks to manage your purchasing or procurement processes, including how purchase invoices and purchase orders work.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -11,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement, supply, vendor order
+ms.search.form: 460
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -41,6 +40,10 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Learn how [!INCLUDE[prod_short](includes/prod_short.md)] calculates when you must order an item to receive it on a certain date. | [Date Calculation for Purchases](purchasing-date-calculation-for-purchases.md) |
 | Resolve confusion when two or more records exist for the same vendor. | [Merge Duplicate Records](sales-how-merge-duplicate-records.md) |
 | Manage your commitment to a vendor to purchase large quantities delivered in several shipments over time. | [Work With Blanket Purchase Orders](sales-how-to-create-blanket-sales-orders.md) |
+
+## External document numbers
+
+[!INCLUDE [ext-doc-no-purch](includes/ext-doc-no-purch.md)]
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/purchase-items-services-dynamics-365-business-central/)
 

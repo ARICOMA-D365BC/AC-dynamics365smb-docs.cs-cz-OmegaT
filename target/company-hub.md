@@ -26,7 +26,7 @@ Pokud používáte roli **Centrum společnosti**, na domovské stránce se zobra
 > [!TIP]
 > Chcete-li získat přístup ke konkrétní společnosti v [!INCLUDE [prod_short](includes/prod_short.md)], vyberte název společnosti nebo zvolte položku nabídky **Přejít na společnost**, do které jste automaticky přihlášení na nové záložce.
 
-:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Akce pro společnost, která je uvedena v centru společnosti":::
+:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Actions for a company that is listed in the company hub.":::
 
 Můžete přidat nové společnosti, například když dostanete nového klienta nebo když vaše společnost přidá novou dceřinou společnost. Další informace naleznete v [Přidání společností do centra vaší společnosti](company-hub-add-company.md).
 

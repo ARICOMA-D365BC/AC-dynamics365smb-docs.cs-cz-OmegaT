@@ -28,7 +28,7 @@ Stránky **Výběry sestav** určují, které sestavy se vytisknou v různých s
 | Definice sestavy pro vykazování DPH (Německo) | [Nastavení sestav pro DPH a intrastat](LocalFunctionality/Germany/how-to-set-up-reports-for-vat-and-intrastat.md) |
 
 > [!TIP]
-> Váš [!INCLUDE [prod_short](includes/prod_short.md)] může zahrovat další stránky **Výběrů sestav** v závislosti na Vaší lokalitě a odvětví. Nastavení můžete kdykoli zkontrolovat tak, že vyberete ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") , zadejte **Výběry sestav** a poté vyberte související odkaz.
+> Váš [!INCLUDE [prod_short](includes/prod_short.md)] může zahrovat další stránky **Výběrů sestav** v závislosti na Vaší lokalitě a odvětví. You can always check your setup by choosing the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, entering **Report Selections**, and then choose the relevant link.
 
 Výchozí verze [!INCLUDE [prod_short](includes/prod_short.md)] obsahuje následující stránky **Výběrů sestav**:
 

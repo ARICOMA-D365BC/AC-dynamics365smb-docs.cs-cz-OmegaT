@@ -1,6 +1,6 @@
 ---
     title: How to Put Items Away with Warehouse Put-aways | Microsoft Docs
-    description: When your location is set up to require warehouse put-away processing and warehouse receive processing, you use the warehouse put-away documents function to control the putting away of items.
+    description: Learn how the different ways for putting away items in Business Central with the following Warehouse Put-aways tasks.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/25/2021
     ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ V závislosti na nastavení skladu jsou řádky buď zpřístupněny listu zaskl
 Kromě standardních způsobů vytváření zaskladnění skladů, které jsou popsány v tomto tématu, můžete vytvořit zaskladnění z příslušné zaúčtované příjemky na sklad. To je užitečné, pokud jste odstranili řádky zaskladnění nebo pokud používáte řízené zaskladnění a vyskladnění a rozhodli jste se nepoužívat list zaskladnění, protože můžete vytvořit nebo znovu vytvořit pokyny k zaskladnění ze zaúčtovaných řádků příjemky.
 
 ## Zaskladnění zboží bez řízeného zaskladnění a vyskladnění
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-aways**, and then choose the related link.
 2. Otevřete zaskladnění skladu, které je připravené k zpracování.
 
    Řádky zaskladnění můžete seřadit podle různých kritérií, například podle zboží, čísla police nebo data splatnosti, a optimalizovat tak proces zaskladnění.
@@ -31,7 +31,7 @@ Kromě standardních způsobů vytváření zaskladnění skladů, které jsou p
 4. Po dokončení zaskladnení zboží vyberte akci **Zápis zaskladnění**, která zaznamená dokončení aktivity a zpřístupní zboží k vyskladnění.
 
 ## Zaskladnění zboží pomocí řízeného zaskladnění a vyskladnění
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaskladnění** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-aways**, and then choose the related link.
    Pokud byly vytvořeny pokyny k vyskladnění, je viditelné vyskladnění skladu.
 2. Otevřete zaskladněný sklad, se kterým chcete pracovat.
 3. Pokud to váš sklad vyžaduje, zadejte své uživatelské ID na záložce **Obecné**, když začnete pracovat na konkrétním zaskladňování.
@@ -59,7 +59,7 @@ Pořadí přihrádky se zohlední, pokud více než jedna přihrádka odpovídá
 ## Vytvoření zaskladnění ze zaúčtované příjemky
 Pokud vaše lokace používá zpracování zaskladnění i zpracování příjmu a odstranili jste řádky zaskladnění nebo pokud používáte řízené zaskladnění a vyskladnění a rozhodli jste se nepoužívat list zaskladnění, můžete vytvořit nebo znovu vytvořit pokyny pro zaskladnění pro zaúčtované řádky příjemky.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtované příjemky  na sklad** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Whse. na sklad** a poté vyberte související odkaz.
 2. Vyberte zaúčtovanou příjemku, kterou bude pravděpodobně třeba zaskladnit.
 3. Vyberte akci **Karta**.
 

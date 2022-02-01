@@ -1,27 +1,33 @@
 ---
-title: Setting Up Additional Currencies| Microsoft Docs
+title: Set Up Additional Currencies
 description: Your general ledger is set up to use your local currency (LCY), and another currency is set up as an additional currency, with a current exchange rate assigned.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: multiple currencies
-ms.date: 04/01/2021
+ms.search.keywords: multiple currencies, foreign exchange rates
+ms.search.form: 5, 16,118, 483, 495
+ms.date: 07/23/2021
 ms.author: edupont
 
 ---
 # Nastavení přídavné měny pro hlášení
+
 Vzhledem k tomu, že společnosti působí ve stále více zemích nebo oblastech, je důležitější, aby byly schopny kontrolovat a vykazovat finanční údaje ve více než jedné měně.
+
+> [!NOTE]  
+> In [!INCLUDE[prod_short](includes/prod_short.md)] if you are looking for real time information about foreign exchange (FX) rates or historical rates, you will find it referred to as currency. In addition to this article, see also [Update Currency Exchange Rates](finance-how-update-currencies.md).
+
 
 Finance jsou nastaveny tak, aby používaly lokální měnu (LM), ale můžete je nastavit tak, aby používaly i jinou měnu s přiřazeným aktuálním směnným kurzem. By designating a second currency as a so-called additional reporting currency, [!INCLUDE[prod_short](includes/prod_short.md)] will automatically record amounts in both LCY and this additional reporting currency on each G/L entry and other entries, such as VAT entries.
 
 > [!Warning]
-> The Additional Reporting Currency functionality should not be used as a basis for financial statement translation. Nejedná se o nástroj, který může provádět převody zahraničních dceřiných účetních závěrek v rámci konsolidace společnosti. Přídavnou měnu pro hlášení lze použít pouze k přípravě sestav v jiné měně, jako by tato měna byla lokální měnou společnosti.
+> The Additional Reporting Currency functionality should not be used as a basis for financial statement translation unless you understand the limitations. Nejedná se o nástroj, který může provádět převody zahraničních dceřiných účetních závěrek v rámci konsolidace společnosti. The additional reporting currency can only be used to prepare reports in another currency, as if that currency was the company's local currency.
+>
+> For example, you have a large amount of accounts receivable in British pounds (GBP), and you have set up your additional reporting currency (ACY) to be GBP. In this scenario, amounts in the accounts receivable that use GBP will not be adjusted for currency exchange gains/losses in the ACY, only amounts in the accounts receivable that are in other currencies. That means that if you use ACY to report your financial statements, it might result in understated or overstated outstanding balances of accounts receivable.
 
 ## Zobrazení sestav a částek v přídavné měně
 Použití přídavné měny pro hlášení může pomoci procesu vykazování pro společnost v následujících případech:
@@ -32,9 +38,11 @@ Použití přídavné měny pro hlášení může pomoci procesu vykazování pr
 Několik finančních výkazů je založeno na věcných položkách. To display report data in the additional reporting currency, you simply place a check mark in the **Show Amounts in Add. Reporting Currency** field on the **Options** FastTab for the relevant G/L report.
 
 ## Úprava směnných kurzů
+
 Vzhledem k tomu, že směnné kurzy neustále kolísají, musí být pravidelně upravovány další měnové ekvivalenty ve vašem systému. Pokud tyto úpravy nejsou provedeny, částky, které byly převedeny ze zahraničních (nebo dodatečných) měn a zaúčtovány do hlavní knihy v lokální měně, mohou být zavádějící. Kromě toho musí být denní položky zaúčtované před vstupem denního směnného kurzu do aplikace aktualizovány po zadání denních informací o směnném kurzu. The **Adjust Exchange Rates** batch job is used to adjust the exchange rates of posted customer, vendor and bank account entries. Může také aktualizovat další částky měny vykazování u položek hlavní knihy. For more information, see [Update Currency Exchange Rates](finance-how-update-currencies.md).
 
 ## Nastavení přídavné měny pro hlášení
+
 Chcete-li nastavit další měnu pro hlášení, je nutné postupovat takto:
 
 - Určete účty hlavní knihy pro účtování úprav směnného kurzu.
@@ -44,7 +52,7 @@ Chcete-li nastavit další měnu pro hlášení, je nutné postupovat takto:
 
 ### Určení účtů hlavní knihy pro účtování úprav směnného kurzu
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Currencies**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Currencies**, and then choose the related link.
 2. On the **Currencies** page, fill in the following fields for the additional reporting currency.
 
 | Pole | Popis |
@@ -60,7 +68,8 @@ Chcete-li nastavit další měnu pro hlášení, je nutné postupovat takto:
 Pro každý účet hlavní knihy je nutné určit, jak budou částky hlavní knihy pro tento účet upraveny o kolísání směnného kurzu mezi LM a přídavnou měnou pro hlášení.
 
 ### Určení metody úpravy směnného kurzu pro všechny účty hlavní knihy
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účtovní osnova** a poté vyberte související odkaz.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
 2. On the **Chart of Accounts** page, select the relevant account, and then choose the **Edit** action.
 3. On the **GL Account Card** page, select the relevant method in the **Exchange Rate Adjustment** field.
 
@@ -77,7 +86,8 @@ Pro každý účet hlavní knihy je nutné určit, jak budou částky hlavní kn
 4. Close the **G/L Account Card** page.
 
 ### Určení metody úpravy směnného kurzu pro položky DPH
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
 2. On the **General Ledger Setup** page, select the relevant method in the **VAT Exchange Rate Adjustment** field.
 3. If you post in an additional reporting currency, you can specify in the **VAT Exchange Rate Adjustment** field how the accounts set up for VAT posting on the **VAT Posting Setup** page will be adjusted for exchange-rate fluctuations between LCY and the additional reporting currency.
 
@@ -92,7 +102,7 @@ Pro každý účet hlavní knihy je nutné určit, jak budou částky hlavní kn
    | **Adjust Additional-Currency Amount** | Přídavná měna vykazování je upravena o kurzové zisky nebo ztráty. Exchange rate gains or losses are posted to the general ledger account in the **Additional-Currency Amount** field and to the accounts you specified for gains or losses in the **Realized G/L Gains Account** and **Realized G/L Losses Account** fields on the **Currencies** page. |
 
 ### Aktivace přídavné měny pro hlášení
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
 2. On the **General Ledger Setup** page, choose the **Additional Reporting Currency** field to select the additional currency that you want to report in.
 3. When you leave the field, [!INCLUDE[prod_short](includes/prod_short.md)] displays a confirmation message describing the effects of activating the additional reporting currency.
 4. Choose the **Yes** button to confirm that you want to activate the currency.
@@ -120,6 +130,7 @@ Kromě toho budou mít všechny budoucí položky stejného typu částky zaznam
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
 
 ## Viz také
+
 [Update Currency Exchange Rates](finance-how-update-currencies.md)  
 [Closing Years and Periods](year-close-years-periods.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)

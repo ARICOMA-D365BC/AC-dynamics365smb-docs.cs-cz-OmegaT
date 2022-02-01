@@ -1,19 +1,20 @@
 ---
-    title: How to Replan or Refresh Production Orders Directly| Microsoft Docs
-    description: The production order lines contain the items that are to be produced in the production order.
-    author: SorenGP
+title: Replan or Refresh Production Orders Directly
+description: This topic outlines the procedures for how to replan production orders and refresh production orders directly.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 99000842, 99000843, 99000861, 99000862, 99000863
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Replan or Refresh Production Orders Directly
+
 The **Replan** function on production orders is typically used after you have added or changed components that constitute underlying production orders. The function calculates changes made to components and routings lines, and it includes items on lower production BOM levels for which it may generate new production orders.
 
 Based on the changes you have made to the components and routing lines, the Replan function calculates and plans for any new demand for the production order.
@@ -31,7 +32,8 @@ You can either insert the production order lines manually or use the function th
 > If you use the Refresh function to recalculate production order lines, the old production order lines are deleted and new lines are calculated.
 
 ## To replan a production order
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. zakázky** a poté vyberte související odkaz.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature 1.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. zakázky** a poté vyberte související odkaz.
 2. Open the production order you want to replan.
 3. On the **Lines** FastTab, choose the **Lines** action, and then choose the **Components** action.
 4. Add a component, which is a produced item or subassembly.
@@ -40,8 +42,8 @@ You can either insert the production order lines manually or use the function th
    On the **Replan Production Order** page, proceed to define how and what to replan.
 6. In the **Scheduling Direction** field, select one of the following options.
 
-   | Možnost | Popis |
-   |----------------------------------|---------------------------------------|  
+   | Option | Description |
+   |--|--|
    | **Back** | Calculates the operation sequence backwards from the earliest possible ending date, defined by due date and/or other scheduled orders, to the latest possible starting date. **Note:**  This default option is relevant in the majority of situations. |
    | **Forward** | Calculates the operation sequence forward from the earliest latest possible starting date, defined by due date and/or other scheduled orders, to the earliest possible ending date. **Note:**  This option is only relevant for expedite orders. |
 
@@ -59,14 +61,15 @@ You can either insert the production order lines manually or use the function th
 > Changes implemented with the **Replan** function are very likely to change the capacity need of the production order and you may therefore have to reschedule operations afterwards.
 
 ## To refresh a production order
+
 If you have amended production order lines, components, or routing lines, you must also refresh the information on the production order. In the following procedure, the components are calculated for a firm planned production order. The steps are similar for routing lines.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. Order**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Order**, and then choose the related link.
 2. Vyberte akci **Nový**. For more information, see [Create Production orders](production-how-to-create-production-orders.md).
 3. Choose the **Refresh** action.
 4. On the **Refresh Production Order** page, select one of the following options:
 
-   | Možnost | Popis |
+   | Pole | Možnost | Popis |
    |----------------------------------|---------------|---------------------------------------|  
    | **Scheduling Direction** | **Forward** | Scheduling starts from the starting date and proceeds forward to the finishing date. You must fill in the starting date to use this option. |
    |  | **Backward** | Scheduling starts from the ending date and proceeds backward to the starting date. |
@@ -81,6 +84,7 @@ If you have amended production order lines, components, or routing lines, you mu
 > Calculating production order components deletes previous changes in the components.
 
 ## Viz také
+
 [Planning](production-planning.md)  
 [Setting Up Manufacturing](production-configure-production-processes.md)  
 [Manufacturing](production-manage-manufacturing.md)    

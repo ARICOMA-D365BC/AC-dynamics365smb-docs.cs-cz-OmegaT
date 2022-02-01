@@ -1,6 +1,6 @@
 ---
-title: Design Details - Cost Adjustment | Microsoft Docs
-description: The main purpose of cost adjustment is to forward cost changes from cost sources to cost recipients, according to an item’s costing method, to provide correct inventory valuation.
+title: Design Details - Cost Adjustment
+description: Cost adjustment forwards cost changes from cost sources to cost recipients according to an item’s costing method, to provide correct inventory valuation.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 04/01/2021
+ms.date: 06/14/2021
 ms.author: edupont
 
 ---
@@ -63,7 +63,7 @@ Tato detekční funkce se používá ve scénářích převodu, výroby a montá
 
 Funkce Úroveň objednávky se používá k detekci úprav při zaúčtování montáže. Následující obrázek ukazuje strukturu vstupu úpravy:
 
-![Tok položek v úpravě nákladů](media/design_details_assembly_posting_3.png "Tok položek v úpravě nákladů")
+![Flow of entries in cost adjustment.](media/design_details_assembly_posting_3.png "Flow of entries in cost adjustment")
 
 Pro více informací navštivte [Podrobnosti návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md).
 

@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Planning Supplies Automatically | Microsoft Docs
-    description: Phrases like "run planning" and "run MRP" refer to the calculation of the master production schedule (MPS) and the material requirements plan (MRP) based on actual and forecasted demand.
+    title: Walkthrough - Planning Supplies Automatically
+    description: This walkthrough demonstrates how to use the supply planning system to automatically plan purchase and production orders on different sales orders. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
 # Návod: Automatické plánování dodávek
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
 
 Fráze jako "plánování spustění" a "spustit MRP" odkazují na výpočet hlavního výrobního plánu (MPS) a plánu materiálových požadavků (MRP) na základě skutečné a předpokládané poptávky.
 
@@ -44,7 +44,7 @@ Tento návod ilustruje následující úkoly:
 ## Předpoklady
 K dokončení tohoto návodu budete potřebovat:
 
-- Demonstrační společnost CRONUS CZ s.r.o.  
+- Demonstrační společnost CRONUS CZ s.r.o. demonstration company.
 - Chcete-li změnit různé hodnoty nastavení položky, postupujte podle kroků v části „Příprava ukázkových dat“, dále v tomto návodu.
 
 ## Příběh
@@ -70,7 +70,7 @@ Vytvořte skladové jednotky (SKJ) pro cestovní kolo a výběr jeho komponentů
 
 ### Změna vybraných parametrů plánování
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skladové jednotky** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Stockkeeping Units**, and then choose the related link.
 2. Otevřete kartu skladové jednotky EAST pro položku 1100, přední kolo.
 3. Na záložce **Plánování** vyplňte pole, jak je popsáno v následující tabulce.
 
@@ -87,7 +87,7 @@ V reakci na novou prodejní objednávku na pět turistických kol zahajuje Ricar
 
 ### Vytvoření prodejní objednávky
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Na stránce **Prodejní objednávka** vyplňte pole, jak je popsáno v následující tabulce.
 
@@ -99,7 +99,7 @@ V reakci na novou prodejní objednávku na pět turistických kol zahajuje Ricar
 
 ### Vytvoření regeneračního plánu pro splnění poptávky v lokaci EAST
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Plánovací sešit** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheet**, and then choose the related link.
 2. Vyberte akci **Vypočítat regenerační plán**.
 3. Na stránce **Výpočet plánu – plán. sešit** vyplňte pole, jak je popsáno v následující tabulce.
 
@@ -122,7 +122,7 @@ V reakci na novou prodejní objednávku na pět turistických kol zahajuje Ricar
 
 ### Výpočet MRP tak, aby zahrnoval potřeby základních komponent
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Plánovací sešit** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheet**, and then choose the related link.
 2. Vyberte akci **Vypočítat regenerační plán**.
 3. Na stránce **Výpočet plánu – plán. sešit** vyplňte pole, jak je popsáno v následující tabulce.
 
@@ -193,7 +193,7 @@ Poté Eduardo převede navrhované řádky plánování na dodávání objednáv
 
    | Výrobní zakázka | Nákupní objednávka | Objednávka transferu |
    |----------------------|--------------------|--------------------|  
-   | Pevně plánováno | Vytvořit nák. objednávky | Vytvořit objednávky  transferu |
+   | Pevně plánováno | Vytvořit nák. objednávky | Vytvořit objednávky  objednávky |
 
 4. Klepnutím na tlačítko **OK** automaticky vytvoříte všechny navrhované objednávky spotřebního materiálu.
 5. Zavřete prázdnou stránku **Plánovací sešit**.
@@ -216,7 +216,7 @@ Systém plánování vypočítává nejlepší způsob, jak pokrýt poptávku po
 
 3. Přijměte varování o dostupnosti a kliknutím na tlačítko **Ano** zaznamenejte množství poptávky.
 4. Pokračujte v přeplánování a upravte aktuální plán dodávek.
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Plánovací sešit** a poté vyberte související odkaz.
+5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheet**, and then choose the related link.
 6. Vyberte akci **Vypočítat plánovaný pohyb**.
 7. Na stránce **Výpočet plánu – plán. sešit** vyplňte pole, jak je popsáno v následující tabulce.
 
@@ -260,8 +260,8 @@ Několik řádků plánování je jednoduše vynásobeno třemi, aby bylo možn�
 Tím je dokončen návod, jak se plánovací systém používá k automatické detekci poptávky, výpočtu příslušných objednávek dodávek podle parametrů poptávky a plánování a následnému automatickému vytvoření různých typů objednávek dodávek s příslušnými daty a množstvími.
 
 ## Viz také
-[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)     
-[Návod: Ruční plánování dodávek](walkthrough-planning-supplies-manually.md)     
+[Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)
+<!--  [Walkthrough: Planning Supplies Manually](walkthrough-planning-supplies-manually.md)    -->
 [Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)
 
 

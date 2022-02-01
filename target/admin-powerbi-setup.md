@@ -1,13 +1,13 @@
 ---
 title: Enabling Power BI Integration With Business Central
-description: Learn how to set up the connection to Power Bi so you can get insights, business intelligence, and KPIs from your Business Central data with the Business Central apps for Power BI.
+description: Learn how to set up the connection to Power BI. With Power BI reports, you can get insights, business intelligence, and KPIs from your Business Central data.
 author: jswymer
 ms.service: dynamics365-business-central
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: account schedule, analysis, reporting, financial report, business intelligence, KPI
+ms.search.keywords: Power BI, setup, analysis, reporting, financial report, business intelligence, KPI
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
@@ -19,12 +19,36 @@ Tento článek popisuje, jak získat [!INCLUDE[prod_short](includes/prod_short.m
 
 S [!INCLUDE[prod_short](includes/prod_short.md)], uživatelé získají bezplatnou licenci Power BI, která poskytuje přístup k nejběžnějším funkcím v [!INCLUDE[prod_short](includes/prod_short.md)] a Power BI. Můžete si také zakoupit licenci Power BI Pro, která poskytuje přístup k dalším funkcím. Následující tabulka obsahuje přehled funkcí dostupných s každou licencí.
 
-|Licence pro spuštění|Zobrazení sestav|Vytváření sestav|Sdílení sestav|Aktualizace sestav| Aplikace [!INCLUDE[prod_short](includes/prod_short.md)]|
+|Power License|View reports|Create reports|Share reports|Refresh reports| [!INCLUDE[prod_short](includes/prod_short.md)] Apps|
 |-------------|--------||
-|Power BI zdarma|![zaškrtnutí](media/check.png)|![další zaškrtnutí](media/check.png)|(limitované)|(limitované)||
-|Power BI Pro|![ještě další zaškrtnutí](media/check.png)|![je to zaškrtnutí](media/check.png)|![opět zaškrtnutí](media/check.png)|(rozsáhlý)|![poslední zaškrtnutí](media/check.png)|
+|Power BI free|![a checkmark.](media/check.png)|![another checkmark](media/check.png)|(limited)|(limited)||
+|Power BI Pro|![yet another checkmark.](media/check.png)|![it's a checkmark](media/check.png)|![again a checkmark](media/check.png)|(extensive)|![last checkmark](media/check.png)|
 
 Pro více informací navštivte [Licencování služby Power BI pro uživatele ve vaší organizaci](/power-bi/admin/service-admin-licensing-organization) nebo [Registrace ke službě Power BI jako jednotlivci](/power-bi/fundamentals/service-self-service-signup-for-power-bi).
+
+## <a name="exposedata"></a>Expose data through API pages or OData web services
+
+Business Central offers two ways to expose data that can be consumed by Power BI reports: API pages and Open Data Protocol (OData) web services.
+
+### API pages
+
+> **APPLIES TO:** Business Central online only
+
+An API page is a specific page type created in AL code that provides access to database tables through a webhook-supported, OData v4-enabled, REST service. This type of page can't be displayed in the user interface, but is intended for building reliable integration services.
+
+Business Central online comes available with a set of built-in APIs, which you can use to get data for the most common business entities, like customers, items, sales orders, and more. No extra work or setup is required to use these APIs as a data source for Power BI reports. For more information about these APIs, see [Business Central API V2.0](/dynamics365/business-central/dev-itpro/api-reference/v2.0/).
+
+Business Central online also supports custom APIs. Application developers of Business Central solutions can create their own API pages and package them into extensions. You can install the extensions on your tenant. Once installed, you can use the API pages for your Power BI reports, like you'd do with the built-in APIs (v2.0). For more information about how to create API pages, see [Developing a Custom API](/dynamics365/business-central/dev-itpro/developer/devenv-develop-custom-api).
+
+### OData web services
+
+You can publish Business Central application objects, like codeunits, page, and queries, as [OData web services](/dynamics365/business-central/dev-itpro/webservices/odata-web-services). With Business Central online, there are many web services published by default. An easy way to find the web services is to search for *web services* in [!INCLUDE[prod_short](includes/prod_short.md)]. In the **Web Services** page, make sure the **Publish** field is selected for the web services listed above. For more information about publishing web services, see [Publish a Web Service](across-how-publish-web-service.md).
+
+To learn about what you can do to ensure the best performance of web services, as seen from the Business Central server (the endpoint) and from the consumer (the client), read [Writing efficient Web Services](/dynamics365/business-central/dev-itpro/performance/performance-developer#writing-efficient-web-services).
+
+### Choosing whether to use API pages or OData web services
+
+Whenever possible, you're encouraged to use API pages instead of OData web service. API pages are generally faster at loading data in Power BI reports than OData web services. Plus, they're more flexible because they let you get data from table fields that aren't defined in a page object.
 
 ## <a name="setup"></a>Nastavení [!INCLUDE[prod_short](includes/prod_short.md)] on-premises pro integraci Power BI
 
@@ -46,7 +70,7 @@ Tato část vysvětluje požadavky na nasazení [!INCLUDE[prod_short](includes/p
 
    <!--
        > [!IMPORTANT]
-       > With [!INCLUDE[prod_short](../developer/includes/prod_short.md)] online, the use of access keys (Basic Auth) for web service authentication is [deprecated](../upgrade/deprecated-features-w1.md#accesskeys). We recommend that you use OAuth2 instead. For more information, see [Using OAuth to Authorize Business Central Web Services](../webservices/authenticate-web-services-using-oauth.md).-->
+       > With [!INCLUDE[prod_short](../developer/includes/prod_short.md)] online, the use of access keys (Basic Auth) for web service authentication is [deprecated](/dynamics365/business-central/dev-itpro/upgrade/deprecated-features-w1#accesskeys). We recommend that you use OAuth2 instead. For more information, see [Using OAuth to Authorize Business Central Web Services](/dynamics365/business-central/dev-itpro/webservices/authenticate-web-services-using-oauth).-->
 
 4. Vytvořte registraci přihlášky pro [!INCLUDE[prod_short](includes/prod_short.md)] v Microsoft Azure.
 
@@ -61,15 +85,6 @@ Tato část vysvětluje požadavky na nasazení [!INCLUDE[prod_short](includes/p
    Než budou koncoví uživatelé moci používat Power BI v [!INCLUDE[prod_short](includes/prod_short.md)], správce aplikace Azure bude muset udělit souhlas se službou Power BI.
 
    Chcete-li vytvořit počáteční připojení, otevřete [!INCLUDE[prod_short](includes/prod_short.md)] a z centra rolí spusťte funkci **Začínáme s Power BI**. Tato akce vás povede procesem souhlasu a zkontroluje vaši licenci Power BI. Když se zobrazí výzva k přihlášení pomocí účtu správce Azure. Pro více informací navštivte [Připojení k Power BI - pouze jednou](across-working-with-powerbi.md#connect).
-
-## Publikujte data jako webové služby
-
-Kódové jednotky, stránky a dotazy, které chcete použít jako zdroj dat v sestavách Power BI, musí být publikovány jako webové služby. Ve výchozím nastavení je publikováno mnoho webových služeb. Snadný způsob, jak najít webové služby, je vyhledat *webové služby* v [!INCLUDE[prod_short](includes/prod_short.md)]. Na stránce **Webové služby** zkontrolujte, zda je pro výše uvedené webové služby vybráno pole **Publikovat**. Tento úkol je obvykle administrativní.
-
-Pro více informací o publikování webových služeb navštivte [Publikování webové služby](across-how-publish-web-service.md).
-
-> [!TIP]
-> Chcete-li se dozvědět, co můžete udělat pro zajištění nejlepšího výkonu webových služeb, jak je vidět ze serveru Business Central (koncový bod) a od spotřebitele (klienta), přečtěte si [Psaní efektivních webových služeb](/dynamics365/business-central/dev-itpro/performance/performance-developer#writing-efficient-web-services).
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/Configure-powerbi-excel-dynamics-365-business-central/index)
 

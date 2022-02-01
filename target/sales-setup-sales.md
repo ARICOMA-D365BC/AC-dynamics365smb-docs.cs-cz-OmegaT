@@ -1,6 +1,6 @@
 ---
-title: Overview of Tasks to Configure Sales Processes | Microsoft Docs
-description: Outlines tasks to set up rules and values to define your sales policies and processes.
+title: Overview of Tasks to Configure Sales Processes
+description: Overview of tasks required to set up rules and values that define your sales policies and processes including general set-up and finance related sales set-up.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -9,16 +9,17 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: trade, sell, configure
-ms.date: 04/01/2021
+ms.search.form: 170, 172, 300, 301, 428, 459, 1401
+ms.date: 06/23/2021
 ms.author: edupont
 
 ---
 # Nastavení Prodeje
 Než budete moci spravovat prodejní procesy, musíte nakonfigurovat pravidla a hodnoty, které definují prodejní zásady společnosti.
 
-Musíte definovat obecné nastavení, například jaké prodejní doklady jsou požadovány a jak jsou účtovány jejich hodnoty. Toto obecné nastavení se obvykle provádí jednou během počáteční implementace.
+You must define the general setup on the **Sales & Receivables** page, such as which sales documents are required, how their values are posted, and the type of lines to create by default. Toto obecné nastavení se obvykle provádí jednou během počáteční implementace.
 
-Samostatnou řadou úkolů souvisejících s registrací nových zákazníků je zaznamenávání jakýchkoli zvláštních cenových nebo slevových dohod, které máte s každým zákazníkem.
+Samostatnou řadou úkolů souvisejících s registrací nových zákazníků je zaznamenávání jakýchkoli zvláštních cenových nebo slevových dohod, které máte s každým zákazníkem. For more information, see [Record Special Sales Prices and Discounts](sales-how-record-sales-price-discount-payment-agreements.md).
 
 Nastavení prodeje, které souvisí s finančními prostředky, jako jsou platební metody a měny, je uvedeno v části Nastavení financí. Pro více informací navštivte [Nastavení financí](finance-setup-finance.md).
 
@@ -33,7 +34,7 @@ Nastavení prodeje, které souvisí s finančními prostředky, jako jsou plateb
 | Ověřte daňové identifikační číslo (DPH) zákazníka pomocí webové služby EU. | [Ověření daňového identifikačního čísla (DPH)](finance-setup-vat.md) |
 | Zadejte informace o různých dodavatelích přepravy, které používáte, včetně odkazu na jejich službu sledování zásilek. | [Nastavení způsobu dodávky](sales-how-set-up-shipment-methods.md) |
 | Zadejte informace o různých dodavatelích přepravy, které používáte, včetně odkazu na jejich službu sledování zásilek. | [Nastavení přepravců](sales-how-to-set-up-shipping-agents.md) |
-| Zadejte výchozí sestavy, které se mají použít pro různé typy dokladů. | [Výběr sestavy v Business Central](across-report-selections.md) |
+| Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 

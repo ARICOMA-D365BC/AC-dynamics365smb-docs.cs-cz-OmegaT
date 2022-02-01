@@ -1,6 +1,6 @@
 ---
-    title: Add Attachments, Links, and Notes on Records| Microsoft Docs
-    description: Attach a hyperlink to a document or website to a specific record, such as a customer or document.
+    title: Add Attachments, Links, and Notes on Records
+    description: Attach a hyperlink to a document, or a website to a specific record, such as a customer or document.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 ---
 # Správa příloh, odkazů a poznámek ke kartám a dokladům
@@ -33,7 +33,7 @@ Ke kartě nebo dokladu můžete připojit libovolný typ souboru obsahujícího 
 
 Následující postup je založen na nákupní faktuře. Kroky jsou podobné pro všechny ostatní podporované doklady a karty.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
 2. Otevřete prodejní objednávku, ke které chcete připojit soubor.
 3. In the FactBox, open the **Attachments** tab.
 4. Choose the value behind the **Documents** field, such as "0".
@@ -53,17 +53,17 @@ Whenever you need to save a document as a file, you can use the **Attach as PDF*
 
 Následující postup je založen na prodejní objednávce. Kroky jsou podobné pro všechny podporované dokumenty.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Select a sales order, and then choose the **Attach as PDF** action.
 
 A PDF file with the current content of the sales order is added to the **Attachments** tab in the FactBox.
 
 ## Přidání odkazu z karty zboží
-Můžete přidat odkaz z karty nebo dokladu na libovolnou URL adresu nebo cestu. To je užitečné například tehdy, když chcete propojit kartu zboží s katalogem zboží dodavatele.
+You can add a link from a card or document to any URL. To je užitečné například tehdy, když chcete propojit kartu zboží s katalogem zboží dodavatele.
 
 Následující postup je založen na kartě zboží. Postup je podobný pro všechny ostatní podporované karty a doklady.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Select the item that you want to add a link from, and then choose the **Attachments** tab in the FactBox.
 3. In the **Links**, choose the **+** icon.
 4. In the **Link Address** field, enter the link.
@@ -83,7 +83,7 @@ Můžete napsat poznámku na dokument nebo kartu, například sdělit zvláštn�
 
 Následující postup je založen na prodejní objednávce. Kroky jsou podobné pro všechny ostatní podporované doklady a karty.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Select the sales order that you want to write a note on, and then choose the **Attachments** tab in the FactBox.
 3. In the **Notes** section, choose the **+** icon.
 4. In the **Note** field, write any text, such as "This is an urgent order.".

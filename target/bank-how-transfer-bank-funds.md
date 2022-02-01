@@ -9,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bank account transfer, multiple currencies
+ms.search.form: 39
 ms.date: 04/29/2021
 ms.author: edupont
 
@@ -19,22 +20,22 @@ You may sometimes need to transfer an amount from one bank account in [!INCLUDE[
 
 ## To post a transfer between bank accounts with the same currency code
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journal**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journal**, and then choose the related link.
 2. On a journal line, fill in the **Posting Date** and **Document No.** fields.
 3. In the **Account Type** field, select **Bank Account**.
 4. In the **Account No.** field, select the bank from which you want to transfer the funds.
 5. In the **Amount** field, enter the amount to be transferred.
 
    Next, you must specify the balancing account. If you can't see the relevant fields, then choose the **Show More Columns** action to view all available fields.
-6. In the **Bal. Account Type** field, select **Bank Account**.
-7. In the **Bal. Account No.** field, select the bank account to which you want to transfer the funds.
+6. V poli **Číslo Account Type** field, select **Bank Account**.
+7. V poli **Číslo Account No.** field, select the bank account to which you want to transfer the funds.
 8. Zaúčtujte deník.
 
 ## To post a transfer between bank accounts with different currency codes
 
 To transfer funds between bank accounts that use different currencies, you must post two general journal lines.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journal**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journal**, and then choose the related link.
 2. Create two journal lines, and fill in the **Posting Date** and **Document No.** fields.
 3. On the first journal line, in the **Type** field, select **Bank Account**.
 4. In the **Account No.** field, select the bank account from which you want to transfer the funds.

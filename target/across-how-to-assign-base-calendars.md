@@ -1,6 +1,6 @@
 ---
-    title: How to Set Up Base Calendars | Microsoft Docs
-    description: You can assign a base calendar to your company and its business partners, such as customers, vendors, or locations. Delivery and receipt dates on future sales order, purchase order, transfer order, and production order lines are calculated according to the calendar’s specified working days.
+    title: How to Set Up Base Calendars
+    description: You can assign a base calendar to your company and its business partners, to calculate delivery and receipt dates according to the specified working days.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/11/2021
     ms.author: edupont
 
 ---
@@ -17,7 +17,7 @@
 Společnosti a jejím obchodním partnerům, jako jsou zákazníci, dodavatelé nebo lokace, můžete přiřadit základní kalendář. Data dodání a příjmu na budoucí prodejní objednávce, nákupní objednávce, objednávce transferu a řádcích výrobní zakázky se počítají podle určených pracovních dnů kalendáře. Hlavním úkolem při nastavování nového základního kalendáře je určení a definování nepracovních dnů, které chcete použít.
 
 ## Nastavení základního kalendáře
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Base Calendar**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Base Calendar**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Fill in the **Code** field.
 4. Choose the **Maintain Base Calendar Changes** action.
@@ -60,7 +60,7 @@ Zatímco například základní kalendář obvykle uvádí všechny soboty jako 
 
 Následující postup používá případ lokace jako příklad. Všimněte si, že v tomto okamžiku jste již k lokaci přiřadili základní kalendář.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
 2. Open the location that you want to update, and then select the **Customized Calendar** field. Note that a calendar must be selected in the **Base Calendar Code** field.
 3. On the **Customized Calendar Entries** page opens, choose the **Maintain Customized Calendar Changes** action.
 4. In the **Customized Calendar Changes**, add lines for customized calendar entries.
@@ -96,7 +96,7 @@ Základní kalendáře jsou přiřazeny k vaší vlastní společnosti, zákazn�
 - On the **Location** card, the base calendar is assigned on the **Warehouse** FastTab.
 - On the **Shipping Agents** page, the base calendar is assigned on the **Shipping Agent Services** page.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
 2. Open the **Customer** card for whom you will assign a base calendar.
 3. On the **Shipping** FastTab, in the **Base Calendar Code** field, select the base calendar that you want to assign.
 

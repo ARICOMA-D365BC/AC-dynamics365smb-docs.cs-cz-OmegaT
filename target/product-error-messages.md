@@ -32,7 +32,7 @@ Pokud jste administrátor nebo superuživatel, můžete ostatním pomoci vyhled�
 ## Viz také
 
 [Zdroje pro nápovědu a podporu](product-help-and-support.md)  
-[Často kladené otázkys](across-faq.md)  
+[Často kladené otázkys](across-faq.yml)  
 [Řekně te mi - Často kladené otázky](ui-search-faq.md)  
 [Časté dotazy k vyhledávání a filtrování](ui-search-filter-faq.yml)  
 [Časté dotazy o kopírování a vkládání](faq-copy-paste.yml)  

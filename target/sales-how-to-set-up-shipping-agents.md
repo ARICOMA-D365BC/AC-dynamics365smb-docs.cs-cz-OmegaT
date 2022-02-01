@@ -1,6 +1,6 @@
 ---
-    title: How to Set Up Shipping Agents | Microsoft Docs
-    description: You can set up a code for each of your shipping agents and enter information about them.
+    title: How to Set Up Shipping Agents
+    description: Learn how to set up a code for each of your shipping agents and enter descriptive information about each of them and the services they provide.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/23/2021
     ms.author: edupont
 
 ---
@@ -24,7 +24,7 @@ Pro každého přepravce můžete nastavit neomezený počet služeb a pro každ
 Po přiřazení služby přepravce k řádku prodejní objednávky bude doba dodávky služby zahrnuta do výpočtu příslibu vyřízení objednávky pro tento řádek. Pro více informací navštivte [Výpočet data přislíbení objednávky](sales-how-to-calculate-order-promising-dates.md).
 
 ## Nastavení přepravce
-1. Vyberte ikonu ![Žárovku, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Přepravci** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Shipping Agents**, and then choose the related link.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
 3. Vyberte akci **Služby přepravce**.
 4. Na stránce **Služby přepravce**, vyplňte pole podle potřeby.

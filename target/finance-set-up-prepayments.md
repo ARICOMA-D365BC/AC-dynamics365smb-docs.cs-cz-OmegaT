@@ -1,17 +1,19 @@
 ---
-title: Set Up Prepayments | Microsoft Docs
-description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. You might require a deposit before you manufacture items to order, or you might require payment before you ship items to a customer. The prepayments functionality enables you to invoice and collect deposits required from customers or to remit deposits to vendors. Thus, you can ensure that all payments are posted against an invoice.
+title: Set Up Prepayments
+description: Learn how to configure Business Central so that you can use prepayments to invoice and collect deposits from customers and remit deposits to vendors.
 author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
-ms.search.keywords: prepayment
-ms.date: 04/01/2021
+ms.search.keyword: prepayment
+ms.search.form: 314, 459, 460, 664
+ms.date: 10/27/2021
 ms.author: edupont
 
 ---
 # Nastavení záloh
-Pokud požadujete, aby vaši zákazníci odeslali platbu před odesláním objednávky, nebo pokud váš dodavatel vyžaduje, abyste platbu odešleli před odesláním objednávky, můžete použít funkci Záloha. Tato funkce umožňuje fakturovat a vybírat zálohy požadované od zákazníků nebo převádět vklady dodavatelům a zajistit, aby všechny částečné platby byly zaúčtovány na fakturu. Pro více informací navštivte [Vytvoření zálohové faktury](finance-how-to-create-prepayment-invoices.md).
+
+Pokud požadujete, aby vaši zákazníci odeslali platbu před odesláním objednávky, nebo pokud váš dodavatel vyžaduje, abyste platbu odešleli před odesláním objednávky, můžete použít funkci Záloha. The prepayments functionality enables you to invoice and collect deposits required from customers or to remit deposits to vendors, to ensure that all partial payments are posted against an invoice. Pro více informací navštivte [Vytvoření zálohové faktury](finance-how-to-create-prepayment-invoices.md).
 
 Před zaúčtováním zálohových faktur musíte nastavit účty v hlavní knize a nastavit číselné řady pro zálohové doklady. Je nutné zadat účet pro zálohy související s prodejem a účet pro zálohy související s nákupem. Můžete určit stejné účtovací účty, které se použijí pro všechny platby spojené se všemi obecnými obchodními účto skupinami nebo obecnými skupinami účtování produktů, nebo můžete určit konkrétní účty pro konkrétní účto skupiny pro prodej a nákup. To závisí na požadavcích vaší společnosti na sledování záloh.
 
@@ -19,6 +21,7 @@ Můžete definovat procento částky řádku, která bude fakturována za záloh
 
 > [!NOTE]
 > Doporučujeme nepoužívat procento zálohy ve výši 100 % v následujících případech:
+>
 > * Pokud se nacházíte v Severní Americe. Vzhledem k tomu, jak se daně počítají, může procento zálohy ve výši 100 % vést k problémům s fakturami za platbu předem.
 > * Ve všech oblastech, pokud ručně odečtete skonto z faktury. Procento zálohy ve výši 100 % automaticky nezanechá částku, ze které lze slevu odečíst.
 
@@ -28,11 +31,11 @@ Vzhledem k tomu, že předplacená částka patří kupujícímu, dokud neobdrž
 
 ## Přidání účtů záloh k obecnému nastavení účtování
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
-2. Na stránce **Nastavení obecného účtování** vyplňte následující pole:
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.
+2. On the **General Posting Setup** page, for the relevant lines, fill in the following fields:
 
-   - **Účet záloh výnosů**
-   - **Nákupní  účet záloh**
+   * **Účet záloh výnosů**
+   * **Nákupní  účet záloh**
 
 > [!TIP]
 > Pokud pole na stránce **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
@@ -41,34 +44,38 @@ Pokud jste ještě nenastavili účty hlavní knihy pro platby záloh, můžete 
 
 ## Nastavení číselných řad pro doklady záloh
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
-2. Na stránce **Nastavení prodeje a pohledávek** vyplňte následující pole:
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+2. On the **Sales & Receivables Setup** page, on the **Number Series** FastTab, fill in the following fields:
 
-   - **Čísla účtovaných  zál.  faktur**
-   - **Čísla účtovaných  zál.  dobropisů**
+   * **Čísla účtovaných  zál.  faktur**
+   * **Čísla účtovaných  zál.  dobropisů**
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
-2. Na stránce **Nastavení nákupu a závazků** vyplňte následující pole:
+3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchases & Payables Setup**, and then choose the related link.
+4. On the **Purchases & Payables Setup** page, on the **Number Series** FastTab, fill in the following fields:
 
-   - **Čísla účtovaných  zál.  faktur**
-   - **Čísla účtovaných  zál.  dobropisů**
+   * **Čísla účtovaných  zál.  faktur**
+   * **Čísla účtovaných  zál.  dobropisů**
 
 > [!NOTE]  
 > Stejnou číselnou řadu můžete použít pro zálohové faktury a běžné faktury, nebo můžete použít různé číselné řady. Pokud používáte různé řady, nesmí se překrývat, protože v obou řadách nesmí existovat stejná čísla.
 
 ## Nastavení procent záloh pro zboží, zákazníky a dodavatele
-Pro zboží můžete nastavit výchozí procento zálohy pro všechny zákazníky, konkrétního zákazníka nebo cenovou skupinu zákazníka.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+Pro zboží můžete nastavit výchozí procento zálohy pro všechny zákazníky, konkrétního zákazníka nebo cenovou skupinu zákazníka. If you do not want to apply the same prepayment percentage to all customers, you must specify which customers or which customer price groups the prepayment percentage applies to.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Vyberte zboží a pak zvolte akci **Procentní části zálohy**.
 3. Na stránce **Procentní části prodejní zálohy** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-Pro zákazníka nebo dodavatele můžete nastavit jedno výchozí procento zálohy pro všechny zboží a všechny typy prodejních řádků. Toto zadáte na kartě zákazníka nebo dodavatele.
+Pro zákazníka nebo dodavatele můžete nastavit jedno výchozí procento zálohy pro všechny zboží a všechny typy prodejních řádků. Toto zadáte na kartě zákazníka nebo dodavatele. The following procedure shows how to specify a prepayment percentage for a customer, but similar steps apply to vendors.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
 2. Otevřete kartu pro zákazníka.
 3. Vyplňte pole **Záloha v %**.
 4. Opakujte kroky pro ostatní zákazníky nebo pro dodavatele.
+
+> [!TIP]
+> You can also access the **Sales Prepayment Percentages** page from the customer or vendor card.
 
 ### Určení, které procento zálohy má první prioritu
 

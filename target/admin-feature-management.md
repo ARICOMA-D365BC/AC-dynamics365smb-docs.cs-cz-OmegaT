@@ -5,11 +5,11 @@ author: mikebcMSFT
 ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords: administration, admin, key, optional, feature management, early access, preview
-ms.date: 04/01/2021
+ms.date: 06/14/2021
 ms.author: mikebc
 ---
 
-# Povolení nadcházejících funkcí předem
+# Enabling New and Upcoming Features Ahead of Time
 
 Některé nové funkce lze povolit předem, což vám umožňuje využít je co nejdříve. Včasné povolení funkcí vám dává čas otestovat a připravit organizaci na změnu.
 

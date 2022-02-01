@@ -30,10 +30,12 @@ Tato část popisuje minimální požadavky na aplikaci [!INCLUDE [prod_short](i
 
    | Co | Licence Teams | [!INCLUDE [prod_short](includes/prod_short.md)] licence |
    |----|---|---|
-   | Vyhledávání [!INCLUDE [prod_short](includes/prod_short.md)] kontaktů. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   | Vyhledávání [!INCLUDE [prod_short](includes/prod_short.md)] kontaktů. | ![check mark.](media/check.png "check") | ![check mark](media/check.png "check") |
    | Vložení odkazu na záznam [!INCLUDE [prod_short](includes/prod_short.md)] do konverzace a odelsání jako karty. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   | Share a link from a page in [!INCLUDE [prod_short](includes/prod_short.md)] to Teams conversation. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
    | Zobrazení karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") |
    | Zobrazení podrobností karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   | Open a page link in [!INCLUDE [prod_short](includes/prod_short.md)] from a conversation. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
 
 - Povolit náhledy URL adres
 
@@ -71,6 +73,30 @@ Další informace najdete v následujících článcích v dokumentaci Microsoft
    - Chcete-li změnit data, je potřeba upravit oprávnění uživatele.
 
    Informace o oprávněních najdete v části [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
+
+## Installing the Business Central app by using Centralized Deployment
+
+The Microsoft Teams admin center is where you configure Teams app setup policies for the organization. In the Teams admin center, you can use the Centralized Deployment feature to automatically install the Business Central app in Teams for all users in your organization, specific groups, or individual users.
+
+> [!NOTE]
+> To set up Centralized Deployment, your Teams account must have the **Teams Service admin**  role or the **Global admin** role.
+
+1. In Business Central, choose the ![Magnifying glass that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Teams App Centralized Deployment**, and then choose the related link. Or, select [here](https://businesscentral.dynamics.com/?page=1833) to open the page directly.
+2. Read the information on the **Set up the Business Central app for Teams**, then choose **Next** when ready.
+3. Open the [Teams admin center](https://go.microsoft.com/fwlink/?linkid=2163970), and complete the following steps.
+   1. Go to **Teams apps** > **Setup policies**.
+   2. Create a new policy or select the policy that you want to use to install the Business Central app, then select **Add apps**.
+   3. In the **Add installed apps** page, search for and select **Business Central**.
+   4. Choose **Add**.
+
+      Business Central should now appear under **Installed apps** for the policy.
+   5. Configure any additional settings, then choose **Save**.
+
+   For more information about setup policies in Teams, see [Manage app setup policies in Microsoft Teams](/MicrosoftTeams/teams-app-setup-policies) in the Teams documentation.
+4. Go back to **Teams App Centralized Deployment** in Business Central, and select **Done**.
+
+> [!IMPORTANT]
+> It can take up to 24 hours for the app set up policy to be applied and the app deployed to users.
 
 ## Správa ochrany osobních údajů a dodržování předpisů
 

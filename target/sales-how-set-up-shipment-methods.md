@@ -1,16 +1,17 @@
 ---
-    title: Set Up Shipment Methods
-    description: You can set up a code for each of your offered shipment methods, and enter information about them.
-    author: SorenGP
+title: Set Up Shipment Methods
+description: You can set up a code for each of your offered shipment methods, and enter information about them.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: incoterms
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: incoterms
+ms.search.form: 11, 130
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Nastavení způsobu přepravy
@@ -21,7 +22,7 @@ You set up the description and code for each shipment method on the **Shipment M
 
 ## To set up a shipment method
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Shipment Methods**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Shipment Methods**, and then choose the related link.
 2. On the **Shipment Methods** page, choose the **New** action.
 3. Na novém řádku zadejte kód a popis způsobu dodávky.
 

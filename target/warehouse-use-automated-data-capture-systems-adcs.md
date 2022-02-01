@@ -1,6 +1,6 @@
 ---
-title: Use Automated Data Capture Systems (ADCS) | Microsoft Docs
-description: You can use your automatic data capture system (ADCS) to register the movement of items in the warehouse and to register some journal activities, such as quantity adjustments in the warehouse item journal and physical inventories.
+title: Use Automated Data Capture Systems (ADCS)
+description: You can use your automatic data capture system (ADCS) to register the movement of items in the warehouse and to register some journal activities.
 author: SorenGP
 ms.service: dynamics365-business-central
 ms.topic: conceptual
@@ -8,7 +8,8 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: barcode
-ms.date: 04/01/2021
+ms.search.form: 7700, 7703, 7704, 7706, 7707, 7710
+ms.date: 06/25/2021
 ms.author: edupont
 
 ---
@@ -32,7 +33,7 @@ To use Automated Data Capture System, you must enable the ADCS web service.
 
 ## To enable and publish the ADCS web service
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Web Services**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Web Services**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. On the **Web Services** page, enter the following information on a new line:
 
@@ -51,14 +52,14 @@ Chcete-li používat ASSD, musíte určit, které lokace technologii budou použ
 > [!NOTE]  
 > We recommend that you do not set up a warehouse to use ADCS if the warehouse also has a bin capacity policy.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and choose the related link.
 2. Select a warehouse from the list for which you want to enable ADCS, and then choose the **Edit** action.
 3. On the **Location Card** page, select the **Use ADCS** check box.
 
 ## Určení zboží pro použití ASSD
 Každému zboží skladu, které chcete použít s ASSD, musí být přiřazen identifikační kód, který jej propojí s číslem zboží. Jako kód identifikátoru můžete například použít čárový kód zboží. Zboží může mít také více identifikačních kódů. To může být užitečné v případě, kdy je zboží k dispozici v různých měrných jednotkách, například v kusech a paletách. V takovém případě každému přiřaďte identifikační kód.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Select an item from the list that is part of your ADCS solution, and then choose the **Edit** action.
 3. On the **Item Card** page, choose the **Identifiers** action.
 4. On the **Item Identifiers** page, choose the **New** action.
@@ -73,13 +74,13 @@ Každému zboží skladu, které chcete použít s ASSD, musí být přiřazen i
 ## Přidání uživatele ASSD
 Jako uživatele automatizovaného systému pro sběr dat (ASSD) můžete přidat libovolného uživatele. Pokud to uděláte, musí uživatel zadat také heslo. Volitelně můžete také poskytnout připojení, které identifikuje uživatele ASSD jako zaměstnance skladu. Heslo uživatele ASSD se může lišit od přihlašovacího hesla uživatele systému Windows. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **ADCS Users**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **ADCS Users**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. In the **Name** field, enter a name for the user. Název nesmí obsahovat více než 20 znaků včetně mezer.
 4. In the **Password** field, enter a password. Heslo je maskováno.
 
 ### Určení, který zaměstnanec skladu je uživatel ADCS (ASSD)
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.
 2. V případě potřeby přidejte nového zaměstnance skladu. For more information, see [Set Up Warehouse Employees](warehouse-how-to-set-up-warehouse-employees.md).
 3. Choose the **Edit List** action.
 4. Ze seznamu vyberte zaměstnance skladu. In the **ADCS User** field, choose the drop-down arrow, and then select the name of an ADCS user from the list.
@@ -94,7 +95,7 @@ Miniformuláře se používají k popisu informací, které chcete prezentovat n
 > To implement or change the functionality of a miniform function, you must create a new codeunit for the **Handling Codeunit** field to perform the required action or response. You can learn more about ADCS functionality by examining codeunits, such as 7705, 7706, 7712, and 7713.
 
 ### Vytvoření miniformiuláře pro ADCS
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Miniforms**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Miniforms**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. In the **Code** field, enter a code for the miniform. Volitelně zadejte hodnoty do všech ostatních polí.
 
@@ -105,7 +106,7 @@ Miniformuláře se používají k popisu informací, které chcete prezentovat n
 Pokud jste vytvořili miniformulář, další kroky slouží k vytvoření funkcí a k přidružení funkčnosti pro různé vstupy klávesnice.
 
 ### Přizpůsobené funkcí miniformuláře
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Miniforms**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Miniforms**, and then choose the related link.
 2. Select a miniform from the list, and then choose the **Edit** action.
 3. Choose the **Functions** action.
 4. In the **Function Code** drop-down list, select a code to represent the function that you want to associate with the miniform. Můžete například vybrat ESC, které spojuje funkčnost s stisknutím klávesy ESC.

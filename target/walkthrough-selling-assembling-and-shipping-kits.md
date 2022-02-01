@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Selling, Assembling, and Shipping Kits | Microsoft Docs
-    description: To support just-in-time inventory and the ability to customize products to customer requests, assembly orders can be automatically created and linked as soon as the sales order line is created. The link between the sales demand and the assembly supply enables sales order processors to customize the assembly item and promise delivery dates according to component availability. In addition, assembly consumption and output are posted automatically with the shipment of the linked sales order.
+    title: Selling, Assembling, and Shipping Kits
+    description: To support just-in-time inventory, assembly orders can be automatically created and linked as soon as the sales order line is created. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
 # Návod: Prodejní, montážní a přepravní sestavy
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
 
 Aby byla možná podpora zásob za běhu a aby bylo možné přizpůsobit produkty požadavkům zákazníků, lze montážní zakázky automaticky vytvořit a propojit, jakmile je vytvořen řádek prodejní objednávky. Spojení mezi prodejní poptávkou a dodávkou montáže umožňuje procesorům prodejní objednávky přizpůsobit zboží montáže a slíbit dodací termíny podle dostupnosti komponent. Kromě toho se spotřeba a výstup sestavy automaticky zaúčtují s dodávkou propojenou s prodejní objednávky.
 
@@ -78,7 +78,7 @@ Před provedením úkolů v návodu je nutné provést následující kroky:
 - Nainstalujte [!INCLUDE[prod_short](includes/prod_short.md)].
 - Vytvořte si zaměstnance skladu v lokaci BÍLÝ takto:
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.
 2. Vyberte pole **ID uživatele** a na stránce **Uživatelé** vyberte svůj vlastní uživatelský účet.
 3. Do pole **Kód lokace** zadejte BÍLÝ.
 4. Vyberte pole **Výchozí**.
@@ -88,7 +88,7 @@ Před provedením úkolů v návodu je nutné provést následující kroky:
 
 Připravte lokaci BÍLÝ pro zpracování montáže pomocí následujících kroků:
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
 2. Otevřete kartu lokace pro lokaci BÍLÝ.
 3. Na záložce **Přihrádky** zadejte do pole **Kód přihrádky na montáž** hodnotu **W-10-0001**.
 
@@ -100,10 +100,10 @@ Připravte lokaci BÍLÝ pro zpracování montáže pomocí následujících kro
 
 Odeberte výchozí dodací lhůtu pro interní procesy pomocí těchto kroků:
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení výroby** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Manufacturing Setup**, and then choose the related link.
 2. Na stránce **Nastavení výroby** na záložce **Plánování** odeberte hodnotu v poli **Výchozí bezp.průběžná doba**.
 
-Vytvořte zásoby pro komponenty montáže pomocí [Přípravy ukázkových dat](walkthrough-selling-assembling-and-shipping-kits.md#prepare-sample-data).
+<!-- Create inventory for assembly components by following [Prepare Sample Data](walkthrough-selling-assembling-and-shipping-kits.md#prepare-sample-data).   -->
 
 ## Příběh
 Susan, zpracovatelka objednávky, převezme 23. ledna od společnosti Kutilka, s.r.o objednávku na tři jednotky Sady B, což je zboží MNO. Všechny tři jednotky jsou přizpůsobeny a musí obsahovat silnou grafickou kartu a další extra RAM. Diskové jednotky jsou upgradovány na DWD, protože jednotky CD nejsou k dispozici. Susan ví, že jednotky lze sestavit okamžitě, takže opouští navrhované datum dodání 23. ledna.
@@ -134,7 +134,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ## Příprava ukázkových dat
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky  zboží skladu** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. zboží skladu** a poté vyberte související odkaz.
 2. Vyberte pole **Název dávky** a poté vyberte výchozí deník.
 3. Vytvořte kladné úpravy zásob v lokaci BÍLÝ k datu práce 23. ledna zadáním následujících informací.
 
@@ -151,14 +151,14 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
    Dále synchronizujte nové položky skladu se zásobou.
 
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky zboží** a poté vyberte související odkaz. Otevře se stránka **Deník zboží**.
+5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link. Otevře se stránka **Deník zboží**.
 6. Vyberte akci **Výpočet adjustace  skladu**.
 7. Na stránce **Výpočet adjustace  skladu** klikněte na tlačítko **OK**.
 8. Na stránce **Deník zboží** vyberte akci **Účtovat** a poté klikněte na tlačítko **Ano**.
 
 ### Vytváření zboží montáže
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Vytvořte první zboží montáže na základě následujících informací.
 
@@ -209,7 +209,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Prodej zboží montáže
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Vytvořte dva řádky prodejní objednávky pro zákazníka 62000, Kutilka, s.r.o, k pracovnímu datu s následujícími informacemi.
 
@@ -262,7 +262,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Plánování nedostupného zboží MNS
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Plánovací sešit** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Planning Worksheet**, and then choose the related link.
 2. Vyberte akci **Vypočítat regenerační plán**.
 3. Na stránce **Vypočítat plán** nastavte následující filtry.
 
@@ -280,7 +280,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Sestavení a dodání množství prvního MNO
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávka ze skladu** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipment**, and then choose the related link.
 
    > [!NOTE]  
    > In this section, the person who is responsible for shipping is in charge of recording the completed ATO assembly work on the warehouse shipment line. K tomuto pracovnímu postupu může dojít v prostředích, kde montážní práce provádí osoba odpovědná za dopravu nebo montážní pracovníci v oblasti expedice.
@@ -299,7 +299,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
    Dále proveďte úlohu vyskladnění.
 
-4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz.
+4. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link.
 5. Otevřete doklad vyskladnění, který jste vytvořili v kroku 3 v této části.
 
    Všimněte si hodnoty v poli **Původní doklad** a toho, že všechny řádky vyskladnění jsou pro komponenty montáže.
@@ -340,7 +340,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Montáž a zaznamenání množství druhého MNO
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Montážní zakázky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Orders**, and then choose the related link.
 
    Všimněte si, že objednávka MNO pro dodané jednotky sady B je stále v seznamu, i když pole **Zbývající množství** je prázdné. Je to proto, že propojená prodejní objednávka stále není plně fakturována.
 
@@ -364,7 +364,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Montáž množství MNS
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Montážní zakázky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Orders**, and then choose the related link.
 2. Otevřete montážní objednávku pro deset jednotek sady A.
 
    Všimněte si, že pole **Množství k montáži** je vyplněno očekávaným množstvím.
@@ -372,11 +372,11 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    Dále vytvořte doklad vyskladnění pro načtení potřebných komponent.
 
 3. Vyberte akci **Vydat**.
-4. Vyberte akci **Vytvořit  vyskladnění** a klikněte na tlačítko **OK**.
+4. Vyberte akci **Vytvořit dodávku  vyskladnění** a klikněte na tlačítko **OK**.
 
    Dále proveďte úlohu vyskladnění.
 
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz.
+5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link.
 6. Otevřete doklad vyskladnění, který jste vytvořili v kroku 4 v této části.
 
    Pokračujte v registraci vyskladnění bez změny výchozích informací.
@@ -392,7 +392,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Dodání zbývajícího zboží, částečně ze skladu a částečně z montáže na zakázku
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Dodávka ze skladu** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipment**, and then choose the related link.
 2. Otevřete nejnovější dodávku ze skladu, která je vytvořena na lokaci BÍLÝ.
 
    Všimněte si na řádku pro deset jednotek sady A, že pole **K  dodání** a **Vyskladněné  množství** sou prázdná.
@@ -403,7 +403,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
    Dále proveďte poslední úkol vyskladnění pro tuto skladovou dodávku.
 
-4. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vyskladnění** a poté vyberte související odkaz.
+4. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Picks**, and then choose the related link.
 5. Otevřete doklad vyskladnění, který jste vytvořili v kroku 3 v této části.
 
    Všimněte si, že tento doklad vyskladnění je pro zboží montáže, nikoli pro komponenty montáže.
@@ -423,7 +423,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
    Dokument dodávky ze skladu je odebrán, což znamená, že příslušné aktivity skladu jsou dokončeny. Dále ověřte, že byla zpracována prodejní objednávka.
 
-10. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+10. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link
 11. Otevřete prodejní objednávku pro Kutilka, s.r.o.
 
    Všimněte si, že pole **Dodané množství** obsahuje celé množství na obou řádcích.
@@ -431,15 +431,15 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
    Když Kutilka, s.r.o. zaplatí za dodání 18 počítačů od společnosti CRONUS, prodejní objednávka a její propojené montážní zakázky budou odstraněny.
 
 ## Viz také
-[Princip montáže na zakázku a montáže na sklad](assembly-assemble-to-order-or-assemble-to-stock.md)     
-[Montáž zboží](assembly-how-to-assemble-items.md)     
-[Vyskladnění zboží pro dodávku ze skladu](warehouse-how-to-pick-items-for-warehouse-shipment.md)     
-[Prodej zboží montáže na obejdnávku](assembly-how-to-sell-items-assembled-to-order.md)     
-[Montáž zboží](assembly-how-to-assemble-items.md)     
-[Podrobnosti návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md)     
-[Detaily návrhu: Vnitřní procesy skladu](design-details-internal-warehouse-flows.md)     
-[Detaily návrhu: Výstupní procesy skladu](design-details-outbound-warehouse-flow.md)     
-[Návod: Automatické plánování dodávek](walkthrough-planning-supplies-automatically.md)
+[Understanding Assemble to Order and Assemble to Stock](assembly-assemble-to-order-or-assemble-to-stock.md)   
+[Assemble Items](assembly-how-to-assemble-items.md)   
+[Pick Items for Warehouse Shipment](warehouse-how-to-pick-items-for-warehouse-shipment.md)   
+[Sell Items Assembled to Order](assembly-how-to-sell-items-assembled-to-order.md)   
+[Assemble Items](assembly-how-to-assemble-items.md)   
+[Design Details: Assembly Order Posting](design-details-assembly-order-posting.md)   
+[Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md)   
+[Design Details: Outbound Warehouse Flow](design-details-outbound-warehouse-flow.md)
+<!--  [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md) -->
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

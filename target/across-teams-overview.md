@@ -28,11 +28,11 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams nabízí nás
 
 Bez ohledu na to, kde se v Teams nacházíte, můžete si prohlédnout podrobnosti o zákaznících, dodavatelích, kontaktech a dalších v [!INCLUDE [prod_short](includes/prod_short.md)]. Tato funkce umožňuje nejen zobrazit obecné informace o kontaktech, ale také poskytuje přístup k historii interakcí, souvisejícím dokumentům a dalším.
 
-[![Vyhledávání kontaktů Business Central z příkazového pole v Teams](media/teams-contacts-overview.png)](media/teams-contacts-overview.png#lightbox)
+[![Look up Business Central contacts from Teams command box.](media/teams-contacts-overview.png)](media/teams-contacts-overview.png#lightbox)
 
 V konverzaci můžete také sdílet kontaktní údaje. Odtud mají spolupracovníci přístup k ještě více podrobnostem o kontaktu.
 
-[![Vyhledávání kontaktů Business Central z psacího pole v Teams](media/teams-contacts.png)](media/teams-contacts.png#lightbox)
+[![Look up Business Central contacts from Teams compose box.](media/teams-contacts.png)](media/teams-contacts.png#lightbox)
 
 Pro více informací navštivte[Vyhledávání kontaktů z Microsoft Teams](across-search-contacts-teams.md).
 
@@ -40,11 +40,19 @@ Pro více informací navštivte[Vyhledávání kontaktů z Microsoft Teams](acro
 
 Kopírovat odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
 
-[![Teams integrace s Business Central](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+[![Teams integration with Business Central.](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
 
 Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
 
 For more information, see [Share Records in Microsoft Teams](across-working-with-teams.md).
+
+### Share links from pages in Business Central to Teams
+
+Directly from most collection and details pages in Business Central, you can use the **Share to Teams** action from the ![!The Share menu icon on pages.](media/share-icon.png "The Share menu displayed on a card.") icon to type a message, choose recipients, such as team members, groups or channels, and send the message with a link to the Business Central page.
+
+![!The Share menu displayed on a card.](media/teams-share-link.png "The Share menu displayed on a card.")
+
+For more information, see [Share Records and Page Links in Microsoft Teams](across-working-with-teams.md#share-link).
 
 ## Začínáme
 
@@ -62,8 +70,9 @@ For more information, see [Share Records in Microsoft Teams](across-working-with
 ## Viz také
 
 [Teams FAQ](teams-faq.md)  
-[Řešení problémů v Teams](admin-teams-troubleshooting.md)  
-[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Troubleshooting Teams](admin-teams-troubleshooting.md)  
+[Changing Company and Other Settings in Teams](across-teams-settings.md)  
+[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

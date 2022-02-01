@@ -35,7 +35,7 @@ Stránka **Najít položky** obsahuje všechny související doklady a položky 
 <!--
  There are two ways to open this page:
 
-- Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Find Entries**, and then choose the related link.
+- Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Find Entries**, and then choose the related link.
 
     With this way, the **Find Entries** page might be empty, and you'll have to start searching for entries from scratch.
     
@@ -61,7 +61,7 @@ Záznamy můžete hledat na základě informací o dokladu, obchodním kontaktu 
 Po provedení výběru zadejte příslušné vyhledávací informace do polí v horní části. Chcete-li pomoci, použijte tooltipy. Po dokončení spusťte vyhledávání pomocí tlačítka **Najít**. Pokud změníte některý z filtrů, musíte znovu použít funkci **Najít**.
 
 > [!TIP]
-> Několik příkladů použití **Najít položky** naleznete v [Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md) a [Návod:Sledování zboží - Sledované zboží](walkthrough-tracing-serial-lot-numbers.md).
+> For a couple examples about using **Find Entries**, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md) <!--and [Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md). -->
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
 

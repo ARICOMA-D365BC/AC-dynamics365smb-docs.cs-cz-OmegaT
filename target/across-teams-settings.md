@@ -22,19 +22,21 @@ Aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Teams obsahuje str�
 
 1. Pod rámečkem pro psaní zprávy klikněte pravým tlačítkem na ikonu aplikace [!INCLUDE [prod_short](includes/prod_short.md)] a vyberte **Nastavení**.
 
-   ![Nastavení pro Business Central z příkazového pole](media/teams-settings-message-box.png)
+   ![Settings for Business Central from command box.](media/teams-settings-message-box.png)
 
 2. V příkazovém poli nahoře vyhledejte **@Business Central**, vyberte **... (Více možností)**, a zvolte **Nastavení**.
 
-   ![Nastavení pro Business Central ze zprávy](media/teams-settings-command-box.png)
+   ![Settings for Business Central from message box.](media/teams-settings-command-box.png)
 
 ## Viz také
 
-[Přehled integrace Business Central a Microsoft Teams](across-teams-overview.md)  
-[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
+[Business Central and Microsoft Teams Integration Overview](across-teams-overview.md)  
+[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
+[Searching for Customers, Vendors, and Other Contacts from Microsoft Teams](across-search-contacts-teams.md)  
+[Share Records in Microsoft Teams](across-working-with-teams.md)  
 [Teams FAQ](teams-faq.md)  
-[Řešení problémů Teams](admin-teams-troubleshooting.md)  
-[Vývoj pro integraci Teams](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[Troubleshooting Teams](admin-teams-troubleshooting.md)  
+[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

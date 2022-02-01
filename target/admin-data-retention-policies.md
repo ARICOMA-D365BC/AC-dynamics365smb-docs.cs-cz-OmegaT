@@ -36,7 +36,7 @@ Doby uchování mohou být dlouhé nebo krátké, jak chcete. Chcete-li vytvoři
 > Z důvodu dodržování předpisů jsme pro některé tabulky definovali minimální dobu uchování. Pokud nastavíte dobu uchovávání, která je kratší než minimální požadovaná doba, zobrazí se povinná doba.
 
 ### Nastavení zásad uchovávání informací
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zásady uchovávání informací<x5/> a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Retention Policies**, and choose the related link.
 2. V Poli **ID tabulky** yberte tabulku, kterou chcete zahrnout do zásad.
 3. V poli **Doba uchovávání** určete dobu, po kterou mají být data v tabulce uchováváná.
 4. Volitelné: Chcete-li zásadu použít na konkrétní data v tabulce, vyberte přepínač Použít na všechny záznamy. Zobrazí se záložka Záznam uchování záznamů, kde můžete nastavit filtry pro vytváření podmnožin dat pro každý řádek. Další informace naleznete v tématu [Filtrování](ui-enter-criteria-filters.md#filtering).

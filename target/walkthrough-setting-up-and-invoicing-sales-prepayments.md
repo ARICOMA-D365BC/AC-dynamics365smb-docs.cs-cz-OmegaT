@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Setting Up and Invoicing Sales Prepayments | Microsoft Docs
-    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. You may require a deposit before you manufacture items to order, or you may require payment before you ship items to a customer. You use the prepayments functionality in Business Central to invoice and collect deposits that are required from customers or remit deposits to vendors. Thus, you can make sure that all payments are posted against an invoice.
+    title: Setting Up and Invoicing Sales Prepayments
+    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,19 +9,20 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 12/03/2021
     ms.author: edupont
 
 ---
 # Návod: Nastavení a fakturace prodejních záloh
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+This walkthrough takes you through the process of setting up and using prepayments in [!INCLUDE [prod_short](includes/prod_short.md)]. [!INCLUDE [prepayment_def](includes/prepayment_def.md)]
 
-Zálohy jsou platby, které jsou fakturovány a zaúčtovány na prodejní nebo nákupní objednávku zálohy před konečnou fakturací. Než budete vyrábět zboží na objednávku, můžete požadovat zálohu, nebo můžete požadovat platbu před odesláním zboží zákazníkovi. Funkci záloh používáte v [!INCLUDE[prod_short](includes/prod_short.md)] k fakturaci a inkasování vkladů požadovaných od zákazníků nebo k úhradě vkladů prodejcům. Můžete tedy zajistit, aby byly všechny platby zaúčtovány na fakturu.
+[!INCLUDE [prepayment_req](includes/prepayment_req.md)]
 
-Požadavky na zálohu lze definovat pro zákazníka nebo dodavatele pro všechny zboží nebo jenom pro vybrané zboží. Po dokončení požadovaného nastavení můžete generovat zálohové faktury z prodejních a nákupních objednávek pro vypočtenou částku zálohy. Výchozí částky na faktuře můžete podle potřeby změnit. Můžete například poslat další zálohové faktury, pokud jsou k objednávce přidány další položky.
+Můžete například poslat další zálohové faktury, pokud jsou k objednávce přidány další položky.
 
 ## O tomto návodu
+
 Tento návod vás provede následujícími scénáři:
 
 - Nastavení záloh
@@ -32,6 +33,7 @@ Tento návod vás provede následujícími scénáři:
 - Fakturace konečné částky za objednávku se zálohou
 
 ### Role
+
 Tento návod obsahuje úkoly pro následující role:
 
 - Hlavní účetní (Phyllis)
@@ -39,6 +41,7 @@ Tento návod obsahuje úkoly pro následující role:
 - Správce pohledávek (Arnie)
 
 ## Příběh
+
 Phyllis je hlavní účetní. Před výrobou nebo odesláním zboží rozhoduje o tom, kteří zákazníci jsou povinni zaplatit zálohu. Phyllis nastavuje [!INCLUDE[prod_short](includes/prod_short.md)] k automatickému výpočtu záloh.
 
 Susan je zpracovatelka prodejní objednávky. Když zákazník zavolá a zadá objednávku, Susan zadá objednávku do systému, když je zákazník na telefonu. Tímto způsobem může okamžitě ověřit ceny a platební podmínky se zákazníkem a během jednání se zákazníkem může provádět úpravy objednávky.
@@ -54,6 +57,7 @@ Poté, co Susan odešle zálohovou fakturu, zákazník si objedná další zbož
 Arnie zaregistruje platbu zákazníka a použije ji na faktury a poté odešle konečnou fakturu.
 
 ## Nastavení záloh
+
 Phyllis nastavuje systém pro zpracování záloh pro zákazníky.
 
 - Phyllis se rozhodne mít stejnou číselnou řadu pro zálohy jako ta, která se používá pro prodejní fakturaci.
@@ -62,117 +66,126 @@ Phyllis nastavuje systém pro zpracování záloh pro zákazníky.
 
 Následující postupy popisují, jak splnit úkoly Phyllis:
 
-#### Nastavení číselných řad pro zálohy
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
-2. Na stránce **Nastavení prodeje a pohledávek** rozbalte záložku **Číslování**.
+### Nastavení číselných řad pro zálohy
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+2. On the **Sales & Receivables Setup** page, expand the **Number Series** FastTab.
 3. Ověřte, že číselná řada pro zaúčtované zálohové faktury v poli **Čísla účtovaných  Zásoby faktur** je stejná jako u zaúčtovaných prodejních faktur (**Čísla zaúčtovaných faktur**) a číselné řady zaúčtovaných dobropisů zálohy (**Čísla účtovaných  zál.  dobropisů**) je stejné jako u zaúčtovaných dobropisů (**Čísla zaúčtovaných dobropisů**).
 
-#### Blokování zásilek pro nezaplacenou zálohu
+### Blokování zásilek pro nezaplacenou zálohu
+
 1. Na stránce **Nastavení prodeje a pohledávek** na záložce **Obecné** zaškrtněte políčko **Zkontrolovat zálohu při účtování**.
 
-   Nyní nemůžete odeslat ani fakturovat objednávku, která má nezaplacenou částku zálohy.
+Nyní nemůžete odeslat ani fakturovat objednávku, která má nezaplacenou částku zálohy.
 
 Ve výchozím nastavení vyžaduje Phyllis fakturaci zákazníkovi 20 000 na zálohu 30% na všechny objednávky. Proto zadá výchozí procento zálohy na kartě zákazníka.
 
-Phyllis vyžaduje, aby všem zákazníkům byla fakturována 20% záloha za položku 1100. Zákazník 20000 má špatnou platební historii. Proto požaduje 40% zálohu od zákazníka 20000 za položku 1100. Následující postup znázorňuje, jak nastavit výchozí procenta záloh.
+Phyllis requires all customers to be invoiced a 20% deposit for item 1896-S. Zákazník 20000 má špatnou platební historii. Therefore, she requires a 40% prepayment from customer 20000 for item 1896-S. Následující postup znázorňuje, jak nastavit výchozí procenta záloh.
 
-#### Přiřazení výchozích procent záloh zákazníkům a zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Otevřete kartu pro zákazníka 20000 (Selangorian).
-3. Do pole **Záloha %** zadejte **30**.
-4. Kliknutím na tlačítko **OK** zavřete zákaznickou kartu.
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
-6. Otevřete kartu pro zákazníka 1100.
-7. Vyberte akci  **Procentní části zálohy**.
-8. Vyplňte dva řádky na stránce **Procentní části prodejní zálohy**.
+### Přiřazení výchozích procent záloh zákazníkům a zboží
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+2. Open the card for customer 20000 (Trey Research).
+3. On the **Payments** FastTab, in the **Prepayment %** field, enter **30**.
+4. Choose the **Related** action, select the **Sales** menu item, and then choose the **Prepayment Percentages** menu item.
+5. Vyplňte dva řádky na stránce **Procentní části prodejní zálohy**.
 
    | **Typ prodeje** | **Kód prodeje** | **Číslo zboží** | **Záloha %** |
    |--------------------|--------------------|------------------|----------------------|  
-   | **Zákazník** | **20000** | **1100** | **40** |
-   | **Všichni zákazníci** | **1100** | **20** |
+   | **Zákazník** | **20000** | **1896-S** | **40** |
+   | **Všichni zákazníci** | | **1896-S** | **20** |
 
-   > [!IMPORTANT]  
-   > Depending on your country/region, you must also specify a tax group code on the **Invoicing** FastTab for items 1000 and 1100.
+   > [!TIP]
+   > Depending on your country/region, you must also specify a tax group code on the **Costs & Posting** FastTab for item 1896-S. When you use the demonstration company, this field is already set.
 
-9. Zavřete všechny stránky.
+6. Zavřete všechny stránky.
 
-#### Určení účtu pro prodejní zálohy v nastavení obecného účtování
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
-2. Vyberte řádek, kde je pole **Obecná  účto  účto skupina** nastaveno na **EXPORT** a pole **Obecná  účto  skupina zboží** je nastaveno na **RETAIL** a poté vyberte akci **Upravit**.
-3. Na stránce **Karta nastavení obecného účto.** v poli **Účet záloh výnosů** zadejte příslušný účet.
-4. Zvolte tlačítko **OK**.
+### Určení účtu pro prodejní zálohy v nastavení obecného účtování
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.
+2. Vyberte řádek, kde je pole **Obecná  účto  Posting Group** field is set to **DOMESTIC**, and the **Gen. účto  Posting Group** field is set to **RETAIL**.
+3. In the **Sales Prepayments Account** field, specify the relevant account. Your selection is automatically saved.
+
+> [!TIP]
+> If you cannot see the field in the **General Posting Setup** page, then use the horizontal scroll bar at the bottom of the page to scroll to the right.
 
 ## Vytvoření objednávky, která vyžaduje zálohu
-V následujícím scénáři Susan, zpracovatel objednávek, vytvoří objednávku při rozhovoru se zákazníkem. Zboží, které zákazník objednává, vyžaduje zálohu a zákazník v minulosti provedl některé opožděné platby. Proto byla Susan instruována, aby požadovala pevnou částku 2 000 jako zálohu na objednávku.
+
+V následujícím scénáři Susan, zpracovatel objednávek, vytvoří objednávku při rozhovoru se zákazníkem. Zboží, které zákazník objednává, vyžaduje zálohu a zákazník v minulosti provedl některé opožděné platby. Therefore, Susan has been instructed to require a fixed amount of **800** as a prepayment on the order.
 
 Zákazník požaduje, aby mohl platit 35%, s čím může Susan souhlasit. Proto mění pořadí.
 
 Susan vytvoří zálohovou fakturu a odešle ji zákazníkovi.
 
-#### Vytvoření prodejní objednávky se zálohou
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+### Vytvoření prodejní objednávky se zálohou
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. V poli **Zákazník-číslo** vyberte **20000**.
-5. Přijměte zobrazené varování po splatnosti.
-6. Vyplňte dva prodejní řádky následujícími informacemi.
+3. In the **Customer Name** field, choose **Trey Research**.
+4. Close the overdue balance warning that is displayed.
+5. Vyplňte dva prodejní řádky následujícími informacemi.
 
    | **Typ** | **Číslo** | **Množství** |
    |--------------|-------------|------------------|  
-   | **Zboží** | **1000** | **1** |
-   | **Zboží** | **1100** | **1** |
+   | **Zboží** | **1896-S** | **1** |
+   | **Zboží** | **1900-S** | **1** |
 
-   Ve výchozím nastavení jsou pole zálohy na prodejním řádku skrytá, takže je nutné je zobrazit.
+   Ve výchozím nastavení jsou pole zálohy na prodejním řádku skrytá, takže je nutné je zobrazit. To do this you need to personalize the page. For more information, see [To start personalizing a page through the Personalizing banner](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).
 
-7. Ověřte, zda pole **Záloha %** na řádku se zbožím **1000** obsahuje **30**. Výchozí hodnota byla převzata z prodejní hlavičky, která byla vyplněna z karty zákazníka.
+6. Verify that the **Prepayment %** field on the line with item **1900-S** contains **30**. Výchozí hodnota byla převzata z prodejní hlavičky, která byla vyplněna z karty zákazníka.
 
-   Pole **Záloha %** na řádku se zbožím **1100** obsahuje **40**. Toto je procento, které jste zadali na stránce **Procentní části prodejní zálohy** pro zboží **1100** a zákazníka **20000**.
+   The **Prepayment %** field on the line with item **1896-S** contains **40**. This is the percentage you entered on the **Sales Prepayment Percentages** page for item **1896-S** and customer **20000**.
 
    Pro více informací navštivte [Nastavení záloh](finance-set-up-prepayments.md).
-8. Vyberte akci **Statistika**.
-9. Na záložce **Záloha**, pole **Částka  řádku zálohy bez  DPH** obsahuje **1 560**. Pokud nyní pro objednávku vytvoříte zálohovou fakturu, pak se jedná o částku, která se zobrazí na faktuře.
+7. In the **Order** action, choose  **Statistics**.
+8. On the **Prepayment** FastTab, the **Prepayment Amount Excl. VAT** field contains **458.16**. Pokud nyní pro objednávku vytvoříte zálohovou fakturu, pak se jedná o částku, která se zobrazí na faktuře.
 
-   V tomto scénáři byla Susan instruována, aby navrhla celkovou zálohu 2000 za objednávku.
+   In this scenario, Susan has been instructed to suggest a total prepayment of **800** for the order.
 
    > [!IMPORTANT]  
    > Depending on your country/region, the following step might not apply.
-10. Změňte částku v poli **Částka  řádku zálohy bez  DPH** na **2000** a potom stránku zavřete.
-11. Ověřte pole **Záloha %** na prodejních řádcích a uvidíte, že bylo přepočítáno na **40,81625**.
+9. Změňte částku v poli **Částka  Amount Excl. Tax** field to **800** and then close the page.
+10. Verify the **Prepayment %** field on the sales lines, and you will see that it has been recalculated to **67.02438** and **67.02282**.
 
    Přepočet zahrnuje všechny řádky, které mají procento platby předem větší než 0.
 
    Nyní se zákazník zeptá, zda je možné nastavit procento zálohy na 35%. Susanina nadřízená změnu schvaluje.
-
-12. Na stránce **Prodejní objednávka** zadejte do pole **Záloha %** hodnotu **35**.
-13. V zobrazeném varování klikněte na tlačítko **Ano**. Jako procento platby pro celou objednávku bude použita sazba 35%.
-14. Ověřte, zda byly řádky odpovídajícím způsobem aktualizovány.
+11. On the **Sales Order** page, on the **Prepayment** FastTab in the **Prepayment %** field, enter **35**.
+12. V zobrazeném varování klikněte na tlačítko **Ano**. Jako procento platby pro celou objednávku bude použita sazba 35%.
+13. Ověřte, zda byly řádky odpovídajícím způsobem aktualizovány.
 
 ## Vytvoření zálohové faktury
+
 Po zadání správných hodnot zálohy na objednávce vytvoří Susan zálohovou fakturu a odešle ji zákazníkovi.
 
-#### Vytvoření zálohové faktury
+### Vytvoření zálohové faktury
 
-1. Na stránce **Prodejní objednávka** vyberte akci **Zaúčtovat zálohovou fakturu**.
+1. On the **Sales Order** page, choose **Actions**, then **Posting**, then **Prepayment** and then select **Post and Print Prepayment Invoice**
+2. Choose the **Yes** button to post the invoice.
 
 > [!NOTE]  
-> Susan would select **Post and Print Prepmt. Invoice** and mail the invoice to the customer.
+> Susan would now send the invoice to the customer.
 
 ## Vytvoření dodatečné zálohové faktury
-Následující den zákazník zavolá Susan a provede změny v objednávce. Zákazník chce dva zboží 1100. Susan znovu otevře a aktualizuje objednávku a pak vytvoří druhou zálohovou fakturu na objednávce a odešle ji zákazníkovi.
 
-#### Vytvoření dodatečné zálohové faktury
+Následující den zákazník zavolá Susan a provede změny v objednávce. The customer wants two of item 1896-S. Susan znovu otevře a aktualizuje objednávku a pak vytvoří druhou zálohovou fakturu na objednávce a odešle ji zákazníkovi.
 
-1. Na stránce **Prodejní objednávka** vyberte akci **Znovu otevřít**.
-2. Na řádku pro zboží **1100** zadejte do pole **Množství** hodnotu **2**.
+### Vytvoření dodatečné zálohové faktury
 
-   Posunutím zobrazíte pole zálohy. Pole **Částka řádku zálohy bez  DPH** nyní obsahuje  **630** a pole **Fakt.  částka  Zásoby bez  DPH** obsahuje **315**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
-3. Chcete-li zaúčtovat fakturu s další částkou zálohy, vyberte akci **Zaúčtovat zálohovou fakturu**.
+1. On the **Sales Order** page, choose the **Release** action, and then **Reopen**.
+2. On the line for item **1896-S**, in the **Quantity** field, enter **2**.
+
+   In the **Order** action, choose **Statistics**. The **Prepayment Amount Excl. VAT** field now contains **768.04**, and the **Prepmt. částka  Zásoby bez  VAT** field contains **417.76**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
+3. To post an invoice for the additional prepayment amount, choose **Actions**, then **Posting**, then **Prepayment** and then select **Post and Print Prepayment Invoice**
+4. Choose the **Yes** button to post the invoice.
 
 ## Uplatnění záloh
+
 Zákazník zaplatí částku zálohy a Arnie, která pracuje v účetním oddělení, zaregistruje platbu a použije ji na zálohové faktury.
 
-#### Použití platby na zálohové faktury
+### Použití platby na zálohové faktury
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky přijaté hotovosti** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Receipt Journals**, and then choose the related link.
 2. Vyplňte řádek deníku následujícími informacemi.
 
    | Název pole | Zadejte |
@@ -180,30 +193,36 @@ Zákazník zaplatí částku zálohy a Arnie, která pracuje v účetním odděl
    | **Typ dokladu** | **Platba** |
    | **Typ účtu** | **Zákazník** |
    | **Číslo účtu** | **20000** |
-3. Vyberte akci **Vyrovnat položky**.
-4. Na stránce **Vyrovnat položky zákazníka** vyberte první zálohovou fakturu a poté vyberte akci **Nastavit ID vyrovnání**.
+3. Choose the **Process** action, and then **Apply Entries**.
+4. On the **Apply Customer Entries** page, select the first prepayment invoice, and then choose the **Process** action, and then choose the **Set Applies-to ID** action.
 5. Opakujte předchozí krok pro druhou zálohu.
 6. Zvolte tlačítko **OK**.
 
-   Pole částky bylo nyní vyplněno součtem dvou zálohových faktur.
+   The **Amount** fields have now been filled in with the sum of the two prepayment invoices.
 
-7. Zaúčtujte deník.
+7. To post the journal, choose the **Post/Print** action, then select **Post**.
+8. Vyberte tlačítko **Ano**.
 
 ## Fakturace zbývající částky
+
 Nyní byla Arnie informována, že položky v objednávce byly odeslány a že objednávka je připravena k fakturaci. Arnie vytvoří fakturu za objednávku.
 
-#### Fakturace zbývající částky
+### Fakturace zbývající částky
+
 1. Otevřete prodejní objednávku.
-2. Vyberte akci **Dodat a fakturovat** a poté klikněte na tlačítko **OK**.
+2. Choose the **Posting** action, then **Post**.
+3. Select **Ship and Invoice**, and then choose the **OK** button.
+4. If you want to preview the invoice, choose the **Yes** button.
 
-> [!NOTE]  
-> Normally, the shipping department would have already posted the shipment.
+   > [!NOTE]  
+   > Normally, the shipping department would have already posted the shipment.
 
-Arnie může zobrazit historii a ověřit, zda byla prodejní faktura vytvořena tak, jak bylo zamýšleno.
+   Arnie může zobrazit historii a ověřit, zda byla prodejní faktura vytvořena tak, jak bylo zamýšleno.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účtované prodejní faktury** a poté vyberte související odkaz.
+5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Invoices**, and then choose the related link.
 
 ## Další kroky
+
 Tento návod vás provedl kroky k nastavení [!INCLUDE[prod_short](includes/prod_short.md)] pro zpracování záloh. Nastavili jste výchozí procenta předplacení u zákazníků a položek a také jste použili různé metody pro výpočet zálohy u objednávky. Pokusili jste se přiřadit jednu celkovú částku zálohy k objednávce a nechali jste si částku zálohy vypočítat jako procento z celé objednávky.
 
 Zaúčtovali jste také zálohovou fakturu, vytvořili jste druhou zálohovou fakturu, když se změnila objednávka, a zaúčtovali jste konečnou fakturu pro zbývající částku.
@@ -211,6 +230,7 @@ Zaúčtovali jste také zálohovou fakturu, vytvořili jste druhou zálohovou fa
 Funkce záloh v [!INCLUDE[prod_short](includes/prod_short.md)] usnadňuje nastavení a vynucení pravidel záloh pro zákazníky a zboží a umožňuje zaúčtovat každou platbu na fakturu.
 
 ## Viz také
+
 [Fakturace záloh](finance-invoice-prepayments.md)    
 [Finance](finance.md)    
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)    

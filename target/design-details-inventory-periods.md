@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Inventory Periods | Microsoft Docs
-    description: Backdated transactions or cost adjustments often affect balances and stock valuations for accounting periods that may be considered closed. This can have adverse effects on accurate reporting, especially within global corporations. The Inventory Periods feature can be used to avoid such problems by opening or closing inventory periods to limit posting in a set period of time.
+    title: Design Details - Inventory Periods
+    description: Inventory Periods helps avoid problems with balances and stock valuations by opening or closing inventory periods to limit posting in a set period of time.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -27,8 +27,9 @@ Chcete-li zajistit, aby všechny položky transakcí v uzavřeném období byly 
 Když uzavřete skladové období, vytvoří se položka skladového období pomocí čísla poslední položky žurnálu zboží, který spadá do období inventury. Čas, datum a kód uživatele, který období uzavírá, se navíc zaznamenává do položky období zásob. Pomocí těchto informací s poslední položkou žurnálu zboží za předchozí období můžete zjistit, které skladové transakce byly zaúčtovány v období zásob. Je také možné znovu otevřít období zásob, pokud potřebujete zaúčtovat v uzavřeném období. Při opětovném otevření období zásob je vytvořena položka období zásob.
 
 ## Viz také
-[Design Details: Inventory Costing](design-details-inventory-costing.md)
-[Managing Inventory Costs](finance-manage-inventory-costs.md)
+
+[Design Details: Inventory Costing](design-details-inventory-costing.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
 [Finance](finance.md)  
 [Working with Business Central](ui-work-product.md)
 

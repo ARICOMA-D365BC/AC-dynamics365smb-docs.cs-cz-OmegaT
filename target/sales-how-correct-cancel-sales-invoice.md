@@ -1,6 +1,6 @@
 ---
 title: Correct or Cancel a Posted Sales Invoice
-description: Describes how to correct, undo, or cancel a posted sales invoice and apply a sales credit memo.
+description: This topic describes how to correct, undo, or cancel a posted sales invoice and apply a sales credit memo.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: undo, credit memo, return
-ms.date: 04/01/2021
+ms.date: 06/23/2021
 ms.author: edupont
 
 ---
@@ -34,7 +34,7 @@ Při opravě nebo zrušení zaúčtované prodejní faktury je opravný prodejn�
 
 ## Pro zrušení účtované prodejní faktury
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účtované prodejní faktury** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Invoices**, and then choose the related link.
 2. Vyberte účtovanou prodejní fakturu, kterou chcete zrušit.
 
    > [!NOTE]  
@@ -50,7 +50,7 @@ Pokud zrušení souvisí s částečným účtováním faktury, je původní ř�
 
 ## Pro opravu účtované prodejní faktury
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účtované prodejní faktury** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Posted Sales Invoices**, and then choose the related link.
 2. Vyberte účtovanou prodejní fakturu, kterou chcete opravit.
 
    > [!NOTE]  

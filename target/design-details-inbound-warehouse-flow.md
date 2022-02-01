@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Inbound Warehouse Flow | Microsoft Docs
-    description: The inbound flow in a warehouse begins when items arrive in the warehouse of the company location, either received from external sources or from another company location. An employee registers the items, typically by scanning a bar code. From the receiving dock, warehouse activities are performed at different complexity levels to bring the items into the storage area.
+    title: Design Details - Inbound Warehouse Flow
+    description: Inbound warehouse flow begins when items arrive in the warehouse company location. Items are registered and eventually matched to inbound source documents.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -47,7 +47,7 @@ V metodách A, B a C jsou akce příjmu a zaskladnění kombinovány v jednom kr
 ## Základní konfigurace skladu
 Následující diagram znázorňuje toky vstupního skladu podle typu dokladu v základních konfiguracích skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Příchozí tok v základních konfiguracích skladu](media/design_details_warehouse_management_inbound_basic_flow.png "Příchozí tok v základních konfiguracích skladu")
+![Inbound flow in basic warehouse configurations.](media/design_details_warehouse_management_inbound_basic_flow.png "Inbound flow in basic warehouse configurations")
 
 ### 1: Vydání zdrojového dokladu / Vytvoření zaskladnění zásob
 Když je zboží přijato ve skladu, uživatel, který je zodpovědný za příjem, vydá zdrojový doklad, například nákupní objednávku nebo vstupní objednávku transferu, aby signalizoval pracovníkům skladu, že přijaté zboží může být zaskladněné ve skladu. Alternativně uživatel vytvoří doklady zaskladnění zásob pro jednotlivé řádky objednávky nabízeným způsobem na základě zadaných přihrádek a množství, které je možné zpracovat.
@@ -66,7 +66,7 @@ Vytvoří se kladné položky zbož a položky skladu a odstraní se požadavek 
 ## Pokročílé nastavení skladu
 Následující diagram znázorňuje tok vstupního skladu podle typu dokladu v pokročilých konfiguracích skladu. Čísla v diagramu odpovídají krokům v následujících částech diagramu.
 
-![Příchozí tok v pokročilých konfiguracích skladu](media/design_details_warehouse_management_inbound_advanced_flow.png "Příchozí tok v pokročilých konfiguracích skladu")
+![Inbound flow in advanced warehouse configurations.](media/design_details_warehouse_management_inbound_advanced_flow.png "Inbound flow in advanced warehouse configurations")
 
 ### 1: Vydání zdrojového dokladu
 Když je zboží přijato ve skladu, uživatel, který je zodpovědný za příjem, vydá zdrojový doklad, například nákupní objednávku nebo vstupní objednávku transferu, aby signalizoval pracovníkům skladu, že přijaté zboží může být zaskladněné ve skladu.

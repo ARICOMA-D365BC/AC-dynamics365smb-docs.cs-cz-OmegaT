@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Planning Parameters | Microsoft Docs
-    description: This topic describes the different planning parameters that you can use in Business Central.
+    title: Design Details - Planning Parameters
+    description: This topic describes the different planning parameters that you can use and how they affect the planning system.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: planning, design
-    ms.date: 04/01/2021
+    ms.date: 07/21/2021
     ms.author: edupont
 
 ---
@@ -79,25 +79,25 @@ Chcete-li získat racionální plán dodávek, plánovač doladí parametry plá
 
 Načasování období přeplánování, období prodlevy a období kumulace dávky je založeno na datu dodávky. Intervaly dostupnosti začínají datem zahájení plánování, jak je znázorněno na následujícím obrázku.
 
-![Prvky intervalu dostupnosti](media/supply_planning_5_time_bucket_elements.png "Prvky intervalu dostupnosti")
+![Time bucket elements.](media/supply_planning_5_time_bucket_elements.png "Time bucket elements")
 
 V následujících příkladech představují černé šipky existující nabídku (nahoru) a poptávku (dolů). Červená, zelená a oranžová šipky jsou návrhy plánování.
 
 **Příklad 1**: Změněné datum je mimo období přeplánování, což způsobí zrušení stávající dodávky. Navrhuje se nová nabídka, která pokryje poptávku v období kumulace dávky.
 
-![Období přeplánování a období kumulace dávky](media/supply_planning_5_recheduling_period_lot_accumulation_period.png "Období přeplánování a období kumulace dávky")
+![Rescheduling Period and Lot Accumulation Period.](media/supply_planning_5_recheduling_period_lot_accumulation_period.png "Rescheduling Period and Lot Accumulation Period")
 
 **Příklad 2**: Změněné datum je v období přeplánování, což způsobí, že existující dodávky mají být přeplánovány. Navrhuje se nová nabídka, která pokryje poptávku mimo období kumulace dávky.
 
-![Období přeplánování, období kumulace dávky, and Přeplánování](media/supply_planning_5_recheduling_period_lot_accum_period_reschedule.png "Období přeplánování, období kumulace dávky, and Přeplánování")
+![Rescheduling Period, Lot Accumulation Period, and Reschedule.](media/supply_planning_5_recheduling_period_lot_accum_period_reschedule.png "Rescheduling Period, Lot Accumulation Period, and Reschedule")
 
 **Příklad 3**: V období prodlevy je poptávka a množství zásob v období kumulace dávky odpovídá množství nabídky. Další poptávka je odkryta a je navržena nová nabídka.
 
-![Období prodlevy a Období kumulace dávky](media/supply_planning_5_dampener_period_lot_accumulation_period.png "Období prodlevy a Období kumulace dávky")
+![Dampener Period and Lot Accumulation Period.](media/supply_planning_5_dampener_period_lot_accumulation_period.png "Dampener Period and Lot Accumulation Period")
 
 **Příklad 4**: V období prodlevy je poptávka a nabídka zůstává ve stejném datu. Aktuální množství nabídky však nestačí k pokrytí poptávky v období kumulace dávky, proto se navrhuje akce změny množství pro stávající objednávku dodávky.
 
-![Období prodlevy, Období kumulace dávky, a Změnit množství](media/supply_planning_5_dampener_period_lot_accum_period_change_qty.png "Období prodlevy, Období kumulace dávky, a Změnit množství")
+![Dampener Period, Lot Accumulation Period, and Change Quantity.](media/supply_planning_5_dampener_period_lot_accum_period_change_qty.png "Dampener Period, Lot Accumulation Period, and Change Quantity")
 
 **Výchozí hodnoty:** Výchozí hodnota pole **Interval dostupnosti** a tři pole pro změnu pořadí období jsou prázdné. Pro všechna pole, kromě pole **Období prodlevy**, to znamená 0D (nula dní). Pokud pole **Období prodlevy** je prázdné, bude použita globální hodnota v poli **Výchozí období prodlevy** na stránce **Nastavení výroby**.
 
@@ -112,6 +112,26 @@ Možnost **Způsob výroby** definuje, které další objednávky bude výpočet
 Pokud je použita možnost **Vyrobit na sklad** objednávky se týkají pouze dotyčného zboží.
 
 Pokud je použita možnost **Vyrobit na zakázku**, plánovací systém analyzuje výrobní kusovník zboží a vytvoří další propojené návrhy objednávek pro to zboží nižší úrovně, které je definováno jako vyrobit na zakázku. To pokračuje, dokud jsou v sestupných strukturách kusovníku zboží typu zhotovit na objednávku.
+
+## Use Low-Level Codes to manage derived demand
+
+Use Low-Level Codes to make derived demand for components progress through to the lower levels of the BOM. For a more thorough explanation of this, please see [Item Priority / Low-Level Code](design-details-central-concepts-of-the-planning-system.md#item-priority--low-level-code).
+
+You can assign a low-level code to each part in the product structure or the indented BOM. The top final assembly level is denoted as level 0 - the end item. The higher the low-level code number, the lower the item is in the hierarchy. For example, end items have low-level code 0, and the item parts that go into the assembly of the end item have low-level codes 1, 2, 3, and so on. The result is the planning of component parts coordinated with the requirements of all higher-level part numbers. When you calculate a plan, the BOM is exploded in the planning worksheet, and the gross requirements for level 0 are passed down the planning levels as gross requirements for the next planning level.
+
+Select the **Dynamic Low-Level Code** field to specify whether to immediately assign and calculate low-level codes for each component in the product structure. If you have large amounts of data, this function can have negative effects on the program's performance, for example during automatic cost adjustment. Note that this is not a retroactive function, so it is a good idea to consider the use of this facility beforehand.
+
+As an alternative to the automatic calculation that occurs dynamically if the field is selected, you can run the **Calculate Low-Level Code** batch job from the **Manufacturing** menu by clicking **Product Design**, **Calculate Low-Level Code**.
+
+> [!IMPORTANT]
+> If you do not select the **Dynamic Low-Level Code** field, then you must run the **Calculate Low-Level Code** batch job before you calculate a supply plan (the **Calculate Plan** batch job).
+
+> [!NOTE]
+> Even with the **Dynamic Low-Level Code** field selected, the low-level codes of component items are not changed dynamically if a parent BOM is deleted or set to non-certified. This may result in difficulty to add new items to the end of the product structure as it might exceed the maximum number of low-level codes. Therefore, for large product structures that reach the low-level code limit, it is encouraged to run the **Calculate Low Level Code** batch job frequently to maintain the structure.
+
+### Optimize Low-Level Code Calculation
+
+Select the **Optimize Low-Level Code Calculation** field to specify that you want to use the new, faster method of low-level code calculation. Note that the new calculation is done differently, and using it might break extensions that rely on the existing method. The new calculation method will replace the current method in a future release.
 
 ## Viz také
 [Detaily návrhu: Zpracování způsobu přiobjednání](design-details-handling-reordering-policies.md)   

@@ -9,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment due, debt, overdue, fee, charge, reminder
+ms.search.form: 431, 432, 478
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -26,7 +27,7 @@ Pokud mají zákazníci platby po splatnosti, musíte se rozhodnout, kdy a jak j
 
 ### Nastavení podmínek upomínky
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky upomínky** a vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
 2. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 3. Chcete-li použít více než jednu kombinaci podmínky upomínky, nastavte pro každou z nich vlastní kód.
 
@@ -38,7 +39,7 @@ Pokud vytvoříte více upomínek, než jste definovali úrovně, budou použity
 
 ### Nastavení úrovní upomínek
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky upomínky** a vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
 2. Na stránce **Podmínky upomínky** vyberte řádek s podmínkami, pro které chcete nastavit úrovně, a poté vyberte akci **Úrovně**.
 3. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 

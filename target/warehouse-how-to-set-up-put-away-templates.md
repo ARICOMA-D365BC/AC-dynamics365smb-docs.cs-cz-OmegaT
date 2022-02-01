@@ -1,6 +1,6 @@
 ---
-    title: How to Set Up Put-away Templates | Microsoft Docs
-    description: With directed put-away and pick functionality, the most appropriate bin for your items at any given time is suggested, according to the put-away template that you have set up for the warehouse, the bin rankings you have given to the bins, and the minimum and maximum quantities that you have set up for fixed bins.
+    title: Set Up Put-away Templates
+    description: Use Put-away templates to have the most appropriate bins for your items suggested to you at any given time.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -8,8 +8,8 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.form: 7312, 7313, 7314, 7321, 7322, 7323, 7329
+    ms.date: 06/25/2021
     ms.author: edupont
 
 ---
@@ -21,7 +21,7 @@ Můžete nastavit počet šablon zaskladnění a vybrat jednu z nich, která bud
 
 ## Nastavení šablon zaskladnění
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-away Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-away Templates**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Zadejte kód, který je jedinečným identifikátorem šablony, kterou se chystáte vytvořit.
 4. Zadejte krátký popis, pokud chcete.

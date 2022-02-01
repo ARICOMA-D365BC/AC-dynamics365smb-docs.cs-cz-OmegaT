@@ -1,19 +1,20 @@
 ---
-    title: Move Items | Microsoft Docs
-    description: While in inventory, items may need to be moved between bins to support the daily warehouse activities involved in keeping items flowing through the warehouse. Some movements happen in direct relation to internal operations, such as a production order that needs components delivered or end items put away. Other movements happen as mere warehouse space optimization or as ad-hoc movements to and from operations.
-    author: SorenGP
+title: Move Items
+description: While in inventory, items may need to be moved between bins to support the daily warehouse activities involved in keeping items flowing through the warehouse. 
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 7315, 7349, 7351, 7382, 7384, 7386, 7387, 7399, 7400, 9314, 9330, 9345
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Přesouvání zboží
+
 Skladová aktivita přesouvání zboží ve skladu se provádí různými způsoby v závislosti na tom, jak jsou nakonfigurovány funkce správy skladu. Složitost se může řadit od žádných funkcí skladu, přes základní konfigurace skladu pro zpracování objednávek pouze v jedné nebo více aktivitách, až po pokročilé konfigurace, kde všechny aktivity skladu musí být prováděny v směrovaném workflow. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 V jedné lokaci skladu může být nutné zboží přesouvat mezi přihrádky, aby se podpořily denní aktivity skladu spojené s udržováním zboží procházejících skladem. Některé přesuny se uskutecují v přímém vztahu k interním operacím, například výrobní zakázka, která vyžaduje dodání komponent nebo zaskladnění koncového zboží. K dalším přesunům dochází jako pouhá optimalizace skladových prostor nebo jako ad hoc přesuny do a z operací.
@@ -36,12 +37,13 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Restrukturalizujte svůj sklad pomocí nových kódů přihrádek a nových charakteristik přihrádky a případně je přesuňte. | [Restrukturalizace skladů](warehouse-how-to-restructure-warehouses.md) |
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)
+[Assembly Management](assembly-assemble-items.md)
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

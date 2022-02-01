@@ -1,6 +1,6 @@
 ---
-title: About the Data Exchange Framework | Microsoft Docs
-description: The format of files for exchange of data in bank files, electronic documents, currency exchange rates, and other with ERP systems vary depending on the provider of the data file or stream and on the country/region.
+title: About the Data Exchange Framework
+description: This topic explains how to use the Data Exchange Framework to manage the exchange of data in business documents like invoices with your business partners.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -8,8 +8,8 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords:
-ms.date: 04/01/2021
+ms.search.keywords: Data exchange framework, data files, data exchange, electronic document, invoice, Business Central, business document, standard-compliant file, OCR
+ms.date: 06/10/2021
 ms.author: edupont
 
 ---
@@ -21,17 +21,17 @@ As an administrator or Microsoft partner, you can use the framework in new integ
 
 The following diagrams show the architecture of the data exchange framework.
 
-![Data Exchange Framework &#45; Import](media/across-data-exchange/dataexchangeframework_import.png)
+![Data Exchange Framework &#45; Import.](media/across-data-exchange/dataexchangeframework_import.png)
 
-![Data Exchange Framework &#45; Export](media/across-data-exchange/dataexchangeframework_export.png)
+![Data Exchange Framework &#45; Export.](media/across-data-exchange/dataexchangeframework_export.png)
 
 ## Electronic Documents
 
-As an alternative to emailing as file attachments, you can send and receive business documents electronically. By electronic document is meant a standard-compliant file representing a business document, such as an invoice from a vendor that you can receive and convert to a purchase invoice in [!INCLUDE[prod_short](includes/prod_short.md)] . The exchange of electronic documents between two trading partners is performed by an external provider of document exchange services. The generic version of [!INCLUDE[prod_short](includes/prod_short.md)]  supports sending and receiving electronic invoices and credit memos in the PEPPOL format, which is supported by the largest providers of document exchange services. A major provider of document exchange services is preconfigured and ready to be set up for your company. To provide support for other electronic document formats, you must create new date exchange definitions using the Data Exchange Framework.
+As an alternative to emailing business documents as file attachments, you can send and receive them electronically. An "electronic document" is a standard-compliant file representing a business document, such as an invoice from a vendor that you can receive and convert to a purchase invoice in [!INCLUDE[prod_short](includes/prod_short.md)]. Trading partners exchange electronic documents through external document exchange services. By default, [!INCLUDE[prod_short](includes/prod_short.md)] supports sending and receiving electronic invoices and credit memos in the PEPPOL format, which is supported by the largest providers of document exchange services. A major provider of document exchange services, Tradeshift, is pre-configured and ready to be set up for your company. To provide support for other electronic document formats, you must create new data exchange definitions.
 
 From PDF or image files representing incoming documents, you can have an external OCR service (Optical Character Recognition) create electronic documents that you can then convert to document records in [!INCLUDE[prod_short](includes/prod_short.md)], like for electronic PEPPOL documents. For example, when you receive an invoice in PDF format from your vendor, you can send it to the OCR service from the **Incoming Documents** page. After a few seconds, you receive the file back as an electronic invoice that can be converted to a purchase invoice for the vendor. If you send the file to the OCR service by email, then a new incoming document record is automatically created when you receive the electronic document back.
 
-To send, for example, a sales invoice as an electronic PEPPOL document, you select the **Electronic Document** option in the **Post and Send** dialog box. From here, you can also set up the customer's default document sending profile. First, you must set up various master data, such as company information, customers, items, and units of measure. These are used to identify the business partners and items when you convert data in fields in [!INCLUDE[prod_short](includes/prod_short.md)]  to elements in the outgoing document file. The data conversion and sending of the PEPPOL sales invoice are performed by dedicated codeunits and XMLports, represented by the **PEPPOL** electronic document format.
+To send, for example, a sales invoice as an electronic PEPPOL document, you select the **Electronic Document** option in the **Post and Send** dialog box. From here, you can also set up the customer's default document sending profile. First, you must set up various master data, such as company information, customers, items, and units of measure. These are used to identify the business partners and items when you convert data in fields in [!INCLUDE[prod_short](includes/prod_short.md)] to elements in the outgoing document file. The data conversion and sending of the PEPPOL sales invoice are performed by dedicated codeunits and XMLports, represented by the **PEPPOL** electronic document format.
 
 To receive, for example, an invoice from a vendor as an electronic PEPPOL document, you process the document on the **Incoming Documents** page to convert it to a purchase invoice in [!INCLUDE[prod_short](includes/prod_short.md)]. You can either set up the Job Queue feature to process such files regularly or you can start the process manually. First, you must set up various master data, such as company information, vendors, items, and units of measure. These are used to identify the business partners and items when you convert data in elements in the incoming document file to fields in [!INCLUDE[prod_short](includes/prod_short.md)]. The receiving and data conversion of PEPPOL invoices are performed by the Data Exchange Framework, represented by the **PEPPOL - Invoice** data exchange definition.
 
@@ -39,7 +39,7 @@ To receive, for example, an invoice as an electronic OCR document, you process i
 
 ## Bank Files
 
-The formats of files for exchanging bank data with ERP systems vary depending on the supplier of the file and the country or region. [!INCLUDE[prod_short](includes/prod_short.md)] supports import and export of SEPA bank files (Single Euro Payments Area) and the AMC Banking 365 Fundamentals extension lets you connect to a AMC Banking 365 Fundamentals extension provided by external provider, AMC Consult. To provide support for other electronic document formats, you use the Data Exchange Framework.
+The formats of files for exchanging bank data with business management applications vary depending on the supplier of the file and the country or region. [!INCLUDE[prod_short](includes/prod_short.md)] supports import and export of Single Euro Payments Area (SEPA) bank files. Additionally, the AMC Banking 365 Fundamentals extension lets you connect to a AMC Banking 365 Fundamentals extension provided by an external provider, AMC Consult. For more information, see [Make Payments with the AMC Banking 365 Fundamentals extension or SEPA Credit Transfer](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md). To provide support for other electronic document formats, you use the Data Exchange Framework.
 
 To export SEPA credit transfers, you choose **Export Payments to File** button on the **Payment Journal** page and then upload the file to process the payments in your bank. First you must set up various master data, such as bank account, vendors, and payment methods. The data conversion and export of SEPA bank data is performed by a dedicated codeunit and XMLport, represented by the **SEPA Credit Transfer** bank export/import setup. Alternatively, you can set up the AMC Banking 365 Fundamentals extension to perform the export, represented by the **AMC Banking 365 Fundamentals extension - Credit Transfer** data exchange definition.
 

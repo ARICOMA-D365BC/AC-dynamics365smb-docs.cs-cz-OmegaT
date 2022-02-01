@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Tracing Serial-Lot Numbers | Microsoft Docs
-    description: This topic describes the actions to take to stop selling a defective item.
+    title: Walkthrough - Tracing Serial-Lot Numbers
+    description: This topic describes the actions that are needed to take to prevent selling a defective item, and also how to trace and recall items when needed.
     author: bholtorf
 
     ms.service: dynamics365-business-central
@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: bholtorf
 
 ---
 # Návod: Sledování sériových čísel
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
 
 Pokud se vyskytnou vady produktu, musí být chyby identifikovány a musí se zabránit tomu, aby dotčené zboží opustilo společnost. Pokud již bylo vadné zboží odesláno, musíte sledovat, kdo jej obdržel, a pokud potřebujete zboží odvolat.
 
@@ -47,7 +47,7 @@ Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatels
 K dokončení tohoto návodu budete potřebovat:
 
 - Společnost [!INCLUDE[prod_short](includes/prod_short.md)].
-- Chcete-li vytvořit nové zboží a několik obchodních transakcí, postupujte podle [Příprava ukázkových dat](walkthrough-tracing-serial-lot-numbers.md#prepare-sample-data).
+<!-- - To create new items and several business transactions by following the [Prepare Sample Data](walkthrough-tracing-serial-lot-numbers.md#prepare-sample-data).   -->
 
 ## Příběh
 
@@ -73,7 +73,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
 ### Vytvoření zboží
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Do pole **Číslo** zadejte **2000** a poté vyplňte následující pole.
 
@@ -91,7 +91,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    | Popis | Základní měrná jednotka | Obecné účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Systém doplnění | Kód sledování zboží |
    |-----------------|--------------------------|------------------------------|-----------------------------|-----------------------------|--------------------------|------------------------|  
-   | Závodní kolo | KS | OBCHOD | DPH19 | DOKONČENÉ | výr. zakázky | SČVŠE |
+   | Závodní kolo | KS | OBCHOD | DPH19 | DOKONČENÉ | účto  Pořadí | SČVŠE |
 
    > [!NOTE]  
    > To enter the base unit of measure, choose the **New** button, and then select **PSC** on the **Item Units of Measure** page.
@@ -110,7 +110,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
 ### Nákup komponent
 
-1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Vytvořte nákupní objednávku pro dodavatele Custom Metals Incorporated vyplněním následujících polí v řádku.
 
@@ -124,7 +124,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 7. Zvolte akci **Účtovat**, vyberte možnost **Příjem a fakturace** a poté klikněte na tlačítko **OK**.
 
    Dále si zakupte závodní rámy od Mach a spol. v.o.s..
-8. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
+8. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
 9. Vyberte akci **Nový**.
 10. Vytvořte nákupní objednávku pro dodavatele Coolwood Technologies vyplněním následujících řádkových polí.
 
@@ -141,7 +141,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
 ### Vytvoření koncových položek
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vydané výr.  zakázky** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Prod. zakázky** a poté vyberte související odkaz.
 2. Vyberte skupinu **Nový**.
 3. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí.
 
@@ -162,7 +162,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    Dále vyrobte další dvě závodní kola, SČ3 a SČ4.
 
-11. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Vydané výr.  zakázky** a poté vyberte související odkaz.
+11. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Prod. zakázky** a poté vyberte související odkaz.
 12. Vyberte akci **Nový**.
 13. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí v záhlaví.
 
@@ -187,7 +187,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
    Dále prodejte závodní kola. Nejprve prodejte závodní kolo se SČ1 společnosti J V v.o.s..
 
 ### Prodej koncového zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
    | Zákazník | Zboží | Množství | Sériové číslo |
@@ -199,7 +199,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    Dále prodejte závodní kolo se SČ2 společnosti BYT-KOMPLET s.r.o..
 
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 6. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
    | Zákazník | Zboží | Množství | Sériové číslo |
@@ -211,7 +211,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    Nakonec prodejte některé závodní rámy samostatně. BYT-KOMPLET s.r.o. také objednává čtyři samostatné závodní rámy pro vlastní montážní linku.
 
-9. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+9. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 10. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
    | Zákazník | Zboží | Množství | Sériové číslo |
@@ -229,7 +229,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 Od obchodního oddělení kontrolor kvality ví, že vrácené závodní kolo, položka 1002, má sériové číslo SČ1. Pomocí těchto základních informací může určit, kde bylo hotové závodní kolo naposledy použito, v tomto případě na prodejní zdodávce společnosti J V v.o.s. Poté musí kontrolor kvality vysledovat zboží zpět k nejstaršímu původu, aby zjistil, ze kterého čísla šarže vadný závodní rám pochází a který dodavatel ho dodal.
 
 ### Určení, která šarže obsahovala vadný rám a kdo ji dodal
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Trasování zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracing**, and then choose the related link.
 2. Na stránce **Trasování zboží** zadejte **SČ1** do pole **Filtr sériového  čísla** a poté do pole **Filtr zboží** zadejte **1002**.
 3. Ponechte výchozí nastavení **Se sledováním zboží** v poli **Zobrazit komponenty** a ponechte výchozí metodu trasování **Použití -> Původ** v poli **Metoda sledování**.
 4. Vyberte akci **Sledovat**.

@@ -8,7 +8,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365, collaborate, collaboration, teamwork, faq, errors
-ms.date: 05/19/2021
+ms.date: 10/01/2021
 ms.author: jswymer
 ---
 # Teams Nejčastěji pokládané otázky a odpovědi
@@ -140,7 +140,11 @@ Ve společnosti Microsoft neustále nasloucháme zpětné vazbě od naší rozma
 
 Pokud se chcete podílet na vylepšování aplikace pro Teams nebo máte nápad, který by vám pomohl zjednodušit práci nebo spolupráci v Teams, přidejte nápad nebo hlasujte na [https://aka.ms/BusinessCentralIdeas](https://aka.ms/BusinessCentralIdeas).
 
-## [Vyhledávání kontaktů](#tab/contacts)
+### Where can I find Teams integration inside the Business Central Web client?
+
+For functionality in the web client that links to Teams, see the [Share Records and Page Links in Microsoft Teams](across-working-with-teams.md#share-link).
+
+## [Search for Contacts](#tab/contacts)
 
 ### Ve kterých tabulkách aplikace vyhledává?
 
@@ -234,7 +238,7 @@ Hledání v jiných tabulkách není v tuto chvíli možné. Aplikace [!INCLUDE 
 
 Pokud chcete, aby se možnosti vyhledávání vyvíjely tak, aby zahrnovaly další tabulky, doporučujeme naší komunitě, aby přidala nápad nebo hlasovala pro existující nápady na adrese  https://aka.ms/BusinessCentralIdeas.
 
-## [Práce s kartami](#tab/cards)
+## [Work with cards](#tab/cards)
 
 ### Jaké typy odkazů aplikace podporuje?
 
@@ -267,7 +271,7 @@ Když vytvoříte a odešlete zprávu do chatu, která obsahuje kartu, uvidí ji
 
 Pokud pracujete napříč společnostmi [!INCLUDE [prod_short.md](includes/prod_short.md)], promluvte se svým správcem o povolení odznaku společnosti pro každou společnost. Pokud je tato nápověda povolená, zobrazí se v okně podrobností v Teams, zobrazí společnost a prostředí, do které záznam patří. Informace o tom, jak nastavit odznáček společnosti naleznete v [Zobrazení firemního odznaku pro rychlý přístup k informacím o společnosti](ui-change-basic-settings.md#badge).
 
-## [Práce s podrobnostmi karty](#tab/carddetails)
+## [Work with card details](#tab/carddetails)
 
 ### Kde je tlačítko uložit v okně podrobností v Teams?
 
@@ -297,7 +301,7 @@ Ano. Veškeré funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] v okně
 
 Pokud používáte funkce v [!INCLUDE [prod_short.md](includes/prod_short.md)], které přistupují k vašim aktuálním souřadnicím polohy, například s mapami, musíte teams používat v prohlížeči nebo v mobilní aplikaci Teams. Poloha není k dispozici při použití desktopové aplikace Teams.
 
-## [Spolupráce s hosty](#tab/collaborating)
+## [Collaborate with guests](#tab/collaborating)
 
 ### Mohu sdílet karty s uživateli mimo organizaci?
 
@@ -313,14 +317,46 @@ Další podobnosti a rozdíly mezi hosty a členy týmu najdete v tématu [Zkuš
 
 Hosté nemají přístup k tržišti aplikací, aby si mohli instalovat aplikace sami. Aplikaci však lze pro ně automaticky nainstalovat na základě zásad vaší organizace. Další způsob, jak může uživatel typu host nainstalovat aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] je, když obdrží chatovou zprávu, která obsahuje kartu [!INCLUDE [prod_short.md](includes/prod_short.md)] card. V tomto případě uživatel zvolí tlačítko **Podrobnosti** nebo nabídku na kartě a poté nainstaluje aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro použití s vaší organizací. Po instalaci aplikace uživatel automaticky neobdrží žádná oprávnění pro přístup k datům z vašeho [!INCLUDE [prod_short.md](includes/prod_short.md)].
 
----
+## [Share to Teams](#tab/share)
 
+### Does Share to Teams send a compact card?
+
+At this time, only a deep link to the page is shared. Recipients will see a hyperlink in your message, which they can select to take them to [!INCLUDE [prod_short.md](includes/prod_short.md)] in a separate browser window.
+
+### Will recipients receive the message from me or from a Business Central service account?
+
+When you use Share to Teams, the message is sent to a person, group, or channel, similar to if you had sent the message yourself from within Microsoft Teams. Recipients see the message from you on their preferred Teams client, and can react and respond as they normally would to a message from you.
+
+### Is Share to Teams available in Business Central on premises?
+
+Ne.  Similar to the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams, this feature is only available for the web client in [!INCLUDE [prod_short.md](includes/prod_short.md)] online. There are no plans to support [!INCLUDE [prod_short.md](includes/prod_short.md)] deployment types&mdash;like on-premises, hybrid cloud, or private cloud&mdash;that Microsoft doesn’t host or manage directly.
+
+### Does Share to Teams grant permissions to recipients?
+
+Ne.  When you share with a person, group, or channel, permissions are unaffected. Users who already have permission to view the page and data targeted by the link can do so. Users who don't have permission to view that page and data, or don't have a [!INCLUDE [prod_short.md](includes/prod_short.md)] license, are shown an error message.
+
+### Must I have the Teams desktop app installed to use Share to Teams?
+
+Ne.  All you need is a valid account that has access to Microsoft Teams.
+
+### Is Share to Teams available in all Business Central clients?
+
+At this time, Share to Teams is available exclusively in the desktop web client, and in the details window in Teams.
+
+### Where do I find Share to Teams in Business Central?
+
+The **Share to Teams action** can be found in the **Share** menu on all pages, such as card and document pages, list or worksheet pages, including custom pages. The action isn't available on dialog boxes or pages shown as dialog boxes, such as lookup pages or wizards.
+
+---
 ## Viz také
 
-[Přehled integrace [!INCLUDE [prod_short](includes/prod_short.md)] a Microsoft Teams](across-teams-overview.md)  
-[Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md)  
-[Řešení problémů Teamss](admin-teams-troubleshooting.md)  
-[Vývoj pro integraci Teamsn](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
+[[!INCLUDE [prod_short](includes/prod_short.md)] and Microsoft Teams Integration Overview](across-teams-overview.md)  
+[Install the [!INCLUDE [prod_short](includes/prod_short.md)] App for Microsoft Teams](across-install-app-for-teams.md)  
+[Searching for Customers, Vendors, and Other Contacts from Microsoft Teams](across-search-contacts-teams.md)  
+[Share Records in Microsoft Teams](across-working-with-teams.md)  
+[Troubleshooting Teams](admin-teams-troubleshooting.md)  
+[Changing Company and Other Settings in Teams](across-teams-settings.md)  
+[Developing for Teams Integration](/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams)
 
 ## [!INCLUDE[d365fin](includes/free_trial_md.md)]
 

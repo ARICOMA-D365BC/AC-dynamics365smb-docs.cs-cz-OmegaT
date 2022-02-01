@@ -36,6 +36,8 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Enable insurance of fixed assets, set up general insurance information, an insurance card per policy, and prepare journals to post insurance costs. | [Set Up Fixed Asset Insurance](fa-how-setup-insurance.md) |
 | Enable maintenance of fixed assets, set up general maintenance information, set up maintenance posting accounts, and define types of maintenance work. | [Set Up Fixed Asset Maintenance](fa-how-setup-maintenance.md) |
 | Learn about different fixed asset depreciation methods. | [Depreciation Methods](fa-depreciation-methods.md) |
+| Learn about how to apply user-defined depreciation methods. | [Set Up User-Defined Depreciation Methods](fa-how-setup-user-defined-depreciation-method.md) |
+
 
 ## Viz také
 [Fixed Assets](fa-manage.md)  

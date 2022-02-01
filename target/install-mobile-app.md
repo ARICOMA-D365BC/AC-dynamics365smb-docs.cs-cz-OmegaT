@@ -1,16 +1,15 @@
 ---
-title: Get Business Central on Your Mobile Device
-description: You can view and edit your Business Central data on your phone or tablet.
-author: edupont04
-
+title: Get Business Central on Your Mobile Device (contains video)
+description: This topic describes the various ways you can view and edit your Business Central data, send to Excel and more on your phone or tablet.
+author: jswymer
 ms.service: dynamics365-business-central
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords: phone, tablet
-ms.date: 04/01/2021
-ms.author: edupont
+ms.search.keywords: desktop, Windows, app
+ms.date: 10/01/2021
+ms.author: jswymer
 ---
 
 # Získání Business Central pro mobilní zařízení
@@ -19,11 +18,12 @@ Access your [!INCLUDE[prod_short](includes/prod_short.md)] data from your mobile
 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4Arje?rel=0]
 
+> [!TIP]
+> Do want an app on your Windows or macOS computer desktop? See [Get the Business Central Desktop App](install-desktop-app.md).
+
 ## Stáhněte si aplikaci do svého mobilního zařízení
 
-1. Nainstalujte si do svého mobilního zařízení aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] stažením aplikace z Windows Store, App Store nebo Google Play.
-
-   - [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848) (PC only)
+1. Install the [!INCLUDE[prod_short](includes/prod_short.md)] app on your mobile device by downloading the app from the App Store or Google Play.
    - [App Store](https://go.microsoft.com/fwlink/?LinkId=734847)
    - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
 2. Spusťte aplikaci na mobilním zařízení.
@@ -40,9 +40,8 @@ Nyní byste měli mít přístup k [!INCLUDE[prod_short](includes/prod_short.md)
 
 Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, budete muset začít od začátku pomocí Power BI Desktop. Instalace je podobná, ale až na pár výjimek.
 
-1. Nainstalujte si do svého mobilního zařízení aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] stažením aplikace z Windows Store, App Store nebo Google Play.
+1. Install the [!INCLUDE[prod_short](includes/prod_short.md)] app on your mobile device by downloading the app from the App Store or Google Play.
 
-   - [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848) (PC only)
    - [App Store](https://go.microsoft.com/fwlink/?LinkId=734847)
    - [Google Play](https://go.microsoft.com/fwlink/?LinkId=734849)
 2. Spusťte aplikaci na mobilním zařízení.
@@ -59,7 +58,7 @@ Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, b
 
 ## Viz také
 
-[Nejčastější otázky Mobilní aplikace](ui-mobile-faq.md)  
+[Nejčastější otázky Mobilní aplikace](ui-mobile-faq.yml)  
 [Příprava na podnikání](ui-get-ready-business.md)  
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 

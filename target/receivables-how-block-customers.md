@@ -27,7 +27,7 @@ Následující tabulka popisuje možnosti blokování zákazníků.
 | **All** | Pro tohoto zákazníka není povolena žádná transakce, včetně plateb. |
 
 ## Zablokování zákazníka
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
 2. Select a customer, and then choose the **Edit** action.
 3. In the **Blocked** field, choose what to block, as described in the table above.
 

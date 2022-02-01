@@ -1,6 +1,6 @@
 ---
-    title: General Journal Post Line Overview | Microsoft Docs
-    description: This topic introduces changes to Codeunit 12, **Gen. Jnl.-Post Line**, which is the major application object for general ledger posting and is the only place to insert general ledger, VAT, and customer and vendor ledger entries.
+    title: General Journal Post Line Overview
+    description: This topic introduces changes to Codeunit 12, Gen. Jnl.-Post Line, and is the only place to insert general ledger, VAT, and customer and vendor ledger entries.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,14 +9,15 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, general ledger, post
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
 # Přehled účtování řádku finančního deníku
+
 Codeunit 12, **Gen. Jnl.-Post Line**, is the major application object for general ledger posting and is the only place to insert general ledger, VAT, and customer and vendor ledger entries. Codeunita se také používá pro vyrovnávání, zrušení vyrovnání a rezervace.
 
-I když byla Codeunita vylepšena v každém vydání za posledních deset let, její architektura zůstala v podstatě nezměněna. Codeunita byla velmi velká a měla přibližně 7600 řádků kódu. With this release of [!INCLUDE[prod_short](includes/prod_short.md)], the architecture is changed and the codeunit has been made simpler and more maintainable. Tato dokumentace představuje změny a poskytuje informace, které budete potřebovat pro upgrade.
+In Microsoft Dynamics NAV 2013 R2, the codeunit was redesigned because it had become very large, with approximately 7,600 code lines. The architecture was changed and the codeunit has been made simpler and more maintainable. This documentation describes the changes and provides information that you will need for upgrade.
 
 ## Stará architektura
 Stará architektura měla následující vlastnosti:
@@ -40,8 +41,10 @@ In [!INCLUDE[prod_short](includes/prod_short.md)], codeunit 12 has had the follo
 * Použití globálních proměnných bylo minimalizováno, takže každá procedura používá parametry a zapouzdřuje vlastní aplikační logiku.
 
 ## Viz také
-[Design Details: Posting Interface Structure](design-details-posting-interface-structure.md)   
-[Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)
+
+[Design Details: Posting Interface Structure](design-details-posting-interface-structure.md)  
+[Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)  
+[Design Details: General Journal Post Line (Dynamics NAV)](/dynamics-nav-app/design-details-general-journal-post-line)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

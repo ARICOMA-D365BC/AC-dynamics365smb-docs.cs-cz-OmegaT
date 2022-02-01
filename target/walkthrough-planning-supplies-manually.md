@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Planning Supplies Manually | Microsoft Docs
-    description: This walkthrough demonstrates the process of planning supply orders to fulfill new demand. You can initiate supply planning at fixed intervals, for example, every morning or every Monday, or when you are notified by sales or production, depending on the type of demand.
+    title: Walkthrough - Planning Supplies Manually
+    description: This walkthrough demonstrates the process of planning supply orders to fulfill new demand including planning a purchase, transfer, and production order.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
 # Návod: Ruční plánování dodávek
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
 
 Tento návod ukazuje proces plánování dodávek na uspokojení nové poptávky. Plánování dodávek můžete iniciovat v pevných intervalech, například každé ráno nebo každé pondělí, nebo když jste upozorněni prodejem nebo výrobou v závislosti na typu poptávky. V tomto návodu použijete stránku **Plánování objednávek**, jednoduchý nástroj pro plánování zásobování, který je založen na manuálním rozhodování místo na automatickém plánování založeném na parametrech.
 
@@ -63,7 +63,7 @@ Na stránku **Plánování objednávek** lze přistupovat z několika různých 
 
 ### Použití stránky Plánování objednávek
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Plánování objednávek** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Order Planning**, and then choose the related link.
 
    Když se nejprve otevře stránka **Plánování objednávek**, je třeba vypočítat plán, aby se zobrazila nová poptávka od posledního výpočtu.
 
@@ -148,7 +148,7 @@ V tomto postupu naplánujte poptávku z prodejní objednávky. Řádky poptávky
 
 5. Vyberte akci **Vytvořit objednávky**. Otevře se stránka **Vytvořit objednávky dodávek**.
 6. Na záložce **Plánování objednávek** vyberte v poli **Vytvořit objednávky pro** možnost **Aktivní objednávka**.
-7. Na záložce **Možnosti** v poli **Vytvořit objednávku transferu** vyberte možnost **Vytvořit objednávky  transferu**.
+7. Na záložce **Možnosti** v poli **Vytvořit objednávku transferu** vyberte možnost **Vytvořit objednávky  Orders** option.
 8. Zvolte tlačítko **OK** a vytvořte objednávku transferu, která dodá prodejní objednávku.
 
    Převodní příkaz je nyní vytvořen a uložen v seznamu jako poslední objednávka v seznamu otevřených objednávkach transferu.
@@ -221,13 +221,13 @@ Jako plánovač výroby nyní musíte naplánovat konkrétní výrobní zakázku
 
    Zpráva označuje, že je nyní dodáno všechno požadované zboží. Ověření firmou plánovaných výrobních zakázek, které jsou vytvořeny.
 
-13. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Pevně plánovaná výr. zakázky** a poté vyberte související odkaz.
+13. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. zakázky** a poté vyberte související odkaz.
 
    Přejděte na stránku **Pevně plánovaná výr. zakázka** zkontrolujte, jak jsou podle struktury produktu naplánovány počáteční a konečné časy jednotlivých objednávek. Komponenty nejnižší úrovně jsou vyráběny jako první. Proto je nutné naplánovat víceúrovňové objednávky, jak je znázorněno v tomto pracovním postupu plánování.
 
 ## Viz také
-[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)     
-[Návod: Automatické plánování dodávek](walkthrough-planning-supplies-automatically.md)
+[Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)
+<!--  [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md) -->
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

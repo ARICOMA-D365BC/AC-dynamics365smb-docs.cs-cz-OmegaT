@@ -1,6 +1,6 @@
 ---
-title: Create Records of Incoming Documents| Microsoft Docs
-description: You can create records of incoming documents, such as e-invoices, and manage OCR tasks, eCommerce, and document exchange.
+title: Create Incoming Document Records
+description: Use different functions on the Incoming Documents page to review expense receipts, manage OCR tasks, convert incoming document files and attach external files.
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, e-invoice, incoming document, OCR, ecommerce, document exchange, import invoice
-ms.date: 04/01/2021
+ms.date: 06/11/2021
 ms.author: edupont
 
 ---
@@ -25,7 +25,7 @@ Předtím než můžete použít funkce Došlých dokladů, musíte provést po�
 ## Schválení nebo odmítnutí došlých dokladů
 Pokud chcete povolit uživatelům vytvářet faktury nebo řádky finančního deníku ze záznamů došlého dokladu, dokud nejsou schváleny, můžete nastavit toho, kdo musí schválit záznamy předtím, než budou zpracovány.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
 2. Select the line with the document that you want to approve or reject, and then choose the **Approve** or **Reject** actions.
 
 If you approve the incoming document record, the **Released** check box on the incoming document line is selected. Uživatel, který je pověřen tvorbou například nákupních faktur, může zpracovat záznam.
@@ -53,7 +53,7 @@ If you approve the incoming document record, the **Released** check box on the i
    Obrázek je připojen k záznamu došlého dokladu.
 
 ## Vytvoření záznamu došlého dokladu ručně
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Incoming Documents**, and then choose the related link.
 2. Choose the **Create from File** action.
 3. On the **Insert File** page, select a file, and then choose **Open**. Soubor je automaticky připojen.
 4. Alternatively, choose the **New** action.

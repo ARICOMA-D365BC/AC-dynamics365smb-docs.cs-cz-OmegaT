@@ -84,7 +84,7 @@ ms.author: bholtorf
 > [!TIP]
 > Pro grafickou verzi vhodnou pro tisk vyberte následující obrázek a stáhněte soubor PDF.
 >
-> [![Ikona, která otevře PDF](media/keyboard_shortcut_inline.png)](media/keyboard_shortcuts.pdf)
+> [![Icon that opens a PDF.](media/keyboard_shortcut_inline.png)](media/keyboard_shortcuts.pdf)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

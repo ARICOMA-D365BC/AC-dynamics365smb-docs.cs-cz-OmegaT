@@ -1,5 +1,5 @@
 ---
-title: Define a WIP Method and Monitor Job Progress| Microsoft Docs
+title: Monitor Job Progress and Performance
 description: Describes how you can create a work in process (WIP) method and calculate WIP to estimate the financial value of jobs while they are ongoing.
 author: SorenGP
 
@@ -9,6 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: project management, KPI, work in process, work in progress
+ms.search.form: 89, 92, 1010
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -34,23 +35,23 @@ Můžete vytvořit projekt s nedokončenou výrobou, který bude odrážet potř
 > [!NOTE]
 > After you have used your new method to create WIP entries, you cannot delete the method or modify it.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Methods**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Methods**, and then choose the related link.
 2. Choose the **New** action, and then fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. Zavřete stránku.
-4. To make this new method the default, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs Setup**, and then choose the related link.
+4. To make this new method the default, choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs Setup**, and then choose the related link.
 5. In the **Default WIP Method** field, choose the method from the list.
 
 ## Definování Nedokončené výroby pro projekt
 Při vytváření nového projektu musíte určit, která metoda nedokončené výroby projektu se použije. V některých případech byla pro Vás jako výchozí nastavena metoda nedokončené výroby projektu, kterou můžete použít.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Vyberte akci **Nový**. For more information, see [Create Jobs](projects-how-create-jobs.md).
 3. On the **Job Card** page, in the **WIP Method** field, select a WIP method from the list. Pokud byla definována výchozí metoda, můžete v případě potřeby vybrat jinou možnost.
 
 ## Výpočet Nedokončené výroby
 Můžete určit částku nedokončené výroby, která má být zaúčtována na rozvahové účty pro vykazování na konci období. You use the **Job Calculate WIP** batch job to do this.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Calculate WIP**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Calculate WIP**, and then choose the related link.
 2. Choose the **Calculate WIP** action.
 3. On the **Job Calculate WIP** page, fill in the fields as necessary.
 4. Zvolte tlačítko **OK**.
@@ -61,14 +62,14 @@ Můžete určit částku nedokončené výroby, která má být zaúčtována na
 ## Účtování Nedokončené výroby
 Když jste vypočítali nedokončenou výrobu, můžete jí zaúčtovat na rozvahové účty pro vykazování konce období. You use the **Job Post WIP to G/L** batch job to do this.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Post WIP to G/L**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Post WIP to G/L**, and then choose the related link.
 2. On the **Job Post WIP to G/L** page, fill in the fields as necessary.
 3. Zvolte tlačítko **OK**.
 
 ## To calculate and post job completion entries
 When you have completed all activities for a job, including usage posting and invoicing, you must update the job to have a **Status** of **Completed**. Then, you must reverse any WIP that has been posted to the general ledger.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Select an open job, and then choose the **Edit** action.
 3. In the **Status** field, select **Completed**.
 4. Follow the assistance steps to calculate and post WIP. Alternatively, follows steps 5 and 6 to do so manually.
@@ -84,7 +85,7 @@ When you have completed all activities for a job, including usage posting and in
 ## Zobrazení Položek projektu
 Všechny položky související s projektem jsou zaznamenány v žurnálech a jsou číslovány postupně, počínaje 1. Z žurnálu projektu můžete získat přehled o všech položkách projektu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Registers**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Registers**, and then choose the related link.
 2. Select a relevant register, and then choose **Job Ledger** action.
 
 On the **Job Ledger Entries** page you can review the entries that are associated with any job.

@@ -1,16 +1,16 @@
 ---
-    title: How to Set Up Standard Tasks for Operations | Microsoft Docs
-    description: You can enter descriptions of standard tasks.
-    author: SorenGP
+title: Set Up Standard Tasks for Operations
+description: Learn about how to set up standard tasks and add standard tasks to operations to simplify the maintenance of routings.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 99000799, 99000803, 99000804, 99000805, 99000807
+ms.date: 06/22/2021
+ms.author: edupont
 
 ---
 # Nastavení řádků standardního TNG postupu
@@ -19,14 +19,14 @@ Použití standardních úloh zjednodušuje vytváření a údržbu TNG postupů
 
 ## Nastavení standardní úlohy
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Standard Tasks**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Standard Tasks**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Choose the **Tools**, **Personnel**, **Description**, or **Tools** action, and then, on the page that opens, add the relevant entry.
 
 ## Přidání standardní úlohy k operaci
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Otevřete příslušný TNG postup.
 3. Select a relevant routing line, choose the **Operations** action, and then choose the **Tools**, **Personnel**, **Description**, or **Tools** action.
 

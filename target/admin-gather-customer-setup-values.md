@@ -1,6 +1,6 @@
 ---
-    title: Gather Customer Setup Values | Microsoft Docs
-    description: You use the configuration questionnaire to help reduce your implementation workload by streamlining the task of setting up the new company. You can generate the configuration questionnaire in Business Central and then provide it to your customer as an Excel (.xlsx) or XML file.
+    title: Gather Customer Setup Values
+    description: Configuration questionnaire helps reduce implementation by streamlining setting up new companies and offering customers an Excel or XML file.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/14/2021
     ms.author: edupont
 
 ---
@@ -28,7 +28,7 @@ Pomocí dotazníku můžete určit rozsah a potřeby konfigurace. Můžete vytvo
 
 <!-- A configuration questionnaire has the following structure
 * The name of the questionnaire itself
-* Question Areas that group questions about a similar subject. For example, you might create a question area that focuses on entering company informtion. Typically, configuration questionnaires have many question groups
+* Question Areas that group questions about a similar subject. For example, you might create a question area that focuses on entering company information. Typically, configuration questionnaires have many question groups
 * Questions that are closed ended, meaning that the customer must choose an answer, and can choose only one. -->
 
 Dotazníky lze vytvořit pouze pro nastavovací tabulky Tento nástroj můžete použít například k poskytnutí informací na následujících stránkách:
@@ -46,9 +46,9 @@ Dotazníky lze vytvořit pouze pro nastavovací tabulky Tento nástroj můžete 
 - Nastavení skladu
 
 > [!NOTE]  
-> To see a complete list of setup tables, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Setup**, and then choose the related link. K určení rozsahu migrace dat záznamů použijte funkci migrace. For more information, see [Migrating Customer Data](admin-migrate-customer-data.md).
+> To see a complete list of setup tables, choose the ![Lightbulb that opens the Tell Me feature 1.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Setup**, and then choose the related link. K určení rozsahu migrace dat záznamů použijte funkci migrace. For more information, see [Migrating Customer Data](admin-migrate-customer-data.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and choose the related link.
 2. Vyberte akci **Nový**.
 3. On the **Configuration Questionnaire** page, in the **Code** field, enter...
 <!--4. In the **Name** field, enter...
@@ -78,7 +78,7 @@ Dotazníky lze vytvořit pouze pro nastavovací tabulky Tento nástroj můžete 
 5. In the **Table ID** field, choose the ID of the table for which you want to collect information. The **Table Name** field is automatically filled in.
 6. Choose the **Update Questions** action. Každé pole v tabulce je přidáno do dotazníku s otazníkem následujícím po jeho popisku.
 
-Označení můžete změnit tak, aby bylo jasné, jak má být otázka zodpovězena. Pokud se například pole nazývá „Název“, můžete jej upravit tak, že uvedete „Jaký je  <data being collected>." You can also provide guidance in the **Reference** field, including a URL to a page that provides additional information.
+Označení můžete změnit tak, aby bylo jasné, jak má být otázka zodpovězena. For example, if a field is called "Name," you could edit it to state "What is the name of \<data being collected\>." You can also provide guidance in the **Reference** field, including a URL to a page that provides additional information.
 
 Můžete také odstranit všechny otázky, které nechcete do dotazníku zahrnout.
 
@@ -94,7 +94,7 @@ Pomocí konfiguračního dotazníku můžete strukturovat a dokumentovat podrobn
 > You can also create your own configuration questionnaire to meet your needs.
 
 1. Otevřete společnost, pro kterou chcete vyplnit dotazník.
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and then choose the related link.
+2. Choose the ![Lightbulb that opens the Tell Me feature 3.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and then choose the related link.
 3. Select the questionnaire for the company, and then choose the **Export to Excel** action, optionally the **Export to XML** action.
 4. Nechte zákazníka vyplnit konfigurační dotazník zadáním odpovědí do sešitu Excel. Pro každou oblast otázek, které byly pro dotazník vytvořeny, existují sešity.
 5. Save the Excel workbook as *XML Data*. Choose the **Import from XML** action, and select the .xml file with the customer's answers.
@@ -127,7 +127,7 @@ Po dokončení ověřování jsou data připravena k použití v databázi.
 ## Použití odpovědí z konfiguračního dotazníku
 After you have imported and validated information from a configuration questionnaire, you can transfer, or apply the setup data to the corresponding tables in the [!INCLUDE[prod_short](includes/prod_short.md)] database.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and then choose the related link. The **Config. Questionnaire** page opens.
+1. Choose the ![Lightbulb that opens the Tell Me feature 4.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and then choose the related link. The **Config. Questionnaire** page opens.
 2. Select a configuration questionnaire from the list, and then choose the **Edit List** action.
 3. Odpovědi můžete použít jedním ze dvou způsobů.
 
@@ -135,7 +135,8 @@ After you have imported and validated information from a configuration questionn
 - To apply answers for a specific **Question Area** only, choose the **Question Areas** action, select a **Question Area** in the list, and then choose the **Apply Answers** action.
 
 ### Ověření úspěšného použití odpovědí
-1. Check setup pages for the various functional areas of [!INCLUDE[prod_short](includes/prod_short.md)]. To locate the page, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter the name of the setup page, and then choose the related link.
+
+1. Check setup pages for the various functional areas of [!INCLUDE[prod_short](includes/prod_short.md)]. To locate the page, choose the ![Lightbulb that opens the Tell Me feature 5](media/ui-search/search_small.png "Tell me what you want to do") icon, enter the name of the setup page, and then choose the related link.
 2. Ověřte, zda byla pole naplněna správnými údaji z různých oblastí otázek v konfiguračním dotazníku.
 
 Nyní jste nakonfigurovali nastavení s obchodními informacemi a pravidly zákazníka.

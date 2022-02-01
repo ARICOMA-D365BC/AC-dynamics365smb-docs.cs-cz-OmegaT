@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Handling Reordering Policies | Microsoft Docs
-    description: Overview of tasks for defining a reorder policy in supply planning.
+    title: Design Details - Handling Reordering Policies
+    description: This article gives an overview of tasks involved in handling reordering policies and defining the reorder policy in supply planning.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -63,7 +63,7 @@ Následující pořadí popisuje, jak je určena předpokládaná úroveň záso
 
 Následující obrázek znázorňuje tento princip:
 
-![Stanovení předpokládané úrovně zásob](media/nav_app_supply_planning_2_projected_inventory.png "Stanovení předpokládané úrovně zásob")
+![Determining the Projected Inventory Level.](media/nav_app_supply_planning_2_projected_inventory.png "Determining the Projected Inventory Level")
 
 1. Nabídka **Sa** s 4 (pevná) uzavírá poptávku **Da** z -3.
 2. ZavřítPoptávku: Vytvoření upomínky snížení o -3 (není ukázáno).
@@ -90,7 +90,7 @@ Pro způsoby přiobjednávání, které používají bod přiobjednávání, mů
 
 Koncept intervalu dostupnosti odráží manuální proces kontroly úrovně zásob častěji než u každé transakce. Uživatel musí definovat frekvenci (interval dostupnosti). Uživatel například shromažďuje všechny potřeby zboží od jednoho dodavatele k vytvoření týdenní objednávky.
 
-![Příklad intervalu dostupnosti v plánování](media/nav_app_supply_planning_2_reorder_cycle.png "Příklad intervalu dostupnosti v plánování")
+![Example of time bucket in planning.](media/nav_app_supply_planning_2_reorder_cycle.png "Example of time bucket in planning")
 
 Časový interval se obvykle používá, aby se zabránilo kaskádovému efektu. Například vyvážená řada poptávky a nabídky, kde je zrušena předčasná poptávka nebo je vytvořena nová. Výsledkem by bylo, že každá objednávka dodávky (kromě té poslední) je přeplánována.
 
@@ -99,7 +99,7 @@ Při použití Maximálního množství a způsob Pevného přiobj.množ., syst�
 
 *Attention: The projected inventory [xx] is higher than the overflow level [xx] on the Due Date [xx].*
 
-![Úroveň přetečení zásob](media/supplyplanning_2_overflow1_new.png "Úroveň přetečení zásob")
+![Inventory overflow level.](media/supplyplanning_2_overflow1_new.png "Inventory overflow level")
 
 ### Výpočet úrovně přetečení
 Úroveň přetečení se počítá různými způsoby v závislosti na nastavení plánování.
@@ -175,7 +175,7 @@ V tomto scénáři zákazník změní prodejní objednávku ze 70 na 40 kusů me
 #### Výsledné řádky plánování
 Jeden řádek plánování (upozornění) je vytvořen pro snížení nákupu z 30 na 90 do 60, aby se předpokládané zásoby udržely na 100 podle úrovně přetečení.
 
-![Plán podle úrovně přetečení](media/nav_app_supply_planning_2_overflow2.png "Plán podle úrovně přetečení")
+![Plan according to overflow level.](media/nav_app_supply_planning_2_overflow2.png "Plan according to overflow level")
 
 > [!NOTE]  
 > Without the Overflow feature, no warning is created if the projected inventory level is above maximum inventory. To by mohlo způsobit nadbytečnou zásobu 30.
@@ -189,7 +189,7 @@ V důsledku toho systém plánování považuje za stav nouze, pokud budoucí po
 
 Na následujícím obrázku nabídka D představuje nouzový příkaz k úpravě pro negativní zásoby.
 
-![Návrh nouzového plánování, aby se zabránilo záporným zásobám](media/nav_app_supply_planning_2_negative_inventory.png "Návrh nouzového plánování, aby se zabránilo záporným zásobám")
+![Emergency planning suggestion to avoid negative inventory.](media/nav_app_supply_planning_2_negative_inventory.png "Emergency planning suggestion to avoid negative inventory")
 
 1. Nabídka**A**, počáteční předpokládané zásoby, je pod bodem přiobjednáním.
 2. Vytvoří se nová dopředu naplánovaná dodávka (**C**).

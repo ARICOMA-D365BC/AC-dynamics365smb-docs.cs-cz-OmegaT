@@ -37,19 +37,19 @@ Následující tabulka popisuje dostupné funkce.
 | Vložené prostředí pro zobrazení dané sestavy uvnitř okna s faktami v [!INCLUDE[prod_short](includes/prod_short.md)] | Oba Vyžaduje konfiguraci pro zobrazení sestav pro prostředí on-premises. |
 | Správa sestav Power BI od [!INCLUDE[prod_short](includes/prod_short.md)] | Online |
 | Výchozí sestavy Power BI o centrech rolí nasazených do Power BI | Online |
-| Aplikace Power BI na Microsoft AppSource | Online. |
+| Aplikace Power BI na Microsoft AppSource | Online |
 
 ## Architektura
 
-[!INCLUDE[prod_short](includes/prod_short.md)] se integruje s Power BI prostřednictvím konektoru pomocí OData. Zdroj dat pro sestavy Power BI je vystaven jako webové služby OData.
+[!INCLUDE[prod_short](includes/prod_short.md)] se integruje s Power BI prostřednictvím konektoru pomocí OData. The data source for Power BI reports is exposed as API pages and OData web services.
 
-![Architektura Power BI pro integraci s Business Central](./media/power-bi-architecture.png)
+![Power BI architecture for integration with Business Central.](./media/power-bi-architecture.png)
 
 ## Obecný tok
 
 Následující diagram znázorňuje základní workflow pro uživatele při připojování [!INCLUDE[prod_short](includes/prod_short.md)] do Power BI.
 
-![Workflow Power BI pro integraci s Business Central](./media/power-bi-flow.png)
+![Power BI workflow  for integration with Business Central.](./media/power-bi-flow.png)
 
 1. Uživatel se zaregistruje k účtu Power BI.
 2. Uživatel se připojuje k Power BI z [!INCLUDE[prod_short](includes/prod_short.md)].

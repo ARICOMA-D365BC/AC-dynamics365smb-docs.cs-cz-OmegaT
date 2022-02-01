@@ -104,7 +104,7 @@ Největší velikost souboru, který můžete nahrát do [!INCLUDE[prod_short](i
 Je třeba učinit jen několik kroků k exportu dat z C5 a jejich importu do [!INCLUDE[prod_short](includes/prod_short.md)]:
 
 1. V C5 exportujte data pomocí funkce **Export databáze**. Poté odešlete exportovanou složku do komprimované (zip) složky.
-2. V [ vyberte ikonu ](includes/prod_short.md)Žárovky, která otevře funkci Řekněte mi![](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Migrace Dat** a poté zvolte **Migrace Dat**.
+2. In [!INCLUDE[prod_short](includes/prod_short.md)], choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Data Migration**, and then choose **Data Migration**.
 3. Proveďte kroky v průvodci asistovanou instalaci. Ujistěte se, že jako zdroj dat jste zvolili **Import z Microsoft Dynamcis C5 2012**.
 
 ## Zobrazení stavu migrace

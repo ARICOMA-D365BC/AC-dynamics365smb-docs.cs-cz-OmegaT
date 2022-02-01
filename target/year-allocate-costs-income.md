@@ -1,8 +1,6 @@
 ---
-title: Overview of Tasks to Allocate Costs and Income | Microsoft Docs
+title: Overview of Tasks to Allocate Costs and Income
 description: Outlines the tasks to allocate an entry in a general journal to several different accounts when you post the journal.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -10,11 +8,13 @@ ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form: 283
 ms.date: 04/01/2021
 ms.author: edupont
 
 ---
 # Přidělení nákladů a výnosů
+
 Při účtování deníku můžete přiřadit položku ve finančním deníku několika různým účtům. Přidělení lze provést třemi různými metodami:
 
 * Množství
@@ -27,8 +27,10 @@ Funkce přidělení lze použít opakovaně pomocí finančních deníků a den�
 Následující postupy popisují, jak připravit přidělení nákladů v periodickém finanční deníku pomocí definování alokačních klíčů Když jsou definovány alokační klíče, tak poté dokončíte a zaúčtujete deník jako jakýkoli jiný periodický finanční deník. For more information, see [Working with General Journals](ui-work-general-journals.md).
 
 ## Nastavení alokačních klíčů
+
 Položku v periodickém finančním deníku můžete při účtování přidělit několika různým účtům. Přidělení lze vytvořit podle množství, procenta nebo částky.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
 2. Choose the **Batch Name** field to open the **General Journal Batches** page.
 3. Můžete buď upravit již existující přidělení v listech děníku, nebo vytvořit nový deník s patřičným přidělením.
    * To create a new batch, choose the **New** action, and go to the next step.
@@ -43,7 +45,7 @@ Položku v periodickém finančním deníku můžete při účtování přiděli
 11. Zaúčtujte deník.
 
 ## Změna již nastaveného alokačního klíče
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
 2. On the **Recurring General Journal** page, select the journal with the allocation.
 3. Choose the line with the allocation, and then choose **Allocations** action.
 4. Change the relevant fields, and then choose the **OK** button.

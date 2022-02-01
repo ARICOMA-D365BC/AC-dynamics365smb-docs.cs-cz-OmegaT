@@ -9,28 +9,28 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, transfer, sku, locations, warehouse
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
 # Detaily návrhu: Transfery v plánování
 Objednávky transferu jsou také zdrojem dodávek při práci na úrovni skladových jednotek. Při použití více lokací (skladů) lze systém doplnění skladové jednotky nastavit na Transfer, což znamená, že lokace je doplněna převodem zboží z jiného skladu. V situaci s více sklady mohou mít společnosti řetězce transferů, kdy pomocí dodávek ze skladu je ZELENÝ sklad doplňován transferem ze skladu ŽLUTÝ a ŽLUTÝ je doplněn tranferem ze skladu ČERVENÝ. Na začátku řetězce je systém doplňování Nákup nebo Montážní zakázka.
 
-![Příklad průběhu transferů](media/nav_app_supply_planning_7_transfers1.png "Příklad průběhu transferů")
+![Example of transfer flow.](media/nav_app_supply_planning_7_transfers1.png "Example of transfer flow")
 
 > [!NOTE]
 > [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
 Při porovnávání situace, kdy objednávka dodávek přímo čelí objednávce poptávky, se situací, kdy je prodejní objednávka dodávána prostřednictvím řetězce transferů skladových položek, je zřejmé, že plánováníl v poslední uvedené situaci se může stát velmi složitým. Pokud se poptávka změní, může to způsobit dominový efekt v řetězci dodávek, protože všechny objednávky transferu včetně Nákupu/Výrobní zakázky na opačném konci řetězce budou muset být manipulovány, aby se obnovila rovnováha mezi poptávkou a nabídkou.
 
-![Příklad rovnováhy mezi nabídkou a poptávkou v transferech](media/nav_app_supply_planning_7_transfers2.png "Příklad rovnováhy mezi nabídkou a poptávkou v transferech")
+![Example of supply/demand balance in transfers.](media/nav_app_supply_planning_7_transfers2.png "Example of supply/demand balance in transfers")
 
 ## Proč je Transfer speciálí případ?
 Objednávka transferu vypadá podobně jako jakákoli jiná objednávka v systému. Nicméně, na pozadí je to velmi odlišné
 
 Jedním ze základních aspektů, který dělá transfery v plánování odlišné od nákupu a výrobních zakázek, je to, že řádek transferu představuje poptávku a nabídku současně. Odchozí část, která je dodávána ze staré lokace, je poptávka. Příchozí část, která má být přijata na novém skladě, je popávkou v tomto místě.
 
-![Obsah stránky Objednávky transferu](media/nav_app_supply_planning_7_transfers3.png "Obsah stránky Objednávky transferu")
+![Content of the Transfer Order page.](media/nav_app_supply_planning_7_transfers3.png "Content of the Transfer Order page")
 
 To znamená, že když systém manipuluje s nabídkovou stranou transferu, musí provést podobnou změnu na straně poptávky.
 
@@ -46,13 +46,13 @@ V plánováním by měla být poptávka po transferu zohledněna až poté, co b
 ## Pořadí plánování
 Následující obrázek znázorňuje, jak by mohl řetězec transferů vypadat.
 
-![Příklad jednoduchého toku transferu](media/nav_app_supply_planning_7_transfers4.png "Příklad jednoduchého toku transferu")
+![Example of simple transfer flow.](media/nav_app_supply_planning_7_transfers4.png "Example of simple transfer flow")
 
 V tomto příkladu zákazník objedná zboží z lokace ZELENÝ. Na lokaci ZELENÝ je dodáváno transferem z centrálního skladu ČERVENÝ. Centrální sklad ČERVENÝ je zásobován transferem z lokace výroby MODRÝ.
 
 V tomto příkladu začne plánovací systém na základě požadavku zákazníka a bude se v řetězci propracovávat zpětně. Požadavky a dodávky budou zpracovány po jedné lokaci.
 
-![Plánování dodávek transferů](media/nav_app_supply_planning_7_transfers5.png "Plánování dodávek transferů")
+![Supply planning with transfers.](media/nav_app_supply_planning_7_transfers5.png "Supply planning with transfers")
 
 ## Kód úrovně transferu
 Pořadí, ve kterém jsou lokace zpracována v plánovacím systému, je určeno kódem úrovně transferu na skladové jednotce.
@@ -61,7 +61,7 @@ Kód úrovně transferu je interní pole, které se automaticky vypočítá a ul
 
 Kód úrovně transferu bude 0 pro skladové jednotky se systémem doplnění Nákup nebo Výr. objednávka a bude -1 pro první úroveň transferu, -2 pro druhou a tak dále. Ve výše popsaném řetězci transferů by tedy úrovně byly -1 pro ČERVENÝ a -2 pro ZELENÝ, jak je znázorněno na následujícím obrázku.
 
-![Obsah stránky Karta skladové jednotky](media/nav_app_supply_planning_7_transfers6.gif "Obsah stránky Karta skladové jednotky")
+![Content of SKU Card page.](media/nav_app_supply_planning_7_transfers6.gif "Content of SKU Card page")
 
 Při aktualizaci skladové jednotky systém plánování zjistí, zda jsou skladové jednotky se systémem doplnění Transfer nastaveny s cyklickými odkazy.
 
@@ -71,7 +71,7 @@ I v případě, že funkce skladové jednotky není použita, je možné použí
 
 Pro podporu ručních transferů bude plánování analyzovat existující objednávky transferu a poté naplánuje pořadí, ve kterém mají být loakce zpracovány. Interně bude plánovací systém pracovat s dočasnými skladovými jednotkami nesoucími kódy úrovně transferu.
 
-![Kód úrovně transferu](media/nav_app_supply_planning_7_transfers7.png "Kód úrovně transferu")
+![Transfer level code.](media/nav_app_supply_planning_7_transfers7.png "Transfer level code")
 
 Pokud existuje více transferů do daného umístění, první objednávka transferu definuje směr plánování. Transfery probíhající v opačném směru budou zrušeny.
 
@@ -82,24 +82,24 @@ Při změně množství na existujícím řádku objednávky transferu mějte na
 
 Pokud je například řádek objednávky transferu na 117 kusů rezervován proti prodejnímu řádku  s 46 a nákupnímu řádku s 24, není možné snížit řádek převodu pod 46 kusů, i když to může představovat nadbytečnou dodávku na příchozí stran.
 
-![Rezervace v plánování transferu](media/nav_app_supply_planning_7_transfers8.png "Rezervace v plánování transferu")
+![Reservations in transfer planning.](media/nav_app_supply_planning_7_transfers8.png "Reservations in transfer planning")
 
 ## Změna množství v řetězci transferu
 V následujícím příkladu je výchozím bodem vyvážená situace s objednávkou transferu dodávající prodejní objednávku s 27 ks na lokaci ČERVENÝ s odpovídající nákupní objednávkou na lokaci MODRÝ, transferovamou prostřednictvím lokace RŮŽOVÝ. Kromě prodeje a nákupu existují dvě objednávky transferu: MODRÝ-RŮŽOVÝ a RŮŽOVÝ-ČERVENÝ.
 
-![Změna množství v plánování transferu 1](media/nav_app_supply_planning_7_transfers9.png "Změna množství v plánování transferu 1")
+![Changing the quantity in transfer planning 1.](media/nav_app_supply_planning_7_transfers9.png "Changing the quantity in transfer planning 1")
 
 Nyní se plánovač na lokaci RŮŽOVÝ rozhodne rezervovat proti nákupu.
 
-![Změna množství v plánování transferu 2](media/nav_app_supply_planning_7_transfers10.png "Změna množství v plánování transferu 2")
+![Changing the quantity in transfer planning 2.](media/nav_app_supply_planning_7_transfers10.png "Changing the quantity in transfer planning 2")
 
 To obvykle znamená, že plánovací systém bude ignorovat nákupní objednávku a požadavek na transfer. Dokud bude rovnováha, nebude problém. Co se ale stane, když zákazník v lokalitě ČERVENÝ částečně lituje objednávky a změní ji na 22?
 
-![Změna množství v plánování transferu 3](media/nav_app_supply_planning_7_transfers11.png "Změna množství v plánování transferu 3")
+![Changing the quantity in transfer planning 3.](media/nav_app_supply_planning_7_transfers11.png "Changing the quantity in transfer planning 3")
 
 Když se plánovací systém znovu spustí, měl by se zbavit přebytečné nabídky. Rezervace však uzamkne nákup a transfer na množství 27.
 
-![Změna množství v plánování transferu 4](media/nav_app_supply_planning_7_transfers12.png "Změna množství v plánování transferu 4")
+![Changing the quantity in transfer planning 4.](media/nav_app_supply_planning_7_transfers12.png "Changing the quantity in transfer planning 4")
 
 Transfer RŮŽOVÝ-ČERVENÝ byl snížen na 22. Příchozí část transferu MODRÝ-RŮŽOVÝ není rezervovaný, ale protože odchozí část je rezervovaná, není možné množství snížit na 27.
 
@@ -123,7 +123,7 @@ Počáteční a koncové datum bude použito k popisu skutečného období přep
 
 Následující obrázek ukazuje interpretaci počátečního data a času na plánovacích řádcích souvisejících s objednávkami transferů.
 
-![Centrální datum a čas v plánování transferu](media/nav_app_supply_planning_7_transfers13.png "Centrální datum a čas v plánování transferu")
+![Central date-times in transfer planning.](media/nav_app_supply_planning_7_transfers13.png "Central date-times in transfer planning")
 
 V tomto příkladu to znamená, že:
 
@@ -134,7 +134,7 @@ V tomto příkladu to znamená, že:
 ## Bezpečnostní dodací lhůta
 Pole Výchozí bezp.průběžná doba v nastavení výroby a související pole Bezpečná průběžná doba na kartě zboží nebude při výpočtu objednávky transferu zohledněno. Nicméně Bezpečná průběžná doba bude mít stále vliv na celkový plán, jako bude mít vliv na objednávku doplnění (nákup nebo výrobu) na začátku řetězce transferu, když je zboží umístěno na skladě, ze kterého budou transferovány.
 
-![Prvky data splatnosti transferu](media/nav_app_supply_planning_7_transfers14.png "Prvky data splatnosti transferu")
+![Elements of the transfer due date.](media/nav_app_supply_planning_7_transfers14.png "Elements of the transfer due date")
 
 Na řádku výrobní zakázky koncové datum + bezpečná průběžná doba + vstupní doba zpracování = Datum splatnosti.
 
@@ -143,7 +143,7 @@ Na řádku nákupní objednávky plánované datum příjmu + bezpečná průbě
 ## Přeplánování
 Při přeplánování existujícího řádku transferu musí systém plánování vyhledat odchozí část a změnit datum a čas. Je důležité si uvědomit, že pokud byl definován dodací čas, mezi dodávkou a příjmem bude mezera. Jak již bylo zmíněno, dodací lhůta se může skládat z více prvků, jako je čas přepravy a doba zpracování skladu. Na časové ose se plánovací systém posune zpět v čase, zatímco vyvažuje prvky.
 
-![Změna data splatnosti při plánování transferu](media/nav_app_supply_planning_7_transfers15.png "Změna data splatnosti při plánování transferu")
+![Changing the due date in transfer planning.](media/nav_app_supply_planning_7_transfers15.png "Changing the due date in transfer planning")
 
 Proto při změně data splatnosti na řádku transferu musí být vypočtena doba realizace, aby bylo možné aktualizovat odchozí stranu transferu.
 
@@ -153,7 +153,7 @@ Pokud poptávka nese sériová čísla/čísla šalží a plánovací modul je a
 ## Propojení Zakázka-na-Zalázku
 V tomto příkladu je skladová jednotka nastavena systémem na MODRÝ a pomocí přionjednání, zatímco RŮŽOVÝ A ČERVENÝ využívá dávka pro dávku. Když je vytvořena prodejní objednávka s 27ks na lokaci ČERVENÝ, povede to k tomu, že řetězec transferů s posledním spojením v lokaci MODRÝ bude rezervován s vazbou. V tomto příkladu rezervace nejsou pevné a vytvořené plánovačem v lokaci RŮŽOVÝ, ale vazby vytvořené systémem plánování. Důležitým rozdílem je, že plánovací systém to může změnit.
 
-![Propojení Zakázka-na-zakázku v plánová transferů](media/nav_app_supply_planning_7_transfers16.png "Propojení Zakázka-na-zakázku v plánová transferů")
+![Order-to-order links in transfer planning.](media/nav_app_supply_planning_7_transfers16.png "Order-to-order links in transfer planning")
 
 Pokud se poptávka změní z 27 na 22, systém sníží množství v řetězci, přičemž se sníží také závazná rezervace.
 

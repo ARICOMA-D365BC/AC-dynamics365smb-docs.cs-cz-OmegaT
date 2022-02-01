@@ -1,16 +1,16 @@
 ---
-    title: Design Details - Costing Methods | Microsoft Docs
-    description: This topic describes how the costing method affects how actual or a budgeted values are capitalized and used in the cost calculation.
-    author: bholtorf
+title: Design Details - Costing Methods
+description: This topic describes how the costing method affects how actual and budgeted values are capitalized and used in the cost calculation.
+author: bholtorf
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: bholtorf
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 30, 42, 43
+ms.date: 06/14/2021
+ms.author: bholtorf
 
 ---
 # Design Details: Costing Methods
@@ -32,7 +32,7 @@ The following methods are supported in [!INCLUDE[prod_short](includes/prod_short
 
 The following image shows how costs flow through the inventory for each costing method.
 
-![Costing methods](media/design_details_inventory_costing_7_costing_methods.png "Costing methods")
+![Costing methods.](media/design_details_inventory_costing_7_costing_methods.png "Costing methods")
 
 Costing methods differ in the way that they value inventory decreases and if they use actual cost or standard cost as the valuation base. The following table explains the different characteristics. (The LIFO method is excluded, as it is very similar to the FIFO method.)
 
@@ -44,6 +44,7 @@ Costing methods differ in the way that they value inventory decreases and if the
 |Miscellaneous|If you back-date an inventory decrease, then existing entries are NOT reapplied to provide a correct FIFO cost flow.|If you back-date an inventory increase or decrease, then the average cost is recalculated, and all affected entries are adjusted.<br /><br /> If you change the period or calculation type, then all affected entries must be adjusted.|Use the **Standard Worksheet** page to periodically update and roll up standard costs.<br /><br /> Is NOT supported per SKU.<br /><br /> No historic records exist for standard costs.|You can use specific item tracking without using the Specific costing method. Then the cost will NOT follow the lot number, but the cost assumption of the selected costing method.|
 
 ## Příklad
+
 This section gives examples of how different costing methods affect inventory value.
 
 The following table shows the inventory increases and decreases that the examples are based on.
@@ -61,98 +62,101 @@ The following table shows the inventory increases and decreases that the example
 > The resulting quantity in inventory is zero. Consequently, the inventory value must also be zero, regardless of the costing method.
 
 ### Effect of Costing Methods on Valuing Inventory Increases
-**FIFO**/**LIFO**/**Average**/**Specific**
 
-For items with costing methods that use actual cost as the valuation base (**FIFO**, **LIFO**, **Average**, or **Specific**), inventory increases are valued at the item's acquisition cost.
+- **FIFO**/**LIFO**/**Average**/**Specific**
 
-The following table shows how inventory increases are valued for all costing methods except **Standard**.
+   For items with costing methods that use actual cost as the valuation base (**FIFO**, **LIFO**, **Average**, or **Specific**), inventory increases are valued at the item's acquisition cost.
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-|------------------|--------------|----------------------------|---------------|  
-| 01.01.20 | 1 | 10,00 | 1 |
-| 01.01.20 | 1 | 20,00 | 2 |
-| 01.01.20 | 1 | 30.00 | 3 |
+   The following table shows how inventory increases are valued for all costing methods except **Standard**.
 
-**Standard**
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
+   |------------------|--------------|----------------------------|---------------|  
+   | 01.01.20 | 1 | 10,00 | 1 |
+   | 01.01.20 | 1 | 20,00 | 2 |
+   | 01.01.20 | 1 | 30.00 | 3 |
 
-For items using the **Standard** costing method, inventory increases are valued at the item's current standard cost.
+- **Standard**
 
-The following table shows how inventory increases are valued for the **Standard** costing method.
+   For items using the **Standard** costing method, inventory increases are valued at the item's current standard cost.
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-|------------------|--------------|----------------------------|---------------|  
-| 01.01.20 | 1 | 15.00 | 1 |
-| 01.01.20 | 1 | 15.00 | 2 |
-| 01.01.20 | 1 | 15.00 | 3 |
+   The following table shows how inventory increases are valued for the **Standard** costing method.
+
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
+   |------------------|--------------|----------------------------|---------------|  
+   | 01.01.20 | 1 | 15.00 | 1 |
+   | 01.01.20 | 1 | 15.00 | 2 |
+   | 01.01.20 | 1 | 15.00 | 3 |
 
 ### Effect of Costing Methods on Valuing Inventory Decreases
-**FIFO**
 
-For items using the **FIFO** costing method, items that were purchased first are always sold first (entry numbers 3, 2, and 1 in this example). Accordingly, inventory decreases are valued by taking the value of the first inventory increase.
+- **FIFO**
 
-COGS is calculated using the value of the first inventory acquisitions.
+   For items using the **FIFO** costing method, items that were purchased first are always sold first (entry numbers 3, 2, and 1 in this example). Accordingly, inventory decreases are valued by taking the value of the first inventory increase.
 
-The following table shows how inventory decreases are valued for the **FIFO** costing method.
+   COGS is calculated using the value of the first inventory acquisitions.
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-|------------------|--------------|----------------------------|---------------|  
-| 01.02.20 | -1 | -10,00 | 4 |
-| 01.03.20 | -1 | -20,00 | 5 |
-| 01.04.20 | -1 | -30,00 | 6 |
+   The following table shows how inventory decreases are valued for the **FIFO** costing method.
 
-**LIFO**
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
+   |------------------|--------------|----------------------------|---------------|  
+   | 01.02.20 | -1 | -10,00 | 4 |
+   | 01.03.20 | -1 | -20,00 | 5 |
+   | 01.04.20 | -1 | -30,00 | 6 |
 
-For items using the **LIFO** costing method, items that were purchased most recently are always sold first (entry numbers 3, 2, and 1 in this example). Accordingly, inventory decreases are valued by taking the value of the last inventory increase.
+- **LIFO**
 
-COGS is calculated using the value of the most recent inventory acquisitions.
+   For items using the **LIFO** costing method, items that were purchased most recently are always sold first (entry numbers 3, 2, and 1 in this example). Accordingly, inventory decreases are valued by taking the value of the last inventory increase.
 
-The following table shows how inventory decreases are valued for the **LIFO** costing method.
+   COGS is calculated using the value of the most recent inventory acquisitions.
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-|------------------|--------------|----------------------------|---------------|  
-| 01.02.20 | -1 | -30,00 | 4 |
-| 01.03.20 | -1 | -20,00 | 5 |
-| 01.04.20 | -1 | -10,00 | 6 |
+   The following table shows how inventory decreases are valued for the **LIFO** costing method.
 
-**Average**
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
+   |------------------|--------------|----------------------------|---------------|  
+   | 01.02.20 | -1 | -30,00 | 4 |
+   | 01.03.20 | -1 | -20,00 | 5 |
+   | 01.04.20 | -1 | -10,00 | 6 |
 
-For items using the **Average** costing method, inventory decreases are valued by calculating a weighted average of the remaining inventory on the last day of the average cost period in which the inventory decrease was posted. For more information, see [Design Details: Average Cost](design-details-average-cost.md).
+- **Average**
 
-The following table shows how inventory decreases are valued for the **Average** costing method.
+   For items using the **Average** costing method, inventory decreases are valued by calculating a weighted average of the remaining inventory on the last day of the average cost period in which the inventory decrease was posted. For more information, see [Design Details: Average Cost](design-details-average-cost.md).
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-|------------------|--------------|----------------------------|---------------|  
-| 01.02.20 | -1 | -20,00 | 4 |
-| 01.03.20 | -1 | -20,00 | 5 |
-| 01.04.20 | -1 | -20,00 | 6 |
+   The following table shows how inventory decreases are valued for the **Average** costing method.
 
-**Standard**
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
+   |------------------|--------------|----------------------------|---------------|  
+   | 01.02.20 | -1 | -20,00 | 4 |
+   | 01.03.20 | -1 | -20,00 | 5 |
+   | 01.04.20 | -1 | -20,00 | 6 |
 
-For items using the **Standard** costing method, inventory decreases are valued similar to the **FIFO** costing method, except valuation is based on a standard cost, not on the actual cost.
+- **Standard**
 
-The following table shows how inventory decreases are valued for the **Standard** costing method.
+   For items using the **Standard** costing method, inventory decreases are valued similar to the **FIFO** costing method, except valuation is based on a standard cost, not on the actual cost.
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-|------------------|--------------|----------------------------|---------------|  
-| 01.02.20 | -1 | -15,00 | 4 |
-| 01.03.20 | -1 | -15,00 | 5 |
-| 01.04.20 | -1 | -15,00 | 6 |
+   The following table shows how inventory decreases are valued for the **Standard** costing method.
 
-**Specific**
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
+   |------------------|--------------|----------------------------|---------------|  
+   | 01.02.20 | -1 | -15,00 | 4 |
+   | 01.03.20 | -1 | -15,00 | 5 |
+   | 01.04.20 | -1 | -15,00 | 6 |
 
-Costing methods make an assumption about how cost flows from an inventory increase to an inventory decrease. However, if more accurate information about the cost flow exists, then you can override this assumption by creating a fixed application between entries. A fixed application creates a link between an inventory decrease and a specific inventory increase and directs the cost flow accordingly.
+- **Specific**
 
-For items using the **Specific** costing method, inventory decreases are valued according to the inventory increase that it is linked to by the fixed application.
+   Costing methods make an assumption about how cost flows from an inventory increase to an inventory decrease. However, if more accurate information about the cost flow exists, then you can override this assumption by creating a fixed application between entries. A fixed application creates a link between an inventory decrease and a specific inventory increase and directs the cost flow accordingly.
 
-The following table shows how inventory decreases are valued for the **Specific** costing method.
+   For items using the **Specific** costing method, inventory decreases are valued according to the inventory increase that it is linked to by the fixed application.
 
-| Zúčtovací datum | Množství | Částka nákladů (skutečná) | Applies-to Entry | Číslo položky |
-|------------------|--------------|----------------------------|-----------------------|---------------|  
-| 01.02.20 | -1 | -20,00 | **2** | 4 |
-| 01.03.20 | -1 | -10,00 | **1** | 5 |
-| 01.04.20 | -1 | -30,00 | **3** | 6 |
+   The following table shows how inventory decreases are valued for the **Specific** costing method.
+
+   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Applies-to Entry | Číslo položky |
+   |------------|--------|--------------------|----------------|---------|  
+   | 01.02.20 | -1 | -20,00 | **2** | 4 |
+   | 01.03.20 | -1 | -10,00 | **1** | 5 |
+   | 01.04.20 | -1 | -30,00 | **3** | 6 |
 
 ## Viz také
+
 [Design Details: Inventory Costing](design-details-inventory-costing.md)   
 [Design Details: Variance](design-details-variance.md)   
 [Design Details: Average Cost](design-details-average-cost.md)   

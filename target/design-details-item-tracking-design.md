@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, item, tracking, tracing
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ With the addition of serial, lot, and package numbers, the reservation system ha
 
 The following diagram outlines the design of item tracking functionality in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-![Příklad toku sledování zboží](media/design_details_item_tracking_design.png "Příklad toku sledování zboží")
+![Example of item tracking flow.](media/design_details_item_tracking_design.png "Example of item tracking flow")
 
 Objekt centrálního účtování je přepracován tak, aby zpracovával jedinečnou subklasifikaci řádku dokladu ve formě sériových čísel nebo čísel šarží, a přidávají se speciální relační tabulky, které vytvářejí relace jedna k více mezi zaúčtovanými doklady a jejich položkami a hodnotami rozdělených položek položky hlavní knihy.
 

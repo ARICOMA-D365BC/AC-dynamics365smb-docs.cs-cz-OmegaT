@@ -1,6 +1,6 @@
 ---
-    title: Dimension Set Entries Overview | Microsoft Docs
-    description: This topic describes how dimension set entries are stored and posted in Dynamcis 365.
+    title: Dimension Set Entries Overview
+    description: This article gives you an overview of how dimension set entries are stored as dimension set entries and how they are posted.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: dimension
-    ms.date: 04/01/2021
+    ms.date: 06/14/2021
     ms.author: edupont
 
 ---
@@ -30,7 +30,7 @@ Následující příklad ukazuje sadu dimenzí, která má tři položky sady di
 ## Položky sady dimenzí
 Dimension sets are stored in the **Dimension Set Entry** table as dimension set entries with the same dimension set ID.
 
-![Tok položek sady dimenzí](media/dimensionentrynav7.png "Tok položek sady dimenzí")
+![Flow of dimension set entries.](media/dimensionentrynav7.png "Flow of dimension set entries")
 
 Když vytvoříte nový řádek deníku, hlavičku dokladu nebo řádek dokladu, můžete zadat kombinaci hodnot dimenze. Namísto explicitního ukládání každé hodnoty dimenze v databázi je k řádku deníku, hlavičce dokladu nebo řádku dokladu přiřazeno ID sady dimenzí k určení sady dimenzí.
 

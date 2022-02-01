@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Balancing Demand and Supply | Microsoft Docs
-    description: To understand how the planning system works, it is necessary to understand the prioritized goals of the planning system, the most important of which are to ensure that any demand will be met by sufficient supply and any supply serves a purpose.
+    title: Design Details - Balancing Demand and Supply
+    description: To understand how the planning system works it is necessary to understand the prioritized goals of the planning system achieved by balancing supply with demand.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -39,7 +39,7 @@ Profily zásob se používají k tomu, aby obsahovaly informace o požadavcích,
 
 Cílem plánovacího mechanismu je vyvážit poptávku a nabídku položky, aby bylo zajištěno, že nabídka bude proveditelným způsobem odpovídat poptávce, jak je definováno v plánovacích parametrech a pravidlech.
 
-![Přehled vyrovnávání nabídky a poptávky](media/nav_app_supply_planning_2_balancing.png "Přehled vyrovnávání nabídky a poptávky")
+![Overview of supply-demand balancing.](media/nav_app_supply_planning_2_balancing.png "Overview of supply-demand balancing")
 
 ## Vyřizování objednávek před datem zahájení plánování
 Aby se zabránilo tomu, že plán dodávek ukazuje nemožné, a tudíž zbytečné návrhy, považuje systém plánování období až do data zahájení plánování jako zmrazenou zónu, kde se nic neplánuje. Pro zmrazenou zónu platí následující pravidlo:

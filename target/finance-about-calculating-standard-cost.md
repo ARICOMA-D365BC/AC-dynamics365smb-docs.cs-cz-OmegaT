@@ -1,16 +1,15 @@
 ---
-    title: About Calculating Standard Cost | Microsoft Docs
-    description: A standard cost system determines inventory unit cost based on some reasonable historical or expected cost. Studies of past and estimated future cost data can then provide the basis for standard costs.
-    author: SorenGP
+title: About Calculating Standard Cost
+description: A standard cost system determines inventory unit cost based on reasonable historical or expected cost.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 5841
+ms.author: edupont
 
 ---
 # About Calculating Standard Cost
@@ -41,6 +40,7 @@ The following key cost elements make up the total direct cost of a finished proc
 - Subcontracting costs for produced items only.
 
 ### Material Costs
+
 Material costs are costs that are associated with subassemblies and purchased raw material. Material unit cost can consist of direct and indirect cost elements.
 
 - Direct material cost represents an invoiced amount for purchased raw materials or the processing cost of a subassembly.
@@ -93,7 +93,7 @@ The process of updating or calculating standard costs typically consists of the 
 
 1. Updating costs at the component and capacity levels. For more information, see the **Suggest Item Standard Cost** and **Suggest Capacity Standard Cost** batch jobs.
 2. Consolidating and rolling up the component and capacity costs to calculate the total assembly or manufacturing cost of the items. For more information, see For more information, see [To calculate the standard cost of an assembly item](inventory-how-work-boms.md#to-calculate-the-standard-cost-of-an-assembly-item).
-3. Implementing the standard costs that are entered when you run the previous batch jobs. The standard costs do not take effect until they are implemented. For more information, see the **Implement Standard Cost Changes** batch job.
+3. Implementing the standard costs that are entered when you run the previous batch jobs. The standard costs do not take effect until they are implemented. Use the **Implement Standard Cost Changes** batch job, which updates the changes in the standard cost on items with the ones in the Standard Cost Worksheet table.
 4. Implementing the changes to update the **Unit Cost** field on the item card and perform inventory revaluation. For more information, see [Revalue Inventory](inventory-how-revalue-inventory.md).
 
 ## Viz také

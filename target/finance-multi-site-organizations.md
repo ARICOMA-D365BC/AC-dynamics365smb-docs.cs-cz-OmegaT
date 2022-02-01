@@ -27,7 +27,7 @@ Tento článek představuje některé způsoby, kterými [!INCLUDE[prod_short](i
 
 Následující schéma je příkladem různých lokalit integrovaných s ústředím společnosti.
 
-![Diagram Description automatically generated](media/multisite-headquarter-sites.png)
+![Diagram Description automatically generated.](media/multisite-headquarter-sites.png)
 
 ## Splnění potřeb domácích a mezinárodních lokalit
 
@@ -100,7 +100,7 @@ Pobočky často potřebují přístup k dodavatelskému řetězci a schopnost ř
 
 Ústředí společnosti musí být schopno rychle reagovat na obchodní změny v jednotlivých lokalitách. V kombinaci s nástrojem Power Automate může [!INCLUDE[prod_short](includes/prod_short.md)] sloužit jako mechanismus včasného varování.
 
-![Snímek obrazovky příspěvku na sociální síti](media/multisite-apps.png)
+![A screenshot of a social media post Description automatically generated.](media/multisite-apps.png)
 
 | **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|

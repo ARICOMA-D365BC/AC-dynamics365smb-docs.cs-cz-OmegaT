@@ -18,13 +18,13 @@ Předtím než začnete se správou dlouhodobého majetku je nutné nastavit vý
 ## Nastavení obecných výchozích hodnot dlouhodobého majetku
 You define the general behavior or the fixed asset functionality and set up document number series in the  on the **Fixed Assets Setup** page.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets Setup**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets Setup**, and then choose the related link.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Nastavení účto skupin dlouhodobého majetku
 Nastavení účto skupiny dlouhodobého majetku Položky pro tyto účto skupiny jsou zaúčtovány na stejné finanční účty.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. On the **FA Posting Group Card** page, fill in the fields as necessary.
 
@@ -39,7 +39,7 @@ Transakce mohou být přiděleny různým oddělením nebo projektům podle uži
 
 Alokační klíče se vztahují na třídy dlouhodobého majetku, nikoli na jednotlivý majetek.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.
 2. On the **FA Posting Groups** page, choose the **Allocations** action, and then choose a posting type.
 3. On the **FA Allocations** page, fill in the fields as necessary.
 4. Opakujte kroky 2 a 3 pro každý typ účtování, pro který chcete definovat alokační klíče.
@@ -49,45 +49,45 @@ Alokační klíče se vztahují na třídy dlouhodobého majetku, nikoli na jedn
 
 [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset journal template the first time that you open the **Fixed Asset Journal** page, but you can set up additional journal templates.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.
 2. Podle potřeby vyplňte pole.
 
 ## Nastavení listů deníku dlouhodobého majetku
 Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každou šablonu. Zaměstnanci mohou mít například vlastní list deníku, který používá iniciály zaměstnance jako název listu deníku. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.
 2. Select the relevant journal template, and then choose the **Batches** action.
 3. On the **FA Journal Batches** page, fill in the fields as necessary.
 
 ## Nastavení šablon deníku přeřazení dlouhodobého majetku
 Vyhrazené deníky přeřazení slouží k převodu, rozdělení nebo kombinování dlouhodobého majetku. [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset reclassification journal template the first time that you open the **FA Reclass. Journal** page, but you can set up additional reclassification journal templates. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.
 2. Podle potřeby vyplňte pole.
 
 ## Nastavení listů deníku přeřazení dlouhodobého majetku
 Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každou šablonu deníku přeřazení. Zaměstnanci mohou mít například vlastní list deníku přeřazení, který používá iniciály zaměstnance jako název listu deníku přeřazení. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.
 2. Select the relevant journal template, and then choose the **Batches** action.
 3. On the **FA Reclass. Journal Batches** page, fill in the fields as necessary.
 
 ## Nastavení kódů tříd dlouhodobého majetku
 Kódy tříd dlouhodobého majetku lze použít k seskupení dlouhodobého majetku, například do hmotného a nehmotného majetku.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Classes**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Classes**, and then choose the related link.
 2. Zadejte kódy a názvy tříd, které chcete vytvořit.
 
 ## Nastavení kódů podtříd dlouhodobého majetku
 Kódy podtříd dlouhodobého majetku se používají k seskupení dlouhodobého majetku do kategorií, jako jsou budovy, vozidla, nábytek nebo stroje.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Subclasses**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Subclasses**, and then choose the related link.
 2. Zadejte kódy a názvy tříd, které chcete vytvořit.
 
 ## Nastavení kódů umístění dlouhodobého majetku
 Kódy umístění dlouhodobého majetku slouží k evidenci umístění dlouhodobého majetku, například prodejního oddělení, recepce, správy, výroby nebo skladu. Tyto informace jsou užitečné pro účely pojištění a inventarizace.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA locations**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA locations**, and then choose the related link.
 2. Zadejte kódy a názvy skladových míst dlouhodobého majetku, které chcete vytvořit.
 
 ## Evidence vstupních záznamů
@@ -100,7 +100,7 @@ Následující postup se používá, pokud mají být transakce dlouhodobého ma
 3. Vytvořte knihu odpisů dlouhodobého majetku pro každý účel odpisu (například daně a finanční výkazy). Pro každou knihu odpisů musíte definovat podmínky, jako je integrace s účty účetní osnovy.
 
    Povolte integraci účtů účetní osnovy podle následujících kroků. Nejprve se ujistěte, že je integrace účtů účetní osnovy zakázána je pro všechny knihy odpisů, potom zaúčtujte počáteční položky a nakonec zapněte integraci.
-4. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.
+4. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Books**, and then choose the related link.
 5. Select the relevant depreciation book, and then choose the **Edit** action to open the **Depreciation Book Card** page.
 6. On the **Integration** FastTab, make sure all fields are blank by clearing all check marks. Pokud máte více než jednu knihu odpisů, vypněte integraci financí pro každou z nich.
 7. Do deníku dlouhodobého majetku zadejte pro každý majetek následující řádky:

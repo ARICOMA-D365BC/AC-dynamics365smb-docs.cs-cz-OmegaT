@@ -25,7 +25,7 @@ Odkaz na prostředí je karta, na které určíte prostředí [!INCLUDE [prod_sh
 
 Odkaz se používá, když zvolíte společnost v centru společnosti.
 
-:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Akce pro společnost, která je uvedena v centru společnosti":::
+:::image type="content" source="media/company-hub-company-list-actions.png" alt-text="Actions for a company that is listed in the company hub.":::
 
 > [!TIP]
 > Pokud pracujete ve zkušební verzi [!INCLUDE [prod_short](includes/prod_short.md)], je snadné přidat společnosti k vašemu tenantu. Odkaz na prostředí můžete najít zkopírováním ID Azure Active Directory z části **Řešení problémů** na stránce nápovědy a podpory. Název prostředí je pravděpodobně ve výchozí hodnotě PRODUCTION. Přidejte tyto informace do pole **Odkaz na prostředí**, jako je ```https://businesscentral.dynamics.com/1a23b456-789c-0123-45de-678910fg12h/production?redirectedfromsignup=1``` a poté zkuste **Test spojení**. Hodnotící společnost bude přidána na seznam.

@@ -1,6 +1,6 @@
 ---
 title: Overview of Tasks to Set Up Business Central
-description: Outlines tasks to set up, initialize, and configure Business Central to suit your needs.
+description: Read an overview of the tasks to set up, initialize, and configure Business Central to suit your needs.
 author: edupont04
 
 ms.service: dynamics365-business-central
@@ -9,17 +9,17 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: configure, initialize
-ms.date: 04/01/2021
+ms.date: 06/23/2021
 ms.author: edupont
 
 ---
 # Overview of Tasks to Set Up [!INCLUDE[prod_short](includes/prod_short.md)]
 
-[!INCLUDE[prod_short](includes/prod_short.md)] includes standard configurations for most business processes, but you can change the configuration to suit the needs of your organization.
+[!INCLUDE[prod_short](includes/prod_short.md)] includes standard configurations for most business processes, but you can change the configuration to suit the needs of your organization. The [Business Central quick start](quick-start-business-central.md) articles can help you take the first steps into making [!INCLUDE [prod_short](includes/prod_short.md)] your own. This article provides an overview of how you can configure [!INCLUDE [prod_short](includes/prod_short.md)] for your organization.
 
 For example, your chart of accounts is prefilled with a number of posting accounts ready for use. You can, of course, change the chart of accounts to suit your needs. For more information, see [Finance](finance.md).
 
-From the ![Sprocket icon to open the Settings menu](media/ui-experience/settings_icon_small.png) menu, you can access assisted setup guides that help you configure certain scenarios and add features to [!INCLUDE[prod_short](includes/prod_short.md)]. For information about how to access all assisted and manual setup pages, see [Getting Ready for Doing Business](ui-get-ready-business.md).
+From the ![Sprocket icon to open the Settings menu.](media/ui-experience/settings_icon_small.png) menu, you can access assisted setup guides that help you configure certain scenarios and add features to [!INCLUDE[prod_short](includes/prod_short.md)]. For information about how to access all assisted and manual setup pages, see [Getting Ready for Doing Business](ui-get-ready-business.md).
 
 > [!NOTE]
 > [!INCLUDE [ua-checklist](includes/ua-checklist.md)]
@@ -33,7 +33,7 @@ Some functionality, either general or for specific business processes, can be se
 | Configure the rules and values that define your company's sales policies, register new customers, and set up how you communicate with customers. | [Setting Up Sales](sales-setup-sales.md) |
 | Configure the rules and values that define your company's purchasing policies, register new vendors, and prioritize your vendors for payment processing. | [Setting Up Purchasing](purchasing-setup-purchasing.md) |
 | Configure the rules and values that define the company's inventory policies, set up locations if you keep inventory in multiple warehouses, and categorize your items to improve searching and sorting . | [Setting Up Inventory](inventory-setup-inventory.md) |
-| Zadejte výchozí sestavy, které se mají použít pro různé typy dokladů. | [Výběr sestavy v Business Central](across-report-selections.md) |
+| Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 | Set up resources, time sheets, and jobs to manage projects. | [Setting Up Project Management](projects-setup-projects.md) |
 | Configure how to insure, maintain, and depreciate fixed assets, and how you record the costs of fixed assets in your company books. | [Setting Up Fixed Assets](fa-setup.md) |
 | Define the general rules and values for warehouse processes and the specific handling at each location. | [Setting Up Warehouse Management](warehouse-setup-warehouse.md) |
@@ -72,7 +72,8 @@ Some areas require you to be an administrator in your [!INCLUDE[prod_short](incl
 [Warehouse Management](warehouse-manage-warehouse.md)  
 [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Business Central Quick Starts](quick-start-business-central.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

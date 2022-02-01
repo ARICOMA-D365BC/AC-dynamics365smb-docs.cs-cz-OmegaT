@@ -5,7 +5,7 @@ author: edupont04
 
 ms.service: dynamics365-business-central
 ms.topic: conceptual
-ms.search.keywords:
+ms.search.form: 4
 ms.date: 04/01/2021
 ms.author: edupont
 ---
@@ -23,7 +23,7 @@ Chcete-li svým zákazníkům zasílat upomínky na platby po splatnosti, musít
 
 ## Nastavení platebních podmínek
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Platební podmínky<x5/> a vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Terms**, and then choose the related link.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 Po nastavení platebních podmínek je přiřadíte zákazníkům a dodavatelům. Volitelně můžete svým platebním metodám přiřadit platební podmínky.

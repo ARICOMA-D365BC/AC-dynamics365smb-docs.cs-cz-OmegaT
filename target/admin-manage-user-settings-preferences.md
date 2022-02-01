@@ -70,7 +70,7 @@ Jako správce můžete získat přehled o jednotlivých změnách v [!INCLUDE [p
 
 ## Kontrola nebo odstranění individuálních nastavení uživatelů
 
-1. Vyberte ikonu ![Hledat stránku nebo sestavu](media/ui-search/search_small.png "Hledat ikonu stránky nebo sestavy"), zadejte **Přizpůsobené stránky** a poté vyberte související odkaz.
+1. Choose the ![Search for Page or Report.](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Personalized Pages**, and then choose the related link.
 2. Zobrazí se seznam uživatelů a jejich přizpůsobené stránky. Chcete-li vymazat personalizaci uživatele, klikněte na příslušný řádek nebo zvolte **Spravovat**a poté zvolte **Odstranit**.
 
 Tím se odstraní přizpůsobení a uživatelské prostředí příslušné stránky se vrátí do výchozího stavu.

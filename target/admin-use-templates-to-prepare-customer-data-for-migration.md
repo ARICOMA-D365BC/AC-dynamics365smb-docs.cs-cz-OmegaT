@@ -1,6 +1,6 @@
 ---
-    title: Prepare Customer Data Migration with Templates | Microsoft Docs
-    description: Learn how to use configuration templates to structure existing customer data before you migrate the data to the new company in Business Central.
+    title: Prepare Customer Data Migration with Templates
+    description: Learn how to use configuration templates to structure existing customer data before you migrate the master data to the new company in Business Central.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/14/2021
     ms.author: edupont
 
 ---
@@ -43,7 +43,7 @@ Když vyberete existující datovou šablonu, musíte posoudit, zda šablony, kt
 > [!TIP]  
 > You can also use data templates to create new records quickly. Používejte je k rychlejšímu a přesnějšímu vytváření dat. Pro více informací navštivte [Evidence nového zboží](inventory-how-register-new-items.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
 2. On the **Configuration Templates** page, select a data template from the list, and then choose the **Edit** action.
 
 Pokud výchozí šablony nesplňují vaše potřeby, můžete vytvořit nové šablony nebo přidat pole do existující šablony. Pokud jsou výchozí šablony dostatečné, můžete je použít k vytvoření záznamů na základě šablon kmenových dat.
@@ -96,7 +96,7 @@ ID tabulky, název tabulky a řádky existující šablony dat jsou vloženy do 
 
 Můžete vytvořit sešit aplikace Excel, který bude sloužit jako šablona, která se rychle zakládá na struktuře existující databázové tabulky. You can then use the template to gather together customer data in a consistent format for later import into [!INCLUDE[prod_short](includes/prod_short.md)].
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Worksheet**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Worksheet**, and then choose the related link.
 2. Přidejte tabulku do seznamu nebo vyberte existující tabulku. For more information, see [Manage Company Configuration in a Worksheet](admin-how-to-manage-company-configuration-in-a-worksheet.md).
 3. Choose the **Shows Fields** action to define the fields from the table that you want to include in the template.
 4. Choose the **Export to Template** action.
@@ -120,19 +120,29 @@ Každý záznam, jehož data jsou použita tímto způsobem, je úplný, protož
 > [!NOTE]
 > If the data in the tables in the configuration package contains dates, for example, posting dates on invoices, the dates are considered in the time zone specified in [!INCLUDE[prod_short](includes/prod_short.md)].
 
+
 ## Vytvoření záznamu z konfigurační šablony
 
 Strukturu dat obsaženou v šablonách dat můžete použít k převedení informací na záznamy v databázi, jeden po jednom. To do so, you use the **Create Instance** function. Jedná se o miniaturní verzi procesu migrace dat, která může být užitečná při vytváření prototypů nebo zpracování menších úloh vytvoření dat.
 
 Následující kroky popisují, jak vytvořit kartu zboží z šablony zboží. Stejným postupem můžete vytvořit záznam z libovolné datové šablony.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Templates**, and then choose the related link.
 2. Select the **Item** template, and then choose the **Edit** action. For more information, see [To create a data template](admin-use-templates-to-prepare-customer-data-for-migration.md#to-create-a-new-data-template).
 3. Choose the **Create Instance** action. Vytvoří se karta zboží.
 4. Zvolte tlačítko **OK**.
-5. To review the new item card, choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+5. To review the new item card, choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
 6. Otevřete novou kartu zboží.
 7. Rozbalte záložky s náhledem a ověřte, zda byly informace na nich správně vytvořeny.
+
+## To use conversion templates
+
+You can convert contacts into customers, vendors and employees.
+
+### To convert a contact into a customer, vendor or employee
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Contacts**, and then select the correct contact.
+2. On the Contact Card select **Actions**, then **Functions** and then select **Create as Customer, Vendor, Bank, or Employee**.
+
 
 ## Použití konfigurační šablony na záznamu
 
@@ -148,6 +158,9 @@ Následující postup je založen na nové kartě zákazníka.
 3. On the **Customer Templates** page, select one of the templates, and then choose the **OK** button.
 
 Výchozí hodnoty z vybrané zákaznické šablony jsou vloženy na kartu zákazníka.
+
+> [!NOTE]
+> You cannot use Apply Template to blank out fields on customers, suppliers, and the like. Instead you need to use the **Edit in Excel** functionality. For more information, see [Edit in Excel](across-work-with-excel.md#edit-in-excel).
 
 ## Viz také
 

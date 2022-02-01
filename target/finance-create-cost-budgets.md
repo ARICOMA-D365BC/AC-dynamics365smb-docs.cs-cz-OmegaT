@@ -1,24 +1,25 @@
 ---
-    title: Creating Cost Budgets | Microsoft Docs
-    description: This topic provides an overview of where to create and analyze cost budgets.
-    author: SorenGP
+title: Creating Cost Budgets
+description: This topic provides an overview of where to create and analyze cost budgets. Budgeting in cost accounting resembles budgeting in the general ledger.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.service: dynamics365-business-central
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 1115, 1116, 1117, 1118, 1119, 1120, 1121, 1131, 1132, 1133
+ms.date: 06/16/2021
+ms.author: edupont
 
 ---
 # Vytváření nákladových rozpočtů
+
 Sestavování rozpočtu v nákladovém účetnictví se podobá rozpočtování v hlavní knize. Nákladový rozpočet je vytvořen na základě typů nákladů stejně jako je vytvořen rozpočet pro hlavní knihu na základě účtů hlavní knihy.
 
 Nákladový rozpočet je vytvořen pro určité časové období, například fiskální rok. Můžete vytvořit libovolný počet nákladových rozpočtů. Nový nákladový rozpočet můžete vytvořit ručně nebo importem nákladového rozpočtu nebo zkopírováním existujícího rozpočtu nákladů jako základu rozpočtu. For more information, see [Create G/L Budgets](finance-how-create-budgets.md).
 
-Následující stránky slouží k vytváření a analýze rozpočtů nákladů. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") pro nalezení stránky, a pak si přečtěte popis pro každou z nich.
+Následující stránky slouží k vytváření a analýze rozpočtů nákladů. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon to find a page, and then read the tooltip for each.
 
 | Viz | Také |
 |--------|---------|  
@@ -29,6 +30,7 @@ Následující stránky slouží k vytváření a analýze rozpočtů nákladů.
 | Tisk porovnání nákladů rozpočtu pomocí různých sestav. | **Cost Acctg. Balance-Budget** report<br /><br /> **Cost Acctg. Statement-Budget** report<br /><br /> **Cost Budget by Cost Center** report<br /><br /> **Cost Budget by Cost Object** report |
 
 ## Viz také
+
 [Accounting for Costs](finance-manage-cost-accounting.md)  
 [Create G/L Budgets](finance-how-create-budgets.md)  
 [Terminology in Cost Accounting](finance-terminology-in-cost-accounting.md)   

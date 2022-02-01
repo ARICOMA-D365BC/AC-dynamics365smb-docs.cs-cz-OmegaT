@@ -1,6 +1,6 @@
 ---
-    title: Walkthrough - Making Cash Flow Forecasts by Using Account Schedules
-    description: Learn how you can use account schedules to make cash flow forecasts.
+    title: Cash Flow Forecasts by Using Account Schedules
+    description: This walkthrough describes how you can use account schedules to make cash flow forecasts in Business Central. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
@@ -50,7 +50,7 @@ Ken je řadič ve společnosti CRONUS, který provádí měsíční prognózy ca
 
 ### Nastavení nového názvu účetního schématu
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedules**, and then choose the related link.
 2. Na stránce **Názvy účetních schémat** vyberte **Nový** a vytvořte nový název účetního schématu cashflow.
 3. Do pole **Název** zadejte **Prognóza**.
 4. Do pole **Popis** zadejte **Prognóza cashflow**.

@@ -1,5 +1,5 @@
 ---
-title: Create a Job Card for a Job and Specify Tasks| Microsoft Docs'
+title: Create a Job Card for a Job and Specify Tasks
 description: For a new project, you create a job card that contains job tasks and planning lines, to help you manage progress and budgets.
 author: SorenGP
 
@@ -7,6 +7,7 @@ ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.workload: na
 ms.search.keywords: project management, task
+ms.search.form: 88, 1001, 1002, 1003, 1004, 1005, 1006, 1007
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -26,17 +27,17 @@ Struktura vrstvy umožňuje rozdělit projekt na menší úkoly, a proto umožň
 ## Vytvoření karty projektu
 Vytvořte kartu projektu a poté pro ni vytvořte úlohy projektu a řádky plánování projektu.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Choose the **New** action, and then fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. To specify the job with information on other jobs, choose the **Copy Job** action, fill in the fields as necessary, and then choose the **OK** button.
 
 > [!NOTE]  
-> If you are using time sheets with your job, you must also designate a person responsible. Tato osoba může schválit pracovní výkazy pro úlohy zaměstnance přidružené k projektu. For more information, see [Set Up Timesheets](projects-how-setup-time-sheets.md).
+> If you are using time sheets with your job, you must also designate a person responsible. Tato osoba může schválit pracovní výkazy pro úlohy zaměstnance přidružené k projektu. For more information, see [Set Up Time Sheets](projects-how-setup-time-sheets.md).
 
 ## Vytvoření úlohy projektu
 Klíčovou součástí vytvoření projektu je určení různých úkolů, které se v projektu vyskytují. You do this by adding new lines on the **Tasks** FastTab on the **Job Card** page, one task per line. Každý projekt musí mít alespoň jednu úlohu.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Otevřete kartu projektu pro příslušný projekt.
 3. On the **Tasks** FastTab, fill in the fields as necessary on a new line.
 4. To indent tasks and create a hierarchy, Choose the **Tasks** action, the then choose **Indent Job Tasks** action.
@@ -56,7 +57,7 @@ Nové úlohy projektu můžete upřesnit na řádcích plánování projektu. Ř
 
 **Note**. Při zadávání informací do řádků plánování projektu se automaticky vyplňují informace o nákladech. Například náklady, cena a sleva na zdroje a položky jsou původně založeny na informacích, které jsou definovány na kartách zdrojů a položek.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Projekty** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
 2. Otevřete příslušnou kartu projektu.
 3. Select a job task for which the **Job Task Type** field contains **Posting**, and then choose the **Job Planning Lines** action.
 4. On the **Job Planning Lines** page, on a new line, fill in the fields as necessary.

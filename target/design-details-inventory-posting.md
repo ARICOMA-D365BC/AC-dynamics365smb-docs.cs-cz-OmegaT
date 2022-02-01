@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -28,7 +28,7 @@ Položky zboží, položky ocenení a položky vyrovnání zboží jsou vytvoře
 
 V pravidelných intervalech jsou položky ocenění vytvořené v položkách zásob zaúčtovány do hlavní knihy, aby se obě hlavní knihy vyrovnaly z důvodů finanční kontroly. Pro více informací navštivte [Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md).
 
-![Tok položky pří odsouhlasní zásob s hlavní účetní knihou](media/design_details_inventory_costing_1_entry_flow.png "Tok položky pří odsouhlasní zásob s hlavní účetní knihou")
+![Entry flow when reconciling inventory with G/L.](media/design_details_inventory_costing_1_entry_flow.png "Entry flow when reconciling inventory with G/L")
 
 ## Příklad
 

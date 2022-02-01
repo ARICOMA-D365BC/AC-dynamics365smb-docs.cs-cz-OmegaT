@@ -1,6 +1,6 @@
 ---
-    title: Handle Inventory and Manufacturing Costs | Microsoft Docs
-    description: Although much of the cost accounting functionality is expressed in underlying processes with no user interaction, such as entry application and automatic cost adjustment, a number of fields, pages, and reports are aimed at users who directly or indirectly manage the cost of items or operations.
+    title: Handle Inventory and Manufacturing Costs
+    description: Learn how a number of fields, pages, and reports are aimed at users who directly or indirectly manage the cost of items or operations.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/16/2021
     ms.author: edupont
 
 ---
@@ -23,7 +23,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | **Viz** | **také** |
 |------------|-------------|  
 | Periodically or automatically update the unit cost of one or multiple items to forward any cost changes from inbound entries, such as those for purchases or production output, to the related outbound entries, such as consumption or transfers. | [Adjust Item Costs](inventory-how-adjust-item-costs.md) |
-| Get insight into average cost dynamics to make pricing decisions or to track cost fluctuations caused by data entry errors. | [Register New Items](inventory-how-register-new-items.md) |
+| Get insight into average cost dynamics to make pricing decisions or to track cost fluctuations caused by data entry errors. | [Evidence nového zboží](inventory-how-register-new-items.md) |
 | Create a manufacturing item's standard cost by entering the three cost elements: material cost, capacity cost, and subcontractor cost. | [About Calculating Standard Cost](finance-about-calculating-standard-cost.md) |
 | Calculate the unit cost of a BOM item based on the unit costs of its underlying components. | [Práce s kusovníky](inventory-how-work-BOMs.md) |
 | Complete the costing life cycle of a produced item by adjusting the costs and reconciling the value entries with the general ledger. | [About Finished Production Order Costs](finance-about-finished-production-order-costs.md) |

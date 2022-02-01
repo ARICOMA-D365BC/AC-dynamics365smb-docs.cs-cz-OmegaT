@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.date: 04/01/2021
+ms.date: 10/01/2021
 ms.author: edupont
 
 ---
@@ -33,9 +33,10 @@ Po nastavení a spuštění front úloh se stav může v každém opakujícím s
 
 Po úspěšném dokončení je úloha odebrána ze seznamu položek fronty úloh, pokud se nejedná o opakovanou úlohu. If it is a recurring job, the **Earliest Start Time** field is adjusted to show the next time that the job is expected to run.
 
-## Zobrazení stavu nebo chyb ve frontě úloh
+## Monitor status or errors in the job queue
 
-Data that is generated when a job queue is run is stored in the database, so that you can troubleshoot job queue errors.  
+Data, která jsou generována při spuštění fronty úloh, jsou uložena v databázi, takže můžete řešit chyby fronty úloh.
+
 For each job queue entry, you can view and change the status. When you create a job queue entry, its status is set to **On Hold**. You can set the status to **Ready** and back to **On Hold**, for example. Otherwise, status information is updated automatically.
 
 The following table describes the values of the **Status** field.
@@ -49,11 +50,21 @@ The following table describes the values of the **Status** field.
 | Finished | Indicates that the job queue entry is complete. |
 
 ### Zobrazení stavu jakékoli úlohy
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
 2. On the **Job Queue Entries** page, select a job queue entry, and then choose the **Log Entries** action.
 
 > [!TIP]
-> With [!INCLUDE [prod_short](includes/prod_short.md)] online, you can also view the status of job queue entries by using Application Insights in Microsoft Azure. For more information, see [Analyzing Job Queue Lifecycle Trace Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-job-queue-lifecycle-trace) in the [!INCLUDE [prod_short](includes/prod_short.md)] Developer and Administration content.
+> You can also view the status of job queue entries by using Application Insights in Microsoft Azure for more in-depth analysis based on telemetry. For more information, see [Monitoring and Analyzing Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-overview) and [Analyzing Job Queue Lifecycle Trace Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-job-queue-lifecycle-trace) in the [!INCLUDE [prod_short](includes/prod_short.md)] developer and administration content.
+
+## View scheduled tasks
+
+The **Scheduled Tasks** page in [!INCLUDE [prod_short](includes/prod_short.md)] shows which tasks are ready to run in the job queue. The page also shows information about the company that each task is set up to run in. However, only tasks that are marked as belonging to the current environment can run.
+
+For example, if the current company is in an environment that is a copy of another environment, all scheduled tasks are automatically stopped. Use the **Scheduled Tasks** page to set tasks as ready to run in the job queue.
+
+> [!NOTE]
+> Internal administrators and users can schedule tasks to run. Delegated administrators cannot.
 
 ## Moje fronta úloh
 The **My Job Queue** part on your Role Center shows the job queues entries that you have started, but which are not yet finished. Ve výchozím nastavení není tato část viditelná, takže ji musíte přidat do Centra rolí. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
@@ -61,9 +72,9 @@ The **My Job Queue** part on your Role Center shows the job queues entries that 
 The part shows which documents with your ID in the **Assigned User ID** field are being processed or are queued, including those related to background posting. Část vám může na první pohled sdělit, zda došlo k chybě při zaúčtování dokladu nebo zda došlo k chybám v položce fronty úloh. Část také umožňuje zrušit zaúčtování dokladu, pokud není spuštěno.
 
 ### Zobrazení chyby z části Moje fronta úloh
+
 1. On an entry with the status **Error**, choose the **Show Error** action.
 2. Zkontrolujte chybovou zprávu a problém vyřešte.
-
 
 ## Examples of what can be scheduled using job queue
 
@@ -82,6 +93,10 @@ If you have integrated [!INCLUDE[prod_short](includes/prod_short.md)] with [!INC
 Fronta úloh je účinným nástrojem pro plánování chodu obchodních procesů na pozadí, například když se více uživatelů pokouší zaúčtovat prodejní objednávky, ale současně lze zpracovat pouze jednu objednávku.
 
 For more information, see [To set up background posting with job queues](ui-batch-posting.md#to-set-up-background-posting-with-job-queues)
+
+## Monitor the job queue with telemetry
+
+As an administrator, you can use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to gather and analyze telemetry that you can use to identify problems. For more information, see [Monitoring and Analyzing Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-overview) in the developer and administration content.
 
 ## Viz také
 

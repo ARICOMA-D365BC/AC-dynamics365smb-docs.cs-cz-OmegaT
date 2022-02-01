@@ -1,6 +1,6 @@
 ---
-title: Specify the Layout of a Check| Microsoft Docs
-description: You can design and print your checks in different formats to conform with standards.
+title: Specify the Layout of a Check
+description: You can design and print your checks in different formats to conform with standards set by your local authorities.
 author: edupont04
 
 ms.service: dynamics365-business-central
@@ -9,17 +9,20 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: print check, customize
-ms.date: 04/01/2021
+ms.search.form: 374, 404
+ms.date: 06/16/2021
 ms.author: edupont
 
 ---
 # Výběr rozložení šeku
+
 Šeky můžete navrhnout tak, aby odpovídaly normám stanoveným místními úřady. Šeky lze vytisknout v angličtině, francouzštině nebo španělštině.
 
 Šeky jsou určeny k tisku ve formátu pro Spojené státy i Kanadu ve formátu check-stub-check nebo ve formátu stub-stub-check.
 
 ## Výběr rozvržení šeku
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Selections Bank Account**, and then choose the related link.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Selections Bank Account**, and then choose the related link.
 2. On the **Report Selection - Bank Acc.** page, in the **Usage** field, select **Check**.
 3. Vyberte jedno z následujících ID sestavy.
 
@@ -35,6 +38,7 @@ When you have set up check layouts, you can print checks from the **Payment Jour
 Chcete-li změnit jedno z těchto výchozích rozvržení šeků, použijte k tomu integraci Word nebo RDLC. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
 
 ## Použití MICR a bezpečtnostního písma
+
 The online version of [!INCLUDE[prod_short](includes/prod_short.md)] contains pre-installed fonts on the servers that can be used when defining check layouts. Následující přehled popisuje, které fonty jsou k dispozici, a obsahuje odkazy na podrobné informace od dodavatelů fontů třetích stran.
 
 > [!Important]
@@ -46,16 +50,19 @@ V aktualizaci 15.3 a novější jsou nainstalovány a dostupné fonty Magnetic I
 > For security and legal reasons, you cannot upload custom fonts to the [!INCLUDE[prod_short](includes/prod_short.md)] environment.
 
 ### Specifikace MICR E-13B
+
 Následující souhrny specifikací pro fonty MICR E-13B, které mohou být užitečné při kalibraci fontů, které mají být na rozložení šeku s konkrétními tiskárnami MICR.
 
-![MICR E-13B Specifikace](media/font_MICR_E-13B_Specifications.png "MICR E-13B Specifikace")
+![MICR E-13B Specifications.](media/font_MICR_E-13B_Specifications.png "MICR E-13B Specifications")
 
 ### Delimiter characters
-![Delimiter characters](media/font-micr-letters.png "Delimiter characters")
+
+![Delimiter characters.](media/font-micr-letters.png "Delimiter characters")
 
 Úplnou specifikaci fontů MICR E-13B naleznete v dokumentaci dodavatele zde: (https://www.idautomation.com/micr-fonts/e13b/).
 
 ### Specifikace MICR CMC-7
+
 The following CMC-7 fonts are available in [!INCLUDE[prod_short](includes/prod_short.md)] online:
 
 - IDAutomationCMC7
@@ -65,23 +72,26 @@ The following CMC-7 fonts are available in [!INCLUDE[prod_short](includes/prod_s
 
 Následující souhrny specifikací pro fonty MICR CMC-7, které mohou být užitečné při kalibraci fontů, které mají být na  rozložení šeků s konkrétními tiskárnami MICR.
 
-![MICR CMC-7 Specifikace](media/font_MICR_CMC-7_Specifications.png "MICR CMC-7 Specifikace")
+![MICR CMC-7 Specifications.](media/font_MICR_CMC-7_Specifications.png "MICR CMC-7 Specifications")
 
 ### Delimiter characters
-![Delimiter characters](media/font-cmc7-letters.png "Delimiter characters")
+
+![Delimiter characters for CMC-7.](media/font-cmc7-letters.png "Delimiter characters for CMC-7")
 
 Úplnou specifikaci fontů MICR CMC-7 naleznete v dokumentaci dodavatele zde: (http://www.idautomation.com/micr-fonts/cmc7/).
 
 ### Specifikace bezpečnostního fontu
+
 Následující souhrny shrnují specifikace pro bezpečnostní fonty šeků, které mohou být užitečné při kalibraci fontů, které mají být na rozložení šeku s konkrétními tiskárnami MICR.
 
-![Check Security Font Specifikace](media/font_check-security-font_Specifications.png "Check Security Font Specifikace")
+![Check Security Font Specifications.](media/font_check-security-font_Specifications.png "Check Security Font Specifications")
 
 Úplnou specifikaci bezpečnostních fontů naleznete v dokumentaci dodavatele zde: (https://www.idautomation.com/security-fonts/).
 
 Fonts for other purposes are also available in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Available Fonts](ui-fonts.md)
 
 ## Viz také
+
 [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)  
 [Fonts in Business Central](ui-fonts.md)  
 [Managing Payables](payables-manage-payables.md)  

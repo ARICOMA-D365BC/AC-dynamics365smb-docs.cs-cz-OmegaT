@@ -1,6 +1,6 @@
 ---
-    title: Design Details - Warehouse Overview | Microsoft Docs
-    description: To support the physical handling of items on the zone and bin level, all information must be traced for each transaction or movement in the warehouse. This is managed in the **Warehouse Entry** table. Each transaction is stored in a warehouse register.
+    title: Design Details - Warehouse Overview
+    description: To support the physical handling of items on the zone and bin level, all information must be traced for each transaction or movement in the warehouse.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/15/2021
     ms.author: edupont
 
 ---
@@ -24,7 +24,7 @@ Pokud se zaúčtování položky vyskytne mimo modul skladu, použije se pro syn
 
 Následující obrázek nastiňuje typické procesy skladu.
 
-![Přehled skladových prcesů](media/design_details_warehouse_management_overview.png "Přehled skladových procesů")
+![Overview of warehouse processes.](media/design_details_warehouse_management_overview.png "Overview of warehouse processes")
 
 ## Základní nebo rozšířené skladování
 Warehouse functionality in [!INCLUDE[prod_short](includes/prod_short.md)] can be implemented in different complexity levels, depending on a company’s processes and order volume. Hlavní rozdíl spočívá v tom, že činnosti se provádějí v základním skladu, v případě, že jsou konsolidovány pro více objednávek v rozšířeném skladu.

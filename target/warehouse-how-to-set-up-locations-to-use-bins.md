@@ -1,6 +1,6 @@
 ---
-    title: How to Set Up Locations to Use Bins | Microsoft Docs
-    description: Bins represent the basic warehouse structure and are used to make suggestions about the placement of items. When you have created your bins, you can define very specifically the contents that you want to place in each bin, or the bin can function as a floating bin without specified contents.
+    title: How to Set Up Locations to Use Bins
+    description: Bins represent the basic warehouse structure and are used to make suggestions about the placement and location of items. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/25/2021
     ms.author: edupont
 
 ---
@@ -22,7 +22,7 @@ To use the bin functionality at a location, you first activate the functionality
 > Before you can specify bin codes on the location card, the bin codes must be created. For more information, see [Create Bins](warehouse-how-to-create-individual-bins.md).
 
 ## Nastavení lokace pro použití přihrádek
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
 2. Vyberte lokaci, kde chcete používat přihrádky.
 3. Choose the **Edit** action.
 4. On the **Warehouse** FastTab, select the **Bin Mandatory** check box.
@@ -37,7 +37,7 @@ To use the bin functionality at a location, you first activate the functionality
 ## Plnění spotřební přihrádky 
 This flow chart shows how the **Bin Code** field on production order component lines is filled according to your location setup.
 
-![Vývojový diagram toku přihrádky](media/binflow.png "BinFlow")
+![Bin flow chart.](media/binflow.png "BinFlow")
 
 ## Viz také
 [Správa skladu](warehouse-manage-warehouse.md)    

@@ -1,5 +1,5 @@
 ---
-    title: Payment Tolerance and Payment Discount Tolerance | Microsoft Docs
+    title: Payment Tolerance and Payment Discount Tolerance
     description: You can set up payment tolerance to close an invoice when the payment does not fully cover the amount on the invoice.
     author: SorenGP
 
@@ -8,8 +8,8 @@
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.search.form: 118, 314, 395
+    ms.date: 10/29/2021
     ms.author: edupont
 
 ---
@@ -41,15 +41,15 @@ For more information, see [To enable or disable payment tolerance warning](finan
 Tolerance ve dnech a částkách vám umožňuje uzavřít fakturu, i když platba zcela nepokrývá částku na faktuře, ať už je to z důvodu překročení data splatnosti platební slevy, odečtení zboží nebo z důvodu malé chyby . To platí i pro refundace a dobropisy.
 
 To set up tolerance you have to set up various tolerance accounts, specify both payment discount tolerance and payment tolerance posting methods and then run the **Change Payment Tolerance** batch job.
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.
 2. On the **General Posting Setup** page, set up a debit and a credit sales payment tolerance account and a debit and a credit purchase payment tolerance account.
-3. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer Posting Groups**, and then choose the related link.
+3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer Posting Groups**, and then choose the related link.
 4. On the **Customer Posting Groups** page, set up a debit and a credit payment tolerance account. For more information, see [Setting Up Posting Groups](finance-posting-groups.md).
-5. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendor Posting Setup**, and then choose the related link.
+5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendor Posting Setup**, and then choose the related link.
 6. On the **Vendor Posting Groups** page, set up a debit and a credit payment tolerance account.
-7. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
+7. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
 8. Open the **General Ledger Setup** page.
-9. On the **Application** FastTab, fill in the **Pmt. skonta Tolerance Posting**, **Payment Discount Grace Period** and **Payment Tolerance Posting** fields.
+9. On the **Application** FastTab, fill in the **Payment Discount Tolerance Posting**, **Payment Discount Grace Period** and **Payment Tolerance Posting** fields.
 10. Choose the **Change Payment Tolerance** action.
 11. On the **Change Payment Tolerance** page, fill in the **Payment Tolerance %** and **Max Payment Tolerance Amount** fields, and then choose the **OK** button.
 
@@ -65,16 +65,16 @@ To set up tolerance you have to set up various tolerance accounts, specify both 
 
 ## Povolení nebo zakázání upozornění na odchylky plateb
 Upozornění odchylky platby se zobrazí při zaúčtování vyrovnání, které má zůstatek v povolené odchylce. Poté si můžete vybrat, jak chcete zůstatek zaúčtovat a dokumentovat.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Setup**, and then choose the related link.
 2. On the **General Ledger Setup** page, on the **Application** FastTab, turn on the **Payment Tolerance Warning** toggle to activate the warning. Chcete-li varování deaktivovat, vypněte zašrtávací políčko.
 
 > [!NOTE]  
-> The default option for the **Payment Tolerance Warning** page is **Leave the Balance as Remaining Amount**. The default option for the **Pmt. skonta Tolerance Warning** page the is **Do Not Accept the Late Payment Discount**.
+> The default option for the **Payment Tolerance Warning** page is **Leave the Balance as Remaining Amount**. The default option for the **Payment Discount Tolerance Warning** page the is **Do Not Accept the Late Payment Discount**.
 
 ## Blokování platební odchylky pro zákazníky
 Výchozí nastavení pro odchylku platby je povoleno. Chcete-li zakázat platební odchylku určitého zákazníka nebo dodavatele, musíte blokovat toleranci na příslušné kartě zákazníka nebo dodavatele. Následující text popisuje, jak to nastavit pro zákazníka. Kroky jsou podobné pro dodavatele.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer** or **Vendor**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer** or **Vendor**, and then choose the related link.
 2. On the **Payments** FastTab, select the **Block Payment Tolerance** check box.
 
 > [!NOTE]  
@@ -92,23 +92,23 @@ Scénáře s alternativou A nebo B představují následující:
 - **A** In this case, the payment discount tolerance warning has been turned off OR the user has the warning on and has selected to allow the late payment discount (Post the Balance as Payment Tolerance).
 - **B** In this case, the user has the warning on and has selected not to allow the late payment discount (Leave the Balance as Remaining Amount).
 
-| — | Zásoby | Platba skonta | Max. plat. zálohy | Platba skonta   | Platba skonta zálohy   | Datum platby | Platba | Typ odchylky | Všechny položky uzavřeny | Platba skonta zálohy hl. kn/CL | Platba zálohy hl. kn. |
+| — | Zásoby | Payment Discount | Max Payment Tolerance | Payment Discount Date | Payment Discount Tolerance Date | Datum platby | Payment | Typ odchylky | Všechny položky uzavřeny | Payment Discount Tolerance GL/CL | Payment Tolerance G/L |
 |-------|----------|----------------|-----------------------|---------------------|--------------------------|------------------|----------|--------------------|------------------------|------------------------------|----------------------------|  
-| 1 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | <=01/15/03 | 985 | Odchylka platby | Ano | 0 | -5 |
+| 1 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | <=01/15/03 | 985 | PaymentTolerance | Ano | 0 | -5 |
 | 2 | **1,000** | **20** | **5** | **01/15/03** | **01/20/03** | **<=01/15/03** | **980** | **None** | **Ano** | **0** | **0** |
-| 3 | 1,000 | 20 | 5 | 01/15/03 | c | <=01/15/03 | 975 | Odchylka platby | Ano | 0 | 5 |
-| 4A | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 1005 | Odchlylka skonta. | Ne, 25 na platbě. | 20/-20 | 0 |
-| 5A | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 1000 | Odchlylka skonta. | Ne, 20 na platbě. | 20/-20 | 0 |
-| 6A | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 995 | Odchlylka skonta. | Ne, 15 na platbě. | 20/-20 | 0 |
-| 4B | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 1005 | Odchylka platby | Ano | 0 | -5 |
+| 3 | 1,000 | 20 | 5 | 01/15/03 | c | <=01/15/03 | 975 | PaymentTolerance | Ano | 0 | 5 |
+| 4A | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 1005 | PaymentDiscountTolerance | No, 25 on the Payment | 20/-20 | 0 |
+| 5A | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 1000 | PaymentDiscountTolerance | No, 20 on the Payment | 20/-20 | 0 |
+| 6A | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 995 | PaymentDiscountTolerance | No, 15 on the Payment | 20/-20 | 0 |
+| 4B | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 1005 | PaymentTolerance | Ano | 0 | -5 |
 | **5B** | **1,000** | **20** | **5** | **01/15/03** | **01/20/03** | **01/16/03 01/20/03** | **1000** | **None** | **Ano** | **0** | **0** |
-| 6B | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 995 | Odchylka platby | Ano | 0 | 5 |
-| 7 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 985 | Odchlylka skonta. a platby. | Ano | 20/-20 | -5 |
-| 8 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 980 | Odchlylka skonta. | Ano | 20/-20 | 0 |
-| 9 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 975 | Odchlylka skonta. a platby. | Ano | 20/-20 | 5 |
-| 10 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 1005 | Odchylka platby | Ano | 0 | -5 |
+| 6B | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 995 | PaymentTolerance | Ano | 0 | 5 |
+| 7 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 985 | PaymentDiscountTolerance & PaymentTolerance | Ano | 20/-20 | -5 |
+| 8 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 980 | PaymentDiscountTolerance | Ano | 20/-20 | 0 |
+| 9 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | 01/16/03 01/20/03 | 975 | PaymentDiscountTolerance & PaymentTolerance | Ano | 20/-20 | 5 |
+| 10 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 1005 | PaymentTolerance | Ano | 0 | -5 |
 | **11** | **1,000** | **20** | **5** | **01/15/03** | **01/20/03** | **>01/20/03** | **1000** | **None** | **Ano** | **0** | **0** |
-| 12 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 995 | Odchylka platby | Ano | 0 | 5 |
+| 12 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 995 | PaymentTolerance | Ano | 0 | 5 |
 | 13 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 985 | Žádné | Ne, 15 na faktuře | 0 | 0 |
 | 14 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 980 | Žádné | Ne, 20 na faktuře | 0 | 0 |
 | 15 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | >01/20/03 | 975 | Žádné | Ne, 25 na faktuře | 0 | 0 |
@@ -121,7 +121,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-![Pravdlo 1 odchylky pro jednotnou platbu](media/singlePmtTolRules(Pre1503).gif "Pravdlo 1 odchylky pro jednotnou platbu")
+![Single payment tolerance rules 1.](media/singlePmtTolRules_Pre1503.gif "Single payment tolerance rules 1")
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -132,7 +132,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-![Pravdlo 2 odchylky pro jednotnou platbu](media/singlePmtTolRules(GracePeriod).gif "Pravdlo 2 odchylky pro jednotnou platbu")
+![Single payment tolerance rules 2.](media/singlePmtTolRules_GracePeriod.gif "Single payment tolerance rules 2")
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -143,7 +143,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-![Pravdlo 3 odchylky pro jednotnou platbu](media/singlePmtTolRules(Post0120).gif "Pravdlo 3 odchylky pro jednotnou platbu")
+![Single payment tolerance rules 3.](media/singlePmtTolRules_Post0120.gif "Single payment tolerance rules 3")
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -163,38 +163,38 @@ Scénáře s alternativou A, B, C, nebo D představují následující:
 - **C** - In this case, the user has the warning on and has selected to allow the late payment discount on the first invoice but not the second.
 - **D** - In this case, the user has the warning on and has selected not to allow the late payment discount on the first invoice but allowed it on the second.
 
-| — | Zásoby | Plat. sleva | Max. plat. zálohy | Platba skonta   | Platba skonta zálohy   | Datum platby | Platba | Typ odchylky | Všechny položky uzavřeny | Platba skonta zálohy hl. kn/CL | Platba zálohy hl. kn. |
+| — | Zásoby | Payment Discount | Max Payment Tolerance | Payment Discount Date | Payment Discount Tolerance Date | Datum platby | Payment | Typ odchylky | Všechny položky uzavřeny | Payment Discount Tolerance GL/CL | Payment Tolerance G/L |
 |-------|----------|---------------|-------------------|---------------------|--------------------------|------------------|---------|--------------------|------------------------|------------------------------|------------------------|  
-| 1 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | <=01/15/03 | 1920 | Odchylka platby | Ano | 0<br /><br /> 0 | -5 <br />-5 |
+| 1 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | <=01/15/03 | 1920 | PaymentTolerance | Ano | 0<br /><br /> 0 | -5 <br />-5 |
 | **2** | **1,000** <br />**1,000** | **60** <br />**30** | **5** <br />**5** | **01/15/03** <br />**01/17/03** | **01/20/03** <br />**01/22/03** | **<=01/15/03** | **1910** | **None** | **Ano** | **0**<br /><br /> **0** | 0 <br />0 |
-| 3 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | <=01/15/03 | 1900 | Odchylka platby | Ano | 0<br /><br /> 0 | 5 <br />5 |
-| 4B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1980 | Odchylka platby | Ano | 0<br /><br /> 0 | -5<br /><br /> -5 |
+| 3 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | <=01/15/03 | 1900 | PaymentTolerance | Ano | 0<br /><br /> 0 | 5 <br />5 |
+| 4B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1980 | PaymentTolerance | Ano | 0<br /><br /> 0 | -5<br /><br /> -5 |
 | **5B** | **1,000** <br />**1,000** | **60** <br />**30** | **5** <br />**5** | **01/15/03** <br />**01/17/03** | **01/20/03** <br />**01/22/03** | **01/16/03 01/17/03** | **1970** | **None** | **Ano** | **0**<br /><br /> **0** | **0**<br /><br /> **0** |
-| 6B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1960 | Odchylka platby | Ano | 0<br /><br /> 0 | 5<br /><br /> 5 |
-| 7A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1920 | Odchlylka skonta. a platby. | Ano | 60/60<br /><br /> 0/0 | -5 <br />-5 |
-| 8A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1910 | Odchlylka skonta. | Ano | 60/60<br /><br /> 0/0 | 0 <br />0 |
-| 9A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1900 | Odchlylka skonta. a platby. | Ano | 60/60 | 5 <br />5 |
-| 10B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 2010 | Odchylka platby | Ano | 0<br /><br /> 0 | -5<br /><br /> -5 |
+| 6B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1960 | PaymentTolerance | Ano | 0<br /><br /> 0 | 5<br /><br /> 5 |
+| 7A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1920 | PaymentDiscountTolerance & PaymentTolerance | Ano | 60/60<br /><br /> 0/0 | -5 <br />-5 |
+| 8A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1910 | PaymentDiscountTolerance | Ano | 60/60<br /><br /> 0/0 | 0 <br />0 |
+| 9A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/16/03 01/17/03 | 1900 | PaymentDiscountTolerance & PaymentTolerance | Ano | 60/60 | 5 <br />5 |
+| 10B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 2010 | PaymentTolerance | Ano | 0<br /><br /> 0 | -5<br /><br /> -5 |
 | **11B** | **1,000** <br />**1,000** | **60** <br />**30** | **5** <br />**5** | **01/15/03** <br />**01/17/03** | **01/20/03** <br />**01/22/03** | **01/18/03 01/20/03** | **2000** | **None** | **Ano** | **0**<br /><br /> **0** | **0**<br /><br /> **0** |
-| 12B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1990 | Odchylka platby | Ano | 0<br /><br /> 0 | 5<br /><br /> 5 |
-| 13D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1980 | Odchlylka skonta. a platby. | Ano | 0/0<br /><br /> 30/-30 | -5 <br />-5 |
-| 14D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1970 | Odchlylka skonta. | Ano | 0/0<br /><br /> 30/-30 | 0 <br />0 |
-| 15D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1960 | Odchlylka skonta. a platby. | Ano | 0/0<br /><br /> 30/-30 | 5 <br />5 |
-| 16D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1950 | Odchlylka skonta. a platby. | Ano | 60/-60<br /><br /> 0/0 | -5 <br />-5 |
-| 17D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1940 | Odchlylka skonta. | Ano | 60/-60<br /><br /> 0/0 | 0 <br />0 |
-| 18D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1930 | Odchlylka skonta. a platby. | Ano | 60/-60<br /><br /> 0/0 | 5 <br />5 |
-| 19A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1920 | Odchlylka skonta. a platby. | Ano | 60/-60<br /><br /> 30/-30 | -5 <br />-5 |
-| 20A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1910 | Odchlylka skonta. | Ano | 60/-60<br /><br /> 30/-30 | 0 <br />0 |
-| 21A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1900 | Odchlylka skonta. a platby. | Ano | 60/-60<br /><br /> 30/-30 | 5 <br />5 |
-| 22B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 2010 | Odchylka platby | Ano | 0<br /><br /> 0 | -5<br /><br /> -5 |
+| 12B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1990 | PaymentTolerance | Ano | 0<br /><br /> 0 | 5<br /><br /> 5 |
+| 13D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1980 | PaymentDiscountTolerance & PaymentTolerance | Ano | 0/0<br /><br /> 30/-30 | -5 <br />-5 |
+| 14D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1970 | PaymentDiscountTolerance | Ano | 0/0<br /><br /> 30/-30 | 0 <br />0 |
+| 15D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1960 | PaymentDiscountTolerance & PaymentTolerance | Ano | 0/0<br /><br /> 30/-30 | 5 <br />5 |
+| 16D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1950 | PaymentDiscountTolerance & PaymentTolerance | Ano | 60/-60<br /><br /> 0/0 | -5 <br />-5 |
+| 17D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1940 | PaymentDiscountTolerance | Ano | 60/-60<br /><br /> 0/0 | 0 <br />0 |
+| 18D | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1930 | PaymentDiscountTolerance & PaymentTolerance | Ano | 60/-60<br /><br /> 0/0 | 5 <br />5 |
+| 19A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1920 | PaymentDiscountTolerance & PaymentTolerance | Ano | 60/-60<br /><br /> 30/-30 | -5 <br />-5 |
+| 20A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1910 | PaymentDiscountTolerance | Ano | 60/-60<br /><br /> 30/-30 | 0 <br />0 |
+| 21A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/18/03 01/20/03 | 1900 | PaymentDiscountTolerance & PaymentTolerance | Ano | 60/-60<br /><br /> 30/-30 | 5 <br />5 |
+| 22B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 2010 | PaymentTolerance | Ano | 0<br /><br /> 0 | -5<br /><br /> -5 |
 | **23B** | **1,000** <br />**1,000** | **60** <br />**30** | **5** <br />**5** | **01/15/03** <br />**01/17/03** | **01/20/03** <br />**01/22/03** | **01/21/03 01/22/03** | **2000** | **None** | **Ano** | **0**<br /><br /> **0** | **0**<br /><br /> **0** |
-| 24B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1990 | Odchylka platby | Ano | 0<br /><br /> 0 | 5<br /><br /> 5 |
-| 25A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1980 | Odchlylka skonta. a platby. | Ano | 0/0<br /><br /> 30/30 | -5 <br />-5 |
-| 26A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1970 | Odchlylka skonta. | Ano | 0/0<br /><br /> 30/30 | 0 <br />0 |
-| 27A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1960 | Odchlylka skonta. a platby. | Ano | 0/0<br /><br /> 30/30 | 5 <br />5 |
-| 28 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | >01/22/03 | 2010 | Odchylka platby | Ano | 0 | -5 |
+| 24B | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1990 | PaymentTolerance | Ano | 0<br /><br /> 0 | 5<br /><br /> 5 |
+| 25A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1980 | PaymentDiscountTolerance & PaymentTolerance | Ano | 0/0<br /><br /> 30/30 | -5 <br />-5 |
+| 26A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1970 | PaymentDiscountTolerance | Ano | 0/0<br /><br /> 30/30 | 0 <br />0 |
+| 27A | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | 01/21/03 01/22/03 | 1960 | PaymentDiscountTolerance & PaymentTolerance | Ano | 0/0<br /><br /> 30/30 | 5 <br />5 |
+| 28 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | >01/22/03 | 2010 | PaymentTolerance | Ano | 0 | -5 |
 | **29** | **1,000** <br />**1,000** | **60** <br />**30** | **5** <br />**5** | **01/15/03** <br />**01/17/03** | **01/20/03** <br />**01/22/03** | **>01/22/03** | **2000** | **None** | **Ano** | **0** | **0** |
-| 30 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | >01/22/03 | 1990 | Odchylka platby | Ano | 0 | 5 |
+| 30 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | >01/22/03 | 1990 | PaymentTolerance | Ano | 0 | 5 |
 
 ### Schémata rozsahu plateb
 Ve vztahu k výše uvedenému scénáři jsou diagramy rozsahů plateb následující:
@@ -204,7 +204,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-:::image type="content" source="media/multiplePmtTolRules(Pre1503).gif" alt-text="Multiple payment tolerance rules 1a":::
+:::image type="content" source="media/multiplePmtTolRules_Pre1503.gif" alt-text="Multiple payment tolerance rules 1a":::
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -215,7 +215,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-:::image type="content" source="media/multiplePmtTolRules(GracePeriodInv1-2).gif" alt-text="Multiple payment tolerance rules 2":::
+:::image type="content" source="media/multiplePmtTolRules_GracePeriodInv1-2.gif" alt-text="Multiple payment tolerance rules 2":::
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -226,7 +226,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-:::image type="content" source="media/multiplePmtTolRules(GracePeriodInv1).gif" alt-text="Multiple payment tolerance rules 3":::
+:::image type="content" source="media/multiplePmtTolRules_GracePeriodInv1.gif" alt-text="Multiple payment tolerance rules 3":::
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -237,7 +237,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-:::image type="content" source="media/multiplePmtTolRules(GracePeriodInv2).gif" alt-text="Multiple payment tolerance rules 4":::
+:::image type="content" source="media/multiplePmtTolRules_GracePeriodInv2.gif" alt-text="Multiple payment tolerance rules 4":::
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 
@@ -248,7 +248,7 @@ Zbývající částka na
 
 Běžná pravidla vyrovnání
 
-:::image type="content" source="media/multiplePmtTolRules(Post0122).gif" alt-text="Multiple payment tolerance rules 5":::
+:::image type="content" source="media/multiplePmtTolRules_Post0122.gif" alt-text="Multiple payment tolerance rules 5":::
 
 (1) Pokud platba spadá do těchto rozsahů, mohou být všechny položky vyrovnání uzavřeny s tolerancí nebo bez ní..
 

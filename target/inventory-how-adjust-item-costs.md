@@ -1,6 +1,6 @@
 ---
-title: Manually Adjust the Costs of Items| Microsoft Docs
-description: You can adjust the inventory valuation of an item using the FIFO or Average costing methods, for example, when item costs change for reasons other than transactions.
+title: Manually Adjust the Costs of Items
+description: You can manually adjust the inventory valuation of an item using the FIFO or Average costing methods when the costs of products change.
 services: project-madeira
 documentationcenter: ''
 author: SorenGP
@@ -11,7 +11,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cost adjustment, cost forwarding, costing method, inventory valuation, costing
-ms.date: 04/01/2021
+ms.date: 06/16/2021
 ms.author: edupont
 
 ---
@@ -33,7 +33,7 @@ Pokud použijete metodu průměrné kalkulace, pořizovací cena zboží se vypo
 Funkce úpravy nákladů zpracovává pouze hodnoty, které ještě nebyly upraveny. Pokud se funkce setká se situací, kdy je třeba přenést změněné příchozí náklady do přidružených odchozích položek, vytvoří se nové upravené položky, které jsou založeny na informacích v položkách původní hodnoty, ale obsahují upravenou částku. Funkce úpravy nákladů používá datum zaúčtování položky původní hodnoty do upravené položky, pokud se tento datum nenachází v uzavřeném období zásob. V takovém případě program používá datum zahájení dalšího otevřeného období zásob. Pokud se nepoužije doba zásob, pak bude v poli **Povolit odesílání z** na stránce **Nastavení financí** definováno, kdy bude zaúčtována upravená položka.
 
 ## Ruční adjustace nákladů zboží
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte  **Adjustace nákladů-položky zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Adjust Cost - Item Entries**, and then choose the related link.
 2. V stránka **Adjustace nákladů - položky zboží** zadejte, pro které zboží chcete upravit náklady.
 3. Zvolte tlačítko **OK**.
 
@@ -42,7 +42,7 @@ Pokud potřebujete změnit přímou pořizovací cenu pro zboží, můžete pou�
 
 Dávková úloha mění obsah v poli **Jednotková cena** na kartě zboží. Dávková úloha mění obsah pole stejným způsobem pro všechno zboží nebo jen pro vybrané zboží. Dávková úloha násobí hodnotu v poli pomocí faktoru úpravy, který zadáte.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Upravit náklady/ceny zboží** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Adjust Item Costs/Prices**, and then choose the related link.
 2. V poli **Upravit pole** zadejte, které zboží nebo pole karty SKJ chcete upravit.
 3. V poli **Faktor úpravy** zadejte faktor, podle kterého bude hodnota upravena. Například zadejte **1,5** pro zvýšení hodnoty o 50%.
 4. Na záložce **Zboží** nastavte filtry, aby určily například, které zboží se má zpracovávat dávkovou úlohou.

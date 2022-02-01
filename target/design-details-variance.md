@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/08/2021
     ms.author: edupont
 
 ---
@@ -34,7 +34,7 @@ Následující příklad ilustruje, jak se vypočítává odchylka u koupeného 
 
 Následující tabulka ukazuje výsledné hodnoty.
 
-![Výpočet odchylky nákupu](media/design_details_inventory_costing_11_purchase_variance.png "Výpočet odchylky nákupu")
+![Purchase variance calculation.](media/design_details_inventory_costing_11_purchase_variance.png "Purchase variance calculation")
 
 ## Stanovení standardních nákladů
 Standardní cena se používá při výpočtu odchylky a částky, která se má kapitalizovat. Vzhledem k tomu, že standardní náklady lze v průběhu času měnit z důvodu ruční aktualizace výpočtu, potřebujete bod v čase, kdy jsou standardní náklady fixovány pro výpočet odchylky. Tímto bod je, když je zvýšení zásob fakturováno. U vyrobených nebo smontovaných položek je okamžikem, kdy jsou stanoveny standardní náklady a to je okamžik, kdy jsou náklady adjustovány.
@@ -44,16 +44,16 @@ Následující tabulka ukazuje, jak se při použití funkce Vypočítat standar
 | Podíl nákladů | Zakoupené zboží | Vyrobené/smontované zboží |
 |----------------|--------------------|------------------------------|  
 | **Pevná pořizovací cena** | Jedna úroveň nákl. na materiál + Jedna úroveň nákl. na kapacitu + Jedna úroveň nákl. subdod. + Jed.ú. režijních nákl.kapacity + J.úroveň režijních nákl.výroby |
-| **Single-Level Material Cost** | Pořizovací cena | ![Rovnice 1](media/design_details_inventory_costing_11_equation_1.png "Rovnice 1") |
-| **Single-Level Capacity Cost** | Nelze použít | ![Rovnice 2](media/design_details_inventory_costing_11_equation_2.png "Rovnice 2") |
-| **Single-Level Subcontrd. Cost** | Nelze použít | ![Rovnice 3](media/design_details_inventory_costing_11_equation_3.png "Rovnice 3") |
-| **Single-Level Cap. Ovhd Cost** | Nelze použít | ![Rovnice 4](media/design_details_inventory_costing_11_equation_4.png "Rovnice 4") |
+| **Single-Level Material Cost** | Pořizovací cena | ![Equation 1.](media/design_details_inventory_costing_11_equation_1.png "Equation 1") |
+| **Single-Level Capacity Cost** | Nelze použít | ![Equation 2.](media/design_details_inventory_costing_11_equation_2.png "Equation 2") |
+| **Single-Level Subcontrd. Cost** | Nelze použít | ![Equation 3.](media/design_details_inventory_costing_11_equation_3.png "Equation 3") |
+| **Single-Level Cap. Ovhd Cost** | Nelze použít | ![Equation 4.](media/design_details_inventory_costing_11_equation_4.png "Equation 4") |
 | **Single-Level Mfg. Ovhd Cost** | Nelze použít | (Jedna úroveň nákl. na materiál + Jedna úroveň nákl. na kapacitu + Jedna úroveň nákl. subdod.) * Nepřímé náklady % / 100 + Režijní náklady |
-| **Rolled-up Material Cost** | Pořizovací cena | ![Rovnice 5](media/design_details_inventory_costing_11_equation_5.png "Rovnice 5") |
-| **Rolled-up Capacity Cost** | Nelze použít | ![Rovnice 6](media/design_details_inventory_costing_11_equation_6.png "Rovnice 6") |
-| **Rolled-Up Subcontracted Cost** | Nelze použít | ![Rovnice 7](media/design_details_inventory_costing_11_equation_7.png "Rovnice 7") |
-| **Rolled-up Capacity Ovhd. Cost** | Nelze použít | ![Rovnice 8](media/design_details_inventory_costing_11_equation_8.png "Rovnice 8") |
-| **Rolled-up Mfg. režijních Cost** | Nelze použít | ![Rovnice 9](media/design_details_inventory_costing_11_equation_9.png "Rovnice 9") |
+| **Rolled-up Material Cost** | Pořizovací cena | ![Equation 5.](media/design_details_inventory_costing_11_equation_5.png "Equation 5") |
+| **Rolled-up Capacity Cost** | Nelze použít | ![Equation 6.](media/design_details_inventory_costing_11_equation_6.png "Equation 6") |
+| **Rolled-Up Subcontracted Cost** | Nelze použít | ![Equation 7.](media/design_details_inventory_costing_11_equation_7.png "Equation 7") |
+| **Rolled-up Capacity Ovhd. Cost** | Nelze použít | ![Equation 8.](media/design_details_inventory_costing_11_equation_8.png "Equation 8") |
+| **Rolled-up Mfg. režijních Cost** | Nelze použít | ![Equation 9.](media/design_details_inventory_costing_11_equation_9.png "Equation 9") |
 
 ## Viz také
 [Design Details: Inventory Costing](design-details-inventory-costing.md)   

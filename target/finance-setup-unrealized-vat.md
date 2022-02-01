@@ -1,5 +1,5 @@
 ---
-title: Setting Up Unrealized Value Added Tax | Microsoft Docs
+title: Setting Up Unrealized Value Added Tax
 description: If you're using cash-based accounting, you can specify how to handle unrealized VAT for sales and purchases.
 author: bholtorf
 
@@ -9,21 +9,25 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cash, VAT, unrealized, cash-based
+ms.search.form: 118, 472, 473
 ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
 
 # Nastavení nerealizované DPH pro účetnictví založené na hotovosti
+
 If you are using cash-based accounting methods, you can set up [!INCLUDE[prod_short](includes/prod_short.md)] to handle unrealized VAT.
 
 ## Použití účtů účetní osnovy k nerealizované DPH
+
 Můžete zvolit, aby byly částky DPH vypočteny a zaúčtovány na dočasný účet účetní osnovy při zaúčtování faktury, poté zaúčtovány na správný účet a nakonec zahrnuty do výkazů DPH při zaúčtování skutečné platby faktury. Než to budete moci provést, musíte dokončit nastavení účtování DPH.
 
 Chcete-li použít účty pro nerealizovanou DPH, postupujte takto:
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, and enter **General Ledger Setup**.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, and enter **General Ledger Setup**.
 2. On the **General Ledger Setup** page, select the **Unrealized VAT** check box.
-3. Choose the **Search for Page or Report** icon ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do"), and enter **VAT Posting Setup**.
+3. Choose the **Search for Page or Report** icon ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do"), and enter **VAT Posting Setup**.
 4. On the **VAT Posting Setup** page, choose the VAT posting group, and then choose the **Edit** action.
 5. In the **Unrealized VAT Type** field, choose an option to specify how to allocate payments to the invoice amount (excluding VAT) and the VAT amount itself, and how to transfer VAT amounts from the unrealized VAT account to the realized account. Následující tabulka popisuje možnosti.
 

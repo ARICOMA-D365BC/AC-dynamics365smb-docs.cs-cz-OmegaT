@@ -35,7 +35,7 @@ Existují dva typy rozvržení sestav, které můžete použít v sestavách - W
 ## Přehled rozvržení sestavy aplikace Word
 Rozložení sestavy aplikace Word je založeno na dokumentu aplikace Word (typ souboru DOCX). Rozložení sestav aplikace Word umožňují navrhovat rozložení sestav pomocí aplikace Microsoft Word 2013 nebo novější. Rozložení sestavy aplikace Word určuje obsah zprávy - určuje, jak jsou tyto prvky obsahu uspořádány a jak vypadají. Dokument rozložení sestavy aplikace Word obvykle používá tabulky k uspořádání obsahu, kde mohou buňky obsahovat datová pole, text nebo obrázky.
 
-![Příklad dokumentu rozložení sestavy aplikace Word pro NAV](media/nav_wordreportlayout_edit_in_word_example.png "NAV_WordReportLayout_Edit_In_Word_Example")
+![Example of a word report layout document for NAV.](media/nav_wordreportlayout_edit_in_word_example.png "NAV_WordReportLayout_Edit_In_Word_Example")
 
 ## Přehled rozvržení RDLC
 Rozložení RDLC je založeno na rozložení definic klientských sestav (typy souborů .rdlc nebo .rdl). Tato rozvržení jsou vytvářena a upravována pomocí SQL Server Report Builder. Koncepce návrhu rozvržení RDLC je podobná rozvržení aplikace Word, kde rozvržení definuje obecný formát sestavy a určuje pole z datové sady, která má být zahrnuta. Navrhování rozložení RDLC je pokročilejší než rozložení aplikace Word. For more information, see [Designing RDLC Report Layouts](/dynamics-nav/Designing-RDLC-Report-Layouts).

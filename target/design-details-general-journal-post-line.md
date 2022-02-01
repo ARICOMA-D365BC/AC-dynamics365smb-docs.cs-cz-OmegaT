@@ -1,5 +1,5 @@
 ---
-    title: Design Details - General Journal Post Line | Microsoft Docs
+    title: Design Details - General Journal Post Line
     description: This topic provides insight into the concepts and principles that are used to redesign the general journal posting line feature in Business Central.
     author: SorenGP
 
@@ -9,22 +9,26 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords: design, general journal, posting, codeunit 12
-    ms.date: 04/01/2021
+    ms.date: 06/14/2021
     ms.author: edupont
 
 ---
 # Detaily návrhu: Účtování řádku finančního deníku
-This documentation provides detailed technical insight into the concepts and principles that are used to redesign the general journal posting line feature in [!INCLUDE[prod_short](includes/prod_short.md)]. Díky redesignu je Codeunit 12 jednodušší a udržovatelnější. Dokumentace začíná popisem koncepčního přehledu redesignu. Poté vysvětluje technickou architekturu a ukazuje změny, které jsou výsledkem redesignu.
+
+This documentation provides detailed technical insight into the concepts and principles that were used to redesign the general journal posting line feature in [!INCLUDE[prod_short](includes/prod_short.md)]. The redesign made codeunit 12 simpler and more maintainable. Dokumentace začíná popisem koncepčního přehledu redesignu. Poté vysvětluje technickou architekturu a ukazuje změny, které jsou výsledkem redesignu.
+
+> [!IMPORTANT]
+> The information in this section applies to the redesign in an earlier version of the product, Microsoft Dynamics NAV 2013 R2.
 
 ## V této části
+
 [General Journal Post Line Overview](design-details-general-journal-post-line-overview.md)  
 [Design Details: Posting Interface Structure](design-details-posting-interface-structure.md)  
-[Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)  
-[Codeunit 12 Changes: Mapping Global Variables for General Journal Post Line](design-details-codeunit-12-changes-mapping-global-variables-for-general-journal-post-line.md)  
-[Codeunit 12 Changes: Changes in General Journal Post Procedures](design-details-codeunit-12-changes-changes-in-general-journal-post-procedures.md)
+[Design Details: Posting Engine Structure](design-details-posting-engine-structure.md)
 
 ## Viz také
-[Working with General Journals](ui-work-general-journals.md)
 
+[Working with General Journals](ui-work-general-journals.md)
+[Design Details: General Journal Post Line (Dynamics NAV)](/dynamics-nav-app/design-details-general-journal-post-line)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

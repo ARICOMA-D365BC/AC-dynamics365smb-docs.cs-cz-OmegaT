@@ -18,7 +18,7 @@ Chcete-li opravit částku, která bude každoročně fakturována, můžete zm�
 
 ## Pro změnu roční částky servisní smlouvy nebo nabídky smlouvy
 
-1. Vyberte  <x1 />Žárovka, která otevře funkci Řekněte mi <x2 /> Řekněte mi, co chcete udělat <x3 />, zadejte **Servisní smlouvy** nebo **Nabídky servisních smlouv </ g5 > a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts** or **Service Contract Quotes**,and then choose the related link.
 2. Vyberte smlouvu nebo nabídku smlouvy.
 3. Zvolte akci **Otevřít smlouvu** a otevřete smlouvu nebo nabídku smlouvy pro úpravy.
 4. Zaškrtněte políčko **Povolit nevyrovnané částky**, pokud chcete změnit roční částku a ručně rozdělit roční částku na řádcích smlouvy. V opačném případě zrušte zaškrtnutí políčka, abyste po změně roční částky automaticky rozdělili roční rozdíl částek na řádky smlouvy.

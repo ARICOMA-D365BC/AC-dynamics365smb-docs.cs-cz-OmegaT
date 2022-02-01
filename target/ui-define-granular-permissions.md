@@ -1,6 +1,6 @@
 ---
-title: Define Granular Permissions  | Microsoft Docs
-description: Describes how to give users access to objects by assigning permission sets to them.
+title: Define Granular Permissions
+description: This topic describes how to define granular permissions by giving certain users access to objects and assigning permission sets to them.
 author: SorenGP
 
 ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: access, right, security
-ms.date: 04/01/2021
+ms.date: 06/23/2021
 ms.author: edupont
 
 ---
@@ -17,7 +17,7 @@ ms.author: edupont
 
 The [!INCLUDE[prod_short](includes/prod_short.md)] security system allows you to control which objects a user can access within each database or environment. Pro každého uživatele můžete určit, zda je schopen číst, upravovat nebo zadávat data do vybraných databázových objektů. For detailed information, see [Data Security](/dynamics365/business-central/dev-itpro/security/data-security?tabs=object-level) in the Developer and ITPro help for [!INCLUDE[prod_short](includes/prod_short.md)].
 
-Před přiřazením oprávnění uživatelům a skupinám uživatelů je nutné definovat, kdo se může přihlásit  pomocí vytvoření uživatelů podle licence definované v Microsoftu 365 Admin Center. For more information, see [Create Users According to Licenses](ui-how-users-permissions.md).
+Before you assign permissions to users and user groups, you must define who can sign in by creating users according to the license as defined in the Microsoft 365 Admin Center. For more information, see [Create Users According to Licenses](ui-how-users-permissions.md).
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], there are two levels of permissions to database objects:
 
@@ -49,7 +49,7 @@ Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
 
 ### Přiřazení sady oprávnění na kartě uživatele
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
 2. Vyberte uživatele, kterému chcete přiřadit oprávnění.
    Any permission sets that are already assigned to the user are displayed in the **Permission Sets** FactBox.
 3. Choose the **Edit** action to open the **User Card** page.
@@ -57,20 +57,20 @@ Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
 
 ### To assign a permission set on the Permission Set by User page
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
 2. On the **Users** page, select the relevant user, and then choose the **Permission Set by User** action.
 3. On the **Permission Set by User** page, select the **[user name]** check box on a line for the relevant permission set to assign the set to the user.
 4. Select the **All Users** check box to assign the permission set to all users.
 
 ## Získání přehledu oprávnění uživatele
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
 2. Otevřete kartu příslušného uživatele.
 3. Choose the **Effective Permissions** action.
 
    The **Permissions** part lists all the database objects that the user has access to. Tuto sekci nelze upravit.
 
-   The **By Permission Set** part shows the assigned permission sets through which the permissions are granted to the user, the source and type of the permission set, and to which extend the different access types are permitted.
+   The **By Permission Set** part shows the assigned permission sets through which the permissions are granted to the user, the source and type of the permission set, and to which extent the different access types are permitted.
 
    For each row that you select in the **Permissions** section, the **By Permission Set** section shows which permission set or sets that the permission is granted through. In this section, you can edit the value in each of the five access type fields, **Read Permission**, **Insert Permission**, **Modify Permission**, **Delete Permission**, **Execute Permission**.
 
@@ -99,7 +99,7 @@ Sady oprávnění fungují jako kontejnery oprávnění, takže můžete snadno 
 
 ### Vytvoření nové sady oprávnění od nuly
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Permission Sets**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Permission Sets**, and then choose the related link.
 2. To create a new permission set, choose the **New** action.
 3. Na novém řádku vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
    When you have created a permission set, you must add the actual permissions. For more information, see [To create or modify permissions manually](ui-define-granular-permissions.md#to-create-or-modify-permissions-manually).
@@ -156,6 +156,9 @@ In each of the five access type fields, **Read Permission**, **Insert Permission
 | **Indirect** | Uživatel může provést akci na dotyčném objektu, ale pouze prostřednictvím jiného souvisejícího objektu, ke kterému má uživatel plný přístup. For more information about indirect permissions, see [Permissions Property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-permissions-property) in Developer and IT-Pro Help | Druhý nejvyšší |
 | **Blank** | Uživatel nemůže provést akci s daným objektem. | Nejnižší |
 
+> [!IMPORTANT]
+> Use caution when assigning **Insert Permission** or **Modify Permission** to the **9001 User Group Member** or **9003 User Group Permission Set** table. Any users assigned to the permission set could potentially assign themselves to other user groups, which in turn, may give them unintended permissions.
+
 ### Příklad - Nepřímé opravnění
 
 Můžete přiřadit nepřímé oprávnění k použití objektu pouze prostřednictvím jiného objektu.
@@ -165,7 +168,7 @@ Uživatel však nemusí mít úplný přístup k tabulce Prodejní řádek, aby 
 
 ## Vytvoření nebo úprava sady oprávnění zaznamenáním vlastní akce
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Permission Sets**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Permission Sets**, and then choose the related link.
 2. Alternatively, on the **Users** page, choose the **Permission Sets** action.
 3. On the **Permission Sets** page, choose the **New** Action.
 4. Na novém řádku vyplňte pole dle potřeby.
@@ -194,7 +197,7 @@ Sady oprávnění přiřazené uživateli prostřednictvím skupiny uživatelů 
 
 Následující postup vysvětluje, jak vytvořit skupiny uživatelů ručně. To create user groups automatically, see [To copy a user group and all its permission sets](ui-define-granular-permissions.md#to-copy-a-user-group-and-all-its-permission-sets).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
 2. Alternatively, on the **Users** page, choose the **User Groups** action.
 3. On the **User Group** page, choose the **User Group Members** action.
 4. On the **User Group Members** page, choose the **Add Users** action.
@@ -206,7 +209,7 @@ Chcete-li rychle definovat novou skupinu uživatelů, můžete zkopírovat všec
 > [!NOTE]
 > The user group members are not copied to the new user group. Poté je musíte přidat ručně. For more information, see [To group users in user groups](ui-define-granular-permissions.md#to-group-users-in-user-groups).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
 2. Select the user group that you want to copy, and then choose the **Copy User Group** action.
 3. In the **New User Group Code** field, enter a name for the group, and then choose the **OK** button.
 
@@ -214,7 +217,7 @@ The new user group is added to the **User Groups** page. Pokračujte v přidáv�
 
 ### Přiřazení sad oprávnění skupinám uživatelů
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Groups**, and then choose the related link.
 2. Vyberte skupinu uživatelů, kterým chcete přiřadit oprávnění.
    Any permission sets that are already assigned to the user are displayed in the **Permission Sets** FactBox.
 3. Choose the **User Permission Sets** action to open the **User Permission Sets** page.
@@ -224,7 +227,7 @@ The new user group is added to the **User Groups** page. Pokračujte v přidáv�
 
 The following procedure explains how to assign permission sets to a user group on the **Permission Set by User Group** page.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
 2. On the **Users** page, select the relevant user, and then choose the **Permission Set by User Group** action.
 3. On the **Permission Set by User Group** page, select the **[user group name]** check box on a line for the relevant permission set to assign the set to the user group.
 4. Select the **All User Groups** check box to assign the permission set to all user groups.
@@ -237,7 +240,7 @@ The following procedure explains how to assign permission sets to a user group o
 
 Správci mohou definovat časové období, během kterého mohou zadaní uživatelé účtovat, a také určit, zda systém zaznamenává dobu, po kterou jsou uživatelé přihlášeni. Administrátoři mohou také uživatelům přiřadit centra odpovědnosti. For more information, see [Work with Responsibility Centers](inventory-responsibility-centers.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Setup**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Setup**, and then choose the related link.
 2. On the **User Setup** page opens, choose the **New** action.
 3. In the **User ID** field, enter the ID of a user, or choose the field to see all current Windows users in the system.
 4. Podle potřeby vyplňte pole.

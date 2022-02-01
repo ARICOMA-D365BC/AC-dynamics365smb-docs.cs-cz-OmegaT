@@ -17,7 +17,7 @@ Když se uživatel poprvé přihlásí do nové společnosti v [!INCLUDE [prod_s
 
 1. Přihlaste se do [!INCLUDE[prod_short](includes/prod_short.md)] na [https://businesscentral.dynamics.com/](https://businesscentral.dynamics.com/).
 
-2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Správa kontrolního seznamu<x5/> a poté vyberte související odkaz.
+2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Checklist Administration**, and choose the related link.
 
 3. Zvolte tlačítko **Nový** a vyberte **Vytvořit položku kontrolního seznamu**.
 

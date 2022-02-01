@@ -1,7 +1,7 @@
 ---
-    title: Picking and Shipping in Basic Warehouse Configurations | Microsoft Docs
-    description: In Business Central, the outbound processes for picking and shipping can be performed in four ways using different functionalities depending on the warehouse complexity level.
-    author: SorenGP
+    title: Picking and Shipping in Basic Warehouse Config
+    description: In Business Central, the outbound processes for picking and shipping can be performed in the following four ways depending on the warehouse complexity level.
+    author: jill-kotel-andersson
 
     ms.service: dynamics365-business-central
     ms.topic: conceptual
@@ -9,13 +9,13 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/24/2021
     ms.author: edupont
 
 ---
 # Walkthrough: Picking and Shipping in Basic Warehouse Configurations
 
-[!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)] -->
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], the outbound processes for picking and shipping can be performed in four ways using different functionalities depending on the warehouse complexity level.
 
@@ -30,23 +30,17 @@ For more information, see [Design Details: Outbound Warehouse Flow](design-detai
 
 The following walkthrough demonstrates method B in the previous table.
 
-> [!NOTE]
-> [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
-
 ## O tomto návodu
 
 In basic warehouse configurations where your location is set up to require pick processing but not ship processing, you use the **Inventory Pick** page to record and post pick and ship information for your outbound source documents. The outbound source document can be a sales order, purchase return order, outbound transfer order, or a production order with component need.
 
 Tento návod ukazuje následující úkoly:
 
-- Setting up SILVER location for inventory picks.
-- Creating a sales order for customer 10000 for 30 loudspeakers.
+- Setting up SOUTH location for inventory picks.
+- Creating a sales order for customer 10000 for 30 Amsterdam Lamps.
 - Releasing the sales order for warehouse handling.
 - Creating an inventory pick based on a released source document.
 - Registering the warehouse movement from the warehouse and at the same time posting the sales shipment for the source sales order.
-
-> [!NOTE]
-> [!INCLUDE [locations-cronus](includes/locations-cronus.md)]
 
 ## Role
 
@@ -56,43 +50,54 @@ Tento návod ukazuje úkoly, které jsou prováděny následujícími uživatels
 - Zpracovatel objednávek
 - Warehouse Worker
 
-## Předpoklady
+<!-- ## Prerequisites
 
-K dokončení tohoto návodu budete potřebovat:
+To complete this walkthrough, you will need:  
 
-- For [!INCLUDE[prod_short](includes/prod_short.md)] online, a company based on the **Advanced Evaluation - Complete Sample Data** option in a sandbox environment. For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, CRONUS International Ltd. installed.
-- To make yourself a warehouse employee at the location SILVER by following these steps:
-
-   1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci skladu** a poté vyberte související odkaz.
-   2. Vyberte pole **ID uživatele** a na stránce **Uživatelé** vyberte svůj vlastní uživatelský účet.
-   3. In the **Location Code** field, enter SILVER.
-   4. Vyberte pole **Výchozí**.
-
-- Make item LS-81 available at SILVER location by following these steps:
-
-   1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky zboží** a poté vyberte související odkaz.
-   2. Open the default journal, and then create two item journal lines with the following information about the work date (January 23).
-
-      | Typ položky | Item Number | Kód lokace | Bin Code | Množství |
-      |----------------|-----------------|-------------------|--------------|--------------|  
-      | Positive Adjmt. | LS-81 | STŘÍBRNÝ | S-01-0001 | 20 |
-      | Positive Adjmt. | LS-81 | STŘÍBRNÝ | S-01-0002 | 20 |
-
-   3. Choose the **Post** action, and then select the **Yes** button.
+- For [!INCLUDE[prod_short](includes/prod_short.md)] online, a company based on the **Advanced Evaluation - Complete Sample Data** option in a sandbox environment. For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, CRONUS installed.
+ -->
 
 ## Příběh
 
-Ellen, the warehouse manager at CRONUS, sets up SILVER warehouse for basic pick handling where warehouse workers process outbound orders individually. Susan, the order processor, creates a sales order for 30 units of item LS-81 to be shipped to customer 10000 from the SILVER Warehouse. John, the warehouse worker must make sure that the shipment is prepared and delivered to the customer. John manages all involved tasks on the **Inventory Pick** page, which automatically points to the bins where LS-81 is stored.
+Ellen, the warehouse manager at CRONUS, sets up SOUTH warehouse for basic pick handling where warehouse workers process outbound orders individually. Susan, the order processor, creates a sales order for 30 units of item 1928-S to be shipped to customer 10000 from the SOUTH Warehouse. John, the warehouse worker must make sure that the shipment is prepared and delivered to the customer. John manages all involved tasks on the **Inventory Pick** page, which automatically points to the bins where 1928-S is stored.
 
-## Setting Up the Location
+[!INCLUDE[set_up_location.md](includes/set_up_location.md)]
 
-The setup of the **Location Card** page defines the company's warehouse flows.
+### Setting Up the Bin Codes
+Once you have the location set up, you must add two bins.
 
-### To set up the location
+#### To setup the bin codes
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
-2. Open the SILVER location card.
-3. On the **Warehouse** FastTab, choose the **Require Pick** check box.
+1. Select the **Bins** action.
+2. Create two bins, with the codes *S-01-0001* and *S-01-0002*.
+
+### Making Yourself a Warehouse Employee at Location SOUTH
+
+In order to use this functionality, you must add yourself to the location as a warehouse worker.
+
+#### To make yourself a warehouse employee
+
+1. Choose the ![Lightbulb that opens the Tell Me feature first.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.
+2. Choose the **User ID** field, and select your own user account on the **Warehouse Employees** page.
+3. In the **Location Code** field, choose SOUTH.
+4. Select the **Default** field, and then select the **Yes** button.
+
+### Making Item 1928-S Available
+
+To make item 1928-S available at the SOUTH location follow these steps:
+
+1. Choose the ![Lightbulb that opens the Tell Me feature second.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link.
+2. Open the default journal, and then create two item journal lines with the following information about the work date (January 23).
+
+   | Typ položky | Item Number | Kód lokace | Bin Code | Množství |
+   |----------------|-----------------|-------------------|--------------|--------------|  
+   | Positive Adjmt. | 1928-S | SOUTH | S-01-0001 | 20 |
+   | Positive Adjmt. | 1928-S | SOUTH | S-01-0002 | 20 |
+
+   By default, the **Bin Code** field on the sales lines are hidden, so you must display it. To do this you need to personalize the page. For more information, see [To start personalizing a page through the Personalizing banner](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).
+
+3. Choose **Actions**, then **Posting**, and then choose **Post**.
+4. Select the **Yes** button.
 
 ## Creating the Sales Order
 
@@ -100,13 +105,13 @@ Sales orders are the most common type of outbound source document.
 
 ### Vytvoření prodejní objednávky
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature third.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Create a sales order for customer 10000 on the work date (January 23) with the following sales order line.
 
    | Zboží | Kód lokace | Množství |
    |----|-------------|--------|  
-   | LS_81 | STŘÍBRNÝ | 30 |
+   | 1928-S | SOUTH | 30 |
 
    Proceed to notify the warehouse that the sales order is ready for warehouse handling.
 
@@ -120,7 +125,7 @@ On the **Inventory Pick** page, you can manage all outbound warehouse activities
 
 ### To pick and ship items
 
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Picks**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature fourth.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Picks**, and then choose the related link.
 2. Vyberte akci **Nový**.
 
    Make sure that the **No.** field on the **General** FastTab is filled in.
@@ -133,7 +138,7 @@ On the **Inventory Pick** page, you can manage all outbound warehouse activities
    Alternatively, in the **Qty. to Handle** field, enter 10 and 20 respectively on the two inventory pick lines.
 6. Choose the **Post** action, select **Ship**, and then choose the **OK** button.
 
-   The 30 loudspeakers are now registered as picked from bins S-01-0001 and S-01-0002, and a negative item ledger entry is created reflecting the posted sales shipment.
+   The 30 Amsterdam Lamps are now registered as picked from bins S-01-0001 and S-01-0002, and a negative item ledger entry is created reflecting the posted sales shipment.
 
 ## Viz také
 

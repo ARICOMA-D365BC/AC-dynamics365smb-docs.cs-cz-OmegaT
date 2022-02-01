@@ -1,6 +1,6 @@
 ---
-    title: How to Assign Default Bins to Items | Microsoft Docs
-    description: If you are using bins at a location, assigning default bins to your items can make the process of shipping, receiving, and moving your items much easier. When a default bin is assigned to an item, this bin is suggested every time you initiate a transaction for this item.
+    title: How to Assign Default Bins to Items
+    description: If you are using bins at a location, assigning default bins to your items can make the process of shipping, receiving, and moving your items much easier.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/25/2021
     ms.author: edupont
 
 ---
@@ -17,7 +17,7 @@
 Pokud používáte přihrádky v lokaci, přiřazení výchozích přihrádek k vašemu zboží může proces expedice, příjmu a přesunu podstatně zjednodušit. Pokud je ke zboží přiřazena výchozí přihrádka, je tato přihrádka navržena pokaždé, když zahájíte transakci pro toto zboží. Default bins are defined on the **Bin Content** page.
 
 ## Přiřazení výchozí přihrádky ke zboží
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Content Creation Worksheet**, and choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Content Creation Worksheet**, and choose the related link.
 2. Vyplňte kód přihrádky a informace o zboží pro každou přihrádku, kterou chcete nastavit pro zboží jako výchozí. Make sure to select the **Default** field.
 3. Choose the **Create Bin Content** action. Pro zboží jsou nyní přiřazeny výchozí přihrádky.
 
@@ -26,7 +26,7 @@ Pokud používáte přihrádky v lokaci, přiřazení výchozích přihrádek k 
 
 ## Změna výchozí přihrádky zboží
 Pravděpodobně bude nutné změnit přiřazení výchozí přihrádky pro zboží nebo přiřadit výchozí přihrádku novému zboží.
-1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Contents**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bin Contents**, and then choose the related link.
 2. In the **Location Filter** field, select the appropriate location code.
 3. Find the current default bin content entry for the item and clear the **Default Bin** check box.
 4. Najděte řádek s obsahem přihrádky, pro který chcete novou výchozí přihrádku. Select the **Default Bin** check box.

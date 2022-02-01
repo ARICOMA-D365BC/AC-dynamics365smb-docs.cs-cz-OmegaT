@@ -15,22 +15,22 @@ ms.author: bholtorf
 
 ---
 
-# The VAT Group Management Extension
+# Rozšíření Správa skupin DPH
 
-You can join one or more businesses in your country to consolidate VAT reporting under a single registration number. This type of arrangement is known as a *VAT group*. You can engage with the group as a member or the group representative.
+Můžete se připojit k jedné nebo více firmám ve vaší zemi a konsolidovat vykazování DPH pod jedním registračním číslem. Tento typ režimu se označuje jako *Skupina DPH*. Do skupiny se můžete zapojit jako člen nebo zástupce skupiny.
 
-## Forming a VAT Group
-VAT group members and the group representative can use the **VAT Group Management Setup** assisted setup guide to define their engagement with the group, and create a connection between their [!INCLUDE[prod_short](includes/prod_short.md)] tenants. The group members will use the connection to submit their VAT returns to the group representative. The representative will submit VAT to tax authorities on behalf of the group using a single VAT return.
+## Vytvoření Skupiny DPH
+Členové skupiny DPH a zástupce skupiny mohou pomocí průvodce asistovaným nastavením **nastavení skupiny DPH ** definovat jejich zapojení do skupiny a vytvořit spojení mezi jejich [!INCLUDE[prod_short](includes/prod_short.md)] tenanty. Členové skupiny použijí toto připojení k podání přiznání k DPH zástupci skupiny. Zástupce podá DPH daňovým orgánům jménem skupiny pomocí jediného přiznání k DPH.
 
-## VAT Group Constellations
-Communication happens from group members to the representative. The group representative exposes an API that allows the members to submit their VAT returns to the VAT group representative.
-[!INCLUDE[prod_short](includes/prod_short.md)] supports inter-group VAT return submissions for companies using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises or online, and in any combination. The setup of the communication depends on the constellation. The following sections describe how to set up various group constellations.
+## Rozvržení skupin pro DPH
+Komunikace probíhá od členů skupiny k zástupci. Zástupce skupiny zpřístupní rozhraní API, které členům umožňuje odeslat svá přiznání k DPH zástupci skupiny DPH.
+[!INCLUDE[prod_short](includes/prod_short.md)] podporuje meziskupiové podávání přiznání k DPH pro společnosti používající [!INCLUDE[prod_short](includes/prod_short.md)] on-premises nebo online, případně jakoukoli kombinaci Nastavení komunikace závisí na rozvržení. Následující části popisují, jak nastavit různé rozvržení skupin.
 
-The following list shows the recommended order of the steps to set up a VAT group:
+V následujícím seznamu je doporučené pořadí kroků pro nastavení skupiny DPH:
 
-1. Create the setup in Azure Active Directory. For more information, see [Requirements for Authentication](ui-extensions-vat-group.md#requirements-for-authentication).
-2. Share the technical information that VAT group members and the representative need to connect their [!INCLUDE[prod_short](includes/prod_short.md)] tenants. Usually, the VAT group representative has this information, such as the name of the VAT group representative's environment to which the VAT group members will submit VAT.
-3. Create users in the VAT group representative's [!INCLUDE[prod_short](includes/prod_short.md)] that VAT group members can use to authenticate and connect.
+1. Vytvořte nastavení ve službě Azure Active Directory. Další informace naleznete v tématu [Požadavky na ověřování](ui-extensions-vat-group.md#requirements-for-authentication).
+2. Podělte se o technické informace, které členové skupiny DPH a zástupce potřebují k propojení svých [!INCLUDE[prod_short](includes/prod_short.md)] tenantů. Zástupce skupiny pro DPH obvykle tyto informace má, například název prostředí zástupce skupiny pro DPH, do kterého členové skupiny pro DPH budou DPH vracet.
+3. Vytvořte uživatele v [!INCLUDE[prod_short](includes/prod_short.md)] zástupce skupiny pro DPH, který mohou členové skupiny pro DPH použít k ověření a připojení.
 4. Run the **Set up VAT Group Management** assisted setup guide to connect the VAT group members.
 
 The guide requires some information from the VAT group representative. For more information, see the [VAT Group Member Setup](#vat-group-member-setup) section. Make a note of the **Group Member ID** for each VAT group member. The representative needs these IDs to add the companies to the VAT group.

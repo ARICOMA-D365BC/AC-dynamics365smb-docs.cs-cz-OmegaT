@@ -1,6 +1,6 @@
 ---
-    title: How to Manage Company Configuration in a Worksheet | Microsoft Docs
-    description: The configuration worksheet is the central location in which you can plan, track, and perform your configuration work. You can create a worksheet for each company that you are working with or create a standard configuration worksheet that can be used for configuring multiple identical companies.
+    title: How to Manage Company Configuration in a Worksheet
+    description: The configuration worksheet is the central location in which you can plan, track, and perform your company configuration work. 
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -9,7 +9,7 @@
     ms.tgt_pltfrm: na
     ms.workload: na
     ms.search.keywords:
-    ms.date: 04/01/2021
+    ms.date: 06/14/2021
     ms.author: edupont
 
 ---
@@ -24,7 +24,7 @@ Následující postupy ukazují, jak přidat a upravit informace o tabulce pro v
 
 ## Otevření konfiguračního sešitu
 1. In [!INCLUDE[prod_short](includes/prod_short.md)], open the company that is the baseline for configuration, and then open its RapidStart Services Implementer Role Center.
-2. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Worksheet**, and then choose the related link.
+2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Worksheet**, and then choose the related link.
 
 ## Přidání tabulky do sešitu
 1. On the **Config. Worksheet** page, choose the **Edit List** action.
