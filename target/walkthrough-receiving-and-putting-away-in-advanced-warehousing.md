@@ -72,7 +72,7 @@ The setup of the **Location Card** page defines the company's warehouse flows.
 
 ### To review the location setup
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Open the WHITE location card.
 3. Note on the **Warehouse** FastTab that the **Directed Put-away and Pick** check box is selected.
 

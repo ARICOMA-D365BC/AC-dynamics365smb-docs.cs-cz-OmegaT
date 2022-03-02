@@ -18,7 +18,7 @@ You can define different flushing strategies, to automate registering of consump
 
 Tato funkce je užitečná z následujících důvodů:
 
-- **Inventory Valuation**
+- **Hodnota zásob**
 
    Value entries for output and consumption are created in parallel as the production order progresses. Bez kódů TNG postupů se hodnota zásob zvýší při zaúčtování výstupu a potom se sníží v čase, kdy je hodnota spotřeby komponent zaúčtována společně s dokončenou výrobní objednávkou.
 - **Inventory Availability**

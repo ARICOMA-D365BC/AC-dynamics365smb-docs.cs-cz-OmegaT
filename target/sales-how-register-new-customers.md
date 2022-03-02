@@ -22,7 +22,7 @@ Before you can register new customers, you must set up various sales codes that 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3PZsM]
 
-## Adding new customers
+## Přidání nových zaměstnanců
 You can add new customers manually, by filling out the fields on the **Customer Card** page, or you can use templates that contain predefined information. For example, you can create a templates for different types of customer profiles. Using templates saves time when adding new customers, and helps ensure that the information is correct each time. If you create templates for more than one type of customer, you can choose the template to use when you add a customer. If you create only one template it will be used for all new customers. After you create a template, you can use the **Apply Template** action to apply it to one or more selected customers. To create a template, you fill in the information that you want to reuse on the Customer Card page, and then save it as a template. For more information, see [To save the customer card as a template](sales-how-register-new-customers.md#to-save-the-customer-card-as-a-template)
 
 > [!TIP]

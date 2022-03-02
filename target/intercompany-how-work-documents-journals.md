@@ -38,7 +38,7 @@ The following procedure describes how to fill in and send an intercompany sales 
 When you post an intercompany general journal line in your company, a corresponding journal line is created in your intercompany outbox that you can transfer to your partner. Your partner can then post the corresponding transaction in their company, without having to re-enter the data.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany General Journals**, and then choose the related link.
-2. Open the relevant journal batch. For more information, see [Working with General Journals](ui-work-general-journals.md).
+2. Open the relevant journal batch. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
 3. Podle potřeby vyplňte pole.
 4. V poli **Číslo finančního účtu vnitropodnikového No.** field, enter the intercompany general ledger account that the amount will be posted to in your partner's company.
 

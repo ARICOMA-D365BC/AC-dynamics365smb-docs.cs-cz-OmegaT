@@ -15,52 +15,51 @@ ms.date: 06/16/2021
 ms.author: edupont
 
 ---
-# Register Employees
-To use the Human Resources functionality, you must first add each employee by filling out the fields on the **Employee Card** page.
+# Evidence zaměstnanců
+Chcete-li používat funkci správy lidských zdrojů, musíte nejprve zaevidovat každého zaměstnance vytvořením **karty zaměstanance** se všemi základními a souvisejícími informacemi..
 
-## Adding new customers
-You can add new employees manually, by filling out the fields on the **Employee Card** page, or you can use templates that contain predefined information. For example, you can create a templates for different types of employee profiles. Using templates saves time when adding new employees, and helps ensure that the information is correct each time. If you create templates for more than one type of employee, you can choose the template to use when you add an employee. If you create only one template it will be used for all new employees. After you create a template, you can use the **Apply Template** action to apply it to one or more selected employees. To create a template, you fill in the information that you want to reuse on the Employee Card page, and then save it as a template.
+## Přidání nových zaměstnanců
+Nové zaměstnance můžete přidávat ručně vyplněním polí na stránce **Karta zaměstnance** nebo můžete použít šablony, které obsahují předdefinované informace. Můžete například vytvořit šablony pro různé typy profilů zaměstnanců. Používání šablon šetří čas při přidávání nových zaměstnanců a pomáhá zajistit, aby byly informace pokaždé správné. Pokud vytvoříte šablony pro více typů zaměstnanců, můžete si vybrat šablonu, která se použije při přidávání zaměstnance. Pokud vytvoříte pouze jednu šablonu, bude použita pro všechny nové zaměstnance. Po vytvoření šablony ji můžete pomocí akce **Použít šablonu** použít na jednoho nebo více vybraných zaměstnanců. Chcete-li vytvořit šablonu, vyplňte informace, které chcete znovu použít na stránce Karty zaměstnance, a poté ji uložte jako šablonu.
 
-> [!TIP]
-> It can be helpful to personalize the **Employee Template** page when you create a template. For example, you might want to add a field that is not already displayed on the page. Více informací viz [Přizpůsobení pracovního prostoru](/dynamics365/business-central/ui-personalization-user#to-start-personalizing-a-page-through-the-personalizing-banner).
+> Při vytváření šablony může být užitečné přizpůsobit si stránku **Šablona zaměstnance**. Můžete například chtít přidat pole, které se na stránce ještě nezobrazují. Více informací viz [Přizpůsobení pracovního prostoru](/dynamics365/business-central/ui-personalization-user#to-start-personalizing-a-page-through-the-personalizing-banner).
 
-You can modify an employee's details at any time. Keeping employee records up-to-date can simplify personnel-related tasks. For example, if an employee's address changes, you register this on the Employee Card page.
+Údaje o zaměstnanci můžete kdykoli upravit. Aktualizace záznamů o zaměstnancích může zjednodušit úkoly související s personalistikou. Pokud se například změní adresa zaměstnance, zjistíte to na stránce Karty zaměstnance.
 
 > [!NOTE]  
-> You can reimburse employees for their expenses during business activities. For this purpose, you must fill in the fields on the **Payments** FastTab on the **Employee Card** page. For more information, see [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md).
+> Zaměstnancům můžete proplácet jejich výdaje při pracovních aktivitách.Zaměstnancům můžete proplácet jejich výdaje při pracovních aktivitách. Za tímto účelem musíte vyplnit pole na záložce **Platby** na stránce **Karta zaměstnance**. Pro více informací navštivte [Evidence a uhrazovaní výdajů zaměstnanců](finance-how-record-reimburse-employee-expenses.md).
 
-## To set up an employee
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Employees**, and then choose the related link.
+## Založení karty zaměstatnce
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
-3. On the **Employee Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Na stránce **Karta zaměstnance** vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To insert a picture of an employee
-If you have a picture of an employee, you can insert it on the employee card.
+## Vložení obrázku zaměstnance
+Pokud máte obrázek zaměstnance, můžete jej vložit na kartu zaměstnance.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Employees**, and then choose the related link.
-2. Open the card for the relevant employee.
-3. In the **Employee Picture** FactBox, choose the drop-down button, and then choose **Import**.
-4. On the **Select a picture to upload** page, choose the **Choose** button.
-5. Select the file, and then choose **Open**.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci** a poté vyberte související odkaz.
+2. Otevřete kartu příslušného zaměstnance.
+3. Na okně s fakty **Obrázek zaměstnance**, zvolte rozevírací tlačítko a poté **Importovat**.
+4. Na stránce **Vybrat obrázek pro nahrání**, zvolte tlačítko **Vybrat**.
+5. Vyberte soubor a poté zvolte **Otevřít**.
 
-The picture is inserted in the **Employee Picture** FactBox.
+Obrázek je vložen do okna s fakty **Obrázek zaměstnance**.
 
-## To register various information about an employee
-On the employee card, you can set up information, such as union membership, relatives, and contracts for the employee. The following describes how to set up an alternate address. The steps are similar for all other information that you can set up from an employee card.
+## Evidence různých informací o zaměstnanci
+Na kartě zaměstnance můžete nastavit informace, jako je členství v odborech, příbuzní a smlouvy pro zaměstnance. Následující text popisuje, jak nastavit alternativní adresu. Kroky jsou podobné pro všechny ostatní informace, které lze na kartě zaměstnance nastavit.
 
-You can use alternate addresses to keep track of your employees’ location, for example if they are stationed abroad, on a long business trip, or residing at a summer residence.
+Pomocí alternativních adres můžete sledovat polohu svých zaměstnanců, pokud jsou například v zahraničí, na dlouhé služební cestě nebo pobývají v letní rezidenci.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Employees**, and then choose the related link.
-2. Open the card for the relevant employee.
-3. Choose the **Alternate Addresses** action.
-4. **In the Alternate Address List** page, fill in the fields as necessary.
-5. Repeat step 4 for each alternate address.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci** a poté vyberte související odkaz.
+2. Otevřete kartu příslušného zaměstnance.
+3. Vyberte akci **Alternativní adresy**.
+4. Na stránce **Seznam alternativních adres**, vyplňte pole podle potřeby.
+5. Opakujte krok 4 pro každou alternativní adresu.
 
 ## Viz také
-[Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md)  
+[Zaznamenávaní a uhrazovaní výdajů zaměstnanců](finance-how-record-reimburse-employee-expenses.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Change Which Features are Displayed](ui-experiences.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Změna zobrazovaných funkcí](ui-experiences.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

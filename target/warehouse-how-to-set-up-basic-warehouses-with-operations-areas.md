@@ -37,13 +37,13 @@ Následující postupy jsou založeny na nastavení základních aktivit skladu 
 > In the following procedure, the **Bin Mandatory** setup field on location cards is selected as a precondition because that is considered the foundation for any level of warehouse management.
 
 ## Povolení skladových dokladů pro interní operace skladu
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete kartu lokace, kterou chcete nastavovat.
 3. On the **Warehouse** FastTab, select the **Require Put-away** check box to indicate that, when an inbound or internal source document with a bin code is released, an inventory put-away or an inventory movement document can be created.
 4. Select the **Require Pick** check box to indicate that when an outbound or internal source document with a bin code is created, an inventory pick or an inventory movement document must be created.
 
 ## Definování výchozí struktury přihrádky v oblasti výroby
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete lokaci, kterou chcete nastavovat.
 3. On the **Bins** FastTab, in the **Open Shop Floor Bin Code** field, enter the code of the bin in the production area with plenty of components that the machine operator can consume from without requesting a warehouse activity to bring them to the bin. Zboží, které jsou umístěny v této přihrádce, se obvykle nastavují pro automatické účtování nebo vyčištění. This means that the **Flushing Method** field contains **Forward** or **Backward**.
 4. In the **To-Production Bin Code** field, enter the code of the bin in the production area where components that are picked for production at this location are placed by default before they can be consumed. Položky, které jsou umístěny v této přihrádce, jsou obvykle nastaveny pro ruční účtování spotřeby. This means that the **Flushing Method** field contains **Manual** or **Pick + Forward** or **Pick + Backward** for warehouse picks and inventory movements.
@@ -73,7 +73,7 @@ For more information, see [Assembly Management](assembly-assemble-items.md).
 ### Nastavit přihrádky montáže, ve které jsou komponenty ve výchozím nastavení umístěny, než mohou být spotřebovány
 The value in this field is automatically inserted in the **Bin Code** field on assembly order lines when this location is entered in the **Location Code** field on the assembly order line.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete lokaci, kterou chcete nastavovat.
 3. Fill in the **To-Assembly Bin Code** field.
 
@@ -85,7 +85,7 @@ Kódy přihrádek nastavené na kartách lokace definují výchozí tok skladu p
 > [!NOTE]
 > This setup is only possible for locations where the Bin Mandatory field is selected.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete lokaci, kterou chcete nastavovat.
 3. Fill in the **From-Assembly Bin Code** field.
 
@@ -106,7 +106,7 @@ If the **Asm.-to-Order Shpt. Bin Code** is blank, then the **From-Assembly Bin C
 
 The same bin code is in turn copied to the **Bin Code** field on the inventory pick line that manages the shipment of the assemble-to-order quantity. For more information, see the “Handling Assemble-to-Order Items in Inventory Picks” section in [Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete lokaci, kterou chcete nastavovat.
 3. Fill in the **Asm.-to-Order Shpt. Bin Code** field.
 
@@ -122,7 +122,7 @@ Vytvoření vyhrazené přihrádky poskytuje podobnou funkci jako použití typ�
 > [!Caution]
 > Items in dedicated bins are not protected when they are picked and consumed as production components with the Inventory Pick page.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link. Vyberte lokaci, kterou chcete aktualizovat.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz. Vyberte lokaci, kterou chcete aktualizovat.
 2. Choose the **Bins** action.
 3. Select the **Dedicated** field for each bin that you want to use exclusively for certain internal operations and where you want quantities to be reserved for that internal operation once placed there.
 

@@ -19,25 +19,25 @@ ms.author: edupont
 Při účtování deníku můžete přiřadit položku ve finančním deníku několika různým účtům. Přidělení lze vytvořit podle množství, procenta nebo částky.
 
 ## Nastavení alokačních klíčů
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
-2. Choose the **Batch Name** field to open the **General Journal Batches** page.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Periodické fin. deníky** a poté vyberte související odkaz.
+2. Klepnutím na pole **Název listu** otevřete stránku **Listy Finančního Deníku**.
 3. Můžete buď upravit již existující přidělení v listech děníku, nebo vytvořit nový deník s patřičným přidělením.
-   * To create a new batch, choose the **New** action, and go to the next step.
+   * Chcete-li vytvořit novou dávku, vyberte akci **Nový** a přejděte k dalšímu kroku.
    * Chcete-li změnit přidělení existujícího deníku, vyberte deník a přejděte ke kroku 7.
-4. In the **Name** field, enter a name for the batch, such as CLEANING. In the **Description** field, enter a description, such as Cleaning Expenses Journal.
+4. Do pole **Název** zadejte název dávky, například ČIŠTĚNÍ. Do pole **Popis** zadejte popis, například Deník pročištění výdajů.
 5. Až budete hotovi, zavřete stránku. Otevře se nový, prázdný periodický deník.
 6. Vyplňte pole v hlavičce.
-7. Choose the **Allocations** action.
-8. Přidejte řádek pro každé přidělení. You must fill in either the **Allocation %**, **Allocation Quantity**, or **Amount** field. You must also fill in the **Account No.** field and, if you are allocating the transaction among global dimensions, the global dimension fields.
-9. If you enter a percentage on a line, the amount in the **Amount** field is calculated automatically. These amounts have the opposite sign from the total amount in the **Amount** field in the recurring journal.
-10. After entering the allocations lines, choose **OK** to return to the **Recurring General Journal** page. The **Allocated Amt. (USD)** field is filled in and matches the **Amount** field.
+7. Vyberte akci **Přidělení**.
+8. Přidejte řádek pro každé přidělení. Musíte vyplnit buď pole **Rozdělení %**, **Rozdělené množství** nebo **Částka**. Musíte také vyplnit pole **Číslo účtu** a pokud přidělujete transakci mezi globální dimenze, pole globální dimenze.
+9. Pokud do řádku zadáte procento, automaticky se vypočítá částka v poli **Částka**. Tyto částky mají opačné znaménko než celková částka v poli **Částka** v periodickém deníku.
+10. Po zadání řádků přidělení zvolte**OK** pro návrat na stránku **Periodický finanční deník**. **Rozdělená částka (USD)** je vyplněno a odpovídá poli **Částka**.
 11. Zaúčtujte deník.
 
 ## Změna již nastaveného alokačního klíče
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Recurring General Journal**, and then choose the related link.
-2. On the **Recurring General Journal** page, select the journal with the allocation.
-3. Choose the line with the allocation, and then choose **Allocations** action.
-4. Change the relevant fields, and then choose the **OK** button.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Periodické fin. deníky** a poté vyberte související odkaz.
+2. Na stránce **Periodický finanční deník** vyberte deník s rozdělením.
+3. Vyberte řádek s rozdělením a poté vyberte akci **Rozdělení**.
+4. Změňte příslušná pole a poté stiskněte tlačítko **OK**.
 
 ## Viz také
 [Working with General Journals](ui-work-general-journals.md)  

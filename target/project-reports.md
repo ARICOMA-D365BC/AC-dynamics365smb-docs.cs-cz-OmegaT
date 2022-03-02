@@ -18,7 +18,7 @@ Project reporting in [!INCLUDE [prod_short](includes/prod_short.md)] allows proj
 
 The following table describes some of the key reports in jobs reporting.
 
-| Sestava | Object ID | Popis |
+| Sestava | ID Objektu | Popis |
 |---------|---------|---------|
 | **Job Analysis** | 1008 | Analyzes your job by using settings that you specify. For example, you can create a report that shows you the budgeted prices, usage prices, and billable prices, and then compares the three sets of prices.<br>Use a combination of the available **Amount** fields to create your own analysis. For each field, select one of the following prices, costs, or profit values: Schedule, Usage, Contract, and Invoiced. <br>Select whether the currency is specified in Local Currency or Foreign Currency. |
 | **Job Planning Lines** | 1006 | This report shows the different job planning and job task lines – including the line type, quantities, unit of measure, total costs, etc. |

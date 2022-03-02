@@ -97,7 +97,7 @@ A dedicated matrix page shows the insurance values that are registered for each 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance**, and then choose the related link.
 2. Select the relevant insurance policy, and then choose the **Total Value Insures per FA** action.
 3. Podle potřeby vyplňte pole.
-4. Choose the **Show Matrix** action.
+4. Vyberte akce **Zobrazit matici**.
 5. To see the underlying insurance coverage ledger entries, choose a value in the matrix.
 
 ## To correct insurance coverage entries

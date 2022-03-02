@@ -60,7 +60,7 @@ Zatímco například základní kalendář obvykle uvádí všechny soboty jako 
 
 Následující postup používá případ lokace jako příklad. Všimněte si, že v tomto okamžiku jste již k lokaci přiřadili základní kalendář.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Open the location that you want to update, and then select the **Customized Calendar** field. Note that a calendar must be selected in the **Base Calendar Code** field.
 3. On the **Customized Calendar Entries** page opens, choose the **Maintain Customized Calendar Changes** action.
 4. In the **Customized Calendar Changes**, add lines for customized calendar entries.

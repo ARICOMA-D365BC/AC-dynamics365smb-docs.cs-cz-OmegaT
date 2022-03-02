@@ -35,7 +35,7 @@ Dimensions play an important role in business intelligence, such as when definin
 > A quick way to analyze transactional data by dimensions is to use the **Set Dimension Filter** action filter totals by dimensions in the chart of accounts and on pages for entries.
 
 > [!NOTE]
-> Analysis views often use data from dimensions. If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. That will help keep your financial reports and analyses accurate. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)
+> Analysis views often use data from dimensions. Pokud zjistíte, že u zaúčtovaných položek hlavní knihy byla použita nesprávná dimenze, můžete opravit hodnoty dimenzí a aktualizovat zobrazení analýzy. To vám pomůže udržet vaše finanční sestavy a analýzy přesné. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)
 
 ## Sady dimenzí
 

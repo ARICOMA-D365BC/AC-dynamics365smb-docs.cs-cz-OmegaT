@@ -77,7 +77,7 @@ The setup of the **Location Card** page defines the company's warehouse flows.
 
 ### To set up the location
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Open the SILVER location card.
 3. Select the **Require Put-away** check box.
 

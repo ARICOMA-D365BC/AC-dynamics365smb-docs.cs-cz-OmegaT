@@ -45,7 +45,7 @@ Alokační klíče se vztahují na třídy dlouhodobého majetku, nikoli na jedn
 4. Opakujte kroky 2 a 3 pro každý typ účtování, pro který chcete definovat alokační klíče.
 
 ## Nastavení šablon deníku dlouhodobého majetku
-Šablona je předdefinované rozvržení deníku. Šablona obsahuje informace o trasovacích kódech, sestavách a číselných řadách. For more information, see [Working with General Journals](ui-work-general-journals.md).
+Šablona je předdefinované rozvržení deníku. Šablona obsahuje informace o trasovacích kódech, sestavách a číselných řadách. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
 
 [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset journal template the first time that you open the **Fixed Asset Journal** page, but you can set up additional journal templates.
 

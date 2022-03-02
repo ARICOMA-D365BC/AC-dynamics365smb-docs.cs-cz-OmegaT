@@ -669,7 +669,7 @@
 ### [Work with Catalog Items](inventory-how-work-nonstock-items.md)
 ### [Count and Adjust Inventory Using Documents](inventory-how-count-inventory-with-documents.md)
 ### [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md)
-### [View the Availability of Items](inventory-how-availability-overview.md)
+### [Zobrazit dostupnost zboží](inventory-how-availability-overview.md)
 ### [Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md)
 ### [Reserve Items](inventory-how-to-reserve-items.md)
 ### [Set Up Item Tracking with Serial, Lot, and Package Numbers](inventory-how-setup-item-tracking.md)

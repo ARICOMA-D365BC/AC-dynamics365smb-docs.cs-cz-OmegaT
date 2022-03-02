@@ -23,7 +23,7 @@ Je možné, že budete chtít změnit strukturu skladu s novými kódy přihrád
 Pokud je sklad nastaven na používání přihrádek, ale nikoli na řízené zaskladnění a vyskladnění, proveďte restrukturalizaci skladu vytvořením nových přihrádek, které chcete v budoucnosti použít.
 
 ## Restrukturalizace skladu, který používá pouze přihrádky
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. On the **Warehouse** FastTab, set the **Default Bin Selection** field to **Last-Used Bin**.
 3. Přesuňte veškerý obsah aktuálních přihrádek do nových přihrádek, které jste právě vytvořili.
 
@@ -48,7 +48,7 @@ Nyní jste vyprázdnili přihrádky, ve kterých se zboží používá. Výchoz�
 
 3. When the old bins are emptied, reclassify them as **QC** type bins to ensure that they are not included in item flows.
 
-   1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+   1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
    2. Select the line with the location, and then choose the **Bins** action.
    3. On the **Bins** page, in the **Bin Type Code** field, enter **QC** for each of the old bins that you emptied in step 3 in the previous procedure.
 
@@ -56,7 +56,7 @@ Nyní jste odstranili přihrádky z toku skladu a překlasifikovali je jako při
 
 ## Odstranění přihrádky
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Vyberte lokaci, kde chcete odstranit přihrádky. Choose the **Bins** action.
 3. Vyberte řádky pro přihrádky, které chcete odstranit.
 4. Choose the **Delete** action.
@@ -67,7 +67,7 @@ If you want to rename a bin so that all records associated with the bin are also
 
 ## Přejmenování přihrádky a změna kódu přihrádky ve všech záznamech
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Select the location where you want to rename a bin or change the bin code, and then choose the **Bins** action.
 3. Select the bin that you want to change and enter a new bin code in the **Code** field.
 4. Vyberte tlačítko **Ano**.

@@ -22,7 +22,7 @@ To use the bin functionality at a location, you first activate the functionality
 > Before you can specify bin codes on the location card, the bin codes must be created. For more information, see [Create Bins](warehouse-how-to-create-individual-bins.md).
 
 ## Nastavení lokace pro použití přihrádek
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Vyberte lokaci, kde chcete používat přihrádky.
 3. Choose the **Edit** action.
 4. On the **Warehouse** FastTab, select the **Bin Mandatory** check box.

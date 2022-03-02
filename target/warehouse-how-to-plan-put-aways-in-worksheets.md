@@ -16,7 +16,7 @@
 # Plan Put-aways in Worksheets
 If your location requires both put-away and receive processing, and you want to plan put-away instructions for a number of receipts, rather than have employees follow the instructions that application creates for separate posted receipts, you can use the put-away worksheet.
 
-To set up your warehouse so that receipt lines are available to you in the put-away worksheet as soon as they are posted, select the **Use Put-away Worksheet** field on the **Warehouse** FastTab of the location card. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).
+To set up your warehouse so that receipt lines are available to you in the put-away worksheet as soon as they are posted, select the **Use Put-away Worksheet** field on the **Warehouse** FastTab of the location card. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 If you do not select this field, application will automatically create put-away instructions for receipts as they are posted.
 

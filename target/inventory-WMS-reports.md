@@ -10,25 +10,25 @@ ms.date: 06/01/2021
 ms.author: andreipa
 
 ---
-# Inventory and Warehouse Reports and Analytics in Business Central
+# Přehledy a analýzy zásob a skladů v Business Central
 
-Inventory and warehouse reporting in [!INCLUDE [prod_short](includes/prod_short.md)] allows inventory and business professionals to get insights and statistics about current and past inventory and warehouse activities.
+Reporting zásob a skladu v [!INCLUDE [prod_short](includes/prod_short.md)] umožňuje skladovým a obchodním profesionálům získat přehledy a statistiky o současných a minulých zásobách a skladových aktivitách.
 
 ## Sestavy
 
-The following table describes some of the key reports in inventory and warehouse reporting.
+Následující tabulka popisuje některé klíčové sestavy v rámci reportingu o zásobách a skladech.
 
-| Sestava | Object ID | Popis |
+| Sestava | ID Objektu | Popis |
 |---------|---------|---------|
-| **Inventory Availability Plan** | 707 | If you would like to have an overview about specific items/stockkeeping units and their availability. This report shows cumulated values like gross requirements, scheduled and planned receipts, the inventory, and so on. |
-| **Inventory Valuation** | 1001 | Displays inventory valuation for selected items in your inventory. The report also shows information about the value of increases and decreases in inventory over time. |
-| **Item Expiration - Quantity** | 5809 | Shows an overview of the quantities of selected items in your inventory whose expiration dates fall within a certain period. The list shows the number of units of the selected item that will expire in a given time period. For each of the items that you specify when setting up the report, the printed document shows the number of units that will expire during each of three periods of equal length and the total inventory quantity of the selected item.<br>You can specify what is included in the report by setting filters. If you do not set any filters, the report will include all your records. The quantities in the report reflect only the quantities of the item for which expiration dates have been defined. |
-| **Item Age Composition - Quantity** or **Item Age Composition - Value** | 5807 or 5808 | Shows an overview of the current age composition of selected items in your inventory. The list shows the number of units or value of the selected item that were added to or removed from inventory and at which point in time. Items can be added to or removed from inventory as a result of purchases, sales, and positive and negative adjustments. |
-| **Inventory Cost and price list** | 716 | Displays a list of price information for the selected items or stockkeeping units: direct unit cost, last direct cost, unit price, profit percentage, and profit. |
-| **Warehouse Bin List** | 7319 | Shows an overview of warehouse bins, their setup, and the quantity of items within the bins. This report can be used for all locations, which have “bin” as mandatory field. |
-| **Warehouse Shipment Status** | 7313 | Shows an overview of open source documents with items shipped or due for shipping per location. This report can be used for all locations, were **Required Shipments** is enabled. **Warehouse Shipment Status** shows locations, bin codes, document status, quantities. |
-| **Inventory Picking List** | 813 | Displays a list of the sales orders in which an item is included. The following information is shown for each item: sales order line with customer's name, variant code, location code, bin code, shipment date, quantity to be shipped, and unit of measure. The quantity to be shipped is totaled for each item. The report can be used when items will be collected from the inventory.<br>NOTE: this functionality is not available for advanced warehouse functionality. |
-| **Warehouse Adjustment Bin** | 7320 | This special report is meant only for an advanced warehouse and shows the remaining quantities that are still stored in the adjustment bin itself. Normally this specific bin should be empty. The only reason when this bin will be filled is as result of physical counting process or if quantities of items had been removed or added to the warehouse |
+| **Plán dostupnosti zásob** | 707 | Pokud byste chtěli mít přehled o konkrétním zboží/skladových jednotkách a jejich dostupnosti. Tato sestava zobrazuje kumulované hodnoty, jako jsou hrubé požadavky, plánované a plánované příjmy, zásoby a další. |
+| **Hodnota zásob** | 1001 | Zobrazí ocenění zásob pro vybrané zboží ve vašich zásobách. Sestava také zobrazuje informace o hodnotě zvýšení a snížení zásob v průběhu času. |
+| **Expirace zboží - množství** | 5809 | Zobrazuje přehled množství vybraného zboží ve vašich zásobách, jejichž data expirace spadají do určitého období. Seznam zobrazuje počet jednotek vybraného zboží, jehož platnost vyprší v daném časovém období. Pro každou z položek, které zadáte do nastavení sestavy, se v tištěném dokumentu zobrazí jako počet jednotek, jejichž platnost vyprší během každého ze tří stejně dlouhých období a celkové množství zásob vybrané položky.<br>Nastavením filtrů můžete určit, co bude do sestavy zahrnuto. Pokud nenastavíte žádné filtry, bude sestava obsahovat všechny záznamy. Množství v sestavě odrážejí pouze množství položky, pro které byla definována data expirace. |
+| **Skladba stáří zboží - množství** nebo **Skladba stáří zboží - hodnota** | 5807 nebo 5808 | Zobrazí přehled aktuálního stáří složení vybraného zboží v zásobách. Seznam zobrazuje počet jednotek nebo hodnotu vybraného zboží, které bylo přidáno nebo odebráno ze zásob a v jakém okamžiku. Zboží lze přidat nebo odebrat ze zásob v důsledku nákupů, prodejů a kladných a záporných úprav. |
+| **Náklady na zásoby a ceník** | 716 | Zobrazí seznam informací o ceně pro vybraného zboží nebo skladové jednotky: přímé jednotkové náklady, poslední přímé náklady, jednotková cena, procento zisku a zisk. |
+| **Přehled přihrádek skladu** | 7319 | Zobrazuje přehled skladových přihrádek, jejich nastavení a množství položek v přihrádkách. Tento přehled lze použít pro všechna umístění, která mají jako povinné pole "Přihrádka". |
+| **Stav dodávky ze skladu** | 7313 | Zobrazuje přehled otevřených zdrojových dokladů s dodaným zbožím nebo zbožím, které má být odesláno, podle lokace. Tento přehled lze použít pro všechny lokace, které mají nastaveno **Vyžadovat dodání**. **Stav dodávky ze skladu** zobrazuje lokace, kódy přihrádek, stav dokladů a množství. |
+| **Přehled vyskladnění zásob** | 813 | Zobrazí seznam prodejních objednávek, ve kterých je zboží zahrnuta. U každého zboží se zobrazují následující informace: řádek prodejní objednávky se jménem zákazníka, kód varianty, kód lokace, kód přihrádky, datum odeslání, množství k odeslání a měrná jednotka. U každého zboží se sečte množství, které má být dodáno. Sestava může být použita, kdyý se zboží bude vybírat ze zásob <br>Poznámka: tato funkce není k dispozici pro pokročilé funkce skladu. |
+| **Adjustační přihrádka skladu** | 7320 | Tato speciální sestava je určena pouze pro pokročilé nastavení skladu a zobrazuje zbývající množství, která jsou ještě uložena v samotné adjustační přihrádce. Za normálních okolností by tato konkrétní přihrádka měla být prázdná. Jediným důvodem, proč se tato přihrádka zaplní, je výsledek fyzického počítání při inventuře nebo pokud bylo množství zboží odebráno nebo přidáno do skladu. |
 
 
 ## Úlohy
@@ -36,14 +36,14 @@ The following table describes some of the key reports in inventory and warehouse
 Následující články popisují některé klíčové úlohy pro analýzu stavu vaší firmy:
 
 * [Vytváření sestav analýz](bi-how-create-analysis-views-reports.md)
-* [View the Availability of Items](inventory-how-availability-overview.md)
+* [Zobrazit dostupnost zboží](inventory-how-availability-overview.md)
 
 
 ## Viz také
 
-[Setting Up Inventory](inventory-setup-inventory.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
-[Warehouse Management](warehouse-manage-warehouse.md)
+[Nastavení zásob](inventory-setup-inventory.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Správa skladu](warehouse-manage-warehouse.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

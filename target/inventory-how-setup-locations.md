@@ -13,77 +13,77 @@ ms.date: 06/16/2021
 ms.author: edupont
 
 ---
-# Set Up Locations
+# Nastavení Lokací
 
-If you buy, store, or sell items at more than one place or warehouse, you must set up each location with a location card and define transfer routes. [!INCLUDE [prod_short](includes/prod_short.md)] uses locations to help keep track of inventory in both simpler cases and the more complex warehouse processes.
+Pokud nakupujete, skladujete nebo prodáváte zboží na více místech nebo ve více skladech, musíte pro každé místo nastavit kartu místa a definovat trasy přenosu. [!INCLUDE [prod_short](includes/prod_short.md)] používá lokace ke sledování zásob v jednodušších případech i ve složitějších skladových procesech.
 
-You can then create document lines for a specific location, view availability by location, and transfer inventory between locations. For more information, see [Manage Inventory](inventory-manage-inventory.md).
+Můžete vytvářet řádky dokladů pro konkrétní lokace, zobrazovat dostupnost podle lokace a převádět zásoby mezi lokacemi. Pro více informací navštivte [Správa skladu](inventory-manage-inventory.md).
 <br><br>
 
 > [!Video https://www.microsoft.com/videoplayer/embed/RE4aQvq?rel=0]
 
-## Location cards
+## Karty lokace
 
-The location card specifies information about a location, such as a warehouse or distribution center. You give each location a name and a code that represents the location. You can then enter the location code in other parts of the program when you want to record transactions for a given location.
+Karta lokace určuje informace o umístění, jako je sklad nebo distribuční centrum. Každému místu přidělíte název a kód, který jej reprezentuje. Kód lokace pak můžete zadat v jiných částech systému, když chcete zaznamenat transakce pro dané místo.
 
-You can enter information about bins and warehouse policies for each location. Based on the warehouse policies you select, you can use the options on the **Bins** FastTab to define the bins that will be used as default bins when you are performing transactions. If you are using directed put-away and pick, you use most of the options on the **Bin Policies** FastTab to define how you would like to use the various advanced warehousing features.
+Pro každé umístění můžete zadat informace o přihrádkách a skladových pravidlech. Na základě vybraných pravidel skladu můžete pomocí možností v záložce **Přihrádky** definovat přihrádky, které budou použity jako výchozí přihrádky při provádění transakcí. Pokud používáte řízené vyskladňování a zaskladňování, použijete většinu možností v záložce **Použití přihrádek**, abyste definovali, jak chcete používat různé pokročilé funkce skladu.
 
-Some option fields are grayed and disabled by other settings in the **Location Card** page to restrict unsupported setup combinations.
+Některá pole možností jsou šedá a zakázaná jinými nastaveními na stránce **Karta lokace**, aby se omezily nepodporované kombinace nastavení.
 
-Choose the **Zones** or **Bins** action to view information about zones and bins that may be defined for the location.
 
-### To create a location card
+Vyberte akci **Zóny** nebo **Přihrádky** pro zobrazení informací o zónách a přihrádkách, které mohou být pro dané umístění definovány.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+### Vytvoření karty lokace
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
-3. On the **Location Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Repeat steps 2 and 3 for every location where you want to keep inventory.
+3. Na stránce **Karta lokace** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Opakujte kroky 2 a 3 pro každou lokaci, kde chcete uchovávat zásoby.
 
 > [!NOTE]  
-> Many fields on the location card refer to the handling of items in inbound and outbound warehouse processes. The fields are not relevant for companies that do not require the more complex warehouse functionality. For more information, see [Setting Up Warehouse Management](warehouse-setup-warehouse.md).
+> Mnoho polí na kartě umístění se týká manipulace se zbožím v procesech příjmu a výdeje ze skladu. Pole nejsou relevantní pro společnosti, které nevyžadují složitější funkce skladu. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
-You can change the configuration of a location later, but you cannot edit the setup of locations that have item ledger entries.
+Konfiguraci lokace můžete změnit později, ale nemůžete upravovat nastavení lokace, které mají položky v účetní knize.
 
-Next, if you have multiple locations, you can define transfer routes between locations.
+Dále, pokud máte více lokací, můžete definovat trasy transferu mezi lokacemi.
 
-### To create a transfer route
+### Vytvoření trasy transferu
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transfer Routes**, and then choose the related link.
-2. Alternatively, from any **Location Card** page, choose the **Transfer Routes** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Trasy transferu** a poté zvolte související odkaz.
+2. Případně na jakékoli **Kartě lokace** vyberte tlačítko **Trasy transferu**.
 3. Vyberte akci **Nový**.
-4. On the **Location Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Na stránce **Karta lokace** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-You can now transfer inventory items between two locations. Pro více informací navštivte [Převádění zásob mezi lokacemi](inventory-how-transfer-between-locations.md).
+Nyní můžete transferovat zboží mezi dvěma lokacemi. Pro více informací navštivte [Převádění zásob mezi lokacemi](inventory-how-transfer-between-locations.md).
 
 ## Přihrádky
 
-Přihrádky představují základní skladovou strukturu a používají se k navrhování umístění zboží. When you have created your bins, you can define precisely the contents that you want to place in each bin, or the bin can function as a floating bin without specified contents. Bins are predominantly used in basic and advance warehouse operations. If you manage inventory in a more simple setup, you probably do not need bins.
+Přihrádky představují základní skladovou strukturu a používají se k navrhování umístění zboží. Pokud jste vytvořili své přihrádky, můžete velmi přesně definovat obsah, který chcete umístit do každé přihrádky, nebo přihrádka může fungovat jako plovoucí přihrádka bez zadaného obsahu. Přihrádky se používají převážně v základních a pokročilých skladových operacích. Pokud spravujete zásoby v jednodušším nastavení, přihrádky pravděpodobně nepotřebujete.
 
-To use the bin functionality at a location, you first activate the functionality on the **Location** card by selecting the **Bins Mandatory** field on the **Warehouse** FastTab. Pak navrhnete tok zboží v lokaci určením kódů přihrádek v polích nastavení, které představují různé toky.
+pro použití přihrádek na lokaci, Musíte nejdříve zapnout funkcionalitu na kartě **Lokace** výběrem pole **Přihrádka nutná** v záložce **Sklad**. Pak navrhnete tok zboží v lokaci určením kódů přihrádek v polích nastavení, které představují různé toky.
 
-> [!NOTE]
-> Before you can specify bin codes on the location card, the bin codes must be created.
+> Předtím než nastavníte kódy přihrádek na kartě lokace, musí být přihrádky již vytvořeny.
 
-For more information, see [Create Bins](warehouse-how-to-create-individual-bins.md) and [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md).
+Pro více informací navštivte [Vytvoření přihrádek](warehouse-how-to-create-individual-bins.md) a [Nastavení přihrádek](warehouse-how-to-set-up-bin-types.md).
 
-## Zones
+## Zóny
 
-If you want to structure your bins under zones, you can do that in the **Zones** page.
+Chcete-li strukturovat přihrádky podle zón, můžete to provést na stránce **Zóny**.
 
-[!INCLUDE [prod_short](includes/prod_short.md)] copies the fields that you set for any particular zone to the bins within it. This way, you can assign a zone to a bin or a bin template (bin creation filter), and several other fields are then filled in automatically.
+[!INCLUDE [prod_short](includes/prod_short.md)] zkopíruje pole, která jste nastavili pro libovolnou konkrétní zónu a přihrádky v ní. Tímto způsobem můžete přiřadit zónu k přihrádce nebo šabloně přihrádky (filtr pro vytvoření přihrádky) a několik dalších polí se pak vyplní automaticky.
 
-However, you can choose to set up just one zone and to organize your warehouse according to bins alone. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
+Můžete se však rozhodnout nastavit pouze jednu zónu a uspořádat svůj sklad pouze podle přihrádek. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 ## Viz také
 
-[Manage Inventory](inventory-manage-inventory.md)  
-[Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md)  
-[Create Bins](warehouse-how-to-create-individual-bins.md)  
-[Set Up Bin Types](warehouse-how-to-set-up-bin-types.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[General Business Functionality](ui-across-business-areas.md)
+[Správa skladu](inventory-manage-inventory.md)  
+[Transfer zboží mezi lokacmei](inventory-how-transfer-between-locations.md)  
+[Vytváření přihrádek](warehouse-how-to-create-individual-bins.md)  
+[nastavení typů přihrádek](warehouse-how-to-set-up-bin-types.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Změna zobrazovaných funkcí](ui-experiences.md)  
+[Obecné obchodní funkcionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

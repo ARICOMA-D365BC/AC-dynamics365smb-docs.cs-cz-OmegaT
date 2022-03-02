@@ -19,7 +19,7 @@ After you have set up your bins, you can set up the bin contents. In other words
 
 ## To create bin content manually
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Select the location where you want to set up bin contents,  and then choose the **Bins** action.
 3. Select the bin where you want to set up contents, and then choose the **Contents** action.
 4. For each item that you want to store in the bin, fill in a line on the **Bin Contents** page with the appropriate information. Some of the fields are filled in already with information about the bin.

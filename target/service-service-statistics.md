@@ -83,7 +83,7 @@ A contract gain or loss entry is generated when a contract quote is converted to
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter the name of the page to display, and then choose the related link.
 2. Fill in the filter criteria you want to apply. For example, on the **Contract Gain/Loss (Reasons)** page, choose a value for **Reason Code Filter**.
-3. Choose the **Show Matrix** action.
+3. Vyberte akce **Zobrazit matici**.
 
 ## Viewing Statistics for Posted Service Documents
 The service statistics feature lets you gain a statistical overview of the contents of posted service documents, such as a posted shipment, posted invoice, and posted credit memo.

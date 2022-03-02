@@ -24,7 +24,7 @@ The email capabilities in [!INCLUDE[prod_short](includes/prod_short.md)] are for
 > If you are using [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, before you can set up email you must create an app registration for [!INCLUDE[prod_short](includes/prod_short.md)] in Azure portal. The app registration will enable [!INCLUDE[prod_short](includes/prod_short.md)] to authorize and authenticate with your email provider. For more information, see [Setting Up Email for Business Central On-Premises](admin-how-setup-email.md#setting-up-email-for-business-central-on-premises). In [!INCLUDE[prod_short](includes/prod_short.md)] online, we handle this for you.
 
 ## Required Permissions
-To set up email, you must have the **EMAIL SETUP** permission set. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
+To set up email, you must have the **EMAIL SETUP** permission set. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
 ## Adding Email Accounts
 You add email accounts through extensions that enable accounts from different providers to connect to [!INCLUDE[prod_short](includes/prod_short.md)]. The standard extensions let you use accounts from Microsoft Exchange Online, but other extensions may be available that let you connect accounts from other providers, such as Gmail.

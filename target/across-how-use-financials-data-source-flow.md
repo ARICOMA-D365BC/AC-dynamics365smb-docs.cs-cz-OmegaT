@@ -92,7 +92,7 @@ Using Power Automate to integrate with your [!INCLUDE[prod_short](includes/prod_
 
 Go to the **Web Services** page and make sure that the following objects are published as web services. There should be an entry in the list for each object, with the **Published** check box selected.
 
-| Object Type | Object ID | Object Name | Service Name |
+| Object Type | ID Objektu | Object Name | Service Name |
 |-----------|---------|-----------|------------|
 | Codeunit | 1544 | WorkflowWebhookSubscription | WorkflowActionResponse |
 | Page | 6408 | workflowCustomers | workflowCustomers |

@@ -15,112 +15,112 @@ ms.author: bholtorf
 
 ---
 
-# Troubleshooting and Correcting Dimensions
+# Odstraňování problémů a oprava dimenzí
 
-Financial reporting and analysis views often rely on data from dimensions. Despite the safeguards that are available, sometimes a mistake happens that can lead to inaccuracies. This topic describes some of the typical errors, and explains how to correct dimension assignments on posted transactions so that financial reports are accurate.
+Pohledy finančního výkaznictví a analýzy často spoléhají na data z dimenzí. I přes dostupná ochranná opatření se někdy stane chyba, která může vést k nepřesnostem. Toto téma popisuje některé typické chyby a vysvětluje, jak opravit přiřazení dimenzí u zaúčtovaných transakcí, aby byly finanční výkazy přesné.
 
-## Troubleshooting Dimensions Errors
+## Řešení problémů s chybami dimenzí
 
-When you post documents or journal lines that contain dimensions various errors may occur, however, they're typically related to an incorrect dimension setup or assignment.
+Při zaúčtování dokladů nebo řádků deníku, které obsahují dimenze, se mohou vyskytnout různé chyby, které však obvykle souvisejí s nesprávným nastavením nebo přiřazením dimenzí.
 
 > [!NOTE]
-> In the following list of potential error messages, the *%X* codes are placeholders for the data variables that the actual message will contain in the UI depending on the context. For example, *%1 %2 is blocked.* could appear in the UI as "Dimension Code AREA is blocked.".
+> V následujícím seznamu možných chybových hlášení jsou kódy *%X* zástupnými znaky pro datové proměnné, které bude skutečné hlášení obsahovat v uživatelském rozhraní v závislosti na kontextu. Například, *%1 %2 je blokobáno.* Může se zobrazit v uživatelském rozhraní jako "Kód dimenze OBLAST je blokováno.".
 
-| Issue | Error Message | Possible Solution |
+| Vydání | Chybová zpráva | Možné řešení |
 |-----|-------------|-----------------|
-| Blocked dimension | %1 %2 is blocked. | -Find non-posted documents containing the dimension set with the blocked dimension and unblock it.<br />-Remove the dimension set line for the blocked dimension. |
-| Deleted dimension | %1 %2 can't be found. | -Restore the missing dimension.<br />-Find non-posted documents containing the dimension set with the missing dimension and add it.<br />-Remove the dimension set line for the missing dimension. |
-| Blocked dimension value | %1 %2 - %3 is blocked. | -Find non-posted documents containing the dimension set with the blocked dimension value and unblock it.<br />-Remove the dimension set line for the blocked dimension value. |
-| Deleted dimension value | %1 for %2 is missing. | -Restore the missing dimension value.<br />-Find non-posted documents containing the dimension set with the missing dimension value and add it.<br />-Remove the dimension set line for the missing dimension value. |
-| Disallowed dimension value | Dimension Value Type for %1 %2 - %3 must not be %4. | -Change the **Dimension Value Type** field on the **Dimension Values** page to **Standard** or **Begin-Total**.<br />-Remove the dimension set line for the blocked dimension value. |
-| Blocked dimension combination | Dimensions %1 and %2 can't be used concurrently. | -Find non-posted documents containing the dimension set with the blocked dimension combination and unblock it.<br />-Modify one of the conflicting permission set line for the dimension combination. |
-| Blocked dimension value Combination | Dimension combinations %1 - %2 and %3 - %4 can't be used concurrently. | -Find non-posted documents containing the dimension set with the blocked dimension value combination and unblock it.<br />-Modify one of the conflicting permission set line for the dimension value combination. |
-| Blank dimension value code for default dimension where the **Value Posting** field contains **Code Mandatory** | -Select a %1 for the %2 %3.<br />-Select a %1 for the %2 %3 for %4 %5. | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Enter a non-blank dimension value for the conflicting dimension in the dimension set. |
-| Wrong dimension value code for default dimension where the **Value Posting** field contains **Same Code** | -Select %1 %2 for the %3 %4.<br />-Select %1 %2 for the %3 %4 for %5 %6 | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Enter the required dimension value for the conflicting dimension in the dimension set. |
-| Non-blank dimension value code for blank default dimension where the **Value Posting** field contains **Same Code** | -%1 %2 must be blank.<br />-%1 %2 must be blank for %3 %4. | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Enter a blank dimension value code for the conflicting dimension in the dimension set. |
-| Unexpected dimension value for default dimension where the **Value Posting** field contains **No Code** | -%1 %2 must not be mentioned.<br />-%1 %2 must not be mentioned for %3 %4 | -Change the **Value Posting** field on the **Default Dimension** page.<br />-Remove the conflicting line from the dimension set. |
-| A dimension correction does not complete correctly. | -Choose **Reset** to revert the correction to a draft state. This resets the changes, and you can run the correction again. |
+| Blokovaná dimenze | %1 %2 je blokováno. | -Najít nezaúčtované doklady obsahující sadu dimenzí s blokovanou dimenzí a odblokovat ji.<br />-Odstranit řádek dimenzí pro blokovanou dimenzi. |
+| Odstraněná dimenze | %1 %2 nelze nalézt. | -Obnovte chybějící dimenzi.<br /> -Najděte nezaúčtované doklady obsahující sadu dimenzí s chybějící dimenzí a přidejte ji.<br />-Odstraňte řádek dimenzí pro blokovanou dimenzi. |
+| Blokovaná hodnota dimenze | %1 %2 - %3 je blokováno. | -Najděte nezaúčtované doklady obsahující sadu dimenzí s blokovanou hodnotou dimenze a odblokujte ji.<br />-Odstraňte řádek dimenzí pro blokovanou dimenzi. |
+| Odstraněná hodnota dimenze | %1 pro %2 chybí. | -Obnovte chybějící hodnotu dimenze.<br />-Najděte nezaúčtované doklady obsahující sadu dimenzí s chybějící hodnotou dimenze a přidejte ji.<br />-Odstraňte řádek dimenzí pro chybějící dimenzi.. |
+| Nepovolená hodnota dimenze | Typ hodnoty dimenze pro %1 %2 - %3 nesmí být %4. | -Změňte pole **Typ hodnoty dimenze**na stránce **Hodnoty dimenze** na **Standardní** nebo **Od-součet**.<br />-Odstraňte řádek dimenzí pro blokovanou dimenzi. |
+| Blokovaná kombinace dimenzí | Dimenze %1 a %2 nelze použít současně. | -Najděte nezaúčtované doklady obsahující sadu dimenzí s blokovanou kombinací dimenze a odblokujte ji.<br />-Změňte jeden z konfliktích řádků sady opravnění pro kombinanci dimenzí. |
+| Blokovaná kombinace hodnot dimenzí | Dimension combinations %1 - %2 and %3 - %4 can't be used concurrently. | -Najděte nezaúčtované doklady obsahující sadu dimenzí s blokovanou kombinací dimenze a odblokujte ji..<br />-Změňte jeden z konfliktích řádků sady opravnění pro kombinanci dimenzí. |
+| Prázdný kód hodnoty dimenze pro výchozí dimenzi, kde pole **Účtování hodnoty** obsahuje **Kód nutný** | -Vyberte %1 pro %2 %3.<br />-Vyberte %1 pro %2 %3 pro %4 %5. | -Změňte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />-Zadejte neprázdnou hodnotu dimenze pro konfliktní dimenzi v sadě dimenzí. |
+| Nesprávný kód hodnoty dimenze pro výchozí dimenzi, kde pole **Účtování hodnoty** osahuje **Stený kód** | -Vyberte %1 %2 pro %3 %4.<br />-Vyberte %1 %2 pro %3 %4 pro %5 %6. | -Změňte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />-Zadejte požadovanou hodnotu dimenze pro konfliktní dimenzi v sadě dimenzí. |
+| Neprázdný kód hodnoty dimenze pro výchozí dimenzi, kde pole **Účtování hodnoty** osahuje **Stený kód** | -%1 %2 musí být prázný.<br />-%1 %2 musí být prázdné pro %3 %4. | -Změňte pole **Účtování hodnoty** na stránce **Výchozí dimenze**.<br />-Zadejte prázdný kód hodnoty dimenze pro konfliktní dimenzi v sadě dimenzí. |
+| Neočekávaná hodnota dimenze pro výchozí dimenzi, kde pole **Účtování hodnoty** neobsahuje **Ždáný kód** | -%1 %2 musí být uvedeno.<br />-%1 %2 musí být uvedeno pro %3 %4 | -Změňte pole **Hodnotu účtování** na stránce **Výchozí dimenze**.<br />-Odstraňte konflitkní řádek ze sady dimenzí. |
+| Oprava dimenzí neproběhne správně. | -Vyberte **Obnovit** chcete-li vrátit opravu do stavu konceptu. Tím se změny resetují a opravu můžete spustit znovu. |
 
-## Changing Dimension Assignments After Posting
+## Změna přiřazení dimenzí po zaúčtování
 
-If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. That will help keep your financial reports and analyses accurate.
+Pokud zjistíte, že u zaúčtovaných položek hlavní knihy byla použita nesprávná dimenze, můžete opravit hodnoty dimenzí a aktualizovat zobrazení analýzy. To vám pomůže udržet vaše finanční sestavy a analýzy přesné.
 
 > [!IMPORTANT]
-> The features for correcting dimensions are intended only to help make financial reporting accurate. Dimension corrections apply only to the G/L entries. They do not change the dimensions assigned to the entries in other ledgers for the same transaction. There will be a mismatch between the dimensions assigned in the general ledger and the sub-ledgers.
+> Funkce pro opravu dimenzí má pouze pomoci zpřesnit finanční výkaznictví. Opravy dimenzí se vztahují pouze na věcné položky. Nemění dimenze přiřazené záznamům v jiných účetních knihách pro stejnou transakci. Dojde k nesouladu mezi dimenzemi přiřazenými v hlavní knize a dílčích knihách.
 
-### Setting Up Dimension Corrections
+### Nastavení opravy dimenze
 
-There are two things to consider when setting up dimension corrections:
+Při nastavování korekcí dimenzí je třeba vzít v úvahu dvě věci:
 
-* Are there dimensions that you do not want to allow people to change? On the **Dimension Correction Settings** page, specify the dimensions that you want to block for changes.
-* Who do you want to allow to change dimensions? To allow people to make changes, assign the **D365 DIM CORRECTION** permission to the users. The permissions allow them to create dimension corrections, run them, and undo them if needed. They'll also be able to specify blocked dimensions. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
+* Existují dimenze, které nechcete lidem dovolit změnit? Na stránce **Nastavení opravy dimenze** zadejte dimenze, které chcete zablokovat pro změny.
+* Komu chcete umožnit změnu dimenzí? Chcete-li uživatelům povolit provádění změn, přiřaďte uživatelům oprávnění **D365 DIM CORRECTION**. Oprávnění jim umožňují vytvářet opravy dimenzí, spouštět je a v případě potřeby je vrátit zpět. Budou také moci určit blokované dimenze. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
-### Correcting a Dimension
+### Opravy dimenzí
 
-You can manually select one or more general ledger entries, or use filters to select sets of entries. If needed, you can also add or delete dimensions.
+Můžete ručně vybrat jednu nebo více položek hlavní knihy nebo použít filtry k výběru sad položek. V případě potřeby můžete také přidat nebo odstranit dimenze.
 
-1. To start a dimension correction, use one the following pages:
+1. Chcete-li zahájit opravu dimenzí, použijte jednu z následujících stránek:
 
-   * On the **GL/Register** page, by selecting a register, and then choosing the **Correct Dimensions** action. This starts a correction for the entries in the selected register.
-   * On the **General Ledger Entries** page, by choosing the **Dimension Correction** action.
+   * Na stánce **Finanční žurnály** vyberte žurnál a poté vyberte **Opravy dimenzí**. Tím se spustí oprava položek ve vybraném žurnálu.
+   * Na stránce **Věcné položky** vyberte tlačítko **Opravy dimenzí**.
 
-2. In the **Description** field, enter information about the change. Other people might use this information later to understand what was done.
-3. On the **Selected Ledger Entries** FastTab, choose the relevant entries.
+2. V poli **Popis** vložte informace, které chcete změnit. Ostatní lidé si mohou tyto informace později přečíst, aby pochopili, co bylo provedeno.
+3. V záložce **Vyberané položky zboží** vyberte příslušné položky.
 
    > [!IMPORTANT]
-   > When you change a selection, the values on the **Dimension Correction Changes** FastTab are reset. Therefore, always select the entries before you specify dimension value changes.
+   > Při změně výběru se hodnoty na kartě **Změny opravy dimenze** vynulují. Proto vždy vyberte položky před zadáním změn hodnoty dimenze.
 
    Následující tabulka popisuje možnosti.
 
    | Možnost | Popis |
    |---------|---------|
-   | Add Related Entries | Add G/L entries that are in the same G/L register. |
-   | Add by Filter | Use filter criteria when adding G/L entries. |
-   | Manual Selection | Select specific G/L entries. |
-   | Add by Dimensions | Filter G/L entries by dimensions. |
-   | Remove Entries | Deselect G/L entries. |
-   | Manage Selection Criteria | Keep track of the selection process, and undo selections if needed. |
+   | Přidat související položky | Přidat položky hlavní knihy, které jsou ve stejném finančním žurnálu. |
+   | Přidat podle filtru | Při přidávání položek hlavní knihy použije kritéria filtru. |
+   | Ruční výběr | Vyberte konkrétní položky hlavní knihy. |
+   | Přidat podle dimenzí | Filtrovat položky hlavní knihy podle rozměrů. |
+   | Odstranit položky | Zrušte výběr položek zboží. |
+   | Správa kritérií výběru | Sledujte proces výběru a v případě potřeby výběr zrušte. |
 
-4. On the **Dimension Correction Changes** FastTab, choose the dimension that you want to change in the **Dimension Code** field, and the new value in the **New Dimension Value Code** field.
-5. To validate that the correction, choose **Validate Dimension Changes**. For more information, see [Validating Dimension Corrections](finance-troubleshooting-correcting-dimensions.md#validating-dimension-corrections).
-6. Choose **Run**.
+4. Na záložce **Změny opravy dimenze** vyberte dimenzi, kterou chcete změnit v poli **Kód dimenze** a novou hodnotu v poli **Nový kód dimenze**.
+5. Chcete-li ověřit, zda je oprava provedena, zvolte **Ověřit změny dimenzí**. Pro více informací navštivte [Ověřování změn dimenzí](finance-troubleshooting-correcting-dimensions.md#validating-dimension-corrections).
+6. Zvolte **Spustit**.
 
-### Validating Dimension Corrections
+### Ověření změn dimenze
 
-Before you run a correction, it's a good idea to validate it first. Validation checks for restrictions on value posting for the G/L accounts, restrictions for dimensions, and whether the dimension values are blocked. During validation, the status of the correction is set to **Validation in Process**. After you validate a correction, the result is shown in the **Validation Status** field. If errors were found, you can use the **View Errors** action to investigate them. After you correct an error, you must use the **Reopen** action to run the correction or a new validation.
+Než spustíte opravu, je vhodné ji nejprve ověřit. Ověření kontroluje omezení týkající se účtování hodnot pro účty hlavní knihy, omezení dimenzí a zda jsou hodnoty dimenzí blokovány. Během ověřování je stav opravy nastaven na  **Probíhá ověřování**. Po ověření opravy se výsledek zobrazí v poli **Stav ověření** field. Pokud byly nalezeny chyby, můžete je prozkoumat pomocí akce **Zobrzit chyby**. Po opravě chyby je nutné použít akci **Znovu otevřít** ke spuštění opravy nebo nového ověření.
 
-You can either run a correction immediately, or schedule it to run a later time. If you are running corrections on a large data set, we recommend that you schedule it to run outside business hours. For more information, see [Dimension Corrections on Large Data Sets](finance-troubleshooting-correcting-dimensions.md#dimension-corrections-on-large-data-sets).
+Opravu můžete buď spustit okamžitě, nebo naplánovat její spuštění na pozdější dobu. Pokud provádíte opravy u velké sady dat, doporučujeme naplánovat její spuštění mimo pracovní dobu. Pro více informací navštivte [Změny dimenzí u velkých datových sad](finance-troubleshooting-correcting-dimensions.md#dimension-corrections-on-large-data-sets).
 
-### Undoing a Correction
+### Vracení změn
 
-After you correct a dimension, if you don't like what you see you can use the **Undo** action to reset the previous value. However, you can only undo the most recent correction. Before you undo a correction, you can validate the changes that the undo will make. For example, this is useful if dimension restrictions have changed after the correction was made.
+Pokud se vám po opravě dimenze nelíbí, co vidíte, můžete pomocí akce **Vrátit změnu** obnovit předchozí hodnotu. Vrátit zpět však můžete pouze poslední změnu. Než změnu vrátíte zpět, můžete potvrdit změny, které vrácení provede. To je užitečné například v případě, že se po provedení změny změnila omezení dimenzí.
 
-If the Undo action is not available, for example because you have made many corrections, you can use the **Copy to Draft** action to start a new correction for the same entries.
+Pokud akce Vrátit změnu není k dispozici, například proto, že jste provedli mnoho oprav, můžete použít akci **Kopírovat do konceptu** k zahájení nové opravy pro stejné položky.
 
-### Dimension Corrections on Large Data Sets
+### Změny dimenzí u velkých datových sad
 
-Use caution when correcting large sets of entries, for example, sets that include more than 10,000 entries. If you can, we recommend that you use the filters to run the corrections on smaller sets of data. It's also a good idea to run corrections outside the normal business hours.
+Buďte opatrní při opravách velkých sad položek, například sad, které obsahují více než 10 000 položek Pokud je to možné, doporučujeme použít filtry ke spuštění oprav na menších sadách dat. Je také vhodné provádět opravy mimo běžnou pracovní dobu
 
-### Using Analysis Views with Dimension Corrections
+### Použití zobrazení analýzy s opravami dimenzí
 
-If **Update on Posting** is enabled for an analysis view, [!INCLUDE[prod_short](includes/prod_short.md)] can the view when documents and journals are posted. You can also update views with this setting enabled with results of dimension corrections. To do so, turn on the **Update Analysis Views** toggle. Updating analysis views can impact performance, especially for large data sets, so we recommend that you update analysis views only for small data sets.
+Pokud je **Aktualizace při účtování** je povoleno pro zobrazení analýzy, [!INCLUDE[prod_short](includes/prod_short.md)] může zobrazit při zaúčtování dokladů a deníků. Pohledy můžete také aktualizovat s tímto nastavením povoleným výsledky oprav dimenzí. Chcete-li tak učinit, zapněte **Aktualizace pohledů analýzy**. Aktualizace analytických pohledů může mít vliv na výkon, zejména u velkých datových sad, proto doporučujeme aktualizovat analytické pohledy pouze u malých datových sad.
 
-### Viewing Historical Dimension Corrections
+### Zobrazení historických změn dimenzí
 
-If a general ledger entry has been corrected, you can investigate the change by using the **History of Dimension Corrections** action.
+Pokud byla položka hlavní knihy opravena, můžete prozkoumat změnu pomocí akce **Historie změn dimenzí**.
 
-### Handling Incomplete Corrections
+### Zpracování neúplných oprav
 
-If a correction does not complete, a warning will display on the correction card. If that happens, you can use the **Reset** action to revert the correction to a draft status and undo the changes. You can then run the correction again.
+Pokud se oprava nedokončí, zobrazí se na kartě změny varování. Pokud k tomu dojde, můžete pomocí akce **Obnovit** vrátit opravu do stavu konceptu a vrátit změny zpět. Změnu pak můžete spustit znovu.
 
 > [!NOTE]
-> Resetting an incomplete correction will not affect updates to analysis views because those happen at the end of the correction process.
+> Resetování neúplné opravy neovlivní aktualizace zobrazení pohledů, protože k nim dochází na konci procesu opravy.
 
-### Using Cost Accounting with Corrected G/L Entries
+### Použití nákladového účetnictví s opravenými položkami hlavní knihy
 
-After you correct dimensions your data for cost accounting will be out of sync. Cost accounting uses dimensions to aggregate amounts for cost centers and cost objects, and to run cost allocations. Changing dimensions for G/L entries will probably mean that you re-run your cost accounting models. Whether you need to just delete a few cost registers and re-run allocations, or you need to delete everything and re-run all of your models depends on the data that has been updated and how your cost accounting capabilities are set up. You must manually identify where dimension corrections will impact cost accounting and where updates are needed. [!INCLUDE[prod_short](includes/prod_short.md)] does not currently provide an automated way to do that.
+ opravě dimenzí nebudou data pro nákladové účetnictví synchronizována. Nákladové účetnictví používá dimenze k agregaci částek pro nákladová střediska a objekty nákladů a ke spuštění přidělení nákladů. Změna dimenzí pro položky hlavní knihy bude pravděpodobně znamenat, že znovu spustíte modely nákladového účetnictví. To, jestli potřebujete odstranit jen několik žurnálů nákladů a znovu spustit přidělení, nebo potřebujete odstranit všechno a znovu spustit všechny modely, závisí na datech, která byla aktualizována, a na tom, jak jsou nastaveny možnosti nákladového účetnictví. Musíte ručně určit, kde budou mít opravy dimenzí vliv na nákladové účetnictví a kde jsou potřebné aktualizace. [!INCLUDE[prod_short](includes/prod_short.md)] does not currently provide an automated way to do that.
 
 ## Viz také
 
-[Working with Dimensions](finance-dimensions.md)
-[Analyze Data by Dimensions](bi-how-analyze-data-dimension.md)
+[Práce s dimenzemi](finance-dimensions.md)
+[Analýza dat pomocí Dimenzí](bi-how-analyze-data-dimension.md)

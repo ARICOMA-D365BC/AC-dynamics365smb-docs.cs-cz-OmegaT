@@ -13,17 +13,17 @@ ms.date: 05/27/2021
 ms.author: edupont
 
 ---
-# External Document Numbers on Purchase Documents
+# Čísla externích dokladů na nákupních dokladech
 
 [!INCLUDE [ext-doc-no-purch](includes/ext-doc-no-purch.md)]
 
-You can also specify external document numbers on sales documents. For more information, see [External Document Numbers](sales-how-invoice-sales.md#external-document-numbers)
+Můžete zadávat externí čísla dokladů také na prodejních dokladech . Pro více informací navštivte [Čísla externích dokladů](sales-how-invoice-sales.md#external-document-numbers)
 
 ## Viz také
 
-[Enter External Document Numbers](across-enter-external-document-numbers.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[External Document Numbers on Sales Documents](sales-how-invoice-sales.md#external-document-numbers)  
-[General Business Functionality](ui-across-business-areas.md)
+[Zadávání čísel externích dokladů](across-enter-external-document-numbers.md)  
+[Nakupování](purchasing-manage-purchasing.md)  
+[Externí čísla dokladů na prodejních dokladech](sales-how-invoice-sales.md#external-document-numbers)  
+[Obecné obchodní funkcionality](ui-across-business-areas.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

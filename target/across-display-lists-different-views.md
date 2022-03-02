@@ -15,17 +15,17 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Displaying Lists in Different Ways
-In the right corner of any list in [!INCLUDE[prod_short](includes/prod_short.md)] you will find icons that let you choose how the list of records is displayed. A list can be displayed as detailed rows, which is ideal when you need to work with many fields or edit fields in the list. But you can also switch to display records as tiles, which is more compact and shows less fields on the specific record. This is very useful to gain an overview of several entries and is in particular useful on smaller devices, because it is compact and easier to tap.
+# Zobrazení přehledů různými způsoby
+V pravém rohu libovolného přehledu v [!INCLUDE[prod_short](includes/prod_short.md)] najdete ikony, které vám umožní zvolit, jak se bude přehled zobrazovat. Přehled lze zobrazit jako podrobné řádky, což je ideální, pokud potřebujete pracovat s mnoha poli nebo upravovat pole v seznamu. Můžete také přepnout na zobrazení záznamů ve formě dlaždic, které je kompaktnější a zobrazuje méně polí u konkrétního záznamu. Tato funkce je velmi užitečná pro získání přehledu o několika položkách zboží a je užitečná zejména na menších zařízeních, protože je kompaktní a lépe se na ni ťuká.
 
 ## Přehled zboží
-On the **Items** page, having pictures helps you get a quick overview of what you sell and switching to the tiles gives you an item catalogue to browse through. For lists that include pictures, such as the **Items** page, you have a third option to display as large tiles. This displays large pictures for each record but also shows few fields.
+Na stránce **Zboží** vám obrázky pomohou získat rychlý přehled o tom, co prodáváte a přepnutím na dlaždice získáte katalog předmětů, který si můžete prohlížet. U seznamů, které obsahují obrázky, jako je například stránka **Zboží** máte třetí možnost zobrazení jako velké dlaždice. Zobrazí se velké obrázky pro každý záznam, ale také několik polí.
 
-You can import item pictures, either one by one or for multiple items in one go. For more information, see [Import Multiple Item Pictures](inventory-how-import-item-pictures.md).
+Obrázky zboží můžete importovat buď po jednom, nebo pro více najednou. Pro více informací navštivte [Hromadný import obrázků ](inventory-how-import-item-pictures.md).
 
 ## Viz také
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Register New Items](inventory-how-register-new-items.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Evidence nového zboží](inventory-how-register-new-items.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

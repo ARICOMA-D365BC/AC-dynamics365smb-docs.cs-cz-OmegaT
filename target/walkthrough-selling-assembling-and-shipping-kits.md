@@ -88,7 +88,7 @@ Před provedením úkolů v návodu je nutné provést následující kroky:
 
 Připravte lokaci BÍLÝ pro zpracování montáže pomocí následujících kroků:
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete kartu lokace pro lokaci BÍLÝ.
 3. Na záložce **Přihrádky** zadejte do pole **Kód přihrádky na montáž** hodnotu **W-10-0001**.
 

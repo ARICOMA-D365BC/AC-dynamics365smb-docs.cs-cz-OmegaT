@@ -119,7 +119,7 @@ Network services such as proxies or firewalls must allow routing between each cl
 
 Sometimes, users run into problems with the Excel add-in. This section gives some tips for how to unblock users in certain circumstances.
 
-| Issue | Solution or workaround | Komentáře |
+| Vydání | Solution or workaround | Komentáře |
 |---------|---------|---------|
 | The add-in doesn't start | Check whether the add-in is deployed centrally. Or, check whether the user is blocked from installing it locally. | The admin can configure Office so that users can't acquire add-ins. In those cases, the admin must deploy the add-in centrally. For more information, see [Deploy add-ins in the admin center](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide&preserve-view=true). |
 | Data doesn't load into Excel | Test the connection by opening another list in Excel from [!INCLUDE [prod_short](includes/prod_short.md)]. Or, open the workbook in Excel in a browser. | If the user has specified a company name that contains special characters, the add-in can't connect. |

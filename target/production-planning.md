@@ -39,7 +39,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Initiate or update a production order as rough-scheduled operations in the master production schedule. | [Replan or Refresh Production Orders Directly](production-how-to-replan-refresh-production-orders.md) |
 | Recalculate work or machine center calendars due to planning changes. | [To calculate a work center calendar](production-how-to-create-work-center-calendars.md#to-calculate-a-work-center-calendar) |
 | Track the order demand (tracked quantity), forecast, blanket sales order, or planning parameter (untracked quantity) that has given rise to the planning line in question. | [Track Relations Between Demand and Supply](production-how-track-demand-supply.md) |
-| View an item's projected available inventory by different views and see which gross requirements, planned order receipts, and other events influence it over time. | [View the Availability of Items](inventory-how-availability-overview.md) |
+| View an item's projected available inventory by different views and see which gross requirements, planned order receipts, and other events influence it over time. | [Zobrazit dostupnost zboží](inventory-how-availability-overview.md) |
 <!--|Perform selected planning activities, such as changing or adding planning worksheet lines, in a graphical view of the supply plan.|[Modify Planning Suggestions in a Graphical View](production-how-to-modify-planning-suggestions-in-a-graphical-view.md)|-->
 
 ## Viz také

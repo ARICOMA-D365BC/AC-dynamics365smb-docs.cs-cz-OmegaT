@@ -121,7 +121,7 @@ Sometimes a bank statement contain amounts for interest or fees charged. Such ba
 2. On the **Trans. Bank Rec. to Gen. Jnl.** page, specify which general journal to use, and then choose the **OK** button.
 
    The **General Journal** page opens containing new journal lines for any banks statement lines with missing ledger entries.
-3. Complete the journal line with relevant information, such as the balancing account. For more information, see [Working with General Journals](ui-work-general-journals.md).
+3. Complete the journal line with relevant information, such as the balancing account. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
 4. To review the result of posting before you post, choose the **Test Report** action. The **Bank Account Statement** report opens and shows the same fields as at the header of the **Bank Acc. Reconciliation** page.
 5. Vyberte tlačítko **Zaúčtovat**.
 
