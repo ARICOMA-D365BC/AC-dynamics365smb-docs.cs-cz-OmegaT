@@ -1,6 +1,6 @@
 ---
     title: Workflows in Dynamic 365 Business Central
-    description: Use workflows to connect business-process tasks performed by different users. System tasks, such as automatic posting, can be included as workflow steps. 
+    description: Use workflows to connect business-process tasks performed by different users. System tasks, such as automatic posting, can be included as workflow steps.
     author: SorenGP
 
     ms.service: dynamics365-business-central

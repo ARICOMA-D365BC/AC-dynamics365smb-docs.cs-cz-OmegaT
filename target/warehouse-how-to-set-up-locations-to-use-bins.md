@@ -1,6 +1,6 @@
 ---
     title: How to Set Up Locations to Use Bins
-    description: Bins represent the basic warehouse structure and are used to make suggestions about the placement and location of items. 
+    description: Bins represent the basic warehouse structure and are used to make suggestions about the placement and location of items.
     author: SorenGP
 
     ms.service: dynamics365-business-central
@@ -34,7 +34,7 @@ To use the bin functionality at a location, you first activate the functionality
 10. Fill in the fields on the **Bin Policies** FastTab if they are relevant to your warehouse. The most important fields are **Bin Capacity Policy**, **Allow Breakbulk**, and **Put-away Template Code** fields.
 11. On the **Warehouse** FastTab, fill in the **Outbound Whse. Handling Time**, **Inbound Whse. Handling Time**, and the **Base Calendar Code** fields. For more information, see [Set Up Base Calendars](across-how-to-assign-base-calendars.md).
 
-## Plnění spotřební přihrádky 
+## Plnění spotřební přihrádky
 This flow chart shows how the **Bin Code** field on production order component lines is filled according to your location setup.
 
 ![Bin flow chart.](media/binflow.png "BinFlow")

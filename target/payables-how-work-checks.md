@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment journal, print check, vendor payment, creditor, debt, balance due, AP
-ms.search.form: 256, 404, 
+ms.search.form: 256, 404,
 ms.date: 04/01/2021
 ms.author: edupont
 

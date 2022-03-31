@@ -1,6 +1,6 @@
 ---
     title: Invoice Prepayments
-    description: Learn how to use prepayments to invoice and collect deposits from customers and remit deposits to vendors in Business Central. 
+    description: Learn how to use prepayments to invoice and collect deposits from customers and remit deposits to vendors in Business Central.
     author: edupont04
 
     ms.service: dynamics365-business-central

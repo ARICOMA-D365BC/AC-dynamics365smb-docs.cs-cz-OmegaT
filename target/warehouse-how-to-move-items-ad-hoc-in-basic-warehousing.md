@@ -1,6 +1,6 @@
 ---
 title: Move Items Ad Hoc in Basic Warehouse Configs
-description: This topic explains ad hoc movements performed when you need to move items between internal bins without a specific demand from a source document. 
+description: This topic explains ad hoc movements performed when you need to move items between internal bins without a specific demand from a source document.
 author: SorenGP
 
 ms.service: dynamics365-business-central

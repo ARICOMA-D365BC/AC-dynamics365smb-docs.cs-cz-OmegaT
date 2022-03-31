@@ -270,7 +270,7 @@ Kromě použití zásady Objednávky lze odkaz zakázky na zakázku použít př
 
 I když se výrobní společnost považuje za prostředí výroby na zakázku, mohlo by být nejlepší použít způsob přiobjednání Dávka pro dávku pokud jsou položky čistým standardem bez odchylek v atributech. V důsledku toho bude systém používat neplánované zásoby a shromažďuje pouze prodejní objednávky se stejným datem dodávky nebo v rámci definovaného intervalu dostupnosti.
 
-#### Propojení zakázky na zakázku a minulá data splatnosti 
+#### Propojení zakázky na zakázku a minulá data splatnosti
 Na rozdíl od většiny sad poptávky a nabídky jsou propojené objednávky s daty splatnosti před datem zahájení plánování plně plánovány systémem. Obchodním důvodem této výjimky je, že konkrétní sady nabídky a poptávky musí být synchronizovány až po provedení. Další informace o zmrazené zóně, která se vztahuje na většinu typů poptávky a dodávek, naleznete v tématu[Vyřizování objednávek před datem zahájení plánování](design-details-balancing-demand-and-supply.md#dealing-with-orders-before-the-planning-starting-date).
 
 ### Dávka-pro-dávku

@@ -1,6 +1,6 @@
 ---
 title: Move Items
-description: While in inventory, items may need to be moved between bins to support the daily warehouse activities involved in keeping items flowing through the warehouse. 
+description: While in inventory, items may need to be moved between bins to support the daily warehouse activities involved in keeping items flowing through the warehouse.
 author: SorenGP
 
 ms.service: dynamics365-business-central

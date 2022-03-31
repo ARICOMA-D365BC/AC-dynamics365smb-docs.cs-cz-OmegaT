@@ -1,6 +1,6 @@
 ---
     title: Using Workflows
-    description: You can set up and use workflows that connect business-process tasks like automatic posting or requesting and granting approval for new records. 
+    description: You can set up and use workflows that connect business-process tasks like automatic posting or requesting and granting approval for new records.
     author: SorenGP
 
     ms.service: dynamics365-business-central

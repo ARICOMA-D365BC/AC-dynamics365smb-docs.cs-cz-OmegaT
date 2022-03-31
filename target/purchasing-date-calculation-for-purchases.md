@@ -1,6 +1,6 @@
 ---
     title: Date Calculation for Purchases
-    description: The application automatically calculates the date on which you must order an item to have it in inventory on a certain date. 
+    description: The application automatically calculates the date on which you must order an item to have it in inventory on a certain date.
     author: SorenGP
 
     ms.service: dynamics365-business-central

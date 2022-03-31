@@ -14,7 +14,7 @@
 
 ---
 
-# Design Details: Change the Costing Method for Items
+# Detaily návrhu: Změna metody ocenění pro zboží
 
 In [!INCLUDE[prod_short](includes/prod_short.md)], you cannot change a costing method for an item after you have included the item in a transaction. For example, after you have bought or sold the item. If an incorrect costing method was assigned to the item or items, you might not discover the issue until you do your financial reporting.
 

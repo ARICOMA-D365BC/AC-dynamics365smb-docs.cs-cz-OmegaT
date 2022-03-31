@@ -1,6 +1,6 @@
 ---
 title: Get the Business Central Add-in for Outlook
-description: Learn how to install the Business Central add-in for Outlook for your organization or for your own use. 
+description: Learn how to install the Business Central add-in for Outlook for your organization or for your own use.
 author: jswymer
 ms.service: dynamics365-business-central
 ms.topic: conceptual

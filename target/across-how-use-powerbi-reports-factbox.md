@@ -26,7 +26,7 @@ ms.author: jswymer
 - A Power BI account.
 - Power BI Desktop.
 
-<!-- 
+<!--
 For more information about getting started, see [Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md).-->
 
 ## Create a report for a list page

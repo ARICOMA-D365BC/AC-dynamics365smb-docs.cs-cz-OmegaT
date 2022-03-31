@@ -57,7 +57,7 @@ An administrator must set up the connection between [!INCLUDE[prod_short](includ
 
 ### To prepare [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for connecting to OneDrive
 
-<!-- 
+<!--
 1. For the best experience Configure Azure Active Directory (AD) authentication.
 
    For more information, see [Authenticating Business Central Users with Azure Active Directory](/dynamics365/business-central/dev-itpro/administration/authenticating-users-with-azure-active-directory)-->
@@ -95,7 +95,7 @@ For more information about registering an application and configuring permission
    The URL for a OneDrive is usually in the following format: `https://<tenant name>-my.sharepoint.com`. For more information, see [OneDrive URLs for users in your organization](/onedrive/list-onedrive-urls) in the OneDrive documentation.
 5. In the **Client ID** field, enter the client ID from your application registration.
 6. In the **Client Secret** field, enter the secret from your application registration.
-   <!-- 
+   <!--
       For information about how to find the URLs, see the following:
       * [How to find your SharePoint server URL]
       * [How to find your OneDrive URL]-->

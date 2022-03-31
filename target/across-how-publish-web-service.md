@@ -10,7 +10,7 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Publish a Web Service
+# Publikování Webbových služeb
 
 Web services are a lightweight way to make application functionality available to different kinds of external systems and users. By default, [!INCLUDE[prod_short](includes/prod_short.md)] exposes a number of objects as web services for better integration with other Microsoft services. You can add other web services as your business requires.
 

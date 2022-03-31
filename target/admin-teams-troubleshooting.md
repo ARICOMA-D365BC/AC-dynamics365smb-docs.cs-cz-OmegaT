@@ -75,8 +75,8 @@ Odkaz musí také obsahovat všechny potřebné informace k vyhledání záznamu
 
 - Název prostředí jeho, včetně URL cesty. Pokud nezadáte název prostředí, Teams předpokládá, že se pokoušíte dostat do prostředí "Produkčního".
 - Název společnosti pomocí parametru *company=*
-- Identifikátor stránky pomocí parametru *page=* 
-- Záložka záznamu pomocí parametru *bookmark=* 
+- Identifikátor stránky pomocí parametru *page=*
+- Záložka záznamu pomocí parametru *bookmark=*
 
 Například:
 
@@ -118,7 +118,7 @@ Některé prohlížeče, například nový Microsoft Edge, Vám umožňují zvol
 
 ## Teams zobrazuje pro mé karty podrobností a karty smíšené jazyky
 
-Aby se karty a údaje o kartě zobrazovaly konzistentně ve stejném jazyce v Teams, jazyk vašeho klienta Teams a jazyk, který používáte ve webovém klientu [!INCLUDE [prod_short](includes/prod_short.md)] musí být stejný. 
+Aby se karty a údaje o kartě zobrazovaly konzistentně ve stejném jazyce v Teams, jazyk vašeho klienta Teams a jazyk, který používáte ve webovém klientu [!INCLUDE [prod_short](includes/prod_short.md)] musí být stejný.
 
 - Další informace o změně jazyka v Teams najdete v tématu [Změna nastavení v Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7) na stránkách podpory Microsoft.
 

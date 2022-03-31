@@ -53,7 +53,7 @@ When exploring other roles, you can also narrow the exploration down by using th
 > [!TIP]
 > For developers, you categorize pages and reports by setting the [UsageCategory property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-usagecategory-property) in the object's AL code.
 <!--
- 
+
 ## Role explorer actions
 
 There a several actions along the top of the role explorer to help you locate features of your role and other roles.

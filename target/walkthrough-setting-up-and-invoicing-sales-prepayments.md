@@ -1,6 +1,6 @@
 ---
     title: Setting Up and Invoicing Sales Prepayments
-    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. 
+    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing.
     author: SorenGP
 
     ms.service: dynamics365-business-central

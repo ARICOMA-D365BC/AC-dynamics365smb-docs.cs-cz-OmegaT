@@ -57,7 +57,7 @@ Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, 
 1. Otevřete prohlížeč, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com) a přihlaste se ke svému účtu.
 2. V dolní části levého navigačního podokna vyberte možnost **Získat data**.
 
-   ![Navigating to Get Data.](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-get-data.png)
+   ![Navigace k získání dat.](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-get-data.png)
 
    Můžete také začít od [!INCLUDE [prod_short](includes/prod_short.md)]. Na domovské stránce přejděte na **Výběr sestavy** v sekci Power BI. Z pásu karet vyberte buď **Služba** nebo **Moje organizace**. Otevře se galerie Organizace v Power BI nebo Microsoft AppSource, filtrovaná tak, aby zobrazovala jenom aplikace související s [!INCLUDE[prod_short](includes/prod_short.md)].
 
@@ -70,7 +70,7 @@ Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, 
 
    Po dokončení bude aplikace dostupná z **Aplikace** v navigační nabídce v Power BI.
 
-## Připojte ke svým datům aplikaci  [!INCLUDE[prod_short](includes/prod_short.md)] 
+## Připojte ke svým datům aplikaci  [!INCLUDE[prod_short](includes/prod_short.md)]
 
 1. V části **Aplikace** vyberte aplikaci Business Central a poté **Připojit**.
 2. Po zobrazení výzvy vyplňte **Název společnosti** a **Prostředí** informacemi o instanci [!INCLUDE[prod_short](includes/prod_short.md)], ke které se chcete připojit.
@@ -83,7 +83,7 @@ Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, 
 5. Po zobrazení výzvy zadejte uživatelské jméno a heslo pro přihlášení do [!INCLUDE[prod_short](includes/prod_short.md)].
 6. Po připojení se do vašeho pracovního prostoru, Power BI přidá řídicí panel a sestavy. Po dokončení se zobrazí data z vaší společnosti [!INCLUDE[prod_short](includes/prod_short.md)].
 
-   ![Select Dynamics 365 Business Central  and select Get it now.](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-workspace-dashboard-report-dataset.png)
+   ![Zvolte Dynamics 365 Business Central a vyberte Získat nyní.](./media/across-how-to-connect-powerbi-d365-content-packs/powerbi-workspace-dashboard-report-dataset.png)
 
 ## Řešení problémů
 
