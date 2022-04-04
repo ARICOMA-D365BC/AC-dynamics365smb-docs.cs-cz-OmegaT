@@ -16,9 +16,9 @@
 
 # Detaily návrhu: Změna metody ocenění pro zboží
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], you cannot change a costing method for an item after you have included the item in a transaction. For example, after you have bought or sold the item. If an incorrect costing method was assigned to the item or items, you might not discover the issue until you do your financial reporting.
+V [!INCLUDE[prod_short](includes/prod_short.md)], nelze změnit metodu ocenění pro zboží po zahrnutí zboží do transakce. Například poté, co jste zboží koupili nebo prodali. Pokud byla zboží přiřazena nesprávná metoda ocenění, je možné, že problém nezjistíte, dokud neprovedete finanční výkaznictví.
 
-This topic describes how to resolve this situation. The recommended approach is to replace the item that has the incorrect costing method with a new item, and use an assembly order to transfer the inventory from the old item to the new.
+Toto téma popisuje, jak tuto situaci vyřešit. Doporučeným přístupem je nahradit zboží, které má nesprávnou metodu ocenění, novým zbožím a použít montážní zakázku k převodu zásob ze starého zboží na nové.
 
 > [!NOTE]
 > Using assembly orders allows the costs to still flow although there are outstanding purchase invoices or shipping charges to post. Additionally, it allows you to undo the conversion and get the quantities of the original items back, if needed.

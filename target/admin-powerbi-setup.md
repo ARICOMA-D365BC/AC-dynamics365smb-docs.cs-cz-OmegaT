@@ -19,36 +19,36 @@ Tento článek popisuje, jak získat [!INCLUDE[prod_short](includes/prod_short.m
 
 S [!INCLUDE[prod_short](includes/prod_short.md)], uživatelé získají bezplatnou licenci Power BI, která poskytuje přístup k nejběžnějším funkcím v [!INCLUDE[prod_short](includes/prod_short.md)] a Power BI. Můžete si také zakoupit licenci Power BI Pro, která poskytuje přístup k dalším funkcím. Následující tabulka obsahuje přehled funkcí dostupných s každou licencí.
 
-|Power License|View reports|Create reports|Share reports|Refresh reports| [!INCLUDE[prod_short](includes/prod_short.md)] Apps|
+|Licence pro spuštění|Zobrazení sestav|Vytváření sestav|Sdílení sestav|Aktualizace sestav| Aplikace [!INCLUDE[prod_short](includes/prod_short.md)]|
 |-------------|--------||
-|Power BI free|![a checkmark.](media/check.png)|![another checkmark](media/check.png)|(limited)|(limited)||
-|Power BI Pro|![yet another checkmark.](media/check.png)|![it's a checkmark](media/check.png)|![again a checkmark](media/check.png)|(extensive)|![last checkmark](media/check.png)|
+|Power BI zdarma|![zaškrtnutí.](media/check.png)|![další zaškrtnutí](media/check.png)|(limitované)|(limitované)||
+|Power BI Pro|![ještě další zaškrtnutí.](media/check.png)|![je to zaškrtnuté](media/check.png)|![opět zaškrtnutí](media/check.png)|(rozsáhlý)|![poslední zaškrtnutí](media/check.png)|
 
 Pro více informací navštivte [Licencování služby Power BI pro uživatele ve vaší organizaci](/power-bi/admin/service-admin-licensing-organization) nebo [Registrace ke službě Power BI jako jednotlivci](/power-bi/fundamentals/service-self-service-signup-for-power-bi).
 
-## <a name="exposedata"></a>Expose data through API pages or OData web services
+## <a name="exposedata"></a>Vystavení dat prostřednictvím stránek rozhraní API nebo webových služeb OData
 
-Business Central offers two ways to expose data that can be consumed by Power BI reports: API pages and Open Data Protocol (OData) web services.
+Business Central nabízí dva způsoby přístupu k datům, která lze zpracovávat sestavami Power BI: stránky API a webové služby Open Data Protocol (OData).
 
-### API pages
+### Stránky rozhraní API
 
-> **APPLIES TO:** Business Central online only
+> **PLATÍ PRO:** pouze Business Central online
 
-An API page is a specific page type created in AL code that provides access to database tables through a webhook-supported, OData v4-enabled, REST service. This type of page can't be displayed in the user interface, but is intended for building reliable integration services.
+Stránka API je specifický typ stránky vytvořený v kódu AL, který poskytuje přístup k databázovým tabulkám prostřednictvím služby REST, podporou webhooku a s podporou OData v4. Tento typ stránky nelze zobrazit v uživatelském rozhraní, ale je určen pro vytváření spolehlivých integračních služeb.
 
-Business Central online comes available with a set of built-in APIs, which you can use to get data for the most common business entities, like customers, items, sales orders, and more. No extra work or setup is required to use these APIs as a data source for Power BI reports. For more information about these APIs, see [Business Central API V2.0](/dynamics365/business-central/dev-itpro/api-reference/v2.0/).
+Business Central online je k dispozici se sadou vestavěných rozhraní API, která můžete použít k získání dat pro nejběžnější obchodní subjekty, jako jsou zákazníci, zboží, prodejní objednávky a další. K použití těchto rozhraní API jako zdroje dat pro sestavy Power BI není potřeba žádná další práce ani nastavení. Pro více informací o těchto rozhraních API navštivte [Business Central API V2.0](/dynamics365/business-central/dev-itpro/api-reference/v2.0/).
 
-Business Central online also supports custom APIs. Application developers of Business Central solutions can create their own API pages and package them into extensions. You can install the extensions on your tenant. Once installed, you can use the API pages for your Power BI reports, like you'd do with the built-in APIs (v2.0). For more information about how to create API pages, see [Developing a Custom API](/dynamics365/business-central/dev-itpro/developer/devenv-develop-custom-api).
+Business Central online také podporuje vlastní rozhraní API. Vývojáři aplikací řešení Business Central mohou vytvářet vlastní stránky API a balit je do rozšíření. Rozšíření můžete nainstalovat do svého tenanta. Po instalaci můžete pro sestavy Power BI použít stránky rozhraní API, jako byste to udělali s integrovanými rozhraními API (v2.0). Pro více informací o tom, jak vytvořit stránky rozhraní API navštivte [Vývoj vlastního rozhraní API](/dynamics365/business-central/dev-itpro/developer/devenv-develop-custom-api).
 
-### OData web services
+### Webové služby OData
 
-You can publish Business Central application objects, like codeunits, page, and queries, as [OData web services](/dynamics365/business-central/dev-itpro/webservices/odata-web-services). With Business Central online, there are many web services published by default. An easy way to find the web services is to search for *web services* in [!INCLUDE[prod_short](includes/prod_short.md)]. In the **Web Services** page, make sure the **Publish** field is selected for the web services listed above. For more information about publishing web services, see [Publish a Web Service](across-how-publish-web-service.md).
+Objekty aplikace Business Central, jako jsou codeunits, stránky a dotazy, můžete publikovat jako [Webové služby OData](/dynamics365/business-central/dev-itpro/webservices/odata-web-services). S Business Central online existuje ve výchozím nastavení mnoho webových služeb. Snadný způsob, jak najít webové služby, je vyhledat *webové služby* v [!INCLUDE[prod_short](includes/prod_short.md)]. Na stránce **Webové služby** se ujistěte, že je pro výše uvedené webové služby vybráno pole **Publikovat**. Pro více informací o publikování webových služeb navštivte [Publikování webové služby](across-how-publish-web-service.md).
 
-To learn about what you can do to ensure the best performance of web services, as seen from the Business Central server (the endpoint) and from the consumer (the client), read [Writing efficient Web Services](/dynamics365/business-central/dev-itpro/performance/performance-developer#writing-efficient-web-services).
+Chcete-li se dozvědět, co můžete udělat pro zajištění nejlepšího výkonu webových služeb, jak je vidět ze serveru Business Central (koncový bod) a od spotřebitele (klienta), přečtěte si [Webové služby s efektivním zápisem](/dynamics365/business-central/dev-itpro/performance/performance-developer#writing-efficient-web-services).
 
-### Choosing whether to use API pages or OData web services
+### Výběr, zda použít stránky API nebo webové služby OData
 
-Whenever possible, you're encouraged to use API pages instead of OData web service. API pages are generally faster at loading data in Power BI reports than OData web services. Plus, they're more flexible because they let you get data from table fields that aren't defined in a page object.
+Kdykoli je to možné, doporučujeme používat stránky rozhraní API místo webové služby OData. Stránky rozhraní API jsou obecně rychlejší při načítání dat v sestavách Power BI než webové služby OData. Navíc jsou flexibilnější, protože umožňují získat data z polí tabulky, která nejsou definována v objektu stránky.
 
 ## <a name="setup"></a>Nastavení [!INCLUDE[prod_short](includes/prod_short.md)] on-premises pro integraci Power BI
 
