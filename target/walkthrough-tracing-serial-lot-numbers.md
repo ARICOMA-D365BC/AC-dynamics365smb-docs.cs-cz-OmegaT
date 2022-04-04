@@ -73,7 +73,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
 ### Vytvoření zboží
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
 3. Do pole **Číslo** zadejte **2000** a poté vyplňte následující pole.
 

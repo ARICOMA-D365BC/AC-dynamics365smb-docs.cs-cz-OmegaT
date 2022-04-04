@@ -49,7 +49,7 @@ Fronta úloh je účinným nástrojem pro plánování chodu obchodních proces�
 
 Následující postup vysvětluje, jak nastavit účtování prodejních objednávek na pozadí. The steps are similar for purchasing.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. On the **Sales & Receivables Setup** page, choose the **Post with Job Queue** check box.
 3. Choose the **Job Queue Category Code** field, and then specify the **SALESPOST** code.
 

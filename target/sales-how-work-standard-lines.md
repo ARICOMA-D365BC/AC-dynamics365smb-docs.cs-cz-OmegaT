@@ -34,7 +34,7 @@ The following procedures show how to work with standard sales lines on a sales i
 
 Assign one or more recurring sales lines to a customer so that they are available to insert on sales documents for that customer.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the card for a relevant customer.
 3. Choose the **Recurring Sales Lines** action.
 4. On the **Recurring Sales Lines** page, select codes for the recurring sales lines that you want to be able to insert on sales documents for the customer.

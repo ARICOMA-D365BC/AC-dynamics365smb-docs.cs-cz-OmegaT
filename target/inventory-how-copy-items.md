@@ -19,7 +19,7 @@ When you add a new item, to save time, you can use the **Copy Item** function to
 
 ## Kopírování existujícího zboží do nového
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Select the item that you want to copy, and then choose the **Copy Item** action.
 
    If you cannot find the **Copy Item** action, choose to view more options, and then find it under **Actions**, **Functions**.

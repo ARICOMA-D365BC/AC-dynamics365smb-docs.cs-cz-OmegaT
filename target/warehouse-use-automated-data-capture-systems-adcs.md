@@ -59,7 +59,7 @@ Chcete-li používat ASSD, musíte určit, které lokace technologii budou použ
 ## Určení zboží pro použití ASSD
 Každému zboží skladu, které chcete použít s ASSD, musí být přiřazen identifikační kód, který jej propojí s číslem zboží. Jako kód identifikátoru můžete například použít čárový kód zboží. Zboží může mít také více identifikačních kódů. To může být užitečné v případě, kdy je zboží k dispozici v různých měrných jednotkách, například v kusech a paletách. V takovém případě každému přiřaďte identifikační kód.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Select an item from the list that is part of your ADCS solution, and then choose the **Edit** action.
 3. On the **Item Card** page, choose the **Identifiers** action.
 4. On the **Item Identifiers** page, choose the **New** action.

@@ -155,7 +155,7 @@ Let's say that your company wants to track transactions based on organizational 
 
 | Kód | Jméno | Code Caption | Filter Caption |
 | --- | --- | --- | --- |
-| AREA | Oblasti | Area Code | Area Filter |
+| AREA | Oblast | Area Code | Area Filter |
 | DEPARTMENT | Department | Department Code | Department Filter |
 
 For **AREA**, you add the following dimension values:

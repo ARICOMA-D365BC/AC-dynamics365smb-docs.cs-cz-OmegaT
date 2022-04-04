@@ -60,7 +60,7 @@ Vyhrazená přihrádka obsahuje obsah přihrádky, který lze vybrat pouze pro v
 Vlastnost Výchozí přihrádka používá systém k navrhování přihrádek pro činnosti skladu. Na lokacách SSS se nepoužívá vlastnost Výchozí přihrádka. V lokacích, kde jsou požadovány přihrádky, se vlastnost používá v příchozích tocích k určení umístění zboží. V odchozích tocích se vlastnost používá k určení, odkud má být zboží odváděno.
 
 > [!NOTE]  
-> If the outbound items are placed in several bins, then items are first taken from the non-default bins, to empty that bin content, and then the remaining items are taken from the default bin.
+> Pokud je odchozí zboží umístěno v několika přihrádkách, pak je zboží nejprve převzato z jiných než výchozích přihrádek, aby se vyprázdnil obsah přihrádky, a pak je zbývající zboží převzato z výchozí přihrádky.
 
 Na zboží na lokaci může být pouze jedna výchozí přihrádka.
 
@@ -80,7 +80,7 @@ V instalacích SSS můžete omezit aktivity skladu, které jsou pro přihrádku 
 Pro všechny typy přihrádek, s výjimkou VYSKL, VYSKLZASKL a ZASKL, není pro přihrádku povolena žádná jiná aktivita, než je definována typem přihrádky. Například přihrádku typu  **K příjmu** lze použít pouze k přijímání zboží nebo k vyskladnění zboží.
 
 > [!NOTE]  
-> Only movement can be made to bins of type RECEIVE and QC. Podobně lze z přihrádek typu DODÁVKA a KVAL uskutechovat pouze pohyby.
+> Lze provést pouze přesun do přihrádek typu K PŘÍJMU a KVAL. Podobně lze z přihrádek typu DODÁVKA a KVAL uskutechovat pouze pohyby.
 
 ## Pořadí přihrádky
 
@@ -100,7 +100,7 @@ Chcete-li nastavit maximální množství určitého zboží, které má být ul
 Před nastavením omezení kapacity pro obsah přihrádky se musíte nejprve ujistit, že na kartě zboží byla nastavena MJ a dimenze zboží.
 
 > [!NOTE]  
-> It is only possible to operate with multiple UOMs in WMS installations. U všech ostatních konfigurací může být obsah přihrádky pouze v základní MJ. Ve všech transakcích s MJ vyšší než základní MJ zboží se množství převede na základní MJ.
+> Pouze v instalacích SKL je možné pracovat s více MJ. U všech ostatních konfigurací může být obsah přihrádky pouze v základní MJ. Ve všech transakcích s MJ vyšší než základní MJ zboží se množství převede na základní MJ.
 
 ## Zóna
 

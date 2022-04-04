@@ -68,7 +68,7 @@ If you want to register items that are then used in production orders, you speci
 
 If you purchase the same item from more than one vendor, you must enter information about each vendor of the item, such as prices, lead time, discounts, and so on.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Select the relevant item, and then choose the **Edit** action.
 3. Choose the **Vendors** action.
 4. Choose the **Vendor No.** field, and then select the vendor that you want to set up for the item.
@@ -83,7 +83,7 @@ You can set up items to have substitutes, such as other items that can be used i
 
 ### To make an item substitution
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Find the relevant item, and then click on the **Item No.** to open the Item Card.
 3. Choose the **Related** action, then choose **Item**, and then **Substitutions** to open the the Item Substitution Entry page.
 4. Choose the **Substitute No.** field, and then select the replacement item from the list.

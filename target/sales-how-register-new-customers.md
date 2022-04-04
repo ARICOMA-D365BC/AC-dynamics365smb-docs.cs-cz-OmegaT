@@ -66,7 +66,7 @@ You can choose not to have warnings telling you that the customer's credit limit
 
 ### To specify credit limit warnings
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 
 2. On the **General** FastTab, in the **Credit Warnings** field, choose the relevant option as described in the following table:
 

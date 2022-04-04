@@ -25,7 +25,7 @@ Toto rozšíření je určeno pro malé firmy a může podporovat až tři uživ
 ## Co je k dispozici
 Následující tabulka popisuje možnosti, které jsou k dispozici při instalaci rozšíření Basic Experience.
 
-| Oblasti | Funkcionalita |
+| Oblast | Funkcionalita |
 |---------|---------|
 | **Hlavní kniha** | Základní finance, Účetní schémata, Dlouhodobý majetek, Správa banky, Vyrovnávání banky, Platby, Inkaso, Dimenze, Více měn, Rozpočty, Workflow, Správa dokladů/OCR, Konsolidace, Neomezené společnosti |
 | **Pohledávky/Prodej** | Základní pohledávky, fakturace prodeje, prodejní slevy, ceny, DPH, správa kontaktů |

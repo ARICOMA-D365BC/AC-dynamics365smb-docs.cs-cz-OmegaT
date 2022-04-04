@@ -68,7 +68,7 @@ Následující postupy popisují, jak splnit úkoly Phyllis:
 
 ### Nastavení číselných řad pro zálohy
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. On the **Sales & Receivables Setup** page, expand the **Number Series** FastTab.
 3. Ověřte, že číselná řada pro zaúčtované zálohové faktury v poli **Čísla účtovaných  Zásoby faktur** je stejná jako u zaúčtovaných prodejních faktur (**Čísla zaúčtovaných faktur**) a číselné řady zaúčtovaných dobropisů zálohy (**Čísla účtovaných  zál.  dobropisů**) je stejné jako u zaúčtovaných dobropisů (**Čísla zaúčtovaných dobropisů**).
 
@@ -84,7 +84,7 @@ Phyllis requires all customers to be invoiced a 20% deposit for item 1896-S. Zá
 
 ### Přiřazení výchozích procent záloh zákazníkům a zboží
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the card for customer 20000 (Trey Research).
 3. On the **Payments** FastTab, in the **Prepayment %** field, enter **30**.
 4. Choose the **Related** action, select the **Sales** menu item, and then choose the **Prepayment Percentages** menu item.
@@ -102,7 +102,7 @@ Phyllis requires all customers to be invoiced a 20% deposit for item 1896-S. Zá
 
 ### Určení účtu pro prodejní zálohy v nastavení obecného účtování
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Posting Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.
 2. Vyberte řádek, kde je pole **Obecná  účto  Posting Group** field is set to **DOMESTIC**, and the **Gen. účto  Posting Group** field is set to **RETAIL**.
 3. In the **Sales Prepayments Account** field, specify the relevant account. Your selection is automatically saved.
 

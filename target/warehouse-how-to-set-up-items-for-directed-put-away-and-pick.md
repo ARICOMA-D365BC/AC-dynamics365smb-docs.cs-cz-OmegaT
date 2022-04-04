@@ -17,7 +17,7 @@
 Když nastavíte lokaci pro řízené zaskladnění a vyskladnění, máte k dispozici nové funkce, které vám pomohou spustit sklad co nejefektivnějším způsobem. Chcete-li tuto funkci plně využít, zadejte další informace o zboží, které pak pomohou provést výpočty nezbytné k tomu, aby navrhli nejúčinnější způsoby provádění skladových aktivit. Pro více informací navštivte [Detaily návrhu: Nastavení skladu](design-details-warehouse-setup.md).
 
 ## Nastavení zboží pro řízené zaskladnění a vyskladnění
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Otevřete kartu zboží, které chcete nastavit pro řízené zaskladnění a vyskladnění.
 3. On the **Warehouse** FastTab of the item card, fill in the fields to define how the item should be handled in the warehouse.
 4. Choose the **Units of Measure** action.

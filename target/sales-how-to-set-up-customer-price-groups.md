@@ -52,7 +52,7 @@ After you have set up the customer price groups, you can enter the customer pric
 
 ### To enter customer price group codes on a customer card
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 
 2. Open the relevant **Customer Card** for a customer that you want to be part of a customer price group.
 

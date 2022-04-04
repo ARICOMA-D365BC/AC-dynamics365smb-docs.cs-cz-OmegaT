@@ -25,7 +25,7 @@ Ve výchozí verzi [!INCLUDE [prod_short](includes/prod_short.md)] je k dispozic
 * Definováno uživatelem
 
    > [!NOTE]  
-   > Určete vlastní metodu odpisu definováním tabulek odpisů. For information about applying a user defined depreciation method, see [Set Up User-Defined Depreciation Method](fa-how-setup-user-defined-depreciation-method.md).
+   > Určete vlastní metodu odpisu definováním tabulek odpisů. Pro informace o použití uživatelem definované metody odpisování navštivte [Nastavení uživatelem definované metody odpisů](fa-how-setup-user-defined-depreciation-method.md).
 * Manuální
 
    > [!NOTE]  

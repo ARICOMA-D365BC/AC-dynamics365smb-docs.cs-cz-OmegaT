@@ -50,14 +50,14 @@ Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové 
 
 ## [Aktuální zkušenosti](#tab/current-experience)
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Vyberte zákazníka a poté vyberte akci **Ceny**.
 3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Vyplňte řádek pro každou kombinaci, která zákazníkovi poskytne speciální prodejní cenu.
 
 ## [Po novu](#tab/new-experience)
 By default, the status of new price lists is Draft. Draft price lists are not included in price calculations. When you're done adding lines and want to start using the prices, change the status to Active.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Vyberte zákazníka a poté zvolte akci **Prodejní ceníky**.
 3. Chcete-li vytvořit nový prodejní ceník, zvolte **Nový**.
 4. Na záložkáck **Obecné** a **Daň** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]

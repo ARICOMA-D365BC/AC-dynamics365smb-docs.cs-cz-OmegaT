@@ -88,7 +88,7 @@ You can achieve that by combining backward flushing method and routing link code
 
 ## Spotřeba komponent podle výstupu operace
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Choose the **Edit** action.
 3. On the **Replenishment** FastTab, in the **Flushing Method** field, select **Backward**.
 

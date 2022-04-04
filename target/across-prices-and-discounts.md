@@ -43,7 +43,7 @@ Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové 
 
 #### [Aktuální zkušenosti](#tab/current-experience)
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Vyberte zákazníka a poté vyberte akci **Ceny**.
 3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Vyplňte řádek pro každou kombinaci, která zákazníkovi poskytne speciální prodejní cenu.
 
@@ -54,7 +54,7 @@ Ve výchozím nastavení je stav nových ceníků **Koncept**. Až budete připr
 
 Chcete-li si prohlédnout ceníky a ceny platné pro konkrétní zákazníky nebo dodavatele, vyberte na stránce **Zákazník** nebo **Dodavatel** akci **Prodejní ceny** nebo **Nákupní ceny**. U položek a zdrojů můžete zobrazit řádky ceníku výběrem **Prodejní ceny** nebo **Nákupní ceny** na stránkách **Zboží** a **Zdroj**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Vyberte zákazníka a poté zvolte akci **Prodejní ceníky**.
 3. Chcete-li vytvořit nový prodejní ceník, zvolte **Nový**.
 4. Na záložkáck **Obecné** a **Daň** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
@@ -71,7 +71,7 @@ Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové 
 
 #### [Aktuální zkušenosti](#tab/current-experience/)
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Otevřete příslušnou kartu zákazníka a poté zvolte akci **Řádkové slevy**.
 3. Vyplňte pole na řádku podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)] Vyplňte řádek pro každou kombinaci, která zákazníkovi poskytne slevu na prodejní řádek.
 
@@ -82,7 +82,7 @@ Tyto kroky se liší podle toho, zda správce zapnul aktualizaci funkce **Nové 
 
 #### [Po novu](#tab/new-experience/)
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Vyberte zákazníka a poté zvolte akci **Prodejní ceníky**.
 3. Otevřete ceník, pro který chcete zadat řádkovou slevu.
 4. Zapněte přepínač **Povolit řádkovou slevu**.
@@ -114,7 +114,7 @@ Kromě (nebo namísto) procenta slevy můžete propojit částku poplatku za slu
 ### Nastavení fakturační slevy pro zýkazníka
 Poté, co se rozhodnete, kteří zákazníci mají nárok na fakturační slevy, zadejte kód fakturační slevy na kartách zákazníka a nastavte podmínky pro každý kód.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Otevřete stránku zákazníka pro zákazníka, který bude mít nárok na fakturační slevy.
 3. Do pole **Kód fakturační slevy** vyberte kód pro příslušné podmínky fakturační slevy, které se mají použít k výpočtu fakturních slev pro zákazníka. <!--Looks like I can only choose customers in this list-->
 

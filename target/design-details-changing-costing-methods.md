@@ -21,61 +21,61 @@ V [!INCLUDE[prod_short](includes/prod_short.md)], nelze změnit metodu ocenění
 Toto téma popisuje, jak tuto situaci vyřešit. Doporučeným přístupem je nahradit zboží, které má nesprávnou metodu ocenění, novým zbožím a použít montážní zakázku k převodu zásob ze starého zboží na nové.
 
 > [!NOTE]
-> Using assembly orders allows the costs to still flow although there are outstanding purchase invoices or shipping charges to post. Additionally, it allows you to undo the conversion and get the quantities of the original items back, if needed.
+> Použití montážních zakázek umožňuje, aby bylo ocenení vždy aktivní, i když je třeba zaúčtovat neuhrazené nákupní faktury nebo poplatky za dopravu. Kromě toho vám umožňuje vrátit zpět převod a v případě potřeby získat množství původního zboží zpět.
 
 > [!TIP]
-> To become familiar with the process, we recommend that you start the conversion process with a single item or a small set of items.
+> Abyste se s procesem seznámili, doporučujeme vám zahájit proces převodu s jedným zbožím nebo malou sadou zboží.
 
-## About Costing Methods
+## O metodách ocenění
 
-Costing methods control cost calculations when goods are purchased, received in inventory, and sold. Costing methods affect the timing of amounts recorded in COGS that affect gross profit. It is this flow that calculates COGS. The cost of goods sold (COGS) and revenue are used to determine gross profit, as follows:
+Metody ocenění řídí výpočty nákladů při nákupu, přijetí ve skladu a prodeji zboží. Metody ocenění ovlivňují načasování částek zaznamenaných v NNPZ, které ovlivňují hrubý zisk. Právě tento tok vypočítává NNPZ. Náklady na prodané zboží (NNPZ) a tržby se používají k určení hrubého zisku takto:
 
-*gross profit* = *revenue - COGS*
+*ghrubý zisk* = *tržby - NNPZ*
 
-When you set up inventory items, you must assign a costing method. The method can vary from business to business, and from item to item, so it's important to choose the right one. [!INCLUDE[prod_short](includes/prod_short.md)] supports the following costing methods:
+Při nastavování skladového zboží je nutné přiřadit metodu ocenění. Metoda se může lišit v souvislosti s firmou nebo konkrétním zbožím, takže je důležité vybrat tu správnou. [!INCLUDE[prod_short](includes/prod_short.md)] podporuje následující metody ocenľní:
 
-* Average
-* FIFO
-* LIFO
+* Průměrná
+* Metoda FIFO
+* Metoda LIFO
 * Standardní
-* Specifikcé
+* Specifikcá
 
 Pro více informace navštivte [Detaily návrhu: Metody ocenění](design-details-costing-methods.md).
 
-## Using Assembly Orders to Change Costing Method Assignments
+## Použití montážních zakázek ke změně přiřazení metody ocenění
 
-This section describes the following steps for changing the costing method assigned to an item:
+Tato část popisuje následující kroky pro změnu metody ocenění přiřazené ke zboží:
 
-1. Define a default costing method.
-2. Identify the items that to change the costing method for and renumber them.
-3. Create new items with the old numbering scheme and copy the master data in a batch.
-4. Manually copy related master data from the existing item to the new item.
-5. Determine the inventory quantity to convert from the original item to the new item.
-6. Transfer the inventory to the new item.
-7. Handle inventory quantities that are allocated to demand.
-8. Block the original item from further use.
+1. Definujte výchozí metodu ocenění.
+2. Identifikujte zboží, pro které chcete změnit metodu ocenění, a přečíslujte je.
+3. Vytvořte nové zboží se starým schématem číslování a zkopírujte kmenová data v dávce.
+4. Ručně zkopírujte související kmenová data ze stávajícího zboží do nového zboží.
+5. Určete množství zásob, které chcete převést z původního zboží na nové.
+6. Převeďte zásoby na nové zboží.
+7. Zpracování množství zásob, která jsou přidělena poptávce.
+8. Zablokuje další použití původního zboží.
 
-### Define a default costing method
+### Definování výchozí metody ocenění
 
-To help avoid future mistakes you can specify a default costing method for new items. Whenever someone creates a new item, [!INCLUDE[prod_short](includes/prod_short.md)] will suggest the default costing method. You specify the default method in the **Default Costing Method** field on the **Inventory Setup** page.
+Chcete-li se vyhnout budoucím chybám, můžete zadat výchozí metodu ocenění pro nové zboží. Kdykoli někdo vytvoří nové zboží, [!INCLUDE[prod_short](includes/prod_short.md)] navrhne výchozí metodu ocenění. Výchozí metodu zadáte v poli **Výchozí metoda ocenění** na stránce **Nastavení zásob**.
 
-### Identify the items to change the costing method for and renumber them
+### Identifikujte zboží, pro které chcete změnit metodu ocenění, a přečíslujte je
 
-You may want to give your new items the same numbers as those they are replacing. To do that, change the numbers of the existing items. For example, if the existing item number is "P1000," you might change it to "X-P1000." This is a manual change that you must make for each item.
+Možná budete chtít dát svým novým zbožím stejná čísla jako těm, které nahrazují. Chcete-li to provést, změňte čísla stávajícího zboží. Pokud je například existující číslo zboží "P1000", můžete ho změnit na "X-P1000". Jedná se o ruční změnu, kterou musíte provést pro každé zboží.
 
-### Create new items with the old numbering scheme and copy the master data in a batch
+### Vytvoření nového zboží se starým schématem číslování a zkopírování kmenových dat v dávce
 
-Create the new items using the current number scheme. With the exception of the **Costing Method** field, the new items should contain the same master data as the existing items. To transfer the master data for the item, and related data from other features, use the **Copy Item** action on the **Item Card** page. For more information, see [Copy Existing Items to Create New Items](inventory-how-copy-items.md).
+Vytvořte nové zboží pomocí aktuálního číselného schématu. S výjimkou pole **Metoda ocenění** by nové zboží mělo obsahovat stejná kmenová data jako stávající zboží. Chcete-li přenést kmenová data pro zboží a související data z jiných prvků, použijte akci **Kopírovat zboží** na stránce **Karta zboží**. Pro více informací navštivte [Kopírování existujícího zboží pro vytvoření nového zboží](inventory-how-copy-items.md).
 
-After you create the new items and transfer the master data, assign the correct costing method.
+Po vytvoření nového zboží a přenosu kmenových dat přiřaďte správnou metodu ocenění.
 
-### Manually copy related master data from the original item to the new item
+### Ruční zkopírování souvisejících kmenových dat z původního zboží do nového zboží
 
-To make the new items fully useful you must manually copy some master data from other areas, as described in the following table.
+Aby bylo nové zboží plně užitečné, musíte ručně zkopírovat některá kmenová data z jiných oblastí, jak je popsáno v následující tabulce.
 
-| Oblasti | What to copy | How to copy it |
+| Oblast | Co kopírovat | Jak jej zkopírovat |
 |---------|---------|---------|
-| Zásoby | Stock-keeping units (SKUs) | Check whether a SKU is specified for the original item. If planning parameters have been entered for each SKU card, then you must manually create the SKU for the new item. If the parameters are not specified, you can use the **Create Stockkeeping Unit** batch job from the **Item Card** page to create the data. |
+| Zásoby | Skladové jednotky (SKJ) | Zkontrolujte, zda je pro původní zboží zadána SKJ. Pokud byly parametry plánování zadány pro každou kartu SKJ, musíte ručně vytvořit SKJ pro nové zboží. If the parameters are not specified, you can use the **Create Stockkeeping Unit** batch job from the **Item Card** page to create the data. |
 |     | Item substitutions | Check whether any item substitutions are defined for the original item. If there are, transfer that data to the new item. To view substitute items, use the **Substitutions** action on the **Item Card** page. |
 |     | Analysis reports | Review the Item Analysis, Sales Analysis, and Purchase Analysis reports. For those that reference the original items you can either create a new analysis report with a reference to the new item (keeping the original analysis report to use as history) or adjust the reports so that they reference the new item. |
 |     | Standard journals | Check whether standard journals reference the original item and transfer that data to the new item when necessary. This information is found on the standard journals, which are available on the item journal. |
@@ -99,7 +99,7 @@ To make the new items fully useful you must manually copy some master data from 
 Use a physical inventory journal to produce a list of the quantities in inventory. Depending on the warehouse location setup, use one of the following:
 
 * Physical Invt. Journals
-* Whse. Phys. Invt. Journals
+* Centrum Phys. Invt. Journals
 
 Both journals can calculate the inventory quantity of the item, including the location, variant, bin, and storage location. For more information, see [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md).
 
@@ -149,7 +149,7 @@ There are 1000 pcs. in inventory, and 20 pcs. are reserved for a sales order tha
 
 The following table lists functional areas where there might be outstanding quantities.
 
-| Oblasti | Where to look for outstanding quantities |
+| Oblast | Where to look for outstanding quantities |
 |---------|---------|
 | Prodej | Sales documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
 | Zásoby | Item journals, reservations, item tracking, and standard cost worksheet |
