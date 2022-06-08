@@ -15,7 +15,7 @@
 ---
 
 # Set Up Service Offerings
-When you set up service management, you must decide what services to offer customers and the schedule for those services. A service is a type of work performed by one or more resources and provided to a customer. For example, a service could be a type of computer repair. A service item is the equipment or item that needs servicing, for example, the computer that needs repair, installed at a specific customer. You can set up services as part of a group of related repair or maintenance items.
+When you set up service management, you must decide what services to offer customers and the schedule for those services. Servis je druh práce prováděné jedním nebo více prostředky a poskytovaný zákazníkovi. Servisem může být například určitý typ opravy počítače A service item is the equipment or item that needs servicing, for example, the computer that needs repair, installed at a specific customer. Servis lze nastavit jako součást skupiny zboží související s opravou nebo údržbou.
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
@@ -25,6 +25,6 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Establish a workflow for service when the service items consists of several components. The component list is always connected to a service item, but these components can also be based on bill of materials (BOMs). | [Set Up Service Items and Service Item Components](service-how-setup-service-items.md) |
 
 ## Viz také
-[Setting Up Service Management](service-setup-service.md)
+[Nastavení správy servisu](service-setup-service.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

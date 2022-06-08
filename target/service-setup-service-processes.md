@@ -13,26 +13,26 @@
     ms.author: bholtorf
 
 ---
-# Configure Service Processes
-The following are some examples of the settings that you can apply to service management processes:
+# Konfigurace procesů servisu
+Následuje několik příkladů nastavení, která můžete použít pro procesy správy servisu:
 
-* Some overall settings for various processes, such as warnings, next service calculations for service items, the starting fee to assess, the fault reporting level to use, and so on.
-* The types if information that a technician must enter on service documents. For example, you can require them to specify the type of order, the start and/or end dates for the work, and the type of work that was done.
-* Some default settings for response times and warranties. These include a default response time for starting service, warranty discount percentages for parts and labor, and how long warranties are valid for.
-* Settings for contracts, such as the maximum number of days that you can use for contract service orders, whether to use reason codes when a contract is canceled, standard texts for contract descriptions, and contract values.
-* The number sequences to use for service-related documents and items.
+* Některá nastavení pro různé procesy, jako jsou varování, další výpočty servisu pro předměty servisu, počáteční poplatek k vyhodnocení, úroveň hlášení poruchy, která se má použít,  atd.
+* Typy informací, které musí technik uvést v servisních dokladech. Můžete například požadovat, aby byl určen typ zakázky, datum zahájení a/nebo ukončení práce a typ provedené práce.
+* Některá výchozí nastavení pro čas odezvy, a záruky. Patří mezi ně výchozí doba odezvy pro zahájení servisu, procento záruční slevy pro díly a práci, a doba platnosti záruk.
+* Nastavení smluv, například maximální počet dní, které můžete použít pro objednávky servisní smlouvy, zda použít kódy příčiny při zrušení smlouvy, standardní texty pro popisy smluv a hodnoty smlouvy.
+* Číselné řady, které se mají použít pro doklady a zboží související se službami.
 
-## To enter general and mandatory settings
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Management Setup**, and then choose the related link.
+## Zadání obecných a povinných nastavení
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení správce servisu** a poté vyberte související odkaz.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Viz také
-[Set Up Fault Reporting](service-how-setup-fault-reporting.md)  
-[Set Up Resource Allocation](service-how-setup-resource-allocation.md)  
-[Set Up Codes for Standard Services](service-how-setup-service-coding.md)  
-[Set Up Additional Costs for Services](service-how-setup-service-costs-pricing.md)  
-[Set Up Troubleshooting](service-how-setup-troubleshooting.md)  
-[Service Management](service-service.md)
+[Nastavení reporotování kódu poruch](service-how-setup-fault-reporting.md)  
+[Nastavení Přidělení zdroje](service-how-setup-resource-allocation.md)  
+[Nastavení Kódů standardního servisu](service-how-setup-service-coding.md)  
+[Nastavení dodatečných nákladů servisu](service-how-setup-service-costs-pricing.md)  
+[Nastavení odstraňování problémů](service-how-setup-troubleshooting.md)  
+[Správa servisu](service-service.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

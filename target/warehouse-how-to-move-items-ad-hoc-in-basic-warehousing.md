@@ -53,7 +53,7 @@ In basic warehouse configurations, that is locations that use the **Bin Mandator
    You perform the remainder of the ad hoc movement on the **Inventory Movement** page in the same way as you would for a movement based on source documents. For more information, see for example [Move Components to an Operation Area in Basic Warehouse Configurations](warehouse-how-to-move-components-to-an-operation-area-in-basic-warehousing.md)
 
 ## To move items with the item reclassification journal
-In stead of using warehouse movement documents, you can record the moving of items by reclassifying their bin codes. For more information, see [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md).
+In stead of using warehouse movement documents, you can record the moving of items by reclassifying their bin codes. Pro více informací navštivte [Počítání, úprava a reklasifikace zásob pomocí deníků](inventory-how-count-adjust-reclassify.md).
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Deníky  přeřazení Journal**, and then choose the related link.
 2. On each journal line, define the bins from which and to which you want to move items by filling in the **Bin Code** and the **New Bin Code** fields.
 

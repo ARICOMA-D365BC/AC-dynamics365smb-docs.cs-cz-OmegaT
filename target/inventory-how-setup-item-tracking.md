@@ -14,11 +14,11 @@
     ms.author: edupont
 
 ---
-# Set Up Item Tracking with Serial, Lot, and Package Numbers
+# Nastavte sledování zboží pomocí sériových čísel, čísel šarží a čísel balíků
 
-Keep track of inventory items even in complex warehouse configurations with numbers that are specific to each item, either as an individual object, as a lot, or as a package. With item tracking, you can trace items across internal warehouse movements, and outbound and inbound documents.
+Sledujte skladové položky i ve složitých skladových konfiguracích pomocí čísel, která jsou specifická pro každou položku, ať už jako jednotlivý objekt, šarži nebo balíček. Pomocí sledování zboží můžete sledovat položky v rámci interních skladových pohybů a u odesílaných a přijímaných dokladů.
 
-Items with serial and lot numbers can be traced both backwards and forward in the supply chain. This is useful for general quality assurance and for product recalls. For more information, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md).
+Zboží se sériovými čísly a čísly šarží lze v dodavatelském řetězci sledovat jak zpětně tak i dopředu. To je užitečné pro obecné zajištění kvality a pro případné stažení výrobků z oběhu For more information, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md).
 
 > [!TIP]
 > In 2021 release wave 1 and later, switch on the *Use tracking by package number in reservation and tracking system* feature update if you want to work with package numbers as well as serial and lot numbers. For more information, see [Enabling Upcoming Features Ahead of Time](admin-feature-management.md). Once the feature is switched on, you can assign package numbers to outbound and inbound documents similar to how you can work with lot numbers.

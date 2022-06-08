@@ -26,7 +26,7 @@ For information about creating or adjusting a data exchange definition, see [Set
 |------------------|---------------------|---------------|-----------------|-------------------------------|---------------|----------------|  
 | Stmt/Ntry/Amt | Částka | Decimal | The amount of money in the cash entry | 13 | Částka |
 | Stmt/Ntry/CdtDbtInd | CreditDebitIndicator | Text | Indicates whether the entry is a credit or a debit entry | DBIT | 13 | Částka |
-| Stmt/Ntry/BookgDt/Dt |   |   | The date when an entry is posted to an account on the account servicer's books | 5 | Zúčtovací datum |
+| Stmt/Ntry/BookgDt/Dt | Datum | Datum | The date when an entry is posted to an account on the account servicer's books | 5 | Zúčtovací datum |
 | Stmt/Ntry/BookgDt/DtTm | DateTime | DateTime | The date and time when an entry is posted to an account on the account servicer's books | 5 | Zúčtovací datum |
 | Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm | Jméno | Text | The name of the party that owes an amount of money to the (ultimate) creditor | 1221 | Payer Information |
 | Stmt/Ntry/NtryDtls/TxDtls/RmtInf/Ustrd | Unstructured | Text | Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts-receivable system, in an unstructured form | 8 | Popis |
@@ -36,7 +36,7 @@ For information about creating or adjusting a data exchange definition, see [Set
 
 | Element Path | Message Element | Datový typ | Popis | Negative-Sign Identifier | Číslo pole. | Název pole |
 |------------------|---------------------|---------------|-----------------|-------------------------------|---------------|----------------|  
-| Stmt/CreDtTm | CreationDateTime |   | The date and time when the message was created | 3 | Statement Date |
+| Stmt/CreDtTm | CreationDateTime | Datum | The date and time when the message was created | 3 | Statement Date |
 | Stmt/Bal/Amt | Částka | Decimal | The amount resulting from the netted amounts for all debit and credit entries | 4 | Statement Ending Balance |
 
 ## CAMT data mapping to fields in the Bank Acc. Reconciliation Line table (274)
@@ -45,9 +45,9 @@ For information about creating or adjusting a data exchange definition, see [Set
 |------------------|---------------------|---------------|-----------------|-------------------------------|---------------|----------------|  
 | Stmt/Ntry/Amt | Částka | Decimal | The amount of money in the cash entry | 7 | Statement Amount |
 | Stmt/Ntry/CdtDbtInd | CreditDebitIndicator | Text | Indicates whether the entry is a credit or a debit entry | DBIT | 7 | Statement Amount |
-| Stmt/Ntry/BookgDt/Dt |   |   | The date when an entry is posted to an account on the account servicer's books | 5 | Transaction Date |
+| Stmt/Ntry/BookgDt/Dt | Datum | Datum | The date when an entry is posted to an account on the account servicer's books | 5 | Transaction Date |
 | Stmt/Ntry/BookgDt/DtTm | DateTime | DateTime | The date and time when an entry is posted to an account on the account servicer's books | 5 | Transaction Date |
-| Stmt/Ntry/ValDt/Dt |   |   | The date when assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit entry | 12 | Value Date |
+| Stmt/Ntry/ValDt/Dt | Datum | Datum | The date when assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit entry | 12 | Value Date |
 | Stmt/Ntry/ValDt/DtTm | DateTime | DateTime | The date and time when assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit entry | 12 | Value Date |
 | Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm | Jméno | Text | The name of the party that owes an amount of money to the (ultimate) creditor | 15 | Payer Information |
 | Stmt/Ntry/NtryDtls/TxDtls/RmtInf/Ustrd | Unstructured | Text | Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts-receivable system, in an unstructured form | 6 | Popis |

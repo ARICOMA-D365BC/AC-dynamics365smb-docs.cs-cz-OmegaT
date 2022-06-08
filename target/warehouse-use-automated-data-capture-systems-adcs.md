@@ -72,7 +72,7 @@ Každému zboží skladu, které chcete použít s ASSD, musí být přiřazen i
 8. To review the information, choose the **Identifier Code** field to open the **Item Identifiers** page.
 
 ## Přidání uživatele ASSD
-Jako uživatele automatizovaného systému pro sběr dat (ASSD) můžete přidat libovolného uživatele. Pokud to uděláte, musí uživatel zadat také heslo. Volitelně můžete také poskytnout připojení, které identifikuje uživatele ASSD jako zaměstnance skladu. Heslo uživatele ASSD se může lišit od přihlašovacího hesla uživatele systému Windows. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
+Jako uživatele automatizovaného systému pro sběr dat (ASSD) můžete přidat libovolného uživatele. Pokud to uděláte, musí uživatel zadat také heslo. Volitelně můžete také poskytnout připojení, které identifikuje uživatele ASSD jako zaměstnance skladu. Heslo uživatele ASSD se může lišit od přihlašovacího hesla uživatele systému Windows. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **ADCS Users**, and then choose the related link.
 2. Vyberte akci **Nový**.

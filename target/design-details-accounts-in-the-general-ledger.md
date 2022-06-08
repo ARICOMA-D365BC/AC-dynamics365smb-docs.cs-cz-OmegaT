@@ -21,7 +21,7 @@ Následující tabulka ukazuje vztah mezi různými typy položek hodnot zásob 
 
 | **Typ položky zboží** | **Value Entry Ttype** | **Variance Type** | **Expected Cost** | **Account** | **Balancing Account** |
 |--------------------------------|--------------------------|-----------------------|-----------------------|-----------------|---------------------------|  
-| Nákup | Přímé náklady | Ano | Zásoby (dočasné) | Invt. Accrual Acc. (Dočasné) |
+| Nákup | Přímé náklady | Ano | Zásoby (dočasné) | inventury Accrual Acc. (Dočasné) |
 | Nákup | Přímé náklady | Ne | Zásoby | Použité přímé náklady |
 | Nákup | Nepřímé náklady | Ne | Zásoby | Vyrvonaná režie |
 | Nákup | Odchylka | Nákup | Ne | Zásoby | Odchylka nákupu |

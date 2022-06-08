@@ -13,28 +13,28 @@ ms.date: 09/29/2021
 ms.author: edupont
 ---
 
-# Company Information Quick Start
+# Quick Start - Informace o společnosti
 
-To help you get your company up and running in [!INCLUDE[prod_short](includes/prod_short.md)], you must first fill in some of the basic company details and relevant information based on your business needs.
+Abychom vám pomohli uvést vaši společnost do chodu v [!INCLUDE[prod_short](includes/prod_short.md)], musíte nejprve vyplnit určité základní údaje o společnosti a relevantní informace na základě vašich obchodních potřeb.
 
-You can enter all relevant data on the **Company Information** page when you set up a new company.
+Při zakládání nové společnosti můžete zadat všechna relevantní data na stránce **Informace o společnosti**.
 
-## To set up company information
+## Nastavení informací o společnosti
 
-1. Choose the ![Sprocket icon to open the Settings menu.](media/ui-experience/settings_icon_small.png) menu, and then choose the **Company Information** action.
-2. Enter the information into the FastTabs as described in the following table.
+1. Klikněte na ikonu ![Ozubeného kolečka k otevření nabídky nastavení](media/ui-experience/settings_icon_small.png) a poté zvoltě akci **Informace o společnosti**.
+2. Zadejte informace do záložek, jak je popsáno v následující tabulce.
 
    | Pole | Popis |
    |-------------|---------------------------------------|  
-   | **Obecné** | Enter the general information about your company including a logo since that will be appearing on customer facing documents, for example invoices that you send out. |
-   | **Communication** | Enter the basic company contact information, such as phone number and email address. |
-   | **Payments** | Fill in the relevant banking information to insure that your customers will be able to pay you. |
-   | **Shipping** | Fill in the relevant shipping information so that you will be able to send and receive goods from and to your company. |
-   | **Tax** | Depending on the country you live in the Tax fast tab may be available to you. If it is available fill it out. |
+   | **Obecné** | Zadejte obecné informace o vaší společnosti včetně loga, které se bude zobrazovat na doklad pro zákazníky, například na fakturách, které odesíláte. |
+   | **Spojení** | Zadejte základní kontaktní informace společnosti, například telefonní číslo a e-mailovou adresu. |
+   | **Platby** | Vyplňte příslušné bankovní údaje, abyste měli jistotu, že vám vaši zákazníci budou moci zaplatit. |
+   | **Dodávka** | Vyplňte příslušné informace o přepravě, abyste mohli odesílat a přijímat zboží od a do vaší společnosti. |
+   | **DPH** | V závislosti na zemi, ve které žijete, můžete mít k dispozici záložku pro DPH. Pokud je k dispozici, vyplňte jej. |
 
-Once you have completed filling in the information you can close the page.
+Po dokončení vyplňování informací můžete stránku zavřít.
 
 ## Viz také
 
 [Business Central Quick Starts](quick-start-business-central.md)  
-[Set Up Company Information](LocalFunctionality/Italy/how-to-set-up-company-information.md)
+[Nastavení konfigurace společnosti](LocalFunctionality/Italy/how-to-set-up-company-information.md)

@@ -70,7 +70,7 @@ The purchase credit memo is removed and replaced with a new document in the list
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Credit Memos**, and then choose the related link.
 2. Choose the **New** action to open a new empty purchase credit memo.
-3. In the **Vendor** field, enter the name of an existing vendor.
+3. Do pole **Dodavatel** zadejte název existujícího dodavatele.
 4. Choose the **Copy from Document** action.
 5. On the **Copy Purchase Document** page, in the **Document Type** field, select **Posted Invoice**.
 6. Choose the **Document No.** field to open the **Posted Purchase Invoices** page, and then select the posted purchase invoice that contains lines that you want to reverse.

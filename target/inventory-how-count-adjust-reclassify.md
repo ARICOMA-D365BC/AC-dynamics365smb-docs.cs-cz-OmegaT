@@ -41,7 +41,7 @@ Apart from the physical counting task, the complete process involves the followi
 You can perform the physical inventory in either of the following ways depending on your warehouse setup. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 - If your location is not using directed put-away and pick (basic warehouse configuration), you use the **Phys. Inventory Journal** page in the **Inventory** menu, and the procedure is much the same as when you conduct a physical inventory without cycle counting.
-- If your location is using directed put-away and pick (advanced warehouse configuration), you first use the **Whse. Phys. Invt. Journal** page, and then you use the **Item Journal** page to run the **Calculate Whse. Adjustment** function.
+- If your location is using directed put-away and pick (advanced warehouse configuration), you first use the **Whse. fyzické inventury Journal** page, and then you use the **Item Journal** page to run the **Calculate Whse. Adjustment** function.
 
 ### To calculate the expected inventory in basic warehouse configurations
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. Inventory Journals**, and then choose the related link.
@@ -82,7 +82,7 @@ Employees can now proceed to count inventory and record any discrepancies on the
 ### To calculate the expected inventory in advanced warehouse configurations
 Synchronize item ledger and warehouse before you perform the warehouse physical inventory, otherwise the results you post to the physical inventory journal and item ledger in the final part of the process will be the physical inventory results combined with other warehouse adjustments for the items that were counted. For more information, see [synchronize quantities in the item ledger and warehouse](inventory-how-count-adjust-reclassify.md#to-synchronize-the-adjusted-warehouse-entries-with-the-related-item-ledger-entries)
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Phys. Invt. Journal**, and choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. fyzické inventury Journal**, and choose the related link.
 2. Choose the **Calculate Inventory** action. The **Whse. Calculate Inventory** batch job request page opens.
 3. Set the filters to limit the items that will be counted in the journal, and then choose the **OK** button.
 
@@ -119,38 +119,38 @@ Although you count all items in inventory at least once a year, you may have dec
 You can perform the cycle counting in either of the following ways depending on your warehouse setup. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 - If your location is not using directed put-away and pick (basic warehouse configuration), you use the **Phys. Inventory Journal** page in the **Inventory** menu, and the procedure is much the same as when you conduct a physical inventory without cycle counting.
-- If your location is using directed put-away and pick (advanced warehouse configuration), you first use the **Whse. Phys. Invt. Journal** page, and then you use the **Item Journal** page to run the **Calculate Whse. Adjustment** function.
+- If your location is using directed put-away and pick (advanced warehouse configuration), you first use the **Whse. fyzické inventury Journal** page, and then you use the **Item Journal** page to run the **Calculate Whse. Adjustment** function.
 
 ### To set up counting periods
 A physical inventory is typically taken at some recurring interval, for example monthly, quarterly, or annually. You can set up whatever inventory counting periods necessary.
 
 You set up the inventory counting periods that you want to use and then assign one to each item. When you perform a physical inventory and use the **Calculate Counting Period** in the physical inventory journal, lines for the items are created automatically.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. Invt. Counting Periods**, and then choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. inventury Counting Periods**, and then choose the related link.
 2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ### To assign a counting period to an item
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Select the item to which you want to assign a counting period.
 3. In the **Phys Invt Counting Period Code** field, select the appropriate counting period.
-4. Choose the **Yes** button to change the code and calculate the first counting period for the item. The next time you choose to calculate a counting period in the physical inventory journal, the item appears as a line on the **Phys. Invt. Item Selection** page. You can then begin to count the item on a periodic basis.
+4. Choose the **Yes** button to change the code and calculate the first counting period for the item. The next time you choose to calculate a counting period in the physical inventory journal, the item appears as a line on the **Phys. inventury Item Selection** page. You can then begin to count the item on a periodic basis.
 
 ### To initiate a count based on counting periods in basic warehouse configurations
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Phys. Inventory Journal**, and then choose the related link.
 2. Choose the **Calculate Counting Period** action.
 
-   The **Phys. Invt. Item Selection** page opens showing the items that have counting periods assigned and need to be counted according to their counting periods.
+   The **Phys. inventury Item Selection** page opens showing the items that have counting periods assigned and need to be counted according to their counting periods.
 3. Perform the physical inventory. For more information, see [To perform a physical inventory](inventory-how-count-adjust-reclassify.md#to-perform-a-physical-inventory).
 
 ### To initiate a count based on counting periods in advanced warehouse configurations
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. Phys. Invt. Journal**, and choose the related link.
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Whse. fyzické inventury Journal**, and choose the related link.
 2. Choose the **Calculate Counting Period** action.
 
-   The **Phys. Invt. Item Selection** page opens showing the items that have counting periods assigned and need to be counted according to their counting periods.
+   The **Phys. inventury Item Selection** page opens showing the items that have counting periods assigned and need to be counted according to their counting periods.
 3. Perform the physical inventory. For more information, see [To perform a physical inventory](inventory-how-count-adjust-reclassify.md#to-perform-a-physical-inventory).
 
    > [!NOTE]  
-   > You must count the item in all the bins that contain the particular item. If you delete some of the bin lines that application has retrieved for counting on the **Whse. Phys. Inventory** page, then you will not be counting all the items in the warehouse. If you later post such incomplete results in the Phys. Inventory Journal, the amounts posted will be incorrect.
+   > You must count the item in all the bins that contain the particular item. If you delete some of the bin lines that application has retrieved for counting on the **Whse. fyzické Inventory** page, then you will not be counting all the items in the warehouse. If you later post such incomplete results in the Phys. Inventory Journal, the amounts posted will be incorrect.
 
 ## To adjust the inventory of one item
 After you have made a physical count of an item in your inventory area, you can use the **Adjust Inventory** function to record the actual inventory quantity.

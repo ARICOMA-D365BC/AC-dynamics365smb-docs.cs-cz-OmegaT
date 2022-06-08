@@ -17,9 +17,9 @@ You can use [!INCLUDE[prod_short](includes/prod_short.md)] to set up the user-de
 
 For each user-defined method, you use the **Depreciation Tables** page, where you must enter a depreciation percentage for each period (month, quarter, year, or accounting period). Then, when you assign a depreciation book with a user-defined method to a fixed asset, you must set the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields on the **FA Depreciation Books** page for the specific fixed asset.
 
-The formula for calculating the depreciation amounts is:
+Vzorec pro výpočet odpisových částek je:
 
-*Depreciation Amount = (Depreciation % x Number of Depreciation Days x Depr. Basis) / (100 x 360)*
+*Depreciation Amount = (Depreciation % x Number of Depreciation Days x Depr. odpisu) / (100 x 360)*
 
 
 > [!NOTE]  
@@ -75,25 +75,25 @@ You would use the following depreciation rates for a fixed asset with a three-ye
 
 The acquisition cost is LCY 100,000, and the depreciable lifetime is five years. Depreciation is calculated annually.
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 12/31/20 | Depreciation | 360 | -25,000.00 | 75,000.00 |
-| 12/31/21 | Depreciation | 360 | -38,000.00 | 37,000.00 |
-| 12/31/22 | Depreciation | 360 | -37,000.00 | 0 |
-| 12/31/23 | Depreciation | Žádné | Žádné | 0 |
-| 12/31/24 | Depreciation | Žádné | Žádné | 0 |
+| 01.01.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 31.12.20 | Odpisy | 360 | -25,000.00 | 75 000,00 |
+| 31.12.21 | Odpisy | 360 | -38,000.00 | 37,000.00 |
+| 31.12.22 | Odpisy | 360 | -37,000.00 | 0 |
+| 31,12.23 | Odpisy | Žádné | Žádné | 0 |
+| 31.12.24 | Odpisy | Žádné | Žádné | 0 |
 
 In the previous example, both the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields would be set to 01/01/20 in the **FA Depreciation Books** page for the specific fixed asset. If, however, the **First User-Defined Depr. Date** field contained 01/01/20 and the **Depreciation Starting Date** field contained 04/01/20, the result would be:
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 12/31/20 | Depreciation | 270 | -18,750.00 | 81,250.00 |
-| 12/31/21 | Depreciation | 360 | -38,000.00 | 42,250.00 |
-| 12/31/22 | Depreciation | 360 | -37,000.00 | 6,250.00 |
-| 12/31/23 | Depreciation | 90 | -6,250.00 | 0 |
-| 12/31/24 | Depreciation | Žádné | Žádné | 0 |
+| 01.01.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 31.12.20 | Odpisy | 270 | -18,750.00 | 81 250,00 |
+| 31.12.21 | Odpisy | 360 | -38,000.00 | 42,250.00 |
+| 31.12.22 | Odpisy | 360 | -37,000.00 | 6 250,00 |
+| 31,12.23 | Odpisy | 90 | -6 250,00 | 0 |
+| 31.12.24 | Odpisy | Žádné | Žádné | 0 |
 
 
 ## Viz také

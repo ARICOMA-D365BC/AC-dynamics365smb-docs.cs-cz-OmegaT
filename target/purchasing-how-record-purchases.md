@@ -32,37 +32,37 @@ When you receive the inventory items or when the purchased service is completed,
 The following describes how to create a purchase invoice. The steps are similar for a purchase order. The main difference is that purchase orders have additional fields and actions for physical handling of items.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. In the **Vendor** field, enter the name of an existing vendor.
+2. Do pole **Dodavatel** zadejte název existujícího dodavatele.
 
-   Other fields on the **Purchase Invoice** page are now filled with the standard information of the selected vendor. If the vendor is not registered, then follow these steps:
+   Ostatní pole na stránce **Nákupní faktura** se sama vyplní standardními informacemi o vybraném dodavateli. If the vendor is not registered, then follow these steps:
 
    1. In the **Vendor** field, enter the name of the new vendor.
    2. In the dialog box about registering the new vendor, choose the **Yes** button.
    3. For more on how to fill in the vendor card, see [Register New Vendors](purchasing-how-register-new-vendors.md).
    4. When you have completed the vendor card, choose the **OK** button to return to the **Purchase Invoice** page.
 
-3. Fill in the remaining fields on the **Purchase Invoice** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte i zbývající pole na stránce **Nákupní faktura**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-   You are now ready to fill in the purchase invoice lines with items or resources that you have purchased from the vendor.
+   Nyní jste připraveni vyplnit řádky nákupní faktury zbožím nebo zdroji, které jste zakoupili od dodavatele.
 
    > [!NOTE]  
    > If you have set up recurring purchase lines for the vendor, such as a monthly replenishment order, then you can insert these lines on the invoice by choosing the **Get Recurring Purchase Lines** action.
-4. On the **Lines** FastTab, in the **Item No.** field, enter the number of an inventory item or service.
-5. In the **Quantity** field, enter the number of items to be purchased.
+4. V záložce **Řádky** v poli **Číslo zboží** zadejte číslo inventární zboží nebo služby.
+5. V poli **Množství** zadejte počet položek, které mají být zakoupeny.
 
-   The **Line Amount** field is updated to show the value in the **Direct Unit Cost** field multiplied by the value in the **Quantity** field.
+   Pole **Částka na řádku** je aktualizováno tak, aby zobrazovalo hodnotu v poli **Nákupní cena** vynásobenou hodnotou v poli **Množství**.
 
    The price and line amount are shown with or without sales tax depending on what you selected in the **Prices Including Tax** field on the vendor card.
 
    The totals fields under the lines are automatically updated as you create or modify lines to display the amounts that will be posted to the ledgers.
 
-6. In the **Invoice Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field at the bottom of the invoice.
+6. V poli **Fakturační sleva** zadejte částku, která má být odečtena od hodnoty uvedené v poli**Celkem včetně DPH** v dolní části faktury.
 
    > [!NOTE]  
    > If you have set up invoice discounts for the vendor, then the specified percentage value is automatically inserted in the **Vendor Invoice Discount %** field if the criteria are met, and the related amount is inserted in the **Invoice Discount Amount** field.
-7. When you receive the purchased items or services, choose **Post**.
+7. Když obdržíte zakoupené zboží nebo služby, zvolte **Účtovat**.
 
-The purchase is now reflected in inventory, resource ledgers, and financial records, and the vendor payment is activated. The purchase invoice is removed from the list of purchase invoices and replaced with a new document in the list of posted purchase invoices.
+Nákup se nyní promítne do zásob, účetních knih zdrojů a finančních záznamů a je aktivována platba dodavatele. Nákupní faktura je odstraněna ze seznamu nákupních faktur a nahrazena novým dokladem v seznamu zaúčtovaných nákupních faktur.
 
 > [!NOTE]
 > In rare cases, the posted amounts may deviate from what is displayed in the totals fields. This is typically due to rounding calculations in relation to VAT or sales tax.

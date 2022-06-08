@@ -40,7 +40,7 @@ Production orders can be created on an order-by-order basis manually from the **
 Production orders are created using information from:
 
 - Zboží
-- Production BOMs
+- Výrobní kusovníky
 - Routings
 - Machine centers
 - Work centers

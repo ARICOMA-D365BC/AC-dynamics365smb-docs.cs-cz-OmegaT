@@ -105,7 +105,7 @@ Tady jsou další stránky, které obsahují větší část **Sestav Power BI**
 | 1156 | Podrobnosti o společnosti |
 | 4013 | Intelligent Cloud Insights |
 | 9006 | Centrum rolí Zpracovatel objednávek |
-| 9008 | Centrum rolí Skladník |
+| 9008 | Deník rolí Skladník |
 | 9010 | Centrum rolí Výrobní plánovač |
 | 9015 | Centrum rolí Vedoucí projektuC |
 | 9016 | Centrum rolí Správce servisu |

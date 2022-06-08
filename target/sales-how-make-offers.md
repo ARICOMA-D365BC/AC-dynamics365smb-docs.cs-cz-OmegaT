@@ -48,14 +48,14 @@ In most cases, you send sales quotes to prospective customers. You often have a 
 
    If you have set up recurring sales lines for the customer, such as a monthly replenishment order, then you can insert these lines on the order by choosing the **Get Recurring Sales Lines** action.
 
-4. On the **Lines** FastTab, in the **Type** field, select what type of product, charge, or transaction that you will post for the customer with the sales line.
-5. In the **No.** field, select a record to post according to the value in the **Type** field.
+4. V záložce **Řádky** v poli **Typ** vyberte typ zboží, poplatek nebo transakce, které budete účtovat zákazníkovi s řádkem prodeje.
+5. V poli **Číslo** vyberte záznam, který chcete účtovat, podle hodnoty v poli **Typ**.
 
    You leave the **No.** field empty in the following cases:
    - If the line is for a comment. Write the comment in the **Description** field.
    - If the line is for a catalog item. Choose the **Select Catalog Items** action. For more information, see [Work With Catalog Items](inventory-how-work-nonstock-items.md).
 
-6. In the **Quantity** field, enter how many units of the product, charge, or transaction that the line will record for the customer.
+6. V poli **Množství** zadejte, kolik jednotek zboží, nákladů nebo transakcí bude řádek zaznamenávat pro odběratele.
 
    > [!NOTE]  
    > If the item is of type **Service**, or the **Type** field contains **Resource**, then the quantity is a time unit, such as hours, as indicated in the **Unit of Measure Code** field on the line. For more information, see [Set Up Item Units of Measure](inventory-how-setup-units-of-measure.md)
@@ -63,15 +63,15 @@ In most cases, you send sales quotes to prospective customers. You often have a 
    The value in the **Line Amount** field is calculated as *Unit Price* x *Quantity*.
 
    The price and line amounts are with or without sales tax, depending on what you selected in the **Prices Including Tax** field on the customer card.
-7. If you want to give a discount, enter a percentage in the **Line Discount %** field. The value in the **Line Amount** field updates accordingly.
+7. Pokud chcete poskytnout slevu, zadejte procento do pole **Řádková sleva %**. Hodnota v poli **Částka na řádku** se odpovídajícím způsobem aktualizuje.
 
    If special item prices are set up on the **Sales Prices and Sales Line Discounts** FastTab on the customer or item card, the price and amount on the sales line automatically update if the price criteria is met. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
 8. Repeat steps 4 through 7 for every product you want to offer the contact.
 
    The totals under the lines are automatically calculated as you create or modify lines.
-9. In the **Invoice Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field.
+9. V poli **Fakturační sleva** zadejte částku, která má být odečtena od hodnoty uvedené v poli**Celkem včetně DPH**.
 
-   If you have set up invoice discounts for the customer, then the specified percentage value is automatically inserted in the **Invoice Discount %** field if the criteria are met, and the related amount is inserted in the **Inv. Discount Amount Excl. Tax** field. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
+   If you have set up invoice discounts for the customer, then the specified percentage value is automatically inserted in the **Invoice Discount %** field if the criteria are met, and the related amount is inserted in the **Inv. Discount Amount Excl. DPH**. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
 
    > [!TIP]
    > To have the **Quote Valid Until Date** filled in automatically with a certain number of days after quote creation, you can fill in the **Quote Validity Calculation** field on the **Sales & Receivables** page.

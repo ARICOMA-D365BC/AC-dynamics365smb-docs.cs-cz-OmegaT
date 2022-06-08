@@ -10,137 +10,137 @@ ms.date: 06/14/2021
 ms.author: edupont
 
 ---
-# Manage User Profiles
+# Správa uživatelských profilů
 
-All users of [!INCLUDE[prod_short](includes/prod_short.md)] are assigned a profile that reflects their business role, the department they work in, or another categorization. Profiles allow administrators to define and manage centrally what different user types can see and do in the user interface so they can perform their business tasks efficiently.
+Všichni uživatelé [!INCLUDE[prod_short](includes/prod_short.md)] mají přiřazený profil, který odráží jejich obchodní roli, oddělení, ve kterém pracují nebo jinou kategorizaci. Profily umožňují správcům centrálně definovat a spravovat, co mohou různé typy uživatelů vidět a dělat v uživatelském rozhraní, aby mohli efektivně plnit své pracovní úkoly.
 
 > [!NOTE]
-> The typical business use of a profile is a role. A profile is therefore named *Profile (Role)* in the UI.
+> Typickým využitím obchondího profilu je role. Profil se proto v uživatelském rozhraní nazývá *Profil (Role)*.
 
-As an administrator, you create and manage profiles on the **Profiles (Roles)** page. Each profile has a card where you manage various settings for the related role, such as the role name, the user settings, and which Role Center the profile uses. For more information about user settings and Role Centers, see [Change Basic Settings](ui-change-basic-settings.md).
+Jako správce vytváříte a spravujete profily na stránce **Profily (role)**. Každý profil má kartu, na které lze spravovat různá nastavení související role, například název role, uživatelská nastavení a to, které Centrul rolí profil používá. Další informace o uživatelských nastaveních a Centrech rolí naleznete v tématu [Změna základního nastavení](ui-change-basic-settings.md).
 
-Before you can administrate users' profiles, the users must be created and added, through the Microsoft 365 Admin Center. Then you can assign permissions to each user or user group to define which features they are allowed to view and/or edit. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md).
+Než budete moct spravovat profily uživatelů, musí se uživatelé vytvořit a přidat prostřednictvím Centra pro správu Microsoft 365. Poté můžete každému uživateli nebo skupině uživatelů přiřadit oprávnění k definování funkcí, které mohou prohlížet a/nebo upravovat. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
-## Page Customization
-You can customize page layouts for a profile so that all users assigned the profile will see the customized pages. As an administrator, you customize pages by using the same functionality as users do when they personalize. For more information, see [Customize Pages for Profiles](ui-personalization-manage.md).
+## Přizpůsobení stránky
+Rozložení stránek pro profil můžete přizpůsobit tak, aby všichni uživatelé přiřazení k profilu viděli tyto přizpůsobené stránky. Jako správce přizpůsobujete stránky pomocí stejných funkcí jako uživatelé při přizpůsobování. Pro další informace se podívejte na [Přizpůsobení stránek pro profily](ui-personalization-manage.md).
 
-## To create a profile
-If you cannot copy an existing profile, you can create a new one manually.
+## Vytvoření profilu
+Pokud nemůžete zkopírovat existující profil, můžete vytvořit nový ručně.
 
-1. Choose the ![Search for Page or Report.](media/ui-search/search_small.png "Search for Page or Report icon") icon, enter **Profiles (Roles)**, and then choose the related link.
-2. On the **Profiles (Roles)** page, choose the **New** action.
+1. Vyberte ikonu ![Hledat stránku nebo sestavu](media/ui-search/search_small.png "Hledat ikonu stránky nebo sestavy"), zadejte **Profily (role)** a poté vyberte související odkaz.
+2. Na stránce **Profily (role)** vyberte akci **Nový**.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To copy a profile
-To save time, you can create a new profile by copying an existing one. Copy one that has similar settings to the one you want to create.
+## Kopírování profilu
+Chcete-li ušetřit čas, můžete vytvořit nový profil zkopírováním existujícího profilu. Zkopírujte ten, který má podobné nastavení jako ten, který chcete vytvořit.
 
 > [!NOTE]
-> When you copy a profile, all the involved page customizations are copied as well, both the user-created and those derived from extensions.
+> Při kopírování profilu se zkopírují i všechna příslušná přizpůsobení stránky, a to jak uživatelsky vytvořená, tak ta z rozšíření.
 
-1. On the **Profiles (Roles)** page, select the line for the profile that you want to copy, and then choose the **Copy Profile** action.
-2. Fill in the **Profile ID** and **Display Name** fields, and then choose the **OK** button.
-3. On the **Profiles (Roles)** page, open the newly created profile card, and then edit other fields as necessary.
+1. Na stránce **Profily (role)** vyberte řádek profilu, který chcete zkopírovat, a pak zvolte akci **Kopírovat profil**.
+2. Vyplňte pole **ID profilu** a **Zobrazit název** a klikněte na tlačítko **OK**.
+3. Na stránce **Profily (role)** otevřete nově vytvořenou kartu profilu a podle potřeby upravte další pole.
 
-## To edit a profile
-You can edit a profile by changing the fields on the **Profile (Role)** page. However, the changes will not be visible to user assigned the profile until they sign out and back in.
+## Úprava profilu
+Profil můžete upravit změnou polí na stránce **Profil (Role)**. Změny však nebudou viditelné pro uživatele přiřazeného k profilu, dokud se neodhlásí a znovu nepřihlásí.
 
 > [!Caution]
-> Do not rename a profile while users assigned the profile are signed in as users may experience that the product freezes and must be restarted.
+> Nepřejmenovávejte profil, pokud jsou uživatelé přiřazení k profilu přihlášeni, protože uživatelé mohou zaznamenat, že Business Central zamrzne a bude nutné jej restartovat.
 
-## To assign a profile to a user
-Users can assign themselves a role (representing a profile) by choosing the **Role** field on the **My Settings** page. As an administrator, you can do the same through the **Profiles (Roles)** page.
+## Přiřazení profilu uživateli
+Uživatelé si mohou přiřadit roli (představující profil) výběrem pole **Role** na stránce **Moje nastavení**. Jako správce můžete provést totéž prostřednictvím stránky **Profily (Role)**.
 
-1. On the **Profiles (Roles)** page, select the profile that you want to assign, and then choose the **User Personalization List** action.
-2. On the **User Personalizations** page, select the user that you want to assign the profile to, and then choose the **Edit** action.
-3. In the **Profile ID** field, select the relevant profile.
+1. Na stránce **Profily (role)** vyberte profil, který chcete přiřadit, a pak zvolte akci **Seznam přizpůsobení uživateli**.
+2. Na stránce **Uživatelská nastavení** vyberte uživatele, kterému chcete profil přiřadit, a pak zvolte akci **Upravit**.
+3. V poli **ID profilu** vyberte příslušný profil.
 
 > [!NOTE]
-> If you assign another profile to a user, any personalizations made by the user with the previous profile are preserved.
+> Pokud uživateli přiřadíte jiný profil, veškeré personalizace provedené uživatelem v předchozím profilu zůstanou zachovány.
 
-## To define user settings for a profile
-On the **My Settings** page, users can define basic behavior of their account, such as the Role Center, the language, and which notifications they get. For more information, see [Change Basic Settings](ui-change-basic-settings.md).
+## Definování uživatelských nastavení pro profil
+Na stránce **Moje nastavení** mohou uživatelé definovat základní chování svého účtu, například Centrum rolí, jazyk a oznámení, která dostávají. Pro více informací navštivte <g2/>Změna základního nastavení](ui-change-basic-settings.md).
 
-As an administrator, you can define these setting for a profile and thereby apply the settings to all users of the related role.
+Jako správce můžete definovat tato nastavení pro profil a tím použít nastavení pro všechny uživatele související role.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Profiles (Roles)**, and then choose the related link.
-2. Select the line for the profile that you want to change user settings for, and then choose the **User Personalizations List** action.
-3. On the **User Personalizations** page, open the card for the user whose settings you want to change.
-4. On the **User Personalization Card** page, edit the fields as necessary.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Profily (role)** a poté vyberte související odkaz.
+2. Vyberte řádek pro profil, pro který chcete změnit nastavení uživatele, a pak zvolte akci **Seznam přizpůsobení uživateli**.
+3. Na stránce **Individuální nastavení uživatelů** otevřete kartu pro uživatele, jehož nastavení chcete změnit.
+4. Na stránce **Uživatelská nastavení** upravte pole podle potřeby.
 
-## To activate a profile
-When a profile is created, you can select different check boxes that define if, where, and how the profile and its information is made available to users.
+## Aktivace profilu
+Při vytváření profilu můžete zaškrtnout různá políčka, která definují, zda, kde a jak jsou profil a jeho informace zpřístupněny uživatelům.
 
-* On the **Profile (Role)** page, select the following check boxes:
-   - **Enabled** to specify if the related role is visible in the **Available Roles** page for users to choose from.
-   - **Use as default profile** to specify the profile that applies to users who are not assigned a specific role.
-   - **Disable personalization** to specify if users of the related role can personalize their workspace.
-   - **Show in Role Explorer** to specify if actions to business features included in the profile are shown in the extended view of the role explorer, a feature overview. For more information, see [Finding Pages with the Role Explorer](ui-role-explorer.md).
+* Na stránce **Profil (role)** zaškrtněte následující políčka:
+   - **Povoleno** určující, zda je souvisejicí profil viditelný na stránce **Dostupné role**, ze kterých si uživatelé mohou vybrat.
+   - **Použít jako výchozí profil** k určení profilu, který se vztahuje na uživatele, kterým není přiřazena konkrétní role.
+   - **Zakázat přizpůsobení** určující, zda uživatelé role mohou přizpůsobit svůj pracovní prostor.
+   - **Zobrazit v Průzkumníku Role** určuje, jestli se akce s obchodními funkcemi zahrnutými v profilu zobrazí v rozšířeném zobrazení Průzkumníka rolí, což je přehled funkcí. Pro více informací navštivte [Vyhledávání stránek pomocí Průzkůmníka rolí](ui-role-explorer.md).
 
-## To export profiles
-You can export profiles from [!INCLUDE[prod_short](includes/prod_short.md)], for example to reuse them in another tenant. The profiles are exported to a zip file containing .al files that can be reused to develop extensions. For more information, see [Using the Client to Create Profiles and Page Customizations](/dynamics365/business-central/dev-itpro/developer/devenv-design-profiles-using-client).
+## Export profilů
+Profily můžete exportovat z [!INCLUDE[prod_short](includes/prod_short.md)], například pro opětovné použití v jiném tenantovi. Profily jsou exportovány do souboru ZIP obsahujícího soubory AL, které lze znovu použít k vývoji rozšíření. Pro více informací navštivte [Použití klienta k vytváření přizpůsobení profilů a stránek](/dynamics365/business-central/dev-itpro/developer/devenv-design-profiles-using-client).
 
-* On the **Profiles (Roles)** page, choose the **Export Profiles** action.
+* Na stránce **Profily (role)** vyberte akci **Export profilů**.
 
-A zip file with the .al files for all profiles is exported.
+Exportuje se soubor ZIP se soubory .al pro všechny profily.
 
-## To import profiles
-You can import profiles that have been exported from [!INCLUDE[prod_short](includes/prod_short.md)]. The steps are more or less the opposite of the steps to export profiles. For more information, see [To export profiles](admin-users-profiles-roles.md#to-export-profiles).
+## Import profilů
+Můžete importovat profily, které byly exportovány z [!INCLUDE[prod_short](includes/prod_short.md)]. Kroky jsou víceméně opačné než kroky pro export profilů. Pro více informací navštivte  [Export profilů](admin-users-profiles-roles.md#to-export-profiles).
 
-1. On the **Profiles (Roles)** page, choose the **Import Profiles** action.
-2. Follow the steps on the **Import Profiles** wizard.
+1. Na stránce **Profily (role)** vyberte akci **Import profilů**.
+2. Postupujte podle pokynů v Průvodci **Importu profilů**.
 
-   If you only want to import selected profiles, use the **Selected** check box to indicate which to import.
-3. Choose the **Import selected** button.
+   Chcete-li importovat pouze vybrané profily, pomocí zaškrtávacího políčka ** Vybrané** určete, které chcete importovat.
+3. Zvolte tlačítko **Importovat vybrané**.
 
-A zip file with .al files for the selected profiles is imported.
+Importuje se soubor zip se soubory .al pro vybrané profily.
 
-## To delete a profile
-You can delete a profile by choosing the **Delete** action on the **Profiles (Roles)** page. However, the following limitations apply:
+## Odstranění profilu
+Profil můžete odstranit výběrem akce **Odstranit** na stránce **Profily (role)**. Platí však následující omezení:
 
-- You cannot delete a profile that is assigned to a user or a user group.
-- You cannot delete profiles that originate from extensions. The extension must first be uninstalled.
-- You can only delete one profile at a time.
+- Nemůžete odstranit profil, který je přiřazen uživateli nebo skupině uživatelů.
+- Profily, které pocházejí z rozšíření, nelze odstranit. Rozšíření je nutné nejprve odinstalovat.
+- V jednom okamžiku můžete odstranit pouze jeden profil.
 
-## To delete all personalizations made by a user
-You can delete all changes that a user has made to pages that make up their workspace. This may be useful, for example, if an employee has changed role and no longer needs the personalizations. Deleting users' personalizations changes the page layout back to what is defined by the profile.
+## Odstranění všech přizpůsobení provedených uživatelem
+Můžete odstranit všechny změny, které uživatel provedl na stránkách, které tvoří jeho pracovní prostor. To může být užitečné například v případě, že zaměstnanec změnil roli a již nepotřebuje přizpůsobení. Odstraněním přizpůsobení uživatelů se rozložení stránky změní zpět na to, co je definováno profilem.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Personalizations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter <g4/>Přizpůsobení uživatele** a vyberte související odkaz.
 
-   The **User Personalizations** page lists all users who have made personalizations.
+   Na stránce **Přizpůsobení uživatele** jsou uvedeni všichni uživatelé, kteří provedli individuální nastavení.
 
-2. Open the card for a user whose personalizations you want to delete.
-3. On the **User Personalization Card** page, choose the **Clear Personalized Pages** action, and then accept the message that appears.
+2. Otevřete kartu pro uživatele, jehož přizpůsobení chcete odstranit.
+3. Na stránce **Přizpůsobení uživatele** zvolte akci **Odstranit** a přijměte zprávu, která se zobrazí.
 
-The user will see the changes the next time they sign in.
+Uživatel uvidí změny při příštím přihlášení.
 
-You can also delete all page customizations for a profile. For more information, see [To delete all customizations for a profile](ui-personalization-manage.md#to-delete-all-customizations-for-a-profile).
+Můžete také odstranit všechna přizpůsobení stránek pro profil. Pro více infortmací navštivte [Odstranění všech vlastních nastavení profilu](ui-personalization-manage.md#to-delete-all-customizations-for-a-profile).
 
-## To delete personalizations for specific pages
-You can delete personalizations that one or more users have made to specific pages that make up their workspace. This may be useful, for example, if a changed business process means that a personalization must no longer be used by users. Deleting users' personalizations changes the page layout back to what is defined by the profile.
+## Odstranění individuálních nastavení pro určité stránky
+Můžete odstranit přizpůsobení, která jeden nebo více uživatelů provedlo na konkrétních stránkách, které tvoří jejich pracovní prostor. To může být užitečné například v případě, že změněný obchodní proces znamená, že uživatelé již nesmí používat přizpůsobení. Odstraněním přizpůsobení uživatelů se rozložení stránky změní zpět na to, co je definováno profilem.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Page Personalizations**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter **Přizpůsobení uživatele** a vyberte související odkaz.
 
-   The **User Page Personalizations** page lists all the pages that have been personalized and the user that they belong to.
+   Stránka **Přizpůsobení uživatele** obsahuje seznam všech personalizovaných stránek a uživatele, kterému patří.
 
    > [!Note]
-   > A check mark in the **Legacy Personalization** field indicates that the personalization was done in an older version of [!INCLUDE[prod_short](includes/prod_short.md)], which handled personalization differently. Users who try to personalize these pages are locked from doing so unless they choose to unlock the page. For more information, see [Why a Page is Locked from Personalizing](ui-personalization-locked.md).
+   > Zaškrtnutí v poli **Zděděné Přizpůsobení** znamená, že personalizace byla provedena ve starší verzi [!INCLUDE[prod_short](includes/prod_short.md)], která personalizaci zpracovávala jinak. Uživatelé, kteří se pokusí tyto stránky přizpůsobit, budou zablokováni, pokud se nerozhodnou stránku odemknout. Pro více informací navštivte  [Proč je stránka uzamčena před přizpůsobením](ui-personalization-locked.md).
 
-2. Select the line for the page personalization that you want to delete, and then choose the **Delete** action.
+2. Vyberte řádek pro přizpůsobení stránky, který chcete odstranit, a pak zvolte akci **Odstranit**.
 
-The user will see the changes the next time they sign-in.
+Uživatel uvidí změny při příštím přihlášení.
 
-You can also delete individual page customizations for a profile. For more information, see [To delete customization for specific pages for a profile](ui-personalization-manage.md#to-delete-customization-for-specific-pages-for-a-profile).
+Můžete také odstranit jednotlivá přizpůsobení stránky pro profil. Pro více informací navštivte [Odstranění vlastního nastavení pro konkrétní stránky profilu](ui-personalization-manage.md#to-delete-customization-for-specific-pages-for-a-profile).
 
-## Managing user sessions
+## Správa uživatelských relací
 
-As the administrator of [!INCLUDE[prod_short](includes/prod_short.md)] online, you can manage user sessions in the administration center. For more information, see [Managing Sessions](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments#managing-sessions) in the administration content.
+Jako správce [!INCLUDE[prod_short](includes/prod_short.md)] online, můžete spravovat uživatelské relace v centru pro správu. Pro více informací navštivte [Správa relací](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments#managing-sessions) v obsahu správy.
 
-For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, you can manage sessions using SQL Server Management Studio, for example. For more information, see [SQL Server technical documentation](/sql/sql-server).
+Pro [! INCLUDE[prod_short](includes/prod_short.md)] v místním prostředí, můžete spravovat relace například pomocí SQL Server Management Studio. Pro více informací navštivte [SQL Server technická dokumentace](/sql/sql-server).
 
 ## Viz také
-[Assign Permissions to Users and Groups](ui-define-granular-permissions.md)  
-[Customize Pages for Profiles](ui-personalization-manage.md)  
-[Personalize Your Workspace](ui-personalization-user.md)
+[Přiřazení oprávnění uživatelům a skupině](ui-define-granular-permissions.md)  
+[Přizpůsobení stránek pro profily](ui-personalization-manage.md)  
+[Přizpůsobte si svůj pracovní prostor](ui-personalization-user.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

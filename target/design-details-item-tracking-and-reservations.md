@@ -35,7 +35,7 @@ Hlavní rozdíl mezi specifickou a nespecifickou rezervací je definován existe
 
 | Typ | Dodávka | Poptávka |
 |-----------------|-----------------------|--------------------------|
-| **Specific** | Sériové číslo nebo číslo šarže. | Sériové číslo nebo číslo šarže. |
+| **Otevřená položka** | Sériové číslo nebo číslo šarže. | Sériové číslo nebo číslo šarže. |
 | **Nonspecific** | Sériové číslo nebo číslo šarže. | Žádné sériové číslo nebo číslo šarže. |
 
 When you reserve inventory quantities from an outbound document line for an item that has item tracking numbers assigned and is set up for specific item tracking, the **Reservation** page leads you through different workflows depending on your need for the serial or lot numbers.

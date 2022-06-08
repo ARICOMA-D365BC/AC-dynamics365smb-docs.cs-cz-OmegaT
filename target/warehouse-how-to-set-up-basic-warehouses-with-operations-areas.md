@@ -64,7 +64,7 @@ Komponenty pro montážní zakázky nemohou být vydány nebo zaúčtovány s vy
 
 Při Vyskladnění a odesílání prodejních řádků, které jsou smontovány pro objednávku, musíte při vytváření řádků vyskladnění zásob dodržet určitá pravidla. For more information, see the “Handling Assemble-to-Order Items in Inventory Picks” section in [Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md).
 
-For more information, see [Assembly Management](assembly-assemble-items.md).
+Pro více informací navštivte [Správa montáže](assembly-assemble-items.md).
 
 ### Nastavení automatického vytvoření přesunu při vyskladnění zásob pro montážní zakázku
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Setup**, and then choose the related link.

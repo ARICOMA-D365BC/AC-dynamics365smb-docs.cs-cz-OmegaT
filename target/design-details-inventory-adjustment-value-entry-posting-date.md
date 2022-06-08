@@ -41,7 +41,7 @@ Below are the related value entries:
 - **Entry No. 381** represents the invoice.
 - **Entry No. 391** is an Adjustment of the invoicing Value Entry (Entry No. 381 above).
 
-| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky zboží | Typ položky | Číslo dokladu | Číslo položky zboží | Kód lokace | Item Ledger Entry Quantity | Fakturované množství | Částka nákladů (skutečná) | Částka nákladů (očekávaná) | Adjustace | Applies-to Entry | Source Code |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky zboží | Typ položky | Číslo dokladu | Číslo položky zboží | Kód lokace | Item Ledger Entry Quantity | Fakturované množství | Částka nákladů (skutečná) | Částka nákladů (očekávaná) | Adjustace | Vyrovnává položku | Source Code |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|--------|---------|---------|---------|---------|
 | 379 | A | 2020-09-05 | Prodej | Přímé náklady | 102033 | 319 | Blue | -1 | 0 | 0 | -10 | Ne | 0 | Prodej |
 | 381 | A | 2020-09-06 | Prodej | Přímé náklady | 103022 | 319 | Blue | 0 | -1 | -10 | 10 | Ne | 0 | Prodej |
@@ -90,7 +90,7 @@ The first allowed posting date is the date stated in field **Allow Posting From*
 The initial assigned Posting Date was September 6 as illustrated in step 1. However, in the second step the Adjust Cost – Item entries batch job identifies that earliest allowed Posting Date is September 10 and thereby assigns September 10 to the Adjustment Value Entry (**Entry No. 391**), below.
 
 
-| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky zboží | Typ položky | Číslo dokladu | Číslo položky zboží | Kód lokace | Item Ledger Entry Quantity | Fakturované množství | Částka nákladů (skutečná) | Částka nákladů (očekávaná) | Adjustace | Applies-to Entry | Source Code |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky zboží | Typ položky | Číslo dokladu | Číslo položky zboží | Kód lokace | Item Ledger Entry Quantity | Fakturované množství | Částka nákladů (skutečná) | Částka nákladů (očekávaná) | Adjustace | Vyrovnává položku | Source Code |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 379 | A | 2020-09-05 | Prodej | Přímé náklady | 102033 | 319 | Blue | -1 | 0 | 0 | -10 | Ne | 0 | Prodej |
 | 381 | A | 2020-09-06 | Prodej | Přímé náklady | 103022 | 319 | Blue | 0 | -1 | -10 | 10 | Ne | 0 | Prodej |

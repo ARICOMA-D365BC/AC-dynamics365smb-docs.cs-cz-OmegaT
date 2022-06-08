@@ -15,91 +15,91 @@ ms.author: edupont
 
 ---
 
-# Procurement Quick Start
+# Rychlý začátek nákupu
 
-To be able to buy products and services, you must first set up vendors. Once that is done, you can start registering purchase orders and receiving invoices.
+Abyste mohli nakupovat produkty a služby, musíte nejprve založit a nastavit dodavatele. Jakmile to provedete, můžete začít evidovat nákupní objednávky a přijímat faktury.
 
-## Set up vendors
+## Nastavení dodavatelů
 
-The following video shows you how to set up a vendor in [!INCLUDE[prod_short](includes/prod_short.md)].
+Následující video ukazuje, jak nastavit dodavatele v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 <br><br>
 
 > [!Video https://www.microsoft.com/videoplayer/embed/RE3PZtd?rel=0]
 
-### Set up a new vendor
+### Založení nového dodavatele
 
 [!INCLUDE[create_new_vendor](includes/create_new_vendor.md)]
 
-For more information and additional things you can do when you register vendors, see [Register New Vendors](purchasing-how-register-new-vendors.md).
+Další informace a další kroky, které můžete udělat při zakládání a nastavení dodavatelů, naleznete v tématu [Evidence nových dodavatelů](purchasing-how-register-new-vendors.md).
 
-## Create new purchase orders
+## Vytváření nových nákupních objednávek
 
-When you buy something from a vendor you have two options. The first, and simplest, is to just create a purchase invoice. However, you must use purchase orders if your purchasing process requires that you record partial receipts of an order quantity, for example, because the full quantity was not available at the vendor.
+Když nakupujete něco od dodavatele, máte dvě možnosti. První a nejjednodušší je vytvořit nákupní fakturu. Nákupní objednávky je však nutné použít, pokud váš nákupní proces vyžaduje, abyste zaznamenali částečné příjmy množství objednávky, například proto, že celé množství nebylo k dispozici u dodavatele.
 
-The following video shows you how to create a purchase order in [!INCLUDE[prod_short](includes/prod_short.md)].
+Následující video ukazuje, jak vytvořit nákupní objednávku v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 <br><br>
 
 > [!Video https://www.microsoft.com/videoplayer/embed/RE4b3tt?rel=0]
 
-### To create a purchase order
+### Vytvoření nákupní objednávky
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 1.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní objednávky** a poté zvolte související odkaz.
 
-2. On the **Purchase Orders** page, select the **New** action to create a new Purchase Order.
+2. Na stránce **Nákupní objednávky**, vyberte funkci **Nový** k vytvoření nové nákupní objednávky.
 
-3. In the **Vendor Name** field, enter the name of an existing vendor.
+3. Do pole **Název dodavatele** zadejte název existujícího dodavatele.
 
-   Other fields on the **Purchase Header** are now filled with the standard information about the selected vendor.
+   Ostatní pole v **Nákupní hlavičcce** jsou nyní vyplněna standardními informacemi o vybraném dodavateli.
 
-4. Fill in the remaining fields on the **Purchase Order** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Podle potřeby vyplňte další zbývající pole na stránce **Nákupní objednávka**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-   You are now ready to fill in the purchase order lines with items or resources that you have purchased from the vendor.
+   Nyní jste připraveni vyplnit řádky nákupní objednávky zbožím nebo zdroji, které jste zakoupili od dodavatele.
 
-5. On the **Lines** FastTab, in the **Item No.** field, enter the number of an inventory item or service.
+5. V záložce **Řádky** v poli **Číslo zboží** zadejte číslo inventární zboží nebo služby.
 
-6. In the **Quantity** field, enter the number of items to be purchased.
+6. V poli **Množství** zadejte počet položek, které mají být zakoupeny.
 
-   The **Line Amount** field is updated to show the value in the **Direct Unit Cost** field multiplied by the value in the **Quantity** field.
+   Pole **Částka na řádku** je aktualizováno tak, aby zobrazovalo hodnotu v poli **Nákupní cena** vynásobenou hodnotou v poli **Množství**.
 
-7. In the **Order Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field at the bottom of the order.
+7. V poli **Sleva objednávky** zadejte částku, která má být odečtena od hodnoty uvedené v poli **Celkem včetně. DPH** v dolní části objednávky.
 
-8. When you receive the purchased items or services, choose **Post**.
+8. Když obdržíte zakoupené zboží nebo služby, zvolte **Účtovat**.
 
-For more information and additional things you can do when creating a purchase order, see [Purchasing](purchasing-manage-purchasing.md).
+Další informace a další kroky, které můžete udělat při zakládání nákupních objednávek, navštivte [Nakupování](purchasing-manage-purchasing.md).
 
-## Create a purchase invoice
+## Vytvoření nákupní faktury
 
-You create a purchase invoice to record the cost of purchases and to track accounts payable. Creating a purchase invoice is similar to creating a purchase order.
+Vytvoření nákupní faktury pro zaznamenání nákladů na nákupy a pro sledování závazků. Vytvoření nákupní faktury je podobné jako vytvoření nákupní objednávky
 
-### How to create and post a purchase invoice
+### Jak vytvořit a zaúčtovat nákupní fakturu
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 3.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. On the **Purchase Invoice** page, select the **New** action to create a new Purchase Invoice.
-3. In the **Vendor** field, enter the name of an existing vendor.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
+2. Na stránce **Nákupní faktury** vyberte akci **Nový** pro vytvoření nové nákupní faktury.
+3. Do pole **Dodavatel** zadejte název existujícího dodavatele.
 
-   Other fields on the **Purchase Invoice** page are now filled with the standard information of the selected vendor.
+   Ostatní pole na stránce **Nákupní faktura** se sama vyplní standardními informacemi o vybraném dodavateli.
 
-4. Fill in the remaining fields on the **Purchase Invoice** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Podle potřeby vyplňte i zbývající pole na stránce **Nákupní faktura**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-   You are now ready to fill in the purchase invoice lines with items or resources that you have purchased from the vendor.
+   Nyní jste připraveni vyplnit řádky nákupní faktury zbožím nebo zdroji, které jste zakoupili od dodavatele.
 
-5. On the **Lines** FastTab, in the **Item No.** field, enter the number of an inventory item or service.
-6. In the **Quantity** field, enter the number of items to be purchased.
+5. V záložce **Řádky** v poli **Číslo zboží** zadejte číslo inventární zboží nebo služby.
+6. V poli **Množství** zadejte počet položek, které mají být zakoupeny.
 
-   The **Line Amount** field is updated to show the value in the **Direct Unit Cost** field multiplied by the value in the **Quantity** field.
+   Pole **Částka na řádku** je aktualizováno tak, aby zobrazovalo hodnotu v poli **Nákupní cena** vynásobenou hodnotou v poli **Množství**.
 
-7. In the **Invoice Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field at the bottom of the invoice.
+7. V poli **Fakturační sleva** zadejte částku, která má být odečtena od hodnoty uvedené v poli**Celkem včetně DPH** v dolní části faktury.
 
-8. When you receive the purchased items or services, choose **Post**.
+8. Když obdržíte zakoupené zboží nebo služby, zvolte **Účtovat**.
 
-The purchase is now reflected in inventory, resource ledgers, and financial records, and the vendor payment is activated. The purchase invoice is removed from the list of purchase invoices and replaced with a new document in the list of posted purchase invoices.
+Nákup se nyní promítne do zásob, účetních knih zdrojů a finančních záznamů a je aktivována platba dodavatele. Nákupní faktura je odstraněna ze seznamu nákupních faktur a nahrazena novým dokladem v seznamu zaúčtovaných nákupních faktur.
 
-For more information and additional things you can do when creating a purchase invoice, see [Record Purchases with Purchase Invoices](purchasing-how-record-purchases.md).
+Další informace a další kroky, které můžete udělat při zakládání nákupních objednávek, navštivte [Evidence nákupů pomocí nákupních faktur](purchasing-how-record-purchases.md).
 
 ## Viz také
 
 [Business Central Quick Starts](quick-start-business-central.md)  
-[Purchasing Overview](Purchasing-manage-purchasing.md)  
-[Record Purchases with Purchase Invoices](purchasing-how-record-purchases.md)
+[Přehed nakupování](Purchasing-manage-purchasing.md)  
+[Evidence nákupů pomocí nákupních faktur](purchasing-how-record-purchases.md)

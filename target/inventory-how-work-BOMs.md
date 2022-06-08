@@ -18,7 +18,7 @@ You use bills of materials (BOMs) to structure parent items that must be assembl
 ## Assembly BOMs or Production BOMs
 You use assembly orders for making end items from components in a simple process that can be performed by one or more basic resources, which are not machine or work centers, or without any resources. Proces montáže by například mohl být, z výběru dvou láhví vína a jednoho pytlíku kávy a následného zabalení jako dárek.
 
-An assembly BOM is the master data that defines which component items go into an assembled end item and which resources are used to assemble the assembly item. When you enter an assembly item and a quantity in the header of a new assembly order, then the assembly order lines are automatically filled according to the assembly BOM with one assembly order line per component or resource. For more information, see [Assembly Management](assembly-assemble-items.md).
+An assembly BOM is the master data that defines which component items go into an assembled end item and which resources are used to assemble the assembly item. When you enter an assembly item and a quantity in the header of a new assembly order, then the assembly order lines are automatically filled according to the assembly BOM with one assembly order line per component or resource. Pro více informací navštivte [Správa montáže](assembly-assemble-items.md).
 
 Assembly BOMs are described in this topic.
 

@@ -14,105 +14,105 @@ ms.author: edupont
 
 ---
 
-# Sales Quick Start
+# Rychlý start prodeje
 
-To be able to sell products and services, you must first set up items and customers. Once that is done, you can start registering sales orders and sending out invoices.
+Abyste mohli prodávat produkty a služby, musíte nejprve založit a nastavit zboží a zákazníky. Jakmile to provedete, můžete začít evidovat prodejní objednávky a odesílat faktury.
 
-## Set up items to sell
+## Nastavení a založení zboží k prodeji
 
-This video shows how to set up an item to sell in [!INCLUDE[prod_short](includes/prod_short.md)].
+Toto video ukazuje, jak nastavit zboží pro prodej v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 <br>
 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE47eLx?rel=0]
 
-### Set up a new item
+### Založení nového zboží
 
 [!INCLUDE[create_new_item](includes/create_new_item.md)]
 
-For more information and additional things you can do when setting up items, see [Register New Items](inventory-how-register-new-items.md).
+Další informace a další kroky, které můžete udělat při zakládání a nastavení zboží, naleznete v tématu [Evidence nového zboží](inventory-how-register-new-items.md).
 
-## Set up customers
+## Nastavení zákazníků
 
-This video shows how to set up a new customer in [!INCLUDE[prod_short](includes/prod_short.md)].
+Toto video ukazuje, jak nastavit nového zákazníka v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3PZsM]
 
-### Set up a new customer
+### Nastavení nového zákazníka
 
 [!INCLUDE[create_new_customer](includes/create_new_customer.md)]
 
-For more information and additional things you can do when setting up customers, see [Register New Customers](sales-how-register-new-customers.md)
+Další informace a další kroky, které můžete udělat při zakládání a nastavení zboží, naleznete v tématu [Evidence nového zákazníka](sales-how-register-new-customers.md)
 
-## Create a sales order
+## Vytvoření prodejní objednávky
 
-When you sell something to a customer, you have two options. The first, and simplest, is to just create a sales invoice. However, if your sales process is more complex, for example if you have situations where you only ship parts of an order quantity, you use a sales order.
+Když něco prodáváte zákazníkovi, máte dvě možnosti. První a nejjednodušší je vytvořit prodejní fakturu. Pokud je však váš proces prodeje složitější, například pokud máte situace, kdy odesíláte pouze části objednaného množství, použijete prodejní objednávku.
 
-### To create a sales order
+### Vytvoření prodejní objednávky
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 10.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
-2. Select **New** to create a new entry.
-3. In the **Customer** field, enter the name of an existing customer.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
+2. Vyberte **Nový** a vytvořte nový záznam.
+3. Do pole **Zákazník** zadejte jméno existujícího zákazníka.
 
-   Other fields on the **Sales Order** page are now filled with the standard information of the selected customer.
+   Ostatní pole na stránce **Prodejní objednávka** se sama vyplní standardními informacemi o vybraném zákazníkovi.
 
-4. Fill in the remaining fields on the **Sales Order** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Podle potřeby vyplňte další zbývající pole na stránce **Prodejní objednávka**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-5. On the **Lines** FastTab, in the **Type** field, select what type of product, charge, or transaction that you will post for the customer with the sales line.
+5. V záložce **Řádky** v poli **Typ** vyberte typ zboží, poplatek nebo transakce, které budete účtovat zákazníkovi s řádkem prodeje.
 
-6. In the **No.** field, enter the number of an inventory item or service.
+6. Do pole **Číslo** zadejte číslo zboží nebo služby.
 
-7. In the **Quantity** field, enter the number of items to be sold.
+7. Do pole **Množství** zadejte počet položek, které mají být prodány.
 
-8. In the **Line Discount %** field, enter a percentage if you want to grant the customer a discount on the product.
+8. Do pole **Řádková sleva** zadejte procentuální hodnotu, pokud chcete odběrateli poskytnout slevu na produkt.
 
-9. To add a comment about the order line that the customer can see on the printed sales order, write a comment in the **Description** field on an empty line.
+9. Chcete-li přidat komentář k řádku objednávky, který zákazník může vidět na vytištěné prodejní objednávce, napište komentář do pole **Popis** na prázdném řádku.
 
-10. Repeat steps 5 through 9 for every item that you want to sell to the customer.
+10. Opakujte kroky 5 až 9 pro každou položku, kterou chcete prodat zákazníkovi.
 
-11. To only ship a part of the order quantity, enter that quantity in the **Qty. to Ship** field. The value is copied to the **Qty. to Invoice** field.
+11. Chcete-li odeslat pouze část objednaného množství, zadejte toto množství do pole **K dodání**. Hodnota se zkopíruje do pole **K. fakturaci**.
 
-12. To only invoice a part of the shipped quantity, enter that quantity in the **Qty. to Invoice** field. The quantity must be lower than the value in the **Qty. to Ship** field.
+12. Chcete-li fakturovat pouze část dodaného množství, zadejte toto množství do pole **K fakturaci**. Množství musí být nižší než hodnota v poli **K dodání**.
 
-13. When the sales order lines are completed, choose the **Post and Send** action.
+13. Po dokončení řádků prodejní objednávky vyberte akci **Účtovat a Odeslat**.
 
-For more information and additional things you can do when creating customer sales orders, see [Sell Products with a Customer Sales Order](sales-how-sell-products.md).
+Další informace a další kroky, které můžete udělat při zakládání prodejních objednávek navštivte [Prodej produktů pomocí podejní objednávky](sales-how-sell-products.md).
 
-## Create a sales invoice
+## Vytvoření prodejní faktury
 
-When you create and post a sales invoice, you not only create the invoice document you send to the customer, you also create the related quantity and value entries in [!INCLUDE[prod_short](includes/prod_short.md)].
+Když vytvoříte a zaúčtujete prodejní fakturu, vytvoříte nejen fakturu, kterou odešlete zákazníkovi, ale také vytvoříte související položky množství a hodnoty v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-### To create and post a sales invoice
+### Vytvoření a zaúčtování prodejní faktury
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 20.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní faktury** a poté vyberte související odkaz.
 
-2. Select **New** to create a new entry.
+2. Vyberte **Nový** a vytvořte nový záznam.
 
-3. In the **Customer** field, enter the name of an existing customer.
+3. Do pole **Zákazník** zadejte jméno existujícího zákazníka.
 
-4. Fill in the remaining fields on the **Sales Invoice** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Podle potřeby vyplňte další zbývající pole na stránce **Prodejní faktura**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-5. On the **Lines** FastTab, in the **Type** field, select what type of product, charge, or transaction that you will post for the customer with the sales line.
+5. V záložce **Řádky** v poli **Typ** vyberte typ zboží, poplatek nebo transakce, které budete účtovat zákazníkovi s řádkem prodeje.
 
-6. In the **No.** field, select a record to post according to the value in the **Type** field.
+6. V poli **Číslo** vyberte záznam, který chcete účtovat, podle hodnoty v poli **Typ**.
 
-7. In the **Quantity** field, enter how many units of the product, charge, or transaction that the line will record for the customer.
+7. V poli **Množství** zadejte, kolik jednotek zboží, nákladů nebo transakcí bude řádek zaznamenávat pro odběratele.
 
-8. If you want to give a discount, enter a percentage in the **Line Discount %** field. The value in the **Line Amount** field updates accordingly.
+8. Pokud chcete poskytnout slevu, zadejte procento do pole **Řádková sleva %**. Hodnota v poli **Částka na řádku** se odpovídajícím způsobem aktualizuje.
 
-9. Repeat steps 5 through 8 for every product or charge that you want to invoice the customer for.
+9. Opakujte kroky 5 až 8 pro každý produkt nebo poplatek, který chcete zákazníkovi fakturovat.
 
-10. In the **Invoice Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field.
+10. V poli **Fakturační sleva** zadejte částku, která má být odečtena od hodnoty uvedené v poli**Celkem včetně DPH**.
 
-11. When the sales invoice lines are completed, choose the **Post and Send** action.
+11. Po dokončení řádků prodejní faktury vyberte akci **Účtovat a odeslat**.
 
-For more information and additional things you can do when creating customer sales invoices, see [Invoice Sales](sales-how-invoice-sales.md)
+Další informace a další kroky, které můžete udělat při zakládání prodejních faktur, navštivte [Prodejní faktury](sales-how-invoice-sales.md)
 
 ## Viz také
 
 [Business Central Quick Starts](quick-start-business-central.md)  
-[Sales Overview](sales-manage-sales.md)  
-[Sell Products with a Customer Sales Order](sales-how-sell-products.md)  
-[Invoice Sales](sales-how-invoice-sales.md)
+[Přehled Prodeje](sales-manage-sales.md)  
+[Prodej produktů zákazníkovi pomocí prodejních objednávek](sales-how-sell-products.md)  
+[Prodejní faktury](sales-how-invoice-sales.md)

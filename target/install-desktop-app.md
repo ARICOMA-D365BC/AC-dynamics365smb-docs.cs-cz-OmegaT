@@ -11,48 +11,48 @@ ms.search.keywords: phone, tablet
 ms.date: 10/01/2021
 ms.author: jswymer
 ---
-# Get Business Central Desktop App
+# Získání desktopové aplikace Business Central
 
-If you have a Windows (PC) or macOS computer, you can install a Business Central app on your desktop.
+Pokud máte počítač se systémem Windows (PC) nebo macOS, můžete si nainstalovat aplikaci Business Central.
 > [!NOTE]
-> If you're using Business Central 2021 release wave 1 or earlier, get the app from [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848).
+> Pokud používáte Business Central 2021 release wave 1 nebo starší, stáhněte si aplikaci z [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848).
 
-## Why use the app?
+## Proč aplikaci používat?
 
-The Business Central app resembles the web client, but it provides a few benefits like:
+Aplikace Business Central se podobá webovému klientovi, ale poskytuje několik výhod, jako jsou:
 
-- The app is readily available from the **Start** menu, you can easily pin it to the task bar, or have it launch by default when you start your computer.
-- In general, the app also is a faster and smoother to render on screen, with no performance differences, compared to running [!INCLUDE[prod_short](includes/prod_short.md)] in the browser.
-- The app opens in its own window, independent of any browser windows. This feature makes it easier to find when running a large number many apps or browser tabs.
-- If you have more than one Business Central environment (online only), you can install the app separately for each environment.
+- Aplikace je snadno dostupná z nabídky **Start**, můžete ji snadno připnout na hlavní panel nebo ji spustit ve výchozím nastavení při spuštění počítače.
+- Obecně platí, že aplikace je rychlejší a plynulejší ve vykreslování na obrazovce bez rozdílů ve výkonu, ve srovnání se spuštěním [!INCLUDE[prod_short](includes/prod_short.md)] v prohlížeči.
+- Aplikace se otevře ve vlastním okně, nezávisle na všech oknech prohlížeče. Tato funkce usnadňuje vyhledání aplikace při spuštění velkého počtu aplikací nebo karet prohlížeče.
+- Pokud máte více než jedno prostředí Business Central (pouze online), můžete si aplikaci nainstalovat samostatně pro každé prostředí.
 
-   When you open the app for specific environment, the environment name is included in the window title. When working across multiple [!INCLUDE[prod_short](includes/prod_short.md)] environments, each app window is displayed separately. The name makes it easier for you to see which window is associated with each environment.
+   Když otevřete aplikaci pro konkrétní prostředí, název prostředí je zobrazen v názvu okna. Při práci ve více prostředích [!INCLUDE[prod_short](includes/prod_short.md)]  se každé okno aplikace zobrazuje samostatně. Název vám usnadní zobrazení, které okno je přiřazeno k jednotlivému prostředí.
 
-## Install the app
+## Instalace aplikace
 
-1. Open the [!INCLUDE[prod_short](includes/prod_short.md)] web client in either Microsoft Edge or Google Chrome.
+1. Otevřete webového klienta [!INCLUDE[prod_short](includes/prod_short.md)] v prohlížeči Microsoft Edge nebo Google Chrome.
 
-2. If the page for selecting the environment appears, you can do one of two things:
+2. Pokud se zobrazí stránka pro výběr prostředí, můžete provést jednu ze dvou věcí:
 
-   - Select the environment and go to the next step to install the app. In this case, the installed app will open the environment you select.
-   - Don't select the environment, and just go to next step to install the app. In this case, the installed app will open the environment selection page, instead of a specific environment.
+   - Vyberte prostředí a přejděte k dalšímu kroku k instalaci aplikace. V takovém případě nainstalovaná aplikace otevře prostředí, které vyberete.
+   - Nevybírejte prostředí a přejděte k dalšímu kroku k instalaci aplikace. V takovém případě nainstalovaná aplikace otevře stránku pro výběr prostředí namísto konkrétního prostře
 
-3. To install the app, depending on your browser, select ![Icon for installing an app in Edge.](media/ui-edge-install-app-icon.png) **App available. Install Business Central** or ![Icon for installing an app in Chrome.](media/ui-chrome-install-app-icon.png) **Install Business Central**, then **Install**.
+3. Chcete-li aplikaci nainstalovat, v závislosti na prohlížeči vyberte ikonu ![Ikona Instalace aplikace v Edge](media/ui-edge-install-app-icon.png) **Dostupná aplikace instalace Business Central** nebo ![Ikona Instalace aplikace v Chrome](media/ui-chrome-install-app-icon.png) **Instalovat Business Central**, poté **Instalovat**.
 
    | Microsoft Edge | Google Chrome |
    |--|--|
-   | :::image type="content" source="media/ui-edge-install-app-v2.png" alt-text="illustration of a button for installing an app in Edge."::: | :::image type="content" source="media/ui-chrome-install-app-v2.png" alt-text="illustration of a button for installing an app in Chrome."::: |
+   | :::image type="content" source="media/ui-edge-install-app-v2.png" alt-text="ilustrace tlačítka pro instalaci aplikace v Edge"::: | :::image type="content" source="media/ui-chrome-install-app-v2.png" alt-text="ilustrace tlačítka pro instalaci aplikace v Chrome."::: |
 
 > [!TIP]
-> With Edge, you can also install the app by going to the **Settings and more** menu in the browser, then selecting **Apps** > **Install this site as an app** > **Install**.
+> V prohlížeči Edge můžete aplikaci nainstalovat také tak, že přejdete do nabídky **Nastaven a další** v prohlížeči vyberete **Aplikace** > **Instalovat tuto stránku jako aplikaci** > **Instalovat**.
 
-Once installed, the app appears in the **Start** menu. If you've selected a specific environment for the app, the environment name is added to the app name in the **Start** menu.
+Po instalaci se aplikace objeví v nabídce **Start**. Pokud jste pro aplikaci vybrali konkrétní prostředí, název prostředí se přidá k názvu aplikace v nabídce **Start**.
 
-### For Business Central on-premises
+### On-premise Business Central
 
-Installing the app when you're using Business Central on-premises is basically the same as described above. If you only have one tenant, just open the Business Central in your browser, then select either ![Icon for installing an app in Edge.](media/ui-edge-install-app-icon.png) **App available. Install Business Central** or ![Icon for installing an app in Chrome.](media/ui-chrome-install-app-icon.png) **Install Business Central** as shown above.
+Instalace aplikace, když používáte on-premise Business Central, je v podstatě stejná, jak je popsáno výše. Pokud máte pouze jednoho tenanta, stačí otevřít Business Central v prohlížeči a poté vybrat buď ikonu ![Ikona Instalace aplikace v Edge](media/ui-edge-install-app-icon.png) **Dostupná aplikace instalace Business Central** nebo ![Ikona Instalace aplikace v Chrome](media/ui-chrome-install-app-icon.png) **Instalovat Business Central**, jak je uvedeno výše.
 
-The difference is when you have multiple tenants. Unlike [!INCLUDE[prod_short](includes/prod_short.md)] online, where you can install the app separately for different environments, with on-premises you can only install the app for one tenant. So, before you install the app when you have multiple tenants, be sure to switch to the correct tenant. Once installed, when you open the app, it will directly open the tenant.
+Rozdíl je v tom, když máte více klientů. Na rozdíl od [!INCLUDE[prod_short](includes/prod_short.md)] online, kde můžete aplikaci nainstalovat samostatně pro různá prostředí, s on-premises prostředím můžete aplikaci nainstalovat jenom pro jednoho tenanta. Takže před instalací aplikace, když máte více klientů, nezapomeňte přepnout na správného tenanta. Po instalaci se při otevření aplikace otevře přímo tenant.
 
 <!-- for FAQ or troubleshooting
 > [!NOTE]

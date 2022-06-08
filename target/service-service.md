@@ -13,36 +13,36 @@ ms.date: 06/23/2021
 ms.author: edupont
 
 ---
-# Service Management
+# Správa servisu
 > [!NOTE]
-> Functionality described in this topic and sub topics is only visible in the user interface if you have the **Premium** experience. For more information, see [Change Which Features are Displayed](ui-experiences.md).
+> Funkce popsané v tomto tématu a podtématech jsou v uživatelském rozhraní viditelné pouze v případě, že máte zkušenost **Premium**. Pro další informace se podívejte na [Změna zobrazování funkcí](ui-experiences.md).
 
-Providing ongoing service to customers is an important part of any business and one that can be a source of customer satisfaction and loyalty, in addition to revenue. However, managing and tracking service is not always easy, and [!INCLUDE[prod_short](includes/prod_short.md)] provides a set of tools to help. These tools are designed to support repair shop and field service operations, and can be used in business scenarios such as complex customer service distribution systems, industrial service environments with bills of materials, and high volume dispatching of service technicians with requirements for spare parts management.
+Poskytování nepřetržitých služeb zákazníkům je důležitou součástí každého podnikání a může být vedle příjmů zdrojem spokojenosti a loajality zákazníků. Správa a sledování služby však není vždy snadné a  [!INCLUDE[prod_short](includes/prod_short.md)] poskytuje sadu nástrojů, které vám pomohou. Tyto nástroje jsou navrženy tak, aby podporovaly servisy a servisní operace v terénu a mohou být použity v obchodních scénářích, jako jsou komplexní distribuční systémy zákaznických služeb, prostředí průmyslových služeb s kusovníky a velkoobjemové dispečinky servisních techniků s požadavky na správu náhradních dílů.
 
-With these tools you can accomplish the following:
+Pomocí těchto nástrojů můžete provést následující:
 
-* Schedule service calls and set up service orders.
-* Track repair parts and supplies.
-* Assign service personnel based on skill and availability.
-* Provide service estimates and service invoices.
+* Naplánujte servisní hovory a zakládejte servisní zakázky.
+* Sledujte díly a zásoby pro opravy.
+* Přiřaďte servisní personál na základě dovedností a dostupnosti.
+* Poskytujte odhady servisu a faktury.
 
-In addition, you can standardize coding, set up contracts, implement a discounting policy, and create route maps for service employees.
+Kromě toho můžete standardizovat kódy, nastavit smlouvy, zavést politiku slev a vytvořit mapy tras pro servisní pracovníky.
 
-In general, there are two aspects to service management: configuring and setting up your system, and using it for pricing, contracts, orders, service personnel dispatch, and job scheduler.
+Obecně existují dva aspekty správy servisu: konfigurace a nastavení vašeho systému a jeho použití pro stanovení cen, smluv, objednávek, výhezdy servisních techniků a plánovač úloh.
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
 | **Viz** | **také** |
 |------------|-------------|  
-| Set up Service Management, including fault codes, policies, default documents and templates. | [Setting Up Service Management](service-setup-service.md) |
-| Manage service pricing, create service items, and understand how to monitor progress. | [Planning Service](service-plan-service.md) |
-| Create and manage contractual agreements between you and your customers. | [Fulfilling Service Contracts](service-fulfill-service-contracts.md) |
-| Provide service to customers, and invoice service orders. | [Delivering Service](service-deliver-service.md) |
+| Nastavte Nastavení servisu, včetně chybových kódů, zásad, výchozích dokumentů a šablon. | [Nastavení správy servisu](service-setup-service.md) |
+| Spravujte ceny servisu, vytvářejte položky servisu a pochopte, jak sledovat jeho průběh. | [Plánování servisu](service-plan-service.md) |
+| Vytvářejte a spravujte smluvní ujednání mezi vámi a vašimi zákazníky. | [Plnění servisních smluv](service-fulfill-service-contracts.md) |
+| Poskytování služeb zákazníkům a faktura servisních objednávek. | [Poskytování servisu](service-deliver-service.md) |
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)   
-[Jobs](projects-how-create-jobs.md)   
-[Welcome to [!INCLUDE[prod_long](includes/prod_long.md)] ](index.md)
+[Správa pohledávek](receivables-manage-receivables.md)   
+[Projekty](projects-how-create-jobs.md)   
+[Vítejte v[!INCLUDE[prod_long](includes/prod_long.md)] ](index.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

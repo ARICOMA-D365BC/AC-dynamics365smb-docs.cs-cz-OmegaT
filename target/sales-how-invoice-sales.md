@@ -39,7 +39,7 @@ You can fill customer fields on the sales invoice in two ways depending on wheth
 ### To create a sales invoice
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.
-2. In the **Customer** field, enter the name of an existing customer.
+2. Do pole **Zákazník** zadejte jméno existujícího zákazníka.
 
    Other fields on the **Sales Invoice** page contain standard information about the selected customer. If the customer is not registered, follow these steps:
 
@@ -50,7 +50,7 @@ You can fill customer fields on the sales invoice in two ways depending on wheth
    5. When you have completed the customer card, choose the **OK** button to return to the **Sales Invoice** page.
 
    Several fields on the sales invoice are now filled with information that you specified on the new customer card.
-3. Fill in the remaining fields on the **Sales Invoice** page as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Podle potřeby vyplňte další zbývající pole na stránce **Prodejní faktura**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]  
    > If you allow the customer to pay immediately, for example, by cash or by PayPal, then fill in the **Payment Method Code** field. The payment is then recorded as soon as you post the sales invoice. If you select CASH, then the payment is recorded in a specified balancing account.
@@ -58,15 +58,15 @@ You can fill customer fields on the sales invoice in two ways depending on wheth
    You are now ready to fill in the sales invoice lines for products that you are selling to the customer or for any transaction with the customer that you want to record in a G/L account.
 
    If you have set up recurring sales lines for the customer, such as a monthly replenishment order, then you can insert these lines on the order by choosing the **Get Recurring Sales Lines** action.
-4. On the **Lines** FastTab, in the **Type** field, select what type of product, charge, or transaction that you will post for the customer with the sales line.
-5. In the **No.** field, select a record to post according to the value in the **Type** field.
+4. V záložce **Řádky** v poli **Typ** vyberte typ zboží, poplatek nebo transakce, které budete účtovat zákazníkovi s řádkem prodeje.
+5. V poli **Číslo** vyberte záznam, který chcete účtovat, podle hodnoty v poli **Typ**.
 
    You leave the **No.** field empty in the following cases:
 
    * If the line is for a comment. Write the comment in the **Description** field.
    * If the line is for a catalog item. Choose the **Select Catalog Items** action. For more information, see [Work With Catalog Items](inventory-how-work-nonstock-items.md).
 
-6. In the **Quantity** field, enter how many units of the product, charge, or transaction that the line will record for the customer.
+6. V poli **Množství** zadejte, kolik jednotek zboží, nákladů nebo transakcí bude řádek zaznamenávat pro odběratele.
 
    > [!NOTE]  
    > If the item is of type **Service**, or the **Type** field contains **Resource**, then the quantity is a time unit, such as hours, as indicated in the **Unit of Measure Code** field on the line. For more information, see [Set Up Item Units of Measure](inventory-how-setup-units-of-measure.md)
@@ -74,7 +74,7 @@ You can fill customer fields on the sales invoice in two ways depending on wheth
    The value in the **Line Amount** field is calculated as *Unit Price* x *Quantity*.
 
    The price and line amounts are with or without sales tax, depending on what you selected in the **Prices Including Tax** field on the customer card.
-7. If you want to give a discount, enter a percentage in the **Line Discount %** field. The value in the **Line Amount** field updates accordingly.
+7. Pokud chcete poskytnout slevu, zadejte procento do pole **Řádková sleva %**. Hodnota v poli **Částka na řádku** se odpovídajícím způsobem aktualizuje.
 
    If special item prices are set up on the **Sales Prices and Sales Line Discounts** FastTab on the customer or item card, the price and amount on the sales line automatically update if the price criteria is met. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
 8. Repeat steps 9 through 12 for every product or charge that you want to invoice the customer for.
@@ -83,10 +83,10 @@ You can fill customer fields on the sales invoice in two ways depending on wheth
 
    > [!NOTE]
    > In very rare cases, the posted amounts may deviate from what is displayed in the totals fields. This is typically due to rounding calculations in relation to VAT or sales tax.<br /><br />To check the amounts that will actually be posted, you can use the **Statistics** page, which takes into account the rounding calculations. Also, if you choose the **Release** action, the totals fields will be updated to include rounding calculations.
-9. In the **Invoice Discount Amount** field, enter an amount that should be deducted from the value shown in the **Total Incl. Tax** field.
+9. V poli **Fakturační sleva** zadejte částku, která má být odečtena od hodnoty uvedené v poli**Celkem včetně DPH**.
 
-   If you have set up invoice discounts for the customer, then the specified percentage value is automatically inserted in the **Invoice Discount %** field if the criteria are met, and the related amount is inserted in the **Inv. Discount Amount Excl. Tax** field. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
-10. When the sales invoice lines are completed, choose the **Post and Send** action.
+   If you have set up invoice discounts for the customer, then the specified percentage value is automatically inserted in the **Invoice Discount %** field if the criteria are met, and the related amount is inserted in the **Inv. Discount Amount Excl. DPH**. For more information, see [Record Sales Price, Discount, and Payment Agreements](sales-how-record-sales-price-discount-payment-agreements.md).
+10. Po dokončení řádků prodejní faktury vyberte akci **Účtovat a odeslat**.
 
 The **Post and Send Confirmation** dialog box displays the customer's preferred method of receiving documents. You can change the sending method by choosing the lookup button for the **Send Document to** field. For more information, see [Set Up Document Sending Profiles](sales-how-setup-document-send-profiles.md).
 

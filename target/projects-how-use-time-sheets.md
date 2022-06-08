@@ -49,9 +49,9 @@ You can view the time sheets that you have created on the **Time Sheets** page. 
 | | Use to add a note or marker in the **Description** field of the time sheet line. For example, you can use this field to categorize time sheet entries. If you leave the **Type** field empty for a time sheet line, you cannot enter time values in the weekday fields for that line. |
 | Absence | Use to register the time you are absent during a work week. To complete the information for the line, specify the type of absence in the **Cause of Absence Code** field. |
 | Montážní zakázka | Used to register time for assembly orders. A time sheet line of this type is created during the posting of assembly order lines for which the resource is set up to use time sheets. You cannot manually select a line of this type. |
-| Job | Use to register time usage for a project. To complete the information for the line, specify the job number and the job task number for which you want to register time. You can register time for lines that you have not scheduled. |
+| Projekt | Use to register time usage for a project. To complete the information for the line, specify the job number and the job task number for which you want to register time. You can register time for lines that you have not scheduled. |
 | Zdroj | Use to register time usage for a resource. To complete the information for the line, provide a description of the work. |
-| Service | Use to register time usage for a service order or service credit memo. |
+| Služba | Use to register time usage for a service order or service credit memo. |
 
 For example, to submit a time sheet for a work week where you worked on cleaning tasks most days but had one day off due to medical appointments, you would add lines as illustrated in the following table.
 

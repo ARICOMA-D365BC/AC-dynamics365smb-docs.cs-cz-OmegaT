@@ -53,7 +53,7 @@ The following table outlines related tasks.
 | Set up a vendor's or customer's own item description on your item card so that you can quickly insert their item description on trade documents. | [Use Item References](inventory-how-use-item-cross-refs.md) |
 | Block items from being entered on sales or purchase lines or from being posted in any transaction. | [Block Items](inventory-how-block-items.md) |
 | Manage business operations in sales offices, a purchasing departments, or plant planning offices across multiple locations. | [Práce s Centry odpovědnosti](inventory-responsibility-centers.md) |
-| Use resources with specific skills for various services and service items. | [Set Up Resource Allocation](service-how-setup-resource-allocation.md) |
+| Use resources with specific skills for various services and service items. | [Nastavení přidělení zdrojů](service-how-setup-resource-allocation.md) |
 
 ## Viz také
 

@@ -16,13 +16,13 @@ ms.author: edupont
 
 # Business Central Quick Starts
 
-These quick start articles help you get started as soon as possible so that you can perform the basic functions that you need in [!INCLUDE[prod_short](includes/prod_short.md)].
+Tyto články pro rychlý start vám pomohou začít co nejdříve, abyste mohli provádět základní funkce, které potřebujete v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-The following sections take you to guides for beginners that help you get familiar with the features you need in [!INCLUDE[prod_short](includes/prod_short.md)]. In each quick start, find links to more advanced content about the functionality, should you need it.
+Následující části vás zavedou do průvodců pro začátečníky, kteří vám pomohou seznámit se s funkcemi, které potřebujete v [!INCLUDE[prod_short](includes/prod_short.md)]. V každém rychlém startu najdete odkazy na pokročilejší obsah o této funkci, pokud ji budete potřebovat.
 
-## Provide basic information about your company
+## Poskytnutí základních informací o vaší společnosti
 
-The first step is to provide the basic information about your company. This includes information such as address, bank accounts, VAT number, and so on. This is explained in the [Company Information Quick Start](quick-start-company-information.md) article.
+Prvním krokem je poskytnutí základních informací o vaší společnosti. Jedná se o informace, jako je adresa, bankovní účty, DIČ a další. To je vysvětleno v článku [Informace o společnosti – rychlý start](quick-start-company-information.md).
 
 <!--
 ## Financial Basics
@@ -38,17 +38,17 @@ Reports and Documents
 (final reports, but also documents - how do I style invoices to work better for me?)
 -->
 
-## Sell products and services
+## Prodej produktů a služeb
 
-To quickly get up and running with selling products and services, see the [Quick Start for Sales](quick-start-sell-products-and-services.md) article.
+Pokud chcete rychle začít pracovat s prodejem produktů a služeb, přečtěte si článek [Rychlý start prodeje](quick-start-sell-products-and-services.md).
 
 <!--
 (customer, items, things on stock or not, orders versus invoices, get paid on time, etc.)
 -->
 
-## Buy products and services
+## Nákup produktů a služeb
 
-To learn how to buy products and services, see the [Quick Start for Procurement](quick-start-procurement.md) article.
+Chcete-li se dozvědět, jak nakupovat produkty a služby, přečtěte si článek [Rychlý start nákupu](quick-start-procurement.md).
 
 <!--
 (buy stuff, register in inventory, pay vendor)
@@ -63,6 +63,6 @@ Business Intelligence
 
 ## Viz také
 
-[Overview of Business Functionality](across-business-functionality.md)  
-[Business Central Learning Catalog](readiness/readiness-learning-catalog.md)  
-[Overview of Tasks to Set Up Business Central](setup.md)
+[Přehled Obchodních funkcionalit](across-business-functionality.md)  
+[Business Central katalog vzdělávání](readiness/readiness-learning-catalog.md)  
+[Přehled úkolů pro nastavení Business Central](setup.md)

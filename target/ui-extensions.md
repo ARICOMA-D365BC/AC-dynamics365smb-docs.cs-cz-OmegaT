@@ -71,7 +71,7 @@ This also applies to some functionality in the base application, such as the fol
 * Dataverse connections
 * OCR Service
 * Online Map
-* EU VAT Reg. Ne.  Service
+* EU VAT Reg. Ne.  Služba
 
 ## Recommended Apps
 Microsoft partners and resellers can create an extensions that they can use to compile lists of apps that they often recommend to their customers. If they do, and have deployed the extension to your tenant, the apps will be available on the **Recommended Apps** page. There you can read about each app and decide whether to install them.

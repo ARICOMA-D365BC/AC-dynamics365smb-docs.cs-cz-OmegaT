@@ -73,7 +73,7 @@ When you receive an invoice from a company in a foreign currency, it is fairly e
 
 In the following example, an invoice is received on January 1 with the currency amount of 1000. At the time, the currency rate is 1.123.
 
-|   | Akce | Currency Amount | Document Rate | LCY Amount on document | Adjustment Rate | Unrealized Gains Amount | Payment Rate | Realized Losses Amount |
+| Datum | Akce | Currency Amount | Document Rate | LCY Amount on document | Adjustment Rate | Unrealized Gains Amount | Payment Rate | Realized Losses Amount |
 |-----|----------|------------|-----------|---------|-----------|-------------|---------|---------|
 | 1/1 | **Invoice** | 1000 | 1.123 | 1123 |
 | 1/31 | **Adjustment** | 1000 | 1125 | 1.125 | 2 |

@@ -52,6 +52,6 @@ Before you can work with contracts, you must set up the following:
 5. Fill in the **Gen. účto  Posting Group** and **Customer Posting Group** fields.
 
 ## Viz také
-[Setting Up Service Management](service-setup-service.md)
+[Nastavení správy servisu](service-setup-service.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

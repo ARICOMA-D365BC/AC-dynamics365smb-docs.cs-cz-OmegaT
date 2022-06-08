@@ -54,11 +54,11 @@ You can use the **Fixed Asset - Projected Value** report to calculate future dep
 5. Choose the **Print** or **Preview** button.
 
 ## Viz také
-[Fixed Assets](fa-manage.md)  
-[Setting Up Fixed Assets](fa-setup.md)  
-[Finance](finance.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Dlouhodobý majetek](fa-manage.md)    
+[Nastavení dlouhodobého majetku](fa-setup.md)    
+[Finance](finance.md)    
+[Příprava na podnikání](ui-get-ready-business.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

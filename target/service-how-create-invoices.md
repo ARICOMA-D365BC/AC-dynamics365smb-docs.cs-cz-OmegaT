@@ -42,7 +42,7 @@ The following procedure describes how to define the part of service that you wil
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Orders**, and then choose the related link.
 2. Choose the service order to invoice, and open the order card.
 3. Choose the **Service Lines** action.
-4. Find the required entries, and then specify the quantities for which you will charge the customer in the **Qty. to Invoice** field.
+4. Find the required entries, and then specify the quantities for which you will charge the customer in the **Qty. fakturaci**.
 
    > [!NOTE]  
    > You can invoice the customer for the registered service either fully or in parts. If you choose to invoice the customer fully, the value in the **Qty. to Invoice** field must be equal to the value in the **Quantity** field. You can post a full invoice together with a full shipment, and you can post a full invoice for an already posted full shipment that has been neither invoiced nor consumed previously.

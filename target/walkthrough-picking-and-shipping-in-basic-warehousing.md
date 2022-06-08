@@ -89,7 +89,7 @@ To make item 1928-S available at the SOUTH location follow these steps:
 1. Choose the ![Lightbulb that opens the Tell Me feature second.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Journals**, and then choose the related link.
 2. Open the default journal, and then create two item journal lines with the following information about the work date (January 23).
 
-   | Typ položky | Item Number | Kód lokace | Bin Code | Množství |
+   | Typ položky | Item Number | Kód lokace | Kód přihrádky | Množství |
    |----------------|-----------------|-------------------|--------------|--------------|  
    | Positive Adjmt. | 1928-S | SOUTH | S-01-0001 | 20 |
    | Positive Adjmt. | 1928-S | SOUTH | S-01-0002 | 20 |

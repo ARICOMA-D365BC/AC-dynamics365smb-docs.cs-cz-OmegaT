@@ -20,8 +20,8 @@ When you post a transaction where items are moved in or out of inventory, an ite
 
 The following scenarios might require that you undo an application or reapply item ledger entries:
 
-- You have forgotten to make a fixed application.
-- You have made an incorrect fixed application.
+- Zapomněli jste vytvořit pevné vyrovnání.
+- Udělali jste nesprávné pevné vyrovnání.
 - You have to return an item to which a sale has already been applied.
 
 If possible, use a document to reapply an item ledger entry. For example, if you must make a purchase return of an item to which a sale has already been applied, you can reapply by creating and posting the purchase return document by using the correct application in the **Appl.-to Item Entry** field on the purchase return line. You can use the **Get Posted Document Lines to Reverse** function or the **Copy from Document** function in the purchase return document to make this easier. When you post the document, the item ledger entry is automatically reapplied. For more information, see [Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md).

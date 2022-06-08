@@ -19,7 +19,7 @@ ms.author: edupont
 
 For example, if you are using the Canadian version of [!INCLUDE[prod_short](includes/prod_short.md)], you can see the user interface in English, German, French, or another language, but it is still the Canadian version of [!INCLUDE[prod_short](includes/prod_short.md)] in all other aspects. It is not the same as, say, [!INCLUDE[prod_short](includes/prod_short.md)] in the United Kingdom where functionality has been adapted towards that market's requirements.
 
-To change the language of the user interface, go to the **My Settings** page. For more information, see [Change Basic Settings](ui-change-basic-settings.md#language).
+To change the language of the user interface, go to the **My Settings** page. Pro více informací navštivte <g2/>Změna základního nastavení](ui-change-basic-settings.md#language).
 
 > [!NOTE]  
 > The choice of languages will be reset to your setting on your Microsoft 365 profile if your administrator synchronizes users from Microsoft 365 to [!INCLUDE[prod_short](includes/prod_short.md)].
@@ -37,7 +37,7 @@ You can change the region in the browser tab that you are using to work in [!INC
 > [!IMPORTANT]  
 > When you change the region, you will see a long list of languages and regions. However, the language is not influenced by the choice of region.
 
-To change the region, go to the **My Settings** page. For more information, see [Change Basic Settings](ui-change-basic-settings.md).
+To change the region, go to the **My Settings** page. Pro více informací navštivte <g2/>Změna základního nastavení](ui-change-basic-settings.md).
 
 ## Changing the Region Setting for Customers, Contacts, and Vendors
 Some businesses use an external service that validates address information in their country or region. However, when you need to update address information, the structured approach that these services use may not always be what's right for some scenarios. Business Central offers a more flexible means of entering address details.

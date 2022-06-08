@@ -75,111 +75,111 @@ Aby bylo nové zboží plně užitečné, musíte ručně zkopírovat některá 
 
 | Oblast | Co kopírovat | Jak jej zkopírovat |
 |---------|---------|---------|
-| Zásoby | Skladové jednotky (SKJ) | Zkontrolujte, zda je pro původní zboží zadána SKJ. Pokud byly parametry plánování zadány pro každou kartu SKJ, musíte ručně vytvořit SKJ pro nové zboží. If the parameters are not specified, you can use the **Create Stockkeeping Unit** batch job from the **Item Card** page to create the data. |
-|     | Item substitutions | Check whether any item substitutions are defined for the original item. If there are, transfer that data to the new item. To view substitute items, use the **Substitutions** action on the **Item Card** page. |
-|     | Analysis reports | Review the Item Analysis, Sales Analysis, and Purchase Analysis reports. For those that reference the original items you can either create a new analysis report with a reference to the new item (keeping the original analysis report to use as history) or adjust the reports so that they reference the new item. |
-|     | Standard journals | Check whether standard journals reference the original item and transfer that data to the new item when necessary. This information is found on the standard journals, which are available on the item journal. |
-| Prodej | Sales prepayment percentage | Check whether any sales prepayment percentages are defined for the original item and transfer that data to the new item. To view prepayment percentages, on the **Item Card** page, choose **Sales**, and then **Prepayment Percentages**. |
-| Nákup | Purchase prepayment percentage | Check whether any purchase prepayment percentages are defined for the original item and transfer that data to the new item. To view prepayment percentages, on the **Item Card** page, choose **Purchases**, and then **Prepayment Percentages**. |
-| Warehouse | Bin contents | Review the bin content defined for the original item. If columns such as as Min. Qty., Max. Qty., Default, and Dedicated have been individually entered then you must manually create bin content for the new item. If they are not, no action is required. [!INCLUDE[prod_short](includes/prod_short.md)] will maintain the records when you register warehouse documents and journals. |
-| Job | Job Prices | Check whether job prices are defined for the original item and transfer that data to the new item. This information is available on the **Job Card** page in the **Job Details – No. of Prices** part on the **FactBox pane**. |
-| Service | Service resource skill | Check whether service resource skills are defined for the original item and transfer that data to the new item. To view resource skills, use the **Resource Skills** action on the **Item Card** page. |
-|     | Service item components | Check whether components are defined for the original service item and transfer that data to the new item. To view service item components, on the **Item Card** page use the **Service Item** action to open the list of related service items, and then choose the **Components** action. |
-| Výroba | Production BOMs | Check whether any production BOMs contain the original item and replace it with the new item. To replace the original item, on the **Production BOMs** page, choose the **Exchange Production BOM Item** action. |
-| Montáž | Kusovníky montáže | Check whether any assembly BOMs contain the original item and manually replace it with the new item. |
+| Zásoby | Skladové jednotky (SKJ) | Zkontrolujte, zda je pro původní zboží zadána SKJ. Pokud byly parametry plánování zadány pro každou kartu SKJ, musíte ručně vytvořit SKJ pro nové zboží. Pokud parametry nejsou specifikovány, můžete použít dávkovou úlohu **Vytvořit skladovou jednotku** ze stránky **Karta zboží** a data vytvořit. |
+|     | Náhrady zboží | Zkontrolujte, zda jsou pro původní zboží definovány nějaké náhrady zboží. Pokud existují, přeneste tato data do nového zboží. Chcete-li zobrazit náhradní zboží, použijte akci **Náhrady** na stránce **Karta zboží**. |
+|     | Analytické sestavy | Prohlédněte si sestavy Analýza zboží, Analýza prodeje a Analýza nákupu. Pro ty, které odkazují na původní zboží, můžete buď vytvořit novou sestavu analýzy s odkazem na nové zboží (zachování původní sestavy analýzy pro použití jako historie), nebo upravit sestavy tak, aby odkazovaly na nové zboží. |
+|     | Standardní deníky | Zkontrolujte, zda standardní deníky odkazují na původní zboží, a v případě potřeby přeneste tato data do nového zboží. Tyto informace se nacházejí ve standardních denících, které jsou k dispozici v deníku zboží. |
+| Prodej | Procento zálohy prodeje | Zkontrolujte, zda jsou pro původní zboží definována procenta prodejní zálohy, a přeneste tato data do nového zboží. Chcete-li zobrazit procenta zálohy, na stránce **Karta zboží** zvolte **Prodej** a poté **Procentní části zálohy**. |
+| Nákup | Procento zálohy nákupu | Zkontrolujte, zda jsou pro původní zboží definována procenta nákupní zálohy, a přeneste tato data do nového zboží. Chcete-li zobrazit procenta zálohy, na stránce **Karta zboží** zvolte **Nákup** a poté **Procentní části zálohy**. |
+| Sklad | Obsah přihrádky | Zkontrolujte obsah přihrádky definovaný pro původní zboží. Pokud sloupce, například Min. Množství, Max. Množství,Výchozí a Vyhrazeno byly zadány jednotlivě, pak musíte ručně vytvořit obsah přihrádky pro nové zboží. Pokud tomu tak není, není nutná žádná akce. [!INCLUDE[prod_short](includes/prod_short.md)] bude uchovávat záznamy při registraci skladových dokladů a deníků. |
+| Projekt | Ceny projektu | Zkontrolujte, zda jsou ceny projektů definovány pro původní zboží a přeneste tato data do nového zboží. Tyto informace jsou k dispozici na stránce **Karta projektu** v části **Detaily projektu – poč. cen** v **Okně s fakty**. |
+| Služba | Odbornosti v oblasti prostředků služeb | Zkontrolujte, zda jsou pro původní zboží definovány Odbornosti v oblasti prostředků služeb, a přeneste tato data do nového zboží. Chcete-li zobrazit odbornost zdrojů, použijte akci **Odbornosti zdroje** na sránce **Karta zboží**. |
+|     | Komponenty předmětu servisu | Zkontrolujte, zda jsou komponenty definovány pro původní předmět servisu a přeneste tato data do nového zboží. Chcete-li zobrazit komponenty předmětu servisu, na stránce **Karta zboží** otevřete pomocí akce **Předmět servisu** seznam souvisejících předmětů servisu a poté zvolte akci **Komponenty**. |
+| Výroba | Výrobní kusovníky | Zkontrolujte, zda některé výrobní kusovníky obsahují původní zboží a nahraďte ji novým zbožím. Chcete-li nahradit původní zboží, na stránce **Výrobní kusovníky** zvolte akci **Výměna zboží výr. kusovníku**. |
+| Montáž | Kusovníky montáže | Zkontrolujte, zda některé kusovníky montáže obsahují původní zboží a ručně jej nahraďte novým zbožím. |
 
 > [!IMPORTANT]
-> If the new costing method is Standard you should enter a value in the **Standard Cost** field on the **Item Card** page. You can use the **Standard Cost Worksheet** page to set the cost shares accordingly. For more information, see [Update Standard Costs](finance-how-to-update-standard-costs.md).
+> Pokud je nová metoda ocenění Pevná, měli byste zadat hodnotu do pole **Pevná pořizovací cena** na stránce **Karta zboží**. Na stránce **Sešit pevné ceny** můžete odpovídajícím způsobem nastavit podíly nákladů. Pro více informací navštivte [Aktualizace pevná pořizovací ceny](finance-how-to-update-standard-costs.md).
 
-### Determine the inventory quantity to convert from the original item to the new item
+### Určete množství zásob, které se má převést z původního zboží na nové zboží
 
 > [!NOTE]
-> This step does not consider quantities that are included in unshipped orders. For more information, see [Handle inventory quantities that are allocated to demand](design-details-changing-costing-methods.md#handle-inventory-quantities-that-are-allocated-to-demand).
+> Tento krok nebere v úvahu množství, která jsou zahrnuta v neodeslaných objednávkách. Pro více informací navštivte [Zpracování množství zásob, které jsou přiděleny poptávce](design-details-changing-costing-methods.md#handle-inventory-quantities-that-are-allocated-to-demand).
 
-Use a physical inventory journal to produce a list of the quantities in inventory. Depending on the warehouse location setup, use one of the following:
+Použijte Deník fyzické inventury k vytvoření seznamu množství ve skladu. V závislosti na nastavení lokací skladu použijte jednu z následujících možností:
 
-* Physical Invt. Journals
-* Centrum Phys. Invt. Journals
+* Deník fyzické inventury
+* Deník fyzické inventury skladu
 
-Both journals can calculate the inventory quantity of the item, including the location, variant, bin, and storage location. For more information, see [Count, Adjust, and Reclassify Inventory Using Journals](inventory-how-count-adjust-reclassify.md).
+Oba deníky mohou vypočítat množství zásob zboží, včetně lokace, varianty, přihrádky a umístění úložiště. Pro více informací navštivte [Počítání, úprava a reklasifikace zásob pomocí deníků](inventory-how-count-adjust-reclassify.md).
 
-### Transfer the inventory to the new item
+### Převeďte zásoby na nové zboží
 
-Create and post assembly orders to transfer the cost and inventory quantity from the original item to the new item. Assembly orders can convert one item to another while preserving the costs. This helps ensure that the net totals for the inventory account and COGS are not affected (except when the new costing method is Standard, in which case costs may be distributed to variance accounts). For more information, see [Assembly Management](assembly-assemble-items.md).
+Vytvořte a zaúčtujte montážní zakázky pro převod nákladů a množství zásob z původního zboží na nové zboží. Montážní zakázky mohou převést jedno zboží na druhé při zachování nákladů. To pomáhá zajistit, aby čisté součty pro účet zásob a NNPZ nebyly ovlivněny (s výjimkou případů, kdy je nová metoda oceněné standardní, v takovém případě mohou být náklady rozděleny na účty odchylek). Pro více informací navštivte [Správa montáže](assembly-assemble-items.md).
 
-When creating assembly orders, use the information from the Physical Invt. journal or Whse. Phys. Invt. journal. The following tables describe the information in the reports to enter in the header and lines on the assembly order.
+Při vytváření montážních zakázek použijte informace z Deníku fyzické inventury nebo Deníku fyzické inventury skladu. Následující tabulky popisují informace ve zprávách, které je třeba zadat do záhlaví a řádků v montážní zakázce.
 
-#### Header
+#### Záhlaví
 
-| Pole | Value to enter |
+| Pole | Hodnota, kterou chcete zadat |
 |---------|---------|
-| Číslo zboží | The number of the new item. |
-| Množství | The quantity in physical inventory journal.<br> **NOTE:** The quantities calculated by the physical inventory journals does not include the quantities that are on orders that have not yet shipped. |
-| Variant Code | The same as in physical inventory journal. |
-| Kód lokace | The same as in physical inventory journal. |
-| Unit of Measure Code | The same as in physical inventory journal. |
-| Bin Code | The same as in physical inventory journal. |
+| Číslo zboží | Číslo nového zboží. |
+| Množství | Množství v deníku fyzické inventury.<br> **NOTE:** Množství vypočítaná deníky fyzické inventury nezahrnují množství, která jsou na objednávkách, které ještě nebyly odeslány. |
+| Kód varianty | Stejné jako v deníku fyzické inventury. |
+| Kód lokace | Stejné jako v deníku fyzické inventury. |
+| Kód měrné jednotky | Stejné jako v deníku fyzické inventury. |
+| Kód přihrádky | Stejné jako v deníku fyzické inventury. |
 
-#### Lines
+#### Řádky
 
-| Pole | Value to enter |
+| Pole | Hodnota, kterou chcete zadat |
 |---------|---------|
-| Typ | Zboží |
-| Ne.  | The number of the original item. |
+| Typ | Číslo |
+| zboží | Číslo původního zboží. |
 | Množství za | 1 |
-| Variant Code | The same as in physical inventory journal. |
-| Kód lokace | The same as in physical inventory journal. |
-| Unit of Measure Code | The same as in physical inventory journal. |
+| Kód varianty | Stejné jako v deníku fyzické inventury. |
+| Kód lokace | Stejné jako v deníku fyzické inventury. |
+| Kód měrné jednotky | Stejné jako v deníku fyzické inventury. |
 
 > [!NOTE]
-> An assembly order can handle only one SKU of an item at a time. You must create an assembly order for each combination of SKU that has a quantity in inventory.
+> Montážní zakázka může zpracovávat pouze jednu jednotku SKJ zboží najednou. Je nutné vytvořit montážní zakázku pro každou kombinaci SKJ, která má množství ve skladu.
 
 > [!NOTE]
-> For a warehouse location, you might have to create picks before you can post the assembly order. To investigate that, review the setup for picking on the **Location Card** page. For more information, see [Set Up Items and Locations for Directed Put-away and Pick](warehouse-how-to-set-up-items-for-directed-put-away-and-pick.md).
+> V případě lokací skladu může být nutné vytvořit vyskladnění zboží před zaúčtováním montážní zakázky. Chcete-li to prozkoumat, zkontrolujte nastavení pro vyskladnění na stránce **Karta lokace**. Pro více informací navštivte [Nastavení zboží a lokací pro přímé zaskladnění a vyskladnění](warehouse-how-to-set-up-items-for-directed-put-away-and-pick.md).
 
-### Handle inventory quantities that are allocated to demand
+### Zpracování množství zásob, která jsou přidělena poptávce
 
-Ideally, the inventory for the original item should go to zero after you transfer the inventory quantities. However, there can be outstanding orders, worksheets, and journals (see the table below) that still require a quantity of the original item. The quantity could also be blocked by a reservation or item tracking.
+V ideálním případě by zásoby pro původní zboží měly po převodu skladových množství klesnout na nulu. Mohou však existovat nevyřízené objednávky, výkazy a deníky (viz tabulka níže), které stále vyžadují množství původního zboží. Množství může být také blokováno rezervací nebo sledováním zboží.
 
-**Example**
-There are 1000 pcs. in inventory, and 20 pcs. are reserved for a sales order that has not yet shipped. In that case, you might decide to keep the 20 pcs. in the old item so that you can fulfill the outstanding order.
+**Příklad**
+áme 1000 kusů ne skladu, a 20 kusů je vyhrazeno pro prodejní objednávku, která ještě nebyla odeslána. V takovém případě se můžete rozhodnout ponechat si 20 kusů ve starém zboží, abyste mohli splnit nevyřízenou objednávku.
 
 > [!NOTE]
-> There are functional areas that can affect the quantity, as listed in the table below, so it can be tricky to find the correct amount. To be safe, using the example above, you can choose to keep 100 pcs. and transfer the remaining 900 pcs. instead. Another way to do it would be to process the documents and journals so that only a manageable few remain. Yet another alternative is to transfer the entire quantity to the new item and then transfer some of it back to the original item using the assembly order.
+> Existují funkční oblasti, které mohou ovlivnit množství, jak je uvedeno v tabulce níže, takže může být složité najít správné množství. Chcete-li být v bezpečí, pomocí výše uvedeného příkladu se můžete rozhodnout ponechat 100 ks. a převíst zbývajících 900 ks.  Dalším způsobem, jak to udělat, by bylo zpracovat doklady a deníky tak, aby zůstalo jen několik zvládnutelných. Další alternativou je převést celé množství do nového zboží a poté převést část zpět do původního zboží pomocí montážní zakázky.
 
-The following table lists functional areas where there might be outstanding quantities.
+V následující tabulce jsou uvedeny funkční oblasti, kde mohou být nevyřízená množství.
 
-| Oblast | Where to look for outstanding quantities |
+| Oblast | Kde hledat nevyřízená množství |
 |---------|---------|
-| Prodej | Sales documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
-| Zásoby | Item journals, reservations, item tracking, and standard cost worksheet |
-| Nákup | Purchase documents, including orders, return orders, invoices, quotes, blanket orders, and credit memos |
-| Planning | Requisition worksheet, planning worksheet, and order planning |
-| Warehouse | Transfer orders, warehouse shipments, warehouse journals, and warehouse picks, put-aways, and movements, internal picks and put-aways, and bin creation worksheets |
-| Montáž | Assembly documents, including orders, return orders, and blanket orders |
-| Jobs | Job planning lines and job journal lines |
-| Service | Service documents and service contracts |
-| Výroba | Production orders (planned, firm planned, and released) |
+| Prodej | Prodejní doklady, včetně objednávek, vratek, faktur, nabídek, hromadných objednávek a dobropisů |
+| Zásoby | Deníky zboží, rezervace, sledování zboží a sešit pevné ceny nákladů |
+| Nákup | Nákupní doklady, včetně objednávek, vratek, faktur, nabídek, hromadných objednávek a dobropisů |
+| Plánování | Sešit požadavků, plánovací sešit a plánování objednávek |
+| Sklad | Objednávky transferu, dodávky ze skladu, deníky skladu a vyskladnění, zaskadnění a skladové pohyby, interní zaskladnění a vyskladnění a sešit vytvoření přihrádky |
+| Montáž | Montážní doklady, včetně objednávek, vratek a hromadných objednávek |
+| Projekty | Řádky plánování projektu a řádky deníku projektu |
+| Služba | Servisní doklady a servisní smlouvy |
+| Výroba | Výrobní zakázky (plánované, pevně plánované a vydané) |
 
-### Block the original item from further use
+### Zablování dalšího použití původního zboží
 
-When the inventory for the original item is zero, you can block the item to prevent it fom being used in new transactions. To block the item, on the **Item Card** page, turn on the **Blocked** toggle. For more information, see [Block Items from Sales or Purchasing](inventory-how-block-items.md).
+Pokud jsou zásoby pro původní zboží nulové, můžete zboží zablokovat, abyste zabránili jejímu použití v nových transakcích. Chcete-li zboží zablokovat, na stránce **Karta zboží** zapněte přepínač **Blokováno**. Pro více informací navštivte [Blokování položek z prodeje nebo nákupu](inventory-how-block-items.md).
 
-## Summary
+## Shrnutí
 
-Changing the costing method on items that have been used in transactions is a process, and not a standard action in [!INCLUDE[prod_short](includes/prod_short.md)]. You can use the steps described in this topic as a template for the process.
+Změna metody ocenění u zboží, které bylo použité v transakcích, je proces, nikoli standardní akce v [!INCLUDE[prod_short](includes/prod_short.md)]. Kroky popsané v tomto tématu můžete použít jako šablonu pro proces.
 
-The process can be time consuming because there are several manual steps. However, taking the time to complete it will minimize the impact of mistakes on your general ledger.
+Proces může být časově náročný, protože existuje několik manuálních kroků. Pokud si však uděláte čas na jeho dokončení, minimalizujete dopad chyb na hlavní knihu.
 
-We recommend the following:
+Doporučujeme následující:
 
-1. Assess the feasibility of the process by taking one, or maybe a few, representative items through the entire process.
-2. Consider contacting an experienced partner who can help you with the process.
+1. Vyhodnoťte proveditelnost procesu tím, že vezmete jedno, nebo možná několik, reprezentativních zboží v celém procesu.
+2. Zvažte kontaktování zkušeného partnera, který vám může s procesem pomoci.
 
 ## Viz také
 
-[Design Details: Costing Methods](design-details-costing-methods.md)  
-[Overview](design-details-inventory-costing.md)
+[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)    
+[Přehled](design-details-inventory-costing.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

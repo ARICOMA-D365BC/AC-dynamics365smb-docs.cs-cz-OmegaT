@@ -16,12 +16,12 @@ Users can personalize pages that make up their workspace to suit their own prefe
 Administrators can customize pages for a profile, according to the related business role or department, for example, so that all users that are assigned the profile will see the customized page layout. The administrator customizes pages by using the same functionality as users do when they personalize pages.
 
 > [!NOTE]
-> The typical business use of a profile is a role. A profile is therefore named *Profile (Role)* in the UI.
+> Typickým využitím obchondího profilu je role. Profil se proto v uživatelském rozhraní nazývá *Profil (Role)*.
 
 Page customization starts from the **Profiles (Roles)** page, the administrator's starting point for managing users' profiles on individual profile cards. In addition to customizing the page layout, you control various other settings for profiles on the **Profile (Role)** page for each profile. For more information, see [Manage Profiles](admin-users-profiles-roles.md).
 
 ## To customize pages for a profile
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Profiles (Roles)**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Profily (role)** a poté vyberte související odkaz.
 2. Select the line for the profile that you want to customize pages for, and then choose the **Edit** action.
 3. Choose the **Customize pages** action.
 

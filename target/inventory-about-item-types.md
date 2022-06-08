@@ -22,7 +22,7 @@ In the **Type** field on the **Item Card** page, you can select what the item is
 |------|-----------|
 | Zásoby | Physical things, such as bicycles, telephones, and desks, for which you want to be able to use all inventory processes. This can also include non-physical items, such as software licenses and subscriptions, if the items have identification numbers, such as serial numbers. You can fully track item values and availability in inventory. |
 | Non-Inventory | Typically, non-inventory items are physical things, such as bolts or pens, that a business consumes but does not want to fully track in inventory. For example, because they're low-cost items and are only used internally. |
-| Service | A labor time unit, such as a consultancy hour, for limited business support. |
+| Služba | A labor time unit, such as a consultancy hour, for limited business support. |
 
 > [!NOTE]
 > The **Service** and **Non-Inventory** types do not support tracking of inventory quantities and values. Only selected item transaction types and features are supported.

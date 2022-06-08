@@ -208,21 +208,21 @@
 #### [Work With Production Families](production-how-work-family.md)
 #### [Set Up Standard Routing Lines](production-how-set-up-standard-routing-lines.md)
 #### [Subcontract Manufacturing](production-how-to-subcontract-manufacturing.md)
-### Setting Up Service Management
-#### [Setting Up Service Management](service-setup-service.md)
+### Nastavení Správy servisu
+#### [Nastavení správy servisu](service-setup-service.md)
 #### [Create Service Items](service-how-to-create-service-items.md)
 #### [Set Up Standard Service Codes](service-how-setup-service-coding.md)
-#### [Configure Service Processes](service-setup-service-processes.md)
-#### [Set Up Fault Reporting](service-how-setup-fault-reporting.md)
-#### [Set Up Service Offerings](service-how-setup-service-offerings.md)
-#### [Set Up Troubleshooting](service-how-setup-troubleshooting.md)
-#### [Set Up Resource Allocation](service-how-setup-resource-allocation.md)
-#### [Set Up Pricing and Additional Costs for Services](service-how-setup-service-costs-pricing.md)
+#### [Konfigurace procesů servisu](service-setup-service-processes.md)
+#### [Nastavení hlášení poruch](service-how-setup-fault-reporting.md)
+#### [Nastavení nabídky servisu](service-how-setup-service-offerings.md)
+#### [Nastavení řešení potíží](service-how-setup-troubleshooting.md)
+#### [Nastavení přidělení zdrojů](service-how-setup-resource-allocation.md)
+#### [Nastavení Ceny a Dodatečných nákladů za servis](service-how-setup-service-costs-pricing.md)
 #### [Set Up Service Items and Service Item Components](service-how-setup-service-items.md)
-#### [Set Up Work Hours and Service Hours](service-how-setup-work-service-hours.md)
-#### [Set Up Statuses for Service Orders and Repairs](service-order-repair-status.md)
-#### [Set Up a Loaner Program](service-how-setup-loaner-program.md)
-#### [Set Up Service Contracts](service-how-setup-service-contracts.md)
+#### [Nastavení Pracovní doby a Servisních hodin](service-how-setup-work-service-hours.md)
+#### [Nastavení stavů pro Servisní zakázky a Opravy](service-order-repair-status.md)
+#### [Nastavení programu zápůjček](service-how-setup-loaner-program.md)
+#### [Nastavení servisních smluv](service-how-setup-service-contracts.md)
 ### Setting Up Complex Application Areas Using Best Practices
 #### [Setup Best Practices](set-up-complex-application-areas-using-best-practices.md)
 #### Doporučené postupy nastavení: Plánování dodávek
@@ -740,7 +740,7 @@
 ### [Register Employees](hr-how-register-employees.md)
 ### [Manage Employee Absence](hr-how-manage-absence.md)
 
-## Planning
+## Plánování
 ### [Production Planning](production-planning.md)
 ### [About Planning Functionality](production-about-planning-functionality.md)
 ### [Planning With or Without Locations](production-planning-with-without-locations.md)
@@ -821,7 +821,7 @@
 <!-- ### [Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-receiving-and-putting-away-in-basic-warehousing.md) -->
 <!-- ### [Walkthrough: Receiving and Putting Away in Advanced Warehouse Configurations](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md) -->
 
-## Service Management
+## Správa servisu
 ### [Service Management](service-service.md)
 ### Planning Service
 #### [Planning Service Management](service-plan-service.md)

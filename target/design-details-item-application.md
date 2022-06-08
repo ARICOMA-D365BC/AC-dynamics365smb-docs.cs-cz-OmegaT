@@ -43,210 +43,210 @@ Následující tabulka ukazuje, na základě centrálních polí vyrovnání na 
 |Vyrovnání pro příchozí položky|Příchozí položky tlačí cenu do otevřené vyrovnané položky.<br /><br /> Příchozí položky jsou zdrojem nákladů.<br /><br /> **Vyrovnání množství**|Příchozí položky táhnou cenu z výstupní položky. **Poznámka**  Při vytváření tohoto pevného vyrovnání se příchozí transakce považuje za prodejní vratku. Proto odchozí položka zůstane otevřená. <br /><br /> Příchozí položka NENÍ zdrojem nákladů.<br /><br /> **Vyrovávání nákladů**|
 
 > [!IMPORTANT]  
-> A sales return is NOT considered a cost source when fixed applied.
+> Při pevném vyrovnání NENÍ prodejní vratka považována za zdroj nákladů.
 >
-> The sales entry remains open until the real source is posted.
+> Položka prodeje zůstane otevřená, dokud nebude zaúčtován skutečný zdroj.
 
-An item application entry records the following information.
+Záznam položky vyrovnání zboží zaznamenává následující informace.
 
 | Pole | Popis |
 |---------------------------------|---------------------------------------|  
-| **Item Ledger Entry No.** | The number of the item ledger entry for the transaction that this application entry is created for. |
-| **Inbound Item Entry No.** | The item ledger entry number of the inventory increase to which the transaction should be linked, if applicable. |
-| **Outbound Item Entry No.** | The item ledger entry number of the inventory decrease to which the transaction should be linked, if applicable. |
-| **Množství** | The quantity being applied. |
-| **Datum zaúčtování** | The posting date of the transaction. |
+| **Číslo položky zboží** | Číslo položky zboží pro transakci, pro kterou je toto vyrovnání zboží vytvořeno. |
+| **Číslo vstupní položky zboží** | Číslo položky zboží zvýšení zásob, ke kterému má být transakce navázána, je-li to relevantní. |
+| **Číslo výstupní položky zboží** | Číslo položky zboží snížení zásob, se kterým by měla být transakce propojena, pokud je to možné. |
+| **Množství** | Použité množství. |
+| **Datum zaúčtování** | Datum zaúčtování transakce. |
 
 ## Zvýšení zásob
-When you post an inventory increase, then a simple item application entry is recorded without an application to an outbound entry.
+Když zaúčtujete zvýšení zásob, pak se jednoduchá položka vyrovnání zboží zaznamená bez vyrovnání do výstupní položky.
 
 ### Příklad
-The following table shows the item application entry that is created when you post a purchase receipt of 10 units.
+Následující tabulka ukazuje položku vyrovnání zboží, která se vytvoří, když zaúčtujete potvrzení o nákupu 10 jednotek.
 
 | Zúčtovací datum | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Číslo položky zboží |
 |------------------|----------------------------------------------|-----------------------------------------------|--------------|---------------------------------------------|  
 | 01.01.20 | 1 | 0 | 10 | 1 |
 
-## Inventory Decrease
-When you post an inventory decrease, an item application entry is created that links the inventory decrease to an inventory increase. This link is created by using the item's costing method as a guideline. For items using FIFO, Standard, and Average costing methods, the linking is based on the first-in-first-out principle. The inventory decrease is applied to the inventory increase with the earliest posting date. For items using the LIFO costing method, the linking is based on the last-in-first-out principle. The inventory decrease is applied to the inventory increase with the most recent posting date.
+## Snížení zásob
+Když zaúčtujete snížení zásob, vytvoří se položka vyrovnání zboží, která propojí snížení zásob s nárůstem zásob. Tento odkaz je vytvořen pomocí metody metody ocenění zboží jako směrnice. U zboží používajících metody ocenění FIFO, Standardní a průměrnú metodu ocenění je propojení založeno na principu „první dovnitř, první ven“. Snížení zásob se aplikuje na přírůstek zásob s nejbližším datem zaúčtování. U položek používajících metodu ocenění LIFO je propojení založeno na principu "poslední dovnitř, první ven". Snížení zásob se použije na zvýšení zásob s posledním datem zaúčtování.
 
-In the  **Item Ledger Entry** table, the **Remaining Quantity** field shows the quantity that has not yet been applied. If the remaining quantity is more than 0, then the **Open** check box is selected.
+V tabulce **Položka zboží** zobrazuje pole **Zbývající množství** množství, které ještě nebylo použito. Pokud je zbývající množství větší než 0, je zaškrtnuto políčko **Otevřít**.
 
 ### Příklad
-The following example shows the item application entry that is created when you post a sales shipment of 5 units of the items that were received in the previous example. The first item application entry is the purchase receipt. The second application entry is the sales shipment.
+Následující příklad ukazuje položku vyrovnání zboží, která se vytvoří, když zaúčtujete 5 jednotek zboží prodejní dodávku, které byly přijaty v předchozím příkladu. První položka vyrovnání zboží je nákupní doklad. Druhou položkou vyrovnání zboží je prodejní dodávka.
 
-The following table shows the two item application entries that result from the inventory increase and the inventory decrease, respectively.
+V následující tabulce jsou uvedeny dvě položky vyrovnání zboží, které jsou výsledkem zvýšení a snížení zásob.
 
 | Zúčtovací datum | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Číslo položky zboží |
 |------------------|----------------------------------------------|-----------------------------------------------|--------------|---------------------------------------------|  
 | 01.01.20 | 1 | 0 | 10 | 1 |
 | 3.1.2020 | 1 | 2 | -5 | 2 |
 
-## Fixed Application
-You make a fixed application when you specify that the cost of an inventory increase should apply to a specific inventory decrease, or vice versa. The fixed application affects the remaining quantities of the entries, but the fixed application also reverses the exact cost of the original entry that you are applying to, or from.
+## Pevné vyrovnání
+Pevné vyrovnání vytvoříte, když určíte, že náklady na zvýšení zásob by se měly vztahovat na konkrétní snížení zásob nebo naopak. Pevné vyrovnání ovlivňuje zbývající množství položek, ale také obrátí přesné náklady na původní položku, na kterou nebo z které aplikujete.
 
-To make a fixed application, you use the **Appl.-to Item Entry** field or the **Appl.-from Item Entry** field in the document lines to specify the item ledger entry that you want the transaction line to apply to, or from. For example, you might make a fixed application when you want to create a cost application that specifies that a sales return should apply to a specific sales shipment to reverse the cost of the sales shipment. In this case, [!INCLUDE[prod_short](includes/prod_short.md)] ignores the costing method and applies the inventory decrease, or increase, for a sales return, to the item ledger entry that you specify. The advantage of making a fixed application is that the cost of the original transaction is passed to the new transaction.
+Chcete-li vytvořit pevné vyrovnání, použijte pole **Vyrovnat položkou zboží** nebo pole **Vyrovnáno položkou zboží** v řádcích dokladu k určení položky zboží, na kterou nebo z které se má řádek transakce vztahovat. Můžete například vytvořit pevné vyrovnání, když chcete vytvořit vyrovnání nákladů, která určuje, že prodejní vratka by se měla vztahovat na konkrétní prodejní dodávku, aby se obrátily náklady na prodejní dodávku. V tomto případě [!INCLUDE[prod_short](includes/prod_short.md)] ignoruje metodu ocenění a použije snížení nebo zvýšení zásob pro prodejní vratku na položku zboží, kterou určíte. Výhodou vytvoření pevného vyrovnání je, že náklady na původní transakci jsou přeneseny na novou transakci.
 
-### Example – Fixed Application in Purchase Return
-The following example, which illustrates the effect of fixed application of a purchase return of an item using the FIFO costing method, is based on the following scenario:
+### Příklad – Pevné vyrovnání v prodejní vratce
+Následující příklad, který ilustruje účinek pevného vyrovnání nákupní vratky položky pomocí metody FIFO, je založen na následujícím scénáři:
 
-1. In entry 1, the user posts a purchase at a cost of LCY 10.00.
-2. In entry 2, the user posts a purchase at a cost of LCY 20.00.
-3. In entry 3, the user posts a purchase return. The user makes a fixed application to the second purchase by entering the item ledger entry number in the **Appl.-to Item Entry** field on the purchase return order line.
+1. V položce 1 uživatel zaúčtuje nákup za cenu 10,00 LM.
+2. V položce 2 uživatel zaúčtuje nákup za cenu 20,00 LM.
+3. V položce 3 uživatel zaúčtuje nákupní vratku. Uživatel provede pevné vyrovnání na druhý nákup zadáním čísla položky zboží do pole **Vyrovnat položkou zboží** na řádku objednávky nákupní vratky.
 
-The following table shows item ledger entries resulting from the scenario.
+V následující tabulce jsou uvedeny věcné položky vyplývající ze scénáře.
 
-| **Datum zaúčtování** | **Typ položky zboží** | **Množství** | **Částka nákladů (skutečná)** | **Item Ledger Entry No.** |
+| **Datum zaúčtování** | **Typ položky zboží** | **Množství** | **Částka nákladů (skutečná)** | **Číslo položky zboží** |
 |----------------------|---------------------------------------------------|------------------|----------------------------------------------------|---------------------------------------------------|  
 | 01-04-20 | Nákup | 10 | 10,00 | 1 |
 | 01-05-20 | Nákup | 10 | 20,00 | 2 |
-| 01-06-20 | Purchase (Return) | -10 | -20,00 | 3 |
+| 01-06-20 | Nákup (vratka) | -10 | -20,00 | 3 |
 
-Because a fixed application is made from the purchase return to the second purchase entry, the items are returned at the correct cost. If the user had not performed the fixed application, then the returned item would be incorrectly valued at LCY 10.00 because the return would have been applied to the first purchase entry according to the FIFO principle.
+Vzhledem k tomu, že od nákupní vratky do druhé nákupní položky je provedené pevné vyrovnání, jsou položky vráceny se správnou cenou. Pokud by uživatel neprovedl pevné vyrovnání, pak by vrácené zboží bylo nesprávně oceněné na 10,00 LM, protože vratka by byla použita na první nákupní položku podle principu FIFO.
 
-The following table shows the item application entry that results from the fixed application.
+V následující tabulce je uvedena položka vyrovnání zboží, která je výsledkem pevného vyrovnání.
 
 | Zúčtovací datum | Číslo vstupní položky zboží | Číslo výstupní položky zboží | Množství | Číslo položky zboží |
 |------------------|----------------------------------------------|-----------------------------------------------|--------------|---------------------------------------------|  
 | 01-06-20 | 2 | 3 | 10 | 3 |
 
-The cost of the second purchase, LCY 20.00, is passed correctly to the purchase return.
+Náklady na druhý nákup, 20,00 LM, jsou správně předány do nákupní vratky.
 
-### Example – Fixed Application with Average Cost
-The following example, which illustrates the effect of fixed application, is based on the following scenario for an item that uses the Average costing method:
+### Příklad – pevné vyrovnání s průměrnými náklady
+Následující příklad, který ilustruje účinek pevného vyrovnání, je založen na následujícím scénáři pro zboží, které používá průměrnú metodu ocenění:
 
-1. In entry numbers 1 and 2, the user posts two purchase invoices. The second invoice has the incorrect direct unit cost of LCY 1000.00.
-2. In entry number 3, the user posts a purchase credit memo with a fixed application applied to the purchase entry with the wrong direct unit cost. The sum of the **Cost Amount (Actual)** field for the two fixed applied value entries becomes 0.00
-3. In entry number 4, the user posts another purchase invoice with the correct direct unit cost of LCY 100.00
-4. In entry number 5, the user posts a sales invoice.
-5. The inventory quantity is 0, and the inventory value is also 0.00
+1. V číslech položky 1 a 2 uživatel zaúčtuje dvě nákupní faktury. Druhá faktura obsahuje nesprávné přímé jednotkové náklady 1 000,00 LM.
+2. V položce číslo 3 uživatel zaúčtuje nákupní dobropis s pevným vyrovnáním aplikovanýn na položku nákupu s nesprávnými přímými jednotkovými náklady. Součet pole **Částka nákladů (skutečná)** pro dvě pevně vyrovnané položky se změní na 0,00
+3. V položce číslo 4 uživatel zaúčtuje další nákupní fakturu se správnou přímou jednotkovou cenou 100,00 LM
+4. V položce číslo 5 uživatel zaúčtuje prodejní fakturu.
+5. Množství zásob je 0 a hodnota zásob je také 0,00
 
-The following table shows the result of the scenario on the item's value entries.
+V následující tabulce je uveden výsledek scénáře u položek ocenění zboží.
 
-The following table shows the result of the scenario on the item's value entries after posting is complete and cost adjustment has been run.
+Následující tabulka ukazuje výsledek scénáře u položek ocenění zboží po dokončení zaúčtování a spuštění úpravy nákladů.
 
-| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-to Item Entry | Valued by Average Cost | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Vyrovnat položkou zboží | Oceněno prům.náklady | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|--------------------------------------------|-------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 01.01.20 | Nákup | 1 | 200.00 | Ne | 1 | 1 |
-| 01.01.20 | Nákup | 1 | 1000.00 | Ne | 2 | 2 |
+| 01.01.20 | Nákup | 1 | 200,00 | Ne | 1 | 1 |
+| 01.01.20 | Nákup | 1 | 1000,00 | Ne | 2 | 2 |
 | 01.01.20 | Nákup | -1 | -1000 | 2 | Ne | 3 | 3 |
 | 01.01.20 | Nákup | 1 | 100,00 | Ne | 4 | 4 |
 | 01.01.20 | Prodej | -2 | -300,00 | Ano | 5 | 5 |
 
-If the user had not made the fixed application between the purchase credit memo and the purchase with the incorrect direct unit cost (step 2 in the previous scenario), then the cost would have been adjusted differently.
+Pokud by uživatel neprovedl pevné vyrovnání mezi nákupním dobropisem a nákupem s nesprávnými přímými jednotkovými náklady (krok 2 v předchozím scénáři), pak by byly náklady upraveny odlišně.
 
-The following table shows the result on the item's value entries if step 2 in the previous scenario is performed without a fixed application.
+Následující tabulka ukazuje výsledek u položek ocenění zboží, pokud je krok 2 v předchozím scénáři proveden bez pevného vyrovnání.
 
-| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-to Item Entry | Valued by Average Cost | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Vyrovnat položkou zboží | Oceněno prům.náklady | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|--------------------------------------------|-------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 01.01.20 | Nákup | 1 | 200.00 | Ne | 1 | 1 |
-| 01.01.20 | Nákup | 1 | 1000.00 | Ne | 2 | 2 |
+| 01.01.20 | Nákup | 1 | 200,00 | Ne | 1 | 1 |
+| 01.01.20 | Nákup | 1 | 1000,00 | Ne | 2 | 2 |
 | 01.01.20 | Nákup | -1 | 433,33 | Ano | 3 | 3 |
 | 01.01.20 | Nákup | 1 | 100,00 | Ne | 4 | 4 |
 | 01.01.20 | Prodej | -2 | 866,67 | Ano | 5 | 5 |
 
-In entry number 3, the value in the **Cost Amount (Actual)** field is valued by average and therefore includes the erroneous posting of 1000.00. Accordingly, it becomes -433,33, which is an inflated cost amount. The calculation is 1300 / 3 = .-433,33.
+V položce číslo 3 je hodnota v poli **Částka nákladů (skutečná)** oceněna průměrem, a proto zahrnuje chybné zaúčtování 1000,00. V souladu s tím se stává -433,33, což je nadhodnocená částka nákladů. Výpočet je 1300 / 3 = .-433,33.
 
-In entry number 5, the value of the **Cost Amount (Actual)** field for this entry is also inaccurate for the same reason.
+V položce číslo 5 je hodnota pole **Částka nákladů (skutečná)** pro tuto položku také nepřesná ze stejného důvodu.
 
 > [!NOTE]  
-> If you create a fixed application for an inventory decrease for an item that uses the Average costing method, then the decrease will not receive the average cost for the item as usual, but will instead receive the cost of the inventory increase that you specified. That inventory decrease is then no longer part of the average cost calculation.
+> Pokud vytvoříte pevné vyrovnání pro snížení zásob u položky, která používá metodu Průměrného ocenění nákladů, pak snížení neobdrží průměrné náklady na položku jako obvykle, ale místo toho obdrží náklady na zvýšení zásob, které jste zadali. Toto snížení zásob pak již není součástí kalkulace průměrných nákladů.
 
-### Example – Fixed Application in Sales Return
-Fixed applications are also a very good means of reversing cost exactly, such as with sales returns.
+### Příklad – Pevné vyrovnání v prodejní vratce
+Pevné vyrovnání je také velmi dobrým prostředkem k přesnému vrácení nákladů, například pomocí prodejní vratky.
 
-The following example, which illustrates how a fixed application ensures exact cost reversal, is based on the following scenario:
+Následující příklad, který ilustruje, jak pevné vyrovnání zajišťuje přesné zvrácení nákladů, je založen na následujícím scénáři:
 
-1. The user posts a purchase invoice.
-2. The user posts a sales invoice.
-3. The user posts a sales credit memo for the returned item, which applies to the sales entry, to reverse the cost correctly.
-4. A freight cost, related to the purchase order that was posted earlier, arrives. The user posts it as an item charge.
+1. Uživatel zaúčtuje nákupní fakturu.
+2. Uživatel zaúčtuje prodejní fakturu.
+3. Uživatel zaúčtuje prodejní dobropis pro vrácené zboží, které se vztahuje na položku prodeje, aby správně vrátil náklady.
+4. Přijde náklad na přepravu související s dříve zaúčtovanou nákupní objednávkou. Uživatel ji zaúčtuje jako poplatek za zboží.
 
-The following table shows the result of scenario steps 1 through 3 on the item's value entries.
+V následující tabulce je uveden výsledek kroků scénáře 1 až 3 u položek ocenění zboží.
 
-| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Vyrovnáno položkou zboží | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
-| 01.02.20 | Prodej | -1 | 1000.00 | 2 | 2 |
-| 01.03.20 | Sale (Credit Memo) | 1 | 1000 | 2 | 3 | 3 |
+| 01.01.20 | Nákup | 1 | 1000,00 | 1 | 1 |
+| 01.02.20 | Prodej | -1 | 1000,00 | 2 | 2 |
+| 01.03.20 | Prodej (Dobropis) | 1 | 1000 | 2 | 3 | 3 |
 
-The following table shows the value entry resulting from scenario step 4, posting the item charge.
+V následující tabulce je uvedena položka ocenění vyplývající ze scénáře krok 4, zaúčtování poplatku za zboží.
 
-| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Vyrovnáno položkou zboží | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
 | 01.04.20 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
 
-The following table shows the effect of the exact cost reversal on the item's value entries.
+Následující tabulka ukazuje vliv přesného storna nákladů na položky ocenění zboží.
 
-| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Appl.-from Item Entry | Číslo položky zboží | Číslo položky |
+| Zúčtovací datum | Typ položky zboží | Oceněné množství | Částka nákladů (skutečná) | Vyrovnáno položkou zboží | Číslo položky zboží | Číslo položky |
 |-------------------------------------|-----------------------------------------------|-----------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------|  
-| 01.01.20 | Nákup | 1 | 1000.00 | 1 | 1 |
-| 01.02.20 | Prodej | -1 | 1100.00 | 2 | 2 |
-| 01.03.20 | Sale (Credit Memo) | 1 | 1100.00 | 2 | 3 | 3 |
+| 01.01.20 | Nákup | 1 | 1000,00 | 1 | 1 |
+| 01.02.20 | Prodej | -1 | 1100,00 | 2 | 2 |
+| 01.03.20 | Prodej (Dobropis) | 1 | 1100,00 | 2 | 3 | 3 |
 | 01.04.20 | (Poplatek za zboží) | 1 | 100,00 | 1 | 4 |
 
-When you run the **Adjust Cost - Item Entries** batch job, the increased cost of the purchase entry, due to the item charge, is forwarded to the sales entry (entry number 2). The sales entry then forwards this increased cost to the sales credit entry (entry number 3). The final result is that the cost is correctly reversed.
+Když spustíte dávkovou úlohu **Adjustace nákladů položek zboží**, zvýšené náklady na položku nákupu, v důsledku poplatku za položku, jsou předány do položky prodeje (položka číslo 2). Položka prodeje pak předá tyto zvýšené náklady do položky prodejního kreditu (položka číslo 3). Konečným výsledkem je, že náklady jsou správně stornovány.
 
 > [!NOTE]  
-> If you are working with returns or credit memos and you have set up the **Exact Cost Reversing Mandatory** field in either the **Purchases & Payables Setup** page or the **Sales & Receivables Setup** page, as appropriate for your situation, then [!INCLUDE[prod_short](includes/prod_short.md)] automatically fills the various application entry fields when you use the **Copy from Document** function. If you use the **Get Posted Document Lines to Reverse** function, then the fields are always filled automatically.
+> Pokud pracujete s vratkami nebo dobropisy a máte nastaveno pole **Nutné vrác.přesn.nákladů** buď na stránce **Nastavení nákupu a závazků**, nebo na stránce **Nastavení prodeje a pohledávek**, podle situace, pak [!INCLUDE[prod_short](includes/prod_short.md)] automaticky vyplní různá pole pro zadání žádosti při použití funkce **Kopie z dokladu**. Pokud použijete funkci **Získat účt. řádky pro stornování**, pole se vždy vyplní automaticky.
 
 > [!NOTE]  
-> If you post a transaction with a fixed application, and the item ledger entry that you are applying to is closed, meaning that the remaining quantity is zero, then the old application is automatically undone and reapplies the item ledger entry using the fixed application that you specified.
+> Pokud zaúčtujete transakci s pevným vyronáním a položka zboží, o kterou žádáte, je uzavřena, což znamená, že zbývající množství je nulové, staré vyrovnání se automaticky vrátí zpět a znovu použije položku zboží pomocí pevného vyrovnání, které jste specifikovali.
 
-## Transfer Application
-When an item is transferred from one location to another, inside the company inventory, then an application is created between the two transfer entries. Valuing a transfer entry depends on the costing method. For items using the Average costing method, valuation is made using the average cost in the average cost period in which the valuation date of the transfer occurs. For items using other costing methods, valuation is made by tracing back to the cost of the original inventory increase.
+## Transferové vyrovnání
+Když je zboží převedené z jedné lokace do druhé, uvnitř zásob společnosti, pak je vytvořené vyrovnání mezi dvěma položkami převodu. Ocenění položky převodu závisí na metodě ocenění. U zboží používající průměrnú metodu ocenění se ocenění provádí pomocí průměrných nákladů v období průměrných nákladů, ve kterém nastane datum ocenění převodu. U zboží používající jiné metody ocenění se ocenění provádí zpětným sledováním nákladů na původní zvýšení zásob.
 
-### Example – Average Costing Method
-The following example, which illustrates how transfer entries are applied, is based on the following scenario for an item using Average costing method and an average cost period of Day.
+### Příklad – Průměrná metoda ocenění
+Následující příklad, který ilustruje, jak se aplikují položky převodu, je založen na následujícím scénáři pro položku používající průměrnú metodu ocenění a období průměrných nákladů - Den.
 
-1. The user purchases the item at a cost of LCY 10.00.
-2. The user purchases the item again at a cost of LCY 20.00.
-3. The user transfers the item from EAST to WEST location.
+1. Uživatel zakoupí zboží za cenu 10,00 LM.
+2. Uživatel zakoupí zboží znovu za cenu 20,00 LM.
+3. Uživatel přenese zboží z lokace VÝCHOD na lokaci ZÁPAD.
 
-The following table shows the effect of the transfer on the item's value entries.
+Následující tabulka ukazuje vliv převodu na položky ocenění zboží.
 
 | Zúčtovací datum | Typ položky zboží | Kód lokace | Oceněné množství | Částka nákladů (skutečná) | Číslo položky |
 |-------------------------------------|-----------------------------------------------|--------------------------------------|-----------------------------------------|------------------------------------------------|----------------------------------|  
 | 01.01.20 | Nákup | EAST | 1 | 10,00 | 1 |
 | 01.01.20 | Nákup | EAST | 1 | 20,00 | 2 |
-| 01.02.20 | Transfer | EAST | -1 | 15.00 | 3 |
-| 01.02.20 | Transfer | WEST | 1 | 15.00 | 4 |
+| 01.02.20 | Transfer | EAST | -1 | 15,00 | 3 |
+| 01.02.20 | Transfer | ZÁPAD | 1 | 15,00 | 4 |
 
-### Example – Standard Costing Method
-The following example, which illustrates how transfer entries are applied, is based on the following scenario for an item using Standard costing method and an average cost period of Day.
+### Příklad – standardní metoda ocenění
+Následující příklad, který ukazuje, jak jsou použity položky převodu, je založen na následujícím scénáři pro zboží používající standardní metodu kocenění a období průměrných nákladů - Den.
 
-1. The user purchases the item at a standard cost of LCY 10.00.
-2. The user transfers the item from EAST to WEST location at a standard cost of LCY 12.00.
+1. Uživatel zakoupí zboží za standardní cenu 10,00 LM.
+2. Uživatel přenese zboží z lokace VÝCHOD na lokaci ZÁPAD za standardní cenu 12,00 LM.
 
-The following table shows the effect of the transfer on the item's value entries.
+Následující tabulka ukazuje vliv převodu na položky ocenění zboží.
 
 | Zúčtovací datum | Typ položky zboží | Kód lokace | Oceněné množství | Částka nákladů (skutečná) | Číslo položky |
 |-------------------------------------|-----------------------------------------------|--------------------------------------|-----------------------------------------|------------------------------------------------|----------------------------------|  
 | 01.01.20 | Nákup | EAST | 1 | 10,00 | 1 |
 | 01.02.20 | Transfer | EAST | -1 | 10,00 | 2 |
-| 01.02.20 | Transfer | WEST | 1 | 10,00 | 3 |
+| 01.02.20 | Transfer | ZÁPAD | 1 | 10,00 | 3 |
 
-Since the value of the original inventory increase is LCY 10.00, the transfer is valued at that cost, not at LCY 12.00.
+Vzhledem k tomu, že hodnota původního navýšení zásob je 10,00 LCY, převod se oceňuje při těchto nákladech, nikoli 12,00 LM.
 
-## Reapplication
-Because of the way an item's unit cost is calculated, an incorrect item application could lead to a skewed average cost and unit cost. The following scenarios may cause incorrect item applications, which require that you undo item applications and reapply item ledger entries:
+## Opakované vyrovnání
+Vzhledem ke způsobu výpočtu jednotkových nákladů zboží může nesprávné vyrovnání zboží vést ke zkresleným průměrným a jednotkovým nákladům. Následující scénáře mohou způsobit nesprávné vyrovnání zboží, které vyžadují vrácení vyrovnání zboží a opětovné použití položek zboží:
 
-* You have forgotten to make a fixed application.
-* You have made an incorrect fixed application.
-* You want to overrule the application created automatically when posting, according to the item's costing method.
-* You have to return an item to which a sale has already been manually applied, without using the **Get Posted Document Lines to Reverse** function, and you must therefore undo the application.
+* Zapomněli jste vytvořit pevné vyrovnání.
+* Udělali jste nesprávné pevné vyrovnání.
+* Chcete zrušit vyrovnání vytvořené automaticky při zaúčtování podle metody ocenění zboží.
+* Musíte vrátit zboží, na které již byl ručně uplatněn prodej, bez použití funkce **Získat účt. řádky pro stornování**, a proto musíte vyrovnání vrátit.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] offers a feature for analyzing and correcting item applications. This work is performed on the **Application Worksheet** page.
+[!INCLUDE[prod_short](includes/prod_short.md)] nabízí funkci pro analýzu a opravu vyrovnání zboží. Tato práce se provádí na stránce **Sešit vyrovnání**.
 
 ## Viz také
-[Design Details: Known Item Application Issue](design-details-inventory-zero-level-open-item-ledger-entries.md)  
-[Design Details: Inventory Costing](design-details-inventory-costing.md)  
-[Design Details: Costing Methods](design-details-costing-methods.md)  
-[Design Details: Average Cost](design-details-average-cost.md)   
-[Design Details: Cost Adjustment](design-details-cost-adjustment.md)  
-[Managing Inventory Costs](finance-manage-inventory-costs.md)  
-[Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Detaily návrhu: Známé problémy vyrovnávání zboží](design-details-inventory-zero-level-open-item-ledger-entries.md)    
+[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)    
+[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)    
+[Detaily návrhu: Průměrné náklady](design-details-average-cost.md)     
+[Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)    
+[Správa nákladů na zásoby](finance-manage-inventory-costs.md)    
+[Finance](finance.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

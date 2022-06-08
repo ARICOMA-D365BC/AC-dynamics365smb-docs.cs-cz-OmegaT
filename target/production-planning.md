@@ -13,7 +13,7 @@
     ms.author: edupont
 
 ---
-# Planning
+# Plánování
 
 The production operations required to transform inputs into finished goods must be planned daily or weekly depending on the volume and nature of the products. [!INCLUDE[prod_short](includes/prod_short.md)] offers features to supply for anticipated and actual demand from sale, assembly, and production as well as features for distribution planning using stockkeeping units and location transfers.
 

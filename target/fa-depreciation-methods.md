@@ -39,270 +39,270 @@ Ve výchozí verzi [!INCLUDE [prod_short](includes/prod_short.md)] je k dispozic
 
 When you use the straight-line method, you must specify one of the following options in the fixed asset depreciation book:
 
-* The depreciation period (years or months) or a depreciation ending date
-* A fixed yearly percentage
-* A fixed yearly amount
-* Depreciation period
+* Doba odpisování (roky nebo měsíce) nebo konečný termín odpisování
+* Pevné roční procento
+* Pevná roční částka
+* Odpisové období
 
-### Depreciation Period
+### Odpisové Období
 
-If you enter the depreciation period (the number of depreciation years, the number of depreciation months, or the depreciation ending date), the following formula calculates the depreciation amount:
+Pokud zadáte dobu odpisování (počet odpisových let, počet odpisových měsíců nebo konečný termín odepisování), program použije pro výpočet odpisové částky následující vzorec:
 
-*Depreciation Amount = ((Book value - Salvage Value) x Number of Depreciation Days) / Remaining Depreciation Days*
+*Odpisovaná částka = ((Účetní hodnota - Hodnota při vyřazení) x Počet dní odpisu) / zbývající dny odpisu*
 
-Remaining depreciation days are calculated as the number of depreciation days minus the number of days between the depreciation starting date and the last fixed asset entry date.
+Zbývající dny odpisu se počítají jako počet dnů odpisování minus počet dní mezi počátečním datem odpisu a posledním datem zadání dlouhodobého majetku.
 
-Book value may be reduced by posted appreciation, write-down, custom 1 or custom 2 amounts, depending on whether the **Include in Depr. Calculation** field is deactivated and whether the **Part of Book Value** field is activated on the **FA Posting Type Setup** page. This calculation ensures that the fixed asset is fully depreciated at the depreciation ending date.
+Účetní hodnota může být snížena o zaúčtované zhodnocení, odpis, vlastní 1 nebo vlastní 2 částky v závislosti na tom, zda pole **Zahrnout do výpočtu  odpisů** je deaktivováno a je aktivováno pole **Část účetní hodnoty** na stránce **Nast.typu účtování DM**. Tento výpočet zajišťuje, že dlouhodobý majetek je plně odepsán v den ukončení odpisů.
 
-### Fixed Yearly Percentage
+### Pevná roční procentní sazba
 
-If you enter a fixed yearly percentage, application uses the following formula to calculate the depreciation amount:
+Zadáte-li pevnou roční procentní sazbu, program vypočítá odpisovou část dle následujícího vzorce:
 
-*Depreciation Amount = (Straight-Line % x Depreciable Basis x Number of Depr. Days) / (100 x 360)*
+*Odpisovaná částka = (Lineární % x Odpisovatelný základ x Počet dní  odpis.) / (100 x 360)*
 
-### Fixed Yearly Amount
+### Pevná roční částka
 
-If you enter a fixed yearly amount, application uses this formula to calculate the depreciation amount:
+Pokud zadáte pevnou roční částku, program použije tento vzorec pro výpočet částky odpisů:
 
-*Depreciation Amount = (Fixed Depreciation Amount x Number of Depreciation Days) / 360*
+*Odpisovaná částka = (fixovaná odpisovaná částka x počet dní odpisu) / 360*
 
-### Example - Straight-Line Depreciation
+### Příklad - Lineární odpis
 
-A fixed asset has an acquisition cost of LCY 100,000. The estimated life is eight years. The **Calculate Depreciation** batch job is run biannually.
+Dlouhodobý majetek má pořizovací cenu 100 000 LM. Odhadovaná doba života je osm let. Dávková úloha **Výpočet odpisůy** se spouští dvakrát ročně.
 
-For this example, the fixed asset ledger entry looks like this:
+V tomto příkladu položka dlouhodobého majetku vypadá takto:
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 06/30/20 | Depreciation | 180 | -6,250.00 | 93,750.00 |
-| 12/31/20 | Depreciation | 180 | -6,250.00 | 87,500.00 |
-| 06/30/21 | Depreciation | 180 | -6,250.00 | 81,250.00 |
-| 12/31/21 | Depreciation | 180 | -6,250.00 | 75,000.00 |
-| 06/30/27 | Depreciation | 180 | -6,250.00 | 6,250.00 |
-| 12/31/27 | Depreciation | 180 | -6,250.00 | 0 |
+| 01.01.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 30.06.20 | Odpisy | 180 | -6 250,00 | 93 750,00 |
+| 31.12.20 | Odpisy | 180 | -6 250,00 | 87 500,00 |
+| 30.06.21 | Odpisy | 180 | -6 250,00 | 81 250,00 |
+| 31.12.21 | Odpisy | 180 | -6 250,00 | 75 000,00 |
+| 30.06.27 | Odpisy | 180 | -6 250,00 | 6 250,00 |
+| 31.12.27 | Odpisy | 180 | -6 250,00 | 0 |
 
-## Declining-Balance 1 Depreciation
+## Zrychlený odpis 1
 
-This accelerated depreciation method allocates the largest portion of the cost of an asset to the early years of its useful lifetime. If you use this method, you must enter a fixed yearly percentage.
+Jedná se o zrychlenou metodu odpisování, která přiděluje největší část nákladů na majetek v prvních letech své životnosti. Používáte-li tuto metodu, musíte zadat pevný roční procentní podíl.
 
-The following formula calculates depreciation amounts:
+Vzorec pro výpočet odpisových částek je:
 
-*Depreciation Amount = (Declining-Bal. % x Number of Depreciation Days x Depr. Basis) / (100 x 360)*
+*Odpisovaná částka = (Zrychlený % x Počet dní odpisu x Základ odpisu) / (100 x 360)*
 
-The depreciable basis is calculated as the book value less posted depreciation since the starting date of the current fiscal year.
+Odpisovatelný základ se vypočítá jako účetní hodnota snížená o zaúčtované odpisy od počátku běžného fiskálního roku.
 
-The posted depreciation amount can contain entries with various posting types (write-down, custom1, and custom2) posted since the starting date of the current fiscal year. These posting types are included in the posted depreciation amount if there are check marks in the **Depreciation Type** and the **Part of Book Value** fields on the **FA Posting Type Setup** page.
+Zaúčtovaná částka odpisu může obsahovat položky s různými typy zaúčtování (odpis, vlastní1 a vlastní2) zaúčtované od počátečního data aktuálního fiskálního roku. Tyto typy zaúčtování jsou zahrnuty v částce zaúčtovaného odpisu, pokud jsou zaškrtnuta pole **Typ odpisu** a **Část účetní hodnoty** na stránce **Nast.typu účtování DM**.
 
-### Example - Declining-Balance 1 Depreciation
+### Příklad - Zrychlený odpis 1
 
-A fixed asset has an acquisition cost of LCY 100,000. The **Declining-Balance %** field is 25. The **Calculate Depreciation** batch job is run biannually.
+Dlouhodobý majetek má pořizovací cenu 100 000 LM. Pole **Zrychlený %** je 25. Dávková dávková úloha **Výpočet odpisůy** se spouští dvakrát ročně.
 
-The following table shows how the fixed asset ledger entries look.
+Následující tabulka ukazuje, jak vypadají položky dlouhodobého majetku.
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Costs | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 06/30/20 | Depreciation | 180 | -12,500.00 | 87,500.00 |
-| 12/31/20 | Depreciation | 180 | -12,500.00 | 75,000.00 |
-| 06/30/21 | Depreciation | 180 | -9,375.00 | 65,625.00 |
-| 12/31/21 | Depreciation | 180 | -9,375.00 | 56,250.00 |
-| 06/30/22 | Depreciation | 180 | -7,031.25 | 49,218.75 |
-| 12/31/22 | Depreciation | 180 | -7,031.25 | 42,187.50 |
-| 06/30/23 | Depreciation | 180 | -5,273.44 | 36,914.06 |
-| 12/31/23 | Depreciation | 180 | -5,273.44 | 31,640.62 |
-| 06/30/24 | Depreciation | 180 | -3,955.08 | 27,685.54 |
-| 12/31/24 | Depreciation | 180 | -3,955.08 | 23,730.46 |
+| 01.01.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 30.06.20 | Odpisy | 180 | -12 500,00 | 87 500,00 |
+| 31.12.20 | Odpisy | 180 | -12 500,00 | 75 000,00 |
+| 30.06.21 | Odpisy | 180 | -9 375,00 | 65 625,00 |
+| 31.12.21 | Odpisy | 180 | -9 375,00 | 56 250,00 |
+| 30.06.22 | Odpisy | 180 | -7 031,25 | 49 218,75 |
+| 31.12.22 | Odpisy | 180 | -7 031,25 | 42 187,50 |
+| 30.06.23 | Odpisy | 180 | -5 273,44 | 36 914,06 |
+| 31,12.23 | Odpisy | 180 | -5 273,44 | 31 640,62 |
+| 30.06.24 | Odpisy | 180 | -3 955,08 | 27 685,54 |
+| 31.12.24 | Odpisy | 180 | -3 955,08 | 23 730,46 |
 
-Calculation Method:
+Metoda výpočtu:
 
-* Year 1: *25% of 100,000 = 25,000 = 12,500 + 12,500*
+* Rok 1: *25 % ze 100 000 = 25 000 = 12 500 + 12,500*
 
-* Year 2: *25% of 75,000 = 18,750 = 9,375 + 9,375*
+* Rok 2: *25 % ze 75 000 = 18 750 = 9 375 + 9,375*
 
-* Year 3: *25% of 56,250 = 14,062.50 = 7,031.25 + 7,031.25*
+* Rok 3: *25 % z 56 250 = 14 062,50 = 7 031,25 + 7 031,25*
 
-The calculation continues until the book value equals the final rounding amount or the salvage value that you entered.
+Výpočet pokračuje, dokud účetní hodnota neodpovídá konečnému počtu zaokrouhlení částky nebo hodnotě, kterou zadáte.
 
-## Declining-Balance 2 Depreciation
+## Zrychlený odpis 2
 
-The Declining-Balance 1 and Declining-Balance 2 methods calculate the same total depreciation amount for each year. However, if you run the **Calculate Depreciation** batch job more than once a year, the Declining-Balance 1 method will result in equal depreciation amounts for each depreciation period. The Declining-Balance 2 method, on the other hand, will result in depreciation amounts that decline for each period.
+Metody Zrychlený odpis 1 a Zrychlený odpis 2 vypočítají stejnou celkovou částku odpisů pro každý rok. Pokud však spustíte dávkovou úlohu **Výpočet odpisů** více než jednou ročně, metoda Zrychlený odpis 1 bude mít za následek stejné částky odpisů pro každé odpisové období. Metoda Zrychlený odpis 2 na druhé straně bude mít za následek odpisové částky, které klesají pro každé období.
 
-### Example - Declining-Balance 2 Depreciation
+### Příklad - Zrychlený odpis 2
 
-A fixed asset has an acquisition cost of LCY 100,000. The **Declining-Balance %** field is 25. The **Calculate Depreciation** batch job is run biannually. The fixed asset ledger entries look like this:
+Dlouhodobý majetek má pořizovací cenu 100 000 LM. Pole **Zrychlený %** je 25. Dávková dávková úloha **Výpočet odpisůy** se spouští dvakrát ročně. Položky knihy dlouhodobého majetku vypadají takto:
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Costs | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 06/30/20 | Depreciation | 180 | -13,397.46 | 86,602.54 |
-| 12/31/20 | Depreciation | 180 | -11,602.54 | 75,000.00 |
-| 06/30/21 | Depreciation | 180 | -10,048.09 | 64,951.91 |
-| 12/31/21 | Depreciation | 180 | -8,701.91 | 56,250.00 |
+| 01.01.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 30.06.20 | Odpisy | 180 | -13 397,46 | 86 602,54 |
+| 31.12.20 | Odpisy | 180 | -11 602,54 | 75 000,00 |
+| 30.06.21 | Odpisy | 180 | -10 048,09 | 64 951,91 |
+| 31.12.21 | Odpisy | 180 | -8 701,91 | 56 250,00 |
 
-Calculation Method:
+Metoda výpočtu:
 
-* *BV* = Book value
-* *ND* = Number of depreciation days
-* *DBP* = Declining-balance percent
+* *BV* = Účetní hodnota
+* *ND* = Počet dní odpisu
+* *DBP* = Zrychlený %
 * *P* = *DBP*/100
 * *D* = *ND*/360
 
-The formula for calculating the depreciation amounts is:
+Vzorec pro výpočet odpisových částek je:
 
-*DA* = *BV* x (1 – (1 –P)<sup>D</sup>)
+*DA* = *BV* x (1 – (1 – P)<sup>D</sup>)
 
-The depreciation values are:
+Hodnoty odpisování jsou:
 
-|   | Výpočet |
+| Datum | Výpočet |
 | --- | --- |
-| 06/30/20 | DA = 100,000.00 x (1 -(1 - 0.25)<sup>0.5</sup>) = 13,397.46 |
-| 12/31/20 | DA = 86,602.54 x (1 - (1 - 0.25)<sup>0.5</sup>) = 11,602.54 |
-| 06/30/21 | DA = 75,000.00 x (1 - (1 - 0.25)<sup>0.5</sup>) = 10,048.09 |
-| 12/31/21 | DA = 64,951.91 x (1 - (1 - 0.25)<sup>0.5</sup>) = 8,701.91 |
+| 30.06.20 | DA = 100 000,00 x (1 -(1 - 0,25)<sup>0,5</sup>) = 13 397,46 |
+| 31.12.20 | DA = 86 602,54 x (1 - (1 - 0,25)<sup>0,5</sup>) = 11 602,54 |
+| 30.06.21 | DA = 75 000,00 x (1 - (1 - 0,25)<sup>0,5</sup>) = 10 048,09 |
+| 31.12.21 | DA = 64 951,91 x (1 - (1 - 0,25)<sup>0,5</sup>) = 8 701,91 |
 
-## DB1/SL Depreciation
+## Odpisy DB1/SL
 
-DB1/SL is an abbreviated combination of Declining-Balance 1 and Straight-Line. The calculation continues until the book value equals the final rounding amount, or the salvage value that you entered.
+DB1/SL is an abbreviated combination of Declining-Balance 1 and Straight-Line. Výpočet pokračuje, dokud účetní hodnota neodpovídá konečnému počtu zaokrouhlení částky nebo hodnotě, kterou zadáte.
 
-The **Calculate Depreciation** batch job calculates a straight-line amount and a declining balance amount, but only the greater of the two amounts is transferred to the journal.
+Dávková úloha **Výpočet odpisů** vypočítá přímou částku a klesající částku zůstatku, ale pouze část větší z obou částek je převedena do deníku.
 
-You can use various percentages to calculate declining-balance.
+K výpočtu klesajícího zůstatku můžete použít různá procenta.
 
-If you use this method, you must enter the estimated useful lifetime and a declining balance percentage on the **FA Depreciation Books** page.
+Pokud použijete tuto metodu, musíte zadat odhadovanou životnost a procento klesajícího zůstatku na stránce **Knihy odpisů DM**.
 
-### Example - DB1-SL Depreciation
+### Příklad - Odpisy DB1-SL
 
-A fixed asset has an acquisition cost of LCY 100,000. On the **FA Depreciation Books** page, the **Declining-Balance %** field contains 25 and the **No. of Depreciation Years** field contains 8. The **Calculate Depreciation** batch job is run biannually.
+Dlouhodobý majetek má pořizovací cenu 100 000 LM. Na stránce **Knihy odpisů DM** obsahuje pole **Zrychlený %** hodnotu 25 a pole **Počet roků odpisování** obsahuje hodnotu 8. Dávková dávková úloha **Výpočet odpisůy** se spouští dvakrát ročně.
 
-The fixed asset ledger entries look like this:
+Položky knihy dlouhodobého majetku vypadají takto:
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 01/01/20 | Acquisition Costs | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 06/30/20 | Depreciation | 180 | -12,500.00 | 87,500.00 |
-| 12/31/20 | Depreciation | 180 | -12,500.00 | 75,000.00 |
-| 06/30/21 | Depreciation | 180 | -9,375.00 | 65,625.00 |
-| 12/31/21 | Depreciation | 180 | -9,375.00 | 56,250.00 |
-| 06/30/22 | Depreciation | 180 | -7,031.25 | 49,218.75 |
-| 12/31/22 | Depreciation | 180 | -7,031.25 | 42,187.50 |
-| 06/30/23 | Depreciation | 180 | -5,273.44 | 36,914.06 |
-| 12/31/23 | Depreciation | 180 | -5,273.44 | 31,640.62 |
-| 06/30/24 | Depreciation | 180 | -3,955.08 | 27,685.54 |
-| 12/31/24 | Depreciation | 180 | -3,955.08 | 23,730.46 |
-| 06/30/25 | Depreciation | 180 | -3,955.08 | 19,775.38 SL |
-| 12/31/25 | Depreciation | 180 | -3,955.08 | 15,820.30 SL |
-| 06/30/26 | Depreciation | 180 | -3,955.08 | 11,865.22 SL |
-| 12/31/26 | Depreciation | 180 | -3,955.07 | 7,910.15 SL |
-| 06/30/27 | Depreciation | 180 | -3,955.08 | 3,955.07 SL |
-| 12/31/27 | Depreciation | 180 | -3,955.07 | 0,00 SL |
+| 01.01.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 30.06.20 | Odpisy | 180 | -12 500,00 | 87 500,00 |
+| 31.12.20 | Odpisy | 180 | -12 500,00 | 75 000,00 |
+| 30.06.21 | Odpisy | 180 | -9 375,00 | 65 625,00 |
+| 31.12.21 | Odpisy | 180 | -9 375,00 | 56 250,00 |
+| 30.06.22 | Odpisy | 180 | -7 031,25 | 49 218,75 |
+| 31.12.22 | Odpisy | 180 | -7 031,25 | 42 187,50 |
+| 30.06.23 | Odpisy | 180 | -5 273,44 | 36 914,06 |
+| 31,12.23 | Odpisy | 180 | -5 273,44 | 31 640,62 |
+| 30.06.24 | Odpisy | 180 | -3 955,08 | 27 685,54 |
+| 31.12.24 | Odpisy | 180 | -3 955,08 | 23 730,46 |
+| 30.06.25 | Odpisy | 180 | -3 955,08 | 19 775,38 SL |
+| 31.12.25 | Odpisy | 180 | -3 955,08 | 15 820,30 SL |
+| 30.06.26 | Odpisy | 180 | -3 955,08 | 11 865,22 SL |
+| 31.12.26 | Odpisy | 180 | -3 955,07 | 7 910,15 SL |
+| 30.06.27 | Odpisy | 180 | -3 955,08 | 3 955,07 SL |
+| 31.12.27 | Odpisy | 180 | -3 955,07 | 0,00 SL |
 
-`SL` after the book value means that the straight-line method has been used.
+`SL` za účetní hodnotou znamená, že byla použita lineární metoda.
 
-Calculation method:
+Způsob výpočtu:
 
-* Year 1 (2020):
+* Rok 1 (2020):
 
-   *Declining-balance amount: 25% of 100,000 = 25,000 = 12,500 + 12,500*
+   *Částka zrychleného odpisu: 25 % ze 100 000 = 25 000 = 12 500 + 12 500*
 
-   *Straight-line amount = 100,000 / 8 = 12,500 = 6,250 + 6,250*
+   *Částka lineárního odpisu = 100 000 / 8 = 12 500 = 6 250 + 6 250*
 
-   The declining-balance amount is used because it is the greater amount.
+   Klesající částka se používá, protože je to větší částka.
 
-* Year 5 (2025):
+* Rok 5 (2025):
 
-   *Declining-balance amount: 25% of 23,730.46 = 4,943.85= 2,471.92 + 2,471.92*
+   *Částka zrychleného odpisu: 25 % z 23 730,46 = 4 943,85 = 2 471,92 + 2 471,92*
 
-   *Straight-line amount = 23,730.46/3 = 7,910.15 = 3,995.07 + 3,995.08*
+   *Částka lineárního odpisu = 23 730,46/3 = 7 910,15 = 3 995,07 + 3 995,08*
 
-   The straight-line amount is used because it is the greater amount.
+   Částka lineárního odpisu se používá, protože je to částka větší.
 
-## Half-Year Convention Depreciation
+## Odpisy podle půlroční konvence
 
-The Half-Year Convention method will only be applied if you have placed a check mark in the **Use Half-Year Convention** field in the fixed **FA Depreciation Book** page.
+Metoda půlroční konvence se použije pouze v případě, že jste zaškrtli pole **Použít pololetní konvenci** na stránce **Kniha odpisů DM**.
 
-This depreciation method can be used in conjunction with the following depreciation methods in application:
+Tuto metodu odpisování lze použít v souvislosti s následujícími metodami odpisování v programu:
 
 * Lineární
 * Zrychlený 1
 * ZR1/LI
 
-When you apply the Half-Year Convention, a fixed asset has six months of depreciation in the first fiscal year, regardless of the contents of the **Depreciation Starting Date** field.
+Při použití pololetní konvence má dlouhodobý majetek šest měsíců odpisů v prvním fiskálním roce bez ohledu na obsah pole **Počáteční datum odpisování**.
 
 > [!NOTE]  
-> The estimated life of the fixed asset that is remaining after the first fiscal year will always contain a half-year using the Half-Year Convention Method. Thus, for the Half-Year Convention method to be applied correctly, the **Depreciation Ending Date** field on the **FA Depreciation Book** page must always contain a date which is exactly six months before the final date of the fiscal year in which the fixed asset will fully depreciate.
+> Odhadovaná doba životnosti dlouhodobého majetku, která zbývá po prvním fiskálním roce, bude vždy obsahovat pololetí při použití metody pololetní konvence. Aby tedy byla metoda půlroční konvence správně aplikována, musí pole **Poslední datum odpisování** na stránce **Kniha odpisů DM** vždy obsahovat datum, které je přesně šest měsíců před konečným datem fiskálního roku, ve kterém bude dlouhodobý majetek plně odepsán.
 
-### Example - Half-Year Convention Depreciation
+### Příklad - Odpisy pololetní konvence
 
-A fixed asset has an acquisition cost of LCY 100,000. The **Depreciation Starting Date** is 03/01/20. The estimated life is five years, so the **Depreciation Ending Date** must be 06/30/25. The **Calculate Depreciation** batch job is run annually. This example is based on a calendar fiscal year.
+Dlouhodobý majetek má pořizovací cenu 100 000 LM. **Počáteční datum odpisování** je 01.03.20. Odhadovaná životnost je pět let, takže **Poslední datum odpisování** musí být 30.06.25. Dávková úloha **Výpočet odpisů** se spouští každoročně. Tento příklad je založen na kalendářním fiskálním roce.
 
-The fixed asset ledger entries look like this:
+Položky knihy dlouhodobého majetku vypadají takto:
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 03/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 12/31/20 | Depreciation | 270 | -10,000.00 | 90,000.00 |
-| 12/31/21 | Depreciation | 360 | -20,000.00 | 70,000.00 |
-| 12/31/22 | Depreciation | 360 | -20,000.00 | 50,000.00 |
-| 12/31/23 | Depreciation | 360 | -20,000.00 | 30,000.00 |
-| 12/31/24 | Depreciation | 360 | -20,000.00 | 10,000.00 |
-| 12/31/25 | Depreciation | 180 | -10,000.00 | 0,00 |
+| 01.03.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 31.12.20 | Odpisy | 270 | -10 000,00 | 90 000,00 |
+| 31.12.21 | Odpisy | 360 | -20 000,00 | 70 000,00 |
+| 31.12.22 | Odpisy | 360 | -20 000,00 | 50 000,00 |
+| 31,12.23 | Odpisy | 360 | -20 000,00 | 30 000,00 |
+| 31.12.24 | Odpisy | 360 | -20 000,00 | 10 000,00 |
+| 31.12.25 | Odpisy | 180 | -10 000,00 | 0,00 |
 
-## Example - DB1/SL Depreciation Using Half-Year Convention
+## Příklad - Odpisy DB1/SL s použitím půlroční konvence
 
-A fixed asset has an acquisition cost of LCY 100,000. The **Depreciation Starting Date** is 11/01/20. The estimated life is five years, so the **Depreciation Ending Date** must be 06/30/25. On the **FA Depreciation Books** page, the **Declining-Balance %** field contains 40. The **Calculate Depreciation** batch job is run annually. This example is based on a calendar fiscal year.
+Dlouhodobý majetek má pořizovací cenu 100 000 LM. **Počáteční datum odpisování** je 01.11.20. Odhadovaná životnost je pět let, takže **Poslední datum odpisování** musí být 30.06.25. Na stránce **Knihy odpisů DM** obsahuje pole **Zrychlený %** hodnotu 40. Dávková úloha **Výpočet odpisů** se spouští ročně. Tento příklad je založen na kalendářním fiskálním roce.
 
-The fixed asset ledger entries look like this:
+Položky knihy dlouhodobého majetku vypadají takto:
 
-|   | FA Posting Type | Days | Částka | Book Value |
+| Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
-| 11/01/20 | Acquisition Cost | (Depreciation starting date) | 100,000.00 | 100,000.00 |
-| 12/31/20 | Depreciation | 60 | -20,000.00 | 80,000.00 |
-| 12/31/21 | Depreciation | 360 | -32,000.00 | 48,000.00 |
-| 12/31/22 | Depreciation | 360 | -19,200.00 | 28,800.00 |
-| 12/31/23 | Depreciation | 360 | -11,520.00 | 17,280.00 |
-| 12/31/24 | Depreciation | 360 | -11,520.00 | 5,760.00 SL |
-| 12/31/25 | Depreciation | 180 | -5,760.00 | 0,00 SL |
+| 01.11.20 | Pořizovací cena | (Datum zahájení odpisování) | 100 000,00 | 100 000,00 |
+| 31.12.20 | Odpisy | 60 | -20 000,00 | 80 000,00 |
+| 31.12.21 | Odpisy | 360 | -32 000,00 | 48 000,00 |
+| 31.12.22 | Odpisy | 360 | -19 200,00 | 28 800,00 |
+| 31,12.23 | Odpisy | 360 | -11 520,00 | 17 280,00 |
+| 31.12.24 | Odpisy | 360 | -11 520,00 | 5 760,00 SL |
+| 31.12.25 | Odpisy | 180 | -5 760,00 | 0,00 SL |
 
-`SL` after the book value means that the straight-line method has been used.
+`SL` za účetní hodnotou znamená, že byla použita lineární metoda.
 
-Calculation method:
+Způsob výpočtu:
 
-* Year 1:
+* Rok 1:
 
-   *Declining-balance amount = Full year amount = 40% of 100,000 = 40,000.* Thus, for half a year 40,000 / 2 = 20,000
+   *Částka zrychleného odpisu = Částka za celý rok = 40 % ze 100 000 = 40 000.* Tedy za půl roku 40 000 / 2 = 20 000
 
-   *Straight-line amount = Full year amount = 100,000 / 5 = 20,000.* Thus, for half a year = 20,000 / 2 = 10,000
+   *Lineární částka odpisu = Částka za celý rok = 100 000 / 5 = 20 000.* Tedy za půl roku = 20 000 / 2 = 10 000
 
-   The declining-balance amount is used because it is the greater amount.
+   Klesající částka se používá, protože je to větší částka.
 
-* Year 5 (2024):
+* Rok 5 (2024):
 
-   *Declining-balance amount = 40% of 17,280.00 = 6,912.00*
+   *Částka zrychleného odpisu = 40 % z 17 280,00 = 6 912,00*
 
-   *Straight-line amount = 28,800 / 1.5 = 11,520.00*
+   *Částka lineárního odpisu = 28 800 / 1,5 = 11 520,00*
 
-   The straight-line amount is used because it is the greater amount.
+   Částka lineárního odpisu se používá, protože je to částka větší.
 
-## Duplicating Entries to More Depreciation Books
+## Kopírování položek do dalších odpisových knih
 
-If you have three depreciation books, B1, B2 and B3, and you want to duplicate entries from B1 to B2 and B3, you can place a check mark in the **Part of Duplication List** field on the depreciation book cards for B2 and B3. This can be useful if depreciation book B1 is integrated with the general ledger and uses the fixed asset G/L journal, and depreciation books B2 and B3 are not integrated with the general ledger and use the fixed asset journal.
+Pokud máte tři odpisové knihy, B1, B2 a B3, a chcete duplikovat položky z B1 na B2 a B3, můžete zaškrtnout políčko **Část seznamu duplikací** na kartách odpisové knihy pro B2 a B3. To může být užitečné, pokud je odpisová kniha B1 integrována s hlavní knihou a používá finanční deník dlouhodobého majetku a odpisové knihy B2 a B3, které nejsou integrovány do hlavní knihy a používají deník dlouhodobého majetku.
 
-When you enter an entry in B1 in the fixed asset G/L journal and place a check mark in the **Use Duplication List** field, application will duplicate the entry in book B2 and B3 in the fixed asset journal when the entry is posted.
-
-> [!NOTE]  
-> You cannot duplicate in the same journal and journal batch as you are duplicating from. If you post entries in the fixed asset G/L journal, you can duplicate them in the fixed asset journal or in the fixed asset G/L journal using another batch.
+Při zadání položky v B1 ve finančním deníku dlouhodobého majetku a zaškrtnutí do pole  **Použít seznam duplikátů** program duplikuje záznam v knize B2 a B3 v deníku dlouhodobého majetku, když je záznam zaúčtován.
 
 > [!NOTE]  
-> You cannot use the same number series in the fixed asset G/L journal and the fixed asset journal. When you post entries in the fixed asset G/L journal, you must leave the **Document No.** field empty. If you enter a number in the field, the the number is duplicated in the fixed asset journal. You'll have to manually change the document number before you can post the journal.
+> Nemůžete duplikovat ve stejném deníku a listu deníku, ze kterých duplikujete. Pokud zaúčtujete položky dlouhodobého majetku ve finančním deníku, můžete je duplikovat v deníku dlouhodobého majetku nebo ve finančním deníku dlouhodobého majetku pomocí jiné dávky.
+
+> [!NOTE]  
+> V finančním deníku DM a deníku dlouhodobého majetku nelze použít stejnou číselnou řadu. Při zaúčtování položek do finančního deníku dlouhodobého majetku musíte nechat pole **Číslo dokladu** prázdné Pokud do pole zadáte číslo, bude číslo duplikováno v deníku dlouhodobého majetku. Před zaúčtováním deníku budete muset ručně změnit číslo dokladu.
 
 ## Viz také
 
-[Fixed Assets](fa-manage.md)  
-[Setting Up Fixed Assets](fa-setup.md)  
-[Finance](finance.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Dlouhodobý majetek](fa-manage.md)    
+[Nastavení dlouhodobého majetku](fa-setup.md)    
+[Finance](finance.md)    
+[Příprava na podnikání](ui-get-ready-business.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

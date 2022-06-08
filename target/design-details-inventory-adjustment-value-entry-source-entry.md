@@ -268,7 +268,7 @@ Test this scenario by carrying out the following steps:
 
 **Položky ocenění**
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies-to Entry |
+| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 397 | CHARGE | 2020-12-15 | 324 | Nákup | Přímé náklady | 108029 |         | 1 | 100 | 100 | NO | 0 |
 | 399 | CHARGE | 2021-01-02 | 324 | Nákup | Přímé náklady | 108009 | JBFREIGHT | 0 | 3 | 3 | NO | 0 |
@@ -281,7 +281,7 @@ Test this scenario by carrying out the following steps:
 
 **Položky ocenění**
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies-to Entry |
+| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 398 | CHARGE | 2020-12-16 | 325 | Prodej | Přímé náklady | 109024 |         | -1 | -100 | -100 | NO | 0 |
 | 400 | CHARGE | 2021-01-01 | 325 | Prodej | Přímé náklady | 109024 |         | 0 | -3 | -3 | Ano | 398 |
@@ -317,7 +317,7 @@ Test this scenario by carrying out the following steps:
 
 **Položky ocenění**
 
-| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies-to Entry |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 397 | CHARGE | 2020-12-15 | 324 | Nákup | Přímé náklady | 108029 |            | 1 | 100 | 100 | Ne | 0 |
 | 399 | CHARGE | 2021-01-02 | 324 | Nákup | Přímé náklady | 108030 | JBFREIGHT | 0 | 3 | 3 | Ne | 0 |
@@ -331,7 +331,7 @@ Test this scenario by carrying out the following steps:
 
 **Položky ocenění**
 
-| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies-to Entry |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 398 | CHARGE | 2020-12-16 | 325 | Prodej | Přímé náklady | 103024 |            | -1 | -100 | -100 | Ne | 0 |
 | 400 | CHARGE | 2021-01-01 | 325 | Prodej | Přímé náklady | 103024 |            | 0 | -3 | -3 | Ano | 398 |

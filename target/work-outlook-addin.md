@@ -12,103 +12,103 @@ ms.date: 08/13/2021
 ms.author: jswymer
 
 ---
-# Použití aplikace Business Central jako schránka v aplikaci Outlook
+# Použití aplikace Business Central jako schránka obchodní doručené pošty v aplikaci Outlook
 
-[!INCLUDE[prod_short](includes/prod_short.md)] offers an add-in that lets you manage business interactions with your customers and vendors, directly in Microsoft Outlook. With the [!INCLUDE[prod_short](includes/prod_short.md)] add-in for Outlook, you can see financial data related to customers and vendors, and create and send financial documents, such as quotes and invoices.
+[!INCLUDE[prod_short](includes/prod_short.md)] abízí doplněk, který umožňuje spravovat obchodní interakce se zákazníky a dodavateli přímo v aplikaci Microsoft Outlook.. S doplňkem [!INCLUDE[prod_short](includes/prod_short.md)] pro aplikaci Outlook můžete zobrazit finanční údaje související se zákazníky a dodavateli a vytvářet a odesílat finanční doklady, jako jsou nabídky a faktury.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] add-in consists of two separate add-ins that provide the following capabilities:
+Doplněk [!INCLUDE[prod_short](includes/prod_short.md)] se skládá ze dvou samostatných doplňků, které poskytují následující možnosti:
 
-- Contact insights
+- Kontaktní informace
 
-   This add-in lets you look up [!INCLUDE[prod_short](includes/prod_short.md)] customer or vendor information in Outlook emails and calendar appointments. It also lets you create and send [!INCLUDE[prod_short](includes/prod_short.md)] business documents, such a sales quote or invoice to a contact.
+   Tento doplněk vám umožňuje vyhledat [!INCLUDE[prod_short](includes/prod_short.md)] informace o zákaznících nebo dodavatelích v e-mailech aplikace Outlook a schůzkách v kalendáři. Umožňuje také vytvářet a odesílat [!INCLUDE[prod_short](includes/prod_short.md)] obchodní doklady, například prodejní nabídku nebo fakturu kontaktu.
 
-- Document view
+- Zobrazení dokladů
 
-   When a business document is sent in an email, the add-in provides a direct link from email to the actual business document in [!INCLUDE[prod_short](includes/prod_short.md)].
+   Když je obchodní doklad odeslán pomocí e-mailu, doplněk poskytuje přímý odkaz z e-mailu na skutečný obchodní doklad v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 ## Začínáme
 
-1. The first thing to do is get the [!INCLUDE[prod_short](includes/prod_short.md)] add-in installed in Outlook. Your administrator may have already installed the add-in for you. So if you're not sure, check with your administrator or see the next step to verify whether it's installed.
+1. První věc, kterou musíte udělat, je nainstalovat doplněk [!INCLUDE[prod_short](includes/prod_short.md)] do aplikace Outlook. Je možné, že váš správce již doplněk pro Vás nainstaloval. Pokud si tedy nejste jisti, obraťte se na správce nebo v dalším kroku ověřte, zda je nainstalován.
 
-   If the add-in hasn't been installed for you, see [Install the add-in for your own use](admin-outlook.md#install).
+   Pokud doplněk nebyl již nainstalován, přečtěte si článek [Instalace doplňku pro vlastní použití](admin-outlook.md#install).
 
-2. With the add-in installed, you can access the **[!INCLUDE[prod_short](includes/prod_short.md)]** add-in from any new or existing email message or calendar appointment in Outlook.
+2. S nainstalovaným doplňkem máte přístup k **[!INCLUDE[prod_short](includes/prod_short.md)]** z jakékoli nové nebo existující e-mailové zprávy nebo události kalendáře v aplikaci Outlook.
 
-   Start by signing in to Outlook and opening an email message. Then, if you're using the Outlook app, go to the ribbon, and look for **[!INCLUDE[prod_short](includes/prod_short.md)]**.  Or if you're using Outlook on the web, at the top or bottom of the email message, look for ![Business Central add-in icon in Outlook.](media/outlook-business-central-icon.png) or go to the more actions ![Show more actions for an email in Outlook.](media/outlook-more-actions-button.png) button.
+   Začněte tím, že se přihlásíte do Outlooku a otevřete e-mailovou zprávu. Pokud používáte aplikaci Outlook, přejděte na pás karet a vyhledejte **[!INCLUDE[prod_short](includes/prod_short.md)]**.  Nebo pokud používáte Outlook na webu, v horní nebo dolní části e-mailové zprávy vyhledejte ikonu doplňku ![Business Central v aplikaci Outlook](media/outlook-business-central-icon.png) nebo přejděte na další akce ![Zobrazit další akce pro e-mail v aplikaci Outlook](media/outlook-more-actions-button.png).
 
-   ![Access Business Central add-ins in Outlook.](media/outlook-business-central-addin.png)
+   ![Přístup k doplňkům Business Central v aplikaci Outlook](media/outlook-business-central-addin.png)
 
-   If you've installed the add-in on your own and chose to get a sample email, check your inbox for the welcome email. This email provides information to help you get started.
+   Pokud jste si doplněk nainstalovali sami a rozhodli jste se dostat vzorový e-mail, zkontrolujte, zda jste ve své doručené poště nenašli uvítací e-mail. Tento e-mail obsahuje informace, které vám pomůžou začít.
 
-The first time you use the add-in, in [!INCLUDE[prod_short](includes/prod_short.md)] add-in pane, you might be asked to sign in. In this case, choose **Sign in now** and follow the instructions onscreen to sign in to Business Central using your account.
+Při prvním použití doplňku v [!INCLUDE[prod_short](includes/prod_short.md)] můžete být vyzváni k přihlášení. V takovém případě zvolte **Přihlásit se nyní** a podle pokynů na obrazovce se přihlaste k Business Central pomocí svého účtu.
 
 > [!TIP]
-> If you use the new Outlook on the web, you can pin **[!INCLUDE[prod_short](includes/prod_short.md)]** so that it is always immediately visible, instead of having to go to the more actions button, making it convenient to view contact insights while you browse through different emails.
+> Pokud používáte nový Outlook na webu, můžete připnout **[!INCLUDE[prod_short](includes/prod_short.md)]**, aby byl vždy okamžitě viditelný, místo toho, abyste museli přecházet na tlačítko Další akcí, což umožňuje pohodlné zobrazení informací o kontaktech při procházení různých e-mailů.
 
-For more information, see [Using add-ins in Outlook on the web](https://support.office.com/article/using-add-ins-in-outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?ns=OLWAO365B&version=16).
+Pro více informací, navštivte [Použití doplňků v aplikaci Outlook na webu](https://support.office.com/article/using-add-ins-in-outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?ns=OLWAO365B&version=16).
 
-## Work with contacts and documents using the Contact Insights add-in
+## Práce s kontakty a doklady pomocí doplňku Contact Insights
 
-Řekněme, že dostanete e-mail od zákazníka, který chce získat nabídku na některé zboží. Directly in Outlook, you can open the [!INCLUDE[prod_short](includes/prod_short.md)] add-in, which recognizes the sender as a customer, and opens the customer card for that company. From this dashboard, you see overview information for the customer, and can drill down for more detail on specific documents. Můžete také nahlédnout do historie prodeje pro zákazníka. If it's a new contact, you can create them as a new customer in [!INCLUDE[prod_short](includes/prod_short.md)] without leaving Outlook.
+Řekněme, že dostanete e-mail od zákazníka, který chce získat nabídku na některé zboží. Přímo v aplikaci Outlook můžete otevřít doplněk [!INCLUDE[prod_short](includes/prod_short.md)], který rozpozná odesílatele jako zákazníka a otevře kartu zákazníka pro tuto společnost. Na tomto řídicím panelu vidíte přehledné informace o zákazníkovi a můžete si prohlédnout podrobnější informace o konkrétních dokladech. Můžete také nahlédnout do historie prodeje pro zákazníka. Pokud se jedná o nový kontakt, můžete jej vytvořit jako nového zákazníka v [!INCLUDE[prod_short](includes/prod_short.md)] bez opuštění aplikace Outlook.
 
-V doplňku můžete vytvořit prodejní nabídku a odeslat ji zpět tomuto zákazníkovi, aniž byste opustili aplikaci Outlook. Všechny informace, které potřebujete k odeslání nabídky, jsou k dispozici ve vaší schránce v aplikaci Outlook. Once you have the data entered, you post the quote and send it by email. [!INCLUDE[prod_short](includes/prod_short.md)] generates a .PDF file with the sales quote and attaches it to the email message that you draft in the add-in.
+V doplňku můžete vytvořit prodejní nabídku a odeslat ji zpět tomuto zákazníkovi, aniž byste opustili aplikaci Outlook. Všechny informace, které potřebujete k odeslání nabídky, jsou k dispozici ve vaší schránce v aplikaci Outlook. Jakmile zadáte data, zaúčtujete nabídku a odešlete ji e-mailem. [!INCLUDE[prod_short](includes/prod_short.md)] vygeneruje .PDF soubor s prodejní nabídkou a připojí jej k e-mailové zprávě, kterou jste napsali v doplňku.
 
 Podobně, pokud dostanete e-mail od dodavatele, můžete tento doplněk použít pro práci s dodavateli a nákupními fakturami.
 
 Někdy chcete zobrazit více polí, než je v doplňku možné zobrazit, například když chcete vyplnit řádky faktury. Chcete-li mít více místa pro práci, můžete tento doplněk vložit na samostatnou stránku. Stále je součástí aplikace Outlook, ale máte více místa. Při zadávání dat ve vyskakovacím okně se změny automaticky ukládají.
-The following sections lead you through some basic tasks to give you a general understanding how to use it.
+Následující části vás provedou některými základními úkoly, které vám poskytnou obecné znalosti o tom, jak je používat.
 
 > [!TIP]
-> The tasks explain how to use the add-in from an email message. But you can do the same from a calendar appointment in Outlook.
+> Úkoly vysvětlují, jak používat doplněk z e-mailové zprávy. To stejné můžete udělat z události kalendáře v aplikaci Outlook.
 
-### Look up a business contact when composing an email
+### Vyhledání obchodního kontaktu při psaní e-mailu
 
-1. Create a new email message.
-2. In the ribbon, go to **[!INCLUDE[prod_short](includes/prod_short.md)]** and choose **Contact Insights**. Or if you're using Outlook on the web, go to the bottom of the message, choose ![Business Central add-in icon in Outlook.](media/outlook-business-central-icon.png) > **Contact Insights**.
-3. In the **[!INCLUDE[prod_short](includes/prod_short.md)]** add-in pane that opens, scan for and choose the contact you want.
+1. Vytvoření nové e-mailové zprávy.
+2. Na pásu karet přejděte na **[!INCLUDE[prod_short](includes/prod_short.md)]** a vyberte **Contact Insights**. Nebo pokud používáte webovou aplikaci Outlooku, přejděte do dolní části zprávy a vyberte ikonu ![doplněk Business Central v Outlooku](media/outlook-business-central-icon.png) > **Contact Insights**.
+3. V **[!INCLUDE[prod_short](includes/prod_short.md)]** podoknu doplňku, které se otevře, vyhledejte a vyberte požadovaný kontakt.
 
-   An overview of the contact displays in the pane and the contact is added in the **To** line of the email.
+   Přehled kontaktu se zobrazí v podokně a kontakt se přidá do řádku **Komu** v e-mailu.
 
-### View and change the contact details or switch company
+### Zobrazení a změna kontaktních údajů nebo změna společnosti
 
-The action bar at the top of the [!INCLUDE[prod_short](includes/prod_short.md)] add-in pane includes several actions that let your dig deeper into details about the contact and change things.
+Panel akcí v horní části podokna doplňku [!INCLUDE[prod_short](includes/prod_short.md)] obsahuje několik akcí, které vám umožní nahlédnout hlouběji do podrobností o kontaktu a změnit věci.
 
-![Business Central add-in action bar in Outlook.](media/outlook-addin-action-bar.png)
+![Panel akcí doplňku Business Central v aplikaci Outlook](media/outlook-addin-action-bar.png)
 
-For example, you can open the full contact details as you would see them in [!INCLUDE[prod_short](includes/prod_short.md)]. If you work with more that one [!INCLUDE[prod_short](includes/prod_short.md)] company, you can easily switch between companies.
+Můžete například otevřít úplné kontaktní údaje tak, jak byste je viděli v [!INCLUDE[prod_short](includes/prod_short.md)]. Pokud pracujete s více než [!INCLUDE[prod_short](includes/prod_short.md)] společností, můžete mezi nimi snadno přepínat.
 
-### Track incoming documents
+### Sledování došlých dokladů
 
-Perhaps you use the **Incoming Documents** list in [!INCLUDE[prod_short](includes/prod_short.md)] to track documents for processing that vendors send to you, such as a purchase invoice that needs to be paid. If you do, you can easily create Incoming Documents records from the Outlook add-in and include the email attachments.
+Možná využíváte přehled **Došlé doklady** v [!INCLUDE[prod_short](includes/prod_short.md)] ke sledování dokladů, které vám dodavatelé zasílají, například nákupní fakturu, kterou je třeba zaplatit. Pokud funkcionalitu používate, můžete snadno vytvořit záznamy Došlých dokladů z doplňku Outlook a zahrnout e-mailové přílohy.
 
-1. When you receive an email from a vendor that has an attachment, choose ![Business Central add-in icon in Outlook.](media/outlook-business-central-icon.png) **[!INCLUDE[prod_short](includes/prod_short.md)]**  > **Contact Insights**.
+1. Když obdržíte e-mail od dodavatele, který má přílohu, vyberte ![Ikona doplňku Business Central v aplikaci Outlook](media/outlook-business-central-icon.png) **[!INCLUDE[prod_short](includes/prod_short.md)]**  > **Contact Insights**.
 
-2. In the action bar of the add-in, choose **Show more actions**, then choose the **Send to Incoming Documents…**.
+2. Na panelu akcí doplňku vyberte **Zobrazit další akce**, a vyberte **Odeslat do došlých dokladů...**.
 
-### Create and send new document to a contact
+### Vytvoření a odeslání nového dokladu kontaktu
 
-1. In the ribbon or at the bottom of the email message, choose ![Business Central add-in icon in Outlook.](media/outlook-business-central-icon.png) **[!INCLUDE[prod_short](includes/prod_short.md)]** > **New**, then choose the type of document you want to create, such as **Sales Quote**.
-2. Make changes to the document in the **[!INCLUDE[prod_short](includes/prod_short.md)]** add-in pane.
-3. When the document is ready to send to the contact, in the action bar, choose **Show more actions**, then choose the **Send by Email** action.
+1. Na pásu karet nebo v dolní části e-mailové zprávy vyberte ![Ikona doplňku Business Central v aplikaci Outlook](media/outlook-business-central-icon.png) **[!INCLUDE[prod_short](includes/prod_short.md)]** > **Nový**a poté vyberte typ dokumentu, který chcete vytvořit, například **Prodejní nabídku**.
+2. Udělejte změny v dokladu v podokně doplňku **[!INCLUDE[prod_short](includes/prod_short.md)]**.
+3. Jakmile bude doklad nachystaný k odeslání kontaktu, na panelu akcí vyberte **Zobrazit další akce**, a pak vyberte **Odeslat e-mailem**.
 
-## View a document from an email using the Document View add-in
+## Zobrazení dokladu z e-mailu pomocí doplňku Zobrazení Dokladu
 
-Whether it's an email you sent or received, you can surface any [!INCLUDE[prod_short](includes/prod_short.md)] document, like the sales quote, directly in Outlook. From there, you can make changes and navigate to related information&mdash;just as you would from within [!INCLUDE[prod_short](includes/prod_short.md)].
+Ať už se jedná o e-mail, který jste odeslali nebo přijali, můžete přímo v aplikaci Outlook zobrazit jakýkoli doklad [!INCLUDE[prod_short](includes/prod_short.md)] například prodejní nabídku. Odtud můžete provádět změny a přecházet na související informace - stejně jako v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-If you're using the Outlook app, just choose **Document Link** at the top of the email message. For Outlook on the web, look for the document reference link in the email message. The reference link text will include the document number, which is based on the number series used in [!INCLUDE[prod_short](includes/prod_short.md)]. For example, the link for a sales quote would be something like **Sales Quote S-QUO1000**.
+Pokud používáte aplikaci Outlook, stačí v horní části e-mailové zprávy vybrat **Odkaz na dokument**. V případě webové aplikace Outlook vyhledejte v e-mailové zprávě odkaz na doklad. Text odkazu bude obsahovat číslo dokladu, které je založeno na číselné řadě použité v [!INCLUDE[prod_short](includes/prod_short.md)]. Například odkaz na prodejní nabídku by mohl vypadat jako **Prodejní nabídka S-QUO1000**.
 
 ## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Getting Business Central on my Mobile Device](install-mobile-app.md)  
-[Send Documents by Email](ui-how-send-documents-email.md)  
+[Příprava na podnikání](ui-get-ready-business.md)  
+[Získání Business Cental na mobilní zařízení](install-mobile-app.md)  
+[Odesílání dokladů pomocí Emailu](ui-how-send-documents-email.md)  
 [Finance](finance.md)  
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Minimum Requirements for Outlook](product-requirements.md#outlook)  
-[Using add-ins in Outlook on the web](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
+[Prodej](sales-manage-sales.md)  
+[Nakupování](purchasing-manage-purchasing.md)  
+[Minimální požadavky na Outlook](product-requirements.md#outlook)  
+[Pouižtí add-inů ve vebové aplikaci Outlooku](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
