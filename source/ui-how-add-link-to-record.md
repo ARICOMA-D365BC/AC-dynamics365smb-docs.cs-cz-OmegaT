@@ -3,7 +3,7 @@
     description: Attach a hyperlink to a document, or a website to a specific record, such as a customer or document.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -92,7 +92,7 @@ The following procedure is based on a sales order. The steps are similar for all
 The note is now attached to the sales order.
 
 ## See Also  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Incoming Documents](across-income-documents.md)  
 [Setting Up Workflow Notifications](across-setting-up-workflow-notifications.md)  
 

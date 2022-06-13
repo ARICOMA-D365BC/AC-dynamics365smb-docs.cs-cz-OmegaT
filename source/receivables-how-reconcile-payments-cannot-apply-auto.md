@@ -3,12 +3,13 @@ title: Using the Transfer Difference to Account Feature to Reconcile Payments
 description: Describes how to process payments that cannot be applied to a document, for example, when an exchange rate causes amounts to differ.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, cash receipts
+ms.search.form: 1290, 1294, 1287
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -47,7 +48,7 @@ If the value in the **Difference** field was lower than the value in the **Trans
 ## See Also
 [Managing Receivables](receivables-manage-receivables.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

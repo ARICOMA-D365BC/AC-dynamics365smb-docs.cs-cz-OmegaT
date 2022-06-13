@@ -1,13 +1,14 @@
 ---
-title: Introduction to Business Central and Power BI| Microsoft Docs
+title: Introduction to Business Central and Power BI
 description: Get an overview of using Power BI to get insight, business intelligence, and KPIs from your Business Central data.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: account schedule, analysis, reporting, financial report, business intelligence, KPI
+ms.search.form: 6316, 6317
 ms.reviewer: edupont
 ms.date: 04/01/2021
 ms.author: jswymer
@@ -81,9 +82,9 @@ There are a few tasks that must be done before you can start using Power BI with
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
 [Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
 [Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
-[Using [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)  
 
 
 

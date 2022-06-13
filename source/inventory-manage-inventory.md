@@ -3,12 +3,12 @@ title: Managing Inventory
 description: This topic describes how to manage the physical products that you trade in by creating an Inventory item card.
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
+ms.search.forms: 5804, 2106, 5823, 5751, 5750, 772, 5829, 5828, 513, 304, 40, 38, 167, 117, 5827, 9223, 158, 354, 9152, 286, 5754, 5402, 209, 297, 298, 99000782
 ms.date: 06/16/2021
 ms.author: edupont
 ---
@@ -60,7 +60,7 @@ The following table outlines related tasks.
 [Warehouse Management](warehouse-manage-warehouse.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)  
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  

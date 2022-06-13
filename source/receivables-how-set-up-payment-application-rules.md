@@ -3,12 +3,13 @@ title: Rules for Automatic Application of Payments
 description: Read about how to set Up Rules for the Automatic Application of Payments on the Payment Application Rules page.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, direct payment posting, reconcile payment, expenses, cash receipts
+ms.search.form: 1290, 1294, 1287
 ms.date: 06/25/2021
 ms.author: edupont
 
@@ -82,7 +83,7 @@ The following table describes the standard payment application rules in [!INCLUD
 [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md)  
 [Managing Receivables](receivables-manage-receivables.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

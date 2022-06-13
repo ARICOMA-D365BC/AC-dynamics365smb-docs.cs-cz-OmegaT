@@ -3,7 +3,7 @@
     description: Expected costs represent the estimation of, for example, a purchased item’s cost that you record before you receive the invoice for the item.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -96,7 +96,7 @@ You post a purchase order as received. The expected cost is LCY 95.00.
  [Design Details: Variance](design-details-variance.md)  
  [Managing Inventory Costs](finance-manage-inventory-costs.md)  
  [Finance](finance.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

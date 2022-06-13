@@ -2,7 +2,7 @@
 title: Getting the Business Central Add-in for Excel
 description: Learn about how to get users the Business Central add-in for Excel. 
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -75,13 +75,13 @@ You'll work in both [!INCLUDE[prod_short](includes/prod_short.md)] and the Micro
     4. Review the **Accept permissions requests**, then choose **Next** > **Finish Deployment**.
     5. Wait for the green check mark next to **Deployed** appears for the add-in, then choose **Done**. <!--Select **Deploy** and wait til successful, then **Next** > **Continue**.-->
 
-       The add-in appears on the **Add-ins** page. For more information about deploying add-ins in the Microsoft 365 admin center, see [Deploy add-ins in the admin center](/microsoft-365/admin/manage/manage-deployment-of-add-in).
+       The add-in appears on the **Add-ins** page. For more information about deploying add-ins in the Microsoft 365 admin center, see [Deploy add-ins in the admin center](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
 4. Go back to **Excel Add-in Centralized Deployment** assisted setup in [!INCLUDE[prod_short](includes/prod_short.md)], and choose **Next**.
 5. Turn on **Use Centralized Deployment**, and choose **Finish**.
 
     If you don't turn on this switch, [!INCLUDE[prod_short](includes/prod_short.md)] will get the add-in directly from the Office Store.
 
-When finished, you can always change the deployment in Microsoft 365 admin center, like assigning more users. For more information about deploying add-ins in the admin center, see [Deploy add-ins in the admin center](/microsoft-365/admin/manage/manage-deployment-of-add-in).
+When finished, you can always change the deployment in Microsoft 365 admin center, like assigning more users. For more information about deploying add-ins in the admin center, see [Deploy add-ins in the admin center](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
 
 > [!IMPORTANT]
 > If you have more than one environment, you must run the **Excel Add-in Centralized Deployment** assisted setup on each environment that you want to use Centralized Deployment. However, you don't have to configure the Centralized Deployment in Microsoft 365 again. The only thing you have to do is turn on the **Use Centralized Deployment** switch in the assisted setup. 
@@ -119,15 +119,14 @@ Network services such as proxies or firewalls must allow routing between each cl
 
 Sometimes, users run into problems with the Excel add-in. This section gives some tips for how to unblock users in certain circumstances.
 
-|Issue  |Solution or workaround  |Comments  |
+|Problem  |Solution or workaround  |Comments  |
 |---------|---------|---------|
 |The add-in doesn't start|Check whether the add-in is deployed centrally. Or, check whether the user is blocked from installing it locally. | The admin can configure Office so that users can't acquire add-ins. In those cases, the admin must deploy the add-in centrally. For more information, see [Deploy add-ins in the admin center](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide&preserve-view=true).|
 |Data doesn't load into Excel|Test the connection by opening another list in Excel from [!INCLUDE [prod_short](includes/prod_short.md)]. Or, open the workbook in Excel in a browser.|If the user has specified a company name that contains special characters, the add-in can't connect. |
 |Data can't publish back to [!INCLUDE [prod_short](includes/prod_short.md)].|Test the connection by opening the workbook in Excel in a browser. |Sometimes an extension can block the publishing job. If the page is extended or customized, remove the extensions, and then try again.|
 |The dates are wrong  |Excel might show times and dates in a different format than [!INCLUDE [prod_short](includes/prod_short.md)]. This condition doesn't make them wrong, and the data in [!INCLUDE [prod_short](includes/prod_short.md)] won't get messed up.|         |
 |For some list pages, editing multiple lines in Excel consistently causes errors. This condition can occur if OData calls include FlowFields and fields outside of the repeater control.|On the **Web Services** page, select the **Exclude Non-Editable FlowFields** and **Exclude Fields Outside of the Repeater** check boxes for the published page. Selecting these check boxes excludes non-editable FlowFields and field from the eTag calculation. |These check boxes are hidden by default. To show them on the **Web Services** page, use [personalization](/dynamics365/business-central/ui-personalization-user). |
-
-
+|Users can no longer sign in to the add-in. When they try to sign in, the process stops without completing.| This problem might be caused by an update that we made to the add-in, sometime in July 2022. For more information and a fix, see [Modify the Excel Add-in Configuration to Support July 2022 Update](/dynamics365/business-central/dev-itpro/administration/update-excel-addin-configuration).|Applies to [!INCLUDE [prod_short](includes/prod_short.md)] on-premises only|
 
 <!--
 ## Deploy the Excel add-in for Business Central online
@@ -167,7 +166,7 @@ When the add-in is installed, it shows up as a panel in Excel. Next, you must co
 ## See Also
 
 [Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md)  
-[Working with Business Central](ui-work-product.md)  
+[Work with Business Central](ui-work-product.md)  
 [Enhancements to Excel integration in 2019 release wave 2](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)  
 
 

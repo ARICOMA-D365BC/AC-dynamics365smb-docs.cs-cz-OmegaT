@@ -3,7 +3,7 @@
     description: After you have set up your bins, you can specify the items that you want to store in them, and set up rules that control how often bins are refilled.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -61,7 +61,7 @@ In this worksheet, you can work with a number of bin content lines for a number 
 [Assembly Management](assembly-assemble-items.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
 [Design Details: Warehouse Setup](design-details-warehouse-setup.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

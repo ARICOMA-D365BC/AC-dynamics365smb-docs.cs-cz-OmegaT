@@ -1,14 +1,15 @@
 ---
-title: Understanding How To Post Purchase Documents
+title: Post Purchase Documents
 description: Learn about the different posting functions to post purchase documents, and how to update posted documents.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.reviewer: edupont
+ms.search.form: 
 ms.date: 06/24/2021
 ms.author: edupont
 
@@ -57,7 +58,7 @@ You can edit certain fields on posted purchase documents, such as the **Payment 
 [Posting Documents and Journals](ui-post-documents-journals.md)  
 [Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
 [Finding Pages and Information with Tell Me](ui-search.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

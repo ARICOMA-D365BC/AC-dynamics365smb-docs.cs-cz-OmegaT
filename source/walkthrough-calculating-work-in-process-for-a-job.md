@@ -3,7 +3,7 @@
     description: Jobs involve the consumption of employee hours, machine hours, inventory items, and other types of usage that have to be tracked as a job progresses.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -159,7 +159,7 @@ With jobs, you can schedule the usage of your company's resources and keep track
  [Walkthrough: Managing Projects with Jobs](walkthrough-managing-projects-with-jobs.md)   
  [Understanding WIP Methods](projects-understanding-wip.md)   
  [Monitor Progress and Performance](projects-how-monitor-progress-performance.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

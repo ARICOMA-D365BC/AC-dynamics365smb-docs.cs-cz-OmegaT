@@ -1,15 +1,15 @@
 ---
 title: Coupling and Synchronizing (contains video)
 description: Synchronizing an integration table mapping enables data syncing in all records in a table in Business Central and Dynamics 365 Sales table that are coupled.
+author: brentholtorf
 
-author: bholtorf
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: crm, sales, couple, decouple, synchronize
+ms.search.form: 6250
 ms.date: 10/01/2021
 ms.author: bholtorf
 
@@ -64,7 +64,7 @@ You can specify the data to synchronize for an entity, such as a customer or con
 You can uncouple one or more records from list pages or the **Coupled Data Synchronization Errors** page by choosing one or more lines and choosing **Delete Coupling**. You can also remove all couplings for one or more table mappings on the **Integration Table Mappings** page.
 
 ## See Also  
-[Using Dynamics 365 Sales from Business Central](marketing-integrate-dynamicscrm.md)
+[Use Dynamics 365 Sales from Business Central](marketing-integrate-dynamicscrm.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

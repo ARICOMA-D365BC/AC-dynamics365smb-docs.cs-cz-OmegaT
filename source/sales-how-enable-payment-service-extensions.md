@@ -3,12 +3,13 @@ title: Enable Customer Payments with Payment Services
 description: Make it easier for customers to pay their invoices by enabling customer payments through payment services.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: online payment
+ms.search.forms: 1060, 1061, 1062
 ms.date: 06/25/2021
 ms.author: edupont
 
@@ -40,7 +41,7 @@ The PayPal Payments Standard and WorldPay Payments Standard extensions are insta
 [Setting Up Sales](sales-setup-sales.md)  
 [Sales](sales-manage-sales.md)  
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

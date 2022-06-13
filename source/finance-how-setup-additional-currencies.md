@@ -3,7 +3,7 @@ title: Set Up Additional Currencies
 description: Your general ledger is set up to use your local currency (LCY), and another currency is set up as an additional currency, with a current exchange rate assigned.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -133,7 +133,7 @@ In addition, all future entries of the same type will have amounts recorded in b
 
 [Update Currency Exchange Rates](finance-how-update-currencies.md)  
 [Closing Years and Periods](year-close-years-periods.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

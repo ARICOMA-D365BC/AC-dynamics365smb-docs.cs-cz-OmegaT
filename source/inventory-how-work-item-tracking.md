@@ -1,16 +1,16 @@
 ---
-    title: Track Items with Serial, Lot, and Package Numbers
-    description: You can add serial numbers, lot numbers, and package numbers to any outbound or inbound document, and its posted item tracking entries are displayed in the related item ledger entries.
-    author: SorenGP
+title: Track Items with Serial, Lot, and Package Numbers
+description: You can add serial numbers, lot numbers, and package numbers to any outbound or inbound document, and its posted item tracking entries are displayed in the related item ledger entries.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 08/31/2021
-    ms.author: edupont
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.forms: 6503, 6515, 6513, 6512, 6502, 6506, 6501, 6510, 6507, 6500, 6505, 6508, 9126, 6526, 6516, 6511, 6504, 6509, 163, 6550, 
+ms.date: 08/31/2021
+ms.author: edupont
 
 ---
 # Track Items with Serial, Lot, and Package Numbers
@@ -230,6 +230,6 @@ Reclassifying item tracking for an item means changing a lot or serial number to
 [Design Details: Item Tracking](design-details-item-tracking.md)  
 [Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)  
 [Reserve Items](inventory-how-to-reserve-items.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

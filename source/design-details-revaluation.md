@@ -3,7 +3,7 @@
     description: You can revalue the inventory based on the valuation base that most accurately reflects the inventory value.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -178,7 +178,7 @@ WIP inventory can be revalued as long as the revaluation date is not later than 
  [Design Details: Inventory Valuation](design-details-inventory-valuation.md)
  [Managing Inventory Costs](finance-manage-inventory-costs.md)  
  [Finance](finance.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: Reconcile Inventory Costs with the General Ledger
 description: At the end of accounting periods a sequence of cost control and auditing tasks must be performed to report a correct and balanced inventory value. 
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -83,7 +83,7 @@ The following table describes them.
 [Managing Inventory Costs](finance-manage-inventory-costs.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
 [Sales](sales-manage-sales.md)    
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)
 
 

@@ -1,17 +1,17 @@
 ---
-title: Manage database access intent in Business Central | Microsoft Docs
+title: Manage database access intent in Business Central
 description: Change the database access intent for reports, API pages, and queries.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords:
+ms.search.form: 9880
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Managing Database Access Intent 
+# Managing Database Access Intent
 
 As a super user or administrator, you can change the database access intent on reports, pages of the type API, and queries to improve performance of the service.
 
@@ -49,7 +49,7 @@ In database terms, this feature is commonly known as *read scale-out*. For more 
 ## See Also
 [Business Functionality](across-business-functionality.md)  
 [General Business Functionality](ui-across-business-areas.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)    
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  

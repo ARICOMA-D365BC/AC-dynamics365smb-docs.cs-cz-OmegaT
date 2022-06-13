@@ -3,7 +3,7 @@ title: Set Up Prepayments
 description: Learn how to configure Business Central so that you can use prepayments to invoice and collect deposits from customers and remit deposits to vendors.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.search.keyword: prepayment
 ms.search.form: 314, 459, 460, 664
@@ -20,10 +20,12 @@ Before you can post prepayment invoices, you have to set up the posting accounts
 You can define the percentage of the line amount that will be invoiced for prepayment, for a customer or vendor, for all items or selected items. After you complete the setup, you can generate prepayment invoices from sales and purchase orders. You can use the default percentages for each sales or purchase line, or you can change the amounts on the invoice as needed. For example, you can specify a total amount for the entire order.  
 
 > [!NOTE]
-> We recommend that you do not use a prepayment percentage of 100% in the following cases:
+> We recommend that you do not use a prepayment percentage of 100 in the following cases:
 >
-> * If you are located in North America. Due to how taxes are calculated, a prepayment percentage of 100% can lead to issues with prepayment invoices.
-> * In all regions, if you manually deduct a payment discount from the invoice. A prepayment percentage of 100% will not automatically leave an amount from which to deduct the discount. 
+> * If you are located in North America. Due to how taxes are calculated, a prepayment percentage of 100 can lead to issues with prepayment invoices.
+> * In all regions, if you manually deduct a payment discount from the invoice. A prepayment percentage of 100 will not automatically leave an amount from which to deduct the discount.
+>
+> Also, when you're using prepayment percentage of 100, [!INCLUDE[prod_short](includes/prod_short.md)] might need to create off-setting rounding entries. When that happens, you will need to choose a G/L account in the **Invoice Rounding Account** field on the **Customer Posting Groups** page. This is true even if you have not turned on the **Invoice Rounding** toggle on the **Sales & Receivables Setup** page. If you do not specify an account you you will not be able to post prepayment invoices. 
 
 Because the prepaid amount belongs to the buyer until they have received the goods or services, you need to set up general ledger accounts to hold the prepayment amounts until the final invoice is posted. Sales prepayments must be recorded in a liabilities account until the items are shipped. Purchase prepayments must be recorded in an assets account until the items are received. In addition, you must set up a separate general ledger account for each VAT identifier.  
 
@@ -88,6 +90,19 @@ An order may have a prepayment percentage on the sales header, and a different p
 
 In other words, the prepayment percentage on the customer card will only apply if there is no prepayment percentage set up for the item. However, if you change the contents of the **Prepayment Percentage** field on the sales or purchase header after you create the lines, the prepayment percentage on all of the lines will be updated. This makes it easy to create an order with a fixed prepayment percentage, regardless of the percentage set up on items.
 
+## To automatically release sales orders when prepayments are applied
+
+You can save time by setting up a job queue entry that will automatically release sales orders that require prepayment after payments are applied. Automating the process saves you the step of releasing the sales order.
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables Setup**, and then choose the related link.
+2. In the **Prepmt. Auto Update Frequency** field, specify how often you want the job queue entry to run.
+
+> [!TIP]
+> While you're here, consider adding a safeguard against shipping or invoicing sales orders that have unpaid premayment amounts. If you turn on the **Check Prepmt. when Posting** toggle, [!INCLUDE[prod_short](includes/prod_short.md)] will prevent people from posting orders with outstanding prepayment amounts.
+
+3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
+4. Set up the **Upd. Pending Prepmt. Sales** job queue entry, for example, by using the settings on the **Recurrence** FastTab to schedule how often you want it to run. For more informaiton, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+
 ## See Also  
 
 [Invoicing Prepayments](finance-invoice-prepayments.md)  
@@ -96,7 +111,7 @@ In other words, the prepayment percentage on the customer card will only apply i
 [Calculate Goods and Services Tax on Prepayments in New Zealand](LocalFunctionality/NewZealand/how-to-calculate-goods-and-services-tax-on-prepayments.md)  
 [Understanding the General Ledger and the COA](finance-general-ledger.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

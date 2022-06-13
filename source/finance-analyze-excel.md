@@ -3,8 +3,8 @@ title: Work with financial overviews in Excel
 description: Learn about how you can open the financial statements in Microsoft Excel from Business Central for better analysis.
 author: edupont04
 
-ms.service: dynamics365-business-central
-ms.topic: conceptual
+
+ms.topic: overview
 ms.search.keywords: accountant, accounting, financial report
 ms.search.form: 9027
 ms.date: 04/01/2021
@@ -52,7 +52,7 @@ With the add-in, you can get fresh data from [!INCLUDE [prod_short](includes/pro
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with Business Central](ui-work-product.md)  
+[Work with Business Central](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

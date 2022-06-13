@@ -3,7 +3,7 @@
     description: Assembly order posting is based on the same principles as when posting the similar activities of sales orders and production consumption/output.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -111,7 +111,7 @@ Posting sales order lines where a part is inventory quantity and another part is
  [Design Details: Costing Methods](design-details-costing-methods.md)  
  [Managing Inventory Costs](finance-manage-inventory-costs.md)  
  [Finance](finance.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

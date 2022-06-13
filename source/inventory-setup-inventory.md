@@ -3,13 +3,12 @@ title: Setting Up Inventory
 description: Describes how to set up your stock and inventory processes, including transfer routes and locations, such as warehouses.
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.search.form: 30
+ms.search.form: 30, 461
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -42,7 +41,7 @@ When you have set up your inventory, you can manage various processes related to
 [Managing Inventory](inventory-manage-inventory.md)  
 [Managing Purchasing](purchasing-manage-purchasing.md)  
 [Managing Sales](sales-manage-sales.md)    
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)
 
 

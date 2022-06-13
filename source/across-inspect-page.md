@@ -6,7 +6,7 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: conceptual
-ms.service: dynamics365-business-central
+
 author: jswymer
 ms.author: jswymer
 ms.date: 04/01/2021
@@ -18,7 +18,7 @@ The page inspection feature enables you to get details about a page, providing i
 
 [!INCLUDE [send-report-excel](includes/send-report-excel.md)]
 
-## Working with Page Inspection
+## Work with Page Inspection
 
 You start page inspection from the **Help & Support** page. Choose the question mark in the top right corner, choose **Help & Support**, and then choose **Inspect pages and data**. Or, you can just use the keyboard shortcut **Ctrl+Alt+F1**.
 
@@ -42,7 +42,7 @@ Users who are not granted permissions on **System object 5330** can still access
 
 ## See Also
 
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

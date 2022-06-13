@@ -3,7 +3,7 @@ title: Importing Payroll or Salary Data Using the Ceridian Payroll Extension
 description: Use this extension to import payroll transactions from the Ceridian HR/Payroll (US) and Ceridian PowerPay (Canada) services.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -25,7 +25,7 @@ The Ceridian Payroll extension allows you to import payroll transactions from th
 
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions ](ui-extensions.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

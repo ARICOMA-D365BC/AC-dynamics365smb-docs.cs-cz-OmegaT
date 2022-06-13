@@ -3,14 +3,14 @@ title: Create a Customer Sales Order and Sell Products
 description: Describes how to create a sales order to record your agreement with a customer to sell or trade products under specific terms.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: trade, partial deliveries, customer sales order
 ms.search.form: 42, 48, 9305
-ms.date: 09/24/2021
+ms.date: 01/19/2022
 ms.author: edupont
 
 ---
@@ -81,6 +81,8 @@ You can even create directly-paid orders for non-registered customers by first s
 13. To only invoice a part of the shipped quantity, enter that quantity in the **Qty. to Invoice** field. The quantity must be lower than the value in the **Qty. to Ship** field.  
 14. When the sales order lines are completed, choose the **Post and Send** action.
 
+[!INCLUDE [order-ship-invoice](includes/order-ship-invoice.md)]
+
 The **Post and Send Confirmation** dialog box displays the customer's preferred method of receiving documents. You can change the sending method by choosing the lookup button for the **Send Document to** field. For more information, see [Set Up Document Sending Profiles](sales-how-setup-document-send-profiles.md).
 
 The related item and customer ledger entries are now created in your system, and the sales order is output as a PDF document. When the sales order is fully posted, it is removed from the list of sales orders and replaced with new documents in the list of posted sales invoices and the list of posted sales shipments.  
@@ -96,7 +98,7 @@ The related item and customer ledger entries are now created in your system, and
 [Print the Picking List](sales-how-print-picking-list.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,7 @@
     description: This walkthrough demonstrates the process of planning supply orders to fulfill new demand including planning a purchase, transfer, and production order.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -52,7 +52,7 @@ This walkthrough demonstrates the process of planning supply orders to fulfill n
 ## Setting Up the Sample Data  
  The standard CRONUS demonstration company currently has lots of unplanned demand. During the different planning tasks in this walkthrough, you will have to deviate from the realistic business flow by ignoring demand with close due dates and instead use demand with later due dates.  
 
-## Using the Order Planning Page  
+## Use the Order Planning Page  
 
 The **Order Planning** page can be accessed from several different locations:  
 

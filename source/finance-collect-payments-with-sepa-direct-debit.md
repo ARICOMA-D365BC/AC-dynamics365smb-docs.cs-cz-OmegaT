@@ -3,7 +3,7 @@ title: SEPA Direct Debit in Business Central
 description: With your customer's consent, you can collect payments directly from the customer's bank account according to the SEPA format.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -35,7 +35,7 @@ From the **Direct Debit Collections** page, you can export instructions to your 
 > [!NOTE]
 > The global version of [!INCLUDE[prod_short](includes/prod_short.md)] supports the SEPA direct debit format only. Your country/region version may support other formats for electronic payment. See under **Local Functionality** in the table of contents.  
 
-To enable export of a bank file formats that are not supported out of the box in [!INCLUDE[prod_short](includes/prod_short.md)] , you can set up a data exchange definition by using the data exchange framework. For more information, see [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md).  
+To enable export of a bank file formats that are not supported out of the box in [!INCLUDE[prod_short](includes/prod_short.md)], you can set up a data exchange definition by using the data exchange framework. For more information, see [Set Up Data Exchange Definitions](across-how-to-set-up-data-exchange-definitions.md).  
 
 Before you can process customer payments electronically by exporting direct debit instructions in the SEPA Direct Debit format, you must perform the following setup steps:  
 

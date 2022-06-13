@@ -3,7 +3,7 @@ title: Setting Up Cost Accounting
 description: Before you start working with cost accounting, you must setup. Each cost entry must have a cost type assigned and a cost center code or a cost object assigned.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -191,7 +191,7 @@ For each general ledger account, you can define default dimension values in the 
 [Accounting for Costs](finance-manage-cost-accounting.md)  
 [Transferring and Posting Cost Entries](finance-transfer-and-post-cost-entries.md)   
 [Defining and Allocating Costs](finance-define-and-allocate-costs.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

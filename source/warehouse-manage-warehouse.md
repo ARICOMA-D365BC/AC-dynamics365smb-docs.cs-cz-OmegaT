@@ -3,7 +3,7 @@ title: Manage Warehouse Activities
 description: After goods are received and before goods are shipped, a series of internal warehouse activities take place to ensure an effective flow through the warehouse.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -42,7 +42,7 @@ The inventory-related tasks of counting, adjusting, and reclassifying items may 
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md) 
 [Assembly Management](assembly-assemble-items.md)
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
 

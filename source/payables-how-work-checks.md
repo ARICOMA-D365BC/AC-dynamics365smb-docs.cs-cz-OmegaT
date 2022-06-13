@@ -3,7 +3,7 @@ title: Issue, Print, Cancel, and Void Checks
 description: Describes how to issue checks using the payment journal, print checks, and void or view check ledger entries in Business Central.  
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -80,7 +80,7 @@ If you want to review posted checks, for example to verify multiple checks paid 
 [Managing Payables](payables-manage-payables.md)  
 [Setting Up Banking](bank-setup-banking.md)  
 [Export a Positive Pay file](finance-how-positive-pay.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

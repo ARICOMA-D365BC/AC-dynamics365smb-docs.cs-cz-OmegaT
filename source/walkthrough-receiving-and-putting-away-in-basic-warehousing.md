@@ -3,7 +3,7 @@
     description: In Business Central, the inbound processes for receiving and putting away can be performed in four different ways, depending on the warehouse complexity level.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -143,7 +143,7 @@ On the **Inventory Put-away** page, you can manage all inbound warehouse activit
  [Move Items Ad Hoc in Basic Warehouse Configurations](warehouse-how-to-move-items-ad-hoc-in-basic-warehousing.md)   
  [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md)   
  [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

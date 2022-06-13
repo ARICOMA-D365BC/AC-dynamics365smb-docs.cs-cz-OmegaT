@@ -3,7 +3,7 @@ title: Suggest Vendor Payments Batch Job
 description: You can specify vendor payment settings to get suggestions or proposals for payments that are due soon or where a discount is available.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -51,8 +51,8 @@ Alternatively, you can manually create payment lines using the due date to calcu
 ## See Also
 [Managing Payables](payables-manage-payables.md)  
 [Making Payments](payables-make-payments.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with General Journals](ui-work-general-journals.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

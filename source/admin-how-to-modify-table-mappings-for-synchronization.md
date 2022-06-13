@@ -1,9 +1,9 @@
 ---
 title: Mapping the Tables and Fields to Synchronize | Microsoft Docs
 description: Learn how to map tables and fields for synchronizing data between Business Central and Microsoft Dataverse.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -14,7 +14,7 @@ ms.author: bholtorf
 
 ---
 # Mapping the Tables and Fields to Synchronize
-[!INCLUDE[prod_short](includes/cc_data_platform_banner.md)]
+
 
 The basis of synchronizing data is mapping the tables and fields in [!INCLUDE[prod_short](includes/prod_short.md)] with tables and columns in [!INCLUDE[prod_short](includes/cds_long_md.md)], so they can exchange the data. Mapping happens through integration tables. 
 
@@ -25,6 +25,9 @@ When you create the connection between the apps, [!INCLUDE[prod_short](includes/
 
 > [!Note]
 > If you are using an on-premises version of [!INCLUDE[prod_short](includes/prod_short.md)], the integration table mappings are stored in table 5335 Integration Table Mappings, where you can view and edit the mappings. Complex mappings and synchronization rules are defined in codeunit 5341. 
+
+### Additional Mappings 
+Payment terms, shipment methods, and shipping agents can change, and it can be important to be able to adjust them. If you enable the **Feature Update: Map to option sets in Dataverse without code** feature on the [Feature Management](https://businesscentral.dynamics.com/?page=2610) page, you can manually add integration table mappings for payment terms (PAYMENT TERMS), shipment methods (SHIPMENT METHOD), and shipping agents (SHIPPING AGENT). This mapping can help ensure that your policies are the same for these setups in [!INCLUDE[prod_short](includes/cds_long_md.md)] and [!INCLUDE[cds_long_md](includes/cds_long_md.md)].
 
 ### Synchronization Rules
 An integration table mapping also includes rules that control how integration synchronization jobs synchronize records in a [!INCLUDE[prod_short](includes/prod_short.md)] table and an table in [!INCLUDE[prod_short](includes/cds_long_md.md)]. <!--For examples of rules for an integration with Sales, see [Synchronization Rules](admin-synchronizing-business-central-and-sales.md#synchronization-rules). need to verify link -->
@@ -82,7 +85,7 @@ For example, the SALESPEOPLE - Dynamics 365 Sales synchronization job uses the t
 
 2.  In the table mapping entry in the list, clear the **Synch. Only Coupled Records** field.  
 
-## Using Configuration Templates on Table Mappings
+## Use Configuration Templates on Table Mappings
 You can assign configuration templates to table mappings to use for new records or rows that are created in [!INCLUDE[prod_short](includes/prod_short.md)] or [!INCLUDE[prod_short](includes/cds_long_md.md)]. For each table mapping, you can specify a configuration template to use for new [!INCLUDE[prod_short](includes/prod_short.md)] records and another template to use new [!INCLUDE[prod_short](includes/cds_long_md.md)] rows.  
 
 If you install the default synchronization setup, most of the time, two configuration templates will be automatically created and used on the table mapping for [!INCLUDE[prod_short](includes/prod_short.md)] customers and [!INCLUDE[crm_md](includes/crm_md.md)] accounts: **CDSCUST** and **CDSACCOUNT**.  

@@ -1,13 +1,14 @@
 ---
-title: Set Up General Ledger FA| Microsoft Docs
+title: Set Up General FA Information
 description: Before you work with fixed assets, you must set up default G/L accounts, posting groups, allocation keys, journal templates and batches, and class codes.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form: 5623, 5615, 5661, 5662, 5627, 5616, 5620, 5629, 5633, 5609, 5631, 5630, 5617, 5612, 5613, 5608, 5609, 5635, 9277
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -45,7 +46,7 @@ Allocation keys apply to fixed asset classes, not to individual assets.
 4. Repeat steps 2 and 3 for each posting type that you want to define allocation keys for.
 
 ## To set up fixed asset journal templates
-A template is a predefined layout for a journal. The template contains information about trace codes, reports, and number series. For more information, see [Working with General Journals](ui-work-general-journals.md).
+A template is a predefined layout for a journal. The template contains information about trace codes, reports, and number series. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
 [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset journal template the first time that you open the **Fixed Asset Journal** page, but you can set up additional journal templates.  
 
@@ -119,7 +120,7 @@ If the fixed assets are not integrated with the general ledger, skip step 6 and 
 [Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,9 +1,9 @@
 ---
 title: Payments and Reconciliations (DK) Extension
 description: This extension makes it easy to export files that are pre-formatted to meet bank requirements for electronic submissions.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -104,7 +104,7 @@ The following table shows the combinations of FIK and GIRO payment methods that 
 
 [Customizing Business Central for [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
 [Collect Payments with SEPA Direct Debit](finance-collect-payments-with-sepa-direct-debit.md)  
-[Working with General Journals](ui-work-general-journals.md)  
+[Work with General Journals](ui-work-general-journals.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

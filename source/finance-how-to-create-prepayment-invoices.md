@@ -3,7 +3,7 @@ title: Create Prepayment Invoices
 description: Handle situations where you or your vendor require prepayment. Use the default percentages for each sales or purchase line or adjust the amount as necessary.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -71,7 +71,7 @@ You can issue additional prepayment invoices for the order. To do this, increase
 [Invoicing Prepayments](finance-invoice-prepayments.md)  
 [Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 [Personalize Your Workspace](ui-personalization-user.md)  
 
 

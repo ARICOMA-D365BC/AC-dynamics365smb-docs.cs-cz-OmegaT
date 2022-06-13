@@ -3,7 +3,7 @@ title: Set Up Yodlee Bank Feeds
 description: You can convert payment information to any data format that your bank requires and enable the export or import of bank files.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -132,7 +132,7 @@ Every hour, the **Payment Reconciliation Journal** page will display new payment
 [Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
 [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md)  
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions ](ui-extensions.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

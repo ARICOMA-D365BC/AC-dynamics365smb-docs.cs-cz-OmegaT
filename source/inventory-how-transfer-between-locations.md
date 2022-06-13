@@ -1,14 +1,14 @@
 ---
-title: Transfer Items Between Warehouse Locations| Microsoft Docs
+title: Transfer Items Between Warehouse Locations
 description: Describes how to move inventory from one place or warehouse to another, either with the reclassification journal or with transfer orders.
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: move, warehouse
+ms.search.forms: 5746, 5745, 5759, 5753, 5743, 5758, 5752, 5744, 5749, 5740, 5741, 5742, 5757, 5748, 5747, 9285, 5756, 5755
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -27,7 +27,7 @@ To transfer items, locations and transfer routes must be set up. For more inform
 
 ## To transfer items with a transfer order
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Transfer orders**, and then choose the related link.
-2. On the header of the **Transfer Order** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. On the **Transfer Order** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
     > [!NOTE]  
     >   If you have filled in the **In-Transit Code**, **Shipping Agent Code**, and **Shipping Agent Service** fields on the **Trans. Route Spec.** page when you set up the transfer route, then the corresponding fields on the transfer order are filled in automatically.
@@ -59,7 +59,7 @@ To transfer items, locations and transfer routes must be set up. For more inform
 ## See Also
 [Manage Inventory](inventory-manage-inventory.md)  
 [Set Up Locations](inventory-how-setup-locations.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Change Which Features are Displayed](ui-experiences.md)  
 [General Business Functionality](ui-across-business-areas.md)
 

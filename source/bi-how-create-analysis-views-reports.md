@@ -1,14 +1,15 @@
 ---
-title: Create Analysis Reports| Microsoft Docs
+title: Create Analysis Reports
 description: Describes how to create new analysis reports for sales, purchases, and inventory, and set up analysis templates.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
+ms.search.form: 555, 556, 557, 558, 9372, 9370, 9371 
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -101,7 +102,7 @@ You use analysis reports to analyze the dynamics of your sales according to key 
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

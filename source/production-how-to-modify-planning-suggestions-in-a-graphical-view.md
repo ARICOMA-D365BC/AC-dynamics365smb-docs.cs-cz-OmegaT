@@ -3,7 +3,7 @@
     description: Typical planning activity- change or add planning worksheet lines to modify suggested supply orders before you commit run Carry out Action Message function.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -98,7 +98,7 @@ To implement the supply plan changes, you must follow the resulting action messa
 [Purchasing](purchasing-manage-purchasing.md)  
 [Design Details: Supply Planning](design-details-supply-planning.md)  
 [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

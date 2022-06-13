@@ -3,7 +3,7 @@ title: Batch Post Production Output and Run Times
 description: The output quantity represents the work progress in the form of the finished quantity and used capacity of work or machine center.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -49,7 +49,7 @@ If you posted the last operation, the item will be added to the inventory.
 [Setting Up Manufacturing](production-configure-production-processes.md)  
 [Planning](production-planning.md)  
 [Inventory](inventory-manage-inventory.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

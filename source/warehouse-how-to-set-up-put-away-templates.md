@@ -3,7 +3,7 @@
     description: Use Put-away templates to have the most appropriate bins for your items suggested to you at any given time.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -41,7 +41,7 @@ You can create various put-away templates and then apply them as you see fit. Th
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
 [Assembly Management](assembly-assemble-items.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

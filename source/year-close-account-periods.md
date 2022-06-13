@@ -3,7 +3,7 @@ title: Close Accounting Periods for a Fiscal Year
 description: This article describes how to close the accounting periods that make up the fiscal year for year end closing.
 author: jswymer
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -40,7 +40,7 @@ After a fiscal year is closed, you must close the income statement accounts and 
 [Closing Books](year-close-books.md)  
 [Post the Year-End Closing Entry](year-how-post-year-end-close-entry.md)  
 [Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

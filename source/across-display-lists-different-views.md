@@ -1,16 +1,15 @@
 ---
-title: Adjust the Amount of Detail You See in Lists | Microsoft Docs
+title: Adjust the Amount of Detail You See in Lists
 description: You can display lists as detailed rows that provide most information, or as tiles that are easy to visually scan and may include picture thumbnails.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: personalization
+ms.search.form: 31
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -24,7 +23,7 @@ On the **Items** page, having pictures helps you get a quick overview of what yo
 You can import item pictures, either one by one or for multiple items in one go. For more information, see [Import Multiple Item Pictures](inventory-how-import-item-pictures.md).  
 
 ## See Also
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Register New Items](inventory-how-register-new-items.md)  
 
 

@@ -3,13 +3,13 @@ title: Process Returns or Cancellations
 description: Explains how to create and post a purchase credit memo when you want to return items to a vendor or cancel purchased services.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cancel, undo, correct
-ms.search.form: 6640, 6643 
+ms.search.form: 6640, 6643, 9307, 9309, 9308, 6652, 145, 147
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -190,7 +190,7 @@ When return shipments are combined on a credit memo and posted, then a posted pu
 [Purchasing](purchasing-manage-purchasing.md)  
 [Record Purchases](purchasing-how-record-purchases.md)  
 [Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Process Sales Returns or Cancellations](sales-how-process-sales-returns-cancellations.md)  
 
 

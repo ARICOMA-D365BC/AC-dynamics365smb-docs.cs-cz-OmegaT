@@ -3,7 +3,7 @@
     description: Attach a note to any record in the application. For example, if you have extra information about a sales order that does not fit in any of the fields on the sales order, you can write a note.
     author: jswymer
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -44,7 +44,7 @@
 <!--OnPrem
 3.  Choose the **OK** button.  -->
 ## See Also
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

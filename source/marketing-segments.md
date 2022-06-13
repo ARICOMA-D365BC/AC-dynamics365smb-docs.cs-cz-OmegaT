@@ -1,16 +1,15 @@
 ---
 title: Manage Segments and Select Contacts
 description: This topic outlines how to create a segment by selecting a group of contacts according to specific criteria to later target that segment with a campaign.
-services: project-madeira
 documentationcenter: ''
 author: jswymer
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
+ms.search.forms: 5150, 5142, 5140, 5141, 5144, 5091, 5143, 5093, 5092
 ms.date: 06/22/2021
 ms.author: jswymer
 
@@ -34,7 +33,7 @@ The following table describes a sequence of tasks, with links to the topics that
 ## See Also
 [Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
 [Managing Contacts](marketing-contacts.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

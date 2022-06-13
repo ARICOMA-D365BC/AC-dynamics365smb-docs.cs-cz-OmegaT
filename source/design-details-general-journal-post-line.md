@@ -3,7 +3,7 @@
     description: This topic provides insight into the concepts and principles that are used to redesign the general journal posting line feature in Business Central.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -28,7 +28,7 @@ This documentation provides detailed technical insight into the concepts and pri
 
 ## See Also
 
-[Working with General Journals](ui-work-general-journals.md)
+[Work with General Journals](ui-work-general-journals.md)
 [Design Details: General Journal Post Line (Dynamics NAV)](/dynamics-nav-app/design-details-general-journal-post-line)  
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

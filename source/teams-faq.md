@@ -2,7 +2,7 @@
 title: Teams FAQ
 description: Get answers for some typical questions about working with Teams and Business Central.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -65,10 +65,6 @@ Yes. But only some features of the app work with [Embed apps](/dynamics365/busin
 
 - The app works with links based on the **\*.bc.dynamics.com** pattern that's typically used with Embed apps.
 - Contact search isn't available for Embed apps that replace the base application from Microsoft.
-
-### Where can I find Teams integration inside the [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client? 
-
-There's currently no embedding of Teams controls or presence of Teams features inside the [!INCLUDE [prod_short.md](includes/prod_short.md)] Web client or other clients.
 
 ### Does [!INCLUDE [prod_short.md](includes/prod_short.md)] work with the Teams mobile app?
 
@@ -299,7 +295,11 @@ Yes. Any [!INCLUDE [prod_short.md](includes/prod_short.md)] features in the deta
 
 ### <a name="location"></a>Can I access my location from the details window in Teams?
 
-If you’re using functionality in [!INCLUDE [prod_short.md](includes/prod_short.md)] that accesses your current location coordinates, such as with maps, you must use Teams in the browser or the Teams mobile app. Location isn't available when using the Teams desktop app. 
+If you’re using functionality in [!INCLUDE [prod_short.md](includes/prod_short.md)] that accesses your current location coordinates, such as with maps, you must use Teams in the browser or the Teams mobile app. Location isn't available when using the Teams desktop app.
+
+### How do I open the details in a new window?
+
+Popping out the details window as a separate window is useful for multi-tasking or for being able to work with business data while still being able to use Teams chat and other Teams functions. To open details in its own window, choose **Open in browser** from the ellipse menu (**...**) in the upper right corner of the window.
 
 ## [Collaborate with guests](#tab/collaborating)
 
@@ -341,7 +341,7 @@ No. All you need is a valid account that has access to Microsoft Teams.
 
 ### Is Share to Teams available in all Business Central clients? 
 
-At this time, Share to Teams is available exclusively in the desktop web client, and in the details window in Teams.  
+At this time, Share to Teams is available in the desktop web client, in the details window in Teams, and when opening a page in a new window from the Outlook add-in.
 
 ### Where do I find Share to Teams in Business Central? 
 

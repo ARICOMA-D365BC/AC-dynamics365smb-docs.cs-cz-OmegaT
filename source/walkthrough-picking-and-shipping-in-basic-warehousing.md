@@ -3,7 +3,7 @@
     description: In Business Central, the outbound processes for picking and shipping can be performed in the following four ways depending on the warehouse complexity level.
     author: jill-kotel-andersson
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -150,7 +150,7 @@ On the **Inventory Pick** page, you can manage all outbound warehouse activities
 [Move Items Ad Hoc in Basic Warehouse Configurations](warehouse-how-to-move-items-ad-hoc-in-basic-warehousing.md)  
 [Design Details: Outbound Warehouse Flow](design-details-outbound-warehouse-flow.md)  
 [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

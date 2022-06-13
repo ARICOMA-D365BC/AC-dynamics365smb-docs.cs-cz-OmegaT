@@ -3,13 +3,13 @@ title: Record Purchases with Purchase Invoices  (contains video)
 description: Describes how to purchase inventory, non-inventory items, or resources by creating and posting purchase invoices or orders.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement
-ms.search.form: 50 ,51, 53, 56, 146
+ms.search.form: 50 ,51, 53, 56, 146, 147, 9307, 9309, 9306, 9308, 9310
 ms.date: 09/07/2021
 ms.author: edupont
 
@@ -110,7 +110,7 @@ You can easily correct or cancel a posted purchase invoice before you pay the ve
 [Purchase Items for a Sale](purchasing-how-purchase-products-sale.md)  
 [Register New Vendors](purchasing-how-register-new-vendors.md)  
 [Prepare Drop Shipments](sales-how-drop-shipment.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

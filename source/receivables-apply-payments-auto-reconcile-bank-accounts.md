@@ -1,16 +1,15 @@
 ---
-title: Reconcile Bank Accounts and Apply Payments | Microsoft Docs
+title: Reconcile Bank Accounts and Apply Payments
 description: Outlines tasks to reconcile your bank, receivables, and payables accounts, post cash receipts or expenses, and apply payments automatically.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, direct payment posting, reconcile payment, expenses, cash receipts
+ms.search.form: 1290, 1291, 1293, 1294
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -29,7 +28,7 @@ To import bank statements as a bank feed, you must first set up and enable the E
 > [!TIP]
 > You can also import bank statement files in comma or semicolon delimited format (.CSV). Use the **Set up a bank statement file format** assisted setup to define bank statement import formats and attach the format to a bank account. You can then use these formats when you import bank statements in the **Bank Account Reconciliation** page.
 
-Alternatively, you can use the AMC Banking 365 Fundamentals extension to convert a bank statement file, from any format, to a data stream that you can import into [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md).  
+Alternatively, you can use the AMC Banking 365 Fundamentals extension to convert a bank statement file, from any format, to a data stream that you can import into [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Use the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md).  
 
 The following table describes a sequence of tasks, with links to the topics that describe them.  
 
@@ -47,7 +46,7 @@ The following table describes a sequence of tasks, with links to the topics that
 [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md)  
 [Managing Receivables](receivables-manage-receivables.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

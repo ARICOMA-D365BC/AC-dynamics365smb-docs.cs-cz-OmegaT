@@ -1,15 +1,16 @@
 ---
-    title: Set Up and Publish KPI Web Services for Account Schedules
-    description: This topic describes how to show the account-schedule KPI data based on specific account schedules.
-    author: bholtorf
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/15/2021
-    ms.author: bholtorf
+title: Set Up and Publish KPI Web Services for Account Schedules
+description: This topic describes how to show the account-schedule KPI data based on specific account schedules.
+author: brentholtorf
+    
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 103, 104, 197, 196, 195, 198, 490, 764, 765, 766
+ms.date: 06/15/2021
+ms.author: bholtorf
 
 ---
 # Set Up and Publish KPI Web Services Based on Account Schedules
@@ -52,7 +53,7 @@ On the **Account Schedule KPI Web Service Setup** page, you set up how to show t
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

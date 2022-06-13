@@ -3,12 +3,13 @@ title: Depreciation Methods for Fixed Assets
 description: Learn about the different built-in methods to depreciate or write-down fixed assets in the default version of Business Central which includes eight methods.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: write down
+ms.search.form: 5629, 5633
 ms.date: 07/05/2021
 ms.author: edupont
 
@@ -302,7 +303,7 @@ When you enter an entry in B1 in the fixed asset G/L journal and place a check m
 [Setting Up Fixed Assets](fa-setup.md)  
 [Finance](finance.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

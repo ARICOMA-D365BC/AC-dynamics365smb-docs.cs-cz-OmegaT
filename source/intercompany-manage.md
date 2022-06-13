@@ -3,12 +3,13 @@ title: Managing intercompany transactions
 description: With the Intercompany functionality, you can simplify business processes and transactions between companies within the same organization.  
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: IC, group, consolidation, affiliate, subsidiary
+ms.search.form: 605
 ms.date: 08/11/2021
 ms.author: edupont
 
@@ -71,8 +72,8 @@ The following table describes a sequence of tasks, with links to the articles th
 
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with General Journals](ui-work-general-journals.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
 

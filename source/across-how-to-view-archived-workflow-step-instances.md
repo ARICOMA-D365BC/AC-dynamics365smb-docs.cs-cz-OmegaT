@@ -3,7 +3,7 @@
     description: All completed workflow step instances are saved on the **Archived Workflow Step Instances** page. Each step consists of a workflow event and workflow response.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -34,7 +34,7 @@ The **Archived Workflow Step Instances** page opens showing all archived workflo
  [Enable Workflows](across-how-to-enable-workflows.md)   
  [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)   
  [Setting Up Workflows](across-set-up-workflows.md)   
- [Using Workflows](across-use-workflows.md)   
+ [Use Workflows](across-use-workflows.md)   
  [Workflow](across-workflow.md)
 
 

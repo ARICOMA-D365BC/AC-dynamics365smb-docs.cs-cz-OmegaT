@@ -1,19 +1,22 @@
 ---
-    title: Importing and Exporting a Report and Document Layout | Microsoft Docs
-    description: You can import and export an existing custom report layout as a file to and from a location on your computer and network.
-    author: SorenGP
+title: Import and Export a Report and Document Layout
+description: You can import and export an existing custom report layout as a file to and from a location on your computer and network.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 9652, 9650
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
-# Import and Export Custom Report Layouts
+# (Legacy) Import and Export Custom Report Layouts
+
+[!INCLUDE[legacy-custom-layouts](includes/legacy-custom-layouts.md)]
+
 You can import and export an existing custom report layout as a file to and from a location on your computer and network. For example, you can export a report layout, and then send the file to another person to modify. That person can then make the modifications to layout and return the file to you so that you can import it back.  
 
 > [!IMPORTANT]  
@@ -47,10 +50,11 @@ You can import and export an existing custom report layout as a file to and from
 
 ## See Related Training at [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
-## See Also  
- [Create and Modify a Custom Report Layout](ui-how-create-custom-report-layout.md)   
- [Managing Report and Document Layouts](ui-manage-report-layouts.md)  
- [Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)    
+## See Also
+
+[Create and Modify a Custom Report Layout](ui-how-create-custom-report-layout.md)   
+[Managing Report and Document Layouts](ui-manage-report-layouts.md)  
+[Work with Reports, Batch Jobs, and XMLports](ui-work-report.md)    
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

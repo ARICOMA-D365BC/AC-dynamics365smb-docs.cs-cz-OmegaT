@@ -1,15 +1,15 @@
 ---
 title: Reconcile Bank Accounts
 description: This topic describes how to reconcile the transactions in your internal bank accounts with the transactions in statements from your bank.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bank account balance, bank statement
-ms.search.form: 379, 388, 1290, 10124
+ms.search.form: 379, 388, 389, 1290, 1692, 10124
 ms.date: 06/14/2021
 ms.author: bholtorf
 
@@ -85,7 +85,7 @@ The **Bank Statement Lines** pane will be filled according to invoices in [!INCL
 
 The **Bank Acc. Reconciliation** page offers automatic matching functionality based on a matching of text on a bank statement line (left pane) with text on one or more bank account ledger entries (right pane). Note that you can overwrite the suggested automatic matching, and you can choose to not use automatic matching at all. For more information, see [To match bank statement lines with bank account ledger entries manually](bank-how-reconcile-bank-accounts-separately.md#to-match-bank-statement-lines-with-bank-account-ledger-entries-manually).
 
-Auto-matching matches entries based on a set of payment application rules. For more information, see [Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md). You can investigate the basis for matches by using the **Match Details** action. For example, the details will include the names of the fields that contained matching values.  
+You can investigate the basis for matches by using the **Match Details** action. For example, the details will include the names of the fields that contained matching values.  
 
 1. On the **Bank Acc. Reconciliation** page, choose the **Match Automatically**. **The Match Bank Entries** page opens.
 2. In the **Transaction Date Tolerance (Days)** field, specify the span of days before and after the bank account ledger entry posting date within which the function will search for matching transaction dates in the bank statement.
@@ -121,7 +121,7 @@ Sometimes a bank statement contain amounts for interest or fees charged. Such ba
 2. On the **Trans. Bank Rec. to Gen. Jnl.** page, specify which general journal to use, and then choose the **OK** button.
 
     The **General Journal** page opens containing new journal lines for any banks statement lines with missing ledger entries.
-3. Complete the journal line with relevant information, such as the balancing account. For more information, see [Working with General Journals](ui-work-general-journals.md).  
+3. Complete the journal line with relevant information, such as the balancing account. For more information, see [Work with General Journals](ui-work-general-journals.md).  
 4. To review the result of posting before you post, choose the **Test Report** action. The **Bank Account Statement** report opens and shows the same fields as at the header of the **Bank Acc. Reconciliation** page.
 5. Choose the **Post** action.
 
@@ -171,7 +171,7 @@ If the next bank reconciliation you do is for August, consider changing the valu
 [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md)  
 [Setting Up Banking](bank-setup-banking.md)  
 [Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

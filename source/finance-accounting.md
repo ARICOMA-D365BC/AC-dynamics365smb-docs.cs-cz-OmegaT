@@ -3,13 +3,13 @@ title: Accountant experiences in Business Central (contains video)
 description: Learn about the Accountant Role Center and the Company Hub that support internal and external accountants in the client company.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accountant, accounting, financial report
-ms.search.forms: 100, 1156, 1157, 1314, 1315, 1316, 9027
+ms.search.form: 100, 1156, 1157, 1314, 1315, 1316, 9027
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -101,10 +101,10 @@ If you want to give access to multiple companies, then you must log into each co
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
 [Closing Years and Periods](year-close-years-periods.md)  
-[Working with Dimensions](finance-dimensions.md)  
+[Work with Dimensions](finance-dimensions.md)  
 [Analyzing Financial Statements in Excel](finance-analyze-excel.md)  
 [Manage Work across Multiple Companies in the Company Hub](company-hub.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Setting Up Cash Flow Analysis](finance-setup-cash-flow-analyses.md)  
 
 

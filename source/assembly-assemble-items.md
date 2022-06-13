@@ -1,16 +1,17 @@
 ---
-    title: Assembly Management
-    description: Support companies that supply products to their customers by combining components in simple processes without the need of manufacturing functionality.
-    author: SorenGP
+title: Assembly Management
+description: Support companies that supply products to their customers by combining components in simple processes without the need of manufacturing functionality.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: kit, kitting
-    ms.date: 06/14/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: kit, kitting
+ms.search.form: 900, 901, 902, 903, 904, 907, 910, 916, 920, 921, 922, 923, 940, 941, 942, 930, 931, 932, 914, 915, 905
+ms.date: 06/14/2021
+ms.author: edupont
 
 ---
 # Assembly Management
@@ -52,7 +53,7 @@ The following table describes a sequence of tasks, with links to the topics that
 [Design Details: Supply Planning](design-details-supply-planning.md)  
 <!-- [Walkthrough: Planning Supplies Manually](walkthrough-planning-supplies-manually.md)   -->
 <!-- [Walkthrough: Selling, Assembling, and Shipping Kits](walkthrough-selling-assembling-and-shipping-kits.md)   -->
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  
 

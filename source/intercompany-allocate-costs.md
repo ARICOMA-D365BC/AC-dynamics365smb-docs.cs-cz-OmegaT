@@ -3,9 +3,9 @@ title: Allocate Costs to Intercompany Partners| Microsoft Docs
 description: Learn how VAT settings for customers and vendors control whether, and how, VAT is calculated.
 services: project-madeira
 documentationcenter: ''
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -88,7 +88,7 @@ When you use a document to distribute costs to intercompany partners, there are 
 [Managing Intercompany Transactions](intercompany-manage.md)  
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with General Journals](ui-work-general-journals.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

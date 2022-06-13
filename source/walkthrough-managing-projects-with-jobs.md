@@ -3,7 +3,7 @@
     description: This walkthrough introduces you to the project management features in jobs which allow you to schedule the usage of your company's resources and more.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -450,7 +450,7 @@ The following procedures show how to create a new job, set pricing, and then set
  [Use Resources](projects-how-use-resources.md)   
  [Monitor Progress and Performance](projects-how-monitor-progress-performance.md)   
  [Invoice Jobs](projects-how-invoice-jobs.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

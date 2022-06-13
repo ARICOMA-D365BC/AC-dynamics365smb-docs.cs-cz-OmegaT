@@ -2,12 +2,13 @@
 title: Setting Up Printers
 description: Learn about setting up printers that you can use for reports and documents and the different print feature available to you in Business Central. 
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: online printing, email printing, cloud printing, Universal Print
+ms.search.form: 8900
 ms.date: 06/24/2021
 ms.author: jswymer
 ---
@@ -262,6 +263,9 @@ You or the administrator can also use the **Printer Selections** page to define 
 > [!NOTE]
 > More specific printer selections take precedence over a more general printer selections. For example, a printer selection that has values in the **User ID**, **Report ID**, and **Printer Name** fields takes precedence over a printer selection that has blank entries in the **User ID** or **Report ID** fields.
 
+### Choosing the printer when running a report
+Instead of using the default printer when running a report, you can override this setting from the request page. Simply choose the wich printer you want to use for this invocation of the report in the **Printer** dropdown menu.
+
 ### Sizing Print Jobs
 
 Cloud printing is designed for documents of a reasonable size. Most cloud services, including PrintNode and HP ePrint, have a limit of 10 MB per job. If you need to print larger reports, you may have to split them in multiple printouts.
@@ -269,7 +273,7 @@ Cloud printing is designed for documents of a reasonable size. Most cloud servic
 ## See Also
 
 [Printing a Report](ui-work-report.md#PrintReport)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Run Batch Jobs](ui-how-run-batch-jobs.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
 

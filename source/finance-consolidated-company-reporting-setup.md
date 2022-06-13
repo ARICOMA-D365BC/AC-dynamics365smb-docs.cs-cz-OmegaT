@@ -1,9 +1,9 @@
 ---
 title: Set up company consolidation
 description: Learn how you can configure how data from different companies in Business Central is reported into a consolidation company.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -135,7 +135,7 @@ If you own only part of a company, you can include a percentage of each transact
 
 [Consolidating Financial Data from Multiple Companies](finance-consolidated-company-reporting.md)  
 [Managing Intercompany Transactions](intercompany-manage.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Exporting Your Business Data to Excel](about-export-data.md)
 
 

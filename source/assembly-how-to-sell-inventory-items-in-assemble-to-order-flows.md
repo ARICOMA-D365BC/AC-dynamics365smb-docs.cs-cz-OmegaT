@@ -1,16 +1,17 @@
 ---
-    title: How to Sell Inventory Items in Assemble-to-Order Flows
-    description: If an item is set up for assemble-to-order, the item must be assembled for sales orders and a linked assembly order is automatically created.
-    author: SorenGP
+title: Sell Inventory Items in Assemble-to-Order Flows
+description: If an item is set up for assemble-to-order, the item must be assembled for sales orders and a linked assembly order is automatically created.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: kit, kitting
-    ms.date: 06/14/2021
-    ms.author: edupont
+    
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: kit, kitting
+ms.search.form: 900, 901, 902, 903, 904, 907, 910, 916, 920, 921, 922, 923, 940, 941, 942, 930, 931, 932, 914, 915, 905
+ms.date: 06/14/2021
+ms.author: edupont
 
 ---
 # Selling Inventory Items in Assemble-to-Order Flows
@@ -50,7 +51,7 @@ In this procedure, you replace assemble-to-order quantities with inventory quant
 [Work with Bills of Material](inventory-how-work-BOMs.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

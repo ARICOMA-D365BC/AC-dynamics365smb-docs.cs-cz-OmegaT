@@ -3,7 +3,7 @@ title: Work with Production Families in Manufacturing
 description: The main task in customizing a base calendar for your company, or one of its business partners, is to enter any changes to working and nonworking day status.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -45,7 +45,7 @@ Forming production families reduces the scrap quantity because what would normal
 [Planning](production-planning.md)   
 [Inventory](inventory-manage-inventory.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

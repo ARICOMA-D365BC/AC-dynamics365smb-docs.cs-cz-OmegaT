@@ -3,7 +3,7 @@
     description: This content contains detailed technical information about complex application features in Business Central.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -35,6 +35,6 @@ Design details content is aimed at implementers, developers, and super users who
 [Managing Inventory Costs](finance-manage-inventory-costs.md)  
 [Warehouse Management](warehouse-manage-warehouse.md)  
 [Setting Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  

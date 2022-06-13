@@ -3,7 +3,7 @@ title: Batch Post Consumption
 description: If the flushing method is Manual, you must post the components manually, using a consumption journal.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -41,6 +41,6 @@ You can also set up [!INCLUDE[prod_short](includes/prod_short.md)] to automatica
 [Planning](production-planning.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

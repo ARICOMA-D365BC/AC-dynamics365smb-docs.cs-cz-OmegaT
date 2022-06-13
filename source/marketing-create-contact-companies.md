@@ -1,9 +1,9 @@
 ---
 title: Create Business Contacts
 description: Outlines the tasks involved in creating contacts and defining your business relationships on the Contact Card.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -117,7 +117,7 @@ There are three ways to enable data synchronization between contacts and custome
 ## See Also
 [Managing Contacts](marketing-contacts.md)  
 [Setting Up Contacts](marketing-setup-contacts.md)  
-[Working with Business Central](ui-work-product.md)
+[Work with Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

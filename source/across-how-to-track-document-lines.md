@@ -3,12 +3,12 @@
     description: View documents related to sales and purchase order lines, like quotes, shipments, receipts, and blanket orders, to identify documents used to process orders.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
+    ms.search.form: 6560, 42, 50, 507, 509
     ms.date: 06/11/2021
     ms.author: edupont
 
@@ -30,7 +30,7 @@ The following procedure describes how to track from a sales order line. The step
 ## See Also
 [Sales](sales-manage-sales.md)  
 [General Business Functionality](ui-across-business-areas.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

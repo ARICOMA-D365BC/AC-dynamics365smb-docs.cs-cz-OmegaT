@@ -1,15 +1,15 @@
 ---
 title: Record Special Purchase Prices and Discounts
 description: You can define different or alternate prices and discount agreements and apply them to purchase documents for vendors.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: special price, alternate price, pricing
-ms.search.form: 26, 1346, 7012, 7014, 7017, 7018, 7189, 7190
+ms.search.form: 26, 1346, 7012, 7014, 7017, 7018, 7189, 7190, 9307
 ms.date: 04/01/2021
 ms.author: bholtorf
 
@@ -140,7 +140,7 @@ If no special price can be calculated for the item on the line, then either the 
 ## See Also
 [Setting Up Purchasing](purchasing-setup-purchasing.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

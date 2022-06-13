@@ -1,14 +1,15 @@
 ---
-title: Work With Smart Notifications and Specify When You See Them | Microsoft Docs
+title: Work With Smart Notifications and Specify When You See Them
 description: You can receive notifications that inform you about status changes or events, for example, an overdue balance or low inventory.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/01/2021
+ms.search.form: 
 ms.author: bholtorf
 
 ---
@@ -35,7 +36,7 @@ Turning notifications on or off, and specifying conditions, applies only to you.
 
 ## See Also
 
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

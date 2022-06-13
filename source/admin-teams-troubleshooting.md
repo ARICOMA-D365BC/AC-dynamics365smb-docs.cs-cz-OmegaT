@@ -2,7 +2,7 @@
 title: Troubleshooting Microsoft Teams Integration
 description: Learn about what you can do as an administrator to control Microsoft Teams integration.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -151,6 +151,10 @@ When you paste text into the message box in the **Share to Teams** window, the t
 ## Unable to sign into the Share to Teams window 
 
 This problem can be caused by a various reasons. For example, the identity you are using to sign in must have access to Microsoft Teams, such as through a Microsoft 365 subscription.
+
+## My cards no longer have a popout button
+
+As of April 2022, links that are displayed as compact card in Teams will no longer contain the **Popout** button. To open that card in its own window, choose the **Details** button, then choose **Open in browser** from the ellipses menu (**...**) in the upper right corner of the window.
 
 ## See Also
 

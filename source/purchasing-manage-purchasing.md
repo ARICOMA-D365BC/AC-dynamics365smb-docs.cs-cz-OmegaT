@@ -3,13 +3,13 @@ title: Overview of Tasks to Manage Purchasing
 description: Outlines tasks to manage your purchasing or procurement processes, including how purchase invoices and purchase orders work.
 author: SorenGP
 
-ms.service: dynamics365-business-central
-ms.topic: conceptual
+
+ms.topic: overview
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: procurement, supply, vendor order
-ms.search.form: 460
+ms.search.form: 460, 9307
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -23,7 +23,7 @@ You can have purchase invoices created automatically by using the OCR (Optical C
 
 Products can be both inventory items and services. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
-For all purchase processes, you can incorporate an approval workflow, for example, to require that large purchases are approved by the accounting manager. For more information, see [Using Approval Workflows](across-how-use-approval-workflows.md).
+For all purchase processes, you can incorporate an approval workflow, for example, to require that large purchases are approved by the accounting manager. For more information, see [Use Approval Workflows](across-how-use-approval-workflows.md).
 
 The following table describes a sequence of tasks, with links to the topics that describe them.
 
@@ -52,7 +52,7 @@ The following table describes a sequence of tasks, with links to the topics that
 [Register New Vendors](purchasing-how-register-new-vendors.md)  
 [Managing Payables](payables-manage-payables.md)  
 [Managing Projects](projects-manage-projects.md)    
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]  

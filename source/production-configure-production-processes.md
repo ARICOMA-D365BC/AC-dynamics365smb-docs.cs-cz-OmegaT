@@ -3,7 +3,7 @@ title: Configure Production Processes
 description: To convert material into produced end items, production resources, such as bills of material, routings, machine operators, and machinery must be set up in the system.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -44,7 +44,7 @@ When you have set up manufacturing, you can plan and execute production orders. 
 [Planning](production-planning.md)   
 [Inventory](inventory-manage-inventory.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

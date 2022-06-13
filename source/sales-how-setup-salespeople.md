@@ -3,7 +3,7 @@ title: Set Up a Salesperson (contains video) | Microsoft Docs'
 description: You can set up a identifier for each of your salespeople, so you can track an individual's performance or assign a salesperson to a contact.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -29,7 +29,7 @@ You can use salespeople in various relationship management and marketing work. F
 ## See Also
 [Setting Up Sales](sales-setup-sales.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

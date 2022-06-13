@@ -1,9 +1,8 @@
 ---
 title: Manage Bank Accounts
 description: You must regularly reconcile bank ledger entries with the related bank transactions in your bank accounts.
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -45,7 +44,7 @@ The following table describes a sequence of tasks, with links to the topics that
 [Transfer Bank Funds](bank-how-transfer-bank-funds.md)  
 [Managing Receivables](receivables-manage-receivables.md)  
 [Managing Payables](payables-manage-payables.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)
 
 

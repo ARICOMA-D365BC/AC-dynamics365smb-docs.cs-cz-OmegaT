@@ -1,16 +1,17 @@
 ---
-    title: How to Restructure Warehouses
-    description: Learn how to restructure your warehouse with new bin codes and new bin characteristics to achieve or maintain a more efficient operation.
-    author: SorenGP
+title: Restructure Warehouses
+description: Learn how to restructure your warehouse with new bin codes and new bin characteristics to achieve or maintain a more efficient operation.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/25/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 9813, 9814
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Restructure Warehouses
@@ -83,7 +84,7 @@ If you want to rename a bin so that all records associated with the bin are also
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
 [Assembly Management](assembly-assemble-items.md)    
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

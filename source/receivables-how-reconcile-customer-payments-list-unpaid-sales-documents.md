@@ -1,14 +1,15 @@
 ---
-title: Apply Payments to Unpaid Sales Documents | Microsoft Docs
+title: Apply Payments to Unpaid Sales Documents
 description: You apply amounts paid by customers to related sales documents and post the payment to update the customer, general ledger, and bank ledger entries.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, cash receipts, customer payment
+ms.search.form: 1290, 1294, 1287
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -182,7 +183,7 @@ If you leave the journal line unposted, it will add to the value in the **Unpost
 ## See Also
 [Managing Receivables](receivables-manage-receivables.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

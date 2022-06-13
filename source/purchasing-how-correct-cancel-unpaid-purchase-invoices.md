@@ -3,7 +3,7 @@ title: Amend or Cancel Unpaid Purchase Invoices (contains video)
 description: Explains how to correct, cancel, or undo a posted purchase invoice and automatically create a purchase credit memo.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -54,7 +54,7 @@ If the cancellation is related to a partial invoice posting, then the originatin
 ## See Also
 [Purchasing](purchasing-manage-purchasing.md)  
 [Record Purchases](purchasing-how-record-purchases.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

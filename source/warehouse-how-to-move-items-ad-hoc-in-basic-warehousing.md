@@ -3,12 +3,13 @@ title: Move Items Ad Hoc in Basic Warehouse Configs
 description: This topic explains ad hoc movements performed when you need to move items between internal bins without a specific demand from a source document. 
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
+ms.search.form: 393, 7382
 ms.date: 06/25/2021
 ms.author: edupont
 
@@ -71,7 +72,7 @@ In stead of using warehouse movement documents, you can record the moving of ite
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
 [Assembly Management](assembly-assemble-items.md)    
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

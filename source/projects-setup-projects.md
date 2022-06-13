@@ -3,7 +3,7 @@ title: Set Up Resources, Time Sheets, and Jobs
 description: This topic outlines how to set up resources, time sheets, and jobs to manage projects and their budgets.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -36,7 +36,7 @@ The following table describes a sequence of tasks, with links to the topics that
 [Finance](finance.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

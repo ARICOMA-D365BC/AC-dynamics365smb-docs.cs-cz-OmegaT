@@ -3,7 +3,7 @@
     description: Rounding residuals can occur when you value the cost of an inventory decrease measured in a different quantity than the corresponding inventory increase.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -61,7 +61,7 @@ Rounding residuals can occur when you value the cost of an inventory decrease th
  [Design Details: Costing Methods](design-details-costing-methods.md)
  [Managing Inventory Costs](finance-manage-inventory-costs.md)  
  [Finance](finance.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,13 +3,13 @@ title: Combine Receipts on a Single Invoice
 description: If you want to invoice more than one purchase receipt at a time, you can use the Combine Receipts function.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.search.form: 136, 145, 146
+ms.search.form: 136, 145, 146, 9308
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -49,7 +49,7 @@ Repeat steps 1 through 3 for any other affected documents, such as blanket purch
 
 [Purchasing](purchasing-manage-purchasing.md)  
 [Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

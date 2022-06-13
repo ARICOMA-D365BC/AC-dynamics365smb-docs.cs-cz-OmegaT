@@ -3,7 +3,7 @@
     description: This walkthrough gives a detailed overview of all the tasks involved in conducting a sales campaign in Business Central.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -200,7 +200,7 @@ Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_s
 ## See Also  
 [Relationship Management](marketing-relationship-management.md)  
  [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
- [Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+ [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

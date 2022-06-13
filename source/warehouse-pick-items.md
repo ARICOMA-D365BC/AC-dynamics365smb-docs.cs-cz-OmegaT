@@ -3,7 +3,7 @@ title: Pick Items
 description: The activity of picking items before they are shipped or consumed is performed in different ways, depending on how warehouse management features are configured.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -47,7 +47,7 @@ The following table describes a sequence of tasks, with links to the topics that
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md) 
 [Assembly Management](assembly-assemble-items.md)
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
