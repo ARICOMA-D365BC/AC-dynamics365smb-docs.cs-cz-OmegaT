@@ -3,7 +3,7 @@
     description: Generate groups of similar bins in the bin creation worksheet, create bins individually on the location card, or automatically on the Bin Creation Worksheet.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -75,12 +75,12 @@ Repeat the process for another set of bins until you have created all the bins i
 
 ## Viz také
 
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

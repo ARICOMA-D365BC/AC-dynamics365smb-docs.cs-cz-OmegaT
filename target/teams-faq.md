@@ -2,7 +2,7 @@
 title: Teams FAQ
 description: Get answers for some typical questions about working with Teams and Business Central.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -29,7 +29,7 @@ Chcete-li se odhlásit ze své aktuální identity uživatele v Teams použitýc
 
 ### Připojuje se aplikace pro Teams k [!INCLUDE [prod_short.md](includes/prod_short.md)] on premises?
 
-Ne.  Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams pracuje pouze s [!INCLUDE [prod_short.md](includes/prod_short.md)] online. Neexistují žádné plány na podporu [!INCLUDE [prod_short.md](includes/prod_short.md)] pro &mdash; on-premises, hybrid cloud nebo privátní cloud&mdash;, který společnost Microsoft přímo nehostuje ani nespravuje
+Ne. Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams pracuje pouze s [!INCLUDE [prod_short.md](includes/prod_short.md)] online. Neexistují žádné plány na podporu [!INCLUDE [prod_short.md](includes/prod_short.md)] pro &mdash; on-premises, hybrid cloud nebo privátní cloud&mdash;, který společnost Microsoft přímo nehostuje ani nespravuje
 
 ### Funguje aplikace s více společnostmi a prostředími?
 
@@ -66,17 +66,13 @@ Ano. Jen pouze některé funkce aplikace fungují s [Vloženými aplikacemi](/dy
 - Aplikace pracuje s odkazy založenými na **\*.bc.dynamics.com**, které se obvykle používají ve Vložených aplikacích.
 - Vyhledávání kontaktů není k dispozici pro vložené aplikace, které nahrazují základní aplikaci od společnosti Microsoft.
 
-### Kde můžu najít integraci Teams ve webovém klientu [!INCLUDE [prod_short.md](includes/prod_short.md)]?
-
-V současné době není do webového klienta [!INCLUDE [prod_short.md](includes/prod_short.md)] možné vkládat ovládací prvky Teams nebo jeho funkce.
-
 ### Pracuje [!INCLUDE [prod_short.md](includes/prod_short.md)] s mobilní aplikací Teams?
 
 Ano. Aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] lze nainstalovat z desktopové aplikace nebo prohlížeče Teams nebo administrátorem pro všechny uživatele. Po instalaci je aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] automaticky dostupná v Teams pro iOS a Android. Na mobilních zařízeních můžete v mobilní aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] zobrazit pouze karty odeslané ostatními, přistupovat k detailům karty nebo kartu otevřít. Nelze vkládat odkazy, které se při psaní zprávy nebo hledání kontaktů rozbalí na karty. Minimální požadavky na mobilní zařízení naleznete v [Minimální požadavky na používání Business Central](product-requirements.md).
 
 ### Je aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams stejná jako aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro iOS a Android?
 
-Ne.  Aplikace pro Teams je doplňkem Microsoft Teams a je určena výhradně pro prostředí spolupráce, která se v Teams rozvíjí. Na druhou stranu mobilní aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] poskytuje bohaté prostředí pro práci s daty [!INCLUDE [prod_short.md](includes/prod_short.md)] na vašich mobilních zařízeních.
+Ne. Aplikace pro Teams je doplňkem Microsoft Teams a je určena výhradně pro prostředí spolupráce, která se v Teams rozvíjí. Na druhou stranu mobilní aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] poskytuje bohaté prostředí pro práci s daty [!INCLUDE [prod_short.md](includes/prod_short.md)] na vašich mobilních zařízeních.
 
 Uživatelům mobilních zařízení se doporučuje, aby si nainstalovali mobilní aplikaci i desktopovou aplikaci Teams, aby z [!INCLUDE [prod_short.md](includes/prod_short.md)] vytěžili maximum. S oběma nainstalovanými můžete zvolit **Vyskakovací okno** na kartě v Teams a otevřít podrobnosti o kartě v mobilní aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)]. pro více informaí o instalaci [!INCLUDE [prod_short.md](includes/prod_short.md)] a mobilní aplikaci Teams, bežte na:
 
@@ -85,7 +81,7 @@ Uživatelům mobilních zařízení se doporučuje, aby si nainstalovali mobiln�
 
 ### Funguje aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] se všemi Teams klienty?
 
-Ne.  Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams není podporována, pokud je nainstalována jako balíček pro macOS nebo Linux. Na těchto platformách můžete místo toho přistupovat k Teams pomocí podporovaného prohlížeče.
+Ne. Aplikace [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams není podporována, pokud je nainstalována jako balíček pro macOS nebo Linux. Na těchto platformách můžete místo toho přistupovat k Teams pomocí podporovaného prohlížeče.
 
 Pro minimální požadavky na [!INCLUDE [prod_short.md](includes/prod_short.md)], bežte na [Minimální požadavky na používání Business Central](product-requirements.md#teams).
 
@@ -203,7 +199,7 @@ Ano. Kontakty uložené v [!INCLUDE [prod_short.md](includes/prod_short.md)] př
 
 ### Synchronizuje [!INCLUDE [prod_short.md](includes/prod_short.md)] kontakty s Teams?
 
-Ne.  Kontakty uložené v [!INCLUDE [prod_short.md](includes/prod_short.md)] zůstávají oddělené od vašich kontaktů uložených v Teams.
+Ne. Kontakty uložené v [!INCLUDE [prod_short.md](includes/prod_short.md)] zůstávají oddělené od vašich kontaktů uložených v Teams.
 V současné době nejsou žádné plány na synchronizaci obou seznamů dohromady.
 
 ### Jaká je minimální verze [!INCLUDE [prod_short.md](includes/prod_short.md)] pro vyhledávání kontaktů?
@@ -261,7 +257,7 @@ Smazáním zprávy, která obsahuje kartu, se neodstraní ani neovlivní žádn�
 
 ### Mají karty vždy aktuální informace?
 
-Ne.  Hodnoty polí na kartě v Teams, včetně všech obrázků, jsou založeny na datech dostupných při odeslání této karty do chatu. Karty [!INCLUDE [prod_short.md](includes/prod_short.md)] se v Teams automaticky neobnovují.
+Ne. Hodnoty polí na kartě v Teams, včetně všech obrázků, jsou založeny na datech dostupných při odeslání této karty do chatu. Karty [!INCLUDE [prod_short.md](includes/prod_short.md)] se v Teams automaticky neobnovují.
 
 ### Uvidí ostatní moji kartu, pokud nemají aplikaci [!INCLUDE [prod_short.md](includes/prod_short.md)] pro Teams?
 
@@ -279,7 +275,7 @@ Pokud pracujete napříč společnostmi [!INCLUDE [prod_short.md](includes/prod_
 
 ### Pokud se rozhodnu zobrazit podrobnosti karty, uvidí ostatní uživatelé okno s mými podrobnostmi?
 
-Ne.  Zatímco všichni v chatu nebo na schůzce mohou zobrazit samotnou kartu, okno podrobností se zobrazí pouze na vašem zařízení, když zvolíte **Podrobnosti**. Ostatní uživatelé musí zvolit **Podrobnosti**, pokud si chtějí na svém zařízení prohlédnout okno s podrobnostmi.
+Ne. Zatímco všichni v chatu nebo na schůzce mohou zobrazit samotnou kartu, okno podrobností se zobrazí pouze na vašem zařízení, když zvolíte **Podrobnosti**. Ostatní uživatelé musí zvolit **Podrobnosti**, pokud si chtějí na svém zařízení prohlédnout okno s podrobnostmi.
 
 ### Můžu Teams hovor zahájit z okna podrobností?
 
@@ -300,6 +296,10 @@ Ano. Veškeré funkce [!INCLUDE [prod_short.md](includes/prod_short.md)] v okně
 ### <a name="location"></a>Mohu získat přístup ke své poloze z okna podrobností v Teams?
 
 Pokud používáte funkce v [!INCLUDE [prod_short.md](includes/prod_short.md)], které přistupují k vašim aktuálním souřadnicím polohy, například s mapami, musíte teams používat v prohlížeči nebo v mobilní aplikaci Teams. Poloha není k dispozici při použití desktopové aplikace Teams.
+
+### How do I open the details in a new window?
+
+Popping out the details window as a separate window is useful for multi-tasking or for being able to work with business data while still being able to use Teams chat and other Teams functions. To open details in its own window, choose **Open in browser** from the ellipse menu (**...**) in the upper right corner of the window.
 
 ## [Collaborate with guests](#tab/collaborating)
 
@@ -329,19 +329,19 @@ When you use Share to Teams, the message is sent to a person, group, or channel,
 
 ### Is Share to Teams available in Business Central on premises?
 
-Ne.  Similar to the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams, this feature is only available for the web client in [!INCLUDE [prod_short.md](includes/prod_short.md)] online. There are no plans to support [!INCLUDE [prod_short.md](includes/prod_short.md)] deployment types&mdash;like on-premises, hybrid cloud, or private cloud&mdash;that Microsoft doesn’t host or manage directly.
+Ne. Similar to the [!INCLUDE [prod_short.md](includes/prod_short.md)] app for Teams, this feature is only available for the web client in [!INCLUDE [prod_short.md](includes/prod_short.md)] online. There are no plans to support [!INCLUDE [prod_short.md](includes/prod_short.md)] deployment types&mdash;like on-premises, hybrid cloud, or private cloud&mdash;that Microsoft doesn’t host or manage directly.
 
 ### Does Share to Teams grant permissions to recipients?
 
-Ne.  When you share with a person, group, or channel, permissions are unaffected. Users who already have permission to view the page and data targeted by the link can do so. Users who don't have permission to view that page and data, or don't have a [!INCLUDE [prod_short.md](includes/prod_short.md)] license, are shown an error message.
+Ne. When you share with a person, group, or channel, permissions are unaffected. Users who already have permission to view the page and data targeted by the link can do so. Users who don't have permission to view that page and data, or don't have a [!INCLUDE [prod_short.md](includes/prod_short.md)] license, are shown an error message.
 
 ### Must I have the Teams desktop app installed to use Share to Teams?
 
-Ne.  All you need is a valid account that has access to Microsoft Teams.
+Ne. All you need is a valid account that has access to Microsoft Teams.
 
 ### Is Share to Teams available in all Business Central clients?
 
-At this time, Share to Teams is available exclusively in the desktop web client, and in the details window in Teams.
+At this time, Share to Teams is available in the desktop web client, in the details window in Teams, and when opening a page in a new window from the Outlook add-in.
 
 ### Where do I find Share to Teams in Business Central?
 

@@ -1,9 +1,9 @@
 ---
 title: Content Under Construction
 description: Occasionally we make a change to a feature that makes a video misleading, so we take the video down while we're updating the content.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -14,17 +14,17 @@ ms.author: bholtorf
 
 ---
 
-# Sorry, this content is under construction
+# Je nám líto, ale tento obsah je ve výstavbě
 
 :::image type="content" source="media/helene/empty illustration_BCdocs.png" alt-text="There's nothing here right now." border="false":::
 
-The video you tried to play isn't available right now. That's probably because we're updating the content.
+Video, které jste se pokusili přehrát, není momentálně dostupné. Je to pravděpodobně proto, že aktualizujeme obsah.
 
-We're constantly adding to and improving [!INCLUDE[prod_short](includes/prod_short.md)], and sometimes our changes make an existing video inaccurate. To avoid confusion, we take down the content while we're working on the update.
+Neustále přidáváme a zlepšujeme [!INCLUDE[prod_short](includes/prod_short.md)], a někdy naše změny způsobí, že existující video bude nepřesné. Aby nedošlo k nejasnostem, odstraníme obsah během práce na aktualizaci.
 
-Check back again soon though, and in the meantime you can explore other subjects on the [Dynamics 365 channel on YouTube](https://www.youtube.com/playlist?list=PLcakwueIHoT-wVFPKUtmxlqcG1kJ0oqq4).
+Brzy se však vraťte a mezitím můžete prozkoumat další témata na kanálu [Dynamics 365 na YouTube](https://www.youtube.com/playlist?list=PLcakwueIHoT-wVFPKUtmxlqcG1kJ0oqq4).
 
 ## Viz také
-[Visit our video library](across-videos.md)
+[Navštivte naši knihovnu](across-videos.md)
 
 

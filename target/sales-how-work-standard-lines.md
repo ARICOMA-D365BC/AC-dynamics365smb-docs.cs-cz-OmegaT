@@ -3,7 +3,7 @@ title: Standard Recurring Sales and Purchase Lines
 description: Set up frequently used sales lines and purchase lines to insert them on sales and purchase documents and quickly fill the lines with standard information.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -74,8 +74,8 @@ Sales invoices are created for the customers with the specified standard custome
 
 ## Viz také
 
-[Prodej](sales-manage-sales.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Sales](sales-manage-sales.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

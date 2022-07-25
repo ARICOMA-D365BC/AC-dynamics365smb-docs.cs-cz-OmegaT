@@ -1,16 +1,17 @@
 ---
-    title: Create Put-aways from Internal Put-aways
-    description: This topic covers how to pick and put away without a source document, both how to create an internal pick, and how to create an internal put-away.
-    author: SorenGP
+title: Create Put-aways from Internal Put-aways
+description: This topic covers how to pick and put away without a source document, both how to create an internal pick, and how to create an internal put-away.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/24/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 7354, 7356, 7357, 7358, 7359, 7361
+ms.date: 06/24/2021
+ms.author: edupont
 
 ---
 # Pick and Put Away Without a Source Document
@@ -48,12 +49,12 @@ The **Internal Put-aways** enables you to perform put-aways without having to re
 6. Choose the **Create Put-away** action. A warehouse put-away instruction is now ready for a warehouse employee to perform. Alternatively you can choose the **Release** action and create warehouse put-aways using the **Put-away worksheet**. For more information see,  [Plan Put-aways in Worksheets](warehouse-how-to-plan-put-aways-in-worksheets.md)
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Assembly Management](assembly-assemble-items.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

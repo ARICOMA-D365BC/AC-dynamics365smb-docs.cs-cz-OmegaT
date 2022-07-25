@@ -3,7 +3,7 @@
     description: In this topic learn about production and manufacturing, including supply planning, in Business Central.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -154,7 +154,7 @@ Therefore, if you often plan for demand at locations, then we recommend that you
 [Purchasing](purchasing-manage-purchasing.md)  
 [Design Details: Supply Planning](design-details-supply-planning.md)  
 [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,12 +3,13 @@ title: Analyze Actual Amounts Versus Budgeted Amounts
 description: This topic describes how to analyze actual amounts versus budgeted amounts as a means of gathering, analyzing, and sharing your company data.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
+ms.search.form: 120, 121, 422
 ms.date: 06/15/2021
 ms.author: edupont
 
@@ -58,7 +59,7 @@ Instead of viewing the actual and budgeted amounts for all accounts within a sin
 3. At the top of the page, fill in the fields as necessary to define what is shown.
 4. To see a specification of an amount shown, choose the field.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/budgets-exchange-rates-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/budgets-exchange-rates-dynamics-365-business-central/index)
 
 ## Viz také
 [Business Intelligence](bi.md)  
@@ -66,7 +67,7 @@ Instead of viewing the actual and budgeted amounts for all accounts within a sin
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

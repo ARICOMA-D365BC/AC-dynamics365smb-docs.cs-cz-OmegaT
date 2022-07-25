@@ -5,7 +5,7 @@ services: project-madeira
 documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -16,6 +16,10 @@ ms.author: edupont
 
 ---
 # Create Reports with XBRL
+
+> [!NOTE]
+> We're in the process of removing the features for XBRL reporting from [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Changes in 2022 release wave 1](/dynamics365/business-central/dev-itpro/upgrade/deprecated-features-w1).
+
 XBRL, which stands for eXtensible Business Reporting Language, is an XML-based language for tagging financial data, and enabling businesses to efficiently and accurately process and share their data. The XBRL initiative enables global financial reporting by numerous ERP software companies and international accounting organizations. The goal of the initiative is to provide a standard for the uniform reporting of financial information for banks, investors, and government authorities. Such business reporting can include:
 
 • Financial statements  
@@ -109,12 +113,12 @@ When a taxonomy changes you need to update the current taxonomy accordingly. The
 6. To import the linkbase, choose the **Import** action.
 7. Choose the **Yes** button to apply the linkbase to the schema.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/xbrl-reports-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/xbrl-reports-dynamics-365-business-central/index)
 
 ## Viz také
 [Finance](finance.md)    
 [Business Intelligence](bi.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

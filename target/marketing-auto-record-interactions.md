@@ -5,7 +5,7 @@ services: project-madeira
 documentationcenter: ''
 author: jswymer
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -29,7 +29,7 @@ To open the **Interaction Template Setup** page, choose the ![Lightbulb that ope
 
 ## Viz také
 [Recording Interactions With Contacts](marketing-interactions.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

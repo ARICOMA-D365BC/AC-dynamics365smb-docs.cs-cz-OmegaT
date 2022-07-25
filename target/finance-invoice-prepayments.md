@@ -3,7 +3,7 @@
     description: Learn how to use prepayments to invoice and collect deposits from customers and remit deposits to vendors in Business Central.
     author: edupont04
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -32,13 +32,13 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Create an order, adjust the prepayment amounts, and issue an invoice for prepayment amounts. | [Create Prepayment Invoices](finance-how-to-create-prepayment-invoices.md) |
 | Issue an additional prepayment invoice, either for additional items or for an additional deposit on the original order, or issue a prepayment credit memo. | [Correct Prepayments](finance-how-to-correct-prepayments.md) |
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/prepayment-invoices-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/prepayment-invoices-dynamics-365-business-central/index)
 
 ## Viz také
 
 [Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

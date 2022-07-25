@@ -1,16 +1,16 @@
 ---
-    title: How to Work with Responsibility Centers
-    description: Responsibility center as administrative centers help companies set up user-specific views of sales and purchase documents related exclusively to each center.
-    author: SorenGP
+title: How to Work with Responsibility Centers
+description: Responsibility center as administrative centers help companies set up user-specific views of sales and purchase documents related exclusively to each center.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/16/2021
-    ms.author: edupont
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.forms: 5714, 5715
+ms.date: 06/16/2021
+ms.author: edupont
 
 ---
 # Work with Responsibility Centers
@@ -58,7 +58,7 @@ To set this up, you assign responsibility centers to users in three functional a
 [Inventory](inventory-manage-inventory.md)  
 [Warehouse Management](warehouse-manage-warehouse.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

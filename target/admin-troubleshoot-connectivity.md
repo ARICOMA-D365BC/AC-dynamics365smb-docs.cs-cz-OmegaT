@@ -2,7 +2,7 @@
 title: Troubleshoot Connectivity
 description: Describes how to use the Troubleshoot Connectivity page to identify and fix problems connecting to Business Central online.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -12,100 +12,100 @@ ms.date: 06/17/2021
 ms.author: jswymer
 ROBOTS: NOINDEX
 ---
-# Troubleshoot Connectivity for Business Central
+# Řešení potíží s připojením pro Business Central
 
 > **APPLIES TO:** [!INCLUDE[prod_short](includes/prod_short.md)] Online
 >
-> This feature is currently in preview. The functionality and documentation may change in later releases. If you would like to contribute to the documentation based on your own findings, please select ![Edit article in GitHub.](media/github-edit-pencil.png) **Edit**, and propose changes. Then we'll take a look!
+> Tato funkce je aktuálně ve verzi Preview. Funkce a dokumentace se může v pozdějších verzích změnit. Pokud byste chtěli přispět do dokumentace na základě vlastních zjištění a zkušeností, vyberte ![upravit článek na GitHubu.](media/github-edit-pencil.png) **Upravit** a navrhnout změny. Pak se na to podíváme!
 
-[!INCLUDE[prod_short](includes/prod_short.md)] Online includes the **Troubleshooting Connectivity** page that you can use to identify problems with your connection to the online service. There are several things that affect connectivity to Business Central, like the firewall settings of your network or domain name service configuration. The page lets you run a list of checks that will diagnose common Business Central connectivity issues. You can use the information to try to fix the problems yourself, or pass it on to your support representative.
+[!INCLUDE[prod_short](includes/prod_short.md)] Online obsahuje stránku **Odstraňování problémů s připojením**, kterou můžete použít k identifikaci problémů s připojením ke službě online. Existuje několik věcí, které ovlivňují připojení k Business Central, jako je nastavení brány firewall vaší konfigurace sítě nebo služby domény. Stránka vám umožňuje spustit seznam kontrol, které diagnostikují běžné problémy s připojením Business Central. Tyto informace můžete použít k tomu, abyste se pokusili problémy vyřešit sami, nebo je předat zástupci podpory.
 
 > [!NOTE]
-> The **Troubleshooting Connectivity** page doesn't test network performance or reliability, like the speed of your connection. It only verifies connectivity to different resources.
+> Stránka **Odstraňování problémů s připojením** netestuje výkon nebo spolehlivost sítě, jako je rychlost vašeho připojení. Ověřuje pouze připojení k různým prostředkům.
 
-## Start the connectivity check
+## Spuštění kontroly připojení
 
-1. Open an Internet browser.
-2. In the address, enter the URL that you use to open Business Central and add `/connectivity` at the end.
+1. Otevřete internetový prohlížeč.
+2. V adrese zadejte adresu URL, kterou používáte k otevření Business Central a přidání `/connectivity` na konci.
 
-   For example, if you use `https://businesscentral.dynamics.com`, then enter:
+   Pokud například použijete `https://businesscentral.dynamics.com`, zadejte:
 
    ```http
    https://businesscentral.dynamics.com/connectivity
    ```
 
-   Or, if the URL includes the tenant ID, like `https://businesscentral.dynamics.com/12345678-1234-1234-1234-1234567890AB`, then you'd enter:
+   Nebo pokud adresa URL obsahuje ID tenanta, například `https://businesscentral.dynamics.com/12345678-1234-1234-1234-1234567890AB`, zadejte:
 
    ```http
    https://businesscentral.dynamics.com/12345678-1234-1234-1234-1234567890AB/connectivity
    ```
 
-3. On the **Troubleshooting Connectivity** page, choose **Start check**.
+3. Na stránce **Poradce při potížích s připojením** zvolte **Spustit kontrolu**.
 
-   A series of checks is run, and the result of each check is shown:
+   Spustí se řada kontrol a zobrazí se výsledek každé kontroly:
 
-   - ![Connectivity check succeeded.](media/connectivity-check.png) indicates the check succeeded.
-   - ![Connectivity check failed.](media/connectivity-failed.png) indicates the check failed. Review the message below the check for more details.
-   - ![Connectivity check was not run.](media/connectivity-blocked.png) indicates the check wasn't run, typically because of a failure of a previous check. Review the message below the check for more details.
+   - ![Konektivita byla úspěšná.](media/connectivity-check.png) označuje úspěšnou kontrolu.
+   - ![Kontrola připojení se nezdařila.](media/connectivity-failed.png) označuje, že se kontrola nezdařila. Další podrobnosti najdete ve zprávě pod kontrolou.
+   - ![Kontrola připojení nebyla spuštěna.](media/connectivity-blocked.png) označuje, že kontrola nebyla spuštěna, obvykle z důvodu selhání předchozí kontroly. Další podrobnosti najdete ve zprávě pod kontrolou.
 
-4. To run the check again, choose **Restart check**.
+4. Chcete-li znovu spustit kontrolu, zvolte **Restartovat kontrolu**.
 
-The following sections explain the checks that are run, and provide some tips for fixing any problems.
+Následující části vysvětlují kontroly, které jsou spouštěny, a poskytují několik tipů pro řešení případných problémů.
 
-## Basic internet connectivity
+## Základní připojení k internetu
 
-Checks that you have connection to the Internet by verifying that you can access a known public domain, like www.bing.com.
+Zkontroluje, zda máte připojení k internetu, ověřením, že máte přístup ke známé veřejné doméně, jako je www.bing.com.
 
-| Problem | Things to try |
+| Problém | Co můžete vyzkoušet |
 |-------|-------------|
-| Your browser does not support this check | Open the page in a supported browser, and try again. For a list of supported browsers, see [Minimum Requirements for Using Business Central - Browsers](product-requirements.md#browsers) |
-| Failed to ping the server at the following URL: {url} | Check Firewall settings. |
+| Váš prohlížeč tuto kontrolu nepodporuje | Otevřete stránku v podporovaném prohlížeči a zkuste to znovu. Seznam podporovaných prohlížečů naleznete v tématu [Minimální požadavky pro používání Business Central - Prohlížeče](product-requirements.md#browsers) |
+| Příkazem ping se nepodařilo otestovat server na následující adrese URL: {url} | Zkontrolujte nastavení brány firewall. |
 
-## CDN (content delivery network) resources loading
+## Načítání zdrojů CDN (Content Delivery Network)
 
-[!INCLUDE[prod_short](includes/prod_short.md)] uses Azure Content Delivery Network (CDN) to provide resources that are required to run the Business Central Web client. This check verifies that the required resources are available and accessible by pinging the Business Central instance in CDN.
+[!INCLUDE[prod_short](includes/prod_short.md)] používá Azure Content Delivery Network (CDN) k poskytování prostředků, které jsou nutné ke spuštění webového klienta Business Central. Tato kontrola ověřuje, že požadované prostředky jsou dostupné a přístupné pomocí příkazu ping na instanci Business Central v CDN.
 
-| Problem | Things to try |
+| Problém | Co můžete vyzkoušet |
 |-------|-------------|
-| Your browser does not support this check | See **Basic Internet connectivity** check. |
-| Failed to ping the server at the following URL: {url} | Check Firewall settings. |
+| Váš prohlížeč tuto kontrolu nepodporuje | Viz **Základní kontrola připojení k Internetu**. |
+| Příkazem ping se nepodařilo otestovat server na následující adrese URL: {url} | Zkontrolujte nastavení brány firewall. |
 
-## User authentication
+## Ověřování uživatelů
 
-Checks that the current user has signed in with a valid Business Central account.
+Zkontroluje, zda se aktuální uživatel přihlásil pomocí platného účtu Business Central.
 
-| Problem | Things to try |
+| Problém | Co můžete vyzkoušet |
 |-------|-------------|
-| No user is currently authenticated | Sign in to Business Central with valid user name and password. |
+| Momentálně není ověřen žádný uživatel | Přihlaste se do Business Central pomocí platného uživatelského jména a hesla. |
 
-## Business Central environments discovery
+## Zjišťování prostředí Business Central
 
-Checks for Business Central environments that are available to an authenticated user, then verifies whether the user can be authenticated in the environment.
+Zkontroluje prostředí Business Central, která jsou k dispozici ověřenému uživateli, a poté ověří, zda lze uživatele ověřit v prostředí.
 <!-- example: Your user name or password is incorrect, or you do not have a valid account.. Request duration: 332 milliseconds)-->
 
-| Problem | Things to try |
+| Problém | Co můžete vyzkoušet |
 |-------|-------------|
-| No authenticated user to perform this check for | See the **User authentication** check. |
-| Failed to retrieve available environments for your account. | Check the list of available environments in the Business Central admin center. |
-| Your user name or password is incorrect, or you do not have a valid account. | Verify that you've signed in using the correct user name and password. |
+| Žádný ověřený uživatel, který by tuto kontrolu provedl | Viz **Kontrola ověření uživatele**. |
+| Nepodařilo se načíst dostupná prostředí pro váš účet. | Zkontrolujte seznam dostupných prostředí v Centru pro správu Business Central. |
+| Vaše uživatelské jméno nebo heslo je nesprávné nebo nemáte platný účet. | Ověřte, zda jste se přihlásili pomocí správného uživatelského jména a hesla. |
 
-## Application service connectivity
+## Připojení aplikační služby
 
-Checks that the authenticated user can connect to a discovered environment, typically starting with the production environment.
+Zkontroluje, zda se ověřený uživatel může připojit ke zjištěnému prostředí, obvykle počínaje produkčním prostředím.
 
-| Problem | Things to try |
+| Problém | Co můžete vyzkoušet |
 |-------|-------------|
-| No authenticated user to perform this check for | See the **User authentication check**. |
-| Failed to retrieve available environments for your account. | See **Business Central environments discovery**. |
-| No cluster address to perform this check for | Check the list of available environments in the Business Central admin center. |
-| Version endpoint does not exist | Check the list of available environments in the Business Central admin center. |
+| Žádný ověřený uživatel, který by tuto kontrolu provedl | Viz **Kontrola ověření uživatele**. |
+| Nepodařilo se načíst dostupná prostředí pro váš účet. | Viz **Zjišťování prostředí Business Central**. |
+| Žádná adresa clusteru, pro kterou by bylo možné provést tuto kontrolu | Zkontrolujte seznam dostupných prostředí v Centru pro správu Business Central. |
+| Koncový bod verze neexistuje | Zkontrolujte seznam dostupných prostředí v Centru pro správu Business Central. |
 
 ## Viz také
 
-[Resources for Help and Support](product-help-and-support.md)  
-[Overview of Tasks to Set Up Business Central](setup.md)  
-[Frequently Asked Questions about Using Business Central](across-faq.yml)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[The Business Central Admin Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center)
+[Zdroje nápovědy a podpory](product-help-and-support.md)  
+[Přehled úkolů pro nastavení Business Central](setup.md)  
+[Často kladené otázky k používání Business Central](across-faq.yml)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Středisko správy Business Central](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

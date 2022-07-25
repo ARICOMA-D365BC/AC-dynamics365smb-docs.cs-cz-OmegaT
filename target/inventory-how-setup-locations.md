@@ -3,19 +3,20 @@ title: Set Up a Location Card and Define Transfer Routes (contains video)
 description: If you buy, store, or sell items at more than one place or warehouse, you must set up each location with a location card and define transfer routes.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, distribution center
+ms.search.forms: 5703, 15
 ms.date: 06/16/2021
 ms.author: edupont
 
 ---
 # Nastavení Lokací
 
-Pokud nakupujete, skladujete nebo prodáváte zboží na více místech nebo ve více skladech, musíte pro každé místo nastavit kartu místa a definovat trasy přenosu. [!INCLUDE [prod_short](includes/prod_short.md)] používá lokace ke sledování zásob v jednodušších případech i ve složitějších skladových procesech.
+Locations are places such as warehouses where you buy, store, or sell items. [!INCLUDE [prod_short](includes/prod_short.md)] uses locations to help keep track of inventory in both simple and complex warehouse processes.
 
 Můžete vytvářet řádky dokladů pro konkrétní lokace, zobrazovat dostupnost podle lokace a převádět zásoby mezi lokacemi. Pro více informací navštivte [Správa skladu](inventory-manage-inventory.md).
 <br><br>
@@ -23,17 +24,15 @@ Můžete vytvářet řádky dokladů pro konkrétní lokace, zobrazovat dostupno
 > [!Video https://www.microsoft.com/videoplayer/embed/RE4aQvq?rel=0]
 
 ## Karty lokace
-
-Karta lokace určuje informace o umístění, jako je sklad nebo distribuční centrum. Každému místu přidělíte název a kód, který jej reprezentuje. Kód lokace pak můžete zadat v jiných částech systému, když chcete zaznamenat transakce pro dané místo.
+You specify information about a location, such as a warehouse or distribution center, on the **Location Card** page. Každému místu přidělíte název a kód, který jej reprezentuje. Kód lokace pak můžete zadat v jiných částech systému, když chcete zaznamenat transakce pro dané místo.
 
 Pro každé umístění můžete zadat informace o přihrádkách a skladových pravidlech. Na základě vybraných pravidel skladu můžete pomocí možností v záložce **Přihrádky** definovat přihrádky, které budou použity jako výchozí přihrádky při provádění transakcí. Pokud používáte řízené vyskladňování a zaskladňování, použijete většinu možností v záložce **Použití přihrádek**, abyste definovali, jak chcete používat různé pokročilé funkce skladu.
 
-Některá pole možností jsou šedá a zakázaná jinými nastaveními na stránce **Karta lokace**, aby se omezily nepodporované kombinace nastavení.
+Some option fields depend on settings in the **Location Card** page to restrict unsupported setup combinations.
 
+Choose the **Zones** or **Bins** actions to view information about zones and bins that are defined for the location.
 
-Vyberte akci **Zóny** nebo **Přihrádky** pro zobrazení informací o zónách a přihrádkách, které mohou být pro dané umístění definovány.
-
-### Vytvoření karty lokace
+### To set up a location
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
@@ -41,11 +40,12 @@ Vyberte akci **Zóny** nebo **Přihrádky** pro zobrazení informací o zónách
 4. Opakujte kroky 2 a 3 pro každou lokaci, kde chcete uchovávat zásoby.
 
 > [!NOTE]  
-> Mnoho polí na kartě umístění se týká manipulace se zbožím v procesech příjmu a výdeje ze skladu. Pole nejsou relevantní pro společnosti, které nevyžadují složitější funkce skladu. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
+> Many fields on the Location Card page are related to the handling of items in inbound and outbound warehouse processes. These fields are not relevant for companies that do not require complex warehouse functionality. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
 Konfiguraci lokace můžete změnit později, ale nemůžete upravovat nastavení lokace, které mají položky v účetní knize.
 
-Dále, pokud máte více lokací, můžete definovat trasy transferu mezi lokacemi.
+If you have multiple locations, you can define transfer routes between locations. For more information, see [To create a transfer route
+](inventory-how-setup-locations.md#to-create-a-transfer-route).
 
 ### Vytvoření trasy transferu
 
@@ -58,13 +58,12 @@ Nyní můžete transferovat zboží mezi dvěma lokacemi. Pro více informací n
 
 ## Přihrádky
 
-Přihrádky představují základní skladovou strukturu a používají se k navrhování umístění zboží. Pokud jste vytvořili své přihrádky, můžete velmi přesně definovat obsah, který chcete umístit do každé přihrádky, nebo přihrádka může fungovat jako plovoucí přihrádka bez zadaného obsahu. Přihrádky se používají převážně v základních a pokročilých skladových operacích. Pokud spravujete zásoby v jednodušším nastavení, přihrádky pravděpodobně nepotřebujete.
+Přihrádky představují základní skladovou strukturu a používají se k navrhování umístění zboží. When you have created your bins, you can define their contents, or they can function as a floating bins without specified contents. Přihrádky se používají převážně v základních a pokročilých skladových operacích. Pokud spravujete zásoby v jednodušším nastavení, přihrádky pravděpodobně nepotřebujete.
 
-pro použití přihrádek na lokaci, Musíte nejdříve zapnout funkcionalitu na kartě **Lokace** výběrem pole **Přihrádka nutná** v záložce **Sklad**. Pak navrhnete tok zboží v lokaci určením kódů přihrádek v polích nastavení, které představují různé toky.
+To use the bin functionality at a location, you first activate the functionality on the **Location Card** page by selecting the **Bins Mandatory** field on the **Warehouse** FastTab. Pak navrhnete tok zboží v lokaci určením kódů přihrádek v polích nastavení, které představují různé toky.
 
-> Předtím než nastavníte kódy přihrádek na kartě lokace, musí být přihrádky již vytvořeny.
-
-Pro více informací navštivte [Vytvoření přihrádek](warehouse-how-to-create-individual-bins.md) a [Nastavení přihrádek](warehouse-how-to-set-up-bin-types.md).
+> [!NOTE]
+> Before you can specify bin codes on a location, you must create bin codes. For more information, see [Create Bins](warehouse-how-to-create-individual-bins.md) and [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md).
 
 ## Zóny
 
@@ -74,16 +73,19 @@ Chcete-li strukturovat přihrádky podle zón, můžete to provést na stránce 
 
 Můžete se však rozhodnout nastavit pouze jednu zónu a uspořádat svůj sklad pouze podle přihrádek. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
+## Default Dimensions for Locations
+You set default dimensions for a location on the **Location Card** page by choosing **Location**, and then **Dimensions**. The location's default dimensions are copied to journals and documents when you specify the location on a line, but you can delete or change the dimension on the line if needed. You can require that people specify dimensions for specific locations before they can post an entry. You can also include location dimension values in **Default Dimension Priorities** and **Dimension Combinations** for combinations of priority and dimension rules.
+
 ## Viz také
 
-[Správa skladu](inventory-manage-inventory.md)  
-[Transfer zboží mezi lokacmei](inventory-how-transfer-between-locations.md)  
-[Vytváření přihrádek](warehouse-how-to-create-individual-bins.md)  
-[nastavení typů přihrádek](warehouse-how-to-set-up-bin-types.md)  
-[Nastavení správy skladu](warehouse-setup-warehouse.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)
+[Manage Inventory](inventory-manage-inventory.md)  
+[Transfer Inventory Between Locations](inventory-how-transfer-between-locations.md)  
+[Create Bins](warehouse-how-to-create-individual-bins.md)  
+[Set Up Bin Types](warehouse-how-to-set-up-bin-types.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,17 +3,18 @@ title: Post Multiple Documents at the Same Time
 description: Learn how to select multiple non-posted documents in a list for immediate or scheduled batch posting in Business Central.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form:
 ms.reviewer: edupont
 ms.date: 06/25/2021
 ms.author: edupont
 
 ---
-# Dávkové zaúčtování dokladů
+# Dávkové účtování dokladů
 
 Namísto účtování jednotlivých dokladů jeden po druhém můžete vybrat více nezaúčtovaných dokladů v seznamu pro okamžité zaúčtování nebo pro dávkové zaúčtování podle plánu, například na konci dne. To může být užitečné, pokud může pouze nadřízený zaúčtovat doklady vytvořené jinými uživateli nebo, aby se zabránilo problémům s výkonem systému z účtování během pracovní doby.
 
@@ -21,112 +22,112 @@ Namísto účtování jednotlivých dokladů jeden po druhém můžete vybrat v�
 
 Následující postup vysvětluje, jak okamžitě zaúčtovat více nákupních objednávek. Postup je podobný pro všechny nákupní a prodejní doklady.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
-2. On the **Purchase Orders** page, proceed to select all orders to be posted:
-3. In the **No.** field, choose the three vertical dots to open the context menu, and then choose the **Select More** action.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
+2. Na stránce **Nákupní objednávky** pokračujte výběrem všech objednávek, které mají být zaúčtovány:
+3. V poli **Číslo** zvolte tři tečky pro otevření kontextové nabídky a pak zvolte akci **Vybrat další**.
 4. Zaškrtněte políčko u všech řádků představujících objednávky, které chcete zaúčtovat současně.
-5. Choose the **Posting** action, and then choose the **Post** action.
-6. Choose the **Yes** button on the confirmation message.
+5. Zvolte akci **Účtovaní** a poté **Účtovat**.
+6. V potvrzovací zprávě klikněte na tlačítko **Ano**.
 
 ## Dávkově zaúčtování více nákupních objednávek
 
-Následující postup vysvětluje, jak dávkově zaúčtovat nákupní objednávky. The steps are similar for all purchase and sales documents where the **Batch Post** action is available.
+Následující postup vysvětluje, jak dávkově zaúčtovat nákupní objednávky. Kroky jsou podobné pro všechny nákupní a prodejní doklady, kde je k dispozici akce **Dávkové účtování**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
-2. On the **Purchase Orders** page, proceed to select all orders to be posted:
-3. In the **No.** field, choose the three vertical dots to open the context menu, and then choose the **Select More** action.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
+2. Na stránce **Nákupní objednávky** pokračujte výběrem všech objednávek, které mají být zaúčtovány:
+3. V poli **Číslo** zvolte tři tečky pro otevření kontextové nabídky a pak zvolte akci **Vybrat další**.
 4. Zaškrtněte políčko u všech řádků představujících objednávky, které chcete zaúčtovat současně.
-5. Choose the **Posting** action, and then choose the **Post Batch** action.
-6. On the **Batch Post Purchase Order** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+5. Zvolte akci  **Účtování** a poté **Dávkové účtování**.
+6. Na stránce **Dávkové účto nák.objednávek** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 7. Zvolte tlačítko **OK**.
-8. To view potential issues that occurred during batch posting of documents, open the **Error Message Register** page.
+8. Chcete-li zobrazit potenciální problémy, ke kterým došlo během hromadného účtování dokladů, otevřete stránku **Registr chybových zpráv**.
 
 > [!NOTE]
-> Posting of multiple documents might take some time and block other users. Consider enabling background posting. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+> Účtování více dokladů může chvíli trvat a blokovat ostatní uživatele. Zvažte možnost povolení účtování na pozadí. Pro více informací navštivte [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md)
 
 ## Nastavení účtování na pozadí pomocí fronty úloh
 Fronta úloh je účinným nástrojem pro plánování chodu obchodních procesů na pozadí, například když se více uživatelů pokouší zaúčtovat prodejní objednávky, ale současně lze zpracovat pouze jednu objednávku.
 
-Následující postup vysvětluje, jak nastavit účtování prodejních objednávek na pozadí. The steps are similar for purchasing.
+Následující postup vysvětluje, jak nastavit účtování prodejních objednávek na pozadí. Kroky pro nákup jsou podobné.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
-2. On the **Sales & Receivables Setup** page, choose the **Post with Job Queue** check box.
-3. Choose the **Job Queue Category Code** field, and then specify the **SALESPOST** code.
+2. Na stránce **Nastavení prodeje a pohledávek** zaškrtněte políčko **Účtovat frontou úloh**.
+3. Zvolte pole **Kód kategorie fronty úloh** a zadejte kód **SALESPOST**.
 
    > [!NOTE]
-   > Some jobs change the same data and should not run at the same time because that can cause conflicts. Například úlohy na pozadí pro prodejní doklady se pokusí upravit stejná data současně. Kategorie fronty úloh pomáhají předcházet těmto konfliktům tím, že zajišťují, že při spuštění jedné úlohy se další úloha, která patří do stejné kategorie front úloh nespustí, dokud nedokončí. Například úloha, která patří do kategorie fronty prodejních úloh, bude čekat, dokud nebudou provedeny všechny ostatní úlohy související s prodejem. You specify a job queue category on the **Background Posting** FastTab on the **Sales & Receivables Setup** page.
+   > Některé úlohy mění stejná data a neměly by být spuštěny současně, protože to může způsobit konflikty. Například úlohy na pozadí pro prodejní doklady se pokusí upravit stejná data současně. Kategorie fronty úloh pomáhají předcházet těmto konfliktům tím, že zajišťují, že při spuštění jedné úlohy se další úloha, která patří do stejné kategorie front úloh nespustí, dokud nedokončí. Například úloha, která patří do kategorie fronty prodejních úloh, bude čekat, dokud nebudou provedeny všechny ostatní úlohy související s prodejem. Kategorii fronty úloh určíte na záložce **Účtování na pozadí** na stránce **Nastavení prodeje a pohledávek**.
    >
-   > [!INCLUDE[prod_short](includes/prod_short.md)] provides job queue categories for sales, purchase, and general ledger posting. Doporučujeme, abyste vždy určili jeden z nich nebo ten, který vytvoříte. Pokud dojde k selhání v důsledku konfliktů, zvažte nastavení kategorie pro všechno účtování prodeje, nákupu a hlavní knihy na pozadí.
+   > [!INCLUDE[prod_short](includes/prod_short.md)] poskytuje kategorie fronty úloh pro prodej, nákup a účtování hlavní knihy. posting. Doporučujeme, abyste vždy určili jeden z nich nebo ten, který vytvoříte. Pokud dojde k selhání v důsledku konfliktů, zvažte nastavení kategorie pro všechno účtování prodeje, nákupu a hlavní knihy na pozadí.
 
-   If you also want sales documents to be printed when they are posted, select the **Post & Print with Job Queue** check box on the **Sales & Receivables Setup** page.  
-   If you select **PDF** in the **Report Output Type** field, successfully posted purchase orders will be available in the **Report Inbox** part on your Role Center.
+   Chcete-li, aby se prodejní doklady vytiskly i při jejich zaúčtování, zaškrtněte políčko **Účto a tisk frountou úloh** na stránce **Nastavení prodeje a pohledávek**.  
+   Pokud v poli **Typ výstupu sestavy** vyberete **PDF**, úspěšně zaúčtované nákupní objednávky budou k dispozici v části **Schránka sestav** ve vašem Centru rolí.
 
    > [!IMPORTANT]  
-   > If you set up a job that will post and print documents, and the printer displays a dialog box, such as a request for credentials or a warning about low printer ink, your document is posted but not printed. The corresponding job queue entry eventually times out and the **Status** field is set to **Error**. Proto doporučujeme nepoužívat nastavení tiskárny, které vyžaduje interakci se zobrazením dialogových oken tiskárny ve spojení s odesíláním na pozadí.
+   > Pokud nastavíte úlohu, která bude účtovat a tisknout dokumenty a tiskárna zobrazí dialogové okno, například žádost o přihlašovací údaje nebo upozornění na nedostatek inkoustu v tiskárně, bude váš dokument zaúčtován, ale nevytisknut. Odpovídající záznam fronty úloh nakonec vyprší a pole **Stav** se nastaví na **Chyba**. Proto doporučujeme nepoužívat nastavení tiskárny, které vyžaduje interakci se zobrazením dialogových oken tiskárny ve spojení s odesíláním na pozadí.
 
-   Next time that you post sales documents, [!INCLUDE [prod_short](includes/prod_short.md)] automatically creates a job queue entry for each document and run the jobs in the background, one by one.
+   Při příštím účtování prodejních dokladů , [!INCLUDE [prod_short](includes/prod_short.md)]automaticky vytvoří položku fronty úloh pro každý doklad a spustí úlohy na pozadí jednu po druhé.
 
 4. Chcete-li ověřit, zda fronta úloh funguje podle očekávání, zaúčtujte prodejní objednávku. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
-   The sales order will now be added to a dedicated job queue entry, which defines when the documents are posted.
+   Prodejní objednávka bude nyní přidána do vyhrazené položky fronty úloh, která definuje, kdy jsou doklady zaúčtovány.
 
 ### Zobrazení stavu z prodejního nebo nákupního dokladu
-If the job queue cannot post the sales order, the status is changed to **Error** and the sales order is added to the list of sales orders that the user must handle manually.
-1. From the document that you have tried to post with background posting, choose the **Job Queue Status** field, which will contain **Error**.
+Pokud fronta úloh nemůže prodejní objednávku zaúčtovat, změní se stav na  **Chyba** a prodejní objednávka se přidá do seznamu prodejních objednávek, které musí uživatel zpracovat ručně.
+1. V dokladu, který jste se pokusili účtovat pomocí odeslání na frontu úloh, vyberte pole **Stav fronty úloh**, které bude obsahovat **Chybu**.
 2. Zkontrolujte chybovou zprávu a problém vyřešte.
 
-Alternatively, you can review on the **Job Queue Log Entries** page if the sales order was posted successfully. For more information, see the [Monitor the job queue](#monitor-the-job-queue) section.
+Případně můžete na stránce **Položky protokolu fronty úloh** zkontrolovat, zda byla prodejní objednávka úspěšně zaúčtována. Další informace naleznete v části [Monitorování fronty úloh](#monitor-the-job-queue).
 
 ## Vytvoření položky fronty úlohy pro dávkové účtování prodejních objednávek
 
-Alternatively, you can postpone postings for when it is convenient for your organization. For example, in your business it might make sense to run certain routines when most of the data entry for the day has concluded. You can achieve this by setting the job queue up to run various batch-posting reports, such as the **Batch Post Sales Orders**, **Batch Post Sales Invoices**, and similar reports. [!INCLUDE[prod_short](includes/prod_short.md)] supports background posting for all sales, purchasing, and service documents.
+Případně můžete odložit účtování na dobu, kdy je to pro vaši organizaci výhodné. Například ve vaší firmě může mít smysl spouštět určité úlohy, když většina zadávání dat pro daný den skončila. Můžete toho dosáhnout nastavením fronty úloh tak, aby spouštěly různé sestavy dávkového účtování, jako jsou **Dávkové účto prod.faktur**, **Dávkové účto prod.objednávek** a podobné sestavy. [!INCLUDE[prod_short](includes/prod_short.md)] podporuje účtování na pozadí pro všechny prodejní, nákupní a servisní doklady.
 
-The following procedure shows how to set the **Batch Post Sales Orders** report up to automatically post sales orders at 4 PM on weekdays.
+Následující postup ukazuje, jak nastavit sestavu **Dávkové účto prod.objednávek** tak, aby automaticky účtovaly prodejní objednávky v 16:00 hod. ve všední dny.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Položky fronty úloh** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
-3. In the **Object Type to Run** field, select **Report**.
-4. In the **Object ID to Run** field, select 296, **Batch Post Sales Orders**.
+3. V poli **Typ spouštěného objektu** vyberte možnost ** Sestava**.
+4. V poli **ID spouštěného objektu** vyberte možnost 296, **Dávkové účto prod.objednávek**.
 
-   You can also use following reports:
+   Můžete také použít následující sestavy:
 
-   * 900 **Batch Post Assembly Orders**
-   * 497 **Batch Post Purchase Invoices**
-   * 496 **Batch Post Purchase Orders**
-   * 498 **Batch Post Purch. Credit Memos**
-   * 6665 **Batch Post Purch. Ret. Orders**
-   * 298 **Batch Post Sales Credit Memos**
-   * 297 **Batch Post Sales Invoices**
-   * 296 **Batch Post Sales Orders**
-   * 6655 **Batch Post Sales Return Orders**
-   * 6005 **Batch Post Service Cr. Memos**
-   * 6004 **Batch Post Service Invoices**
-   * 6001 **Batch Post Service Orders**
+   * 900 **Dávkové účtování montážních zakázek**
+   * 497 **Dávkové účto nák.faktur**
+   * 496 **Dávkové účto nák.objednávek**
+   * 498 **Dávkové účto nák. dobropisů
+   * 6665 **Dávkové účto nák. obj. vratky**
+   * 298 **Dávkové účto prod.dobropisů**
+   * 297 **Dávkové účto prod.faktur**
+   * 296 **Dávkové účto prod.objednávek**
+   * 6655 **Dávkové účto prod.obj.vratky**
+   * 6005 **Dávkové účtování dobropisů servisu**
+   * 6004 **Dávkové účtování faktur servisu**
+   * 6001 **Dávkové účto serv.zakázek**
 
-5. Select the **Report Request Page** check box.
-6. In the **Batch Post Sales Orders** request page, define what is included during automatic posting of sales orders, and then choose the **OK** button.
+5. Zaškrtněte políčko **Dialog sestavy**
+6. Na stránce **Dávkové účto prod.objednávek** definujte, co je zahrnuto během automatického zaúčtování prodejních objednávek, a poté klikněte na tlačítko **OK**.
 
    > [!IMPORTANT]
-   > Remember to set strict filters; otherwise, [!INCLUDE [prod_short](includes/prod_short.md)] will post all documents, even if they are not ready. Consider setting a filter on the **Status** field for the value *Released*, and a filter on the **Posting Date** field for the value *..today*. For more information, see [Sorting, Searching, and Filtering](ui-enter-criteria-filters.md).
-7. Select all check boxes from **Run on Mondays** through **Run on Fridays**.
-8. In the **Starting Time** field, enter 4 PM.
-9. Choose the **Set Status to Ready** action.
+   > Nezapomeňte nastavit striktní filtry; jinak [!INCLUDE [prod_short](includes/prod_short.md)] zaúčtuje všechny doklady, i když nejsou připravené. Zvažte nastavení filtru v poli **Stav** na hodnotu *Vydáno* a filtr v poli **Zúčtovací datum** na *..dnes*. Pro více infortmací navštivte [Řazení, Vyhledávání a Seznam filtrování](ui-enter-criteria-filters.md).
+7. Zaškrtněte všechna políčka od **Spustit v pondělí** až po **Spustit v pátek**
+8. Do pole **Počáteční čas** zadejte 16:00.
+9. Zvolte akci **Nastavit stav na Připraveno**.
 
-Sales orders that are within defined filters will now be posted every weekday at 4 PM.
+Prodejní objednávky, které jsou v rámci definovaných filtrů, budou nyní zaúčtovány každý pracovní den v 16 hodin.
 
-## Monitor the job queue
+## Monitorování fronty úloh
 
-If you set up background posting with job queues, make it a regular task to monitor the job queue to catch any issues. You can track the status in the **Job Queue Entries** page. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+Pokud nastavíte účtování na pozadí pomocí fronty úloh, nastavte jako běžný úkol sledovat frontu úloh, abyste zachytili případné problémy. Stav můžete sledovat na stránce **Položky fronty úloh**. Pro více informací navštivte [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md)
 
-As an administrator, you can use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to gather and analyze telemetry that you can use to identify problems. For more information, see [Monitoring and Analyzing Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-overview) in the developer and administration content.
+Jako správce můžete použít [Application Insights](/azure/azure-monitor/app/app-insights-overview) ke shromažďování a analýze telemetrie, kterou můžete použít k identifikaci problémů. Pro více informací navštivte [Monitorování a analýza telemetrie](/dynamics365/business-central/dev-itpro/administration/telemetry-overview) v obsahu pro vývojáře a správu.
 
 ## Viz také
 
-[Posting Documents and Journals](ui-post-documents-journals.md)  
-[Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md)  
-[Edit Posted Documents](across-edit-posted-document.md)  
-[Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
-[Finding Pages and Information with Tell Me](ui-search.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Účtování dokladů a deníků](ui-post-documents-journals.md)  
+[Použití fronty úloh k pravidelným úkolům](admin-job-queues-schedule-tasks.md)  
+[Úprava účtovaných dokladů](across-edit-posted-document.md)  
+[Oprava nebo zrušení nezaplacených účtovaných faktur](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
+[Vyhledávání stránek a inforamcí pomocí Řekněte mi](ui-search.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

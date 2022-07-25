@@ -3,7 +3,7 @@
     description: Read about how to use the Inventory Put-away document to record and post put-away and receipt information for your source documents.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -25,7 +25,7 @@ You can create an inventory put-away in three ways:
 ## To request an inventory put-away by releasing the source document
 For purchase orders, sales return orders, inbound transfer orders, and assembly orders, you create the warehouse request by releasing the order. The following describes how to do this from a purchase order.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 2. Select the purchase order that you want to release, and then choose the **Release** action.
 
    For production orders, you create the warehouse request by creating an inbound request from the released production order.
@@ -68,12 +68,12 @@ Now that the request is created, the warehouse employee can create a new invento
 The posting process will post the receipt, or for production orders, the output, of the source document lines that have been put away, and if the location uses bins, the posting will also create warehouse entries to post the bin quantity changes.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

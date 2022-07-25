@@ -1,16 +1,17 @@
 ---
-    title: Set Up Basic Warehouses with Operations Areas
-    description: Set up warehouse operations areas and use inventory movements, picks and put-aways to move goods between them.
-    author: SorenGP
+title: Set Up Basic Warehouses with Operations Areas
+description: Set up warehouse operations areas and use inventory movements, picks and put-aways to move goods between them.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/25/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 6774, 6775, 6776
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Nastavení základních skladů s provozními oblastmi
@@ -43,6 +44,7 @@ Následující postupy jsou založeny na nastavení základních aktivit skladu 
 4. Select the **Require Pick** check box to indicate that when an outbound or internal source document with a bin code is created, an inventory pick or an inventory movement document must be created.
 
 ## Definování výchozí struktury přihrádky v oblasti výroby
+
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
 2. Otevřete lokaci, kterou chcete nastavovat.
 3. On the **Bins** FastTab, in the **Open Shop Floor Bin Code** field, enter the code of the bin in the production area with plenty of components that the machine operator can consume from without requesting a warehouse activity to bring them to the bin. Zboží, které jsou umístěny v této přihrádce, se obvykle nastavují pro automatické účtování nebo vyčištění. This means that the **Flushing Method** field contains **Forward** or **Backward**.
@@ -130,12 +132,12 @@ Vytvoření vyhrazené přihrádky poskytuje podobnou funkci jako použití typ�
 > The bin must be empty before you can select or clear the **Dedicated** field.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Assembly Management](assembly-assemble-items.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

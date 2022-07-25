@@ -1,9 +1,8 @@
 ---
 title: Manage Bank Accounts
 description: You must regularly reconcile bank ledger entries with the related bank transactions in your bank accounts.
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -35,7 +34,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 > [!TIP]
 > Use bank reconciliation to help verify that your books are up-to-date, and do not post the reconciliation until you are satisfied with the reconciliation.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/reconcile-bank-accounts-dynamics-365-business-central/)
+## Viz související školení na webu [Microsoft Learn](/learn/paths/reconcile-bank-accounts-dynamics-365-business-central/)
 
 ## Viz také
 
@@ -45,7 +44,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 [Transfer Bank Funds](bank-how-transfer-bank-funds.md)  
 [Managing Receivables](receivables-manage-receivables.md)  
 [Managing Payables](payables-manage-payables.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)
 
 

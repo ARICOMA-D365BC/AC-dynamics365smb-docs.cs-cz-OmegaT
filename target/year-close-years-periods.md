@@ -3,7 +3,7 @@ title: Close a Fiscal Year and Accounting Periods
 description: Outlines the tasks to close a fiscal year or accounting period, for example, making sure documents and journals are posted and verifying bank balances.
 author: jswymer
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -22,7 +22,7 @@ The following table provides an overview of tasks that you typically perform to 
 
 | Viz | Také |
 | --- | --- |
-| Define your fiscal year, and divide it into time periods for which to report financial performance. | [Working with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md) |
+| Define your fiscal year, and divide it into time periods for which to report financial performance. | [Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md) |
 | Specify system-wide and user-specific posting date ranges. Depending on your business needs, you may want to restrict user posting date ranges at the start of the period-end process or after it. | [Specify Posting Periods](finance-how-specify-posting-periods.md) |
 | Get an overview of activities that are commonly performed at the end of a period, such as posting all documents and journals, or running account schedules. | [Closing Periods](year-how-complete-period-end-processes.md) |
 | Update currency exchange rates and adjust the exchange rates of posted customer, vendor, and bank account entries. | [Aktualizace směnných kurzů](finance-how-update-currencies.md) |
@@ -32,12 +32,12 @@ The following table provides an overview of tasks that you typically perform to 
 | Close accounting periods and fiscal year, transfer income statement balances to balance sheet accounts and post the year end closing entry. | [Closing Books](year-close-books.md) |
 | Print reports that can assist you in creating financial statements. | [Preparing Closing Statements](year-prepare-close-statement.md) |
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/close-fiscal-year-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/close-fiscal-year-dynamics-365-business-central/index)
 
 ## Viz také
 
 [Work with Accounting Periods and Fiscal Years](finance-accounting-periods-and-fiscal-years.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

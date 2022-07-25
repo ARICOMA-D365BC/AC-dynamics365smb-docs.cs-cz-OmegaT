@@ -2,7 +2,7 @@
 title: Working with Power BI Reports in Business Central| Microsoft Docs
 description: Get insight, business intelligence, and KPIs from your Business Central data with Power BI.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -11,7 +11,7 @@ ms.search.keywords: account schedule, analysis, reporting, financial report, bus
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Práce se sestavami Power BI v [!INCLUDE [prod_short](includes/prod_short.md)]
+# Work with Power BI Reports in [!INCLUDE [prod_short](includes/prod_short.md)]
 
 V tomto článku se dozvíte některé základy o zobrazení sestav Power BI v [!INCLUDE [prod_short](includes/prod_short.md)].
 
@@ -60,7 +60,7 @@ Připojení k Power BI z [!INCLUDE [prod_short](includes/prod_short.md)] je podo
 
 Po připojení můžete vybrat sestavu z části Power BI na stránkách.
 
-## Práce se sestavou Power BI
+## Work with Power BI reports
 
 ### Zobrazení sestavy na stránkách seznamu
 
@@ -104,7 +104,7 @@ Pokud chcete sestavu odeslat, vyberte akci **Odeslat sestavu** z rozevíracího 
 Po nahrání sestavy do pracovního prostoru Power BI se tato sestava automaticky nahraje do pracovních prostorů Power BI jiných uživatelů.
 
 > [!NOTE]
-> Nahrání sestavy vyžaduje, abyste měli uživatelská oprávnění SUPER v [!INCLUDE[prod_short](includes/prod_short.md)]. Nahrávat sestavy nemůžete také pomocí [!INCLUDE [prod_short](includes/prod_short.md)] on-premises. V on-premises prostředí nahráváte sestavy přímo do pracovního prostoru Power BI. Pro další informace navštivte [Práce s [!INCLUDE [prod_short](includes/prod_short.md)] Data In Power BI](across-working-with-business-central-in-powerbi.md).
+> Nahrání sestavy vyžaduje, abyste měli uživatelská oprávnění SUPER v [!INCLUDE[prod_short](includes/prod_short.md)]. Nahrávat sestavy nemůžete také pomocí [!INCLUDE [prod_short](includes/prod_short.md)] on-premises. V on-premises prostředí nahráváte sestavy přímo do pracovního prostoru Power BI. For more information, see [Work with [!INCLUDE [prod_short](includes/prod_short.md)] Data In Power BI](across-working-with-business-central-in-powerbi.md).
 
 ## Řešení problémů
 
@@ -122,25 +122,25 @@ Tato zpráva se zobrazí, pokud se výchozí sestavě nepodařilo nasadit do va�
 
 Je to pravděpodobně proto, že název sestavy neobsahuje název stránky seznamu. Vymažte filtr a získejte úplný seznam dostupných sestav Power BI.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central a Power BI](admin-powerbi.md)    
-[Vytváření sestav Power BI k zobrazení dat [!INCLUDE [prod_long](includes/prod_long.md)]](across-how-use-financials-data-source-powerbi.md)    
-[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
-[Práce s daty [!INCLUDE [prod_short](includes/prod_short.md)] v Power BI](across-working-with-business-central-in-powerbi.md)    
-[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
-[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
-[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
-[Dokumentace Power BI](/power-bi/)    
-[Business Intelligence](bi.md)    
-[Připravte se na podnikání](ui-get-ready-business.md)    
-[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
-[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central and Power BI](admin-powerbi.md)  
+[Building Power BI Reports to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md)  
+[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
+[Work with [!INCLUDE [prod_short](includes/prod_short.md)] Data in Power BI](across-working-with-business-central-in-powerbi.md)  
+[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
+[The 'new look' of the Power BI service](/power-bi/service-new-look)  
+[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
+[Power BI documentation](/power-bi/)  
+[Business Intelligence](bi.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 

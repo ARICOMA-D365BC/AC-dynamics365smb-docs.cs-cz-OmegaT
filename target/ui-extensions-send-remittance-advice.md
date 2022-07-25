@@ -3,7 +3,7 @@ title: Send Remittance Advice Extension | Microsoft Docs
 description: Describes the Send Remittance Advice extension, which allows emailing and resending remittance advice from the payment journal and vendor ledger entries.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -29,7 +29,7 @@ You can send remittance advice in two different ways:
 
 [Suggest Vendor Payments](payables-how-suggest-vendor-payments.md)  
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions ](ui-extensions.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
 [Electronic Funds Transfer (EFT) in the Australian Version](localfunctionality/australia/electronic-funds-transfer-eft-.md)  
 [Make Electronic Payments (CA)](finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.md#exporting-payments-to-a-bank-file)  

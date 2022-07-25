@@ -3,7 +3,7 @@ title: Set Up Customer Price Groups
 description: Learn how to set up customer price groups and create sales prices for those groups.
 author: jill-kotel-andersson
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -14,53 +14,56 @@ ms.author: edupont
 
 ---
 
-# Set Up Customer Price Groups
+# Nastavení Cenových skupin zákazníka
 
-Sales prices can be made dependent on the customer groups to which you sell. These are called customer price groups.
+Prodejní ceny mohou záviset na skupinách zákazníků, kterým prodáváte. Ty se nazývají cenové skupiny zákazníka
 
-Before you set up customer price groups, you must decide how many groups you want and which customers will belong to each group.
+Před nastavením cenových skupin zákazníků se musíte rozhodnout, kolik skupin chcete a kteří zákazníci budou patřit do jednotlivých skupin.
 
-## How to create sales prices for a group of customers
+## Jak vytvořit prodejní ceny pro skupinu zákazníků
 
-When you have agreed on the prices that the group of customers will pay for certain items, you register the agreement for the individual items on the lines in the **Sales Prices** page.
+Jakmile se dohodnete na cenách, které bude skupina zákazníků platit za určité zboží, zadejte dohodnutou cenu pro jednotlivé zboží do řádků na stránce **Prodejní ceny**.
 
-### To create sales prices for a group of customers
+### Vytvoření prodejních cen pro skupinu odběratelů
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer Price Groups**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Cenové skupiny zákazníka** a poté vyberte související odkaz.
 
-2. Select the line for the customer price group. If a line does not already exist you can create a new line. Select **New** to create a new entity and give it a name.
+2. Vyberte řádek pro cenovou skupinu zákazníka. Pokud řádek ještě neexistuje, můžete vytvořit nový řádek. Vyberte **Nový**, vytvořte novou entitu a pojmenujte ji.
 
-   For the selected line, verify the contents of the fields **Allow Line Disc.**, **Allow Invoice Disc.**, **Price Includes Tax** and **Tax Bus. Posting Gr. (Price)**.
+   U vybraného řádku ověřte obsah polí  **Povolit řádkovou slevu**, **Povolit fakturační slevu**, **Ceny včetně DPH** a **DPH obchodní účto sk. (cena)**.
 
-3. Select the **Navigate** action, and choose **Sales Prices**. The **Sales Prices** page opens. The **Sales Type** field will be filled in with **Customer Price Group**.
+3. Vyberte akci **Navigace** a zvolte **Prodejní ceny**. Otevře se stránka **Prodejní ceny**. Pole **Typ prodeje** bude vyplněno **Cenovou skupinou zákazníka**.
 
-4. Fill in the **Sales Code** with the sales code you selected on the previous page.
+4. Vyplňte **Kód prodeje** kódem prodeje, který jste vybrali na předchozí stránce.
 
-5. Fill in the fields on the lines with the **Item No.**, **Unit of Measure Code**, and the agreed **Unit Price**. You can also show the **Variant Code** column and specify the **Variant Code** if there are several variants of the item.
+5. Do polí na řádcích vyplňte  **Číslo zboží**, **Kód měrné jednotky** a dohodnutou **Jednotkovou cenu**. Můžete také zobrazit sloupec **Kód varianty** a zadat **Kód varianty**, pokud existuje několik variant zboží.
 
-6. If the customer group needs to purchase a minimum quantity in order to gain the price agreed on, fill in the **Minimum Quantity** field.
+6. Pokud skupina zákazníků musí nakoupit minimální množství, aby získala dohodnutou cenu, vyplňte pole **Minimální množství**.
 
-7. If required, enter the **Starting Date** and **Ending Date** of the price agreement.
+7. V případě potřeby zadejte **Počátečná datum** a **Koncové datum** ceníku.
 
-8. If relevant, you can also specify the **Currency Code**.
+8. Pokud je to relevantní, můžete také zadat **Kód měny**.
 
-Repeat steps 4 through 8 for each item that you want to create a Sales Price for.
+Opakujte kroky 4 až 8 pro každou položku, pro kterou chcete vytvořit prodejní cenu.
 
-## How to enter customer price group codes on customer cards
+## Jak zadat kódy cenových skupin zákazníka na kartě zákazníka
 
-After you have set up the customer price groups, you can enter the customer price group codes on the customer cards.
+Po nastavení cenových skupin zákazníka můžete na kartě zákazníka zadat kódy cenových skupin zákazníka
 
-### To enter customer price group codes on a customer card
+### Zadání kódů cenových skupin zákazníka na kartě zákazníka
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 
-2. Open the relevant **Customer Card** for a customer that you want to be part of a customer price group.
+2. Otevřete příslušnou **kartu zákazníka** pro zákazníka, kterýho chcete mít jako součást cenové skupiny zákazníků.
 
-3. On the **Invoicing** FastTab, in the **Customer Price Group** field, select the **Customer Price Group** code.
+3. V záložce **Fakturace** v poli **Cenové skupiny zákazníka** vyberte kód **Cenové skupiny zákazníka**.
 
 
 ## Viz také
 
-[Record Special Sales Prices and Discounts](sales-how-record-sales-price-discount-payment-agreements.md)
+[Prodej](sales-manage-sales.md)  
+[Nastavení prodeje](sales-setup-sales.md)  
+[Evidence speciálních cen a slev](sales-how-record-sales-price-discount-payment-agreements.md)  
+[Nastavení Skupin slev zákazníka](sales-how-to-set-up-customer-discount-groups.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

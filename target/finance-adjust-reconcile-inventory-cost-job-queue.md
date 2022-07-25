@@ -3,7 +3,7 @@ title: Schedule Jobs for Adjusting & Reconciling Inventory Cost
 description: Learn how you can use the job queue to move the tasks for adjusting inventory cost or reconciling it with the general ledger to the background. For example, if your company runs many tasks or processes many transactions.
 author: AndreiPanko
 
-ms.service: dynamics365-business-central
+
 ms.topic: article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -30,7 +30,7 @@ Creating the job queue entries can be tricky, even for an experienced consultant
 > [!NOTE]
 > You cannot create a new job queue entry if a job queue entry for the specified task already exists.
 
-5. Select the **View job queue entries when finished** field to review and adjust settings. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+5. Select the **View job queue entries when finished** field to review and adjust settings. Pro více informací navštivte [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md)
 
 ## To create a job queue entry for adjusting and reconciling inventory cost manually
 
@@ -42,7 +42,7 @@ Alternatively, you can create job queue entries manually. The following procedur
 4. In the **Object ID to Run** field, choose *795*, **Adjust Cost - Item Entries**.
 5. In the **Next Run Date Formula** field, enter *1D*.
 6. In the **Starting Time** field, enter *2 AM*.
-7. Choose the **Set Status to Ready** action.
+7. Zvolte akci **Nastavit stav na Připraveno**.
 
 Now, inventory cost will be updated every night.
 
@@ -57,4 +57,4 @@ To schedule a task for reconciling inventory with the general ledger, choose Cod
 [Reconcile Inventory Costs with the General Ledger](finance-how-to-post-inventory-costs-to-the-general-ledger.md)  
 [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md)  
 [Finding Pages and Information with Tell Me](ui-search.md)  
-[Working with [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)
+[Work with [!INCLUDE[d365fin](includes/d365fin_md.md)]](ui-work-product.md)

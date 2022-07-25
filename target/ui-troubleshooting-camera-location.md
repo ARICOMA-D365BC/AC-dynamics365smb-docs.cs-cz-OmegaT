@@ -9,7 +9,7 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: conceptual
-ms.service: "dynamics365-business-central"
+
 ---
 
 # Poradce při potížích: Přístup ke kameře a umístění
@@ -42,7 +42,7 @@ Funkce kamery a umístění jsou k dispozici pouze při přístupu k webovému k
 Jedinou výjimkou je připojení k `http://localhost`, které se používají pro vývojové a testovací účely.
 
 
-## Práce s virtualizačními technologiemi
+## Work with Virtualization Technologies
 
 Při připojování k [!INCLUDE[prod_short](includes/prod_short.md)] prostřednictvím vzdálené plochy nebo jiné virtualizace nemusí být přístup k fotoaparátu nebo umístění k dispozici. V takovém případě použijte místo toho fyzický systém.
 

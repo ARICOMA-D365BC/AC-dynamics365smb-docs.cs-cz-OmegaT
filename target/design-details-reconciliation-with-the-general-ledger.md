@@ -3,7 +3,7 @@
     description: This topic describes reconciliation with the general ledger when you post inventory transactions, such as sales shipments, production output, or negative adjustments.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -114,12 +114,12 @@ Následující tabulka ukazuje, jak je pracovní centrum nastaveno na kartě pra
 Pro více informací o vztahu mezi typy účtů a různými typy položek ocenění navštivte [Detaily návrhu: Účty hlavní knihy](design-details-accounts-in-the-general-ledger.md).
 
 ## Viz také
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
-[Detaily návrhu: Účtování očekávaných nákladů](design-details-expected-cost-posting.md)     
-[Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)  
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Inventory Costing](design-details-inventory-costing.md)   
+[Design Details: Expected Cost Posting](design-details-expected-cost-posting.md)   
+[Design Details: Cost Adjustment](design-details-cost-adjustment.md)
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

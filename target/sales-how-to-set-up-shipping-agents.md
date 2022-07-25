@@ -3,7 +3,7 @@
     description: Learn how to set up a code for each of your shipping agents and enter descriptive information about each of them and the services they provide.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -33,14 +33,14 @@ Po přiřazení služby přepravce k řádku prodejní objednávky bude doba dod
 > If you delete the shipping agent on the order line, the shipping agent service code is also deleted. Obsah polí, která byla částečně založena na službě přepravce, se přepočítá.
 
 ## Viz také
-[Nastavení způsobu přepravy](sales-how-set-up-shipment-methods.md)    
-[Sledování balíčků](sales-how-track-packages.md)      
-[Správa skladů](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Podrobnosti návrhu: Správa skladů](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Set Up Shipment Methods](sales-how-set-up-shipment-methods.md)  
+[Track Packages](sales-how-track-packages.md)    
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

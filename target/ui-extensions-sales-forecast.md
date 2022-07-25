@@ -3,7 +3,7 @@ title: Using the Sales and Inventory Forecast Extension to Manage Inventory | Mi
 description: This extension helps you predict sales, get a clear overview of expected stock-outs, and even helps you create replenishment requests to vendors.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -22,7 +22,7 @@ In [!INCLUDE[prod_short](includes/prod_short.md)], the connection to [Azure AI](
 > [!TIP]  
 > Consider the length of the periods that the service will use in its calculations. Čím více dat poskytnete, tím přesnější budou předpovědi. Také pozor na velké rozdíly v obdobích. Budou mít také vliv na předpovědi. Pokud Azure AI nenajde dostatek dat nebo se data budou velice lišit, služba neprovede předpověď.
 
-## Using the Forecasts
+## Use the Forecasts
 The extension uses Azure AI to predict future sales based on your sales history to help you avoid inventory shortage. For example, when you choose an item on the **Items** page, the chart in the **Item Forecast** pane shows the estimated sales of this item in the coming period. This way you can see if you are likely to run out of stock of the item soon.
 
 You can also use the extension to suggest when to stock up on inventory. For example, if you create a purchase order for Fabrikam because you want to buy their new desk chair, the Sales and Inventory Forecast extension will suggest that you also restock on the LONDON swivel chair that you usually buy from this vendor. This is because the extension forecasts that you will run out of stock of the LONDON swivel chair in the coming two months, so you might want to order more chairs already now.
@@ -53,7 +53,7 @@ You can also create your own predictive web service based on a public model name
 6. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales and Inventory Forecast Setup**, and then choose the related link.
 7. Expand the **General** FastTab, and then fill in the API URL and API key fields.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/use-sales-inventory-forecast-extension/)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/use-sales-inventory-forecast-extension/)
 
 
 ## Viz také

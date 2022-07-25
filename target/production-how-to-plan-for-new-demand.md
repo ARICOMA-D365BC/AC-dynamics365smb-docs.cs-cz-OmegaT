@@ -3,7 +3,7 @@ title: Plan for New Demand Order by Order
 description: This planning task can be performed on the Order Planning page, which displays all new demand along with availability information and suggestions for supply, including item substitution.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -121,7 +121,7 @@ When you have finished your planning work on the **Order Planning** page, for ex
 [Purchasing](purchasing-manage-purchasing.md)  
 [Design Details: Supply Planning](design-details-supply-planning.md)  
 [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Register New Items](inventory-how-register-new-items.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,16 +1,17 @@
 ---
-    title: Design Details - Changing Costing Methods for Items
-    description: Learn how to assign a different costing method to an item although you have already used the item in transactions.
-    author: bholtorf
+title: Design Details - Changing Costing Methods for Items
+description: Learn how to assign a different costing method to an item although you have already used the item in transactions.
+author: brentholtorf
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: costing methods, costing, item cost
-    ms.date: 06/08/2021
-    ms.author: bholtorf
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: costing methods, costing, item cost
+ms.search.form: 8645
+ms.date: 06/08/2021
+ms.author: bholtorf
 
 ---
 
@@ -42,7 +43,7 @@ Při nastavování skladového zboží je nutné přiřadit metodu ocenění. Me
 
 Pro více informace navštivte [Detaily návrhu: Metody ocenění](design-details-costing-methods.md).
 
-## Použití montážních zakázek ke změně přiřazení metody ocenění
+## Use Assembly Orders to Change Costing Method Assignments
 
 Tato část popisuje následující kroky pro změnu metody ocenění přiřazené ke zboží:
 
@@ -76,15 +77,15 @@ Aby bylo nové zboží plně užitečné, musíte ručně zkopírovat některá 
 | Oblast | Co kopírovat | Jak jej zkopírovat |
 |---------|---------|---------|
 | Zásoby | Skladové jednotky (SKJ) | Zkontrolujte, zda je pro původní zboží zadána SKJ. Pokud byly parametry plánování zadány pro každou kartu SKJ, musíte ručně vytvořit SKJ pro nové zboží. Pokud parametry nejsou specifikovány, můžete použít dávkovou úlohu **Vytvořit skladovou jednotku** ze stránky **Karta zboží** a data vytvořit. |
-|     | Náhrady zboží | Zkontrolujte, zda jsou pro původní zboží definovány nějaké náhrady zboží. Pokud existují, přeneste tato data do nového zboží. Chcete-li zobrazit náhradní zboží, použijte akci **Náhrady** na stránce **Karta zboží**. |
-|     | Analytické sestavy | Prohlédněte si sestavy Analýza zboží, Analýza prodeje a Analýza nákupu. Pro ty, které odkazují na původní zboží, můžete buď vytvořit novou sestavu analýzy s odkazem na nové zboží (zachování původní sestavy analýzy pro použití jako historie), nebo upravit sestavy tak, aby odkazovaly na nové zboží. |
-|     | Standardní deníky | Zkontrolujte, zda standardní deníky odkazují na původní zboží, a v případě potřeby přeneste tato data do nového zboží. Tyto informace se nacházejí ve standardních denících, které jsou k dispozici v deníku zboží. |
+| | Náhrady zboží | Zkontrolujte, zda jsou pro původní zboží definovány nějaké náhrady zboží. Pokud existují, přeneste tato data do nového zboží. Chcete-li zobrazit náhradní zboží, použijte akci **Náhrady** na stránce **Karta zboží**. |
+| | Analytické sestavy | Prohlédněte si sestavy Analýza zboží, Analýza prodeje a Analýza nákupu. Pro ty, které odkazují na původní zboží, můžete buď vytvořit novou sestavu analýzy s odkazem na nové zboží (zachování původní sestavy analýzy pro použití jako historie), nebo upravit sestavy tak, aby odkazovaly na nové zboží. |
+| | Standardní deníky | Zkontrolujte, zda standardní deníky odkazují na původní zboží, a v případě potřeby přeneste tato data do nového zboží. Tyto informace se nacházejí ve standardních denících, které jsou k dispozici v deníku zboží. |
 | Prodej | Procento zálohy prodeje | Zkontrolujte, zda jsou pro původní zboží definována procenta prodejní zálohy, a přeneste tato data do nového zboží. Chcete-li zobrazit procenta zálohy, na stránce **Karta zboží** zvolte **Prodej** a poté **Procentní části zálohy**. |
 | Nákup | Procento zálohy nákupu | Zkontrolujte, zda jsou pro původní zboží definována procenta nákupní zálohy, a přeneste tato data do nového zboží. Chcete-li zobrazit procenta zálohy, na stránce **Karta zboží** zvolte **Nákup** a poté **Procentní části zálohy**. |
 | Sklad | Obsah přihrádky | Zkontrolujte obsah přihrádky definovaný pro původní zboží. Pokud sloupce, například Min. Množství, Max. Množství,Výchozí a Vyhrazeno byly zadány jednotlivě, pak musíte ručně vytvořit obsah přihrádky pro nové zboží. Pokud tomu tak není, není nutná žádná akce. [!INCLUDE[prod_short](includes/prod_short.md)] bude uchovávat záznamy při registraci skladových dokladů a deníků. |
 | Projekt | Ceny projektu | Zkontrolujte, zda jsou ceny projektů definovány pro původní zboží a přeneste tato data do nového zboží. Tyto informace jsou k dispozici na stránce **Karta projektu** v části **Detaily projektu – poč. cen** v **Okně s fakty**. |
 | Služba | Odbornosti v oblasti prostředků služeb | Zkontrolujte, zda jsou pro původní zboží definovány Odbornosti v oblasti prostředků služeb, a přeneste tato data do nového zboží. Chcete-li zobrazit odbornost zdrojů, použijte akci **Odbornosti zdroje** na sránce **Karta zboží**. |
-|     | Komponenty předmětu servisu | Zkontrolujte, zda jsou komponenty definovány pro původní předmět servisu a přeneste tato data do nového zboží. Chcete-li zobrazit komponenty předmětu servisu, na stránce **Karta zboží** otevřete pomocí akce **Předmět servisu** seznam souvisejících předmětů servisu a poté zvolte akci **Komponenty**. |
+| | Komponenty předmětu servisu | Zkontrolujte, zda jsou komponenty definovány pro původní předmět servisu a přeneste tato data do nového zboží. Chcete-li zobrazit komponenty předmětu servisu, na stránce **Karta zboží** otevřete pomocí akce **Předmět servisu** seznam souvisejících předmětů servisu a poté zvolte akci **Komponenty**. |
 | Výroba | Výrobní kusovníky | Zkontrolujte, zda některé výrobní kusovníky obsahují původní zboží a nahraďte ji novým zbožím. Chcete-li nahradit původní zboží, na stránce **Výrobní kusovníky** zvolte akci **Výměna zboží výr. kusovníku**. |
 | Montáž | Kusovníky montáže | Zkontrolujte, zda některé kusovníky montáže obsahují původní zboží a ručně jej nahraďte novým zbožím. |
 

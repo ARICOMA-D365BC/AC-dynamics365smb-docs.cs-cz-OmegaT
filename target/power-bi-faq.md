@@ -2,7 +2,7 @@
 title: Power BI FAQ
 description: Get answers for some typical questions about working with Power BI and Business Central.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ Ano, protože sestavy jsou vložené z Power BI.
 <!-- 3 -->
 ### Jsou aplikace Business Central pro Power BI dostupné v jiných jazycích než v angličtině?
 
-Ne.  Tyto aplikace jsou v současné době k dispozici pouze v angličtině.
+Ne. Tyto aplikace jsou v současné době k dispozici pouze v angličtině.
 
 <!-- 24 -->
 ### Jakmile je sestava publikována na mém powerbi.com pracovním prostoru, mohu si stáhnout její pbix?
@@ -34,7 +34,7 @@ Ano. Pro více informací navštivte [Stažení sestavy ze služby Power BI do P
 <!-- 27 -->
 ### Mohu si stáhnout aplikace jako soubory pbix?
 
-Ne.  V současné době nenabízíme stahování souborů pbix pro oficiální aplikace Power BI, protože jsou publikovány v AppSource.
+Ne. V současné době nenabízíme stahování souborů pbix pro oficiální aplikace Power BI, protože jsou publikovány v AppSource.
 
 ## [Licence](#tab/license)
 
@@ -42,7 +42,7 @@ Ne.  V současné době nenabízíme stahování souborů pbix pro oficiální a
 ### Potřebuji k publikování sestav licenci Power BI Pro?
 
 <!-- todo What does " or for every user that consults the published report" mean? fixed -->
-Ne.  K publikování sestav není potřeba licence Pro. Stačí standardní (bezplatná) licence Power BI. Pro více informací navštivte [Licencování Power BI](admin-powerbi-setup.md#license).
+Ne. K publikování sestav není potřeba licence Pro. Stačí standardní (bezplatná) licence Power BI. Pro více informací navštivte [Licencování Power BI](admin-powerbi-setup.md#license).
 
 <!-- 15 -->
 ### Je něco, co nemůžu udělat s licencí zdarma?
@@ -127,25 +127,62 @@ V současné době neexistuje žádný způsob, jak nastavit filtr pro data webo
 <!-- 10 -->
 ### Existuje z Power BI kromě použití dotazu i jiný způsob, jak získat data z tabulek Business Central, které nemají přidruženou stránku? Například jako tabulka *Atributy zboží mapování hodnot*.
 
-Ne.  V tuhle chvíli ne.
+Ne. V tuhle chvíli ne.
 
 <!-- 12 -->
 ### Jsou publikované dotazy rychlejší než publikované stránky?
 
 Pokud jde o webové služby, publikované dotazy jsou obvykle rychlejší než ekvivalentní publikované stránky. Důvodem je, že dotazy jsou optimalizovány pro čtení dat a neobsahují triggery, jako je OnAfterGetRecord.
 
-Až bude nový konektor k dispozici v červnu 2021, doporučujeme používat stránky rozhraní API na dotazy publikované jako webové služby.
+Web services are based on pages or queries that are built for access from the web and usually not optimized for access from external services. Even though the Business Central connector still supports getting data from web services, we encourage you to use API pages instead of web services whenever possible.
 
 <!-- 13 -->
 ### Existuje způsob, jak může koncový uživatel vytvořit webovou službu se sloupcem, který je v tabulce Business Central, ale ne na stránce? Nebo bude muset vývojář vytvořit vlastní dotaz?
 
-Ano. S vydáním nového konektoru v červnu 2021 může vývojář vytvořit novou stránku rozhraní API, která tento požadavek splní.
+There is currently no way of adding a new field to a web service. API pages offer full flexibility on the page structure, so a developer can create a new API page to meet this requirement.
 
 <!-- 28 -->
 ### Můžu Power BI připojit k databázi Business Central online jen pro čtení?
 
-Ne.  Ale tuto funkci máme v našem dlouhodobém plánu.
+This functionality will be available soon. Starting in February 2022, new reports you create based on Business Central online data will automatically try to connect to a read-only database replica. This will cause your reports to refresh faster, and will have less impact on performances if you're using Business Central while a report is refreshing. We still recommend, whenever possible, that you schedule your reports to refresh outside of normal working hours.
 
+If you have old reports based on Business Central data, they won't connect to the read-only database replica.
+
+### <a name="databasemods"></a>I've tried the preview of the new connector for the February 2022 update. When I connect to my custom Business Central API page, I get the error "Cannot insert a record. Current connection intent is Read-Only.". How can I fix it?
+
+With the new connector, new reports that use Business Central data will connect to a read-only replica of the Business Central database by default. This change will bring a performance improvement. However, in rare cases, it might cause the error. This error typically happens because your custom API is making modifications to Business Central records while Power BI tries to get the data. In particular, it happens as part of the AL triggers: OnInit, OnOpenPage, OnFindRecord, OnNextRecord, OnAfterGetRecord, and OnAfterGetCurrRecord.
+
+To fix this issue by forcing the Business Central connector to allow this behavior, see [Building Power BI Reports to Display Business Central Data - Fixing Problems](across-how-use-financials-data-source-powerbi.md#fixing-problems).
+
+<!--
+In general, we recommend avoiding any database modifications in API pages when they're opening or loading records, because they cause performance issues and might cause your report refresh to fail. In some cases, you might still need to make a database modification when your custom API page opens or loads records. You can force the Business Central connector to allow this behavior. Do the following steps when getting data from Business Central for the report in Power BI Desktop:
+
+1. Start Power BI Desktop.
+2. In the ribbon, select **Get Data** > **Online Services**.
+3. In the **Online Services** pane, select **Dynamics 365 Business Central**, then **Connect**.
+4. In the **Navigator** window, select the API endpoint that you want to load data from.
+5. In the preview pane on the right, you'll see the following error:
+
+   *Dynamics365BusinessCentral: Request failed: The remote server returned an error: (400) Bad Request. (Cannot insert a record. Current connection intent is Read-Only. CorrelationId: [...])".*
+
+6.	Select **Transform Data** instead of **Load** as you might normally do.
+7. In **Power Query Editor**, select **Advanced Editor** from the ribbon.
+8.	Replace the following line:
+
+   ```
+   Source = Dynamics365BusinessCentral.ApiContentsWithOptions(null, null, null, null),
+   ```
+
+   with the line:
+
+   ```
+   Source = Dynamics365BusinessCentral.ApiContentsWithOptions(null, null, null, [UseReadOnlyReplica = false]),
+   ```
+
+9.	Select **Done**.
+10. Select **Close & Apply** from the ribbon to save the changes and close Power Query Editor.
+
+-->
 ### <a name="perms"></a>Jak změním nebo vymažu uživatelský účet, který aktuálně používám pro připojení k Business Central z Power BI Desktopu?
 
 V Power BI Desktopu proveďte následující kroky:
@@ -166,12 +203,12 @@ Ano. Naše testy ukazují, že stránky API jsou až o 25 % výkonnější než 
 <!-- 18 -->
 ### Existují plány na zrcadlení instance Azure SQL Database, ke které se mohu připojit přímo?
 
-Ne.  V tuhle chvíli ne. S Business Central můžu komunikovat pouze prostřednictvím rozhraní API.
+Ne. V tuhle chvíli ne. S Business Central můžu komunikovat pouze prostřednictvím rozhraní API.
 
 <!-- 19 -->
 ### Načítání dat z webových služeb Business Central se zdá být pomalé. Existuje nějaký způsob, jak získat data přímo z databázové tabulky SQL?
 
-Ne.  Přímý přístup k databázi není možný, ale přechod na stránky rozhraní API (když je k dispozici nový konektor) výrazně pomůže.
+Ne. Přímý přístup k databázi není možný, ale přechod na stránky rozhraní API (když je k dispozici nový konektor) výrazně pomůže.
 
 ## [Pokročilé](#tab/advanced)
 <!-- 1 -->
@@ -201,23 +238,23 @@ Ano. Tento pokročilý scénář pomůže Business Central zůstat výkonným, p
 
 Prověřujeme tuto funkci. Power BI nabízí bohatá rozhraní API pro řízení nasazení sestav. Pro více informací navštivte [Úvod do nasazení kanálů](/power-bi/create-reports/deployment-pipelines-overview).
 
-### Vyzkoušel jsem náhled nového konektoru, který bude v červnu 2021. Při připojování k rozhraní API v2.0 se zobrazí některé hodnoty jako "_x0020_". Co znamenají tyto hodnoty?
+### When I get data from Business Central to use in my Power BI reports, I see some values like "_x0020_". Co znamenají tyto hodnoty?
 
-Nadcházející verze konektoru Power BI umožňuje připojení k stránkám rozhraní Business Central API, včetně rozhraní API v2.0. Tyto stránky obsahují několik polí založených na objektech [AL Enum](/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums). Pole založená na objektech AL Enum musí mít názvy, které jsou konzistentní a vždy stejné, aby filtry v sestavě vždy fungovaly bez ohledu na jazyk nebo operační systém, který používáte. Z tohoto důvodu nejsou pole založená na AL Enums přeložena a jsou kódována, aby se zabránilo jakémukoli speciálnímu znaku, včetně mezery. Zejména vždy, když je v objektu AL Enum prázdná možnost, je zakódována na "_x0020_". Transformaci dat v Power BI můžete použít vždy, pokud chcete pro tato pole zobrazit jinou hodnotu, například "Prázdná".
+Some API pages, including most API v2.0 pages, have fields based on [AL Enum objects](/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums). Fields based on AL enum objects must have names that are consistent and always the same, so that filters on the report always work&mdash;no matter the language or operating system you're using. For this reason, the fields based on AL enums aren't translated and are encoded to avoid any special character, including the space. Zejména vždy, když je v objektu AL Enum prázdná možnost, je zakódována na "_x0020_". Transformaci dat v Power BI můžete použít vždy, pokud chcete pro tato pole zobrazit jinou hodnotu, například "Prázdná".
 
 
 ---
 
 ## Viz také
 
-[Licence Power BI](admin-powerbi-setup.md#license)  
-[Úvod Business Central a Power BI](admin-powerbi.md)    
-[Přehled integrace Power BI](admin-powerbi-overview.md)    
-[Povolení Power BI v Business Central](admin-powerbi-setup.md)    
-[Práce se sestavami Power BI v Business Central](across-working-with-powerbi.md)    
-[Práce s daty Business Central v Power BI](across-working-with-business-central-in-powerbi.md)    
-[Vytvážení sestav Power BI pro zobrazení dat Business Central](across-how-use-financials-data-source-powerbi.md)      
-[Dokumentace Power BI](/power-bi/)
+[Power BI Licensing](admin-powerbi-setup.md#license)
+[Business Central and Power BI Introduction](admin-powerbi.md)  
+[Power BI Integration Overview](admin-powerbi-overview.md)  
+[Enabling Power BI in Business Central](admin-powerbi-setup.md)  
+[Work with Power BI Reports in Business Central](across-working-with-powerbi.md)  
+[Work with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md)  
+[Building Power BI Reports to Display Business Central Data](across-how-use-financials-data-source-powerbi.md)    
+[Power BI documentation](/power-bi/)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

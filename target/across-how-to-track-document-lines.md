@@ -3,12 +3,12 @@
     description: View documents related to sales and purchase order lines, like quotes, shipments, receipts, and blanket orders, to identify documents used to process orders.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
+    ms.search.form: 6560, 42, 50, 507, 509
     ms.date: 06/11/2021
     ms.author: edupont
 
@@ -19,7 +19,7 @@ Můžete zobrazit doklady, které souvisejí s řádky prodejní objednávky a �
 ## Sledování dokladů souvisejících s řádkem prodejní objednávky
 Následující postup popisuje, jak lze sledovat z řádku prodejní objednávky. Postup je podobný jako u řádků nákupní objednávky a hromadné objednávky.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Otevřete prodejní objednávku, ze které chcete sledovat.
 3. Select a line, and then choose the **Document Line Tracking** action.
 4. On the **Document Lines Tracking** page, select the document that you want to view, and then choose the **Show** action to see the related line.
@@ -30,7 +30,7 @@ Následující postup popisuje, jak lze sledovat z řádku prodejní objednávky
 ## Viz také
 [Sales](sales-manage-sales.md)  
 [General Business Functionality](ui-across-business-areas.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

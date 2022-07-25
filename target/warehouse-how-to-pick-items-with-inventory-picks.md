@@ -3,7 +3,7 @@
     description: If a location set up requires pick processing but not shipment, use inventory pick documents to record and post picking and shipping info for source documents.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -32,7 +32,7 @@ You can create an inventory pick in three ways:
 
 For sales orders, purchase return orders, and outbound transfer orders, you create the warehouse request by releasing the order. The following describes how to do this from a sales order.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Select the sales order that you want to release, and then choose the **Release** action.
 
 For production orders, you automatically create the warehouse request for the picking of components, called *flushing*, when the production order status is changed to **Released** or when the released production order is created. For more information, see [Pick for Production or Assembly](warehouse-how-to-pick-for-production.md).
@@ -117,7 +117,7 @@ In combination scenarios, where a part of the quantity must first be assembled a
 [Assembly Management](assembly-assemble-items.md)  
 [Walkthrough: Picking and Shipping in Basic Warehouse Configurations](walkthrough-picking-and-shipping-in-basic-warehousing.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

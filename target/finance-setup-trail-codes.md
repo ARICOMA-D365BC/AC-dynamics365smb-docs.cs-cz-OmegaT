@@ -3,7 +3,7 @@ title: Set Up Codes for Audit Trails
 description: Learn about the tasks to set up source codes and reason codes that you can use to track audit trails.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -82,16 +82,16 @@ The selected reason code will be copied to new journal batches created under thi
 
 When the invoice is posted, the reason code is copied to each general ledger, customer, and vendor entry. You cannot assign different reason codes to the individual purchase and sales lines because all lines are posted as one entry.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/set-up-financial-management-dynamics-365-business-central/)
+## Viz související školení na webu [Microsoft Learn](/learn/paths/set-up-financial-management-dynamics-365-business-central/)
 
 ## Viz také
 
 [Finance](finance.md)  
 [Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
-[Working with Dimensions](finance-dimensions.md)  
+[Work with Dimensions](finance-dimensions.md)  
 [Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
 [Analyzing Cash Flow in Your Company](finance-analyze-cash-flow.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

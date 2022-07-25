@@ -1,18 +1,19 @@
 ---
 title: Understanding Item Types
 description: You can adjust the inventory valuation of an item using the FIFO or Average costing methods when item costs change for reasons other than transactions.
-services: project-madeira
 documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
+ms.search.form: 9297, 5845, 30,
 ms.date: 06/16/2021
 ms.author: edupont
+
 
 ---
 # About Item Types
@@ -52,7 +53,7 @@ Customers' items that you perform service on, such as a printer, are called serv
 [Setting Up Inventory](inventory-setup-inventory.md)  
 [Managing Inventory Costs](finance-manage-inventory-costs.md)  
 [Inventory](inventory-manage-inventory.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

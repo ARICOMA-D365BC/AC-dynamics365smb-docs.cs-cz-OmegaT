@@ -1,15 +1,14 @@
 ---
-title: Revalue Fixed Assets| Microsoft Docs
+title: Revalue Fixed Assets
 description: Learn how to adjust the value of fixed assets, recording new amounts as a write-down or appreciation, and post additional acquisition costs.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form: 5628, 5629, 5633
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -113,11 +112,11 @@ If you did not select the **Depr. until FA Posting Date** check box, the asset w
 *Total of depreciation = 100 + 15 + 55.54 = 170.54*
 
 ## Viz také
-[Dlouhodobý majetek](fa-manage.md)    
-[Nastavení dlouhodobého majetku](fa-setup.md)    
-[Finance](finance.md)    
-[Příprava na podnikání](ui-get-ready-business.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
+[Finance](finance.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -2,20 +2,18 @@
 title: Get Business Central on Your Desktop
 description: This article describes how to get the Business Central app on a Windows or MACiOS desktop.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: phone, tablet
-ms.date: 10/01/2021
+ms.date: 01/11/2022
 ms.author: jswymer
 ---
 # Získání desktopové aplikace Business Central
 
-Pokud máte počítač se systémem Windows (PC) nebo macOS, můžete si nainstalovat aplikaci Business Central.
-> [!NOTE]
-> Pokud používáte Business Central 2021 release wave 1 nebo starší, stáhněte si aplikaci z [Windows Store](https://go.microsoft.com/fwlink/?LinkId=734848).
+Pokud máte počítač se systémem Windows (PC) nebo macOS, můžete si nainstalovat aplikaci Business Central. The app works with Business Central online and on-premises.
 
 ## Proč aplikaci používat?
 
@@ -24,11 +22,23 @@ Aplikace Business Central se podobá webovému klientovi, ale poskytuje několik
 - Aplikace je snadno dostupná z nabídky **Start**, můžete ji snadno připnout na hlavní panel nebo ji spustit ve výchozím nastavení při spuštění počítače.
 - Obecně platí, že aplikace je rychlejší a plynulejší ve vykreslování na obrazovce bez rozdílů ve výkonu, ve srovnání se spuštěním [!INCLUDE[prod_short](includes/prod_short.md)] v prohlížeči.
 - Aplikace se otevře ve vlastním okně, nezávisle na všech oknech prohlížeče. Tato funkce usnadňuje vyhledání aplikace při spuštění velkého počtu aplikací nebo karet prohlížeče.
-- Pokud máte více než jedno prostředí Business Central (pouze online), můžete si aplikaci nainstalovat samostatně pro každé prostředí.
+- If there's more than one Business Central environment (online only), you can install the app separately for each environment.
 
    Když otevřete aplikaci pro konkrétní prostředí, název prostředí je zobrazen v názvu okna. Při práci ve více prostředích [!INCLUDE[prod_short](includes/prod_short.md)]  se každé okno aplikace zobrazuje samostatně. Název vám usnadní zobrazení, které okno je přiřazeno k jednotlivému prostředí.
 
-## Instalace aplikace
+## Install the app for Business Central online
+
+There are two ways to install the app for Business Central online. You can install it directly from the browser or from Microsoft Store. Whichever approach you use, it's the same app. The difference is that  installing from the browser lets you install the app for each environment when there's more than one.
+
+### From Microsoft Store
+
+1. Go to [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2182870).
+2. Choose **Get** > **Install**.
+3. When the app has been installed, choose **Open**, then sign in to Business Central.
+
+The next time you want to open the app, look for it in **Start** menu.
+
+### From the browser
 
 1. Otevřete webového klienta [!INCLUDE[prod_short](includes/prod_short.md)] v prohlížeči Microsoft Edge nebo Google Chrome.
 
@@ -48,24 +58,22 @@ Aplikace Business Central se podobá webovému klientovi, ale poskytuje několik
 
 Po instalaci se aplikace objeví v nabídce **Start**. Pokud jste pro aplikaci vybrali konkrétní prostředí, název prostředí se přidá k názvu aplikace v nabídce **Start**.
 
-### On-premise Business Central
+## Install the app for Business Central on-premises
 
-Instalace aplikace, když používáte on-premise Business Central, je v podstatě stejná, jak je popsáno výše. Pokud máte pouze jednoho tenanta, stačí otevřít Business Central v prohlížeči a poté vybrat buď ikonu ![Ikona Instalace aplikace v Edge](media/ui-edge-install-app-icon.png) **Dostupná aplikace instalace Business Central** nebo ![Ikona Instalace aplikace v Chrome](media/ui-chrome-install-app-icon.png) **Instalovat Business Central**, jak je uvedeno výše.
+Installing the desktop app when you're using Business Central on-premises is done directly from the browser as [described above](#from-the-browser). If you only have one tenant, just open the Business Central in your browser, then select either ![Icon for installing an app in Edge.](media/ui-edge-install-app-icon.png) **App available. Install Business Central** or ![Icon for installing an app in Chrome.](media/ui-chrome-install-app-icon.png) **Install Business Central** as shown above.
 
-Rozdíl je v tom, když máte více klientů. Na rozdíl od [!INCLUDE[prod_short](includes/prod_short.md)] online, kde můžete aplikaci nainstalovat samostatně pro různá prostředí, s on-premises prostředím můžete aplikaci nainstalovat jenom pro jednoho tenanta. Takže před instalací aplikace, když máte více klientů, nezapomeňte přepnout na správného tenanta. Po instalaci se při otevření aplikace otevře přímo tenant.
+Rozdíl je v tom, když máte více klientů. Unlike [!INCLUDE[prod_short](includes/prod_short.md)] online, where you can install the app for different environments, you can only install the app for one tenant. So before you install the app when you have multiple tenants, be sure to switch to the correct tenant. Po instalaci se při otevření aplikace otevře přímo tenant.
 
-<!-- for FAQ or troubleshooting
-> [!NOTE]
-> To install the app, [!INCLUDE[prod_short](includes/prod_short.md)] must be configured for HTTPS. If it isn't, you won't see ![Icon for installing an app in Edge.](media/ui-edge-install-app-icon.png) **App available. Install Business Central** or ![Icon for installing an app in Chrome.](media/ui-chrome-install-app-icon.png) **Install Business Central** in the browser. If you're having problems, contact your administrator or see [Configuring SSL to Secure the Business Central Web Client Connection](/dynamics365/business-central/dev-itpro/deployment/configure-ssl-web-client-connection) about how to configure HTTPS.
--->
+> [!IMPORTANT]
+> If you're using Business Central 2021 release wave 1 (version 18) or earlier, you can't install the app as described in this article. Instead, install the app from [Microsoft Store](https://go.microsoft.com/fwlink/?LinkId=734848). For more information and help about installing this legacy app, see [Preparing For and Installing the Business Central App](/dynamics365/business-central/dev-itpro/deployment/install-business-central-app).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Nejčastější otázky Mobilní aplikace](ui-mobile-faq.yml)  
-[Příprava na podnikání](ui-get-ready-business.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Mobile Apps FAQ](ui-mobile-faq.yml)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,7 @@
     description: Jobs involve the consumption of employee hours, machine hours, inventory items, and other types of usage that have to be tracked as a job progresses.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -155,11 +155,11 @@ Tricia určuje, že projektoví úkoly, které byly vyloučeny z výpočtu NV, m
 Tento návod vás provedl kroky výpočtu NV v [!INCLUDE[prod_short](includes/prod_short.md)]. U větších úloh může být užitečné pravidelně převádět náklady na účet NV, zatímco se úloha dokončuje. Tento návod ukázal, jak vyloučit řádky úkolu z výpočtu. To také ukazuje, kdy budete muset přepočítat. A nakonec tento návod ukazuje, jak zaúčtovat NV do věcných položek. Součástí je také příklad, jak stornovat zaúčtování nedokončené výroby do věcných položek.
 
 ## Viz také
-[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)    
-[Návod: Správa projektů pomocí úloh](walkthrough-managing-projects-with-jobs.md)     
-[Metody nedokončené výroby](projects-understanding-wip.md)     
-[Sledování průběhu a výkonu projektu](projects-how-monitor-progress-performance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
+[Walkthrough: Managing Projects with Jobs](walkthrough-managing-projects-with-jobs.md)   
+[Understanding WIP Methods](projects-understanding-wip.md)   
+[Monitor Progress and Performance](projects-how-monitor-progress-performance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

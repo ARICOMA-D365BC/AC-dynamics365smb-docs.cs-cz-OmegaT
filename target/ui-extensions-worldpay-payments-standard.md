@@ -3,9 +3,9 @@ title: WorldPay Payments Standard
 description: The WorldPay Payments Standard extension lets you offer customers a convenient alternative to making payments through bank transfers or credit cards.
 services: project-madeira
 documentationcenter: ''
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -23,7 +23,7 @@ Enabling payment service extensions is free in [!INCLUDE[prod_short](includes/pr
 ## Viz také
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
 [Setting Up Sales](sales-setup-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

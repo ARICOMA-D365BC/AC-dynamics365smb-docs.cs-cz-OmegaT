@@ -1,22 +1,24 @@
 ---
-    title: How to Set Up Base Calendars
+    title: Set Up Base Calendars
     description: You can assign a base calendar to your company and its business partners, to calculate delivery and receipt dates according to the specified working days.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.keywords:
+    ms.search.form: 7600, 7601, 7602, 5703
     ms.date: 06/11/2021
     ms.author: edupont
 
 ---
 # Nastavení základních kalendářů
+
 Společnosti a jejím obchodním partnerům, jako jsou zákazníci, dodavatelé nebo lokace, můžete přiřadit základní kalendář. Data dodání a příjmu na budoucí prodejní objednávce, nákupní objednávce, objednávce transferu a řádcích výrobní zakázky se počítají podle určených pracovních dnů kalendáře. Hlavním úkolem při nastavování nového základního kalendáře je určení a definování nepracovních dnů, které chcete použít.
 
 ## Nastavení základního kalendáře
+
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Base Calendar**, and then choose the related link.
 2. Vyberte akci **Nový**.
 3. Fill in the **Code** field.
@@ -38,6 +40,7 @@ When you return to the base calendar card, you will observe that the nonworking 
 > Určuje vzorec data pro čas potřebný k doplnění zboží. It is used to calculate the **Planned Receipt Date** field, if calculating forward, and **Order Date** field, if calculating backwards. See [Lead Time Calculation](across-how-to-assign-base-calendars.md#lead-time-calculation).
 
 ## Výpočet průběžné doby
+
 Jakýkoli základní kalendář definovaný pro dodavatele nebo místo ovlivňuje způsob výpočtu dat a zaokrouhlování na pracovní dny. Proto jsou dvě pole data na řádcích nákupní objednávky vypočtena následujícím způsobem za různých podmínek.
 
 | Směr výpočtu | Kalendář dodavatele definován | Kalendář dodavatele není definován |
@@ -112,7 +115,7 @@ Základní kalendáře jsou přiřazeny k vaší vlastní společnosti, zákazn�
 [Purchasing](purchasing-manage-purchasing.md)  
 [Manufacturing](production-manage-manufacturing.md)    
 [Inventory](inventory-manage-inventory.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

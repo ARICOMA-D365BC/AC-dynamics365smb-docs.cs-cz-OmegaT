@@ -3,7 +3,7 @@ title: Delete Cost Budget Entries
 description: You use the Delete Cost Budget Entries batch job to cancel cost budget entries from the cost budget register.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -35,7 +35,7 @@ To prevent any gaps in the cost budget entries and cost register entries, you ca
 
 [Accounting for Costs](finance-manage-cost-accounting.md)
 [Creating Cost Budgets](finance-create-cost-budgets.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

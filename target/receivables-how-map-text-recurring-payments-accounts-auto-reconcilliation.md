@@ -1,14 +1,15 @@
 ---
-title: Setting Up Text-to-Account Mapping for Recurring Payments | Microsoft Docs
+title: Setting Up Text-to-Account Mapping for Recurring Payments
 description: Link text on payments with specific accounts, so that payments are posted to the accounts when you post the payment reconciliation journal.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: account linking, direct payment posting, automatic payment processing, reconcile payment, recurring expense, recurring cash receipt
+ms.search.form: 1290, 1294, 1287
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -48,7 +49,7 @@ Next time you import a bank statement file or choose the **Apply Automatically**
 
 To always post expenses that are related to fees from a specific bank, MyBank, to the general ledger account for bank charges and fees (account 60400), fill a line on the **Text-to-Account Mapping** page as follows.
 
-| Mapping Text | Debit Acc. Ne.  | Credit Acc. Ne.  | Bal. Source Type | Bal. Číslo původu |
+| Mapping Text | Debit Acc. Ne. | Credit Acc. Ne. | Bal. Source Type | Bal. Číslo původu |
 | --- | --- | --- | --- | --- |
 | MyBank | BLANK | 60400 | Finanční účet | BLANK |
 
@@ -58,7 +59,7 @@ To always post expenses that are related to fees from a specific bank, MyBank, t
 [Sales](sales-manage-sales.md)  
 [Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)  
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

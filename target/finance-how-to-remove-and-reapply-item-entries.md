@@ -3,7 +3,7 @@
     description: You can view and manually change certain item application entries that are created automatically during inventory transactions.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -76,7 +76,7 @@ The **Remaining Quantity** field of the two item ledger entries are increased by
 [Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md)  
 [Managing Inventory Costs](finance-manage-inventory-costs.md)   
 [Design Details: Item Application](design-details-item-application.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

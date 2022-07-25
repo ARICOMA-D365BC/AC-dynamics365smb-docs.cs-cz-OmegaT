@@ -3,7 +3,7 @@
     description: The inbound processes for receiving and putting away can be performed in four ways using different functionalities depending on the warehouse complexity level.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -88,7 +88,7 @@ Purchase orders are the most common type of inbound source document.
 
 ### To create the purchase orders
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 2. Vyberte akci **Nový**.
 3. Create a purchase order for vendor 10000 on the work date (January 23) with the following purchase order lines.
 

@@ -1,9 +1,9 @@
 ---
 title: Using Word Templates for Bulk Communications | Microsoft Docs
 description: Word templates can make it easy to bulk create documents that are personalized for specific entities.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -14,7 +14,7 @@ ms.author: bholtorf
 
 ---
 
-# Použití šablon aplikace Word pro hromadnou komunikaci
+# Use Word Templates for Bulk Communication
 Microsoft Word templates can make it easier to mass communicate in print or email with entities such as contacts, customers, and vendors. Můžete například vytvořit brožury, které zákazníky upozorní na prodejní kampaň, dopisy informující dodavatele o nových zásadách nákupu nebo pozvánky k přilákání kontaktů na nadcházející událost.
 
 > [!NOTE]
@@ -53,7 +53,7 @@ Až bude vaše šablona Wordu připravena, můžete na stránce **Šablony aplik
 
 You can apply templates to one or more of the same type of entity, such as a contact, directly in the context of that page, or from the Word Templates page to apply the template to all of the entities of that type.
 
-## Using Word Templates with Email
+## Use Word Templates with Email
 You can use Word templates to add content to email messages. When you compose an email, you can choose the **Use Word Template** action to apply the content of a template to the message. This requires that you have created one or more template for the entity. You can use one template at a time, and when you switch between templates the message changes to reflect the content from the chosen template.
 
 Additionally, you can use the **Add File from Word Template** action to attach the content of the template to the email as a file. The file will use the format you specified for the template output.

@@ -3,7 +3,7 @@
     description: You can revalue the inventory based on the valuation base that most accurately reflects the inventory value.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -173,12 +173,12 @@ Zásoby nedokončené výroby lze přecenit, pokud datum přecenění není pozd
 > Sestava **Hodnota zásob – vl.výroba** zobrazuje hodnotu zaúčtovaného zboží výrobní zakázky, a proto může být trochu matoucí pro zboží NV, které bylo přeceněné.
 
 ## Viz také
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
-[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)     
-[Detaily návrhu: Hodnota zásob](design-details-inventory-valuation.md)  
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Inventory Costing](design-details-inventory-costing.md)   
+[Design Details: Costing Methods](design-details-costing-methods.md)   
+[Design Details: Inventory Valuation](design-details-inventory-valuation.md)
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

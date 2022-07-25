@@ -5,7 +5,7 @@ services: project-madeira
 documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -77,11 +77,11 @@ Když prodáváte zboží, pořizovací cena se zkopíruje z pole Pořizovací c
 Když zaúčtujete, pořizovací cena z řádku nákupu nebo řádku deníku zboží se zkopíruje do položky nákupní faktury za zboží a lze ji zobrazit v seznamu položek zboží. [!INCLUDE[prod_short](includes/prod_short.md)] používá Pořizovací cenu z řádku zdrojového dokladu k výpočtu obsahu pole **Částka nákladů (skutečná)** nebo případně pole **Částka nákladů (očekávaná)** v položce ocenění vztahující se k této položce zboží.
 
 ## Viz také
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Prodej](sales-manage-sales.md)    
-[Nakupování](purchasing-manage-purchasing.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Sales](sales-manage-sales.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

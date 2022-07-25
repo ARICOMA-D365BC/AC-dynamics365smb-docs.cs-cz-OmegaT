@@ -1,11 +1,11 @@
 ---
-title: Switching to Another Company or Environment | Microsoft Docs
+title: Switching to Another Company or Environment
 description: If you do work for multiple organizations, you can quickly switch between the environments and companies.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.search.keywords: environments, companies, tenants, organization
+ms.search.form: 9020, 9022, 9026, 9027, 9030, 9000, 9009, 9004, 9005, 9024, 9006, 9007, 9010, 9016, 9017
 ms.date: 10/04/2021
 ms.author: bholtorf
 
@@ -13,10 +13,16 @@ ms.author: bholtorf
 
 # Přepnutí do jiné společnosti nebo prostředí
 
+[!INCLUDE [prod_short](includes/prod_short.md)] is available in many different countries and supports many different types of organizations. Your organization might set up [!INCLUDE [prod_short](includes/prod_short.md)] so that you have to understand the terms *company* and *environment*.
+
 [!INCLUDE [company_environment](includes/company_environment.md)] Další informace naleznete v tématu [Vytváření nových společností v [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).
 
 > [!TIP]
 > Pokud často přepínáte mezi společnostmi nebo pracujete s aplikací [!INCLUDE[prod_short](includes/prod_short.md)] z jiné aplikace, jako je Microsoft Teams, může být snadné ztratit přehled o tom, kde jste. Abyste si udrželi přehled, můžete přidat odznak, který bude zobrazovat název společnosti, abyste mohli rychle ověřit, že jste na správném místě. Další informace naleznete v tématu [Zobrazení firemního odznaku pro rychlý přístup k informacím o společnosti](ui-change-basic-settings.md#badge).
+
+Depending on your browser, you can also pin the different companies to your favourites bar.
+
+[!INCLUDE [about-ui-learn](includes/about-ui-learn.md)]
 
 ## Přepnutí do jiného prostředí
 
@@ -48,8 +54,9 @@ Když jste přihlášeni k účtu [!INCLUDE[prod_short](includes/prod_short.md)]
 
 ## Viz také
 
-[Administrace Dynamics Central](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center)  
-[Změna základního nastavení](ui-change-basic-settings.md)
+[Change Basic Settings](ui-change-basic-settings.md)  
+[Environments and companies (English only)](/dynamics365/business-central/dev-itpro/administration/tenant-environment-topology)  
+[The Business Central Administration Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

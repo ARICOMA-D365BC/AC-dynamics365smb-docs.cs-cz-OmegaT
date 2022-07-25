@@ -3,12 +3,13 @@ title: Using the Transfer Difference to Account Feature to Reconcile Payments
 description: Describes how to process payments that cannot be applied to a document, for example, when an exchange rate causes amounts to differ.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, cash receipts
+ms.search.form: 1290, 1294, 1287
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -45,9 +46,9 @@ If the value in the **Difference** field was equal to the value in the **Transac
 If the value in the **Difference** field was lower than the value in the **Transaction Amount** field, then an additional journal line will be created with the same text and date and with the difference inserted in the **Transaction Amount** field. On the original journal line, the difference will be deducted from the value in the **Transaction Amount** field, and the payment will remain applied to its related customer, vendor, or bank account ledger entry. Při účtování deníku odsouhlasení plateb bude částka platby zaúčtovaná jako vyrovnání. Druhá část platby bude zaúčtována přímo na zadaný účet.
 
 ## Viz také
-[Správa pohledávek  [
-  Prodej[<x6/>
-[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
+[Managing Receivables](receivables-manage-receivables.md)  
+[Sales](sales-manage-sales.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

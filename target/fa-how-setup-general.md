@@ -1,13 +1,14 @@
 ---
-title: Set Up General Ledger FA| Microsoft Docs
+title: Set Up General FA Information
 description: Before you work with fixed assets, you must set up default G/L accounts, posting groups, allocation keys, journal templates and batches, and class codes.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form: 5623, 5615, 5661, 5662, 5627, 5616, 5620, 5629, 5633, 5609, 5631, 5630, 5617, 5612, 5613, 5608, 5609, 5635, 9277
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -45,7 +46,7 @@ Alokační klíče se vztahují na třídy dlouhodobého majetku, nikoli na jedn
 4. Opakujte kroky 2 a 3 pro každý typ účtování, pro který chcete definovat alokační klíče.
 
 ## Nastavení šablon deníku dlouhodobého majetku
-Šablona je předdefinované rozvržení deníku. Šablona obsahuje informace o trasovacích kódech, sestavách a číselných řadách. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
+Šablona je předdefinované rozvržení deníku. Šablona obsahuje informace o trasovacích kódech, sestavách a číselných řadách. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
 [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset journal template the first time that you open the **Fixed Asset Journal** page, but you can set up additional journal templates.
 
@@ -118,7 +119,7 @@ Pokud dlouhodobý majetek není integrován s financemi, přeskočte krok 6 a 8.
 [Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

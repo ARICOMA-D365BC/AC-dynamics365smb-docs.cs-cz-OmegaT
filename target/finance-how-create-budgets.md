@@ -3,7 +3,7 @@ title: Creating G/L Budgets
 description: Describes hos to create G/L budgets to forecast different financial activities and assign dimensions for business intelligence purposes.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -18,7 +18,7 @@ ms.author: edupont
 
 You can have multiple budgets for identical time periods by creating budgets with separate names. First, you set up the budget name and enter the budget figures. The budget name is then included on all the budget entries you create.
 
-When you create a budget, you can define four dimensions for each budget. These budget-specific dimensions are called budget dimensions. You select the budget dimensions for each budget from among the dimensions you have already set up. Budget dimensions can be used to set filters on a budget and to add dimension information to budget entries. For more information, see [Working with Dimensions](finance-dimensions.md).
+When you create a budget, you can define four dimensions for each budget. These budget-specific dimensions are called budget dimensions. You select the budget dimensions for each budget from among the dimensions you have already set up. Budget dimensions can be used to set filters on a budget and to add dimension information to budget entries. For more information, see [Work with Dimensions](finance-dimensions.md).
 
 Budgets play an important role in business intelligence, such as in financial statement based on account schedules that include budget entries or when analyzing budgeted versus actual amounts in the chart of accounts. For more information, see [Business Intelligence](bi.md).
 
@@ -46,7 +46,7 @@ As for practically all other pages, you can export data on budget pages to Excel
 > [!NOTE]
 > The chart of accounts, that G/L budgets are based on, have lines of account type Heading that contain the total of the lines below it. When you export a G/L budget, data on all lines is exported regardless of the account type. However, only data on lines of account type Posting can be imported back in. Accordingly: <br /><br /> **When you import a G/L budget, any values that existed on Heading lines will be deleted.** <br /><br /> This is to avoid wrong totals after importing data that has been created or edited in Excel.<br /><br /> **Scenario**: You know that the new budgeted salaries cost is going to be LCY 1.200.000. You want to let the Salaries department budget for the three specific lines (of account type Posting) for Full-time Employees, Part-time Employees, and Temp Help. The three lines are grouped under a Salaries heading line.<br /><br />You enter 1.200.000 on the Heading line, export the budget to Excel, and then send it to the Salaries department, telling them to distribute the LCY 1.200.000.<br /><br /> The Salaries department distributes the amount on the three posting accounts. When you import back into the G/L budget, the three accounts are filled in with the new Excel data, summing to LCY 1.200.000, and the Heading line is blank.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/budgets-exchange-rates-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/budgets-exchange-rates-dynamics-365-business-central/index)
 
 ## Viz také
 
@@ -55,7 +55,7 @@ As for practically all other pages, you can export data on budget pages to Excel
 [Business Intelligence](bi.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

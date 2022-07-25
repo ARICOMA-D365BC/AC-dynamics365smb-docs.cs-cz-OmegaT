@@ -3,7 +3,7 @@
     description: This walkthrough demonstrates the process of planning supply orders to fulfill new demand including planning a purchase, transfer, and production order.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -52,7 +52,7 @@ Ve složitějším výrobním prostředí se plánovací sešit používá k pl�
 ## Nastavení ukázkových dat
 Standardní demonstrační společnost CRONUS má v současné době spoustu neplánovaných požadavků. Během různých plánovacích úkolů v tomto návodu se budete muset odchýlit od realistického obchodního toku ignorováním poptávky s blízkými daty splatnosti a místo toho použít poptávku s pozdějšími daty splatnosti.
 
-## Použití stránky Plánování objednávek
+## Use the Order Planning Page
 
 Na stránku **Plánování objednávek** lze přistupovat z několika různých míst:
 

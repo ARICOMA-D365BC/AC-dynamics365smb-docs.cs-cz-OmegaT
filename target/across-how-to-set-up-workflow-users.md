@@ -3,7 +3,7 @@ title: How to Set Up Workflow Users
 description: Before you can create workflows, you must set up the users who take part in them on the Workflow User Group page.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -45,7 +45,7 @@ Workflow users that function as approval users, both approval requesters and app
 
 [Set Up Approval Users](across-how-to-set-up-approval-users.md)  
 [Setting Up Workflows](across-set-up-workflows.md)  
-[Using Workflows](across-use-workflows.md)  
+[Use Workflows](across-use-workflows.md)  
 [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
 [Workflow](across-workflow.md)
 

@@ -3,7 +3,7 @@ title: Set Up Warehouse Employees
 description: Each user who performs warehouse activities must be set up as a warehouse employee assigned to one default location and potentially more non-default locations.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -33,7 +33,7 @@ Každý uživatel, který provádí aktivity skladu, musí být nastaven jako za
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md)
 [Assembly Management](assembly-assemble-items.md)
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

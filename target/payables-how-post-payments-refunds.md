@@ -3,13 +3,13 @@ title: Record Payments and Refunds in Payment Journal
 description: Read about how to record payments that you make to vendors, and refunds that you make to customers, on the Payment Journal page.  
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment journal, print check, vendor payment, customer refund, refund check, creditor, debt, balance due, AP
-ms.search.form: 256, 251, 233, 624, 1228
+ms.search.form: 256, 233, 624, 1228
 ms.date: 07/09/2021
 ms.author: edupont
 
@@ -66,9 +66,9 @@ The payment journal is a general journal that is optimized for making payments. 
 [Managing Payables](payables-manage-payables.md)  
 [Setting Up Banking](bank-setup-banking.md)  
 [Export a Positive Pay file](finance-how-positive-pay.md)  
-[Working with General Journals](ui-work-general-journals.md)  
+[Work with General Journals](ui-work-general-journals.md)  
 [Personalize Your Workspace](ui-personalization-user.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

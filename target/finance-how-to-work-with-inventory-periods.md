@@ -3,7 +3,7 @@ title: Work with Inventory Periods
 description: You can control the timeframe in which people can post post changes to inventory by defining inventory periods.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -69,7 +69,7 @@ After you have closed the inventory period, you cannot delete the inventory peri
 [Design Details: Inventory Periods](design-details-inventory-periods.md)  
 [Finance](finance.md)  
 [Inventory](inventory-manage-inventory.md)  
-[Working with Financials](ui-work-product.md)
+[Work with Financials](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

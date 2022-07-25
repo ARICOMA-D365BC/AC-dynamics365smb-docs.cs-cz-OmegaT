@@ -3,7 +3,7 @@ title: Assign Item Charges to Sales and Purchases (contains video)
 description: Assign item charges when you need inventory items to carry added costs, such as freight and physical handling that you incur when purchasing or selling items.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -80,7 +80,7 @@ Poplatek za zboží na samostatné nákupní faktuře je nyní přiřazen zbož�
 [Managing Payables](payables-manage-payables.md)  
 [Record Purchases](purchasing-how-record-purchases.md)  
 [Invoice Sales](sales-how-invoice-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

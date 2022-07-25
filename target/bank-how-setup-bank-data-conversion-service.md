@@ -3,7 +3,7 @@ title: Set Up Bank Data Conversion
 description: You can set up bank accounts to keep track of transactions and import or export bank feeds, such as Yodlee.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -60,7 +60,7 @@ You have now signed up for the AMC Banking 365 Fundamentals extension. Proceed t
 ## Viz také
 [Setting Up Banking](bank-setup-banking.md)  
 [Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

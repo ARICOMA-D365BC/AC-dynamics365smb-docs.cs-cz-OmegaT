@@ -3,7 +3,7 @@ title: Set Up Prepayments
 description: Learn how to configure Business Central so that you can use prepayments to invoice and collect deposits from customers and remit deposits to vendors.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.search.keyword: prepayment
 ms.search.form: 314, 459, 460, 664
@@ -20,10 +20,12 @@ Před zaúčtováním zálohových faktur musíte nastavit účty v hlavní kniz
 Můžete definovat procento částky řádku, která bude fakturována za zálohu pro zákazníka nebo dodavatele, pro všechno zboží nebo vybrané zboží. Po dokončení nastavení můžete vygenerovat zálohové faktury z prodejních a nákupních objednávek. Můžete použít výchozí procenta pro každý prodejní nebo nákupní řádek nebo můžete podle potřeby změnit částky na faktuře. Můžete například určit celkovou částku za celou objednávku.
 
 > [!NOTE]
-> Doporučujeme nepoužívat procento zálohy ve výši 100 % v následujících případech:
+> We recommend that you do not use a prepayment percentage of 100 in the following cases:
 >
-> * Pokud se nacházíte v Severní Americe. Vzhledem k tomu, jak se daně počítají, může procento zálohy ve výši 100 % vést k problémům s fakturami za platbu předem.
-> * Ve všech oblastech, pokud ručně odečtete skonto z faktury. Procento zálohy ve výši 100 % automaticky nezanechá částku, ze které lze slevu odečíst.
+> * Pokud se nacházíte v Severní Americe. Due to how taxes are calculated, a prepayment percentage of 100 can lead to issues with prepayment invoices.
+> * Ve všech oblastech, pokud ručně odečtete skonto z faktury. A prepayment percentage of 100 will not automatically leave an amount from which to deduct the discount.
+>
+> Also, when you're using prepayment percentage of 100, [!INCLUDE[prod_short](includes/prod_short.md)] might need to create off-setting rounding entries. When that happens, you will need to choose a G/L account in the **Invoice Rounding Account** field on the **Customer Posting Groups** page. This is true even if you have not turned on the **Invoice Rounding** toggle on the **Sales & Receivables Setup** page. If you do not specify an account you you will not be able to post prepayment invoices.
 
 Vzhledem k tomu, že předplacená částka patří kupujícímu, dokud neobdržel zboží nebo služby, je nutné nastavit účty hlavní knihy, aby se částky zálohy zadržovaly, dokud nebude zaúčtována konečná faktura. Platby za prodej musí být zaznamenány na účtu závazků, dokud nebudou položky odeslány. Zálohy na nákup musí být zaznamenány na účtu majetku, dokud není zboží přijato. Kromě toho je nutné pro každý identifikátor DPH nastavit samostatný účet hlavní knihy.
 
@@ -47,13 +49,13 @@ Pokud jste ještě nenastavili účty hlavní knihy pro platby záloh, můžete 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. Na stránce **Nastavení prodeje a pohledávek** na záložce **Číselné řady** vyplňte následující pole:
 
-   * **Čísla účtovaných  zál.  faktur**
+   * **Čísla účtovaných  Zásoby faktur**
    * **Čísla účtovaných  zál.  dobropisů**
 
 3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
 4. Na stránce **Nastavení nákupu a závazků** na záložce **Číselné řady** vyplňte následující pole:
 
-   * **Čísla účtovaných  zál.  faktur**
+   * **Čísla účtovaných  Zásoby faktur**
    * **Čísla účtovaných  zál.  dobropisů**
 
 > [!NOTE]  
@@ -88,14 +90,28 @@ Objednávka může mít procento zálohy v prodejní hlavičce a jiné procento 
 
 Jinými slovy, procento zálohy na kartě zákazníka se použije pouze v případě, že pro zboží není nastaveno procento zálohy. Pokud však po vytvoření řádků změníte obsah pole **Procento zálohy** v prodejní nebo nákupní hlavičce, bude procento zálohy na všech řádcích aktualizováno. To usnadňuje vytvoření objednávky s pevným procentem zálohy bez ohledu na procento nastavené na kartě zboží.
 
+## To automatically release sales orders when prepayments are applied
+
+You can save time by setting up a job queue entry that will automatically release sales orders that require prepayment after payments are applied. Automating the process saves you the step of releasing the sales order.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
+2. In the **Prepmt. Auto Update Frequency** field, specify how often you want the job queue entry to run.
+
+> [!TIP]
+> While you're here, consider adding a safeguard against shipping or invoicing sales orders that have unpaid premayment amounts. If you turn on the **Check Prepmt. when Posting** toggle, [!INCLUDE[prod_short](includes/prod_short.md)] will prevent people from posting orders with outstanding prepayment amounts.
+
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Položky fronty úloh** a poté vyberte související odkaz.
+4. Set up the **Upd. Pending Prepmt. Sales** job queue entry, for example, by using the settings on the **Recurrence** FastTab to schedule how often you want it to run. For more informaiton, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+
 ## Viz také
 
-[Fakturace záloh](finance-invoice-prepayments.md)    
-[Návod: Nastavení a fakturace prodejních záloh](walkthrough-setting-up-and-invoicing-sales-prepayments.md)    
-[Výpočet daně ze zboží a služeb při platbách záloh](LocalFunctionality/Australia/how-to-calculate-goods-and-services-tax-on-prepayments.md)    
-[Znalost o hlavní knize a certifikátu pravosti](finance-general-ledger.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Invoicing Prepayments](finance-invoice-prepayments.md)  
+[Walkthrough: Setting Up and Invoicing Sales Prepayments](walkthrough-setting-up-and-invoicing-sales-prepayments.md)  
+[Calculate Goods and Services Tax on Prepayments in Australia](LocalFunctionality/Australia/how-to-calculate-goods-and-services-tax-on-prepayments.md)  
+[Calculate Goods and Services Tax on Prepayments in New Zealand](LocalFunctionality/NewZealand/how-to-calculate-goods-and-services-tax-on-prepayments.md)  
+[Understanding the General Ledger and the COA](finance-general-ledger.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

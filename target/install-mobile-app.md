@@ -2,7 +2,7 @@
 title: Get Business Central on Your Mobile Device (contains video)
 description: This topic describes the various ways you can view and edit your Business Central data, send to Excel and more on your phone or tablet.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -36,7 +36,7 @@ Nyní byste měli mít přístup k [!INCLUDE[prod_short](includes/prod_short.md)
 > [!TIP]
 > Pokud chcete aplikaci připojit k sandboxovému prostředí, zvolte akci **Pokročilé nastavení** a poté vyberte možnost přihlášení **Cloud sandbox**. Pak, pokud máte více než jedno prostředí sandboxu, vyberte příslušné prostředí.
 
-## používáte Business Central on-premises?
+## Use Business Central on-premises?
 
 Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, budete muset začít od začátku pomocí Power BI Desktop. Instalace je podobná, ale až na pár výjimek.
 
@@ -54,13 +54,13 @@ Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, b
 > [!NOTE]
 > Pokud máte potíže se správným fungováním aplikace, obraťte se na svého správce. Může se stát, že se jedná o chybějící předpoklad nebo neúplnou konfiguraci. Další informace najdete v [Příprava prostředí pro mobilní aplikaci](/dynamics365/business-central/dev-itpro/deployment/install-business-central-app#prereqs) nebo [Řešení potíží s mobilní aplikací Business Central On-Premises](/dynamics365/business-central/dev-itpro/developer/devenv-troubleshooting-the-mobile-app).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Nejčastější otázky Mobilní aplikace](ui-mobile-faq.yml)  
-[Příprava na podnikání](ui-get-ready-business.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Mobile Apps FAQ](ui-mobile-faq.yml)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

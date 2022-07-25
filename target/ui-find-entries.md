@@ -1,14 +1,15 @@
 ---
-title: Finding entries | Microsoft Docs
+title: Finding entries
 description: This article describes how to documents and entries that are related
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: find
-ms.date: 04/01/2021
+ms.search.form: 344
+ms.date: 05/23/2022
 ms.author: jswymer
 ---
 # Hledání souvisejících položek pro zaúčtovaných dokladů
@@ -23,7 +24,7 @@ Tato funkce je užitečná pro vyhledání položek, které byly výsledkem urč
 
 ## Začínáme
 
-Funkce hledání položek je snadno dostupná na většině stránek, které zobrazují zaúčtované doklady nebo zaúčtované položky dokladů - pro seznamy i karty. Prvním krokem je tedy otevření jedné z těchto stránek. Potom vyberte akci **Najít položky** nebo zmáčkněte klávesy Alt+G.
+The find entries feature is readily available from almost any page by pressing the Ctrl+Alt+Q keys. From pages that specifically display posted documents or posted documents entries&mdash;for both lists and cards&mdash;you can also open the feature by choosing the **Find Entries** action.
 
 Stránka **Najít položky** obsahuje všechny související doklady a položky založené na čísle dokladu a zúčtovacím datu. Stránka je rozdělena do tří částí:
 
@@ -63,13 +64,13 @@ Po provedení výběru zadejte příslušné vyhledávací informace do polí v 
 > [!TIP]
 > For a couple examples about using **Find Entries**, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md) <!--and [Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md). -->
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Práce s Business Central](ui-work-product.md)  
-[Přidání tlačítka na stránku ve Vašem Centru rolí](ui-bookmarks.md)  
-[Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md)
+[Work with Business Central](ui-work-product.md)  
+[Add a Page Action to Your Role Center](ui-bookmarks.md)  
+[Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

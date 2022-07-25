@@ -1,16 +1,15 @@
 ---
-title: Acquire Fixed Assets| Microsoft Docs
+title: Acquire Fixed Assets
 description: You can set up a fixed asset, assign a depreciation book, and record the fixed asset’s acquisition cost.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: purchase fixed asset
+ms.search.form: 5605, 5551, 5600, 5628, 5629, 5633
 ms.date: 12/03/2021
 ms.author: edupont
 
@@ -98,11 +97,11 @@ You can post the salvage value together with the acquisition cost from a fixed a
 > If a salvage value exists for a fixed asset, then that value will be used in depreciation posting instead of the value in the **Ending Book Value** field on the **FA Depreciation Books** page. For more information, see [To manage the ending book value](fa-how-depreciate-amortize.md#to-manage-the-ending-book-value).
 
 ## Viz také
-[Dlouhodobý majetek](fa-manage.md)    
-[Nastavení dlouhodobého majetku](fa-setup.md)    
-[Finance](finance.md)    
-[Příprava na podnikání](ui-get-ready-business.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
+[Finance](finance.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

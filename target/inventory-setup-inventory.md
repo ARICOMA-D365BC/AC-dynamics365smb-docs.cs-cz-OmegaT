@@ -3,13 +3,12 @@ title: Setting Up Inventory
 description: Describes how to set up your stock and inventory processes, including transfer routes and locations, such as warehouses.
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.search.form: 30
+ms.search.form: 30, 461
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -35,15 +34,15 @@ Po nastavení zásob můžete spravovat různé procesy související s transakc
 | Import více obrázků zboží najednou ze souboru zip, kde jsou soubory pojmenovány podle čísel zboží. | [Hromadný import obrázků zboží](inventory-how-import-item-pictures.md) |
 | Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
+## Viz související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 
 ## Viz také
 
-[Správa zásob](inventory-manage-inventory.md)  
-[Správa nákupu](purchasing-manage-purchasing.md)  
-[Správa prodeje](sales-manage-sales.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)
+[Managing Inventory](inventory-manage-inventory.md)  
+[Managing Purchasing](purchasing-manage-purchasing.md)  
+[Managing Sales](sales-manage-sales.md)    
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

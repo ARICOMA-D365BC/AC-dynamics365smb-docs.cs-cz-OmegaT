@@ -3,12 +3,12 @@ title: Overview of Tasks to Allocate Costs and Income
 description: Outlines the tasks to allocate an entry in a general journal to several different accounts when you post the journal.
 author: SorenGP
 
-ms.service: dynamics365-business-central
-ms.topic: conceptual
+
+ms.topic: overview
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.form: 283
+ms.search.form: 283, 5629
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -24,7 +24,7 @@ Při účtování deníku můžete přiřadit položku ve finančním deníku n�
 Funkce přidělení lze použít opakovaně pomocí finančních deníků a deníků dlouhodobého majetku.
 <!--You can also distribute the cost or revenue of a line to an intercompany partner when you post a sales or purchase document. When you post the document, a line will be posted in your general journal, and a corresponding line will be created in the intercompany outbox.-->
 
-Následující postupy popisují, jak připravit přidělení nákladů v periodickém finanční deníku pomocí definování alokačních klíčů Když jsou definovány alokační klíče, tak poté dokončíte a zaúčtujete deník jako jakýkoli jiný periodický finanční deník. Pro více informací navštivte [Práce s finančními deníky](ui-work-general-journals.md).
+Následující postupy popisují, jak připravit přidělení nákladů v periodickém finanční deníku pomocí definování alokačních klíčů Když jsou definovány alokační klíče, tak poté dokončíte a zaúčtujete deník jako jakýkoli jiný periodický finanční deník. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
 ## Nastavení alokačních klíčů
 
@@ -51,10 +51,10 @@ Položku v periodickém finančním deníku můžete při účtování přiděli
 4. Změňte příslušná pole a poté stiskněte tlačítko **OK**.
 
 ## Viz také
-[Uzavírání roků a období](year-close-years-periods.md)  
-[Práce s finančními deníky](ui-work-general-journals.md)    
-[Účtování dokladů a deníků](ui-post-documents-journals.md)    
-[Práce s  [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Closing Years and Periods](year-close-years-periods.md)  
+[Work with General Journals](ui-work-general-journals.md)    
+[Posting Documents and Journals](ui-post-documents-journals.md)    
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

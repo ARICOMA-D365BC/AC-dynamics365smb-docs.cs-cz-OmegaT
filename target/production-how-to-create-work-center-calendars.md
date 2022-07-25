@@ -3,7 +3,7 @@
     description: Creating and enabling a work center calendar involves several tasks including setting up shop calendars and creating work shifts.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -107,7 +107,7 @@ The capacity of the selected day has now decreased by the recorded absence time.
 [Set Up Work Centers and Machine Centers](production-how-to-set-up-work-and-machine-centers.md)  
 [Setting Up Manufacturing](production-configure-production-processes.md)  
 [Manufacturing](production-manage-manufacturing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

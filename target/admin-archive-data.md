@@ -1,59 +1,59 @@
 ---
-    title: The Data Archive Extension
-    description: Archiving data creates a low-cost backup of your records.
-    author: bholtorf
+title: The Data Archive Extension
+description: Archiving data creates a low-cost backup of your records.
+author: brentholtorf
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/14/2021
-    ms.author: bholtorf
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.form: 630
+ms.date: 06/14/2021
+ms.author: bholtorf
 
 ---
 
-# The Data Archive Extension
-Over time, your business will accumulate a substantial amount of data, and as an administrator, it's probably a good idea to have a strategy for archiving data. Having lots of data can slow things down, for example, it might take slightly longer to generate reports, or even lock records. Additionally, large amounts of data can lead to increased storage costs.
+# Rozšíření Archiv dat
+Časem se ve vaší firmě nahromadí značné množství dat a jako správce je pravděpodobně dobré mít strategii pro jejich archivaci. Množství dat může zpomalit práci, například generování sestav nebo dokonce uzamčení záznamů může trvat o něco déle. Velké množství dat navíc může vést ke zvýšeným nákladům na ukládání.
 
-The Data Archive extension provides a basic framework for archiving and backing up data as part of date compression. When you use date compression, related entries are consolidated into a single entry, and the originals are deleted. For more information, see [Compress Data with Date Compression](admin-manage-documents.md#compress-data-with-date-compression). However, there might be value in keeping that data, so rather than deleting it, you can archive it for later use.
+Rozšíření Archiv dat poskytuje základní balík pro archivaci a zálohování dat v rámci komprese dat. Při použití komprese dat se související záznamy sloučí do jediného záznamu a originály se odstraní. Pro více informací navštivte [Komprese dat pomocí komprimování dat](admin-manage-documents.md#compress-data-with-date-compression). Může se však stát, že si tato data ponecháte,a místo abyste je smazali je můžete archivovat pro pozdější použití.
 
-## Start Archiving Data
-The extension is pre-installed and available on the **Extension Management**, so you don't need to do anything to get started. The extension is also available on Microsoft AppSource.
+## Zahájení archivace dat
+Rozšíření je předinstalované a dostupné na **Správa rozšíření**, takže pro spuštění nemusíte nic dělat. Rozšíření je také k dispozici na Microsoft AppSource.
 
-Your data archives are listed on the **Data Archive List** page. Each archive can contain data from multiple tables, and can hold up to 10,000 records. If there are more than 10,000 records in a table, a second archive will be created for the next 10,000 records, and so on. For example, if you archive 10,100 G/L entries, Business Central creates one "G/L Entry" archive for the first 10,000 entries, and then a second archive for the remaining 100 entries.
+Vaše archivy dat jsou uvedeny na stránce **Přehled archivace dat**. Každý archiv může obsahovat data z více tabulek a může obsahovat až 10 000 záznamů. Pokud je v tabulce více než 10 000 záznamů, vytvoří se druhý archiv pro dalších 10 000 záznamů a tak dále. Pokud například archivujete 10 100 položky hlavní knihy, Business Central vytvoří jeden archiv "Položky" pro prvních 10 000 záznamů a poté druhý archiv pro zbývajících 100 záznamů.
 
-After you archive data, you can explore it using Microsoft Excel or as a CSV file.
+Po archivaci dat je možné prozkoumat data pomocí aplikace Microsoft Excel nebo jako soubor CSV.
 
-* If you use the Excel option, the workbook will contain one worksheet for each data archive table.
-* If you use the CSV option you'll get a ZIP file with one CSV file for each data archive table.
+* Pokud použijete možnost Aplikace Excel, sešit bude obsahovat jeden list pro každou tabulku archivu dat.
+* Pokud použijete možnost CSV, získáte soubor ZIP s jedním souborem CSV pro každou tabulku archivu dat.
 
 > [!TIP]
-> The Excel and CSV options make it easier to use another app or service to move the data to another location, such as Azure Blob storage, or analysis tool, such as Microsoft Power BI.
+> Možnosti Excel a CSV usnadňují použití jiné aplikace nebo služby pro přesun dat do jiného umístění, například do úložiště Azure Blob, nebo do analytického nástroje, například Microsoft Power BI.
 
-The Data Archive extensions is used by the following batch jobs for date compression.
+Rozšíření Archiv dat používají následující dávkové úlohy pro kompresi data.
 
-| Batch jobs |
+| Dávkové úlohy |
 |---------|
-| Date Comp. Item Budget Entries |
-| Date Compress Bank Acc. Ledger |
-| Date Compress Customer Ledger |
-| Date Compress FA Ledger |
-| Date Compress General Ledger |
-| Date Compress Insurance Ledger |
-| Date Compress Maint. Ledger |
-| Date Compress Maint. Ledger |
-| Date Compress Resource Ledger |
-| Date Compress VAT Entries |
-| Date Compress Vendor Ledger |
-| Date Compress Whse. Položky |
-| Date Compr. Položky finančního rozpočtu |
+| Datum Porov. Položky rozpočtu zboží |
+| Datová komprese bankovních účtů   |
+| Komprese položek zákazníka |
+| Komprese položek DM |
+| Komprese věcných položek |
+| Komprese položek pojištění |
+| Komprese dat údržby   |
+| Komprese dat údržby   |
+| Komprese položek zdrojů |
+| Komprese DPH položek |
+| Komprese položek dodavatele |
+| Kompere skladových položek Položky |
+| Datová kompere Položky finančního rozpočtu |
 
-To start archiving data when you run one of the batch jobs, turn on the **Archive Deleted Entries** toggle.
+Chcete-li zahájit archivaci dat při spuštění jedné z dávkových úloh, zapněte přepínač **Archivovat odstraněné položky**.
 
-## Storage Considerations
-The archived data is stored in the **Tenant Media** table. This table is not included when database size is calculated, according to your license terms. Instead, it counts as file storage. However, we recommend that you export old archives to, for example, a CSV file and then delete the old archive records.
+## Důležité informace o úložišti
+Archivovaná data jsou uložena v tabulce **Tenant Media**. Tato tabulka není zahrnuta při výpočtu velikosti databáze podle vašich licenčních podmínek. Místo toho se počítá jako úložiště souborů. Doporučujeme však exportovat staré archivy například do souboru CSV a poté odstranit staré záznamy archivu.
 
 ## Viz také
-[Manage Storage by Deleting Documents or Compressing Data](admin-manage-documents.md)
+[Správa úložiště odstraněním dokumentů nebo kompresí dat](admin-manage-documents.md)

@@ -3,10 +3,11 @@ title: Send Documents and Emails
 description: You can define content to insert into the body of an email message, for example, a PayPal link. You can also attach documents to email messages.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.workload: na
 ms.search.keywords: SMTP, mail, Microsoft 365, cover, body, PayPal, layout
+ms.search.form:
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -40,7 +41,7 @@ This procedure describes how attach a posted sales invoice to an email as a PDF 
 7. In the **Attachment** field, the generated invoice is attached by default as a PDF file.
 8. In the **Body** field, enter a short message to the recipient.
 
-   If a document-specific email text is set up on the **Report Selection - Sales** page, then the **Body** field is filled in automatically. For more information, see [Set Up Reusable Email Texts and Layouts for Sales and Purchase Documents](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts-for-sales-and-purchase-documents).
+   If a document-specific email text is set up on the **Report Selection - Sales** page, then the **Body** field is filled in automatically. For more information, see [Set Up Reusable Email Texts and Layouts](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts).
 9. Choose the **OK** button to send the email message.
 
 > [!NOTE]  
@@ -50,7 +51,7 @@ This procedure describes how attach a posted sales invoice to an email as a PDF 
 You can quickly compose emails for contacts, customers, vendors, salespeople/purchasers, and bank accounts directly from the pages for those entities. Just choose **Process**, and then **Send Email** to open the email editor. For bank accounts, the **Send Email** action is under **Actions**.
 
 > [!TIP]
-> If you often send email messages that are similar in nature, or want to send a bulk communication, for example, to advertise a sales campaign, using Word templates with email can speed up the process. You can create a template for an entities such as customers, vendors, and contacts, that will generate the content of an email message for you, and even personalize the content for the recipient based on data in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Using Word Templates for Bulk Communication](ui-mail-merge.md).
+> If you often send email messages that are similar in nature, or want to send a bulk communication, for example, to advertise a sales campaign, using Word templates with email can speed up the process. You can create a template for an entities such as customers, vendors, and contacts, that will generate the content of an email message for you, and even personalize the content for the recipient based on data in [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Use Word Templates for Bulk Communication](ui-mail-merge.md).
 
 ## Documents marked as printed when they are sent
 
@@ -65,14 +66,14 @@ Some documents in [!INCLUDE[prod_short](includes/prod_short.md)] have a field th
 
 The **Email Outbox** is where you'll find the emails that you saved as drafts, and emails that failed to send, for example, if the email address was invalid. For messages that failed to send, you can choose **Show Error** or **Investigate Error** to troubleshoot the problem.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/set-up-email/)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/set-up-email/)
 
 ## Viz také
 
 [Managing Report and Document Layouts](ui-manage-report-layouts.md)  
 [Set up Email](admin-how-setup-email.md)  
 [Invoice Sales](sales-how-invoice-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

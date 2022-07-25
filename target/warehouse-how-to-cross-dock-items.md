@@ -1,16 +1,17 @@
 ---
-    title: How to Cross-Dock Items | Microsoft Docs
-    description: Cross-docking functionality is available to you if you have set up your location to require warehouse receive and put-away processing.
-    author: SorenGP
+title: Cross-Dock Items
+description: Cross-docking functionality is available to you if you have set up your location to require warehouse receive and put-away processing.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 15, 5703, 7302, 7332, 5768
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Cross-Dock Items
@@ -95,12 +96,12 @@ When a production order has been released, the lines are available in the pick w
 If you are not using bins, you must remember to check the cross-dock area from time to time, or rely on notifications from receipts that items for production have arrived.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

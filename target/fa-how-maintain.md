@@ -1,16 +1,15 @@
 ---
 title: Maintain Fixed Assets
 description: You keep a maintenance record of any repairs and service on a fixed asset to preserve the value of that fixed asset.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: repair, service
+ms.search.form: 5642, 5625
 ms.date: 06/15/2021
 ms.author: edupont
 
@@ -81,11 +80,11 @@ In the **Maintenance - Details** report, you can view or print maintenance ledge
 3. Choose the **Print** or **Preview** button.
 
 ## Viz také
-[Dlouhodobý majetek](fa-manage.md)    
-[Nastavení dlouhodobého majetku](fa-setup.md)    
-[Finance](finance.md)    
-[Příprava na podnikání](ui-get-ready-business.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
+[Finance](finance.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

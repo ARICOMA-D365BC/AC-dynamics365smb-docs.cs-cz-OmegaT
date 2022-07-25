@@ -3,7 +3,7 @@
     description: This walkthrough gives a detailed overview of all the tasks involved in conducting a sales campaign in Business Central.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -198,9 +198,9 @@ Neexistuje žádná šablona interakce pro zaznamenávání odpovědí na kampan
 8. On the **Log Segment** page, clear the **Send Attachments** check box. Then choose the **OK** button to confirm the message that the segment has been logged.
 
 ## Viz také
-[Řízení vztahů](marketing-relationship-management.md)    
-[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Relationship Management](marketing-relationship-management.md)  
+[Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,16 +1,15 @@
 ---
-title: Reconcile Bank Accounts and Apply Payments | Microsoft Docs
+title: Reconcile Bank Accounts and Apply Payments
 description: Outlines tasks to reconcile your bank, receivables, and payables accounts, post cash receipts or expenses, and apply payments automatically.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, direct payment posting, reconcile payment, expenses, cash receipts
+ms.search.form: 1290, 1291, 1293, 1294
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -29,7 +28,7 @@ Chcete-li importovat bankovní výpisy jako bankovní zdroj, musíte nejprve nas
 > [!TIP]
 > You can also import bank statement files in comma or semicolon delimited format (.CSV). Use the **Set up a bank statement file format** assisted setup to define bank statement import formats and attach the format to a bank account. You can then use these formats when you import bank statements in the **Bank Account Reconciliation** page.
 
-Alternatively, you can use the AMC Banking 365 Fundamentals extension to convert a bank statement file, from any format, to a data stream that you can import into [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Using the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md).
+Alternatively, you can use the AMC Banking 365 Fundamentals extension to convert a bank statement file, from any format, to a data stream that you can import into [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Use the AMC Banking 365 Fundamentals extension](ui-extensions-amc-banking.md).
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
@@ -41,13 +40,13 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Propojte text plateb s konkrétními účty zákazníka, dodavatele nebo hlavní knihy tak, aby vždy zaúčtoval opakované příjmy v hotovosti nebo výdaje na tyto účty, pokud neexistují žádné doklady, na které by se vztahovaly. | [Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md) |
 | Set up the rules to govern how payments/bank transactions should be automatically applied to their related open ledger entries when you use the **Apply Automatically** function on the **Payment Reconciliation Journal** page. | [Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md) |
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/use-journals-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/use-journals-dynamics-365-business-central/index)
 
 ## Viz také
 [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md)  
 [Managing Receivables](receivables-manage-receivables.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,9 +1,9 @@
 ---
     title: Walkthrough - Tracing Serial-Lot Numbers
     description: This topic describes the actions that are needed to take to prevent selling a defective item, and also how to trace and recall items when needed.
-    author: bholtorf
+    author: brentholtorf
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -110,7 +110,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
 ### Nákup komponent
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 2. Vyberte akci **Nový**.
 3. Vytvořte nákupní objednávku pro dodavatele Custom Metals Incorporated vyplněním následujících polí v řádku.
 
@@ -124,7 +124,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 7. Zvolte akci **Účtovat**, vyberte možnost **Příjem a fakturace** a poté klikněte na tlačítko **OK**.
 
    Dále si zakupte závodní rámy od Mach a spol. v.o.s..
-8. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+8. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 9. Vyberte akci **Nový**.
 10. Vytvořte nákupní objednávku pro dodavatele Coolwood Technologies vyplněním následujících řádkových polí.
 
@@ -187,7 +187,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
    Dále prodejte závodní kola. Nejprve prodejte závodní kolo se SČ1 společnosti J V v.o.s..
 
 ### Prodej koncového zboží
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
    | Zákazník | Zboží | Množství | Sériové číslo |
@@ -199,7 +199,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    Dále prodejte závodní kolo se SČ2 společnosti BYT-KOMPLET s.r.o..
 
-5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 6. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
    | Zákazník | Zboží | Množství | Sériové číslo |
@@ -211,7 +211,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    Nakonec prodejte některé závodní rámy samostatně. BYT-KOMPLET s.r.o. také objednává čtyři samostatné závodní rámy pro vlastní montážní linku.
 
-9. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+9. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 10. Vyberte akci **Nový** a poté vytvořte prodejní objednávku vyplněním následujících polí.
 
    | Zákazník | Zboží | Množství | Sériové číslo |

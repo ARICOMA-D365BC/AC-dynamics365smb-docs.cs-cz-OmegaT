@@ -2,7 +2,7 @@
 title: Using Business Central Apps in Power BI| Microsoft Docs
 description: Getting insight, business intelligence, and KPIs from your Business Central data is easy with the Business Central apps for Power BI.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -11,7 +11,7 @@ ms.search.keywords: account schedule, analysis, reporting, financial report, bus
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
-# Použití [!INCLUDE [prod_short](includes/prod_short.md)] Apps v Power BI
+# Use the [!INCLUDE [prod_short](includes/prod_short.md)] Apps in Power BI
 
 > **PLATÍ PRO:** [!INCLUDE [prod_long](includes/prod_long.md)] online
 
@@ -145,25 +145,25 @@ Aplikace Power BI zobrazí pouze data od společnosti [!INCLUDE[prod_short](incl
 - [Vyberte dlaždici](/power-bi/service-dashboard-tiles) pro otevření zdrojové sestavy.
 - Ve výchozím nastavení není aktualizace datové sady naplánována. Plán aktualizace můžete změnit nebo jej můžete na vyžádání aktualizovat pomocí příkazu **Aktualizovat**. Pro více informací navštivte [Konfigurace naplánované aktualizace](/power-bi/refresh-scheduled-refresh).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central a Power BI](admin-powerbi.md)    
-[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
-[Práce s daty [!INCLUDE [prod_short](includes/prod_short.md)] v Power BI](across-working-with-business-central-in-powerbi.md)    
-[Vytváranie zostáv Power BI na zobrazenie dát [!INCLUDE [prod_long](includes/prod_long.md)]](across-how-use-financials-data-source-powerbi.md)    
-[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
-[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
-[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
-[Dokumentace Power BI](/power-bi/)    
-[Business Intelligence](bi.md)    
-[Příprava na podnikání](ui-get-ready-business.md)    
-[Import podnikových dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
-[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroj dat Power BI](across-how-use-financials-data-source-powerbi.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroj dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central and Power BI](admin-powerbi.md)  
+[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
+[Work with [!INCLUDE [prod_short](includes/prod_short.md)] Data in Power BI](across-working-with-business-central-in-powerbi.md)  
+[Building Power BI Reports to Display [!INCLUDE [prod_long](includes/prod_long.md)] Data](across-how-use-financials-data-source-powerbi.md)  
+[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
+[The 'new look' of the Power BI service](/power-bi/service-new-look)  
+[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
+[Power BI documentation](/power-bi/)  
+[Business Intelligence](bi.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 

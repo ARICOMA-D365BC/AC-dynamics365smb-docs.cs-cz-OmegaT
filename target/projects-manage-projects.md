@@ -3,11 +3,11 @@ title: Project Management
 description: This topic outlines how to use resources, time sheets, and jobs to manage projects and their budgets.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.workload: na
 ms.search.keywords: projects
-ms.search.form: 89, 289, 290, 376, 462, 463, 1029, 8904, 9014, 9015
+ms.search.form: 89, 200, 289, 290, 376, 462, 463, 1029, 1615, 8904, 9014, 9015
 ms.date: 06/22/2021
 ms.author: edupont
 
@@ -29,7 +29,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Review and record usage on various parts of your job, which is automatically updated as you modify and transfer information from job planning lines to job journals or job invoices for posting. | [Record Usage for Jobs](projects-how-record-job-usage.md) |
 | Purchase supplies for a job, either on purchase orders or invoices, and record item and time usage. | [Manage Job Supplies](projects-how-manage-project-supplies.md) |
 | Learn about WIP (Work in Process), a feature that ensures correct financial statements and enables you to estimate the financial value of jobs that are ongoing. | [Understanding WIP Methods](projects-understanding-wip.md) |
-| Post the consumption of materials, resources, and other expenses of job work in process (WIP) to monitor its financial value and to maintain correct financial statements even though you post job expenses before invoicing the job. | [Monitor Job Progress and Performance](projects-how-monitor-progress-performance.md) |
+| Post the consumption of materials, resources, and other expenses of job work in process (WIP) to monitor its financial value and to maintain correct financial statements even though you post job expenses before invoicing the job. | [Sledování průběhu a výkonu projektů](projects-how-monitor-progress-performance.md) |
 | Record job costs for resource usage, materials, and job-related purchases on an on-going basis and invoice the customer, either when the job is finished or according to an invoicing schedule. | [Invoice Jobs](projects-how-invoice-jobs.md) |
 
 ## Get started with projects
@@ -44,7 +44,7 @@ Project management is complicated enough in itself, and learning how to create j
 [Purchasing](purchasing-manage-purchasing.md)  
 [Sales](sales-manage-sales.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

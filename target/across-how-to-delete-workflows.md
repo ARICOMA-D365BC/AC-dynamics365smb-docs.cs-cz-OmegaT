@@ -3,7 +3,7 @@
     description: If you are certain that a workflow is no longer being used, you can delete it. All workflow step instances defined in the workflow must be status **Completed**.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -34,7 +34,7 @@ On the **Workflow** page, you create a workflow by listing the involved steps on
 [View Archived Workflow Step Instances](across-how-to-view-archived-workflow-step-instances.md)   
 [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)   
 [Setting Up Workflows](across-set-up-workflows.md)   
-[Using Workflows](across-use-workflows.md)   
+[Use Workflows](across-use-workflows.md)   
 [Workflow](across-workflow.md)
 
 

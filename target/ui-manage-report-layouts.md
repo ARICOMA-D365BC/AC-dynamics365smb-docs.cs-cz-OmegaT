@@ -1,69 +1,137 @@
 ---
-title: Custom and Built-In Layouts for Reports and Documents | Microsoft Docs
+title: Managing Report and Document Layouts
 description: Use report layouts to customize documents, for example, to personalize the font, logo, or page settings of PDF files you send to customers.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
-
-ms.service: dynamics365-business-central
+author: jswymer
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: customized report, document layout, logo, personalize
+ms.search.form: 9652, 9650
 ms.date: 04/01/2021
-ms.author: edupont
+ms.author: jswymer
 
 ---
-# Správa rozvržení sestav a dokladů
-Rozložení sestavy řídí obsah a formát sestavy, včetně těch datových polí datové sady sestavy, které se zobrazují v sestavě, jejich uspořádání, stylu textu, obrázků a dalších prvků. From [!INCLUDE[prod_short](includes/prod_short.md)], you can change which layout is used on a report, create new layout, or modify the existing layouts.
+# Report and Document Layouts Overview
+
+A report layout controls content and format of the report, including which data fields of a report dataset appear on the report and how they're arranged, text style, images, and more. From [!INCLUDE[prod_short](includes/prod_short.md)], you can change which layout is used on a report, create new layout, or modify the existing layouts.
 
 > [!NOTE]  
 > In [!INCLUDE[prod_short](includes/prod_short.md)], the term "report" also covers externally-facing documents, such as sales invoices and order confirmations that you send to customers as PDF files.
 
-Rozložení sestavy nastavuje zejména následující:
+You can also use report layouts to add content to email messages. Rozvržení sestav může například ušetřit čas a pomoci zajistit konzistenci tím, že při komunikaci se zákazníky znovu použije stejný obsah. Chcete-li použít vlastní rozvržení sestavy pro e-mail, typ souboru pro rozvržení musí být Word. Nelze použít typ souboru RDLC. For more information, see [Set Up Reusable Email Texts and Layouts](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts).
+
+## Úvod
+
+In particular, a report layout sets up the following things:
 
 * The label and data fields to include from the dataset of the [!INCLUDE[prod_short](includes/prod_short.md)] report.
 * Textový formát, například typ písma, velikost a barva.
 * Logo společnosti a jeho pozice.
 * Obecné nastavení stránky, například okraje a obrázky na pozadí.
 
-Sestavu lze nastavit ve více rozloženích sestav, mezi kterými lze přepínat podle potřeby. Můžete použít jedno z vestavěných rozvržení přehledů nebo si můžete vytvořit vlastní rozvržení sestav a podle potřeby je přiřadit k vašim přehledům. For more information, see [Create a Custom Report or Document Layout](ui-how-create-custom-report-layout.md).
+Sestavu lze nastavit ve více rozloženích sestav, mezi kterými lze přepínat podle potřeby.
 
-Existují dva typy rozvržení sestav, které můžete použít v sestavách - Word a RDLC.
+<!--You can use one of the built-in report layouts or you can create custom report layouts and assign them to your reports as needed. For more information, see [Create a Custom Report or Document Layout](ui-how-create-custom-report-layout.md).-->
 
-## Přehled rozvržení sestavy aplikace Word
-Rozložení sestavy aplikace Word je založeno na dokumentu aplikace Word (typ souboru DOCX). Rozložení sestav aplikace Word umožňují navrhovat rozložení sestav pomocí aplikace Microsoft Word 2013 nebo novější. Rozložení sestavy aplikace Word určuje obsah zprávy - určuje, jak jsou tyto prvky obsahu uspořádány a jak vypadají. Dokument rozložení sestavy aplikace Word obvykle používá tabulky k uspořádání obsahu, kde mohou buňky obsahovat datová pole, text nebo obrázky.
+There are two important aspects of report layouts that will influence how you work with them: the *layout type* and the *layout source*. The layout type indicates the kind of file that the layout is based on. The layout source indicates the origin of the layout.
 
-![Example of a word report layout document for NAV.](media/nav_wordreportlayout_edit_in_word_example.png "NAV_WordReportLayout_Edit_In_Word_Example")
+## Layout types
 
-## Přehled rozvržení RDLC
-Rozložení RDLC je založeno na rozložení definic klientských sestav (typy souborů .rdlc nebo .rdl). Tato rozvržení jsou vytvářena a upravována pomocí SQL Server Report Builder. Koncepce návrhu rozvržení RDLC je podobná rozvržení aplikace Word, kde rozvržení definuje obecný formát sestavy a určuje pole z datové sady, která má být zahrnuta. Navrhování rozložení RDLC je pokročilejší než rozložení aplikace Word. For more information, see [Designing RDLC Report Layouts](/dynamics-nav/Designing-RDLC-Report-Layouts).
+There are four types of layouts that you can use on reports: Word, RDLC, Excel, and external.
 
-## Vestavěné a vlastní rozvržení sestavy
-[!INCLUDE[prod_short](includes/prod_short.md)] includes several built-in layouts. Vestavěná rozvržení jsou předdefinovaná rozvržení, která jsou navržena pro konkrétní sestavy. [!INCLUDE[prod_short](includes/prod_short.md)] reports will have a built-in layout as either an RDLC report layout, Word report layout, or in some cases both. You cannot modify a built-in report layout from [!INCLUDE[prod_short](includes/prod_short.md)] but you use them as a starting point for building your own custom report layouts.
+### Word
 
-Vlastní rozvržení jsou rozvržení sestavy, která navrhujete tak, aby změnila vzhled sestavy. Obvykle vytvoříte vlastní rozvržení na základě vestavěného rozvržení, ale můžete je vytvořit od nuly nebo jako kopie z existujícího vlastního rozvržení. Vlastní rozvržení vám umožní mít více rozvržení pro stejnou sestavu, mezi nimiž podle potřeby přepínáte. For example, you can have different layouts for each [!INCLUDE[prod_short](includes/prod_short.md)] company, or you can have different layouts for the same company for specific occasions or events, like a special campaign or holiday season.
+Word layouts are based on Word documents (.docx file type). Word layouts enable you to design report layouts by using Microsoft Word. A Word layout determines the report's content - controlling how that content elements are arranged and how they look. A Word layout document will typically use tables to arrange content, where the cells can contain data fields, text, or pictures.
 
-## Rozhodnutí, zda použít rozvržení sestavy Word nebo RDLC
-Rozložení sestavy může být založeno buď na dokumentu aplikace Word, nebo na souboru RDLC. Rozhodování o tom, zda použít rozvržení sestavy aplikace Word nebo typ rozvržení sestavy RDLC, bude záviset na tom, jak chcete, aby generovaná sestava vypadala, a na vašich znalostech aplikace Word a SQL Server Report Builder.
+[![Example of a word report layout document for Business Central.](media/word-layout-overview.png)](media/word-layout-overview.png#lightbox)
 
-Obecné koncepční koncepce rozvržení Word a RDLC jsou velmi podobné. However each type has certain design features that affect how the generated report appears in [!INCLUDE[prod_short](includes/prod_short.md)]. To znamená, že stejná sestava může vypadat odlišně při použití rozvržení sestavy aplikace Word ve srovnání s rozvržením sestavy RDLC.
+<!--![Example of a word report layout document for Business Central.](media/nav_wordreportlayout_edit_in_word_example.png) -->
 
-Proces nastavení rozvržení sestav aplikace Word a rozvržení sestav RDLC v sestavách je stejný. Hlavní rozdíl spočívá ve způsobu úpravy rozvržení. Rozložení sestav aplikace Word je obvykle snazší vytvořit a upravit než rozvržení sestav RDLC, protože můžete použít aplikaci Word. Rozložení sestav RDLC je upraveno pomocí nástroje SQL Server Report Builder, který cílí na pokročilejší uživatele.
+For more information, see [Work with Word Layouts](ui-how-add-fields-word-report-layout.md).
 
-For information on how to change which layout to use, see [Change the Current Report Layout](ui-how-change-layout-currently-used-report.md).
+### Excel
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+Excel layouts are based on Microsoft Excel workbooks (.xlsx file type). They let you create reports by using familiar Excel features for summarizing, analyzing, and presenting data with tools like formulas, PivotTables, PivotCharts, and more.
+
+[![Shows the an example of an Excel layout.](media/excel-layout-2.png)](media/excel-layout-2.png#lightbox)
+
+For more information, see [Work with Excel Layouts](ui-excel-report-layouts.md).
+
+### RDLC
+
+Rozvržení RDLC jsou založeny na souborech rozvržení definice sestav klienta (typy souborů .rdl nebo .rdlc). These layouts are created and modified by using SQL Server Report Builder or Microsoft RDLC Report Designer. The design concept for RDLC layouts is similar to Word layouts, where the layout determines what fields to show and how they're arranged. However, designing RDLC layouts is more advanced than Word layouts.
+
+[![Shows the an example of an RDLC layout.](media/rdlc-layout-overview.png)](media/rdlc-layout-overview.png#lightbox)
+
+For more information, see [Work with RDLC Layouts](ui-rdlc-report-layouts.md).
+
+### External
+
+An external layout type refers to an advanced type that's specially designed for specific reports. The reports and the layouts themselves are typically provided by partners, not Microsoft. The actual file type of the layout will vary depending on the provider.
+
+For more information, see [Developing a Custom Report Render](/dynamics365/business-central/dev-itpro/developer/devenv-report-custom-render).
+
+## Layout sources
+
+In addition to the type, layouts are further divided into three categories, based on their source or origin.
+
+* Extension layouts
+
+   Extension layouts are layouts that are part of an extension that's been installed on the environment. These layouts are typically standard layouts provided by Microsoft, for example, in the base application. Or, they could be layouts that are included in extensions from other software providers. You can recognize extension layouts on the **Report Layouts** page because the extension name and publisher is shown in the **Extension** column.
+
+* User-defined layouts
+
+   The other source of layouts is the end-user. From inside Business Central, a user with proper permissions can add new layouts in various ways. For example, you could start from an existing extension layout or another user-defined layout. On the **Report Layouts**, user-defined layout will have an empty **Extension** column.
+
+   For more information, see [Get Started Creating Report Layouts](ui-get-started-layouts.md).
+
+* Custom layouts
+
+   Custom layouts are also layouts that are created by users. The difference is that these layouts are created from the legacy **Custom Report Layouts** page, and they can only be Word and RDLC type. Although you can still create custom layouts, they're being phased out in favor of user-defined layouts.
+
+   For more information, see [(Legacy) Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
+
+For information that will help you decide what type is best for you, see [Decide what type of layout you want](ui-get-started-layouts.md#decide).
+
+> [!IMPORTANT]
+> One important thing to remember is that you can't modify extension layouts from the Business Central client. For example, you aren't allowed to change the layout name or type, or upload and replace it with another version. If you try, you'll get an error message. You'll have to create a user-defined or custom layout based on the extension layout instead.
+
+<!--
+### Built-in and custom report layouts
+
+
+
+[!INCLUDE[prod_short](includes/prod_short.md)] includes several built-in layouts. Built-in layouts are predefined layouts that are designed for specific reports. [!INCLUDE[prod_short](includes/prod_short.md)] reports will have a built-in layout as either an RDLC report layout, Word report layout, or in some cases both. You can’t modify a built-in report layout from [!INCLUDE[prod_short](includes/prod_short.md)] but you use them as a starting point for building your own custom report layouts.
+
+Custom layouts are report layouts that you design to change the appearance of a report. You typically create a custom layout based on a built-in layout, but you can create them from scratch or from a copy of an existing custom layout. Custom layouts enable you to have multiple layouts for the same report, which you switch among as needed. For example, you can have different layouts for each [!INCLUDE[prod_short](includes/prod_short.md)] company, or you can have different layouts for the same company for specific occasions or events, like a special campaign or holiday season.
+
+
+Deciding on whether to use a Word, Excel, or RDLC layout type will depend on how you want the generated report to look and your knowledge of tools for creating the layouts, like Word, Excel, and SQL Server Report Builder.
+
+* The general design concepts for Word and RDLC layouts are similar. However each type has certain design features that affect how the generated report appears in [!INCLUDE[prod_short](includes/prod_short.md)]. This means that the same report might look different when using the Word report layout compared to the RDLC report layout.
+
+* The process for setting up Word, Excel, and RDLC report layouts on reports is the same. The main difference is in the way you modify the layouts. Word and especially Excel layouts are typically easier to create and modify than RDLC report layouts because you use Word and Excel. RDLC report layouts are modified by using SQL Server Report builder, which targets more advanced users.
+
+* Not all reports and document have a dataset that is optimized for use with an Excel layout. For example, aggregations and complex calculations work best with RDLC or Word layouts. The same is true for documents.
+
+For information about how to switch the layout currently used on a report, see [Set the Layout Used by a Report](ui-set-report-layout.md).
+
+-->
+
+
+
+## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
+
 [Update Custom Report Layouts](ui-update-report-layouts.md)  
 [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md)  
 [Import and Export a Custom Report or Document Layout](ui-how-import-and-export-report-layout.md)  
 [Define Special Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
-[Working with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

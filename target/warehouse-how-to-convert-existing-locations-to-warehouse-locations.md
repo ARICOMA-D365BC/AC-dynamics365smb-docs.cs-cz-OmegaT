@@ -1,16 +1,17 @@
 ---
-    title: How to Convert Existing Locations to Warehouse Locations | Microsoft Docs
-    description: You can enable an existing inventory location to use zones and bins and to operate as a warehouse location.
-    author: SorenGP
+title: Convert Existing Locations to Warehouse Locations
+description: You can enable an existing inventory location to use zones and bins and to operate as a warehouse location.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 15
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Převod existujících lokací na lokace skladu
@@ -39,12 +40,12 @@ Zóny a přihrádky můžete vytvořit před nebo po převodu. Jediná přihrád
 Pro skladová místa, která před převodem nepoužívaly doklady správy skladu, je nutné znovu otevřít a uvolnit všechny původní doklady, které byly částečně přijaty nebo částečně dodány před převodem.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,16 +1,15 @@
 ---
-title: Create Interactions on Contacts and Segments| Microsoft Docs
+title: Create Interactions on Contacts and Segments
 description: Describes how to create interactions for communication that you have with your contacts and segments in Business Central, for example, direct mail.
-services: project-madeira
 documentationcenter: ''
 author: jswymer
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: relationship, prospect
+ms.search.forms: 5077, 5078, 5074, 5076, 5186, 5075, 5079
 ms.date: 04/01/2021
 ms.author: jswymer
 
@@ -49,7 +48,7 @@ If you have selected the **Create Follow-up Segment** check box, a new segment i
 [Recording Interactions](marketing-interactions.md)  
 [Managing Contacts](marketing-contacts.md)  
 [Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
-[Working with Business Central](ui-work-product.md)
+[Work with Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

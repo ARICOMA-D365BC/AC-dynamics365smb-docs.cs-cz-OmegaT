@@ -3,7 +3,7 @@ title: Set Up Shipment Methods
 description: You can set up a code for each of your offered shipment methods, and enter information about them.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -38,7 +38,7 @@ You set up the description and code for each shipment method on the **Shipment M
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
 [Assembly Management](assembly-assemble-items.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Incoterms on iccwbo.org](https://iccwbo.org/resources-for-business/incoterms-rules)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

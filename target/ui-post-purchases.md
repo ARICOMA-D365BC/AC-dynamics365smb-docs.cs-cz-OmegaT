@@ -1,14 +1,15 @@
 ---
-title: Understanding How To Post Purchase Documents
+title: Post Purchase Documents
 description: Learn about the different posting functions to post purchase documents, and how to update posted documents.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.reviewer: edupont
+ms.search.form:
 ms.date: 06/24/2021
 ms.author: edupont
 
@@ -48,7 +49,7 @@ In most cases, you can open ledger entries from the affected card or document. F
 ## Editing Ledger Entries
 You can edit certain fields on posted purchase documents, such as the **Payment Reference** field. For more information, see [Edit Posted Documents](across-edit-posted-document.md). For more critical fields that affect the auditing trail, you must reverse or undo posting. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
 
 ## Viz také
 [Edit Posted Documents](across-edit-posted-document.md)  
@@ -57,7 +58,7 @@ You can edit certain fields on posted purchase documents, such as the **Payment 
 [Posting Documents and Journals](ui-post-documents-journals.md)  
 [Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
 [Finding Pages and Information with Tell Me](ui-search.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,8 +3,8 @@ title: Overview of Reports to Help Prepare Closing Statements | Microsoft Docs
 description: Provides an overview of the reports you can use to gather information to prepare your company's closing statements when closing the fiscal year.
 author: jswymer
 
-ms.service: dynamics365-business-central
-ms.topic: conceptual
+
+ms.topic: overview
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
@@ -32,7 +32,7 @@ To see a report, choose the ![Lightbulb that opens the Tell Me feature.](media/u
 
 ## Viz také
 [Closing Years and Periods](year-close-years-periods.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Business Intelligence](bi.md)
 
 

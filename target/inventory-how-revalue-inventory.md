@@ -1,16 +1,15 @@
 ---
 title: Create New Value Entries for Items in the Inventory| Microsoft Docs
-description: Describes how to appreciate or depreciate the value entries of one or more items in the inventory by posting their current, calculated value.
-services: project-madeira
+description: Describes how to appreciate or depreciate the value entries of one or more items in inventory by posting their current, calculated value.
 documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: costing, inventory cost, value entries
+ms.search.forms: 5803,
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -35,7 +34,7 @@ Nové položky přecenění jsou nyní vytvořeny tak, aby odrážely přeceněn
 [Inventory](inventory-manage-inventory.md)  
 [Sales](sales-manage-sales.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

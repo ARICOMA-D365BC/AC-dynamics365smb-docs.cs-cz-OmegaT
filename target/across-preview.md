@@ -68,16 +68,16 @@ If you have added data to your [!INCLUDE[prod_short](includes/prod_short.md)] fr
 
 ## Getting Started with a Subscription
 
-Each time you sign in during the trial period, a notification in a blue bar at the top displays the time remaining. If you decide to subscribe, find a [!INCLUDE[prod_short](includes/prod_short.md)] partner. For more information, see [How do I find a reselling partner?](/dynamics365/business-central/across-faq#findpartner). The reselling partner can help you set up [!INCLUDE[prod_short](includes/prod_short.md)] to fit your business, including importing your data from your previous system. You can also customize [!INCLUDE[prod_short](includes/prod_short.md)] by adding apps from [the Microsoft commercial marketplace](https://go.microsoft.com/fwlink/?linkid=2081646).
+Pokaždé, když se během zkušebního období přihlásíte, zobrazí se v oznámení na modrém pruhu v horní části zbývající čas. Pokud se rozhodnete přihlásit k odběru, najděte si  [!INCLUDE[prod_short](includes/prod_short.md)] partnera. Pro další informace se podívejte na [Jak najít partnera?](/dynamics365/business-central/across-faq#findpartner). Prodejní partner vám může pomoci nastavit [!INCLUDE[prod_short](includes/prod_short.md)] tak, aby vyhovovaly vaší firmě, včetně importu dat z předchozího systému. Můžete také přizpůsobit [!INCLUDE[prod_short](includes/prod_short.md)] přidáním aplikací z  [Microsoft marketplace](https://go.microsoft.com/fwlink/?linkid=2081646).
 
-[!INCLUDE[prod_short](includes/prod_short.md)] online uses Microsoft 365. If your company uses a different type of email setup, the reselling partner can help you decided how to migrate, or if you should use [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.
+[!INCLUDE[prod_short](includes/prod_short.md)] online používá Microsoft 365. Pokud vaše společnost používá jiný typ nastavení e-mailu, partner pro prodej vám může pomoci s rozhodnutím, jak provést migraci, nebo zda byste měli použít [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.
 
-You can also contact the [[!INCLUDE[prod_short](includes/prod_short.md)] Sales team](https://go.microsoft.com/fwlink/?linkid=828707).
+Můžete také kontaktovat [[!INCLUDE[prod_short](includes/prod_short.md)] Sales team](https://go.microsoft.com/fwlink/?linkid=828707).
 
 > [!TIP]
 > [!INCLUDE [admin-license-trial](includes/admin-license-trial.md)]
 
-For more information about what you can do with [!INCLUDE [prod_short](includes/prod_short.md)], see [Getting Ready for Doing Business](ui-get-ready-business.md) and [Business Functionality](across-business-functionality.md).
+Další informace o tom, co můžete dělat s [!INCLUDE [prod_short](includes/prod_short.md)], najdete v [Příprava na podnikání](ui-get-ready-business.md) a [Obchodní funkce](across-business-functionality.md).
 
 ## Getting Started with Sandboxes
 

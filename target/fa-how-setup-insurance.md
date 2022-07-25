@@ -1,16 +1,15 @@
 ---
-title: Set Up FA Insurance| Microsoft Docs
+title: Set Up FA Insurance
 description: You set up an insurance card and general insurance policy information to manage fixed asset insurance coverage.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: policy, coverage
+ms.search.form: 5607, 5648, 5644, 5651
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -38,7 +37,7 @@ You may accumulate information about each insurance policy on the insurance card
 3. Podle potřeby vyplňte pole.
 
 ## To set up insurance journal templates
-[!INCLUDE[prod_short](includes/prod_short.md)] automatically creates an insurance journal template the first time that you open the **Insurance Journal** page, but you can set up additional journal templates. For more information, see [Working with General Journals](ui-work-general-journals.md).
+[!INCLUDE[prod_short](includes/prod_short.md)] automatically creates an insurance journal template the first time that you open the **Insurance Journal** page, but you can set up additional journal templates. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance Journal Templates**, and then choose the related link.
 2. Podle potřeby vyplňte pole.
@@ -58,7 +57,7 @@ You can set up batches in an insurance journal template. The values in the journ
 [Fixed Assets](fa-manage.md)  
 [Finance](finance.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

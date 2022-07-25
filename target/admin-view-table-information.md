@@ -2,11 +2,12 @@
 title: View Table Information
 description: Learn how you can view information about the database tables directly from the client interface in Business Central.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form: 8700
 ms.date: 06/14/2021
 ms.author: jswymer
 ---
@@ -28,7 +29,7 @@ Následující tabulka popisuje inforace pro každou tabulku.
 | Název společnosti | Název společnosti, pokud nějaká společnost existuje, ke které tabulka patří. |
 | Název tabulky | Název tabulky. |
 | Číslo tabulky | ID tabulky |
-| Ne.  záznamu | Celkový počet záznamů uložených v tabulce. |
+| Ne. záznamu | Celkový počet záznamů uložených v tabulce. |
 | Velikost záznamu | Průměrná velikost záznamu v KB/záznam. Hodnota se vypočítá pomocí následujícího vzorce: 1024(velikost)/(Číslo Záznamu). |
 
 ## Viz také

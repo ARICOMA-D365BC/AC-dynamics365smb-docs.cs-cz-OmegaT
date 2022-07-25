@@ -2,7 +2,7 @@
 title: Sharing Business Central Records in Microsoft Teams
 description: Learn how to use the Business Central app for Microsoft Teams.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -41,7 +41,7 @@ The following sections describe the different ways in detail.
 
 With the Business Central app for Teams, you can copy a link from any Business Central record, like a customer or sales order, and paste the link into a Teams conversation. The app connects Microsoft Teams to your business data in [!INCLUDE [prod_short](includes/prod_short.md)]\. It then expands the link into a compact, interactive card that displays information about the record. Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
 
-[![Teams integration with Business Central.](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+[![Teams integration with Business Central.](media/teams-intro-vBC20.png)](media/teams-intro-vBC20.png#lightbox)
 
 ### Předpoklady
 
@@ -56,38 +56,36 @@ With the Business Central app for Teams, you can copy a link from any Business C
 1. Přihlašte se do [!INCLUDE [prod_short](includes/prod_short.md)] pomocí Vašeho prohližeče.
 2. Otevřete záznam, který chcete sdílet.
 
-   The app is designed to display card type pages from [!INCLUDE [prod_short](includes/prod_short.md)]\. Otevřete stránku, která zobrazuje jeden záznam, například Zboží, Zákazníka nebo Pprodejní objednávku. Nelze jej použít pro centra rolí nebo stránky, které zobrazují několik záznamů v seznamu.
+   The app is designed to display a card for almost any type of [!INCLUDE [prod_short](includes/prod_short.md)] page. But it provides the best experience when used for pages that display a single record, such as an item, customer, or sales order.
+3. Copy the link to the page.
 
-3. Zkopírujte celou adresu URL z adresního řádku prohlížeče.
+   There are two ways to copy the link. The easiest and preferred way is to select  **Share** ![Share icon in Business Central](media/share-icon.png) > **Copy Link**. The other way is to, copy the entire URL from the browser's address bar.
 
-   ![Copy Business Central URL from browser.](media/teams-url-v2.png)
+   [![Copy Business Central URL from browser.](media/teams-copy-link.png)](media/teams-copy-link.png#lightbox)
 4. Přejděte do Teams a začněte konverzaci, pomocí které můžete chatovat s osobou, skupinou osob nebo týmovám kanálem.
-
-   <!--Teams imposes a few limitations here eg. you cannot unfurl a link during a Voice/Video call :/ We should probably only mention this in a Troubleshooting section (and i hope it will also be fixed soon)-->
-5. Vložíte URL adresu do okna se zprávou, kde ji píšete.
+5. Paste the link (URL) in the message box where you compose a message.
 
    ![Paste Business Central URL in Teams.](media/teams-paste-url-v2.png)
+
+   > [!TIP]
+   > If you get a message like: *Business Central wants to show a preview of this link.*, it means that you don't have the Business Central app for Teams installed. To install the app, select **Show Preview** and follow the instructions.
 6. Při prvním vložení odkazu do konverzace budete požádáni, abyste se přihlásili k [!INCLUDE [prod_short](includes/prod_short.md)] a udělili aplikaci souhlas k načtení dat. Postupujte podle pokynů na obrazovce.
 
    > [!NOTE]
    > Tento krok budete muset udělat pouze jednou.
-
 7. Chvilku počkejte, než se karta vygeneruje v okně se zprávou.
-
 8. Když se karta zobrazí, před odesláním zprávy pečlivě zkontrolujte její obsah, zda neobsahuje citlivé informace. Tento krok je důležitý, protože jakmile zprávu odešlete, všichni v konverzaci kartu uvidí.
-
 9. Pokud karta vypadá dobře, pomocí **Odeslat** ji přidáte do konverzace.
 
    > [!TIP]
    > Jakmile se karta objeví a před tím, než zvolíte **Send** můžete smazat URL, které jste vložili.
-
 10. Chcete-li zobrazit další podrobnosti nebo provést změny záznamu zobrazeném na kartě, vyberte možnost **Podrobnosti**. Další informace naleznete v následující části.
 
 ### Zobrazení podrobností karty
 
-Po odeslání karty do konverzace mohou všichni účastníci se [správnými oprávněními](admin-teams-integration.md#permissions) vybrat **Detaily** a otevřít okno, které zobrazuje další informace o záznamu a případně provést změny záznamu. Nezáleží na tom, jestli jste ten, kdo kartu posílá, nebo ten, kdo kartu přijímá. Funkce **Podrobnosti** je obzvláště užitečná pro příjemce, protože jim rychle poskytuje stručné a cílené informace o záznamu, na rozdíl od toho, že musí zobrazovat celý záznam.
+Po odeslání karty do konverzace mohou všichni účastníci se [správnými oprávněními](admin-teams-integration.md#permissions) vybrat **Detaily** a otevřít okno, které zobrazuje další informace o záznamu a případně provést změny záznamu. Nezáleží na tom, jestli jste ten, kdo kartu posílá, nebo ten, kdo kartu přijímá. The **Details** feature is especially useful to recipients, because it quickly provides them with concise, targeted information about the record.
 
-Okno podrobností je podobné tomu, co byste viděli v záznamu [!INCLUDE [prod_short](includes/prod_short.md)]. Ale pro Teams je to trošku ořezáné. Až dokončíte prohlížení a provádění změn, zavřete okno a vraťte se do konverzace Teams.
+The details window is similar to what you'd see in [!INCLUDE [prod_short](includes/prod_short.md)], but it's focused on the page or record that the card is about. Až dokončíte prohlížení a provádění změn, zavřete okno a vraťte se do konverzace Teams.
 
 Při práci s údaji na kartě je na paměti několik věcí:
 

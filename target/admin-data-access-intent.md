@@ -1,13 +1,13 @@
 ---
-title: Manage database access intent in Business Central | Microsoft Docs
+title: Manage database access intent in Business Central
 description: Change the database access intent for reports, API pages, and queries.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords:
+ms.search.form: 9880
 ms.date: 04/01/2021
 ms.author: jswymer
 ---
@@ -44,12 +44,12 @@ In database terms, this feature is commonly known as *read scale-out*. For more 
    > [!NOTE]
    > If an object that is editable, like the Customer Card, is set to **Read Only**, the primary database will still be used, regardless of the access intent, allowing users to make changes as normal.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/deploy-configure-dynamics-365-business-central/)
+## Viz související školení na webu [Microsoft Learn](/learn/paths/deploy-configure-dynamics-365-business-central/)
 
 ## Viz také
 [Business Functionality](across-business-functionality.md)  
 [General Business Functionality](ui-across-business-areas.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]

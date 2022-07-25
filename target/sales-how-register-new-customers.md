@@ -3,13 +3,13 @@ title: Register New Customers by Creating a Customer Card (contains video)
 description: Describes how to create a customer card to register information about each new customer or client that you sell to.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: client, customer, credit
-ms.search.form: 7, 21, 22, 33, 42, 43, 367, 368, 369, 512, 785, 1330, 1380, 1381, 1382, 1627, 2107, 7177, 9080, 9081, 9084, 9301, 9305
+ms.search.form: 7, 21, 22, 33, 42, 43, 367, 368, 369, 461, 512, 785, 1330, 1380, 1381, 1382, 1627, 2107, 7177, 9080, 9081, 9084, 9301, 9305
 ms.date: 09/24/2021
 ms.author: edupont
 
@@ -84,6 +84,6 @@ You can choose not to have warnings telling you that the customer's credit limit
 [Create Number Series](ui-create-number-series.md)  
 [Sales](sales-manage-sales.md)  
 [Setting Up Sales](sales-setup-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

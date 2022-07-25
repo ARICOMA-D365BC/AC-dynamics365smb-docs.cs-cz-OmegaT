@@ -4,7 +4,7 @@
 
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -18,79 +18,79 @@
 
 Sledujte skladové položky i ve složitých skladových konfiguracích pomocí čísel, která jsou specifická pro každou položku, ať už jako jednotlivý objekt, šarži nebo balíček. Pomocí sledování zboží můžete sledovat položky v rámci interních skladových pohybů a u odesílaných a přijímaných dokladů.
 
-Zboží se sériovými čísly a čísly šarží lze v dodavatelském řetězci sledovat jak zpětně tak i dopředu. To je užitečné pro obecné zajištění kvality a pro případné stažení výrobků z oběhu For more information, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md).
+Zboží se sériovými čísly a čísly šarží lze v dodavatelském řetězci sledovat jak zpětně tak i dopředu. To je užitečné pro obecné zajištění kvality a pro případné stažení výrobků z oběhu Pro více informací navštivte [Sledování položek sledovaného zboží](inventory-how-to-trace-item-tracked-items.md).
 
 > [!TIP]
-> In 2021 release wave 1 and later, switch on the *Use tracking by package number in reservation and tracking system* feature update if you want to work with package numbers as well as serial and lot numbers. For more information, see [Enabling Upcoming Features Ahead of Time](admin-feature-management.md). Once the feature is switched on, you can assign package numbers to outbound and inbound documents similar to how you can work with lot numbers.
+> V roce 2021 ve vlně 1 a novějších zapněte aktualizaci funkce *Použít sledování podle čísla balíku v rezervačním a sledovacím systému*, pokud chcete pracovat s čísly balíků a také sériovými čísly a čísly šarží.. Pro další informace se podívejte na [Povolení nadcházejících funkcí s předstihem](admin-feature-management.md). Jakmile je funkce zapnutá, můžete přiřadit čísla balíků odchozím a příchozím dokladům podobně jako při práci s čísly šarží.
 
-## Numbers and item tracking
+## Čísla a sledování zboží
 
-As part of your warehouse processes, you can bundle your stock in packages, boxes, containers, and so on. But in order to keep track of the items, you assign unique numbers as identification. For example, you manufacture and sell a chair that has the item number *1900-S*. Each individual chair has a serial number, *1001*, but you also bundle four chairs into a lot, *LOT0001*, and you ship the chairs in a container with the package number *CONTAINER010* that also includes other items, such as *LOT0100* with side tables, and *LOT200* with lamps.
+Jako součást vašich skladových procesů můžete své zásoby do dát balíčků, krabic, kontejnerů a dalších. Ale abyste měli přehled o položkách, přidělujete jedinečná čísla pro identifikaci. Například vyrábíte a prodáváte židli, která má číslo zboží *1900-S*. Každá jednotlivá židle má sériové číslo *1001* ale také sdružíte čtyři židle do šarže *LOT0001* a židle odešlete v kontejneru s číslem balení *CONTAINER010*, který také obsahuje další položky, jako je *LOT0100* s odkládacími stolky a *LOT200* s lampami.
 
-Depending on your configuration, you use these different numbers to keep track of inventory in [!INCLUDE [prod_short](includes/prod_short.md)] at the various stages of purchasing, sales, warehouse operations, and so on.
+V závislosti na konfiguraci můžete tato různá čísla používat ke sledování zásob v [!INCLUDE [prod_short](includes/prod_short.md)]  v různých fázích nákupu, prodeje, skladových operací atd.
 
-## To set up item tracking codes
+## Nastavení Kódů sledování zboží
 
-An item tracking code reflects the different considerations a company has regarding the use of serial and lot numbers for items moving through the inventory.
+Kód sledování zboží odráží odráží různé úvahy společnosti týkající se používání sériových čísel a čísel šarží u položek, které procházejí skladem.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracking Codes**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kódy sledování zboží** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. On the **Serial No.**, **Lot No.**, and the **Package No.** FastTabs, define policies of item tracking by serial, lot, and package numbers respectively.
+4. V záložce **Sériové číslo**, **Číslo šarže** a **Číslo balení** definujte zásady sledování zboží podle sériového čísla, čísla šarže a balení.
 
 > [!NOTE]  
-> If you want to track specific items or specific lots throughout their lifetime, you must choose the **SN Specific Tracking** and **Lot Specific Tracking** fields, respectively. As a result, when handling an outbound unit of an item with this item tracking code, you must always specify which existing serial number or which existing lot number to handle. This means that when selling a unit of the item, it must be applied against a specific pool of serial numbers or a specific lot number in inventory. Or in other words, a serial number or lot number assigned to the item when entering into inventory must follow that item type out of inventory.
+> IPokud chcete sledovat konkrétní položky nebo konkrétní šarže po celou dobu jejich životnosti, musíte zvolit pole **Sledování sériových čísel**, respektive **Sledování šarže**. V důsledku toho musíte při manipulaci s odchozí jednotkou zboží s tímto kódem sledování položky vždy určit, které stávající sériové číslo nebo které stávající číslo šarže se má zpracovat. To znamená, že při prodeji jednotky zboží musí být použita proti určitému souboru sériových čísel nebo konkrétnímu číslu šarže ve skladu. Nebo jinými slovy, sériové číslo nebo číslo šarže přiřazené ke zboží při vstupu do zásob musí následovat tento typ položky mimo zásoby.
 
-As this particular setup field covers all possible transactions with the item, the individual inbound/outbound fields will also be selected. However, the individual inbound/outbound fields have nothing to do with application across inventory - they merely define your company's work flow concerning when to assign item tracking numbers.
+Vzhledem k tomu, že toto konkrétní pole nastavení zahrnuje všechny možné transakce s daným zbožím, budou vybrána i jednotlivá příchozí/odchozí pole. Jednotlivá příchozí/odchozí pole však nemají nic společného s aplikací napříč skladem – pouze definují pracovní tok vaší společnosti, pokud jde o to, kdy přiřadit čísla sledování zboží.
 
 > [!NOTE]  
-> To assign item tracking numbers in warehouse activities, the **SN Warehouse Tracking** and **Lot Warehouse Tracking** fields must be selected on the item's item tracking code card.
+> Aby bylo možné při skladových činnostech přiřadit sledovací čísla položek, musí být na kartě kódu položky vybrána pole **Sledování s.čísel ve skladu** a **Sledování šarže ve skladu**.
 
-## To set up expiration rules for serial or lot numbers
+## Nastavení pravidel pro vypršení platnosti sériových čísel nebo čísel šarží
 
-For some items you might want to set up specific expiration dates and rules in the item tracking code. This functionality allows you to keep track of when specific serial numbers and lot numbers expire.
+U některého zboží můžete chtít v kódu pro sledování položek nastavit konkrétní data a pravidla expirace. Tato funkce umožňuje sledovat, kdy končí platnost konkrétních sériových čísel a čísel šarží.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracking Codes**, and then choose the related link.
-2. Select an existing item tracking code, and then choose the **Edit** action.
-3. On the **Misc.** FastTab, select the following fields:
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kódy sledování zboží** a poté vyberte související odkaz.
+2. Vyberte existující kód sledování zboží a poté vyberte akci **Upravit**.
+3. Na záložce **Různé** vyberte následující pole:
 
    | Pole | Popis |
    |---------------------------------|---------------------------------------|  
-   | **Strict Expiration Posting** | Specifies that an expiration date assigned to the item tracking number as it entered inventory must be respected when it exits inventory. |
-   | **Require Expir. Date Entry** | Specifies that you must enter an expiration date on the item tracking line. |
-   | **Use Expiration Dates** | Specifies that you want to calculate expiration dates. |
+   | **Přísné účtování expirace** | Určuje, že datum vypršení platnosti přiřazené ke sledovacímu číslu zboží při zadaném stavu zásob musí být respektováno při vydávání zásob. |
+   | **Vyžadovat Položku data záruky** | Určuje, že je nutné zadat datum expirace platnosti na řádku sledování zboží. |
+   | **Použít data expirace** | Určuje, že chcete vypočítat data vypršení platnosti. |
 
-## To set up warranties for serial or lot numbers
+## Nastavení záruk pro sériová čísla nebo čísla šarží
 
-For some items, you might want to set up specific warranties in the item tracking code. This functionality allows you to keep track of when the warranties on specific serial or lot numbers in your inventory will run out.
+U některého zboží můžete chtít nastavit konkrétní záruku v kódu sledování zboží. Tato funkce vám umožní sledovat, kdy skončí záruky na konkrétních sériových číslech nebo šaržích ve vašich zásobách.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item Tracking Codes**, and then choose the related link.
-2. Select an existing item tracking code, and then choose the **Edit** action.
-3. On the **Misc.** FastTab, fill in the **Warranty Date Formula** field, and then select the fields as follows:
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kódy sledování zboží** a poté vyberte související odkaz.
+2. Vyberte existující kód sledování zboží a poté vyberte akci **Upravit**.
+3. V záložce **Různé** vyplňte pole **Vzorec data záruky** a poté vyberte pole následujícím způsobem:
 
    | Pole | Popis |
    |---------------------------------|---------------------------------------|  
-   | **Warranty Date Formula** | Specifies the last day of warranty for the item. |
-   | **Require Warranty Date Entry** | Specifies that you must manually enter a warranty date on the item tracking line. |
+   | **Vzorec data záruky** | Určuje poslední den záruky zboží |
+   | **Vyžadovat zadání data záruky** | Určuje, že musíte ručně zadat datum záruky na řádek sledování zboží. |
 
 
-## To set up items for tracking with the correct item tracking codes
+## Nastavení zboží pro správné sledování zboží
 
-To enable item tracking you first have to assign the item tracking codes to an item. There are two ways to add item tracking codes, by selecting the code from a predefined list or by assigning a new unique code. Hover over the fields to read a short description.
+Chcete-li povolit sledování zboží, musíte nejprve přiřadit kódy sledování zboží ke zboží. Existují dva způsoby, jak přidat kódy sledován zboží, a to výběrem kódu z předdefinovaného seznamu nebo přiřazením nového jedinečného kódu. Najeďte myší na pole a přečtěte si krátký popis.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item**, and then choose the related link.
-2. Select an existing item from the list, and open the **Item Card** page.
-3. On the **Item Tracking** FastTab, assign the appropriate item tracking codes and choose the **Item Tracking Code**, the **Serial Nos.**, and the **Lot Nos.**.
-   1. Alternatively you can also create a new item tracking code by selecting the **New** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
+2. Vyberte existující zboží ze seznamu a otevřete stránku **Karta zboží**.
+3. V záložce **Sledování zboží** přiřaďte příslušné kódy sledování zboží a zvolte **Kód sledování zboží**, **Sériová čísla** a **Čísla šarže**.
+   1. Případně můžete také vytvořit nový kód sledování zboží výběrem akce **Nový**.
 
 ## Viz také
 
-[Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md)
-[Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Design Details: Item Tracking](design-details-item-tracking.md)  
-[Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)  
-[Reserve Items](inventory-how-to-reserve-items.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce se sériovými čísly a čísly šarží](inventory-how-work-item-tracking.md)
+[Sledování zboží - Sledované zboží](inventory-how-to-trace-item-tracked-items.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Detaily návrhu: Sledování zboží](design-details-item-tracking.md)  
+[Detaily návrhu:  ledování zboží a Rezervace](design-details-item-tracking-and-reservations.md)  
+[Rezervace zboží](inventory-how-to-reserve-items.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

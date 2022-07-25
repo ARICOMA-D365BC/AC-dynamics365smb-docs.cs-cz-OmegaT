@@ -3,19 +3,18 @@ title: Working with Dimensions to Track and Analyze Data Easily
 description: You use dimensions to categorize entries, for example by department or project, so you can easily track and analyze data to help you make good business decisions.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: analysis, history, track, business intelligence
-ms.search.form: 408, 479, 480, 481, 484, 536, 537, 538, 539, 540, 541, 542, 543, 544, 548, 560, 562, 564, 567, 568, 577, 578, 580, 699, 1343, 2580, 2581, 2582, 2583, 2584, 2585, 2586, 2587, 2588, 2590, 2591, 2592, 2593, 9083, 9233, 9251, 9252, 9253
+ms.search.form: 408, 479, 480, 481, 484, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 548, 560, 562, 564, 567, 568, 577, 578, 580, 699, 1343, 2580, 2581, 2582, 2583, 2584, 2585, 2586, 2587, 2588, 2590, 2591, 2592, 2593, 9083, 9233, 9251, 9252, 9253
 ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Working with Dimensions
-
+# Work with Dimensions
 Dimensions are values that categorize entries so you can track and analyze them on documents, such as sales orders. Dimensions can, for example, indicate the project or department an entry came from.
 
 For example, instead of setting up separate general ledger accounts for each department and project, you can use dimensions as a basis for analysis and avoid having to create a complicated chart of accounts. For more information, see [Business Intelligence](bi.md).
@@ -199,8 +198,7 @@ The **Default Dimensions-Multiple** page contains the following fields:
 | **Dimension Value Code** | Shows either a single dimension value or the term (Conflict). If a dimension value is shown in the field, then all highlighted accounts have the same default dimension value for a dimension. If the term (Conflict) is shown in the field, then not all of the highlighted accounts have the same default dimension value for a dimension. By choosing the field, you can see a list of all available dimension values for a dimension. If you select a dimension value, the selected dimension value will be defined as a default dimension value for all highlighted accounts. |
 | **Value Posting** | Shows either a single value posting rule or the term (Conflict). If a value posting rule is shown in the field, then all highlighted accounts have the same value posting rule for a dimension value. If the term (Conflict) is shown in the field, then not all of the highlighted accounts have the same value posting rule for a dimension value. By choosing the Value Posting field, you can see a list of value posting rules. If you select a value posting rule, it will be applied for all highlighted accounts. |
 
-## Using Dimensions
-
+## Use Dimensions
 In a document such as a sales order, you can add dimension information for both an individual document line and the document itself. For example, on the **Sales Order** page, you can enter dimension values for the first two shortcut dimensions on the individual sales lines, and you can add more dimension information if you choose the **Dimensions** button.
 
 If you work in a journal instead, you can add dimension information to an entry in the same way, if you have set up shortcut dimensions as fields directly on journal lines.
@@ -221,14 +219,14 @@ In a ledger entry page, you can see whether there are global dimensions for the 
 > [!NOTE]  
 > The **Ledger Entry Dimensions** page displays the dimensions for one ledger entry at a time. As you scroll through the ledger entries, the content on the **Ledger Entry Dimensions** page changes accordingly.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/dimensions-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/dimensions-dynamics-365-business-central/index)
 
 ## Viz také
 
 [Business Intelligence](bi.md)  
 [Finance](finance.md)  
 [Analyze Data by Dimensions](bi-how-analyze-data-dimension.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

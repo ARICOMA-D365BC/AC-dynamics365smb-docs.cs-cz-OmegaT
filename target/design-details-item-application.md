@@ -3,7 +3,7 @@ title: Design Details - Item Application | Microsoft Docs
 description: This topic describes where inventory quantity and value are recorded when you post an inventory transaction.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -239,14 +239,14 @@ Vzhledem ke způsobu výpočtu jednotkových nákladů zboží může nesprávn�
 [!INCLUDE[prod_short](includes/prod_short.md)] nabízí funkci pro analýzu a opravu vyrovnání zboží. Tato práce se provádí na stránce **Sešit vyrovnání**.
 
 ## Viz také
-[Detaily návrhu: Známé problémy vyrovnávání zboží](design-details-inventory-zero-level-open-item-ledger-entries.md)    
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)    
-[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)    
-[Detaily návrhu: Průměrné náklady](design-details-average-cost.md)     
-[Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)    
-[Správa nákladů na zásoby](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Known Item Application Issue](design-details-inventory-zero-level-open-item-ledger-entries.md)  
+[Design Details: Inventory Costing](design-details-inventory-costing.md)  
+[Design Details: Costing Methods](design-details-costing-methods.md)  
+[Design Details: Average Cost](design-details-average-cost.md)   
+[Design Details: Cost Adjustment](design-details-cost-adjustment.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

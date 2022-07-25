@@ -1,8 +1,8 @@
 ---
 title: OneDrive for Business FAQ
 description: Get answers for some typical questions about working with OneDrive for Business and Business Central.
-author: bholtorf
-ms.service: dynamics365-business-central
+author: brentholtorf
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -11,91 +11,91 @@ ms.search.keywords: OneDrive, integration, share, browser
 ms.date: 05/19/2021
 ms.author: bholtorf
 ---
-# OneDrive for Business FAQ
+# Nejčastější dotazy k OneDrive pro firmy
 
 [!INCLUDE [online_only](includes/online_only.md)]
 
-This article answers some of the questions you may have about working with OneDrive and [!INCLUDE [prod_short](includes/prod_short.md)].
+Tento článek odpovídá na některé otázky, které můžete mít při práci s OneDrive a [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## Does this work with all [!INCLUDE[prod_short](includes/prod_short.md)] clients?
+## Funguje to se všemi [!INCLUDE[prod_short](includes/prod_short.md)] klienty?
 
-Ano. You can open files in OneDrive from the [!INCLUDE[prod_short](includes/prod_short.md)] mobile apps, when viewing card details in Microsoft Teams, or even from the Outlook add-in.
+Ano. Soubory na OneDrive můžete otevírat z mobilních aplikací [!INCLUDE[prod_short](includes/prod_short.md)], při prohlížení karty v Microsoft Teams nebo dokonce z doplňku Outlooku.
 
-## Is OneDrive the same as SharePoint for storing files?
+## Je OneDrive stejný jako SharePoint pro ukládání souborů?
 
-As part of your Microsoft 365 subscription, your organization provides you with OneDrive, your file storage in the cloud. OneDrive is private by default, where you organize your content and choose which files or folders to share and with whom. SharePoint on the other hand, provides a file repository in the cloud that is shared with others in your organization.
+V rámci předplatného Microsoftu 365 vám vaše organizace poskytuje OneDrive, úložiště souborů v cloudu. Služba OneDrive je ve výchozím nastavení soukromá a můžete si v ní uspořádat obsah a vybrat, které soubory nebo složky chcete sdílet a s kým. SharePoint naproti tomu poskytuje úložiště souborů v cloudu, které je sdíleno s ostatními v organizaci.
 
-## Does [!INCLUDE[prod_short](includes/prod_short.md)] support consumer OneDrive?
+## Má [!INCLUDE[prod_short](includes/prod_short.md)] podporu služby OneDrive pro spotřebitele?
 
-Ne.  This integration is exclusively intended for OneDrive for Business and only supports your work account.
+Ne. Tato integrace je určena výhradně pro OneDrive pro firmy a podporuje pouze váš pracovní účet.
 
-## Are all OneDrive for Business plans supported?
+## Podporují se všechny plány OneDrivu pro firmy?
 
-[!INCLUDE[prod_short](includes/prod_short.md)] does not support standalone plans for OneDrive for Business. OneDrive must be purchased as part of a Microsoft 365 business or enterprise plan. For more information, see [Compare OneDrive cloud storage pricing and plans](https://www.microsoft.com/microsoft-365/onedrive/compare-onedrive-plans?market=af&activetab=tab:primaryr2).
+[!INCLUDE[prod_short](includes/prod_short.md)] epodporuje samostatné plány pro OneDrive pro firmy. OneDrive se musí koupit jako součást plánu Microsoft 365 Business nebo Enterprise. Pro více informací navštivte [Porovnání cen a plánů cloudového úložiště OneDrive](https://www.microsoft.com/microsoft-365/onedrive/compare-onedrive-plans?market=af&activetab=tab:primaryr2).
 
-## Where can I see OneDrive service health?
+## Kde najdu stav služby OneDrive?
 
-Administrators can access the Service health dashboard as part of the Microsoft 365 admin center. The dashboard includes OneDrive’s service availability.
+Správci mají přístup k řídicímu panelu stavu služby jako součást Centra pro správu Microsoft 365. Řídicí panel obsahuje dostupnost služby OneDrive.
 
-## Is OneDrive integration available to [!INCLUDE[prod_short](includes/prod_short.md)] on premises?
+## Je integrace OneDrivu k dispozici pro [!INCLUDE[prod_short](includes/prod_short.md)] on premises?
 
-Yes, but unlike [!INCLUDE[prod_short](includes/prod_short.md)] online, it does require additional setup. For more information, see [Configuring Business Central On-Premises](admin-onedrive-integration.md#configuring-business-central-on-premises).
+Ano, ale na rozdíl od [!INCLUDE[prod_short](includes/prod_short.md)] online vyžaduje další nastavení. Pro více informací, navštivte [Konfigurace Business Central On-Premises](admin-onedrive-integration.md#configuring-business-central-on-premises).
 
-## Does [!INCLUDE[prod_short](includes/prod_short.md)] on premises connect with SharePoint Server?
+## Propojuje se [!INCLUDE[prod_short](includes/prod_short.md)] v místě se serverem SharePoint?
 
-Ne.  This deployment combination is not supported, even if SharePoint Server has enabled My Sites.
+Ne. Tato kombinace nasazení není podporována, a to ani v případě, že má SharePoint Server povolené osobní weby.
 
-## Does [!INCLUDE[prod_short](includes/prod_short.md)] online connect with SharePoint Server?
+## Má [!INCLUDE[prod_short](includes/prod_short.md)] online připojení k serveru SharePoint Server?
 
-Ne.  This deployment combination is not supported, even if SharePoint Server has enabled My Sites.
+Ne. Tato kombinace nasazení není podporována, a to ani v případě, že má SharePoint Server povolené osobní weby.
 
-## How does this work in an organization with multiple environments?
+## Jak to funguje v organizaci s více prostředími?
 
-The integration assumes that company names are unique across [!INCLUDE[prod_short](includes/prod_short.md)] environments. When company names are unique across the organization, opening a file in OneDrive will copy the file to a folder named after the current company. If company names are not unique across environments, files may from identical company names will be placed together in the same folder.
+Integrace předpokládá, že názvy společností jsou v prostředích [!INCLUDE[prod_short](includes/prod_short.md)] jedinečné. Když jsou názvy společností v rámci organizace jedinečné, otevřením souboru na OneDrive se soubor zkopíruje do složky pojmenované po aktuální společnosti. Pokud názvy společností nejsou v různých prostředích jedinečné, mohou být soubory z identických názvů společností umístěny společně do stejné složky
 
-## We’ve changed company name. What happens to my previous files?
+## Změnili jsme název společnosti. Co se stane s mými předchozími soubory?
 
-[!INCLUDE[prod_short](includes/prod_short.md)] does not automatically migrate files you opened earlier in OneDrive to the new folder. After renaming your company, the Open in OneDrive action will copy files to a folder that has the new company name.
+[!INCLUDE[prod_short](includes/prod_short.md)] automaticky nemigruje soubory, které jste otevřeli dříve na OneDrivu, do nové složky. Po přejmenování vaší společnosti akce Otevřít na OneDrivu zkopíruje soubory do složky s novým názvem společnosti.
 
-## When attaching files to [!INCLUDE[prod_short](includes/prod_short.md)], how do I pick a file from OneDrive?
-[!INCLUDE[prod_short](includes/prod_short.md)] does not provide a cloud file picker. You must download the file from OneDrive to your device, and then upload it to [!INCLUDE[prod_short](includes/prod_short.md)].
+## Při připojování souborů k [! INCLUDE[prod_short](includes/prod_short.md)], jak vyberu soubor z OneDrivu?
+[!INCLUDE[prod_short](includes/prod_short.md)] neposkytuje výběr cloudového souboru. Soubor si musíte stáhnout z OneDrivu do svého zařízení a pak ho nahrát do [!INCLUDE[prod_short](includes/prod_short.md)].
 
-## I want to open files in SharePoint instead. How do I do this?
+## Chci místo toho otevřít soubory ve službě SharePoint. Jak to mám udělat?
 
-[!INCLUDE[prod_short](includes/prod_short.md)] does not provide features to copy files to SharePoint and open them from a SharePoint library. Contact your Microsoft partner to understand your options, or search for apps on AppSource.
+[!INCLUDE[prod_short](includes/prod_short.md)] eposkytuje funkce pro kopírování souborů do služby SharePoint a jejich otevření z knihovny služby SharePoint. Chcete-li porozumět vašim možnostem, kontaktujte svého partnera společnosti Microsoft nebo vyhledejte aplikace na AppSource.
 
-## How do I turn off integration to OneDrive?
+## Jak vypnu integraci na OneDrive?
 
-[!INCLUDE[prod_short](includes/prod_short.md)] online does not provide a way to enable or disable integration to OneDrive.
+[!INCLUDE[prod_short](includes/prod_short.md)]  online neposkytuje způsob, jak povolit nebo zakázat integraci do OneDrive.
 
-## Should I use the SharePoint Connection Setup page to connect to SharePoint?
+## Mám se ke službě SharePoint připojit pomocí stránky Nastavení připojení služby SharePoint?
 
-This is a legacy feature where all [!INCLUDE[prod_short](includes/prod_short.md)] files from all users are sent to a single SharePoint folder. We recommend that you do not configure the Shared Documents FastTab on the SharePoint Connection Setup page because we are working toward deprecating this feature.
+Jedná se o starší funkci, kde všechny [!INCLUDE[prod_short](includes/prod_short.md)] soubory od všech uživatelů jsou odesílány do jedné složky služby SharePoint. Doporučujeme nekonfigurovat pevnou záložku Sdílené dokumenty na stránce Nastavení připojení služby SharePoint, protože pracujeme na vyřazení této funkce.
 
-## Which version of [!INCLUDE[prod_short](includes/prod_short.md)] supports OneDrive?
+## Která verze [!INCLUDE[prod_short](includes/prod_short.md)] podporuje OneDrive?
 
-Integration with OneDrive became available in 2021 release wave 2.
+Integrace s OneDrivem byla k dispozici ve vlně vydání 2 v roce 2021.
 
-## Will Microsoft continue to improve the integration to OneDrive?
+## Bude Microsoft i nadále vylepšovat integraci do OneDrivu?
 
-Ve společnosti Microsoft neustále nasloucháme zpětné vazbě od naší rozmanité komunity uživatelů a jednáme na základě nejlepších návrhů. To learn about what's next for integrations with Microsoft 365 apps, see the [Dynamics 365 release plan](/dynamics365-release-plan/2021wave1).
+Ve společnosti Microsoft neustále nasloucháme zpětné vazbě od naší rozmanité komunity uživatelů a jednáme na základě nejlepších návrhů. Další informace o integraci s aplikacemi Microsoft 365 najdete v [Plán vydání Dynamics 365](/dynamics365-release-plan/2021wave1).
 
-If you want to participate in improving OneDrive integration, or have an idea that would improve file sharing and collaboration in [!INCLUDE[prod_short](includes/prod_short.md)], add an idea or vote for existing ideas at [https://aka.ms/BusinessCentralIdeas](https://aka.ms/BusinessCentralIdeas).
+Pokud se chcete podílet na zlepšování integrace OneDrive nebo máte nápad, který by zlepšil sdílení souborů a spolupráci v [!INCLUDE[prod_short](includes/prod_short.md)] přidejte nápad nebo hlasujte pro stávající nápady na [https:/ /aka.ms/BusinessCentralIdeas](https://aka.ms/BusinessCentralIdeas).
 
 ## Řešení potíží
 
-This section provides information about how to identify and fix problems you might experience when using OneDrive with [!INCLUDE[prod_short](includes/prod_short.md)].
+Tato část obsahuje informace o tom, jak identifikovat a opravit problémy, se kterými se můžete setkat při používání OneDrivu s [!INCLUDE[prod_short](includes/prod_short.md)].
 
-### I have to sign in each time I open a file
+### Musím se přihlásit při každém otevření souboru
 
-Sorry, that's a known issue and we're working on it. We expect to provide a smoother experience in an upcoming update.
+Je nám líto, ale je to známý problém a pracujeme na něm. Očekáváme, že v nadcházející aktualizaci poskytneme plynulejší přihlášení.
 
-### Business Central can't find my OneDrive
+### Business Central nemůže najít můj OneDrive
 
-When this message displays, “Could not determine the location of your OneDrive for Business, contact your partner to set this up.”, check whether the user has accessed their OneDrive at least one time. If they haven't, ask the person to go to portal.office.com/onedrive to set it up. That can take a while. If the message still displays after 24 hours, contact Support.
+Když se zobrazí tato zpráva "Nelze určit umístění vašeho OneDrivu pro firmy, obraťte se na svého partnera a nastavte to.", Zkontrolujte, jestli uživatel alespoň jednou přistupoval ke svému OneDrivu. Pokud tomu tak není, požádejte osobu, aby šla do portal.office.com/onedrive a nastavila ji. To může chvíli trvat. Pokud se zpráva zobrazuje i po 24 hodinách, kontaktujte podporu.
 
 
 ## Viz také
-[Business Central and OneDrive Integration](across-onedrive-overview.md)  
-[Managing OneDrive Integration with Business Central](admin-onedrive-integration.md)  
-[Opening Business Central Files in OneDrive](across-share-onedrive.md)
+[Integrace Business Central a OneDrive](across-onedrive-overview.md)  
+[Správa integrace OneDrive s Business Central](admin-onedrive-integration.md)  
+[Otevírání souborů Business Central na OneDrive](across-share-onedrive.md)

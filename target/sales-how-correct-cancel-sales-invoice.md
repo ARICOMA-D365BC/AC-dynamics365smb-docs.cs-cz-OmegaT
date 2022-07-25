@@ -3,7 +3,7 @@ title: Correct or Cancel a Posted Sales Invoice
 description: This topic describes how to correct, undo, or cancel a posted sales invoice and apply a sales credit memo.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -69,7 +69,7 @@ Pokud zrušení souvisí s částečným účtováním faktury, je původní ř�
 [Sales](sales-manage-sales.md)  
 [Setting Up Sales](sales-setup-sales.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

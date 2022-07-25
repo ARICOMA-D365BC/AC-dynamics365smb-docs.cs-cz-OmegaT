@@ -1,21 +1,22 @@
 ---
-    title: View the Status of Synchronization Jobs (contains video)
-    description: Use the Coupled Data Synchronization Errors page to view the status of synchronization jobs that have been run for coupled records in integrations.
-    author: bholtorf
+title: View the Status of Synchronization Jobs (contains video)
+description: Use the Coupled Data Synchronization Errors page to view the status of synchronization jobs that have been run for coupled records in integrations.
+author: brentholtorf
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: sales, crm, integration, sync, synchronize
-    ms.date: 06/14/2021
-    ms.author: bholtorf
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: sales, crm, integration, sync, synchronize
+ms.search.form: 6250
+ms.date: 06/14/2021
+ms.author: bholtorf
 
 ---
 
 # Zobrazení stavu synchronizace
-[!INCLUDE[prod_short](includes/cc_data_platform_banner.md)]
+
 
 Use the **Coupled Data Synchronization Errors** page to view the status of synchronization jobs that have been run for coupled records in a Dataverse or [!INCLUDE[crm_md](includes/crm_md.md)] integrations. This includes jobs that were run from the job queue and manual synchronization jobs that ran on records from [!INCLUDE[prod_short](includes/prod_short.md)]. Například zobrazení jejich stavu je užitečné při odstraňování problémů, protože vám poskytuje přístup k podrobnostem o chybách souvisejících s propojenými záznamy. Obvykle jsou tyto typy chyb způsobeny akcemi uživatele, například když:
 
@@ -56,7 +57,7 @@ If an entity with a unidirectional coupling is deleted in [!INCLUDE[prod_short](
 
 ## Viz také
 [Setting Up User Accounts for Integrating with Dynamics 365 Sales](admin-setting-up-integration-with-dynamics-sales.md)  
-[Using Dynamics 365 Sales from Business Central](marketing-integrate-dynamicscrm.md)
+[Use Dynamics 365 Sales from Business Central](marketing-integrate-dynamicscrm.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

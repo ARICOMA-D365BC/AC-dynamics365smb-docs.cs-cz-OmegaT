@@ -3,7 +3,7 @@
     description: This selection of walkthroughs provides step-by-step, end-to-end business processes that you can perform using the CRONUS demonstration company.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -41,7 +41,7 @@ The walkthroughs are complete scenarios, and should be performed from beginning 
 
 ## Viz také
 
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

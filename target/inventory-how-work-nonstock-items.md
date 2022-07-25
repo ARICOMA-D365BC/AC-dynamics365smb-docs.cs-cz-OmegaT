@@ -1,15 +1,14 @@
 ---
-title: Create and Manage Catalog Items| Microsoft Docs
+title: Create and Manage Catalog Items
 description: Describes how to trade in items that are in your vendors list of items but not in your own list of items.
-documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: non-inventoriable
+ms.search.forms: 5725, 5726, 5732
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -50,7 +49,7 @@ To enable conversion of a catalog item card to a normal item card, you must firs
 A new item card pre-filled with information from the catalog item and a relevant item template is created. You can then fill or edit fields on the new item card as necessary. For more information, see [Register New Items](inventory-how-register-new-items.md).
 
 ## To sell a catalog item, and convert it to a normal item
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Vyberte akci **Nový**. Fill in the fields on the **General** FastTab as for any sales order. For more information, see [Sell Products](sales-how-sell-products.md).
 3. On a new sales line, in the **Type** field, select **Item**, but leave the **No.** field empty.
 4. Choose the **Line** action, and then choose the **Select Catalog Items** action.
@@ -68,7 +67,7 @@ You can then fill or edit fields on the new item card as necessary. For more inf
 [Register New Items](inventory-how-register-new-items.md)  
 [Create Special Orders](sales-how-to-create-special-orders.md)|  
 [Inventory](inventory-manage-inventory.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

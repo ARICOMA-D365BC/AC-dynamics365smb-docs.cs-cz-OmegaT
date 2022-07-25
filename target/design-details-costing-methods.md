@@ -1,16 +1,15 @@
 ---
-title: Design Details - Costing Methods
-description: This topic describes how the costing method affects how actual and budgeted values are capitalized and used in the cost calculation.
-author: bholtorf
+    title: Design Details Costing Methods
+    description: This topic describes how the costing method affects how actual and budgeted values are capitalized and used in the cost calculation.
+    author: bholtorf
 
-ms.service: dynamics365-business-central
-ms.topic: conceptual
-ms.devlang: na
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.search.form: 30, 42, 43
-ms.date: 06/14/2021
-ms.author: bholtorf
+    ms.topic: conceptual
+    ms.devlang: na
+    ms.tgt_pltfrm: na
+    ms.workload: na
+    ms.search.keywords:
+    ms.date: 03/24/2022
+    ms.author: bholtorf
 
 ---
 # Detaily návrhu: Metody ocenění
@@ -32,7 +31,7 @@ Následující metody jsou podporovány v [!INCLUDE[prod_short](includes/prod_sh
 
 Následující obrázek znázorňuje, jak náklady procházejí zásobami pro každou metodu ocenění.
 
-![Metody ocenění.](media/design_details_inventory_costing_7_costing_methods.png "Metody ocenění")
+![Costing methods visualized.](media/design_details_inventory_costing_7_costing_methods.png "Costing methods visualized")
 
 Metody ocenění se liší způsobem, jakým oceňují snížení zásob a zda jako základ ocenění používají pevnou pořizovací cenu nebo skutečné náklady. Následující tabulka vysvětluje různé charakteristiky. (Metoda LIFO je vyloučena, protože je velmi podobná metodě FIFO.)
 
@@ -63,29 +62,15 @@ V následující tabulce jsou uvedeny nárůsty a snížení zásob, na kterých
 
 ### Vliv metody kalkulace na zvýšení ocenění zásob
 
-- **FIFO**/**LIFO**/**Průměrná cena**/**Otevřená položka**
-
-   U zboží s metodami ocenění, které používají skutečné náklady jako základ ocenění (**FIFO**, **LIFO**, **Průměrná cena**, nebo **Otevřená položka**), se zvýšení zásob oceňuje náklady na pořízení zboží.
-
-   Následující tabulka ukazuje, jak se zvyšují zásoby pro všechny metody ocenění s výjimkou **Pevné ceny**.
-
-   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-   |------------------|--------------|----------------------------|---------------|  
-   | 01.01.20 | 1 | 10,00 | 1 |
-   | 01.01.20 | 1 | 20,00 | 2 |
-   | 01.01.20 | 1 | 30,00 | 3 |
+U zboží s metodami ocenění, které používají skutečné náklady jako základ ocenění (**FIFO**, **LIFO**, **Průměrná cena**, nebo **Otevřená položka**), se zvýšení zásob oceňuje náklady na pořízení zboží.
 
 - **Pevná cena**
 
    U zboží používající metodu ocenění **Pevná cena** se zvýšení zásob oceňuje aktuální standardní cenou zboží.
 
-   Následující tabulka ukazuje, jak jsou zvýšení zásob oceňována pro metodu ocenění **Pevná cena**.
+#### Standardní
 
-   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-   |------------------|--------------|----------------------------|---------------|  
-   | 01.01.20 | 1 | 15,00 | 1 |
-   | 01.01.20 | 1 | 15,00 | 2 |
-   | 01.01.20 | 1 | 15,00 | 3 |
+U zboží používající metodu ocenění **Pevná cena** se zvýšení zásob oceňuje aktuální standardní cenou zboží.
 
 ### Vliv metod ocenění na snížení cen zásob
 
@@ -112,7 +97,7 @@ V následující tabulce jsou uvedeny nárůsty a snížení zásob, na kterých
    Následující tabulka ukazuje, jak se oceňují snížení zásob pro metodu ocenění **LIFO**.
 
    | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-   |------------------|--------------|----------------------------|---------------|  
+   |------------|--------|--------------------|---------|  
    | 01.02.20 | -1 | -30,00 | 4 |
    | 01.03.20 | -1 | -20,00 | 5 |
    | 01.04.20 | -1 | -10,00 | 6 |
@@ -123,11 +108,11 @@ V následující tabulce jsou uvedeny nárůsty a snížení zásob, na kterých
 
    Následující tabulka ukazuje, jak se oceňuje snížení zásob pro metodu ocenění **Průměrná cena**.
 
-   | Zúčtovací datum | Množství | Částka nákladů (skutečná) | Číslo položky |
-   |------------------|--------------|----------------------------|---------------|  
-   | 01.02.20 | -1 | -20,00 | 4 |
-   | 01.03.20 | -1 | -20,00 | 5 |
-   | 01.04.20 | -1 | -20,00 | 6 |
+   | Posting Date | Quantity | Cost Amount (Actual) | Entry No. |
+   |--|--|--|--|
+   | 02-01-20 | -1 | -20.00 | 4 |
+   | 03-01-20 | -1 | -20.00 | 5 |
+   | 04-01-20 | -1 | -20.00 | 6 |
 
 - **Pevná cena**
 
@@ -157,13 +142,13 @@ V následující tabulce jsou uvedeny nárůsty a snížení zásob, na kterých
 
 ## Viz také
 
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
-[Detaily návrhu: Odchylka](design-details-variance.md)     
-[Detaily návrhu: Průměrné náklady](design-details-average-cost.md)     
-[Detaily návrhu: Vyrovnání zboží](design-details-item-application.md)    
-[Přehled nákladů na zásoby](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Inventory Costing](design-details-inventory-costing.md)   
+[Design Details: Variance](design-details-variance.md)   
+[Design Details: Average Cost](design-details-average-cost.md)   
+[Design Details: Item Application](design-details-item-application.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,6 @@ title: Invoice Sales
 description: Describes how to create a bill of sale, or a sales invoice or sales order, to record your agreement with a customer to sell products under specific terms.
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -24,7 +23,7 @@ There are a couple of scenarios where you must use a sales order instead of a sa
 * If you ship products after you post the corresponding sales invoices.
 * If you sell items that your vendor delivers directly to your customer, known as drop shipment. For more information, see [Make Drop Shipments](sales-how-drop-shipment.md).
 
-In all other aspects, sales orders and sales invoices work in the same way. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
+In all other aspects, sales orders and sales invoices work in the same way. For more information about how to use sales orders, see [Sell Products](sales-how-sell-products.md).
 
 You can negotiate with the customer by first creating a sales quote, which you can convert to a sales invoice when you agree on the sale. For more information, see [Make Sales Quotes](sales-how-make-offers.md).
 
@@ -123,7 +122,7 @@ You can even create directly-paid invoices for non-registered customers by first
 
 [!INCLUDE [ext-doc-no-sales](includes/ext-doc-no-sales.md)]
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/invoicing-customers-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/invoicing-customers-dynamics-365-business-central/index)
 
 ## Viz také
 
@@ -134,7 +133,7 @@ You can even create directly-paid invoices for non-registered customers by first
 [Send Documents by Email](ui-how-send-documents-email.md)  
 [Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
 [Bulk Invoicing from Microsoft Bookings in Business Central](finance-bookings.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

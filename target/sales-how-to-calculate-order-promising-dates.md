@@ -3,7 +3,7 @@
     description: The order promising function is a tool for calculating the earliest possible date that an item is available for shipment or delivery.
     author: edupont04
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -122,7 +122,7 @@ Before an item can be included in the order promising calculation, it must be ma
 ## Viz také
 [Sales](sales-manage-sales.md)  
 [Date Calculation for Purchases](purchasing-date-calculation-for-purchases.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

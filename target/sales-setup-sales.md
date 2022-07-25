@@ -3,13 +3,13 @@ title: Overview of Tasks to Configure Sales Processes
 description: Overview of tasks required to set up rules and values that define your sales policies and processes including general set-up and finance related sales set-up.
 author: SorenGP
 
-ms.service: dynamics365-business-central
-ms.topic: conceptual
+
+ms.topic: overview
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: trade, sell, configure
-ms.search.form: 170, 172, 300, 301, 428, 459, 1401
+ms.search.form: 170, 172, 300, 301, 428, 456, 459, 1401
 ms.date: 06/23/2021
 ms.author: edupont
 
@@ -36,11 +36,11 @@ Nastavení prodeje, které souvisí s finančními prostředky, jako jsou plateb
 | Zadejte informace o různých dodavatelích přepravy, které používáte, včetně odkazu na jejich službu sledování zásilek. | [Nastavení přepravců](sales-how-to-set-up-shipping-agents.md) |
 | Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
+## Viz související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 
 ## Viz také
-[Prodej](sales-manage-sales.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Sales](sales-manage-sales.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: Defer Revenues and Expenses
 description: To recognize revenues and expenses in periods when the transaction was not posted, you can automatically defer or postpone them over a specified schedule.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -56,7 +56,7 @@ Example: The posting date is 02/06/2016. If you enter “Expenses deferred for %
 > [!NOTE]  
 > The steps in this procedure are the same as when you assign a deferral template to a G/L account or a resource.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Item**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Open the card for the item for which revenues or expenses must be deferred to the accounting periods when the item was sold or purchased.
 3. In the **Default Deferral Template** field, select the relevant deferral template.
 
@@ -97,8 +97,8 @@ G/L entries to be posted to the specified deferral account, for example, Unearne
 
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with General Journals](ui-work-general-journals.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

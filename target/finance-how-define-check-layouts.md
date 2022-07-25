@@ -3,7 +3,7 @@ title: Specify the Layout of a Check
 description: You can design and print your checks in different formats to conform with standards set by your local authorities.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -37,8 +37,7 @@ When you have set up check layouts, you can print checks from the **Payment Jour
 
 Chcete-li změnit jedno z těchto výchozích rozvržení šeků, použijte k tomu integraci Word nebo RDLC. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
 
-## Použití MICR a bezpečtnostního písma
-
+## Use MICR and Security Fonts
 The online version of [!INCLUDE[prod_short](includes/prod_short.md)] contains pre-installed fonts on the servers that can be used when defining check layouts. Následující přehled popisuje, které fonty jsou k dispozici, a obsahuje odkazy na podrobné informace od dodavatelů fontů třetích stran.
 
 > [!Important]
@@ -97,7 +96,7 @@ Fonts for other purposes are also available in [!INCLUDE[prod_short](includes/pr
 [Managing Payables](payables-manage-payables.md)  
 [Reconciling Bank Accounts](bank-manage-bank-accounts.md)   
 [Completing Period-End Processes](year-how-complete-period-end-processes.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [General Business Functionality](ui-across-business-areas.md)
 
 

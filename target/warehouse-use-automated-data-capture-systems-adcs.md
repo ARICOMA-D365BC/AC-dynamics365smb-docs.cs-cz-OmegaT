@@ -2,13 +2,13 @@
 title: Use Automated Data Capture Systems (ADCS)
 description: You can use your automatic data capture system (ADCS) to register the movement of items in the warehouse and to register some journal activities.
 author: SorenGP
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: barcode
-ms.search.form: 7700, 7703, 7704, 7706, 7707, 7710
+ms.search.form: 7700, 7703, 7704, 7706, 7707, 7710, 9813, 9814
 ms.date: 06/25/2021
 ms.author: edupont
 
@@ -39,7 +39,7 @@ To use Automated Data Capture System, you must enable the ADCS web service.
 
    | Pole | Hodnota |
    |---------------------------------|-----------|  
-   | **Object Type** | Codeunit |
+   | **Object Type** | Codeunita |
    | **Object ID** | 7714 |
    | **Service Name** | ADCS **Important:** It is required that you name the service **ADCS**. |
 
@@ -112,12 +112,12 @@ Pokud jste vytvořili miniformulář, další kroky slouží k vytvoření funkc
 4. In the **Function Code** drop-down list, select a code to represent the function that you want to associate with the miniform. Můžete například vybrat ESC, které spojuje funkčnost s stisknutím klávesy ESC.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)     
+[Assembly Management](assembly-assemble-items.md)    
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,14 +3,14 @@ title: Create a Customer Sales Order and Sell Products
 description: Describes how to create a sales order to record your agreement with a customer to sell or trade products under specific terms.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: trade, partial deliveries, customer sales order
 ms.search.form: 42, 48, 9305
-ms.date: 09/24/2021
+ms.date: 01/19/2022
 ms.author: edupont
 
 ---
@@ -31,7 +31,7 @@ You can even create directly-paid orders for non-registered customers by first s
 > [!NOTE]  
 > The following procedure assumes that the customer is already set up. For instructions on how to do this, please see [Register New Customers](sales-how-register-new-customers.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Vyberte **Nový** a vytvořte nový záznam.
 3. Do pole **Zákazník** zadejte jméno existujícího zákazníka.
 
@@ -81,6 +81,8 @@ You can even create directly-paid orders for non-registered customers by first s
 13. Chcete-li fakturovat pouze část dodaného množství, zadejte toto množství do pole **K fakturaci**. Množství musí být nižší než hodnota v poli **K dodání**.
 14. Po dokončení řádků prodejní objednávky vyberte akci **Účtovat a Odeslat**.
 
+[!INCLUDE [order-ship-invoice](includes/order-ship-invoice.md)]
+
 The **Post and Send Confirmation** dialog box displays the customer's preferred method of receiving documents. You can change the sending method by choosing the lookup button for the **Send Document to** field. For more information, see [Set Up Document Sending Profiles](sales-how-setup-document-send-profiles.md).
 
 The related item and customer ledger entries are now created in your system, and the sales order is output as a PDF document. When the sales order is fully posted, it is removed from the list of sales orders and replaced with new documents in the list of posted sales invoices and the list of posted sales shipments.
@@ -96,7 +98,7 @@ The related item and customer ledger entries are now created in your system, and
 [Print the Picking List](sales-how-print-picking-list.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

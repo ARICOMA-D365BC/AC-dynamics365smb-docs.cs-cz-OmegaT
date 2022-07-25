@@ -1,41 +1,42 @@
 ---
 title: PC Keyboard Shortcuts Quick Reference
 description: "A print-friendly reference sheet containing the most popular keyboard shortcuts for PC users."
-author: bholtorf
-ms.service: dynamics365-business-central
+author: jswymer
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accessibility, shortcuts, keyboarding
-ms.date: 04/01/2021
-ms.author: bholtorf
+ms.date: 05/23/2022
+ms.author: jswymer
 ---
 
 # Klávesové zkratky - pouze pro PC
 
 #### Obecné
 
-|Stiskněte tyto klávesy|Chcete-li provést|  
+|Press these keys|To do this|  
 |-|-|
-|Alt+F2|Zobrazení a skrytí informačního okna|
-|Alt+N|Pro vytvoření nového záznamu|
-|Alt+Shift+N|Zavřete nově vytvořený záznam a vytvořte nový|
-|Alt+O|Přidá novou poznámku pro vybraný záznam|
-|Alt+Q|Otevře **Řekněte mi**|
-|Alt+Up|Otevře tooltip nebo chybu ověření|
-|Alt+Down Arrow|Otevřete rozevírací nabídku nebo vyhledávání|
-|Alt+T|Otevře stránku **Má nastavení**|
-|Alt+Shift+W|Otevřít aktuální kartu nebo doklad v novém okně|
-|Ctrl+Insert|Vloží nový řádek do dokladu|
-|Ctrl-Delete|Odstraní řádek v dokladu, deníku nebo seznamu|
-|Ctrl+Shift+F12|Maximalizujte část řádkových položek na stránce dokladu|
-|Ctrl+F1|Otevře nápovědu pro stránku<br />Navigace při přizpůsobení|
-|Ctrl+Click|Navigovat při přizpůsobení|
-|Shift+F12|Otevře průzkumníka rolí, přehled funkcí|
-|F5/Ctrl+F5|Obnovit/znovu načíst stránku|
-|Tab/Shift+Tab|Přesunout fokus na další/předchozí prvek|
-|F6/Shift+F6|Přejít na další záložku/část|
+|Alt+F2|Show and hide the FactBox pane|
+|Alt+N|Create a new record|
+|Alt+Shift+N|Close a newly created record and create a new one|
+|Alt+O|Add a new note for the selected record|
+|Alt+Q|Open **Tell me**|
+|Ctrl+Alt+Q|Open **Find Entries**|
+|Alt+Up|Open tooltip or validation error|
+|Alt+Down Arrow|Open a drop-down or look up|
+|Alt+T|Open the **My Settings** page|
+|Alt+Shift+W|Open the current card or document in a new window|
+|Ctrl+Insert|Insert a new line on a document|
+|Ctrl-Delete|Delete the line on a document, journal, or worksheet|
+|Ctrl+Shift+F12|Maximize the line items part on a document page|
+|Ctrl+F1|Open the help pane or a help article|
+|Ctrl+Click|Navigate when personalizing and customizing|
+|Shift+F12|Open the role explorer, a feature overview|
+|F5/Ctrl+F5|Refresh/reload page|
+|Tab/Shift+Tab|Move focus to the next/previous element|
+|F6/Shift+F6|Move to next FastTab/part|
 
 #### Navigace a Výběr řádků
 
@@ -75,11 +76,18 @@ ms.author: bholtorf
 |-|-|
 |Ctrl+Shift+Enter|Přejít na další pole pro rychlé zadání mimo seznam|
 |Enter/Shift+Enter|Přejít na další/předchozí pole pro rychlé zadání|
+
 ##### Náhled sestavy
 
 |Stiskněte tyto klávesy|Chcete-li provést|
 |-|-|
 |Ctrl+Home/End|Přejít na první/poslední stránku|
+
+#### Numeric Keypad
+
+|Press these keys|To do this|  
+|-|-|
+|Alt+Decimal Separator|Toggle output of decimal separator key on numeric keypad|
 
 > [!TIP]
 > Pro grafickou verzi vhodnou pro tisk vyberte následující obrázek a stáhněte soubor PDF.

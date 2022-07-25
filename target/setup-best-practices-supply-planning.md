@@ -3,7 +3,7 @@
     description: When set up and used correctly, supply planning helps a company avoid stock out and reduce both ordering costs and inventory costs.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -27,10 +27,10 @@ Následující témata poskytují informace o osvědčených postupech, jak nast
 | Naučte se osvědčené postupy pro aplikaci obecné strategie dodávek na všechny karty zboží, jako je například přijímání zboží vždy jeden den před tím, než je zboží spotřebováno, nebo tlumení reakce systému na malé výkyvy poptávky. | [Doporučené postupy nastavení: Nastavení globálního plánování](setup-best-practices-global-planning-setup.md) |
 
 ## Viz také
-[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)     
-[Detaily návrhu: Parametry plánování](design-details-planning-parameters.md)     
-[Nastavení složitých oblastí aplikace pomocí doporučených postupů](set-up-complex-application-areas-using-best-practices.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Supply Planning](design-details-supply-planning.md)   
+[Design Details: Planning Parameters](design-details-planning-parameters.md)   
+[Set Up Complex Application Areas Using Best Practices](set-up-complex-application-areas-using-best-practices.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

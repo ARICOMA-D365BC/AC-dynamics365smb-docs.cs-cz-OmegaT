@@ -3,7 +3,7 @@
     description: This walkthrough takes you through all the stages involved in setting up and using a purchase approval workflow in Business Central.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -18,7 +18,7 @@
 Můžete automatizovat proces schvalování nových nebo změněných záznamů, jako jsou doklady, řádky deníku a karty zákazníků, vytvořením workflow s kroky pro příslušné schvalování. Před vytvořením schvalovacího workflow je nutné nastavit schvalovatele a nahradit schvalovatele pro každého uživatele schvalování. You can also set approvers' amount limits to define which sales and purchase records they are qualified to approve. Žádosti o schválení a další oznámení lze odeslat jako e-mail nebo interní oznámení. Pro každé nastavení uživatele schvalování můžete také nastavit, když obdrží oznámení.
 
 > [!NOTE]
-> In addition to the Workflow functionality within [!INCLUDE[prod_short](includes/prod_short.md)], you can use Power Automate to define workflows for events in [!INCLUDE[prod_short](includes/prod_short.md)]. Note that although they are two separate workflow systems, any flow template that you create with Power Automate is added to the list of workflow templates within [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md).
+> In addition to the Workflow functionality within [!INCLUDE[prod_short](includes/prod_short.md)], you can use Power Automate to define workflows for events in [!INCLUDE[prod_short](includes/prod_short.md)]. Note that although they are two separate workflow systems, any flow template that you create with Power Automate is added to the list of workflow templates within [!INCLUDE[prod_short](includes/prod_short.md)]. For more information, see [Use Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md).
 
 Můžete nastavovat a používat workflow, které spojují úlohy podnikových procesů prováděné různými uživateli. Systémové úlohy, jako je například automatické účtování, lze zahrnout jako kroky do workflow, které předchází nebo následují úkoly uživatele. Vyžádání a udělení souhlasu k vytvoření nových záznamů jsou typické kroky workflow. For more information, see [Workflow](across-workflow.md).
 
@@ -89,14 +89,14 @@ Create the purchase order approval workflow by copying the steps from the **Purc
    The **Workflow** page opens for a new workflow containing all the information of the selected template. The value in the **Code** field is extended with *-01* to indicate that this is the first workflow that is created from the **Purchase Order Approval Workflow** workflow template.
 4. On the header of the **Workflow** page, select the **Enabled** check box.
 
-## Použití schovalování workflow
+## Use the Approval Workflow
 
 Use the new Purchase Order Approval Workflow workflow by first signing in to [!INCLUDE[prod_short](includes/prod_short.md)] as Alicia to request approval of a purchase order. Potom se přihlaste sami, zobrazte upozornění v Centru rolí, kliknetě na odkaz žádosti o schválení a pak žádost schvalte.
 
 ### Žádost o schválení objednávky jako Alicia.
 
 1. Přihlaste se jako Alicia.
-2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+2. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 3. Select the line to open Purchase Order 106001.
 4. On the **Purchase Order** page, choose **Actions**, then **Request Approval**, and then choose the **Send Approval Request** action.
 
@@ -116,7 +116,7 @@ The generic version of [!INCLUDE[prod_short](includes/prod_short.md)] includes a
 
 Varianty workflow definujete vyplněním polí na řádcích workflow z pevných seznamů hodnot událostí a odpovědí představujících scénáře podporované kódem aplikace. For more information, see [Create Workflows](across-how-to-create-workflows.md).
 
-If a business scenario requires a workflow event or response that is not supported, a Microsoft partner must implement them through code, or you can set up a workflow using Power Automate. For more information, see [Using [!INCLUDE[prod_short](includes/prod_short.md)] in an Automated Workflow](across-how-use-financials-data-source-flow.md) or [Events in AL](/dynamics365/business-central/dev-itpro/developer/devenv-events-in-al) in the developer help, respectively.
+If a business scenario requires a workflow event or response that is not supported, a Microsoft partner must implement them through code, or you can set up a workflow using Power Automate. For more information, see [Use [!INCLUDE[prod_short](includes/prod_short.md)] in an Automated Workflow](across-how-use-financials-data-source-flow.md) or [Events in AL](/dynamics365/business-central/dev-itpro/developer/devenv-events-in-al) in the developer help, respectively.
 
 ## Viz také
 
@@ -125,7 +125,7 @@ If a business scenario requires a workflow event or response that is not support
 [Create Workflows](across-how-to-create-workflows.md)  
 [Use Approval Workflows](across-how-use-approval-workflows.md)  
 [Workflow](across-workflow.md)  
-[Using Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md)
+[Use Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: Configure Warehouse Processes
 description: A company's distribution strategy is reflected in the configuration of its warehouse processes, for example the warehouse locations.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -45,7 +45,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 [Inventory](inventory-manage-inventory.md)  
 [Assembly Management](assembly-assemble-items.md)
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

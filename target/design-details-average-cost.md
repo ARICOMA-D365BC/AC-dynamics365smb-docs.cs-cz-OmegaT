@@ -1,16 +1,17 @@
 ---
-    title: Design Details - Average Cost | Microsoft Docs
-    description: The average cost of an item is calculated with a periodic weighted average, based on the average cost period that is set up in Business Central.
-    author: SorenGP
+title: Design Details - Average Cost
+description: The average cost of an item is calculated with a periodic weighted average, based on the average cost period that is set up in Business Central.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/08/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 8645
+ms.date: 06/08/2021
+ms.author: edupont
 
 ---
 # Detaily návrhu: Průměrné náklady
@@ -24,7 +25,7 @@ Následující tabulka popisuje dvě pole na stránce **Nastavení zásob**, kte
 | Pole | Popis |
 |---------------------------------|---------------------------------------|  
 | **Období průměrných nákladů** | Určuje, ve kterém období jsou vypočteny průměrné náklady. Existují následující možnosti:<br /><br /> -   **Den**<br />-   **Týden**<br />-   **Měsíc**<br />-   **Účetní období**<br /><br /> Všechny poklesy zásob, které jsou zaúčtovány v období průměrných nákladů, obdrží průměrné náklady vypočtené pro toto období. |
-| **Typ výpočtu prům.poř. ceny** | Určuje způsob výpočtu průměrných nákladů. Existují následující možnosti:<br /><br /> -   **Zboží**<br />-   **Zboží, Varianta a Lokace**<br />     S touto možností se průměrné náklady počítají pro každé zboží, pro každou lokaci a pro každou variantu zboží. To znamená, že průměrné náklady na tuto položku závisí na tom, kde je uložena a jakou variantu zboží jste vybrali, například barvu. |
+| **Typ výpočtu prům.poř. ceny** | Určuje způsob výpočtu průměrných nákladů. The following options exist:<br /><br /> -   **Item**<br />-   **Item, Variant, and Location**<br /> With this option, the average cost is calculated for each item, for each location, and for each variant of the item. To znamená, že průměrné náklady na tuto položku závisí na tom, kde je uložena a jakou variantu zboží jste vybrali, například barvu. |
 
 > [!NOTE]  
 > Ve fiskálním roce můžete použít pouze jedno období průměrných nákladů a jeden typ výpočtu průměrných nákladů.
@@ -51,37 +52,37 @@ Následující příklad ukazuje účinek výpočtu průměrných nákladů na z
 
 V následující tabulce jsou uvedeny položky zboží pro vzorovou položku s průměrnými náklady ZBOŽÍ1 před spuštěním dávkové úlohy **Adjustace nákladů položek zboží**.
 
-| **Datum zaúčtování** | **Typ položky zboží** | **Množství** | **Částka nákladů (skutečná)** | **Číslo položky** |
-|---------------------------------------|---------------------------------------------------|------------------------------------|----------------------------------------------------|------------------------------------|  
-| 01.01.20 | Nákup | 1 | 20,00 | 1 |
-| 01.01.20 | Nákup | 1 | 40,00 | 2 |
-| 01.01.20 | Prodej | -1 | -20,00 | 3 |
-| 01.02.20 | Prodej | -1 | -40,00 | 4 |
-| 02.02.20 | Nákup | 1 | 100,00 | 5 |
-| 03.02.20 | Prodej | -1 | -100,00 | 6 |
+| **Posting Date** | **Item Ledger Entry Type** | **Quantity** | **Cost Amount (Actual)** | **Entry No.** |
+|--|--|--|--|--|
+| 01-01-20 | Purchase | 1 | 20.00 | 1 |
+| 01-01-20 | Purchase | 1 | 40.00 | 2 |
+| 01-01-20 | Sale | -1 | -20.00 | 3 |
+| 02-01-20 | Sale | -1 | -40.00 | 4 |
+| 02-02-20 | Purchase | 1 | 100.00 | 5 |
+| 02-03-20 | Sale | -1 | -100.00 | 6 |
 
 > [!NOTE]  
 > Protože k úpravě nákladů dosud nedošlo, hodnoty v poli **Částka nákladů (skutečná)** se snižují, což odpovídá nárůstu zásob, na který se vztahují.
 
 Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  průměrné ceny**, které se vztahují na položky ocenění vyplývající z položek zboží v předchozí tabulce.
 
-| **Číslo zboží** | **Kód varianty** | **Kód lokace** | **Datum ocenění** | **Náklady jsou adjustovány** |
-|-------------------------------------|-----------------------------------------|------------------------------------------|-------------------------------------------|---------------------------------------------|  
-| ZBOŽÍ1 | MODRÝ | 01.01.20 | Ne |
-| ZBOŽÍ1 | MODRÝ | 01.02.20 | Ne |
-| ZBOŽÍ1 | MODRÝ | 02.02.20 | Ne |
-| ZBOŽÍ1 | MODRÝ | 03.02.20 | Ne |
+| **Item No.** | **Variant Code** | **Location Code** | **Valuation Date** | **Cost is Adjusted** |
+|--|--|--|--|--|
+| ITEM1 |  | BLUE | 01-01-20 | No |
+| ITEM1 |  | BLUE | 02-01-20 | No |
+| ITEM1 |  | BLUE | 02-02-20 | No |
+| ITEM1 |  | BLUE | 02-03-20 | No |
 
 V následující tabulce jsou stejné položky zboží po spuštění dávkové úlohy **Adjustace nákladů položek zboží**. Průměrné náklady za den se počítají a aplikují na snížení zásob.
 
-| **Datum zaúčtování** | **Typ položky zboží** | **Množství** | **Částka nákladů (skutečná)** | **Číslo položky** |
-|---------------------------------------|---------------------------------------------------|------------------------------------|----------------------------------------------------|------------------------------------|  
-| 01.01.20 | Nákup | 1 | 20,00 | 1 |
-| 01.01.20 | Nákup | 1 | 40,00 | 2 |
-| 01.01.20 | Prodej | -1 | -30,00 | 3 |
-| 01.02.20 | Prodej | -1 | -30,00 | 4 |
-| 02.02.20 | Nákup | 1 | 100,00 | 5 |
-| 03.02.20 | Prodej | -1 | -100,00 | 6 |
+| **Posting Date** | **Item Ledger Entry Type** | **Quantity** | **Cost Amount (Actual)** | **Entry No.** |
+|--|--|--|--|--|--|
+| 01-01-20 | Purchase | 1 | 20.00 | 1 |
+| 01-01-20 | Purchase | 1 | 40.00 | 2 |
+| 01-01-20 | Sale | -1 | -30.00 | 3 |
+| 02-01-20 | Sale | -1 | -30.00 | 4 |
+| 02-02-20 | Purchase | 1 | 100.00 | 5 |
+| 02-03-20 | Sale | -1 | -100.00 | 6 |
 
 ### Příklad: Období průměrných nákladů = Měsíc
 Následující příklad ukazuje účinek výpočtu průměrných nákladů na základě průměrných nákladů jednoho měsíce. Pole **Typ výpočtu prům.poř. ceny** na stránce **Nastavení zásob** je nastaveno na **Zboží**.
@@ -90,24 +91,24 @@ Pokud je období průměrných nákladů jeden měsíc, vytvoří se pro každou
 
 V následující tabulce jsou uvedeny položky zboží pro vzorovou položku s průměrnými náklady ZBOŽÍ1 před spuštěním dávkové úlohy **Adjustace nákladů položek zboží**.
 
-| **Datum zaúčtování** | **Typ položky zboží** | **Množství** | **Částka nákladů (skutečná)** | **Číslo položky** |
-|---------------------------------------|---------------------------------------------------|------------------------------------|----------------------------------------------------|------------------------------------|  
-| 01.01.20 | Nákup | 1 | 20,00 | 1 |
-| 01.01.20 | Nákup | 1 | 40,00 | 2 |
-| 01.01.20 | Prodej | -1 | -20,00 | 3 |
-| 01.02.20 | Prodej | -1 | -40,00 | 4 |
-| 02.02.20 | Nákup | 1 | 100,00 | 5 |
-| 03.02.20 | Prodej | -1 | -100,00 | 6 |
+| **Posting Date** | **Item Ledger Entry Type** | **Quantity** | **Cost Amount (Actual)** | **Entry No.** |
+|--|--|--|--|--|
+| 01-01-20 | Purchase | 1 | 20.00 | 1 |
+| 01-01-20 | Purchase | 1 | 40.00 | 2 |
+| 01-01-20 | Sale | -1 | -20.00 | 3 |
+| 02-01-20 | Sale | -1 | -40.00 | 4 |
+| 02-02-20 | Purchase | 1 | 100.00 | 5 |
+| 02-03-20 | Sale | -1 | -100.00 | 6 |
 
 > [!NOTE]  
 > Protože k úpravě nákladů ještě nedošlo, hodnoty v poli **Částka nákladů (skutečná)** se snižují, což odpovídá zvýšení zásob, na které se vztahují.
 
 Následující tabulka uvádí položky v tabulce **Místo  zadání úpravy  průměrné ceny**, které se vztahují na položky ocenění vyplývající z položek zboží v předchozí tabulce.
 
-| **Číslo zboží** | **Kód varianty** | **Kód lokace** | **Datum ocenění** | **Náklady jsou adjustovány** |
-|-------------------------------------|-----------------------------------------|------------------------------------------|-------------------------------------------|---------------------------------------------|  
-| ZBOŽÍ1 | MODRÝ | 31.01.20 | Ne |
-| ZBOŽÍ1 | MODRÝ | 28.02.20 | Ne |
+| **Item No.** | **Variant Code** | **Location Code** | **Valuation Date** | **Cost is Adjusted** |
+|--|--|--|--|--|
+| ITEM1 |  | BLUE | 01-31-20 | No |
+| ITEM1 |  | BLUE | 02-28-20 | No |
 
 > [!NOTE]  
 > Datum ocenění je nastaveno na poslední den v období průměrných nákladů, což je v tomto případě poslední den měsíce.
@@ -201,13 +202,13 @@ Následující tabulka ukazuje položky ocenění, které existují pro položku
 | 16.2.2020 | -1 | -17,00 | 4 |
 
 ## Viz také
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
-[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)     
-[Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)     
-[Detaily návrhu: Vyrovnání zboží](design-details-item-application.md)    
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Inventory Costing](design-details-inventory-costing.md)   
+[Design Details: Costing Methods](design-details-costing-methods.md)   
+[Design Details: Cost Adjustment](design-details-cost-adjustment.md)   
+[Design Details: Item Application](design-details-item-application.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

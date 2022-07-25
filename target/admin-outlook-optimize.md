@@ -2,7 +2,7 @@
 title: Optimizing Outlook for Your Business Inbox
 description: Learn about things you can do to improve experience with the Business Inbox in Microsoft Outlook.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -69,14 +69,14 @@ Consider using Outlook for the Web in one of the browsers supported by Business 
 
 ## Viz také
 
-[Příprava na podnikání](ui-get-ready-business.md)  
-[Získání Business Cental na mobilní zařízení](install-mobile-app.md)  
-[Odesílání dokladů pomocí Emailu](ui-how-send-documents-email.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Getting Business Central on my Mobile Device](install-mobile-app.md)  
+[Send Documents by Email](ui-how-send-documents-email.md)  
 [Finance](finance.md)  
-[Prodej](sales-manage-sales.md)  
-[Nakupování](purchasing-manage-purchasing.md)  
-[Minimální požadavky na Outlook](product-requirements.md#outlook)  
-[Pouižtí add-inů ve vebové aplikaci Outlooku](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
+[Sales](sales-manage-sales.md)  
+[Purchasing](purchasing-manage-purchasing.md)  
+[Minimum Requirements for Outlook](product-requirements.md#outlook)  
+[Use add-ins in Outlook on the web](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

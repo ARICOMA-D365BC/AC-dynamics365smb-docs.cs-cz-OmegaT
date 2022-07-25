@@ -1,16 +1,17 @@
 ---
-    title: Breaking Bulk with Directed Put-away and Pick
-    description: Learn how to enable automatic breaking bulk with directed put-away and pick, as well as breakbulking in picks, putaways, movements, and more.
-    author: SorenGP
+title: Breaking Bulk with Directed Put-away and Pick
+description: Learn how to enable automatic breaking bulk with directed put-away and pick, as well as breakbulking in picks, putaways, movements, and more.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/25/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 5703, 7352
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Povolení automatického rozdělení zboží s řízeným zaskladněním a vyskladněním
@@ -41,12 +42,12 @@ Výsledky procesu převodu lze zobrazit z jedné měrné jednotky do jiné jako 
 > - Nastavte alternativní měrné jednotky pro zboží jako násobky základní měrné jednotky.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)
+[Assembly Management](assembly-assemble-items.md)
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

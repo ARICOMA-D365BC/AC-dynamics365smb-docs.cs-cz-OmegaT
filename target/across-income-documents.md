@@ -3,7 +3,7 @@ title: Work with Incoming Documents| Microsoft Docs
 description: You can manage incoming external business documents, such as payment receipts or PDFs, manage OCR tasks, and convert files to electronic documents and records.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -39,12 +39,12 @@ Proces došlých dokladů se může skládat z následujících hlavních činno
 | Nastavení funkce Došlých dokladů a nastavení služby OCR | [Set Up Incoming Documents](across-how-setup-income-documents.md) |
 | Vytváření záznamů došlých dokladů, připojování souborů, použití služby OCR k přeměně PDF souborů na elektronické doklady, převedení elektronických dokladů na evidenci dokladů, kontrola záznamů došlých dokladů z zaúčtovaných prodejních a nákupních dokladů. | [Processing Incoming Documents](across-process-income-documents.md) |
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/incoming-documents-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/incoming-documents-dynamics-365-business-central/index)
 
 ## Viz také
 
 [Purchasing](purchasing-manage-purchasing.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

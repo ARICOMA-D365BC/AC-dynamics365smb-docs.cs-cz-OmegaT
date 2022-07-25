@@ -3,7 +3,7 @@
     description: Similar to assembly order posting, the consumed components and the used machine time are converted and output as the produced item when the production order is finished.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -106,7 +106,7 @@ V prostředí se standardními náklady je nákladování výrobní zakázky zal
 [Design Details: Assembly Order Posting](design-details-assembly-order-posting.md)  
 [Managing Inventory Costs](finance-manage-inventory-costs.md)
 [Finance](finance.md)  
-[Working with Business Central](ui-work-product.md)
+[Work with Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

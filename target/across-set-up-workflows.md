@@ -3,7 +3,7 @@
     description: Set up workflows, workflow users and approval users to connect business-process system tasks performed by these different users.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -15,13 +15,13 @@
 ---
 # Set Up Workflows
 
-Můžete nastavovat a používat workflow, které spojují úlohy podnikových procesů prováděné různými uživateli. Systémové úlohy, jako je například automatické účtování, lze zahrnout jako kroky do workflow, které předchází nebo následují úkoly uživatele. Vyžádání a udělení souhlasu k vytvoření nových záznamů jsou typické kroky workflow. For more information, see [Using Workflows](across-use-workflows.md).
+Můžete nastavovat a používat workflow, které spojují úlohy podnikových procesů prováděné různými uživateli. Systémové úlohy, jako je například automatické účtování, lze zahrnout jako kroky do workflow, které předchází nebo následují úkoly uživatele. Vyžádání a udělení souhlasu k vytvoření nových záznamů jsou typické kroky workflow. For more information, see [Use Workflows](across-use-workflows.md).
 
 Before you begin to use workflows, you must set up workflow users and approval users, specify how users receive notifications about workflow steps, and then create the workflows, potentially preceded by code customization.
 
 On the **Workflow** page, you create a workflow by listing the involved steps on the lines. Each step consists of a workflow event, moderated by event conditions, and a workflow response, moderated by response options. You define workflow steps by filling fields on workflow lines from fixed lists of event and response values representing scenarios that are supported by the application code.
 
-If a business scenario requires a workflow event or response that is not supported, a Microsoft partner must implement them through code, or you can set up a workflow using Power Automate. For more information, see [Using [!INCLUDE[prod_short](includes/prod_short.md)] in an Automated Workflow](across-how-use-financials-data-source-flow.md) or [Events in AL](/dynamics365/business-central/dev-itpro/developer/devenv-events-in-al) in the developer help, respectively.
+If a business scenario requires a workflow event or response that is not supported, a Microsoft partner must implement them through code, or you can set up a workflow using Power Automate. For more information, see [Use [!INCLUDE[prod_short](includes/prod_short.md)] in an Automated Workflow](across-how-use-financials-data-source-flow.md) or [Events in AL](/dynamics365/business-central/dev-itpro/developer/devenv-events-in-al) in the developer help, respectively.
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
@@ -45,10 +45,10 @@ This video shows how to set up an workflow that will require someone to request 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4jzHI?rel=0]
 
 ## Viz také
-[Using Workflows](across-use-workflows.md)   
+[Use Workflows](across-use-workflows.md)   
 [Workflow](across-workflow.md)   
 [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)  
-[Working with Business Central](ui-work-product.md)
+[Work with Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

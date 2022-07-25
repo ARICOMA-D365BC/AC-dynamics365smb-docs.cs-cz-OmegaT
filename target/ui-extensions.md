@@ -1,12 +1,13 @@
 ---
-title: Installing Extensions to Customize Business Central
+title: Customizing Business Central Online Using Extensions
 description: Learn all about adding functionality and customizing Business Central by installing extensions here.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.search.keywords: app, add-in, manifest, customize
-ms.date: 08/25/2021
+ms.search.form: 2500, 2502
+ms.date: 03/22/2022
 ms.author: edupont
 
 ---
@@ -15,12 +16,12 @@ ms.author: edupont
 You can change [!INCLUDE[prod_short](includes/prod_short.md)] online by installing extensions that add functionality, changes behavior, or gives you access to new online services, for example.
 
 > [!NOTE]
-> To install or uninstall extensions from AppSource or add per-tenant extensions, you must have the right permissions. You must either be a member of the EXTEND. MGT. - ADMIN user group or you must have the EXTEND. MGT. - ADMIN permission set. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti.
+> To install or uninstall extensions from AppSource or add per-tenant extensions, you must have the right permissions. You must either be a member of the **D365 Extension Mgt.** user group, or you must have the **EXTEN. MGT. - ADMIN** permission set explicitly. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti. For more information, see [Create Users According to Licenses](ui-how-users-permissions.md).
 >
 > Chcete-li použít funkce poskytované rozšířením, jako je otevírání stránek, spouštění sestav, výběr akcí a další, musíte mít přiřazené sady oprávnění, které jsou nainstalovány jako součást rozšíření.
 
-> [!NOTE]  
-> The **EXTEND. MGT. - ADMIN** permission set was introduced in Business Central 2021 release wave 1 as a replacement for the **D365 EXTENSION MGT** permission set in earlier versions.
+<!-- [!NOTE]  
+> The **EXTEN. MGT. - ADMIN** permission set was introduced in 2021 release wave 1 as a replacement for the **D365 EXTENSION MGT** permission set in earlier versions.-->
 
 > [!IMPORTANT]  
 > The upload of per-tenant extensions and the installation of AppSource extensions is not supported through the **Extension Management** page for on-premise installations. You cannot install AppSource extensions on-premises, including in Docker-based deployments.
@@ -71,7 +72,7 @@ This also applies to some functionality in the base application, such as the fol
 * Dataverse connections
 * OCR Service
 * Online Map
-* EU VAT Reg. Ne.  Služba
+* EU VAT Reg. Ne. Služba
 
 ## Recommended Apps
 Microsoft partners and resellers can create an extensions that they can use to compile lists of apps that they often recommend to their customers. If they do, and have deployed the extension to your tenant, the apps will be available on the **Recommended Apps** page. There you can read about each app and decide whether to install them.
@@ -81,14 +82,15 @@ Microsoft partners and resellers can create an extensions that they can use to c
 
 ## Viz také
 
-[Přizpůsobení Business Central](ui-customizing-overview.md)  
-[Rozšíření Business Central od ostatních poskytovatelů](ui-extensions-other.md)  
-[Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md)  
-[Povolit platbu zákazníka prostřednictvím služby PayPal](sales-how-enable-payment-service-extensions.md)  
-[Migrace obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)  
-[Nastavení rozšíření GetAddress.io UK Postal Code extension](LocalFunctionality/UnitedKingdom/uk-setup-postal-code-service.md)  
-[[!INCLUDE[prod_short](includes/prod_short.md)] Rozšíření od jiných poskytovatelů](ui-extensions-other.md)  
-[Příprava na podnikání](ui-get-ready-business.md)
+[Install and Uninstall Extensions](ui-extensions-install-uninstall.md)  
+[Customize Business Central](ui-customizing-overview.md)  
+[Business Central Extensions by Other Providers](ui-extensions-other.md)  
+[Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)  
+[Enable Customer Payment Through PayPal](sales-how-enable-payment-service-extensions.md)  
+[Migrating Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Setting Up the GetAddress.io UK Postal Code extension](LocalFunctionality/UnitedKingdom/uk-setup-postal-code-service.md)  
+[[!INCLUDE[prod_short](includes/prod_short.md)] Extensions by Other Providers](ui-extensions-other.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

@@ -2,20 +2,24 @@
 title: Exploring and Navigating Pages per Role
 description: You can get an overview of all the business features that are available for your role, and for other roles, with the Role Explorer.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: role explorer, find features, navigate
+ms.search.form: RoleExplorer, 9020, 9022, 9027, 9024
 ms.date: 08/01/2021
 ms.author: jswymer
 ---
+
 # Vyhledávání stránek pomocí Průzkůmníka rolí
 
 Získejte přehled o všech obchodních funkcích, které jsou k dispozici pro vaši roli a i pro další role, pokud půjdete o krok dále. In the following documentation, this feature overview is referred to as the *role explorer*.
 
 Každý prvek v průzkumníku rolí je akce, která otevře stránku. Accordingly, you can also use the role explorer as a means to navigate in [!INCLUDE[prod_short](includes/prod_short.md)].
+
+[!INCLUDE [about-ui-learn](includes/about-ui-learn.md)]
 
 ## Open the role explorer
 
@@ -90,6 +94,6 @@ Akce, které otevírají stránky jsou uspořádány pod uzly pojmenované po fu
 ## Viz také
 [Finding Pages and Information with Tell Me](ui-search.md)  
 [Manage Profiles](admin-users-profiles-roles.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

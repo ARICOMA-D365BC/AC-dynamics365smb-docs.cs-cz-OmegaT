@@ -1,14 +1,14 @@
 ---
-title: Transfer Items Between Warehouse Locations| Microsoft Docs
+title: Transfer Items Between Warehouse Locations
 description: Describes how to move inventory from one place or warehouse to another, either with the reclassification journal or with transfer orders.
 author: SorenGP
 
-ms.service: dynamics365-business-central
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: move, warehouse
+ms.search.forms: 5746, 5745, 5759, 5753, 5743, 5758, 5752, 5744, 5749, 5740, 5741, 5742, 5757, 5748, 5747, 9285, 5756, 5755
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -27,7 +27,7 @@ Pro transfer zboží je třeba nastavit lokace a trasy transferu. Pro více info
 
 ## Převod zboží pomocí objednávek transferu
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Objednávky transferu** a poté zvolte související odkaz.
-2. V hlavičce **Objednávky transferu** vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. On the **Transfer Order** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]  
    > Pokud jste vyplnili pole **Kód na cestě**, **Kód přepravce** a **Kód služby přepravce** na stránce **Trans. spec.transferu.** při nastavování trasy transferu se automaticky vyplní odpovídající pole na objednávce transferu.
@@ -57,11 +57,11 @@ Pro transfer zboží je třeba nastavit lokace a trasy transferu. Pro více info
 5. Vyberte tlačítko **Zaúčtovat**.
 
 ## Viz také
-[Správa zásob](inventory-manage-inventory.md)  
-[Nastavení skladu](inventory-how-setup-locations.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)  
-[Obecné obchodní funkcionality](ui-across-business-areas.md)
+[Manage Inventory](inventory-manage-inventory.md)  
+[Set Up Locations](inventory-how-setup-locations.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

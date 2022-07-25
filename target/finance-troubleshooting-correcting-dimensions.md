@@ -1,9 +1,9 @@
 ---
 title: Troubleshooting and Correcting Dimensions
 description: Learn how to troubleshoot typical dimension errors, and how to correct dimensions after they are used on posted transactions.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -101,7 +101,7 @@ Pokud akce Vrátit změnu není k dispozici, například proto, že jste provedl
 
 Buďte opatrní při opravách velkých sad položek, například sad, které obsahují více než 10 000 položek Pokud je to možné, doporučujeme použít filtry ke spuštění oprav na menších sadách dat. Je také vhodné provádět opravy mimo běžnou pracovní dobu
 
-### Použití zobrazení analýzy s opravami dimenzí
+### Use Analysis Views with Dimension Corrections
 
 Pokud je **Aktualizace při účtování** je povoleno pro zobrazení analýzy, [!INCLUDE[prod_short](includes/prod_short.md)] může zobrazit při zaúčtování dokladů a deníků. Pohledy můžete také aktualizovat s tímto nastavením povoleným výsledky oprav dimenzí. Chcete-li tak učinit, zapněte **Aktualizace pohledů analýzy**. Aktualizace analytických pohledů může mít vliv na výkon, zejména u velkých datových sad, proto doporučujeme aktualizovat analytické pohledy pouze u malých datových sad.
 
@@ -116,11 +116,11 @@ Pokud se oprava nedokončí, zobrazí se na kartě změny varování. Pokud k to
 > [!NOTE]
 > Resetování neúplné opravy neovlivní aktualizace zobrazení pohledů, protože k nim dochází na konci procesu opravy.
 
-### Použití nákladového účetnictví s opravenými položkami hlavní knihy
+### Use Cost Accounting with Corrected G/L Entries
 
  opravě dimenzí nebudou data pro nákladové účetnictví synchronizována. Nákladové účetnictví používá dimenze k agregaci částek pro nákladová střediska a objekty nákladů a ke spuštění přidělení nákladů. Změna dimenzí pro položky hlavní knihy bude pravděpodobně znamenat, že znovu spustíte modely nákladového účetnictví. To, jestli potřebujete odstranit jen několik žurnálů nákladů a znovu spustit přidělení, nebo potřebujete odstranit všechno a znovu spustit všechny modely, závisí na datech, která byla aktualizována, a na tom, jak jsou nastaveny možnosti nákladového účetnictví. Musíte ručně určit, kde budou mít opravy dimenzí vliv na nákladové účetnictví a kde jsou potřebné aktualizace. [!INCLUDE[prod_short](includes/prod_short.md)] does not currently provide an automated way to do that.
 
 ## Viz také
 
-[Práce s dimenzemi](finance-dimensions.md)
-[Analýza dat pomocí Dimenzí](bi-how-analyze-data-dimension.md)
+[Work with Dimensions](finance-dimensions.md)
+[Analyze Data by Dimensions](bi-how-analyze-data-dimension.md)

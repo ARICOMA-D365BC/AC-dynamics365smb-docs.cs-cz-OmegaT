@@ -3,7 +3,7 @@
     description: To make sure that inventory costs are recorded correctly, you must set up various fields and pages before you begin to make item transactions.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.search.keywords:
     ms.date: 06/16/2021
@@ -41,7 +41,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 [Setup Best Practices: Costing Method](setup-best-practices-costing-method.md)  
 [Design Details: Inventory Costing](design-details-inventory-costing.md)  
 [Design Details: Change the Costing Method for Items](design-details-changing-costing-methods.md)  
-[Working with Business Central](ui-work-product.md)  
+[Work with Business Central](ui-work-product.md)  
 [Finance](finance.md)
 
 

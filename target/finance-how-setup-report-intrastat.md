@@ -1,16 +1,16 @@
 ---
 title: Set Up and Report Intrastat
 description: Learn how to set up Intrastat reporting features, and how to report trade with companies in other EU countries.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: electronic document, Intrastat, trade, EU, European Union
 ms.search.form: 308, 309, 310, 311, 325, 326, 327, 328, 405, 406, 8451, 12202, 31077
-ms.date: 04/01/2021
+ms.date: 05/23/2022
 ms.author: bholtorf
 
 ---
@@ -19,12 +19,22 @@ ms.author: bholtorf
 Všechny společnosti v Evropské unii musí hlásit svůj obchod s ostatními zeměmi nebo oblastmi EU. Pohyb zboží musíte nahlásit statistickým úřadům ve vaší zemi / regionu každý měsíc a zpráva musí být doručena daňovým úřadům. Toto se nazývá hlášení Intrastatu. You use the **Intrastat Journal** page to complete periodic Intrastat reports.
 
 ## Povinné a volitelné nastavení
+
+> [!IMPORTANT]  
+> Customer cards and Vendor cards include a field, **Intrastat Partner Type**, that has the same option values as the **Partner Type** field: *"" (blank)*, *Company*, and *Person*. The **Intrastat Partner Type** field has replaced the **Parter Type** field in Intrastat reporting. **Partner Type** is used in SEPA to define theSEPA Direct Debit Scheme (Core or B2B). **Intrastat Partner Type** is used for Intrastat reporting only. This way, you can specifiy different values for the two fields, if you need to.
+>
+> However, note that if the **Intrastat Partner Type** field is left blank, the value from the **Partner Type** field is used for Intrastat reporting.
+
 Před použitím deníku Intrastat k vykazování informací o intrastatu je třeba nastavit několik věcí:
 
 * **Intrastat Setup**: Intrastat Setup page is used to enable intrastat reporting and set defaults for it. Můžete určit, zda chcete nahlásit Intrastat ze dodávek (odchozí), příjemek (příchozí) nebo obojí v závislosti na prahových hodnotách stanovených místními předpisy. Můžete také nastavit výchozí typy transakcí pro běžné doklady a doklady vratky, které se používají podle povahy vykazování transakcí.
 * **Intrastat journal templates**: You must set up the Intrastat journal templates and batches you will use. Protože je Intrastat hlášen měsíčně, musíte vytvořit 12 deníků založených na stejné šabloně.
 * **Commodity codes**: Customs and tax authorities have established numerical codes that classify items and services. Tyto kódy zadáte u zboží.
-* **Transaction nature codes**: Countries and regions have different codes for types of Intrastat transactions, such as ordinary purchase and sale, exchange of returned goods, and exchange of non-returned goods. Nastavte všechny kódy, které platí pro vaši zemi nebo oblast. Tyto kódy se používají v prodejních a nákupních dokladech a při zpracování vratek.
+* **Transaction nature codes**: Countries and regions have different codes for types of Intrastat transactions, such as ordinary purchase and sale, exchange of returned goods, and exchange of non-returned goods. Nastavte všechny kódy, které platí pro vaši zemi nebo oblast. You use these codes on the **Foreign Trade** FastTab on sales and purchase documents, and when you process returns.
+
+   > [!NOTE]
+   > Starting in January 2022, Intrastat requires different transaction nature code for dispatches to private individuals or non-VAT registered businesses and VAT registered businesses. To comply with this requirement, we recommend that you review and/or add new transaction nature codes in the **Transaction Types** page accoridng to the requirements in your country. You should also review and update the **Intrastat Partner Type** field to *Person* for private individual or non-VAT registered businesses customers in the relevant **Customer** page. If you are unsure about the correct intrastat partner type or transaction type to use, we recommend that you ask an expert in your country or region.
+
 * **Transport methods**: There are seven, one-digit codes for Intrastat transport methods. **1** for sea, **2** for rail, **3** for road, **4** for air, **5** for post, **7** for fixed installations, and **9** for own propulsion (for eample, transporting a car by driving it). [!INCLUDE[prod_short](includes/prod_short.md)] does not require these codes, however, we recommend that the descriptions provide a similar meaning.
 * **Transaction specifications**: Use these to supplement the descriptions from the transaction types.
 * **Country of origin**: Use the two-letter ISO Alpha Codes for the country where the good was obtained or produced. If the good was produced in more than one country, the country of origin is the last country where it was significantly processed.
@@ -106,7 +116,19 @@ After you fill in the Intrastat journal, you can run the **Checklist report** ac
 Dávková úloha načte všechny položky zboží v období statistiky a vloží je jako řádky do deníku Intrastat. V případě potřeby můžete řádky upravit.
 
 > [!IMPORTANT]  
-> The batch job retrieves only the entries that contain a country/region code for which an Intrastat code has been entered on the **Countries/Regions** page. Proto je nutné zadat kódy Intrastat pro kódy zemí nebo oblastí, pro které budete dávkovou úlohu spouštět.
+> The batch job retrieves only the entries that contain a country/region code for which an Intrastat code has been entered on the **Countries/Regions** page. Proto je nutné zadat kódy Intrastat pro kódy zemí nebo oblastí, pro které budete dávkovou úlohu spouštět. The batch job sets the **Partner VAT ID** field to *QV999999999999* for private individuals or non-VAT registered businesses (customers with the **Intrastat Partner Type** field set to *Person*), and it uses the value of the **Tranaction Type** field on the posted item ledger entry or job ledger entry.
+
+### To modify Intrastat journals lines
+
+1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intrastat Journal**, and then choose the related link.
+2. On the **Intrastat Journal** page, in the **Batch Name** field, choose the relevant journal batch, and then choose **OK**.
+3. User filter pane to filter Intrastat Jorunal lines based on some criteria. For example, filter on **Partner VAT ID** fields with the value *QV999999999999*.
+4. Choose **Share** icon ![Share a page in another app.](media/share-icon.png) and select **Edit in Excel**
+5. In Excel, modify the Intrastat journal lines that you filtered out. For example, modify **Transaction Type** field values.
+6. Publish the changes that you have made in Excel back to [!INCLUDE[prod_short](includes/prod_short.md)]
+
+> [!Note]
+> In [!INCLUDE[prod_short](includes/prod_short.md)] versions that do not support [**Edit in Excel**](across-work-with-excel.md#edit-in-excel) for journals, you can create configuration packages to export and import Intrastat journal lines to Excel. For more information, see [Migrate On-Premises Data to Business Central Online](/dynamics365/business-central/dev-itpro/administration/migrate-data) in the administration content.
 
 ### Hlášení Intrastatu ve formuláři nebo souboru
 
@@ -131,6 +153,9 @@ You can submit the Intrastat report as a file. Před vytvořením souboru si mů
 6. Choose **Save**.
 7. Browse to the location where you want to save the file, enter the file name, and then choose **Save**.
 
+> [!NOTE]
+> When a line in the Intrastat report has a supplementary unit of measure, the weight of the item will not be shown, since this value is not required.
+
 ## Reorganizace deníků Intrastatu
 
 Vzhledem k tomu, že musíte odeslat sestavu Intrastat každý měsíc a vytvořit nový list deníku pro každou sestavu, budete mít nakonec mnoho listů deníku. Řádky deníku nejsou automaticky odstraněny. Možná budete chtít periodicky reorganizovat názvy dávek deníku. To provést odstraněním listů deníků, které již nepotřebujete. Řádky deníku v těchto dávkách jsou také odstraněny.
@@ -145,9 +170,10 @@ In many countries, the customs and tax authorities establish 8-digit item codes 
 
 In the **Tariff Numbers** page, add all the codes that you use. You must enter the codes on the item card before you begin to post. When you have set up the codes, enter them in the **Tariff No.** field on the item card. You must also fill in the **Net Weight** field on the item card.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/process-intrastat-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/process-intrastat-dynamics-365-business-central/index)
 
 ## Viz také
+
 [Financial Management](finance.md)
 
 

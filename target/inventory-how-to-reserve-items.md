@@ -1,16 +1,16 @@
 ---
-    title: How to Reserve Items | Microsoft Docs
-    description: You can reserve items for sales orders, purchase orders, and production orders. You can reserve items on inventory or inbound on open document lines.
-    author: SorenGP
+title: How to Reserve Items
+description: You can reserve items for sales orders, purchase orders, and production orders. You can reserve items on inventory or inbound on open document lines.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 04/01/2021
-    ms.author: edupont
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.forms: 498, 497
+ms.date: 04/01/2021
+ms.author: edupont
 
 ---
 # Reserve Items
@@ -20,7 +20,7 @@ Each line on the **Reservation** page, which you open to reserve items, displays
 
 ## To reserve items for sales
 The following describes how to reserve items from a sales order. The steps are similar for purchase, service, and assembly orders.
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. On a sales order, on the **Lines** FastTab, choose the **Reserve** action. The **Reservation** page opens.
 3. Select the line that you want to reserve the items from.
 4. Choose one of the following actions.
@@ -94,7 +94,7 @@ Následující postup je založen na prodejní objednávce.
 [Design Details: Reservation, Order Tracking, and Action Messaging](design-details-reservation-order-tracking-and-action-messaging.md)  
 [Design Details - Item Tracking and Reservations](design-details-item-tracking-and-reservations.md)  
 [Work with Serial and Lot Numbers](inventory-how-work-item-tracking.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,15 +1,15 @@
 ---
 title: Set Up General Inventory Information
 description: Describes how to define the general inventory setup so that you can manage your warehouse and stock.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: warehouse, stock
-ms.search.form: 30, 461
+ms.search.form: 30, 456, 461
 ms.date: 07/28/2021
 ms.author: edupont
 
@@ -36,12 +36,12 @@ Pokud chcete zahrnout dobu zpracování ve skladu do kalkulace nadějné zakázk
 
 ## Viz také
 
-[Nastavení zásob](inventory-setup-inventory.md)    
-[Detaily návrhu: Metody ocenění](design-details-costing-methods.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)    
-[Změňte, které funkce se zobrazí](ui-experiences.md)    
-[Přehled obchodních funkcionalit](ui-across-business-areas.md)
+[Set Up Inventory](inventory-setup-inventory.md)  
+[Design Details: Costing Methods](design-details-costing-methods.md)  
+[Manage Inventory](inventory-manage-inventory.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)  
+[General Business Functionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

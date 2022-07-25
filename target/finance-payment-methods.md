@@ -1,9 +1,9 @@
 ---
 title: Set Up Payment Methods (contains video)
 description: You use payment methods, for example, check, bank transfer, cash, or PayPal, to define how sales and purchase invoices will be paid.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -45,7 +45,7 @@ Optionally, add payment terms to your payment method. For more information, see 
 [Register New Customers](sales-how-register-new-customers.md)  
 [Set Up Payment Terms](finance-payment-terms.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

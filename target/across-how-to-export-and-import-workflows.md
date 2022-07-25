@@ -3,7 +3,7 @@
     description: To transfer workflows to other Business Central databases, for example to save time when creating new workflows, you can export and import workflows.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -41,7 +41,7 @@ On the **Workflow** page, you create a workflow by listing the involved steps on
 [Delete Workflows](across-how-to-delete-workflows.md)   
 [Walkthrough: Setting Up and Using a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)   
 [Setting Up Workflows](across-set-up-workflows.md)   
-[Using Workflows](across-use-workflows.md)   
+[Use Workflows](across-use-workflows.md)   
 [Workflow](across-workflow.md)
 
 

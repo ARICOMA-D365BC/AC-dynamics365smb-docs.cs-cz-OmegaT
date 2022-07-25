@@ -3,12 +3,12 @@ title: Schedule jobs to run automatically
 description: Scheduled tasks are managed by the job queue. These jobs run reports and codeunits. You can set jobs to run one time, or on a recurring basis.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.search.keywords:
+ms.search.form: 672, 673, 674, 671
 ms.date: 10/01/2021
 ms.author: edupont
 
@@ -51,7 +51,7 @@ The following table describes the values of the **Status** field.
 
 ### Zobrazení stavu jakékoli úlohy
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Položky fronty úloh** a poté vyberte související odkaz.
 2. On the **Job Queue Entries** page, select a job queue entry, and then choose the **Log Entries** action.
 
 > [!TIP]
@@ -67,6 +67,7 @@ For example, if the current company is in an environment that is a copy of anoth
 > Internal administrators and users can schedule tasks to run. Delegated administrators cannot.
 
 ## Moje fronta úloh
+
 The **My Job Queue** part on your Role Center shows the job queues entries that you have started, but which are not yet finished. Ve výchozím nastavení není tato část viditelná, takže ji musíte přidat do Centra rolí. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
 
 The part shows which documents with your ID in the **Assigned User ID** field are being processed or are queued, including those related to background posting. Část vám může na první pohled sdělit, zda došlo k chybě při zaúčtování dokladu nebo zda došlo k chybám v položce fronty úloh. Část také umožňuje zrušit zaúčtování dokladu, pokud není spuštěno.
@@ -96,7 +97,7 @@ For more information, see [To set up background posting with job queues](ui-batc
 
 ## Monitor the job queue with telemetry
 
-As an administrator, you can use [Application Insights](/azure/azure-monitor/app/app-insights-overview) to gather and analyze telemetry that you can use to identify problems. For more information, see [Monitoring and Analyzing Telemetry](/dynamics365/business-central/dev-itpro/administration/telemetry-overview) in the developer and administration content.
+Jako správce můžete použít [Application Insights](/azure/azure-monitor/app/app-insights-overview) ke shromažďování a analýze telemetrie, kterou můžete použít k identifikaci problémů. Pro více informací navštivte [Monitorování a analýza telemetrie](/dynamics365/business-central/dev-itpro/administration/telemetry-overview) v obsahu pro vývojáře a správu.
 
 ## Viz také
 

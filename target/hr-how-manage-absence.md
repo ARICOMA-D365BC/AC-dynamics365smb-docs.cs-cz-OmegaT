@@ -1,15 +1,14 @@
 ---
 title: Manage Employee Absence
 description: Describes how to record employees' absence and analyze absence statistics using the Absence Registration and Employee Absences pages.
-services: project-madeira
-documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
+ms.search.form: 5200, 5201, 5204, 5206, 5208, 5209, 5211, 5212
 ms.date: 06/16/2021
 ms.author: edupont
 
@@ -65,10 +64,10 @@ Absence zaměstnanců můžete evidovat denně nebo v jiném intervalu, který v
    Otevře se stránka **Matice přehledu abs. dle období** zobrazující nepřítomnosti zaměstnanců rozdělené podle období.
 
 ## Viz také
-[Správa lidských zdrojů](hr-manage-human-resources.md)  
+[Manage Human Resources](hr-manage-human-resources.md)  
 [Finance](finance.md)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Změna zobrazovaných funkcí](ui-experiences.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Change Which Features are Displayed](ui-experiences.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

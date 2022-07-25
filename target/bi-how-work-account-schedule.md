@@ -3,12 +3,13 @@ title: Build financial reports using account schedules
 description: Describes how to use account schedules to create various views and report for analyzing financial performance data.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
+ms.search.form: 103, 104, 197, 196, 195, 198, 490, 764, 765, 766
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -50,10 +51,10 @@ The account schedules in the standard version of [!INCLUDE[prod_short](includes/
 
 The **Acc. Schedule Overview** page is where you preview the financial report that the account schedule defines. In the following, it is important to understand that what you set up as account schedule rows and columns can only be seen and validated on the **Acc. Schedule Overview** page, which you open from an account schedule by choosing the **Overview** action. The **Account Schedule** page itself is only a setup area.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature 1.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedules**, and then choose the related link.
 2. On the **Account Schedules** page, choose the **New** action to create a new account schedule name.
 3. Alternatively, choose the **Copy Account Schedule** action, fill in the two fields, and then choose the **OK** button.
-4. Podle potřeby vyplňte pole. In the **Default Column Layout** field select an existing layout. Pokud chcete, můžete jej upravit později.
+4. Podle potřeby vyplňte pole. In the **Default Column Layout** field, select an existing layout. Pokud chcete, můžete jej upravit později.
 
    Rozložení sloupců slouží k definování sloupců pro různé parametry, podle kterých jsou zobrazena finanční data na řádcích. Můžete například navrhnout rozložení sloupce pro porovnání čisté změny a zůstatku za stejné období letošního a minulého roku ve čtyřech sloupcích. For more information, see [To edit a column layout](bi-how-work-account-schedule.md#to-edit-a-column-layout).
 
@@ -67,7 +68,7 @@ Nyní jste definovali základ účetního schématu, řádky finančních dat, k
 
 ### Úprava rozložení sloupců
 
-Rozložení sloupců slouží k definování sloupců, které mají být zahrnuty do výsledné sestavy. Můžete například navrhnout rozložení pro porovnání čisté změny a zůstatku za stejné období tohoto roku a loňského roku.
+Rozložení sloupců slouží k definování sloupců, které mají být zahrnuty do výsledné sestavy. Můžete například navrhnout rozložení pro porovnání čisté změny a zůstatku za stejné období tohoto roku a loňského roku. You can have up to 15 columns. This is useful, for example, if you want to view budgets for 12 months and include a column that shows the total.
 
 > [!NOTE]
 > A printed/previewed/saved version of an account schedule can display a maximum of five columns. If the account schedule is only meant for analysis on the **Acc. Schedule Overview** page, you can create as many columns as you want.
@@ -84,7 +85,7 @@ Rozložení sloupců slouží k definování sloupců, které mají být zahrnut
 
 Někdy můžete chtít zahrnout sloupec do účetního schématu pro výpočet procent z celkového počtu. Například, pokud máte několik řádků, které rozdělují tržby podle dimenzí, můžete chtít, aby sloupec označil procento z celkových prodejů, které každý řádek představuje.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedules**, and then choose the related link.
 2. On the **Account Schedule Names** page, select an account schedule.
 3. Choose the **Edit Account Schedule** action to set up an account schedule row to calculate the total on which the percentages will be based.
 4. Vložte řádek bezprostředně nad první řádek, pro který chcete zobrazit procento.
@@ -97,11 +98,11 @@ Někdy můžete chtít zahrnout sloupec do účetního schématu pro výpočet p
 
 Účetní schémata můžete použít k vytvoření výkazu porovnávajícího čísla hlavní knihy a obecné údaje o rozpočtu.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní schémata** a poté vyberte související odkaz.
+1. Choose the ![Lightbulb that opens the Tell Me feature 3.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedules**, and then choose the related link.
 2. On the **Account Schedule Names** page, select an account schedule.
 3. Choose the **Edit Account Schedule** action
 4. On the **Account Schedule** page, in the **Name** field, select the default account schedule name.
-5. Choose the **Insert Accounts** action.
+5. Choose the **Insert G/L Accounts** action.
 6. Select the accounts that you want to include in your statement, and then choose the **OK** button.
 
    Účty jsou nyní vloženy do vašeho účetního schématu. Pokud chcete, můžete také změnit rozložení sloupce.
@@ -143,9 +144,19 @@ If you want to calculate by regular time periods, you must enter a formula in th
 > [!NOTE]
 > It is not always transparent which periods you are comparing because you can set a date filter on a report that spans different dates than the accounting periods that are reflected in the data in the chart of accounts. For example, you create an account schedule where you want to compare this period with the same period last year, so you set the **Comparison Date Formula** field to *-1FY*. Poté spustíte sestavu 28. února a nastavíte filtr data na leden a únor. V důsledku toho účetní schéma porovnává leden a únor letošního roku s lednem loňského roku, což je jediné dokončené účetní období dvou za loňský rok.
 
-For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
+For more information about date formulas, see [Work with Calendar Dates and Times](ui-enter-date-ranges.md).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/configure-financial-reports-dynamics-365-business-central/index)
+## Import or Export Account Schedules
+You can import and export account schedules as RapidStart configuration packages. For example, this is useful for sharing them with other companies. The package is created in a .rapidstart file, which delivers the package contents in a compressed format.
+
+### To import and export account schedules
+1. Choose the ![Lightbulb that opens the Tell Me feature 4.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedules**, and then choose the related link.
+2. Choose the account schedule, and then choose the **Import Account Schedule** or **Export Account Schedule** actions, depending on what you want to do.
+
+> [!NOTE]
+> When you import account schedules, existing records that have the same names as those you are importing will be deleted.
+
+## See related training at [Microsoft Learn](/learn/modules/configure-financial-reports-dynamics-365-business-central/index)
 
 ## Viz také
 
@@ -153,7 +164,7 @@ For more information about date formulas, see [Working with Calendar Dates and T
 [Finance](finance.md)  
 [Setting Up Finance](finance-setup-finance.md)  
 [The General Ledger and the Chart of Accounts](finance-general-ledger.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

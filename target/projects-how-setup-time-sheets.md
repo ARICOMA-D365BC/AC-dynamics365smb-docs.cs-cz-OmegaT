@@ -3,7 +3,7 @@ title: Set Up Time Sheets and Their Approval
 description: You set up time sheets to track the time used on tasks and projects, helping you with project management, staffing, and capacity
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -101,7 +101,7 @@ The following sections describe how to set up time sheets if you do not use the 
 [Finance](finance.md)  
 [Purchasing](purchasing-manage-purchasing.md)  
 [Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

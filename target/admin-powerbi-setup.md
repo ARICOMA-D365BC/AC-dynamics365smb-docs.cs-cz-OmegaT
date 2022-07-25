@@ -2,7 +2,7 @@
 title: Enabling Power BI Integration With Business Central
 description: Learn how to set up the connection to Power BI. With Power BI reports, you can get insights, business intelligence, and KPIs from your Business Central data.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -38,7 +38,12 @@ Stránka API je specifický typ stránky vytvořený v kódu AL, který poskytuj
 
 Business Central online je k dispozici se sadou vestavěných rozhraní API, která můžete použít k získání dat pro nejběžnější obchodní subjekty, jako jsou zákazníci, zboží, prodejní objednávky a další. K použití těchto rozhraní API jako zdroje dat pro sestavy Power BI není potřeba žádná další práce ani nastavení. Pro více informací o těchto rozhraních API navštivte [Business Central API V2.0](/dynamics365/business-central/dev-itpro/api-reference/v2.0/).
 
-Business Central online také podporuje vlastní rozhraní API. Vývojáři aplikací řešení Business Central mohou vytvářet vlastní stránky API a balit je do rozšíření. Rozšíření můžete nainstalovat do svého tenanta. Po instalaci můžete pro sestavy Power BI použít stránky rozhraní API, jako byste to udělali s integrovanými rozhraními API (v2.0). Pro více informací o tom, jak vytvořit stránky rozhraní API navštivte [Vývoj vlastního rozhraní API](/dynamics365/business-central/dev-itpro/developer/devenv-develop-custom-api).
+Business Central online také podporuje vlastní rozhraní API. Vývojáři aplikací řešení Business Central mohou vytvářet vlastní stránky API a balit je do rozšíření. You then install the extensions on your tenant. Once installed, you use the API pages for your Power BI reports, like you'd do with the built-in APIs (v2.0). Pro více informací o tom, jak vytvořit stránky rozhraní API navštivte [Vývoj vlastního rozhraní API](/dynamics365/business-central/dev-itpro/developer/devenv-develop-custom-api).
+
+> [!IMPORTANT]
+> Starting in February 2022, Power BI reports for [!INCLUDE[prod_short](includes/prod_short.md)] online are sourced from a secondary, read-only database replica for performance reasons. As a consequence, AL developers should avoid designing API pages that make database modifications while the pages are opening or loading records. In particular, consider the code on the AL triggers: OnInit, OnOpenPage, OnFindRecord, OnNextRecord, OnAfterGetRecord, and OnAfterGetCurrRecord. These database modifications, in some cases, may cause performance problems and prevent the report from refreshing data. For more information, see [Performance Articles For Developers](/dynamics365/business-central/dev-itpro/performance/performance-developer?branch=main#writing-efficient-web-services) in the Business Central development help.
+>
+> In rare cases, the behavior will cause an error when a user tries get data from the API page for a report in Power BI Desktop. However, if database modifications are necessary in the custom API page, Power BI Desktop users can force the behavior. For more information, see [Building Power BI Reports to Display Business Central Data](across-how-use-financials-data-source-powerbi.md#fixing-problems).
 
 ### Webové služby OData
 
@@ -70,11 +75,11 @@ Tato část vysvětluje požadavky na nasazení [!INCLUDE[prod_short](includes/p
 
    <!--
        > [!IMPORTANT]
-       > With [!INCLUDE[prod_short](../developer/includes/prod_short.md)] online, the use of access keys (Basic Auth) for web service authentication is [deprecated](/dynamics365/business-central/dev-itpro/upgrade/deprecated-features-w1#accesskeys). We recommend that you use OAuth2 instead. For more information, see [Using OAuth to Authorize Business Central Web Services](/dynamics365/business-central/dev-itpro/webservices/authenticate-web-services-using-oauth).-->
+       > With [!INCLUDE[prod_short](../developer/includes/prod_short.md)] online, the use of access keys (Basic Auth) for web service authentication is [deprecated](/dynamics365/business-central/dev-itpro/upgrade/deprecated-features-w1#accesskeys). We recommend that you use OAuth2 instead. For more information, see [Use OAuth to Authorize Business Central Web Services](/dynamics365/business-central/dev-itpro/webservices/authenticate-web-services-using-oauth).-->
 
 4. Vytvořte registraci přihlášky pro [!INCLUDE[prod_short](includes/prod_short.md)] v Microsoft Azure.
 
-   Pro zobrazení sestav Power BI vložených na stránky [!INCLUDE[prod_short](includes/prod_short.md)], musí být přihláška zaregistrována pro [!INCLUDE[prod_short](includes/prod_short.md)] v Microsoft Azure. Registrovaná aplikace potřebuje oprávnění ke službám Power BI. Pro více informací navštivte [Registrace [!INCLUDE[prod_short](includes/prod_short.md)] On-Premises v Azure AD pro integraci s jinými službami](/dynamics365/business-central/dev-itpro/administration/register-app-azure).
+   To view Power BI reports embedded in [!INCLUDE[prod_short](includes/prod_short.md)] pages, an application must be registered for [!INCLUDE[prod_short](includes/prod_short.md)] in Microsoft Azure. The registered application needs permission to Power BI services. At a minimum, the app requires  **User.ReadWrite.All** permission. For users to view reports from shared Power BI workspaces, the app requires **Workspace.Read.All** permission. For more information, see [Registering [!INCLUDE[prod_short](includes/prod_short.md)] On-Premises in Azure AD for Integrating with Other Services](/dynamics365/business-central/dev-itpro/administration/register-app-azure).
 
    > [!NOTE]
    > Pokud vaše nasazení používá ověřování NavUserPassword, [!INCLUDE[prod_short](includes/prod_short.md)] se připojuje ke stejné službě Power BI pro všechny uživatele. Tento účet služby zadáte jako součást registrace aplikace. S ověřováním Azure AD, se [!INCLUDE[prod_short](includes/prod_short.md)] připojuje ke službě Power BI přidružené k jednotlivým uživatelským účtům.
@@ -86,23 +91,24 @@ Tato část vysvětluje požadavky na nasazení [!INCLUDE[prod_short](includes/p
 
    Chcete-li vytvořit počáteční připojení, otevřete [!INCLUDE[prod_short](includes/prod_short.md)] a z centra rolí spusťte funkci **Začínáme s Power BI**. Tato akce vás povede procesem souhlasu a zkontroluje vaši licenci Power BI. Když se zobrazí výzva k přihlášení pomocí účtu správce Azure. Pro více informací navštivte [Připojení k Power BI - pouze jednou](across-working-with-powerbi.md#connect).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/Configure-powerbi-excel-dynamics-365-business-central/index)
+
+## Viz související školení na webu [Microsoft Learn](/learn/modules/Configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Business Central a Power BI](admin-powerbi.md)    
-[Integrace komponent Power BI a přehledu architektur pro [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)    
-[Power BI pro uživatelé](/power-bi/consumer/end-user-consumer)    
-[„Nový vzhled“ služby Power BI](/power-bi/service-new-look)    
-[Rychlý start: Připojení k datům v Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)    
-[Dokumentace Power BI](/power-bi/)    
-[Business Intelligence](bi.md)    
-[Připravte se na podnikání](ui-get-ready-business.md)    
-[Import obchodních dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
-[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power BI](across-how-use-financials-data-source-powerbi.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] jako zdroje dat Power Apps](across-how-use-financials-data-source-powerapps.md)    
-[Použití [!INCLUDE[prod_short](includes/prod_short.md)] v Power Automate](across-how-use-financials-data-source-flow.md)
+[Business Central and Power BI](admin-powerbi.md)  
+[Power BI Integration Component and Architecture Overview for [!INCLUDE[prod_short](includes/prod_short.md)]](admin-powerbi-overview.md)  
+[Power BI for consumers](/power-bi/consumer/end-user-consumer)  
+[The 'new look' of the Power BI service](/power-bi/service-new-look)  
+[Quickstart: Connect to data in Power BI Desktop](/power-bi/desktop-quickstart-connect-to-data)  
+[Power BI documentation](/power-bi/)  
+[Business Intelligence](bi.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Importing Business Data from Other Finance Systems](across-import-data-configuration-packages.md)  
+[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] as a Power Apps Data Source](across-how-use-financials-data-source-powerapps.md)  
+[Use [!INCLUDE[prod_short](includes/prod_short.md)] in Power Automate](across-how-use-financials-data-source-flow.md)
 
 
 

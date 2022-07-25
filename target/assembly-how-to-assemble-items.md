@@ -1,16 +1,17 @@
 ---
-    title: How to Assemble Items
-    description: If the Replenishment System field on the item card contains Assembly the default method of supplying the item is to assemble it from defined components.
-    author: SorenGP
+title: Assemble Items
+description: If the Replenishment System field on the item card contains Assembly the default method of supplying the item is to assemble it from defined components.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: kit, kitting
-    ms.date: 06/14/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: kit, kitting
+ms.search.form: 900, 901, 902, 903, 904, 907, 910, 916, 920, 921, 922, 923, 940, 941, 942, 930, 931, 932, 914, 915, 905
+ms.date: 06/14/2021
+ms.author: edupont
 
 ---
 # Assemble Items
@@ -68,7 +69,7 @@ After posting succeeds, the assembly item is posted as output to the location co
 [Work with Bills of Material](inventory-how-work-BOMs.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

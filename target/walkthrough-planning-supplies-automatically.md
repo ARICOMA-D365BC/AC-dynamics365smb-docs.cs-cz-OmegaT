@@ -3,7 +3,7 @@
     description: This walkthrough demonstrates how to use the supply planning system to automatically plan purchase and production orders on different sales orders.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -87,7 +87,7 @@ V reakci na novou prodejní objednávku na pět turistických kol zahajuje Ricar
 
 ### Vytvoření prodejní objednávky
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Vyberte akci **Nový**.
 3. Na stránce **Prodejní objednávka** vyplňte pole, jak je popsáno v následující tabulce.
 

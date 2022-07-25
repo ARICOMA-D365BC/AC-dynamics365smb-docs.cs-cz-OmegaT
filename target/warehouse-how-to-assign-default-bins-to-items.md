@@ -1,16 +1,17 @@
 ---
-    title: How to Assign Default Bins to Items
-    description: If you are using bins at a location, assigning default bins to your items can make the process of shipping, receiving, and moving your items much easier.
-    author: SorenGP
+title: Assign Default Bins to Items
+description: If you are using bins at a location, assigning default bins to your items can make the process of shipping, receiving, and moving your items much easier.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords:
-    ms.date: 06/25/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords:
+ms.search.form: 7371, 7374, 7379
+ms.date: 06/25/2021
+ms.author: edupont
 
 ---
 # Přiřazení výchozí přihrádky ke zboží
@@ -35,12 +36,12 @@ Pravděpodobně bude nutné změnit přiřazení výchozí přihrádky pro zbož
 > When an item is put away for the first time, and the item does not have a default bin assigned, the system will assign the bin where the item is put away as the default bin for the item.
 
 ## Viz také
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)       
-[Správa montáže](assembly-assemble-items.md)      
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)
+[Assembly Management](assembly-assemble-items.md)
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,7 +3,7 @@ title: Sandbox environments
 description: Learn about how a dedicated environment can help you safely explore, learn, demo, develop, troubleshoot, and test Business Central.
 author: SusanneWindfeldPedersen
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.reviewer: edupont
 ms.devlang: na
@@ -42,7 +42,7 @@ The sandbox environment is not least useful because it includes a couple of hand
 
 It is possible to enable and try the full functionality of the standard version of [!INCLUDE[prod_short](includes/prod_short.md)] in a sandbox tenant by setting the **Experience** field on the **Company Information** page to *Premium*. Find the **Company Information** page in the :::image type="content" source="media/ui-experience/settings_icon_small.png" alt-text="Settings icon."::: menu.
 
-After you have enabled the *Premium* user experience, you get access to all the standard profiles (roles) and Role Centers in the standard version. Alternatively, contact a reselling partner for a demonstration of the capabilities. For more information, see [How do I find a reselling partner?](across-faq.yml#how-do-i-find-a-reselling-partner).
+After you have enabled the *Premium* user experience, you get access to all the standard profiles (roles) and Role Centers in the standard version. Alternatively, contact a reselling partner for a demonstration of the capabilities. Pro další informace se podívejte na [Jak najít partnera?](across-faq.yml#how-do-i-find-a-reselling-partner).
 
 ### Complete sample data
 
@@ -63,14 +63,14 @@ When the assisted setup guide completes, you can start exploring the new company
 
 In a sandbox environment, you will find the **Designer** enabled. You can activate Designer by selecting the design icon ![Designer.](./media/across-sandbox/sandbox-inclient-design-icon.png) on a page, or by choosing the **Design** menu item in the ![Settings](media/ui-experience/settings_icon_small.png) Settings menu.
 
-For more information, see [Using Designer](/dynamics365/business-central/dev-itpro/developer/devenv-inclient-designer) in the developer and admin content (in English only).
+For more information, see [Use Designer](/dynamics365/business-central/dev-itpro/developer/devenv-inclient-designer) in the developer and admin content (in English only).
 
 <!-- ![In-client Designer.](./media/across-sandbox/sandbox-inclient-designer.png) -->
 
 ## Viz také
 
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[[!INCLUDE[prod_long](includes/prod_long.md)] Trials and Subscriptions](across-preview.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[[!INCLUDE[prod_long](includes/prod_long.md)] Trials and Subscriptions]((/dynamics365/business-central/dev-itpro/administration/trials-subscriptions)  
 [Managing Environments in the Business Central administration center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments)  
 [Production and Sandbox Environments](/dynamics365/business-central/dev-itpro/administration/environment-types)
 

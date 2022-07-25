@@ -1,16 +1,15 @@
 ---
-title: Manage FA Budgets| Microsoft Docs
+title: Manage FA Budgets
 description: You set up information about future investments, disposals, and depreciation of fixed assets to help prepare budgets and forecasts.
-services: project-madeira
-documentationcenter: ''
-author: SorenGP
+author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: forecast
+ms.search.form: 5610, 5611
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -54,11 +53,11 @@ You can use the **Fixed Asset - Projected Value** report to calculate future dep
 5. Choose the **Print** or **Preview** button.
 
 ## Viz také
-[Dlouhodobý majetek](fa-manage.md)    
-[Nastavení dlouhodobého majetku](fa-setup.md)    
-[Finance](finance.md)    
-[Příprava na podnikání](ui-get-ready-business.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Fixed Assets](fa-manage.md)  
+[Setting Up Fixed Assets](fa-setup.md)  
+[Finance](finance.md)  
+[Getting Ready for Doing Business](ui-get-ready-business.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

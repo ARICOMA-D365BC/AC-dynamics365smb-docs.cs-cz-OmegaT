@@ -3,7 +3,7 @@ title: Transfer Bank Funds
 description: You can transfer amounts from one bank account to another, including different currencies, by posting the transaction in the general journal.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -72,8 +72,8 @@ To transfer funds between bank accounts that use different currencies, you must 
 
 [Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
 [Setting Up Banking](bank-setup-banking.md)  
-[Working with General Journals](ui-work-general-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with General Journals](ui-work-general-journals.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

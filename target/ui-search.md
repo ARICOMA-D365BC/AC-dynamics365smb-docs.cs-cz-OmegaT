@@ -1,15 +1,16 @@
 ---
-title: Finding Features and Information (contains video) | Microsoft Docs
+title: Finding Features and Information (contains video)
 description: This topic describes how to use search to find actions, pages, reports, documentation, and data, as well as other apps and consulting services.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: find
-ms.date: 04/01/2021
+ms.search.form: TellMe, 9020, 9022, 9026, 9027, 9030, 9000, 9009, 9004, 9005, 9024, 9006, 9007, 9010, 9016, 9017
+ms.date: 05/23/2022
 ms.author: bholtorf
 
 ---
@@ -30,6 +31,8 @@ At the bottom of the **Tell Me** window is an action called **exploring**, which
 > [!NOTE]  
 > If you prefer to use your keyboard, use the Tab key and Arrow keys to choose an item in the results. If you press the Enter key on your keyboard without choosing a result, [!INCLUDE[prod_short](includes/prod_short.md)] opens the result that is listed first.
 
+[!INCLUDE [about-ui-learn](includes/about-ui-learn.md)]
+
 ### Finding an Action on the Current Page
 The **On Current Page** section lets you find and perform actions on the page you have open. For example, if the **Sales Quote** page is open and you type "customer," the section includes an action that opens the customer card for the customer chosen on the sales quote.
 
@@ -44,11 +47,13 @@ The pages and tasks that are listed depend on the user experience you chose for 
 ### Finding a Report or Archived Information
 The **Go to Reports and Analysis** section offers access to reporting tools. For example, you can open the **Balance Sheet** report from the list, or access archived documents and other information.
 
+<!-- removed in v20 because of Help pane
 ### Finding Information in the Help
-Under **Documentation** you will see articles from the [!INCLUDE[prod_short](includes/prod_short.md)] documentation that describe concepts and provide step-by-step guidance for completing tasks in the application.
+Under **Documentation** you will see articles from the [!INCLUDE[prod_short](includes/prod_short.md)] documentation that describe concepts and provide step-by-step guidance for completing tasks in the application.    
 
 > [!NOTE]  
 > Documentation for third-party extensions is not included in the results.
+-->
 
 ### Getting More Functionality by Finding an App on Microsoft AppSource
 Our partner community is busily developing apps that add capabilities to [!INCLUDE[prod_short](includes/prod_short.md)]. The **Get from Microsoft AppSource** section lists apps for [!INCLUDE[prod_short](includes/prod_short.md)] that are available on Microsoft AppSource and are related to the keyword you searched for.
@@ -59,10 +64,10 @@ The **Tell me what you want to do** function does not search for data, such as c
 ## Questions?
 We have shown Tell Me to a range of stakeholders, noted the questions that they had in common, and turned our notes into a list frequently asked questions. If you are interested, see [Tell Me FAQ](ui-search-faq.md).
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
 
 ## Viz také
-[Working with Business Central](ui-work-product.md)  
+[Work with Business Central](ui-work-product.md)  
 [Add a Page Action to Your Role Center](ui-bookmarks.md)
 
 

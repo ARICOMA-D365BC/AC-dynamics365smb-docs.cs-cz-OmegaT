@@ -1,15 +1,15 @@
 ---
-title: Choosing the User Experience to Show or Hide Advanced Features | Microsoft Docs
+title: Change which features are displayed
 description: Learn what the Essential and Premium user experience tiers mean for the user interface, application areas, and your company.
-documentationcenter: ''
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: essential, basic, user interface, application area, experience
+ms.search.form: 1
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -21,7 +21,7 @@ You can define the product complexity level, and thereby which features the comp
 
 The following table lists the experiences that are currently available.
 
-| Experience | Impact on User Interface |
+| Zkušenosti | Impact on User Interface |
 | --- | --- |
 | **Essential** | Shows all actions and fields for all common business functionality. |
 | **Premium** | Shows all actions and fields for all business functionality, including Manufacturing and Service Management. |
@@ -61,7 +61,7 @@ All feature descriptions in user documentation for [!INCLUDE[prod_short](include
 [Assign Permissions to Users and Groups](ui-define-granular-permissions.md)  
 [Creating New Companies](about-new-company.md)  
 [Change Basic Settings](ui-change-basic-settings.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [[!INCLUDE[prod_short](includes/prod_short.md)] Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=871590&clcid=0x409)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]

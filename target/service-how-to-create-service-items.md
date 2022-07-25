@@ -3,7 +3,7 @@
     description: Read about the different ways you can create service items in Business Central, for example within a service order or when shipping items.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -36,7 +36,7 @@ When you ship items by posting either sales orders or sales invoices, the shippe
 
 The following procedure shows how to create service items when you ship items on sales orders.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Open the relevant sales order.
 3. Choose the **Post** or **Post and Print** action.
 4. Choose the **Ship** or **Ship and Invoice** action.

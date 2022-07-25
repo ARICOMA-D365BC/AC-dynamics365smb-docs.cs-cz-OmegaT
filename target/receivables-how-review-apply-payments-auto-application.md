@@ -1,15 +1,15 @@
 ---
-title: Verify Automatically Applied Payments, and Reapply Payments Manually | Microsoft Docs
+title: Review and Apply Payments Manually After Automatic Application
 description: After payments are applied automatically, you can review all the entries for a payment and manually reapply those that were applied incorrectly.
-
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, reconcile payment, expenses, cash receipts
+ms.search.form: 1290, 1294, 1287
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -47,9 +47,9 @@ Any gains-and-loss adjustment required due to currency conversions is not handle
 The **Payment Application** page  closes, and on the **Payment Reconciliation Journal** page, the value in the **Match Confidence** field is changed to **Accepted** to indicate to you that you have reviewed or manually applied the payment.
 
 ## Viz také
-[Správa pohledávek  [
-  Prodej[<x6/>
-[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
+[Managing Receivables](receivables-manage-receivables.md)  
+[Sales](sales-manage-sales.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

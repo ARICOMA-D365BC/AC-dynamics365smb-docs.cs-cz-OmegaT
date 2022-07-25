@@ -3,7 +3,7 @@
     description: Inventory valuation is the determination of the cost of an inventory item.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -49,12 +49,12 @@ Pokud jde o nakoupené zásoby, položky ocenění poskytují základ ocenění 
 Účelem ocenění zásob NV je určit hodnotu zboží, kterého výroba ještě nebyla k danému datu dokončena. Hodnota zásob NV je proto založena na položkách ocenění souvisejících s položkami spotřeby a kapacity. Položky spotřeby musí být k datu ocenění zcela fakturovány. Proto sestava  **Hodnota zásob vlastní výroby** zobrazuje náklady představující hodnotu zásob NV ve dvou kategoriích: spotřeba a kapacita.
 
 ## Viz také
-[Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md)     
-[Detaily návrhu: Přecenění](design-details-revaluation.md)     
-[Detaily návrhu: Účtování prodejní zakázky](design-details-production-order-posting.md)  
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Reconciliation with the General Ledger](design-details-reconciliation-with-the-general-ledger.md)   
+[Design Details: Revaluation](design-details-revaluation.md)   
+[Design Details: Production Order Posting](design-details-production-order-posting.md)
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

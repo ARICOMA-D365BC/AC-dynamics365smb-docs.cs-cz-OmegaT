@@ -3,7 +3,7 @@ title: Put Items Away
 description: Putting items away after they are received or output is performed in different ways depending on how warehouse management features are configured.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -43,7 +43,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 [Setting Up Warehouse Management](warehouse-setup-warehouse.md)
 [Assembly Management](assembly-assemble-items.md)
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

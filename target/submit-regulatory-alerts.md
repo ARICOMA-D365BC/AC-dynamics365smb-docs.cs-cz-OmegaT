@@ -3,7 +3,7 @@ title: Submit Regulatory Alerts
 description: If you know about new legislation that requires feature support in Business Central, you can follow this guide to submit a regulatory alert to the product team.
 author: sorenfriisalexandersen
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.reviewer: edupont
 ms.search.keywords:
@@ -17,7 +17,7 @@ Zveme vás k použití služby Microsoft Dynamics Lifecycle Services (LCS) tk od
 
 ## Odesílání regulačního upozornění v LCS
 
-1. Běžte na https://lcs.dynamics.com a přihlašte se
+1. Go to [https://lcs.dynamics.com](https://lcs.dynamics.com) and sign in
 
    Budou vám zobrazeny projekty, ke kterým máte přístup
 

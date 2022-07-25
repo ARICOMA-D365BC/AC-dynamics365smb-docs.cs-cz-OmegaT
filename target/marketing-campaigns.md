@@ -3,7 +3,7 @@ title: Set Up Marketing Campaigns in Business Central| Microsoft Docs
 description: Describes how you can set up and conduct marketing campaigns in Business Central to help you identify and attract prospects and retain customers.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -45,7 +45,7 @@ Kampaně jsou prováděny prodejci a je nutné vytvořit aktivity, které budou 
 [Managing Contacts](marketing-contacts.md)  
 [Managing Segments](marketing-segments.md)  
 [Managing Sales Opportunities](marketing-manage-sales-opportunities.md)  
-[Working with Business Central](ui-work-product.md)
+[Work with Business Central](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

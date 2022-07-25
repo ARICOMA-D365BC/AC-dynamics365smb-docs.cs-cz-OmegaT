@@ -3,12 +3,13 @@ title: Dispose or Retire FA
 description: When you sell or otherwise dispose of a fixed asset, the disposal value must be posted to calculate and record the gain or loss.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: scrap
+ms.search.form: 5628, 5610, 5611, 5629, 5633
 ms.date: 06/15/2021
 ms.author: edupont
 
@@ -53,7 +54,7 @@ The **General Ledger Entries** page opens where you can see the entries that the
 [To set up fixed asset posting groups](fa-how-setup-general.md#to-set-up-fixed-asset-posting-groups).  
 [Finance](finance.md)  
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Find Entries](ui-find-entries.md)
 
 

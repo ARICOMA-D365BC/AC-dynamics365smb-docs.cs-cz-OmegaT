@@ -3,13 +3,13 @@ title: Create Item Cards for Goods or Services (contains video)
 description: You create item cards for services that you sell as hours and for physical products, such as assembly items, finished goods, that you sell from your inventory.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: item, finished good, component, raw material, assembly item, item substitution
-ms.search.form: 30
+ms.search.form: 30, 5717, 31, 32, 346, 9091, 5718, 5716, 5720, 1384, 1383, 35, 5404, 1378, 5719
 ms.date: 09/24/2021
 ms.author: edupont
 
@@ -130,7 +130,7 @@ For examples of how you can use the fields on the **Planning** FastTab, see [Set
 [Design Details: Central Concepts of the Planning System](design-details-central-concepts-of-the-planning-system.md)  
 [Design Details: Balancing Demand and Supply](design-details-balancing-demand-and-supply.md)  
 [Design Details: Planning Parameters](design-details-planning-parameters.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

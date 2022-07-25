@@ -3,7 +3,7 @@ title: Undo a Posting by Posting a Reversing Entry
 description: If you have made an erroneous posting in the general journal, then you can use the Reverse Transaction function to undo the posting with a correct audit trail.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -31,7 +31,7 @@ You can reverse entries from all **Ledger Entries** pages. The following procedu
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Ledger Entries**, and then choose the related link.
 2. Select the entry that you want to reverse, and then choose the **Reverse Transaction** action. Note that is must originate from a journal posting.
 3. On the **Reverse Transaction Entries** page, choose the **Reverse** action.
-4. Choose the **Yes** button on the confirmation message.
+4. V potvrzovací zprávě klikněte na tlačítko **Ano**.
 
 > [!NOTE]
 > You cannot reverse entries that have been posted with information from a job, or which have realized gains and losses within the same transaction.
@@ -79,9 +79,9 @@ The following describes how to undo a posted return shipment of items or resourc
 
 [Undo Assembly Posting](assembly-how-to-undo-assembly-posting.md)  
 [Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md)  
-[Working with General Journals](ui-work-general-journals.md)  
+[Work with General Journals](ui-work-general-journals.md)  
 [Finance](finance.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

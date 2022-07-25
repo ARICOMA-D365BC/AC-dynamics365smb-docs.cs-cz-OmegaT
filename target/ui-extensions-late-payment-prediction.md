@@ -1,9 +1,9 @@
 ---
 title: Predict Late Payments for Sales Documents
 description: This topic explains how to use our predictive model to predict whether an invoice will be paid on time.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -103,7 +103,7 @@ You can also create your own predictive web service based on a public model name
 7. Choose the **Use My Azure Subscription** check box.
 8. On the **My Model Credentials** FastTab, enter the API URL and API key for your model.  .
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/predict-late-payments-sales-documents/)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/predict-late-payments-sales-documents/)
 
 ## Viz také
 

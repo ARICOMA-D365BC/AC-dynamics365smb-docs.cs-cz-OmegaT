@@ -3,7 +3,7 @@ title: Replan or Refresh Production Orders Directly
 description: This topic outlines the procedures for how to replan production orders and refresh production orders directly.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -92,7 +92,7 @@ If you have amended production order lines, components, or routing lines, you mu
 [Purchasing](purchasing-manage-purchasing.md)  
 [Design Details: Supply Planning](design-details-supply-planning.md)   
 [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

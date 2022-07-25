@@ -3,12 +3,12 @@
     description: This topic is an overview of the different ways of receiving items at a warehouse, for example items with a purchase order or items with a warehouse receipt.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.form: 5768, 7330, 7332, 7333, 7342, 7363, 8510
+    ms.search.form: 5768, 7330, 7332, 7333, 7342, 7363, 8510, 9008
     ms.date: 06/24/2021
     ms.author: edupont
 
@@ -23,7 +23,7 @@ When items arrive at a warehouse that is set up for warehouse receipt processing
 
 The following describes how to receive items with a purchase order. The steps are similar for sales return orders and transfer orders.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Orders**, and then choose the related link.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
 2. Open an existing purchase order, or create a new one. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 3. V poli **Množ. to Receive** field, enter the received quantity.
 
@@ -121,16 +121,16 @@ When you handle an over-receipt, you can either increase the value in the **Qty.
 > [!NOTE]
 > [!INCLUDE[prod_short](includes/prod_short.md)] does not include functionality to automatically initiate the financial administration of over-receipts. You must manually handle this in agreement with the vendor, for example, by the vendor forwarding a new or updated invoice.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
 
 ## Viz také
 
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)    
-[Správa montáže](assembly-assemble-items.md)    
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Assembly Management](assembly-assemble-items.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

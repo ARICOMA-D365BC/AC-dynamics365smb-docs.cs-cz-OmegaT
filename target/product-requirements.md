@@ -1,15 +1,15 @@
 ---
 title: Minimum requirements in using Business Central
 description: Learn about the minimum system and version requirements for using Business Central online outlined below.
-author: edupont04
-ms.service: dynamics365-business-central
+author: jswymer
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: version
-ms.date: 06/25/2021
-ms.author: edupont
+ms.date: 06/08/2022
+ms.author: jswymer
 
 ---
 # Minimum Requirements for Using Business Central
@@ -18,27 +18,21 @@ Before you access [!INCLUDE[prod_short](includes/prod_short.md)] online, we reco
 
 ## Browsers
 
-**Microsoft Edge:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of the new Microsoft Edge.
+**Microsoft Edge:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of Microsoft Edge.
 
 **Chrome for Windows and Firefox for Windows:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of these desktop browsers.
 
 **Safari:** [!INCLUDE[prod_short](includes/prod_short.md)] is designed to work with the current version of Safari on macOS.
 
+> [!TIP]
+> Install the [!INCLUDE[prod_short](includes/prod_short.md)] [app in the Start menu](install-desktop-app.md#install-the-app-for-business-central-online) using the Microsoft Edge or Chrome browsers.
+
 ## Mobile devices
 
-**Windows:** Windows 10 S, Home, Pro, Enterprise, or Education (32-bit and 64-bit editions).
+**Android (tablet and phone):** One of the latest three major operating system versions and their updates.
 
-**Android (tablet and phone):** One of the latest three major versions and their updates.
+**iOS (iPad and iPhone):** One of the latest three major operating system versions and their updates.
 
-**iOS (iPad and iPhone):** One of the latest three major versions and their updates.
-
-<!--
-
-**Windows:** [!INCLUDE[prod_short](includes/prod_short.md)] for Windows can be installed on devices with at least 1 GB of RAM and Windows 10 S, Home, Pro, Enterprise, or Education (32-bit and 64-bit editions).  
-**iOS:** [!INCLUDE[prod_short](includes/prod_short.md)] for iPad and iPhone requires iOS 10.0 or later.  
-**Android:** [!INCLUDE[prod_short](includes/prod_short.md)] for Android tablet and Android phone can be installed on devices with at least 1 GB of RAM and Android 6.0 or higher.  
-**Device size:** [!INCLUDE[prod_short](includes/prod_short.md)] is supported on smart phones with a minimum screen size of 4" and tablets with a minimum screen size of 7".  
--->
 ## Outlook
 
 **Outlook applications:** To use [!INCLUDE[prod_short](includes/prod_short.md)] online as your business inbox in Outlook, you'll need Outlook 2019 or later, Outlook on the web, Outlook for iOS, or Outlook for Android. Your organization must also use Microsoft 365. You can't use [!INCLUDE[prod_short](includes/prod_short.md)] online as your business inbox in Outlook if your organization uses Exchange Server on-premises.
@@ -56,7 +50,9 @@ Before you access [!INCLUDE[prod_short](includes/prod_short.md)] online, we reco
 
 **Browsers:** When using the [!INCLUDE[prod_short](includes/prod_short.md)] app for Teams in the browser (web client), the app requires that your computer is running one of the supported browsers listed earlier in this article.
 
-**Platforms:** When using the [!INCLUDE[prod_short](includes/prod_short.md)] app in Teams for iOS or Android, the app requires that your mobile device is running one of the supported mobile platforms, listed earlier in this article.
+**Platforms:** When using the [!INCLUDE[prod_short](includes/prod_short.md)] app in Teams for iOS or Android, the app requires that your mobile device is running one of the supported mobile platforms listed earlier in this article.
+
+**Supported subscription:** The [!INCLUDE[prod_short](includes/prod_short.md)] app for Teams supports Microsoft 365 Business and Enterprise subscriptions, but not standalone Teams subscriptions such as Microsoft Teams (free) or Microsoft Teams Essentials.
 
 ## Excel
 
@@ -69,18 +65,22 @@ Before you access [!INCLUDE[prod_short](includes/prod_short.md)] online, we reco
 
 The administration center is designed to work with the current version of the following browsers:
 
-- The new Microsoft Edge
+- Microsoft Edge
 - Chrome for Windows
 - Firefox for Windows
 - Safari for macOS
 
-## Using Business Central on-premises
+## Use Business Central on-premises
 
-If you want to deploy Business Central on-premises, you should check the system requirements. For more information, see [System Requirements for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirements-business-central-v18) and [Deployment Overview](/dynamics365/business-central/dev-itpro/deployment/deployment).
+If you want to deploy Business Central on-premises, you should check the system requirements. For more information, see [System Requirements for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirements-business-central-v20) and [Deployment Overview](/dynamics365/business-central/dev-itpro/deployment/deployment).
 
 ## Viz také
 
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[System Requirements for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirements-business-central-v18)
+[System Requirements for Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/system-requirements-business-central-v20)  
+[Getting the Business Central Desktop App](install-desktop-app.md)  
+[Getting Business Central on Your Mobile Device](install-mobile-app.md)  
+[Managing Business Interactions in Microsoft Outlook](admin-outlook.md)  
+[Business Central and Microsoft Teams Integration](across-teams-overview.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

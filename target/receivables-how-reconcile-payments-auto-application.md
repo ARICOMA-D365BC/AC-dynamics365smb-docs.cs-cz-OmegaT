@@ -3,12 +3,13 @@ title: Reconcile Payments Using Automatic Application
 description: Describes how to use the automatic application function to apply payments or cash receipts to their related open entries, and reconcile payments.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, direct payment posting, reconcile payment, expenses, cash receipts
+ms.search.form: 389, 1290, 1294, 1287
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -85,9 +86,9 @@ You can compare the value in the **Balance on Bank Account After Posting** field
 > If you do not want to reconcile the bank account from the **Payment Reconciliation Journal** page, then you must use the **Bank Acc. Reconciliation** page. For more information, see [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md).
 
 ## Viz také
-[Správa pohledávek  [
-  Prodej[<x6/>
-[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
+[Managing Receivables](receivables-manage-receivables.md)  
+[Sales](sales-manage-sales.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

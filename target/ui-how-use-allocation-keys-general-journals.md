@@ -1,16 +1,15 @@
 ---
 title: Use Allocation Keys in General Journals
 description: You can allocate an entry in a general journal to several different accounts when you post the journal.
-services: project-madeira
-documentationcenter: ''
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: cost accounting
+ms.search.form: 283, 284
 ms.date: 06/29/2021
 ms.author: edupont
 
@@ -40,9 +39,9 @@ Při účtování deníku můžete přiřadit položku ve finančním deníku n�
 4. Změňte příslušná pole a poté stiskněte tlačítko **OK**.
 
 ## Viz také
-[Working with General Journals](ui-work-general-journals.md)  
+[Work with General Journals](ui-work-general-journals.md)  
 [Posting Documents and Journals](ui-post-documents-journals.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

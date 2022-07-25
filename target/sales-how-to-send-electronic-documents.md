@@ -3,7 +3,7 @@
     description: Learn how to use Business Central to send electric invoices and credit memos in the PEPPOL format.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -46,7 +46,7 @@ To send a sales invoice as an electronic PEPPOL document, you select the **Elect
    > [!NOTE]  
    > You can also send a posted sales invoice as an electronic document. The procedure is the same as described in this topic for non-posted sales documents. On the **Posted Sales Invoice** page, choose the **Activity Log** action to view the status of the electronic document.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/electronic-documents-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/electronic-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

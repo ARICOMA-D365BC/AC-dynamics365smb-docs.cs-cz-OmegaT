@@ -3,7 +3,7 @@
     description: To support just-in-time inventory, assembly orders can be automatically created and linked as soon as the sales order line is created.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -209,7 +209,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 
 ### Prodej zboží montáže
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Vyberte akci **Nový**.
 3. Vytvořte dva řádky prodejní objednávky pro zákazníka 62000, Kutilka, s.r.o, k pracovnímu datu s následujícími informacemi.
 
@@ -235,7 +235,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 7. Na řádku montážní objednávky pro zboží 80210 zvolte pole **Číslo** a místo toho vyberte položku 80209.
 8. Vytvořte nový řádek montážní objednávky s následujícími informacemi.
 
-   | Typ | Ne.  | Množství za |
+   | Typ | Ne. | Množství za |
    |----------|---------|------------------|  
    | Zboží | 80203 | 1 |
 
@@ -249,7 +249,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 13. Na záložce **Řádky** vyberte **Řádek** zvolte **Montáž na objednávku** a poté vyberte **Řádky montáže na zakázku**.
 14. Na stránce **Řádky montáže na zakázku** vytvořte nový řádek montážní zakázky s následujícími informacemi.
 
-   | Typ | Ne.  | Množství za |
+   | Typ | Ne. | Množství za |
    |----------|---------|------------------|  
    | Zboží | 80203 | 1 |
 
@@ -266,7 +266,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 2. Vyberte akci **Vypočítat regenerační plán**.
 3. Na stránce **Vypočítat plán** nastavte následující filtry.
 
-   | Počáteční datum | Koncové datum | Ne.  |
+   | Počáteční datum | Koncové datum | Ne. |
    |-------------------|-----------------|---------|  
    | 01-23-2014 | 01-27-2014 | Sada A – Základní PC |
 

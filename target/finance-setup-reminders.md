@@ -3,14 +3,14 @@ title: Set Up Reminder Terms and Levels
 description: Learn how to set up Business Central so that you can send a reminder to a customer about a payment that is due and add charges, or fees to the payment because of the delay.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment due, debt, overdue, fee, charge, reminder
-ms.search.form: 431, 432, 478
-ms.date: 04/01/2021
+ms.search.form: 431, 432, 436, 478
+ms.date: 02/09/2022
 ms.author: edupont
 
 ---
@@ -91,15 +91,16 @@ Pokud vytvoříte více upomínek, než jste definovali úrovně, budou použity
    Například pokud napíšete **Dlužíte % 9 %7 z důvodu %2.**, výsledná upomínka bude obsahovat následující text: **Dlužíte 1 200,50 USD splatného 02-02- 2014**.
 
    > [!NOTE]
-   > Datum splatnosti se počítá podle zadaného vzorce data. Pro více informací navštivte [Použití vzorců dat](ui-enter-date-ranges.md#using-date-formulas).
+   > Datum splatnosti se počítá podle zadaného vzorce data. For more information, see [Use Date Formulas](ui-enter-date-ranges.md#use-date-formulas).
 
 Po nastavení podmínek upomínky s dalšími úrovněmi a textem zadejte jeden z kódů na každé kartě zákazníka. Pro více informací navštivte <x3/>Evidence nového zákazníka<x4/>.
 
 ## Viz také
 
-[Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)  
-[Nastavení podmínek penále](finance-setup-finance-charges.md)  
-[Nastavení financí](finance-setup-finance.md)
+[Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
+[Send Reminders of Outstanding Balances](receivables-send-reminders.md)  
+[Set Up Finance Charge Terms](finance-setup-finance-charges.md)  
+[Setting Up Finance](finance-setup-finance.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

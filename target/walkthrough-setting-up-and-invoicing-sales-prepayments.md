@@ -3,7 +3,7 @@
     description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -93,7 +93,7 @@ Phyllis requires all customers to be invoiced a 20% deposit for item 1896-S. Zá
    | **Typ prodeje** | **Kód prodeje** | **Číslo zboží** | **Záloha %** |
    |--------------------|--------------------|------------------|----------------------|  
    | **Zákazník** | **20000** | **1896-S** | **40** |
-   | **Všichni zákazníci** | | **1896-S** | **20** |
+   | **Zákazník** | **20000** | **1900-S** | **30** |
 
    > [!TIP]
    > Depending on your country/region, you must also specify a tax group code on the **Costs & Posting** FastTab for item 1896-S. When you use the demonstration company, this field is already set.
@@ -119,7 +119,7 @@ Susan vytvoří zálohovou fakturu a odešle ji zákazníkovi.
 
 ### Vytvoření prodejní objednávky se zálohou
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Vyberte akci **Nový**.
 3. In the **Customer Name** field, choose **Trey Research**.
 4. Close the overdue balance warning that is displayed.
@@ -231,10 +231,10 @@ Funkce záloh v [!INCLUDE[prod_short](includes/prod_short.md)] usnadňuje nastav
 
 ## Viz také
 
-[Fakturace záloh](finance-invoice-prepayments.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)    
-[Návody obchodních procesů](walkthrough-business-process-walkthroughs.md)
+[Invoicing Prepayments](finance-invoice-prepayments.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

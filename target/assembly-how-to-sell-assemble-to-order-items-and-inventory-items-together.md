@@ -1,16 +1,17 @@
 ---
-    title: Sell Assemble-to-Order Items and Inventory Items Together
-    description: If a part of an assembly item set up for assemble-to-stock is not available, you have the flexibility to create an assembly order for the remaining quantity.
-    author: SorenGP
+title: Sell Assemble-to-Order Items and Inventory Items Together
+description: If a part of an assembly item set up for assemble-to-stock is not available, you have the flexibility to create an assembly order for the remaining quantity.
+author: SorenGP
 
-    ms.service: dynamics365-business-central
-    ms.topic: conceptual
-    ms.devlang: na
-    ms.tgt_pltfrm: na
-    ms.workload: na
-    ms.search.keywords: kit, kitting
-    ms.date: 06/14/2021
-    ms.author: edupont
+
+ms.topic: conceptual
+ms.devlang: na
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.search.keywords: kit, kitting
+ms.search.form: 900, 901, 902, 903, 904, 907, 910, 916, 920, 921, 922, 923, 940, 941, 942, 930, 931, 932, 914, 915, 905
+ms.date: 06/14/2021
+ms.author: edupont
 
 ---
 # Sell Assemble-to-Order Items and Inventory Items Together
@@ -39,7 +40,7 @@ Similar flexibility exists when you are selling items to be assembled to the ord
 [Work with Bills of Material](inventory-how-work-BOMs.md)  
 [Inventory](inventory-manage-inventory.md)  
 [Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

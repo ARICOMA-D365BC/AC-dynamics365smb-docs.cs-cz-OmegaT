@@ -3,7 +3,7 @@ title: Receive and Convert Electronic Documents
 description: This topic describes how to receive electronic documents directly from trading partners or from an OCR service.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -55,7 +55,7 @@ The following procedure describes how to receive a vendor invoice and convert it
 
    Any validation errors, typically related to wrong or missing master data in [!INCLUDE[prod_short](includes/prod_short.md)] will be shown on the **Error Messages** FastTab.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/modules/electronic-documents-dynamics-365-business-central/index)
+## Viz související školení na webu [Microsoft Learn](/learn/modules/electronic-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

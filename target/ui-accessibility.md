@@ -2,12 +2,13 @@
 title: Assistive features
 description: This article provides information about keyboard shortcuts and other assistive features in Business Central for people with disabilities.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: accessibility, shortcuts, charts, tooltips, screen reader
+ms.search.form: 9020, 9022, 9026, 9027, 9030, 9000, 9009, 9004, 9005, 9024, 9006, 9007, 9010, 9016, 9017
 ms.date: 06/23/2021
 ms.author: jswymer
 
@@ -24,6 +25,8 @@ This article provides information about the features that make [!INCLUDE[prod_sh
 - Support for common assistive technologies
 - Zoom in or out on any page
 - Tooltips on elements in the user interface
+
+[!INCLUDE [about-ui-learn](includes/about-ui-learn.md)]
 
 ## <a name="Navigation"></a> Navigation
 
@@ -57,12 +60,12 @@ Tooltips are accessed in different ways, depending on the client (web or mobile)
 
 #### Accessing tooltips
 
-| Element | Mouse action for web client | Keyboard shortcut for web client | Touch gesture on tablet/phone for mobile app | Screen reader support |
+| Elementu | Mouse action for web client | Keyboard shortcut for web client | Touch gesture on tablet/phone for mobile app | Screen reader support |
 |-------|-----------------|------------|--------------------------|---------------------|
-| Page fields and column headings | Hover over or click the field caption or column heading | Move focus to the field or column heading, and press Alt+Up Arrow keys | Tap the field caption | yes |
-| Charts elements, like a bar, line, pie slice | Hover over the element | Move focus to element, for example, by using arrow keys | Klepněte a podržte prvek | yes |
-| Actions | Hover over the action | none | none | no |
-| Cue tiles | Hover over the tile | none | none | no |
+| Page fields and column headings | Hover over or click the field caption or column heading | Move focus to the field or column heading, and press Alt+Up Arrow keys | Tap the field caption | ano |
+| Charts elements, like a bar, line, pie slice | Hover over the element | Move focus to element, for example, by using arrow keys | Klepněte a podržte prvek | ano |
+| Actions | Hover over the action | none | none | ne |
+| Cue tiles | Hover over the tile | none | none | ne |
 
 
 <!--
@@ -79,7 +82,7 @@ You can find additional information about accessibility with Microsoft products 
 ## Viz také
 
 [Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Frequently Asked Questions](across-faq.yml)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

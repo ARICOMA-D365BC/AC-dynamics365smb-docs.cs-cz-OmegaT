@@ -2,7 +2,7 @@
 title: Managing Microsoft Teams Integration with Business Central| Microsoft Docs
 description: Manage Business Central integration with Microsoft Teams.
 author: jswymer
-ms.service: dynamics365-business-central
+
 ms.topic: get-started-article
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -26,16 +26,18 @@ Tato část popisuje minimální požadavky na aplikaci [!INCLUDE [prod_short](i
 
 - Požadované licence
 
-   Tato tabulka poskytuje přehled licencí potřebných pro aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] pro práci v Teams.
+   The [!INCLUDE[prod_short](includes/prod_short.md)] app requires a Teams license through a Microsoft 365 Business or Enterprise subscription. Standalone Teams subscriptions such as Microsoft Teams (free) or Microsoft Teams Essentials aren't supported.
 
-   | Co | Licence Teams | [!INCLUDE [prod_short](includes/prod_short.md)] licence |
-   |----|---|---|
-   | Vyhledávání [!INCLUDE [prod_short](includes/prod_short.md)] kontaktů. | ![check mark.](media/check.png "check") | ![check mark](media/check.png "check") |
-   | Vložení odkazu na záznam [!INCLUDE [prod_short](includes/prod_short.md)] do konverzace a odelsání jako karty. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
-   | Share a link from a page in [!INCLUDE [prod_short](includes/prod_short.md)] to Teams conversation. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
-   | Zobrazení karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") |
-   | Zobrazení podrobností karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
-   | Open a page link in [!INCLUDE [prod_short](includes/prod_short.md)] from a conversation. | ![check mark](media/check.png "check") | ![check mark](media/check.png "check") |
+   Most features of the [!INCLUDE[prod_short](includes/prod_short.md)] app for Teams also require a [!INCLUDE [prod_short](includes/prod_short.md)] license, as shown in the following table.
+
+   | Co | [!INCLUDE [prod_short](includes/prod_short.md)] licence |
+   |----|---|
+   | Vyhledávání [!INCLUDE [prod_short](includes/prod_short.md)] kontaktů. | ![check mark](media/check.png "check") |
+   | Vložení odkazu na záznam [!INCLUDE [prod_short](includes/prod_short.md)] do konverzace a odelsání jako karty. | ![check mark](media/check.png "check") |
+   | Share a link from a page in [!INCLUDE [prod_short](includes/prod_short.md)] to Teams conversation. | ![check mark](media/check.png "check") |
+   | Zobrazení karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. |
+   | Zobrazení podrobností karty záznamu [!INCLUDE [prod_short](includes/prod_short.md)] v konverzaci. | ![check mark](media/check.png "check") |
+   | Open a page link in [!INCLUDE [prod_short](includes/prod_short.md)] from a conversation. | ![check mark](media/check.png "check") |
 
 - Povolit náhledy URL adres
 

@@ -3,7 +3,7 @@
     description: Expected costs represent the estimation of, for example, a purchased item’s cost that you record before you receive the invoice for the item.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -33,7 +33,7 @@ To make it possible to post expected costs you need to do the following:
 
 On the **Inventory Posting Setup** page, verify the **Inventory Account** and the **Inventory Account (Interim)** fields for the **Location Code and Invt. Posting Group Code** of the item you will be purchasing. To learn more about these accounts see [Design Details - Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md).
 3. On the **General Posting Setup** page, verify the **Invt. Accrual Acc. (Interim)** field for the **Gen. účto  Posting Group** and the **Gen. účto  Posting Group** you will be using.
-4. When you create a purchase order the default is that the **Vendor Invoice No.** field is required. You need to turn that off on the **Purchase & Payables Setup** page, by unselecting the **Ext. Doc. Ne.  Mandatory** field.
+4. When you create a purchase order the default is that the **Vendor Invoice No.** field is required. You need to turn that off on the **Purchase & Payables Setup** page, by unselecting the **Ext. Doc. Ne. Mandatory** field.
 
 ## Příklad
 
@@ -89,14 +89,14 @@ Později zaúčtujete nákupní objednávku jako fakturovanou. Fakturované nák
 | 15.01.20 | Skladový účet | 2130 | 100 | 5 |
 
 ## Viz také
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)     
-[Detaily návrhu: Úprava nákladů](design-details-cost-adjustment.md)     
-[Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md)     
-[Detaily návrhu: Účtování zásob](design-details-inventory-posting.md)     
-[Detaily návrhu: Odchylka](design-details-variance.md)    
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Design Details: Inventory Costing](design-details-inventory-costing.md)   
+[Design Details: Cost Adjustment](design-details-cost-adjustment.md)   
+[Design Details: Reconciliation with the General Ledger](design-details-reconciliation-with-the-general-ledger.md)   
+[Design Details: Inventory Posting](design-details-inventory-posting.md)   
+[Design Details: Variance](design-details-variance.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

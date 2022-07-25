@@ -3,7 +3,7 @@
     description: The application automatically calculates the date on which you must order an item to have it in inventory on a certain date and available for picking.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -29,7 +29,7 @@ Pokud zadáte požadované datum dodání na řádku prodejní objednávky, stan
 Pokud je zboží dostupné k vyskladnění k datu dodávky, může proces prodeje pokračovat. Jinak se zobrazí varování o vyprodání zásob.
 
 > [!Note]
-> If your process is based on backward calculation, for example, if you use the requested delivery date to get the planned shipment date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. For more information about date formulas, see [Working with Calendar Dates and Times](ui-enter-date-ranges.md).
+> If your process is based on backward calculation, for example, if you use the requested delivery date to get the planned shipment date, we recommend that you use date formulas that have fixed durations, such as "5D" for five days or "1W" for one week. Datové vzorce bez pevné doby trvání, například „CW“ pro aktuální týden nebo CM pro aktuální měsíc, mohou mít za následek nesprávné výpočty data. For more information about date formulas, see [Work with Calendar Dates and Times](ui-enter-date-ranges.md).
 
 ## Výpočet nejbližšího možného data dodání
 Pokud na řádku prodejní objednávky nezadáte požadované datum dodání nebo pokud požadované datum dodání nelze splnit, vypočítá se nejbližší možné datum, kdy bude zboží k dispozici. Toto datum se poté zadá do pole Datum dodávky na řádku a datum, kdy plánujete zboží odeslat, stejně jako datum, kdy budou zákazníkovi dodány, se vypočítá podle následujících vzorců.
@@ -41,7 +41,7 @@ Pokud na řádku prodejní objednávky nezadáte požadované datum dodání neb
 ## Viz také
 [Date Calculation for Purchases](purchasing-date-calculation-for-purchases.md)   
 [Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

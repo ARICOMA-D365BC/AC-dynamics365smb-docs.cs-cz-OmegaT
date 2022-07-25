@@ -3,7 +3,7 @@ title: Design Details - Cost Adjustment
 description: Cost adjustment forwards cost changes from cost sources to cost recipients according to an item’s costing method, to provide correct inventory valuation.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -175,16 +175,16 @@ Pokud jste nastavili automatickou úpravu nákladů tak, aby se vztahovala na ú
 
 ## Viz také
 
-[Úprava nákladu zboží](inventory-how-adjust-item-costs.md)    
-[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)    
-[Detaily návrhu: Odsouhlasení s hlavní knihou](design-details-reconciliation-with-the-general-ledger.md)    
-[Detaily návrhu: Účtování zásob](design-details-inventory-posting.md)    
-[Detaily návrhu: Odchylka](design-details-variance.md)    
-[Podrobnosti návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md)    
-[Detaily návrhu: Účtování prodejní zakázky](design-details-production-order-posting.md)    
-[Správa nákladů zásob](finance-manage-inventory-costs.md)    
-[Finance](finance.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Adjust Item Costs](inventory-how-adjust-item-costs.md)  
+[Design Details: Inventory Costing](design-details-inventory-costing.md)  
+[Design Details: Reconciliation with the General Ledger](design-details-reconciliation-with-the-general-ledger.md)  
+[Design Details: Inventory Posting](design-details-inventory-posting.md)  
+[Design Details: Variance](design-details-variance.md)  
+[Design Details: Assembly Order Posting](design-details-assembly-order-posting.md)  
+[Design Details: Production Order Posting](design-details-production-order-posting.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Finance](finance.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

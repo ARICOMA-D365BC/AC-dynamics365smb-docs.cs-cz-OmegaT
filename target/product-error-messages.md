@@ -3,7 +3,7 @@ title: Warnings and Error Messages
 description: Learn how you can troubleshoot and find solutions to error messages when you work in Business Central.
 author: edupont04
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.date: 04/01/2021
 ms.author: edupont
@@ -17,7 +17,7 @@ Během pracovního dne můžete v [!INCLUDE [prod_short](includes/prod_short.md)
 
 Výchozí verze [!INCLUDE [prod_short](includes/prod_short.md)] obsahuje popisy většiny polí, sloupců a akcí, ke kterým lze přistupovat, když vyberete název. V kombinaci s výukou tipů pro důležité stránky, popisných titulků a instruktážním textem jsou tyto popisky nebo tooltipy naší současnou *integrovanou uživatelskou pomocí*, což je důležitý princip v dnešním světě designu softwaru.
 
-Pokud máte dotaz ohledně pole nebo jiného prvku uživatelského rozhraní, zvolte název a zobrazí se krátký popis. Pokud to nestačí, vyberte odkaz *Zjistěte více*.
+Pokud máte dotaz ohledně pole nebo jiného prvku uživatelského rozhraní, zvolte název a zobrazí se krátký popis. Pokud to nestačí, vyberte odkaz *Zjistěte více*. You can also use the in-product Help pane to find answers to your questions.
 
 Další informace najdete v [Dynamics 365 Business Central modelu pomoci uživateli](/dynamics365/business-central/dev-itpro/user-assistance) v obsahu pro správu [!INCLUDE [prod_short](includes/prod_short.md)].
 

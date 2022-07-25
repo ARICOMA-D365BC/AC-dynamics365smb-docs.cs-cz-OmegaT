@@ -1,9 +1,9 @@
 ---
 title: Set up company consolidation
 description: Learn how you can configure how data from different companies in Business Central is reported into a consolidation company.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -73,7 +73,7 @@ The following list illustrates key aspects of the consolidated company.
 
 1. Sign in to the consolidated company.
 2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Business Units**, and then choose the related link.
-3. Choose **New**, and then fill in the required fields. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Zvolte **Nový** a vyplňte požadovaná pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!IMPORTANT]
    > When you fill in the **Starting Date** and **Ending Date** fields, make sure you comply with GAAP rules concerning the fiscal periods of the business unit versus the parent company.
@@ -135,7 +135,7 @@ If you own only part of a company, you can include a percentage of each transact
 
 [Consolidating Financial Data from Multiple Companies](finance-consolidated-company-reporting.md)  
 [Managing Intercompany Transactions](intercompany-manage.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 [Exporting Your Business Data to Excel](about-export-data.md)
 
 

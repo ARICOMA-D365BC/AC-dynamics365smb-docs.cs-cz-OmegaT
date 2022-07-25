@@ -3,12 +3,12 @@
     description: This topic describes how to ship items from your warehouse depending on your warehouse configuration for shipment processing.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
     ms.workload: na
-    ms.search.form: 7335, 7337, 7339, 7340, 7341, 7362
+    ms.search.form: 7335, 7337, 7339, 7340, 7341, 7362, 9008
     ms.date: 06/24/2021
     ms.author: edupont
 
@@ -26,7 +26,7 @@ When you ship items from a warehouse that is set up for warehouse shipment proce
 
 The following describes how to ship items from a sales order. The steps are similar for purchase return orders, service orders, and outbound transfer orders.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Open an existing sales order, or create a new one. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
 3. V poli **Množ. to Ship** field, enter the shipped quantity.
 
@@ -105,12 +105,12 @@ You can also use the pick worksheet to make several pick instructions into one i
 
 ## Viz také
 
-[Správa skladu](warehouse-manage-warehouse.md)    
-[Zásoby](inventory-manage-inventory.md)    
-[Nastavení správy skladu](warehouse-setup-warehouse.md)    
-[Správa montáže](assembly-assemble-items.md)    
-[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)    
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Warehouse Management](warehouse-manage-warehouse.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
+[Assembly Management](assembly-assemble-items.md)  
+[Design Details: Warehouse Management](design-details-warehouse-management.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

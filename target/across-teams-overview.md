@@ -2,13 +2,13 @@
 title: Business Central and Microsoft Teams Integration overview| Microsoft Docs
 description: Share Business Central records directly in a Teams conversation.
 author: jswymer
-ms.service: dynamics365-business-central
-ms.topic: get-started-article
+
+ms.topic: overview
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: Teams, MS Teams, Microsoft Teams, Skype, Link, Microsoft 365, collaborate, collaboration, teamwork
-ms.date: 04/12/2021
+ms.date: 03/04/2022
 ms.author: jswymer
 ---
 
@@ -40,7 +40,7 @@ Pro více informací navštivte[Vyhledávání kontaktů z Microsoft Teams](acro
 
 Kopírovat odkaz na jakýkoli záznam Business Central a vložte jej do konverzace Teams, kterou chcete sdílet se svými spolupracovníky. Aplikace poté rozšíří odkaz na kompaktní interaktivní kartu, která zobrazuje informace o záznamu.
 
-[![Teams integration with Business Central.](media/teams-intro-v3.png)](media/teams-intro-v3.png#lightbox)
+[![Teams integration with Business Central.](media/teams-intro-vBC20.png)](media/teams-intro-vBC20.png#lightbox)
 
 Jakmile jste v konverzaci,  tak vy a vaši spolupracovníci můžete zobrazovat další podrobnosti o záznamu, upravit data a podniknout kroky - aniž byste opustili Teams.
 
@@ -61,7 +61,7 @@ For more information, see [Share Records and Page Links in Microsoft Teams](acro
    Pokud si nejste jisti, zda máte účet nebo neznáte přihlašovací údaje pro přihlášení, obraťte se na správce společnosti, který Vám pomůže začít.
 
    > [!TIP]
-   > Pokud vaše organizace nemá předplatné [!INCLUDE [prod_short](includes/prod_short.md)] můžete se zaregistrovat k bezplatné zkušební verzi. Pro více infomací běžte na [Začínáme se zkušební verzí](across-preview.md#getting-started-with-a-trial).
+   > Pokud vaše organizace nemá předplatné [!INCLUDE [prod_short](includes/prod_short.md)] můžete se zaregistrovat k bezplatné zkušební verzi. For more information, see [Sign up for a free Dynamics 365 Business Central trial](trial-signup.md).
 
 2. Jako administrátor běžte na [Správa Integrace Microsoft Teams s Business Central](admin-teams-integration.md) , kde jsou informace o nastavení uživatelských skupin v [!INCLUDE [prod_short](includes/prod_short.md)] a Teams.
 3. Nainstalujte aplikaci [!INCLUDE [prod_short](includes/prod_short.md)] v Teams. Více informací naleznete v [Instalace aplikace [!INCLUDE [prod_short](includes/prod_short.md)] pro Microsoft Teams](across-install-app-for-teams.md).

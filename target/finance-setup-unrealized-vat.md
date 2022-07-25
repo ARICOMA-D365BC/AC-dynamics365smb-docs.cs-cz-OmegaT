@@ -1,9 +1,9 @@
 ---
-title: Setting Up Unrealized Value Added Tax
+title: Set Up Unrealized Value Added Tax
 description: If you're using cash-based accounting, you can specify how to handle unrealized VAT for sales and purchases.
-author: bholtorf
+author: brentholtorf
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
@@ -21,7 +21,7 @@ If you are using cash-based accounting methods, you can set up [!INCLUDE[prod_sh
 
 ## Použití účtů účetní osnovy k nerealizované DPH
 
-Můžete zvolit, aby byly částky DPH vypočteny a zaúčtovány na dočasný účet účetní osnovy při zaúčtování faktury, poté zaúčtovány na správný účet a nakonec zahrnuty do výkazů DPH při zaúčtování skutečné platby faktury. Než to budete moci provést, musíte dokončit nastavení účtování DPH.
+Můžete zvolit, aby byly částky DPH vypočteny a zaúčtovány na dočasný účet účetní osnovy při zaúčtování faktury, poté zaúčtovány na správný účet a nakonec zahrnuty do výkazů DPH při zaúčtování skutečné platby faktury. Before you can do this, you must complete the [VAT posting setup](finance-setup-vat.md).
 
 Chcete-li použít účty pro nerealizovanou DPH, postupujte takto:
 

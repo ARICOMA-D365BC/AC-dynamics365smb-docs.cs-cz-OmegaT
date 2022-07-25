@@ -3,7 +3,7 @@
     description: Learn the different ways to create production orders for produced items directly from sales orders.
     author: SorenGP
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -18,7 +18,7 @@ You can create production orders for produced items directly from sales orders.
 
 ## To create a production order from a sales order
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Orders**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
 2. Select the sales order you want to create a production order for.
 3. Vyberte akci **Plánování**. On the **Sales Order Planning** page, you can view the availability of the sales order item.
 4. Choose the **Create Prod. Order** action.
@@ -47,7 +47,7 @@ When you use project orders, the **Source Type** field of the production order c
 [Purchasing](purchasing-manage-purchasing.md)  
 [Design Details: Supply Planning](design-details-supply-planning.md)   
 [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

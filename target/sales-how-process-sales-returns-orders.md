@@ -3,13 +3,13 @@ title: Process Sales Return Orders
 description: Describes how to create a sales return order to process a return, cancellation, or reimbursement for items or services you have been received payment for.
 author: SorenGP
 
-ms.service: dynamics365-business-central
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: undo, credit memo, return, order
-ms.search.form: 44, 134, 144, 9302
+ms.search.form: 44, 134, 144, 6629, 6630, 6633, 6662, 9302, 9304, Report_6646
 ms.date: 09/08/2021
 ms.author: edupont
 
@@ -83,7 +83,7 @@ You can have replacement sales orders, purchase return orders, and replacement p
 
 1. On the **Sales Return Order** page for an active return process, choose the **Create Return-Related Documents** action.
 2. In the **Vendor No.** field, enter the number of a vendor if you want to create vendor documents automatically.
-3. If a returned item must be returned to the vendor, select the **Create Purch. Ret. Order** check box.
+3. If a returned item must be returned to the vendor, select the **Create Purch. obj. Order** check box.
 4. If a returned item must be ordered from the vendor, select the **Create Purchase Order** check box.
 5. If a replacement sales order must be created, select the **Create Sales Order** check box.
 
@@ -98,7 +98,7 @@ You can post this increased cost as an item charge in a credit memo or a return 
 
 When you post the sales return order, the restock charge is added to the relevant sales entry amount. In this way, you can maintain accurate inventory valuation.
 
-## Zobrazit související školení na webu [Microsoft Learn](/learn/paths/return-items-dynamics-365-business-central/)
+## Viz související školení na webu [Microsoft Learn](/learn/paths/return-items-dynamics-365-business-central/)
 
 ## Viz také
 
@@ -107,7 +107,7 @@ When you post the sales return order, the restock charge is added to the relevan
 [Managing Payables](payables-manage-payables.md)  
 [Send Documents by Email](ui-how-send-documents-email.md)  
 [Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

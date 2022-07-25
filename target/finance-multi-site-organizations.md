@@ -1,9 +1,9 @@
 ﻿---
     title: Business Central for Multi-Site and International Organizations | Microsoft Docs
     description: Business Central provides capabilities that support a hub-and-spoke business model.
-    author: bholtorf
+    author: brentholtorf
 
-    ms.service: dynamics365-business-central
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -65,7 +65,7 @@ Sladění organizace s vašimi obchodními cíli díky společnému chápání s
 | **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
 | Sdílejte poznatky s pracovišti bez rozsáhlé podpory IT. | Vytvářejte klíčové ukazatele výkonnosti a panely Business Intelligence v aplikaci Power BI na základě svých dat.
- | [Práce s daty Business Central v Power BI](across-working-with-business-central-in-powerbi.md) |
+ | [Work with Business Central Data in Power BI](across-working-with-business-central-in-powerbi.md) |
 | Vytváření vlastních finančních výkazů. | Generování finančních výkazů na základě parametrů. | [Business Intelligence](bi.md) |
 | Srovnání s fakty. | Vytvářet, zobrazovat a sdílet sestavy s interními a externími zúčastněnými stranami. | [Finanční sestavy](finance-reports.md) |
 | Analýza dat v Excelu | Zjišťování faktů, řešení problémů a provádění ad hoc analýz v aplikaci Microsoft Excel. | [Analýza finančních výkazů v aplikaci Excel](finance-analyze-excel.md) |
@@ -83,7 +83,7 @@ Rozhraní API a XML porty zjednodušují proces připojování instancí [!INCLU
  | Jednotky kódu lze vystavit jako nevázané akce pro podporu odesílání a přijímání dokumentů XML. Pro zpracování dokumentů XML lze použít XMLports. Nesvázané akce jsou také schopny generovat dokument XML nebo JSON. | [Objekty XMLport](/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object) |
 | Usnadnění údržby prostřednictvím elektronické výměny dat. | Jako integrační vrstva mezi centrálou a pobočkami může být přidáno řešení pro elektronickou výměnu dat. | [Framework pro výměnu dat](across-about-the-data-exchange-framework.md) |
 | Výměna dat mezi různými systémy. | Pomocí XMLportů můžete vytvářet dokumenty, které si pak mohou vyměňovat ústředí společnosti, jež používá jeden systém, a pracoviště, která používají Business Central. | [Přehled XMLport](/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-overview) |
-| Organizace složitých výměn dat. | Pro splnění jedinečných potřeb na vašich pracovištích použijte kombinaci XMLportů s Business Central a Microsoft BizTalk Server.</br> Pro komplexní potřeby použijte řešení elektronické výměny dat založené na BizTalk Server a Commerce Gateway v Business Central v kombinaci s XMLports. | [Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md) |
+| Organizace složitých výměn dat. | Pro splnění jedinečných potřeb na vašich pracovištích použijte kombinaci XMLportů s Business Central a Microsoft BizTalk Server.</br> Pro komplexní potřeby použijte řešení elektronické výměny dat založené na BizTalk Server a Commerce Gateway v Business Central v kombinaci s XMLports. | [Work with Reports, Batch Jobs, and XMLports](ui-work-report.md) |
 | Připojení k řešením a službám třetích stran. | API rozhraní vytvářejí spojení mezi Business Central a řešeními a službami třítách stran. | [API v2.0](/dynamics-nav/api-reference/v2.0/) |
 
 
@@ -105,11 +105,11 @@ Pobočky často potřebují přístup k dodavatelskému řetězci a schopnost ř
 | **Obchodní požadavek** | **Jak to Business Central podporuje** | **Další informace** |
 |-------------------------|-------------------------|-------------------------|
 | Automatické generování e-mailových upozornění. | V aplikaci Power Automate můžete nastavit upozornění, která budou generovat e-maily informující o kritických obchodních podmínkách na pracovištích nebo u partnerů v dodavatelském řetězci. | [Business Central a Power BI](admin-powerbi.md) |
-| Použijte standardní nebo vlastní upozornění. | Použijte 12 různých šablon, které jsou součástí aplikace Business Central, nebo si nastavte vlastní upozornění, která budou vyhovovat vašemu podnikání. | [Použití nástroje Business Central s automatizovaným workflow ](across-how-use-financials-data-source-flow.md) |
+| Použijte standardní nebo vlastní upozornění. | Použijte 12 různých šablon, které jsou součástí aplikace Business Central, nebo si nastavte vlastní upozornění, která budou vyhovovat vašemu podnikání. | [Use Business Central in an Automated Workflow](across-how-use-financials-data-source-flow.md) |
 
 ## Viz také
-[Administrace Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration)  
-[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Administration of Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
