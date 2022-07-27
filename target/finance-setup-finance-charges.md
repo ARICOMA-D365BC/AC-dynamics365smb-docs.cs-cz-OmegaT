@@ -14,13 +14,13 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Nastavení Podmínek Penále
+# Nastavení podmínek penále
 
-Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli. Nejprve však musíte nastavit kód, který představuje každý výpočet penále. Poté můžete tento kód zadat do pole Kód Podmínky penále na kartách zákazníků.
+Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli. Nejprve však musíte nastavit kód, který představuje každý výpočet penále. Poté můžete tento kód zadat do pole Kód podmínky penále na kartách zákazníků.
 
-## Podmínky Penále
+## Podmínky penále
 
-Musíte nastavit podmínky penále pro každý výpočet penále a poté přiřadit podmínky odběrateli v poli **Kód Podmínky penále** na stránce **Zákazník**.
+Musíte nastavit podmínky penále pro každý výpočet penále a poté přiřadit podmínky odběrateli v poli **Kód podmínky penále** na stránce **Zákazník**.
 
 Penále lze vypočítat pomocí metod průměrného denního zůstatku nebo zůstatku.
 
