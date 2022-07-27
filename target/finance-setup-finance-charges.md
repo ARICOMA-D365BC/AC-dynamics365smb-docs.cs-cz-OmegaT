@@ -55,21 +55,21 @@ Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulko
 
 | Zástupný symbol | Hodnota |
 |-----------------|-----------|  
-| %1 | Content of the **Document Date** field on the finance charge memo header |
-| %2 | Content of the **Due Date** field on the finance charge memo header |
+| %1 | Obsah pole **Datum dokladu** v záhlaví poznámky o penáli |
+| %2 | Obsah pole **Datum splatnosti** v záhlaví oznámení o penáli |
 | %3 | Obsah pole **Úroková sazba** v souvisejících podmínkách penále |
-| %4 | Content of the **Remaining Amount** field on the finance charge memo header |
-| %5 | Content of the **Interest Amount** field on the finance charge memo header |
-| %6 | Content of the **Additional Fee** field on the finance charge memo header |
+| %4 | Obsah pole **Zbývající částka** v záhlaví poznámky o penáli |
+| %5 | Obsah pole **Částka úroku** v záhlaví zprávy o penáli |
+| %6 | Obsah pole **Dodatečný poplatek v** záhlaví poznámky o penáli |
 | %7 | Celková částka upomínky |
-| %8 | Content of the **Currency Code** field on the finance charge memo header |
-| %9 | Content of the **Posting Date** field on the finance charge memo header |
+| %8 | Obsah pole **Kód měny** v záhlaví poznámky o penáli |
+| %9 | Obsah pole **Datum zaúčtování** v záhlaví poznámky o penáli |
 
 ## Viz také
 
-[Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
-[Set Up Reminder Terms and Levels](finance-setup-reminders.md)  
-[Setting Up Finance](finance-setup-finance.md)
+[Shromažďování nedoplatků](receivables-collect-outstanding-balances.md)  
+[Nastavit podmínky a úrovně připomenutí](finance-setup-reminders.md)  
+[Nastavení financí](finance-setup-finance.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
