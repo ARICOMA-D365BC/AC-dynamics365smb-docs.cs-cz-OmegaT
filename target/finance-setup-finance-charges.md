@@ -14,44 +14,44 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Nastavení podmínek finančních nákladů
+# Nastavení Podmínek Penále
 
-Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat finanční poplatky a přidat je k částkám po splatnosti na účtu zákazníka. You can inform customers of the added charges by sending finance charge memos. But first, you must set up a code that represents each finance charge calculation. Then you can enter this code in the Fin. Charge Terms Code field on customer cards.
+Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli. Nejprve však musíte nastavit kód, který představuje každý výpočet penále. Poté můžete tento kód zadat do pole Kód Podmínky Penále na kartách zákazníků.
 
-## Finance charge terms
+## Podmínky penále
 
-You must set up finance charge terms for each finance charge calculation, and then assign the terms to the customer in the **Fin. Charge Terms Code** field on the **Customer** page.
+Musíte nastavit podmínky penále pro každý výpočet penále a poté přiřadit podmínky odběrateli v poli **Kód Podmínky penále** na stránce **Zákazník**.
 
-Finance charges can be calculated using either the average daily balance or the balance due methods.
+Penále lze vypočítat pomocí metod průměrného denního zůstatku nebo zůstatku.
 
-* Average daily balance
+* Průměrný denní zůstatek
 
-   The number of days the payment is overdue is taken into account:  
-   *Average Daily Balance method* - *Finance Charge* = *Overdue Amount* x *(Days Overdue / Interest Period)* x *(Interest Rate/100)*
+   Zohledňuje se počet dní, po které je platba po splatnosti:  
+   *Metoda průměrného denního zůstatku* – *Penále* = *Částka po splatnosti* x *(Dny po splatnosti / Úrokové období)* x *(Úroková sazba/100)*
 
-* Balance due
+* Splatný zůstatek
 
-   The finance charge is a percentage of the overdue amount:  
-   *Balance Due method* - *Finance Charge* = *Overdue Amount* x *(Interest Rate / 100)*
+   Penále je procentem z dlužné částky:  
+   *Metoda dlužného zůstatku* – *Penále* = *Částka po splatnosti* x *(úroková sazba / 100)*
 
-Additionally, each term in the Finance Charge Terms table is linked to a subtable, the Finance Charge Text table. For each set of finance charge terms, you can define a beginning and/or an ending text to include on the finance charge memo.
+Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulkou, tabulkou Text Penále. Pro každou sadu podmínek penále můžete definovat počáteční a/nebo koncový text, který se má zahrnout do poznámky o penáli.
 
-### To set up finance charge terms
+### Nastavte Podmínky Penále
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Terms**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále<x5/> a vyberte související odkaz.
 2. Podle potřeby vyplňte pole.
-3. To use more than one combination of finance charge terms, set up a code for each one.
+3. Chcete-li použít více než jednu kombinaci podmínek penále, nastavte kód pro každou z nich.
 
-   For each finance charge term, you can specify individual conditions that can include additional fees in both LCY and in foreign currency. You can define additional fees in foreign currencies for each term on the **Finance Charge Terms** page.
+   Pro každé období penále můžete zadat jednotlivé podmínky, které mohou zahrnovat další poplatky v LM i v cizí měně. Můžete definovat další poplatky v cizích měnách pro každý termín na stránce **Podmínky penále**.
 4. Vyberte akci **Měny**.
-5. On the **Currencies for Fin. Chrg. Terms** page, define for each term a currency code and an additional fee.
+5. Na stránce **Měny pro Podmínky penále**, definujte pro každý termín kód měny a dodatečný poplatek.
 
-   > [!NOTE]  
-   > When you create finance charges in a foreign currency, the foreign currency conditions that you set up here will be used to create finance charge memos. If there are no foreign currency finance charge conditions set up, the LCY finance charge conditions specified on the **Finance Charge Terms** page will be used and then converted to the relevant currency.
+   > [!POZNÁMKA]  
+   > Když vytvoříte penále v cizí měně, podmínky v cizí měně, které zde nastavíte, se použijí k vytvoření oznámení o penálích. Pokud nejsou nastaveny žádné podmínky penále v cizí měně, použijí se podmínky penále LM uvedené na stránce **Podmínky penále** a poté se převedou na příslušnou měnu.
 
-   For each finance charge term, you can specify text that will be printed before (**Beginning Text**) or after (**Ending Text**) on the entries on the finance charge memo.
-6. Choose the **Beginning Text** or **Ending Text** actions respectively, and fill on the **Finance Charge Text** page.
-7. To automatically insert related values in the resulting finance charge text, enter the following placeholders in the **Text** field.
+   Pro každý termín finančního poplatku můžete zadat text, který bude vytištěn před (**Počáteční text**) nebo za (**Konečný text**) na záznamech ve zprávě o penálích.
+6. Vyberte akce **Počáteční text** nebo **Koncový text** a vyplňte na stránce **Text penále**.
+7. Chcete-li automaticky vložit související hodnoty do výsledného textu penále, zadejte do pole **Text** následující zástupné symboly.
 
 | Zástupný symbol | Hodnota |
 |-----------------|-----------|  

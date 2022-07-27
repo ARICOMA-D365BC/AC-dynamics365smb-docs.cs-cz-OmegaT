@@ -39,7 +39,7 @@ From the customer card, you can create a statement with that customer's transact
 
 ## Finance Charges
 
-Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat finanční poplatky a přidat je k částkám po splatnosti na účtu zákazníka. You can inform customers of the added charges by sending finance charge memos.
+Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli.
 
 > [!NOTE]  
 > You use finance charge memos to calculate interest and finance charges and to inform your customers about interest and finance charges without reminding them of overdue payments. Alternatively, you can calculate interest on overdue payments when you create reminders.
