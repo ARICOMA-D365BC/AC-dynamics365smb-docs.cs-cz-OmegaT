@@ -12,8 +12,8 @@ ms.search.form: 1752
 ms.date: 06/14/2021
 ---
 
-# Classifying Data Sensitivity Fields
-To classify the fields that hold sensitive or personal data, a Microsoft partner can set the ```DataClassification``` property on fields. This requires access to the database tables, either through the development environment or by running a Windows PowerShell script. For more information, see [Classifying Data](/dynamics365/business-central/dev-itpro/developer/devenv-classifying-data).
+# Klasifikace citlivosti dat
+Chcete-li klasifikovat pole, která obsahují citlivá nebo osobní data, může partner společnosti Microsoft nastavit vlastnost ```Klasifikace Dat``` na polích. [přibližně]To vyžaduje přístup k databázovým tabulkám, buď prostřednictvím vývojového prostředí nebo spuštěním skriptu Windows PowerShell. For more information, see [Classifying Data](/dynamics365/business-central/dev-itpro/developer/devenv-classifying-data).
 
 As a customer, you can add a second level of classification by specifying sensitivity levels for the data you store in standard and custom fields. Classifying data sensitivity helps ensure that you know where you keep personal data in your system, and makes it easier to respond to requests from data subjects. For example, if a contact or customer asks you to export their personal data. For more information, see [Responding to Requests About Personal Data](admin-responding-to-requests-about-personal-data.md).
 

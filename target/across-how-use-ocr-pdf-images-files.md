@@ -114,10 +114,10 @@ The **OCR Data Correction** page, which you open from the **Incoming Document** 
 The fields on the **Financial Information** FastTab on the **Incoming Document** page are updated with any new values that you entered in step 4.
 
 ## Viz také
-[Process Incoming Documents](across-process-income-documents.md)  
-[Incoming Documents](across-income-documents.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Zpracování došlých dokladů](across-process-income-documents.md)  
+[Došlé doklady](across-income-documents.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
