@@ -14,9 +14,9 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Finance Charge Terms
+# Nastavení podmínek finančních nákladů
 
-When a customer does not pay by the due date, you can have finance charges calculated automatically and add them to the overdue amounts on the customer's account. You can inform customers of the added charges by sending finance charge memos. But first, you must set up a code that represents each finance charge calculation. Then you can enter this code in the Fin. Charge Terms Code field on customer cards.
+Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat finanční poplatky a přidat je k částkám po splatnosti na účtu zákazníka. You can inform customers of the added charges by sending finance charge memos. But first, you must set up a code that represents each finance charge calculation. Then you can enter this code in the Fin. Charge Terms Code field on customer cards.
 
 ## Finance charge terms
 

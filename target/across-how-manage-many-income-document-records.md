@@ -16,19 +16,19 @@ ms.author: edupont
 
 ---
 # Správa mnoha záznamů došlých dokladů
-Při vytváření nebo zpracování záznamů došlého dokladu může počet řádků na stránce **Došlé doklady** vzrůst do té míry, že ztratíte přehled. Proto můžete nastavit záznamy došlého dokladu na Zpracováno a odebrat je z výchozího zobrazení. [přibližně]Když zvolíte akci Ukázat vše můžete zobrazit jak zpracované, tak nezpracované záznamy.
+Při vytváření nebo zpracování záznamů došlého dokladu může počet řádků na stránce **Došlé doklady** vzrůst do té míry, že ztratíte přehled. Proto můžete nastavit záznamy došlého dokladu na Zpracováno a odebrat je z výchozího zobrazení. Když zvolíte akci Ukázat vše můžete zobrazit jak zpracované, tak nezpracované záznamy.
 
 > [!POZNÁMKA]  
-> Nemůžete upravovat informace, připojovat soubory nebo provádět jiné procesy na záznamech došlých dokladů, které jsou nastaveny na Zpracované. [přibližně]Nejprve je musíte nastavit na Nezpracováno.
+> Nemůžete upravovat informace, připojovat soubory nebo provádět jiné procesy na záznamech došlých dokladů, které jsou nastaveny na Zpracované. Nejprve je musíte nastavit na Nezpracováno.
 
-Zaškrtávací políčko **Zpracováno** je automaticky zaškrtnuto u záznamů došlého dokladu, které byly zpracovány, ale můžete také zaškrtnout nebo zrušit zaškrtnutí políčka ručně. [přibližně]V závislosti na vašem obchodním procesu může být záznam došlého dokladu zpracován, pokud byl pro něj vytvořen související doklad nebo byl připojen soubor.
+Zaškrtávací políčko **Zpracováno** je automaticky zaškrtnuto u záznamů došlého dokladu, které byly zpracovány, ale můžete také zaškrtnout nebo zrušit zaškrtnutí políčka ručně. V závislosti na vašem obchodním procesu může být záznam došlého dokladu zpracován, pokud byl pro něj vytvořen související doklad nebo byl připojen soubor.
 
 > [!POZNÁMKA]  
-> Když otevřete stránku **Došlé doklady** pomocí akce **Moje došlé doklady** v Centru rolí, ve výchozím nastavení se zobrazí pouze nezpracované záznamy došlých dokladů. [přibližně]Toto je v tomto tématu označováno jako "výchozí zobrazení".
+> Když otevřete stránku **Došlé doklady** pomocí akce **Moje došlé doklady** v Centru rolí, ve výchozím nastavení se zobrazí pouze nezpracované záznamy došlých dokladů. Toto je v tomto tématu označováno jako "výchozí zobrazení".
 
 ## Odebrání záznamů došlého dokladu z výchozího zobrazení
-1. [přibližně]V Stránka **Došlé doklady** vyberte jeden nebo více řádků pro záznamy příchozího dokladu, které chcete z výchozího zobrazení odstranit.
-2. [přibližně]Zvolte akci Nastavit na zpracované.
+1. V Stránka **Došlé doklady** vyberte jeden nebo více řádků pro záznamy příchozího dokladu, které chcete z výchozího zobrazení odstranit.
+2. Zvolte akci Nastavit na zpracované.
 
    Záznamy došlého dokladu jsou odebrány z výchozího zobrazení a na řádcích je zaškrtnuto políčko **Zpracováno**.
 
@@ -43,7 +43,7 @@ Zobrazí se všechny záznamy došlých dokladů, včetně těch, u kterých nen
 ## Přidání záznamů došlého dokladu do výchozího zobrazení
 1. Na stránce **Došlé doklady** vyberte akci **Zobrazit vše**.
 2. Vyberte jeden nebo více řádků pro záznamy došlého dokladu, které chcete zobrazit ve výchozím zobrazení.
-3. [přibližně]Zvolte akci Nastavit na nezpracovanou.
+3. Zvolte akci Nastavit na nezpracovanou.
 
 > [!POZNÁMKA]  
 > Tuto akci můžete také provést pro jednotlivý záznam na stránce **Karta došlých dokladů**.
