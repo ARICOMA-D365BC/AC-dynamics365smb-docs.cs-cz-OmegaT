@@ -62,10 +62,10 @@ If you approve the incoming document record, the **Released** check box on the i
 7. On the **Incoming Document** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Viz také
-[Zpracování došlých dokladů](across-process-income-documents.md)  
-[Došlé doklady](across-income-documents.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Zpracování došlých dokladů](across-process-income-documents.md)    
+[Došlé doklady](across-income-documents.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -43,10 +43,10 @@ Přílohy souborů z nezaúčtovaných dokladů můžete kdykoli odebrat odstran
 Připojení k zaúčtovanému dokladu bude odebráno. Nyní můžete přistoupit k připojení dalšího souboru došlého dokladu k zaúčtovanému dokladu, tak jak je popsáno v tomto tématu.
 
 ## Viz také
-[Zpracování došlých dokladů](across-process-income-documents.md)  
-[Došlé doklady](across-income-documents.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Zpracování došlých dokladů](across-process-income-documents.md)    
+[Došlé doklady](across-income-documents.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

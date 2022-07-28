@@ -50,10 +50,10 @@ For more information, see [Use OCR to Turn PDF and Image Files into Electronic D
 
 ## Viz také
 
-[Zpracování došlých dokladů](across-process-income-documents.md)  
-[Došlé doklady](across-income-documents.md)  
-[Nákup](purchasing-manage-purchasing.md)  
-[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Zpracování došlých dokladů](across-process-income-documents.md)    
+[Došlé doklady](across-income-documents.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
