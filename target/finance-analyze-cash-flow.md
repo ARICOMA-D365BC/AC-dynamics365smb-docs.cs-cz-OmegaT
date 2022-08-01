@@ -14,7 +14,7 @@ ms.date: 12/20/2021
 ms.author: bholtorf
 
 ---
-# Analyzing Cash Flow in Your Company
+# Analýza cashflow ve Vaší firmě
 The charts on the Accountant Role Center provide insights that can help you make solid decisions about what to do with your cash.
 
 | To answer questions like these | Use this chart |
