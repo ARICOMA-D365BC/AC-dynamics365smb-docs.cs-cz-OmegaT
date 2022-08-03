@@ -12,40 +12,40 @@ ms.date: 10/07/2021
 ms.author: jswymer
 
 ---
-# Get the Business Central Add-in for Excel
+# Získejte doplněk Business Central pro Excel
 
-[!INCLUDE[prod_short](includes/prod_short.md)] includes an add-in for Excel that lets users select a **Edit in Excel** action on certain pages to open the data in an Excel worksheet. This action is different than the **Open in Excel** action because it lets users can make changes in Excel, then publish the changes back to [!INCLUDE[prod_short](includes/prod_short.md)]
+[! INCLUDE[prod_short](includes/prod_short.md)] obsahuje doplněk pro excel, který umožňuje uživatelům vybrat akci **Upravit v excelu** na určitých stránkách a otevřít tak data v excelovém listu. Tato akce se liší od akce **Otevřít v aplikaci Excel**, protože umožňuje uživatelům provádět změny v aplikaci Excel a poté publikovat změny zpět do [! ZAHRNOUT[prod_short](includes/prod_short.md)]
 
 ## Přehled
 
-### About the add-in
+### O doplňku
 
-The add-in is called **Microsoft Dynamics Office Add-in** and it's available for installation from on the [Office Store (AppSource)](https://appsource.microsoft.com/). With the add-in installed, the **Edit in Excel** action is available on most list and list part pages from the **Share** icon ![Share a page in another app.](media/share-icon.png). For more information about using the add-in, see [Viewing and Editing in Excel From Business Central](across-work-with-excel.md).
+Doplněk se nazývá **Doplněk Microsoft Dynamics Office** a je k dispozici pro instalaci z [Office Store (AppSource).](https://appsource.microsoft.com/) S nainstalovaným doplňkem je akce **Upravit v Excelu** dostupná na většině stránek seznamu a částí seznamu pomocí ikony **Sdílet** ![Sdílet stránku v jiné aplikaci. ](media/share-icon.png). Další informace o použití doplňku naleznete v tématu [Zobrazení a úpravy v aplikaci Excel z Business Central](across-work-with-excel.md).
 
 > [!NOTE]
-> The add-in works on Windows only; not macOS.
+> Doplněk funguje pouze v systému Windows; ne na MacOS.
 
-### About deployment as an admin
+### O nasazení jako správce
 
-With [!INCLUDE[prod_short](includes/prod_short.md)] online, there are a few deployment options for getting the add-in to users. One option is *individual acquisition*, where you let users install the add-in themselves. With this option, users must have access to downloading files from the Office Store. Another option is to set up *Centralized Deployment* in the Microsoft 365 admin center to automatically deploy the add-in to your entire organization, groups, or specific users. Centralized Deployment provides a way to get the add-in to users if your organization doesn't give users access to the Office Store.
+S [!INCLUDE[prod_short](includes/prod_short.md)] online existuje několik možností nasazení, jak dostat doplněk k uživatelům. Jednou z možností je *individuální pořízení*, kdy necháte uživatele instalovat doplněk sami. Při použití této možnosti musí mít uživatelé přístup ke stahování souborů z Office Store. Další možností je nastavit *centralizované nasazení* v Admin Centru pro správu Microsoft 365 tak, aby se doplněk automaticky nasadil do celé organizace, skupin nebo konkrétních uživatelů. Centralizované nasazení poskytuje způsob, jak získat doplněk pro uživatele, pokud vaše organizace neposkytuje uživatelům přístup k Office Store.
 
-For the end-user, the installation experience is different for the two deployment scenarios:
+Pro koncového uživatele se prostředí instalace liší pro dva scénáře nasazení:
 
-- With individual acquisition, the first time users choose the **Edit in Excel** action, the **New Office Add-in** pane opens in Excel. To install the add-in, the user chooses **Trust this add-in**, which in turn installs the add-in directly from the Office Store. Users then sign in to [!INCLUDE[prod_short](includes/prod_short.md)] using their user name and password.
+- Při individuální akvizici se při prvním výběru akce **Upravit v aplikaci Excel** otevře podokno **Nový doplněk Office** v aplikaci Excel. K instalaci doplňku uživatel zvolí **Důvěřovat tomuto doplňku**, čímž se doplněk nainstaluje přímo z Office Store. Uživatelé se pak přihlásí do [!INCLUDE[prod_short](includes/prod_short.md)] pomocí svého uživatelského jména a hesla.
 
-- With Centralized Deployment, the first time users choose the **Edit in Excel** action, the add-in is automatically installed in Excel from Centralized Deployment; not the Office Store. The only thing users have to do is sign in to [!INCLUDE[prod_short](includes/prod_short.md)]
+- Při centralizovaném nasazení se doplněk při prvním výběru akce **Upravit v aplikaci Excel** automaticky nainstaluje do aplikace Excel z centralizovaného nasazení; ne z Office Store. Jediné, co uživatelé musí udělat, je přihlásit se k [!INCLUDE[prod_short](includes/prod_short.md)]
 
-With both these deployment options, the add-in is automatically configured to connect to [!INCLUDE[prod_short](includes/prod_short.md)].A third deployment option is a manual installation of the add-in directly from Excel. With this option, users will need to configure the add-in to connect to [!INCLUDE[prod_short](includes/prod_short.md)]
+S oběma těmito možnostmi nasazení je doplněk automaticky nakonfigurován pro připojení k [!INCLUDE[prod_short](includes/prod_short.md)]. Třetí možností nasazení je ruční instalace doplňku přímo z aplikace Excel. Pomocí této možnosti budou uživatelé muset nakonfigurovat doplněk pro připojení k [!INCLUDE[prod_short](includes/prod_short.md)]
 
-### <a name="switch"></a>Switching from individual acquisition to Centralized Deployment or the other way around
+### <a name="switch"></a>Přechod z individuální akvizice na centralizované nasazení nebo naopak
 
-When you change from individual acquisition of the add-in to Centralized Deployment, or vice versa, Excel files that users created before the transition are affected. After the transition, users can still open any Excel worksheets previously created using the **Edit in Excel** action or created manually by configuring the Excel add-in. But they can't update the data in the file from Business Central or push updates to Business Central
+Když přejdete z individuálního pořízení doplňku na centralizované nasazení nebo naopak, budou ovlivněny soubory aplikace Excel, které uživatelé vytvořili před přechodem. Po přechodu mohou uživatelé stále otevírat všechny listy aplikace Excel, které byly dříve vytvořeny pomocí akce **Upravit v aplikaci Excel** nebo vytvořeny ručně konfigurací doplňku aplikace Excel. Nemohou však aktualizovat data v souboru z Business Central nebo odesílat aktualizace do Business Central
 
-This condition is caused by the fact that each Excel file gets assigned an "add-in" identifier. In the transition to or from Centralized Deployment, a different ID is assigned, so the earlier ID becomes blocked.
+Tento stav je způsoben skutečností, že každému souboru aplikace Excel je přiřazen identifikátor "doplňku". Při přechodu do centralizovaného nasazení nebo z centralizovaného nasazení je přiřazeno jiné ID, takže dřívější ID se zablokuje.
 
-## Preparation (on-premises only)
+## Příprava (pouze on-premise)
 
-[!INCLUDE[prod_short](includes/prod_short.md)] on-premises requires that your environment is configured for the add-in. If not, the **Edit in Excel** action won't be available to users. For more information, see [Setting up the Excel Add-In for Editing Business Central Data](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin) in the Developer and IT Pro help.
+[! INCLUDE[prod_short](includes/prod_short.md)] v místním prostředí vyžaduje, aby vaše prostředí bylo nakonfigurované pro doplněk. Pokud ne, akce **Upravit v Excelu** nebude uživatelům k dispozici. Další informace naleznete v části [Nastavení doplňku aplikace Excel pro úpravu dat Business Central](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin) v nápovědě pro vývojáře a IT profesionály.
 
 ## Deploy the add-in by using Centralized Deployment
 
