@@ -15,16 +15,16 @@ ms.author: edupont
 
 You can define different currencies in [!INCLUDE [prod_short](includes/prod_short.md)], for example if you do trade in currencies other than your local currency. Then, to help you keep track of changes in currency exchange rates, you can manage the currencies manually, or you can set up a currency exchange rate service.
 
-## Currencies
+## Měny
 
 > [!TIP]  
-> In [!INCLUDE[prod_short](includes/prod_short.md)] if you are looking for real time information about foreign exchange (FX) rates or historical rates, you will find it referred to as currency. In addition to this article, see also [Set Up an Additional Reporting Currency](finance-how-setup-additional-currencies.md).
+> Pokud v [!INCLUDE[prod_short](includes/prod_short.md)] hledáte aktuální informace o směnných (FX) kurzech nebo historických kurzech, najdete je označované jako měna. Kromě tohoto článku si také přečtěte [Nastavení přídavní měny pro hlášení](finance-how-setup-additional-currencies.md).
 
 [!INCLUDE [finance-currencies-def](includes/finance-currencies-def.md)]
 
-You specify the currency codes in the **Currencies** list, including extra information and settings that are necessary for each currency code. For more information, see [Currencies](finance-set-up-currencies.md#curr)
+Kódy měn zadáte v seznamu **Měny**, včetně dalších informací a nastavení, které jsou nezbytné pro každý kód měny. Pro více informací navštivte [Měny](finance-set-up-currencies.md#curr)
 
-### Example of a receivable currency transaction
+### Příklad měnové transakce pohledávky
 
 [!INCLUDE [finance-currencies-example](includes/finance-currencies-example.md)]
 

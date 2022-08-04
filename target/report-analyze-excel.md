@@ -12,21 +12,21 @@ ms.date: 03/16/2022
 ms.author: jswymer
 
 ---
-# Analyzing Report Data with Excel and XML
+# Analýza dat sestavy pomocí Excelu a XML
 
-[!INCLUDE[2021_releasewave2](includes/2021_releasewave2.md)]
+[!INCLUDE[d365fin](includes/2021_releasewave2.md)]
 
-As a developer or advanced user, it helps to inspect the data that is generated for a given report dataset while you create new reports or modify existing ones. To support this capability, you can export a report dataset as raw data to an Excel workbook or XML file&mdash;directly. In Excel, for example, you can then do ad-hoc analysis of the data and diagnose issues.
+Jako vývojář nebo pokročilý uživatel pomáhá kontrolovat data generovaná pro danou datovou sadu sestav při vytváření nových sestav nebo úpravách stávajících. Chcete-li tuto funkci podporovat, můžete exportovat datovou sadu sestavy jako nezpracovaná data do sešitu aplikace Excel nebo do souboru XML – přímo. Například v aplikaci Excel můžete provést ad-hoc analýzu dat a diagnostikovat problémy.
 
 ## Začínáme
 
-To export a report dataset to an Excel workbook or XML file, open the report in the client, then in the request page, select **Send to** > **Microsoft Excel Document (data only)** or **XML Document**. The file will be downloaded to your device.
+Chcete-li exportovat datovou sadu sestavy do excelového sešitu nebo souboru XML, otevřete sestavu v klientovi a na stránce požadavku vyberte **Odeslat do** > **Dokument Microsoft Excel (pouze data)</g2 > nebo **dokument XML**. Soubor bude stažen do vašeho zařízení.
 
-## More about Excel (data only)
+## Další informace o aplikaci Excel (pouze data)
 
-**Microsoft Excel Document (data only)** option exports the report results and the criteria that was used to generate them&mdash;but it doesn't include the report layout. The Excel file will include the full dataset, as raw data, arranged in rows and columns. All data columns of the report's dataset are included, regardless of whether they're used in the report layout.
+**Dokument aplikace Microsoft Excel (pouze data)** exportuje výsledky sestavy a kritéria, která byla použita k jejich vygenerování, ale nezahrnuje rozložení sestavy. Soubor Excel bude obsahovat úplnou datovou sadu jako nezpracovaná data uspořádaná do řádků a sloupců. Zahrnuty jsou všechny sloupce dat datové sady sestavy bez ohledu na to, zda jsou použity v rozložení sestavy.
 
-Once you have the Excel file, you can start analyzing the data. For example, you could filter the data and use Power Pivot to display it.
+Jakmile máte soubor Excel, můžete začít analyzovat data. Můžete například filtrovat data a použít Power Pivot k jejich zobrazení.
 
 Each time you export results, a new worksheet is created. Using the **Microsoft Excel Document (data only)** option, you can run the same report and reuse formatting changes. For example, for Power Pivot, you can run the report again for another time period, copy the results to the worksheet, and then refresh the worksheet. You can also find a reporting app on [AppSource](https://appsource.microsoft.com/).
 

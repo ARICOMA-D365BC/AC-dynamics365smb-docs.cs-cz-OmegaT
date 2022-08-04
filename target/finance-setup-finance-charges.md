@@ -46,7 +46,7 @@ Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulko
 4. Vyberte akci **Měny**.
 5. Na stránce **Měny pro Podmínky penále**, definujte pro každý termín kód měny a dodatečný poplatek.
 
-   > [!POZNÁMKA]  
+   > [!NOTE]  
    > Když vytvoříte penále v cizí měně, podmínky v cizí měně, které zde nastavíte, se použijí k vytvoření oznámení o penálích. Pokud nejsou nastaveny žádné podmínky penále v cizí měně, použijí se podmínky penále LM uvedené na stránce **Podmínky penále** a poté se převedou na příslušnou měnu.
 
    Pro každý termín finančního poplatku můžete zadat text, který bude vytištěn před (**Počáteční text**) nebo za (**Konečný text**) na záznamech ve zprávě o penálích.
@@ -67,9 +67,9 @@ Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulko
 
 ## Viz také
 
-[Shromažďování nedoplatků](receivables-collect-outstanding-balances.md)  
-[Nastavit podmínky a úrovně připomenutí](finance-setup-reminders.md)  
-[Nastavení financí](finance-setup-finance.md)
+[Shromažďování nedoplatků](receivables-collect-outstanding-balances.md)    
+[Nastavit podmínky a úrovně připomenutí](finance-setup-reminders.md)    
+[Nastavení financí](finance-setup-finance.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

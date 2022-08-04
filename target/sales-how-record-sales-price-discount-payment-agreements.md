@@ -99,7 +99,7 @@ When you enable the **New sales pricing experience** feature update on the **Fea
 * Zákazník
 * Customer group or campaign
 * Starting and ending dates
-* Currencies
+* Měny
 
 If you have many combinations, you'll have many price lists.
 

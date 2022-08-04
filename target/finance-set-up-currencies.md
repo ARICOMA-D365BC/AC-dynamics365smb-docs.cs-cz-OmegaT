@@ -108,7 +108,7 @@ You cannot link currency codes to general ledger accounts because amounts on gen
 
 You can enter a currency code on a general journal line and post the line to a general ledger account. The relevant exchange rate is used to convert the amount to LCY before it is posted to the general ledger account.
 
-## Example of a receivable currency transaction
+## Příklad měnové transakce pohledávky
 
 [!INCLUDE [finance-currencies-example](includes/finance-currencies-example.md)]
 
