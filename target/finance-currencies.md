@@ -27,19 +27,19 @@ Kódy měn zadáte v seznamu **Měny**, včetně dalších informací a nastaven
 
 [!INCLUDE [finance-currencies-example](includes/finance-currencies-example.md)]
 
-## Exchange Rates
+## Směnné kurzy
 
-The exchange rates are the tool to calculate the local currency value (LCY) of each currency transaction. For more information, see [Update Currency Exchange Rates](finance-how-update-currencies.md).
+Směnné kurzy jsou nástrojem pro výpočet hodnoty místní měny (LCY) každé měnové transakce. Pro víc informací navštivte <x3/>Aktualizace směnných kurzů<x4/> .
 
 ## Viz související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
 
 ## Viz také
 
-[Set Up Currencies](finance-set-up-currencies.md)  
-[Update Currency Exchange Rates](finance-how-update-currencies.md)  
-[Set Up an Additional Reporting Currency](finance-how-setup-additional-currencies.md)  
-[Closing Years and Periods](year-close-years-periods.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nastavení měn](finance-set-up-currencies.md)    
+[Aktualizace směnných kurzů](finance-how-update-currencies.md)    
+[Nastavte další vykazovací měnu](finance-how-setup-additional-currencies.md)    
+[Uzávěrka a období](year-close-years-periods.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

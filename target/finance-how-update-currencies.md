@@ -28,9 +28,9 @@ Kódy měn zadáte v seznamu **Měny**, včetně dalších informací a nastaven
 
 [!INCLUDE [finance-currencies-example](includes/finance-currencies-example.md)]
 
-## Exchange Rates
+## Směnné kurzy
 
-The exchange rates are the tool to calculate the local currency value (LCY) of each currency transaction. The **Exchange Rates** page includes the following fields:
+Směnné kurzy jsou nástrojem pro výpočet hodnoty místní měny (LCY) každé měnové transakce. The **Exchange Rates** page includes the following fields:
 
 | Pole | Popis |
 |---------------------------------|---------------------------------------|  

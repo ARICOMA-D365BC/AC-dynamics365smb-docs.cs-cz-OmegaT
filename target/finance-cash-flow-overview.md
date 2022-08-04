@@ -15,27 +15,27 @@ ms.author: edupont
 
 ---
 
-# Cash Flow Overview
+# Přehled cash flow
 
-Understanding cash inflows and outflows is the key to running a successful business. You can use cash flow to easily create a short-term forecast that predicts how and when you expect money to be received and paid out by your business. It is important for you to know that your business will have enough cash to pay creditors and expenses when they fall due.
+Pochopení přílivu a odtoku hotovosti je klíčem k úspěšnému podnikání. Cash flow můžete použít ke snadnému vytvoření krátkodobé prognózy, která předpovídá, jak a kdy očekáváte, že vaše firma obdrží a vyplatí peníze. Je důležité, abyste věděli, že vaše firma bude mít dostatek hotovosti na zaplacení věřitelů a výdajů, když se stanou splatnými.
 
-## Definition of Cash Flow
+## Definice cash flow
 
-The term *cash flow* is used to designate cash receipts minus cash payments over a selected period. It is an estimate of the amount of money that you expect to flow in and out of your business, and it includes all your forecasted income and expenses.
+Termín *cash flow* se používá k označení peněžních příjmů minus hotovostní platby za vybrané období. Jedná se o odhad množství peněz, které očekáváte, že budou proudit do a z vašeho podnikání, a zahrnuje všechny vaše předpokládané příjmy a výdaje.
 
-## Work with Cash Flow
+## Práce s cash flow
 
-The following illustration shows an overview of how you can work with cash flow.
+Následující obrázek znázorňuje přehled toho, jak můžete pracovat s cash flow.
 
-![Cash Flow overview.](media/finance_cash_flow_overview.png "Cash Flow overview")
+![Přehled cash flow.](media/finance_cash_flow_overview.png " Přehled cash flow")
 
-- You set up a cash flow forecast.
+- Nastavíte prognózu peněžních toků.
 
-- You get cash flow forecast sources from the following areas:
+- Získáte zdroje prognózy cash flow z následujících oblastí:
 
-   - General ledger – Information about the liquid funds and the budgeted revenues and expenses of your company.
-   - Purchasing – Information about the current payables and any forecasted debts from open purchase orders.
-   - Sales – Information about the current receivables and any forecasted receipts from open sales orders.
+   - Finance – Informace o likvidních prostředcích a rozpočtovaných příjmech a výdajích vaší společnosti.
+   - Nákup – informace o aktuálních závazcích a předpokládaných dluzích z otevřených nákupních objednávek.
+   - Prodej – Informace o aktuálních pohledávkách a všech předpokládaných příjmech z otevřených prodejních objednávek.
    - Service – Information about open service orders.
    - Fixed assets – Information about planned disposal and budgeted purchases of fixed assets.
    - Manual revenues and expenses – Manage manual revenues and expenses and include them in the cash flow forecast.

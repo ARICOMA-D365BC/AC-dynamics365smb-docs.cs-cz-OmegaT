@@ -28,35 +28,35 @@ Chcete-li exportovat datovou sadu sestavy do excelového sešitu nebo souboru XM
 
 Jakmile máte soubor Excel, můžete začít analyzovat data. Můžete například filtrovat data a použít Power Pivot k jejich zobrazení.
 
-Each time you export results, a new worksheet is created. Using the **Microsoft Excel Document (data only)** option, you can run the same report and reuse formatting changes. For example, for Power Pivot, you can run the report again for another time period, copy the results to the worksheet, and then refresh the worksheet. You can also find a reporting app on [AppSource](https://appsource.microsoft.com/).
+Při každém exportu výsledků se vytvoří nový list. Pomocí **Dokument aplikace Microsoft Excel (pouze data)** můžete spustit stejnou sestavu a znovu použít změny formátování. Například pro Power Pivot můžete znovu spustit sestavu pro jiné časové období, zkopírovat výsledky do listu a pak list aktualizovat. Aplikaci pro vytváření sestav najdete také na [AppSource](https://appsource.microsoft.com/).
 
 > [!NOTE]
-> You can't export a report that has more than 1,048,576 rows or 16,384 columns. With Business Central on-premises, the maximum number of exported rows might be even less. Business Central Server includes a configuration setting, called **Max Data Rows Allowed to Send to Excel**, for decreasing the limit from the maximum value. For more information, see [Configuring Business Central Server](/dynamics365/business-central/dev-itpro/administration/configure-server-instance#General) or contact your administrator.
+> Nelze exportovat sestavu, která má více než 1 048 576 řádků nebo 16 384 sloupců. S místním Business Central může být maximální počet exportovaných řádků ještě nižší. Business Central Server obsahuje konfigurační nastavení s názvem **Maximální počet řádků dat povolených k odeslání do aplikace Excel** pro snížení limitu z maximální hodnoty. Další informace naleznete v [Konfigurace serveru Business Central Server](/dynamics365/business-central/dev-itpro/administration/configure-server-instance#General) nebo se obraťte na správce.
 
-## For administrators
+## Pro administrátory
 
-- **Microsoft Excel Document (data only)** was introduced as an optional feature in the 2021 release wave 1, update 18.3. To give users access to this feature when running 2021 release wave 1, enable the **Save report dataset to Microsoft Excel Document** feature update in **Feature Management**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management). In 2021 release wave 2, this feature became permanent, so you won't have to enable it.
+- **Dokument aplikace Microsoft Excel (pouze data)** byl zaveden jako volitelná funkce ve vlně 2021 vydání 1., aktualizace 18.3. Chcete-li uživatelům poskytnout přístup k této funkci při spuštění vlny 2021 vydání 1., povolte aktualizaci funkce **Uložit datovou sadu sestavy do dokumentu aplikace Microsoft Excel** v **nástroji Správa funkcí**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management). Ve vlně 2021 vydání 2. se tato funkce stala trvalou, takže ji nebudete muset povolit.
 
-- To use **Microsoft Excel Document (data only)**, user accounts need the **Allow Action Export Report Dataset To Excel** permission. You can give users this permission by assigning either the **Troubleshooting Tools** or **Export Report Excel** permission set. For more information, see [Assign Permissions to Users and Groups](ui-define-granular-permissions.md)
+- Chcete-li používat **dokument aplikace Microsoft Excel (pouze data),** musí uživatelské účty **povolit akci Exportovat datovou sadu sestav do aplikace Excel**. Toto oprávnění můžete uživatelům udělit přiřazením sady oprávnění **Nástroje pro řešení potíží** nebo **Exportovat sestavu aplikace Excel**. Další informace naleznete v části [Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md)
 
-## For developers and advanced users
+## Pro vývojáře a pokročilé uživatele
 
-The **Microsoft Excel Document (data only)** option exports all columns, including columns that hold filters and formatting instructions for other values. Here are a few points of interest:
+Možnost **Dokument aplikace Microsoft Excel (pouze data)** exportuje všechny sloupce, včetně sloupců, které obsahují filtry a pokyny k formátování pro jiné hodnoty. Zde je několik zajímavých bodů:
 
-- Binary data in a field, like an image, isn't exported.
+- Binární data v poli, například v obrázku, se neexportují.
 
-   In columns that hold binary data, fields will include the text **Binary data ({0} bytes)**, where **{0}** indicates the number of bytes.
-- Starting in Business Central 2021 release wave 2, the Excel file also includes the **Report Metadata** worksheet.
+   Ve sloupcích, které obsahují binární data, budou pole obsahovat text **Binární data ({0} bajtů),** kde **{0}** označuje počet bajtů.
+- Počínaje verzí Business Central 2021 2. vydání obsahuje soubor aplikace Excel také list **Metadata sestavy**.
 
-   This worksheet shows the filters applied to the report and general report properties, like the name, ID, and extension details. The filters are shown in the **Filter (DataItem::Table::FilterGroupNo::FieldName)** column. The filters in this column include filters set on the report's request page. It also includes filters defined in AL code, for example, by the [DataItemLink property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemlink-reports-property) and [DataItemTableView property](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemtableview-property).
+   Tento list zobrazuje filtry použité na sestavu a obecné vlastnosti sestavy, jako je název, ID a podrobnosti o rozšíření. Filtry jsou zobrazeny ve sloupci **Filtr (DataItem::Table::FilterGroupNo::FieldName)**. Filtry v tomto sloupci zahrnují filtry nastavené na stránce požadavku sestavy. Zahrnuje také filtry definované v kódu AL, například [Vlastností DataItemLink](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemlink-reports-property) a [Vlastností DataItemTableView](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemtableview-property).
 
-For more information about report design, see [Report Overview](/dynamics365/business-central/dev-itpro/developer/devenv-reports).
+Další informace o návrhu sestavy naleznete [v tématu Přehled sestavy](/dynamics365/business-central/dev-itpro/developer/devenv-reports).
 
 ## Viz také
 
-[Working with Reports](ui-work-report.md)  
-[Managing Report and Document Layouts](ui-manage-report-layouts.md)  
-[Assign Permissions to Users and Groups](ui-define-granular-permissions.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce se sestavami](ui-work-report.md)    
+[Správa rozvržení sestav a dokumentů](ui-manage-report-layouts.md)    
+[Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
