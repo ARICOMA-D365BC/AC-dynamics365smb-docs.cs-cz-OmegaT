@@ -13,7 +13,7 @@ ms.date: 06/16/2021
 ms.author: edupont
 
 ---
-# Collect Payments with SEPA Direct Debit
+# [přibližně]Sběr plateb pomocí SEPA – příkaz k inkasu
 
 With your customer's consent, you can collect payments directly from the customer's bank account according to the SEPA format.
 

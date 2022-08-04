@@ -34,47 +34,47 @@ Následující obrázek znázorňuje přehled toho, jak můžete pracovat s cash
 - Získáte zdroje prognózy cash flow z následujících oblastí:
 
    - Finance – Informace o likvidních prostředcích a rozpočtovaných příjmech a výdajích vaší společnosti.
-   - Nákup – informace o aktuálních závazcích a předpokládaných dluzích z otevřených nákupních objednávek.
+   - Nákup – Informace o aktuálních závazcích a předpokládaných dluzích z otevřených nákupních objednávek.
    - Prodej – Informace o aktuálních pohledávkách a všech předpokládaných příjmech z otevřených prodejních objednávek.
-   - Service – Information about open service orders.
-   - Fixed assets – Information about planned disposal and budgeted purchases of fixed assets.
-   - Manual revenues and expenses – Manage manual revenues and expenses and include them in the cash flow forecast.
-- You use a batch job to transfer information from the areas of general ledger, sales, purchasing, service, and fixed assets to the worksheet Then, you register worksheet lines to make a cash flow forecast.
-- You use various windows, reports, and charts to analyze and print a cash flow forecast that relates to availability and timeline overviews.
+   - Servis – Informace o otevřených servisních objednávkách.
+   - Dlouhodobý majetek – informace o plánované likvidaci a rozpočtových nákupech dlouhodobého majetku.
+   - Manuální výnosy a výdaje – Spravujte manuální výnosy a výdaje a zahrňte je do prognózy peněžních toků.
+- Dávkovou úlohu použijete k přenosu informací z oblastí financí, prodeje, nákupu, servisu a dlouhodobého majetku do listu Potom zaregistrujete řádky listu pro vytvoření prognózy cashflow.
+- Pomocí různých oken, sestav a grafů můžete analyzovat a vytisknout prognózu cash flow, která se týká přehledů dostupnosti a časové osy.
 
-## Making a Cash Flow Forecast
+## Vytvoření prognózy cash flow
 
-Based on the registered worksheet lines, you can periodically make a cash flow forecast. The following layout is a frequently used layout for a cash flow forecast. The layout has three sections:
+Na základě registrovaných řádků listu můžete pravidelně vytvářet prognózu cash flow. Následující rozložení je často používané rozvržení pro prognózu cash flow. Rozložení má tři části:
 
-- Cash receipts
-- Cash disbursements
-- Net cash flow or cash-in-hand
+- Deníky hotovosti
+- Výplaty hotovosti
+- Čistý peněžní tok nebo pokladní hotovost
 
-Cash receipts provide details of the income that the business receives.
+Deníky hotovosti poskytují podrobnosti o příjmech, které podnik obdrží.
 
-*total cash receipts* = *receivables* + *open sales orders* + *open service orders* + *fixed assets disposals* + *manual revenues* + *budgeted revenues*
-
-> [!NOTE]
-> Manual revenues can be rental income, interest from financial assets, or new private capital. You can plan manual revenues for a period of time and use them in the calculation of cash flow forecast.
-
-Cash disbursements provide details of the payments made by the business.
-
-*total cash disbursements* = *payables* + *open purchase orders* + *fixed asset investment* + *manual expenses* + *budgeted expenses*
+*celkové peněžní příjmy* = *pohledávky* + *otevřené prodejní objednávky* + *otevřené servisní zakázky* + *vyřazení dlouhodobého majetku* + *manuální výnosy* + *rozpočtové výnosy*
 
 > [!NOTE]
-> Manual expenses can be salaries, interest on credit, or private consumptions. You can plan manual expenses for a period of time and use them in the calculation of cash flow forecast.
+> Manuálními výnosy mohou být výnosy z pronájmu, úroky z finančních aktiv nebo nový soukromý kapitál. Můžete plánovat ruční výnosy na určité časové období a použít je při výpočtu prognózy cash flow.
 
-Net cash flow or cash-in-hand is calculated as total receipts minus total disbursements at the end of each period.
+Výplaty hotovosti poskytují podrobnosti o platbách provedených podnikem.
 
-*net cash flow* = *total cash receipts* – *total cash disbursements* + *liquid funds*
+*celkové hotovostní výdaje* = *závazky* + *otevřené nákupní objednávky* + *investice do dlouhodobého majetku* + *manuální výdaje* + *rozpočtové výdaje* **
 
-The forecast can then be used as an internal management decision-making tool that helps you plan ahead and make important strategic decisions about the operation of the business.
+> [!NOTE]
+> Manuální výdaje mohou být platy, úroky z úvěru nebo soukromé spotřeby. Můžete naplánovat ruční výdaje na určité časové období a použít je při výpočtu prognózy cash flow.
+
+Čisté cash flow nebo hotovost v ruce se vypočítá jako celkové příjmy minus celkové výplaty na konci každého období.
+
+*čisté cash flow* = *celkové peněžní příjmy* – *celkové peněžní výdaje* + *likvidní prostředky*
+
+Prognóza pak může být použita jako interní nástroj pro rozhodování managementu, který vám pomůže plánovat dopředu a činit důležitá strategická rozhodnutí o fungování podniku.
 
 ## Viz také
 
-[Setting Up Cash Flow Analysis](finance-setup-cash-flow-analyses.md)  
-[Analyze Cash Flow](finance-analyze-cash-flow.md)  
-[Forecast your cash flow in Dynamics 365 Business Central (Microsoft Learn)](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)  
-[Set up cash flow forecasts using Azure AI in Dynamics 365 Business Central(Microsoft Learn)](/learn/modules/setup-cash-flow-forecasts/)
+[Nastavení analýzy cash flow](finance-setup-cash-flow-analyses.md)    
+[Analýza cash flow](finance-analyze-cash-flow.md)    
+[Prognóza svého cash flow v Dynamics 365 Business Central (Microsoft Learn)](/learn/modules/forecast-cash-flow-dynamics-365-business-central/index)    
+[Nastavení prognóz cash flow pomocí Azure AI v Dynamics 365 Business Central (Microsoft Learn)](/learn/modules/setup-cash-flow-forecasts/)  
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

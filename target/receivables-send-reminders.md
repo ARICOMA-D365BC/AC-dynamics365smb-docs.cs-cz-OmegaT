@@ -14,21 +14,21 @@ ms.date: 02/09/2022
 ms.author: edupont
 
 ---
-# Send Reminders of Outstanding Balances
+# Odeslání připomenutí nevyrovnaných zůstatků
 
-[!INCLUDE [receivables-reminders](includes/receivables-reminders.md)]
+[!INCLUDE [připomenutí pohledávek](includes/receivables-reminders.md)]
 
 ## Viz související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
 
 ## Viz také
 
-[Collect Outstanding Balances](receivables-collect-outstanding-balances.md)  
-[Set Up Multiple Interest Rates for Delayed Payment](finance-how-to-set-up-multiple-interest-rates.md)  
-[Set Up Reminder Terms and Levels](finance-setup-reminders.md)  
-[Set Up Finance Charge Terms](finance-setup-finance-charges.md)  
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Working with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Shromažďování nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)    
+[Nastavení více úrokových sazeb pro zpožděnou platbu](finance-how-to-set-up-multiple-interest-rates.md)    
+[Nastavit podmínky a úrovně připomenutí](finance-setup-reminders.md)    
+[Nastavení podmínek pro finanční poplatky](finance-setup-finance-charges.md)    
+[Správa pohledávek](receivables-manage-receivables.md)    
+[Prodej](sales-manage-sales.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

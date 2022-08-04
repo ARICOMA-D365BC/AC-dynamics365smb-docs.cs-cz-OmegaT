@@ -64,7 +64,7 @@ Vzhledem k tomu, že směnné kurzy neustále kolísají, musí být pravidelně
 The **Adjust Exchange Rates** batch job is used to manually adjust the exchange rates of posted customer, vendor, and bank account entries. Může také aktualizovat další částky měny vykazování u položek hlavní knihy.
 
 > [!TIP]
-> You can use a service to update exchange rates in the system automatically. For more information, see [To set up a currency exchange rate service](finance-how-update-currencies.md#to-set-up-a-currency-exchange-rate-service). However, this does not adjust exchange rates on already posted transactions. To update exchange rates on posted entries, use the **Adjust Exchange Rates** batch job.
+> You can use a service to update exchange rates in the system automatically. Další informace naleznete v části [Nastavení služby směnného kurzu](finance-how-update-currencies.md#to-set-up-a-currency-exchange-rate-service). However, this does not adjust exchange rates on already posted transactions. To update exchange rates on posted entries, use the **Adjust Exchange Rates** batch job.
 
 You can preview the effect that an adjustment will have on posting before you actually post by choosing **Preview** on the **Adjust Exchange Rates** page. Additionally, you can select whether the general ledger posting will be detailed (per entry) or summarized (per currency) by choosing **Summarize Entries**. You can also specify how to handle dimensions for unrealized gains and losses postings by choosing one of the following options in the **Transfer Dimension Values** field:
 

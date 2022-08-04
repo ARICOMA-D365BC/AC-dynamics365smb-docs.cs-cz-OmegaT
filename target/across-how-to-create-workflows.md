@@ -122,7 +122,7 @@ In the following example a new workflow is made to approve changes to the name o
 
    | Pole | Hodnota |
    |---------|---------|
-   | **Code** | **VENDAPN-01** |
+   | Kód | **VENDAPN-01** |
    | **Popis** | **Vendor Name Change Approval** |
    | **Category** | **PURCH** |
 

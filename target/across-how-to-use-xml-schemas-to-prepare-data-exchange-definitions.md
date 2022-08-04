@@ -39,7 +39,7 @@ This topic contains the following procedures:
 
    | Pole | Popis |
    |---------------------------------|---------------------------------------|  
-   | **Code** | Specify a code to identify the XML schema. |
+   | Kód | Specify a code to identify the XML schema. |
    | **Popis** | Specify a description of the XML schema. |
 
    The **Target Namespace** field specifies any namespace in the XML schema file that has been loaded for the line.

@@ -35,7 +35,7 @@ From the customer card, you can create a statement with that customer's transact
 
 ## Reminders
 
-[!INCLUDE [receivables-reminders](includes/receivables-reminders.md)]
+[!INCLUDE [připomenutí pohledávek](includes/receivables-reminders.md)]
 
 ## Finance Charges
 

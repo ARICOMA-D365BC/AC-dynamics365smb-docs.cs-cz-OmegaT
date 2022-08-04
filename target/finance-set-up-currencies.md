@@ -9,44 +9,44 @@ ms.search.form: 5, 118
 ms.date: 03/15/2022
 ms.author: edupont
 ---
-# Set Up Currencies
+# Nastavit měny
 
 [!INCLUDE [finance-currencies-def](includes/finance-currencies-def.md)]
 
-Use an external service to get the latest currency exchange rates into the **Currencies** list. For more information, see [To set up a currency exchange rate service](finance-how-update-currencies.md#to-set-up-a-currency-exchange-rate-service).
+Pomocí externí služby můžete získat nejnovější směnné kurzy měn do seznamu **Měny**. Další informace naleznete v části [Nastavení služby směnného kurzu](finance-how-update-currencies.md#to-set-up-a-currency-exchange-rate-service).
 
 [!INCLUDE [finance-currencies-lcy](includes/finance-currencies-lcy-note.md)]
 
-## <a name="curr"></a>Currencies
+## Měny
 
-The following table describes the fields in the **Currencies** list.
+Následující tabulka popisuje pole v seznamu **Měny**.
 
 | Pole | Popis |
 |---------------------------------|---------------------------------------|  
-| **Code** | The identifier for the currency. |
-| **Popis** | A free text description of the currency. |
-| **ISO Code** | The international three letter code to the currency defined in ISO 4217. |
-| **ISO Numeric code** | The international numeric reference to the currency defined in ISO 4217. |
-| **Exchange Rate Date** | The latest actual exchange rate date. |
-| **EMU Currency** | Specifies if the currency is an EMU (Economic and Monetary Union) currency, such as EUR. |
-| **Realized Gains Account** | The account where the actual gain will be posted when you receive payments for receivables or register the actual currency rate on payments to payables. For an example of a receivable currency transaction, see the example below this table. |
-| **Realized Losses Account** | The account where the actual loss will be posted when you receive payments for receivables or register the actual currency rate on payments to payables. For an example of a receivable currency transaction, see the example below this table. |
-| **Unrealized Gains Account** | The account where the theoretical gain will be posted when you perform a currency adjustment. |
-| **Unrealized Losses Account** | The account where the theoretical loss will be posted when you perform a currency adjustment. |
-| **Amount Rounding Precision** | Some currencies have other formats for invoice amounts than are defined in the **General Ledger Setup** page. If you change the amount rounding precision for a currency, all invoice amounts in that currency will be rounded with the updated precision. |
-| **Amount Decimal Places** | Some currencies have other formats for invoice amounts than are defined in the **General Ledger Setup** page. If you change the amount decimal places for a currency, all invoice amounts in the currency will be rounded with the updated decimals |
-| **Invoice Rounding Type** | Specifies the method to use if the amounts must be rounded. The options are **Nearest**, **Up**, and **Down**. |
-| **Unit-Amount Rounding Precision** | Some currencies have other formats for unit amounts than are defined in the **General Ledger Setup** page. if you change the unit amount rounding precision for a currency, all unit amounts in the currency will be rounded with the updated precision. |
-| **Unit-Amount Decimal Places** | Some currencies have other formats for unit amounts than are defined in the **General Ledger Setup** page. If you change the unit amount decimal places for a currency, all unit amounts in the currency will be rounded with the updated decimals. |
-| **Application Rounding Precision** | Specifies the size of the interval that is allowed as a rounding difference when you apply entries in different currencies to one another. |
-| **Conversion LCY Rounding. Debit Account** | Specifies conversion information that must also contain a debit account if you want to insert correction lines for rounding differences in the general journals using the **Insert Conv. LCY Rndg. Lines** action. |
-| **Conversion LCY Rounding Credit Account** | Specifies conversion information that must also contain a credit account if you wish to insert correction lines for rounding differences in the general journals using the **Insert Conv. LCY Rndg. Lines** action. |
-| **Last Date Adjusted** | The date of the last currency adjustment. |
-| **Last Date Modified** | The date of the change to the setup of the currency. |
-| **Payment Tolerance %** | The maximum payment tolerance % set for this currency. For more information, see [Payment Tolerance and Payment Discount Tolerance](finance-payment-tolerance-and-payment-discount-tolerance.md). |
-| **Max. Payment Tolerance Amount** | The maximum payment tolerance amount set for this currency. For more information, see [Payment Tolerance and Payment Discount Tolerance](finance-payment-tolerance-and-payment-discount-tolerance.md). |
-| **Currency Factor** | Specifies the relationship between the currency and the local currency using the actual currency rate. |
-| **Realized G/L Gains Account** | Specifies the G/L account that is used to post exchange rate gains for currency adjustments between the local currency (LCY) and the additional reporting currency. The exchange rate gains are calculated when the Adjust Exchange Rates batch job is run to adjust general ledger accounts. This field might not be visible by default. It can be retrieved by personalizing the page. |
+| Kód | Identifikátor měny. |
+| **Popis** | Volný textový popis měny. |
+| **Kód ISO** | Mezinárodní třípísmenný kód měny definovaný v ISO 4217. |
+| **Číselný kód ISO** | Mezinárodní číselný odkaz na měnu definovanou v ISO 4217. |
+| **Datum směnného kurzu** | Poslední aktuální datum směnného kurzu. |
+| **HMU Měna** | Určuje, zda je měnou HMU (Hospodářská a měnová unie), například EUR. |
+| **Účet realizovaných zisků** | Účet, na kterém bude skutečný zisk zaúčtován při přijímání plateb za pohledávky nebo při registraci skutečného měnového kurzu plateb závazkům. Příklad měnové transakce pohledávky naleznete v příkladu pod touto tabulkou. |
+| **Účet realizovaných ztrát** | Účet, na kterém bude zaúčtována skutečná ztráta, když obdržíte platby za pohledávky nebo zaregistrujete skutečný kurz měny u plateb závazků. Příklad měnové transakce pohledávky naleznete v příkladu pod touto tabulkou. |
+| **Účet nerealizovaných zisků** | Účet, na kterém bude teoretický zisk zaúčtován při provádění měnové úpravy. |
+| **Účet nerealizovaných ztrát** | Účet, na kterém bude zaúčtována teoretická ztráta, když provedete úpravu měny. |
+| **Přesnost zaokrouhlení částky** | Některé měny mají pro fakturované částky jiné formáty, než jsou definovány na stránce **Nastavení hlavní knihy**. Pokud změníte přesnost zaokrouhlení částky pro měnu, všechny fakturované částky v této měně budou zaokrouhleny s aktualizovanou přesností. |
+| **Desetinná místa v částce** | Některé měny mají pro fakturované částky jiné formáty, než jsou definovány na stránce **Nastavení hlavní knihy**. Pokud změníte částku desetinných míst pro měnu, všechny fakturované částky v měně budou zaokrouhleny aktualizovanými desetinnými místy |
+| **Typ zaokrouhlení faktury** | Určuje metodu, která se má použít, pokud musí být částky zaokrouhleny. Možnosti jsou **Nejbližší**, **Nahoru**a **Dolů**. |
+| **Přesnost zaokrouhlení jednotkové částky** | Některé měny mají jiné formáty pro jednotkové částky, než jsou definovány na stránce **Nastavení hlavní knihy**. pokud změníte přesnost zaokrouhlení jednotkové částky pro měnu, všechny jednotkové částky v měně budou zaokrouhleny s aktualizovanou přesností. |
+| **Desetinná místa v jednotkách** | Některé měny mají jiné formáty pro jednotkové částky, než jsou definovány na stránce **Nastavení hlavní knihy**. Pokud pro měnu změníte desetinná místa částky jednotky, všechny částky jednotky v měně budou zaokrouhleny na aktualizovaná desetinná místa. |
+| **Přesnost zaokrouhlení aplikace** | Určuje velikost intervalu, který je povolen jako rozdíl zaokrouhlení při vzájemném použití položek v různých měnách. |
+| **Zaokrouhlení převodu LCY. Debetní účet** | Určuje informace o převodu, které musí také obsahovat debetní účet, pokud chcete vložit opravné řádky pro zaokrouhlení rozdílů ve finančních denících pomocí příkazu ** Vložit konv. LCY Rndg. zakázky**. |
+| **Konverze LCY Zaokrouhlovací kreditní účet** | Určuje informace o převodu, které musí také obsahovat debetní účet, pokud chcete vložit opravné řádky pro zaokrouhlení rozdílů ve finančních denících pomocí příkazu ** Vložit konv. LCY Rndg. zakázky**. |
+| **Poslední datum úpravy** | Datum poslední měnové úpravy. |
+| **Datum poslední změny** | Datum změny nastavení měny. |
+| **Tolerance platby %** | Maximální tolerance platby % nastavená pro tuto měnu. Další informace naleznete v tématu [ Tolerance platby a Tolerance platební slevy](finance-payment-tolerance-and-payment-discount-tolerance.md). |
+| **Max. Částka tolerance platby** | Maximální částka tolerance platby nastavená pro tuto měnu. Další informace naleznete v tématu [ Tolerance platby a Tolerance platební slevy](finance-payment-tolerance-and-payment-discount-tolerance.md). |
+| **Měnový faktor** | Určuje vztah mezi měnou a místní měnou pomocí skutečného kurzu měny. |
+| **Účet realizovaných zisků hk** | Určuje finanční účet, který se používá k zaúčtování kurzových zisků pro měnové úpravy mezi místní měnou (LCY) a další měnou vykazování. The exchange rate gains are calculated when the Adjust Exchange Rates batch job is run to adjust general ledger accounts. This field might not be visible by default. It can be retrieved by personalizing the page. |
 | **Realized G/L Losses Account** | Specifies the G/L account that is used to post exchange rate losses for currency adjustments between the local currency (LCY) and the additional reporting currency. The exchange rate gains are calculated when the Adjust Exchange Rates batch job is run to adjust general ledger accounts. This field might not be visible by default. It can be retrieved by personalizing the page. |
 | **Residual Gains Account** | Specifies the G/L account that is used to post residual gain amounts (rounding differences) when an additional reporting currency is used in the general ledger application area. This field might not be visible by default. It can be retrieved by personalizing the page. |
 | **Residual Losses Account** | Specifies the G/L account that is used to post residual loss amounts (rounding differences) when an additional reporting currency is used in the general ledger application area. This field might not be visible by default. It can be retrieved by personalizing the page. |
