@@ -59,8 +59,8 @@ Chcete-li nastavit další měnu pro hlášení, je nutné postupovat takto:
 |---------------------------------|---------------------------------------|  
 | **Realized GL Gains Account** | Účet hlavní knihy, na který budou zaúčtovány kurzové zisky pro měnové úpravy mezi LM a přídavnou měnou vykazování. |
 | **Realized GL Losses Account** | Účet hlavní knihy, na který budou zaúčtovány kurzové ztráty pro měnové úpravy mezi LM a přídavnou měnou vykazování. |
-| **Residual Gains Account** | Účet hlavní knihy, na který jsou zaúčtovány zbývající částky, které jsou zisky, pokud účtujete v oblasti aplikace hlavní knihy v LM i v přídavné měně pro hlášení. |
-| **Residual Losses Account** | Účet hlavní knihy, na který jsou zaúčtovány zbývající částky, které jsou ztrátami, pokud účtujete v oblasti aplikace hlavní knihy v LM i v přídavné měně pro hlášení. |
+| **Reziduální účet zisků<x2/> | Účet hlavní knihy, na který jsou zaúčtovány zbývající částky, které jsou zisky, pokud účtujete v oblasti aplikace hlavní knihy v LM i v přídavné měně pro hlášení. |
+| <g1/>Reziduální účet ztrát** | Účet hlavní knihy, na který jsou zaúčtovány zbývající částky, které jsou ztrátami, pokud účtujete v oblasti aplikace hlavní knihy v LM i v přídavné měně pro hlášení. |
 
 > [!NOTE]  
 > Residual amounts can occur when [!INCLUDE[prod_short](includes/prod_short.md)] rounds debit and credit amounts that have been converted from LCY to an additional reporting currency.

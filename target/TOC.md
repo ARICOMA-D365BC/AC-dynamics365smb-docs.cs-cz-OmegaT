@@ -1380,7 +1380,7 @@
 #### Core Finance
 ##### [Swiss General Ledger Accounts](LocalFunctionality/Switzerland/swiss-general-ledger-accounts.md)
 ##### [Balance](LocalFunctionality/Switzerland/balance.md)
-##### [Adjust Exchange Rates](LocalFunctionality/Switzerland/how-to-adjust-exchange-rates.md)
+##### Úprava směnných kurzů
 ##### [View Temporary Balances in General Ledger Journals](LocalFunctionality/Switzerland/how-to-view-temporary-balances-in-general-ledger-journals.md)
 ##### [Print General Ledger Setup Information](LocalFunctionality/Switzerland/how-to-print-general-ledger-setup-information.md)
 #### Purchasing
