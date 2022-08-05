@@ -46,7 +46,7 @@ If there's a ![Personalization blocked](media/personalization-blocked-icon.png "
 
 <!-- Only text is translated, so removing this image for non-English UX reasons.  ![Personalize blocked.](media/personalization-blocked.png "Personalize lock") -->
 
-The reason is that the Role Center or role that is currently associated with your user account modifies this page specifically for your role. Contact your administrator for assistance. Alternatively, try switching to a Role Center that does include role-tailoring for this page. For more information, see [Change Basic Settings](ui-change-basic-settings.md).
+The reason is that the Role Center or role that is currently associated with your user account modifies this page specifically for your role. Požádejte o pomoc správce. Alternatively, try switching to a Role Center that does include role-tailoring for this page. For more information, see [Change Basic Settings](ui-change-basic-settings.md).
 
 ## Viz také
 

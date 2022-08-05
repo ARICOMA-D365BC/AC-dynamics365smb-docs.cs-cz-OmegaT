@@ -122,14 +122,14 @@ You're now ready to start using the add-in in Outlook.
 
 ## Viz také
 
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Getting Business Central on my Mobile Device](install-mobile-app.md)  
-[Send Documents by Email](ui-how-send-documents-email.md)  
-[Finance](finance.md)  
-[Sales](sales-manage-sales.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Minimum Requirements for Outlook](product-requirements.md#outlook)  
-[Use add-ins in Outlook on the web](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
+[Příprava na podnikání](ui-get-ready-business.md)    
+[Získání Business Cental na mobilní zařízení](install-mobile-app.md)    
+[Odesílání dokladů pomocí Emailu](ui-how-send-documents-email.md)    
+[Finance](finance.md)    
+[Prodej](sales-manage-sales.md)    
+[Nakupování](purchasing-manage-purchasing.md)    
+[Minimální požadavky na Outlook](product-requirements.md#outlook)    
+[Pouižtí add-inů ve vebové aplikaci Outlooku](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
