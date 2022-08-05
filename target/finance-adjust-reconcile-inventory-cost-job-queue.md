@@ -37,7 +37,7 @@ Creating the job queue entries can be tricky, even for an experienced consultant
 Alternatively, you can create job queue entries manually. The following procedure shows how to set the **Adjust Cost - Item Entries** batch job to automatically run daily, but the same steps apply to the **Post Inventory Cost to G/L** batch job.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job Queue Entries**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. In the **Object Type to Run** field, choose *Report*.
 4. In the **Object ID to Run** field, choose *795*, **Adjust Cost - Item Entries**.
 5. In the **Next Run Date Formula** field, enter *1D*.

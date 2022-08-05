@@ -24,7 +24,7 @@ In the following procedure, a firm planned production order is created. You can 
 ## To create a production order header
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. zakázky** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. In the **No.** field, insert the next number in the series.
 4. In the **Source Type** field, select the source of the production order.
 

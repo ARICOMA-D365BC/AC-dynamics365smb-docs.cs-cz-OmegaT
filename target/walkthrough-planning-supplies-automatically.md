@@ -88,7 +88,7 @@ V reakci na novou prodejní objednávku na pět turistických kol zahajuje Ricar
 ### Vytvoření prodejní objednávky
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Na stránce **Prodejní objednávka** vyplňte pole, jak je popsáno v následující tabulce.
 
    | Zákazník-název | Datum odeslání | Číslo zboží | Lokace | Množství |
@@ -207,7 +207,7 @@ Systém plánování vypočítává nejlepší způsob, jak pokrýt poptávku po
 
 ### Vytvoření nové prodejní poptávky s odpovídajícím způsobem přeplánování
 
-1. Vyberte akci **Nový**.
+1. Vyberte **Nový** Akce.
 2. Na stránce **Prodejní objednávka** vyplňte pole, jak je popsáno v následující tabulce.
 
    | Zákazník-název | Datum odeslání | Číslo zboží | Lokace | Množství |

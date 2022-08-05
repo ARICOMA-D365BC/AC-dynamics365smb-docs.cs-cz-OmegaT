@@ -52,7 +52,7 @@ Before you can process customer payments electronically by exporting direct debi
 ### To set up the customer's payment method for SEPA direct debit
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Methods**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Set up a payment method. Fill in the direct debit\-specific fields as described in the following table.
 
    | Pole | Popis |

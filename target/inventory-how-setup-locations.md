@@ -35,7 +35,7 @@ Choose the **Zones** or **Bins** actions to view information about zones and bin
 ### To set up a location
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Lokace** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Na stránce **Karta lokace** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Opakujte kroky 2 a 3 pro každou lokaci, kde chcete uchovávat zásoby.
 
@@ -51,7 +51,7 @@ If you have multiple locations, you can define transfer routes between locations
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Trasy transferu** a poté zvolte související odkaz.
 2. Případně na jakékoli **Kartě lokace** vyberte tlačítko **Trasy transferu**.
-3. Vyberte akci **Nový**.
+3. Vyberte **Nový** Akce.
 4. Na stránce **Karta lokace** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 Nyní můžete transferovat zboží mezi dvěma lokacemi. Pro více informací navštivte [Převádění zásob mezi lokacemi](inventory-how-transfer-between-locations.md).

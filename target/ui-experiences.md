@@ -49,7 +49,7 @@ All new information about the users' plans and their assigned user groups are no
 
 ### To select the Premium experience
 You can now proceed to select the new experience.
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Informace o společnosti** a vyberte související odkaz.
 2. On the **Company Information** page, on the **User Experience** FastTab, select Premium  in the **Experience** field.
 
 ## Help Assumes Premium Experience

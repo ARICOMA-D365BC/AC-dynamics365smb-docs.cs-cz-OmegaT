@@ -29,7 +29,7 @@ Dříve než můžete TNG postup založit, musí být nastaveno následující:
 ## Vytvoření TNG postupů
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. In the **Type** field, select **Serial** to calculate the production routing according to the value in the **Operation No.** field.  
    Select **Parallel** to calculate the operations according to the value in the **Next Operation No.** field.

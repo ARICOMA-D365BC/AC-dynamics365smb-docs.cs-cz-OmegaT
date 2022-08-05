@@ -120,7 +120,7 @@ Susan vytvoří zálohovou fakturu a odešle ji zákazníkovi.
 ### Vytvoření prodejní objednávky se zálohou
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. In the **Customer Name** field, choose **Trey Research**.
 4. Close the overdue balance warning that is displayed.
 5. Vyplňte dva prodejní řádky následujícími informacemi.

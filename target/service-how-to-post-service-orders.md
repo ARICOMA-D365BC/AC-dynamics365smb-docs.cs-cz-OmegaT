@@ -56,7 +56,7 @@ When posting the order, the corresponding ledger entries and posted documents ar
 When you have created a service credit memo and filled it in, you can post the credit memo. If there are errors or a lack of information on the credit memo while posting, the process will be interrupted by an error message.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Credit Memos**, and then choose the related link.
-2. Create a new service credit memo. Vyberte akci **Nový**.
+2. Create a new service credit memo. Vyberte **Nový** Akce.
 3. Fill in the necessary fields.
 4. Vyberte tlačítko **Zaúčtovat**. If you want to print the credit memo at the same time as you post, choose the **Post and Print** action instead.
 5. To test credit memos before you post them, choose **Test Report**. When you run the report, the posting dates specified in the document are verified.

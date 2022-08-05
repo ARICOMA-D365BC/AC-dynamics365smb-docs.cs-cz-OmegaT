@@ -45,7 +45,7 @@ First you create a shipment document from a business source document. Then you p
 Typically, the employee who is responsible for shipping creates a warehouse shipment. The following procedure describes how to create the shipment manually in the default version of [!INCLUDE[prod_short](includes/prod_short.md)], but your organization might have automated part of the process, such as with the use of hand-held or mounted scanners that are supported by external providers.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Shipments**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 
    Fill in the fields on **General** FastTab. When you retrieve source document lines, some of the information is copied to each line.
 

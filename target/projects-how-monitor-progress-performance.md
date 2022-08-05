@@ -45,7 +45,7 @@ Můžete vytvořit projekt s nedokončenou výrobou, který bude odrážet potř
 Při vytváření nového projektu musíte určit, která metoda nedokončené výroby projektu se použije. V některých případech byla pro Vás jako výchozí nastavena metoda nedokončené výroby projektu, kterou můžete použít.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
-2. Vyberte akci **Nový**. For more information, see [Create Jobs](projects-how-create-jobs.md).
+2. Vyberte **Nový** Akce. For more information, see [Create Jobs](projects-how-create-jobs.md).
 3. On the **Job Card** page, in the **WIP Method** field, select a WIP method from the list. Pokud byla definována výchozí metoda, můžete v případě potřeby vybrat jinou možnost.
 
 ## Výpočet Nedokončené výroby

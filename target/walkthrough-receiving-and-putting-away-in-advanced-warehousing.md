@@ -89,7 +89,7 @@ Purchase orders are the most common type of inbound source document.
 ### To create the purchase orders
 
 1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Create a purchase order for vendor 10000 on the work date (January 23) with the following purchase order lines.
 
    | Zboží | Location code | Množství |
@@ -103,7 +103,7 @@ Purchase orders are the most common type of inbound source document.
 
    Proceed to create the second purchase order.
 
-5. Vyberte akci **Nový**.
+5. Vyberte **Nový** Akce.
 6. Create a purchase order for vendor 20000 on the work date (January 23) with the following purchase order lines.
 
    | Zboží | Location code | Množství |
@@ -121,7 +121,7 @@ On the **Warehouse Receipt** page, you can manage multiple inbound orders for so
 
 ### To receive the items
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Receipts**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Do pole **Kód lokace** zadejte BÍLÝ.
 4. Select **Actions** then **Functions** then choose the **Use Filters to Get Src. Docs.** action.
 5. In the **Code** field, enter **ACCESSORY**.

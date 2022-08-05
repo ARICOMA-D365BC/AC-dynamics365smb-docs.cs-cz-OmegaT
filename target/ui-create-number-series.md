@@ -63,7 +63,7 @@ When you open a new document or card that a number series exists for, then the r
 ## To create a new number series
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **No. Series**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Na novém řádku vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Choose the **Lines** action.
 5. On the **No. Series Lines** page, fill in the fields to define the actual use and content of the number series that you created in step 2.

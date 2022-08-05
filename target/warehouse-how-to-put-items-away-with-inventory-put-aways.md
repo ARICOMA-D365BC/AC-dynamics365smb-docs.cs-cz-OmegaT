@@ -40,7 +40,7 @@ When the warehouse request is created, a warehouse employee assigned to putting 
 ## To create an inventory put-away based on the source document
 Now that the request is created, the warehouse employee can create a new inventory put-away based on the released source document.
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Put-away**, and then select the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. In the **Source Document** field, select the type of source document you are putting away for.
 4. In the **Source No.** field, select the source document.
 5. Alternatively, choose the **Get Source Document** action to select the document from a list of inbound source documents that are ready for put-away at the location.

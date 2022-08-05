@@ -40,7 +40,7 @@ The value in the **Qty. Received** field is updated. If this is a partial receip
 ## To receive items with a warehouse receipt
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Receipts**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 
    Fill in the fields on **General** FastTab. When you retrieve source document lines, some of the information is copied to each line.
 
@@ -95,7 +95,7 @@ The following describes how to set up and assign an over-receipt code to an item
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
 2. Open the card for an item that you suspect may sometimes be delivered with a higher quantity than ordered.
 3. Choose the look-up button in the **Over-Receipt Code** field.
-4. Vyberte akci **Nový**.
+4. Vyberte **Nový** Akce.
 5. On the **Over-Receipt Codes** page, create one or more new lines that define different over-receive policies. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)].
 6. Select a line, and then choose the **OK** button.
 

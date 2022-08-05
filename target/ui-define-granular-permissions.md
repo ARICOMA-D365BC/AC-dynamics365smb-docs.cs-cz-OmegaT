@@ -268,7 +268,7 @@ However, the user doesn't need to have full access to the Sales Line table to ru
 
 Administrators can define periods of time during which specified users are able to post. Administrators can also specify if the system logs how much time users are signed in. Similarly, administrators can assign responsibility centers to users. For more information, see [Work with Responsibility Centers](inventory-responsibility-centers.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **User Setup**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Nastavení uživatelů** a poté vyberte související odkaz.
 2. On the **User Setup** page opens, choose the **New** action.
 3. In the **User ID** field, enter the ID of a user, or choose the field to see all current Windows users in the system.
 4. Podle potřeby vyplňte pole.

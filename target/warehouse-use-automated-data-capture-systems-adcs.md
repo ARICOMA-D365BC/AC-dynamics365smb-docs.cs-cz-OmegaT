@@ -34,7 +34,7 @@ To use Automated Data Capture System, you must enable the ADCS web service.
 ## To enable and publish the ADCS web service
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Web Services**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. On the **Web Services** page, enter the following information on a new line:
 
    | Pole | Hodnota |
@@ -75,7 +75,7 @@ Každému zboží skladu, které chcete použít s ASSD, musí být přiřazen i
 Jako uživatele automatizovaného systému pro sběr dat (ASSD) můžete přidat libovolného uživatele. Pokud to uděláte, musí uživatel zadat také heslo. Volitelně můžete také poskytnout připojení, které identifikuje uživatele ASSD jako zaměstnance skladu. Heslo uživatele ASSD se může lišit od přihlašovacího hesla uživatele systému Windows. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **ADCS Users**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. In the **Name** field, enter a name for the user. Název nesmí obsahovat více než 20 znaků včetně mezer.
 4. In the **Password** field, enter a password. Heslo je maskováno.
 
@@ -96,7 +96,7 @@ Miniformuláře se používají k popisu informací, které chcete prezentovat n
 
 ### Vytvoření miniformiuláře pro ADCS
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Miniforms**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. In the **Code** field, enter a code for the miniform. Volitelně zadejte hodnoty do všech ostatních polí.
 
    Select the **Start Miniform** check box to indicate that the miniform is the first form that the user sees at logon.

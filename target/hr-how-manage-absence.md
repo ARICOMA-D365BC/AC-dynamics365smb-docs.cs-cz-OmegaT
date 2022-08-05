@@ -27,7 +27,7 @@ Chcete-li získat smysluplné statistiky, měli byste při evidenci nepřítomno
 Absence zaměstnanců můžete evidovat denně nebo v jiném intervalu, který vyhovuje vašim organizačním potřebám.
 
 1. V pravém horním rohu vyberte ikonu **Hledat stránku nebo sestavu**, zadejte **Evidence absence**, a pak vyberte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Vyplňte řádek pro každou nepřítomnost zaměstnance, kterou chcete evidovat.
 4. Zavřete stránku.
 

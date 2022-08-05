@@ -62,7 +62,7 @@ Each template consists of a header and a line for each field to include in the t
 Novou šablonu dat můžete rychle vytvořit zkopírováním informací z existující šablony dat, kterou potom upravíte.
 
 1. Open the **Configuration Templates** page.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Fill in the **Code** field.
 4. Choose the **Copy Config. Template** action.
 5. On the **Configuration Templates** page, select an existing template to copy, and then choose the **OK** button.
@@ -72,7 +72,7 @@ ID tabulky, název tabulky a řádky existující šablony dat jsou vloženy do 
 ### Ruční vytvoření záhlaví šablony dat
 
 1. Open the **Configuration Templates** page.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Fill in the **Code** field.
 4. In the **Table ID** field, enter the table to which this template applies. The **Table Name** field is automatically filled in when the **Table ID** field is set.
 

@@ -159,7 +159,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 ### Vytváření zboží montáže
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Vytvořte první zboží montáže na základě následujících informací.
 
    | Pole | Hodnota |
@@ -210,7 +210,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 ### Prodej zboží montáže
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Vytvořte dva řádky prodejní objednávky pro zákazníka 62000, Kutilka, s.r.o, k pracovnímu datu s následujícími informacemi.
 
    | **Typ** | **Popis** | **Množství** | Množství  k montáži na zakázku | Datum odeslání |

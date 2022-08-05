@@ -31,7 +31,7 @@ Before you import a configuration package it is a good idea to verify that the f
 2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Packages**, and then select the related link.
 3. Choose the **Import Package** action.
 4. Navigate to the location where you have saved the .rapidstart configuration package file, and then choose the **Open** button.
-5. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Company Information**, and then choose the related link. Enter information about the company in the company information card. Include information, such as bank details. You can also provide a logo for the company.
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Informace o společnosti** a vyberte související odkaz. Enter information about the company in the company information card. Include information, such as bank details. You can also provide a logo for the company.
 
 All the tables that you have designated for inclusion in the new company are imported. At this point, you can apply the package data to the database, or adjust and modify the table data to meet your customer specifications.
 

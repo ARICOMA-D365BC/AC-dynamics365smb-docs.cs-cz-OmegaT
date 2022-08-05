@@ -20,7 +20,7 @@ Společnosti a jejím obchodním partnerům, jako jsou zákazníci, dodavatelé 
 ## Nastavení základního kalendáře
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Base Calendar**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. Fill in the **Code** field.
 4. Choose the **Maintain Base Calendar Changes** action.
 5. On the **Base Calendar Changes** page, use the **Recurring System** field to mark a particular date or day as a recurring nonworking day. You can select either the **Annual Recurring** or **Weekly Recurring** option.

@@ -40,7 +40,7 @@ In versions older than 2022 release wave 1, you must fill in three intercompany-
 ## To set up intercompany partners
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Intercompany Partners**, and then choose the related link.
-2. Vyberte akci **Nový**.
+2. Vyberte **Nový** Akce.
 3. On the **Intercompany Partner** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Repeat steps 2 and 3 for all other companies that are part of this intercompany setup.
 
