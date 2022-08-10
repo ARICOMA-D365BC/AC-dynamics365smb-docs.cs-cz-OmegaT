@@ -32,7 +32,7 @@ After you fill in the deposit information and lines, you must post it. Posting w
 
 The **Bank Deposit** report displays customer and vendor deposits with the original deposit amount, the amount of the deposit that remains open, and the amount applied. The report also shows the total posted deposit amount to reconcile.
 
-## Before you start
+## Než začnete
 There are a few things to set up before you can use bank deposits. You must have a number series and general journal template ready. You should also specify whether to post bank deposit amounts as a lump sum. That is, as a total of all the amounts on the deposit lines. Otherwise, each line is posted as an individual entry. Posting a deposit as a single bank ledger entry can make it easier to do bank reconciliation.
 
 ### Number Series and Lump Sum Deposits

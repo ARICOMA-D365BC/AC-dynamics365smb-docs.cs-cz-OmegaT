@@ -12,51 +12,51 @@ ms.date: 04/01/2021
 ms.author: bholtorf
 
 ---
-# Consolidate Balances for a Company that is a Customer and a Vendor
-A company that you do business with might be both a customer and a vendor. When that's the case, you can avoid making unnecessary payments or receipts, and perhaps save on transaction fees, by consolidating the company's customer and vendor balances. Consolidation compares the company's balances as a vendor and as a customer, and then nets the amount so that that either the customer or vendor balance remains, depending on which amount was higher.
+# Konsolidace zůstatků pro společnost, která je zákazníkem a dodavatelem
+Společnost, se kterou obchodujete, může být zákazníkem i dodavatelem. V takovém případě se můžete vyhnout zbytečným platbám nebo příjmům a možná ušetřit na transakčních poplatcích konsolidací zůstatků zákazníků a dodavatelů společnosti. Konsolidace porovná zůstatky společnosti jako dodavatele a jako odběratele a poté započítá částku tak, aby zůstal zůstatek odběratele nebo dodavatele v závislosti na tom, která částka byla vyšší.
 
-To consolidate the balances, you must first link the customer and vendor companies through a contact that has the type **Company**. A customer or vendor can only have one contact of the type **Company**. For more information, see [Create Contacts](marketing-create-contact-companies.md).
+Chcete-li konsolidovat zůstatky, musíte nejprve propojit společnosti zákazníka a dodavatele prostřednictvím kontaktu, který má typ **Společnost**. Odběratel nebo dodavatel může mít pouze jeden kontakt typu **Společnost**. Další informace naleznete v části [Vytváření kontaktů](marketing-create-contact-companies.md).
 
-After you link the companies, the **Customer Card** page offers the **Balance as Vendor** field, and the **Vendor Card** page includes the **Balance as Customer** field.
+Po propojení společností stránka **Karta zákazníka** nabídne pole **Zůstatek jako prodejce** a stránka **Karta dodavatele** obsahuje pole **Zůstatek jako Zákazník**.
 
-Though it's not a requirement, the customer and vendor companies are typically the same legal entity.
+I když to není požadavek, společnosti zákazníka a dodavatele jsou obvykle stejná právnická osoba.
 
-## Before you start
-Before you consolidate balances, specify a few settings on the **Marketing Setup** page.
+## Než začnete
+Před konsolidací zůstatků zadejte na stránce **Nastavení marketingu** několik nastavení.
 
-* On the **Interactions** FastTab, you must specify business relation codes in the **Customers** and **Vendors** fields. [!INCLUDE[prod_short](includes/prod_short.md)] uses this information to determine the type of relation to display for contacts.
-* Optional: On the **Duplicates** FastTab, turn duplicate search on or off. By default, duplicate search is turned on. For more information, see [Handling duplicates](#handling-duplicates).
+* Na pevné záložce **Interakce** je nutné zadat kódy obchodních vztahů v polích **Odběratelé** a **Dodavatelé**. [! INCLUDE[prod_short](includes/prod_short.md)] používá tyto informace k určení typu relace, která se má zobrazit pro kontakty.
+* Volitelné: Na pevné záložce **Duplikáty** zapněte nebo vypněte duplicitní vyhledávání. Ve výchozím nastavení je duplicitní vyhledávání zapnuto. Další informace naleznete v tématu [Zpracování duplicit](#handling-duplicates).
 
-## Link an existing customer and vendor company thorough a contact
+## Propojte stávajícího zákazníka a dodavatelskou společnost prostřednictvím kontakt
 The following steps describe how to link a customer and a vendor through a contact.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer** or **Vendor**, and then choose the related link.
-2. Choose the customer or vendor, and then choose the **Contact** action.
-3. If the **Contact Business Relation** field contains a value other than **None**, you must remove the relation. To do that, use the **Business Relation** action, and then delete the relation.
-4. Depending on whether you chose **Customer** or **Vendor** in step 1, choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, and then enter the opposite party. That is, if you chose **Vendor**, you should search for **Customer**.
-5. Choose the vendor or customer, and then choose the **Contacts** action.
-6. Choose the **Link with existing** action, and then the **Customer** or **Vendor** option.
-7. Choose the customer or vendor.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikona, zadejte **Zákazník** nebo **Vendor**, a poté vyberte související odkaz.
+2. Vyberte odběratele nebo dodavatele a poté zvolte akci **Kontaktovat**.
+3. Pokud pole **Obchodní vztah kontaktu** obsahuje jinou hodnotu než **Žádná**, je nutné relaci odebrat. Chcete-li to provést, použijte akci **Obchodní vztah** a poté vztah odstraňte.
+4. V závislosti na tom, zda jste v kroku 1 vybrali **Zákazník** nebo **Dodavatel**, vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") a poté zadejte protější stranu. To znamená, že pokud zvolíte **Dodavatel**, měli byste hledat **Zákazník**.
+5. Vyberte dodavatele nebo zákazníka a poté vyberte akci **Kontakty**.
+6. Zvolte akci **Propojit s existující** a poté možnost **Zákazník** nebo **Dodavatel**.
+7. Vyberte zákazníka nebo dodavatele.
 
-## Create a vendor from a customer, or vice versa
-You can create a new vendor from an existing customer, or a new customer from a vendor. From the **Customer** or **Vendor** pages, open the **Contact** page. Choose the **Create as** action, and then either the **Customer** or **Vendor** options.
+## Vytvoření dodavatele od zákazníka nebo naopak
+Můžete vytvořit nového dodavatele od existujícího zákazníka nebo nového zákazníka od dodavatele. Na stránce **Zákazník** nebo **Dodavatel** otevřete stránku **Kontakt**. Zvolte akci **Vytvořit jako** a pak možnosti **Zákazník** nebo **Dodavatel**.
 
-## Create a new customer or vendor and link them through a vendor or customer contact
-1. Create a new customer or vendor. For more information, see [Register New Customers](sales-how-register-new-customers.md) or [Register New Customers](sales-how-register-new-customers.md).
-2. After you set up the customer or vendor, choose the **Create** action, and then choose either the **Customer** or **Vendor** options.
+## Vytvořte nového zákazníka nebo dodavatele a propojte je prostřednictvím kontaktu na dodavatele nebo zákazníka
+1. Vytvořte nového zákazníka nebo dodavatele. Další informace naleznete v tématu [Registrace nových zákazníků](sales-how-register-new-customers.md) nebo [Registrace nových zákazníků](sales-how-register-new-customers.md).
+2. Po nastavení zákazníka nebo dodavatele zvolte akci **Vytvořit** a poté zvolte možnosti **Zákazník** nebo **Dodavatel**.
 
-## To consolidate the customer and vendor balances for a contact company
-On the **Payment Journal** page, use the **Net Customer/Vendor Balances** action to consolidate the customer and vendor balances into a single net amount. The action creates, but does not post, payment journal lines that contain the net balances.
+## Konsolidace zůstatků odběratelů a dodavatelů pro kontaktní společnost
+Na stránce **Deník plateb** použijte akci **Čisté zůstatky zákazníků/dodavatelů** ke konsolidaci zůstatků zákazníků a dodavatelů do jedné čisté částky. Akce vytvoří, ale nezaúčtuje řádky deníku plateb, které obsahují čisté zůstatky.
 
 > [!NOTE]
-> If the customer or vendor balances contain amounts that are in different currencies, a line is created for the amount in each currency.
+> Pokud zůstatky zákazníka nebo dodavatele obsahují částky, které jsou v různých měnách, vytvoří se řádek pro částku v každé měně.
 
-## Handling duplicates
-If you turn on duplicate search on the **Duplicates** FastTab on the **Marketing Setup** page, a warning will display when you change the values of fields that are part of the setup for duplicate search strings. When a duplicate is found, you can take the following actions:
+## Zpracování duplicit
+Pokud zapnete duplicitní vyhledávání na pevné záložce **Duplikáty** na stránce **Nastavení marketingu**, zobrazí se upozornění při změně hodnot polí, která jsou součástí nastavení duplicitních vyhledávacích řetězců. Když je nalezen duplikát, můžete provést následující akce:
 
-* Combine the duplicate contacts into a single contact that is the same for both the customer and vendor by using the **Merge With** capability on the **Contact Card** page. Typically, merging contacts is done only when the customer and vendor are the same legal entity. For more information, see [Merge Duplicate Records](sales-how-merge-duplicate-records.md).
-* Delete the vendor business relation for the vendor or customer contact, and then use the **Link to Existing** action to link to a different contact.
+* Zkombinujte duplicitní kontakty do jednoho kontaktu, který je stejný pro zákazníka i dodavatele pomocí funkce **Sloučit s** na stránce **Karta kontaktu**. Sloučení kontaktů se obvykle provádí pouze v případě, že zákazník a dodavatel jsou stejná právnická osoba. Další informace naleznete v tématu [Sloučení duplicitních záznamů](sales-how-merge-duplicate-records.md).
+* Odstraňte obchodní vztah dodavatele pro kontakt dodavatele nebo zákazníka a potom pomocí akce **Odkaz na existující** vytvořte odkaz na jiný kontakt.
 
 ## Viz také
-[Sales](sales-manage-sales.md)  
-[Register New Customers](sales-how-register-new-customers.md)
+[Prodej](sales-manage-sales.md)    
+[Registrace nových zákazníků](sales-how-register-new-customers.md)  

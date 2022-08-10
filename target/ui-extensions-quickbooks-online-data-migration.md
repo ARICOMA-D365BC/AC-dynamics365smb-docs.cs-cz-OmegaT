@@ -35,7 +35,7 @@ We migrate only full amounts on sales and purchase documents. We do not update p
 > [!NOTE]  
 > We do not migrate purchase orders or sales orders.
 
-## Before you start
+## Než začnete
 
 An important part of the migration process is to specify the accounts to migrate transactions to. It's a good idea to plan this mapping before you migrate data. For example, the accounts where you post transactions for:
 
