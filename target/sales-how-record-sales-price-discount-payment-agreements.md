@@ -139,7 +139,7 @@ You can specify whether the new price list will use the settings from the header
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat<"), zvolte **Sešit prodejní ceny** a poté vyberte související odkaz.
 2. Vyberte ceník, který chcete zkopírovat, a poté zvolte **Kopírovat řádky**.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!NOTE]
    > You can't have two items that have the same settings but different prices. If that happens, a message will display when you activate the price list. Cenu, kterou chcete použít, můžete zvolit otevřením seznamu a odstraněním nesprávné ceny.

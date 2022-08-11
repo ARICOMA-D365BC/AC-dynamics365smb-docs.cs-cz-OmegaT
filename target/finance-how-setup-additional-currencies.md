@@ -109,7 +109,7 @@ Pro každý účet hlavní knihy je nutné určit, jak budou částky hlavní kn
 5. The **Adjust Add. Reporting Currency** batch job opens.
 
    Tato dávková úloha převádí částky LM u existujících položek na přídavnou měnu pro hlášení. The batch job uses a default exchange rate copied from the exchange rate that is valid on the work date on the **Currency Exchange Rates** page. Residual amounts that occur on conversion of LCY to additional reporting currency are posted to the residual gains and losses accounts specified on the **Currencies** page. Datum zaúčtování a číslo dokumentu pro tyto položky jsou stejné jako pro původní položku hlavní knihy. Po zaúčtování všech těchto zbývajících položek dávková úloha zaúčtuje položku zaokrouhlení k datu uzávěrky každého uzavřeného roku na účet nerozděleného zisku. Tím zajistíte, že konečný zůstatek účtů příjmů za každý uzavřený rok je 0 v LM i v přídavné měně pro vykazování.
-6. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+6. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 7. Zvolte tlačítko **OK** pro spuštění dávkové úlohy.
 
 Po spuštění dávkové úlohy budou částky na následujících existujících položkách v LM i v přídavné měně pro hlášení:

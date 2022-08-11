@@ -23,7 +23,7 @@ If scrap is produced during processing, it can be entered in the output journal.
 ## To post scrap manually
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Output Journal**, and then choose the related link.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. In the **Scrapped Quantity** field, enter the scrap quantity.
 4. In the **Scrap Code** field, enter the scrap code.
 5. Choose the **Post** action to post the specified scrap per operation.

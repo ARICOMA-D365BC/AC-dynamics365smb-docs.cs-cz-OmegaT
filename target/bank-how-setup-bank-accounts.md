@@ -87,7 +87,7 @@ The better mapping information that you do in the payment reconciliation journal
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Accounts**, and then choose the related link.
 2. On the **Bank Accounts** page, choose the **New** action.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    For example, the **Bank Acc. Posting Group** field connects the bank account to the underlying G/L account in the balance sheet. For more information, see [Set Up Posting Groups](finance-posting-groups.md).
 

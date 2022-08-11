@@ -30,7 +30,7 @@ Dříve než můžete TNG postup založit, musí být nastaveno následující:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Vyberte **Nový** Akce.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. In the **Type** field, select **Serial** to calculate the production routing according to the value in the **Operation No.** field.  
    Select **Parallel** to calculate the operations according to the value in the **Next Operation No.** field.
 5. To edit the routing, set the **Status** field to **New** or **Under Development**. To activate it, set the **Status** field to **Certified**.
@@ -105,7 +105,7 @@ Princip verze umožňuje spravovat několik verzí TNG postupu. Struktura verze 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Routings**, and then choose the related link.
 2. Select the routing to be copied, and then choose the **Versions** action.
 3. On the **Routing Versions** page, choose the **New** action.
-4. Podle potřeby vyplňte pole.
+4. Vyplňte pole podle potřeby.
 5. In the **Version Code** field, enter the unique identification of the version. Je povolena jakákoli kombinace číslic a písmen.
 
    The newly created version is automatically assigned the status **New**.

@@ -20,7 +20,7 @@ For each job, you then specify individual job cards with information about price
 
 ## To set general information for jobs
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs Setup**, and then choose the related link.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!NOTE]
 > The **Apply Usage Link by Default** field indicates if job ledger entries are linked to job planning lines by default. Choose the field if you want to apply this setting to all new jobs that you create. You can enable or disable job usage tracking for a specific job by changing value of the **Apply Usage Link** field on the individual job card. The consequenses are explained in the following section.

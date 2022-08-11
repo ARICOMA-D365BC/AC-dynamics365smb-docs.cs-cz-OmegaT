@@ -58,7 +58,7 @@ You can edit the information on vendor cards at any time. However, if you have p
 ## To save the vendor card as a template
 
 1. On the **Vendor Card** page, choose the **Save as Template** action. The **Vendor Template** page opens showing the vendor card as a template.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. To reuse dimensions in templates, choose the **Dimensions** action. The **Dimension Templates** page opens showing any dimension codes that are set up for the vendor.
 4. Edit or enter dimension codes that will apply to new vendor cards created by using the template.
 5. When you have completed the new vendor template, choose the **OK** button.  

@@ -24,7 +24,7 @@ Before you can define which document layout to use for which processes, and whic
 The steps in the following sections describe how to define sales document layouts from the **Customer Card** page. For vendors, the steps are the same from the **Vendor Card** page.
 
 ## To load the standard document layouts for sales documents for a customer
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the **Customer Card** page for the customer, and then choose the **Document Layouts** action.
 3. On the **Document Layouts** page, choose the **Copy from Report Selection** action.
 
@@ -33,7 +33,7 @@ The **Document Layouts** page displays all layouts that are available for sales 
 ## Výběr vlastního rozvržení sestavy, které se použije pro prodejní doklad
 If you haven't already created a custom report layout for the type of document, you'll need to do that first. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the **Customer Card** page for the customer, and then choose the **Document Layouts** action.
 3. On the **Document Layouts** page, on the line for a report layout that you want to use a custom layout for, choose the **Custom Layout Description** field.
 4. On the **Custom Report Layouts** page, select the document layout that you want to use for the type of sales document. For more information, see [Create and Modify Custom Report Layouts](ui-how-create-custom-report-layout.md).

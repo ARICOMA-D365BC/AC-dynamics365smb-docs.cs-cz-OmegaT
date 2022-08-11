@@ -99,7 +99,7 @@ Základní kalendáře jsou přiřazeny k vaší vlastní společnosti, zákazn�
 - On the **Location** card, the base calendar is assigned on the **Warehouse** FastTab.
 - On the **Shipping Agents** page, the base calendar is assigned on the **Shipping Agent Services** page.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the **Customer** card for whom you will assign a base calendar.
 3. On the **Shipping** FastTab, in the **Base Calendar Code** field, select the base calendar that you want to assign.
 

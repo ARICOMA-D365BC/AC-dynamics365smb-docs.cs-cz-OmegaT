@@ -66,7 +66,7 @@ If you want to set up multiple alternate resource prices based on the standard p
 If you have already set up alternate resource price for some resources, you can use a batch job to set up multiple alternate resource prices.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Suggest Res. Price Chg. (Price)**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 3. Zvolte tlačítko **OK**.
 4. When the batch job is finished, open the **Resource Price Changes** page to see the results of the batch job.
 

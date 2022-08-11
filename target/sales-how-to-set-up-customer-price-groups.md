@@ -52,7 +52,7 @@ Po nastavení cenových skupin zákazníka můžete na kartě zákazníka zadat 
 
 ### Zadání kódů cenových skupin zákazníka na kartě zákazníka
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 
 2. Otevřete příslušnou **kartu zákazníka** pro zákazníka, kterýho chcete mít jako součást cenové skupiny zákazníků.
 

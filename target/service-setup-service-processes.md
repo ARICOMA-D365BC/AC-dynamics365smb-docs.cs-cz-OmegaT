@@ -24,7 +24,7 @@ Následuje několik příkladů nastavení, která můžete použít pro procesy
 
 ## Zadání obecných a povinných nastavení
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení správce servisu** a poté vyberte související odkaz.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Viz také
 [Nastavení reporotování kódu poruch](service-how-setup-fault-reporting.md)  

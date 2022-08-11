@@ -50,7 +50,7 @@ You reimburse employees by posting payments to their bank account on the **Payme
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.
 2. Open the relevant payment journal batch. For more information, see [Work with General Journals](ui-work-general-journals.md).
-3. Podle potřeby vyplňte pole. For more information, see [Making Payments](payables-make-payments.md).
+3. Vyplňte pole podle potřeby. For more information, see [Making Payments](payables-make-payments.md).
 4. Alternatively, choose the **Suggest Employee Payment** action to automatically insert journal lines for pending employee reimbursements.
 5. Choose the **Post** action to register the reimbursement.
 

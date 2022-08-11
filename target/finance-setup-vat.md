@@ -76,7 +76,7 @@ Use codes that are easy to remember and describe the business posting group, suc
 Pro nastavení DPH obchodních účto skupin postupujte takto:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature 3.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Business Posting Group**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 
 Výchozí DPH obchodní účto skupiny nastavíte jejich propojením s obecnými obchodními účto skupinami. [!INCLUDE[prod_short](includes/prod_short.md)] automatically assigns the VAT business posting group when you assign the business posting group to a customer, vendor, or general ledger account.
 
@@ -88,7 +88,7 @@ It is a good idea to use codes that are easy to remember and describe the rate, 
 Pro nastavení DPH obchodních účto skupin postupujte takto:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature 4.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Product Posting Groups**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 
 ## Combine VAT posting groups in VAT posting setups
 
@@ -99,7 +99,7 @@ Nastavte tolik kombinací, kolik potřebujete. If you want to group VAT posting 
 Chcete-li kombinovat nastavení účtování DPH, postupujte takto:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature 5.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **VAT Posting Setup**, and then choose the related link.
-2. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
 ## Assign VAT posting groups by default to multiple entities
 

@@ -32,7 +32,7 @@ To benefit fully from payment suggestions, you must first prioritize your vendor
 ## To use the Suggest Vendor Payments function
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journals**, and then choose the related link.
 2. Open the relevant journal, and then choose the **Suggest Vendor Payments** action.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Zvolte tlačítko **OK**.
 
 ## To insert the due date as posting date on payment journal lines

@@ -78,7 +78,7 @@ For example, if you post an acquisition with the wrong date, you must correct it
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Ledger Entries**, and then choose the related link.
 2. In the **FA Ledger Entries** page, select the entry or entries that you want to cancel.
 3. Choose the **Actions** menu, and then choose the **Cancel Entries** action.
-4. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+4. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 5. Zvolte tlačítko **OK** pro spuštění dávkové úlohy.
 6. When the incorrect entry or entries are canceled, proceed to post the correct acquisition cost.
 

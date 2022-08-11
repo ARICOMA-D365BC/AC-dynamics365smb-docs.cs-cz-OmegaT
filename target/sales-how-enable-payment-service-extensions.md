@@ -26,7 +26,7 @@ The PayPal Payments Standard and WorldPay Payments Standard extensions are insta
 2. On the **Payment Services** page, choose the **New** action.
 3. Select the payment service, and then close the page.
 4. On the **Payment Services** page, choose the **Setup** action.
-5. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+5. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 6. Zavřete stránku.
 
 ## To select a payment service on a sales invoice

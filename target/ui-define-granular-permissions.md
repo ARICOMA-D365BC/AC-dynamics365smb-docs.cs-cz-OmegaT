@@ -271,7 +271,7 @@ Administrators can define periods of time during which specified users are able 
 1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Nastavení uživatelů** a poté vyberte související odkaz.
 2. On the **User Setup** page opens, choose the **New** action.
 3. In the **User ID** field, enter the ID of a user, or choose the field to see all current Windows users in the system.
-4. Podle potřeby vyplňte pole.
+4. Vyplňte pole podle potřeby.
 
 ## Viewing permission changes telemetry
 

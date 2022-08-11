@@ -240,7 +240,7 @@ The **Printer Selections** page let's you specify the printer that a report will
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Printer Selections**, and then select the related link. Instead, from the **Printer Management** page, select a printer, and then choose the **Printer Selections** action.
 2. Choose the **New** action to add a printer selection for a specific report.
-3. Podle potřeby vyplňte pole.
+3. Vyplňte pole podle potřeby.
 
 The specified report is now set up to print to the selected printer by default.
 

@@ -35,7 +35,7 @@ Kód sledování zboží odráží odráží různé úvahy společnosti týkaj�
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Kódy sledování zboží** a poté vyberte související odkaz.
 2. Vyberte **Nový** Akce.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. V záložce **Sériové číslo**, **Číslo šarže** a **Číslo balení** definujte zásady sledování zboží podle sériového čísla, čísla šarže a balení.
 
 > [!NOTE]  

@@ -15,29 +15,29 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Document Sending Profiles
-You can set each customer up with a preferred method of sending sales documents, so that you do not have to select a sending option every time you choose the **Post and Send** action.
+# Nastavení profilů odesílání dokladů
+Každému zákazníkovi můžete nastavit preferovaný způsob odesílání prodejních dokladů, abyste nemuseli vybírat možnost odesílání pokaždé, když zvolíte akci **Účtovat a Odeslat**.
 
-On the **Document Sending Profiles** page, you set up different sending profiles that you can select from in the **Document Sending Profile** field on a customer card. You can select the **Default** check box to specify that the document sending profile is the default profile for all customers, except for customers where the **Document Sending Profile** field is filled with another sending profile.
+Na stránce **Profily odesílání dokladů** můžete nastavit různé profily odesílání, ze kterých můžete vybírat v poli **Profil odesílání dokladů** na kartě zákazníka. Zaškrtnutím políčka **Výchozí** můžete určit, že profil odesílání dokladů je výchozím profilem pro všechny zákazníky s výjimkou zákazníků, u kterých je pole **Profil odesílání dokladů** vyplněno jiným profilem odesílání.
 
-When you choose the **Post and Send** action on a sales document, the **Post and Send Confirmation** dialog box shows the sending profile used, either the one set up for the customer or the default for all customers. In the dialog box, you can change the sending profile for the sales document. For more information, see [Invoice Sales](sales-how-invoice-sales.md).
+Pokud v prodejním dokladu zvolíte akci **Účtovat a Odeslat**, **Zaúčtovat a odeslat potvrzení** zobrazí v dialogovém okně použitý profil, buď ten, který je nastaven pro zákazníka, nebo výchozí pro všechny zákazníky. V dialogovém okně můžete změnit profil pro odesílání prodejního dokladu. Další informace naleznete v tématu [Prodejní faktury](sales-how-invoice-sales.md).
 <br><br>
 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4jzHH?rel=0]
 
-## To set up a document sending profile
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Document Sending Profiles**, and then choose the related link.
-2. On the **Document Sending Profiles** page, choose the **New** action.
-3. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+## Nastavení profilu odesílání dokladů
+1. Vyberte ikonu  ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") , zadejte  **Profily odesílání dokladů** a poté vyberte související odkaz.
+2. Na stránce **Profily odesílání dokumentů** vyberte akci **Nový**.
+3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To specify a sending profile on a customer card
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Open the card of the customer who you want to set up a sending profile for.
-3. In the **Document Sending Profile** field, select a profile that you have set up as described in the previous procedure.
+## K určení profilu odesílání na kartě zákazníka
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+2. Otevřete kartu zákazníka, pro kterého chcete nastavit profil odesílání.
+3. V poli **Profil odesílání dokladů** vyberte profil, který jste nastavili, jak je popsáno v předchozím postupu.
 
 ## Viz také
-[Setting Up Sales](sales-setup-sales.md)  
-[Sales](sales-manage-sales.md)  
+[Setting Up Sales](sales-setup-sales.md)    
+[Sales](sales-manage-sales.md)    
 [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

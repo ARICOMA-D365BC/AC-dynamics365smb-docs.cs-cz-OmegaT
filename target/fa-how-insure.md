@@ -54,7 +54,7 @@ The following procedure explains how to create an insurance journal line manuall
 You can use the **Index Insurance** batch job to update the value of the fixed assets that are covered.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Index Insurance**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 
    > [!NOTE]  
    > In the **Index Figure** field, you enter a decrease of 5%, for example, as 95, whereas you enter an increase of 2% as 102.
@@ -95,7 +95,7 @@ A dedicated matrix page shows the insurance values that are registered for each 
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insurance**, and then choose the related link.
 2. Select the relevant insurance policy, and then choose the **Total Value Insures per FA** action.
-3. Podle potřeby vyplňte pole.
+3. Vyplňte pole podle potřeby.
 4. Vyberte akce **Zobrazit matici**.
 5. To see the underlying insurance coverage ledger entries, choose a value in the matrix.
 

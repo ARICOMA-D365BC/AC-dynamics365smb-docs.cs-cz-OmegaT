@@ -39,7 +39,7 @@ Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulko
 ### Nastavte Podmínky Penále
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále<x5/> a vyberte související odkaz.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 3. Chcete-li použít více než jednu kombinaci podmínek penále, nastavte kód pro každou z nich.
 
    Pro každé období penále můžete zadat jednotlivé podmínky, které mohou zahrnovat další poplatky v LM i v cizí měně. Můžete definovat další poplatky v cizích měnách pro každý termín na stránce **Podmínky penále**.

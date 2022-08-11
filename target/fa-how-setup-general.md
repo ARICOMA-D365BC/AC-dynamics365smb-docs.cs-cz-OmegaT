@@ -20,7 +20,7 @@ Předtím než začnete se správou dlouhodobého majetku je nutné nastavit vý
 You define the general behavior or the fixed asset functionality and set up document number series in the  on the **Fixed Assets Setup** page.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets Setup**, and then choose the related link.
-2. Podle potřeby vyplňte pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Nastavení účto skupin dlouhodobého majetku
 Nastavení účto skupiny dlouhodobého majetku Položky pro tyto účto skupiny jsou zaúčtovány na stejné finanční účty.
@@ -51,7 +51,7 @@ Alokační klíče se vztahují na třídy dlouhodobého majetku, nikoli na jedn
 [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset journal template the first time that you open the **Fixed Asset Journal** page, but you can set up additional journal templates.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Journal Templates**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 
 ## Nastavení listů deníku dlouhodobého majetku
 Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každou šablonu. Zaměstnanci mohou mít například vlastní list deníku, který používá iniciály zaměstnance jako název listu deníku. For more information, see [Work with General Journals](ui-work-general-journals.md).
@@ -64,7 +64,7 @@ Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každo
 Vyhrazené deníky přeřazení slouží k převodu, rozdělení nebo kombinování dlouhodobého majetku. [!INCLUDE[prod_short](includes/prod_short.md)] automatically creates a fixed asset reclassification journal template the first time that you open the **FA Reclass. Journal** page, but you can set up additional reclassification journal templates. For more information, see [Work with General Journals](ui-work-general-journals.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Reclass. Journal Templates**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 
 ## Nastavení listů deníku přeřazení dlouhodobého majetku
 Můžete nastavit více listů deníku, což jsou jednotlivé deníky pro každou šablonu deníku přeřazení. Zaměstnanci mohou mít například vlastní list deníku přeřazení, který používá iniciály zaměstnance jako název listu deníku přeřazení. For more information, see [Work with General Journals](ui-work-general-journals.md).

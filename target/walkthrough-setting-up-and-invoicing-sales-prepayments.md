@@ -84,7 +84,7 @@ Phyllis requires all customers to be invoiced a 20% deposit for item 1896-S. Zá
 
 ### Přiřazení výchozích procent záloh zákazníkům a zboží
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the card for customer 20000 (Trey Research).
 3. On the **Payments** FastTab, in the **Prepayment %** field, enter **30**.
 4. Choose the **Related** action, select the **Sales** menu item, and then choose the **Prepayment Percentages** menu item.

@@ -61,7 +61,7 @@ The Dataverse Connection Setup guide can make it easier to connect the applicati
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assisted Setup**, and then choose the related link.
 2. Choose **Set up a connection to Microsoft Dataverse** to start the assisted setup guide.
-3. Podle potřeby vyplňte pole.
+3. Vyplňte pole podle potřeby.
 
 > [!NOTE]
 > If you aren't prompted to sign in with your administrator account, it's probably because pop-ups are blocked. To sign in, allow pop-ups from `https://login.microsoftonline.com`.

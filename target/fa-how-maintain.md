@@ -62,7 +62,7 @@ The **Maintenance Ledger Entries** page opens showing the entries that make up t
 In the **Maintenance - Analysis** report, you can select to see maintenance based on one, two, or three maintenance codes for a specified date or period. You can see the total of all selected assets or a total for each asset.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Maintenance Analysis**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 3. Choose the **Print** or **Preview** button.
 
 ## To view maintenance ledger entries
@@ -76,7 +76,7 @@ You can also study maintenance costs by viewing the maintenance ledger entries.
 In the **Maintenance - Details** report, you can view or print maintenance ledger entries for one or many fixed assets.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Maintenance Details**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 3. Choose the **Print** or **Preview** button.
 
 ## Viz také

@@ -28,7 +28,7 @@ Pokud mají zákazníci platby po splatnosti, musíte se rozhodnout, kdy a jak j
 ### Nastavení podmínek upomínky
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
-2. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+2. Vyplňte pole podle potřeby. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 3. Chcete-li použít více než jednu kombinaci podmínky upomínky, nastavte pro každou z nich vlastní kód.
 
 ## Úrovně upomínky
@@ -41,7 +41,7 @@ Pokud vytvoříte více upomínek, než jste definovali úrovně, budou použity
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Reminder Terms**, and then choose the related link.
 2. Na stránce **Podmínky upomínky** vyberte řádek s podmínkami, pro které chcete nastavit úrovně, a poté vyberte akci **Úrovně**.
-3. Podle potřeby vyplňte pole. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole podle potřeby. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
    > [!TIP]
    > Nastavením polí **Vypočítat penále** určuje, zda se úrok zobrazí na upomínce při vystavení upomínky. Pole **Účtovat úrok** na stránce **Podmínky upomínky** určuje, zda musí být vypočtený úrok zaúčtován na zápočty a účty odběratelů.

@@ -64,14 +64,14 @@ Before you can process customer payments electronically by exporting direct debi
    > Do not enter a value in the **Bal. Account No.** field.
 
 4. Choose the **OK** button to close the **Payment Methods** page.
-5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+5. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 6. Open the customer card for the customer that you want to set up for SEPA direct debit collection.
 7. Choose the **Payment Method Code** field, and then select the payment method code that you specified in step 3.
 8. Repeat steps 6 and 7 for all customers that you want to set up for SEPA direct debit collection.
 
 #### To set up the direct-debit mandate that represents the customer agreement
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Open the card for the customer that you want to set up for SEPA direct debits.
 3. Choose the **Bank Accounts** action.
 4. On the **Customer Bank Account List** page, select the customer bank account that will use direct debits, and then choose the **Direct Debit Mandates** action.

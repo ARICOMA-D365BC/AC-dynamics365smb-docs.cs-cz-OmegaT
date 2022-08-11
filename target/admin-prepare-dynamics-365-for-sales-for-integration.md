@@ -43,7 +43,7 @@ You can use an assisted setup guide to quickly set up the connection and specify
 
 1. Choose **Setup and Extensions**, and then choose **Assisted Setup**.
 2. Choose **Set up the Dynamics 365 Sales Connection** to start the assisted setup guide.
-3. Podle potřeby vyplňte pole.
+3. Vyplňte pole podle potřeby.
 4. Optionally, there are advanced settings that can enhance security and enable more capabilities. The following table describes the advanced settings.
 
 | Field | Description |

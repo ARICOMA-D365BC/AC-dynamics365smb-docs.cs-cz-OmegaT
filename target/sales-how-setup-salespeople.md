@@ -13,7 +13,7 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Salespeople
+# [přibližně]Nastavení prodejců
 Many companies want to follow an individual employee's performance as a basis for calculating the sales commission or bonus. See, for example, the **Salesperson Commissions** report. A company may also want to assign a salesperson to each of their contacts.
 
 When you have set up a salesperson on the **Salespeople** page, you can select it in the **Salesperson Code** field on all relevant records, such as G/L account, customer, vendor, contacts, and campaign cards. Then, when you post or set up invoices, credit memos, journal lines, finance charge activities, and so on, the salesperson code is carried to the resulting ledger entries.
@@ -27,8 +27,8 @@ When you have set up a salesperson on the **Salespeople** page, you can select i
 You can use salespeople in various relationship management and marketing work. For example, you can assign tasks to salespeople, so that the tasks are incorporated in sales opportunities that the salesperson are assigned to. For more information, see [Set Up Opportunity Sales Cycles and Cycle Stages](marketing-how-setup-opportunity-sales-cycles-stages.md).
 
 ## Viz také
-[Setting Up Sales](sales-setup-sales.md)  
-[Sales](sales-manage-sales.md)  
+[Setting Up Sales](sales-setup-sales.md)    
+[Sales](sales-manage-sales.md)    
 [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

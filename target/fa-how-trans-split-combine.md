@@ -66,7 +66,7 @@ You can combine multiple fixed assets into one fixed asset, for example when you
 ## To view changed depreciation book values due to fixed asset reclassification
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Asset Book Value 02**, and then choose the related link.
-2. Podle potřeby vyplňte pole.
+2. Vyplňte pole podle potřeby.
 3. Choose the **Print** or **Preview** button.
 
 ## Viz také

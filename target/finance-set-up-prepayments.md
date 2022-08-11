@@ -71,7 +71,7 @@ Pro zboží můžete nastavit výchozí procento zálohy pro všechny zákazník
 
 Pro zákazníka nebo dodavatele můžete nastavit jedno výchozí procento zálohy pro všechny zboží a všechny typy prodejních řádků. Toto zadáte na kartě zákazníka nebo dodavatele. Následující postup ukazuje, jak určit procento zálohy pro zákazníka, ale podobné kroky platí i pro dodavatele.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
 2. Otevřete kartu pro zákazníka.
 3. Vyplňte pole **Záloha v %**.
 4. Opakujte kroky pro ostatní zákazníky nebo pro dodavatele.

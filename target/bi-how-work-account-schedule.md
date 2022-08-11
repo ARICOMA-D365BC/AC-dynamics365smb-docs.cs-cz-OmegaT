@@ -54,7 +54,7 @@ The **Acc. Schedule Overview** page is where you preview the financial report th
 1. Choose the ![Lightbulb that opens the Tell Me feature 1.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Account Schedules**, and then choose the related link.
 2. On the **Account Schedules** page, choose the **New** action to create a new account schedule name.
 3. Alternatively, choose the **Copy Account Schedule** action, fill in the two fields, and then choose the **OK** button.
-4. Podle potřeby vyplňte pole. In the **Default Column Layout** field, select an existing layout. Pokud chcete, můžete jej upravit později.
+4. Vyplňte pole podle potřeby. In the **Default Column Layout** field, select an existing layout. Pokud chcete, můžete jej upravit později.
 
    Rozložení sloupců slouží k definování sloupců pro různé parametry, podle kterých jsou zobrazena finanční data na řádcích. Můžete například navrhnout rozložení sloupce pro porovnání čisté změny a zůstatku za stejné období letošního a minulého roku ve čtyřech sloupcích. For more information, see [To edit a column layout](bi-how-work-account-schedule.md#to-edit-a-column-layout).
 
