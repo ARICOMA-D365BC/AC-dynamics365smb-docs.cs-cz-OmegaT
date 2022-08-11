@@ -16,7 +16,7 @@ ms.author: edupont
 
 
 ---
-# About Item Types
+# O typech zboží
 In the **Type** field on the **Item Card** page, you can select what the item is used for in your business, which affects the degree to which you can manage the item in inventory. The following table lists and describes the three types of items that are available.
 
 | Možnost | Typical Purpose |

@@ -14,7 +14,7 @@ ms.author: jswymer
 ---
 # Získejte doplněk Business Central pro Excel
 
-[! INCLUDE[prod_short](includes/prod_short.md)] obsahuje doplněk pro excel, který umožňuje uživatelům vybrat akci **Upravit v excelu** na určitých stránkách a otevřít tak data v excelovém listu. Tato akce se liší od akce **Otevřít v aplikaci Excel**, protože umožňuje uživatelům provádět změny v aplikaci Excel a poté publikovat změny zpět do [! ZAHRNOUT[prod_short](includes/prod_short.md)]
+[! INCLUDE[prod_short](includes/prod_short.md)] obsahuje doplněk pro excel, který umožňuje uživatelům vybrat akci **Upravit v excelu** na určitých stránkách a otevřít tak data v excelovém listu. Tato akce se liší od akce **Otevřít v aplikaci Excel**, protože umožňuje uživatelům provádět změny v aplikaci Excel a poté publikovat změny zpět do [! INCLUDE[prod_short](includes/prod_short.md)]
 
 ## Přehled
 
@@ -47,86 +47,86 @@ Tento stav je způsoben skutečností, že každému souboru aplikace Excel je p
 
 [! INCLUDE[prod_short](includes/prod_short.md)] v místním prostředí vyžaduje, aby vaše prostředí bylo nakonfigurované pro doplněk. Pokud ne, akce **Upravit v Excelu** nebude uživatelům k dispozici. Další informace naleznete v části [Nastavení doplňku aplikace Excel pro úpravu dat Business Central](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin) v nápovědě pro vývojáře a IT profesionály.
 
-## Deploy the add-in by using Centralized Deployment
+## Nasazení doplňku pomocí centralizovaného nasazení
 
-Centralized Deployment is a feature in Microsoft 365 admin center that you use to automatically install add-ins in users' Office apps, like Excel. To help you with Centralized Deployment, [!INCLUDE[prod_short](includes/prod_short.md)] includes the **Excel Add-in Centralized Deployment** assisted setup.
+Centralizované nasazení je funkce v Centru pro správu Microsoft 365, kterou používáte k automatické instalaci doplňků do aplikací Office, jako je Excel. Abychom vám pomohli s centralizovaným nasazením, [! INCLUDE[prod_short](includes/prod_short.md)] zahrnuje asistovanou instalaci **centralizovaného nasazení doplňku aplikace Excel**.
 
-### Before you begin
+### Než začnete
 
-- To learn about preventing users from downloading from the Office store, see [Manage add-ins in the admin center](/microsoft-365/admin/manage/manage-addins-in-the-admin-center).
-- Verify that Centralized Deployment will work for your organization. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/microsoft-365/admin/manage/centralized-deployment-of-add-ins)
-- If you're transitioning from individual acquisition, see [Switching from individual acquisition to Centralized Deployment](#switch)
+- Informace o tom, jak uživatelům zabránit ve stahování z obchodu Office, najdete v části [Správa doplňků v centru pro správu](/microsoft-365/admin/manage/manage-addins-in-the-admin-center).
+- Ověřte, že centralizované nasazení bude pro vaši organizaci fungovat. Další informace naleznete v tématu [Určení, zda centralizované nasazení doplňků funguje pro vaši organizaci](/microsoft-365/admin/manage/centralized-deployment-of-add-ins)
+- Pokud přecházíte z individuální akvizice, přečtěte si téma [Přechod z individuální akvizice na centralizované nasazení.](#switch)
 
 > [!NOTE]
-> Enabling Centralized Deployment affects features that use the Excel add-in, such as the **Edit in Excel** action. It has no effect on other Excel-related features and or permissions assigned to users in [!INCLUDE[prod_short](includes/prod_short.md)]
+> Povolení centralizovaného nasazení ovlivní funkce, které používají doplněk aplikace Excel, jako je například akce **Upravit v aplikaci Excel**. Nemá žádný vliv na jiné funkce související s aplikací Excel a nebo oprávnění přiřazená uživatelům v [! INCLUDE[prod_short](includes/prod_short.md)]
 
-### Set up Centralized Deployment of the add-in
+### Nastavení centralizovaného nasazení doplňku
 
-You'll work in both [!INCLUDE[prod_short](includes/prod_short.md)] and the Microsoft 365 admin center.
+Budete pracovat v [!INCLUDE[prod_short](includes/prod_short.md)] i v centru pro správu Microsoft 365.
 
-1. In [!INCLUDE[prod_short](includes/prod_short.md)], choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Excel Add-in Centralized Deployment**, then choose the related link.
-2. Read the information on the **Business Central Excel add-in setup** page and choose **Next**.
-3. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2163967) and go to **Integrated Apps**<!--**Add-ins**-->.
+1. V [! INCLUDE[prod_short](includes/prod_short.md)], vyberte ![žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Centralizované nasazení doplňku Excelu** a pak vyberte související odkaz.
+2. Přečtěte si informace na stránce **Nastavení doplňku Business Central Excel** a zvolte **Další**.
+3. Přihlaste se k [Centru pro správu Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2163967) a přejděte na **Integrované aplikace**<!--**Add-ins**-->.
 
-   Complete the following steps to configure the add-in to deploy from the Office Store:
-   1. Choose **Get apps** to open Office Store (AppSource). <!--**Deploy Add-in** 5. In the **Deploy a new add-in**, select **Choose from the store**.-->
-   2. Search for **Microsoft Dynamics Office Add-in**, then select **Get it now**. <!--On the **Select add-in** page, search for and select **Microsoft Dynamics Office Add-in** > **Add** > **Continue**.-->
-   3. On the **Add Users** page, specify the users that you want to deploy the add-in for, then choose **Next**.<!--On the **Configure add-in**, specify the users that you want to deploy the add-in for.-->
-   4. Review the **Accept permissions requests**, then choose **Next** > **Finish Deployment**.
-   5. Wait for the green check mark next to **Deployed** appears for the add-in, then choose **Done**. <!--Select **Deploy** and wait til successful, then **Next** > **Continue**.-->
+   Provedením následujících kroků nakonfigurujte doplněk pro nasazení z Office Store:
+   1. Zvolte **Získat aplikace** a otevřete Office Store (AppSource). <!--**Deploy Add-in** 5. In the **Deploy a new add-in**, select **Choose from the store**.-->
+   2. Vyhledejte **Doplněk Microsoft Dynamics Office** a pak vyberte **Získat nyní**. <!--On the **Select add-in** page, search for and select **Microsoft Dynamics Office Add-in** > **Add** > **Continue**.-->
+   3. Na stránce **Přidat uživatele** zadejte uživatele, pro které chcete doplněk nasadit, a pak zvolte **Další**.<!--On the **Configure add-in**, specify the users that you want to deploy the add-in for.-->
+   4. Zkontrolujte **Přijmout žádosti o oprávnění**a poté zvolte **Další** > **Dokončit implementaci**.
+   5. Počkejte, až se u doplňku zobrazí zelená značka zaškrtnutí vedle položky **Nasazeno**, a poté vyberte možnost **Hotovo**. <!--Select **Deploy** and wait til successful, then **Next** > **Continue**.-->
 
-      The add-in appears on the **Add-ins** page. For more information about deploying add-ins in the Microsoft 365 admin center, see [Deploy add-ins in the admin center](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
-4. Go back to **Excel Add-in Centralized Deployment** assisted setup in [!INCLUDE[prod_short](includes/prod_short.md)], and choose **Next**.
-5. Turn on **Use Centralized Deployment**, and choose **Finish**.
+      Doplněk se zobrazí na stránce **Doplňky**. Další informace o nasazení doplňků v Centru pro správu Microsoft 365 najdete v tématu[Nasazení doplňků v centru pro správu](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
+4. Vraťte se k asistovanému nastavení **centralizovaného nasazení doplňku aplikace Excel** v [!INCLUDE[prod_short](includes/prod_short.md)] a zvolte **Další**.
+5. Zapněte **Použít centralizované nasazení** a zvolte **Dokončit**.
 
-   If you don't turn on this switch, [!INCLUDE[prod_short](includes/prod_short.md)] will get the add-in directly from the Office Store.
+   Pokud tento přepínač nezapnete, [!INCLUDE[prod_short](includes/prod_short.md)] získá doplněk přímo z Office Store.
 
-When finished, you can always change the deployment in Microsoft 365 admin center, like assigning more users. For more information about deploying add-ins in the admin center, see [Deploy add-ins in the admin center](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
+Po dokončení můžete kdykoli změnit nasazení v Centru pro správu Microsoft 365, například přiřazení dalších uživatelů. Další informace o nasazení doplňků v centru pro správu najdete v části [Nasazení doplňků v centru pro správu](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
 
 > [!IMPORTANT]
-> If you have more than one environment, you must run the **Excel Add-in Centralized Deployment** assisted setup on each environment that you want to use Centralized Deployment. However, you don't have to configure the Centralized Deployment in Microsoft 365 again. The only thing you have to do is turn on the **Use Centralized Deployment** switch in the assisted setup.
+> Máte-li více než jedno prostředí, musíte spustit asistované nastavení **Centralizovaného nasazení doplňku Excel** v každém prostředí, ve kterém chcete centralizované nasazení použít. Centralizované nasazení v Microsoftu 365 ale nemusíte znovu konfigurovat. Jediné, co musíte udělat, je zapnout přepínač **Použít centralizované nasazení** v asistovaném nastavení.
 
 > [!NOTE]
-> It can take up to 24 hours before users the add-in deploys automatically in Excel of users.
+> Uživatelům může trvat až 24 hodin, než se doplněk automaticky nasadí do aplikace Excel.
 
-## <a name="install"></a>Individual acquisition: Install the add-in manually for your own use
+## <a name="install"></a> Individuální pořízení: Nainstalujte doplněk ručně pro vlastní potřebu
 
-In most cases, when you open Excel from Business Central, the add-in will either be installed automatically for you or you'll be prompted to install it. There might be cases, however, where you have to manually install the add-in.
+Ve většině případů, když otevřete aplikaci Excel z Business Central, doplněk bude buď nainstalován automaticky pro vás, nebo budete vyzváni k jeho instalaci. Mohou však nastat případy, kdy budete muset doplněk nainstalovat ručně.
 
-1. Open Excel, then open any Excel workbook.
-2. On the **Insert** menu, choose **Add-ins** > **Get add-ins**
-3. Go to **Admin managed** and look for **Microsoft Dynamics Office Add-In**. If you see there, select it, then choose **Add**. If you don't see it, go to **Store**, then search for *Microsoft Dynamics Office Add-In* and follow the instruction on screen to add it.
+1. Otevřete Excel a otevřete libovolný excelový sešit.
+2. V nabídce **Vložit** zvolte **Doplňky** > **Získat doplňky**
+3. Přejděte na **Spravováno správcem** a vyhledejte **Doplněk Microsoft Dynamics Office**. Pokud tam vidíte, vyberte ji a pak zvolte **Přidat**. Pokud ji nevidíte, přejděte do **Obchodu**, vyhledejte *doplněk Microsoft Dynamics Office* a podle pokynů na obrazovce jej přidejte.
 
-When the add-in is installed, it shows up as a panel in Excel. Next, configure the connection.
+Když je doplněk nainstalován, zobrazí se jako panel v aplikaci Excel. Dále nakonfigurujte připojení.
 
-### Configure the Business Central connection
+### Konfigurace připojení Business Central
 
-If a user can't connect automatically, you can unblock them by asking them to follow these steps:
+Pokud se uživatel nemůže připojit automaticky, můžete ho odblokovat tak, že ho požádáte, aby postupoval takto:
 
-1. In the **Microsoft Dynamics** add-in pane in Excel, choose **Add server information**. If you don't see it, choose the ![More option button in Excel.](media/cogwheel.png) icon at the top to open the options dialog.
-2. For [!INCLUDE[prod_short](includes/prod_short.md)] online, set **Server URL** to `https://exceladdinprovider.smb.dynamics.com`. For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, set it the URL of the web client, like `https://myBCserver/190`.
-3. Choose **OK**, and then confirm that the app reloads.
-4. When prompted, sign in with your Business Central user name and password.
-5. Optionally, choose the environment and company that you want to connect to.
+1. V podokně doplňku **Microsoft Dynamics** v aplikaci Excel zvolte **možnost Přidat informace o serveru**. Pokud jej nevidíte, vyberte ![v aplikaci Excel tlačítko volby další.](media/cogwheel.png) nahoře a otevřete dialogové okno možností.
+2. Pro [!INCLUDE[prod_short](includes/prod_short.md)] online, **nastavte adresu URL serveru** na `https://exceladdinprovider.smb.dynamics.com`. Pro [!INCLUDE[prod_short](includes/prod_short.md)] v místním prostředí, nastavte adresu URL webového klienta, například `https://myBCserver/190`.
+3. Zvolte **OK** a potvrďte, že se aplikace znovu načte.
+4. Po zobrazení výzvy se přihlaste pomocí svého uživatelského jména a hesla pro Business Central.
+5. Volitelně můžete zvolit prostředí a společnost, ke které se chcete připojit.
 
-The add-in is now connected to [!INCLUDE [prod_short](includes/prod_short.md)], and you can edit data and publish the changes to [!INCLUDE [prod_short](includes/prod_short.md)].
+Doplněk je nyní připojen k [!INCLUDE [prod_short](includes/prod_short.md)] a můžete upravovat data a publikovat změny na [!INCLUDE [prod_short](includes/prod_short.md)].
 
-## Prepare devices and network for the Excel Add-In
+## Příprava zařízení a sítě pro doplněk aplikace Excel
 
-Network services such as proxies or firewalls must allow routing between each client device on which the add-In is installed and many service endpoints. For a list of endpoints, see [Preparing your network for the Excel Add-In](/dynamics365/business-central/dev-itpro/administration/configuring-network-for-addins).
+Síťové služby, jako jsou proxy servery nebo brány firewall, musí umožňovat směrování mezi každým klientským zařízením, na kterém je doplněk nainstalovaný, a mnoha koncovými body služby. Seznam koncových bodů najdete v tématu [Příprava sítě na doplněk Excelu](/dynamics365/business-central/dev-itpro/administration/configuring-network-for-addins).
 
 ## Řešení potíží
 
-Sometimes, users run into problems with the Excel add-in. This section gives some tips for how to unblock users in certain circumstances.
+Někdy uživatelé narazí na problémy s doplňkem aplikace Excel. Tato část obsahuje několik tipů, jak za určitých okolností uživatele odblokovat.
 
-| Problém | Solution or workaround | Komentáře |
+| Problém | Řešení nebo alternativní řešení | Komentáře |
 |---------|---------|---------|
-| The add-in doesn't start | Check whether the add-in is deployed centrally. Or, check whether the user is blocked from installing it locally. | The admin can configure Office so that users can't acquire add-ins. In those cases, the admin must deploy the add-in centrally. For more information, see [Deploy add-ins in the admin center](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide&preserve-view=true). |
-| Data doesn't load into Excel | Test the connection by opening another list in Excel from [!INCLUDE [prod_short](includes/prod_short.md)]. Or, open the workbook in Excel in a browser. | If the user has specified a company name that contains special characters, the add-in can't connect. |
-| Data can't publish back to [!INCLUDE [prod_short](includes/prod_short.md)]. | Test the connection by opening the workbook in Excel in a browser. | Sometimes an extension can block the publishing job. If the page is extended or customized, remove the extensions, and then try again. |
-| The dates are wrong | Excel might show times and dates in a different format than [!INCLUDE [prod_short](includes/prod_short.md)]. This condition doesn't make them wrong, and the data in [!INCLUDE [prod_short](includes/prod_short.md)] won't get messed up. |         |
-| For some list pages, editing multiple lines in Excel consistently causes errors. This condition can occur if OData calls include FlowFields and fields outside of the repeater control. | On the **Web Services** page, select the **Exclude Non-Editable FlowFields** and **Exclude Fields Outside of the Repeater** check boxes for the published page. Selecting these check boxes excludes non-editable FlowFields and field from the eTag calculation. | These check boxes are hidden by default. To show them on the **Web Services** page, use [personalization](/dynamics365/business-central/ui-personalization-user). |
-| Users can no longer sign in to the add-in. When they try to sign in, the process stops without completing. | This problem might be caused by an update that we made to the add-in, sometime in July 2022. For more information and a fix, see [Modify the Excel Add-in Configuration to Support July 2022 Update](/dynamics365/business-central/dev-itpro/administration/update-excel-addin-configuration). | Applies to [!INCLUDE [prod_short](includes/prod_short.md)] on-premises only |
+| Doplněk se nespustí | Zkontrolujte, zda je doplněk nasazen centrálně. Nebo zkontrolujte, zda je uživateli blokována místní instalace. | Správce může Office nakonfigurovat tak, aby uživatelé nemohli získat doplňky. V těchto případech musí správce nasadit doplněk centrálně. Další informace najdete v tématu [Nasazení doplňků v Centru pro správu](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide&preserve-view=true). |
+| Data se nenačítají do Excelu | Otestujte připojení otevřením dalšího seznamu v aplikaci Excel z [!INCLUDE [prod_short](includes/prod_short.md)]. Nebo otevřete sešit v aplikaci Excel v prohlížeči. | Pokud uživatel zadal název společnosti, který obsahuje speciální znaky, doplněk se nemůže připojit. |
+| Data nelze publikovat zpět do [!INCLUDE [prod_short](includes/prod_short.md)]. | Otestujte připojení otevřením sešitu v aplikaci Excel v prohlížeči. | Někdy může rozšíření zablokovat úlohu publikování. Pokud je stránka rozšířená nebo přizpůsobená, odeberte rozšíření a poté to zkuste znovu. |
+| Data jsou špatná | Excel může zobrazovat časy a datumy v jiném formátu než [!INCLUDE [prod_short](includes/prod_short.md)]. Tato podmínka je nedělá špatně a data v [!INCLUDE [prod_short](includes/prod_short.md)] se nezkazí. |         |
+| U některých stránek seznamu způsobuje úprava více řádků v Excelu soustavně chyby. K této podmínce může dojít, pokud volání OData zahrnují dynamické pole a pole mimo ovládací prvek opakovače. | Na stránce **Webové služby** zaškrtněte políčka **Vyloučit neupravitelná dynamické pole** a **Vyloučit pole mimo opakovač** pro publikovanou stránku. Zaškrtnutím těchto políček vyloučíte z výpočtu eTag neupravitelná dynamická pole a pole. | Tato zaškrtávací políčka jsou ve výchozím nastavení skrytá. Chcete-li je zobrazit na stránce **Webové služby**, použijte [přizpůsobení](/dynamics365/business-central/ui-personalization-user). |
+| Uživatelé se již nemohou přihlásit k doplňku. Když se pokusí přihlásit, proces se zastaví, aniž by byl dokončen. | Tento problém může být způsoben aktualizací doplňku, kterou jsme provedli někdy v červenci 2022. Další informace a opravu naleznete v tématu [Úprava konfigurace doplňku aplikace Excel pro podporu aktualizace z července 2022](/dynamics365/business-central/dev-itpro/administration/update-excel-addin-configuration). | Platí pro [!INCLUDE [prod_short](includes/prod_short.md)] pouze v místním prostředí |
 
 <!--
 ## Deploy the Excel add-in for Business Central online
@@ -165,8 +165,8 @@ When the add-in is installed, it shows up as a panel in Excel. Next, you must co
 
 ## Viz také
 
-[Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md)  
-[Work with Business Central](ui-work-product.md)  
+[Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md)    
+[Work with Business Central](ui-work-product.md)    
 [Enhancements to Excel integration in 2019 release wave 2](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)
 
 
