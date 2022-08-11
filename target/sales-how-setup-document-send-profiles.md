@@ -26,8 +26,8 @@ Pokud v prodejním dokladu zvolíte akci **Účtovat a Odeslat**, **Zaúčtovat 
 > [!Video https://www.microsoft.com/en-us/videoplayer/embed/RE4jzHH?rel=0]
 
 ## Nastavení profilu odesílání dokladů
-1. Vyberte ikonu  ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") , zadejte  **Profily odesílání dokladů** a poté vyberte související odkaz.
-2. Na stránce **Profily odesílání dokumentů** vyberte akci **Nový**.
+1. Vyberte ikonu  ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Profily odesílání dokladů** a poté vyberte související odkaz.
+2. Na stránce **Profily odesílání dokladů** vyberte akci **Nový**.
 3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## K určení profilu odesílání na kartě zákazníka
