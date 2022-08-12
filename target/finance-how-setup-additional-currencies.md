@@ -69,7 +69,7 @@ Pro každý účet hlavní knihy je nutné určit, jak budou částky hlavní kn
 
 ### Určení metody úpravy směnného kurzu pro všechny účty hlavní knihy
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. On the **Chart of Accounts** page, select the relevant account, and then choose the **Edit** action.
 3. On the **GL Account Card** page, select the relevant method in the **Exchange Rate Adjustment** field.
 

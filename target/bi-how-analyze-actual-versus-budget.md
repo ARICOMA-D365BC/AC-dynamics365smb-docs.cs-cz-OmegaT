@@ -38,7 +38,7 @@ In a budget with dimensions, you can filter the entries and see specific budgets
 ## To view actual and budgeted amounts for all accounts
 You can view general ledger budgets and compare them with actual figures in several areas of [!INCLUDE[prod_short](includes/prod_short.md)].
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. On the **Chart of Accounts** page, choose the **G/L Balance/Budget** action.
 3. At the top of the page, fill in the fields as necessary to define what is shown.
 4. To see a specification that makes up the amount shown, choose the field.
@@ -54,7 +54,7 @@ The leftmost columns contain the chart of accounts. Of the five columns on the r
 ## To view actual and budgeted amounts for several periods
 Instead of viewing the actual and budgeted amounts for all accounts within a single period, you can view a number of periods for a single account.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. On the **Chart of Accounts** page, select the relevant general ledger account, and then choose the **G/L Account Balance/Budget** action.
 3. At the top of the page, fill in the fields as necessary to define what is shown.
 4. To see a specification of an amount shown, choose the field.

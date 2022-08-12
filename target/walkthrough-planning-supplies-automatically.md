@@ -70,7 +70,7 @@ Vytvořte skladové jednotky (SKJ) pro cestovní kolo a výběr jeho komponentů
 
 ### Změna vybraných parametrů plánování
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Stockkeeping Units**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skladové jednotky** a poté vyberte související odkaz.
 2. Otevřete kartu skladové jednotky EAST pro položku 1100, přední kolo.
 3. Na záložce **Plánování** vyplňte pole, jak je popsáno v následující tabulce.
 

@@ -38,7 +38,7 @@ The value in the **OCR Status** field changes to **Sent**, provided that no erro
 ## To send a PDF or image file to the OCR service by email
 From your email application, you can send an email to the OCR service provider with the PDF or image file attached. For information about the email address to send to, see the OCR service provider’s web site.
 
-Because no incoming document record exists for the file, a new record will be created automatically on the **Incoming Documents** page when you receive the resulting electronic document from the OCR service. For more information, see [Create Incoming Document Records](across-how-create-income-document-records.md).
+Because no incoming document record exists for the file, a new record will be created automatically on the **Incoming Documents** page when you receive the resulting electronic document from the OCR service. Další informace naleznete v části [Vytvoření záznamů došlých dokladů](across-how-create-income-document-records.md).
 
 > [!NOTE]  
 > If you work on a tablet or phone, you can send the file to the OCR service as soon as you have taken a photo of the document, or you can create an incoming document directly. For more information, see [To create an incoming document record by taking a photo](across-how-create-income-document-records.md#to-create-an-incoming-document-record-by-taking-a-photo).

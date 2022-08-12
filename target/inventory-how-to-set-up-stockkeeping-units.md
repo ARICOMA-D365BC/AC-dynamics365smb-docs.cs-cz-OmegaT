@@ -13,36 +13,36 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Stockkeeping Units
-You can use stockkeeping units to record information about items for a specific location or a variant code.
+# Nastavení skladové jednotky
+Skladové jednotky můžete použít k záznamu informací o položkách pro konkrétní skladové místo nebo kód varianty.
 
-Stockkeeping units are a supplement to item cards. They do not replace them, although they are related to them. Stockkeeping units allow you to differentiate information about an item for a specific location, such as a warehouse or distribution center, or a specific variant, such as different shelf numbers and different replenishment information, for the same item.
+Skladové jednotky jsou doplňkem ke kartám zboží. Nenahrazují je, i když s nimi souvisí. Skladovací jednotky umožňují rozlišovat informace o zboží pro konkrétní lokaci, jako je sklad nebo distribuční centrum, nebo konkrétní varianta, jako jsou různá čísla polic a různé informace o doplňování, pro stejné zboží.
 
-## To set up a stockkeeping unit
+## Nastavení skladové jednotky
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Stockkeeping Units**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skladové jednotky** a poté vyberte související odkaz.
 2. Vyberte **Nový** Akce.
-3. Fill in the fields on the card. The following fields are required: **Item No.**, **Location Code**, and/or **Variant Code**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole na kartě. Následující pole jsou povinná: **Číslo položky**, **Kód umístění**a/nebo **Kód varianty**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-When you have set up the first stockkeeping unit for an item, the **Stockkeeping Unit Exists** check box on the **Item** card is selected.
+Pokud jste pro zboží nastavili první skladovou jednotku, je zaškrtnuto políčko **Skladová jednotka existuje** na kartě **Zboží**.
 
-To create several stockkeeping units for an item, use the **Create Stockkeeping Unit** batch job.
+Chcete-li pro položku vytvořit několik skladových jednotek, použijte dávkovou úlohu **Vytvořit skladovou jednotku**.
 
 > [!NOTE]  
-> The information on the **Stockkeeping Unit** card has priority over the **Item** card.
+> Informace na kartě **Skladová jednotka** mají přednost před kartou **Zboží**.
 
 > [!Warning]
-> If the SKU is supplied through production, then the **Standard Cost** field is not used when invoicing and adjusting the actual cost of the produced item. Instead, the **Standard Cost** field on the underlying item card is used, and any variances are calculated against the cost shares of that item.<br /><br />
-> Because production BOMs and routing cannot be assigned to SKUs, then the unit cost roll-up and the related calculation of cost shares are also not available on SKUs. For more information, see [About Calculating Standard Cost](finance-about-calculating-standard-cost.md)
+> Pokud je SKU dodáváno prostřednictvím výroby, pak se pole **Standardní náklady** při fakturaci a úpravě skutečných nákladů na vyrobenou položku nepoužívá. Místo toho se použije pole **Standardní cena** na kartě podkladové položky a případné odchylky se počítají proti podílům na nákladech této položky.<br /><br />
+> Protože kusovníky produkce a směrování nemohou být přiřazeny k jednotkám SKU, pak souhrn jednotkových nákladů a související výpočet podílů na nákladech také nejsou k dispozici na jednotkách SKU.. Pro více informací navštivte [O výpočtu pevné pořizovací ceny](finance-about-calculating-standard-cost.md)
 
 ## Viz také
-[Register New Items](inventory-how-register-new-items.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)  
-[Warehouse Management](warehouse-manage-warehouse.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Assembly Management](assembly-assemble-items.md)    
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Registrace nových položek](inventory-how-register-new-items.md)    
+[Nastavení správy skladu](warehouse-setup-warehouse.md)    
+[Správa skladu](warehouse-manage-warehouse.md)    
+[Inventář](inventory-manage-inventory.md)    
+[Správa sestavy](assembly-assemble-items.md)      
+[Podrobnosti návrhu: Správa skladu](design-details-warehouse-management.md)    
+[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

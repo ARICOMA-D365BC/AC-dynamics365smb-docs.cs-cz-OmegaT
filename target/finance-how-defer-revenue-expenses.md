@@ -22,7 +22,7 @@ To distribute revenues or expenses on the involved accounting periods, you set u
 
 ## To set up a G/L account for deferral
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. Vyberte **Nový** Akce.
 3. Fill in the fields as necessary to create a G/L account for deferred revenues. For more information, see [The General Ledger and the Chart of Accounts](finance-general-ledger.md).
 4. Repeat steps 2 and 3 to create a new G/L account for deferred expenses.

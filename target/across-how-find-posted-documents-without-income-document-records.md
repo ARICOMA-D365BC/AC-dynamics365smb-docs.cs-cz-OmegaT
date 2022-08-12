@@ -13,23 +13,23 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Vyhledání zaúčtovaných dokumentů bez záznamů příchozího dokumentu
-From the **Chart of Accounts** and **General Ledger Entries** pages, you can use a search function to find general ledger entries for posted purchase and sales documents that do not have incoming document records and then centrally link to existing records or create new ones with attached document files.
+# Vyhledání zaúčtovaných dokladů bez záznamů došlého dokladu
+Na stránkách **Účetní osnova** a **Věcné položky** můžete pomocí funkce vyhledávání najít záznamy věcné položky pro zaúčtované nákupní a prodejní doklady, které nemají záznamy o došlých dokladech a poté centrálně propojte existující záznamy nebo vytvořte nové s připojenými soubory dokladů.
 
-## To find posted documents without incoming document records
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
-2. Select a line for a G/L account for whose general ledger entries you want to see posted purchase and sales documents without incoming document records, and then choose the **Posted Documents without Incoming Document** action.
-3. Alternatively, choose the **Ledger Entries** action.
-4. On the **General Ledger Entries** page, choose the **Posted Documents without Incoming Documents** action.
+## Vyhledání zaúčtovaných dokladů bez záznamů došlého dokladu
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
+2. Vyberte řádek pro finanční účet, kde jsou věcné položky, které chcete zaúčtovat jako nákupní a prodejní doklady bez záznamů příchozího dokladu a pak zvolte akci **Zaúčtovat doklad bez došlého dokladu**.
+3. Alternativně zvolte akci **Položky**.
+4. Na stránce **Věcné položky** zvolte akci **Zaúčtovat doklady bez došlých dokladů**.
 
-The **Posted Documents without Incoming Document** page opens showing posted purchase and sales documents without incoming document records represented by general ledger entries on the G/L account that you opened the page for. The page can show a maximum of 1000 lines. By default, the **Date Filter** field therefore contains a filter that limits the lines to entries with posting dates from the beginning of the accounting period to the work date.
+Otevře se stránka **Zaúčtované doklady bez došlého dokladu** zobrazující zaúčtované nákupní a prodejní doklady bez záznamů došlého dokladu reprezentovaných věcnch položek na finančním účtě, pro který jste stránku otevřeli. Stránka může ukázat maximálně 1000 řádků. Standardně tedy pole **Filtr data** obsahuje filtr, který omezuje řádky na záznamy s daty účtování od začátku účetního období do pracovního data.
 
-## To connect found documents to existing incoming document records
-1. On the **Posted Documents without Incoming Document** page, select the line for a posted document that you want to connect to an existing incoming document record, and then choose the **Select Incoming Document** action.
-2. On the **Incoming Documents** page, select the incoming document record that you want to connect to posted document found, and then choose the **OK** button.
-3. On the **Posted Documents without Incoming Document** page, the selected incoming document record is now connected to the posted document, as you can see in the **Incoming Document Files** FactBox.
+## Připojení nalezených dokladů k existujícím záznamům došlého dokladu
+1. Na stránce **Zaúčtované doklady bez došlého dokladu** vyberte řádek pro zaúčtovaný doklad, který chcete připojit k existujícímu záznamu došlého dokladu, a poté zvolte akci **Vybrat došlý doklad**.
+2. Na stránce **Došlé doklady** vyberte záznam došlého dokladu, který chcete propojit s nalezeným zaúčtovaným dokladem, a poté klepněte na tlačítko **OK**.
+3. Na stránce **Zaúčtované doklady bez došlého dokladu** je nyní vybraný záznam došlého dokladu připojen k zaúčtovanému dokladu, jak můžete vidět ve FactBoxu **Soubory došlých dokladů**.
 
-If a relevant incoming document record does not exist on the **Incoming Documents** page, then you can create it. For more information, see [Create Incoming Document Records](across-how-create-income-document-records.md).
+Pokud na stránce **Došlé doklady** neexistuje relevantní záznam došlého dokladu, můžete jej vytvořit. Další informace naleznete v části [Vytvoření záznamů došlých dokladů](across-how-create-income-document-records.md).
 
 ## Viz také
 [Zpracování došlých dokladů](across-process-income-documents.md)    

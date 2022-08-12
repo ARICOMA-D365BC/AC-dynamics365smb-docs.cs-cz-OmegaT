@@ -94,7 +94,7 @@ When you create an intercompany sales or purchase line to send as an outgoing tr
 
 Then, when you enter a general ledger account in the **Bal. Account No.** field on an intercompany line with **Intercompany Partner** in the **Account Type** field, the **IC Partner G/L Account** field is automatically filled in.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. On the line for a G/L account that is used for intercompany transactions, in the **Default IC Partner G/L Account** field, enter the intercompany general ledger account that your partner will post to when you post to the general ledger account on the line.
 3. Repeat step 2 for each account that you often enter in the **Bal. Account No.** field on a line in an intercompany journal or document.
 

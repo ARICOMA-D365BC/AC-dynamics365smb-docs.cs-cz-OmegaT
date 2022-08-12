@@ -26,7 +26,7 @@ An item can be structured as a parent item with underlying child items in a bill
 
 If you purchase the same item from more than one vendor, you can connect those vendors to the item card. The vendors will then appear on the **Item Vendor Catalog** page, so that you can easily select an alternate vendor.
 
-Items that you offer to your customers but you do not want manage in your system until you start selling them can be set up as catalog items. Catalog items are not to be mistaken with regular items of type **Non-Inventory**. For more information, see [Work with Catalog Items](inventory-how-work-nonstock-items.md).
+Položky, které nabízíte svým zákazníkům, ale nechcete je spravovat ve svém systému, dokud je nezačnete prodávat, lze nastavit jako položky katalogu. Catalog items are not to be mistaken with regular items of type **Non-Inventory**. For more information, see [Work with Catalog Items](inventory-how-work-nonstock-items.md).
 
 > [!NOTE]  
 > If item templates exist for different item types, then a page appears when you create a new item card from where you can select an appropriate template. If only one item template exists, then new item cards always use that template.

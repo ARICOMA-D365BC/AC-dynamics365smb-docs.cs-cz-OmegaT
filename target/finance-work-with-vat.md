@@ -106,7 +106,7 @@ Instead of using journals to post an import VAT invoice, you can use a purchase 
 ### To set up purchasing for posting import VAT invoices
 1. Set up a vendor card for the import authority that sends you the import VAT invoice. The **Gen. účto  Posting Group** and **VAT Bus. Posting Group** must be set up in the same way as the general ledger account for the import VAT.
 2. Create a **Gen. Product Posting Group** for the import VAT and set up an import VAT **Def. VAT Product Posting Group** for the related **Gen. Product Posting Group**.
-3. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 4. Select the import VAT general ledger account, and then choose the **Edit** action.
 5. On the **Posting** FastTab, select the **Gen. účto  Posting Group** setup for import VAT. [!INCLUDE[prod_short](includes/prod_short.md)] automatically fills in the **VAT Prod. Posting Group** field.
 6. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení obecného účtování** a poté vyberte související odkaz.

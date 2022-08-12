@@ -211,7 +211,7 @@ Global dimensions are always company\-defined and company-named. To see the glob
 
 In a ledger entry page, you can see whether there are global dimensions for the entries. The two global dimensions differ from the rest of your dimensions because you can use them as filters anywhere in [!INCLUDE[prod_short](includes/prod_short.md)].
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. On the **Chart of Accounts** page, choose the **Ledger Entries** action.
 3. To see only the entries that are relevant, set one or more filters on the page.
 4. To see all the dimensions for an entry, select the entry, and then choose the **Dimensions** action.

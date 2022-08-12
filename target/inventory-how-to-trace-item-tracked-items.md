@@ -13,7 +13,7 @@ ms.date: 06/16/2021
 ms.author: edupont
 
 ---
-# Trace Item-Tracked Items
+# Sledování zboží
 You can see where an item-tracked item was used, including how and when it was received or produced, transferred, sold, consumed, or returned. You can also find all current instances of a specific serial or lot number in the database. You do this by using the Item Tracing and the [Find Entries](ui-find-entries.md) features.
 
 These features can be particularly useful in quality control when you need to find out which customers received products with a particular lot number or when you need to find out which lot a defective component came from.

@@ -361,7 +361,7 @@ CRONUS právě dokončil velký projekt, který bude trvat rok. Vzhledem k tomu,
 
 ### Nastavení nového účtu
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
 2. Na stránce **Účetní osnova** vyberte akci **Nový** a vytvořte novou kartu.
 3. Na kartě **Nový finanční účet** zadejte následující informace:
 
