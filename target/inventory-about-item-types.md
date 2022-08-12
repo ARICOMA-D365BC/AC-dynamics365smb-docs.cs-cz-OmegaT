@@ -49,11 +49,11 @@ Položky, které nabízíte svým zákazníkům, ale nechcete je spravovat ve sv
 Položky zákazníků, na kterých provádíte servis, jako je tiskárna, se nazývají servisní položky. Servisní položky nemají nic společného s běžnými nebo katalogovými položkami. Servisní komponenty však mohou být běžné položky. Pro více informací navštivte [Nastavení Předmětů servisu a Komponent předmětu servisu](service-how-setup-service-items.md).
 
 ## Viz také
-[Registrace nových položek](inventory-how-register-new-items.md)    
-[Nastavení inventáře](inventory-setup-inventory.md)    
-[Správa nákladů na zásoby](finance-manage-inventory-costs.md)    
-[Inventář](inventory-manage-inventory.md)    
-[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Register New Items](inventory-how-register-new-items.md)  
+[Setting Up Inventory](inventory-setup-inventory.md)  
+[Managing Inventory Costs](finance-manage-inventory-costs.md)  
+[Inventory](inventory-manage-inventory.md)  
+[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
