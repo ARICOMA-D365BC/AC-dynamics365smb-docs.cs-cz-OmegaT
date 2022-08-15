@@ -67,7 +67,7 @@ Rozdíl je v tom, když máte více klientů. Unlike [!INCLUDE[prod_short](inclu
 > [!IMPORTANT]
 > If you're using Business Central 2021 release wave 1 (version 18) or earlier, you can't install the app as described in this article. Instead, install the app from [Microsoft Store](https://go.microsoft.com/fwlink/?LinkId=734848). For more information and help about installing this legacy app, see [Preparing For and Installing the Business Central App](/dynamics365/business-central/dev-itpro/deployment/install-business-central-app).
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 

@@ -53,7 +53,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 > [!TIP]
 > Depending on your geographical location, some pages can contain fields that are not described in the articles that are listed here because they apply to local functionality or customizations. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/set-up-financial-management-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/set-up-financial-management-dynamics-365-business-central/)
 
 ## Viz také
 

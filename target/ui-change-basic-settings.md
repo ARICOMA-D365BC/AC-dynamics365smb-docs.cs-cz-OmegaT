@@ -102,7 +102,7 @@ Choose the *Change when I receive notifications* link to view or change the noti
 
 [!INCLUDE [ua-teachingtips](includes/ua-teachingtips.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/personalize-ui-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/personalize-ui-dynamics-365-business-central/index)
 
 ## Viz také
 

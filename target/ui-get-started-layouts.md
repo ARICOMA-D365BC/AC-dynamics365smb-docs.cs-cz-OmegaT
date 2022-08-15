@@ -179,7 +179,7 @@ Chcete-li změnit název a popis uživatelsky definovaného rozvržení, postupu
     > Při hledání rozvržení vám pomůže pole **Vyhledávání**, panel **Filtr** a třídění sloupců.
 3. Změňte **Název rozvržení**, pak vyberte **OK**.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

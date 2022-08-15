@@ -64,7 +64,7 @@ Po provedení výběru zadejte příslušné vyhledávací informace do polí v 
 > [!TIP]
 > For a couple examples about using **Find Entries**, see [Trace Item-Tracked Items](inventory-how-to-trace-item-tracked-items.md) <!--and [Walkthrough: Tracing Serial-Lot Numbers](walkthrough-tracing-serial-lot-numbers.md). -->
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/user-interface-dynamics-365-business-central/index)
 
 ## Viz také
 

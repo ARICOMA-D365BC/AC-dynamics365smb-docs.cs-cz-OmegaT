@@ -18,7 +18,7 @@ ms.author: edupont
 
 [!INCLUDE [připomenutí pohledávek](includes/receivables-reminders.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
 
 ## Viz také
 

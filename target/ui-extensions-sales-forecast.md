@@ -53,7 +53,7 @@ You can also create your own predictive web service based on a public model name
 6. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales and Inventory Forecast Setup**, and then choose the related link.
 7. Expand the **General** FastTab, and then fill in the API URL and API key fields.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/use-sales-inventory-forecast-extension/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/use-sales-inventory-forecast-extension/)
 
 
 ## Viz také

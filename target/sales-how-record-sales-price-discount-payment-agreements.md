@@ -272,7 +272,7 @@ Pokračujte nastavením nových podmínek slevy prodejní faktury.
 4. Do pole **Procento slevy** zadejte fakturační slevu jako procento částky faktury.
 5. Opakujte kroky 5 až 7 pro každou měnu, pro kterou zákazník obdrží jinou fakturační slevu.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/manage-sales-prices-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/manage-sales-prices-dynamics-365-business-central/index)
 
 ## Viz také
 

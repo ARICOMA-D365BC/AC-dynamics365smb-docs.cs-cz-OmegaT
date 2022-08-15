@@ -39,7 +39,7 @@ Proces došlých dokladů se může skládat z následujících hlavních činno
 | Nastavení funkce Došlých dokladů a nastavení služby OCR | [Set Up Incoming Documents](across-how-setup-income-documents.md) |
 | Vytváření záznamů došlých dokladů, připojování souborů, použití služby OCR k přeměně PDF souborů na elektronické doklady, převedení elektronických dokladů na evidenci dokladů, kontrola záznamů došlých dokladů z zaúčtovaných prodejních a nákupních dokladů. | [Processing Incoming Documents](across-process-income-documents.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/incoming-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/incoming-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

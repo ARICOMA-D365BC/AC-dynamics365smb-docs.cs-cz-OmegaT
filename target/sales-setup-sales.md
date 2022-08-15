@@ -36,7 +36,7 @@ Nastavení prodeje, které souvisí s finančními prostředky, jako jsou plateb
 | Zadejte informace o různých dodavatelích přepravy, které používáte, včetně odkazu na jejich službu sledování zásilek. | [Nastavení přepravců](sales-how-to-set-up-shipping-agents.md) |
 | Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 
 ## Viz také
 [Sales](sales-manage-sales.md)  

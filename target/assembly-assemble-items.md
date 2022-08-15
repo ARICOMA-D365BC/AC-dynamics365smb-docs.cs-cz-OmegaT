@@ -43,7 +43,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Zjistětě více o rozdílu mezi kusovníkem montáže a výrobním kusovníkem a souvisejicími rozdíly ve zpracování. | [Práce s kusovníky](inventory-how-work-BOMs.md) |
 | Zjistěte více o tom, jak se zpracovává spotřeba montážní zakázky a výstup při účtování a jak jsou odvozené náklady na zboží a zdroje zpracovávány a distribuovány do hlavní knihy. | [Podrobnosti návrhu: Účtování montážní zakázky](design-details-assembly-order-posting.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/assemble-items-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/assemble-items-dynamics-365-business-central/)
 
 ## Viz také
 

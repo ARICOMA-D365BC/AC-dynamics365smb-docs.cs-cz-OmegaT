@@ -54,7 +54,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Inform your customers of order delivery dates by calculating either the capable-to-promise date or the available-to-promise date. | [Calculate Order Promising Dates](sales-how-to-calculate-order-promising-dates.md) |
 | Resolve confusion when two or more records exist for the same customer. | [Merge Duplicate Records](sales-how-merge-duplicate-records.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/sell-items-services-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/sell-items-services-dynamics-365-business-central/)
 
 ## Viz také
 [Setting Up Sales](sales-setup-sales.md)  

@@ -56,7 +56,7 @@ Existují dva způsoby, jak nastavit rozvržení, které sestava používá. Jed
 
 Sestavy jsou navrženy tak, aby používaly vvýchozí rozvržení. Zpět na původní výchozí rozložení můžete přepnout ze stránky **Výběr rozvržení sestav**. Stačí vybrat sestavu a poté v horní části stránky vybrat akci **Obnovit výchozí výběr**.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

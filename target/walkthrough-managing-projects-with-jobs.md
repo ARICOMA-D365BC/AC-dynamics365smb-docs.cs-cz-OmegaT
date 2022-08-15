@@ -183,7 +183,7 @@ V tomto návodu používá projektový manažer možnost **Plán i Fakturovateln
 
 2. Vytvořte řádek plánování s následujícími informacemi:
 
-   | Řádek | Typ řádku | Datum plánování | Typ | Ne. | Množství | jednotková cena |
+   | Řádek | Typ řádku | Datum plánování | Typ | Č.. | Množství | jednotková cena |
    |------|-----------|----------------|-------------|-------|----------|------------|
    | 1 | Rozpočet i fakturovatelné | (dnešní datum) | Zdroj | Tricia | 40 |     |
    | 2 | Rozpočet i fakturovatelné | (dnešní datum) | Zdroj | Timothy | 40 |     |
@@ -192,7 +192,7 @@ V tomto návodu používá projektový manažer možnost **Plán i Fakturovateln
    Zavřete stránku. Součty se aktualizují na stránce **Řádky úlohy projektu**.
 3. Vyberte řádek 1020 a poté vyberte akci **Řádky plánování projektu**. Zadejte následující informace:
 
-   | Řádek | Typ řádku | Datum plánování | Typ | Ne. | Množství | jednotková cena |
+   | Řádek | Typ řádku | Datum plánování | Typ | Č.. | Množství | jednotková cena |
    |------|-----------|----------------|-------------|-------|----------|------------|
    | 1 | Rozpočet i fakturovatelné | (dnešní datum) | Zdroj | Tricia | 80 |     |
    | 2 | Rozpočet i fakturovatelné | (dnešní datum) | Zboží | 80201 (grafický program) | 1 |     |
@@ -262,7 +262,7 @@ CRONUS má smlouvu na zřizování konferenčních místností. Jako projektový
 
 4. Na stránce **Řádky úlohy projektu** vyberte řádek 1120 a poté vyberte akci **Řádky plánování projektu**. Vytvořte řádek plánování s následujícími informacemi:
 
-   | Řádek | Typ řádku | Typ | Ne. | Množství |
+   | Řádek | Typ řádku | Typ | Č.. | Množství |
    |------|-----------|-------------|-------|----------|
    | 1 | Rozpočet i fakturovatelné | Zdroj | Tricia | 30 |
 
@@ -403,7 +403,7 @@ Následující postupy ukazují, jak vytvořit novou úlohu, nastavit ceny a pak
 
 6. Vytvořte řádek plánování s následujícími informacemi:
 
-   | Řádek | Typ řádku | Datum plánování | Typ | Ne. | Množství | jednotková cena |
+   | Řádek | Typ řádku | Datum plánování | Typ | Č.. | Množství | jednotková cena |
    |------|-----------|----------------|-------------|-------|----------|------------|
    | 1 | Fakturovatelné | (dnešní datum) | Finanční účet | 40255 | 1 | 5000 |
 
@@ -413,7 +413,7 @@ Následující postupy ukazují, jak vytvořit novou úlohu, nastavit ceny a pak
 
 8. Vytvořte řádek plánování s následujícími informacemi:
 
-   | Řádek | Typ řádku | Datum plánování | Typ | Ne. | Množství |
+   | Řádek | Typ řádku | Datum plánování | Typ | Č.. | Množství |
    |------|-----------|----------------|----------|--------|----------|
    | 1 | Rozpočet | (dnešní datum) | Zdroj | Tricia | 120 |
    | 2 | Rozpočet | (dnešní datum) | Zboží | 70104 | 10 |
@@ -424,7 +424,7 @@ Následující postupy ukazují, jak vytvořit novou úlohu, nastavit ceny a pak
 
 10. Vytvořte řádek plánování s následujícími informacemi:
 
-   | Řádek | Typ řádku | Datum plánování | Typ | Ne. | Množství | jednotková cena |
+   | Řádek | Typ řádku | Datum plánování | Typ | Č.. | Množství | jednotková cena |
    |------|-----------|-----------------|-------------|-------|----------|------------|
    | 1 | Fakturovatelné | (budoucí datum) | Finanční účet | 40255 | 1 | 5000 |
 

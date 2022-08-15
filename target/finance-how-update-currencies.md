@@ -125,7 +125,7 @@ You can use an external service to keep your currency exchange rates up to date,
 
 The value in the **Exchange Rate** field on the **Currencies** page is updated with the latest currency exchange rate.
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
 
 ## Viz také
 

@@ -70,7 +70,7 @@ Než začnete používat Power BI s [!INCLUDE[prod_short](includes/prod_short.md
 
 -->
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

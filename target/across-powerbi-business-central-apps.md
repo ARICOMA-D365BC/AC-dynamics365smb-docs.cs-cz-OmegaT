@@ -145,7 +145,7 @@ Aplikace Power BI zobrazí pouze data od společnosti [!INCLUDE[prod_short](incl
 - [Vyberte dlaždici](/power-bi/service-dashboard-tiles) pro otevření zdrojové sestavy.
 - Ve výchozím nastavení není aktualizace datové sady naplánována. Plán aktualizace můžete změnit nebo jej můžete na vyžádání aktualizovat pomocí příkazu **Aktualizovat**. Pro více informací navštivte [Konfigurace naplánované aktualizace](/power-bi/refresh-scheduled-refresh).
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

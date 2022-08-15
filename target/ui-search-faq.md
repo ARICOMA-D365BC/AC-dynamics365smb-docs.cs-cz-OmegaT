@@ -19,7 +19,7 @@ This article answers questions that our advanced users often ask about the Tell 
 
 ### Are all actions from my current page discoverable in Tell Me?
 
-Ne. Actions in parts, such as the Sales Lines part or FactBoxes, are not displayed in Tell Me.
+Č.. Actions in parts, such as the Sales Lines part or FactBoxes, are not displayed in Tell Me.
 
 ### Are the results in Tell Me filtered by permissions?
 

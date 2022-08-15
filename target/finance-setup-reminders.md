@@ -16,7 +16,7 @@ ms.author: edupont
 ---
 # Nastavení podmínek a úrovní upomínek
 
-Pomocí připomenutí můžete zákazníkům připomenout částky po splatnosti. [!INCLUDE [reminder-terms](includes/reminder-terms.md)]
+Pomocí upomínek můžete zákazníkům připomenout částky po splatnosti. [!INCLUDE [reminder-terms](includes/reminder-terms.md)]
 
 ## Podmínky upomínky
 

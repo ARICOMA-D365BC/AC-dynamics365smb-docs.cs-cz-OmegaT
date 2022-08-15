@@ -14,24 +14,24 @@ ms.date: 02/09/2022
 ms.author: edupont
 
 ---
-# Collect Outstanding Balances
+# Inkaso nevyrovnaných zůstatků
 
-Managing receivables includes checking whether amounts due are paid on time. If customers have overdue payments, you can begin by sending the **Customer Statement** report as a reminder. Alternatively, you can issue reminders.
+Správa pohledávek zahrnuje kontrolu, zda jsou dlužné částky hrazeny včas. Pokud mají zákazníci platby po splatnosti, můžete jim odeslat sestavu **Výkaz zákazníka** jako připomínku. Případně můžete vydávat upomínky.
 
-Pomocí připomenutí můžete zákazníkům připomenout částky po splatnosti. You can also use reminders to calculate finance charges, such as interest or fees and include them on the reminder. Use finance charge memos if you want to debit customers for interest or fees without reminding them of overdue amounts.
+Pomocí upomínek můžete zákazníkům připomenout částky po splatnosti. Upomínky můžete také použít k výpočtu finančních poplatků, jako jsou úroky nebo poplatky, které je možné zahrnout do upomínky. Chcete-li zákazníkům strhnout úroky nebo poplatky, aniž byste jim připomínali částky po splatnosti, použijte vyúčtování finančních poplatků.
 
-## Statements
+## Výpisy
 
-From the customer card, you can create a statement with that customer's transactions with you. Then, you send the customer the generated PDF file. Alternatively, use the **Customer Statement** report to send your customers an overview of their business with you. The customer statement can be sent to Excel for further processing.
+Z karty zákazníka můžete vytvořit výpis transakcí mezi vámi a zákazníkem. Poté odešlete zákazníkovi vygenerovaný soubor PDF. Případně můžete pomocí sestavy **Výkaz zákazníka** poslat zákazníkům přehled o jejich podnikání s vámi. Výkaz zákazníka lze odeslat do Excelu k dalšímu zpracování.
 
-### To send the Customer Statement report
+### Odeslání sestavy Výkaz zákazníka
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 10.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customer Statement**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Výkaz zákazníka <x5/> a vyberte související odkaz..
 2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. Under **Output Options**, select how to send the report to the customer.
+3. V části **Možnosti výstupu** vyberte způsob odeslání sestavy odběrateli.
 
 > [!NOTE]
-> If you are using multiple currencies, the Customer Statement report is always printed in the customer's currency. The last date in a statement period is also used as the statement date and the aging date, if aging is included.
+> Pokud používáte více měn, sestava Výkaz zákazníka se vytiskne v  měně zákazníka. The last date in a statement period is also used as the statement date and the aging date, if aging is included.
 
 ## Reminders
 
@@ -110,7 +110,7 @@ When you issue a reminder, a reminder entry is created on the **Reminder/Fin. Ch
 
 [!INCLUDE [multiple-interest-rates-def](includes/multiple-interest-rates-def.md)] For more information, see [Set Up Multiple Interest Rates](finance-how-to-set-up-multiple-interest-rates.md).
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
 
 ## Viz také
 

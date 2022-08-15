@@ -32,7 +32,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Create an order, adjust the prepayment amounts, and issue an invoice for prepayment amounts. | [Create Prepayment Invoices](finance-how-to-create-prepayment-invoices.md) |
 | Issue an additional prepayment invoice, either for additional items or for an additional deposit on the original order, or issue a prepayment credit memo. | [Correct Prepayments](finance-how-to-correct-prepayments.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/prepayment-invoices-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/prepayment-invoices-dynamics-365-business-central/index)
 
 ## Viz také
 

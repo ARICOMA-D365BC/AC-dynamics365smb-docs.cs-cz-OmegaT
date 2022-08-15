@@ -135,7 +135,7 @@ The following table describes the codeunits that you must create for your report
 > [!Note]
 > When you create codeunits for the report, pay attention to the value in the **VAT Report Version** field. This field must reflect the version of the report that is, or was, required by the tax authority. For example, you might enter **2021** in the field to indicate that the report conforms to the requirements that were in place that year. To find the current version, contact your tax authority.
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
 
 ## Viz také
 

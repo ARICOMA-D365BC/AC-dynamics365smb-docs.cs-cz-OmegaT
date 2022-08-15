@@ -40,7 +40,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Propojte text plateb s konkrétními účty zákazníka, dodavatele nebo hlavní knihy tak, aby vždy zaúčtoval opakované příjmy v hotovosti nebo výdaje na tyto účty, pokud neexistují žádné doklady, na které by se vztahovaly. | [Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md) |
 | Set up the rules to govern how payments/bank transactions should be automatically applied to their related open ledger entries when you use the **Apply Automatically** function on the **Payment Reconciliation Journal** page. | [Set Up Rules for Automatic Application of Payments](receivables-how-set-up-payment-application-rules.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/use-journals-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/use-journals-dynamics-365-business-central/index)
 
 ## Viz také
 [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md)  

@@ -14,42 +14,42 @@ ms.author: jswymer
 ---
 # Zobrazení a úpravy v aplikaci Excel
 
-With pages that display a list of records in rows and columns, like a list of customers, sale orders, or invoices, you can export the list to Microsoft Excel, and view it there. Depending on the page, you have two options for viewing in Excel. Both options are available from the **Share** icon ![Share a page in another app.](media/share-icon.png) at the top of a page. You can either select the **Open in Excel** action or the **Edit in Excel** action on the page. This article explains the differences between the two actions.
+Se stránkami, které zobrazují seznam záznamů v řádcích a sloupcích, jako je seznam zákazníků, prodejních objednávek nebo faktur, můžete seznam exportovat do aplikace Microsoft Excel a zobrazit jej tam. V závislosti na stránce máte dvě možnosti zobrazení v aplikaci Excel. Obě možnosti jsou k dispozici na ikoně ![**Sdílet** Stránku sdílet v jiné aplikaci](media/share-icon.png) V horní části stránky. Na stránce můžete vybrat akci **Otevřít v Excelu** nebo **Upravit v Excelu**. Tento článek vysvětluje rozdíly mezi těmito dvěma akcemi.
 
 ## Otevřít v aplikaci Excel
 
-With the **Open in Excel** action, you can make changes to the records in Excel, but you can't publish the changes back to [!INCLUDE[prod_short](includes/prod_short.md)]. You can only save the changes to Excel file, without affecting data in [!INCLUDE[prod_short](includes/prod_short.md)].
+Pomocí akce **Otevřít v aplikaci Excel** můžete provádět změny záznamů v aplikaci Excel, ale nemůžete publikovat změny zpět do [!INCLUDE[prod_short](includes/prod_short.md)]. Změny můžete uložit pouze do souboru aplikace Excel, aniž by to ovlivnilo data v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-- With this action, Excel respects any filters on the page that limit the records shown. The Excel workbook will contain the same rows and columns that appear on the page in [!INCLUDE[prod_short](includes/prod_short.md)].
+- Pomocí této akce aplikace Excel respektuje všechny filtry na stránce, které omezují zobrazené záznamy. Sešit aplikace Excel bude obsahovat stejné řádky a sloupce, které se zobrazí na stránce v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 - Tato akce funguje na Windows i MacOS.
 
-- Starting with update 18.3, you can also view lists that are shown in page parts, like the lines in a sales order.
+- Počínaje aktualizací 18.3 můžete také zobrazit seznamy, které jsou zobrazeny v částech stránky, jako jsou řádky v prodejní objednávce.
 
 > [!NOTE]
-> For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, the **Open in Excel** action is available by default. However, if you set up [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for editing data in Excel, then the **Open in Excel** action is replaced by the **Edit in Excel** action.
+> Pro místní [!INCLUDE[prod_short](includes/prod_short.md)] je ve výchozím nastavení k dispozici akce **Otevřít v Excelu**. Pokud však nastavíte [!INCLUDE[prod_short](includes/prod_short.md)] místně pro úpravy dat v Excelu, pak se akce **Otevřít v Excelu** nahradí akcí **Upravit v Excelu**.
 
 [!INCLUDE [send-report-excel](includes/send-report-excel.md)]
 
 ## Úprava v aplikaci Excel
 
-The **Edit in Excel** action is available on most lists, but not all. With the **Edit in Excel** action, you make changes to records in Excel and then publish the changes back to [!INCLUDE[prod_short](includes/prod_short.md)]. When Excel opens, you'll see the **Excel Add-in** pane on the right.
+Akce **Upravit v Excelu** je dostupná u většiny seznamů, ale ne u všech. Pomocí akce **Upravit v aplikaci Excel** provedete změny záznamů v aplikaci Excel a poté publikujete změny zpět do [!INCLUDE[prod_short](includes/prod_short.md)]. Po otevření Excelu se na pravé straně zobrazí podokno **Doplněk Excelu**.
 
-- With this action, Excel respects most filters on the page that limit the records shown, so the Excel workbook will contain almost the same records and columns.
+- Díky této akci Excel respektuje většinu filtrů na stránce, které omezují zobrazené záznamy, takže sešit aplikace Excel bude obsahovat téměř stejné záznamy a sloupce.
 
-- To get the latest data from [!INCLUDE[prod_short](includes/prod_short.md)], choose **Refresh** in the the Excel Add-in pane.
+- Chcete-li získat nejnovější data z [!INCLUDE[prod_short](includes/prod_short.md)], zvolte **Aktualizovat** v podokně Doplněk aplikace Excel.
 
-- You can switch the company that you're working with. To switch company, select the **Options** icon ![Excel add-in options.](media/cogwheel.png "Excel add-in options") in the Excel Add-in pane, then select the company from the **Company** field.
+- Můžete přepnout společnost, se kterou pracujete. Chcete-li přepnout společnost, vyberte ikonu **Možnosti** ![možnosti doplňku aplikace Excel.](media/cogwheel.png " Možnosti doplňku aplikace Excel") v podokně Doplněk aplikace Excel a potom vyberte společnost z pole **Společnost**.
 
    > [!IMPORTANT]
-   > When changing the company, make sure that the **Environment** field is not empty. If it is, then set it to one of the available options; otherwise, the add-in will not work correctly.
+   > Při změně společnosti se ujistěte, že pole **Prostředí** není prázdné. Pokud ano, nastavte ji na jednu z dostupných možností; v opačném případě nebude doplněk fungovat správně.
 
-If you make changes to the add-in, you must reload it to update the connection. To reload, use the ![Excel add-in menu](media/excel-addin-menu.png "Excel add-in menu") menu in the top-right corner of the add-in. If you can't load the add-in, talk to your administrator. If you're the administrator, see [Get the Business Central Add-in for Excel](admin-deploy-excel-addin.md).
+Pokud v doplňku provedete změny, je nutné jej znovu načíst, aby se aktualizovalo připojení. Chcete-li znovu načíst, použijte ![nabídku doplňku aplikace Excel](media/excel-addin-menu.png "nabídku doplňku aplikace Excel") nabídka v pravém horním rohu doplňku. Pokud se vám nedaří načíst doplněk, obraťte se na svého správce. Pokud jste správcem, přečtěte si téma [Získání doplňku Business Central pro Excel](admin-deploy-excel-addin.md).
 
 > [!NOTE]
-> The add-in works with Excel for the web (online) from any device as long as as use a supported browser. It also works with the Excel app for Windows (PC); but not for macOS.
+> Doplněk funguje s Excelem pro web (online) z jakéhokoli zařízení, pokud používáte podporovaný prohlížeč. Funguje také s aplikací Excel pro Windows (PC); ale ne pro macOS.
 >
-> For [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, the **Edit in Excel** action is only available if the Excel add-in has been configured by your administrator, and only available for the Web client. For administrators, if you want to learn how to install the Excel add-in, see [Setting up the Excel Add-In for Editing Business Central Data](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin).
+> Pro místní [!INCLUDE[prod_short](includes/prod_short.md)] je akce **Upravit v Excelu** k dispozici pouze v případě, že doplněk aplikace Excel nakonfiguroval váš správce, a je k dispozici pouze pro Webový klient. Pro správce, pokud se chcete dozvědět, jak nainstalovat doplněk aplikace Excel, přečtěte si téma [Nastavení doplňku aplikace Excel pro úpravu dat Business Central](/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin).
 
 
 <!-- Note for later: here we're immediately jumping to pretty advanced topics like changing company or reloading the addin. Fine to keep them for now. In the future, we will first need to explain in more detail the actual functionality of the addin, primarily these sub-sections:
@@ -60,18 +60,18 @@ Creating new records from Excel
 Crafting your own editable Excel.
 Point (4) is where it gets interesting for changing/specifying company, environment and other connection settings-->
 
-### First-time sign-in
+### První přihlášení
 
-The **Edit in Excel** action requires that the Business Central add-in is installed in Excel. In some cases, your administrator may have set up the add-in to install automatically for you. In this case, you just have to sign in to Business Central in **Excel Add-in** pane with your user name and password. Otherwise, the **New Office Add-in** pane opens. To install the add-in, choose **Trust this add-in**, which will install the add-in directly from the Office Store.
+Akce **Upravit v aplikaci Excel** vyžaduje, aby byl doplněk Business Central nainstalován v aplikaci Excel. V některých případech může váš správce nastavit, aby se doplněk automaticky nainstaloval za vás. V tomto případě se stačí přihlásit k Business Central v podokně **doplňku aplikace Excel** pomocí vašeho uživatelského jména a hesla. Jinak se otevře podokno **Nový doplněk Office**. Pokud chcete doplněk nainstalovat, zvolte **Důvěřovat tomuto doplňku**, který nainstaluje doplněk přímo z Office Store.
 
-If for some reason the add-in doesn't install, contact your admin or try to install it manually. For more information, see [Install the add-in manually for your own use](admin-deploy-excel-addin.md#install).
+Pokud se doplněk z nějakého důvodu nenainstaluje, kontaktujte svého správce nebo jej zkuste nainstalovat ručně. Další informace naleznete v části [Ruční instalace doplňku pro vlastní použití](admin-deploy-excel-addin.md#install).
 
 ## Podívejte se na rozdíly mezi možnostmi
 <br><br>
 
 > [!Video https://go.microsoft.com/fwlink/?linkid=2086039]
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

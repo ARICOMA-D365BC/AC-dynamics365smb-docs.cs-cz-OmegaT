@@ -92,7 +92,7 @@ Tato část vysvětluje požadavky na nasazení [!INCLUDE[prod_short](includes/p
    Chcete-li vytvořit počáteční připojení, otevřete [!INCLUDE[prod_short](includes/prod_short.md)] a z centra rolí spusťte funkci **Začínáme s Power BI**. Tato akce vás povede procesem souhlasu a zkontroluje vaši licenci Power BI. Když se zobrazí výzva k přihlášení pomocí účtu správce Azure. Pro více informací navštivte [Připojení k Power BI - pouze jednou](across-working-with-powerbi.md#connect).
 
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/Configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/Configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

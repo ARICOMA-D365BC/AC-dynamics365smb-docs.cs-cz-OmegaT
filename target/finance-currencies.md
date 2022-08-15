@@ -31,7 +31,7 @@ Kódy měn zadáte v seznamu **Měny**, včetně dalších informací a nastaven
 
 Směnné kurzy jsou nástrojem pro výpočet hodnoty místní měny (LCY) každé měnové transakce. Pro víc informací navštivte <x3/>Aktualizace směnných kurzů<x4/> .
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
 
 ## Viz také
 

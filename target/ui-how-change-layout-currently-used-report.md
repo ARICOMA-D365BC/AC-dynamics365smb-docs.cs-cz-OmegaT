@@ -56,7 +56,7 @@ The name of the selected custom layout is now shown in the **Custom Layout Descr
 
 You can now go to your customer and vendor cards to specify which of the layouts to use for different documents that you crate for the customer or vendor in question, such as order confirmations or payment reminders. For more information, see [Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md).
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 [Managing Report Layouts](ui-manage-report-layouts.md)  

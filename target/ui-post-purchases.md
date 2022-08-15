@@ -49,7 +49,7 @@ In most cases, you can open ledger entries from the affected card or document. F
 ## Editing Ledger Entries
 You can edit certain fields on posted purchase documents, such as the **Payment Reference** field. For more information, see [Edit Posted Documents](across-edit-posted-document.md). For more critical fields that affect the auditing trail, you must reverse or undo posting. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
 
 ## Viz také
 [Edit Posted Documents](across-edit-posted-document.md)  

@@ -34,7 +34,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 > [!TIP]
 > Use bank reconciliation to help verify that your books are up-to-date, and do not post the reconciliation until you are satisfied with the reconciliation.
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/reconcile-bank-accounts-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/reconcile-bank-accounts-dynamics-365-business-central/)
 
 ## Viz také
 

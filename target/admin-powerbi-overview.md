@@ -61,7 +61,7 @@ Následující diagram znázorňuje základní workflow pro uživatele při při
 6. Uživatel vytvoří sestavu v Power BI Desktop.
 7. Uživatel publikuje sestavu do služby Power BI. Sestavy jsou pak k dispozici pro výběr v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

@@ -57,7 +57,7 @@ Chcete-li zajistit, aby lidé zadávali platná DIČ, můžete definovat formát
 Pro nastavení DIČ postupujte takto:
 
 1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Countries/Regions**.
-2. Choose the country or region, and then choose the **VAT Reg. Ne. Formats** action.
+2. Choose the country or region, and then choose the **VAT Reg. Č.. Formats** action.
 3. In the **Formats** field, define the format by entering one or more of the following characters:
 
 * **#** Requires a single-digit number.
@@ -232,7 +232,7 @@ You must set up information about how the tax authorities in your country or reg
 [VAT Reporting in the Norwegian Version](LocalFunctionality/Norway/norwegian-vat-reporting.md)  
 [Reporting Goods/Services Tax and Harmonized Sales Tax in Canada](LocalFunctionality/Canada/sales-tax-goods-services.md)
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-vat-dynamics-365-business-central/)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

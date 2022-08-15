@@ -97,7 +97,7 @@ The selected number will now be used to fill in the **No.** field on the card or
 
 
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/number-series-trail-codes-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/number-series-trail-codes-dynamics-365-business-central/index)
 
 ## Viz také
 [Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  

@@ -121,7 +121,7 @@ For information about how to switch the layout currently used on a report, see [
 
 
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

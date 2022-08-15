@@ -45,7 +45,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 
 [!INCLUDE [ext-doc-no-purch](includes/ext-doc-no-purch.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/purchase-items-services-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/purchase-items-services-dynamics-365-business-central/)
 
 ## Viz také
 [Setting Up Purchasing](purchasing-setup-purchasing.md)  

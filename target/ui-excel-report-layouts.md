@@ -116,7 +116,7 @@ Existují některé specifické požadavky na strukturu sešitu aplikace Excel P
 
 [![Zobrazuje různé prvky rozvržení aplikace Excel.](media/excel-layout-callouts-2.png)](media/excel-layout-callouts-2.png#lightbox)
 
-| Ne. | Elementu | Popis | Povinný |
+| Č.. | Elementu | Popis | Povinný |
 |---|-------|----|---|
 | 1 | **Datový** list | <ul><li>Musí mít název **Data**</li><li>Může obsahovat pouze jednu tabulku a tabulka musí mít název **Data**</li></ul> | ![Je povinné](media/check.png) |
 | 2 | **Data** Tabulka | <ul><li>Musí mít název **Data**</li><li>Musí mít alespoň jeden sloupec.</li><li>Může obsahovat pouze sloupce, které jsou v datové sadě sestavy.</li><li>Musí začínat v první buňce **A1** listu **Data**</li></ul> | ![Je povinné](media/check.png) |
@@ -130,7 +130,7 @@ Shrnutí toho, co můžete a nemůžete dělat na listu **Data**:
 - Nepřidávejte žádné sloupce, pokud nejsou zahrnuty v datové sadě sestavy.
 - Listy můžete umístit v libovolném pořadí. Například list **Data** může být první nebo poslední.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

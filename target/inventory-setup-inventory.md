@@ -34,7 +34,7 @@ Po nastavení zásob můžete spravovat různé procesy související s transakc
 | Import více obrázků zboží najednou ze souboru zip, kde jsou soubory pojmenovány podle čísel zboží. | [Hromadný import obrázků zboží](inventory-how-import-item-pictures.md) |
 | Výběr výchozích sestav, které se mají použít pro různé typy dokladů. | [Výběr sestav v Business Central](across-report-selections.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 
 ## Viz také
 

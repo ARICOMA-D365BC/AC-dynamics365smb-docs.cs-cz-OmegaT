@@ -61,7 +61,7 @@ For more information, see [Create and Modify a Custom Report Layout](ui-how-crea
 
 After you modify the layout, try to update the layout again.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 [Managing Report Layouts](ui-manage-report-layouts.md)  

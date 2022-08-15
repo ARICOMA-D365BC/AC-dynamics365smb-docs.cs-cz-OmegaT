@@ -118,7 +118,7 @@ If you're using Business Central on-premises, installing the add-in may be sligh
 
 You're now ready to start using the add-in in Outlook.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 

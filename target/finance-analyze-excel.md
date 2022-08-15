@@ -44,7 +44,7 @@ Your [!INCLUDE [prod_short](includes/prod_short.md)] experience includes an add-
 
 With the add-in, you can get fresh data from [!INCLUDE [prod_short](includes/prod_short.md)], and you can push changes back into [!INCLUDE [prod_short](includes/prod_short.md)]. However, the ability to push data back to the database is disabled for the financial Excel reports in the list above.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

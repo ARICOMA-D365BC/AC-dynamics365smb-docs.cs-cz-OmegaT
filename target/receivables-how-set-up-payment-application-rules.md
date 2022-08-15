@@ -14,76 +14,76 @@ ms.date: 06/25/2021
 ms.author: edupont
 
 ---
-# Set Up Rules for Automatic Application of Payments
+# Nastavení pravidel pro automatickou aplikaci plateb
 
-On the **Payment Application Rules** page, you set up rules to govern how payment text (on a bank transaction) is automatically matched with text on related open (unpaid) invoices, credit memos, or other entries when you use the **Apply Automatically** function on the **Payment Reconciliation Journal** page. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
+Na stránce **Pravidla aplikace platby** nastavíte pravidla, která určují, jak je text platby (u bankovní transakce) automaticky spárován s textem na souvisejících otevřených (nezaplacených) fakturách, dobropisech nebo jiných položkách při použití **Použít automaticky** funkce na stránce **Deník odsouhlasení plateb**. Pro více informací navštivte **Automatické odsouhlasení plateb**.
 
-You set up new payment application rules by choosing which types of data on a payment reconciliation journal line must match with data on one or more open entries before the related payment is automatically applied to the open entries. The quality of each automatic application is shown as a value of **Low** to **High** in the **Match Confidence** field on the **Payment Reconciliation Journal** page according to the payment application rule that was used.
+Nová pravidla aplikace platby nastavíte tak, že zvolíte, které typy dat na řádku deníku odsouhlasení plateb se musí shodovat s daty o jedné nebo více otevřených položkách, než bude související platba automaticky použita na otevřené položky. Kvalita každé automatické aplikace je zobrazena jako hodnota **Nízká** až **Vysoká** v poli **Spolehlivost shody** na stránce **Deník odsouhlasení plateb** podle použitého pravidla platební aplikace.
 
-Each row on the **Payment Application Rules** page represents a payment application rule. Rules are applied in the order specified by the **Sorting Order** field. If multiple rules are used simultaneously, then the match confidence of the highest sorted rule is used.
+Každý řádek na stránce **Pravidla aplikace platby** představuje pravidlo žádosti o platbu. Pravidla se používají v pořadí určeném v poli **Pořadí řazení**. Pokud je současně použito více pravidel, použije se shoda nejvyššího seřazeného pravidla.
 
-The automatic application function is based on prioritized matching criteria. First the function tries, in prioritized order, to match text in the five **Related-Party** fields on a journal line with text in the bank account, name, or address of customers or vendors with unpaid documents representing open entries. Then, the function tries to match text in the **Transaction Text** and **Additional Transaction Info** fields on a journal line with text in the **External Document No.** and **Document No.** fields on open entries. Last, the function tries to match the amount in the **Statement Amount** field on a journal line with the amount on open entries.
+Funkce automatické aplikace je založena na prioritních kritériích shody. Nejprve se funkce pokusí v pořadí podle priority porovnat text v pěti polích **Související strana** na řádku deníku s textem na bankovním účtu, jménu nebo adrese zákazníků nebo dodavatelů s nezaplacenými dokumenty představujícími otevřené položky. Poté se funkce pokusí porovnat text v polích **Text transakce** a **Další informace o transakci** na řádku deníku s textem v polích **Číslo externího dokladu** a **Č. dokumentu** u otevřených položek. Nakonec se funkce pokusí porovnat částku v poli **Částka výkazu** na řádku deníku s částkou na otevřených položkách.
 
 > [!NOTE]
-> Text matching is only possible for text longer than four characters.
+> Shoda textu je možná pouze pro text delší než čtyři znaky.
 
-In addition to the matching criteria, the following applies concerning the sign of the payment amount:
+Kromě kritérií pro přiřazování platí pro znaménko částky platby toto:
 
-- For negative amounts, a match is made first against open entries representing customer invoices and then against vendor credit memos.
-- For positive amounts, a match is made first against open entries representing vendor invoices and then against customer credit memos.
+- U záporných částek je nejprve provedena shoda s otevřenými položkami představujícími faktury odběratele a poté s dobropisy dodavatele.
+- U kladných částek je nejprve provedena shoda s otevřenými položkami představujícími faktury dodavatele a poté s dobropisy odběratele.
 
-## To set up a payment application rule
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Application Rules**, and then choose the related link.
-2. Define a new or edited payment application rule by filling the fields on a line as described in the following table.
+## Nastavení pravidla žádosti o platbu
+1. Vyberte ![ Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat") ikona, zadejte **Pravidla žádosti o platbu** a poté vyberte související odkaz.
+2. Definujte nové nebo upravené pravidlo platební aplikace vyplněním polí na řádku, jak je popsáno v následující tabulce.
 
-|Field|Description|
+|Pole|Popis|
 |-|-|
-|**Match Confidence**|Specifies your confidence in the application rule that you define on the line. <br /></br>A value that you specify in this field is shown in the **Match Confidence** field on the **Payment Reconciliation Journal** page according to the quality of the automatic payment application on the journal line.|
-|**Priority**|Specifies the priority of the application rule relative to other application rules that are defined as lines on the **Payment Application Rules** page. 1 represents the highest priority.|
-|**Related Party Matched**|Specifies how much information about the customer or vendor, such as address, city name, and bank account number, on the payment reconciliation journal line must match with information about the open entry before the application rule will be used to automatically apply the payment to the open entry.|
-|**Doc. No./Ext. Doc. Ne. Matched**|Specifies whether text on the payment reconciliation journal line must match with the value in the **Document No.** field or the **External Document No.** field on the open entry before the application rule will be used to automatically apply the payment to the open entry.|
-|**Amount Incl. Tolerance Matched**|Specifies how many entries for a customer or vendor must match the amount including payment tolerance before the application rule will be used to automatically apply a payment to the open entry.|
-|**Review Required**|Specifies whether the automatic payment application is recommended for manual review by the user before posting. Choosing the **Lines to Review** field on the **Payment Application Journal** page starts a guided experience where you can easily review multiple applications in a sequence on the **Payment Application Review** page.|
+|**Důvěra shody**|Udává vaši důvěru v pravidlo aplikace, které definujete na řádku. <br /></br>Hodnota, kterou zadáte v tomto poli, se zobrazí v poli **Důvěra shody** na stránce **Deník odsouhlasení plateb** podle kvality automatického žádost o platbu na řádku deníku.|
+|**Priorita**|Určuje prioritu pravidla aplikace vzhledem k ostatním pravidlům aplikace, která jsou definována jako řádky na stránce **Pravidla aplikace platby**. 1 představuje nejvyšší prioritu.|
+|**Shoda se spřízněnou stranou**|Uvádí, kolik informací o zákazníkovi nebo dodavateli, jako je adresa, název města a číslo bankovního účtu, na řádku deníku odsouhlasení plateb se musí shodovat s informacemi o otevřené položce než bude použito aplikační pravidlo pro automatické připsání platby na otevřený záznam.|
+|**Doc. Č./příp. Doc. Č.. Shoda**|Uvádí, zda se text na řádku deníku odsouhlasení plateb musí shodovat s hodnotou v poli **Číslo dokumentu** nebo **Číslo externího dokladu** v otevřeném poli záznam před aplikačním pravidlem bude použit k automatickému uplatnění platby na otevřený záznam.|
+|**Částka vč. Odpovídající tolerance**|Uvádí, kolik položek pro zákazníka nebo dodavatele musí odpovídat částce včetně tolerance platby, než bude pravidlo aplikace použito k automatickému použití platby na otevřenou položku.|
+|**Vyžadována kontrola**|Uvádí, zda je aplikace pro automatické platby doporučena k manuální kontrole uživatelem před odesláním. Výběrem pole **Řádky ke kontrole** na stránce **Deník platebních aplikací** spustíte řízené prostředí, kde můžete snadno zkontrolovat více žádostí v sekvenci na stránce **Kontrola žádosti o platbu**.|
 
-The following table describes the standard payment application rules in [!INCLUDE[prod_short](includes/prod_short.md)].
+Následující tabulka popisuje standardní pravidla aplikace platby v [!INCLUDE[prod_short](includes/prod_short.md)].
 
 > [!Important]
-> The payment application rules may be different in your implementation of [!INCLUDE[prod_short](includes/prod_short.md)].
+> Pravidla žádosti o platbu se mohou ve vaší implementaci [!INCLUDE[prod_short](includes/prod_short.md)] lišit.
 
-| Match Confidence | Priority | Related Party Matched | Doc. No./Ext. Doc. Ne. Matched | Amount Incl. Tolerance Matched |
+| Jistota shody | Priorita | Spřízněná strana se shoduje | Doc. Č./příp. Doc. Č.. Shoda | Částka vč. Odpovídající tolerance |
 |------------------|----------|-----------------------|--------------------------------|--------------------------------|
-| High | 1 | Fully | Yes - Multiple | One Match |
-| High | 2 | Fully | Yes - Multiple | Multiple Matches |
-| High | 3 | Fully | Ano | One Match |
-| High | 4 | Fully | Ano | Multiple Matches |
-| High | 5 | Partially | Yes - Multiple | One Match |
-| High | 6 | Partially | Yes - Multiple | Multiple Matches |
-| High | 7 | Partially | Ano | One Match |
-| High | 8 | Fully | Ne | One Match |
-| High | 9 | Ne | Yes - Multiple | One Match |
-| High | 10 | Ne | Yes - Multiple | Multiple Matches |
-| Medium | 1 | Fully | Yes - Multiple | Not Considered |
-| Medium | 2 | Fully | Ano | Not Considered |
-| Medium | 3 | Fully | Ne | Multiple Matches |
-| Medium | 4 | Partially | Yes - Multiple | Not Considered |
-| Medium | 5 | Partially | Ano | Not Considered |
-| Medium | 6 | Ne | Ano | One Match |
-| Medium | 7 | Ne | Yes-Multiple | Not Considered |
-| Medium | 8 | Partially | Ne | One Match |
-| Medium | 9 | Ne | Ano | Not Considered |
-| Low | 1 | Fully | Ne | No Matches |
-| Low | 2 | Partially | Ne | Multiple Matches |
-| Low | 3 | Partially | Ne | No Matches |
-| Low | 4 | Ne | Ne | One Match |
-| Low | 5 | Ne | Ne | Multiple Matches |
+| Vysoká | 1 | Plně | Ano - Více | Jedna shoda |
+| Vysoká | 2 | Plně | Ano - Více | Více shod |
+| Vysoká | 3 | Plně | Ano | Jedna shoda |
+| Vysoká | 4 | Plně | Ano | Více shod |
+| Vysoká | 5 | Částečně | Ano - Více | Jedna shoda |
+| Vysoká | 6 | Částečně | Ano - Více | Více shod |
+| Vysoká | 7 | Částečně | Ano | Jedna shoda |
+| Vysoká | 8 | Plně | Ne | Jedna shoda |
+| Vysoká | 9 | Ne | Ano - Více | Jedna shoda |
+| Vysoká | 10 | Ne | Ano - Více | Více shod |
+| Střední | 1 | Plně | Ano - Více | Nezvažuje se |
+| Střední | 2 | Plně | Ano | Nezvažuje se |
+| Střední | 3 | Plně | Ne | Více shod |
+| Střední | 4 | Částečně | Ano - Více | Nezvažuje se |
+| Střední | 5 | Částečně | Ano | Nezvažuje se |
+| Střední | 6 | Ne | Ano | Jedna shoda |
+| Střední | 7 | Ne | Ano - Více | Nezvažuje se |
+| Střední | 8 | Částečně | Ne | Jedna shoda |
+| Střední | 9 | Ne | Ano | Nezvažuje se |
+| Nízký | 1 | Plně | Ne | Žádné shody |
+| Nízký | 2 | Částečně | Ne | Více shod |
+| Nízký | 3 | Částečně | Ne | Žádné shody |
+| Nízký | 4 | Ne | Ne | Jedna shoda |
+| Nízký | 5 | Ne | Ne | Více shod |
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/reconciliation-journals-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/reconciliation-journals-dynamics-365-business-central/index)
 
 ## Viz také
-[Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md)  
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Odsouhlasení plateb pomocí automatické aplikace](receivables-how-reconcile-payments-auto-application.md)    
+[Správa pohledávek](receivables-manage-receivables.md)    
+[Prodej](sales-manage-sales.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -42,7 +42,7 @@ RDL/RDLC a jak používat nástroj Report Builder.
 > [!NOTE]
 > Nástroj Report Builder rozpozná pouze typ souboru .rdl file type;, not .rdlc. Soubory rozvržení exportované z Business Central jsou soubory typu .rdlc. Chcete-li upravit toto rozložení v Report Builder, přejmenujte typ souboru na .rdl
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
 

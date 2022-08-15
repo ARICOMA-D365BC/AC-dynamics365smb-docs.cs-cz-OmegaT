@@ -44,7 +44,7 @@ Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je po
 | Set up a tolerance by which the system closes an invoice even though the payment, including any discount, does not fully cover the amount on the invoice. | [Work with Payment Tolerances and Payment Discount Tolerances](finance-payment-tolerance-and-payment-discount-tolerance.md) |
 | Predict when payments will be made late for sales documents. | [The Late Payment Prediction Extension](ui-extensions-late-payment-prediction.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/process-customer-vendor-payments-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-customer-vendor-payments-dynamics-365-business-central/)
 
 ## Viz také
 [Sales](sales-manage-sales.md)  

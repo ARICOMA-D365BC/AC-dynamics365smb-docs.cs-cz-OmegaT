@@ -91,7 +91,7 @@ You can also view videos of new and commonly used capabilities in our video libr
 
 [!INCLUDE [ua-rss](includes/ua-rss.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs)
 
 ## Viz také
 

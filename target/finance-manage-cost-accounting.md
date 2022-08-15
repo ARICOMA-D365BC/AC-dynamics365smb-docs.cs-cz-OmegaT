@@ -27,7 +27,7 @@ Cost accounting is used to help you understand the costs of running a business. 
 | Learn the processes in creating cost budgets. | [Creating Cost Budgets](finance-create-cost-budgets.md) |
 | Cancel cost budget entries from the cost budget register. | [Deleting Cost Budget Entries](finance-how-to-delete-cost-budget-entries.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/use-cost-accounting-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/use-cost-accounting-dynamics-365-business-central/)
 
 ## Viz také
 [Finance](finance.md)  

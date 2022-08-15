@@ -38,7 +38,7 @@ Finance-related purchase setup, such as payment methods and currencies, are cove
 
 [!INCLUDE [ext-doc-no-purch](includes/ext-doc-no-purch.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/trade-get-started-dynamics-365-business-central/)
 
 ## Viz také
 

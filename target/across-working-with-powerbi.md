@@ -122,7 +122,7 @@ Tato zpráva se zobrazí, pokud se výchozí sestavě nepodařilo nasadit do va�
 
 Je to pravděpodobně proto, že název sestavy neobsahuje název stránky seznamu. Vymažte filtr a získejte úplný seznam dostupných sestav Power BI.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

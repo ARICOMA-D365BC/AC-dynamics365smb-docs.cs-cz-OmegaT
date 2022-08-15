@@ -71,7 +71,7 @@ Chcete-li sdílet sestavu, vyberte v seznamu sestav nebo v otevřené sestavě m
 > [!NOTE]
 > Musíte mít licenci [Power BI Pro](/power-bi/service-features-license-type) a také jí musí mít lidé, se kterými chcete sestavu sdílet sdílíte. Obsah musí být v pracovním prostoru s  [kapacitou Premium](/power-bi/service-premium-what-is). Pro více informací navštivte [Způsoby sdílení práce v Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports).
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/configure-powerbi-excel-dynamics-365-business-central/index)
 
 ## Viz také
 

@@ -135,7 +135,7 @@ The best price is the lowest permissible price with the highest permissible line
 
 If no special price can be calculated for the item on the line, then either the last direct cost or the unit price from the item card is inserted.
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/set-up-prices-discounts-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/set-up-prices-discounts-dynamics-365-business-central/index)
 
 ## Viz také
 [Setting Up Purchasing](purchasing-setup-purchasing.md)  

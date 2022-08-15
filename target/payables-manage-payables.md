@@ -32,7 +32,7 @@ The following table describes a sequence of tasks within accounts payable, with 
 | Ensure correct inventory valuation by assigning added item costs, such as freight, physical handling, insurance, and transportation that you incur when purchasing. | [Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md) |
 | Reimburse employees for personal expenses during business activities by making payment to their bank account. | [Record and Reimburse Employees' Expenses](finance-how-record-reimburse-employee-expenses.md) |
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/process-customer-vendor-payments-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-customer-vendor-payments-dynamics-365-business-central/)
 
 ## Viz také
 [Purchasing](purchasing-manage-purchasing.md)  

@@ -54,7 +54,7 @@ Pokud používáte [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, b
 > [!NOTE]
 > Pokud máte potíže se správným fungováním aplikace, obraťte se na svého správce. Může se stát, že se jedná o chybějící předpoklad nebo neúplnou konfiguraci. Další informace najdete v [Příprava prostředí pro mobilní aplikaci](/dynamics365/business-central/dev-itpro/deployment/install-business-central-app#prereqs) nebo [Řešení potíží s mobilní aplikací Business Central On-Premises](/dynamics365/business-central/dev-itpro/developer/devenv-troubleshooting-the-mobile-app).
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/alternative-interfaces-dynamics-365-business-central/index)
 
 ## Viz také
 

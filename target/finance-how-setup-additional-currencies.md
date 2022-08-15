@@ -127,7 +127,7 @@ Kromě toho budou mít všechny budoucí položky stejného typu částky zaznam
 > [!NOTE]  
 > The **Add. Reporting Currency** field will only be activated after you choose the **OK** button in the **Adjust Add. Reporting Currency** batch job.
 
-## Viz související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/use-multiple-currencies-dynamics-365-business-central/)
 
 ## Viz také
 

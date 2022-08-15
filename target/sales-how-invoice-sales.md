@@ -122,7 +122,7 @@ You can even create directly-paid invoices for non-registered customers by first
 
 [!INCLUDE [ext-doc-no-sales](includes/ext-doc-no-sales.md)]
 
-## Viz související školení na webu [Microsoft Learn](/learn/modules/invoicing-customers-dynamics-365-business-central/index)
+## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/invoicing-customers-dynamics-365-business-central/index)
 
 ## Viz také
 
