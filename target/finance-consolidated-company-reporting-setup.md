@@ -15,128 +15,128 @@ ms.author: bholtorf
 
 ---
 
-# Set Up Company Consolidation
+# Nastavení konsolidace společnosti
 
-Before you can consolidate the general ledger entries of two or more separate companies (subsidiaries) into a consolidated company, you must prepare the charts of accounts and the consolidation company.
+Před konsolidací položek hlavní knihy dvou nebo více samostatných společností (dceřiných společností) do konsolidované společnosti je nutné připravit účtovou osnovu a konsolidační společnost.
 
-Depending on the complexity of your businesses, there are two ways to set up consolidation:
+V závislosti na složitosti vašeho podnikání existují dva způsoby, jak nastavit konsolidaci:
 
-* If you do not need advanced settings, such as including a company that you only own part of, you can use the **Company Consolidation** assisted setup guide to quickly set up a consolidation. The guide helps you through the basic steps.
-* If you do need more advanced settings, you can set up the consolidated company and business units yourself.
-   * In each business unit, specify which general ledger accounts are to be included in the consolidation, and specify the consolidation translation method for each account.
-   * In the consolidation company, set up a business unit card for each company to be included in the consolidation. The business unit card includes information, such as the dates of the business unit's fiscal year, and the percentage of each account that must be included in the consolidation.
+* Pokud nepotřebujete upřesňující nastavení, například zahrnutí společnosti, jejíž součást vlastníte pouze část, můžete pomocí průvodce asistovaným nastavením **Konsolidace společnosti** rychle nastavit konsolidaci. Průvodce vám pomůže projít základními kroky.
+* Pokud potřebujete pokročilejší nastavení, můžete konsolidovanou společnost a účetní jednotky nastavit sami.
+   * V každé účetní jednotce určete, které účty hlavní knihy mají být zahrnuty do konsolidace, a určete metodu převodu konsolidace pro každý účet.
+   * V konsolidační společnosti nastavte pro každou společnost, která má být zahrnuta do konsolidace, kartu účetní jednotky. Karta účetní jednotky obsahuje informace, například data fiskálního roku organizační jednotky a procento každého účtu, který musí být zahrnut do konsolidace.
 
-## Simple consolidation setup
+## Jednoduché nastavení konsolidace
 
 [!INCLUDE [2021_releasewave1](includes/2021_releasewave1.md)]
-If your consolidation is straightforward, for example because you wholly-own the business units to consolidate, the **Company Consolidation** assisted setup guide will help you through the following steps:
+Pokud je vaše konsolidace přímočará, například proto, že jste úplným vlastníkem účetních jednotek určených ke konsolidaci, průvodce nastavením s asistencí **Konsolidace společnosti** vám pomůže projít následujícími kroky:
 
-* Choose whether to create a new consolidated company, or whether to consolidate the data in a company that you have already created for the consolidation. The company should not contain transactions.
-* Preview the results. [!INCLUDE[prod_short](includes/prod_short.md)] verifies that the master data and transactions can be successfully transferred to the consolidated company.
+* Zvolte, zda chcete vytvořit novou konsolidovanou společnost nebo zda chcete konsolidovat data ve společnosti, kterou jste již vytvořili pro konsolidaci. Společnost by neměla obsahovat transakce.
+* Zobrazte náhled výsledků. [! INCLUDE[prod_short](includes/prod_short.md)] ověřuje, že kmenová data a transakce mohou být úspěšně převedeny do konsolidované společnosti.
 
-To use the assisted setup guide, follow these steps:
+Chcete-li použít průvodce asistovaným nastavením, postupujte takto:
 
-1. On the **Accountant** Role Center, choose the **Assisted Setup** action.
-2. Choose **Set up consolidation reporting**, and then complete each step in the assisted setup guide.
+1. V Centru rolí **Účetní** vyberte akci **Asistované nastavení**.
+2. Zvolte **Nastavit vykazování konsolidace** a pak dokončete každý krok v průvodci asistovaným nastavením.
 
-## Advanced consolidation setup
+## Pokročilé nastavení konsolidace
 
-If you need more advanced settings for your consolidation, you can set up consolidation manually. For example, if you have companies that you own only partially, or you have companies that you do not want to include in the consolidation.
+Pokud potřebujete pokročilejší nastavení pro konsolidaci, můžete konsolidaci nastavit ručně. Například pokud máte společnosti, které vlastníte pouze částečně, nebo máte společnosti, které nechcete zahrnout do konsolidace.
 
-### Set up the consolidated company
+### Založení konsolidované společnosti
 
-First, you must set up the consolidated company. You set up the consolidated company in the same way that you set up other companies. For more information, see [Getting Ready for Doing Business](ui-get-ready-business.md).
+Nejprve musíte založit konsolidovanou společnost. Konsolidovanou společnost nastavíte stejným způsobem jako jiné společnosti. [přibližně]Pro více infomací běžte na <x3/>Příprava na podnikání<x4/>.
 
-The following list illustrates key aspects of the consolidated company.
+Následující seznam znázorňuje klíčové aspekty konsolidované společnosti.
 
-1. Set up the chart of accounts
+1. Nastavení účetní osnovy
 
-   For more information, see [Setting Up or Changing the Chart of Accounts](finance-setup-chart-accounts.md).
+   Pro více informací navštivte Nastavení nebo změna účetní osnovy.
 
-   The charts of accounts can be identical across a business unit and the consolidated company, or the consolidated company can have a different chart of account. If a business unit's chart of accounts is different from that of the consolidated company, you must specify the mapping between accounts on the accounts in the business unit. For more information, see the [Prepare general ledger accounts for consolidation](#glacc) section.
+   Účtové osnovy můžou být stejné v rámci obchodní jednotky a konsolidované společnosti nebo konsolidovaná společnost může mít jinou účtovou osnovu. Pokud se účtová osnova organizační jednotky liší od účtové osnovy konsolidované společnosti, je nutné zadat mapování mezi účty na účtech v účetní jednotce. Další informace naleznete v části [Příprava účtů hlavní knihy na konsolidaci](#glacc).
 
-2. Add business units
+2. Přidání organizačních jednotek
 
-   To consolidate several companies' financial data in a consolidated company, you must enter information about the subsidiary as business units to be included and about how much their figures will be included.
+   Chcete-li konsolidovat finanční data několika společností do konsolidované společnosti, musíte zadat informace o dceřiné společnosti jako účetní jednotky, které mají být zahrnuty, a o tom, do jaké míry budou zahrnuty jejich údaje.
 
-   For more information, see the [Add business units](#busunit) section.
-3. You can specify exchange rates when consolidating the financial statements of business units if the financial statements are in a foreign currency.
+   Další informace naleznete v části [Přidání účetních jednotek](#busunit).
+3. Při konsolidaci účetní závěrky účetních jednotek můžete určit směnné kurzy, pokud je účetní závěrka v cizí měně.
 
-   The three exchange rates that are used are **Average Rate (Manual)**, **Closing Rate**, and **Last Closing Rate**. For more information, see the [Specify exchange rates for consolidations](#exchrates) section.
-4. You can consolidate dimension information and general ledger accounts.
+   Používají se tři směnné kurzy **Průměrný kurz (ručně)**, **Uzávěrkový kurz**a **Poslední závěrečný kurz**. Další informace naleznete v části [Určení směnných kurzů pro konsolidace](#exchrates).
+4. Můžete konsolidovat informace o dimenzích a finanční účty.
 
-   For more information, see the [Include or exclude dimensions](#dim) section.
+   Další informace naleznete v části [Zahrnutí nebo vyloučení dimenzí](#dim).
 
-### <a name="busunit"></a>Add business units
+### <a name="busunit"></a> Přidání účetních jednotek
 
-[!INCLUDE[prod_short](includes/prod_short.md)] lets you set up a list of business units to consolidate, verify the accounting data before you consolidate it, import files, and generate consolidation reports.
+[! INCLUDE[prod_short](includes/prod_short.md)] umožňuje nastavit seznam účetních jednotek ke konsolidaci, ověřit účetní data před jejich konsolidací, importovat soubory a generovat konsolidační sestavy.
 
-1. Sign in to the consolidated company.
-2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Business Units**, and then choose the related link.
+1. Přihlaste se ke konsolidované společnosti.
+2. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte **Účetní jednotky**a poté vyberte související odkaz.
 3. Zvolte **Nový** a vyplňte požadovaná pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-   > [!IMPORTANT]
-   > When you fill in the **Starting Date** and **Ending Date** fields, make sure you comply with GAAP rules concerning the fiscal periods of the business unit versus the parent company.
-4. Repeat step 3 for each additional business unit
+   > [!DŮLEŽITÉ]
+   > Když vyplníte pole **Počáteční datum** a **Koncové datum**, ujistěte se, že dodržujete pravidla GAAP týkající se fiskálních období obchodní jednotky oproti mateřské společnosti.
+4. Opakujte krok 3 pro každou další účetní jednotku
 
-If your business unit uses a foreign currency, you must specify the exchange rate to use in the consolidation. You must also enter consolidation information about the business unit's general ledger accounts. These processes are described in the following sections.
+Pokud vaše účetní jednotka používá cizí měnu, musíte určit směnný kurz, který se má použít při konsolidaci. Musíte také zadat konsolidační informace o finančních účtech účetní jednotky. Tyto procesy jsou popsány v následujících částech.
 
-### <a name="glacc"></a>Prepare general ledger accounts for consolidation
+### <a name="glacc"></a> Příprava finančních účtů pro konsolidaci
 
-The chart of accounts for a company that will be consolidated must specify accounts for consolidation. For each posting general ledger account in each company, you must specify the general ledger account in the consolidated company to which the balance will be transferred on consolidation. This is a mapping that will allow companies with different chart of accounts to be consolidated together.
+Účtová osnova společnosti, která bude konsolidována, musí specifikovat účty pro konsolidaci. Pro každý zaúčtovaný finanční účet v každé společnosti musíte zadat finanční účet v konsolidované společnosti, na který bude zůstatek převeden při konsolidaci. Jedná se o mapování, které umožní konsolidaci společností s různou účtovou osnovou.
 
-If the chart of accounts in the business unit differs from the consolidated company, you must prepare general ledger accounts for consolidation. You can specify the accounts to post debits and credits to, and the method to use to translate currencies in the consolidated company. For example, this is useful if you frequently run the report.
+Pokud se účtová osnova v účetní jednotce liší od konsolidované společnosti, musíte připravit finanční účty pro konsolidaci. Můžete určit účty, na které se mají účtovat debety a kredity, a metodu, která se použije k převodu měn v konsolidované společnosti. To je užitečné například v případě, že sestavu často spouštíte.
 
-1. In each business unit's [!INCLUDE [prod_short](includes/prod_short.md)], choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Chart of Accounts**, and then choose the related link.
-2. Open the card for the account, and then fill in the fields on the **Consolidation** FastTab. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
+1. V každé obchodní jednotce [!INCLUDE [prod_short](includes/prod_short.md)] vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte < g5>Účtová osnova**a poté vyberte související odkaz.
+2. Otevřete kartu pro účet a vyplňte pole na pevné záložce **Konsolidace**. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
-### <a name="exchrates"></a>Specify exchange rates for consolidations
+### <a name="exchrates"></a> Určení směnných kurzů pro konsolidace
 
-If a business unit uses a different currency than the consolidated company, you must specify exchange rate methods for each account before you consolidate. For each account, the content of the **Consol. Translation Method** field determines the exchange rate. In the consolidated company, on each business unit card, in the **Currency Exchange Rate Table** field, you specify whether consolidation will use exchange rates from the business unit or the consolidated company. If you use exchange rates from the consolidated company, you can change the exchange rates for a business unit. For business units, if the **Currency Exchange Rate Table** field on the business unit card contains **Local**, you can change the exchange rate from the business unit card. The exchange rates are copied from the **Currency Exchange Rate** table, but you can change them before consolidating.
+Pokud účetní jednotka používá jinou měnu než konsolidovaná společnost, je nutné před konsolidací zadat metody směnných kurzů pro každý účet. Pro každý účet obsah pole **Způsob převodu konsolidace** určuje směnný kurz. V konsolidované společnosti na každé kartě účetní jednotky v poli **Tabulka směnných kurzů** určíte, zda bude konsolidace používat směnné kurzy z účetní jednotky nebo konsolidované společnosti. Pokud používáte směnné kurzy konsolidované společnosti, můžete změnit směnné kurzy pro účetní jednotku. Pokud u účetních jednotek pole **Tabulka směnných kurzů** na kartě organizační jednotky obsahuje **Místní**, můžete změnit směnný kurz z karty organizační jednotky. Směnné kurzy jsou zkopírovány z tabulky **Směnný kurz**, ale před konsolidací je můžete změnit.
 
-The following table describes the exchange rate methods you can use for accounts.
+Následující tabulka popisuje metody směnných kurzů, které lze použít pro účty.
 
-| Exchange rate | Typical use |
+| Směnný kurz | Typické použití |
 |---|---|
-| Average Rate (Manual) | You manually calculate the average rate for the period to consolidate. Calculate the average either as an arithmetic average or as a best estimate, and specify the result for each business unit. Used for income statement accounts. |
-| Closing Rate | Used for balance sheet accounts. |
-| Last Closing Rate | The rate that was valid in the foreign exchange market on the date for which the balance sheet or income statement is being prepared. You enter this rate for each business unit. Used for balance sheet accounts. |
-| Historical Rate | The exchange rate that was valid when the transaction occurred. |
-| Composite Rate | The current period amounts are translated at the average rate and added to the previously recorded balance in the consolidated company. This method is typically used for retained earnings accounts because they include amounts from different periods and are therefore a composite of amounts translated with different exchange rates. |
-| Equity Rate | This is similar to **Composite**. Differences are posted to separate general ledger accounts. |
+| Průměrný kurz (ručně) | Ručně vypočítáte průměrnou sazbu pro období konsolidace. Vypočítejte průměr buď jako aritmetický průměr, nebo jako nejlepší odhad, a zadejte výsledek pro každou účetní jednotku. Používá se pro účty výsledovky. |
+| Uzavírací kurz | Používá se pro rozvahové účty. |
+| Poslední uzavírací kurz | Kurz, který byl platný na devizovém trhu k datu, pro který se sestavuje rozvaha nebo výsledovka. Tuto sazbu zadáte pro každou účetní jednotku. Používá se pro rozvahové účty. |
+| Historický kurz | Směnný kurz, který byl platný v době uskutečnění transakce. |
+| Složený kurz | Částky za běžné období jsou přepočteny průměrným kurzem a přičteny k dříve zaznamenanému zůstatku v konsolidované společnosti. Tato metoda se obvykle používá pro účty nerozděleného zisku, protože zahrnují částky z různých období, a jsou tedy složeny z částek převedených různými směnnými kurzy. |
+| Kurz cenných papírů | To je podobné jako **Kompozitní**. Rozdíly jsou zaúčtovány do samostatných finančních účtů. |
 
-To specify exchange rates for business units, follow these steps:
+Chcete-li zadat směnné kurzy pro organizační jednotky, postupujte takto:
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Business Units**, and then choose the related link.
-2. On the **Business Unit List** page, choose the business unit, and then choose the **Average Rate (Manual)** action.
-3. On the **Change Exchange Rate** page, the contents of the **Relational Exch. Rate** field have been copied from the **Currency Exchange Rate** table, but you can modify them. Zavřete stránku.
-4. Choose the **Closing Rate** action.
-5. In the **Relational Exch. Rate Amount** field, enter the exchange rate.
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte **Účetní jednotky**a poté vyberte související odkaz.
+2. Na stránce **Seznam účetních jednotek** vyberte účetní jednotku a poté zvolte akci **Průměrný kurz (ručně)**.
+3. Na stránce **Změnit směnný kurz**, je obsah **Změna směnného kurzu **zkopírován z tabulky **Směnný kurz**, ale můžete je upravit. Zavřete stránku.
+4. Vyberte akci **Uzavírací kurz**.
+5. V poli**Částka vztažného sm.kurzu ** zadejte směnný kurz.
 
-### <a name="dim"></a>Include or exclude dimensions
+### <a name="dim"></a> Zahrnutí nebo vyloučení dimenzí
 
-You can consolidate dimension information and general ledger accounts.
+Můžete konsolidovat informace o dimenzích a finanční účty.
 
-* On the relevant dimensions, specify the **Consolidation Code** field, or leave it blank
-   * To exclude a dimension in the consolidation, leave the **Consolidation Code** field blank on the dimension, and do not choose dimensions in the **Copy Dimensions** fields in any consolidation functions or reports.
-   * To include dimension information in the consolidation, leave the **Consolidation Code** field blank. However, the consolidation will only work if the dimension values in the business unit are the same as the consolidated company.
-   * To consolidate the dimension value code in the business unit with a different dimension value code in the consolidated company, fill in the **Consolidation Code** field on the relevant dimensions.
-* Add the relevant dimensions to the relevant general ledger accounts
+* U příslušných dimenzí zadejte pole **Kód konsolidace** nebo jej ponechte prázdné
+   * Chcete-li z konsolidace vyloučit dimenzi, ponechte pole **Kód konsolidace** na dimenzi prázdné a nevybírejte dimenze v polích **Kopie dimenzí** v žádných konsolidačních funkcích nebo sestavách.
+   * Chcete-li do konsolidace zahrnout informace o dimenzích, ponechte pole **Kód konsolidace** prázdné. Konsolidace však bude fungovat pouze v případě, že hodnoty dimenzí v účetní jednotce jsou stejné jako v konsolidované společnosti.
+   * Chcete-li konsolidovat kód hodnoty dimenze v účetní jednotce s jiným kódem hodnoty dimenze v konsolidované společnosti, vyplňte pole **Kód konsolidace** u příslušných dimenzích.
+* Přidání příslušných dimenzí do příslušných finančních účtů
 
-### <a name="exclude"></a>Exclude a company from consolidation
+### <a name="exclude"></a> Vyloučení společnosti z konsolidace
 
-If you do not want to include a business unit in the consolidation, you can exclude it. To do that, go to the business unit card, and clear the **Consolidate** check box.
+Pokud nechcete zahrnout účetní jednotku do konsolidace, můžete ji vyloučit. Chcete-li to provést, přejděte na kartu účetní jednotky a zrušte zaškrtnutí políčka **Konsolidovat**.
 
-### <a name="include"></a>Include a partially-owned company in consolidation
+### <a name="include"></a>Zahrnout do konsolidace částečně vlastněnou společnost
 
-If you own only part of a company, you can include a percentage of each transaction that corresponds to the percentage of the company you own. For example, if you own 70% of the company, consolidation will include $70 of an invoice for $100. To specify the percentage of the company you own, go to the business unit card, and enter the percentage in the **Consolidation %** field.
+Pokud vlastníte pouze část společnosti, můžete zahrnout procento každé transakce, které odpovídá procentu společnosti, kterou vlastníte. Pokud například vlastníte 70 % společnosti, konsolidace bude zahrnovat fakturu ve výši 70 USD za 100 USD. Chcete-li zadat procento společnosti, kterou vlastníte, přejděte na kartu účetní jednotky a zadejte procento do pole **Konsolidace %.**
 
 ## Viz také
 
-[Consolidating Financial Data from Multiple Companies](finance-consolidated-company-reporting.md)  
-[Managing Intercompany Transactions](intercompany-manage.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Exporting Your Business Data to Excel](about-export-data.md)
+[Konsolidace finančních údajů z více společností](finance-consolidated-company-reporting.md)    
+[Správa mezipodnikových transakcí](intercompany-manage.md)    
+[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)    
+[Export vašich firemních dat do Excelu](about-export-data.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

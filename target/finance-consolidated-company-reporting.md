@@ -15,7 +15,7 @@ ms.author: edupont
 
 ---
 
-# Consolidating Financial Data from Multiple Companies
+# [přibližně]Konsolidování finančních dat z několika společností
 
 Some organizations use [!INCLUDE [prod_short](includes/prod_short.md)] in multiple business units or legal entities. Others use [!INCLUDE [prod_short](includes/prod_short.md)] in subsidiaries that must report into parent organizations. In both cases, the accountants use built-in tools to help consolidate the financial data.
 
@@ -33,7 +33,7 @@ You can consolidate:
 * Using different currency exchange rates in individual G/L accounts
 * Companies in other accounting and business management programs
 
-You set up the consolidated company in the same way that you set up other companies. The chart of accounts is independent of the chart of accounts in the other business units, and the chart of accounts in the individual business units may differ from one another. You set up a list of companies to consolidate, verify the accounting data before consolidating, import from files or databases, and generate consolidation reports. For more information, see [Set Up Company Consolidation](finance-consolidated-company-reporting-setup.md).
+Konsolidovanou společnost nastavíte stejným způsobem jako jiné společnosti. The chart of accounts is independent of the chart of accounts in the other business units, and the chart of accounts in the individual business units may differ from one another. You set up a list of companies to consolidate, verify the accounting data before consolidating, import from files or databases, and generate consolidation reports. For more information, see [Set Up Company Consolidation](finance-consolidated-company-reporting-setup.md).
 
 > [!TIP]
 > Consolidating financial data may especially be relevant in connection with intercompany processes. For more information, see [Managing Intercompany Transactions](intercompany-manage.md).
@@ -53,7 +53,7 @@ The process of transferring the figures from the business units to the consolida
 You can test your data before you transfer it to the consolidated company. [!INCLUDE[prod_short](includes/prod_short.md)] looks for differences in the information in the business units and the consolidated company. For example, whether account numbers or dimension codes are different. You must correct errors before you can run the report. You can test the database or, if you are importing data from an XML file, you can test the file.
 
 1. Open the consolidated company.
-2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Business Units**, and then choose the related link.
+2. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte **Účetní jednotky**a poté vyberte související odkaz.
 3. Proveďte jeden z následujících úkonů:
 
    * To test a file, choose the **Test File** action, enter the name of the file to test, and then choose **Print**.
@@ -63,7 +63,7 @@ You can test your data before you transfer it to the consolidated company. [!INC
 
 After you have tested the data, you can transfer it to the consolidated company.
 
-1. Sign in to the consolidated company.
+1. Přihlaste se ke konsolidované společnosti.
 2. On the **Accountant Role Center**, choose the **Run Consolidation** action.
 3. Vyplňte požadovaná pole.
 4. In the Filter section, set a filter for the relevant business unit or company name.
