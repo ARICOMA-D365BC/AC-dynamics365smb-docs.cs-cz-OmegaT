@@ -16,11 +16,11 @@ ms.author: jswymer
 
 [!INCLUDE[d365fin](includes/2021_releasewave2.md)]
 
-Jako vývojář nebo pokročilý uživatel pomáhá kontrolovat data generovaná pro danou datovou sadu sestav při vytváření nových sestav nebo úpravách stávajících. Chcete-li tuto funkci podporovat, můžete exportovat datovou sadu sestavy jako nezpracovaná data do sešitu aplikace Excel nebo do souboru XML – přímo. Například v aplikaci Excel můžete provést ad-hoc analýzu dat a diagnostikovat problémy.
+Jako vývojář nebo pokročilý uživatel můžete pomáhat kontrolovat data generovaná pro danou datovou sadu sestav při vytváření nových sestav nebo při stávajících úpravách.  Chcete-li tuto funkci podporovat, můžete exportovat datovou sadu sestavy jako nezpracovaná data do sešitu aplikace Excel nebo do souboru XML – přímo. Například v aplikaci Excel můžete provést ad-hoc analýzu dat a diagnostikovat problémy.
 
 ## Začínáme
 
-Chcete-li exportovat datovou sadu sestavy do excelového sešitu nebo souboru XML, otevřete sestavu v klientovi a na stránce požadavku vyberte **Odeslat do** > **Dokument Microsoft Excel (pouze data)</g2 > nebo **dokument XML**. Soubor bude stažen do vašeho zařízení.
+Chcete-li exportovat datovou sadu sestavy do excelového sešitu nebo souboru XML, otevřete sestavu v klientovi a na stránce požadavku vyberte **Odeslat do** > **Dokument Microsoft Excel (pouze data)** nebo **dokument XML**. Soubor bude stažen do vašeho zařízení.
 
 ## Další informace o aplikaci Excel (pouze data)
 
@@ -35,7 +35,7 @@ Při každém exportu výsledků se vytvoří nový list. Pomocí **Dokument apl
 
 ## Pro administrátory
 
-- **Dokument aplikace Microsoft Excel (pouze data)** byl zaveden jako volitelná funkce ve vlně 2021 vydání 1., aktualizace 18.3. Chcete-li uživatelům poskytnout přístup k této funkci při spuštění vlny 2021 vydání 1., povolte aktualizaci funkce **Uložit datovou sadu sestavy do dokumentu aplikace Microsoft Excel** v **nástroji Správa funkcí**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management). Ve vlně 2021 vydání 2. se tato funkce stala trvalou, takže ji nebudete muset povolit.
+- **Dokument aplikace Microsoft Excel (pouze data)** byl zaveden jako volitelná funkce ve vlně 2021 vydání 1., aktualizace 18.3. Chcete-li uživatelům poskytnout přístup k této funkci při spuštění vlny 2021 vydání 1., povolte aktualizaci funkce **Uložit datovou sadu sestavy do dokumentu aplikace Microsoft Excel** v nástroji ** Správa funkcí**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management). Ve vlně 2021 vydání 2. se tato funkce stala trvalou, takže ji nebudete muset povolit.
 
 - Chcete-li používat **dokument aplikace Microsoft Excel (pouze data),** musí uživatelské účty **povolit akci Exportovat datovou sadu sestav do aplikace Excel**. Toto oprávnění můžete uživatelům udělit přiřazením sady oprávnění **Nástroje pro řešení potíží** nebo **Exportovat sestavu aplikace Excel**. Další informace naleznete v části [Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md)
 
@@ -48,7 +48,7 @@ Možnost **Dokument aplikace Microsoft Excel (pouze data)** exportuje všechny s
    Ve sloupcích, které obsahují binární data, budou pole obsahovat text **Binární data ({0} bajtů),** kde **{0}** označuje počet bajtů.
 - Počínaje verzí Business Central 2021 2. vydání obsahuje soubor aplikace Excel také list **Metadata sestavy**.
 
-   Tento list zobrazuje filtry použité na sestavu a obecné vlastnosti sestavy, jako je název, ID a podrobnosti o rozšíření. Filtry jsou zobrazeny ve sloupci **Filtr (DataItem::Table::FilterGroupNo::FieldName)**. Filtry v tomto sloupci zahrnují filtry nastavené na stránce požadavku sestavy. Zahrnuje také filtry definované v kódu AL, například [Vlastností DataItemLink](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemlink-reports-property) a [Vlastností DataItemTableView](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemtableview-property).
+   Tento list zobrazuje filtry použité na sestavu a obecné vlastnosti sestavy, jako je název, ID a podrobnosti o rozšíření. Filtry jsou zobrazeny ve sloupci **Filtr (DataItem::Table::FilterGroupNo::FieldName)**. Filtry v tomto sloupci zahrnují filtry nastavené na stránce požadavku sestavy. Zahrnuje také filtry definované v kódu AL, například [ Vlastností DataItemLink](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemlink-reports-property) a [ Vlastností DataItemTableView](/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemtableview-property).
 
 Další informace o návrhu sestavy naleznete [v tématu Přehled sestavy](/dynamics365/business-central/dev-itpro/developer/devenv-reports).
 
