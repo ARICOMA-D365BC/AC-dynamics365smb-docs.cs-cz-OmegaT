@@ -81,7 +81,7 @@ Následující tabulka popisuje standardní pravidla aplikace platby v [!INCLUDE
 
 ## Viz také
 [Odsouhlasení plateb pomocí automatické vyrovnání](receivables-how-reconcile-payments-auto-application.md)    
-[Správa pohledávek](receivables-manage-receivables.md)    
+[Řízení pohledávek](receivables-manage-receivables.md)    
 [Prodej](sales-manage-sales.md)    
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 

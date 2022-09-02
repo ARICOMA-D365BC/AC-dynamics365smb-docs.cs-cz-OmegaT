@@ -37,7 +37,7 @@ Optionally, add payment terms to your payment method. For more information, see 
 
 ## To assign a payment method to a customer or vendor
 
-1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikona, zadejte **Zákazník** nebo **Vendor**, a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Zákazník** nebo **Dodavatel** a poté vyberte související odkaz.
 2. In the **Payment Method Code** field, choose the method to use by default for the customer or vendor.
 
 ## Viz také

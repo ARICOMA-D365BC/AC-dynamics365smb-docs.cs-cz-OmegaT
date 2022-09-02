@@ -13,7 +13,7 @@ ms.author: bholtorf
 
 ---
 # Konsolidace zůstatků pro společnost, která je zákazníkem a dodavatelem
-Společnost, se kterou obchodujete, může být zákazníkem i dodavatelem. V takovém případě se můžete vyhnout zbytečným platbám nebo příjmům a možná ušetřit na transakčních poplatcích konsolidací zůstatků zákazníků a dodavatelů společnosti. Konsolidace porovná zůstatky společnosti jako dodavatele a jako odběratele a poté započítá částku tak, aby zůstal zůstatek odběratele nebo dodavatele v závislosti na tom, která částka byla vyšší.
+Společnost, se kterou obchodujete, může být zákazníkem i dodavatelem. V takovém případě se můžete vyhnout zbytečným platbám nebo příjmům a možná ušetřit na transakčních poplatcích konsolidací zůstatků zákazníků a dodavatelů společnosti. Konsolidace porovná zůstatky společnosti jako dodavatele a jako odběratele a poté započítá částku tak, aby zůstal zůstatek zákazníka nebo dodavatele v závislosti na tom, která částka byla vyšší.
 
 Chcete-li konsolidovat zůstatky, musíte nejprve propojit společnosti zákazníka a dodavatele prostřednictvím kontaktu, který má typ **Společnost**. Odběratel nebo dodavatel může mít pouze jeden kontakt typu **Společnost**. Další informace naleznete v části [Vytváření kontaktů](marketing-create-contact-companies.md).
 
@@ -24,16 +24,16 @@ I když to není požadavek, společnosti zákazníka a dodavatele jsou obvykle 
 ## Než začnete
 Před konsolidací zůstatků zadejte na stránce **Nastavení marketingu** několik nastavení.
 
-* Na pevné záložce **Interakce** je nutné zadat kódy obchodních vztahů v polích **Odběratelé** a **Dodavatelé**. [! INCLUDE[prod_short](includes/prod_short.md)] používá tyto informace k určení typu relace, která se má zobrazit pro kontakty.
-* Volitelné: Na pevné záložce **Duplikáty** zapněte nebo vypněte duplicitní vyhledávání. Ve výchozím nastavení je duplicitní vyhledávání zapnuto. Další informace naleznete v tématu [Zpracování duplicit](#handling-duplicates).
+* Na záložce **Interakce** je nutné zadat kódy obchodních vztahů v polích **Odběratelé** a **Dodavatelé**. [! INCLUDE[prod_short](includes/prod_short.md)] používá tyto informace k určení typu relace, která se má zobrazit pro kontakty.
+* Volitelné: Na záložce **Duplikáty** zapněte nebo vypněte duplicitní vyhledávání. Ve výchozím nastavení je duplicitní vyhledávání zapnuto. Další informace naleznete v tématu [Zpracování duplicit](#handling-duplicates).
 
-## Propojte stávajícího zákazníka a dodavatelskou společnost prostřednictvím kontakt
+## Propojte stávajícího zákazníka a dodavatelskou společnost prostřednictvím kontaktu
 The following steps describe how to link a customer and a vendor through a contact.
 
-1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikona, zadejte **Zákazník** nebo **Vendor**, a poté vyberte související odkaz.
-2. Vyberte odběratele nebo dodavatele a poté zvolte akci **Kontaktovat**.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Zákazník** nebo **Dodavatel** a poté vyberte související odkaz.
+2. Vyberte zákazníka nebo dodavatele a poté zvolte akci **Kontakt**.
 3. Pokud pole **Obchodní vztah kontaktu** obsahuje jinou hodnotu než **Žádná**, je nutné relaci odebrat. Chcete-li to provést, použijte akci **Obchodní vztah** a poté vztah odstraňte.
-4. V závislosti na tom, zda jste v kroku 1 vybrali **Zákazník** nebo **Dodavatel**, vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") a poté zadejte protější stranu. To znamená, že pokud zvolíte **Dodavatel**, měli byste hledat **Zákazník**.
+4. V závislosti na tom, zda jste v kroku 1 vybrali **Zákazník** nebo **Dodavatel**, vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat") a poté zadejte protější stranu. To znamená, že pokud zvolíte **Dodavatel**, měli byste hledat **Zákazník**.
 5. Vyberte dodavatele nebo zákazníka a poté vyberte akci **Kontakty**.
 6. Zvolte akci **Propojit s existující** a poté možnost **Zákazník** nebo **Dodavatel**.
 7. Vyberte zákazníka nebo dodavatele.
@@ -52,11 +52,11 @@ Na stránce **Deník plateb** použijte akci **Čisté zůstatky zákazníků/do
 > Pokud zůstatky zákazníka nebo dodavatele obsahují částky, které jsou v různých měnách, vytvoří se řádek pro částku v každé měně.
 
 ## Zpracování duplicit
-Pokud zapnete duplicitní vyhledávání na pevné záložce **Duplikáty** na stránce **Nastavení marketingu**, zobrazí se upozornění při změně hodnot polí, která jsou součástí nastavení duplicitních vyhledávacích řetězců. Když je nalezen duplikát, můžete provést následující akce:
+Pokud zapnete duplicitní vyhledávání na záložce **Duplikáty** na stránce **Nastavení marketingu**, zobrazí se upozornění při změně hodnot polí, která jsou součástí nastavení duplicitních vyhledávacích řetězců. Když je nalezen duplikát, můžete provést následující akce:
 
 * Zkombinujte duplicitní kontakty do jednoho kontaktu, který je stejný pro zákazníka i dodavatele pomocí funkce **Sloučit s** na stránce **Karta kontaktu**. Sloučení kontaktů se obvykle provádí pouze v případě, že zákazník a dodavatel jsou stejná právnická osoba. Další informace naleznete v tématu [Sloučení duplicitních záznamů](sales-how-merge-duplicate-records.md).
 * Odstraňte obchodní vztah dodavatele pro kontakt dodavatele nebo zákazníka a potom pomocí akce **Odkaz na existující** vytvořte odkaz na jiný kontakt.
 
 ## Viz také
 [Prodej](sales-manage-sales.md)    
-[Registrace nových zákazníků](sales-how-register-new-customers.md)  
+[Evidence nových zákazníků](sales-how-register-new-customers.md)  

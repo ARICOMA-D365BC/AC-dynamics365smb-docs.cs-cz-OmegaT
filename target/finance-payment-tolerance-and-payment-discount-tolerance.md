@@ -74,7 +74,7 @@ Upozornění odchylky platby se zobrazí při zaúčtování vyrovnání, které
 ## Blokování platební odchylky pro zákazníky
 Výchozí nastavení pro odchylku platby je povoleno. Chcete-li zakázat platební odchylku určitého zákazníka nebo dodavatele, musíte blokovat toleranci na příslušné kartě zákazníka nebo dodavatele. Následující text popisuje, jak to nastavit pro zákazníka. Kroky jsou podobné pro dodavatele.
 
-1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikona, zadejte **Zákazník** nebo **Vendor**, a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Zákazník** nebo **Dodavatel** a poté vyberte související odkaz.
 2. On the **Payments** FastTab, select the **Block Payment Tolerance** check box.
 
 > [!NOTE]  

@@ -26,7 +26,7 @@ Z karty zákazníka můžete vytvořit výpis transakcí mezi vámi a zákazník
 
 ### Odeslání sestavy Výkaz zákazníka
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Výkaz zákazníka <x5/> a vyberte související odkaz..
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Výkaz zákazníka** a vyberte související odkaz..
 2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. V části **Možnosti výstupu** vyberte způsob odeslání sestavy odběrateli.
 
@@ -56,19 +56,19 @@ Po vytvoření penále a provedení potřebných úprav můžete buď vytisknout
 
 Penále je podobné faktuře. Záhlaví můžete vyplnit ručně a nechat řádky vyplnit za vás, nebo můžete automaticky vytvořit poznámky o penálích pro všechny zákazníky.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 2.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále **a poté vyberte související odkaz .
-2. Zvolte tlačítko ** Nový<x2/> a vyplňte pole dle potřeby.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 2.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále** a poté vyberte související odkaz .
+2. Zvolte tlačítko **Nový** a vyplňte pole dle potřeby.
 3. Zvolte **Navrhnout Fin. Řádky penále**
-4. Na stránce **Navrhnout řádky penále** nastavte filtr v **Cust. Záložka ** Položka hlavní knihy, pokud chcete vytvořit finanční doklady pouze pro konkrétní položky.
+4. Na stránce **Navrhnout řádky penále** nastavte filtr v **Zák. Záložka** Položka hlavní knihy, pokud chcete vytvořit finanční doklady pouze pro konkrétní položky.
 
    > [!NOTE]
-   > Přestože jsou uvedeny, výběr filtrů **Platba** a **Dobropis** jako **Typ dokumentu** nebude mít žádný účinek, protože funkce **Navrhnout řádky oznámení o penále ** zpracovává pouze kladné částky.
+   > Přestože jsou uvedeny, výběr filtrů **Platba** a **Dobropis** jako **Typ dokumentu** nebude mít žádný účinek, protože funkce **Navrhnout řádky oznámení o penále** zpracovává pouze kladné částky.
 5. Zvolte tlačítko **OK** pro spuštění dávkové úlohy.
 
 ### Aktualizace textů penále
-V některých případech můžete upravit počáteční a koncový text, který jste nastavili pro podmínky penále. Pokud tak učiníte v době, kdy jste vytvořili, ale ještě nevydali, poznámky o penálích, můžete je aktualizovat upraveným textem.
+V některých případech můžete upravit počáteční a koncový text, který jste nastavili pro podmínky penále.  Pokud tak učiníte v době, kdy jste vytvořili, ale ještě nevydali, poznámky o penálích, můžete je aktualizovat upraveným textem.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 3.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále**a poté vyberte související odkaz .
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 3.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále** a poté vyberte související odkaz .
 2. otevřete záznam o penále, jehož text chcete změnit, a poté zvolte akci **Aktualizovat text penále**.
 3. Na stránce **Aktualizovat text penále** můžete nastavit filtr, pokud chcete aktualizovat několik poznámek.
 4. Zvolte tlačítko **OK** pro aktualizaci počátečních a koncových textů.
@@ -88,7 +88,7 @@ Pokud jsou na stránce **Podmínky penále** zaškrtnuta políčka **Zaúčtovat
 
 Kromě toho může vydání penále vést k zaúčtování DPH.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 4.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále**a poté vyberte související odkaz .
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 4.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále** a poté vyberte související odkaz .
 2. Vyberte příslušné penále a poté vyberte akci **Vydat**.
 3. Na stránce **Vydat penále** vyplňte pole podle potřeby.
 4. Zvolte tlačítko **OK**.
@@ -98,7 +98,7 @@ Poznámka o penále je vytištěna pro odeslání na zadaný e-mail jako přílo
 ### Zrušení vydaného penále
 Pokud byly penále vystaveny omylem, můžete je zrušit před jejich odesláním. Můžete to udělat buď jeden po druhém, nebo jako dávku.
 1. Na stránce **Vydané penále** vyberte jeden nebo více řádků pro vydané penále, které chcete zrušit, a pak zvolte akci **Zrušit**.
-2. Na stránce**Zrušení vydaného penále. Na stránce účtované položky** vyplňte pole podle potřeby a poté stiskněte tlačítko **OK**.
+2. Na stránce **Zrušení vydaného penále. Na stránce účtované položky** vyplňte pole podle potřeby a poté stiskněte tlačítko **OK**.
 
 ### Zobrazení položek upomínek a penále
 Když vydáte připomenutí, vytvoří se záznam připomenutí na **Upomínka /Fin. Stránka Položky penále** pro každý řádek připomenutí, který obsahuje položku odběratele. Následně můžete získat přehled o vytvořených záznamech upomínek pro konkrétního zákazníka.
@@ -108,16 +108,16 @@ Když vydáte připomenutí, vytvoří se záznam připomenutí na **Upomínka /
 
 ## Více úrokových sazeb
 
-[!INCLUDE [multiple-interest-rates-def](includes/multiple-interest-rates-def.md)] For more information, see [Set Up Multiple Interest Rates](finance-how-to-set-up-multiple-interest-rates.md).
+[!INCLUDE [multiple-interest-rates-def](includes/multiple-interest-rates-def.md)] Více informací viz [Nastavení více úrokových sazeb](finance-how-to-set-up-multiple-interest-rates.md).
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
 
 ## Viz také
 
- [Set Up Reminder Terms and Levels ](finance-setup-reminders.md)  
-[Set Up Finance Charge Terms](finance-setup-finance-charges.md)  
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
+ [Nastavení upomínky a úrovně ](finance-setup-reminders.md)  
+[Nastavení podmínky penále](finance-setup-finance-charges.md)  
+[Správa pohledávek](receivables-manage-receivables.md)  
+[Prodej](sales-manage-sales.md)  
 [Práce s[!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

@@ -20,9 +20,9 @@ Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky v
 
 ## Podmínky penále
 
-Musíte nastavit podmínky penále pro každý výpočet penále a poté přiřadit podmínky odběrateli v poli **Kód podmínky penále** na stránce **Zákazník**.
+Musíte nastavit podmínky penále pro každý výpočet penále a poté přiřadit podmínky zákazníkovi v poli **Kód podmínky penále** na stránce **Zákazník**.
 
-Penále lze vypočítat pomocí metod průměrného denního zůstatku nebo zůstatku.
+Penále lze vypočítat pomocí metod průměrného denního zůstatku nebo splatného salda.
 
 * Průměrný denní zůstatek
 
@@ -32,7 +32,7 @@ Penále lze vypočítat pomocí metod průměrného denního zůstatku nebo zůs
 * Splatný zůstatek
 
    Penále je procentem z dlužné částky:  
-   *Metoda dlužného zůstatku* – *Penále* = *Částka po splatnosti* x *(úroková sazba / 100)*
+   *Metoda splatného salda* – *Penále* = *Částka po splatnosti* x *(úroková sazba / 100)*
 
 Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulkou, tabulkou Text Penále. Pro každou sadu podmínek penále můžete definovat počáteční a/nebo koncový text, který se má zahrnout do poznámky o penáli.
 

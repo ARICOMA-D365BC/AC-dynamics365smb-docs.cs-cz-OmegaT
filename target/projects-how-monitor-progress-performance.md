@@ -36,7 +36,7 @@ Můžete vytvořit projekt s nedokončenou výrobou, který bude odrážet potř
 > After you have used your new method to create WIP entries, you cannot delete the method or modify it.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Job WIP Methods**, and then choose the related link.
-2. Zvolte tlačítko ** Nový[ a vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Zvolte tlačítko **Nový** a vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. Zavřete stránku.
 4. To make this new method the default, choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs Setup**, and then choose the related link.
 5. In the **Default WIP Method** field, choose the method from the list.
