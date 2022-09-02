@@ -33,7 +33,7 @@ When a contact is converted to a customer, for example, the contact person or co
 
 ## To create a contact manually
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Contacts**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. In the **No.** field, enter a number for the contact.
 
    Alternatively, if you have set up a number series for contacts on the **Marketing Setup** page, you can press **Enter** to insert the next available contact number.

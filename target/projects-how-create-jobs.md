@@ -34,7 +34,7 @@ Sometimes the party that is receiving a service is different from the party that
 Vytvořte kartu projektu a poté pro ni vytvořte úlohy projektu a řádky plánování projektu.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Jobs**, and then choose the related link.
-2. Choose the **New** action, and then fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+2. Zvolte tlačítko ** Nový[ a vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 3. To specify the job with information on other jobs, choose the **Copy Job** action, fill in the fields as necessary, and then choose the **OK** button.
 
 > [!NOTE]  

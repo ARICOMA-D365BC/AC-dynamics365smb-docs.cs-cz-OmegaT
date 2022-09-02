@@ -13,7 +13,7 @@ ms.author: jswymer
 ---
 # Optimalizace složky Doručená pošta v Outlooku pro firmy
 
-Tento článek pojednává o tom, co můžete udělat, abyste získali co nejlepší zkušenost s Doručená pošta v Microsoft Outlooku.
+Tento článek pojednává o tom, co můžete udělat, abyste získali co nejlepší zkušenost s Doručenou poštou v Microsoft Outlooku.
 
 ## Aktualizace aplikace Outlook
 
@@ -69,13 +69,13 @@ Zvažte použití aplikace Outlook pro web v jednom z prohlížečů podporovan�
 
 ## Viz také
 
-[Příprava na podnikání](ui-get-ready-business.md)    
-[Získání Business Cental na mobilní zařízení](install-mobile-app.md)    
-[Odesílání dokladů pomocí Emailu](ui-how-send-documents-email.md)    
-[Finance](finance.md)    
-[Prodej](sales-manage-sales.md)    
-[Nakupování](purchasing-manage-purchasing.md)    
-[Minimální požadavky na Outlook](product-requirements.md#outlook)    
+[Příprava obchodování](ui-get-ready-business.md)    
+[Získání Business Central pro mobilním zařízení](install-mobile-app.md)    
+[Odesílání dokladů e-mailem](ui-how-send-documents-email.md)    
+[Přehled](finance.md)    
+[Přehled](sales-manage-sales.md)    
+[Přehled](purchasing-manage-purchasing.md)    
+[Minimální požadavky](product-requirements.md#outlook)    
 [Pouižtí add-inů ve vebové aplikaci Outlooku](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
 
 

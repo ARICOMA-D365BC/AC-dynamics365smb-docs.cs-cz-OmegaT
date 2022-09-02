@@ -19,7 +19,7 @@ You can create segments to select a group of contacts, for example, if you want 
 
 ## To create a segment
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Segments**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. In the **General** section, in the **No.** field, enter a number for the segment.
 
    Alternatively, if you have set up number series for segments on the **Marketing Setup** page, you can press Enter to select the next available segment number.

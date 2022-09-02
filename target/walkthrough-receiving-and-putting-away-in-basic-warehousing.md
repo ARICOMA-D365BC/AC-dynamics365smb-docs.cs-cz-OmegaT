@@ -88,7 +88,7 @@ The setup of the **Location Card** page defines the company's warehouse flows.
 
    Notice on the **Bin Content** page that item LS-75 is already set up as content in bin S-01-0001.
 
-6. Vyberte **Nový** Akce.
+6. Vyberte akci **Nový**.
 7. Select the **Fixed** and the **Default** fields.
 8. In the **Item No.** field, enter LS-81.
 
@@ -98,7 +98,7 @@ Purchase orders are the most common type of inbound source document.
 ### To create the purchase order
 
 1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Create a purchase order for vendor 10000 on the work date (January 23) with the following purchase order lines.
 
    | Zboží | Location code | Bin code | Množství |
@@ -121,7 +121,7 @@ On the **Inventory Put-away** page, you can manage all inbound warehouse activit
 ### To receive and put the items away
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Inventory Put-aways**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Select the **Source Document** field, and then select **Purchase Order**.
 4. Select the **Source No.** field, select the line for the purchase from vendor 10000, and then choose the **OK** button.
 

@@ -84,7 +84,7 @@ Případně můžete odložit účtování na dobu, kdy je to pro vaši organiza
 Následující postup ukazuje, jak nastavit sestavu **Dávkové účto prod.objednávek** tak, aby automaticky účtovaly prodejní objednávky v 16:00 hod. ve všední dny.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Položky fronty úloh** a poté vyberte související odkaz.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. V poli **Typ spouštěného objektu** vyberte možnost ** Sestava**.
 4. V poli **ID spouštěného objektu** vyberte možnost 296, **Dávkové účto prod.objednávek**.
 

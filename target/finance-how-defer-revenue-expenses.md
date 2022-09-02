@@ -23,7 +23,7 @@ To distribute revenues or expenses on the involved accounting periods, you set u
 ## To set up a G/L account for deferral
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Účetní osnova** a poté vyberte související odkaz.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Fill in the fields as necessary to create a G/L account for deferred revenues. For more information, see [The General Ledger and the Chart of Accounts](finance-general-ledger.md).
 4. Repeat steps 2 and 3 to create a new G/L account for deferred expenses.
 
@@ -32,7 +32,7 @@ For both types of deferral, select **Balance Sheet** in the **Type** field, and 
 ## To set up a deferral template
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Deferral Templates**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Vyplňte pole podle potřeby.
 4. In the **Calc. Method** field, specify how the **Amount** field for each period on the **Deferral Schedule** page is calculated. You can choose between the following options:
 

@@ -21,7 +21,7 @@ The most effective way to create the bins of your warehouse is to generate group
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Locations**, and choose the related link.
 2. Select the location that you want to create a bin from, and then choose the **Bins** action.
-3. Vyberte **Nový** Akce.
+3. Vyberte akci **Nový**.
 4. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ### The Dedicated field

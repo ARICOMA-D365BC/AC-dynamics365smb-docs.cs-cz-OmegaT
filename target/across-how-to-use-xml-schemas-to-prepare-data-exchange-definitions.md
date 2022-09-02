@@ -33,7 +33,7 @@ This topic contains the following procedures:
 
 2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XML Schemas**, and then choose the related link.
 
-3. Vyberte **Nový** Akce.
+3. Vyberte akci **Nový**.
 
 4. Fill the fields as described in the following table.
 

@@ -32,7 +32,7 @@ Nové zaměstnance můžete přidávat ručně vyplněním polí na stránce **K
 ## Založení karty zaměstatnce
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zaměstnanci** a poté vyberte související odkaz.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Na stránce **Karta zaměstnance** vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 ## Vložení obrázku zaměstnance

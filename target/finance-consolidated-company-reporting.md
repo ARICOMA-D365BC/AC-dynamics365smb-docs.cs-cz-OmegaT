@@ -53,7 +53,7 @@ The process of transferring the figures from the business units to the consolida
 You can test your data before you transfer it to the consolidated company. [!INCLUDE[prod_short](includes/prod_short.md)] looks for differences in the information in the business units and the consolidated company. For example, whether account numbers or dimension codes are different. You must correct errors before you can run the report. You can test the database or, if you are importing data from an XML file, you can test the file.
 
 1. Open the consolidated company.
-2. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte **Účetní jednotky**a poté vyberte související odkaz.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účetní jednotky** a poté vyberte související odkaz.
 3. Proveďte jeden z následujících úkonů:
 
    * To test a file, choose the **Test File** action, enter the name of the file to test, and then choose **Print**.

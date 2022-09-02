@@ -44,7 +44,7 @@ You can also use custom report layouts to add content to email messages. Report 
 
    The copy of the custom layout appears on the **Custom Report Layouts** page and has the words *Copy of* in the **Description** field.
 5. If you want to add a new custom layout that is based on a built-in layout, do the following steps:
-   1. Vyberte **Nový** Akce. The **Insert Built-in Layout for a Report** page appears. The **ID** and **Name** fields are automatically filled in.
+   1. Vyberte akci **Nový**. The **Insert Built-in Layout for a Report** page appears. The **ID** and **Name** fields are automatically filled in.
    2. To add a custom Word report layout type, turn on the **Insert Word Layout** toggle.
    3. To add a custom RDLC report layout type, turn on the **Insert RDLC Layout** toggle.
    4. Zvolte tlačítko **OK**.

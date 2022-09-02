@@ -74,7 +74,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 ### Vytvoření zboží
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Do pole **Číslo** zadejte **2000** a poté vyplňte následující pole.
 
    | Popis | Základní měrná jednotka | Obecné účto  skupina zboží | DPH účto  skupina zboží | Účto skupiny zboží | Kód sledování zboží |
@@ -111,7 +111,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 ### Nákup komponent
 
 1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Vytvořte nákupní objednávku pro dodavatele Custom Metals Incorporated vyplněním následujících polí v řádku.
 
    | Zboží | Množství | Číslo šarže |
@@ -125,7 +125,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 
    Dále si zakupte závodní rámy od Mach a spol. v.o.s..
 8. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
-9. Vyberte **Nový** Akce.
+9. Vyberte akci **Nový**.
 10. Vytvořte nákupní objednávku pro dodavatele Coolwood Technologies vyplněním následujících řádkových polí.
 
    | Zboží | Množství | Číslo šarže |
@@ -163,7 +163,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
    Dále vyrobte další dvě závodní kola, SČ3 a SČ4.
 
 11. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Released Prod. zakázky** a poté vyberte související odkaz.
-12. Vyberte **Nový** Akce.
+12. Vyberte akci **Nový**.
 13. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí v záhlaví.
 
    | Číslo původu | Množství | Sériové číslo |

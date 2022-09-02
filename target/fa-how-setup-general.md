@@ -26,7 +26,7 @@ You define the general behavior or the fixed asset functionality and set up docu
 Nastavení účto skupiny dlouhodobého majetku Položky pro tyto účto skupiny jsou zaúčtovány na stejné finanční účty.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **FA Posting Groups**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. On the **FA Posting Group Card** page, fill in the fields as necessary.
 
    > [!NOTE]  

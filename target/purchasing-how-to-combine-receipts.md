@@ -28,7 +28,7 @@ When purchase receipts are combined on an invoice and posted, then a posted purc
 ## To combine receipts
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. Vyberte **Nový** Akce. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+2. Vyberte akci **Nový**. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 3. On the **Lines** FastTab, choose the **Get Receipt Lines** action.
 4. Select multiple receipt lines that you want to include in the invoice.
 

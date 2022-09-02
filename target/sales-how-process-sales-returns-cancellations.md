@@ -96,7 +96,7 @@ To combine return receipts, the **Combine Shipments** check box must be selected
 ### To manually combine return receipts
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. On the **General** FastTab, fill in the fields as necessary.
 4. Choose the **Get Return Receipt Lines** action.
 5. Select the return receipt lines that you want to include in the credit memo:

@@ -22,7 +22,7 @@ Before you can use this feature, you must first set up the customer, vendor, and
 
 ## To create a special order
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Order**, and then choose the related link.
-2. Vyberte **Nový** Akce. Create and fill in a  sales order for the item. For more information, see [Sell Products](sales-how-sell-products.md).
+2. Vyberte akci **Nový**. Create and fill in a  sales order for the item. For more information, see [Sell Products](sales-how-sell-products.md).
 3. On the **Lines** FastTab, fill in the sales line. In the **Purchasing Code** field, select a purchasing code that has the **Special Order** field selected.
 
    You must now create a purchase order from a requisition worksheet.

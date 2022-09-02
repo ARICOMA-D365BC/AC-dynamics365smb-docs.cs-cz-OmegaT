@@ -39,7 +39,7 @@ In this procedure, you create and process an assembly order for items that are a
 
 ## To assemble an item
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Assembly Orders**, and then choose the related link.
-2. Vyberte **Nový** Akce. The **New Assembly Order** page opens.
+2. Vyberte akci **Nový**. The **New Assembly Order** page opens.
 3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. In the **Item No.** field, select the assembly item that you want to process. The field is filtered to show only items that are set up for assembly, which means that they have assembly BOMs assigned.
 5. In the **Quantity** field, enter how many units of the item that you want assembled.

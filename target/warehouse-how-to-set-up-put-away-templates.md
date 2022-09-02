@@ -22,7 +22,7 @@ Můžete nastavit počet šablon zaskladnění a vybrat jednu z nich, která bud
 ## Nastavení šablon zaskladnění
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Put-away Templates**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Zadejte kód, který je jedinečným identifikátorem šablony, kterou se chystáte vytvořit.
 4. Zadejte krátký popis, pokud chcete.
 5. Vyplňte první řádek požadavků přihrádky, které chcete splnit v jako první při navrhování zaskladnění.

@@ -49,7 +49,7 @@ Dotazníky lze vytvořit pouze pro nastavovací tabulky Tento nástroj můžete 
 > To see a complete list of setup tables, choose the ![Lightbulb that opens the Tell Me feature 1.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Setup**, and then choose the related link. K určení rozsahu migrace dat záznamů použijte funkci migrace. For more information, see [Migrating Customer Data](admin-migrate-customer-data.md).
 
 1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Configuration Questionnaire**, and choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. On the **Configuration Questionnaire** page, in the **Code** field, enter...
 <!--4. In the **Name** field, enter...
 5. Choose the **Question Areas** action. .
@@ -74,7 +74,7 @@ Dotazníky lze vytvořit pouze pro nastavovací tabulky Tento nástroj můžete 
 -->
 
 3. Choose the **Questions Areas** action. The **Question Areas** page opens.
-4. Vyberte **Nový** Akce. The **Config. Question Area** page opens.
+4. Vyberte akci **Nový**. The **Config. Question Area** page opens.
 5. In the **Table ID** field, choose the ID of the table for which you want to collect information. The **Table Name** field is automatically filled in.
 6. Choose the **Update Questions** action. Každé pole v tabulce je přidáno do dotazníku s otazníkem následujícím po jeho popisku.
 

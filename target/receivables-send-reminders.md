@@ -16,18 +16,18 @@ ms.author: edupont
 ---
 # Odeslání připomenutí nevyrovnaných zůstatků
 
-[!INCLUDE [připomenutí pohledávek](includes/receivables-reminders.md)]
+[!INCLUDE [receivables-reminders](includes/receivables-reminders.md)]
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/paths/process-financial-periodic-activities-dynamics-365-business-central/)
 
 ## Viz také
 
-[Shromažďování nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)    
-[Nastavení více úrokových sazeb pro zpožděnou platbu](finance-how-to-set-up-multiple-interest-rates.md)    
+[Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)    
+[Nastavení více úrokových sazeb pro zpožděné platby](finance-how-to-set-up-multiple-interest-rates.md)    
 [Nastavit podmínky a úrovně připomenutí](finance-setup-reminders.md)    
 [Nastavení podmínek pro finanční poplatky](finance-setup-finance-charges.md)    
-[Správa pohledávek](receivables-manage-receivables.md)    
-[Prodej](sales-manage-sales.md)    
+[Řízení pohledávek](receivables-manage-receivables.md)    
+[Prodeje](sales-manage-sales.md)    
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

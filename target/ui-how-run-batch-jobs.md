@@ -26,7 +26,7 @@ You can schedule when a batch job runs. Další informace naleznete v tématu [P
 1. To open the request page for the relevant batch job, choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter the name of the batch job, and then choose the related link.
 2. If there is an **Options** FastTab for the batch job, fill in the fields to determine what the batch job will do.
 3. The page may contain one or more FastTab with filters, which you can use to limit the data included in the batch job. You can enter criteria in the suggested filters or add more filters.
-4. Choose the **OK** button to start the batch job.
+4. Zvolte tlačítko **OK** pro spuštění dávkové úlohy.
 
 ## Viz také
 [Sorting, Searching, and Filtering Lists](ui-enter-criteria-filters.md)  

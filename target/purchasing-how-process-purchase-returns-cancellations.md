@@ -81,7 +81,7 @@ The purchase credit memo is removed and replaced with a new document in the list
 ## To create a purchase return order based on one or more posted purchase documents
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Return Orders**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Fill in the fields on the **General** FastTab as necessary.
 4. On the **Lines** FastTab, fill the lines manually, or copy information from other documents to fill the lines automatically:
 
@@ -170,7 +170,7 @@ When return shipments are combined on a credit memo and posted, then a posted pu
 > The following procedure assumes that there are several purchase return orders for the vendor, and that they have been posted as shipped.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Credit Memos**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. On the **General** FastTab, fill in the fields as necessary.
 4. Choose the **Get Return Shipment Lines** action.
 5. Select multiple return shipment lines that you want to include in the invoice.

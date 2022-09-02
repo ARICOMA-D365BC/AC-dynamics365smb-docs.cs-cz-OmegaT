@@ -22,7 +22,7 @@ Dříve než můžete TNG postup založit, musí být nastaveno následující:
 ## Vytvoření výrobních kusovníků
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Production BOM**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. To edit the BOM, set the **Status** field to **New** or **Under Development**. To activate it, set the **Status** field to **Certified**.
 
@@ -51,7 +51,7 @@ Počáteční datum označuje začátek období, ve kterém je tato verze platn�
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Production BOM**, and then choose the related link.
 2. Select the production BOM to be copied, and then choose the **Versions** action.
-3. Vyberte **Nový** Akce.
+3. Vyberte akci **Nový**.
 4. Vyplňte pole podle potřeby.
 5. In the **Version Code** field, enter the unique identification of the version. Je povolena jakákoli kombinace číslic a písmen.
 

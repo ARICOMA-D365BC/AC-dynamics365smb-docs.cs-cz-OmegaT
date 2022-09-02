@@ -20,7 +20,7 @@ Každý uživatel, který provádí aktivity skladu, musí být nastaven jako za
 ## Nastavení zaměstnanců skladu
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Warehouse Employees**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. Select the **User ID** field, and then select the user to be added as a warehouse employee. Choose the **OK** button.
 4. In the **Location Code** field, enter the code of the location where the user will be working.
 5. Select the **Default** check box to define the location as the only location where the employee can perform warehouse activities.

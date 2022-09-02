@@ -42,7 +42,7 @@ This is described in the following procedures.
 
 #### To describe the formatting of lines and columns in the file
 1. In the **Search** box, enter **Data Exchange Definitions**, and then choose the related link.
-2. Vyberte **Nový** Akce.
+2. Vyberte akci **Nový**.
 3. On the **General** FastTab, describe the data exchange definition and the data file type by filling the fields as described in the following table.
 
    | Pole | Definition |
@@ -186,7 +186,7 @@ When you have created the data exchange definition for a specific data file, you
 ### To import an existing data exchange definition
 1. Save the XML file that represents the data exchange definition in an appropriate location.
 2. In the **Search** box, enter **Data Exchange Definitions**, and then choose the related link.
-3. Vyberte **Nový** Akce. The **Data Exchange Definitio** page opens.
+3. Vyberte akci **Nový**. The **Data Exchange Definitio** page opens.
 4. Choose the **Import Data Exchange Definition** action.
 5. Choose the file that you saved in step 1.
 

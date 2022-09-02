@@ -17,14 +17,14 @@ ms.author: bholtorf
 
 # Nastavení konsolidace společnosti
 
-Před konsolidací položek hlavní knihy dvou nebo více samostatných společností (dceřiných společností) do konsolidované společnosti je nutné připravit účtovou osnovu a konsolidační společnost.
+Před konsolidací věcných položek dvou nebo více samostatných společností (dceřiných společností) do konsolidované společnosti je nutné připravit účtovou osnovu a konsolidační společnost.
 
 V závislosti na složitosti vašeho podnikání existují dva způsoby, jak nastavit konsolidaci:
 
 * Pokud nepotřebujete upřesňující nastavení, například zahrnutí společnosti, jejíž součást vlastníte pouze část, můžete pomocí průvodce asistovaným nastavením **Konsolidace společnosti** rychle nastavit konsolidaci. Průvodce vám pomůže projít základními kroky.
 * Pokud potřebujete pokročilejší nastavení, můžete konsolidovanou společnost a účetní jednotky nastavit sami.
    * V každé účetní jednotce určete, které účty hlavní knihy mají být zahrnuty do konsolidace, a určete metodu převodu konsolidace pro každý účet.
-   * V konsolidační společnosti nastavte pro každou společnost, která má být zahrnuta do konsolidace, kartu účetní jednotky. Karta účetní jednotky obsahuje informace, například data fiskálního roku organizační jednotky a procento každého účtu, který musí být zahrnut do konsolidace.
+   * V konsolidační společnosti nastavte pro každou společnost, která má být zahrnuta do konsolidace, kartu účetní jednotky. Karta účetní jednotky obsahuje informace, například data fiskálního roku účetní jednotky a procento každého účtu, který musí být zahrnut do konsolidace.
 
 ## Jednoduché nastavení konsolidace
 
@@ -45,24 +45,24 @@ Pokud potřebujete pokročilejší nastavení pro konsolidaci, můžete konsolid
 
 ### Založení konsolidované společnosti
 
-Nejprve musíte založit konsolidovanou společnost. Konsolidovanou společnost nastavíte stejným způsobem jako jiné společnosti. [přibližně]Pro více infomací běžte na <x3/>Příprava na podnikání<x4/>.
+Nejprve musíte založit konsolidovanou společnost. Konsolidovanou společnost nastavíte stejným způsobem jako jiné společnosti. Pro více infomací běžte na [Příprava na podnikání](ui-get-ready-business.md).
 
 Následující seznam znázorňuje klíčové aspekty konsolidované společnosti.
 
 1. Nastavení účetní osnovy
 
-   Pro více informací navštivte Nastavení nebo změna účetní osnovy.
+   Pro více informací navštivte [Nastavení nebo změna účetní osnovy](finance-setup-chart-accounts.md).
 
-   Účtové osnovy můžou být stejné v rámci obchodní jednotky a konsolidované společnosti nebo konsolidovaná společnost může mít jinou účtovou osnovu. Pokud se účtová osnova organizační jednotky liší od účtové osnovy konsolidované společnosti, je nutné zadat mapování mezi účty na účtech v účetní jednotce. Další informace naleznete v části [Příprava účtů hlavní knihy na konsolidaci](#glacc).
+   Účetní osnovy můžou být stejné v rámci účetní jednotky a konsolidované společnosti nebo konsolidovaná společnost může mít jinou účetní osnovu. Pokud se účetní osnova organizační jednotky liší od účtové osnovy konsolidované společnosti, je nutné zadat mapování mezi účty na účtech v účetní jednotce. Další informace naleznete v části [Příprava účtů hlavní knihy na konsolidaci](#glacc).
 
-2. Přidání organizačních jednotek
+2. Přidání účetních jednotek
 
    Chcete-li konsolidovat finanční data několika společností do konsolidované společnosti, musíte zadat informace o dceřiné společnosti jako účetní jednotky, které mají být zahrnuty, a o tom, do jaké míry budou zahrnuty jejich údaje.
 
    Další informace naleznete v části [Přidání účetních jednotek](#busunit).
 3. Při konsolidaci účetní závěrky účetních jednotek můžete určit směnné kurzy, pokud je účetní závěrka v cizí měně.
 
-   Používají se tři směnné kurzy **Průměrný kurz (ručně)**, **Uzávěrkový kurz**a **Poslední závěrečný kurz**. Další informace naleznete v části [Určení směnných kurzů pro konsolidace](#exchrates).
+   Používají se tři směnné kurzy **Průměrný kurz (ručně)**, **Uzavírací kurz** a **Poslední uzavírací kurz**. Další informace naleznete v části [Určení směnných kurzů pro konsolidace](#exchrates).
 4. Můžete konsolidovat informace o dimenzích a finanční účty.
 
    Další informace naleznete v části [Zahrnutí nebo vyloučení dimenzí](#dim).
@@ -72,27 +72,27 @@ Následující seznam znázorňuje klíčové aspekty konsolidované společnost
 [! INCLUDE[prod_short](includes/prod_short.md)] umožňuje nastavit seznam účetních jednotek ke konsolidaci, ověřit účetní data před jejich konsolidací, importovat soubory a generovat konsolidační sestavy.
 
 1. Přihlaste se ke konsolidované společnosti.
-2. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte **Účetní jednotky**a poté vyberte související odkaz.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účetní jednotky** a poté vyberte související odkaz.
 3. Zvolte **Nový** a vyplňte požadovaná pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
    > [!DŮLEŽITÉ]
-   > Když vyplníte pole **Počáteční datum** a **Koncové datum**, ujistěte se, že dodržujete pravidla GAAP týkající se fiskálních období obchodní jednotky oproti mateřské společnosti.
+   > Když vyplníte pole **Počáteční datum** a **Koncové datum**, ujistěte se, že dodržujete pravidla GAAP týkající se fiskálních období účetní jednotky oproti mateřské společnosti.
 4. Opakujte krok 3 pro každou další účetní jednotku
 
 Pokud vaše účetní jednotka používá cizí měnu, musíte určit směnný kurz, který se má použít při konsolidaci. Musíte také zadat konsolidační informace o finančních účtech účetní jednotky. Tyto procesy jsou popsány v následujících částech.
 
 ### <a name="glacc"></a> Příprava finančních účtů pro konsolidaci
 
-Účtová osnova společnosti, která bude konsolidována, musí specifikovat účty pro konsolidaci. Pro každý zaúčtovaný finanční účet v každé společnosti musíte zadat finanční účet v konsolidované společnosti, na který bude zůstatek převeden při konsolidaci. Jedná se o mapování, které umožní konsolidaci společností s různou účtovou osnovou.
+Účetní osnova společnosti, která bude konsolidována, musí specifikovat účty pro konsolidaci. Pro každý zaúčtovaný finanční účet v každé společnosti musíte zadat finanční účet v konsolidované společnosti, na který bude zůstatek převeden při konsolidaci. Jedná se o mapování, které umožní konsolidaci společností s různou účetní osnovou.
 
-Pokud se účtová osnova v účetní jednotce liší od konsolidované společnosti, musíte připravit finanční účty pro konsolidaci. Můžete určit účty, na které se mají účtovat debety a kredity, a metodu, která se použije k převodu měn v konsolidované společnosti. To je užitečné například v případě, že sestavu často spouštíte.
+Pokud se účtová osnova v účetní jednotce liší od konsolidované společnosti, musíte připravit finanční účty pro konsolidaci. Můžete určit účty, na které se mají účtovat částky MD a částky Dal, a metodu, která se použije k převodu měn v konsolidované společnosti. To je užitečné například v případě, že sestavu často spouštíte.
 
-1. V každé obchodní jednotce [!INCLUDE [prod_short](includes/prod_short.md)] vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte < g5>Účtová osnova**a poté vyberte související odkaz.
+1. V každé obchodní jednotce [!INCLUDE [prod_short](includes/prod_short.md)] vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účetní osnova**a poté vyberte související odkaz.
 2. Otevřete kartu pro účet a vyplňte pole na pevné záložce **Konsolidace**. [!INCLUDE [tooltip-inline-tip_md](includes/tooltip-inline-tip_md.md)]
 
 ### <a name="exchrates"></a> Určení směnných kurzů pro konsolidace
 
-Pokud účetní jednotka používá jinou měnu než konsolidovaná společnost, je nutné před konsolidací zadat metody směnných kurzů pro každý účet. Pro každý účet obsah pole **Způsob převodu konsolidace** určuje směnný kurz. V konsolidované společnosti na každé kartě účetní jednotky v poli **Tabulka směnných kurzů** určíte, zda bude konsolidace používat směnné kurzy z účetní jednotky nebo konsolidované společnosti. Pokud používáte směnné kurzy konsolidované společnosti, můžete změnit směnné kurzy pro účetní jednotku. Pokud u účetních jednotek pole **Tabulka směnných kurzů** na kartě organizační jednotky obsahuje **Místní**, můžete změnit směnný kurz z karty organizační jednotky. Směnné kurzy jsou zkopírovány z tabulky **Směnný kurz**, ale před konsolidací je můžete změnit.
+Pokud účetní jednotka používá jinou měnu než konsolidovaná společnost, je nutné před konsolidací zadat metody směnných kurzů pro každý účet. Pro každý účet obsah pole **Způsob převodu konsolidace** určuje směnný kurz. V konsolidované společnosti na každé kartě účetní jednotky v poli **Tabulka směnných kurzů** určíte, zda bude konsolidace používat směnné kurzy z účetní jednotky nebo konsolidované společnosti. Pokud používáte směnné kurzy konsolidované společnosti, můžete změnit směnné kurzy pro účetní jednotku. Pokud u účetních jednotek pole **Tabulka směnných kurzů** na kartě účetní jednotky obsahuje **Místní**, můžete změnit směnný kurz z karty účetní jednotky. Směnné kurzy jsou zkopírovány z tabulky **Směnný kurz**, ale před konsolidací je můžete změnit.
 
 Následující tabulka popisuje metody směnných kurzů, které lze použít pro účty.
 
@@ -105,11 +105,11 @@ Následující tabulka popisuje metody směnných kurzů, které lze použít pr
 | Složený kurz | Částky za běžné období jsou přepočteny průměrným kurzem a přičteny k dříve zaznamenanému zůstatku v konsolidované společnosti. Tato metoda se obvykle používá pro účty nerozděleného zisku, protože zahrnují částky z různých období, a jsou tedy složeny z částek převedených různými směnnými kurzy. |
 | Kurz cenných papírů | To je podobné jako **Kompozitní**. Rozdíly jsou zaúčtovány do samostatných finančních účtů. |
 
-Chcete-li zadat směnné kurzy pro organizační jednotky, postupujte takto:
+Chcete-li zadat směnné kurzy pro účetní jednotky, postupujte takto:
 
-1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikonu, zadejte **Účetní jednotky**a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Účetní jednotky** a poté vyberte související odkaz.
 2. Na stránce **Seznam účetních jednotek** vyberte účetní jednotku a poté zvolte akci **Průměrný kurz (ručně)**.
-3. Na stránce **Změnit směnný kurz**, je obsah **Změna směnného kurzu **zkopírován z tabulky **Směnný kurz**, ale můžete je upravit. Zavřete stránku.
+3. Na stránce **Změnit směnný kurz**, je obsah pole **Změna směnného kurzu** zkopírován z tabulky **Směnný kurz**, ale můžete je upravit. Zavřete stránku.
 4. Vyberte akci **Uzavírací kurz**.
 5. V poli**Částka vztažného sm.kurzu ** zadejte směnný kurz.
 
@@ -123,7 +123,7 @@ Můžete konsolidovat informace o dimenzích a finanční účty.
    * Chcete-li konsolidovat kód hodnoty dimenze v účetní jednotce s jiným kódem hodnoty dimenze v konsolidované společnosti, vyplňte pole **Kód konsolidace** u příslušných dimenzích.
 * Přidání příslušných dimenzí do příslušných finančních účtů
 
-### <a name="exclude"></a> Vyloučení společnosti z konsolidace
+### <a name="exclude"></a>Vyloučení společnosti z konsolidace
 
 Pokud nechcete zahrnout účetní jednotku do konsolidace, můžete ji vyloučit. Chcete-li to provést, přejděte na kartu účetní jednotky a zrušte zaškrtnutí políčka **Konsolidovat**.
 
@@ -133,10 +133,10 @@ Pokud vlastníte pouze část společnosti, můžete zahrnout procento každé t
 
 ## Viz také
 
-[Konsolidace finančních údajů z více společností](finance-consolidated-company-reporting.md)    
+[Konsolidování finančních dat z několika společností](finance-consolidated-company-reporting.md)    
 [Správa mezipodnikových transakcí](intercompany-manage.md)    
 [Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)    
-[Export vašich firemních dat do Excelu](about-export-data.md)  
+[Export vašich obchodních dat do Excelu](about-export-data.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

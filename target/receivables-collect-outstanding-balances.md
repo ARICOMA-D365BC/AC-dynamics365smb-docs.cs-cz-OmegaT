@@ -31,82 +31,82 @@ Z karty zákazníka můžete vytvořit výpis transakcí mezi vámi a zákazník
 3. V části **Možnosti výstupu** vyberte způsob odeslání sestavy odběrateli.
 
 > [!NOTE]
-> Pokud používáte více měn, sestava Výkaz zákazníka se vytiskne v  měně zákazníka. The last date in a statement period is also used as the statement date and the aging date, if aging is included.
+> Pokud používáte více měn, sestava Výkaz zákazníka se vytiskne v  měně zákazníka. Poslední datum v období výkazu se také používá jako datum výkazu a datum splatnosti, pokud je zahrnuto sledování splatnosti.
 
-## Reminders
+## Upomínky
 
-[!INCLUDE [připomenutí pohledávek](includes/receivables-reminders.md)]
+[!INCLUDE [receivables-reminders](includes/receivables-reminders.md)]
 
-## Finance Charges
+## Finanční poplatky
 
 Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli.
 
 > [!NOTE]  
-> You use finance charge memos to calculate interest and finance charges and to inform your customers about interest and finance charges without reminding them of overdue payments. Alternatively, you can calculate interest on overdue payments when you create reminders.
+> K výpočtu úroků a finančních poplatků a k informování zákazníků o úrocích a finančních poplatcích bez upomínání o opožděných platbách používáte upomínky o penálích. Alternativně můžete vypočítat úroky z plateb po splatnosti při vytváření upomínek.
 
-Before you can create finance charge memos, you must set up terms. For more information, see [Set Up Finance Charge Terms](finance-setup-finance-charges.md).
+Než budete moci vytvořit penále, musíte nastavit podmínky. Pro více informací navštivte [Nastavení podmínek pro finanční poplatky](finance-setup-finance-charges.md).
 
-You can manually create a finance charge memo for an individual customer, and fill in the lines automatically. Alternatively, you can use the **Create Finance Charge Memos** function job to create finance charge memos for all or selected customers with overdue balances.
+Můžete ručně vytvořit penále pro jednotlivého odběratele a automaticky vyplnit řádky. Můžete taky použít funkční úlohu **Vytvořit poznámky finančních nákladů** k vytvoření poznámek o penálích pro všechny nebo vybrané odběratele se zůstatky po splatnosti.
 
-After you create the finance charge memos, you can modify them. The text that appears at the beginning and end of the finance charge memo is determined by the finance charge terms, and can be seen in the **Description** column on the lines. If a calculated amount has been inserted automatically in the beginning or ending text, the text will not be adjusted if you delete lines. Then you must use the **Update Finance Charge Text** function.
+Po vytvoření penálích je můžete upravovat. Text, který se zobrazí na začátku a na konci penále, je určen podmínkami finančního poplatku a lze jej zobrazit ve sloupci **Popis** na řádcích. Pokud byla vypočítaná částka automaticky vložena do počátečního nebo koncového textu, text se při smazání řádků neupraví. Pak musíte použít funkci **Aktualizovat text finančních nákladů**.
 
-After you have created finance charge memos and made any needed modifications, you can either print test reports or issue the finance charge memos, typically as email.
+Po vytvoření penále a provedení potřebných úprav můžete buď vytisknout zkušební sestavy, nebo vydat poznámky o penálích, obvykle jako e-mail.
 
-### To create a finance charge memo manually
+### Ruční vytvoření penále
 
-A finance charge memo is similar to an invoice. You can fill in a header manually and have the lines filled in for you, or you can create finance charge memos for all customers automatically.
+Penále je podobné faktuře. Záhlaví můžete vyplnit ručně a nechat řádky vyplnit za vás, nebo můžete automaticky vytvořit poznámky o penálích pro všechny zákazníky.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Memos**, and then choose the related link.
-2. Choose the **New** action, and then fill in the fields as necessary.
-3. Choose **Suggest Fin. Charge Memo Lines** action.
-4. On the **Suggest Finance Charge Memo Lines** page, set a filter on the **Cust. Ledger Entry** FastTab if you want to create finance charge memos only for specific entries.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 2.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále **a poté vyberte související odkaz .
+2. Zvolte tlačítko ** Nový<x2/> a vyplňte pole dle potřeby.
+3. Zvolte **Navrhnout Fin. Řádky penále**
+4. Na stránce **Navrhnout řádky penále** nastavte filtr v **Cust. Záložka ** Položka hlavní knihy, pokud chcete vytvořit finanční doklady pouze pro konkrétní položky.
 
    > [!NOTE]
-   > Although they are listed, selecting **Payment** and **Credit Memo** as **Document Type** filters will not have any effect because the **Suggest Finance Charge Memo Lines** function only handles positive amounts.
-5. Choose the **OK** button to start the batch job.
+   > Přestože jsou uvedeny, výběr filtrů **Platba** a **Dobropis** jako **Typ dokumentu** nebude mít žádný účinek, protože funkce **Navrhnout řádky oznámení o penále ** zpracovává pouze kladné částky.
+5. Zvolte tlačítko **OK** pro spuštění dávkové úlohy.
 
-### To update finance charge memo texts
-In some cases, you may want to modify the beginning and ending text that you have set up for the finance charge terms. If you do this at a time when you have created, but not yet issued, finance charge memos, you can update the memos with the modified text.
+### Aktualizace textů penále
+V některých případech můžete upravit počáteční a koncový text, který jste nastavili pro podmínky penále. Pokud tak učiníte v době, kdy jste vytvořili, ale ještě nevydali, poznámky o penálích, můžete je aktualizovat upraveným textem.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 3.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Memo**, and then choose the related link.
-2. open the finance charge memo that you want to change text for, and then choose the **Update Finance Charge Text** action.
-3. On the **Update Finance Charge Text** page, you can set a filter if you want to update several memos.
-4. Choose the **OK** button to update the beginning and ending texts.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 3.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále**a poté vyberte související odkaz .
+2. otevřete záznam o penále, jehož text chcete změnit, a poté zvolte akci **Aktualizovat text penále**.
+3. Na stránce **Aktualizovat text penále** můžete nastavit filtr, pokud chcete aktualizovat několik poznámek.
+4. Zvolte tlačítko **OK** pro aktualizaci počátečních a koncových textů.
 
-### To issue finance charge memos
-After you have created finance charge memos and made any needed modifications, you can either print test reports or issue the finance charge memos.
+### Vystavení penále
+Po vytvoření poznámek o penále a provedení potřebných úprav můžete buď vytisknout zkušební zprávy, nebo vydat penále.
 
-When a reminder is issued, the entries are posted according to your specifications on the **Finance Charge Terms** page. This specification determines whether interest and/or additional fees are posted to the customer's account and the general ledger. Setup on the **Customer Posting Groups** page determines which accounts are posted to.
+Po vystavení připomenutí jsou položky zveřejněny podle vašich specifikací na stránce **Podmínky penále**. Tato specifikace určuje, zda jsou úroky a/nebo další poplatky zaúčtovány na účet zákazníka a do hlavní knihy. Nastavení na stránce **Účto skupiny zákazníka** určuje, do kterých účtů jsou zaúčtovány.
 
-For each customer ledger entry on the finance charge memo, an entry is created on the **Reminder/Fin. Charge Entries** page.
+Pro každou položku knihy odběratelů v poznámce o penále je vytvořena položka na **Upomínky/Fin. Účtované položky**
 
-If the **Post Interest** or the **Post Additional Fee** check boxes are selected on the **Finance Charge Terms** page, then the following entries are also created:
+Pokud jsou na stránce **Podmínky penále** zaškrtnuta políčka **Zaúčtovat úrok** nebo **Zaúčtovat dodatečný poplatek**, vytvoří se také následující položky:
 
-- One entry on the **Cust. Ledger Entries** page
-- One receivables entry in the relevant G/L account
-- One interest and/or one additional fee entry in the relevant G/L account
+- Jedna položka na stránce **Zák. Položky hlavní knihy**
+- Jeden záznam pohledávky na příslušný účet hlavní knihy
+- Jeden úrok a/nebo jeden dodatečný poplatek na příslušném účtu hlavní knihy
 
-In addition, issuing the finance charge memo may result in VAT entries.
+Kromě toho může vydání penále vést k zaúčtování DPH.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature 4.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Finance Charge Memos**, and then choose the related link.
-2. Select the relevant memo, and then choose the **Issue** action.
-3. On the **Issue Finance Charge Memos** page, fill in the fields as necessary.
-4. Choose the **OK** button
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 4.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále**a poté vyberte související odkaz .
+2. Vyberte příslušné penále a poté vyberte akci **Vydat**.
+3. Na stránce **Vydat penále** vyplňte pole podle potřeby.
+4. Zvolte tlačítko **OK**.
 
-The finance charge memo is either printed for sent to an specified email as a PDF attachment.
+Poznámka o penále je vytištěna pro odeslání na zadaný e-mail jako příloha PDF.
 
-### To cancel an issued finance charge memo
-If finance charge memos were issued in error, you can cancel them before they are sent out. You can do this either one by one or as a batch.
-1. On the **Issued Finance Charge Memos** page, select one or more lines for issued finance charge memos that you want to cancel, and then choose the **Cancel** action.
-2. On the **Cancel Issued Fin. Charge Memos** page, fill in the fields as necessary, and then choose the **OK** button.
+### Zrušení vydaného penále
+Pokud byly penále vystaveny omylem, můžete je zrušit před jejich odesláním. Můžete to udělat buď jeden po druhém, nebo jako dávku.
+1. Na stránce **Vydané penále** vyberte jeden nebo více řádků pro vydané penále, které chcete zrušit, a pak zvolte akci **Zrušit**.
+2. Na stránce**Zrušení vydaného penále. Na stránce účtované položky** vyplňte pole podle potřeby a poté stiskněte tlačítko **OK**.
 
-### To view reminder and finance charge entries
-When you issue a reminder, a reminder entry is created on the **Reminder/Fin. Charge Entries** page for each reminder line that contains a customer ledger entry. You can then get an overview of the created reminder entries for a specific customer.
-1. Choose the ![Lightbulb that opens the Tell Me feature 5.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link.
-2. Open the relevant customer card, and then choose the **Ledger Entries** action.
-3. On the **Customer Ledger Entries** page, select the line with the ledger entry you want to see the reminder entries for, and then choose the **Reminder/Fin. Charge Entries** action.
+### Zobrazení položek upomínek a penále
+Když vydáte připomenutí, vytvoří se záznam připomenutí na **Upomínka /Fin. Stránka Položky penále** pro každý řádek připomenutí, který obsahuje položku odběratele. Následně můžete získat přehled o vytvořených záznamech upomínek pro konkrétního zákazníka.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
+2. Otevřete příslušnou kartu zákazníka a poté zvolte akci **Položky hlavní knihy**.
+3. Na stránce **Položky zákazníka** vyberte řádek s položkou hlavní knihy, pro kterou chcete zobrazit položky připomenutí, a pak zvolte **Připomenutí/Fin. Účtované položky**.
 
-## Multiple Interest rates
+## Více úrokových sazeb
 
 [!INCLUDE [multiple-interest-rates-def](includes/multiple-interest-rates-def.md)] For more information, see [Set Up Multiple Interest Rates](finance-how-to-set-up-multiple-interest-rates.md).
 
@@ -114,11 +114,11 @@ When you issue a reminder, a reminder entry is created on the **Reminder/Fin. Ch
 
 ## Viz také
 
-[Set Up Reminder Terms and Levels](finance-setup-reminders.md)  
+ [Set Up Reminder Terms and Levels ](finance-setup-reminders.md)  
 [Set Up Finance Charge Terms](finance-setup-finance-charges.md)  
 [Managing Receivables](receivables-manage-receivables.md)  
 [Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce s[!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

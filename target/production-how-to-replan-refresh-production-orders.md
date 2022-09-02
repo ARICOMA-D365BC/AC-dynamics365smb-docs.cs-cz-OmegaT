@@ -65,7 +65,7 @@ You can either insert the production order lines manually or use the function th
 If you have amended production order lines, components, or routing lines, you must also refresh the information on the production order. In the following procedure, the components are calculated for a firm planned production order. The steps are similar for routing lines.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature 2.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Firm Planned Prod. Order**, and then choose the related link.
-2. Vyberte **Nový** Akce. For more information, see [Create Production orders](production-how-to-create-production-orders.md).
+2. Vyberte akci **Nový**. For more information, see [Create Production orders](production-how-to-create-production-orders.md).
 3. Choose the **Refresh** action.
 4. On the **Refresh Production Order** page, select one of the following options:
 

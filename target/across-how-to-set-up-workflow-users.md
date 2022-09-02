@@ -29,7 +29,7 @@ Workflow users that function as approval users, both approval requesters and app
 ## To set up a workflow user
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Workflow User Groups**, and then choose the related link.
-2. Vyberte **Nový** Akce. The **Workflow User Group** page opens.
+2. Vyberte akci **Nový**. The **Workflow User Group** page opens.
 3. In the **Code** field, enter a maximum of 20 characters to identify the workflow.
 4. In the **Description** field, describe the workflow.
 5. On the **Workflow User Group Members** FastTab, fill the fields on the first line as described in the following table.

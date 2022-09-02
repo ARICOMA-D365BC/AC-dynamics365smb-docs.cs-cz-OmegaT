@@ -33,7 +33,7 @@ Kromě kritérií pro přiřazování platí pro znaménko částky platby toto:
 - U kladných částek je nejprve provedena shoda s otevřenými položkami představujícími faktury dodavatele a poté s dobropisy odběratele.
 
 ## Nastavení pravidla žádosti o platbu
-1. Vyberte ![ Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat") ikona, zadejte **Pravidla žádosti o platbu** a poté vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Pravidla žádosti o platbu** a poté vyberte související odkaz.
 2. Definujte nové nebo upravené pravidlo platební aplikace vyplněním polí na řádku, jak je popsáno v následující tabulce.
 
 |Pole|Popis|
@@ -80,7 +80,7 @@ Následující tabulka popisuje standardní pravidla aplikace platby v [!INCLUDE
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/reconciliation-journals-dynamics-365-business-central/index)
 
 ## Viz také
-[Odsouhlasení plateb pomocí automatické aplikace](receivables-how-reconcile-payments-auto-application.md)    
+[Odsouhlasení plateb pomocí automatické vyrovnání](receivables-how-reconcile-payments-auto-application.md)    
 [Správa pohledávek](receivables-manage-receivables.md)    
 [Prodej](sales-manage-sales.md)    
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)

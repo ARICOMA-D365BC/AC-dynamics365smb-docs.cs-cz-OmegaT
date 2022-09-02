@@ -20,7 +20,7 @@ Before you can create a combined shipment, more than one sales shipment for the 
 
 ## To manually combine shipments on a single invoice
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Invoices**, and then choose the related link.
-2. Vyberte **Nový** Akce. For more information, see [Invoice Sales](sales-how-invoice-sales.md).
+2. Vyberte akci **Nový**. For more information, see [Invoice Sales](sales-how-invoice-sales.md).
 3. In the **Sell-to Customer No.** field, enter the customer who will receive the invoice for the shipped items.
 4. On the **Lines** FastTab, choose the **Get Shipment Lines** action.
 5. Select the shipment line that you want to include in the invoice:
