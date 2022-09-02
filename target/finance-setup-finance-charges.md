@@ -67,7 +67,7 @@ Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulko
 
 ## Viz také
 
-[Shromažďování nedoplatků](receivables-collect-outstanding-balances.md)    
+[Inkaso nevyrovnaných zůstatků](receivables-collect-outstanding-balances.md)    
 [Nastavit podmínky a úrovně připomenutí](finance-setup-reminders.md)    
 [Nastavení financí](finance-setup-finance.md)  
 
