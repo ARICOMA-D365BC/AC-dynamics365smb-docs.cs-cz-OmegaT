@@ -22,7 +22,7 @@ Skladové jednotky jsou doplňkem ke kartám zboží. Nenahrazují je, i když s
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Skladové jednotky** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
-3. Vyplňte pole na kartě. Následující pole jsou povinná: **Číslo zboží**, **Kód lokace**a/nebo **Kód varianty**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+3. Vyplňte pole na kartě. Následující pole jsou povinná: **Číslo zboží**, **Kód lokace** a/nebo **Kód varianty**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 Pokud jste pro zboží nastavili první skladovou jednotku, je zaškrtnuto políčko **Skladová jednotka existuje** na kartě **Zboží**.
 
@@ -37,11 +37,11 @@ Chcete-li pro položku vytvořit několik skladových jednotek, použijte dávko
 
 ## Viz také
 [Evidence nového zboží](inventory-how-register-new-items.md)    
-[Přehled](warehouse-setup-warehouse.md)    
-[Přehled](warehouse-manage-warehouse.md)    
-[Přehled](inventory-manage-inventory.md)    
-[Přehled](assembly-assemble-items.md)      
-[Přehled](design-details-warehouse-management.md)    
+[Nastavení řízení skladu](warehouse-setup-warehouse.md)    
+[Řízení skladu](warehouse-manage-warehouse.md)    
+[Zásoby](inventory-manage-inventory.md)    
+[Řízení montáže](assembly-assemble-items.md)      
+[Podrobnosti o designu: Řízení skladu](design-details-warehouse-management.md)    
 [Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

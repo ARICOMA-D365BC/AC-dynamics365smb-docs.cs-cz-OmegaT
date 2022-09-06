@@ -125,10 +125,10 @@ You're now ready to start using the add-in in Outlook.
 [Příprava obchodování](ui-get-ready-business.md)    
 [Získání Business Central pro mobilním zařízení](install-mobile-app.md)    
 [Odesílání dokladů e-mailem](ui-how-send-documents-email.md)    
-[Přehled](finance.md)    
-[Přehled](sales-manage-sales.md)    
-[Přehled](purchasing-manage-purchasing.md)    
-[Minimální požadavky](product-requirements.md#outlook)    
+[Finance](finance.md)    
+[Prodej](sales-manage-sales.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Minimální požadavky na Outlook](product-requirements.md#outlook)    
 [Pouižtí add-inů ve vebové aplikaci Outlooku](https://support.office.com/article/Using-Add-ins-in-Outlook-on-the-web-8f2ce816-5df4-44a5-958c-f7f9d6dabdce?appver=OWB150)
 
 

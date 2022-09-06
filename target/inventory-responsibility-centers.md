@@ -53,11 +53,11 @@ Chcete-li to nastavit, přiřaďte centra odpovědnosti uživatelům ve třech f
 
 ## Viz také
 
-[Přehled](inventory-setup-inventory.md)    
-[Přehled](warehouse-setup-warehouse.md)    
-[Přehled](inventory-manage-inventory.md)    
-[Přehled](warehouse-manage-warehouse.md)    
-[Přehled](design-details-warehouse-management.md)    
+[Nastavení zásob](inventory-setup-inventory.md)    
+[Nastavení řízení skladu](warehouse-setup-warehouse.md)    
+[Zásoby](inventory-manage-inventory.md)    
+[Řízení skladu](warehouse-manage-warehouse.md)    
+[Podrobnosti o designu: Řízení skladu](design-details-warehouse-management.md)    
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

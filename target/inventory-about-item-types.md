@@ -50,9 +50,9 @@ Položky zákazníků, na kterých provádíte servis, jako je tiskárna, se naz
 
 ## Viz také
 [Evidence nového zboží](inventory-how-register-new-items.md)    
-[Přehled](inventory-setup-inventory.md)    
-[Přehled](finance-manage-inventory-costs.md)    
-[Přehled](inventory-manage-inventory.md)    
+[Nastavení zásob](inventory-setup-inventory.md)    
+[Řízení nákladů na zásoby](finance-manage-inventory-costs.md)    
+[Zásoby](inventory-manage-inventory.md)    
 [Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
