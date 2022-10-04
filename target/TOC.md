@@ -1502,9 +1502,9 @@
 #### [Hromadný import obrázků zboží](inventory-how-import-item-pictures.md)
 ### Set Up Project Management
 #### [Set Up Projects](projects-setup-projects.md)
-#### [Set Up Resources](projects-how-setup-resources.md)
-#### [Set Up Time Sheets](projects-how-setup-time-sheets.md)
-#### [Set Up Jobs](projects-how-setup-jobs.md)
+#### [Nastavení zdrojů](projects-how-setup-resources.md)
+#### [Nastavení pracovních výkazů](projects-how-setup-time-sheets.md)
+#### Nastavení projektů
 ### Set Up Fixed Assets
 #### [Set Up Fixed Assets](fa-setup.md)
 #### [Set Up General Fixed Assets Information](fa-how-setup-general.md)

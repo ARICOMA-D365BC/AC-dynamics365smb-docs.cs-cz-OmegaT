@@ -14,29 +14,29 @@ ms.date: 06/22/2021
 ms.author: edupont
 
 ---
-# Setting Up Project Management
+# Nastavení správy projektu
 
 Než budete moci používat [!INCLUDE[prod_short](includes/prod_short.md)] ke správě projektů, musíte nastavit zdroje, časové rozvrhy a úlohy.
 
-Then you can create jobs and schedule resources for projects as well as manage budgets and track machine and employee hours with time sheets. For more information, see [Managing Projects](projects-manage-projects.md).
+Pak můžete vytvářet úlohy a plánovat zdroje pro projekty, spravovat rozpočty a sledovat hodiny strojů a zaměstnanců pomocí pracovních výkazů. Další informace naleznete v části [Správa projektů](projects-manage-projects.md).
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
 | Viz | Také |
 | --- | --- |
-| Set up project management. | [Set general information for jobs](projects-how-setup-jobs.md#to-set-general-information-for-jobs) |
-| Set up your resources and the related costs and prices, either for individual resources, resource groups, or for all available resources of the company. | [Set Up Resources](projects-how-setup-resources.md) |
-| Enable resources to report time usage for an individual or a machine and enable a manager to review the usage and its allocation. | [Set Up Time Sheets](projects-how-setup-time-sheets.md) |
-| Create job cards and prepare job tasks. Set up prices for job items and job resources and define job posting groups. | [Set Up Jobs](projects-how-setup-jobs.md) |
+| Nastavte projektové řízení. | [Nastavení obecných informací pro úlohy](projects-how-setup-jobs.md#to-set-general-information-for-jobs) |
+| Nastavte zdroje a související náklady a ceny buď pro jednotlivé zdroje, skupiny prostředků nebo pro všechny dostupné zdroje společnosti. | [Nastavení zdrojů](projects-how-setup-resources.md) |
+| Povolte zdrojům sestavy o využití času pro jednotlivce nebo stroje a umožněte správci zkontrolovat využití a jeho alokaci. | [Nastavení pracovních výkazů](projects-how-setup-time-sheets.md) |
+| Vytvoření projektů a úloh projektů. Nastavení cen pro zboží projektu, projektové zdroje a definujte projektové účto skupiny. | Nastavení projektů |
 
 ## Viz také
 
-[Managing Projects](projects-manage-projects.md)  
-[Video: How to create a job in Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)  
-[Finance](finance.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa projektů](projects-manage-projects.md)    
+[Video: Jak vytvořit úlohu v Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)    
+[Finance](finance.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Prodej](sales-manage-sales.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

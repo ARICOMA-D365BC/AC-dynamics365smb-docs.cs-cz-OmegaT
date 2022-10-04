@@ -74,17 +74,17 @@ Položky plateb jsou zaúčtovány do hlavní knihy, banky a účtů odběratel�
 
 Pokud platba v bance není reprezentována řádkem na stránce **Registrace platby**, může to být proto, že související dokument ještě nebyl zaúčtován. V takovém případě můžete pomocí funkce vyhledávání rychle najít dokument a odeslat jej ke zpracování platby. Další informace naleznete v části [Vyhledání specifického prodejního dokladu, který není plně fakturován](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-find-a-specific-sales-document-that-is-not-fully-invoiced).
 
-Pokud platba v bance není reprezentována žádným dokumentem v [! INCLUDE[prod_short](includes/prod_short.md)] pak můžete otevřít předvyplněný hlavní deník ze stránky **Registrace platby** a zaúčtovat platbu přímo na vyrovnávací účet bez použití platby na doklad. Případně můžete chtít evidovat platbu v deníku, dokud nebude vyřešen původ platby. For more information, see [To record or post a payment without a related document](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-record-or-post-a-payment-without-a-related-document).
+Pokud platba v bance není reprezentována žádným dokumentem v [! INCLUDE[prod_short](includes/prod_short.md)] pak můžete otevřít předvyplněný hlavní deník ze stránky **Registrace platby** a zaúčtovat platbu přímo na vyrovnávací účet bez použití platby na doklad. Případně můžete chtít evidovat platbu v deníku, dokud nebude vyřešen původ platby. Další informace naleznete v části [Zaznamenávání nebo zaúčtování platby bez souvisejícího dokumentu](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-record-or-post-a-payment-without-a-related-document).
 
-## To process customer payments with discounts manually
-If you have agreed on a payment discount with your customer, then the payment amounts can be lower than the invoice amounts if payment occurs before the agreed discount date.
+## Pro ruční zpracování plateb zákazníků se slevami
+Pokud jste se se svým zákazníkem dohodli na slevě z platby, pak mohou být částky platby nižší než částky faktury, pokud platba proběhne před dohodnutým datem slevy.
 
-The following procedures explains four different ways to post discounted payments on the **Payment Registration** page.
+Následující postupy vysvětlují čtyři různé způsoby zaúčtování zlevněných plateb na stránce **Registrace plateb**.
 
-* The payment amount is equal to the remaining discounted amount, and the payment date is before the discount date. You post the payment as is.
-* The payment amount is equal to the remaining discounted amount, but the payment date is after the discount date. You post the payment as partial. The document remains open to collect/pay the remaining amount. Alternatively, you set the discount date later to allow the payment in full.
-* The payment amount is lower than the remaining discounted amount. You post the payment as partial. The document remains open to collect/pay the remaining amount.
-* The payment amount is more than the remaining discounted amount. You post the payments as is. Only the remaining amount is posted. The additional amount is credited to the customer.
+* Částka platby se rovná zbývající diskontované částce a datum platby je před datem slevy. Platbu zaúčtujete tak, jak je.
+* Částka platby se rovná zbývající diskontované částce, ale datum platby je po datu slevy. Platbu zaúčtujete jako částečnou. Dokument zůstává otevřen pro vyzvednutí/zaplacení zbývající částky. Případně můžete nastavit datum slevy později, abyste umožnili platbu v plné výši.
+* Částka platby je nižší než zbývající diskontovaná částka. Platbu zaúčtujete jako částečnou. Dokument zůstává otevřen pro vyzvednutí/zaplacení zbývající částky.
+* Částka platby je vyšší než zbývající diskontovaná částka. Platby zaúčtujete tak, jak jsou. Zaúčtuje se pouze zbývající částka. Dodatečná částka je připsána zákazníkovi.
 
 ### To process a payment amount that is equal to the discounted amount and where the payment date is before the discount date
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
