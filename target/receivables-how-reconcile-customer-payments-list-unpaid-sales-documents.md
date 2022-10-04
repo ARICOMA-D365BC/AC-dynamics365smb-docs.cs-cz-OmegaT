@@ -20,61 +20,61 @@ Když vaši zákazníci provedli platby na váš elektronický bankovní účet,
 > [!NOTE]  
 > Můžete provádět stejné úkoly, včetně plateb dodavatele na stránce **Deník odsouhlasení plateb** pomocí funkcí pro import výpisu z účtu, automatickou aplikaci a odsouhlasení bankovního účtu. Pro více informací navštivte [Automatické odsouhlasení plateb  .
 
-Stránka **Registrovat platby zákazníků** je navržena tak, aby vám pomohla při vyrovnávání interních účtů pomocí skutečných peněžních údajů, aby bylo zajištěno, že platby jsou od zákazníků shromažďovány efektivně. Tento nástroj pro zpracování plateb vám umožňuje rychle ověřit a zaúčtovat jednotlivé nebo jednorázové platby, zpracovat zlevněné platby a najít konkrétní nezaplacené doklady, za které se platí.
+Stránka **Registrovat platby zákazníků** je navržena tak, aby vám pomohla při vyrovnávání interních účtů pomocí skutečných peněžních údajů, aby bylo zajištěno, že platby jsou od zákazníků shromažďovány efektivně. Tento nástroj pro zpracování plateb vám umožňuje rychle ověřit a zaúčtovat jednotlivé nebo paušální platby, zpracovat zlevněné platby a najít konkrétní nezaplacené doklady, za které se platí.
 
 Platby pro různé zákazníky, kteří mají různá data plateb, musí být zaúčtovány jako jednotlivé platby. Platby pro stejného zákazníka se stejným datem platby lze zaúčtovat jako paušální platbu. To je užitečné například v případě, že zákazník provedl jednu platbu, která pokrývá více prodejních faktur.
 
 ## Nastavení deníku registrace plateb
 Protože můžete účtovat různé typy plateb na různé vyrovnávací účty, musíte před zahájením zpracování plateb zákazníků vybrat vyrovnávací účet na stránce **Nastavení registrace plateb**. Pokud vždy účtujete na stejný vyrovnávací účet, můžete tento účet nastavit jako výchozí a vyhnout se tomuto kroku při každém otevření stránky **Registrovat platby zákazníka**.
 
-1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Nastavení registrace plateb** a pak zvolte související odkaz.
+1. Zvolte ![žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Nastavení registrace plateb** a pak zvolte související odkaz.
 
-   Alternatively, on the **Register Customer Payments** page, choose the **Setup** action.
-2. Fill in the fields on the **Payment Registration Setup** page. Choose a field to read a short description of the field or link to related information.
+   Případně na stránce **Registrovat platby zákazníka** vyberte akci **Nastavení**.
+2. Vyplňte pole na stránce **Nastavení registrace plateb**. Vyberte pole, ve kterém si chcete přečíst krátký popis pole nebo odkaz na související informace.
 
-## To register customer payments individually
+## Individuální registrace plateb zákazníka
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Register Customer Payments**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Zaregistrovat platby zákazníka** a pak zvolte související odkaz.
 
-   The **Register Customer Payments** page shows all posted documents for which a payment can be registered. The page can also be opened from the **Customers** and **Customer Card** pages where it is automatically filtered for the specified customer.
-2. Select the **Payment Made** check box on the line that represents the posted document for which a payment has been made.
+   Stránka **Registrovat platby zákazníka** zobrazuje všechny zaúčtované doklady, pro které lze platbu zaregistrovat. Stránku lze také otevřít ze stránek **Zákazníci** a **Karta zákazníka**, kde je automaticky filtrována pro zadaného zákazníka.
+2. Zaškrtněte políčko **Platba provedena** na řádku, který představuje zaúčtovaný doklad, pro který byla provedena platba.
 
-   If the **Auto Fill Date Received** check box is selected on the **Payment Registration Setup** page, then the work date is entered in the **Date Received** field.
-3. In the **Date Received** field, enter the date when the payment was made. This date may be different from the work date.
-4. In the **Amount Received** field, enter the amount that has been paid.
+   Pokud je na stránce **Nastavení registrace plateb** zaškrtnuto políčko automatické vyplnění Data **pak,**  je pracovní datum zadáno **do pole Datum přijetí**.
+3. Do pole **Datum přijetí** zadejte datum, kdy byla platba provedena. Toto datum se může lišit od pracovního data.
+4. Do pole **Přijatá částka** zadejte částku, která byla zaplacena.
 
-   For full payments, this is the same as the amount in the **Remaining Amount** field on the line. For partial payments, this is lower than the amount in the **Remaining Amount** field on the line.
-5. Repeat steps 2-4 for other lines that represent posted documents for which payments are made.
-6. Choose the **Post Payments** action.
+   U úplných plateb je to stejné jako částka v poli **Zbývající částka** na řádku. U částečných plateb je tato částka nižší než částka v poli **Zbývající částka** na řádku.
+5. Opakujte kroky 2 až 4 pro další řádky, které představují zaúčtované doklady, pro které jsou prováděny platby.
+6. Vyberte akci **Zaúčtovat platby**.
 
-The payment information is posted for documents represented by lines where the **Payment Made** check box is selected.
+Informace o platbě jsou zaúčtovány pro doklady reprezentované řádky, kde je zaškrtnuto políčko **Platba provedena**.
 
-Payments entries are posted to general ledger, bank, and customer accounts. Each payment is applied to the related posted sales document.
+Položky plateb jsou zaúčtovány do hlavní knihy, banky a účtů zákazníků. Každá platba se použije na související zaúčtovaný prodejní doklad.
 
-## To reconcile lump-sum payments
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
-2. Select the **Payment Made** check box on the lines that represent posted documents for the same customer for which a lump-sum payment has been made.
-
-   > [!NOTE]  
-   > The customer in the **Name** field must be the same on all lines that will be posted as a lump-sum payment.
-
-   If the **Auto Fill Date Received** check box is selected on the **Payment Registration Setup** page, then the work date is filled in the **Date Received** field.
-3. In the **Date Received** field, enter the date when the payment was made. This date may be different from the work date.
+## Odsouhlasení paušálních plateb
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
+2. Zaškrtněte políčko **Platba provedena** na řádcích, které představují zaúčtované doklady pro stejného zákazníka, pro kterého byla provedena paušální platba.
 
    > [!NOTE]  
-   > This date must be the same on all lines that will be posted as a lump-som payment.
-4. In the **Amount Received** field, enter amounts on multiple lines that sum up to the lump payment amount.
+   > Zákazník v poli **Jméno** musí být stejný na všech řádcích, které budou zaúčtovány jako paušální platba.
+
+   Pokud je na stránce **Nastavení registrace plateb** zaškrtnuto políčko **Datum automatického vyplnění** pak, je pracovní datum vyplněno v poli **Datum přijetí**.
+3. Do pole **Datum přijetí** zadejte datum, kdy byla platba provedena. Toto datum se může lišit od pracovního data.
+
+   > [!NOTE]  
+   > Toto datum musí být stejné na všech řádcích, které budou zaúčtovány jako paušální platba.
+4. V poli **Přijatá částka** zadejte částky na více řádcích, které se sečítají až do paušální částky.
 
    > [!TIP]  
-   > Try to post as many full payments as possible with the lump-sum amount. Enter amounts that are the same as the amount in the **Remaining Amount** field on as many lines as possible.
-5. Repeat steps 2-4 for other lines that represent posted documents for the same customer for which a lump-sum payment has been made.
-6. Choose the **Post As Lump Payment** action. The entered payment information is posted for documents represented by lines where the **Payment Made** check box is selected.
+   > Pokuste se zaúčtovat co nejvíce úplných plateb s paušální částkou. Zadejte částky, které jsou stejné jako částka v poli **Zbývající částka** na co největším počtu řádků.
+5. Opakujte kroky 2 až 4 pro další řádky, které představují zaúčtované doklady pro stejného zákazníka, pro kterého byla provedena paušální platba.
+6. Vyberte akci **Zaúčtovat jako paušální platbu**. Zadané informace o platbě jsou zaúčtovány pro doklady reprezentované řádky, kde je zaškrtnuto políčko **Platba provedena**.
 
-Payment entries are posted to general ledger, bank, and customer accounts. Each payment is applied to the related posted sales document.
+Položky plateb jsou zaúčtovány do hlavní knihy, banky a účtů odběratelů. Každá platba se použije na související zaúčtovaný prodejní doklad.
 
-If a payment in the bank is not represented by line on the **Payment Registration** page, it may be because the related document has not yet been posted. In that case, you can use a search function to quickly find the document and post it to process the payment. For more information, see [To find a specific sales document that is not fully invoiced](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-find-a-specific-sales-document-that-is-not-fully-invoiced).
+Pokud platba v bance není reprezentována řádkem na stránce **Registrace platby**, může to být proto, že související dokument ještě nebyl zaúčtován. V takovém případě můžete pomocí funkce vyhledávání rychle najít dokument a odeslat jej ke zpracování platby. Další informace naleznete v části [Vyhledání specifického prodejního dokladu, který není plně fakturován](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-find-a-specific-sales-document-that-is-not-fully-invoiced).
 
-If a payment in the bank is not represented by any document in [!INCLUDE[prod_short](includes/prod_short.md)], then you can open a prefilled general journal from the **Payment Registration** page to post the payment directly to the balancing account without applying the payment to a document. Alternatively, you may want to record the payment in the journal until the origin of the payment has been resolved. For more information, see [To record or post a payment without a related document](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-record-or-post-a-payment-without-a-related-document).
+Pokud platba v bance není reprezentována žádným dokumentem v [! INCLUDE[prod_short](includes/prod_short.md)] pak můžete otevřít předvyplněný hlavní deník ze stránky **Registrace platby** a zaúčtovat platbu přímo na vyrovnávací účet bez použití platby na doklad. Případně můžete chtít evidovat platbu v deníku, dokud nebude vyřešen původ platby. For more information, see [To record or post a payment without a related document](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-record-or-post-a-payment-without-a-related-document).
 
 ## To process customer payments with discounts manually
 If you have agreed on a payment discount with your customer, then the payment amounts can be lower than the invoice amounts if payment occurs before the agreed discount date.
@@ -87,7 +87,7 @@ The following procedures explains four different ways to post discounted payment
 * The payment amount is more than the remaining discounted amount. You post the payments as is. Only the remaining amount is posted. The additional amount is credited to the customer.
 
 ### To process a payment amount that is equal to the discounted amount and where the payment date is before the discount date
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 2. Enter the payment amount in the **Amount Received** field. The amount is equal to the amount in the **Rem. částka  after Discount** field.
 
    The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
@@ -96,7 +96,7 @@ The following procedures explains four different ways to post discounted payment
 5. Choose the **Post Payments** action to post the full payment to general ledger, bank, and customer accounts.
 
 ### To process a payment amount that is equal to the discounted amount but where the payment date is after the discount date
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 2. Enter the payment amount in the **Amount Received** field. The amount is equal to the amount in the **Rem. částka  after Discount** field.
 
    The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
@@ -114,7 +114,7 @@ The following procedures explains four different ways to post discounted payment
 The related document remains open.
 
 ### To process a payment that is lower than the remaining discounted amount
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 2. Enter the payment amount in the **Amount Received** field. The amount is lower than the amount in the **Rem. částka  after Discount** field.
 
    The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
@@ -125,7 +125,7 @@ The related document remains open.
 The related document remains open.
 
 ### To process a payment that is more than the remaining discounted amount
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 2. Enter the payment amount in the **Amount Received** field. The amount is more than the amount in the **Rem. částka  after Discount** field.
 
    The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
@@ -147,7 +147,7 @@ On the **Document Search** page, you can search among documents that are not ful
 
 The following procedure explains how to find a specific document by using both search criteria.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 2. With the pointer on any line, Choose the **Search Documents** action.
 3. On the **Document Search** page, enter a search value in the **Document No.** field.
 
@@ -163,12 +163,12 @@ The Search function searches among documents that are not fully invoiced based o
 
 If one or more documents match the criteria, then the **Document Search Result** page opens to display lines that represent those documents. Each line contains a document number, description, and amount so that you can easily find a specific document, for example based on information on your bank statement.
 
-If a payment in the bank is not represented by any document in [!INCLUDE[prod_short](includes/prod_short.md)], then you can open a prefilled general journal from the **Payment Registration** page to post the payment directly to the balancing account without applying the payment to a document. Alternatively, you may want to record the payment in the journal until the origin of the payment has been resolved.
+Pokud platba v bance není reprezentována žádným dokumentem v [! INCLUDE[prod_short](includes/prod_short.md)] pak můžete otevřít předvyplněný hlavní deník ze stránky **Registrace platby** a zaúčtovat platbu přímo na vyrovnávací účet bez použití platby na doklad. Případně můžete chtít evidovat platbu v deníku, dokud nebude vyřešen původ platby.
 
 ## To record or post a payment without a related document
 If a payment in the bank is not represented by any document in [!INCLUDE[prod_short](includes/prod_short.md)], then you can open a prefilled general journal line from the **Payment Registration** page to post the payment directly to the balancing account without applying the payment to a document. Alternatively, you may want to record the payment in the journal until the origin of the payment has been clarified.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 
    Proceed to record an undocumented payment.
 2. Choose the **General Journal** action.

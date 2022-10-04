@@ -12,39 +12,39 @@ ms.date: 06/22/2021
 ms.author: edupont
 
 ---
-# Project Management
+# Přehled správy projektů
 
-In [!INCLUDE[prod_short](includes/prod_short.md)], you can perform common project management tasks, such as configuring a job and scheduling a resource, as well as providing the information needed to manage budgets and monitor progress. You can track machine and employee hours on the project by using time sheets. As a project manager, you have a good overview, not only of individual jobs, but also of the allocation of employees, machinery and other resources being used in all projects.
+V [!INCLUDE[prod_short](includes/prod_short.md)] můžete provádět běžné úkoly projektového řízení, jako je konfigurace úlohy a plánování zdroje, stejně jako poskytování informací potřebných ke správě rozpočtů a sledování průběhu. Pomocí časových výkazů můžete sledovat strojové a zaměstnanecké hodiny na projektu. Jako projektový manažer máte dobrý přehled nejen o jednotlivých úkolech, ale také o alokaci zaměstnanců, strojů a dalších zdrojů využívaných ve všech projektech.
 
-Before you can use [!INCLUDE[prod_short](includes/prod_short.md)] to manage projects, you must set up resources, time sheets, and jobs. For more information, see [Setting Up Project Management](projects-setup-projects.md).
+Než budete moci používat [!INCLUDE[prod_short](includes/prod_short.md)] ke správě projektů, musíte nastavit zdroje, časové rozvrhy a úlohy. Další informace naleznete [v tématu Nastavení řízení projektů](projects-setup-projects.md).
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
 | Viz | Také |
 | --- | --- |
-| Create jobs, assign job tasks, and prepare job planning lines. | [Create Jobs](projects-how-create-jobs.md) |
-| Allocate resources to jobs and manage resource prices. | [Use Resources for Jobs](projects-how-use-resources.md) |
-| Create a time sheet with integrated job task and planning lines and post time sheet lines to a job journal. | [Use Time Sheets for Jobs](projects-how-use-time-sheets.md) |
-| Budget for resources to be used in jobs and compare actual item and resource usage to budgeted usage to improve the quality and cost efficiency of future projects. | [Manage Job Budgets](projects-how-manage-budgets.md) |
-| Review and record usage on various parts of your job, which is automatically updated as you modify and transfer information from job planning lines to job journals or job invoices for posting. | [Record Usage for Jobs](projects-how-record-job-usage.md) |
-| Purchase supplies for a job, either on purchase orders or invoices, and record item and time usage. | [Manage Job Supplies](projects-how-manage-project-supplies.md) |
-| Learn about WIP (Work in Process), a feature that ensures correct financial statements and enables you to estimate the financial value of jobs that are ongoing. | [Understanding WIP Methods](projects-understanding-wip.md) |
-| Post the consumption of materials, resources, and other expenses of job work in process (WIP) to monitor its financial value and to maintain correct financial statements even though you post job expenses before invoicing the job. | [Sledování průběhu a výkonu projektů](projects-how-monitor-progress-performance.md) |
-| Record job costs for resource usage, materials, and job-related purchases on an on-going basis and invoice the customer, either when the job is finished or according to an invoicing schedule. | [Invoice Jobs](projects-how-invoice-jobs.md) |
+| Vytvářejte úlohy, přidělujte pracovní úkoly a připravujte řádky plánování úloh. | [Vytváření pracovních míst](projects-how-create-jobs.md) |
+| Přidělujte zdroje úlohám a spravujte ceny zdrojů. | [Použití zdrojů pro úlohy](projects-how-use-resources.md) |
+| Vytvořte pracovní výkaz s integrovanými řádky úkolu a plánování a vložte řádky pracovního výkazu do deníku projektů. | [Používejte časové rozvrhy pro úlohy](projects-how-use-time-sheets.md) |
+| Rozpočet zdrojů, které mají být použity v úlohách, a porovnání skutečného využití položek a zdrojů s rozpočtovým využitím, aby se zlepšila kvalita a nákladová efektivita budoucích projektů. | [Správa rozpočtů úloh](projects-how-manage-budgets.md) |
+| Zkontrolujte a zaznamenávejte využití v různých částech úlohy, které se automaticky aktualizuje při úpravě a přenosu informací z řádků plánování projektu do deníků projektů nebo faktur projektu pro zaúčtování. | [Záznam využití pro úlohy](projects-how-record-job-usage.md) |
+| Nakupujte zásoby pro úlohu, a to buď na nákupních objednávkách nebo fakturách, a zaznamenávejte využití položky a času. | [Správa pracovních potřeb](projects-how-manage-project-supplies.md) |
+| Seznamte se s funkcí WIP (Work in Process), která zajišťuje správné finanční výkazy a umožňuje vám odhadnout finanční hodnotu probíhajících úloh. | [Porozumění metodám WIP](projects-understanding-wip.md) |
+| Zaúčtujte spotřebu materiálu, zdrojů a dalších výdajů na nedokončenou práci projektu (WIP), abyste mohli sledovat jeho finanční hodnotu a udržovat správné finanční výkazy, i když zaúčtujete výdaje na projekt před fakturací projektu. | [Sledování průběhu a výkonu projektů](projects-how-monitor-progress-performance.md) |
+| Průběžně zaznamenávejte náklady na projekt za využití zdrojů, materiály a nákupy související s projektem a fakturujte zákazníkovi, buď po dokončení projektu, nebo podle fakturačního plánu. | [Fakturace Projektu](projects-how-invoice-jobs.md) |
 
-## Get started with projects
+## Začínáme s projekty
 
-Project management is complicated enough in itself, and learning how to create jobs and managing work in process in a new tool can be another complication. To help you get started with project management in [!INCLUDE[prod_short](includes/prod_short.md)], you can see [a video about creating jobs](https://www.youtube.com/watch?v=VqaPWr7BWmw) on the [!INCLUDE[prod_short](includes/prod_short.md)] YouTube channel.
+Projektové řízení je samo o sobě dost komplikované a další komplikací může být naučit se vytvářet pracovní místa a řídit práci v procesu v novém nástroji. Abychom vám pomohli začít s řízením projektů v [! INCLUDE[prod_short](includes/prod_short.md)], můžete se podívat na [video o vytváření pracovních míst](https://www.youtube.com/watch?v=VqaPWr7BWmw) na [!INCLUDE[prod_short](includes/prod_short.md)] kanále YouTube.
 
 ## Viz také
 
-[Setting Up Project Management](projects-setup-projects.md)  
-[Video: How to create a job in Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Sales](sales-manage-sales.md)  
-[Finance](finance.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nastavení projektového řízení](projects-setup-projects.md)    
+[Video: Jak vytvořit projekt v Dynamics 365 Business Central](https://www.youtube.com/watch?v=VqaPWr7BWmw)    
+[Změna zobrazovaných funkcí](ui-experiences.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Prodej](sales-manage-sales.md)    
+[Finance](finance.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

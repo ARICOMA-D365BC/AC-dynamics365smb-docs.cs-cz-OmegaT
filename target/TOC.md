@@ -496,18 +496,18 @@
 ### [Block Items](inventory-how-block-items.md)
 ### [Práce s Centry odpovědnosti](inventory-responsibility-centers.md)
 
-## Project Management
+## Přehled správy projektů
 ### [Project Management Overview](projects-manage-projects.md)
 ### [Project Reports](project-reports.md)
-### [Create Jobs](projects-how-create-jobs.md)
+### [Vytváření pracovních míst](projects-how-create-jobs.md)
 ### [Use Resources for Projects](projects-how-use-resources.md)
 ### [Use Time Sheets](projects-how-use-time-sheets.md)
-### [Manage Job Budgets](projects-how-manage-budgets.md)
-### [Record Usage for Jobs](projects-how-record-job-usage.md)
-### [Manage Job Supplies](projects-how-manage-project-supplies.md)
+### [Správa rozpočtů úloh](projects-how-manage-budgets.md)
+### [Záznam využití pro úlohy](projects-how-record-job-usage.md)
+### [Správa pracovních potřeb](projects-how-manage-project-supplies.md)
 ### [Understand WIP Methods](projects-understanding-wip.md)
 ### [Sledování průběhu a výkonu projektů](projects-how-monitor-progress-performance.md)
-### [Invoice Jobs](projects-how-invoice-jobs.md)
+### [Fakturace Projektu](projects-how-invoice-jobs.md)
 
 ## Fixed Assets
 ### [Fixed Assets Overview](fa-manage.md)

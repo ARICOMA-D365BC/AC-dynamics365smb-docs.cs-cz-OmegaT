@@ -93,32 +93,32 @@ Další informace naleznete v části [Práce s hromadními prodejními objedná
 ### Periodické objednávky (Norsko)
 
 Periodické objednávky můžete použít k vytvoření šablon hromadních objednávek, aby bylo možné vytvořit prodejní objednávky na základě definovaných časových intervalů. Pokud například dodáváte stejnou prodejní objednávku každé dva týdny, můžete použít hromadní prodejní objednávku a vytvořit periodické objednávky.
-You can use recurring groups to define a range of parameters that show how you make the orders. These groups are assigned to blanket orders that have to be created regularly. To create the recurring orders, you will have to periodically run the create recurring orders process.
+Pomocí periodických skupin můžete definovat rozsah parametrů, které ukazují, jak provádíte objednávky. Tyto skupiny jsou přiřazeny k hromadným objednávkám, které je třeba pravidelně vytvářet. Chcete-li vytvořit periodické objednávky, budete muset pravidelně spouštět proces vytváření periodických objednávek.
 
 #### Proč používat tuto možnost
 
-With this option, you can choose between fixed and "best" prices.
+Díky této možnosti si můžete vybrat mezi pevnou a „nejlepší“ cenou.
 
-However, this is only available in Norway. Validity period can be defined on the recurring group level.
+To je však k dispozici pouze v Norsku. Dobu platnosti lze definovat na úrovni periodické skupiny.
 
-For more information, see [Recurring Orders](LocalFunctionality/Norway/recurring-orders.md).
+Další informace naleznete v části [Periodické objednávky](LocalFunctionality/Norway/recurring-orders.md).
 
-### Recurring revenue and subscription billing by other providers
+### Periodické příjmy a fakturace předplatného jinými poskytovateli
 
-At [AppSource.microsoft.com](https://appsource.microsoft.com/), you can get extensions for Business Central. Some extensions are provided by Microsoft, and other extensions are provided by other companies. The list of the extensions by other companies grows each month. So keep an eye out for [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646) and get apps to help you in your work in Business Central.
+Na [AppSource.microsoft.com](https://appsource.microsoft.com/) můžete získat rozšíření pro Business Central. Některá rozšíření jsou poskytována společností Microsoft a jiná rozšíření jsou poskytována jinými společnostmi. Seznam rozšíření o další společnosti roste každý měsíc. Sledujte proto [AppSource.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2081646) a získejte aplikace, které vám pomohou při práci v Business Central.
 
 ## Viz také
 
-[Date Formulas](ui-enter-date-ranges.md#use-date-formulas)  
-[Work with Recurring Journals](ui-work-general-journals.md#work-with-recurring-journals)  
-[Create job journal lines](projects-how-record-job-usage.md#to-create-job-journal-lines-manually)  
-[Create multiple job sales invoices](projects-how-invoice-jobs.md#to-create-multiple-job-sales-invoices)  
-[Create Recurring Sales and Purchase Lines](sales-how-work-standard-lines.md)  
-[Work with Service Contracts and Service Contract Quotes](service-how-to-create-service-contracts-and-service-contract-quotes.md)  
-[Invoice several service contracts](service-how-create-invoices.md#to-invoice-several-service-contracts)  
-[Demand Forecasts and Blanket Orders](design-details-central-concepts-of-the-planning-system.md#demand-forecasts-and-blanket-orders)  
-[Work with Blanket Sales Orders](sales-how-to-create-blanket-sales-orders.md)  
-[Recurring Orders (Norway)](LocalFunctionality/Norway/recurring-orders.md)
+[Vzorce dat](ui-enter-date-ranges.md#use-date-formulas)  
+[Práce s periodickými deníky](ui-work-general-journals.md#work-with-recurring-journals)  
+[Vytvořit řádek deníku projektu](projects-how-record-job-usage.md#to-create-job-journal-lines-manually)  
+[Vytvořit více prodejních faktur projektu](projects-how-invoice-jobs.md#to-create-multiple-job-sales-invoices)  
+[Vytvořit periodické prodejní a nákupní řádky](sales-how-work-standard-lines.md)  
+[Práce se servisními smlouvami a nabídkami servisní smlouvy](service-how-to-create-service-contracts-and-service-contract-quotes.md)  
+[Fakturace několika servisních smluv](service-how-create-invoices.md#to-invoice-several-service-contracts)  
+[Prognózy poptávky a hromadní objednávky](design-details-central-concepts-of-the-planning-system.md#demand-forecasts-and-blanket-orders)  
+[Práce s hormadnými prodejnými objednávkami](sales-how-to-create-blanket-sales-orders.md)  
+[Periodické objednávky (Norsko)](LocalFunctionality/Norway/recurring-orders.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -16,7 +16,7 @@ ms.author: edupont
 ---
 # Setting Up Project Management
 
-Before you can use [!INCLUDE[prod_short](includes/prod_short.md)] to manage projects, you must set up resources, time sheets, and jobs.
+Než budete moci používat [!INCLUDE[prod_short](includes/prod_short.md)] ke správě projektů, musíte nastavit zdroje, časové rozvrhy a úlohy.
 
 Then you can create jobs and schedule resources for projects as well as manage budgets and track machine and employee hours with time sheets. For more information, see [Managing Projects](projects-manage-projects.md).
 
