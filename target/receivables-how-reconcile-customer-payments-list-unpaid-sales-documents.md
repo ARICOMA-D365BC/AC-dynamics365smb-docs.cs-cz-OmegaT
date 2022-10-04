@@ -86,26 +86,26 @@ Následující postupy vysvětlují čtyři různé způsoby zaúčtování zlev
 * Částka platby je nižší než zbývající diskontovaná částka. Platbu zaúčtujete jako částečnou. Dokument zůstává otevřen pro vyzvednutí/zaplacení zbývající částky.
 * Částka platby je vyšší než zbývající diskontovaná částka. Platby zaúčtujete tak, jak jsou. Zaúčtuje se pouze zbývající částka. Dodatečná částka je připsána zákazníkovi.
 
-### To process a payment amount that is equal to the discounted amount and where the payment date is before the discount date
+### Zpracování částky platby, která se rovná diskontované částce a jejíž datum platby je před datem slevy
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Enter the payment amount in the **Amount Received** field. The amount is equal to the amount in the **Rem. částka  after Discount** field.
+2. Zadejte částku platby do pole **Přijatá částka**. Částka se rovná částce v **Rem. Částka  za pole Sleva**.
 
-   The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
-3. In the **Date Received** field, enter the payment date. The date is before the date in the **Pmt. Discount Date** field.
-4. Verify that the **Remaining Amount** field contains zero (0).
-5. Choose the **Post Payments** action to post the full payment to general ledger, bank, and customer accounts.
+   Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
+3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **Platba. pole Datum slevy**.
+4. Ověřte, zda pole **Zbývající částka** obsahuje nulu (0).
+5. Zvolte akci **Zaúčtovat platby** pro zaúčtování úplné platby na hlavní knihu, bankovní účty a účty zákazníků.
 
-### To process a payment amount that is equal to the discounted amount but where the payment date is after the discount date
+### Zpracování částky platby, která se rovná diskontované částce, ale jejíž datum platby je po datu slevy
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Enter the payment amount in the **Amount Received** field. The amount is equal to the amount in the **Rem. částka  after Discount** field.
+2. Zadejte částku platby do pole **Přijatá částka**. Částka se rovná částce v **Rem. Částka  za pole Sleva**.
 
-   The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
-3. In the **Date Received** field, enter a payment date that is after the date in the **Pmt. Discount Date** field. Date fields change to red font, and an error message is shown at the bottom of the page.
+   Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
+3. Do pole **Datum přijetí** zadejte datum platby, které je po datu v **Platba pole Datum slevy**. Pole data se změní na červené písmo a v dolní části stránky se zobrazí chybová zpráva.
 
    > [!TIP]  
-   > If you want to make an exception and grant the discount even though the payment is late, follow these steps:
-4. Choose the **Details** action.
-5. On the **Payment Registration Details** page, in the **Pmt. Discount Date** field on the **Payment Discount** FastTab, enter a date that is after the date in the **Date Received** field on the **Payment Registration** page.
+   > Pokud chcete udělat výjimku a poskytnout slevu, i když je platba opožděná, postupujte takto:
+4. Vyberte akci **Podrobnosti**.
+5. Na stránce **Platební údaje** v **Platba Discount Date** field on the **Payment Discount** FastTab, enter a date that is after the date in the **Date Received** field on the **Payment Registration** page.
 
    The error message and the red font disappear, and you can proceed to process the discounted payment.
 6. Verify that the **Remaining Amount** field contains the amount that remains to pay the full invoice amount.
@@ -115,10 +115,10 @@ The related document remains open.
 
 ### To process a payment that is lower than the remaining discounted amount
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Enter the payment amount in the **Amount Received** field. The amount is lower than the amount in the **Rem. částka  after Discount** field.
+2. Zadejte částku platby do pole **Přijatá částka**. The amount is lower than the amount in the **Rem. Částka  za pole Sleva**.
 
-   The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
-3. In the **Date Received** field, enter the payment date. The date is before the date in the **Pmt. Discount Date** field.
+   Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
+3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **Platba. pole Datum slevy**.
 4. Verify that the **Remaining Amount** field contains the amount that remains to pay the discounted amount.
 5. Choose the **Post Payments** action to post the partial payment to general ledger, bank, and customer accounts.
 
@@ -126,12 +126,12 @@ The related document remains open.
 
 ### To process a payment that is more than the remaining discounted amount
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Enter the payment amount in the **Amount Received** field. The amount is more than the amount in the **Rem. částka  after Discount** field.
+2. Zadejte částku platby do pole **Přijatá částka**. The amount is more than the amount in the **Rem. Částka  za pole Sleva**.
 
-   The **Payment Made** check box is automatically selected, and the **Date Received** field is filled with the work date.
-3. In the **Date Received** field, enter the payment date. The date is before the date in the **Pmt. Discount Date** field.
-4. Verify that the **Remaining Amount** field contains zero (0).
-5. Choose the **Post Payments** action to post the full payment to general ledger, bank, and customer accounts.
+   Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
+3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **Platba. pole Datum slevy**.
+4. Ověřte, zda pole **Zbývající částka** obsahuje nulu (0).
+5. Zvolte akci **Zaúčtovat platby** pro zaúčtování úplné platby na hlavní knihu, bankovní účty a účty zákazníků.
 
 The related document is closed, and the customer is credited the excess payment amount.
 
