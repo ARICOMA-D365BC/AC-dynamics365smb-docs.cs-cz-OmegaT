@@ -24,9 +24,9 @@ Finanční výkaznictví v [!INCLUDE [prod_short](includes/prod_short.md)] umož
 
 Následující články popisují některé klíčové úlohy pro analýzu stavu vaší firmy:
 
-* [Analáza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md)
+* [Analýza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md)
 * [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md)
-* [Nastavení a publikování webových služeb klíčových ukazatelů výkonu na základě účetních plánů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md)
+* [Nastavení a publikování webových služeb KPI na základě rozvrhů účtů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md)
 * [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md)
 * [Vytváření sestav analýz](bi-how-create-analysis-views-reports.md)
 * [Vytváření sestav pomocí XBRL](bi-create-reports-with-xbrl.md)

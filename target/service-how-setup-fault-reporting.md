@@ -14,36 +14,36 @@
 
 ---
 
-# Set Up Fault Reporting
-Fault reporting lets you establish standards for recording fault information for service items. For example, you can specify what the problem is, the symptoms you see, the reason for the problem, and how to resolve it.
+# Nastavení hlášení poruch
+Hlášení poruch vám umožňuje stanovit standardy pro zaznamenávání informací o poruchách pro předměty servisu. Můžete například určit, o jaký problém jde, příznaky, které se u vás vyskytnou, důvod problému a jak jej vyřešit.
 
-Fault codes describe the typical service item faults or the actions taken on service items. Depending on the level of fault reporting in your company, you might need to set up fault area codes and symptom codes before you set up fault codes. Fault areas describe areas of service item faults. Fault reason codes describe the reason for service item faults and, if needed, whether to exclude warranty and contract discounts. For example, you might want to exclude warranty and contract discounts if the customer was somehow responsible for the fault in the service item. You assign fault reason codes to service orders. For more information, see [Work on Service Tasks](service-how-to-work-on-service-tasks.md).
+Kódy poruchy popisují typické chyby předmětů servisu nebo akce provedené na předmětech servisu V závislosti na úrovni hlášení poruch ve vaší společnosti může být nutné nastavit kódy oblasti poruchy a kódy příznaku před nastavením kódů poruchy. Oblast poruchy popisuje oblasti poruch předmětů servisu. Kódy příčin poruch popisují příčinu poruch předmětů servisu a v případě potřeby, zda vylučují záruční a smluvní slevy. Například byste mohli chtít vyloučit záruční a smluvní slevy, pokud byl zákazník nějakým způsobem odpovědný za poruchu na předmětu servisu. K servisním zakázkám přiřadíte kódy důvodu poruchy. Pro více informací navštivte [Práce na servisních úlohách](service-how-to-work-on-service-tasks.md).
 
-## To specify the overall level of fault reporting
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Setup**, and then choose the related link.
-2. In the **Fault Reporting Level** field, choose one of the options described in the following table.
+## Určení celkové úrovně hlášení poruch, které se má použít
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Nastavení servisu** a poté vyberte související odkaz.
+2. V poli **Úroveň hlášení poruchy** vyberte jednu z možností popsaných v následující tabulce.
 
-   | **Fault Level** | **Popis** |
+   | **Úroveň poruchy** | **Popis** |
    |------------|-------------|  
-   | Žádné | No reporting codes are used. |
-   | Fault | Codes are listed in the **Fault Codes** table. These codes identify service item faults or actions to take on service items. You can cluster related codes into **Fault Area Code** groupings. |
-   | Fault + Symptom | You provide a combination of codes in the **Fault Codes** and **Symptom Codes** tables. Typical symptom codes include indicators that a customer might use to describe a problem, such as a noise or a quality. |
-   | Fault + Symptom + Area | You use fault, symptom, and fault area codes as an implementation of the International Repair Coding System (IRIS). |
+   | Žádné | Nepoužívají se žádné kódy hlášení. |
+   | Porucha | Kódy jsou uvedeny v tabulce **Kódy poruchy**. Tyto kódy identifikují poruchy předmětů servisu, nebo akce, které mají být přijaty pro předměty servisu. Související kódy můžete seskupit do seskupení **Kódu oblasti poruchy**. |
+   | Porucha + Příznak | Poskytujete kombinaci kódů v tabulkách  **Kódy poruchy** a **Kódy příznaků**. Mezi typické kódy příznaků patří indikátory, které může zákazník použít k popisu problému, jako je hluk nebo kvalita. |
+   | Porucha + Příznak + Oblasti | Kódy poruch, symptomů a oblastí poruch používáte jako implementaci systému IRIS (International Repair Coding System). |
 
-To complete the setup of fault reporting, you can also specify what repairs or resolutions are associated with a fault or defect. You set that up on the **Fault/Resolution Code Relationships** page, where you set up combinations of codes for the service item group of the service item from which you accessed the window and the number of occurrences for each one.
+Chcete-li dokončit nastavení hlášení poruch, můžete také určit, jaké opravy nebo řešení jsou spojeny s chybou nebo vadou. To lze nastavit na stránce **Vztahy kódů chyba/vyřešení**, kde nastavíte kombinace kódů pro skupinu předmětů servisu u toho předmětu servisu, ze které jste vstoupili do okna, a počet výskytů pro každý z nich.
 
-## To create fault and resolution code relationships
+## Vytvoření vztahů kódů Chyba a Vyřešení
 <!--this needs to go in a working with topic-->
-To be able to see the most common methods of repair for particular item faults when you are servicing the items, you need to build up information on fault/resolution codes relationships. Use the **Insert Fault/Resol. Codes Relationships** batch job to find all the combination of fault and resolution codes in posted service orders and record them on the **Fault/Resol. Codes Relationships** page.
+Abyste mohli při údržbě položek vidět nejběžnější způsoby opravy konkrétních poruch předmětů, musíte si vytvořit informace o vztazích kódů poruch / vyřešení. Použijte dávkovou úlohu **Vložit vztahy kódů oruchy/vyřešení** pro nalezení všech kombinací kódů poruchy a vyřešení v zaúčtovaných  servisních zakázkách, a zaznamenejte je na stránku **Vztahy kódů poruchy/Řešení**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Insert Fault/Resol. Codes Relationships**, and then choose the related link.
-2. Enter dates to define the period you want to include in the batch job.
-3. To group the relationships by service item group, choose the **Relation Based on Service Item Group** check box.
-4. To retain the records that you have already inserted manually on the **Fault/Resol. Codes Relationships** page, choose the **Retain Manually Inserted Rec.** check box.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Vložit vztahy kódů poruchy/vyřešení** a pak vyberte související odkaz.
+2. Zadejte datum pro definování období, které chcete zahrnout do dávkové úlohy.
+3. Chcete-li seskupit vztahy podle skupiny předmětů servisu, zaškrtněte políčko **Vztah založený na skupině předmětů servisu**.
+4. Chcete-li zachovat záznamy, které jste již ručně vložili na stránku **Vztahy kódů Poruchy/Vyřešení**, zaškrtněte políčko **Uchovat ručně vložené položky**.
 
 ## Viz také
-[Setting Up Service Management](service-setup-service.md)  
-[Service Management](service-service.md)
+[Nastavení správy servisu](service-setup-service.md)  
+[Správa servisu](service-service.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

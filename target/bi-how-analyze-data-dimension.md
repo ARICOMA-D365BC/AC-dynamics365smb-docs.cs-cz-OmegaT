@@ -15,12 +15,12 @@ ms.author: edupont
 
 ---
 # Analyze Data by Dimensions
-In financial analysis, a dimension is data that you can add to an entry as a kind of marker. This data is used to group entries with similar characteristics, such as customers, regions, products, and salesperson, and easily retrieve these groups for analysis. Dimensions can be used on entries in journals, documents, and budgets. The term dimension describes how analysis occurs. A two-dimensional analysis, for example, would be sales per area. However, by using more than two dimensions when creating an entry, you can carry out a more complex analysis, such as sales per sales campaign per customer group per area. For more information, see [Work with Dimensions](finance-dimensions.md).
+In financial analysis, a dimension is data that you can add to an entry as a kind of marker. Tato data se používají k seskupení položek s podobnými charakteristikami, jako jsou zákazníci, regiony, produkty a prodejce, a ke snadnému načtení těchto skupin pro analýzu. Dimensions can be used on entries in journals, documents, and budgets. The term dimension describes how analysis occurs. A two-dimensional analysis, for example, would be sales per area. However, by using more than two dimensions when creating an entry, you can carry out a more complex analysis, such as sales per sales campaign per customer group per area. Další informace naleznete v části [Práce s Dimenzemi](finance-dimensions.md).
 
 Analyzing data by dimensions gives you greater insight into your business, so you can evaluate information, such as how well your business is operating, where it is thriving and where it is not, and where more resources should be allocated.
 
 > [!TIP]
-> As a quick way to analyze transactional data by dimensions, you can filter totals in the chart of accounts and entries in all **Entries** pages by dimensions. Look for the **Set Dimension Filter** action.
+> Jako rychlý způsob analýzy transakčních dat podle dimenzí můžete filtrovat součty v účtové osnově a záznamy na všech stránkách **Záznamy** podle dimenzí. Hledejte akci **Nastavit filtr dimenzí**.
 
 > [!NOTE]
 > If you discover that an incorrect dimension has been used on posted general ledger entries, you can correct the dimension values and update your analysis views. For more information, see [Troubleshooting and Correcting Dimensions](finance-troubleshooting-correcting-dimensions.md#changing-dimension-assignments-after-posting)

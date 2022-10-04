@@ -105,7 +105,7 @@ You can easily correct or cancel a posted sales invoice before it is paid. For e
 
 ## Registering payments
 
-Depending on your business needs, you can get paid and register that payment in different ways: manually, automatically, and through payment services.
+V závislosti na vašich obchodních potřebách můžete dostat zaplaceno a zaregistrovat tuto platbu různými způsoby: ručně, automaticky a prostřednictvím platebních služeb.
 
 You can process the payments straight from the customer card. Use the **Register Customer Payments** action to get an overview of unpaid invoices for that customer. Then, mark the invoice as paid partially or in full. This payment reconciliation processes your customer payments by matching amounts received on your bank account with the related unpaid sales invoices, and then posts the payments. For more information, see [To reconcile payments individually](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md#to-register-customer-payments-individually).
 

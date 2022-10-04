@@ -28,7 +28,7 @@ Ease in invoicing your service orders is a key feature of [!INCLUDE[prod_short](
 You can also invoice a service contract directly from the **Service Contract** page, if the next invoice date on the contract is earlier than the working date.
 
 ## To invoice a service contract from the Service Contract page
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Servisní smlouvy** a poté vyberte související odkaz.
 2. Choose the service contract to invoice, and open the contract card.
 3. Choose **Create Service Invoice** action.
 4. Choose **Yes** to create the service invoices.

@@ -423,9 +423,9 @@
 ## Business Intelligence and Financial Reporting
 ### [Business Intelligence and Financial Reporting Overview](bi.md)
 ### [Finanční sestavy](finance-reports.md)
-### [Analáza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md)
+### [Analýza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md)
 ### [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md)
-### [Nastavení a publikování webových služeb klíčových ukazatelů výkonu na základě účetních plánů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md)
+### [Nastavení a publikování webových služeb KPI na základě rozvrhů účtů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md)
 ### [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md)
 ### [Vytváření sestav analýz](bi-how-create-analysis-views-reports.md)
 ### [Vytváření sestav pomocí XBRL](bi-create-reports-with-xbrl.md)
@@ -639,7 +639,7 @@
 <!-- ### [Walkthrough: Receiving and Putting Away in Advanced Warehouse Configurations](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md) -->
 
 ## Správa servisu
-### [Service Management](service-service.md)
+### [Správa Servisu](service-service.md)
 ### Planning Service
 #### [Planning Service Management](service-plan-service.md)
 #### [Service Price Management](service-service-price-management.md)
@@ -1544,7 +1544,7 @@
 #### [Subcontract Manufacturing](production-how-to-subcontract-manufacturing.md)
 ### Set Up Service Management
 #### [Set Up Service Management](service-setup-service.md)
-#### [Create Service Items](service-how-to-create-service-items.md)
+#### [Vytváření předmětů servisu](service-how-to-create-service-items.md)
 #### [Set Up Standard Service Codes](service-how-setup-service-coding.md)
 #### [Konfigurace procesů servisu](service-setup-service-processes.md)
 #### [Nastavení hlášení poruch](service-how-setup-fault-reporting.md)
@@ -1552,7 +1552,7 @@
 #### [Set Up Troubleshoot](service-how-setup-troubleshooting.md)
 #### [Nastavení přidělení zdrojů](service-how-setup-resource-allocation.md)
 #### [Nastavení Ceny a Dodatečných nákladů za servis](service-how-setup-service-costs-pricing.md)
-#### [Set Up Service Items and Service Item Components](service-how-setup-service-items.md)
+#### [Nastavení předmětů servisu a komponent předmětů servisu.](service-how-setup-service-items.md)
 #### [Nastavení Pracovní doby a Servisních hodin](service-how-setup-work-service-hours.md)
 #### [Nastavení stavů pro Servisní zakázky a Opravy](service-order-repair-status.md)
 #### [Nastavení programu zápůjček](service-how-setup-loaner-program.md)

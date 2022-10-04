@@ -35,7 +35,7 @@ Repeat steps 2 and 3 until you have set the priority for each of the four status
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Repair Status**, and then choose the related link.
 2. Create a new repair status.
-3. Fill in the **Code** and **Description** fields.
+3. Vyplňte pole **Kód** a **Popis**.
 4. In the **Service Order Status** field, choose the order status to link the repair status to. The **Priority** field displays the priority of the service order status you have chosen.
 5. Choose a repair status. You can choose only one. A repair status cannot be linked more than one repair status option.
 6. To be able to post service orders, including service items, with this repair status, choose the **Posting Allowed** field.

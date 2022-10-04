@@ -81,11 +81,11 @@ If you have set up standard service codes and assigned them to service item grou
 2. Create a new service order.
 3. Fill in the fields as necessary..
 4. Fill in the service item lines with the required information.
-5. Choose the line with the service item that you want to create service lines for, and then choose **Get Std. Service Codes**. The **Standard Serv. Item Gr. Codes** page opens with the standard codes for the service item group specified on the line.
+5. Choose the line with the service item that you want to create service lines for, and then choose **Get Std. Service Codes**. The **Standard Serv. předmětů Codes** page opens with the standard codes for the service item group specified on the line.
 6. Choose the appropriate code, and choose the **OK** button to enter standard service lines.
 
 > [!NOTE]  
-> If the **Service Item Group Code** field on the service item line of the document is blank, this means that the service item does not belong to any service item group. In this case, the **Standard Serv. Item Gr. Codes** page will contain a list of all standard service codes. You should select from the list to insert standard service lines in the document. You may also select from the list of standard service codes assigned to a specific service item group. To view the list, select the relevant code in the **Service Item Group Code** field on the **Standard Serv. Item Gr. Codes** page.
+> If the **Service Item Group Code** field on the service item line of the document is blank, this means that the service item does not belong to any service item group. In this case, the **Standard Serv. předmětů Codes** page will contain a list of all standard service codes. You should select from the list to insert standard service lines in the document. You may also select from the list of standard service codes assigned to a specific service item group. To view the list, select the relevant code in the **Service Item Group Code** field on the **Standard Serv. předmětů Codes** page.
 
 ## To register internal or public comments
 You can add comments that will be printed on service orders and service quotes to provide additional information. You can add up to 80 characters, including spaces. If you need to enter additional text, choose another line. To register a comment, choose a line, and then choose the **Comments** action.

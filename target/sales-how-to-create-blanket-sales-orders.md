@@ -17,7 +17,7 @@ ms.author: edupont
 
 A blanket sales order represents a framework for a long-term agreement between you and your customer. Similarly, you use blanket purchase orders to manage long-term agreements between you and your vendor.
 
-A blanket order is typically made when a customer has committed to purchasing large quantities that are to be delivered in several smaller shipments over a certain period of time. Often blanket orders cover only one item with predetermined delivery dates. The main reason for using a blanket order rather than a sales order is that quantities entered on a blanket order do not affect item availability and thus can be used as a worksheet for monitoring, forecasting, and planning purposes.
+Hromadní objednávka se obvykle provádí, když se zákazník zavázal k nákupu velkého množství, které má být dodáno v několika menších zásilkách po určitou dobu. Časté hromadné objednávky často pokrývají pouze jednu položku s předem stanovenými termíny dodání. The main reason for using a blanket order rather than a sales order is that quantities entered on a blanket order do not affect item availability and thus can be used as a worksheet for monitoring, forecasting, and planning purposes.
 
 On the blanket order, each separate shipment can be set up as an order line, which can then be converted into a sales order at the time of shipping.
 

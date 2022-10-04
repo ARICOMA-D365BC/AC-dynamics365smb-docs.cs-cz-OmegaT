@@ -36,7 +36,7 @@ The service price adjustment function does not apply to service items under the 
 When you run the service price adjustment function, all of the discounts in the order will be replaced by the values of the service price adjustment.
 
 ## Service Price Groups
-You can set up service price groups to create groups of service items that receive the same special service pricing. When you have set up service price groups, you can then assign them to service items on service item lines. You can also assign service price groups to service item groups.
+You can set up service price groups to create groups of service items that receive the same special service pricing. When you have set up service price groups, you can then assign them to service items on service item lines. Cenové skupiny servisu můžete také přiřadit ke skupinám předmětu servisu.
 
 Before you can assign a service price group to a service item, you have to determine to which fault area, currency, or service price adjustment group the service price group applies. You have to determine to which amount the service price should be adjusted, and whether this amount should include VAT and discounts. You also have to determine whether this adjustment concerns a fixed amount, or should only be applied under certain conditions.
 
@@ -48,7 +48,7 @@ You set up the actual types of service pricing (price adjustment type and price)
 For example, you can set up types of service pricing for a radio service price group. For customers without a price group, you can decide to have service pricing with maximum price on labor, which is the labor price adjustment group. For customers with a particular price group, you can decide to have service pricing with a fixed price on labor, the same labor price adjustment group.
 
 #### [Aktuální zkušenosti](#tab/current-experience)
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Items**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Předměty servisu** a poté vyberte související odkaz.
 2. Select the service item, expand the **Prices and Sales** FastTab, choose the **Resource**, **Item**, or **G/L Account** action.
 3. On the **Job Resource Prices**, **Job Item Prices**, or **Job G/L Account Prices** pages, fill in the fields as necessary.
 

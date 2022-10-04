@@ -37,7 +37,7 @@ ms.author: edupont
 | Jednoduchá montáž zboží z několika položek k vytvoření nového zboží. | [Assembly Management](assembly-assemble-items.md) |
 | Definice zdroje a jejich kapacit, operace plánování, vyžádání výrobní komponenty a provádění výrobních operací. | [Manufacturing](production-manage-manufacturing.md) |
 | Zajištění účiného toku přijatého a dodaného zboží. | [Warehouse Management](warehouse-manage-warehouse.md) |
-| Plánování servisních hovorů a nastavení servisních zakázek a sledování náhradních dílů a dodávek. | [Service Management](service-service.md) |
+| Plánování servisních hovorů a nastavení servisních zakázek a sledování náhradních dílů a dodávek. | [Správa Servisu](service-service.md) |
 | Nastavení a používání workflow, které spojují úkoly prováděné různými uživateli nebo systémem, například automatické účtování. Typickým krokem workflow je vyžádání a udělení schválení k vytvoření nebo účtování dokladů. | [Workflow](across-workflow.md) |
 | Umožnit uživatelům výměnu dat s externími zdroji během každodenních úloh, jako je odesílání/přijímání elektronických dokladů, import/export bankovních souborů a aktualizace směnných kurzů. | [Exchanging Data Electronically](across-data-exchange.md) |
 | Record external documents in [!INCLUDE[prod_short](includes/prod_short.md)], including their file attachments, and then manually create the related documents or automatically convert the files to electronic documents. | [Incoming Documents](across-income-documents.md) |

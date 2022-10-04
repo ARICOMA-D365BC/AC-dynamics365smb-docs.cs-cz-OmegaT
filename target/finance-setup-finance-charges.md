@@ -16,7 +16,7 @@ ms.author: edupont
 ---
 # Nastavení podmínek penále
 
-Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli. Nejprve však musíte nastavit kód, který představuje každý výpočet penále. Poté můžete tento kód zadat do pole Kód podmínky penále na kartách zákazníků.
+Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penále zasláním oznámení o penále. Nejprve však musíte nastavit kód, který představuje každý výpočet penále. Poté můžete tento kód zadat do pole Kód podmínky penále na kartách zákazníků.
 
 ## Podmínky penále
 
@@ -34,11 +34,11 @@ Penále lze vypočítat pomocí metod průměrného denního zůstatku nebo spla
    Penále je procentem z dlužné částky:  
    *Metoda splatného salda* – *Penále* = *Částka po splatnosti* x *(úroková sazba / 100)*
 
-Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulkou, tabulkou Text Penále. Pro každou sadu podmínek penále můžete definovat počáteční a/nebo koncový text, který se má zahrnout do poznámky o penáli.
+Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulkou, tabulkou Text Penále. Pro každou sadu podmínek penále můžete definovat počáteční a/nebo koncový text, který se má zahrnout do poznámky o penále.
 
 ### Nastavte Podmínky Penále
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále<x5/> a vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále** a vyberte související odkaz.
 2. Vyplňte pole podle potřeby.
 3. Chcete-li použít více než jednu kombinaci podmínek penále, nastavte kód pro každou z nich.
 
@@ -47,23 +47,23 @@ Kromě toho je každý termín v tabulce Podmínky Penále propojen s podtabulko
 5. Na stránce **Měny pro Podmínky penále**, definujte pro každý termín kód měny a dodatečný poplatek.
 
    > [!NOTE]  
-   > Když vytvoříte penále v cizí měně, podmínky v cizí měně, které zde nastavíte, se použijí k vytvoření oznámení o penálích. Pokud nejsou nastaveny žádné podmínky penále v cizí měně, použijí se podmínky penále LM uvedené na stránce **Podmínky penále** a poté se převedou na příslušnou měnu.
+   > Když vytvoříte penále v cizí měně, podmínky v cizí měně, které zde nastavíte, se použijí k vytvoření oznámení o penále. Pokud nejsou nastaveny žádné podmínky penále v cizí měně, použijí se podmínky penále LM uvedené na stránce **Podmínky penále** a poté se převedou na příslušnou měnu.
 
-   Pro každý termín finančního poplatku můžete zadat text, který bude vytištěn před (**Počáteční text**) nebo za (**Konečný text**) na záznamech ve zprávě o penálích.
+   Pro každou podmínku penále můžete zadat text, který bude vytištěn před (**Počáteční text**) nebo za (**Konečný text**) na záznamech ve zprávě o penále.
 6. Vyberte akce **Počáteční text** nebo **Koncový text** a vyplňte na stránce **Text penále**.
 7. Chcete-li automaticky vložit související hodnoty do výsledného textu penále, zadejte do pole **Text** následující zástupné symboly.
 
 | Zástupný symbol | Hodnota |
 |-----------------|-----------|  
-| %1 | Obsah pole **Datum dokladu** v záhlaví poznámky o penáli |
-| %2 | Obsah pole **Datum splatnosti** v záhlaví oznámení o penáli |
+| %1 | Obsah pole **Datum dokladu** v záhlaví poznámky o penále |
+| %2 | Obsah pole **Datum splatnosti** v záhlaví oznámení o penále |
 | %3 | Obsah pole **Úroková sazba** v souvisejících podmínkách penále |
-| %4 | Obsah pole **Zbývající částka** v záhlaví poznámky o penáli |
-| %5 | Obsah pole **Částka úroku** v záhlaví zprávy o penáli |
-| %6 | Obsah pole **Dodatečný poplatek v** záhlaví poznámky o penáli |
+| %4 | Obsah pole **Zbývající částka** v záhlaví poznámky o penále |
+| %5 | Obsah pole **Částka úroku** v záhlaví zprávy o penále |
+| %6 | Obsah pole **Dodatečný poplatek** v záhlaví poznámky o penále |
 | %7 | Celková částka upomínky |
-| %8 | Obsah pole **Kód měny** v záhlaví poznámky o penáli |
-| %9 | Obsah pole **Datum zaúčtování** v záhlaví poznámky o penáli |
+| %8 | Obsah pole **Kód měny** v záhlaví poznámky o penále |
+| %9 | Obsah pole **Datum zaúčtování** v záhlaví poznámky o penále |
 
 ## Viz také
 

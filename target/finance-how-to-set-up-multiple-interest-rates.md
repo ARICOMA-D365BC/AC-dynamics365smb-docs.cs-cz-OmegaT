@@ -24,7 +24,7 @@ Při vytváření podmínek penále a upomínek pro zpožděné platby penále m
 
 ## Nastavení více úrokových sazeb
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále<x5/> a vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Podmínky penále** a vyberte související odkaz.
 2. On the **Finance Charge Terms** page, select the required finance term, and then choose the **Interest Rates** action.
 3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 4. Zvolte tlačítko **OK**.

@@ -61,7 +61,7 @@ The following sections point to key articles that can help you get familiar with
    - [Assembly Management](assembly-assemble-items.md)
    - [Manufacturing](production-manage-manufacturing.md)
    - [Warehouse Management](warehouse-manage-warehouse.md)
-   - [Service Management](service-service.md)
+   - [Správa Servisu](service-service.md)
    - [General Business Functionality](ui-across-business-areas.md)
    - [Místní funkcionality](about-localization.md)
 

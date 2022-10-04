@@ -15,31 +15,31 @@ ms.author: edupont
 
 ---
 # Business Intelligence
-Businesses capture a tremendous amount of data through daily activity. This data, which reflects such things as the organization's sales figures, purchases, operational expenses, employee salaries, and budgets, can become valuable information, or business intelligence, for decision makers. [!INCLUDE[prod_short](includes/prod_short.md)] contains a number of features that help you gather, analyze, and share your company data.
+Firmy zachycují obrovské množství dat prostřednictvím každodenní aktivity. Tato data, která odrážejí takové věci, jako jsou údaje o prodeji organizace, nákupy, provozní výdaje, platy zaměstnanců a rozpočty, se mohou stát cennými informacemi nebo business intelligence pro osoby s rozhodovací pravomocí. [!INCLUDE[prod_short](includes/prod_short.md)] obsahuje řadu funkcí, které vám pomohou shromažďovat, analyzovat a sdílet vaše firemní data.
 
-The Dimensions functionality plays an important role in business intelligence. A dimension is data that you can add to an entry as a kind of marker. This data is used to group entries with similar characteristics, such as customers, regions, products, and salesperson, and easily retrieve these groups for analysis. Among other uses, you use dimensions  when defining analysis views and when creating account schedules for reporting. For more information, see [Work with Dimensions](finance-dimensions.md).
+Funkce Dimenze hraje důležitou roli v business intelligence. Dimenze jsou data, která můžete přidat k položce jako druh značky. Tato data se používají k seskupení položek s podobnými charakteristikami, jako jsou zákazníci, regiony, produkty a prodejce, a ke snadnému načtení těchto skupin pro analýzu. Dimenze mimo jiné používáte při definování zobrazení analýzy a při vytváření plánů účtů pro vytváření přehledů. Další informace naleznete v části [Práce s Dimenzemi](finance-dimensions.md).
 
 > [!TIP]
-> As a quick way to analyze transactional data by dimensions, you can filter totals in the chart of accounts and entries in all **Entries** pages by dimensions. Look for the **Set Dimension Filter** action.
+> Jako rychlý způsob analýzy transakčních dat podle dimenzí můžete filtrovat součty v účtové osnově a záznamy na všech stránkách **Záznamy** podle dimenzí. Hledejte akci **Nastavit filtr dimenzí**.
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
 | Viz | Také |
 | --- | --- |
-| View actual amounts compared to budgeted amounts for all accounts and for several periods. | [Analáza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md) |
-| Create new account schedules to define financial statements for reporting or for display as charts. | [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md) |
-| Analyze your financial performance by setting up KPIs based on account schedules, which you then publish as web services. The published account-schedule KPIs can be viewed on a web site or imported to Microsoft Excel using OData web services. | [Nastavení a publikování webových služeb klíčových ukazatelů výkonu na základě účetních plánů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md) |
-| Set up analysis views to analyze data using dimensions. | [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md) |
-| Create new analysis reports for sales, purchases, and inventory, and set up analysis templates. | [Vytváření sestav analýz](bi-how-create-analysis-views-reports.md) |
-| Enable global financial reporting by to international accounting organizations with the eXtensible Business Reporting Language standard. | [Vytváření sestav pomocí XBRL](bi-create-reports-with-xbrl.md) |
-| Change the database access intent on reports, pages of the type API, and queries to reduce load and improve performance. | [Správa přístupu databáze](admin-data-access-intent.md) |
+| Zobrazení skutečných částek v porovnání s rozpočtovými částkami pro všechny účty a za několik období. | [Analýza skutečných částek proti rozpočtovým částkám](bi-how-analyze-actual-versus-budget.md) |
+| Vytvořte nové účetní plány pro definování finančních výkazů pro vytváření sestav nebo pro zobrazení jako grafy. | [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md) |
+| Analyzujte svůj finanční výkon nastavením KPI na základě rozvrhů účtů, které pak publikujete jako webové služby. Publikované KPI rozvrhu účtů lze zobrazit na webu nebo importovat do Microsoft Excelu pomocí webových služeb OData. | [Nastavení a publikování webových služeb KPI na základě rozvrhů účtů](bi-how-to-set-up-and-publish-kpi-web-services-based-on-account-schedules.md) |
+| Nastavte zobrazení analýzy pro analýzu dat pomocí dimenzí. | [Analýza dat podle dimenzí](bi-how-analyze-data-dimension.md) |
+| Vytvářejte nové analytické sestavy pro prodej, nákupy a zásoby a nastavte šablony analýzy. | [Vytváření sestav analýz](bi-how-create-analysis-views-reports.md) |
+| Umožněte globální finanční výkaznictví mezinárodním účetním organizacím pomocí standardu eXtensible Business Reporting Language. | [Vytváření sestav pomocí XBRL](bi-create-reports-with-xbrl.md) |
+| Změňte záměr přístupu k databázi u sestav, stránek typu API a dotazů, abyste snížili zatížení a zlepšili výkon. | [Správa přístupu databáze](admin-data-access-intent.md) |
 
 ## Viz také
-[Finance](finance.md)    
-[Use Business Central as a Power BI Data Source](across-how-use-financials-data-source-powerbi.md)  
-[Closing Fiscal Periods](year-close-years-periods.md)  
-[Importing Data from Other Finance Systems](across-import-data-configuration-packages.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Finance](finance.md)      
+[Používejte Business Central jako zdroj dat Power BI](across-how-use-financials-data-source-powerbi.md)    
+[Uzávěrka fiskálních období](year-close-years-periods.md)    
+[Import dat z jiných finančních systémů](across-import-data-configuration-packages.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

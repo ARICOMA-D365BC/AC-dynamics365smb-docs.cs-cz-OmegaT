@@ -34,7 +34,7 @@ When you receive a loaner from a customer, you must register the receipt. You do
 ## To register loaner comments
 You can use the **General Service Comment Sheet** page to register comments on registered loaners.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Loaners**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zápujčky** a poté vyberte související odkaz.
 2. Open the relevant loaner card.
 3. Choose the **Comments** action. The **General Service Comment Sheet** page opens.
 4. In the **Date** field, enter a date.

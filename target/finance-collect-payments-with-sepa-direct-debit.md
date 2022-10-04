@@ -90,7 +90,7 @@ Before you can process customer payments electronically by exporting direct debi
 
 6. Repeat steps 1 through 5 for all customers that you want to set up for SEPA direct debits.
 
-The direct-debit mandate is automatically inserted in the **Direct Debit Mandate ID** field when you create a sales invoice for the customer that you selected in step 2. For more information, see [Create Recurring Sales and Purchase Lines](sales-how-work-standard-lines.md).
+The direct-debit mandate is automatically inserted in the **Direct Debit Mandate ID** field when you create a sales invoice for the customer that you selected in step 2. Pro více informací navštivte sekci [Vytvoření periodických prodejních a nákupních řádků](sales-how-work-standard-lines.md).
 
 ## Creating SEPA Direct Debit Collection Entries and Export to a Bank File
 

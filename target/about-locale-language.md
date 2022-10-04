@@ -22,7 +22,7 @@ ms.author: edupont
 
 For example, you're using the Canadian version of [!INCLUDE[prod_short](includes/prod_short.md)]. That means that you can see the user interface in English, German, French, or another language, but it's still the Canadian version of [!INCLUDE[prod_short](includes/prod_short.md)]. It isn't the same as [!INCLUDE[prod_short](includes/prod_short.md)] in Germany where functionality has been adapted towards that market's requirements.
 
-To change the language of the user interface, go to the **My Settings** page. Pro více informací navštivte <g2/>Změna základního nastavení](ui-change-basic-settings.md#language).
+To change the language of the user interface, go to the **My Settings** page. Pro více informací navštivte [Změna základního nastavení](ui-change-basic-settings.md#language).
 
 > [!NOTE]  
 > The choice of languages will be reset to your setting on your Microsoft 365 profile if your administrator synchronizes users from Microsoft 365 to [!INCLUDE[prod_short](includes/prod_short.md)].
@@ -41,7 +41,7 @@ You can change the region in the browser tab that you're using to work in [!INCL
 > [!IMPORTANT]  
 > When you change the region, you will see a long list of languages and regions. However, the language is not influenced by the choice of region.
 
-To change the region, go to the **My Settings** page. Pro více informací navštivte <g2/>Změna základního nastavení](ui-change-basic-settings.md).
+To change the region, go to the **My Settings** page. Pro více informací navštivte [Změna základního nastavení](ui-change-basic-settings.md).
 
 ## Changing the Region Setting for Customers, Contacts, and Vendors
 

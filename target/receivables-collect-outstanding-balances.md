@@ -39,7 +39,7 @@ Z karty zákazníka můžete vytvořit výpis transakcí mezi vámi a zákazník
 
 ## Finanční poplatky
 
-Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penálích zasláním oznámení o penáli.
+Když zákazník nezaplatí do data splatnosti, můžete si nechat automaticky vypočítat penále a přidat je k částkám po splatnosti na účtu zákazníka. Zákazníky můžete informovat o přidaných penále zasláním oznámení o penále.
 
 > [!NOTE]  
 > K výpočtu úroků a finančních poplatků a k informování zákazníků o úrocích a finančních poplatcích bez upomínání o opožděných platbách používáte upomínky o penálích. Alternativně můžete vypočítat úroky z plateb po splatnosti při vytváření upomínek.

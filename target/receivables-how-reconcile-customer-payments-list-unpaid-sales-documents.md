@@ -14,20 +14,20 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Reconcile Customer Payments from a List of Unpaid Sales Documents
-When your customers have made payments to your electronic bank account, you must apply each amount paid to the related sales document and then post the payment to update the customer, general ledger, and bank ledger entries. Depending on your business needs, you can get paid and register that payment in different ways: manually, automatically, and through payment services.
+# Odsouhlasení plateb zákazníků ze seznamu nezaplacených prodejních dokladů
+Když vaši zákazníci provedli platby na váš elektronický bankovní účet, musíte použít každou zaplacenou částku na související prodejní doklad a poté zaúčtovat platbu, abyste aktualizovali odběratele, hlavní knihu a položky bankovní knihy. V závislosti na vašich obchodních potřebách můžete dostat zaplaceno a zaregistrovat tuto platbu různými způsoby: ručně, automaticky a prostřednictvím platebních služeb.
 
 > [!NOTE]  
-> You can perform the same tasks, including vendor payments, on the **Payment Reconciliation Journal** page using functions for bank statement import, automatic application, and bank account reconciliation. Pro více informací navštivte [Automatické odsouhlasení plateb  .
+> Můžete provádět stejné úkoly, včetně plateb dodavatele na stránce **Deník odsouhlasení plateb** pomocí funkcí pro import výpisu z účtu, automatickou aplikaci a odsouhlasení bankovního účtu. Pro více informací navštivte [Automatické odsouhlasení plateb  .
 
-The **Register Customer Payments** page is designed to support you in tasks involved in balancing internal accounts by using actual cash figures to make sure that payments are collected efficiently from customers. This payment processing tool enables you to quickly verify and post individual or lump-sum payments, process discounted payments, and find specific unpaid documents for which payment is made.
+Stránka **Registrovat platby zákazníků** je navržena tak, aby vám pomohla při vyrovnávání interních účtů pomocí skutečných peněžních údajů, aby bylo zajištěno, že platby jsou od zákazníků shromažďovány efektivně. Tento nástroj pro zpracování plateb vám umožňuje rychle ověřit a zaúčtovat jednotlivé nebo jednorázové platby, zpracovat zlevněné platby a najít konkrétní nezaplacené doklady, za které se platí.
 
-Payments for different customers that have different payment dates must be posted as individual payments. Payments for the same customer that have the same payment date can be posted as a lump-sum payment. This is useful, for example, when a customer has made a single payment that covers multiple sales invoices.
+Platby pro různé zákazníky, kteří mají různá data plateb, musí být zaúčtovány jako jednotlivé platby. Platby pro stejného zákazníka se stejným datem platby lze zaúčtovat jako paušální platbu. To je užitečné například v případě, že zákazník provedl jednu platbu, která pokrývá více prodejních faktur.
 
-## To set up the payment registration journal
-Because you can post different payment types to different balancing accounts, you must select a balancing account on the **Payment Registration Setup** page before you start processing customer payments. If you always post to the same balancing account, you can set that account as the default and avoid this step every time that you open the **Register Customer Payments** page.
+## Nastavení deníku registrace plateb
+Protože můžete účtovat různé typy plateb na různé vyrovnávací účty, musíte před zahájením zpracování plateb zákazníků vybrat vyrovnávací účet na stránce **Nastavení registrace plateb**. Pokud vždy účtujete na stejný vyrovnávací účet, můžete tento účet nastavit jako výchozí a vyhnout se tomuto kroku při každém otevření stránky **Registrovat platby zákazníka**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Registration Setup**, and then choose the related link.
+1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Nastavení registrace plateb** a pak zvolte související odkaz.
 
    Alternatively, on the **Register Customer Payments** page, choose the **Setup** action.
 2. Fill in the fields on the **Payment Registration Setup** page. Choose a field to read a short description of the field or link to related information.

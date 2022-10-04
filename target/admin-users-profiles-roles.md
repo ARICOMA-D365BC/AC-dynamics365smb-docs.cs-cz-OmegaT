@@ -34,7 +34,7 @@ Pokud nemůžete zkopírovat existující profil, můžete vytvořit nový ručn
 3. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!TIP]
-> If you want a particular profile to be available only for very specific users, you can set the **Description** field to `Navigation menu only.`. This way, the profile is excluded from the list of available roles in **My Settings**.
+> Pokud chcete, aby byl určitý profil dostupný pouze pro velmi specifické uživatele, můžete pole **Popis** nastavit na `Pouze navigační nabídka`. Tímto způsobem je profil vyloučen ze seznamu dostupných rolí v **Mých nastavení**.
 
 ## Kopírování profilu
 Chcete-li ušetřit čas, můžete vytvořit nový profil zkopírováním existujícího profilu. Zkopírujte ten, který má podobné nastavení jako ten, který chcete vytvořit.
@@ -63,7 +63,7 @@ Uživatelé si mohou přiřadit roli (představující profil) výběrem pole **
 > Pokud uživateli přiřadíte jiný profil, veškeré personalizace provedené uživatelem v předchozím profilu zůstanou zachovány.
 
 ## Definování uživatelských nastavení pro profil
-Na stránce **Moje nastavení** mohou uživatelé definovat základní chování svého účtu, například Centrum rolí, jazyk a oznámení, která dostávají. Pro více informací navštivte <g2/>Změna základního nastavení](ui-change-basic-settings.md).
+Na stránce **Moje nastavení** mohou uživatelé definovat základní chování svého účtu, například Centrum rolí, jazyk a oznámení, která dostávají. Pro více informací navštivte [Změna základního nastavení](ui-change-basic-settings.md).
 
 Jako správce můžete definovat tato nastavení pro profil a tím použít nastavení pro všechny uživatele související role.
 
@@ -109,7 +109,7 @@ Profil můžete odstranit výběrem akce **Odstranit** na stránce **Profily (ro
 ## Odstranění všech přizpůsobení provedených uživatelem
 Můžete odstranit všechny změny, které uživatel provedl na stránkách, které tvoří jeho pracovní prostor. To může být užitečné například v případě, že zaměstnanec změnil roli a již nepotřebuje přizpůsobení. Odstraněním přizpůsobení uživatelů se rozložení stránky změní zpět na to, co je definováno profilem.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter <g4/>Přizpůsobení uživatele** a vyberte související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat") icon, enter **Přizpůsobení uživatele** a vyberte související odkaz.
 
    Na stránce **Přizpůsobení uživatele** jsou uvedeni všichni uživatelé, kteří provedli individuální nastavení.
 

@@ -22,7 +22,7 @@ The following section describes how to add extended text to a description of an 
 ## To define extended text for an description
 
 1. Open the card for an item that you want to add extended text to, and then choose the **Extended Text** action.
-2. Fill in the **Code** and **Description** fields.
+2. Vyplňte pole **Kód** a **Popis**.
 3. Choose the **New**.
 4. Fill in the **Language Code** field or select the **All Language Codes** check box if you use language codes.
 5. Fill in the **Starting Date** and **Ending Date** fields if you want to limit the dates on which the extended text is used.

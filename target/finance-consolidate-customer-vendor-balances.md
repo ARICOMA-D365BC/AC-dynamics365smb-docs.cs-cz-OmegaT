@@ -13,9 +13,9 @@ ms.author: bholtorf
 
 ---
 # Konsolidace zůstatků pro společnost, která je zákazníkem a dodavatelem
-Společnost, se kterou obchodujete, může být zákazníkem i dodavatelem. V takovém případě se můžete vyhnout zbytečným platbám nebo příjmům a možná ušetřit na transakčních poplatcích konsolidací zůstatků zákazníků a dodavatelů společnosti. Konsolidace porovná zůstatky společnosti jako dodavatele a jako odběratele a poté započítá částku tak, aby zůstal zůstatek zákazníka nebo dodavatele v závislosti na tom, která částka byla vyšší.
+Společnost, se kterou obchodujete, může být zákazníkem i dodavatelem. V takovém případě se můžete vyhnout zbytečným platbám nebo příjmům a možná ušetřit na transakčních poplatcích konsolidací zůstatků zákazníků a dodavatelů společnosti. Konsolidace porovná zůstatky společnosti jako dodavatele a jako zákazníka a poté započítá částku tak, aby zůstal zůstatek zákazníka nebo dodavatele v závislosti na tom, která částka byla vyšší.
 
-Chcete-li konsolidovat zůstatky, musíte nejprve propojit společnosti zákazníka a dodavatele prostřednictvím kontaktu, který má typ **Společnost**. Odběratel nebo dodavatel může mít pouze jeden kontakt typu **Společnost**. Další informace naleznete v části [Vytváření kontaktů](marketing-create-contact-companies.md).
+Chcete-li konsolidovat zůstatky, musíte nejprve propojit společnosti zákazníka a dodavatele prostřednictvím kontaktu, který má typ **Společnost**. Zákazník nebo dodavatel může mít pouze jeden kontakt typu **Společnost**. Další informace naleznete v části [Vytváření kontaktů](marketing-create-contact-companies.md).
 
 Po propojení společností stránka **Karta zákazníka** nabídne pole **Zůstatek jako prodejce** a stránka **Karta dodavatele** obsahuje pole **Zůstatek jako Zákazník**.
 
@@ -24,11 +24,11 @@ I když to není požadavek, společnosti zákazníka a dodavatele jsou obvykle 
 ## Než začnete
 Před konsolidací zůstatků zadejte na stránce **Nastavení marketingu** několik nastavení.
 
-* Na záložce **Interakce** je nutné zadat kódy obchodních vztahů v polích **Odběratelé** a **Dodavatelé**. [! INCLUDE[prod_short](includes/prod_short.md)] používá tyto informace k určení typu relace, která se má zobrazit pro kontakty.
+* Na záložce **Interakce** je nutné zadat kódy obchodních vztahů v polích **Zákazníci** a **Dodavatelé**. [! INCLUDE[prod_short](includes/prod_short.md)] používá tyto informace k určení typu relace, která se má zobrazit pro kontakty.
 * Volitelné: Na záložce **Duplikáty** zapněte nebo vypněte duplicitní vyhledávání. Ve výchozím nastavení je duplicitní vyhledávání zapnuto. Další informace naleznete v tématu [Zpracování duplicit](#handling-duplicates).
 
 ## Propojte stávajícího zákazníka a dodavatelskou společnost prostřednictvím kontaktu
-The following steps describe how to link a customer and a vendor through a contact.
+Následující kroky popisují, jak propojit zákazníka a dodavatele prostřednictvím kontaktu.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Zákazník** nebo **Dodavatel** a poté vyberte související odkaz.
 2. Vyberte zákazníka nebo dodavatele a poté zvolte akci **Kontakt**.
@@ -42,10 +42,10 @@ The following steps describe how to link a customer and a vendor through a conta
 Můžete vytvořit nového dodavatele od existujícího zákazníka nebo nového zákazníka od dodavatele. Na stránce **Zákazník** nebo **Dodavatel** otevřete stránku **Kontakt**. Zvolte akci **Vytvořit jako** a pak možnosti **Zákazník** nebo **Dodavatel**.
 
 ## Vytvořte nového zákazníka nebo dodavatele a propojte je prostřednictvím kontaktu na dodavatele nebo zákazníka
-1. Vytvořte nového zákazníka nebo dodavatele. Další informace naleznete v tématu [Registrace nových zákazníků](sales-how-register-new-customers.md) nebo [Registrace nových zákazníků](sales-how-register-new-customers.md).
+1. Vytvořte nového zákazníka nebo dodavatele. Další informace naleznete v tématu [Registrace nových zákazníků](sales-how-register-new-customers.md).
 2. Po nastavení zákazníka nebo dodavatele zvolte akci **Vytvořit** a poté zvolte možnosti **Zákazník** nebo **Dodavatel**.
 
-## Konsolidace zůstatků odběratelů a dodavatelů pro kontaktní společnost
+## Konsolidace zůstatků zákazníků a dodavatelů pro kontaktní společnost
 Na stránce **Deník plateb** použijte akci **Čisté zůstatky zákazníků/dodavatelů** ke konsolidaci zůstatků zákazníků a dodavatelů do jedné čisté částky. Akce vytvoří, ale nezaúčtuje řádky deníku plateb, které obsahují čisté zůstatky.
 
 > [!NOTE]

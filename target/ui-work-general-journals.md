@@ -73,9 +73,9 @@ If you have set up default balancing accounts for the journal batches on the **G
 > VAT is calculated separately for the main account and the balancing account, so they can use different VAT percentage rates.
 
 ## Work with Recurring Journals
-A recurring journal is a general journal with specific fields for managing transactions that you post frequently with few or no changes, such as rent, subscriptions, electricity, and heat. Using these fields for recurring transactions, you can post both fixed and variable amounts. You can also specify automatic reversal entries for the day after the posting date. You can also use allocation keys to divide the recurring entries among various accounts. For more information, see [Allocating Recurring Journal Amounts to Several Accounts](#allocating-recurring-journal-amounts-to-several-accounts).
+A recurring journal is a general journal with specific fields for managing transactions that you post frequently with few or no changes, such as rent, subscriptions, electricity, and heat. Pomocí těchto polí pro periodické transakce můžete účtovat pevné i variabilní částky. You can also specify automatic reversal entries for the day after the posting date. You can also use allocation keys to divide the recurring entries among various accounts. For more information, see [Allocating Recurring Journal Amounts to Several Accounts](#allocating-recurring-journal-amounts-to-several-accounts).
 
-With a recurring journal, entries that will be posted regularly need to be typed in only once. That is, the accounts, dimensions and dimension values and so on that you enter will be remain in the journal after posting. If any adjustments are necessary, you can make them with each posting.
+U periodického deníku je třeba položky, které budou zveřejněny pravidelně, psát pouze jednou. To znamená, že účty, dimenze a hodnoty dimenzí atd., které zadáte, zůstanou po zaúčtování v deníku. Pokud jsou nutné úpravy, můžete je provést s každým účtováním.
 
 ### Recurring Method field
 

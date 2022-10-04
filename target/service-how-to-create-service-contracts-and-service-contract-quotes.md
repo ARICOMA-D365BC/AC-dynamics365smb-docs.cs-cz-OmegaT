@@ -14,7 +14,7 @@
 
 ---
 # Práce se servisními smlouvami a nabídkami servisních smluv
-You can create a service contract either manually or from a service contract quote. You can use a service contract quote as a forerunner of a service contract, in which your company makes an offer to the customer and obtains customer approval before you can convert it to a service contract. The procedures for creating either a service contract or service contract quote are similar.
+Servisní smlouvu můžete vytvořit buď ručně, nebo z nabídky servisní smlouvy. You can use a service contract quote as a forerunner of a service contract, in which your company makes an offer to the customer and obtains customer approval before you can convert it to a service contract. The procedures for creating either a service contract or service contract quote are similar.
 
 ## To create a service contract or service contract quote
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts** or **Service Contract Quotes**,and then choose the related link.
@@ -77,7 +77,7 @@ You can change the status of the contract, initially set to **Locked**, add and 
 ## To add a contract line to a service contract or contract quote
 When a customer purchases a new item and wants to include it in the existing service contract or contract quote, you can register the item as a service item and then add it as a new contract line to the contract or contract quote.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Servisní smlouvy** a poté vyberte související odkaz.
 2. Open the relevant service contract or service contract quote that you want to add a new contract line for.
 3. Choose the **Open Contract** action to open the service contract or service contract quote for editing.
 4. On the **Invoice Details** FastTab, select the **Allow Unbalanced Amounts** field if you want to change the annual amount and distribute the annual amount difference manually on the contract lines. Otherwise, clear the check box in the **Allow Unbalanced Amounts** field. This will distribute the annual amount difference automatically on the contract lines after you change the annual amount.
@@ -87,7 +87,7 @@ When a customer purchases a new item and wants to include it in the existing ser
 ## To remove contract lines
 You may need to remove contract lines from the service contract as you remove corresponding service items from the service contract. Usually you remove a contract line that is expired or corresponds to the service item that has broken down.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Servisní smlouvy** a poté vyberte související odkaz.
 2. Open the service contract from which you want to remove contract lines.
 3. Choose the **Open Contract** action to open the service contract for editing.
 4. Choose the contract line you want to remove. Fill in the **Contract Expiration Date** field with the date as of which you want to remove the line. For example, you could enter the date when the service item broke down.
@@ -138,7 +138,7 @@ You may need to change the owner of a service contract. If a service item in a s
 >
 > For example, suppose service item No. 8 is included in contracts SC00003 and SC00015. Contract SC00015 also contains service item No. 15, which is also included in the contract SC00080. In this case, the owner for all three contracts and service items will be changed.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts**, and then choose the related link. Open the relevant service contract whose owner you want to change.
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Servisní smlouvy** a poté vyberte související odkaz. Open the relevant service contract whose owner you want to change.
 2. Choose the **Open Contract** action to open the contract for editing.
 3. Choose the **Change Customer** action. The **Change Customer in Contract** page opens.
 4. In the **Contract No.** and **Service Item No**. fields you can see the numbers of the contract and service item owned by the selected customer. If the customer owns more than one contract with more than one service item included, then the value of these fields will be **Multiple**. To see the list of related contracts or service items, select these field values.
@@ -179,7 +179,7 @@ You may need to cancel a service contract when the contract has expired or has b
 > [!NOTE]  
 > You cannot reopen a contract after it is canceled.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Service Contracts**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Servisní smlouvy** a poté vyberte související odkaz.
 2. Open the relevant service contract to cancel.
 3. Choose the **Open Contract** action to open the service contract for editing.
 4. In the **Cancel Reason Code** field, choose the relevant reason code. To add more reason codes, choose the **Advanced** action.

@@ -15,87 +15,87 @@ ms.date: 04/01/2021
 ms.author: andreipa
 
 ---
-# Work with recurring revenue in [!INCLUDE[prod_short](includes/prod_short.md)]
+# Práce s periodickými výnosy v [!INCLUDE[prod_short](includes/prod_short.md)]
 
-Many companies are moving from a business revenue model where revenue is made from a customer's one-time purchase to a subscription model where revenue is made on a recurring basis in return for consistent access to the delivery of a good or service.
-[!INCLUDE[prod_short](includes/prod_short.md)] has the following options for automating how you send subscription invoices to your customers and register recurring revenue.
+Mnoho společností přechází od modelu obchodních výnosů, kdy výnosy plynou z jednorázového nákupu zákazníka, k modelu předplatného, kdy výnosy plynou periodicky výměnou za stálý přístup k dodávkám zboží nebo služeb.
+[!INCLUDE[prod_short](includes/prod_short.md)] má následující možnosti automatizace zasílání faktur za předplatné zákazníkům a evidence periodických výnosů.
 
-## Register revenue with a recurring general journal
+## Evidence výnosů pomocí periodického finančního denníku.
 
-A recurring journal is a general journal with specific fields for managing transactions that you post frequently with few or no changes, such as rent, subscriptions, electricity, or heat. Using these fields for recurring transactions, you can post both fixed and variable amounts.
-With a recurring journal, entries that will be posted regularly need to be typed in only once. That is, the accounts, dimensions and dimension values and so on that you enter will be remain in the journal after posting. If any adjustments are necessary, you can make them with each posting.
+Periodický deník je finanční deník se specifickými poli pro správu transakcí, které často účtujete, s malými nebo žádnými změnami, jako je nájemné, předplatné, elektřina a teplo. Pomocí těchto polí pro periodické transakce můžete účtovat pevné i variabilní částky.
+U periodického deníku je třeba položky, které budou zveřejněny pravidelně, psát pouze jednou. To znamená, že účty, dimenze a hodnoty dimenzí atd., které zadáte, zůstanou po zaúčtování v deníku. Pokud jsou nutné úpravy, můžete je provést s každým účtováním.
 
-### Why use this option
+### Proč používat tuto možnost
 
-With this option, you define flexible invoicing periods with [Date Formulas](ui-enter-date-ranges.md#use-date-formulas).
+Pomocí této možnosti definujete flexibilní fakturační období pomocí [Vzorců dat](ui-enter-date-ranges.md#use-date-formulas).
 
-However, with this option, you cannot print and send invoices in the default version of [!INCLUDE[prod_short](includes/prod_short.md)].
+Při použití této možnosti však nelze tisknout a odesílat faktury ve výchozí verzi [!INCLUDE[prod_short](includes/prod_short.md)].
 
-For more information, see [Work with Recurring Journals](ui-work-general-journals.md#work-with-recurring-journals).
+Pro další informace navštivte [Práce s periodickými deníky](ui-work-general-journals.md#work-with-recurring-journals).
 
-## Create multiple invoices based on a recurring job journal
+## Tvorba více faktur na základě periodického deníku úloh
 
-The recurring job journal is a more advanced alternative to the general journal. You define Items, Resources and G/L Accounts, that must be repeated for each job, and you specify the frequency of recurrence.
+Periodický deník úloh je pokročilejší alternativou k finančnímu deníku. Definujete položky, zdroje a účty hlavní knihy, které se musí opakovat pro každou úlohu, a určíte frekvenci periody.
 
-After posting a recurring job journal, you can create multiple invoices with the **Create Job Sales Invoice** task. You can review and post created invoices in the **Sales Invoices** page.
+Po zaúčtování periodického deníku úloh můžete vytvořit více faktur pomocí úlohy **Vytvořit prodejní fakturu projektu**. Vytvořené faktury můžete zkontrolovat a zaúčtovat na stránce **Prodejní faktury**.
 
-### Why use this option
+### Proč používat tuto možnost
 
-With this option, you follow the standard invoicing procedure with all the benefits of that, including standard and customer layouts for communication preferences. You can also define prices for each job individually.
+S touto možností budete postupovat podle standardního postupu fakturace se všemi jeho výhodami, včetně standardních a zákaznických rozvržení pro předvolby komunikace. Můžete také definovat ceny pro každou úlohu jednotlivě.
 
-However, for each new customer, you must create a new job and add lines to the recurring journal.
+Pro každého nového zákazníka je však nutné vytvořit novou úlohu a přidat řádky do periodického deníku.
 
-For more information, see [Create job journal lines](projects-how-record-job-usage.md#to-create-job-journal-lines-manually) and [Create multiple job sales invoices](projects-how-invoice-jobs.md#to-create-multiple-job-sales-invoices).
+Další informace naleznete v tématu [Vytvoření řádků deníku projektu](projects-how-record-job-usage.md#to-create-job-journal-lines-manually) a [Vytvoření více prodejních faktur projektu](projects-how-invoice-jobs.md#to-create-multiple-job-sales-invoices).
 
-## Create multiple invoices based on recurring sales lines
+## Vytvoření více faktur na základě periodických řádků prodeje
 
-If you often need to create sales and purchase lines with similar information, you can set up recurring sales lines that you can then insert on recurring sales and purchase documents, for example, for recurring replenishment orders. Use the **Create Recurring Sales Invoices** batch job to create sales invoices according to recurring sales lines that are assigned to the customers and with posting dates within the valid-from and valid-to dates that you specify on the recurring sales lines.
+Pokud často potřebujete vytvořit prodejní a nákupní řádky s podobnými informacemi, můžete nastavit periodické řádky prodeje, které pak můžete vložit do periodických prodejních a nákupních dokladů, například pro periodické objednávky doplňování. Pomocí dávkové úlohy **Vytvořit periodické prodejní faktury** vytvoříte prodejní faktury podle periodických prodejních řádků, které jsou přiřazeny zákazníkům, a s daty zaúčtování v rámci dat platných od a platných do, která jste zadali u periodických prodejních řádků.
 
-### Why use this option
+### Proč používat tuto možnost
 
-With this option, you can assign the same recurring lines to multiple customers. You can define period of validity for the recurring sales lines for specific customer. You can assign multiple recurring lines to the same customer and all of them will be included in the invoice.
+Pomocí této možnosti můžete přiřadit stejné periodické řádky více zákazníkům. Můžete definovat dobu platnosti pro periodické řádky prodeje pro konkrétního odběratele. Můžete přiřadit více periodických řádků stejnému odběrateli a všechny budou zahrnuty do faktury.
 
-However, there is no way to set fixed prices for items because [!INCLUDE[prod_short](includes/prod_short.md)] will use the actual prices and discount valid on document date, trying to find best combination that gives the lowest price.
+Neexistuje však žádný způsob, jak nastavit pevné ceny položek, protože [! INCLUDE[prod_short](includes/prod_short.md)] použije skutečné ceny a slevu platnou k datu dokladu a pokusí se najít nejlepší kombinaci, která dává nejnižší cenu.
 
-For more information, see [Create Recurring Sales and Purchase Lines](sales-how-work-standard-lines.md).
+Pro více informací navštivte sekci <g2>Vytvoření periodických prodejních a nákupních řádků</g2>.
 
-## Recurring invoices with service contract
+## Periodické faktury se servisní smlouvou
 
-A service contract contains the service contract agreements between your customers and your company. A service contract includes service level agreements and the service items that you service as a part of the contract.
+Servisní smlouva obsahuje dohody o poskytování služeb mezi vašimi zákazníky a vaší společností. Servisní smlouva zahrnuje dohody o úrovni služeb a položky služeb, které servisujete jako součást smlouvy.
 
-You can define the starting date of the contract, the invoice period, whether or not the contract is prepaid, price update specifications if you plan to change prices while contract is active. You can use both service items or items in service contract lines.
-You can create contract templates to define how to create certain types of contracts.
+Můžete definovat počáteční datum smlouvy, fakturační období, zda je smlouva předplacená nebo ne, specifikace aktualizace ceny, pokud plánujete změnit ceny, když je smlouva aktivní. Můžete použít jak předměty servisu, tak položky v řádcích servisní smlouvy.
+Můžete vytvořit šablony smluv, které definují, jak vytvořit určité typy smluv.
 
-### Why use this option
+### Proč používat tuto možnost
 
-With this option, you use a part of the advanced service management functionality that not limited to issuing of recurring invoices but support repair shop and field service operations.
+Pomocí této možnosti využijete část funkcí pokročilé správy služeb, která se neomezuje na vystavování periodických faktur, ale podporuje opravárenské a terénní servisní operace.
 
-However, this option requires the Premium license. Setting up service management and maintaining it might not give huge advantages in simpler subscription scenarios.
+Tato možnost však vyžaduje licenci Premium. Nastavení správy služeb a její údržba nemusí v jednodušších scénářích předplatného poskytovat velké výhody.
 
-For more information, see [Work with Service Contracts and Service Contract Quotes](service-how-to-create-service-contracts-and-service-contract-quotes.md) and [Invoice several service contracts](service-how-create-invoices.md#to-invoice-several-service-contracts).
+Další informace naleznete v části [Práce se servisními smlouvami a nabídkami servisních smluv](service-how-to-create-service-contracts-and-service-contract-quotes.md) a [Faktura několika servisních smluv](service-how-create-invoices.md#to-invoice-several-service-contracts).
 
-## Related features
-There are several related capabilities in [!INCLUDE[prod_short](includes/prod_short.md)].
+## Související funkce
+Existuje několik souvisejících funkcí v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-### Blanket sales orders
+### Hromadné prodejní objednávky
 
-A blanket sales order represents a framework for a long-term agreement between your company and your customer.
-A blanket order is typically made when a customer has committed to purchasing large quantities that are to be delivered in several smaller shipments over a certain period of time. Often blanket orders cover only one item with predetermined delivery dates. The main reason for using a blanket order rather than a sales order is that quantities entered on a blanket order do not affect item availability, however it can be used for planning purposes.
+Hromadní prodejní objednávka představuje rámec pro dlouhodobou dohodu mezi vaší společností a vaším zákazníkem.
+Hromadní objednávka se obvykle provádí, když se zákazník zavázal k nákupu velkého množství, které má být dodáno v několika menších zásilkách po určitou dobu. Časté hromadné objednávky často pokrývají pouze jednu položku s předem stanovenými termíny dodání. Hlavním důvodem pro použití hromadní objednávky spíše než prodejní objednávky je to, že množství zadaná v hromadní objednávce nemají vliv na dostupnost položky, ale lze je použít pro účely plánování.
 
-#### Why use this option
+#### Proč používat tuto možnost
 
-With this option, you use the anticipated demand, so the information is considered during the normal planning routines. For more information, see [Demand Forecasts and Blanket Orders](design-details-central-concepts-of-the-planning-system.md#demand-forecasts-and-blanket-orders).
+S touto možností použijete předpokládanou poptávku, takže informace jsou brány v úvahu během běžných plánovacích rutin. Další informace naleznete v části [Prognózy poptávky a hromadní objednávky](design-details-central-concepts-of-the-planning-system.md#demand-forecasts-and-blanket-orders).
 
-However, the default version does not offer an out-of-the-box possibility to process multiple blanket orders in bulk.
+Výchozí verze však nenabízí přednastavenou možnost hromadného zpracování více hromadních objednávek.
 
-For more information, see [Work with Blanket Sales Orders](sales-how-to-create-blanket-sales-orders.md).
+Další informace naleznete v části [Práce s hromadními prodejními objednávkami](sales-how-to-create-blanket-sales-orders.md).
 
-### Recurring Orders (Norway)
+### Periodické objednávky (Norsko)
 
-You can use recurring orders to create blanket order templates so that sales orders can be created based on date intervals that you define. For example, if you deliver the same sales order every two weeks, you can use a blanket sales order and create recurring orders.
+Periodické objednávky můžete použít k vytvoření šablon hromadních objednávek, aby bylo možné vytvořit prodejní objednávky na základě definovaných časových intervalů. Pokud například dodáváte stejnou prodejní objednávku každé dva týdny, můžete použít hromadní prodejní objednávku a vytvořit periodické objednávky.
 You can use recurring groups to define a range of parameters that show how you make the orders. These groups are assigned to blanket orders that have to be created regularly. To create the recurring orders, you will have to periodically run the create recurring orders process.
 
-#### Why use this option
+#### Proč používat tuto možnost
 
 With this option, you can choose between fixed and "best" prices.
 
