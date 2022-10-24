@@ -3,7 +3,7 @@
     description: You can encrypt data on the Business Central server by generating new or importing existing encryption keys that you enable on the server.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

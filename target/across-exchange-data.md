@@ -1,9 +1,9 @@
 ---
     title: Exchanging Data
-    description: Exchange electronic business documents, for example bank files, between Business Central and external parties. 
+    description: Exchange electronic business documents, for example bank files, between Business Central and external parties.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

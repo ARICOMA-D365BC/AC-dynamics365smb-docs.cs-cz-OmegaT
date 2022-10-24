@@ -3,7 +3,7 @@
     description: Learn the different ways to create production orders for produced items directly from sales orders.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

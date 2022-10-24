@@ -1,6 +1,6 @@
 ---
 title: Set Up Payment Terms
-description: In the base version of Business Central, use payment terms to manage due dates and payment discounts. 
+description: In the base version of Business Central, use payment terms to manage due dates and payment discounts.
 author: edupont04
 
 

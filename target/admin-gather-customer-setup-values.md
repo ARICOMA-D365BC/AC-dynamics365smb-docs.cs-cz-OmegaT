@@ -54,17 +54,17 @@ Dotazníky lze vytvořit pouze pro nastavovací tabulky Tento nástroj můžete 
 <!--4. In the **Name** field, enter...
 5. Choose the **Question Areas** action. .
 6. On the **Config. Question Areas** page, in the **Code** field, enter...
-  
+
     > [!Note]  
     > The code is alphanumeric, and must start with a letter of the alphabet.
 7. In the Table ID field, choose the table to which to apply the answer to the question. Your selection will determine the fields that are available for the questions, and thereby the answer selections.
-  
+
     > [!Tip]
     > The list of table objects is long. If you know the name of the table, use **Search** in the upper left to find it in the list.
 8. In the **Description** field, enter text that indicates the subject of the question group.
 9. In the **No.** field, enter a number to define where the question appears in the sequence of questions.
 10. In the **Field ID** field, choose the field the the customer's answer will be applied to. You can choose from the fields on the table you chose in the **Table ID** field.
-  
+
     When you choose a field, [!INCLUDE[prod_short](includes/prod_short.md)] provides a suggestion in the **Question** field. You can edit the question if needed.
 11. To add more questions to the questionnaire, repeat steps seven through 10.
 

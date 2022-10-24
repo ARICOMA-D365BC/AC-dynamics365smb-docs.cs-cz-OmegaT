@@ -3,7 +3,7 @@
     description: Before you can create workflows that involve approval steps, you must set up the workflow users involved in the approval processes with approval User Setup.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

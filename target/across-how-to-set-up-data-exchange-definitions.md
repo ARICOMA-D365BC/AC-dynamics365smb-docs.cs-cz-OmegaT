@@ -3,7 +3,7 @@
     description: You can use an external provider of OCR services to have PDF or image files turned into electronic documents.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

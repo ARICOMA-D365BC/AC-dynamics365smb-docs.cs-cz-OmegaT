@@ -3,7 +3,7 @@
     description: Set up workflows, workflow users and approval users to connect business-process system tasks performed by these different users.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

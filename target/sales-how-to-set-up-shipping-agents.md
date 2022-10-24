@@ -3,7 +3,7 @@
     description: Learn how to set up a code for each of your shipping agents and enter descriptive information about each of them and the services they provide.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
