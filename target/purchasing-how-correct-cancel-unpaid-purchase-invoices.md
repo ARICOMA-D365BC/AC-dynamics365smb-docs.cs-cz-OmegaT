@@ -32,7 +32,7 @@ On the **Posted Purchase Invoice** page, you can choose the **Correct** button o
    > If the **Canceled** check box is selected, then you cannot correct the posted purchase invoice because it has already been corrected or canceled.
 3. On the **Posted Purchase Invoice** page, choose **Correct**.
 
-   A new purchase invoice with the same information is created where you can make the correction. For more information, see [Record Purchases](purchasing-how-record-purchases.md). The **Canceled** field on the initial posted purchase invoice is changed to **Yes**.
+   A new purchase invoice with the same information is created where you can make the correction. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md) The **Canceled** field on the initial posted purchase invoice is changed to **Yes**.
 
    A purchase credit memo is automatically created and posted to void the initial posted purchase invoice.
 4. Choose **Show Corrective Credit Memo** to view the posted purchase credit memo that voids the initial posted purchase invoice.

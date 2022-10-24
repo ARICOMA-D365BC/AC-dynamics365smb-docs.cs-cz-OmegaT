@@ -57,7 +57,7 @@ The following table describes keyboard shortcuts for navigating and accessing di
 | Ctrl+C | Copy the value of field. If the field is in focus, and you haven't selected any text in the field, this will copy the entire value. If you've selected any text in the field, then it will copy the selected text only. |
 | Ctrl+F1 | Open the [help pane](product-help-and-support.md#help-pane) or a Business Central help article on [Microsoft Docs](/dynamics365/business-central/), depending on your Business Central version. |
 | Ctrl+F12 | Switch between wide and narrow layout view. |
-| Ctrl+Click | Navigate during personalizing or customizing when the action is highlighted with an arrowhead. For more information, see [Personalize Your Workspace](ui-personalization-user.md). |
+| Ctrl+Click | Navigate during personalizing or customizing when the action is highlighted with an arrowhead. Pro více informací navštivte [Přizpůsobení Vašeho pracovního prostoru](ui-personalization-user.md). |
 | Ctrl+F5 | Reload the [!INCLUDE[prod_short](includes/prod_short.md)] application. (Similar to selecting refresh/reload in the browser.) |
 | F5 | Refresh the data on the current page.<br /><br />Use this key to ensure that the data on the page is up to date with any changes that others have made while you're working. |
 | Zadejte | Enable or access the element or control that is in focus. |

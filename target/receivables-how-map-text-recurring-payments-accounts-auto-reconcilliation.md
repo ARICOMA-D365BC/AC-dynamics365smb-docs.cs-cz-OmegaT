@@ -14,52 +14,52 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Map Text on Recurring Payments to Accounts for Automatic Reconciliation
-On the **Text-to-Account Mapping** page, which you open from the **Payment Reconciliation Journal** page, you can set up mappings between text on payments and specific debit, credit, and balancing accounts so that such payments are posted to the specified accounts when you post the payment reconciliation journal.
+# Mapování textu na opakované platby na účty pro automatické odsouhlasení
+Na stránce **Mapování textu na účet**, kterou otevřete ze stránky **Deník odsouhlasení plateb**, můžete nastavit mapování mezi textem o platbách a konkrétním debetem, kreditem a vyrovnávací účty, aby se takové platby zaúčtovaly na specifické účty při zaúčtování deníku odsouhlasení plateb.
 
-Similar functionality exists to reconcile excess amounts on payment reconciliation journal lines on an ad-hoc basis. For more information, see [Reconcile Payments that Cannot be Applied Automatically](receivables-how-reconcile-payments-cannot-apply-auto.md).
+Podobná funkce existuje pro odsouhlasení přebytečných částek na řádcích deníku odsouhlasení plateb na ad hoc bázi. Další informace naleznete v části [Odsouhlasení plateb, které nelze použít automaticky](receivables-how-reconcile-payments-cannot-apply-auto.md).
 
-Payments posted based on text-to-account mapping are not applied to open entries, but are merely posted to the specified accounts in addition to creating bank account ledger entries. Accordingly, text-to-account mapping is suited for recurring cash receipts or expenses, such as frequent purchases of car fuel or bank fees and interest, that regularly occur on the bank statement and do not need a related business document. For more information, see the "Example - Text-to-Account Mapping for Fuel Expense" section in this topic.
+Platby zaúčtované na základě mapování textu na účet se nepoužijí na otevřené položky, ale jsou pouze zaúčtovány na zadané účty kromě vytvoření položek bankovního účtu. Mapování textu na účet je proto vhodné pro opakující se hotovostní příjmy nebo výdaje, jako jsou časté nákupy pohonných hmot nebo bankovní poplatky a úroky, které se pravidelně vyskytují na bankovním výpisu a nepotřebují související obchodní dokument. Další informace naleznete v části "Příklad – mapování nákladů na pohonné hmoty z textu na účet" v tomto tématu.
 
 > [!NOTE]  
-> Payments on reconciliation journal lines are only set to posting according to text-to-account mapping if the automatic application function can only provide a match confidence of **Low** or **Medium**. If the automatic application function provides a match confidence of High, then the payment is automatically applied to one or more open entries, and the payment is not posted to the accounts specified on the **Text-to-Account Mapping** page. In other words, a match confidence of **High** overrules a text-to-account mapping.
+> Platby na řádcích deníku odsouhlasení jsou nastaveny na zaúčtování podle mapování textu na účet pouze v případě, že funkce automatické aplikace může poskytnout spolehlivost shody pouze **Nízká** nebo **Střední**. Pokud funkce automatické aplikace poskytuje shodu Vysoká, pak se platba automaticky použije na jednu nebo více otevřených položek a platba není zaúčtována na účty uvedené na stránce **Mapování textu na účet**. Jinými slovy, spolehlivost shody **Vysoká** převažuje nad mapováním textu na účet.
 
-On a payment reconciliation journal line where the payment has been set to posting according to text-to-account mapping, the **Match Confidence** field contains **High - Text-to-Account Mapping**, and the **Account Type** and **Account No.** fields contain the mapped accounts.
+Na řádku deníku odsouhlasení plateb, kde byla platba nastavena na zaúčtování podle mapování textu na účet, obsahuje pole **Spolehlivost shody** **hodnotu Vysoká – mapování textu na účet** a pole **Typ účtu** a **Číslo účtu** obsahují mapované účty.
 
-## To map text on recurring payments to accounts for automatic reconciliation
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.
-2. Otevřete deník odsouhlasení plateb. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
-3. Choose the **Map Text to Account** action. The **Text-to-Account Mapping** page opens.
-4. In the **Mapping Text** field, enter any text that occurs on payments that you want to post to specified accounts without applying to an open entry. You can enter up to 50 characters.
+## Mapování textu o opakovaných platbách k účtům pro automatické odsouhlasení
+1. Zvolte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Deníky odsouhlasení plateb** a pak zvolte související odkaz.
+2. Otevřete deník odsouhlasení plateb. Pro více informací navštivte [Automatické odsouhlasení plateb<x2/>.
+3. Vyberte akci **Mapovat text na účet**. Otevře se stránka **Mapování textu na účet**.
+4. Do pole **Text mapování** zadejte libovolný text, který se vyskytuje u plateb, které chcete zaúčtovat na zadané účty, aniž byste se museli vztahovat na otevřenou položku. Můžete zadat až 50 znaků.
 
    > [!NOTE]  
-   > If no other payments exist with the mapping text in question, then the text-to-account mapping will occur even when only a part of the text on the payment exists as a mapping text.
-5. In the **Vendor No.** field, enter the vendor that the payments will be posted to.
-6. V poli **Číslo Source Type** field, specify if the payment will be posted to a general ledger account or to a customer or vendor account.
-7. V poli **Číslo Source No.** field, specify the account that the payment will be posted to, depending on your selection in the **Bal. Source Type** field.
+   > Pokud s příslušným textem mapování neexistují žádné další platby, dojde k mapování textu na účet, i když pouze část textu na platbě existuje jako text mapování.
+5. V poli **Číslo dodavatele** zadejte dodavatele, kterému budou platby zaúčtovány.
+6. V poli **Číslo V poli Typ zdroje** zadejte, zda bude platba zaúčtována na účet hlavní knihy nebo na účet zákazníka nebo dodavatele.
+7. V poli **Číslo V poli Zdroj č.** zadejte účet, na který bude platba zaúčtována, v závislosti na vašem výběru v **Typu zdroje protiúčtu**
 
    > [!NOTE]
-   > Do not use the **Debit Acc. No.** and **Credit Acc. No.** fields in connection with payment reconciliation. They are used for incoming documents only. For more information, see [Use OCR to Turn PDF and Image Files into Electronic Documents](across-how-use-ocr-pdf-images-files.md).
+   > Nepoužívejte **Debetní účet č.** a **Kreditní účet. č.** pole v souvislosti s odsouhlasením plateb. Jsou používány pouze pro příchozí dokumenty. Další informace naleznete v části [Použití OCR k přeměně souborů PDF a obrázků na elektronické dokumenty](across-how-use-ocr-pdf-images-files.md).
 
-8. Repeat steps 3 through 7 for all text on payments that you want to map to accounts for direct posting without application.
+8. Opakujte kroky 3 až 7 pro veškerý text o platbách, které chcete namapovat na účty pro přímé účtování bez použití.
 
-Next time you import a bank statement file or choose the **Apply Automatically** action on the **Payment Reconciliation Journal** page, journal lines for the payments that contain the specified mapping text will contain the mapped accounts in the **Account Type** and **Account No.** fields. The **Match Confidence** field will contain **High - Text-to-Account Mapping**. This is on the condition that the automatic application function can only provide a match confidence of **Low** or **Medium**.
+Při příštím importu souboru bankovního výpisu nebo výběru akce **Použít automaticky** na stránce **Deník odsouhlasení plateb** budou řádky deníku pro platby, které obsahují zadaný text mapování, obsahovat mapované účty v polích **Typ účtu** a **Číslo účtu**. Pole **Spolehlivost shody** bude obsahovat **vysoké mapování textu na účet**. To je za podmínky, že funkce automatické aplikace může poskytnout pouze shodu **spolehlivosti Nízká** nebo **Střední**.
 
-## Example: Text-to-Account Mapping for Bank Fees
+## Příklad: Mapování textu na účet pro bankovní poplatky
 
-To always post expenses that are related to fees from a specific bank, MyBank, to the general ledger account for bank charges and fees (account 60400), fill a line on the **Text-to-Account Mapping** page as follows.
+Chcete-li vždy účtovat výdaje související s poplatky konkrétní banky, MyBank, na účet hlavní knihy pro bankovní poplatky a poplatky (účet 60400), vyplňte řádek na stránce **Mapování textu na účet** jak následuje.
 
-| Mapping Text | Debit Acc. Č.. | Credit Acc. Č.. | Bal. Source Type | Bal. Číslo původu |
+| Mapování textu | Debetní účet Čísla. | Kreditní účet Čísla. | Typ zdroje protiúčtu | Typ čísla zdroje protiúčtu |
 | --- | --- | --- | --- | --- |
-| MyBank | BLANK | 60400 | Finanční účet | BLANK |
+| MyBank | Prázdný | 60400 | Finanční účet | Prázdný |
 
 ## Viz také
 
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Set Up the Envestnet Yodlee Bank Feeds Service](bank-how-setup-bank-statement-service.md)  
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek](receivables-manage-receivables.md)    
+[Prodej](sales-manage-sales.md)    
+[Nastavení služby Envestnet Yodlee Bank Feeds](bank-how-setup-bank-statement-service.md)    
+[Přizpůsobení [!INCLUDE[prod_short](includes/prod_short.md)] pomocí rozšíření](ui-extensions.md)  
+[Pracovat s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

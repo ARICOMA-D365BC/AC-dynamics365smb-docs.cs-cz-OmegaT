@@ -2,7 +2,7 @@
     title: How to Add Fields to a Word Report Layout
     description: This topic describes how to add fields of a report dataset to an existing Word report layout for a report.
     author: jswymer
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -13,152 +13,152 @@
 
 ---
 
-# Work with Word Layouts
+# Práce s rozvrženími aplikace Word
 
-A Word report layout determines the content and format of a report when it is previewed and printed from Business Central. You create and modify these layouts using Microsoft Word.
+Rozvržení sestavy aplikace Word určuje obsah a formát sestavy při náhledu a tisku z Business Central. Tato rozvržení můžete vytvořit a upravit pomocí aplikace Microsoft Word.
 
-[![Example of a word report layout document for Business Central.](media/word-layout.png)](media/word-layout.png#lightbox)
+[![Příklad dokumentu s rozvržením sestavy ve Wordu pro Business Central.](media/word-layout.png)](media/word-layout.png#lightbox)
 
-When you modify a Word report layout, you specify the fields of the report dataset to include on report and how the fields are arranged. You also define the general format of the report, such as text font and size, margins, and background images. You will typically arrange the content of the report by adding tables to the layout.
+Když upravujete rozvržení sestavy aplikace Word, určíte pole datové sady sestavy, která chcete zahrnout do sestavy a také způsob uspořádání polí. Definujete také obecný formát sestavy, například písmo a velikost textu, okraje a obrázky na pozadí. Obsah sestavy obvykle uspořádáte přidáním tabulek do rozvržení.
 
-To make general formatting and layout changes, such as changing text font, adding and modifying a table, or removing a data field, just use the basic editing features of Word, like you do with any Word document.
+Chcete-li provádět obecné změny formátování a rozvržení, jako je například změna textového písma, přidání a úprava tabulky nebo odstranění datového pole, stačí použít základní editační funkce aplikace Word, jako to děláte u jakéhokoli dokumentu Word.
 
-If you're designing a Word report layout from scratch or adding new data fields, then start by adding a table that includes rows and columns that will eventually hold the data fields.
+Pokud navrhujete rozvržení sestavy aplikace Word od nuly nebo přidáváte nová datová pole, začněte přidáním tabulky, která obsahuje řádky a sloupce, které budou nakonec obsahovat datová pole.
 
 > [!TIP]  
-> Show the table gridlines so that you see the boundaries of table cells. Remember to hide the gridlines when you're done editing. To show or hide table gridlines, select the table, and then under **Layout** on the **Table** tab, choose **View Gridlines**.
+> Zobrazte si čáry mřížky tabulky, abyste viděli hranice buněk tabulky Nezapomeňte skrýt mřížku, až dokončíte úpravy. Chcete-li zobrazit nebo skrýt mřížky tabulky, vyberte tabulku a v části **Rozvržení** na kartě **Tabulka** zvolte **Zobrazit mřížky**.
 
-## Embedding Fonts in Word Layouts for Consistency
+## Vkládání fontů do aplikace Word z důvodu konzistence
 
-To ensure that reports always display and print with the intended fonts, wherever users open or print the reports, you can embed the fonts in the Word document. However, embedding fonts can significantly increase the size of the Word files. For more information about embedding fonts in Word, see [Embed fonts in Word, PowerPoint, or Excel](https://support.office.com/article/Embed-fonts-in-Word-PowerPoint-or-Excel-cb3982aa-ea76-4323-b008-86670f222dbc).
+Chcete-li zajistit, aby se sestavy vždy zobrazovaly a tiskly s zamýšlenými písmy, bez ohledu na to, kde uživatelé otevírají nebo tisknou sestavy, můžete fonty vložit do dokumentu Word. Mějte však na paměti, že vkládání fontů může výrazně zvětšit velikost souborů aplikace Word. Další informace o vkládání fontů do aplikace Word naleznete v tématu [Vkládání písem do aplikací Word, PowerPoint nebo Excel](https://support.office.com/article/Embed-fonts-in-Word-PowerPoint-or-Excel-cb3982aa-ea76-4323-b008-86670f222dbc).
 
-## Adding data fields
+## Přidání datových polí
 
-A report dataset can consist of fields that display labels, data, and images. This topic describes the procedure for adding fields of a report dataset to an existing Word report layout for a report. You add fields by using the Word custom XML part for the report and adding content controls that map to the fields of the report dataset. Adding fields requires that you have some knowledge of the report's dataset so that you can identify the fields that you want to add to the layout.
+Sada dat sestavy se může skládat z polí zobrazujících popisky, data a obrázky. Toto téma popisuje postup pro přidání polí sady dat sestavy do existujícího Word rozvržení sestavy pro sestavu. Pole přidáte pomocí vlastní části XML aplikace Word pro sestavu a přidáním ovládacích prvků obsahu, které se mapují do polí sady dat sestavy. Přidání polí vyžaduje určitou znalost sady dat sestavy, abyste mohli identifikovat pole, která chcete přidat do rozvržení.
 
 > [!NOTE]  
-> You cannot modify built-in report layouts<!--Onprem. Built-in layouts can only be modified by using the development environment-->.
+> Nelze upravovat vestavěné rozvržení sestavy<!--Onprem. Built-in layouts can only be modified by using the development environment-->.
 
-### <a name="OpenXMLPart"></a> To open the Custom XML part for the Report in Word
+### <a name="OpenXMLPart"></a> Otevření vlastní části XML pro zprávu v aplikaci Word
 
-1. If not already open, then open the Word report layout document in Word.
+1. Pokud ještě není otevřený, otevřete dokument rozvržení sestavy ve Wordu.
 
-   For more information, see [Create and Modify a Custom Report Layout](ui-how-create-custom-report-layout.md).
+   Pro více informací navštivte [Vytvoření a úprava vlastního rozvržení sestavy](ui-how-create-custom-report-layout.md).
 
-2. Show the **Developer** tab in the ribbon of Microsoft Word.
+2. Zobrazte kartu **Vývojář** v pásu karet aplikace Microsoft Word.
 
-   By default, the **Developer** tab is not shown in the ribbon. For more information, see [Show the Developer Tab on the Ribbon](/visualstudio/vsto/how-to-show-the-developer-tab-on-the-ribbon).
+   Ve výchozím nastavení není karta **Vývojář** zobrazena na pásu karet. Pro více informací navštivte [Zobrazení karty Vývojář v pásu karet](/visualstudio/vsto/how-to-show-the-developer-tab-on-the-ribbon).
 
-3. On the **Developer** tab, choose **XML Mapping Pane**.
+3. Na kartě **Vývojář** zvolte **Podokno mapování XML**.
 
-4. In the **XML Mapping** pane, in the **Custom XML Part** dropdown list, choose the custom XML part for [!INCLUDE[prod_short](includes/prod_short.md)] report, which is typically last in the list. The name of the custom XML part has the following format:
+4. V podokně **Mapování XML** v rozevíracím seznamu **Vlastní XML část** zvolte vlastní [!INCLUDE[prod_short](includes/prod_short.md)] sestavu, která je obvykle v seznamu poslední. Název vlastní XML části má následující formát:
 
    `urn:microsoft-dynamics-nav/reports/<report_name>/<ID>`
 
-   `<report_name>` is the name that is assigned to the report
+   `<report_name>` je název, který je přiřazen k sestavě
 
-   `<ID>` is the identification number of the report.
+   `<ID>` je identifikační číslo sestavy.
 
-   After you select the custom XML part, the XML Mapping pane displays the labels and field controls that are available for the report.
+   Po výběru vlastní XML části se v podokně Mapování XML zobrazí popisky a ovládací prvky pole, které jsou k dispozici pro sestavu.
 
-### To add a label or data field
+### Přidání popisu nebo datového pole
 
-1. Place your cursor in the document where you want to add the control.
+1. Umístěte kurzor do dokumentu, kam chcete přidat ovládací prvek.
 
-2. In the **XML Mapping** pane, right-click the control that you want to add, choose **Insert Content Control**, and then choose **Plain Text**.
+2. V podokně **Mapování XML** klepněte pravým tlačítkem myši na ovládací prvek, který chcete přidat, zvolte **Vložit ovládací prvek obsahu** a poté zvolte **Prostý text**.
 
    > [!NOTE]  
-   > You cannot add a field by manually typing the dataset field name in the content control. You must use the **XML Mapping** pane to map the fields.
+   > Pole nelze přidat ručně zadáním názvu pole sady dat do ovládacího prvku obsahu. K mapování polí musíte použít podokno **Mapování XML**.
 
-### To add repeating rows of data fields to create a list
+### Přidání opakujících se řádků datových polí k vytvoření seznamu
 
-1. In a table, add a table row that includes a column for each field that you want repeated.
+1. V tabulce přidejte řádek tabulky, který obsahuje sloupec pro každé pole, které chcete opakovat.
 
-   This row will act as a placeholder for the repeating fields.
+   Tento řádek bude sloužit jako zástupný symbol pro opakující se pole.
 
-2. Select the entire row.
+2. Vyberte celý řádek.
 
-3. In the **XML Mapping** pane, right-click the control that corresponds to the report data item that contains the fields that you want repeated, choose **Insert Content Control**, and then choose **Repeating**.
+3. V podokně **Mapování XML** klepněte pravým tlačítkem myši na ovládací prvek, který odpovídá datové položce sestavy, která obsahuje pole, která chcete opakovat, zvolte **Vložit ovládací prvek obsahu** a poté zvolte **Opakovaná**.
 
-4. Add the repeating fields to the row as follows:
+4. Přidejte opakující se pole do řádku následujícím způsobem:
 
-   1. Place your pointer in a column.
+   1. Umístěte ukazatel do sloupce.
 
-   2. In the **XML Mapping** pane, right-click the control that you want to add, choose **Insert Content Control**, and then choose **Plain Text**.
+   2. V podokně **Mapování XML** klepněte pravým tlačítkem myši na ovládací prvek, který chcete přidat, zvolte **Vložit ovládací prvek obsahu** a poté zvolte **Prostý text**.
 
-   3. For each field, repeat steps a and b.
+   3. Pro každé pole opakujte kroky A a B.
 
-## Adding image fields
+## Přidávání obrázkových polí
 
-A report dataset can include a field that contains an image, such as a company logo or a picture of an item. To add an image from the report dataset, you insert a **Picture** content control.
+Sada dat sestavy může zahrnovat pole, které obsahuje obrázek, například logo společnosti nebo obrázek položky. Pro přidání obrázku ze sady dat sestavy, vložte ovládací prvek obsahu **Obrázek**.
 
-Images align in the top-left corner of the content control and resize automatically in proportion to fit the boundary of the content control.
+Obrázky jsou zarovnány v levém horním rohu ovládacího prvku obsahu a automaticky upraví jejich velikost v poměru odpovídajícím hranici ovládacího prvku obsahu.
 
 > [!IMPORTANT]  
-> You can only add images that have a format that is supported by Word, such as .bmp, .jpeg, and .png file types. If you add an image that has a format that is not supported by Word, you will get an error when you run the report from the [!INCLUDE[prod_short](includes/prod_short.md)] client.
+> Můžete přidat pouze obrázky, které mají formát podporovaný aplikací Word, například typy souborů .bmp, .jpeg a .png. Pokud přidáte obrázek, který má formát nepodporovaný aplikací Word, zobrazí se chyba při spuštění sestavy z klienta [!INCLUDE[prod_short](includes/prod_short.md)].
 
-### To add an image
+### Přidání obrázku
 
-1. Place your pointer in the document where you want to add the control.
+1. Umístěte ukazatel do dokumentu, kam chcete přidat ovládací prvek.
 
-2. In the **XML Mapping** pane, right-click the control that you want to add, choose **Insert Content Control**, and then choose **Picture**.
+2. V podokně **Mapování XML** klepněte pravým tlačítkem myši na ovládací prvek, který chcete přidat, zvolte **Vložit ovládací prvek obsahu** a poté zvolte **Obrázek**.
 
-3. To increase or decrease the image size, drag a sizing handle away from or towards the center of the content control.
+3. Pro zvětšení nebo zmenšení obrázku, přetáhněte úchyt pro změnu velikosti z nebo do středu ovládacího prvku seznamu.
 
-## <a name="RemoveField"></a> Removing label and data fields
+## <a name="RemoveField"></a> Odstranění popisku nebo datového pole
 
-Label and data fields of a report are contained in content controls in Word. The following figure illustrates a content control when it's selected in the Word document.
+Popisky a datová pole sestavy jsou obsaženy v ovládacích prvcích obsahu v aplikaci Word. Následující obrázek znázorňuje ovládací prvek obsahu, když je vybrán v dokumentu Word.
 
 ![Content control for field in Word report layout.](media/nav_wordreportlayouts_contentcontrol.png "NAV_WordReportLayouts_ContentControl")
 
-The name of the label or data field name displays in the content control. In the example, the field name is CompanyAddr1.
+Název popisku nebo datového pole se zobrazí v ovládacím prvku obsahu. V příkladu je název pole SpolečnostAddr1.
 
-### To remove a label or data field
+### Odstranění popisku nebo datového pole
 
-1. Right-click the field that you want to delete, and then choose **Remove Content Control**.
+1. Klepněte pravým tlačítkem myši na pole, které chcete odstranit, a pak zvolte **Odstranit kontrolu obsahu**.
 
-   The content control is removed, but the field name remains as text.
+   Ovládací prvek obsahu je odebrán, ale název pole zůstává jako text.
 
-2. Delete the remaining text as needed.
+2. Odstraňte zbývající text podle potřeby.
 
-## Custom XML Part Overview
+## Přehled vlastní XML části
 
-Word report layouts are built on *custom XML parts*. A custom XML part for a report consists of elements that correspond to the data items, columns, and labels that comprise the report's dataset. <!--OnPrem The data as defined in the Report Dataset Designer in Microsoft Dynamics NAV Development Environment. -->The custom XML part is used to map the data into a report when the report is run.
+Rozvržení sestavy aplikace Word je založeno na *vlastních částech XML*. Vlastní XML část sestavy se skládá z prvků, které odpovídají datovým položkám, sloupcům a popiskům, které tvoří sadu dat sestavy. <!--OnPrem The data as defined in the Report Dataset Designer in Microsoft Dynamics NAV Development Environment. -->Vlastní XML část se používá k mapování dat do sestavy, když je spuštěna.
 
-### XML structure of custom XML part
+### Struktura XML vlastní XML část
 
-The following table provides a simplified overview of the XML of a custom XML part.
+Následující tabulka poskytuje zjednodušený přehled XML vlastní XML části.
 
-| XML Elements | Popis |
+| Prvky XML | Popis |
 |------------------|-----------------|  
-| `<?xml version="1.0" encoding="utf-16"?>` | Header |
-| `<WordReportXmlPart xmlns="urn:microsoft-dynamics-365/report/<reportname>/<id>/"` | XML namespace specification. `<reportname>` is the name that is assigned to the report. `<id>` is the ID that is assigned to the report. |
-| `..<Labels>`<br /><br /> `....<ColumnNameCaption>ColumnNameCaption</ColumnNameCaption>`<br /><br /> `....<LabelName>LabelCaption</LabelName>`<br /><br /> `..</Labels>` | Contains all the labels for the report.<!--OnPren The element includes labels that are related to columns that have the IncludeCaption Property.--><br />-   Label elements that are related to columns have the format `<ColumnNameCaption>ColumnNameCaption</ColumnNameCaption>`<!--OnPrem where `ColumnName` is determined by the column's Name Property.-->.<br />-  Label elements have the format `<LabelName>LabelName</LabelName`<!--OnPrem where LabelName is determined by the label's Name Property.-->.<br />-   Labels are listed in alphabetical order. |
-| `..<DataItem1>`<br /><br /> `....<DataItem1Column1>DataItem1Column1</DataItem1Column1>` | Top-level data item and columns. Columns are listed in alphabetical order.<!--OnPrem <br /><br /> The element names and values are determined by the Name Property of the data item or column.--> |
-| `....<DataItem2>`<br /><br /> `......<DataItem2Column1>DataItem2Column1</DataItem2Column1>`<br /><br /> `....</DataItem2>`<br /><br /> `....<DataItem3>`<br /><br /> `......<DataItem3Column1>DataItem3Column1</DataItem3Column1>`<br /><br /> `....</DataItem3>` | Data items and columns that are nested in the top-level data item. Columns are listed in alphabetical order under the respective data item. |
-| `..</DataItem1>`<br /><br /> `</WordReportXmlPart>` | Closing element. |
+| `<?xml version="1.0" encoding="utf-16"?>` | Hlavička |
+| `<WordReportXmlPart xmlns="urn:microsoft-dynamics-365/report/<reportname>/<id>/"` | XML specifikace oboru názvů. `<reportname>` je název, který je přiřazen k sestavě `<id>` je ID přiřazené k sestavě |
+| `..<Labels>`<br /><br /> `....<ColumnNameCaption>ColumnNameCaption</ColumnNameCaption>`<br /><br /> `....<LabelName>LabelCaption</LabelName>`<br /><br /> `..</Labels>` | Obsahuje všechny popisy pro sestavu.<!--OnPren The element includes labels that are related to columns that have the IncludeCaption Property.--><br />- Prvky popisů, které se vztahují ke sloupcům, mají formát `<ColumnNameCaption>ColumnNameCaption</ColumnNameCaption>`<!--OnPrem where `ColumnName` is determined by the column's Name Property.-->.<br />- Prvky popisů mají formát `<LabelName>LabelName</LabelName`<!--OnPrem where LabelName is determined by the label's Name Property.-->.<br />- Popisy jsou řazeny abecedně. |
+| `..<DataItem1>`<br /><br /> `....<DataItem1Column1>DataItem1Column1</DataItem1Column1>` | Datová položka a sloupce nejvyšší úrovně. Sloupce jsou abecedně seřazeny. |
+| `....<DataItem2>`<br /><br /> `......<DataItem2Column1>DataItem2Column1</DataItem2Column1>`<br /><br /> `....</DataItem2>`<br /><br /> `....<DataItem3>`<br /><br /> `......<DataItem3Column1>DataItem3Column1</DataItem3Column1>`<br /><br /> `....</DataItem3>` | Datové položky a sloupce, které jsou vnořeny do datové položky nejvyšší úrovně. Sloupce jsou uvedeny v abecedním pořadí pod příslušnou datovou položkou. |
+| `..</DataItem1>`<br /><br /> `</WordReportXmlPart>` | Uzavírací prvek. |
 
-### Custom XML part in Word
+### Vlastní XML část v aplikaci Word
 
-In Word, you open the custom XML part in the **XML Mapping** pane, and then use the pane to map elements to content controls in the Word document. The **XML Mapping** pane is accessible from the **Developer** tab (for more information, see [Show the Developer Tab on the Ribbon](/visualstudio/vsto/how-to-show-the-developer-tab-on-the-ribbon)).
+V aplikaci Word otevřete vlastní XML část v podokně **Mapování XML** a poté pomocí podokna mapujte prvky na ovládací prvky obsahu v dokumentu aplikace Word Podokno **Mapování XML** je přístupné z karty **Vývojář** (pro více informací navštivte [Zobrazení karty Vývojář v pásu karet](/visualstudio/vsto/how-to-show-the-developer-tab-on-the-ribbon)).
 
-The elements in the **XML Mapping** pane appear in a structure that is similar to the XML source. Label fields are grouped under a common **Labels** element and data item and columns are arranged in a hierarchal structure that corresponds to the XML source, with columns listed in alphabetical order. Elements are identified by their column name as defined in the report's dataset in AL code. For more information, see [Defining a Report Dataset](/dynamics365/business-central/dev-itpro/developer/devenv-report-dataset).
+Prvky v podokně **Mapování XML** se zobrazují ve struktuře podobné zdroji dat XML. Pole popisků jsou seskupena do společného prvku **Popisky** a datová položka a sloupce jsou uspořádány v hierarchické struktuře, která odpovídá zdroji XML, se sloupci uvedenými v abecedním pořadí. Prvky jsou identifikovány názvem sloupce, jak je definováno v datové sadě sestavy v kódu AL. Pro více informací navštivte [Definování datové sady sestavy](/dynamics365/business-central/dev-itpro/developer/devenv-report-dataset).
 
-The following figure illustrates the simple custom XML part from the previous section in the **XML Mapping** pane of a Word document.
+Následující obrázek znázorňuje jednoduchou vlastní XML část z předchozí sekce v podokně **Mapování XML** dokumentu aplikace Word.
 
-![Clip of the XML Mapping pane in word.](media/nav_reportlayout_xmlmappingpane.png "NAV_ReportLayout_XMLMappingPane")
+![Klip podokna mapování XML v aplikaci Word.](media/nav_reportlayout_xmlmappingpane.png "NAV_ReportLayout_XMLMappingPane")
 
-* To add a label or field to the layout, you insert a content control that maps to the element in the **XML Mapping** pane.
+* Chcete-li do rozvržení přidat popisek nebo pole, vložíte ovládací prvek obsahu, který mapuje prvek v podokně.
 
-* To create repeating rows of columns, insert a **Repeating** content control for the parent data item element, and then add content control for the columns.
+* Chcete-li vytvořit opakující se řádky sloupců, vložte ovládací prvek obsahu **Opakování** pro prvek nadřazené datové položky a poté přidejte řízení obsahu pro sloupce.
 
-* For labels, the actual text that appears in the generated report is the value of the **Caption** property for the field in the data item table (if the label is related to the column in the report dataset) or a label in the Report Label Designer (if the label is not related to a column in the dataset).
+* U popisků je skutečným textem, který se objeví ve vygenerované sestavě, hodnota vlastnosti **Titulek** pro pole v tabulce datových položek (pokud popisek souvisí se sloupcem v sadě dat sestavy) nebo popisek v Návrháři štítků sestav (pokud popisek nesouvisí se sloupcem v sadě dat).
 
-* The language of the label that is displayed when you run the report depends on the language setting of the report object.
+* Jazyk popisku, který se zobrazí při spuštění sestavy, závisí na nastavení jazyka objektu sestavy.
 
 ## Viz také
 
-[Create and Modify a Custom Report Layout](ui-how-create-custom-report-layout.md)
+[Vytvoření a úprava vlastní rozvržení sestavy](ui-how-create-custom-report-layout.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

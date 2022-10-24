@@ -78,8 +78,8 @@ For incoming documents, you typically use the **Map Text to Account** action to 
 
 In addition to mapping to a vendor account or G/L accounts, you can also map to a bank account. This is practical, for example, for electronic documents for expenses that are already paid where you want to create a general journal line that is ready to post to a bank account.
 
-1. Select the relevant incoming document line, and then choose the **Map Text to Account** action. The **Text-to-Account Mapping** page opens.
-3. In the **Mapping Text** field, enter any text that occurs on vendor invoices that you want to create purchase documents or journal lines for. You can enter up to 50 characters.
+1. Select the relevant incoming document line, and then choose the **Map Text to Account** action. Otevře se stránka **Mapování textu na účet**.
+3. In the **Mapping Text** field, enter any text that occurs on vendor invoices that you want to create purchase documents or journal lines for. Můžete zadat až 50 znaků.
 4. In the **Vendor No.** field, enter the vendor that the resulting purchase document or journal line will be created for.
 5. In the **Debit Acc. No.** field, enter the debit-type G/L account that will be inserted on resulting purchase document or journal line of type G/L Account.
 6. In the **Credit Acc. No.** field, enter the credit-type G/L account that will be inserted on resulting purchase document or journal line of type G/L Account.

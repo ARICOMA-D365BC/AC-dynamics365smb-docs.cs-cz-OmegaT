@@ -3,7 +3,7 @@
     description: Learn how you can create a fixed application between an inbound transaction and the original outbound transaction in the item journal.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

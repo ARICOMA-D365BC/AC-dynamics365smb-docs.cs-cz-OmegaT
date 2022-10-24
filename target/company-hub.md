@@ -81,7 +81,7 @@ To start using the company hub, you must add one or more companies to your dashb
 
 But to add a company, you must have been given access to one or more instances of [!INCLUDE [prod_short](includes/prod_short.md)] in addition to the company that you use the company hub in.
 
-For example, if you are an accountant, your clients can invite you to their [!INCLUDE [prod_short](includes/prod_short.md)]. For more information, see [Inviting Your External Accountant to Your Business Central](finance-accounting.md#inviteaccountant).
+For example, if you are an accountant, your clients can invite you to their [!INCLUDE [prod_short](includes/prod_short.md)]. ro více informací navštivte [Pozvání externího účetního do Business Cental](finance-accounting.md#inviteaccountant).
 
 Administrators can use the same assisted setup guide to add you to their [!INCLUDE [prod_short](includes/prod_short.md)], or they can add you to the relevant Azure AD account in the Microsoft 365 admin center. For more information, see [Manage users and groups](/microsoft-365/admin/add-users/?view=o365-worldwide&preserve-view=true).
 

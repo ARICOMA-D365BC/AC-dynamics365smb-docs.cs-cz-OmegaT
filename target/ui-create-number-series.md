@@ -14,94 +14,94 @@ ms.date: 03/24/2022
 ms.author: edupont
 
 ---
-# Create Number Series
+# Vytváření Číselných řad
 
-For each company that you set up, you need to assign unique identification codes to things such as general ledger accounts, customer and vendor accounts, invoices, and other documents. Numbering is important not only for identification. A well-designed numbering system also makes the company more manageable and easy to analyze, and can reduce the number of errors that occur in data entry.
+Pro každou společnost, kterou jste založili, musíte přiřadit jedinečné identifikační kódy k věcem jako jsou účty hlavní knihy, účty zákazníků a dodavatelů, faktury a další doklady. Číslování je důležité nejen pro identifikaci. Dobře navržený systém číslování také činí společnost lépe zvládnutelnou a snadno analyzovatelnou a může snížit počet chyb, ke kterým dochází při zadávání dat.
 
 > [!Important]
-> By default, gaps are not allowed in number series because the exact history of financial transactions must be available for auditing, by law, and therefore must follow an unbroken sequence with no deleted numbers.
+> Ve výchozím nastavení nejsou mezery v číselných řadách povoleny, protože přesná historie finančních transakcí musí být ze zákona k dispozici pro audit, a proto musí následovat nepřerušovanou sekvenci bez smazaných čísel..
 >
-> If you want to allow gaps in certain number series, then first consult with your auditor or accounting manager to ensure that you adhere to the legal requirements in your country/region. For more information, see the [Gaps in Number Series](#gaps-in-number-series) section.
+> Pokud chcete povolit mezery v určitých číselných řadách, nejprve se poraďte se svým auditorem nebo účetním manažerem, abyste se ujistili, že dodržujete zákonné požadavky ve vaší zemi. Další informace naleznete v části [Mezery v číselných řadách](#gaps-in-number-series).
 
 > [!NOTE]  
-> We recommend that you use the same number series codes as you see listed on the **No. Series List** page in the CRONUS demonstration company. Codes such as *P-INV+* might not make immediate sense to you, but [!INCLUDE[prod_short](includes/prod_short.md)] has a number of default settings that depend on these number series codes.
+> Doporučujeme používat stejné kódy číselných řad, jaké jsou uvedeny na stránce **Přehled číselných řad</f0> v demonstrační společnosti CRONUS. Kódy jako *P-INV+* vám nemusí dávat okamžitý smysl, ale [!INCLUDE[prod_short](includes/prod_short.md)] má řadu výchozích nastavení, která závisí na těchto kódech číselných řad.
 
-You create a numbering system by setting up one or more codes for each type of master data or document. For example, you can set up one code for numbering customers, another code for numbering sales invoices, and another code for numbering documents in general journals. After you have set up a code, you must set up at least one number series line. The number series line contains information such as the first and last number in the series and the starting date. You can set up more than one number series line per number series code, with a different starting date for each line. The series will be used consecutively, starting each series on the respective starting date.
+Systém číslování vytvoříte nastavením jednoho nebo více kódů pro každý typ hlavních dat nebo dokladu. Můžete například nastavit jeden kód pro číslování zákazníků, jiný kód pro číslování prodejních faktur a jiný kód pro číslování dokladů ve finančních denících. Po nastavení kódu musíte nastavit alespoň jeden řádek číselné řady. Řádek číselné řady obsahuje takové informace, jako jsou první a poslední číslo v řadě a počáteční datum. Pro jeden kód číselné řady lze nastavit více než jeden řádek číselné řady, s odlišným počátečním datem pro každý řádek Řady se budou používat postupně, zahájením každé série v příslušné počáteční datum.
 
 > [!NOTE]
-> The maximum length of a number in a number series is 20 characters. There are some situations where [!INCLUDE[prod_short](includes/prod_short.md)] will append a number with a system-generated ID. For example, when documents such as invoices are used to apply transactions, such as payments, [!INCLUDE[prod_short](includes/prod_short.md)] generates identifiers for the applied transactions. The identifier is comprised of a number from a number series and a six character system-assigned ID, such as -12345. If you expect to process more than 9999 documents in bank or GIRO journals, or cash receipt journals, set up number series for those types of documents to include fewer than 14 characters.
+> Maximální délka čísla v číselné řadě je 20 znaků. V některých situacích [!INCLUDE[prod_short](includes/prod_short.md)] připojí číslo s ID vygenerovaným systémem.< Například při použití dokladů, jako jsou faktury, k uplatnění transakcí, například plateb, generuje [!INCLUDE[prod_short](includes/prod_short.md)] identifikátory pro uplatněné transakce. Identifikátor se skládá z čísla z číselné řady a šestiznakového ID přiřazeného systémem, například -12345. Pokud očekáváte zpracování více než 9999 dokladů v bankovních nebo GIRO denících nebo deníkech pokladních příjmů, nastavte číselné řady pro tyto typy dokladů tak, aby obsahovaly méně než 14 znaků.
 
-You typically set up your number series to automatically insert the next consecutive number on new cards or documents that you create. However, you can also set a number series up to allow that you manually enter the new number. You specify this with the **Manual Nos.** check box.
+Obvykle nastavíte svou číselnou řadu tak, aby se nové pořadové číslo automaticky vkládalo na nové karty nebo doklady, které vytvoříte. Můžete ale nastavit řadu čísel tak, abyste mohli nové číslo zadat ručně. Toto lze specifikovat zaškrtnutím políčka **Ruční čísla**.
 
-If you want to use more than one number series code for one type of master data - for example, if you want to use different number series for different categories of items - you can use number series relationships.
+Pokud chcete použít více než jeden číselný kód řady pro jeden typ hlavních dat - například, pokud chcete použít různé číselné řady pro různé kategorie zboží - můžete použít vztahy číselných řad.
 
-## Gaps in Number Series
-Not all records that you create in [!INCLUDE[prod_short](includes/prod_short.md)] are financial transactions that must use sequential numbering. Customer cards, sales quotes, and warehouse activities are examples of records that are assigned a number from a number series, but are not subject to financial auditing and/or can be deleted. For such number series, you can select the **Allow Gaps in Nos.** check box on the **No. Series Lines** page. This setting can also be changed after creating the number series. For more information, see [To create a new number series](ui-create-number-series.md#to-create-a-new-number-series).
+## Mezery v číselných řadách
+Ne všechny záznamy, které vytvoříte v [!INCLUDE[prod_short](includes/prod_short.md)] jsou finanční transakce, které musí používat sekvenční číslování. Karty zákazníků, prodejní nabídky a aktivity skladu jsou příklady záznamů, kterým je přiřazeno číslo z číselné řady, ale nepodléhají finančnímu auditu a lze odstranit. U těchto číselných řad můžete zaškrtnout políčko **Povolit mezery v číselné řadě** na stránce **Řádky číselných řad**. Toto nastavení lze také změnit po vytvoření číselné řady. Pro více informací navštivte [Vytváření nových číslených řad](ui-create-number-series.md#to-create-a-new-number-series).
 
-## Behavior of the No. field on documents and cards
+## Chování pole Číslo na dokladech a kartách
 
-On sales, purchase, and transfer documents and on all cards, the **No.** field can be filled in automatically from a predefined number series, or you can add it manually. However, under certain circumstances, the **No.** field is invisible to prevent you from editing it.
+Na prodejních, nákupních dokladech včetně transferů a na všech kartách lze pole **Číslo** vyplnit automaticky z předdefinované číselné řady nebo jej můžete přidat ručně. Za určitých okolností je však pole **Číslo** neviditelné, abyste jej nemohli upravovat.
 
-The **No.** field can be filled in three ways:
+Pole **Číslo** lze vyplnit třemi způsoby:
 
-1. If only one number series for the type of document or card exists, and the **Default Nos.** field is selected and the **Manual Nos.** field is not selected for that number series, then the field is automatically filled with the next number in the series. The **No.** field will not be visible on the card or document.
+1. Pokud pro daný typ dokladu nebo karty existuje pouze jedna číselná řada a je vybráno pole **Výchozí čísla** pro tuto číselnou řadu a není vybráno pole **Ruční čísla**, pole se automaticky vyplní dalším číslem v řadě. Pole **Číslo** nebude na kartě nebo dokladu viditelné.
 
-   Even if you define templates with various number series for customers, if the number series that is defined in the **Sales & Receivables Setup** page is set up in this way, the **No.** field will be invisible on the customer card, no matter which template you use. The same applies to other types of cards and documents.
+   I když definujete pro zákazníky šablony s různými číselnými řadami a je číselná řada, která je definována na stránce **Nastavení prodeje a pohledávek**, nastavena tímto způsobem, pole **Číslo** bude na kartě zákazníka neviditelné bez ohledu na to, kterou šablonu použijete. Totéž platí pro jiné typy karet a dokladů.
 
    > [!NOTE]  
-   > If the number series does not function, for example because it has run out of numbers, then the **No.** field will be visible and you can manually enter a number or resolve the issues on the **No. Series** page.
+   > Pokud číselná řada nefunguje, například proto, že jí došla čísla, zobrazí se pole **Číslo** a vy můžete ručně zadat číslo nebo vyřešit problémy na stránce**Číselná řada**.
 
-2. If more than one number series for the type of document or card exist, and the **Default Nos.** check box is not selected for the number series that is currently assigned, then the **No.** field is visible, and you can look up to the **No. Series** page and select the number series you want to use. The next number in the series is then inserted in the **No.** field.
+2. Pokud existuje více než jedna číselná řada pro daný typ dokladu nebo karty a pro aktuálně přiřazenou číselnou řadu není zaškrtnuto políčko **Výchozí čísla** zobrazí se pole **Číslo** a můžete vyhledat a vybrat číselnou řadu na stránce **Číselná řada**, kterou chcete použít. Další číslo v řadě se pak vloží do pole **Číslo**.
 
-3. If you have not set up a number series for the type of document or card, or if the **Manual Nos.** field is selected for the number series, then the **No.** field is visible and you must enter any number manually. You can enter a maximum of 20 characters, both numbers and letters.
+3. Pokud jste pro typ dokladu nebo karty nenastavili číselnou řadu nebo pokud je pro číselnou řadu vybráno pole **Ruční čísla** pak pole **Číslo** je viditelné a jakékoli číslo musíte zadat ručně. Můžete zadat maximálně 20 znaků, a to jak číslic, tak písmen.
 
-When you open a new document or card that a number series exists for, then the relevant **No. Series Setup** page opens so that you can set up a number series for that type of document or card before you proceed with other data entry.
+Když otevřete nový doklad nebo kartu, pro kterou existuje číselná řada, pak se otevře příslušné **Nastavení číselných čad** kde můžete nastavit číselnou řadu pro daný typ dokladu nebo karty před pokračováním v zadávání dalších dat.
 
 > [!NOTE]  
-> If you need to enable manual numbering on, for example, new item cards that have been created with a data migration process that has hidden the **No.** by default, then go to the **Inventory Setup** page and choose the **Item Nos.** field to open and set the related number series to **Manual Nos.**.
+> Pokud potřebujete povolit ruční číslování například u nových karet zboží, , které byly vytvořeny procesem migrace dat, který ve výchozím nastavení skryl pole **Číslo**, bežte do **Nastavení zásob** a vyberte **Číslo zboží** a nastavte související číselnou řadu na **Ruční čísla**.
 
-## To create a new number series
+## Vytvoření nové číselné řady
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **No. Series**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Číselná řada** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
 3. Na novém řádku vyplňte pole dle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-4. Choose the **Lines** action.
-5. On the **No. Series Lines** page, fill in the fields to define the actual use and content of the number series that you created in step 2.
-6. Repeat step 5 for as many different uses of the number series that you need. The **Starting Date** field defines which number series line is active.
+4. Vyberte akci **Řádky**.
+5. Na stránce **Řádky číselné řady** vyplňte pole pro definování skutečného použití a obsahu číselné řady, kterou jste vytvořili v kroku 2.
+6. Opakujte krok 5 pro tolik různých použití číselné řady, kolik potřebujete. Pole **Počáteční datum**definuje, který řádek číselné řady je aktivní.
 
 > [!TIP]
-> To allow users to specify numbers manually when they register a new customer or vendor, for example, choose the **Manual Nos.** field on the number series itself. To disallow manual number, clear the field.
+> Chcete-li například umožnit uživatelům zadávat čísla ručně při evidenci nového zákazníka nebo dodavatele, vyberte pole **Ruční čísla** na samotné číselné řadě. Chcete-li zakázat ruční čísla smažte obsah pole.
 
-You can assign number series to the templates that you set up for the different types of customers and vendors that your sales people and purchasers most often add to your [!INCLUDE [prod_short](includes/prod_short.md)]. In that case, set up the relevant number series, link them through relationships, and then add the first number series in the relevant relationship to the relevant setup page. Then, when a user creates a customer, they choose the relevant template, and the new customer gets a number assigned from the number series that is defined for that template.
+Číselné řady můžete přiřadit k šablonám, které jste nastavili pro různé typy zákazníků a dodavatelů, které vaši prodejci a nákupčí nejčastěji přidávají do vašeho [!INCLUDE [prod_short](includes/prod_short.md)]. V takovém případě nastavte příslušné číselné řady, propojte je prostřednictvím vztahů a poté přidejte první číselnou řadu v příslušném vztahu na příslušnou stránku nastavení. Když poté uživatel vytvoří zákazníka, vybere příslušnou šablonu a novému zákazníkovi se přiřadí číslo z číselné řady definované pro danou šablonu.
 
-## To create relationships between number series
+## Vytvoření vztahů mezi číselnými řadami
 
-If you have set up more than one number series code for the same kind of basic information or transactions, you can create relationships between the codes. This feature can assist you in deciding among the codes when you use a number. When you set up a relationship between a group of number series, you associate all of the related series to one number series code. Then you can enter that code in a field on the **Numbering** FastTab in one of the relevant setup page, such as **Sales & Receivables Setup**.
+Pokud jste nastavili více než jeden kód číselné řady pro stejný druh základní evidence nebo transakcí, můžete vytvořit vztahy mezi těmito kódy. Tato funkce vám může pomoci při rozhodování mezi kódy při použití čísla číselné řady. Při nastavování relace mezi skupinou číselných řad přidružíte všechny související řady k jednomu kódu číselné řady. Poté můžete tento kód zadat do pole v záložce **Číselné řady** na jedné z relevantních stránek nastavení, jako je **Nastavení prodeje a pohledávek**.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **No. Series**, and then choose the related link.
-2. Select the line with the number series you want to create relationships for and then choose **Relationships**.
-3. In the **Series Code** field, enter the code for the number series that you want to relate to the series you selected in step 2.
-4. Add a line for each code that you want to relate to the selected number series.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Číselná řada** a poté vyberte související odkaz.
+2. Vyberte řádek s číselnou řadou, pro kterou chcete vytvořit vztah, a pak zvolte **Vztah**.
+3. Do pole **Kód řady** zadejte kód číselné řady, kterou chcete přiřadit k řadě vybrané v kroku 2.
+4. Přidejte řádek pro každý kód, který chcete přiřadit k vybrané číselné řadě.
 5. Zavřete stránku.
 
-Now when you set up something that requires a number, you can use the relationships you created to select among the related number series.
+V případě že nyní nastavíte něco, co vyžaduje číslo, můžete použít vztahy, které jste vytvořili, k výběru mezi souvisejícími číselnými řadami.
 
-## To set up where a number series is used
+## Nastavení místa použití číselných řad
 
-The following procedure shows how to set number series up for the Sales area. The steps are similar for other areas.
+Následující postup ukazuje, jak nastavit číselné řady pro oblast Prodeje. Kroky jsou podobné i pro další oblasti.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales & Receivables**, and then choose the related link.
-2. On the **Sales & Receivables** page, on the **Number Series** FastTab, select the desired number series for each sales card or document.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
+2. Na stránce **Nastavení prodeje a pohledávek** v záložce **Číselné řady** vyberte požadovanou číselnou řadu pro každou kartu nebo doklad.
 
-The selected number will now be used to fill in the **No.** field on the card or document in question, according to the settings you made on the number series line.
+Vybrané číslo bude nyní použito k vyplnění pole **Číslo** na příslušné kartě nebo dokladu podle nastavení, které jste provedli na řádku číselné řady.
 
 
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/number-series-trail-codes-dynamics-365-business-central/index)
 
 ## Viz také
-[Setting Up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nastavení [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

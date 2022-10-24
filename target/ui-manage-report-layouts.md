@@ -17,9 +17,9 @@ ms.author: jswymer
 A report layout controls content and format of the report, including which data fields of a report dataset appear on the report and how they're arranged, text style, images, and more. From [!INCLUDE[prod_short](includes/prod_short.md)], you can change which layout is used on a report, create new layout, or modify the existing layouts.
 
 > [!NOTE]  
-> In [!INCLUDE[prod_short](includes/prod_short.md)], the term "report" also covers externally-facing documents, such as sales invoices and order confirmations that you send to customers as PDF files.
+> V [!INCLUDE[prod_short](includes/prod_short.md)], se termín "sestava" vztahuje také na doklady určené pro externí použití, jako jsou prodejní faktury a potvrzení objednávek, které zasíláte zákazníkům jako soubory PDF..
 
-You can also use report layouts to add content to email messages. Rozvržení sestav může například ušetřit čas a pomoci zajistit konzistenci tím, že při komunikaci se zákazníky znovu použije stejný obsah. Chcete-li použít vlastní rozvržení sestavy pro e-mail, typ souboru pro rozvržení musí být Word. Nelze použít typ souboru RDLC. For more information, see [Set Up Reusable Email Texts and Layouts](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts).
+You can also use report layouts to add content to email messages. Rozvržení sestav může například ušetřit čas a pomoci zajistit konzistenci tím, že při komunikaci se zákazníky znovu použije stejný obsah. Chcete-li použít vlastní rozvržení sestavy pro e-mail, typ souboru pro rozvržení musí být Word. Nelze použít typ souboru RDLC. Pro více informací navštivte <g2> Nastavení opakovaně použitelných e-mailových textů a rozvržení</g2>.
 
 ## Úvod
 
@@ -44,7 +44,7 @@ There are four types of layouts that you can use on reports: Word, RDLC, Excel, 
 
 Word layouts are based on Word documents (.docx file type). Word layouts enable you to design report layouts by using Microsoft Word. A Word layout determines the report's content - controlling how that content elements are arranged and how they look. A Word layout document will typically use tables to arrange content, where the cells can contain data fields, text, or pictures.
 
-[![Example of a word report layout document for Business Central.](media/word-layout-overview.png)](media/word-layout-overview.png#lightbox)
+[![Příklad dokumentu s rozvržením sestavy ve Wordu pro Business Central.](media/word-layout-overview.png)](media/word-layout-overview.png#lightbox)
 
 <!--![Example of a word report layout document for Business Central.](media/nav_wordreportlayout_edit_in_word_example.png) -->
 

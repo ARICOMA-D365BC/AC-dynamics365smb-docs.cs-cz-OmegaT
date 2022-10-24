@@ -1,9 +1,9 @@
 ---
     title: Handling Lot Sizes
-    description: This topic describes different ways to handle lot sizes.
+    description: This topic describes different ways to handle lot sizes. 
     author: brentholtorf
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

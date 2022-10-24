@@ -3,7 +3,7 @@
     description: Entering the correct setup values from the start is important to the success of any new business software.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -13,21 +13,21 @@
     ms.author: edupont
 
 ---
-# Set Up Complex Application Areas Using Best Practices
-Entering the correct setup values from the start is important to the success of any new business software.
+# Nastavení složitých oblastí aplikací pomocí osvědčených postupů
+Zadání správných hodnot nastavení již od začátku je důležité pro úspěch jakéhokoli nového obchodního softwaru.
 
-Whether you use Rapid Start to implement setup values or you manually enter them in the new company, you can support your setup decisions with some general recommendations for selected setup fields that are known to potentially cause the solution to be inefficient if defined incorrectly.
+Ať už používáte služby RapidStart k implementaci hodnot nastavení nebo je zadáváte ručně v nové společnosti, můžete svá rozhodnutí o nastavení podpořit některými obecnými doporučeními pro vybraná pole nastavení, o kterých je známo, že pokud budou nesprávně definovány, může být řešení neefektivní.
 
-Help in [!INCLUDE[prod_short](includes/prod_short.md)] includes best-practice information about how to set up key fields in the following application areas:
+Nápověda v [!INCLUDE[prod_short](includes/prod_short.md)] obsahuje informace o osvědčených postupech, jak nastavit klíčová pole v následujících oblastech aplikace:
 
-- [Setup Best Practices: Supply Planning](setup-best-practices-supply-planning.md)
+- [Doporučené postupy nastavení: Plánování dodávek](setup-best-practices-supply-planning.md)
 
-- [Setup Best Practices: Costing Method](setup-best-practices-costing-method.md)
+- [Doporučené postupy nastavení: Způsoby přiobjednání](setup-best-practices-costing-method.md)
 
 ## Viz také
-[Design Details: Supply Planning](design-details-supply-planning.md)   
-[Design Details: Costing Methods](design-details-costing-methods.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Detaily návrhu: Plánování dodávek](design-details-supply-planning.md)   
+[Detaily návrhu: Parametry plánování](design-details-costing-methods.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

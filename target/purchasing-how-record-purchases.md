@@ -31,7 +31,7 @@ When you receive the inventory items or when the purchased service is completed,
 
 The following describes how to create a purchase invoice. The steps are similar for a purchase order. The main difference is that purchase orders have additional fields and actions for physical handling of items.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
 2. Do pole **Dodavatel** zadejte název existujícího dodavatele.
 
    Ostatní pole na stránce **Nákupní faktura** se sama vyplní standardními informacemi o vybraném dodavateli. If the vendor is not registered, then follow these steps:

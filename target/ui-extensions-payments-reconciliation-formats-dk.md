@@ -78,7 +78,7 @@ The following table shows the combinations of FIK and GIRO payment methods that 
 
 ## Choosing the FIK or Giro payment information for vendor invoices
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
 2. Choose the vendor. Remember, this must be a Danish vendor with an address in Denmark.
 3. Create an invoice. The **Payment Method** and **Vendor Number** fields are filled in based on settings on the Vendor card. You can change them if you want.
 4. In the **Payment Reference** field, enter the 15-digit number from the vendor invoice.

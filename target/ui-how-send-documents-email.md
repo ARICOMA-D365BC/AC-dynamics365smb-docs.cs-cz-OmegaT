@@ -7,7 +7,7 @@ author: edupont04
 ms.topic: conceptual
 ms.workload: na
 ms.search.keywords: SMTP, mail, Microsoft 365, cover, body, PayPal, layout
-ms.search.form:
+ms.search.form: 
 ms.date: 04/01/2021
 ms.author: edupont
 

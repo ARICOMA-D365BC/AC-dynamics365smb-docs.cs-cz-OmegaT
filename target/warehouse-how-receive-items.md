@@ -3,7 +3,7 @@
     description: This topic is an overview of the different ways of receiving items at a warehouse, for example items with a purchase order or items with a warehouse receipt.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -24,7 +24,7 @@ When items arrive at a warehouse that is set up for warehouse receipt processing
 The following describes how to receive items with a purchase order. The steps are similar for sales return orders and transfer orders.
 
 1. Vyberte ![Žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete delat"), zadejte **Nákupní objednávky**a pak zvolte související odkaz.
-2. Open an existing purchase order, or create a new one. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+2. Open an existing purchase order, or create a new one. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 3. V poli **Množ. to Receive** field, enter the received quantity.
 
 > [!NOTE]

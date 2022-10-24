@@ -17,16 +17,16 @@ ms.author: jswymer
 
 A report can be set up with more than one report layout, which you can then switch among as needed.
 
-Depending on the layouts that are available for a report, you can choose to use a built-in RDLC report layout, a built-in Word report layout, or a custom layout. For more information about RDLC and Word report layouts, built-in and custom layouts, and more, see [Manage Report Layouts](ui-manage-report-layouts.md).
+Depending on the layouts that are available for a report, you can choose to use a built-in RDLC report layout, a built-in Word report layout, or a custom layout. Pro více informací o rozvržení sestav RDLC a Word, vestavěných a vlastních sestavách běžte na [Správa Rozvržení Sestav](ui-manage-report-layouts.md).
 
-When custom report layouts are defined, you can select them from customer and vendor cards to specify that the selected layouts will be used for documents that you crate for the customer or vendor in question. For more information, see [Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md).
+When custom report layouts are defined, you can select them from customer and vendor cards to specify that the selected layouts will be used for documents that you crate for the customer or vendor in question. Další informace naleznete v tématu [Definování rozvržení dokladů pro zákazníky a dodavatele](ui-define-customer-vendor-document-layouts.md).
 
 > [!TIP]  
 > Document reports (not lists) that use a Word report layout are typically faster than those that use an RDLC report layout. So if you have the option to choose between a Word or RDLC report layout for a document report, use the Word report layout for the best performance.
 
 ## To change which report layout to use for a report or document
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Layout Selection**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výběr rozvržení sestav** a poté vyberte související odkaz.
 
    The **Report Layout Selection** page lists all the reports that are available for the company that's specified in the **Company** field at the top of the page. The **Layout Description** <!-- **Selected Layout** -->field specifies the layout that's currently used on the report.
 2. Set the **Company** field at the top the company that includes the report.
@@ -54,7 +54,7 @@ All custom report layouts that exist for report layouts in a company are listed 
 
 The name of the selected custom layout is now shown in the **Custom Layout Description** field and will be used the next time the report or document is previewed, printed, or sent.
 
-You can now go to your customer and vendor cards to specify which of the layouts to use for different documents that you crate for the customer or vendor in question, such as order confirmations or payment reminders. For more information, see [Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md).
+You can now go to your customer and vendor cards to specify which of the layouts to use for different documents that you crate for the customer or vendor in question, such as order confirmations or payment reminders. Další informace naleznete v tématu [Definování rozvržení dokladů pro zákazníky a dodavatele](ui-define-customer-vendor-document-layouts.md).
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 

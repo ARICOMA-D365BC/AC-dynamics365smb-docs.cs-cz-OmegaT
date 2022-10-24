@@ -1,6 +1,6 @@
 ---
 title: Opening Business Central Files in OneDrive
-description: Learn how you can share Business Central data through OneDrive for Business.
+description: Learn how you can share Business Central data through OneDrive for Business. 
 author: jswymer
 ms.topic: conceptual
 ms.workload: na
@@ -22,7 +22,7 @@ ms.author: jswymer
 <!--
 :::image type="content" source="media/Open in OneDrive.PNG" alt-text="The Open in OneDrive action":::
 
-
+ 
 :::image type="content" source="media/OneDrive attachment.PNG" alt-text="Share file attachments in OneDrive":::
 -->
 

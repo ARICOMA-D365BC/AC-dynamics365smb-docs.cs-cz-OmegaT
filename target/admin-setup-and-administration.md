@@ -17,7 +17,7 @@ ms.author: edupont
 
 Central administration tasks are usually performed by one role in the company. The scope of these tasks can depend on the company's size and the administrator's job responsibilities. These tasks can include managing database synchronization of job and email queues, setting up users, and customizing the user interface.
 
-Entering the correct setup values from the start is important to the success of any new business software. [!INCLUDE[prod_short](includes/prod_short.md)] includes a number of setup guides that help you set up core data. For more information, see [Setting Up Business Central](setup.md).
+Zadání správných hodnot nastavení již od začátku je důležité pro úspěch jakéhokoli nového obchodního softwaru. [!INCLUDE[prod_short](includes/prod_short.md)] includes a number of setup guides that help you set up core data. For more information, see [Setting Up Business Central](setup.md).
 
 > [!NOTE]
 > You can use the data migration tools to migrate existing data to [!INCLUDE [prod_short](includes/prod_short.md)] online. Alternatively, you can set up a new company in [!INCLUDE[prod_short](includes/prod_short.md)] with configuration packages to shorten deployment times, improve quality of implementation, introduce a repeatable approach to implementations, and enhance productivity by automating and simplifying recurring tasks. For more information, see [Migrate On-Premises Data to Business Central Online](/dynamics365/business-central/dev-itpro/administration/migrate-data).

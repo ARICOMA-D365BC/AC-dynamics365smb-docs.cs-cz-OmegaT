@@ -13,7 +13,7 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Set Up Incoming Documents
+# Nastavení došlých dokladů
 
 If you create general journal lines from incoming document records, you must specify on the **Incoming Documents Setup** page which journal template and batch to use.
 

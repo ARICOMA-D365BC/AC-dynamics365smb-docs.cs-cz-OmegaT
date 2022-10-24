@@ -1,9 +1,9 @@
 ---
     title: Exchanging Data
-    description: Exchange electronic business documents, for example bank files, between Business Central and external parties.
+    description: Exchange electronic business documents, for example bank files, between Business Central and external parties. 
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -13,7 +13,7 @@
     ms.author: edupont
 
 ---
-# Exchanging Data
+# Výměna dat
 You can exchange data between [!INCLUDE[prod_short](includes/prod_short.md)] and external files or streams in connection with common business tasks, such as sending and receiving electronic documents and importing and exporting bank files.
 
 Before you can send and receive electronic documents or import and export bank files, you must set up the data exchange framework to process the data files or streams. In addition, you must set up related areas, such as the customers that you send electronic invoices to, and the AMC Banking 365 Fundamentals extension if you distribute bank file conversions to an external service provider. For more information, see [Setting Up Data Exchange](across-set-up-data-exchange.md).

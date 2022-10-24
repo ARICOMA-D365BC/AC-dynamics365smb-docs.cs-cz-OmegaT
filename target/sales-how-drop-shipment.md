@@ -36,7 +36,7 @@ Chcete-li připravit přímou dodávku, vytvořte prodejní objednávku pro zbo�
 
 To prepare a drop shipment, you indicate on the purchase order that it must be shipped to your customer, not to yourself.
 
-1. Create a purchase order. Don't fill any fields on the lines. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+1. Create a purchase order. Don't fill any fields on the lines. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 2. In the **Ship-to** field, select **Customer Address**.
 3. In the **Customer** field, select the customer that you're selling to.
 4. Choose the **Drop Shipments** action, and then choose the **Get Sales Order** action.

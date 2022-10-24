@@ -13,34 +13,34 @@ ms.date: 06/24/2021
 ms.author: edupont
 
 ---
-# Add Extended Text
+# Přidání rozšířeného textu
 
-You can extend the description for items, stock-keeping units, general ledger accounts, and resources by adding extra lines as extended text. You can also set up conditions for use of the extra lines.
+Můžete rozšířit popis pro zboží, skladové jednotky, účty hlavní knihy a zdroje přidáním dalších řádků pomocí rozšířeného textu. Také můžete nastavit podmínky pro použití dalších řádků.
 
-The following section describes how to add extended text to a description of an item. But the same steps apply to stock-keeping units, general ledger accounts, and resources.
+Následující část popisuje, jak přidat rozšířený text k popisu zboží. Stejné kroky také platí pro skladové jednotky, účty hlavní knihy a zdroje.
 
-## To define extended text for an description
+## Definování rozšířeného textu pro popis
 
-1. Open the card for an item that you want to add extended text to, and then choose the **Extended Text** action.
+1. Otevřete kartu zboží, ke které chcete přidat rozšířený text a vyberte akci **Rozšířené texty**.
 2. Vyplňte pole **Kód** a **Popis**.
-3. Choose the **New**.
-4. Fill in the **Language Code** field or select the **All Language Codes** check box if you use language codes.
-5. Fill in the **Starting Date** and **Ending Date** fields if you want to limit the dates on which the extended text is used.
-6. In the **Text** field, write the extended text.
-7. Select relevant check boxes for the document types where you want the extended text printed.
+3. Vyberte akci **Nový**.
+4. Vyplňte pole **Kód jazyka** nebo zaškrtněte políčko **Kódy všech jazyků**, pokud používáte kódy jazyků.
+5. Vyplňte pole **Počáteční datum** a **Koncové datum,** pokud chcete omezit data, kdy se rozšířený text používá.
+6. Do pole **Text** napište rozšířený text.
+7. Zaškrtněte příslušná políčka u typů dokumentů, ve kterých chcete rozšířený text vytisknout.
 8. Zavřete stránku.
 
-You can now add this extended text to documents. The following procedure explains how to add extended text to a sales order, but the same steps apply to any other document that you specified for the extended text.
+Nyní můžete tento rozšířený text přidat do dokladů. Následující postup vysvětluje, jak přidat rozšířený text do prodejní objednávky, ale stejné kroky platí pro jakýkoli jiný dokument, který jste zadali pro rozšířený text.
 
-## To add an extended item text on a sales order line
+## Přidání rozšířeného textu zboží na řádek prodejní objednávky
 
-1. Open a sales order with a sales line for an item that has extended text defined. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
-2. Select the line in question, and then choose the **Insert Ext. Text** action.
+1. Otevřete prodejní objednávku s řádkem prodeje zboží, která má definovaný rozšířený text. Více informací viz [Prodávání produktů](sales-how-sell-products.md).
+2. Vyberte příslušný řádek a poté zvolte akci **Vložit rozšířený Text**.
 
 ## Viz také
 
-[Setting Up Inventory](inventory-setup-inventory.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nastavení zásob](inventory-setup-inventory.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

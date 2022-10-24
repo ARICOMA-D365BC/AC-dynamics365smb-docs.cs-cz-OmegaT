@@ -24,7 +24,7 @@ Ano, protože sestavy jsou vložené z Power BI.
 <!-- 3 -->
 ### Jsou aplikace Business Central pro Power BI dostupné v jiných jazycích než v angličtině?
 
-Č.. Tyto aplikace jsou v současné době k dispozici pouze v angličtině.
+Čísla. Tyto aplikace jsou v současné době k dispozici pouze v angličtině.
 
 <!-- 24 -->
 ### Jakmile je sestava publikována na mém powerbi.com pracovním prostoru, mohu si stáhnout její pbix?
@@ -34,7 +34,7 @@ Ano. Pro více informací navštivte [Stažení sestavy ze služby Power BI do P
 <!-- 27 -->
 ### Mohu si stáhnout aplikace jako soubory pbix?
 
-Č.. V současné době nenabízíme stahování souborů pbix pro oficiální aplikace Power BI, protože jsou publikovány v AppSource.
+Čísla. V současné době nenabízíme stahování souborů pbix pro oficiální aplikace Power BI, protože jsou publikovány v AppSource.
 
 ## [Licence](#tab/license)
 
@@ -42,7 +42,7 @@ Ano. Pro více informací navštivte [Stažení sestavy ze služby Power BI do P
 ### Potřebuji k publikování sestav licenci Power BI Pro?
 
 <!-- todo What does " or for every user that consults the published report" mean? fixed -->
-Č.. K publikování sestav není potřeba licence Pro. Stačí standardní (bezplatná) licence Power BI. Pro více informací navštivte [Licencování Power BI](admin-powerbi-setup.md#license).
+Čísla. K publikování sestav není potřeba licence Pro. Stačí standardní (bezplatná) licence Power BI. Pro více informací navštivte [Licencování Power BI](admin-powerbi-setup.md#license).
 
 <!-- 15 -->
 ### Je něco, co nemůžu udělat s licencí zdarma?
@@ -127,7 +127,7 @@ V současné době neexistuje žádný způsob, jak nastavit filtr pro data webo
 <!-- 10 -->
 ### Existuje z Power BI kromě použití dotazu i jiný způsob, jak získat data z tabulek Business Central, které nemají přidruženou stránku? Například jako tabulka *Atributy zboží mapování hodnot*.
 
-Č.. V tuhle chvíli ne.
+Čísla. V tuhle chvíli ne.
 
 <!-- 12 -->
 ### Jsou publikované dotazy rychlejší než publikované stránky?
@@ -203,12 +203,12 @@ Ano. Naše testy ukazují, že stránky API jsou až o 25 % výkonnější než 
 <!-- 18 -->
 ### Existují plány na zrcadlení instance Azure SQL Database, ke které se mohu připojit přímo?
 
-Č.. V tuhle chvíli ne. S Business Central můžu komunikovat pouze prostřednictvím rozhraní API.
+Čísla. V tuhle chvíli ne. S Business Central můžu komunikovat pouze prostřednictvím rozhraní API.
 
 <!-- 19 -->
 ### Načítání dat z webových služeb Business Central se zdá být pomalé. Existuje nějaký způsob, jak získat data přímo z databázové tabulky SQL?
 
-Č.. Přímý přístup k databázi není možný, ale přechod na stránky rozhraní API (když je k dispozici nový konektor) výrazně pomůže.
+Čísla. Přímý přístup k databázi není možný, ale přechod na stránky rozhraní API (když je k dispozici nový konektor) výrazně pomůže.
 
 ## [Pokročilé](#tab/advanced)
 <!-- 1 -->

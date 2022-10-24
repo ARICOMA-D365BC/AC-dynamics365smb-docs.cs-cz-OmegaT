@@ -1,9 +1,9 @@
 ---
     title: Setting Up and Invoicing Sales Prepayments
-    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing.
+    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. 
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -175,7 +175,7 @@ Následující den zákazník zavolá Susan a provede změny v objednávce. The 
 1. On the **Sales Order** page, choose the **Release** action, and then **Reopen**.
 2. On the line for item **1896-S**, in the **Quantity** field, enter **2**.
 
-   In the **Order** action, choose **Statistics**. The **Prepayment Amount Excl. VAT** field now contains **768.04**, and the **Prepmt. Částka  Zásoby bez  VAT** field contains **417.76**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
+   In the **Order** action, choose **Statistics**. The **Prepayment Amount Excl. VAT** field now contains **768.04**, and the **Prepmt. částky  Zásoby bez  VAT** field contains **417.76**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
 3. To post an invoice for the additional prepayment amount, choose **Actions**, then **Posting**, then **Prepayment** and then select **Post and Print Prepayment Invoice**
 4. Choose the **Yes** button to post the invoice.
 

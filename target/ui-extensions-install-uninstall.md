@@ -18,7 +18,7 @@ ms.author: solsen
 Můžete změnit [!INCLUDE[prod_short](includes/prod_short.md)] instalací rozšíření, která například přidají funkčnost, změní chování nebo vám poskytnou přístup k novým online službám. Další informace naleznete v tématu [Přizpůsobení Business Central pomocí rozšíření](ui-extensions.md).
 
 > [!NOTE]
-> To install or uninstall extensions from AppSource or add per-tenant extensions, you must have the right permissions. You must either be a member of the EXTEND. MGT. - ADMIN user group or you must have the EXTEND. MGT. - ADMIN permission set. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti.
+> Chcete-li nainstalovat nebo odinstalovat rozšíření z AppSource nebo přidat rozšíření pro jednotlivé klienty, musíte mít správná oprávnění. You must either be a member of the EXTEND. MGT. - ADMIN user group or you must have the EXTEND. MGT. - ADMIN permission set. Pokud jste správce, můžete přiřadit skupiny uživatelů a oprávnění ostatním uživatelům ve vaší společnosti.
 >
 > Chcete-li použít funkce poskytované rozšířením, jako je otevírání stránek, spouštění sestav, výběr akcí a další, musíte mít přiřazené sady oprávnění, které jsou nainstalovány jako součást rozšíření.
 

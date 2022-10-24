@@ -105,7 +105,7 @@ Vybraný soubor se nahraje do rozvržení a vrátíte se na stránku **Rozvržen
   - The table must have at least one column and can only include columns that are also in report dataset.
   - The table must start in the first cell A1 of the **Data** sheet.
 
-3. Report Metadata
+3. Report Metadata 
 -->
 
 ## Principy rozvržení sestav aplikace Excel
@@ -116,7 +116,7 @@ Existují některé specifické požadavky na strukturu sešitu aplikace Excel P
 
 [![Zobrazuje různé prvky rozvržení aplikace Excel.](media/excel-layout-callouts-2.png)](media/excel-layout-callouts-2.png#lightbox)
 
-| Č.. | Elementu | Popis | Povinný |
+| Čísla. | Element | Popis | Povinný |
 |---|-------|----|---|
 | 1 | **Datový** list | <ul><li>Musí mít název **Data**</li><li>Může obsahovat pouze jednu tabulku a tabulka musí mít název **Data**</li></ul> | ![Je povinné](media/check.png) |
 | 2 | **Data** Tabulka | <ul><li>Musí mít název **Data**</li><li>Musí mít alespoň jeden sloupec.</li><li>Může obsahovat pouze sloupce, které jsou v datové sadě sestavy.</li><li>Musí začínat v první buňce **A1** listu **Data**</li></ul> | ![Je povinné](media/check.png) |

@@ -1,6 +1,6 @@
 ---
 title: Workflows in Dynamic 365 Business Central
-description: Use the built-in workflow capabilities to set up approval workflows to supplement automated workflows based on Power Automate. You can set up steps to assign tasks to different people as part of the different business-process tasks.
+description: Use the built-in workflow capabilities to set up approval workflows to supplement automated workflows based on Power Automate. You can set up steps to assign tasks to different people as part of the different business-process tasks. 
 author: SorenGP
 
 

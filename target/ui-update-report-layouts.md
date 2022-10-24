@@ -13,59 +13,59 @@ ms.date: 06/24/2021
 ms.author: edupont
 
 ---
-# (Legacy) Update Custom Report Layouts
+# (Zastaralé) Aktualizace vlastních rozvržení sestav
 
 [!INCLUDE[legacy-custom-layouts](includes/legacy-custom-layouts.md)]
 
-Occasionally, you may need to update a custom report layout that is used on a report. This is required when there has been a design change to the report's data set, for example, a field that is used in the layout has been removed from the report data set. If a report layout requires updating, you will get an error message when you try to preview, print or save the report.
+V některých případech může být nutné aktualizovat vlastní rozvržení sestavy, které se používá v sestavách. To je nutné, pokud došlo ke změně dat sestavy, například pole použité v rozbržení bylo odebráno ze sady dat sestavy. Pokud rozložení sestavy vyžaduje aktualizaci, zobrazí se chybová zpráva při pokusu o zobrazení náhledu, tisk nebo uložení sestavy.
 
-You can automatically update a report layout from the error message that appears when you run the report by choosing the **Yes** button on the error message. Or, in advance of running reports, you can update specific report layouts or all custom report layouts that might be affected by dataset changes.
+Rozložení sestavy můžete automaticky aktualizovat z chybové zprávy, která se zobrazí při spuštění sestavy, výběrem tlačítka **Ano** v chybové zprávě. Nebo před spuštěním sestav můžete aktualizovat konkrétní rozvržení sestav nebo všechna vlastní rozvržení sestav, které mohou být ovlivněny změnou setu dat.
 
-You also have the option to test updates without applying the required changes to the custom report layouts. This enables you to see what changes will be applied to the report layout and identify possible issues in the process. From the test results, you can open the custom report layouts directly for editing to fix any issues. We recommend that you test the report layout update before you apply the updates.
+Máte také možnost testovat aktualizace bez použití požadovaných změn ve vlastních rozloženích sestav. To vám umožní zjistit, jaké změny budou použity v rozvržení sestavy a identifikovat možné problémy v procesu. Z výsledků testů můžete otevřít vlastní rozvržení sestav pro úpravy a opravit případné problémy. Před instalací aktualizací doporučujeme otestovat rozvržení sestavy.
 
-Not all report dataset changes can be automatically updated in the report layouts. Some changes will require that you manually edit the report layout. For more information, see [Limitations of the Custom Report Layout Update](ui-update-report-layouts.md#UpdateLimitations).
+Ne všechny změny sady dat sestavy mohou být automaticky aktualizovány v rozložení sestavy. Některé změny vyžadují ruční úpravu rozvržení sestav. Pro více informací navštivte [Omezení aktualizace vlastního rozvržení sestavy](ui-update-report-layouts.md#UpdateLimitations).
 
-## To update one or more custom report layouts
+## Aktualizace jedné nebo více vlastních rozvržení sestav
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Layout Selection**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výběr rozvržení sestav** a poté vyberte související odkaz.
 
-2. On the **Report Layout Selection** page, if you want to update a specific report, select the layout from the list, and then choose the **Update Layout** action. Or, if you want to update all custom report layouts for the company, choose the **Update All Layouts** action.
+2. Chcete-li na stránce **Výběr rozvržení sestav** aktualizovat konkrétní sestavu, vyberte rozvržení ze seznamu a poté zvolte akci **Aktualizovat rozložení**. Nebo pokud chcete aktualizovat všechna vlastní rozložení sestav pro vybranou společnost, vyberte akci **Aktualizovat všechna rozložení**.
 
-If no errors occur, then the updates is applied to the report layouts. If errors occur, then a message that contains the errors appears. You will then have to manually edit the custom report layout to fix the error. For more information, see [Fixing Errors](ui-update-report-layouts.md#FixErrors).
+Pokud nenastanou žádné chyby, bude aktualizace použita na rozvržení sestav. Pokud se vyskytnou chyby, objeví se zpráva obsahující chyby. Poté budete muset ručně upravit vlastní rozvržení sestav, abyste chybu opravili. Pro více informací navštivte [Oprava chyb](ui-update-report-layouts.md#FixErrors).
 
-## To test custom report layout updates
+## Testování aktualizací vlastního rozvržení sestav
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Layout Selection**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výběr rozvržení sestav** a poté vyberte související odkaz.
 
-2. On the **Report Layout Selection** page, choose the **Test Layout Updates** action.
+2. Na stránce **Výběr rozvržení sestav**, vyberte akci **Testovat aktualizace rozvržení**.
 
-Changes to the report layouts are tested but not applied to the actual report layouts. A **Report Layout Update Log** page appears that provides the status a potential updates for each report layout. If there are errors for a report layout, you can access the report layout directly for editing from the message to fix any issues. For more information, see [Fixing Errors](ui-update-report-layouts.md#FixErrors).
+Změny rozvržení sestavy se testují, ale nepoužijí se na skutečné rozvržení sestavy. Objeví se stránka **Protokol aktualizace rozložení sestavy** s informacemi o stavu a případných aktualizacích pro každé rozložení sestavy. Pokud se v rozvržení sestavy vyskytnou chyby, můžete k rozvržení sestavy přistupovat přímo ze sestavy, upravovat a opravit tak případné problémy. Pro více informací navštivte [Oprava chyb](ui-update-report-layouts.md#FixErrors).
 
-## <a name="UpdateLimitations"></a> Limitations of the Custom Report Layout Update
-There are several types of changes that the automatic update can apply to custom report layouts, for example, a field that is used in the layout has been removed from the report data set. However, the automatic update cannot handle the following changes to a report dataset.
+## <a name="UpdateLimitations"></a> Omezení aktualizace vlastního rozvržení sestav
+Existuje několik typů změn, které může automatická aktualizace použít u vlastních rozvržení sestavy, například pole použité v rozvržení bylo odebráno ze sady dat sestavy. Automatická aktualizace však nemůže zpracovat následující změny datové sady sestavy.
 
-1. Deleted fields, labels, or data items.
+1. Mazání polí, popisů nebo datových položek
 
-2. Duplicate field names in the report layout after a field has been renamed in the dataset. This should be treated as a design error.
+2. Duplicitní názvy polí v rozvržení sestavy po přejmenování pole v datové sadě. To je třeba považovat za chybu návrhu.
 
-3. Upgrade scenarios where there are multiple iterations of a report layout that causes multiple rename actions on the same fields, labels or data items.
+3. Scénáře aktualizace, kdy existuje více iterací rozvržení sestavy, které způsobí více akcí přejmenování stejných polí, popisů nebo datových položek.
 
-If the update process detects any one of these issues, the update cannot be applied. You will have to fix the issues manually, for example by editing the report layout in Word, or programmatically by using upgrade codeunits.
+Pokud proces aktualizace zjistí některý z těchto problémů, nelze aktualizaci použít. Problémy budete muset odstranit ručně, například úpravou rozvržení sestavy ve Wordu, nebo programově pomocí codeunit.
 
-## <a name="FixErrors"></a> Fixing Errors
-If you get an error message when you update or test report layout updates, you most likely will have to modify the report layout to fix the problem. Read the error message to help determine the cause of the problem.
+## <a name="FixErrors"></a> Opravy chyb
+Pokud se při aktualizaci nebo testování aktualizací rozvržení sestavy zobrazí chybová zpráva, je pravděpodobné, že budete muset rozvržení sestavy upravit, abyste problém odstranili. Přečtěte si chybové hlášení, které vám pomůže určit příčinu problému.
 
-The most typical problem occurs when a field that is used on the layout has been removed from the report dataset. In this case, you will see a line in the error message that states that an item has been removed. To fix this issue, you will have to modify the layout and remove the field in question.
+Nejtypičtější problém nastane, když je pole, které se používá v rozvržení, odstraněno z datové sady sestavy. V takovém případě se v chybové zprávě zobrazí řádek s informací, že položka byla odstraněna. Chcete-li tento problém vyřešit, musíte upravit rozvržení a odstranit příslušné pole.
 
-For more information, see [Create and Modify a Custom Report Layout](ui-how-create-custom-report-layout.md#ModifyCustomLayout).
+Pro více informací navštivte [Vytvoření a úprava vlastního rozvržení sestavy](ui-how-create-custom-report-layout.md#ModifyCustomLayout).
 
-After you modify the layout, try to update the layout again.
+Po úpravě rozvržení zkuste rozvržení znovu aktualizovat.
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/change-documents-dynamics-365-business-central/index)
 
 ## Viz také
-[Managing Report Layouts](ui-manage-report-layouts.md)  
-[Work with Reports, Batch Jobs, and XMLports](ui-work-report.md)
+[Správa rovržení sestav](ui-manage-report-layouts.md)  
+[Práce se sestavami, dávkovými úlohami a XMLporty](ui-work-report.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

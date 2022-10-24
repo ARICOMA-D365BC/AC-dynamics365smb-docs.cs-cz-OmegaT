@@ -13,36 +13,36 @@ ms.date: 06/25/2021
 ms.author: edupont
 
 ---
-# Warehouse Management
+# Správa skladu
 
-After goods are received and before goods are shipped, a series of internal warehouse activities take place to ensure an effective flow through the warehouse and to organize and maintain company inventories.
+Po přijetí zboží a před jeho odesláním probíhá řada interních skladových činností, jejichž cílem je zajistit efektivní tok ve skladu a organizovat a udržovat zásoby společnosti.
 
-Typical warehouse activities include putting items away, moving items inside or between warehouses, and picking items for assembly, production, or shipment. Assembling items for sale or inventory may also be considered warehouse activities, but these are covered elsewhere. Pro více informací navštivte [Správa montáže](assembly-assemble-items.md).
+Typické skladové činnosti zahrnují zaskladnění zboží, přesuny zboží uvnitř skladu nebo mezi sklady a vychystávání zboží pro montáž, výrobu nebo expedici. Montáž zboží k prodeji nebo inventarizace může být také považována za skladovou činnost, ale ty jsou zahrnuty jinde. Pro více informací navštivte [Správa montáže](assembly-assemble-items.md).
 
-In large warehouses, these different handling tasks can be separated by departments and the integration managed by a directed workflow. In simpler installations, the flow is less formalized and the warehouse activities are performed with so-called inventory put-aways and inventory picks. For more information about basic versus advanced warehouse configurations, see [Design Details: Warehouse Overview](design-details-warehouse-overview.md).
+Ve velkých skladech lze tyto různé manipulační úkoly oddělit podle oddělení a integraci řídit pomocí řízeného pracovního postupu. V jednodušších zařízeních je tok méně formalizovaný a skladové činnosti se provádějí pomocí tzv. vyskladňování a zaskladňování zboží. Další informace o základních a pokročilých konfiguracích skladu naleznete v části [Detaily návrhu: Přehled skladu](design-details-warehouse-overview.md).
 
-Before you can perform warehouse activities, you must set the system up for the relevant complexity of warehouse processing. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
+Než budete moci provádět činnosti skladu, musíte nastavit systém pro příslušnou složitost zpracování skladu. Pro více informací navštivte [Nastavení správy skladu](warehouse-setup-warehouse.md).
 
-Úkoly inventury, úpravy a přeřazení zboží související se skladem mohou zahrnovat skladové úkoly, které musí být provedeny u položek skladu před jejich synchronizací se souvisejícími položkami zboží. For more information, see [Count, Adjust, and Reclassify Inventory](inventory-how-count-adjust-reclassify.md).
+Úkoly inventury, úpravy a přeřazení zboží související se skladem mohou zahrnovat skladové úkoly, které musí být provedeny u položek skladu před jejich synchronizací se souvisejícími položkami zboží. Pro více informací navštivte [Výpočet, úprava a přeřazení zásob](inventory-how-count-adjust-reclassify.md).
 
 Následující tabulka popisuje sekvenci úloh s odkazy na témata, které je popisují.
 
 | **Viz** | **také** |
 |------------|-------------|  
-| Record the receipt (including over-receipt) of items at warehouse locations, either with a purchase order only, in simple location setups, or with a warehouse receipt, in case of semi or fully automated warehouse processing at the location. | [Příjem zboží](warehouse-how-receive-items.md) |
-| Bypass the put-away and pick processes to expedite an item straight from receiving or production to shipping. | [Cross-Dock Items](warehouse-how-to-cross-dock-items.md) |
-| Put away items received from purchases, sales returns, transfers, or production output according to the configured warehouse process. | [Putting Items Away](warehouse-put-away-items.md) |
-| Move items between bins in the warehouse. | [Moving Items](warehouse-move-items.md) |
-| Pick items to be shipped, transferred, or consumed in assembly or production, according to the configured warehouse process. | [Picking Items](warehouse-pick-items.md) |
-| Record the shipment of items from warehouse locations, either with a sales order only, in simple location setups, or with a warehouse shipment, in case of semi or fully automated warehouse processes at the location. | [Dodání zboží](warehouse-how-ship-items.md) |
+| Evidence příjmu (včetně převzetí) zboží na lokacích, a to buď pouze pomocí nákupního příkazu v případě jednoduchého nastavení skladu, nebo pomocí skladové příjemky v případě poloautomatizovaného nebo plně automatizovaného skladového zpracování na místě. | [Příjem zboží](warehouse-how-receive-items.md) |
+| Obejití procesů vyskladnění a zaskladnění, abyste urychlili položku přímo z příjmu nebo výroby do expedice. | [Přeožení zboží](warehouse-how-to-cross-dock-items.md) |
+| Zaskladnění zboží z nákupů, vrácených prodejů, převodů nebo výstupů z výroby podle nakonfigurovaného skladového procesu. | [Zaskladnění zboží](warehouse-put-away-items.md) |
+| Přesouvání zboží mezi přihrádkami | [Přesouvání zboží](warehouse-move-items.md) |
+| Vychystávání položek, které mají být odeslány, přeneseny nebo spotřebovány při montáži či výrobě, podle nakonfigurovaného skladového procesu. | [Vyskladňování zboží](warehouse-pick-items.md) |
+| Evidence expedice zboží ze skladových míst, a to buď pouze s prodejní objednávkou v případě jednoduchého nastavení skladu, nebo se skladovou dodávkou v případě poloautomatizovaných nebo plně automatizovaných skladových procesů na místě. | [Dodání zboží](warehouse-how-ship-items.md) |
 
 ## Viz také
 
-[Inventory](inventory-manage-inventory.md)  
-[Setting Up Warehouse Management](warehouse-setup-warehouse.md)
-[Assembly Management](assembly-assemble-items.md)
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Zásoby](inventory-manage-inventory.md)  
+[Nastavení správy skladu](warehouse-setup-warehouse.md)
+[Správa montáže](assembly-assemble-items.md)
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

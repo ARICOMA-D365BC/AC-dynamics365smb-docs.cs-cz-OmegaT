@@ -47,8 +47,8 @@ Toto video ukazuje, jak zpracovat dodatečné náklady na dopravu v rámci nákl
 ## Přiřazení poplatku za zboží přímo k nákupní faktuře za zboží
 Pokud znáte poplatek za zboží v době, kdy účtujete nákupní fakturu za zboží, postupujte podle tohoto postupu.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. Vytvořte novou nákupní fakturu. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
+2. Vytvořte novou nákupní fakturu. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 3. Ujistěte se, že nákupní faktura má jeden nebo více řádků typu Zboží.
 4. On a new line, in the **Type** field, select **Charge (Item)**.
 5. In the **Quantity** field, enter the units of the item charge that you have been invoiced for.

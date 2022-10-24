@@ -43,7 +43,7 @@ To create a purchase order for each unavailable item quantity on the sales order
 5. Zvolte tlačítko **OK**.
 
    A purchase order is created for each vendor of items on the sales order, including any quantity changes that you made on the **Create Purchase Orders** page.
-7. Proceed to process the purchase order or orders, for example, by editing or adding purchase order lines. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+7. Proceed to process the purchase order or orders, for example, by editing or adding purchase order lines. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 
 
 ## To create a purchase invoice from a sales order or sales invoice
@@ -60,7 +60,7 @@ To create a single purchase invoice for one or more lines on a sales document by
 6. In the list of vendors that appears, select the vendor that you want to buy all the items from, and then choose the **OK** button.
 
    A purchase invoice is created that contains one, more than one, or all the lines on the sales invoice.
-7. Proceed to process the purchase invoice, for example, by editing or adding purchase invoice lines. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+7. Proceed to process the purchase invoice, for example, by editing or adding purchase invoice lines. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 
 ## Viz také
 [Purchasing](purchasing-manage-purchasing.md)  

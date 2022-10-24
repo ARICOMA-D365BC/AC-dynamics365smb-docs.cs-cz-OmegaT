@@ -20,7 +20,7 @@ A purchase quote can be used as a preliminary draft for a purchase order, and th
 
 ## To create a purchase quote
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Quotes**, and then choose the related link.
-2. Create a new document, in the same way as you make a purchase order. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
+2. Create a new document, in the same way as you make a purchase order. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 
 ## To convert a purchase quote to a purchase order
 When you have accepted the vendor's quote, you can convert it to a purchase invoice or order to process the purchase.

@@ -9,7 +9,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: bi, power BI, analysis, KPI
-ms.search.form: 555, 556, 557, 558, 9372, 9370, 9371
+ms.search.form: 555, 556, 557, 558, 9372, 9370, 9371 
 ms.date: 04/01/2021
 ms.author: edupont
 
@@ -77,7 +77,7 @@ A template contains a set of lines representing the analysis lines that you see 
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Line Templates**, and then choose the related link.
 2. Select the first empty line, and then fill in the fields as necessary.
-3. Choose the **Lines** action.
+3. Vyberte akci **Řádky**.
 4. On the **Analysis Lines** page, create lines for the items, customers, vendors, or salespeople you want to view figures for in your analysis report. You must fill in the **Type**, **Range**, and the **Description** fields.
 
 > [!NOTE]  

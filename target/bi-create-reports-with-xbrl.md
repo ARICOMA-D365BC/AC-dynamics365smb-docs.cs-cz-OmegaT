@@ -73,7 +73,7 @@ You set up the XBRL Lines by mapping the data in the taxonomy to the data in you
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **XBRL Taxonomies**, and then choose the related link.
 2. On the **XBRL Taxonomies** page, select a taxonomy from the list.
-3. Choose the **Lines** action.
+3. Vyberte akci **Řádky**.
 4. Select a line and fill in the fields.
 5. To read detailed information about what to fill in, choose the **Information** action.
 6. To set up the mapping of the general ledger accounts in the chart of accounts to the XBRL lines, choose the **G/L Map Lines** action.

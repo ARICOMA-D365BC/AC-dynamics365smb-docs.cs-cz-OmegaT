@@ -136,7 +136,7 @@ In the following steps, you first map intercompany dimensions to dimensions for 
 2. On the **Intercompany Dimensions** page, select the lines that you want to automatically map, and then choose the **Map to Dim. with Same Code** action.'
 3. For each intercompany dimension that isn't mapped automatically, fill in the **Map-to Dimension Code** field.
 
-   You may have to add the field to your view. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+   You may have to add the field to your view. Pro více informací navštivte [Přizpůsobení Vašeho pracovního prostoru](ui-personalization-user.md).
 4. Choose the **Intercompany Dimension Values** action.
 5. On the **Intercompany Dimension Values** page, fill in the **Map-to Dimension Value Code** field.
 

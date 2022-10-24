@@ -88,102 +88,102 @@ Následující postupy vysvětlují čtyři různé způsoby zaúčtování zlev
 
 ### Zpracování částky platby, která se rovná diskontované částce a jejíž datum platby je před datem slevy
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Zadejte částku platby do pole **Přijatá částka**. Částka se rovná částce v **Rem. Částka  za pole Sleva**.
+2. Zadejte částku platby do pole **Přijatá částka**. Částka se rovná částce v **zůstatku částky  po slevě**.
 
    Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
-3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **Platba. pole Datum slevy**.
+3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **datu. skonta**.
 4. Ověřte, zda pole **Zbývající částka** obsahuje nulu (0).
 5. Zvolte akci **Zaúčtovat platby** pro zaúčtování úplné platby na hlavní knihu, bankovní účty a účty zákazníků.
 
 ### Zpracování částky platby, která se rovná diskontované částce, ale jejíž datum platby je po datu slevy
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Zadejte částku platby do pole **Přijatá částka**. Částka se rovná částce v **Rem. Částka  za pole Sleva**.
+2. Zadejte částku platby do pole **Přijatá částka**. Částka se rovná částce v **zůstatku částky  po slevě**.
 
    Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
-3. Do pole **Datum přijetí** zadejte datum platby, které je po datu v **Platba pole Datum slevy**. Pole data se změní na červené písmo a v dolní části stránky se zobrazí chybová zpráva.
+3. Do pole **Datum přijetí** zadejte datum platby, které je po datu v **Platba skonta**. Pole data se změní na červené písmo a v dolní části stránky se zobrazí chybová zpráva.
 
    > [!TIP]  
    > Pokud chcete udělat výjimku a poskytnout slevu, i když je platba opožděná, postupujte takto:
 4. Vyberte akci **Podrobnosti**.
-5. Na stránce **Platební údaje** v **Platba Discount Date** field on the **Payment Discount** FastTab, enter a date that is after the date in the **Date Received** field on the **Payment Registration** page.
+5. Na stránce **Platební údaje** v **datu Skonta** na pevné záložce **Skonto**, zadejte datum, které je po datu do pole **Datum přijetí** na stránce **Registrace platby</g5 > .
 
-   The error message and the red font disappear, and you can proceed to process the discounted payment.
-6. Verify that the **Remaining Amount** field contains the amount that remains to pay the full invoice amount.
-7. Choose the **Post Payments** action to post the partial payment to general ledger, bank, and customer accounts.
+   Chybová zpráva a červené písmo zmizí a můžete pokračovat ve zpracování zvýhodněné platby.
+6. Ověřte, zda pole **Zbývající částka** obsahuje částku, která zbývá k zaplacení celé fakturované částky.
+7. Zvolte akci **Zaúčtovat platby**, chcete-li zaúčtovat částečnou platbu na účty hlavní knihy, banky a odběratele.
 
-The related document remains open.
+Související dokument zůstane otevřený.
 
-### To process a payment that is lower than the remaining discounted amount
+### Zpracování platby, která je nižší než zbývající diskontovaná částka
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Zadejte částku platby do pole **Přijatá částka**. The amount is lower than the amount in the **Rem. Částka  za pole Sleva**.
+2. Zadejte částku platby do pole **Přijatá částka**. Částka je nižší než částka v **zůstatku částky  po slevě**.
 
    Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
-3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **Platba. pole Datum slevy**.
-4. Verify that the **Remaining Amount** field contains the amount that remains to pay the discounted amount.
-5. Choose the **Post Payments** action to post the partial payment to general ledger, bank, and customer accounts.
+3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **datu. skonta**.
+4. Ověřte, zda pole **Zbývající částka** obsahuje částku, která zbývá k zaplacení zlevněné částky.
+5. Zvolte akci **Zaúčtovat platby**, chcete-li zaúčtovat částečnou platbu na účty hlavní knihy, banky a odběratele.
 
-The related document remains open.
+Související dokument zůstane otevřený.
 
-### To process a payment that is more than the remaining discounted amount
+### Zpracování platby, která je vyšší než zbývající zlevněná částka
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. Zadejte částku platby do pole **Přijatá částka**. The amount is more than the amount in the **Rem. Částka  za pole Sleva**.
+2. Zadejte částku platby do pole **Přijatá částka**. Částka je vyšší než částka v **zůstatku částky  po slevě**.
 
    Zaškrtávací políčko **Platba byla provedena** je automaticky zaškrtnuto a pole **Datum přijetí** je vyplněno pracovním datem.
-3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **Platba. pole Datum slevy**.
+3. Do pole **Datum přijetí** zadejte datum platby. Datum je před datem v **datu. skonta**.
 4. Ověřte, zda pole **Zbývající částka** obsahuje nulu (0).
 5. Zvolte akci **Zaúčtovat platby** pro zaúčtování úplné platby na hlavní knihu, bankovní účty a účty zákazníků.
 
 The related document is closed, and the customer is credited the excess payment amount.
 
-## To find a specific sales document that is not fully invoiced
-The **Payment Registration** page supports you in tasks needed to balance internal accounts with actual cash figures to ensure effective collection from customers. It shows outstanding incoming payments as lines that represent sales documents where an amount is due for payment.
+## Chcete-li najít specifický prodejní doklad, který není plně fakturován
+Stránka **Registrace plateb** vám pomůže v úkolech potřebných k vyrovnání interních účtů se skutečnými hotovostními částkami, aby bylo zajištěno efektivní inkaso od zákazníků. Zobrazuje neuhrazené příchozí platby jako řádky, které představují prodejní doklady, kde je splatná částka.
 
-Typically, when a payment has been made, recorded in the bank or otherwise, the related sales or purchase document is represented as a line on the **Payment Registration** page because the document in question is waiting for the payment to be posted against the outstanding amount. However, sometimes a payment that has been made is not represented by a line on the **Payment Registration** page, typically because the document in question has not been fully invoice posted.
+Obvykle, když byla provedena platba, zaznamenána v bance nebo jinak, související prodejní nebo nákupní doklad je reprezentován jako řádek na stránce **Registrace platby**, protože příslušný dokument čeká na zaúčtování platby proti dlužné částce. Někdy však platba, která byla provedena, není na stránce znázorněna řádkem **Registrace platby** , obvykle proto, že příslušný doklad nebyl zcela zaúčtován.
 
-On the **Document Search** page, you can search among documents that are not fully invoiced. You can search based on one or more of the following criteria:
+Na stránce **Hledání dokumentu** můžete vyhledávat mezi dokumenty, které nejsou plně fakturovány. Můžete vyhledávat na základě jednoho nebo více z následujících kritérií:
 
-* Document number
-* Amount or amount range
+* Číslo dokladu
+* Množství nebo rozsah částek
 
-The following procedure explains how to find a specific document by using both search criteria.
+Následující postup vysvětluje, jak najít konkrétní dokument pomocí obou kritérií vyhledávání.
 
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
-2. With the pointer on any line, Choose the **Search Documents** action.
-3. On the **Document Search** page, enter a search value in the **Document No.** field.
+2. S ukazatelem na libovolném řádku zvolte akci **Hledat dokumenty**.
+3. Na stránce **Vyhledávání dokumentů** zadejte hledanou hodnotu do pole **Číslo dokumentu**.
 
    > [!NOTE]  
-   > The value that you enter in this field is enclosed in hidden wildcard characters. This means that the function searches for all document numbers that contain the entered value.
-4. In the **Amount** field, enter the specific amount that exists on the document that you want to find.
-5. In the **Amount Tolerance %** field, enter a percentage value to define the range of amounts that you want to search to find the open document.
+   > Hodnota, kterou zadáte do tohoto pole, je uzavřena skrytými zástupnými znaky. To znamená, že funkce vyhledá všechna čísla dokumentů, která obsahují zadanou hodnotu.
+4. V poli **Částka** zadejte konkrétní částku, která existuje v dokladu, který chcete najít.
+5. V poli **Tolerance částky %** zadejte procentuální hodnotu pro definování rozsahu částek, které chcete vyhledat pro otevřený dokument.
 
-   If you enter 10, then the function will search for amounts in a range between ten percent lower and ten percent higher than the value in the **Amount** field.
-6. Choose the **Search** action.
+   Pokud zadáte hodnotu 10, funkce vyhledá částky v rozsahu mezi deseti procenty nižšími a o deset procent vyššími, než je hodnota v poli **Částka**.
+6. Zvolte akci **Hledat**.
 
-The Search function searches among documents that are not fully invoiced based on the specified criteria.
+Funkce Hledat vyhledává mezi dokumenty, které nejsou plně fakturovány na základě zadaných kritérií.
 
-If one or more documents match the criteria, then the **Document Search Result** page opens to display lines that represent those documents. Each line contains a document number, description, and amount so that you can easily find a specific document, for example based on information on your bank statement.
+Pokud kritéria splňuje jeden nebo více dokumentů, otevře se stránka **Výsledek hledání dokumentu**, na které se zobrazí řádky, které tyto dokumenty představují. Každý řádek obsahuje číslo dokladu, popis a částku, abyste mohli snadno najít konkrétní doklad, například na základě informací z vašeho bankovního výpisu.
 
 Pokud platba v bance není reprezentována žádným dokumentem v [! INCLUDE[prod_short](includes/prod_short.md)] pak můžete otevřít předvyplněný hlavní deník ze stránky **Registrace platby** a zaúčtovat platbu přímo na vyrovnávací účet bez použití platby na doklad. Případně můžete chtít evidovat platbu v deníku, dokud nebude vyřešen původ platby.
 
-## To record or post a payment without a related document
-If a payment in the bank is not represented by any document in [!INCLUDE[prod_short](includes/prod_short.md)], then you can open a prefilled general journal line from the **Payment Registration** page to post the payment directly to the balancing account without applying the payment to a document. Alternatively, you may want to record the payment in the journal until the origin of the payment has been clarified.
+## Zaznamenání nebo zaúčtování platby bez souvisejícího dokladu
+Pokud platba v bance není reprezentována žádným dokumentem v [! INCLUDE[prod_short](includes/prod_short.md)], pak můžete otevřít předvyplněný řádek hlavního deníku ze stránky **Registrace platby** a zaúčtovat platbu přímo na vyrovnávací účet bez použití platby na doklad. Případně můžete chtít zaznamenat platbu do deníku, dokud nebude objasněn původ platby.
 
 1. Zvolte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Platební registrace** a pak zvolte související odkaz.
 
-   Proceed to record an undocumented payment.
-2. Choose the **General Journal** action.
+   Pokračujte v zaznamenávání nezdokumentované platby.
+2. Zvolte akci **Hlavní deník**.
 
-   The **General Journal** page opens with one line prefilled with the balancing account of the journal batch that is set up on the **Payment Registration Setup** page.
-3. Fill in the remaining fields on the general journal line, such as the amount and the customer number or other information from the bank statement. For more information, see [Post Transactions Directly to the General Ledger](finance-how-post-transactions-directly.md).
+   Otevře se stránka **Finanční deník** s jedním řádkem předvyplněným vyrovnávací účtem dávky deníku, který je nastaven na stránce **Nastavení registrace plateb**.
+3. Vyplňte zbývající pole na řádku finančního deníku, například částku a číslo zákazníka nebo jiné informace z bankovního výpisu. Další informace naleznete v tématu [Zaúčtování transakcí přímo do hlavní knihy](finance-how-post-transactions-directly.md).
 
-You can either post the journal line to update the total on the balancing account. Alternatively, you can leave the journal line unposted, and perhaps append it with a note that the payment needs more analysis.
+Můžete buď zaúčtovat řádek deníku a aktualizovat součet na vyrovnávacím účtu. Případně můžete nechat řádek deníku nezaúčtovaný a možná k němu připojit poznámku, že platba vyžaduje další analýzu.
 
-If you leave the journal line unposted, it will add to the value in the **Unposted Balance** field at the bottom of the **Payment Registration** page.
+Pokud ponecháte řádek deníku nezaúčtovaný, přidá se k hodnotě v poli **Nezaúčtovaný zůstatek** v dolní části stránky **Registrace platby**.
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek  [  
+  Prodej[<x6/>  
+[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

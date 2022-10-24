@@ -33,8 +33,8 @@ To reconcile such payments, you can choose the **Transfer Difference to Account*
 > Similar functionality exists to set up automatic reconciliation of recurring payments that cannot be applied to related open customer, vendor, or bank account ledger entries. For more information, see [Map Text on Recurring Payments to Accounts for Automatic Reconciliation](receivables-how-map-text-recurring-payments-accounts-auto-reconcilliation.md).
 
 ## Odsouhlasení plateb, které nelze vyronávat automaticky
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.
-2. Otevřete deník odsouhlasení plateb. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
+1. Zvolte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Deníky odsouhlasení plateb** a pak zvolte související odkaz.
+2. Otevřete deník odsouhlasení plateb. Pro více informací navštivte [Automatické odsouhlasení plateb<x2/>.
 3. Choose the **Transfer Difference to Account**. The **Transfer Difference to Account** page opens.
 4. In the **Account Type** field, specify if the type of account that the payment amount will be posted to.
 5. In the **Account No.** field, specify the account that the payment amount will be posted to.
@@ -46,9 +46,9 @@ If the value in the **Difference** field was equal to the value in the **Transac
 If the value in the **Difference** field was lower than the value in the **Transaction Amount** field, then an additional journal line will be created with the same text and date and with the difference inserted in the **Transaction Amount** field. On the original journal line, the difference will be deducted from the value in the **Transaction Amount** field, and the payment will remain applied to its related customer, vendor, or bank account ledger entry. Při účtování deníku odsouhlasení plateb bude částka platby zaúčtovaná jako vyrovnání. Druhá část platby bude zaúčtována přímo na zadaný účet.
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek  [  
+  Prodej[<x6/>  
+[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

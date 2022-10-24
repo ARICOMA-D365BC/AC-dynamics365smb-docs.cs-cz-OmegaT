@@ -602,11 +602,11 @@
 ### [Post Capacities](production-how-to-post-capacities.md)
 ### [About Finished Production Order Costs](finance-about-finished-production-order-costs.md)
 
-## Warehouse Management
+## Správa skladu
 ### [Warehouse Management](warehouse-manage-warehouse.md)
 ### [Inventory and Warehouse Reports](inventory-WMS-reports.md)
 ### [Příjem zboží](warehouse-how-receive-items.md)
-### [Cross-Dock Items](warehouse-how-to-cross-dock-items.md)
+### [Přeožení zboží](warehouse-how-to-cross-dock-items.md)
 ### Put Items Away
 #### [Put Items Away](warehouse-put-away-items.md)
 #### [Zaskladnění zboží pomocí zaskladnění zásob](warehouse-how-to-put-items-away-with-inventory-put-aways.md)
@@ -1557,7 +1557,7 @@
 #### [Nastavení stavů pro Servisní zakázky a Opravy](service-order-repair-status.md)
 #### [Nastavení programu zápůjček](service-how-setup-loaner-program.md)
 #### [Nastavení servisních smluv](service-how-setup-service-contracts.md)
-### Set Up Complex Application Areas Using Best Practices
+### Nastavení složitých oblastí aplikací pomocí osvědčených postupů
 #### [Setup Best Practices](set-up-complex-application-areas-using-best-practices.md)
 #### Doporučené postupy nastavení: Plánování dodávek
 ##### [Set Up Supply Planning](setup-best-practices-supply-planning.md)
@@ -1609,7 +1609,7 @@
 ##### [OneDrive FAQ](admin-onedrive-faq.md)
 #### Use Power BI with Business Central
 ##### [Introduction](admin-powerbi.md)
-##### Administrator
+##### Správce
 ###### [Integration Overview](admin-powerbi-overview.md)
 ###### [Enable Power BI Integration](admin-powerbi-setup.md)
 ##### Report Creator

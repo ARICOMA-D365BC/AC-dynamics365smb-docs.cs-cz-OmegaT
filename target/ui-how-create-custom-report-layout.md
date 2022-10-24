@@ -13,72 +13,72 @@ ms.date: 03/06/2022
 ms.author: edupont
 
 ---
-# (Legacy) Create and Modify Custom Report Layouts
+# (Zastaralé) Vytvoření a úprava vlastní rozvržení sestavy
 
 [!INCLUDE[legacy-custom-layouts](includes/legacy-custom-layouts.md)]
 
-By default, reports have a built-in report layout. The layout can be either an RDLC report layout, a Word report layout, or both. You can't modify built-in layouts, but you can create custom layouts. A report can have multiple custom report layouts.
+Ve výchozím nastavení mají sestavy vestavěné rozvržení sestav. Rozložení může být buď rozvržení sestavy RDLC, rozvržení sestavy aplikace Word nebo obojí. Předdefinovaná rozvržení nelze upravovat, ale můžete vytvářet vlastní rozvržení. Sestava může mít více vlastních rozvržení sestavy
 
 > [!NOTE]  
-> In [!INCLUDE[prod_short](includes/prod_short.md)], the term "report" also covers externally-facing documents, such as sales invoices and order confirmations that you send to customers as PDF files.
+> V [!INCLUDE[prod_short](includes/prod_short.md)], se termín "sestava" vztahuje také na doklady určené pro externí použití, jako jsou prodejní faktury a potvrzení objednávek, které zasíláte zákazníkům jako soubory PDF..
 
-To create a custom layout, either copy an existing custom layout or add a new custom layout. Custom layouts are often based on a built-in layout. When you add a new custom layout, you can choose to add an RDLC or Word report layout type, or both. The new custom layout will be based on the built-in layout for the report, if one is available. If there's no built-in layout for the type, a new blank layout is a created. You'll have to modify and design this blank layout from scratch. For more information about RDLC and Word report layouts, built-in and custom layouts, and more, see [Manage Report Layouts](ui-manage-report-layouts.md).
+Chcete-li vytvořit vlastní rozvržení, zkopírujte existující vlastní rozvržení nebo přidejte nové vlastní rozvržení. Vlastní rozvržení jsou často založena na vestavěném rozložení. Když přidáte nové vlastní rozvržení, můžete přidat typ rozvržení sestavy RDLC nebo Word nebo obojí. Nové vlastní rozvržení bude založeno na předdefinovaném rozvržení sestavy, pokud je k dispozici. Pokud pro typ neexistuje žádné předdefinované rozvržení, vytvoří se nové prázdné rozvržení. Budete muset upravit a navrhnout toto prázdné rozvržení od nuly. Pro více informací o rozvržení sestav RDLC a Word, vestavěných a vlastních sestavách běžte na [Správa Rozvržení Sestav](ui-manage-report-layouts.md).
 
 > [!TIP]
-> Use account schedules to get insight into the financial data stored in your chart of accounts. For more information, see [Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md).
+> Pomocí účetního schímat získáte přehled o finančních údajích uložených v účtové osnově. Další informace naleznete v tématu [Příprava finančního výkaznictví s účetními schématy a kategoriemi účtů](bi-how-work-account-schedule.md).
 
-After you define custom report layouts, you can select them on the Customer Card and Vendor Card pages. The layouts will be used when you create documents for the customer or vendor. For more information, see [Define Document Layouts for Customers and Vendors](ui-define-customer-vendor-document-layouts.md).
+Po definování vlastních rozložení sestav je můžete vybrat na stránkách Karty zákazníka a Karty dodavatele. Rozvržení budou použita při vytváření dokladů pro zákazníky nebo dodavatele. Další informace naleznete v tématu [Definování rozvržení dokladů pro zákazníky a dodavatele](ui-define-customer-vendor-document-layouts.md).
 
-You can also use custom report layouts to add content to email messages. Report layouts can save time and help ensure consistency by reusing the same content when you communicate with your customers. Chcete-li použít vlastní rozvržení sestavy pro e-mail, typ souboru pro rozvržení musí být Word. You can't use the RDLC file type. For more information, see [Set Up Reusable Email Texts and Layouts](admin-how-setup-email.md#set-up-reusable-email-texts-and-layouts).
+K přidání obsahu do e-mailových zpráv můžete také použít vlastní rozvržení sestavy. Rozvržení sestav může například ušetřit čas a pomoci zajistit konzistenci tím, že při komunikaci se zákazníky znovu použije stejný obsah. Chcete-li použít vlastní rozvržení sestavy pro e-mail, typ souboru pro rozvržení musí být Word. Nelze použít typ souboru RDLC. Pro více informací navštivte <g2> Nastavení opakovaně použitelných e-mailových textů a rozvržení</g2>.
 
-## To create a custom layout
+## Vytvoření vlastního rozvržení
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Report Layout Selection**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Výběr rozvržení sestav** a poté vyberte související odkaz.
 
-   The **Report Layout Selection** page lists all the reports that are available in the company that is specified in the **Company Name** field at the top of the page.
-2. In the **Company Name** field, choose the company for which you want to create the report layout.
-3. Select the row for the report that you want to create the layout for, and then choose the **Custom Layouts** action.
+   Na stránce **Výběr rozvržení sestav** jsou uvedeny všechny přehledy, které jsou k dispozici ve společnosti specifikované v poli **Název společnosti** v horní části stránky.
+2. V poli **Název společnosti** vyberte společnost, pro kterou chcete vytvořit rozvržení sestavy.
+3. Vyberte řádek pro sestavu, pro kterou chcete vytvořit rozvržení, a pak zvolte akci **Vlastní rozvržení**.
 
-   The **Custom Report Layouts** page appears and lists all the custom layouts that are available for the selected report.
-4. If you want to create a copy of an existing custom layout, select the existing custom layout in the list, and then choose the **Copy** action.
+   Otevře se stránka **Vlastní rozvržení sestav** a zobrazí se všechna vlastní rozvržení, která jsou k dispozici pro vybranou sestavu.
+4. Pokud chcete vytvořit kopii existujícího vlastního rozvržení, vyberte existující vlastní rozvržení v seznamu a poté vyberte akci **Kopírovat**.
 
-   The copy of the custom layout appears on the **Custom Report Layouts** page and has the words *Copy of* in the **Description** field.
-5. If you want to add a new custom layout that is based on a built-in layout, do the following steps:
-   1. Vyberte akci **Nový**. The **Insert Built-in Layout for a Report** page appears. The **ID** and **Name** fields are automatically filled in.
-   2. To add a custom Word report layout type, turn on the **Insert Word Layout** toggle.
-   3. To add a custom RDLC report layout type, turn on the **Insert RDLC Layout** toggle.
+   Kopie vlastního rozvržení se zobrazí na stránce **Vlastní rozvržení sestav** a v poli *Popis* obsahuje slova **Kopírovat z**
+5. Pokud chcete přidat nové vlastní rozvržení založené na vestavěném rozvržení, postupujte takto:
+   1. Vyberte akci **Nový**. Zobrazí se stránka **Vložit rozvržení sestavy**. Pole **ID** a **Název** jsou automaticky vyplněny.
+   2. Chcete-li přidat vlastní typ rozvržení sestavy aplikace Word, zaškrtněte políčko **Vložit rozvržení Wordu**.
+   3. Chcete-li přidat vlastní typ rozvržení sestavy RDLC, zaškrtněte políčko **Vložit RDLC rozvržení**.
    4. Zvolte tlačítko **OK**.
 
-   The new custom layout now appears on the **Custom Report Layouts** page. If a new layout is based on a built-in layout, then it has the words **Copy of a Built-in Layout** in the **Description** field. If there was no built-in layout for the report, then the new layout has the words **New Layout** in the **Description** field, which indicates that custom layout is blank.
-6. By default, the **Company Name** field is blank, which means that the custom layout will be available for the report in all companies. To make the custom layout available in a specific company only, choose **Edit**, and then set the **Company Name** field to the company that you want.
+   Nové vlastní rozvržení se zobrazí na stránce **Vlastní rozvržení sestav**. Pokud je nové rozvržení založeno na vestavěném rozvržení, bude v poli **Popis** uvedeno **Kopírovat z Vestavěné rozvržení**. Pokud pro sestavu nebylo žádné vestavěné rozvržení, má nové rozvržení v poli **Popis** slova **Nové rozvržení**, což znamená, že vlastní rozvržení je prázdné.
+6. Ve výchozím nastavení je pole **Název společnosti** prázdné, což znamená, že vlastní rozvržení bude k dispozici pro sestavu ve všech společnostech. Chcete-li zpřístupnit vlastní rozvržení pouze v určité společnosti, zvolte **Upravit** a poté nastavte pole **Název společnosti** na požadovanou společnost.
 
-The custom layout has been created. You can now modify the custom layout as needed.
+Vlastní rozvržení bylo vytvořeno. Nyní můžete upravit vlastní rozvržení podle potřeby.
 
 > [!TIP]
-> You can export the report results to an Excel file for viewing the full dataset, including all columns, but without the layout. The Excel file can help you validate that the report returns the expected data or diagnose problems. For more information, see [Analyzing Report Data with Excel](report-analyze-excel.md).
+> Výsledky sestavy můžete exportovat do souboru aplikace Excel pro zobrazení celé datové sady, včetně všech sloupců, ale bez rozvržení. Soubor aplikace Excel vám může pomoci ověřit, zda sestava vrací očekávaná data nebo diagnostikovat problémy. Pro více informací navštivte [Analýza dat sestav pomocí Excelu](report-analyze-excel.md).
 
-## <a name="ModifyCustomLayout"></a>Modifying a custom layout
+## <a name="ModifyCustomLayout"></a>Úprava vlastního rozvržení
 
-To modify a report layout, you must first export the report layout as a file to a location on your computer or network. Then, open the exported document and make the changes. When you're finished making the changes, you import the report layout.
+Chcete-li změnit rozvržení sestavy, musíte nejprve exportovat rozvržení sestavy jako soubor do umístění v počítači nebo síti. Poté otevřete exportovaný dokument a proveďte změny. Po dokončení změn importujete rozvržení sestavy.
 
-### To modify a custom layout
+### Úprava vlastního rozvržení
 
-1. You export a custom layout from the **Custom Report Layouts** page. If this page isn't already open, search for and open the **Report Layout Selection** page, select the report that has the layout that you want to modify, and then choose the **Custom Layouts** action.
-2. On the **Custom Report Layouts** page, select the layout that you want to modify, choose the **Export Layout** action, and then choose **Save** or **Save As** to save the report layout document to a location on your computer or network.
-3. Open the report layout document that you saved, and then make changes.
+1. Vlastní rozvržení exportujete ze stránky **Vlastní rozvržení sestav**. Pokud tato stránka ještě není otevřené, vyhledejte a otevřete stránku **Výběr rozvržení sestav**, vyberte sestavu, která má rozvržení, které chcete upravit, a poté vyberte akci **Vlastní rozvržení**
+2. Na stránce **Vlastní rozvržení sestav** vyberte rozvržení, které chcete upravit, vyberte akci **Exportovat rozvržení** a poté zvolte **Uložit** nebo **Uložit jako**, chcete-li dokument rozvržení sestavy uložit do umístění v počítači nebo síti.
+3. Otevřete dokument rozvržení sestavy, který jste právě uložili, a proveďte změny.
 
-   If you're changing a Word layout, open the layout document in Word. For editing details, see [Work with Word Layouts](ui-how-add-fields-word-report-layout.md)<!--the next section [Making Changes to the Report Layout](ui-how-create-custom-report-layout.md#MakeChangesToLayout)-->.
+   Pokud měníte rozvržení aplikace Word, otevřete dokument rozvržení v aplikaci Word. Pro více informací navštivte [Práce s rozvržením aplikace Word](ui-how-add-fields-word-report-layout.md)<!--the next section [Making Changes to the Report Layout](ui-how-create-custom-report-layout.md#MakeChangesToLayout)-->.
 
-   RDLC report layouts are more advanced than Word report layouts. For more information about modifying an RDLC report layout, see [Designing RDLC Report Layouts](/dynamics-nav/Designing-RDLC-Report-Layouts).
+   Rozložení sestavy RDLC je pokročilejší než rozložení sestavy Word. Další informace o úpravě rozvržení sestavy RDLC naleznete v tématu [Navrhování rozvržení sestav RDLC](/dynamics-nav/Designing-RDLC-Report-Layouts).
 
-   Remember to save your changes when you're done.
+   Po dokončení nezapomeňte změny uložit.
 
-4. Return to the **Custom Report Layouts** page, select the report layout that you exported and modified, and then choose the **Import Layout** action.
+4. Vraťte se na stránku **Vlastní rozvržení sestav**, vyberte rozvržení sestavy, které jste exportovali a upravili, a poté vyberte akci **Importovat rozvržení**.
 
-5. In the **Import** dialog box, select **Choose** to find and select the modified report layout document, and then choose **Open**.
+5. V dialogovém okně **Import** zvolte **Vybrat** aby jste našli a vybrali dokument, který definuje rozvržení sestavy a poté zvolte **Otevřít**.
 
 > [!IMPORTANT]
-> Remember to import the report layout document that you modified. Otherwise, the new report layout will not be available.
+> Nezapomeňte importovat dokument rozvržení sestavy, který jste upravili. V opačném případě nebude nové rozložení sestavy k dispozici.
 
 <!--
 ##  <a name="MakeChangesToLayout"></a> Create and Modify Custom Report Layouts
@@ -118,13 +118,13 @@ Adding data fields from a report dataset is a more advanced and requires some kn
 
 ## Viz také
 
-[Managing Report Layouts](ui-manage-report-layouts.md)  
-[Change the Current Report Layout](ui-how-change-layout-currently-used-report.md)  
-[Import and Export a Custom Report or Document Layout](ui-how-import-and-export-report-layout.md)  
-[Work with Reports, Batch Jobs, and XMLports](ui-work-report.md)  
-[Prepare Financial Reporting with Account Schedules and Account Categories](bi-how-work-account-schedule.md)
+[Správa rozvržení sestav](ui-manage-report-layouts.md)  
+[Změna aktuáního rozvržení sestavy](ui-how-change-layout-currently-used-report.md)  
+[Import a Export vlastního rozvržení sestav](ui-how-import-and-export-report-layout.md)  
+[Práce se sestavamy, dávkovými úlohami a XMLporty](ui-work-report.md)  
+[Příprava finančních výkazů s účtovým rozvrhem a kategoriemi účtů](bi-how-work-account-schedule.md)
 [Business Intelligence](bi.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

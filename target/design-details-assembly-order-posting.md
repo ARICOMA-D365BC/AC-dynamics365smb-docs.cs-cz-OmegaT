@@ -3,7 +3,7 @@
     description: Assembly order posting is based on the same principles as when posting the similar activities of sales orders and production consumption/output.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

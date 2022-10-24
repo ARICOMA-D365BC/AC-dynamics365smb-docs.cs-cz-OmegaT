@@ -34,8 +34,8 @@ Any gains-and-loss adjustment required due to currency conversions is not handle
 > You can only apply a payment to one account. Pokud chcete vyrovnání rozdělit na více otevřených položek, například chcete-li vyrovnat jednorázovou platbu, musí být otevřená položka pro stejný účet. Pro více informací se podívejte na kroky 7 a 8 v postupu tohoto tématu.
 
 ## Kontrola nebo vyrovnání plateb po automatickém vyrovnání
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journals**, and then choose the related link.
-2. Otevřete deník odsouhlasení plateb pro bankovní účet, pro který chcete odsouhlasit platby. For more information, see [Reconcile Payments Using Automatic Application](receivables-how-reconcile-payments-auto-application.md).
+1. Zvolte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Deníky odsouhlasení plateb** a pak zvolte související odkaz.
+2. Otevřete deník odsouhlasení plateb pro bankovní účet, pro který chcete odsouhlasit platby. Pro více informací navštivte [Automatické odsouhlasení plateb<x2/>.
 3. On the **Payment Reconciliation Journal** page, select a payment that you want to review or manually apply to one or more open entries, and then choose the **Apply Manually** action.
 4. Select the **Applied** check box on the line for the open entry that you want to apply the payment to.
 5. The payment amount, which is also shown in the **Transaction Amount** field on the **Payment Application** page, is inserted in the **Applied Amount** field, but you can modify the field, for example if you want to apply the amount to several open entries.
@@ -47,9 +47,9 @@ Any gains-and-loss adjustment required due to currency conversions is not handle
 The **Payment Application** page  closes, and on the **Payment Reconciliation Journal** page, the value in the **Match Confidence** field is changed to **Accepted** to indicate to you that you have reviewed or manually applied the payment.
 
 ## Viz také
-[Managing Receivables](receivables-manage-receivables.md)  
-[Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Správa pohledávek  [  
+  Prodej[<x6/>  
+[Práce s [!INCLUDE<x7/>prod_short<x8/>]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

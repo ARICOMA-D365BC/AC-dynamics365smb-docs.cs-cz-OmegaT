@@ -3,7 +3,7 @@
     description: Expected costs represent the estimation of, for example, a purchased item’s cost that you record before you receive the invoice for the item.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -33,7 +33,7 @@ To make it possible to post expected costs you need to do the following:
 
 On the **Inventory Posting Setup** page, verify the **Inventory Account** and the **Inventory Account (Interim)** fields for the **Location Code and Invt. Posting Group Code** of the item you will be purchasing. To learn more about these accounts see [Design Details - Accounts in the General Ledger](design-details-accounts-in-the-general-ledger.md).
 3. On the **General Posting Setup** page, verify the **Invt. Accrual Acc. (Interim)** field for the **Gen. účto  Posting Group** and the **Gen. účto  Posting Group** you will be using.
-4. When you create a purchase order the default is that the **Vendor Invoice No.** field is required. You need to turn that off on the **Purchase & Payables Setup** page, by unselecting the **Ext. Doc. Č.. Mandatory** field.
+4. When you create a purchase order the default is that the **Vendor Invoice No.** field is required. You need to turn that off on the **Purchase & Payables Setup** page, by unselecting the **Ext. Doc. Čísla. Mandatory** field.
 
 ## Příklad
 

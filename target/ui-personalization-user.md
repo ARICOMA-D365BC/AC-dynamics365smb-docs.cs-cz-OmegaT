@@ -49,8 +49,7 @@ As for other personalization, the changes you make to column width are stored on
 
    The **Personalizing** banner appears at the top to indicate that you can start making changes.
 
-   > [!NOTE]
-   > To navigate during personalization, use Ctrl + Click on an action if it is highlighted by the arrowhead.
+   > Chcete-li se během personalizace pohybovat, použijte klávesovou zkratku Ctrl + klikněte na akci, pokud je zvýrazněna šipkou.
 
    If you see a ![Personalize Lock](media/personalization-lock-icon.png "Personalize lock") or ![Personalization blocked](media/personalization-blocked-icon.png "Personalization blocked") on the banner, you can't personalize the page. For more information, see [Why a Page is Locked from Personalization](ui-personalization-locked.md).
 

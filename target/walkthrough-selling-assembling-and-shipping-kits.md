@@ -1,9 +1,9 @@
 ---
     title: Selling, Assembling, and Shipping Kits
-    description: To support just-in-time inventory, assembly orders can be automatically created and linked as soon as the sales order line is created.
+    description: To support just-in-time inventory, assembly orders can be automatically created and linked as soon as the sales order line is created. 
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -235,7 +235,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 7. Na řádku montážní objednávky pro zboží 80210 zvolte pole **Číslo** a místo toho vyberte položku 80209.
 8. Vytvořte nový řádek montážní objednávky s následujícími informacemi.
 
-   | Typ | Č.. | Množství za |
+   | Typ | Čísla. | Množství za |
    |----------|---------|------------------|  
    | Zboží | 80203 | 1 |
 
@@ -249,7 +249,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 13. Na záložce **Řádky** vyberte **Řádek** zvolte **Montáž na objednávku** a poté vyberte **Řádky montáže na zakázku**.
 14. Na stránce **Řádky montáže na zakázku** vytvořte nový řádek montážní zakázky s následujícími informacemi.
 
-   | Typ | Č.. | Množství za |
+   | Typ | Čísla. | Množství za |
    |----------|---------|------------------|  
    | Zboží | 80203 | 1 |
 
@@ -266,7 +266,7 @@ Když je prodejní objednávka později zaúčtována jako plně fakturovaná, p
 2. Vyberte akci **Vypočítat regenerační plán**.
 3. Na stránce **Vypočítat plán** nastavte následující filtry.
 
-   | Počáteční datum | Koncové datum | Č.. |
+   | Počáteční datum | Koncové datum | Čísla. |
    |-------------------|-----------------|---------|  
    | 01-23-2014 | 01-27-2014 | Sada A – Základní PC |
 

@@ -3,7 +3,7 @@
     description: This topic describes the actions that are needed to take to prevent selling a defective item, and also how to trace and recall items when needed.
     author: brentholtorf
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -145,7 +145,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 2. Vyberte skupinu **Nový**.
 3. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí.
 
-   | Číslo původu | Množství | Sériové číslo |
+   | čísla zdroje protiúčtu | Množství | Sériové číslo |
    |----------|--------|----------|  
    | 1002 | 2 | SČ1 |
    | 1002 | 2 | SČ2 |
@@ -166,7 +166,7 @@ Pak musíte vytvořit různé nákupní, výrobní a prodejní transakce, které
 12. Vyberte akci **Nový**.
 13. Vytvořte novou vydanou výrobní zakázku vyplněním následujících polí v záhlaví.
 
-   | Číslo původu | Množství | Sériové číslo |
+   | čísla zdroje protiúčtu | Množství | Sériové číslo |
    |----------------|--------------|----------------|  
    | 1002 | 2 | SČ3 |
    | 1002 | 2 | SČ4 |

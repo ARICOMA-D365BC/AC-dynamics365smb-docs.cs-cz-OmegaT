@@ -13,59 +13,59 @@ ms.date: 06/23/2021
 ms.author: jswymer
 
 ---
-# Accessibility and Keyboard Shortcuts
+# Usnadnění přístupu a klávesové zkratky
 
-This article provides information about the features that make [!INCLUDE[prod_short](includes/prod_short.md)] readily available to people with disabilities. [!INCLUDE[prod_short](includes/prod_short.md)] supports the following accessibility features:
+Tento článek obsahuje informace o funkcích, které vytvářejí [!INCLUDE[prod_short](includes/prod_short.md)] snadno dostupný osobám se zdravotním postižením. [!INCLUDE[prod_short](includes/prod_short.md)] podporuje následující funkce usnadnění:
 
-- Keyboard shortcuts. See [Keyboard Shortcuts](keyboard-shortcuts.md).
-- Touch and pen gestures on tablets and phones. See [Touch and Pen Gestures](touch-gestures.md).
-- Navigation
-- Headings
-- Alternative text for images and links
-- Support for common assistive technologies
-- Zoom in or out on any page
-- Tooltips on elements in the user interface
+- Klávesové zkratky. Viz [Klávesové zkratky.](keyboard-shortcuts.md).
+- Dotyková gesta a gesta pera na tabletech a telefonech. Viz [Dotyková gesta a gesta pera na tabletech a telefonech.](touch-gestures.md).
+- Navigace
+- Záhlaví
+- Alternativní text pro obrázky a odkazy
+- Podpora běžných asistenčních technologií
+- Přiblížit nebo oddálit libovolnou stránku
+- Popisky prvků v uživatelském rozhraní
 
 [!INCLUDE [about-ui-learn](includes/about-ui-learn.md)]
 
-## <a name="Navigation"></a> Navigation
+## <a name="Navigation"></a> Navigace
 
-You can use different combinations of the Tab, Shift, and arrow keys of your keyboard to move between elements on a page. Elements include actions, fields and columns, parts, and other controls. In general, press Tab or Shift+Tab to move to the next or previous element.
+K pohybu mezi prvky na stránce můžete použít různé kombinace kláves Tab, Shift a šipek na klávesnici. Prvky zahrnují akce, pole a sloupce, součásti a další ovládací prvky. Obecně se stisknutím klávesy Tab nebo Shift+Tab přesunete na další nebo předchozí prvek.
 
-When you focus on an area that contains actions, like the navigation bar on the top of role center or action bar on other pages, use the arrows keys to move through the different actions and groups. Press Enter on a group to open its underlying actions, and then continue using the arrows keys. Press Tab or Shift+Tab to move out of the action area.
+Když se zaměříte na oblast, která obsahuje akce, jako je navigační panel v horní části centra rolí nebo panel akcí na jiných stránkách, můžete pomocí kláves se šipkami procházet různými akcemi a skupinami. Stisknutím klávesy Enter u skupiny otevřete její základní akce a pokračujte pomocí kláves se šipkami. Stisknutím klávesy Tab nebo Shift+Tab se přesuňte z oblasti akcí.
 
-By using the tab order, you can also switch between the main browser page and dialog boxes that request confirmation, for example, or the sign-in page.
+Pomocí pořadí ovládacích prvků můžete také přepínat mezi hlavní stránkou prohlížeče a dialogovými okny, která požadují například potvrzení, nebo přihlašovací stránkou
 
-## <a name="Headings"></a> Headings in Content
+## <a name="Headings"></a> Nadpisy v obsahu
 
-The HTML source for [!INCLUDE[prod_short](includes/prod_short.md)] content uses tags to help users of assistive technology to understand the structure and content of the page. For example, on list pages, the columns are defined in TH tags and the column headings are set with TITLE attribute inside the tag. Captions for elements, such as FastTabs, FactBoxes, and fields are included in heading tags (H1, H2, H3, and H4).
+Zdrojový kód HTML pro [!INCLUDE[prod_short](includes/prod_short.md)] používá značky, které pomáhají uživatelům asistenčních technologií porozumět struktuře a obsahu stránky. Například na stránkách seznamu jsou sloupce definovány ve značkách TH a záhlaví sloupců jsou nastavena s atributem TITLE uvnitř značky. Popisky prvků, jako jsou Záložky, Informační okna a pole, jsou součástí značek nadpisů (H1, H2, H3 a H4).
 
-## <a name="Images"></a> Image and Links
+## <a name="Images"></a> Obrázek a odkazy
 
-A descriptive text for images is set with the ALT attribute inside the IMG tag. A descriptive text for hyperlinks is set with the title attribute inside the A tag.
+Popisný text pro obrázky je nastaven s atributem ALT uvnitř tagu IMG. Popisný text pro hypertextové odkazy je nastaven s atributem title uvnitř tagu A.
 
-## <a name="AssistiveTech"></a> Assistive Technologies
+## <a name="AssistiveTech"></a> Asistenční technologie
 
-[!INCLUDE[prod_short](includes/prod_short.md)] supports various assistive technologies, such as high contrast, screen readers, and voice recognition software. Some assistive technologies may not work well with certain elements in [!INCLUDE[prod_short](includes/prod_short.md)] pages.
+[!INCLUDE[prod_short](includes/prod_short.md)] podporuje různé asistenční technologie, jako je vysoký kontrast, čtečky obrazovky a software pro rozpoznávání hlasu. Některé asistenční technologie nemusí s určitými prvky na stránkách [!INCLUDE[prod_short](includes/prod_short.md)] fungovat správně.
 
-## <a name="zoom"></a> Zoom
+## <a name="zoom"></a> Zvětšení
 
-Most browsers use standard keyboard shortcuts to zoom in and out on the current page. These keyboard shortcuts aren't specific to [!INCLUDE [prod_short](includes/prod_short.md)], but they work when you use [!INCLUDE [prod_short](includes/prod_short.md)] in a browser. For a list of supported keyboard shortcuts, see [Keyboard Shortcuts for Zooming In and Out](keyboard-shortcuts.md#zoomshortcuts).
+Většina prohlížečů používá k přiblížení a oddálení aktuální stránky standardní klávesové zkratky. Tyto klávesové zkratky nejsou specifické pro [!INCLUDE [prod_short](includes/prod_short.md)], ale fungují, když použijete [!INCLUDE [prod_short](includes/prod_short.md)] v prohlížeči. Seznam podporovaných klávesových zkratek naleznete v [Klávesové zkratky pro přiblížení a oddálení](keyboard-shortcuts.md#zoomshortcuts).
 
-## Tooltips
+## Tooltipy
 
-Tooltips are available on most elements in the user interface, like page fields and columns, actions, cues tiles, and charts. A tooltip provides extra text that explains an element to help you better understand its purpose.
+Tooltipy jsou k dispozici u většiny prvků v uživatelském rozhraní, jako jsou stránková pole a sloupce, akce, dlaždice nápovědy a grafy. Tooltipy poskytuje další text, který vysvětluje prvek, aby vám pomohl lépe porozumět jeho účelu.
 
-Tooltips are accessed in different ways, depending on the client (web or mobile) and the device that you're working with. Use the following table as a guide. Some tooltips can be read by screen-readers. In this case, you access the tooltips as described in the table, then use the screen reader to navigate to the tooltip as you would with any other element.
+Popisky se otevírají různými způsoby v závislosti na klientovi (webovém nebo mobilním) a zařízení, se kterým pracujete. Použijte následující tabulku jako vodítko. Některé tooltipy mohou číst programy pro čtení z obrazovky.en-readers. V takovém případě přistupujete k popiskům tak, jak je popsáno v tabulce, a pak pomocí programu pro čtení z obrazovky přejdete na popisek stejně jako u jakéhokoli jiného prvku.
 
-#### Accessing tooltips
+#### Přístup k tooltipům
 
-| Elementu | Mouse action for web client | Keyboard shortcut for web client | Touch gesture on tablet/phone for mobile app | Screen reader support |
+| Element | Akce myši pro webového klienta | Klávesové zkratky pro webového klienta | Dotykové gesto na tabletu/telefonu pro mobilní aplikaci | Podpora čtečky obrazovky |
 |-------|-----------------|------------|--------------------------|---------------------|
-| Page fields and column headings | Hover over or click the field caption or column heading | Move focus to the field or column heading, and press Alt+Up Arrow keys | Tap the field caption | ano |
-| Charts elements, like a bar, line, pie slice | Hover over the element | Move focus to element, for example, by using arrow keys | Klepněte a podržte prvek | ano |
-| Actions | Hover over the action | none | none | ne |
-| Cue tiles | Hover over the tile | none | none | ne |
+| Pole stránek a záhlaví sloupců | Najeďte myší nebo klikněte na titulek pole nebo záhlaví sloupce | Přesuňte fokus na záhlaví pole nebo sloupce a stiskněte Alt+šipka nahoru | Klepněte na titulek pole | ano |
+| Prvky grafů, jako je pruh, čára, výseč výseč | Najeďte myší na prvek | Přesunout fokus na prvek, například pomocí kláves se šipkami | Klepněte a podržte prvek | ano |
+| Akce | Najeďte myší na akci | žádný | žádný | ne |
+| Popis dlaždice | Najeďte myší na dlaždici | žádný | žádný | ne |
 
 
 <!--
@@ -75,14 +75,14 @@ Tooltips are accessed in different ways, depending on the client (web or mobile)
 
 -->
 
-## For more accessibility information
+## Další informace o usnadnění přístupu
 
-You can find additional information about accessibility with Microsoft products and assistive technologies on the [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkId=262160) site.
+Další informace o usnadnění pomocí produktů a technologií usnadnění společnosti Microsoft naleznete na webu [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkId=262160).
 
 ## Viz také
 
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[Frequently Asked Questions](across-faq.yml)
+[Příprava na podnikání](ui-get-ready-business.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Často kladené otázky](across-faq.yml)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

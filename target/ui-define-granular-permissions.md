@@ -93,7 +93,7 @@ The new user group is added to the **User Groups** page. Pokračujte v přidáv�
 
 The following procedure explains how to assign permission sets to a user group on the **Permission Set by User Group** page.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
 2. On the **Users** page, select the relevant user, and then choose the **Permission Set by User Group** action.
 3. On the **Permission Set by User Group** page, select the **[user group name]** field on a line for the relevant permission set to assign the set to the user group.
 4. Select the **All User Groups** check box to assign the permission set to all user groups.
@@ -118,7 +118,7 @@ Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
 
 ### Přiřazení sady oprávnění na kartě uživatele
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
 2. Vyberte uživatele, kterému chcete přiřadit oprávnění.
    Any permission sets that are already assigned to the user are displayed in the **Permission Sets** FactBox.
 3. Choose the **Edit** action to open the **User Card** page.
@@ -126,7 +126,7 @@ Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
 
 ### To assign a permission set on the Permission Set by User page
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
 2. On the **Users** page, choose the **Permission Set by User** action.
 3. On the **Permission Set by User** page, select the **[user name]** check box on a line for the relevant permission set to assign the set to the user.
 
@@ -134,7 +134,7 @@ Sady oprávnění můžete uživatelům přiřadit dvěma způsoby:
 
 ## Získání přehledu oprávnění uživatele
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
 2. Otevřete kartu příslušného uživatele.
 3. Choose the **Effective Permissions** action.
 

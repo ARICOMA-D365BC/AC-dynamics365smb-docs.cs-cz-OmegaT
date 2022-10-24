@@ -11,63 +11,62 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Customize Pages for Profiles
-Users can personalize pages that make up their workspace to suit their own preferences. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+# Přizpůsobení stránek a profilů
+Uživatelé si mohou přizpůsobit svůj pracovní prostor podle svých vlastních preferencí. Pro více informací navštivte [Přizpůsobení Vašeho pracovního prostoru](ui-personalization-user.md).
 
-Administrators can customize pages for a profile, according to the related business role or department, for example, so that all users that are assigned the profile will see the customized page layout. The administrator customizes pages by using the same functionality as users do when they personalize pages.
+Správci mohou přizpůsobit stránky pro profil, například podle související obchodní role nebo oddělení, aby všichni uživatelé, kterým je přiřazen profil, viděli přizpůsobené rozložení stránky. Správce přizpůsobuje stránky pomocí stejných funkcí jako uživatelé.
 
 > [!NOTE]
 > Typickým využitím obchondího profilu je role. Profil se proto v uživatelském rozhraní nazývá *Profil (Role)*.
 
-Page customization starts from the **Profiles (Roles)** page, the administrator's starting point for managing users' profiles on individual profile cards. In addition to customizing the page layout, you control various other settings for profiles on the **Profile (Role)** page for each profile. For more information, see [Manage Profiles](admin-users-profiles-roles.md).
+Přizpůsobení stránky začíná na stránce **Profily (Role)**, která je výchozím bodem správce pro správu profilů uživatelů na jednotlivých kartách profilů. Kromě přizpůsobení rozložení stránky můžete řídit různá další nastavení profilů na stránce **Profil (Role)** pro každý profil. Pro více informací navštivte [Správa profilů](admin-users-profiles-roles.md).
 
-## To customize pages for a profile
+## Přizpůsobení stránek a profilů
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Profily (role)** a poté vyberte související odkaz.
-2. Select the line for the profile that you want to customize pages for, and then choose the **Edit** action.
-3. Choose the **Customize pages** action.
+2. Vyberte řádek pro profil, pro který chcete přizpůsobit stránky, a pak zvolte akci **Upravit**.
+3. Zvolte akci **Přizpůsobit stránky**.
 
-   [!INCLUDE[prod_short](includes/prod_short.md)] opens on a new browser tab for the selected profile with the **Customizing** banner activated. The **Customizing** banner offers the same functionality as the **Personalizing** banner that is available to users.
+   [!INCLUDE[prod_short](includes/prod_short.md)] se otevře na nové kartě prohlížeče pro vybraný profil s aktivovaným bannerem **Přizpůsobení**. Banner **Přizpůsobení** nabízí stejné funkce jako banner **Přizpůsobení**, který je k dispozici uživatelům.
 
-4. Customize pages according to the needs of the role or department in question in the same way as a user would do when personalizing. For more information, see [Personalize Your Workspace](ui-personalization-user.md).
+4. Přizpůsobte stránky podle potřeb dané role nebo oddělení stejným způsobem, jako by to udělal uživatel při personalizaci. Pro více informací navštivte [Přizpůsobení Vašeho pracovního prostoru](ui-personalization-user.md).
 
-   > [!NOTE]
-   > To navigate during personalization, use Ctrl + Click on an action if it is highlighted by the arrowhead.
+   > Chcete-li se během personalizace pohybovat, použijte klávesovou zkratku Ctrl + klikněte na akci, pokud je zvýrazněna šipkou.
 
-5. When you have finished changing the layout on one or more pages, choose the **Done** button on the **Customizing** banner.
-6. Close the browser tab.
+5. Po dokončení změn rozvržení na jedné nebo více stránkách klikněte na tlačítko **Hotovo** v banneru **Přizpůsobení**.
+6. Zavřete kartu prohlížeče.
 
-The customization of pages is now recorded for the profile.
+Přizpůsobení stránek je nyní evidováno pro profil.
 
-## To view all customized pages for a profile
+## Zobrazení všech přizpůsobených stránek profilu
 
-You can get an overview of which pages are customized for a profile, for example to plan which to customize further or delete.
+Můžete získat přehled o tom, které stránky jsou přizpůsobeny pro profil, například naplánovat, které chcete dále přizpůsobit nebo odstranit.
 
-- On the **Profile (Role)** page, choose the **Manage customized pages** action.
+- Na stránce **Profil (role)** zvolte akci **Spravovat přizpůsobené stránky**.
 
-On the **Customized Pages** page, you can delete customizations, and you can troubleshoot by scanning for potential issues.
+Na stránce **Přizpůsobené stránky** můžete odstranit vlastní nastavení a můžete je řešit vyhledáním potenciálních problémů.
 
-## To delete all customizations for a profile
-You can cancel all customizations that you have made for a profile. Customizations introduced with an extension and personalizations made by a user will not be deleted. You can delete all personalizations with another action. For more information, see [To delete all personalizations made by a user](admin-users-profiles-roles.md#to-delete-all-personalizations-made-by-a-user).
+## Odstranění všech vlastních nastavení profilu
+Můžete zrušit všechna vlastní nastavení, která jste pro profil provedli. Vlastní nastavení zavedená s rozšířením a přizpůsobení provedená uživatelem nebudou odstraněna. Všechna přizpůsobení můžete odstranit jinou akcí. Pro více infortmací navštivte [Odstranění všech individuálních nastavení provedených uživatelem](admin-users-profiles-roles.md#to-delete-all-personalizations-made-by-a-user).
 
-- On the **Profile (Role)** page for a customized profile, choose the **Clear customized pages** action.
+- Na stránce **Profil (role)** pro přizpůsobený profil vyberte akci **Vymazat přizpůsobené stránky**.
 
-The layout on pages for the profile is reset to the default layout.
+Rozložení na stránkách profilu se obnoví na výchozí rozložení.
 
-## To delete customization for specific pages for a profile
-You can delete individual page customizations that you have made for a profile. Customizations introduced with an extension and personalizations made by a user will not be deleted. You can delete specific page personalizations with another action. For more information, see [To delete personalizations for specific pages](admin-users-profiles-roles.md#to-delete-personalizations-for-specific-pages).
+## Odstranění vlastního nastavení pro určité stránky profilu
+Můžete odstranit jednotlivá přizpůsobení stránky, která jste provedli pro profil. Vlastní nastavení zavedená s rozšířením a přizpůsobení provedená uživatelem nebudou odstraněna. Konkrétní přizpůsobení stránky můžete odstranit jinou akcí. Pro více infortmací navštivte [Odstranění individuálních nastavení pro konkrétní stránky](admin-users-profiles-roles.md#to-delete-personalizations-for-specific-pages).
 
-1. On the **Profile (Role)** page, choose the **Manage customized pages** action.
-2. On the **Customized Pages** page, select one or more lines for page customizations that you want to delete, and then choose the **Delete** action.
+1. Na stránce **Profil (role)** zvolte akci **Spravovat přizpůsobené stránky**.
+2. Na stránce **Přizpůsobené stránky** vyberte jeden nebo více řádků pro přizpůsobení stránky, které chcete odstranit, a pak zvolte akci **Odstranit**.
 
-The layout on the selected pages is adjusted to the changes you made.
+Rozvržení na vybraných stránkách se přizpůsobí provedeným změnám.
 
 ## Viz také
 
-[Personalize Your Workspace](ui-personalization-user.md)  
-[Manage Profiles](admin-users-profiles-roles.md)  
-[Change Basic Settings](ui-change-basic-settings.md)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Přizpůsobte si svůj pracovní prostor](ui-personalization-user.md)  
+[Správa profilů](admin-users-profiles-roles.md)  
+[Změnit základní nastavení](ui-change-basic-settings.md)  
+[Změna zobrazovaných funkcí](ui-experiences.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

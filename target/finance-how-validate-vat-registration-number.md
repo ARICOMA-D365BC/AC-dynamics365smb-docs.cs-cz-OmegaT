@@ -16,11 +16,11 @@ ms.author: andregu
 
 It is important that the VAT registration numbers you have for customers, vendors, and contacts are valid, if you use [!INCLUDE [prod_short](includes/prod_short.md)] in a country that uses VAT. For example, companies sometimes change their tax liability status, and in some countries tax authorities might ask you to provide reports, such as the **EC Sales List** report, that list the VAT registration numbers you use when you do business.
 
-Evropská komise poskytuje na svých internetových stránkách službu VIES k ověření daňového identifikačního čísla. [!INCLUDE [prod_short](includes/prod_short.md)] can save you a step and let you use the VIES service to validate and track VAT numbers and other company information for customers, vendors, and contacts. The service in [!INCLUDE [prod_short](includes/prod_short.md)] is named **EU VAT Reg. Č.. Validation Service**. The service is available on the **Service Connections** page, and you can start using it right away. The service connection is free, and additional sign up is not required.
+Evropská komise poskytuje na svých internetových stránkách službu VIES k ověření daňového identifikačního čísla. [!INCLUDE [prod_short](includes/prod_short.md)] can save you a step and let you use the VIES service to validate and track VAT numbers and other company information for customers, vendors, and contacts. The service in [!INCLUDE [prod_short](includes/prod_short.md)] is named **EU VAT Reg. Čísla. Validation Service**. The service is available on the **Service Connections** page, and you can start using it right away. The service connection is free, and additional sign up is not required.
 
 ## Configure the service to verify VAT registration numbers automatically
 
-To enable the **EU VAT Reg. Č.. Validation Service**, open the entry in the **Service Connection** page. If the **Service Endpoint** field is not already filled in, use the **Set Default Endpoint** action. Then set the **Enabled** field, and you are good to go.
+To enable the **EU VAT Reg. Čísla. Validation Service**, open the entry in the **Service Connection** page. If the **Service Endpoint** field is not already filled in, use the **Set Default Endpoint** action. Then set the **Enabled** field, and you are good to go.
 
 > [!IMPORTANT]
 > To enable the validation service, you must have administrator permissions.
@@ -41,7 +41,7 @@ O službě ověření DIČ ve VIES je potřeba myslet na několik věcí:
 
 ## Validation templates
 
-You can use the VIES service to also check other company information, such as the address, as well as the VAT registration number. In the **VAT Reg. Č.. Validation Templates** page, create an entry for each country that you want to get further validation for, and then specify the information that you want to get validated automatically.
+You can use the VIES service to also check other company information, such as the address, as well as the VAT registration number. In the **VAT Reg. Čísla. Validation Templates** page, create an entry for each country that you want to get further validation for, and then specify the information that you want to get validated automatically.
 
 For example, add an entry for Spain where you want to get validation for name, street, city, and post code, and then another entry for Germany where you just want validation for post code, for example. Then, in the **EU VAT Registration No. Validation Service Setup** page, specify the default template.
 

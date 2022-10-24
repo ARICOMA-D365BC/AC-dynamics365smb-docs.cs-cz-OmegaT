@@ -23,7 +23,7 @@ Na stránkách **Účetní osnova** a **Věcné položky** můžete pomocí funk
 Následující postupy ukazují, jak připojit soubor k existující nákupní faktuře, která nebyla vytvořena z došlého dokladu a jak připojit soubor k položce dodavatele. Připojení souboru k zaúčtovaným nákupním nebo prodejním dokladům funguje podobným způsobem.
 
 ## Vytvoření a připojení záznamu došlého dokladu k nákupní faktuře
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
 2. Select the line for a purchase invoice that you want to attach a file to, and then choose the **Create Incoming Document from File** action.
 3. Alternatively, select the line for a purchase invoice that you want to attach a file to, and then choose the **Attach File** action.
 4. On the **Insert File** page, select the file that represents the incoming document in question, and then choose the **Open** button.

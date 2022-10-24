@@ -47,7 +47,7 @@ Rozšíření Archiv dat používají následující dávkové úlohy pro kompre
 | Komprese položek zdrojů |
 | Komprese DPH položek |
 | Komprese položek dodavatele |
-| Kompere skladových položek Položky |
+| Komprese skladových položek Položky |
 | Datová kompere Položky finančního rozpočtu |
 
 Chcete-li zahájit archivaci dat při spuštění jedné z dávkových úloh, zapněte přepínač **Archivovat odstraněné položky**.

@@ -11,46 +11,46 @@ ms.date: 05/09/2022
 ms.author: edupont
 
 ---
-# Create Users According to Licenses
+# Vytváření uživatelů podle licencí
 
-This article describes how administrators create users and define who can sign in to [!INCLUDE[prod_short](includes/prod_short.md)]. This article also covers how to assign permissions to different types users according to your product licenses.
+Tento článek popisuje, jak administrátoři vytvářejí uživatele a definují, kdo se může přihlásit k [!INCLUDE[prod_short](includes/prod_short.md)]. Tento článek také popisuje, jak přiřadit oprávnění různým typům uživatelů podle licencí produktu.
 
-When you create users in [!INCLUDE[prod_short](includes/prod_short.md)], you can assign permissions to them through permission sets and organize users in user groups. User groups make it easier to manage permissions for multiple users at the same time. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
+Když vytvoříte uživatele v [!INCLUDE[prod_short](includes/prod_short.md)], můžete jim přiřadit oprávnění prostřednictvím sad oprávnění a organizovat uživatele do skupin uživatelů. Skupiny uživatelů usnadňují správu oprávnění pro více uživatelů současně. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
 
-For more information about the different types of licenses and how licensing works in [!INCLUDE[prod_short](includes/prod_short.md)], [download the Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
-
-> [!NOTE]
-> The process of managing users and licenses varies depending on whether [!INCLUDE[prod_short](includes/prod_short.md)] is deployed online or on-premises. For [!INCLUDE [prod_short](includes/prod_short.md)] online, you must add users from Microsoft 365. In on-premises deployments, you can create, edit, and delete users directly.
-
-## Manage users and licenses in online tenants
-
-Your subscription to [!INCLUDE[prod_short](includes/prod_short.md)] online defines the number of users you're allowed. Users are added to your tenant in the Microsoft Partner Center, typically by your Microsoft partner. For more information, see [Administration of Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration).
-
-You assign product licenses to users according to the work each user will do in [!INCLUDE[prod_short](includes/prod_short.md)]. You can assign licenses in several ways:
-
-- Your company's Microsoft 365 administrator can do it in the [Microsoft 365 Admin Center](https://admin.microsoft.com). For more information, see [Add users individually or in bulk to Microsoft 365](/microsoft-365/admin/add-users/add-users).
-- A Microsoft partner can assign licenses in the Microsoft 365 Admin Center or in the Microsoft Partner Center. For more information, see [User management tasks for customer accounts](/partner-center/assign-licenses-to-users) in the Microsoft Partner Center Help.
-
-For more information, see [Administration of Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration) in the administration Help.
+Pro další informace o různých typech licencí a o tom, jak funguje licencování v [!INCLUDE[prod_short](includes/prod_short.md)], [si stáhněte Průvodce licencí v Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 > [!NOTE]
-> After you add users in the Microsoft 365 Admin Center, we recommend that you update the user information in [!INCLUDE[prod_short](includes/prod_short.md)] as soon as possible. Keeping user information current is easy to do, and helps ensure that people can always sign in. For more information, see [To add users or update user information and license assignments in Business Central](#adduser).<br>
+> Proces správy uživatelů a licencí se liší v závislosti na tom, zda je [!INCLUDE[prod_short](includes/prod_short.md)] nasazen online nebo on-premises (lokálně). Pro [!INCLUDE [prod_short](includes/prod_short.md)] online, musíte přidat uživatele z Microsoftu 365. V on-premimses (lokálních) nasazeních můžete vytvářet, upravovat a odstraňovat uživatele přímo.
+
+## Správa uživatelů a licencí v online tenantech
+
+Vaše předplatné [!INCLUDE[prod_short](includes/prod_short.md)] online definuje počet uživatelů, který máte povolený. Uživatelé jsou přidáváni do vašeho tenanta v Microsoft Partner Center, obvykle vaším partnerem Microsoftu. Pro více informací, navštivte [Správa Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration).
+
+Licence na produkty přidělujete uživatelům podle práce, kterou každý uživatel bude dělat v [!INCLUDE[prod_short](includes/prod_short.md)]. Licence můžete přiřadit několika způsoby:
+
+- Správce Microsoftu 365 vaší společnosti to může udělat v [Centru pro správu Microsoft 365](https://admin.microsoft.com). Pro více informací navštivte [Jednotlivé nebo hromadné přidání uživatelů do Microsoft 365](/microsoft-365/admin/add-users/add-users).
+- Partner společnosti Microsoft může přidělovat licence v Microsoft 365 Admin Center nebo v Microsoft Partner Center. Pro více informací navštivte [Úkoly správy uživatelů pro účty zákazníků](/partner-center/assign-licenses-to-users) v nápovědě Microsoft Partner Center.
+
+Pro více informací, navštivte [Správa Business Central Online](/dynamics365/business-central/dev-itpro/administration/tenant-administration) v nápovědě pro správu.
+
+> [!NOTE]
+> Po přidání uživatelů v Centru pro správu Microsoft 365 vám doporučujeme co nejdříve aktualizovat informace o uživatelích v [!INCLUDE[prod_short](includes/prod_short.md)]. Udržování informací o uživatelích v aktuálním stavu je snadné a pomáhá zajistit, aby se uživatelé mohli vždy přihlásit. Více informací naleznete v [Přidání uživatelů nebo aktualizace informací o uživatelích a přiřazení licencí v Business Central](#adduser).<br>
 >
-> Updating user information is especially important if you've customized permission sets for the license. If a new user tries to sign in to [!INCLUDE[prod_short](includes/prod_short.md)] before you've added them, they might not be able to. For more information, see [Configure permissions based on licenses](#licensespermissions).
+> Aktualizace informací o uživateli je obzvláště důležitá, pokud jste přizpůsobili sady oprávnění pro licenci. Pokud se nový uživatel pokusí přihlásit k [!INCLUDE[prod_short](includes/prod_short.md)] předtím, než je přidáte, nemusí se mu to podařit. Pro více informací navštivte [Konfigurace oprávnění na základě licencí](#licensespermissions).
 >
-> However, users who experience this problem aren't actually blocked. They can either use the **Go back home** action, or simply sign in again to resolve the issue.
+> Uživatelé, kteří se s tímto problémem setkají, však nejsou ve skutečnosti blokováni. Mohou buď použít akci **Vrátit se domů** nebo se jednoduše znovu přihlásit a problém tím vyřešit.
 
 [!INCLUDE [admin-gdap-users](includes/admin-gdap-users.md)]
 
-For more information, see [Delegated administrator access to Business Central Online](/dynamics365/business-central/dev-itpro/administration/delegated-admin).
+Pro více informací navštivte [Delegovaný administrátorský přístup k Business Central Online](/dynamics365/business-central/dev-itpro/administration/delegated-admin).
 
-### <a name="licensespermissions"></a>Configure permissions based on licenses
+### <a name="licensespermissions"></a>Konfigurace oprávnění na základě licencí
 
 [!INCLUDE [2022_releasewave1](includes/2022_releasewave1.md)]
 
-Admins can configure permissions sets and user groups based on the different license types.<!--Note to translators: The names in *italics* or capitalized in this section must not be translated.-->
+Správci mohou konfigurovat sady oprávnění a skupiny uživatelů na základě různých typů licencí.<!--Note to translators: The names in *italics* or capitalized in this section must not be translated.-->
 
-For example, the commonly used license, *Dynamics 365 Business Central Team Member*, has  the user groups *D365 Team Member* and *Excel Export Action* plus the following permissions sets by default:
+Například běžně používaná licence *Dynamics 365 Business Central Team Member* obsahuje skupiny uživatelů *D365 Team Member* a *Excel Export Action* plus následující nastavení oprávnění ve výchozím nastavení:
 
 - D365 READ
 - D365 TEAM MEMBER
@@ -58,105 +58,104 @@ For example, the commonly used license, *Dynamics 365 Business Central Team Memb
 - EXPORT REPORT EXCEL
 - LOCAL
 
-If this default configuration isn't the right setup for a particular tenant, the admin can change that configuration. However, customized permissions will affect only new users who are assigned that license. Permissions for existing users who are assigned the license won't be affected.
+Pokud tato výchozí konfigurace není pro konkrétního tenanta vhodná, může ji správce změnit. Přizpůsobená oprávnění však ovlivní pouze nové uživatele, kterým je tato licence přiřazena. Oprávnění pro stávající uživatele, kterým je přiřazena licence, nebudou ovlivněna.
 
-1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)] using an administrator account.
-2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **License Configuration**, and then choose the related link.
+1. Přihlaste se k [!INCLUDE[prod_short](includes/prod_short.md)] pomocí účtu správce.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Konfigurace licence** a vyberte související odkaz.
 
-   Alternatively, if you're already in the **Users** page, you can run the **Update Users from Microsoft 365** guide, and then, on the first page of the guide, choose the **Configure permissions per license** link.
-3. In the **License Configuration** page, choose the license that you want to customize, and then choose the **Configure** action.
-4. Choose the **Customize permissions** field to switch on customization, and then make the relevant changes.
+   Případně, pokud už jste na stránce **Uživatelé** můžete spustit průvodce **Aktualizovat uživatele z Microsoftu 365** a pak na první stránce průvodce zvolit odkaz **Konfigurovat oprávnění pro jednotlivé licence**.
+3. Na stránce **Konfigurace licence** vyberte licenci, kterou chcete přizpůsobit, a poté vyberte akci **Konfigurovat**.
+4. Výběrem pole **Přizpůsobit oprávnění** zapněte přizpůsobení a poté proveďte příslušné změny.
 
-   In our example, the admin wants to remove the permission to edit in Excel, so they remove the *Excel Export Action* user group from the Team Member license. Going forward, new users that are assigned the Team Member license won't get the option to export data to Excel. If the organization changes their minds on the subject, they can just go back to the **License Configuration** page and switch off the customization for that license type.
+   V našem příkladu chce správce odebrat oprávnění k úpravám v aplikaci Excel, takže odebere skupinu uživatelů *Excel Export*  z licence Team Member. Do budoucna noví uživatelé, kterým je přiřazena licence Team Member, nebudou mít možnost exportovat data do aplikace Excel. Pokud organizace změní názor na toto téma, může se jednoduše vrátit na stránku **Konfigurace licence** a vypnout přizpůsobení pro daný typ licence.
 
 > [!IMPORTANT]
-> This customization of permissions only take effect for new users that you assign the relevant license. Existing users are not updated. We recommend that you customize permissions before you start assigning users licenses in the Microsoft 365 admin center.
+> Toto přizpůsobení oprávnění se projeví pouze u nových uživatelů, kterým přiřadíte příslušnou licenci. Stávající uživatelé nejsou aktualizováni. Doporučujeme přizpůsobit oprávnění před zahájením přiřazování uživatelských licencí v Centru pro správu Microsoft 365.
 
-### <a name="adduser"></a>To add users or update user information and license assignments in Business Central
+### <a name="adduser"></a>Přidání uživatelů nebo aktualizace informací o uživatelích a přiřazení licencí v Business Central
 
-After you add users or change user information in the Microsoft 365 Admin Center, you can quickly import the user information to [!INCLUDE[prod_short](includes/prod_short.md)]. The import includes license assignments.
+Po přidání uživatelů nebo změně informací o uživatelích v Centru pro správu Microsoft 365 můžete informace o uživateli rychle importovat do [!INCLUDE[prod_short](includes/prod_short.md)]. Import zahrnuje přiřazení licencí.
 
-1. Sign in to [!INCLUDE[prod_short](includes/prod_short.md)] using an administrator account.
-2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
-3. Choose **Update Users from Microsoft 365**.
+1. Přihlaste se k [!INCLUDE[prod_short](includes/prod_short.md)] pomocí účtu správce.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
+3. Zvolte **Aktualizovat uživatele z Microsoftu 365**.
 
-For new users, the next step is to assign user groups and permissions. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md). If you're updating user information, and the update includes a license change, users are assigned to the appropriate user group and their permission sets are updated. For more information, see [To manage permissions through user groups](ui-define-granular-permissions.md).
-
-> [!NOTE]
-> All users in an environment must be assigned to the same license, either Essential or Premium. For more information, see the Microsoft Dynamics 365 Business Central Licensing Guide. The guide is available for download on the [Business Central](https://dynamics.microsoft.com/business-central/overview/) website.
-
-For more information about synchronizing user information with Microsoft 365, see the [Synchronization with Microsoft 365](#m365) section.
+Pro nové uživatele je dalším krokem přiřazení skupin uživatelů a oprávnění. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md). Pokud aktualizujete informace o uživateli a aktualizace zahrnuje změnu licence, uživatelé jsou přiřazeni k příslušné skupině uživatelů a jejich sady oprávnění se aktualizují. Pro více informací navštivte [Správa oprávnění prostřednictvím skupin uživatelů](ui-define-granular-permissions.md).
 
 > [!NOTE]
-> If you use an external accountant to manage your books and financial reporting, you can invite them to your Business Central so they can work with you on your fiscal data. For more information, see [Inviting Your External Accountant to Your Business Central](finance-accounting.md#inviteaccountant).
+> Všichni uživatelé v prostředí musí mít přiřazenu stejnou licenci, buď Essential, nebo Premium. Podrobné informace o licencích naleznete v příručce Microsoft Dynamics 365 Business Central Licensing Guide. Příručka je k dispozici ke stažení na webu [Business Central](https://dynamics.microsoft.com/business-central/overview/).
 
-### To remove a user's access to the system
-
-You can remove a user's access to [!INCLUDE[prod_short](includes/prod_short.md)] online. All references to the user are kept. However, the user can't sign in and active sessions for the user are stopped.
-
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
-2. Open the **User Card** page for the relevant user, and then, in the **Status** field, select **Disabled**.
-3. To give the user access again, set the **Status** field to **Enabled**.
-
-You can also remove the license from a user in the Microsoft 365 Admin Center. The user is then unable to sign in. For more information, see [Remove licenses from users](/microsoft-365/admin/manage/remove-licenses-from-users).
-
-### <a name="m365"></a>Synchronization with Microsoft 365
-
-When you assign a license for [!INCLUDE[prod_short](includes/prod_short.md)] to a user in Microsoft 365, there are two ways to create the user in [!INCLUDE[prod_short](includes/prod_short.md)].
-
-- The administrator can add the user by choosing the **Update Users from Microsoft 365** action on the **Users** page as described in the [To add a user or update user information in Business Central](#adduser) section.
-- The license information will update automatically when the user signs in for the first time.
-
-In both cases, several settings are made automatically. These settings are listed in the second and third columns in the table below.
-
-If you change user information in Microsoft 365, you can update [!INCLUDE[prod_short](includes/prod_short.md)] to reflect the change. Depending on what you want to update, use one of the actions on the **Users** page. The actions are described in the last three columns in the table below.
+Další informace o synchronizaci informací uživatelů s Microsoft 365 najdete v části [Synchronizace s Microsoftem 365](#m365) .
 
 > [!NOTE]
-> The actions described in the following table are accurate, however, the only one that you need is **Update Users from Microsoft 365**, which was added to simplify the process. The other actions will be removed in a future version of [!INCLUDE[prod_short](includes/prod_short.md)].
+> Pokud pro správu účetnictví a finančního výkaznictví používáte externího účetního, můžete ho pozvat do služby Business Central, aby s vámi mohl pracovat na vašich fiskálních údajích. ro více informací navštivte [Pozvání externího účetního do Business Cental](finance-accounting.md#inviteaccountant).
 
-|What happens when:|First user, first sign-in|Get Users from Microsoft 365|Update Users from Microsoft 365|Restore User Default User Groups|Refresh User Groups|Update user information from Microsoft 365|
+### Odebrání přístupu uživatele do systému
+
+Můžete odebrat přístup uživatele k [!INCLUDE[prod_short](includes/prod_short.md)] online. Všechny odkazy na uživatele se zachovají. Uživatel se však nemůže přihlásit a aktivní relace pro uživatele jsou zastaveny.
+
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
+2. Otevřete stránku **Karta uživatele** pro příslušného uživatele a poté v poli **Stav** vyberte možnost **Zakázáný**.
+3. Chcete-li uživateli znovu udělit přístup, nastavte pole **Stav** na hodnotu **Povolený**.
+
+Licenci můžete také odebrat uživateli v Centru pro správu Microsoft 365. Uživatel se pak nemůže přihlásit. Pro více informací navštivte [Odebrání licencí uživatelům](/microsoft-365/admin/manage/remove-licenses-from-users).
+
+### <a name="m365"></a>Synchronizace s Microsoft 365
+
+Když přiřadíte licenci pro [!INCLUDE[prod_short](includes/prod_short.md)] pro uživatele v Microsoftu 365, existují dva způsoby, jak vytvořit uživatele v [!INCLUDE[prod_short](includes/prod_short.md)].
+
+- Správce může přidat uživatele výběrem akce **Aktualizovat uživatele z Microsoft 365** na stránce **Uživatelé**, jak je popsáno v části [Přidání uživatele nebo aktualizace informací o uživateli v Business Central](#adduser) 
+- Informace o licenci se aktualizují automaticky při prvním přihlášení uživatele.
+
+V obou případech se automaticky provede několik nastavení. Tato nastavení jsou uvedena ve druhém a třetím sloupci v následující tabulce.
+
+Pokud změníte informace o uživateli v Microsoftu 365, můžete aktualizovat [!INCLUDE[prod_short](includes/prod_short.md)], aby odrážely změnu. V závislosti na tom, co chcete aktualizovat, použijte jednu z akcí na stránce **Uživatelé**. Akce jsou popsány v posledních třech sloupcích v následující tabulce.
+
+> Akce popsané v následující tabulce jsou přesné, ale jedinou, kterou potřebujete, je **Aktualizovat uživatele z Microsoft 365**, která byla přidána za účelem zjednodušení procesu. Ostatní akce budou odstraněny v budoucí verzi [!INCLUDE[prod_short](includes/prod_short.md)].
+
+|Co se stane, když:|První uživatel, první přihlášení|Získání uživatelů z Microsoft 365|Aktualizace uživatelů z Microsoft 365|Obnovení výchozích skupin uživatelů|Obnovení skupin uživatelů|Aktualizace informací o uživatelích z Microsoft 365|
 |-|-|-|-|-|-|-|
-|Scope:|Current user|New users in Microsoft 365|Multiple selected users|Single selected user (except current)|Multiple selected users|Multiple selected users|
-|Create the new user and assign SUPER permission set.<br /><br /><!--Platform-->|**X**||**X** | | | |
-|Update the user based on information in Microsoft 365: Status, Full Name, Contact Email, Authentication Email.<!--<br /><br />Codeunit "Azure AD   Graph User".UpdateUserFromAzureGraph-->|**X**|**X**|**X**|**X**||**X**|
-|Synchronize user plans (licenses) with licenses and roles assigned in Microsoft 365.<!--<br /><br />Codeunit "Azure AD   Graph User".UpdateUserPlans-->|**X**|**X**|**X**|**X**|**X**| |
-|Add the user to user groups according to the current user plans. Remove the SUPER permission set for all users other than the first user to sign in and [administrators](/dynamics365/business-central/dev-itpro/administration/tenant-administration). At least one SUPER is required.<!--<br /><br />Codeunit "Permission Manager". AddUserToDefaultUserGroups-->|**X**|**X**|**X**|**X**<br /><br />Removes manually assigned user groups and permissions.|**X**<br /><br />Update user group assignments.| |
+|Rozsah:|Aktuální uživatel|Noví uživatelé v Microsoft 365|Více vybraných uživatelů|Jeden vybraný uživatel (kromě aktuálního)|Více vybraných uživatelů|Více vybraných uživatelů|
+|Vytvořte nového uživatele a přidělte mu SUPER sadu oprávnění.<br /><br /><!--Platform-->|**X**||**X** | | | |
+|Aktualizujte uživatele na základě informací v Microsoft 365: stav, celé jméno, kontaktní e-mail, ověřovací e-mail.<!--<br /><br />Codeunit "Azure AD   Graph User".UpdateUserFromAzureGraph-->|**X**|**X**|**X**|**X**||**X**|
+|Synchronizujte uživatelské plány (licence) s licencemi a rolemi přiřazenými v Microsoft 365.<!--<br /><br />Codeunit "Azure AD   Graph User".UpdateUserPlans-->|**X**|**X**|**X**|**X**|**X**| |
+|Přidat uživatele do skupin uživatelů podle aktuálních uživatelských plánů. Odeberte sadu oprávnění SUPER pro všechny uživatele kromě prvního přihlášeného uživatele a [správců](/dynamics365/business-central/dev-itpro/administration/tenant-administration). Je vyžadován alespoň jeden SUPER.<!--<br /><br />Codeunit "Permission Manager". AddUserToDefaultUserGroups-->|**X**|**X**|**X**|**X**<br /><br />Odstraní ručně přiřazené skupiny uživatelů a oprávnění.|**X**<br /><br />Aktualizovat přiřazení skupin uživatelů.||
 
 <!--
 ## The Device License
 This section has been moved to [Licensing in Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/licensing).
 -->
 
-## Manage users and licenses in on-premises deployments
+## Správa uživatelů a licencí v on-premise nasazeních
 
-For on-premises deployments, the number of user licenses is specified in the license file (.flf). When an administrator or Microsoft partner uploads the license file, they can specify which users can sign in to [!INCLUDE[prod_short](includes/prod_short.md)].
+Pro on-premises nasazení je počet uživatelských licencí uveden v licenčním souboru (.flf). Když správce nebo partner Microsoftu nahraje licenční soubor, může určit, kteří uživatelé se mohou přihlásit k [!INCLUDE[prod_short](includes/prod_short.md)].
 
-For on-premises deployments, the administrator creates, edits, and deletes users directly from the **Users** page.
+U on-premises nasazení správce vytváří, upravuje a odstraňuje uživatele přímo ze stránky **Uživatelé**.
 
-### To edit or delete a user in an on-premises deployment
+### Úprava nebo odstranění uživatele v on-premises nasazení
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
-2. Select the user that you want to edit, and then choose the **Edit** action.
-3. On the **User Card** page, change the information as necessary.
-4. To delete a user, select the user that you want to delete, and then choose the **Delete** action.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
+2. Vyberte uživatele, kterého chcete upravit, a pak zvolte akci **Upravit**.
+3. Na stránce **Karta uživatele** změňte informace podle potřeby.
+4. Chcete-li odstranit uživatele, vyberte uživatele, kterého chcete odstranit, a pak zvolte akci **Odstranit**.
 
 > [!NOTE]
-> For on-premises deployments an administrator can specify how to authenticate user credentials in the [!INCLUDE[server](includes/server.md)] instance. When you create a user, you provide the credential type that you are using.
+> U on-premises nasazení může správce určit způsob ověřování uživatelských ověření v nástroji [!INCLUDE[server](includes/server.md)] instance. Při vytváření uživatele zadáte typ ověření, který používáte.
 >
-> For more information, see the [Authentication and Credential Types](/dynamics365/business-central/dev-itpro/administration/users-credential-types) in the administration Help for [!INCLUDE[prod_short](includes/prod_short.md)].
+> Pro více informací navštivte [Typy ověřování a pověření](/dynamics365/business-central/dev-itpro/administration/users-credential-types) v nápovědě pro správu pro [!INCLUDE[prod_short](includes/prod_short.md)].
 
 ## Viz také
 
-[Assign Permissions to Users and Groups](ui-define-granular-permissions.md)  
-[Manage Profiles](admin-users-profiles-roles.md)  
-[Change Which Features are Displayed](ui-experiences.md)  
-[Customizing [!INCLUDE[prod_short](includes/prod_short.md)]](ui-customizing-overview.md)  
-[Getting Ready for Doing Business](ui-get-ready-business.md)  
-[Administration](admin-setup-and-administration.md)  
-[Licensing in Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/licensing)  
-[Add Users to Microsoft 365 for business](/microsoft-365/admin/add-users/add-users)  
-[Security and Protection in Business Central (administration content)](/dynamics365/business-central/dev-itpro/security/security-and-protection)  
-[Assign a telemetry ID to users](/dynamics365/business-central/dev-itpro/administration/telemetry-enable-application-insights#assign-a-telemetry-id-to-users)
+[Přiřazení oprávnění uživatelům a skupinám](ui-define-granular-permissions.md)  
+[Správa profilů](admin-users-profiles-roles.md)  
+[Změna zobrazovaných funkcí](ui-experiences.md)  
+[Přizpůsobení [!INCLUDE[prod_short](includes/prod_short.md)]](ui-customizing-overview.md)  
+[Příprava na podnikání](ui-get-ready-business.md)  
+[Správa](admin-setup-and-administration.md)  
+[Licencování v Dynamics 365 Business Central](/dynamics365/business-central/dev-itpro/deployment/licensing)  
+[Přidání uživatelů do Microsoft 365 pro firmy](/microsoft-365/admin/add-users/add-users)  
+[Zabezpečení a ochrana v Business Central (obsah pro správu)](/dynamics365/business-central/dev-itpro/security/security-and-protection)  
+[Přiřazení ID telemetrie uživatelům](/dynamics365/business-central/dev-itpro/administration/telemetry-enable-application-insights#assign-a-telemetry-id-to-users)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

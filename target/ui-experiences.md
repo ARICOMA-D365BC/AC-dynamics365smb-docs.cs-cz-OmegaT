@@ -42,7 +42,7 @@ Users are assigned to plans in Microsoft 365 Admin Center in connection with the
 When you have made a change to users plans in Microsoft 365 Admin Center, such as assigned more users to the Premium plan, you must reflect the change in [!INCLUDE[prod_short](includes/prod_short.md)].
 
 1. Sign is as an administrator.
-2. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Users**, and then choose the related link.
+2. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Uživatelé** a poté vyberte související odkaz.
 3. On the **Users** page, choose the **Refresh all User Groups** action.
 
 All new information about the users' plans and their assigned user groups are now updated according to the plan changes.

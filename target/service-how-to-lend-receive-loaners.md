@@ -3,7 +3,7 @@
     description: You can lend customers loaner items to temporarily replace service items that you have received for servicing.
     author: brentholtorf
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -36,7 +36,7 @@ You can use the **General Service Comment Sheet** page to register comments on r
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zápujčky** a poté vyberte související odkaz.
 2. Open the relevant loaner card.
-3. Choose the **Comments** action. The **General Service Comment Sheet** page opens.
+3. Vyberte akci **Poznámky**. The **General Service Comment Sheet** page opens.
 4. In the **Date** field, enter a date.
 5. In the **Comment** field, enter a comment. You can enter a maximum of 80 characters. If you need to enter additional text, go to the next line. You can fill in as many lines as necessary.
 

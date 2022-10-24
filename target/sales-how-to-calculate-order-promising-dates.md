@@ -1,9 +1,9 @@
 ---
     title: Calculate Order Promising Dates
-    description: The order promising function is a tool for calculating the earliest possible date that an item is available for shipment or delivery.
+    description: The order promising function is a tool for calculating the earliest possible date that an item is available for shipment or delivery. 
     author: edupont04
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -106,7 +106,7 @@ If you want to include warehouse handling time in the order promising calculatio
 ## To make an item critical
 Before an item can be included in the order promising calculation, it must be marked as critical. This setup ensures that non-critical items do not cause irrelevant order promising calculations.
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
-2. Open the relevant item card.
+2. Otevřete příslušnou kartu zboží.
 3. On the **Planning** FastTab, select the **Critical** field.
 
 ## To calculate an order promising date

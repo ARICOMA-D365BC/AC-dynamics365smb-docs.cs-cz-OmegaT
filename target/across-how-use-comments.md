@@ -14,31 +14,31 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Přidávání komentářů ke kartám a dokladům
+# Přidávání poznámek ke kartám a dokladům
 
-You can add extra information to G/L accounts, customers cards, or sales orders to communicate exceptions or special agreements to other users.
-Practically all cards and document have a **Comments** action, which opens the **Comment Sheet** page where you can write or read comments. On documents, you can also add comments to individual lines.
+K účtům hlavní knihy, zákaznickým kartám nebo prodejním objednávkám můžete přidat další informace, abyste mohli informovat o výjimkách nebo dohodách s ostatními uživateli.
+Prakticky všechny karty a doklady mají akci **Poznámky**, která otevře stránku **List poznámek**, kde můžete psát nebo číst poznámek. V dokladech můžete také přidávat poznámky k jednotlivým řádkům.
 
-Comments on ongoing documents are transferred to the related posted document. For example, a comment on a sales order is transferred to a resulting posted sales shipment.
+Poznámky k probíhajícím dokladům jsou převedeny do souvisejícího zaúčtovaného dokladu. Například poznámka k prodejní objednávce je převeden na výslednou zaúčtovanou prodejní dodávku.
 
-In addition, you can specify if you want comments to be transferred from one type of document to another resulting type of document, such as from a sales order to a sales invoice. You do this in the **Sales & Receivables** and the **Purchases & Payables** pages respectively.
+Kromě toho můžete určit, zda chcete, aby byly komentáře přeneseny z jednoho typu dokladu do jiného výsledného typu dokladu, například z prodejní objednávky do prodejní faktury. Provedete to na stránkách **Prodeje a pohledávky** a **Nákupy a závazky**.
 
 > [!NOTE]
-> Comments are not printed or output to reports or externally-facing documents.
+> Poznámky se netisknou ani nevytvářejí do tiskových sestav nebo externích dokumentů.
 
-The following describes how to add a comment to an item card. The steps are similar for all other cards and documents, except on document lines, the **Comments** action is placed on a lines action menu.
+Následující text popisuje, jak přidat poznámku na kartu zboží. Kroky jsou podobné pro všechny ostatní karty a doklady, kromě řádků dokladů je akce **Poznámky** umístěna v nabídce akcí řádků.
 
-## To add a comments to an item card
+## Přidání poznámky na kartu zboží
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Zboží** a poté vyberte související odkaz.
-2. Open the relevant item card.
-3. Choose the **Comments** action.
-4. On the **Comment Sheet** page, enter any text, and then choose the **OK** button.
+2. Otevřete příslušnou kartu zboží.
+3. Vyberte akci **Poznámky**.
+4. Na stránce **List poznámek** zadejte libovolný text a klikněte na tlačítko **OK**.
 
 ## Viz také
 
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[General Business Functionality](ui-across-business-areas.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Obecné obchodní funkcionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

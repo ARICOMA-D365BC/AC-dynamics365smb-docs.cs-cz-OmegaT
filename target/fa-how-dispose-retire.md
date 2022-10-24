@@ -1,6 +1,6 @@
 ---
 title: Dispose or Retire FA
-description: When you sell or otherwise dispose of a fixed asset, the disposal value must be posted to calculate and record the gain or loss.
+description: When you sell or otherwise dispose of a fixed asset, the disposal value must be posted to calculate and record the gain or loss. 
 author: edupont04
 
 

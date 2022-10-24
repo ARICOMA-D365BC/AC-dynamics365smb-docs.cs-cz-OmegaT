@@ -31,7 +31,7 @@ The following table describes the insights that this extension provides for each
 | Relationship Manager | What was the largest invoiced amount, and to which customer did we send the bill? |
 | Team Member | Displays a greeting, and link to product information. |
 | Vedoucí projektu | Displays a greeting, and link to product information. |
-| Administrator | Displays a greeting, and link to product information. |
+| Správce | Displays a greeting, and link to product information. |
 
 ## Viz také
 [Customizing [!INCLUDE[prod_short](includes/prod_short.md)] Using Extensions](ui-extensions.md)

@@ -12,20 +12,20 @@ ms.date: 04/01/2021
 ms.author: solsen
 
 ---
-# Preview Posting Results
-On every document and journal that can be posted, you can choose the **Preview Posting** button to review the different types of entries that will be created when you post the document or journal.
+# Náhled výsledků zaúčtování
+U každého dokladu a deníku, které lze zaúčtovat, můžete zvolit tlačítko **Náhled účtování** a zkontrolovat různé typy položek, které budou vytvořeny při zaúčtování dokladu nebo deníku.
 
-## To preview G/L entries that will result from posting a purchase invoice
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Invoices**, and then choose the related link.
-2. Create a purchase invoice. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
-3. Choose **Preview Posting**.
-4. On the **Posting Preview** page, select **G/L Entry**, and then choose **Show Related Entries**.  
-   The **G/L Entries Preview** page shows which entries will be created when you post the purchase invoice.
+## Zobrazení náhledu věcných položek, které budou výsledkem zaúčtování nákupní faktury
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
+2. Vytvořte nákupní fakturu. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
+3. Zvolte **Náhled účtování**
+4. Na stránce **Náhled účtování** vyberte **Věcné položky** a zvolte **Zobrazit související položky**.  
+   **Náhled věcných položek** ukazuje, které položky budou vytvořeny při zaúčtování nákupní faktury.
 
 ## Viz také
-[Posting Documents and Journals](ui-post-documents-journals.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
-[General Business Functionality](ui-across-business-areas.md)
+[Účtování dokladů a deníků](ui-post-documents-journals.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)  
+[Obecné obchodní funkcionality](ui-across-business-areas.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

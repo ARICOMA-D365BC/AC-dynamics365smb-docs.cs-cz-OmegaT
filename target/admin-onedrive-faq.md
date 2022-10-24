@@ -27,7 +27,7 @@ V rámci předplatného Microsoftu 365 vám vaše organizace poskytuje OneDrive,
 
 ## Má [!INCLUDE[prod_short](includes/prod_short.md)] podporu služby OneDrive pro spotřebitele?
 
-Č.. Tato integrace je určena výhradně pro OneDrive pro firmy a podporuje pouze váš pracovní účet.
+Čísla. Tato integrace je určena výhradně pro OneDrive pro firmy a podporuje pouze váš pracovní účet.
 
 ## Podporují se všechny plány OneDrivu pro firmy?
 
@@ -43,11 +43,11 @@ Ano, ale na rozdíl od [!INCLUDE[prod_short](includes/prod_short.md)] online vy�
 
 ## Propojuje se [!INCLUDE[prod_short](includes/prod_short.md)] v místě se serverem SharePoint?
 
-Č.. Tato kombinace nasazení není podporována, a to ani v případě, že má SharePoint Server povolené osobní weby.
+Čísla. Tato kombinace nasazení není podporována, a to ani v případě, že má SharePoint Server povolené osobní weby.
 
 ## Má [!INCLUDE[prod_short](includes/prod_short.md)] online připojení k serveru SharePoint Server?
 
-Č.. Tato kombinace nasazení není podporována, a to ani v případě, že má SharePoint Server povolené osobní weby.
+Čísla. Tato kombinace nasazení není podporována, a to ani v případě, že má SharePoint Server povolené osobní weby.
 
 ## Jak to funguje v organizaci s více prostředími?
 
