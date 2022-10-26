@@ -49,7 +49,7 @@ Při příštím importu souboru bankovního výpisu nebo výběru akce **Použ�
 
 Chcete-li vždy účtovat výdaje související s poplatky konkrétní banky, MyBank, na účet hlavní knihy pro bankovní poplatky a poplatky (účet 60400), vyplňte řádek na stránce **Mapování textu na účet** jak následuje.
 
-| Mapování textu | Debetní účet Čísla. | Kreditní účet Čísla. | Typ zdroje protiúčtu | Typ čísla zdroje protiúčtu |
+| Mapování textu | Debetní účet Ne. | Kreditní účet Ne. | Typ zdroje protiúčtu | Typ čísla zdroje protiúčtu |
 | --- | --- | --- | --- | --- |
 | MyBank | Prázdný | 60400 | Finanční účet | Prázdný |
 

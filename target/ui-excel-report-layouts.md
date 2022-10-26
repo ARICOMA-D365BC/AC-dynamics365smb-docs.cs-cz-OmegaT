@@ -116,7 +116,7 @@ Existují některé specifické požadavky na strukturu sešitu aplikace Excel P
 
 [![Zobrazuje různé prvky rozvržení aplikace Excel.](media/excel-layout-callouts-2.png)](media/excel-layout-callouts-2.png#lightbox)
 
-| Čísla. | Element | Popis | Povinný |
+| Ne. | Element | Popis | Povinný |
 |---|-------|----|---|
 | 1 | **Datový** list | <ul><li>Musí mít název **Data**</li><li>Může obsahovat pouze jednu tabulku a tabulka musí mít název **Data**</li></ul> | ![Je povinné](media/check.png) |
 | 2 | **Data** Tabulka | <ul><li>Musí mít název **Data**</li><li>Musí mít alespoň jeden sloupec.</li><li>Může obsahovat pouze sloupce, které jsou v datové sadě sestavy.</li><li>Musí začínat v první buňce **A1** listu **Data**</li></ul> | ![Je povinné](media/check.png) |

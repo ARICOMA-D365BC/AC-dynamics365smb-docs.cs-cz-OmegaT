@@ -13,7 +13,7 @@
     ms.author: edupont
 
 ---
-# Detaily návrhu: Vstupní procesy skladu
+# 	Detaily návrhu: Vstupní procesy skladu
 Vstupní procesy ve skladu začínají, když zboží dorazí do skladu v sídle společnosti, buď je přijaté z externích zdrojů, nebo z jiného sídla společnosti. Zaměstnanec zboží zaregistruje, obvykle naskenováním čárového kódu. Z přijímacího doku se skladové činnosti provádějí na různých úrovních složitosti, aby se zboží přeneslo do skladovací oblasti.
 
 Každé zboží je identifikováno a spárováno s odpovídajícím vstupním zdrojovým dokladem. Existují následující vstupní zdrojové doklady:

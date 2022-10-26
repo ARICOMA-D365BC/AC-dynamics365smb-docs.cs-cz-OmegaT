@@ -14,52 +14,52 @@ ms.date: 05/23/2022
 ms.author: bholtorf
 
 ---
-# Tell Me FAQ
-This article answers questions that our advanced users often ask about the Tell Me feature.
+# Nejčastšjčí otázky k funkci Řekněte mi
+Tento článek odpovídá na otázky, které pokročilí uživatelé často kladou ohledně funkce Řekněte mi.
 
-### Are all actions from my current page discoverable in Tell Me?
+### Jsou všechny akce z mé aktuální stránky zjistitelné v Řekněte mi?
 
-Čísla. Actions in parts, such as the Sales Lines part or FactBoxes, are not displayed in Tell Me.
+Ne. Akce v částech, jako je například část Prodejní řádky nebo Okna s fakty, se v Řekněte mi nezobrazí.
 
-### Are the results in Tell Me filtered by permissions?
+### Jsou výsledky v Řekněte mi filtrovány podle oprávnění?
 
-If the user does not have AccessByPermissions then actions are not displayed. However, pages and reports appear in the results but require that the user has permission to access them. A message will display if the user does not have permission to view the object.
+Pokud uživatel nemá oprávnění, akce se nezobrazí. Nicméně, stránky a sestavy se objeví ve výsledcích, ale vyžadují, aby k nim měl uživatel přístup. Pokud uživatel nemá oprávnění k prohlížení objektu, zobrazí se zpráva.
 
-### Does Tell Me display content from my customizations or installed third-party extensions?
+### Zobrazuje funkce Řekněte mi obsah z mých vlastních nastavení nebo nainstalovaných rozšíření třetích stran?
 
-Actions, pages, and reports that originate from extensions are picked up by Tell Me. For technical information about how to make custom pages and reports discoverable, see [Adding Pages and Reports to Search](/dynamics365/business-central/dev-itpro/developer/devenv-al-menusuite-functionality).
+Akce, stránky a sestavy, které pocházejí z rozšíření, zobrazuje funkce Řekněte mi. Technické informace o tom, jak učinit vlastní stránky a sestavy zjistitelnými, naleznete v části [Přidávání Stránek a Sestav do Vyhledávání](/dynamics365/business-central/dev-itpro/developer/devenv-al-menusuite-functionality).
 
-### What makes this different from what was previously known as Page Search?
+### Čím se to liší od toho, co bylo dříve známe jako Vyhledávání?
 
-Page Search has evolved into Tell Me to help you get work done quickly. Page Search could only help you navigate to pages or reports. At a technical level, Tell Me is no longer based on the legacy MenuSuite concept.
+Vyhledávání na se vyvinulo v Řekněte mi, aby vám pomohlo rychle dokončit práci. Vyhledávání na stránce vám může pomoci pouze při přechodu na stránky nebo sestavy. Na technické úrovni již Řekněte mi není založen na starém konceptu MenuSuite.
 
-### I use on-premises [!INCLUDE[prod_short](includes/prod_short.md)]. Does that include Tell Me?
+### Používám on-premise [!INCLUDE[prod_short](includes/prod_short.md)]. Zahrnuje to Řekněte mi?
 
-You can use Tell Me in the on-premises Web Client to find actions, pages, and reports, but not apps and consulting services on AppSource.
+Řekněte mi v místním webovém klientovi můžete použít k vyhledání akcí, stránek a sestav, ale ne aplikací a konzultačních služeb na AppSource.
 
-### Is Tell Me available for all form factors?
+### Je funkce Řekněte mi k dispozici pro všechna provedení?
 
-Tell Me is only available in the Web Client or Windows desktop app.
+Řekněte mi je k dispozici pouze ve Webovém klientovi nebo desktopové aplikaci pro Windows.
 
 <!-- removed in v20 because of Help pane
 ### Are the documentation results available in any language?
 The help articles display in the language you have specified in **My Settings**, if help is available in that language.
 -->
 
-### Does Tell Me give me help on how to use pages, reports, and other things?
+### Poskytuje mi Řekněte mi nápovědu k používání stránek, sestav a dalších věcí?
 
-No, but you can easily get this information from the Help pane. Just select the **Help** menu item (the question mark in the top-right corner) or press Ctrl+F1 on your keyboard. For more information, see [Help pane](product-help-and-support.md#help-pane).
+Ne, ale tyto informace můžete snadno získat z podokna Nápověda. Stačí vybrat položku nabídky **Nápověda** (otazník v pravém horním rohu) nebo stisknout Ctrl+F1 na klávesnici. Další informace naleznete v části [Panel nápovědy](product-help-and-support.md#help-pane).
 
-### Why don't I see a bookmark icon for my search results?
+### Proč se mi u výsledků vyhledávání nezobrazuje ikona záložky?
 
-The bookmark icon is not displayed in the Tell Me window when personalization is disabled for a user role.
+Ikona záložky se nezobrazí v okně Řekněte mi, pokud je pro roli uživatele zakázáno přizpůsobení.
 
 
 ## Viz také
-[Save and Personalize List Views](ui-views.md)  
-[Finding Pages and Information with Tell Me](ui-search.md)  
-[Finding Pages with the Role Explorer](ui-role-explorer.md)  
-[Bookmark a Page or Report on Your Role Center](ui-bookmarks.md)
+[Uložení a přizpůsobení zobrazení seznamu](ui-views.md)  
+[Vyhledání funkcí a informací pomocí Řekněte mi](ui-search.md)  
+[Vyhledávání stránek pomocí prohlížeče profilů](ui-role-explorer.md)  
+[Přidání stránky nebo sestavy do záložek v Centru rolí](ui-bookmarks.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

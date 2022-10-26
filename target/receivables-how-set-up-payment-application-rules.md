@@ -41,7 +41,7 @@ Kromě kritérií pro přiřazování platí pro znaménko částky platby toto:
 |**Důvěra shody**|Udává vaši důvěru v pravidlo aplikace, které definujete na řádku. <br /></br>Hodnota, kterou zadáte v tomto poli, se zobrazí v poli **Důvěra shody** na stránce **Deník odsouhlasení plateb** podle kvality automatického žádost o platbu na řádku deníku.|
 |**Priorita**|Určuje prioritu pravidla aplikace vzhledem k ostatním pravidlům aplikace, která jsou definována jako řádky na stránce **Pravidla aplikace platby**. 1 představuje nejvyšší prioritu.|
 |**Shoda se spřízněnou stranou**|Uvádí, kolik informací o zákazníkovi nebo dodavateli, jako je adresa, název města a číslo bankovního účtu, na řádku deníku odsouhlasení plateb se musí shodovat s informacemi o otevřené položce než bude použito aplikační pravidlo pro automatické připsání platby na otevřený záznam.|
-|**Doc. Č./příp. Doc. Čísla. Shoda**|Uvádí, zda se text na řádku deníku odsouhlasení plateb musí shodovat s hodnotou v poli **Číslo dokumentu** nebo **Číslo externího dokladu** v otevřeném poli záznam před aplikačním pravidlem bude použit k automatickému uplatnění platby na otevřený záznam.|
+|**Doc. Č./příp. Doc. Ne. Shoda**|Uvádí, zda se text na řádku deníku odsouhlasení plateb musí shodovat s hodnotou v poli **Číslo dokumentu** nebo **Číslo externího dokladu** v otevřeném poli záznam před aplikačním pravidlem bude použit k automatickému uplatnění platby na otevřený záznam.|
 |**Částka vč. Odpovídající tolerance**|Uvádí, kolik položek pro zákazníka nebo dodavatele musí odpovídat částce včetně tolerance platby, než bude pravidlo aplikace použito k automatickému použití platby na otevřenou položku.|
 |**Vyžadována kontrola**|Uvádí, zda je aplikace pro automatické platby doporučena k manuální kontrole uživatelem před odesláním. Výběrem pole **Řádky ke kontrole** na stránce **Deník platebních aplikací** spustíte řízené prostředí, kde můžete snadno zkontrolovat více žádostí v sekvenci na stránce **Kontrola žádosti o platbu**.|
 
@@ -50,7 +50,7 @@ Následující tabulka popisuje standardní pravidla aplikace platby v [!INCLUDE
 > [!Important]
 > Pravidla žádosti o platbu se mohou ve vaší implementaci [!INCLUDE[prod_short](includes/prod_short.md)] lišit.
 
-| Jistota shody | Priorita | Spřízněná strana se shoduje | Doc. Č./příp. Doc. Čísla. Shoda | Částka vč. Odpovídající tolerance |
+| Jistota shody | Priorita | Spřízněná strana se shoduje | Doc. Č./příp. Doc. Ne. Shoda | Částka vč. Odpovídající tolerance |
 |------------------|----------|-----------------------|--------------------------------|--------------------------------|
 | Vysoká | 1 | Plně | Ano - Více | Jedna shoda |
 | Vysoká | 2 | Plně | Ano - Více | Více shod |

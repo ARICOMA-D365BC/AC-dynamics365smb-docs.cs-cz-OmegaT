@@ -20,7 +20,7 @@ Někdy možná budete muset převést částku z jednoho bankovního účtu [!IN
 
 ## Zaúčtování převodu mezi bankovními účty se stejným kódem měny
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
 2. Na řádku deníku vyplňte pole **Datum zaúčtování** a **Číslo dokladu**.
 3. V poli **Typ účtu** vyberte **Bankovní účet**.
 4. V poli **Číslo účtu** vyberte banku, ze které chcete převést prostředky.
@@ -35,7 +35,7 @@ Někdy možná budete muset převést částku z jednoho bankovního účtu [!IN
 
 Chcete-li převést prostředky mezi bankovními účty, které používají různé měny, je nutné zaúčtovat dva řádky finančního deníku.
 
-1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
 2. Vytvořte dva řádky deníku a vyplňte pole **Datum zaúčtování** a **Číslo dokladu**.
 3. Na prvním řádku deníku v poli **Typ** vyberte **Bankovní účet**.
 4. V poli **Číslo účtu** vyberte bankovní účet, ze kterého chcete prostředky převést.
@@ -47,22 +47,22 @@ Chcete-li převést prostředky mezi bankovními účty, které používají rů
    > [!NOTE]
    > Některé společnosti preferují převody mezi účty na samostatných řádcích deníku. Jiné společnosti dávají přednost zaúčtování všeho na jeden řádek deníku pomocí vyrovnávacího účtu. Pokud si nejste jisti, co dělat, obraťte se na místního odborníka.
    >
-   > Pokud vaše společnost dává přednost použití vyrovnávacího účtu, nastavte **Typ Vyrovnávací účtu** na **Bankovní účet** a nastavte **Číslo. Account No.** field to the bank account to which you want to transfer the funds. Then proceed to step 9 or 10.
+   > Pokud vaše společnost dává přednost použití vyrovnávacího účtu, nastavte **Typ Vyrovnávací účtu** na **Bankovní účet** a nastavte **Číslo Vyrovnávacího účtu** na bankovní účet, na který chcete prostředky převést. Poté pokračujte krokem 9 nebo 10.
    >
-   > If your company prefers to use a separate journal line, then move on to the next step.
-6. On the second journal line, in the **Type** field, select **Bank Account**.
-7. In the **Account No.** field, select the bank account to which you want to transfer the funds.
+   > Pokud vaše společnost dává přednost použití samostatného řádku deníku, přejděte k dalšímu kroku.
+6. Na druhém řádku deníku v poli **Typ** vyberte Možnost **Bankovní účet**.
+7. V poli **Číslo účtu** vyberte bankovní účet, na který chcete prostředky převést.
 8. V poli **Částka** zadejte částku v měně bankovního účtu se znaménkem minus nebo bez něj.
 
    > [!TIP]
    > Částka bez znaménka je debit a částka se znaménkem mínus je kredit.
-9. If the exchange rates used in the journal are different than the exchange rates on the **Currency Exchange Rates** page, enter a new journal line for the exchange rate gain or loss.
+9. Pokud se směnné kurzy použité v deníku liší od směnných kurzů na stránce **Směnné kurzy měn**, zadejte nový řádek deníku pro zisk nebo ztrátu směnného kurzu.
 
-   1. Enter **G/L Account** in the **Account Type** field.
+   1. Do pole **Typ účtu** zadejte **Účet hlavní knihy**.
 
-   2. Enter the G/L account number for exchange rate gain or loss in the **Account No.** field.
+   2. Do pole **Číslo účtu** zadejte číslo účtu pro kurzový zisk nebo ztrátu.
 
-   3. Enter the exchange rate gain or loss in the **Amount** field with or without a minus sign.
+   3. Zadejte zisk nebo ztrátu směnného kurzu do pole **Částka** se znaménkem minus nebo bez něj.
 
    > [!TIP]
    > Částka bez znaménka je debit a částka se znaménkem mínus je kredit.
@@ -70,10 +70,10 @@ Chcete-li převést prostředky mezi bankovními účty, které používají rů
 
 ## Viz také
 
-[Reconciling Bank Accounts](bank-manage-bank-accounts.md)  
-[Setting Up Banking](bank-setup-banking.md)  
-[Work with General Journals](ui-work-general-journals.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Odsouhlasení bankovních účtů](bank-manage-bank-accounts.md)  
+[Nastavení bankovnictví](bank-setup-banking.md)  
+[Práce s Finačními deníky](ui-work-general-journals.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

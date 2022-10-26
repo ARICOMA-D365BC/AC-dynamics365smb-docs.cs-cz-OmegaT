@@ -72,7 +72,7 @@ To se týká i některých funkcí základní aplikace, například následujíc
 * Dataverse connections
 * Služba OCR
 * Online Mapy
-* Nařízení o DPH EU Čísla. Služba
+* Nařízení o DPH EU Ne. Služba
 
 ## Doporučené aplikace
 Microsoft partneři a prodejci mohou vytvářet rozšíření, která mohou používat k sestavování seznamů aplikací, které často doporučují svým zákazníkům. Pokud ano a nasadili rozšíření do vašeho tenanta, aplikace budou dostupné na stránce **Doporučené aplikace**. Zde si můžete přečíst o každé aplikaci a rozhodnout se, zda ji nainstalovat.
