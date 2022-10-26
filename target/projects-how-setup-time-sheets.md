@@ -89,19 +89,19 @@ Následující části popisují, jak nastavit pracovní výkazy, pokud nepouž�
 4. Do pole **ID schvalovatele pracovního výkazu** zadejte ID schvalovatele pracovního výkazu. Schvalovatel může schválit, odmítnout nebo znovu otevřít pracovní výkaz.
 
 > [!NOTE]  
-> You cannot change the ID of the time sheet approver if there are time sheets that have not yet been processed and have the status of **Submitted** or **Open**.
+> ID schvalovatele pracovního výkazu nemůžete změnit, pokud existují pracovní výkazy, které ještě nebyly zpracovány a mají stav **Odesláno** nebo **Otevřeno**.
 
 ## Viz také
 
-[Use Time Sheets for Projects](projects-how-use-time-sheets.md)  
-[To create time sheets](projects-how-use-time-sheets.md#to-create-time-sheets)  
-[Record Consumption or Usage for Projects](projects-how-record-job-usage.md)  
-[Setting Up Project Management](projects-setup-projects.md)  
-[Project Management](projects-manage-projects.md)  
-[Finance](finance.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Sales](sales-manage-sales.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Používejte pracovní výkazy pro projekty](projects-how-use-time-sheets.md)    
+[Vytvoření časových výkazů](projects-how-use-time-sheets.md#to-create-time-sheets)    
+[Zaznamenejte spotřebu nebo využití zdrojů pro projekty](projects-how-record-job-usage.md)    
+[Nastavení projektového řízení](projects-setup-projects.md)    
+[Správa projektu](projects-manage-projects.md)    
+[Finance](finance.md)    
+[Nákup](purchasing-manage-purchasing.md)    
+[Prodej](sales-manage-sales.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
