@@ -28,10 +28,10 @@ If you have a large number of service orders, you can save time by using a batch
 
    | **Action** | **Result** |
    |------------------|----------------|  
-   | **Test Report** | Checks all parts of the document and presents the result in a report. If the report indicates any errors or a lack of information, you must correct the problem. You can then print a new test report. |
-   | **Post** | Posts the order without printing a shipment or an invoice. |
+   | **Testovací sestava** | Checks all parts of the document and presents the result in a report. If the report indicates any errors or a lack of information, you must correct the problem. You can then print a new test report. |
+   | **Účtovat** | Posts the order without printing a shipment or an invoice. |
    | **Post and Print** | Posts the order and prints a shipment (if you ship the order without invoicing it) or an invoice (if you invoice the order). |
-   | **Post Batch** | Posts multiple service orders at one time once. |
+   | **Dávkové účtování** | Posts multiple service orders at one time once. |
 
 4. When you post the order, you must specify one of the following options for how you want to post the order.
 

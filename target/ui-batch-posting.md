@@ -94,7 +94,7 @@ Následující postup ukazuje, jak nastavit sestavu **Dávkové účto prod.obje
    * 497 **Dávkové účto nák.faktur**
    * 496 **Dávkové účto nák.objednávek**
    * 498 **Dávkové účto nák. dobropisů
-   * 6665 **Dávkové účto nák. obj. vratky**
+   * 6665 **Dávkové účto nák. nákupní vratky**
    * 298 **Dávkové účto prod.dobropisů**
    * 297 **Dávkové účto prod.faktur**
    * 296 **Dávkové účto prod.objednávek**

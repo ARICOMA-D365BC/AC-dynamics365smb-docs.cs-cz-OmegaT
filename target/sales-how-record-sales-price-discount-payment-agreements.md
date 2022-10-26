@@ -14,7 +14,7 @@ ms.author: bholtorf
 
 ---
 
-# Record Special Sales Prices and Discounts
+# Záznam speciálních prodejních cen a slev
 
 > [!NOTE]
 > 2020 release wave 2 introduced new, streamlined processes for setting up and managing prices and discounts. If you're a new customer using the latest version, you're using the new experience. If you're an existing customer, whether you are using the new experience depends on whether your administrator has enabled the **New sales pricing experience** feature update in **Feature Management**. Další informace naleznete v tématu [Povolení nadcházejících funkcí s předstihem](/dynamics365/business-central/dev-itpro/administration/feature-management).

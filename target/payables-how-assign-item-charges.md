@@ -50,7 +50,7 @@ Pokud znáte poplatek za zboží v době, kdy účtujete nákupní fakturu za zb
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte Mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nákupní faktury** a poté vyberte související odkaz.
 2. Vytvořte novou nákupní fakturu. Pro více informací navštivte [Evidence nákupu](purchasing-how-record-purchases.md)
 3. Ujistěte se, že nákupní faktura má jeden nebo více řádků typu Zboží.
-4. On a new line, in the **Type** field, select **Charge (Item)**.
+4. Na novém řádku do pole **Typ** vyberte **Poplatek (zboží)**.
 5. In the **Quantity** field, enter the units of the item charge that you have been invoiced for.
 6. In the **Direct Unit Cost** field, enter the amount of the item charge.
 7. Podle potřeby vyplňte zbývající pole. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]

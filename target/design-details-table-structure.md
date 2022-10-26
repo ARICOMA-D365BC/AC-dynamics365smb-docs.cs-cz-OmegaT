@@ -93,8 +93,8 @@ Pole 480 nelze upravovat v následujících tabulkách.
 | 115 | **Sales Cr.Memo Line** |
 | 120 | **Nákupní  Rcpt. Header** |
 | 121 | **Nákupní  Rcpt. Line** |
-| 122 | **Nákupní  Zásoby Header** |
-| 123 | **Nákupní  Zásoby Line** |
+| 122 | **Nákupní  Nák. Header** |
+| 123 | **Nákupní  Nák. Line** |
 | 124 | **Nákupní  zál.  Memo Hdr.** |
 | 125 | **Nákupní  zál.  Memo Line** |
 | 169 | **Job Ledger Entry** |

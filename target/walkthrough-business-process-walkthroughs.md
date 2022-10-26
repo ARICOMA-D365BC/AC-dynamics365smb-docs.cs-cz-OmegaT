@@ -41,7 +41,7 @@ The walkthroughs are complete scenarios, and should be performed from beginning 
 
 ## Viz také
 
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

@@ -81,7 +81,7 @@ The part shows which documents with your ID in the **Assigned User ID** field ar
 
 ### Schedule reports
 
-You can schedule a report or batch job to run at a specific date and time. Scheduled reports and batch jobs are entered in the job queue and processed at the scheduled time, similar to other jobs. You choose the **Schedule** option after you choose the **Send to** action, and then you enter information such as printer, time and date, recurrence.
+You can schedule a report or batch job to run at a specific date and time. Naplánované sestavy a dávkové úlohy se zadávají do fronty úloh a zpracovávají se v naplánovaném čase, podobně jako u jiných úloh. You choose the **Schedule** option after you choose the **Send to** action, and then you enter information such as printer, time and date, recurrence.
 
 For more information, see [Scheduling a Report to Run](ui-work-report.md#ScheduleReport)
 

@@ -82,11 +82,11 @@ The purchase credit memo is removed and replaced with a new document in the list
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Purchase Return Orders**, and then choose the related link.
 2. Vyberte akci **Nový**.
-3. Fill in the fields on the **General** FastTab as necessary.
-4. On the **Lines** FastTab, fill the lines manually, or copy information from other documents to fill the lines automatically:
+3. Vyplňte pole na pevné záložce **Obecné** podle potřeby.
+4. Na pevné záložce **Řádky** vyplňte řádky ručně nebo zkopírujte informace z jiných dokumentů, abyste řádky vyplnili automaticky:
 
-   - Use the **Get Posted Document Lines to Reverse** function to copy one or more posted document lines from one or more posted documents. This function always exactly reverses the costs from the posted document line. This function is described in the following steps.
-   - Use the **Copy from Document** function to copy an existing document to the return order. Use this function to copy the entire document. It can be either a posted document or a document that is not yet posted. This function only enables exact cost reversing when the **Exact Cost Reversing Mandatory** check box is selected on the **Sales and Receivables Setup** page.
+   - Pomocí funkce **Získat řádky zaúčtovaného dokladu k obrácení** zkopírujte jeden nebo více řádků zaúčtovaného dokladu z jednoho nebo více zaúčtovaných dokladů. Tato funkce vždy přesně obrátí náklady z řádku zaúčtovaného dokladu. Tato funkce je popsána v následujících krocích.
+   - Pomocí funkce **Kopírovat z dokumentu** zkopírujte existující dokument k vrácení objednávky. Tato funkce slouží ke zkopírování celého dokumentu. Může to být buď zaúčtovaný dokument, nebo dokument, který ještě není zaúčtován. Tato funkce umožňuje přesné obrácení nákladů pouze v případě, že je zaškrtnuto políčko **Povinné přesné vrácení nákladů** na stránce **Nastavení prodeje a pohledávek**.  
 
 5. Choose the **Get Posted Document Lines to Reverse** action.
 6. At the top of the **Posted Purchase Document Lines** page, select the **Show Reversible Lines Only** check box if you want to see only lines that have quantities that have not yet been returned. For example, if a posted purchase invoice quantity has already been returned, you may not want to include that quantity on a new purchase return document.
@@ -94,36 +94,36 @@ The purchase credit memo is removed and replaced with a new document in the list
    > [!NOTE]  
    > This field only works for posted receipts and posted invoice lines, not for posted return or posted credit memo lines.
 
-   At the left side of the page, the different document types are listed, and the number in brackets shows the number of documents available of each document type.
+   Na levé straně stránky jsou uvedeny různé typy dokumentů a číslo v závorkách ukazuje počet dokumentů dostupných pro každý typ dokumentu.
 
-7. In the **Document Type Filter** field, select the type of posted document lines you would like to use.
-8. Select the lines that you would like to copy to the new document.
+7. V poli **Filtr typu dokumentu** vyberte typ řádků zaúčtovaného dokladu, který chcete použít.
+8. Vyberte řádky, které chcete zkopírovat do nového dokumentu.
 
    > [!NOTE]  
-   > If you use Ctrl+A to select all lines, all lines within the filter you have set are copied, but the **Show Reversible Quantity Only** filter is ignored. For example, suppose you have filtered the lines to a particular document number with two lines, one of which has already been returned. Even if the **Show Reversible Quantity Only** field is selected, if you press Ctrl+A to copy all lines, both lines are copied, instead of only the one that has not yet been reversed.
+   > Pokud použijete Ctrl+A k výběru všech řádků, zkopírují se všechny řádky v rámci filtru, který jste nastavili, ale filtr **Zobrazit pouze reverzibilní množství** bude ignorován. Předpokládejme například, že jste filtrovali řádky na konkrétní číslo dokumentu se dvěma řádky, z nichž jeden již byl vrácen. I když je vybráno pole **Zobrazit pouze reverzibilní množství**, pokud stisknete Ctrl+A pro zkopírování všech řádků, zkopírují se oba řádky, namísto pouze jednoho, který ještě nebyl obrácen.
 
-9. Choose the **OK** button to copy the lines to the new document.
+9. Kliknutím na tlačítko **OK** zkopírujte řádky do nového dokumentu.
 
-   The following processes occur:
+   Dochází k následujícím procesům:
 
-   - For posted document lines of the type **Item**, a new document line is created that is a copy of the posted document line, with the quantity that has not yet been reversed. The **Appl.-to Item Entry** field is filled in as appropriate with the number of the item ledger entry of the posted document line.
+   - Pro řádky zaúčtovaného dokladu typu **Zboží** je vytvořen nový řádek dokladu, který je kopií řádku zaúčtovaného dokladu s množstvím, které ještě nebylo obráceno. The **Appl.-to Item Entry** field is filled in as appropriate with the number of the item ledger entry of the posted document line.
 
-   - For posted document lines that are not of the type **Item**, such as item charges, a new document line is created that is a copy of the original posted document line.
+   - Pro řádky zaúčtovaného dokladu, které nejsou typu **Zboží**, například náklady na zboží, je vytvořen nový řádek dokladu, který je kopií původního řádku zaúčtovaného dokladu.
 
-   - Calculates the **Unit Cost (LCY)** field on the new line from the costs on the corresponding item ledger entries.
+   - Vypočítá pole **Jednotkové náklady (LCY)** na novém řádku z nákladů na odpovídajících záznamech knihy zboží.
 
-   - If the copied document is a posted shipment, posted receipt, posted return receipt, or posted return shipment, the unit price is calculated automatically from the item card.
+   - Pokud je zkopírovaným dokladem zaúčtovaná zásilka, zaúčtovaná účtenka, zaúčtovaná vratka nebo zaúčtovaná zpětná zásilka, jednotková cena se vypočítá automaticky z karty zboží.
 
-   - If the copied document is a posted invoice or credit memo, the unit price, invoice discounts, and line discounts from the posted document line are copied.
+   - Pokud je zkopírovaný doklad zaúčtovaná faktura nebo dobropis, zkopíruje se jednotková cena, fakturační slevy a řádkové slevy z řádku zaúčtovaného dokladu.
 
    - If the posted document line contains item tracking lines, the **Appl.-to Item Entry** field on the item tracking lines is filled with the appropriate item ledger entry numbers from the posted item tracking lines.
 
-   When you copy from a posted invoice or posted credit memo, application copies any relevant invoice discounts and line discounts as valid at the time of posting that document from the posted document line to the new document line. Be aware, however, that if the **Calc. Zásoby Discount** option is activated on the **Purchases & Payables Setup** page, then the invoice discount will be newly calculated when you post the new document line. The line amount for the new line may therefore be different than the line amount for the posted document line, depending on the new calculation of the invoice discount.
+   Když kopírujete ze zaúčtované faktury nebo zaúčtované dobropisy, aplikace zkopíruje všechny relevantní fakturační slevy a řádkové slevy jako platné v době zaúčtování tohoto dokladu z řádku zaúčtovaného dokladu do nového řádku dokladu. Uvědomte si však, že pokud možnost **Calc. Nák. Discount** option is activated on the **Purchases & Payables Setup** page, then the invoice discount will be newly calculated when you post the new document line. Částka řádku pro nový řádek se tedy může lišit od částky řádku pro řádek zaúčtovaného dokladu v závislosti na novém výpočtu slevy faktury.
 
    > [!NOTE]  
-   > If part of the quantity of the posted document line has already been reversed or sold or consumed, a line is created for only the quantity that remains in inventory or that has not been returned. If the full quantity of the posted document line has already been reversed, a new document line is not created.
+   > Pokud již byla část množství řádku účtovaného dokladu stornována nebo prodána nebo spotřebována, vytvoří se řádek pouze pro množství, které zůstalo na skladě nebo které nebylo vráceno. Pokud již bylo stornováno celé množství řádku zaúčtovaného dokladu, nový řádek dokladu se nevytvoří.
    >
-   > If the flow of goods in the posted document is the same as the flow of goods in the new document, a copy of the original posted document line in the new document is created. The **Appl.-from Item Entry** field is not filled in because, in this case, exact cost reversing is not possible. For example, if you use the **Get Posted Document Lines to Reverse** function to get a posted purchase credit memo line for a new purchase credit memo, only the original posted credit memo line is copied to the new credit memo.
+   > Pokud je tok zboží v zaúčtovaném dokladu stejný jako tok zboží v novém dokladu, vytvoří se kopie řádku původního zaúčtovaného dokladu v novém dokladu. Pole **Aplikační formulář pro zadání zboží** není vyplněno, protože v tomto případě není možné přesné vrácení nákladů. For example, if you use the **Get Posted Document Lines to Reverse** function to get a posted purchase credit memo line for a new purchase credit memo, only the original posted credit memo line is copied to the new credit memo.
 
 10. On the **Purchase Return Order** page, in the **Return Reason Code** field on each line, select the reason for the return.
 11. Vyberte tlačítko **Zaúčtovat**.
@@ -133,7 +133,7 @@ The purchase credit memo is removed and replaced with a new document in the list
 You may agree with your vendor that they compensate you for a purchased item by replacing the item. The replacement item can be the same or it can be different. This situation could occur if the vendor mistakenly shipped the wrong item.
 
 1. On the **Purchase Return Order** page for an active return process, on an empty line, make a negative entry for the replacement item by inserting a negative amount in the **Quantity** field.
-2. Choose the **Move Negative Lines** action.
+2. Vyberte akci **Přesunout záporné čáry**.
 3. On the **Move Negative Purchase Lines** page, fill in the fields as necessary.
 4. Zvolte tlačítko **OK**. The negative line is deleted from the purchase return order, and a new purchase order is created. For more information, see [Record Purchases](purchasing-how-record-purchases.md).
 
@@ -152,9 +152,9 @@ You can post this reduced purchase cost as an item charge on a credit memo or re
    You may want to create a special item charge number to cover purchase allowances.
 6. In the **Quantity** field, enter **1**.
 7. In the **Direct Unit Cost** field, enter the amount of the purchase allowance.
-8. Assign the purchase allowance as an item charge to the items in the posted receipt. For more information, see [Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md). When you have assigned the allowance, return to the **Purchase Credit Memo** page.
+8. Assign the purchase allowance as an item charge to the items in the posted receipt. Další informace [naleznete v tématu Použití poplatků za položku k účtování dodatečných obchodních nákladů](payables-how-assign-item-charges.md). When you have assigned the allowance, return to the **Purchase Credit Memo** page.
 
-When you post the purchase return order, the purchase allowance is added to the relevant purchase entry amount. In this way, you can maintain accurate inventory valuation.
+When you post the purchase return order, the purchase allowance is added to the relevant purchase entry amount. Tímto způsobem můžete udržovat přesné ocenění zásob.
 
 ## To combine return shipments
 

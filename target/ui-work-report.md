@@ -14,77 +14,76 @@ ms.date: 03/24/2022
 ms.author: jswymer
 
 ---
-# Run and Print Reports
+# Spouštění a tisk sestav
 
-A report gathers information based on a specified set of criteria. Informace jsou uspořádány a prezentovány ve snadno čitelném formátu, který lze vytisknout nebo uložit jako soubor. There are many reports that you can access throughout the application. The reports typically provide information related to the context of the page you're on. For example, the **Customer** page includes reports for the top 10 customers, sales statistics, and more.
+Sestava shromažďuje informace na základě zadané sady kritérií. Informace jsou uspořádány a prezentovány ve snadno čitelném formátu, který lze vytisknout nebo uložit jako soubor. Existuje mnoho sestav, ke kterým máte v rámci aplikace přístup. Tyto sestavy obvykle obsahují informace týkající se kontextu stránky, na které se právě nacházíte. Například stránka **Zákazníci** obsahuje sestavy pro 10 nejlepších zákazníků, statistiky prodeje a další.
 
-Batch jobs and XMLports do more or less the same as reports, but are used more for processing or exporting data. For example, the **Create Reminders** batch job creates reminder documents for customers with overdue payments.
+Dávkové úlohy a XMLporty fungují víceméně stejně jako sestavy, ale používají se více pro zpracování nebo export dat. Například dávková úloha **Vytvořit upomínky** vytvoří upomínky pro zákazníky s opožděnými platbami.
 
 > [!NOTE]
-> This topic refers mainly to "report", but similar information applies to batch jobs and XMLports.
+> Toto téma se týká převážně „sestavy“, ale podobné informace platí i pro dávkové úlohy.
 
 ## Začínáme
 
-You find reports in the **Reports** tab on selected pages, or you can use search ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") to find reports by name.
+Sestavy můžete najít v záložce **Sestavy** na vybraných stránkách, nebo můžete použít ![vyhledávací žárovku, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), abyste našli sestavy podle jména.
 
-When you open a report, batch job, or XMLport, you're typically presented with a request page where you set various options and filters that determine what to include in the report. The following sections explain how to use the request page to build, preview, and print a report.
+Když otevřete sestavu, dávkovou úlohu nebo XMLport, obvykle se zobrazí stránka požadavku, kde nastavíte různé možnosti a filtry, které určují, co se má do sestavy zahrnout. Následující části vysvětlují, jak používat stránku požadavku k vytvoření, náhledu a tisku sestavy.
 
-## <a name="SavedSettings"></a>Using default values - predefined settings
+## <a name="SavedSettings"></a>Použití výchozích hodnot – předdefinovaná nastavení
 
-Most request pages include the **Use default values from** field. This field lets you select predefined settings for the report, which automatically set options and filters for the report. Select an entry from the drop-down list, and you'll see the options and filters on the request page change accordingly.
+Většina stránek požadavků obsahuje pole **Použít výchozí hodnoty z**. Toto pole umožňuje vybrat předdefinovaná nastavení pro sestavu, která automaticky nastaví možnosti a filtry pro sestavu. Vyberte položku ze seznamu a uvidíte, že možnosti a filtry na stránce požadavku se odpovídajícím způsobem změní.
 
-The entry called **Last used options and filters** is always available. This entry sets the report to use options and filters that were used the last time you ran the report.
+Položka s názvem **Naposledy použité možnosti a filtry** je vždy k dispozici. Tato položka nastaví sestavu tak, aby používala možnosti a filtry, které byly použity při posledním spuštění sestavy.
 
-The **Use default values from** field provides a fast and reliable way to consistently generate reports that contain the correct data. After you select an entry, you can change any of the options and filters before previewing or printing the report. The changes that you make won't be saved to the predefined settings entry you selected, but they'll be saved to the **Last used options and filters** entry.
+Pole **Použít výchozí hodnoty z** poskytuje rychlý a spolehlivý způsob konzistentního generování sestav obsahujících správná data. Po výběru položky můžete před zobrazením náhledu nebo tiskem sestavy změnit kteroukoli z možností a filtrů. Změny, které provedete, se neuloží do položky předdefinovaných nastavení, kterou jste vybrali, ale uloží se do položky **Naposledy použité možnosti a filtry**.
 
 > [!NOTE]
-> The predefined settings are typically set up and managed by an administrator. If you want to learn more, see [Manage Saved Settings for Reports and Batch Jobs](reports-saving-reusing-settings.md).
+> Předdefinovaná nastavení obvykle nastavuje a spravuje správce. Pokud se chcete dozvědět více, přečtěte si [Správa uložených nastavení pro sestavy a dávkové úlohy](reports-saving-reusing-settings.md).
 
-## Specifying the data to include in a report
+## Určení dat, která mají být zahrnuta do sestavy
 
-Use the fields under **Options** and **Filters** to change limit the information you want in the report. You set filters in a report in more or less the same way as you set filters on lists. For more information, see [Filtering](ui-enter-criteria-filters.md#filtering).
+Pomocí polí v části **Možnosti** a **Filtry** můžete změnit omezení požadovaných informací v sestavě. Filtry v sestavě nastavujete víceméně stejným způsobem jako filtry v seznamech. Další informace naleznete v tématu [Filtrování](ui-enter-criteria-filters.md#filtering).
 
 > [!CAUTION]
-> The **Filter list by** section on a request page provides a generic filtering capability for reports. These filters are optional.
+> Sekce **Filtrovat dle** na stránce požadavku poskytuje obecnou možnost filtrování sestavy. Tyto filtry jsou volitelné.
 >
-> Some reports will ignore any such filters, meaning that no matter what filter is set in the **Filter list by** section, the output of the report is the same. It's not possible to provide a list of which fields are ignored in which reports, so you will have to experiment with the filters when using them.
+> Některé sestavy budou ignorovat všechny takové filtry, což znamená, že bez ohledu na to, jaký filtr je nastaven v části **Zobrazit výsledky**, je výstup sestavy stejný. Není možné poskytnout seznam obsahující informace o tom, která pole jsou ignorována v kterých sestavách, takže při jejich užívání s nimi budete muset experimentovat.
 >
-> **Example**: When you use the **Create Reminders** batch job, a filter for the **Customer Ledger Entries** field of **Last Issued Reminder Level** will be ignored because filters are fixed for that batch job.
+> **Příklad**: Při použití dávkové úlohy **Vytvořit upomínky** bude filtr pro pole **Položky zákazníka** **Úrovně poslední vydané upomínky** ignorován, protože filtry jsou pro danou dávkovou úlohu pevně stanoveny..
 
-## Previewing a report
+## Náhled sestavy
 
-Previewing a report lets you see what the report will look like before you print it. The preview isn't based on the printer selected in the **Printer** field on the request page. It's controlled by the browser. After previewing, you can then go back to the request page and make changes to options and filters as needed.
+Náhled sestavy vám umožní zjistit, jak bude sestava vypadat, ještě před jejím vytištěním. Náhled není založen na tiskárně vybrané v poli **Tiskárna** na stránce požadavku. Je řízen prohlížečem. Po zobrazení náhledu se můžete vrátit na stránku požadavku a podle potřeby provést změny možností a filtrů.
 
-To preview a report, choose the **Preview** or **Preview & Close** button on the report request page. The button that displays depends on the report, so some reports have **Preview** button, while others have a **Preview & Close** button. Both buttons will open a preview of the report. The difference is that **Preview** keeps the request page open, so you can go back to it, make changes, preview again, or print. With **Preview & Close**, the request page closes, so you'll have to open the report again to make changes or print.
+Chcete-li zobrazit náhled sestavy, zvolte tlačítko **Náhled** nebo **Náhled a zavřít** na stránce požadavku sestavy. Tlačítko, které se zobrazí, závisí na sestavě, takže některé sestavy mají tlačítko **Náhled**, zatímco jiné mají tlačítko **Náhled a zavřít**. Obě tlačítka otevřou náhled sestavy. Rozdíl je v tom, že **Náhled** udržuje stránku požadavku otevřenou, takže se k ní můžete vrátit, provést změny, znovu zobrazit náhled nebo vytisknout. Pomocí **Náhled a zavřít**se stránka požadavku zavře, takže budete muset zprávu znovu otevřít, abyste mohli provést změny nebo vytisknout.
 
-> [!NOTE]
-> If you're using Business Central 2020 release wave 1 or earlier, there's only a **Preview** button, which closes the request page on preview, like described for **Preview & Close**.
+> Pokud používáte verzi Business Central 2020, wave 1 nebo starší, je k dispozici pouze tlačítko **Náhled**, které zavře stránku požadavku při náhledu, jak je popsáno u **Náhled a zavřít**.
 
-### Work with the Preview
+### Práce s náhledem
 
-In the preview, use the menu bar on the report preview to:
+V náhledu použijte panel nabídek na náhledu sestavy, abyste:
 
-- Move through pages
-- Zoom in and out
-- Resize to fit the page
-- Select text
+- Procházeli stránkami
+- Přibližovali a oddalovali
+- Měnili velikost stránky
+- Vybírali text
 
-   You can copy text from a report, and then paste it somewhere else, like a page in [!INCLUDE[prod_short](includes/prod_short.md)] or Microsoft Word.  Using a mouse, for example, you press and hold where you want to start. Then move the mouse to select one or more words, sentences, or paragraphs. Press the right mouse button and select **Copy**. Then, paste the selected text where you want it.
-- Pan the document
+   Můžete zkopírovat text ze sestavy a pak ho vložit někam jinam, například na stránku do [! INCLUDE[prod_short](includes/prod_short.md)] nebo Microsoft Word.  Například pomocí myši stisknete a podržíte tlačítko v místě, kde chcete začít. Pak pohybem myši vyberte jedno nebo více slov, vět nebo odstavců. Stiskněte pravé tlačítko myši a vyberte **Kopírovat**. Potom vložte vybraný text na požadované místo.
+- Posun dokumentu
 
-   You can move the visible area of the report in any direction so you can view other areas or the report. Panning is helpful when you've zoomed in to see details.  Using your mouse, for example, press and hold the mouse button anywhere in the report preview, and then move your mouse.
+   Viditelnou část sestavy můžete přesunout libovolným směrem, abyste si mohli prohlédnout jiné oblasti nebo sestavu. To je užitečné, pokud jste přiblížili zobrazení, aby jste viděli podrobnosti.  Pomocí myši stiskněte a podržte tlačítko myši kdekoli v náhledu zprávy a poté pohněte myší.
 
-- Download to a PDF file on your computer or network.
-- Print
+- Stáhnutí PDF souboru do počítače nebo po síti.
+- Tisk
 
-## Saving a report to a file
+## Uložení sestavy do souboru
 
-You can save a report to a PDF document, Microsoft Word document, Microsoft Excel worksheet, or XML document by choosing the **Send to** button, and then making your selection.
+Sestavu můžete uložit do dokumentu PDF, dokumentu Microsoft Word nebo dokumentu Microsoft Excel tak, že vyberete možnost **Odeslat do** a poté provedete výběr.
 
 > [!TIP]
-> The **Microsoft Excel Document (data only)** and **XML Document** options are mostly for advanced purposes. You'd typically use these options for doing detailed data analysis. For more information, see [Analyzing Report Data with Excel and XML](report-analyze-excel.md).
+> Možnosti **Dokument Microsoft Excel (pouze data)** a **Dokument XML** slouží většinou pro pokročilé účely. Tyto možnosti byste obvykle použili pro podrobnou analýzu dat. Další informace naleznete v části [Analýza dat sestav pomocí Excelu a XML](report-analyze-excel.md).
 >
-> You can also use the **Microsoft Excel Document (data only)** to create new Excel layouts for a given report. For more information, see [Work with Excel Layouts](ui-excel-report-layouts.md).
+> Můžete také použít **Dokument aplikace Microsoft Excel (pouze data)** k vytvoření nových rozvržení aplikace Excel pro danou sestavu. Další informace naleznete v tématu  [Práce s rozvržením aplikace Excel](ui-excel-report-layouts.md).
 
 <!--
 ### About sending to Word
@@ -96,59 +95,59 @@ Use the **Microsoft Word Document** option to generate a report as a Word docume
 
 -->
 
-## <a name="ScheduleReport"></a> Scheduling a report to run later
+## <a name="ScheduleReport"></a> Plánování pozdějšího spuštění sestavy
 
-You can schedule or batch job a report to run at a specific date and time. Scheduled reports and batch jobs are entered in the job queue and processed at the scheduled time, similar to other jobs. You choose the **Schedule** option after you choose the **Send to** button, and then you enter information such as printer, and time and date. The report is then added to the job queue and will be run at the specified time. When the report is processed, the item will be removed from the job queue. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+Můžete naplánovat sestavu nebo dávkovou úlohu tak, aby se spouštěla k určitému datu a času. Naplánované sestavy a dávkové úlohy se zadávají do fronty úloh a zpracovávají se v naplánovaném čase, podobně jako u jiných úloh. Po klepnutí na tlačítko **Odeslat do** zvolíte možnost **Plán** a poté zadáte informace, jako je tiskárna, čas a datum. Sestava je poté přidána do fronty úloh a bude spuštěna ve specifikovaném čase. Po zpracování sestavy bude položka odstraněna z fronty úloh. Pro více informací navštivte [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md).
 
-When you schedule a report to run, you can specify that it must run every Thursday by setting the **Next Run Date Formula** field to *D4*, for example. For more information, see [Use Date Formulas](ui-enter-date-ranges.md#use-date-formulas).
+Když naplánujete spuštění sestavy, můžete určit, že se musí spouštět každý čtvrtek, například nastavením pole **Vzorec data dalšího spuštění** na *D4*. Pro více informací navštivte *Použití vzorců dat*.
 
-You can choose to save the report to a file (like Excel, Word, or PDF), print it, or only generate the report. If you choose to save the report to a file, then the processed report is sent to the **Report Inbox** area on your Role Center, where you can view it.
+Sestavu můžete uložit do souboru (například do Excelu, Wordu nebo PDF), vytisknout nebo sestavu pouze vygenerovat. Pokud se rozhodnete uložit sestavu do souboru, bude zpracovaná sestava odeslána do **Schránky sestav** ve vašem Centru rolí, kde si ji můžete prohlédnout.
 
-## <a name="PrintReport"></a>Printing a report
+## <a name="PrintReport"></a>Tisk sestavy
 
-To print a report, choose the **Print** button on the request page or on the menu bar of the **Preview** page.
+Chcete-li zobrazit náhled sestavy, zvolte tlačítko **Náhled** nebo **Náhled** na stránce požadavku sestavy.
 
-When a report is using an Excel layout, you won't see **Printer** field, **Print** button or **Preview** button. Instead, there's a **Download** button. To print, select **Download**, then open the downloaded file in Excel and print from there.
+Pokud sestava používá rozložení aplikace Excel, neuvidíte pole **Tiskárna**, tlačítko **Tisk** ani tlačítko **Náhled**. Místo toho je zde tlačítko **Stáhnout**. Pokud chcete tisknout, vyberte **Stáhnout**, otevřete stažený soubor v Excelu a vytiskněte odtud.
 
-### <a name="Printer"></a>Printer
+### <a name="Printer"></a>Tiskárna
 
-The **Printer** field on the request page shows the name of printer that the report will be sent to. To change a printer, just select the printer from the list.
+Pole **Tiskárna** na stránce požadavku zobrazuje název tiskárny, do které bude sestava odeslána. Chcete-li změnit tiskárnu, stačí vybrat tiskárnu ze seznamu.
 
 > [!NOTE]
-> **(Handled by the browser)** indicates there's no designated printer for the report. In this case, the browser will handle the printout and display a standard experience, where you can choose a local printer connected to your device. **(Handled by the browser)** isn't available in the [!INCLUDE[prod_short](includes/prod_short.md)] mobile app or app for Microsoft Teams.
+> **(Zpracovává prohlížeč)** znamená, že pro sestavu není určena žádná tiskárna. V takovém případě prohlížeč zpracuje výtisk a zobrazí standardní prostředí, kde si můžete vybrat místní tiskárnu připojenou k vašemu zařízení. **(Zpracováno prohlížečem)** není k dispozici v [!INCLUDE[prod_short](includes/prod_short.md)] mobilní aplikaci nebo aplikaci pro Microsoft Teams.
 
 > [!TIP]
-> The printer that's selected for you by default is set up on the **Printer Selections** page. For information about changing the default printer, see [To select which printers print which reports](ui-specify-printer-selection-reports.md#default).
+> Tiskárna, která je pro vás ve výchozím nastavení vybrána, se nastavuje na stránce **Výběry tiskáren**. Informace o změně výchozí tiskárny naleznete v tématu [Postup při výběru tiskáren, které tisknou sestavy](ui-specify-printer-selection-reports.md#default).
 
-### Printing reports in Thai
+### Tisk sestav v thajštině
 
-Specifically for the Thai version of [!INCLUDE[prod_short](includes/prod_short.md)], the **Print** button can't print reports correctly because of limitations in the service that generates the printable PDF file. Instead, you can open the report in Word and then save the report as a printable PDF.
+Speciálně pro thajskou verzi [!INCLUDE[prod_short](includes/prod_short.md)], tlačítko **Tisk** nemůže správně vytisknout sestavy kvůli omezením ve službě, která generuje soubor PDF pro tisk. Místo toho můžete sestavu otevřít v aplikaci Word a uložit ji jako tisknutelný soubor PDF.
 
-Or, you can ask your administrator to create a Word report layout for your most used reports. For more information, see [Managing Report and Document Layouts](ui-manage-report-layouts.md).
+Nebo můžete požádat správce, aby pro nejpoužívanější sestavy vytvořil rozvržení sestavy aplikace Word. Další informace naleznete v tématu [Správa rozvržení sestav a dokladů](ui-manage-report-layouts.md).
 
-## Switching the report layout
+## Přepínání rozložení sestav
 
-A report layout controls what is shown on a report, how it's arranged, and how it's styled. If you want to switch to a different layout, see [Set the Layout Used by a Report](ui-set-report-layout.md). Or, if you want to customize your own report layout, see [Get Started Creating Layouts](ui-get-started-layouts.md).
+Rozložení sestavy určuje, co se v sestavě zobrazuje, jak je uspořádaná a jak je stylizovaná. Chcete-li přepnout na jiné rozložení, přečtěte si téma [Nastavení rozložení pro sestavu](ui-set-report-layout.md). Nebo pokud chcete přizpůsobit vlastní rozložení sestavy, přečtěte si téma [Začínáme s vytvářením rozložení](ui-get-started-layouts.md).
 
-## Advanced options
+## Pokročilé možnosti
 
-The fields under **Advanced** set limitations on the generated report to control printer resources. You typically won't have to change these settings, unless you have a large report. If a report exceeds these limitations when you try to preview or print, a message appears telling you which limitation was exceeded. You can then change the settings to suit your report. Each field, however, has a maximum value that you should be aware of:
+Pole v části **Upřesnit** nastavují omezení generované sestavy pro řízení prostředků tiskárny. Tato nastavení obvykle nebudete muset měnit, pokud nemáte velký přehled. Pokud sestava při pokusu o náhled nebo tisk překročí tato omezení, zobrazí se zpráva s informací, které omezení bylo překročeno. Poté můžete změnit nastavení tak, aby vyhovovalo vašemu přehledu. Každé pole má maximální hodnotu, kterou byste měli znát:
 
-| Pole | Maximum value |
+| Pole | Maximální hodnota |
 |-----|-------------|
-| Maximum rendering time | 12:00:00 |
-| Maximum rows | 1000000 |
-| Maximum documents | 500 |
+| Maximální doba vykreslování | 12:00:00 |
+| Maximální počet řádků | 1000000 |
+| Maximální počet dokumentů | 500 |
 
 > [!NOTE]
-> The maximum values may be different for [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, and an administrator can change them. For more information, see [Configuring Business Central Server - Reports](/dynamics365/business-central/dev-itpro/administration/configure-server-instance#Reports). For an overview of reports limitations [!INCLUDE[prod_short](includes/prod_short.md)] online, see [Operational Limits](/dynamics365/business-central/dev-itpro/administration/operational-limits-online).
+> Maximální hodnoty mohou být pro rozdílně pro [!INCLUDE[prod_short](includes/prod_short.md)] on-premises a správce je může změnit. Další informace naleznete v části [Konfigurace Business Central On-Premises](/dynamics365/business-central/dev-itpro/administration/configure-server-instance#Reports) Pro přehled omezení přehledů [!INCLUDE[prod_short](includes/prod_short.md)] online běžte na [Provozní limity](/dynamics365/business-central/dev-itpro/administration/operational-limits-online).
 
 ## Viz také
 
-[Set Up Printers](ui-specify-printer-selection-reports.md)  
-[Work with Calendar Dates and Times](ui-enter-date-ranges.md)  
-[Managing Report and Document Layouts](ui-manage-report-layouts.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nastavení tiskáren](ui-specify-printer-selection-reports.md)  
+[Práce s kalendářními daty a časy](ui-enter-date-ranges.md)  
+[Správa sestav a rozložení sestav](ui-manage-report-layouts.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

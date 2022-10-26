@@ -14,35 +14,35 @@
 
 ---
 # Povolení vyskladnění pomocí FEFO
-First-Expired-First-Out (FEFO - První expiruje, první ven) je metoda třídění, která zajišťuje, že se nejdříve vyberou nejstarší položky, které mají nejstarší data vypršení platnosti.
+First-Expired-First-Out (FEFO) je metoda třídění, která zajišťuje, že se nejdříve vyberou nejstarší položky, které mají nejstarší data vypršení platnosti.
 
 Tato funkce funguje, pouze pokud jsou splněna následující kritéria:
 
 - Zboží musí mít sériové číslo/číslo šarže.
-- On the item’s item tracking code setup, the **SN Warehouse Tracking** field or the **Lot Warehouse Tracking** field must be selected.
+- U zboží nastavením kódu sledování zboží je nutné vybrat pole **Sledovánísériových čísel** nebo **Sledováníčísla šarže**.
 - Zboží musí být zaúčtováno do skladu s datem expirace.
-- On the location, the **Require Pick**, **Pick According to FEFO**, and **Bin Mandatory** toggles must be turned on.
+- Na kartě lokace musí být zapnuto **Vyždovat vyskladnění**, **Vyskladnění podle FEFO** a **Přihrádka nutná**.
 
 Když jsou splněna všechna kritéria, jsou položky, které mají sériové číslo nebo šarži řazeny od nejstarších ve všech vyskladněních a přesunech zboží,  s výjimkou zboží, které používají sledování specifické pro SN nebo šarže.
 
 > [!NOTE]  
-> If some serial or lot-numbered items use specific tracking, then those are respected first and under them, the remaining, non-specific, serial/lot numbers are listed according to FEFO.
+> Pokud některé zboží se sériovým číslem nebo zboží s čísly šarže používají specifické sledování, pak jsou tyto položky respektovány jako první a pod nimi jsou uvedena zbývající nespecifická sériová čísla/čísla šarží podle FEFO.
 > <br /><br />
-> If two serial or lot-numbered items have the same expiration date, then the application selects the item with the lowest serial or lot number.
+> Pokud má 2 kusy zboží se sériovým číslem nebo číselem šarže stejné datum expirace, pak aplikace vybere položku s nejnižším sériovým číslem nebo číslem šarže.
 > <br /><br />
-> When picking serial or lot-numbered items in locations set up for directed put-away and pick, only quantities on bins of type *Pick* are picked according to FEFO.  
+> Při vyskladnění zboží se sériovým číslem nebo číslem šarže v lokacích nastavených pro řízené zaskladnění a vyskladnění se polde FEFO vyskladní zboží pouze na přihrádkách typu *Vyskladnění*.   
 > <br /><br />
-> To enable movements according to FEFO, leave the **From Bin** field empty on the **Inventory Movement** page or the **Movement Worksheet** pages.  
+> Chcete-li povolit pohyby podle FEFO, ponechte pole **Z přihrádky** na stránce **Pohyb zásob** nebo na stránce **Sešity přesunu** prázdné.  
 > <br /><br />
-> If the **Strict Expiration Posting** field is selected on the **Item Tracking Code Card**, only items that are not expired will be included in the pick, and the lines are sorted according to the FEFO principle.
+> Pokud je na stránce **Kódy sledování zboží** vybráno pole **Přísné účtování expirace**, budou do vyskladnění zahrnuto pouze zboží, které není prošlé a řádky budou seřazeny podle zásady FEFO.
 
 ## Viz také
-[Picking Items](warehouse-pick-items.md)   
-[Pick Items for Warehouse Shipment](warehouse-how-to-pick-items-for-warehouse-shipment.md)   
-[Pick Items with Inventory Picks](warehouse-how-to-pick-items-with-inventory-picks.md)   
-[Design Details: Warehouse Management](design-details-warehouse-management.md)  
-[Inventory](inventory-manage-inventory.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Vyskladnění zboží](warehouse-pick-items.md)   
+[Vyskladnění zboží pro dodávku ze skladu](warehouse-how-to-pick-items-for-warehouse-shipment.md)   
+[Vyskladnění zboží pomocí vyskladnění zásob](warehouse-how-to-pick-items-with-inventory-picks.md)   
+[Detaily návrhu: Správa skladu](design-details-warehouse-management.md)  
+[Zásoby](inventory-manage-inventory.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

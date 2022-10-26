@@ -50,7 +50,7 @@ A new item card pre-filled with information from the catalog item and a relevant
 
 ## To sell a catalog item, and convert it to a normal item
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Prodejní objednávky** a poté zvolte související odkaz.
-2. Vyberte akci **Nový**. Fill in the fields on the **General** FastTab as for any sales order. For more information, see [Sell Products](sales-how-sell-products.md).
+2. Vyberte akci **Nový**. Fill in the fields on the **General** FastTab as for any sales order. Pro více informací navštivte [Prodej zboží](sales-how-sell-products.md).
 3. On a new sales line, in the **Type** field, select **Item**, but leave the **No.** field empty.
 4. Choose the **Line** action, and then choose the **Select Catalog Items** action.
 

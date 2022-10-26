@@ -70,7 +70,7 @@ Následující postupy popisují, jak splnit úkoly Phyllis:
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. On the **Sales & Receivables Setup** page, expand the **Number Series** FastTab.
-3. Ověřte, že číselná řada pro zaúčtované zálohové faktury v poli **Čísla účtovaných  Zásoby faktur** je stejná jako u zaúčtovaných prodejních faktur (**Čísla zaúčtovaných faktur**) a číselné řady zaúčtovaných dobropisů zálohy (**Čísla účtovaných  zál.  dobropisů**) je stejné jako u zaúčtovaných dobropisů (**Čísla zaúčtovaných dobropisů**).
+3. Ověřte, že číselná řada pro zaúčtované zálohové faktury v poli **Čísla účtovaných  Nák. faktur** je stejná jako u zaúčtovaných prodejních faktur (**Čísla zaúčtovaných faktur**) a číselné řady zaúčtovaných dobropisů zálohy (**Čísla účtovaných  zál.  dobropisů**) je stejné jako u zaúčtovaných dobropisů (**Čísla zaúčtovaných dobropisů**).
 
 ### Blokování zásilek pro nezaplacenou zálohu
 
@@ -175,7 +175,7 @@ Následující den zákazník zavolá Susan a provede změny v objednávce. The 
 1. On the **Sales Order** page, choose the **Release** action, and then **Reopen**.
 2. On the line for item **1896-S**, in the **Quantity** field, enter **2**.
 
-   In the **Order** action, choose **Statistics**. The **Prepayment Amount Excl. VAT** field now contains **768.04**, and the **Prepmt. částky  Zásoby bez  VAT** field contains **417.76**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
+   In the **Order** action, choose **Statistics**. The **Prepayment Amount Excl. VAT** field now contains **768.04**, and the **Prepmt. částky  Nák. bez  VAT** field contains **417.76**. To ukazuje, že existuje další částka zálohy, která ještě nebyla fakturována.
 3. To post an invoice for the additional prepayment amount, choose **Actions**, then **Posting**, then **Prepayment** and then select **Post and Print Prepayment Invoice**
 4. Choose the **Yes** button to post the invoice.
 

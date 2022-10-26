@@ -24,7 +24,7 @@ When you create workflows, you can copy the steps from existing workflows or fro
 If your business scenario requires workflow events or responses that are not supported, a Microsoft partner must implement them by creating an extension that implements the relevant workflow event.
 
 > [!NOTE]  
-> All notifications about workflow steps are sent through a job queue. Make sure that the job queue reflects your business needs. For more information, see [Use Job Queues to Schedule Tasks](admin-job-queues-schedule-tasks.md).
+> All notifications about workflow steps are sent through a job queue. Make sure that the job queue reflects your business needs. Pro více informací navštivte [Použití fronty úloh na plánování úloh](admin-job-queues-schedule-tasks.md).
 
 :::image type="content" source="media/Workflows/workflow-example.png" alt-text="Illustration of a workflow example.":::
 

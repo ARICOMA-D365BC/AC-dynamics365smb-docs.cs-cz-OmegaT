@@ -36,9 +36,9 @@ The following table describes the options for the **Archive Quotes** field.
 
 | Možnost | Popis |
 |------|-----------|
-| **Never** | Don't archive sales quotes when they're deleted. |
+| Nikdy | Don't archive sales quotes when they're deleted. |
 | **Question** | Prompt the user to choose whether to archive sales quotes when they're deleted. |
-| **Always** | Archive sales quotes automatically when they're deleted. |
+| Vždy | Archive sales quotes automatically when they're deleted. |
 
 ## Archivace prodejní objednávky
 

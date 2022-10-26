@@ -14,48 +14,48 @@ ms.date: 04/29/2021
 ms.author: edupont
 
 ---
-# Transfer Bank Funds
+# Převod bankovních prostředků
 
-You may sometimes need to transfer an amount from one bank account in [!INCLUDE[prod_short](includes/prod_short.md)] to another. To do this, you must post the transaction on the **General Journal** page. The task varies depending on whether the bank accounts use the same currency or different currencies.
+Někdy možná budete muset převést částku z jednoho bankovního účtu [!INCLUDE[prod_short](includes/prod_short.md)] na jiný. Chcete-li to provést, musíte zaúčtovat transakci na stránce **Finanční deník**. Úloha se liší v závislosti na tom, zda bankovní účty používají stejné nebo různé měny.
 
-## To post a transfer between bank accounts with the same currency code
+## Zaúčtování převodu mezi bankovními účty se stejným kódem měny
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journal**, and then choose the related link.
-2. On a journal line, fill in the **Posting Date** and **Document No.** fields.
-3. In the **Account Type** field, select **Bank Account**.
-4. In the **Account No.** field, select the bank from which you want to transfer the funds.
-5. In the **Amount** field, enter the amount to be transferred.
+1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+2. Na řádku deníku vyplňte pole **Datum zaúčtování** a **Číslo dokladu**.
+3. V poli **Typ účtu** vyberte **Bankovní účet**.
+4. V poli **Číslo účtu** vyberte banku, ze které chcete převést prostředky.
+5. V poli **Částka** zadejte částku, která má být převedena.
 
-   Next, you must specify the balancing account. If you can't see the relevant fields, then choose the **Show More Columns** action to view all available fields.
-6. V poli **Číslo Account Type** field, select **Bank Account**.
-7. V poli **Číslo Account No.** field, select the bank account to which you want to transfer the funds.
+   Dále musíte specifikovat vyrovnávací účet. Pokud příslušná pole nevidíte, výběrem akce **Zobrazit další sloupce** zobrazte všechna dostupná pole.
+6. V poli **Číslo Vyrovnávacího účtu**, vyberte možnost **Bankovní účet**.
+7. V poli **Číslo Vyrovnávacího účtu** vyberte bankovní účet, na který chcete prostředky převést.
 8. Zaúčtujte deník.
 
-## To post a transfer between bank accounts with different currency codes
+## Zaúčtování převodu mezi bankovními účty s různými kódy měny
 
-To transfer funds between bank accounts that use different currencies, you must post two general journal lines.
+Chcete-li převést prostředky mezi bankovními účty, které používají různé měny, je nutné zaúčtovat dva řádky finančního deníku.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **General Journal**, and then choose the related link.
-2. Create two journal lines, and fill in the **Posting Date** and **Document No.** fields.
-3. On the first journal line, in the **Type** field, select **Bank Account**.
-4. In the **Account No.** field, select the bank account from which you want to transfer the funds.
-5. In the **Amount** field, enter the amount in the currency of the bank account with or without a minus sign.
+1. Vyberte ikonu ![ Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+2. Vytvořte dva řádky deníku a vyplňte pole **Datum zaúčtování** a **Číslo dokladu**.
+3. Na prvním řádku deníku v poli **Typ** vyberte **Bankovní účet**.
+4. V poli **Číslo účtu** vyberte bankovní účet, ze kterého chcete prostředky převést.
+5. V poli **Částka** zadejte částku v měně bankovního účtu se znaménkem minus nebo bez něj.
 
    > [!TIP]
-   > An amount without a sign is a debit, and an amount with a minus sign is a credit.
+   > Částka bez znaménka je debit a částka se znaménkem mínus je kredit.
 
    > [!NOTE]
-   > Some companies prefer to transfer between accounts on separate journal lines. Other companies prefer to post everything on one journal line by using a balancing account. Check with your local expert if you're not sure what to do.
+   > Některé společnosti preferují převody mezi účty na samostatných řádcích deníku. Jiné společnosti dávají přednost zaúčtování všeho na jeden řádek deníku pomocí vyrovnávacího účtu. Pokud si nejste jisti, co dělat, obraťte se na místního odborníka.
    >
-   > If your company prefers to use a balancing account, then set the **Bal. Account Type** field to **Bank Account**, and set the **Bal. Account No.** field to the bank account to which you want to transfer the funds. Then proceed to step 9 or 10.
+   > Pokud vaše společnost dává přednost použití vyrovnávacího účtu, nastavte **Typ Vyrovnávací účtu** na **Bankovní účet** a nastavte **Číslo. Account No.** field to the bank account to which you want to transfer the funds. Then proceed to step 9 or 10.
    >
    > If your company prefers to use a separate journal line, then move on to the next step.
 6. On the second journal line, in the **Type** field, select **Bank Account**.
 7. In the **Account No.** field, select the bank account to which you want to transfer the funds.
-8. In the **Amount** field, enter the amount in the currency of the bank account with or without a minus sign.
+8. V poli **Částka** zadejte částku v měně bankovního účtu se znaménkem minus nebo bez něj.
 
    > [!TIP]
-   > An amount without a sign is a debit, and an amount with a minus sign is a credit.
+   > Částka bez znaménka je debit a částka se znaménkem mínus je kredit.
 9. If the exchange rates used in the journal are different than the exchange rates on the **Currency Exchange Rates** page, enter a new journal line for the exchange rate gain or loss.
 
    1. Enter **G/L Account** in the **Account Type** field.
@@ -65,7 +65,7 @@ To transfer funds between bank accounts that use different currencies, you must 
    3. Enter the exchange rate gain or loss in the **Amount** field with or without a minus sign.
 
    > [!TIP]
-   > An amount without a sign is a debit, and an amount with a minus sign is a credit.
+   > Částka bez znaménka je debit a částka se znaménkem mínus je kredit.
 10. Zaúčtujte deník.
 
 ## Viz také

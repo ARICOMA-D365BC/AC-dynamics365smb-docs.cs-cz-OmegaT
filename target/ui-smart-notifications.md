@@ -36,7 +36,7 @@ Turning notifications on or off, and specifying conditions, applies only to you.
 
 ## Viz také
 
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

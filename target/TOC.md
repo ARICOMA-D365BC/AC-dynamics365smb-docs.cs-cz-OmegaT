@@ -75,7 +75,7 @@
 ##### [Design Details: Transfers in Planning](design-details-transfers-in-planning.md)
 #### Detaily návrhu: Správa skladu
 ##### [Warehouse Management Design Details](design-details-warehouse-management.md)
-##### [Design Details: Warehouse Overview](design-details-warehouse-overview.md)
+##### [Detaily návrhu: Správa skladu](design-details-warehouse-overview.md)
 ##### [Design Details: Warehouse Setup](design-details-warehouse-setup.md)
 ##### [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md)
 ##### [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md)
@@ -145,7 +145,7 @@
 #### [Save and Personalize List Views](ui-views.md)
 #### [Bookmark a Page or Report on Your Role Center](ui-bookmarks.md)
 #### [Display Lists in Different Ways](across-display-lists-different-views.md)
-### Run and Print Reports
+### Spouštění a tisk sestav
 #### [Spouštění a tisk sestav](ui-work-report.md)
 #### [Set Up Printers](ui-specify-printer-selection-reports.md)
 #### [Schedule a Report to Run](ui-work-report.md#ScheduleReport)
@@ -634,7 +634,7 @@
 #### [Walkthrough: Picking and Shipping in Basic Warehouse Configurations](walkthrough-picking-and-shipping-in-basic-warehousing.md)
 ### [Dodání zboží](warehouse-how-ship-items.md)
 ### [Najděte svá přiřazení skladu](warehouse-how-to-find-your-warehouse-assignments.md)
-### [Use Automated Data Capture Systems (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md)
+### [Použití automatizovaných systémů pro sběr dat (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md)
 <!-- ### [Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-receiving-and-putting-away-in-basic-warehousing.md) -->
 <!-- ### [Walkthrough: Receiving and Putting Away in Advanced Warehouse Configurations](walkthrough-receiving-and-putting-away-in-advanced-warehousing.md) -->
 
@@ -1515,19 +1515,19 @@
 #### [Set Up Fixed Asset Maintenance](fa-how-setup-maintenance.md)
 ### Set Up Warehouse Management
 #### [Set Up Warehouses](warehouse-setup-warehouse.md)
-#### [Design Details: Warehouse Overview](design-details-warehouse-overview.md)
-#### [Set Up Bin Types](warehouse-how-to-set-up-bin-types.md)
-#### [Create Bins](warehouse-how-to-create-individual-bins.md)
-#### [Create Bin Contents](warehouse-how-to-set-up-bin-contents.md)
-#### [Assign Default Bins to Items](warehouse-how-to-assign-default-bins-to-items.md)
-#### [Set Up Put-away Templates](warehouse-how-to-set-up-put-away-templates.md)
-#### [Set Up Warehouse Employees](warehouse-how-to-set-up-warehouse-employees.md)
-#### [Set Up Locations to Use Bins](warehouse-how-to-set-up-locations-to-use-bins.md)
-#### [Convert Existing Locations to Warehouse Locations](warehouse-how-to-convert-existing-locations-to-warehouse-locations.md)
+#### [Detaily návrhu: Správa skladu](design-details-warehouse-overview.md)
+#### [Nastavení typu přihrádky](warehouse-how-to-set-up-bin-types.md)
+#### [Vytváření přihrádek](warehouse-how-to-create-individual-bins.md)
+#### [Vytvoření obsahu přihrádky](warehouse-how-to-set-up-bin-contents.md)
+#### [Přiřazení výchozí přihrádky ke zboží](warehouse-how-to-assign-default-bins-to-items.md)
+#### [Nastavení šablon zaskladnění](warehouse-how-to-set-up-put-away-templates.md)
+#### [Nastavení zaměstnanců skladu](warehouse-how-to-set-up-warehouse-employees.md)
+#### [Nastavení lokací pro použití přihrádek](warehouse-how-to-set-up-locations-to-use-bins.md)
+#### [Převod existujících lokací na lokace skladu](warehouse-how-to-convert-existing-locations-to-warehouse-locations.md)
 #### [Nastavení základních skladů s provozními oblastmi](warehouse-how-to-set-up-basic-warehouses-with-operations-areas.md)
-#### [Set Up Items and Locations for Directed Put-away and Pick](warehouse-how-to-set-up-items-for-directed-put-away-and-pick.md)
-#### [Enable Automatic Breaking Bulk with Directed Put-away and Pick](warehouse-enable-automatic-breaking-bulk-with-directed-put-away-and-pick.md)
-#### [Enable Picking by FEFO](warehouse-picking-by-fefo.md)
+#### [Nastavení zboží a lokací pro přímé zaskladnění a vyskladnění](warehouse-how-to-set-up-items-for-directed-put-away-and-pick.md)
+#### [Povolení automatického rozdělení zboží s řízeným zaskladněním a vyskladněním](warehouse-enable-automatic-breaking-bulk-with-directed-put-away-and-pick.md)
+#### [Povolení vyskladnění pomocí FEFO](warehouse-picking-by-fefo.md)
 #### [Enable Automated Data Capture Systems (ADCS)](warehouse-use-automated-data-capture-systems-adcs.md)
 #### [Restrukturalizace skladů](warehouse-how-to-restructure-warehouses.md)
 ### Set Up Manufacturing
@@ -1872,7 +1872,7 @@
 #### [Design Details: Revaluation](design-details-revaluation.md)
 ### Detaily návrhu: Správa skladu
 #### [Warehouse Management Overview](design-details-warehouse-management.md)
-#### [Design Details: Warehouse Overview](design-details-warehouse-overview.md)
+#### [Detaily návrhu: Správa skladu](design-details-warehouse-overview.md)
 #### [Design Details: Warehouse Setup](design-details-warehouse-setup.md)
 #### [Design Details: Inbound Warehouse Flow](design-details-inbound-warehouse-flow.md)
 #### [Design Details: Internal Warehouse Flows](design-details-internal-warehouse-flows.md)

@@ -14,79 +14,79 @@ ms.date: 12/13/2021
 ms.author: edupont
 
 ---
-# Set Up Time Sheets
+# Nastavení pracovních výkazů
 
-Time sheets in [!INCLUDE[prod_short](includes/prod_short.md)] handle time registration in weekly increments of seven days. You can use them to track the time used on projects, and you can use them to record simple resource time registration. Before you can use time sheets, you must specify which users will submit time sheets and how you want to configure time sheets.
+Pracovní výkazy v [!INCLUDE[prod_short](includes/prod_short.md)] zpracovává časovou registraci v týdenních přírůstcích po sedmi dnech. Můžete je použít ke sledování času použitého na projektech a můžete je použít k zaznamenání jednoduché registrace času zdroje. Před použitím pracovních výkazů je nutné určit, kteří uživatelé budou pracovní výkazy odesílat a jak chcete pracovní výkazy konfigurovat.
 
 > [!TIP]
-> In [!INCLUDE [prod_short](includes/prod_short.md)], the users of time sheets are *resources*. This way, you can use time sheets to track the work of non-employees, for example. To track the work of your own employees, or to use time sheets to track employee absence, you must associate *employees* with *resources* in the setup guide.
+> V [!INCLUDE [prod_short](includes/prod_short.md)] jsou uživatelé časových výkazů *zdroje*. Tímto způsobem můžete použít pracovní výkazy například ke sledování práce nezaměstnanců. Chcete-li sledovat práci vlastních zaměstnanců nebo používat pracovní výkazy ke sledování nepřítomnosti zaměstnanců, je nutné přidružit *zaměstnance* ke *zdrojům* v průvodci nastavením.
 
-Optionally, specify if and how time sheets are approved. Depending on the needs of your organization, you can designate:
+Volitelně zadejte, zda a jak se schvalují časové výkazy. V závislosti na potřebách vaší organizace můžete určit:
 
-* One or more users as the time sheet administrator and approver for all time sheets.
-* A time sheet approver for each resource.
+* Jednoho nebo více uživatelů jako správce pracovního výkazu a schvalovatele všech pracovních výkazů.
+* Schvalovatel pracovního výkazu pro každý zdroj.
 
-When you have set up time sheets, you can create time sheets for resources, and the resources can post time sheet lines. Optionally, assign time sheets to job planning lines. For more information, see [Use Time Sheets](projects-how-use-time-sheets.md).
+Po nastavení časových výkazů můžete vytvořit časové rozvrhy pro zdroje a zdroje mohou zaúčtovat řádky pracovního výkazu. Volitelně můžete přiřadit pracovní výkazy k řádkům plánování úloh. Pro více informací navštivte [Použití pracovních výkazů](projects-how-use-time-sheets.md).
 
-## Set up time sheets with the assisted setup guide
+## Nastavení časových výkazů pomocí průvodce asistovaným nastavením
 
 [!INCLUDE [2021_releasewave2](includes/2021_releasewave2.md)]
 
-Starting in 2021 release wave 2, you can use an assisted setup guide to help you set up time sheets.
+Počínaje vlnou 2 vydanou v roce 2021 můžete použít průvodce nastavením, který vám pomůže nastavit pracovní výkazy.
 
 > [!TIP]
-> You must enable the **Feature Update: New time sheet experience** feature in the [Feature Management](https://businesscentral.dynamics.com/?page=2610) page to use this capability.
+> Chcete-li tuto funkci používat, musíte na stránce [Správa funkcí](https://businesscentral.dynamics.com/?page=2610) povolit funkci **Aktualizace funkcí: Nové pracovní výkazy**.
 >
-> The same feature also makes it easy to manage time sheets on a mobile device.
+> Stejná funkce také usnadňuje správu pracovních výkazů na mobilním zařízení.
 
-Open the **Set Up Time Sheets** assisted setup guide from the [Assisted Setup](https://businesscentral.dynamics.com/?page=1801) page.
+Otevřete průvodce asistovaným nastavením **Nastavení časových výkazů** ze stránky [Asistované nastavení](https://businesscentral.dynamics.com/?page=1801).
 
-The assisted setup guide takes you through the following steps:
+Průvodce asistovaným nastavením vás provede následujícími kroky:
 
-1. Set up the participants in the time sheet processes
+1. Nastavení účastníků v procesech časového rozvrhu
 
-   The first page in the guide shows you the number of users in your [!INCLUDE [prod_short](includes/prod_short.md)]. It also shows other required and optional information.
-2. Specify the first day of a work week in this organization
+   První stránka v průvodci vám ukáže počet uživatelů ve vašem [!INCLUDE [prod_short](includes/prod_short.md)]. Zobrazuje také další povinné a volitelné informace.
+2. Určení prvního dne pracovního týdne v této organizaci
 
-   The first day of a work week will be the default first day for all time sheets.
-3. Specify the person who administers time sheets
+   První den pracovního týdne bude výchozím prvním dnem pro všechny pracovní výkazy.
+3. Určete osobu, která spravuje pracovní výkazy
 
-   This person can edit and delete all time sheets. Optionally, add the same role to other people in the **User Setup** page.
-4. Set up the resources who will use time sheets, and the people who will approve time sheets
+   Tato osoba může upravovat a mazat všechny časové výkazy. Volitelně můžete přidat stejnou roli ostatním lidem na stránce **Nastavení uživatele**.
+4. Nastavení zdrojů, které budou používat pracovní výkazy, a osob, které budou pracovní výkazy schvalovat
 
-At the end of the setup guide, you can choose to let [!INCLUDE [prod_short](includes/prod_short.md)] create time sheets based on your configuration. View the new time sheets in the **Time Sheets** page, which you can open [here](https://businesscentral.dynamics.com/?page=951). Alternatively, run the assisted setup guide again, or complete the setup manually.
+Na konci průvodce nastavením se můžete rozhodnout nechat [!INCLUDE [prod_short](includes/prod_short.md)] vytvářet pracovní výkazy na základě vaší konfigurace. Prohlédněte si nové časové výkazy na stránce **Časové výkazy**, kterou můžete otevřít [zde](https://businesscentral.dynamics.com/?page=951). Případně spusťte průvodce asistovanou instalací znovu nebo dokončete nastavení ručně.
 
-## Set up time sheets manually
+## Ruční nastavení pracovních výkazů
 
-The following sections describe how to set up time sheets if you do not use the **Set Up Time Sheets** assisted setup guide.
+Následující části popisují, jak nastavit pracovní výkazy, pokud nepoužíváte průvodce asistovaným **Nastavením pracovních výkazů**.
 
-### To set up general information for time sheets manually
+### Ruční nastavení obecných informací pro pracovní výkazy
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resources Setup**, and then choose the related link.
+1. Zvolte ![žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Nastavení zdrojů** a pak zvolte související odkaz.
 2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
-3. For the **Time Sheet by Job Approval** field, select one of the following options.
+3. V poli **Schválení pracovního výkazu** vyberte jednu z následujících možností.
 
 | Možnost | Popis |
 | --- | --- |
-| **Never** | The user in the **Time Sheet Approver User ID** field on the resource card approves the time sheet. |
-| **Always** | The user in the **Person Responsible** field on the job card approves the time sheet. |
-| **Machine Only** | If the machine time sheet is linked with a job, then the user in the **Person Responsible** field on the job card approves the time sheet. If the machine time sheet is linked with a resource, then the user in the **Time Sheet Approver User ID** field on the resource card approves the time sheet. |
+| Nikdy | Uživatel v poli **ID schvalovatele pracovního výkazu** na kartě zdroje schvaluje pracovní výkaz. |
+| Vždy | Uživatel v poli **Zodpovědně osoba** na kartě projektu schvaluje pracovní výkaz. |
+| Pouze počítač | Pokud je pracovní výkaz stroje spojen s projektem, schválí pracovní výkaz uživatel v poli **Zodpovědná osoba** na kartě projektu. Pokud je časový rozvrh stroje spojen se zdrojem, pak pracovní výkaz schválí uživatel v poli **ID schvalovatele pracovního výkazu** na kartě zdroje. |
 
-### To assign a time sheet administrator manually
+### Chcete-li ručně přiřadit správce časového rozvrhu
 
 1. Vyberte ikonu ![Žárovky, která otevře ikonu Řekněte mi](media/ui-search/search_small.png "Řeknete mi, co chcete dělat"), zadejte **Nastavení uživatelů** a poté vyberte související odkaz.
-2. Add a new user if the user list does not include the person who you want to be the time sheet administrator. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
-3. Select a user to be a time sheet administrator, and then select the **Time Sheet Admin.** check box.
+2. Přidejte nového uživatele, pokud seznam uživatelů nezahrnuje osobu, kterou chcete mít jako administrátora pracovního výkazu. Další informace o oprávněních naleznete v tématu [Přiřazení práv uživatelům a uživatelským skupinám](ui-define-granular-permissions.md).
+3. Vyberte uživatele, který má být správcem pracovního výkazu a zaškrtněte políčko **Správce pracovního výkazu**.
 
 > [!TIP]  
-> It is recommended that you designate only one user to be the time sheet administrator for a company. In the following procedure, you set up a time sheet owner and approver where the time sheet approver is assigned for each resource.
+> Doporučuje se určit pouze jednoho uživatele, který bude správcem pracovního výkazu pro společnost. V následujícím postupu nastavíte vlastníka pracovního výkazu a schvalovatele, kde schvalovatel je přiřazen ke každému zdroji.
 
-### To assign a time sheets owner and approver manually
+### Ruční přiřazení vlastníka a schvalovatele pracovních výkazů
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resources**, and then choose the related link.
-2. Select the resource for which you want to set up the ability to use time sheets, and then select the **Use Time Sheet** check box.
-3. In the **Time Sheet Owner User ID** field, enter the ID of the owner of the time sheet. The owner can enter time usage on a time sheet and submit it for approval. In general, when the resource is a person, that person is also the owner.
-4. In the **Time Sheet Approver User ID** field, enter the ID of the approver of the time sheet. The approver can approve, reject, or reopen a time sheet.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zdroje** a poté vyberte související odkaz.
+2. Vyberte zdroj, pro který chcete nastavit možnost používat pracovní výkazy, a zaškrtněte políčko **Použít pracovní výkaz**.
+3. Do pole **ID vlastníka pracovního výkazu** zadejte ID vlastníka pracovního výkazu. Vlastník může zadat využití času do časového výkazu a odeslat jej ke schválení. Obecně platí, že pokud je zdrojem osoba, je tato osoba také vlastníkem.
+4. Do pole **ID schvalovatele pracovního výkazu** zadejte ID schvalovatele pracovního výkazu. Schvalovatel může schválit, odmítnout nebo znovu otevřít pracovní výkaz.
 
 > [!NOTE]  
 > You cannot change the ID of the time sheet approver if there are time sheets that have not yet been processed and have the status of **Submitted** or **Open**.

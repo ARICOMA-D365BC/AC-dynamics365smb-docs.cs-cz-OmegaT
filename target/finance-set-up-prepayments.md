@@ -49,13 +49,13 @@ Pokud jste ještě nenastavili účty hlavní knihy pro platby záloh, můžete 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Nastavení prodeje a pohledávek** a poté vyberte související odkaz.
 2. Na stránce **Nastavení prodeje a pohledávek** na záložce **Číselné řady** vyplňte následující pole:
 
-   * **Čísla účtovaných  Zásoby faktur**
+   * **Čísla účtovaných  Nák. faktur**
    * **Čísla účtovaných  zál.  dobropisů**
 
 3. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Nastavení nákupu a závazků** a vyberte související odkaz.
 4. Na stránce **Nastavení nákupu a závazků** na záložce **Číselné řady** vyplňte následující pole:
 
-   * **Čísla účtovaných  Zásoby faktur**
+   * **Čísla účtovaných  Nák. faktur**
    * **Čísla účtovaných  zál.  dobropisů**
 
 > [!NOTE]  

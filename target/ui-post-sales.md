@@ -14,52 +14,52 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Posting Sales
+# Účtování prodeje
 
-Under the **Posting** menu in a sales document, you can choose between the following posting functions:
+V nabídce  **Účtování** v prodejním dokladu si můžete vybrat mezi následujícími účtovacími funkcemi:
 
-* **Post**
-* **Post and New**
-* **Post and Send**
-* **Preview Posting**
-* **Post Batch**
-* **Test Report**
+* **Účtovat**
+* **Účtovat a nový**
+* **Účtovat a Odeslat**
+* **Náhled účtování**
+* **Dávkové účtování**
+* **Testovací sestava**
 
 > [!NOTE]
-> For sales orders, you can also see options related to the prepayments functionality. For more information, see [Invoicing Prepayments](finance-invoice-prepayments.md).
+> U prodejních objednávek můžete také vidět možnosti související s funkcí prodejních záloh. Další informace naleznete v tématu [ Fakturace záloh](finance-invoice-prepayments.md).
 
-When you have completed all the lines and entered all the information on the sales order, you can post it. This creates a shipment and an invoice.
+Jakmile vyplníte všechny řádky a zadáte všechny informace o prodejní objednávce, můžete ji zaúčtovat. Tím se vytvoří dodávka a faktura.
 
-When a sales order is posted, the customer's account, the general ledger, and the item ledger entries are updated.
+Po zaúčtování prodejní objednávky se aktualizuje účet zákazníka, věcné položky a položky zboží.
 
-For each sales order, a sales entry is created in the **G/L Entry** table. An entry is also created in the customer's account in the **Cust. Ledger Entry** table and a general ledger entry is created in the relevant receivables account. In addition, posting the order may result in a VAT entry and a general ledger entry for the discount amount. Whether an entry for the discount is posted depends on the contents of the **Discount Posting** field on the **Sales & Receivables Setup** page.
+Pro každou prodejní objednávku se v tabulce **Věcná položka** vytvoří záznam o prodeji. Položka je také vytvořena na účtu zákazníka v **Položkách ákazníka<f0> a věcné položky se vytvoří na příslušném účtu pohledávek. Kromě toho může odeslání objednávky vést k zadání DPH a zápisu věcných položek pro částku slevy. Zveřejnění záznamu o slevě závisí na obsahu pole **Účtování slevy** na stránce **Nastavení prodeje a pohledávek**.
 
-For each sales order line, an item ledger entry will be created in the **Item Ledger Entry** table (if the sales lines contain item numbers) or a general ledger entry will be created in the **G/L Entry** table (if the sales lines contain a general ledger account). In addition to this, sales orders are always recorded in the **Sales Shipment Header** and **Sales Invoice Header** tables.
+Pro každou řádek prodejní objednávky bude v tabulce **Položka zboží** vytvořena věcná položka (pokud prodejní řádky obsahují čísla položek) nebo bude věcná položka vytvořena v tabulce **Věcná položka** (pokud prodejní řádky obsahují účet hlavní knihy). Kromě toho jsou prodejní objednávky vždy zaznamenány v tabulkách **Hlavička prodejní dodávky** a **Hlavička prodejní faktury**.
 
 [!INCLUDE [order-ship-invoice](includes/order-ship-invoice.md)]
 
-You can either post, or post and send. If you choose to post and send, a PDF file is generated that you can then send. You can also choose the **Post Batch** function, which lets you post several orders at the same time. For more information, see [Post Multiple Documents at the Same Time](ui-batch-posting.md).
+Můžete buď účtovat, nebo účtovat a odeslat. Pokud se rozhodnete účtovat a odeslat, vygeneruje se soubor PDF, který pak můžete odeslat. Můžete také zvolit funkci **Dávkové účtování**, která vám umožní zaúčtovat několik objednávek současně. Další informace naleznete v tématu [Dávkové účtování dokladů](ui-batch-posting.md).
 
-## Viewing Ledger Entries
+## Zobrazení položek
 
-When the posting is completed, the posted sales lines are removed from the order. A message tells you when the posting is completed. After this, you will be able to see the posted entries in the various pages that contain posted entries, such as the **Cust. Ledger Entries**, **G/L Entries**, **Item Ledger Entries**, **Posted Sales Shipments**, and **Posted Sales Invoices** pages.
+Po dokončení účtování budou zaúčtované řádky z objednávky odstraněny. Po dokončení účtování se zobrazí zpráva. Poté budete moci zobrazit zaúčtované položky na různých stránkách, které obsahují zaúčtované položky, například **Zák. zákazníka**, **Věcné položky**, **Položky zboží**, **Účtované prodejní dodávky** a **Účtované prodejní faktury**.
 
-In most cases, you can open ledger entries from the affected card or document. For example, on the **Customer Card** page, choose the **Ledger Entries** action.
+Ve většině případů můžete otevřít věcné položky z dané karty nebo dokumentu. Například na stránce **Karta zákazníka** vyberte akci **Položky zákazníka**.
 
-## Editing Ledger Entries
+## Úprava položek
 
-You can edit certain fields on posted purchase documents, such as the **Package Tracking No.** field. For more information, see [Edit Posted Documents](across-edit-posted-document.md). For more critical fields that affect the auditing trail, you must reverse or undo posting. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
+Můžete upravit některá pole na zaúčtovaných nákupních dokladech, jako je pole **Číslo sledování zásilky**. Další informace naleznete v tématu [Úprava účtovaných dokladů](across-edit-posted-document.md). U kritičtějších polí, která ovlivňují audit, je třeba účtování vrátit nebo zrušit. Další informace naleznete v tématu [Zpětné účtování deníku a Vrácení příjemek/dodávek zpět](finance-how-reverse-journal-posting.md).
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/ship-invoice-items-dynamics-365-business-central/index)
 
 ## Viz také
 
-[Sales](sales-manage-sales.md)  
-[Post Multiple Documents at the Same Time](ui-batch-posting.md)  
-[Edit Posted Documents](across-edit-posted-document.md)  
-[Send Documents by Email](ui-how-send-documents-email.md)  
-[Correct or Cancel Unpaid Sales Invoices](sales-how-correct-cancel-sales-invoice.md)  
-[Finding Pages and Information with Tell Me](ui-search.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Prodej](sales-manage-sales.md)  
+[Dávkové účtování dokladů](ui-batch-posting.md)  
+[Úprava účtovaných dokladů](across-edit-posted-document.md)  
+[Odesílání dokladů pomocí e-mailu](ui-how-send-documents-email.md)  
+[Oprava nebo zrušení nezaplacených prodejních faktur](sales-how-correct-cancel-sales-invoice.md)  
+[Vyhledávání stránek a informací pomocí Řekněte mi](ui-search.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

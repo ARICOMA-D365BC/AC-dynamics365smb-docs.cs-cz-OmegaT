@@ -34,7 +34,7 @@ In [!INCLUDE[prod_short](includes/prod_short.md)], availability figures are typi
 > The projected available balance is especially relevant to view in the **Item Availability by Periods** and **Item Availability by Event** pages because they contain the date dimension.
 
 > [!NOTE]  
-> The following procedures describe how to view advanced availability information from the items list and item card. You can also access the information from sales document lines for the item on the line. For more information, see [Sell Products](sales-how-sell-products.md).
+> The following procedures describe how to view advanced availability information from the items list and item card. You can also access the information from sales document lines for the item on the line. Pro více informací navštivte [Prodej zboží](sales-how-sell-products.md).
 
 ## To view the availability of an item according to when it will be received or shipped
 You view the availability of an item according to scheduled item transactions on the **Availability by Event** page.

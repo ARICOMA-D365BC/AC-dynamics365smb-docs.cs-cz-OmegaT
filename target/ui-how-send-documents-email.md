@@ -16,7 +16,7 @@ ms.author: edupont
 
 You can easily share information and documents, such as sales and purchase orders and invoices, by email directly from [!INCLUDE[prod_short](includes/prod_short.md)], without having to open an email app.
 
-You can send almost all types of documents as PDF attachments. Alternatively, you can set up a report layout that includes information from the document in the email text, along with text that makes the email more friendly, for example, a standard greeting. For more information, see [Managing Report and Document Layouts](ui-manage-report-layouts.md). <!--this topic does not mention how to set up a layout for email. Need to investigate.-->
+You can send almost all types of documents as PDF attachments. Alternatively, you can set up a report layout that includes information from the document in the email text, along with text that makes the email more friendly, for example, a standard greeting. Další informace naleznete v tématu [Správa rozvržení sestav a dokladů](ui-manage-report-layouts.md). <!--this topic does not mention how to set up a layout for email. Need to investigate.-->
 
 When you send invoices, you can make it easier for customers to make payments through a payment service, such as PayPal, by automatically adding information and a link to the service in the email. For more information, see [Enable Customer Payments Through Payment Services](sales-how-enable-payment-service-extensions.md).
 

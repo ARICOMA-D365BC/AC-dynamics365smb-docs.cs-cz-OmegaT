@@ -92,7 +92,7 @@ Scénáře s alternativou A nebo B představují následující:
 - **A** In this case, the payment discount tolerance warning has been turned off OR the user has the warning on and has selected to allow the late payment discount (Post the Balance as Payment Tolerance).
 - **B** In this case, the user has the warning on and has selected not to allow the late payment discount (Leave the Balance as Remaining Amount).
 
-| — | Zásoby | Payment Discount | Max Payment Tolerance | Payment Discount Date | Payment Discount Tolerance Date | Datum platby | Payment | Typ odchylky | Všechny položky uzavřeny | Payment Discount Tolerance GL/CL | Payment Tolerance G/L |
+| — | Nák. | Payment Discount | Max Payment Tolerance | Payment Discount Date | Payment Discount Tolerance Date | Datum platby | Payment | Typ odchylky | Všechny položky uzavřeny | Payment Discount Tolerance GL/CL | Payment Tolerance G/L |
 |-------|----------|----------------|-----------------------|---------------------|--------------------------|------------------|----------|--------------------|------------------------|------------------------------|----------------------------|  
 | 1 | 1,000 | 20 | 5 | 01/15/03 | 01/20/03 | <=01/15/03 | 985 | PaymentTolerance | Ano | 0 | -5 |
 | 2 | **1,000** | **20** | **5** | **01/15/03** | **01/20/03** | **<=01/15/03** | **980** | **None** | **Ano** | **0** | **0** |
@@ -163,7 +163,7 @@ Scénáře s alternativou A, B, C, nebo D představují následující:
 - **C** - In this case, the user has the warning on and has selected to allow the late payment discount on the first invoice but not the second.
 - **D** - In this case, the user has the warning on and has selected not to allow the late payment discount on the first invoice but allowed it on the second.
 
-| — | Zásoby | Payment Discount | Max Payment Tolerance | Payment Discount Date | Payment Discount Tolerance Date | Datum platby | Payment | Typ odchylky | Všechny položky uzavřeny | Payment Discount Tolerance GL/CL | Payment Tolerance G/L |
+| — | Nák. | Payment Discount | Max Payment Tolerance | Payment Discount Date | Payment Discount Tolerance Date | Datum platby | Payment | Typ odchylky | Všechny položky uzavřeny | Payment Discount Tolerance GL/CL | Payment Tolerance G/L |
 |-------|----------|---------------|-------------------|---------------------|--------------------------|------------------|---------|--------------------|------------------------|------------------------------|------------------------|  
 | 1 | 1,000 <br />1,000 | 60 <br />30 | 5 <br />5 | 01/15/03 <br />01/17/03 | 01/20/03 <br />01/22/03 | <=01/15/03 | 1920 | PaymentTolerance | Ano | 0<br /><br /> 0 | -5 <br />-5 |
 | **2** | **1,000** <br />**1,000** | **60** <br />**30** | **5** <br />**5** | **01/15/03** <br />**01/17/03** | **01/20/03** <br />**01/22/03** | **<=01/15/03** | **1910** | **None** | **Ano** | **0**<br /><br /> **0** | 0 <br />0 |

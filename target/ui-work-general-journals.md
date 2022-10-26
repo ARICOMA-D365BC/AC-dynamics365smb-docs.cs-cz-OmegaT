@@ -186,7 +186,7 @@ When you have finished saving the standard item journal, the Item Journal page i
    If the inserted item journal lines contain saved unit amounts that you do not want to post, you can quickly adjust it to the current value of the item as follows.
 
 5. Select the item journal lines you want to adjust, and then choose the **Recalculate Unit Amount** action. This will update the Unit Amount field with the current unit cost of the item.
-6. Choose the **post** action.
+6. Vyberte tlačítko **Zaúčtovat**.
 
 ## To renumber document numbers in journals
 

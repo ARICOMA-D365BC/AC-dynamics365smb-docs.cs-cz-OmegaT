@@ -73,7 +73,7 @@ Chcete-li se na tento návod připravit, musíte přidat Tricii jako nový zdroj
 
 ### Připravit ukázková data
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Resources**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řeknete mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zdroje** a poté vyberte související odkaz.
 2. Zvolte akci **Nový** a vytvořte novou kartu zdroje.
 3. Na záložce **Obecné** zadejte následující informace:
 

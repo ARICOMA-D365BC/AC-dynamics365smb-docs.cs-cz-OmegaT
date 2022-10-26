@@ -21,7 +21,7 @@ A central role, such as the application administrator, must regularly deal with 
 
 In certain situations, you may need to delete invoiced purchase orders that have not been deleted. [!INCLUDE[prod_short](includes/prod_short.md)] checks that you have fully invoiced the deleted purchase orders. You cannot delete orders that you have not fully invoiced and received.
 
-Return orders are usually deleted after they are invoiced. When you post an invoice, it is transferred to the **Posted Purchase Credit Memo** page. If you selected the **Return Shipment on Credit Memo** check box on the **Purchases & Payable Setup** page, then the invoice is transferred to the **Posted Return Shipment** page. You can delete the documents using the **Delete Invd Purch. obj. Orders** batch job. Before deleting, the batch job checks if the purchase return orders are fully shipped and invoiced.
+Return orders are usually deleted after they are invoiced. When you post an invoice, it is transferred to the **Posted Purchase Credit Memo** page. If you selected the **Return Shipment on Credit Memo** check box on the **Purchases & Payable Setup** page, then the invoice is transferred to the **Posted Return Shipment** page. You can delete the documents using the **Delete Invd Purch. nákupní Orders** batch job. Before deleting, the batch job checks if the purchase return orders are fully shipped and invoiced.
 
 Blanket purchase orders are not deleted after you have processed and invoiced all the related purchase orders. You can delete blanket orders with the **Delete Invoiced Blanket Purchase Orders** batch job.
 

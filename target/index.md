@@ -42,7 +42,7 @@ The following sections point to key articles that can help you get familiar with
 
 - [Getting Ready for Doing Business](ui-get-ready-business.md)
 - [Setting up [!INCLUDE[prod_short](includes/prod_short.md)]](setup.md)
-- [Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+- [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 - [Administration](admin-setup-and-administration.md)
 - [Business Process Walkthroughs](walkthrough-business-process-walkthroughs.md)
 - [Application Design Details](design-details-application-design.md)

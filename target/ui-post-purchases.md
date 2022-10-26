@@ -14,51 +14,51 @@ ms.date: 06/24/2021
 ms.author: edupont
 
 ---
-# Posting Purchases
-On a purchase document, you can choose between the following posting actions:
+# Účtování nákupů
+Na nákupním dokladu si můžete vybrat mezi následujícími akcemi účtování:
 
-* **Post**
-* **Preview Posting**
+* **Účtovat**
+* **Náhled účtování**
 * **Post and Print**
-* **Test Report**
-* **Post Batch**
+* **Testovací sestava**
+* **Dávkové účtování**
 
-When a purchase document is posted, the vendor's account, the general ledger, the item ledger entries, and the resource ledger entries  are updated.
+Při zaúčtování nákupního dokladu se aktualizuje účet dodavatele, věcné položky, položky zboží a položky zdrojů.
 
-For each purchase document, a purchase entry is created in the **G/L Entry** table. An entry is also created in the vendor's account in the **Vendor Ledger Entry** table and a G/L entry is created in the relevant payables account. In addition, posting the purchase may result in a VAT entry and a G/L entry for the discount amount. Whether an entry for the discount is posted depends on the contents of the **Discount Posting** field on the **Purchases & Payables Setup** page.
+Pro každý nákupní doklad se vytvoří nákupní záznam v tabulce **Věcná položka**. Položka se také vytvoří na účtu dodavatele v tabulce **Položka dodavatele** a věcná položka se vytvoří na příslušném účtu závazků. Kromě toho může zaúčtování nákupu vést k položce DPH a věcné položce pro částku slevy. Zveřejnění záznamu o slevě závisí na obsahu pole **Účtování slevy** na stránce **Nastavení nákupu a závazků**.
 
-For each purchase line, the following entries will be created:
-- An entry in the **Item Ledger Entry** table if the purchase line is of type **Item**.
-- An entry in the **G/L Entry** table if the purchase lines is of type **G/L Account**
-- An entry in the **Resource Ledger Entry** table if the purchase line is of type **Resource**.
+Pro každý řádek nákupu budou vytvořeny následující položky:
+- Položka v tabulce **Položky zboží** pokud je řádek nákupu typu **zboží**.
+- Položka v tabulce **Věcná položka** pokud jsou nákupní řádky typu **Finanční účet**
+- Položka v tabulce **Položky zdrojů** pokud je řádek nákupu typu **zdroj**.
 
-In addition, purchase documents are always recorded in the **Purch. Recpt. Header** and **Purch. Zásoby Header** tables.
+Kromě toho jsou nákupní doklady vždy zaznamenány v **Hlavičce Nák. Příjemky** a **Hlavičce Nák. Faktury**.
 
-Before you start to post, you can print a test report that contains all the information in the purchase order and indicates any errors there. To print the report, choose **Posting**, and then choose **Test Report**.
+Než začnete účtovat, můžete si vytisknout testovací sestavu, která obsahuje všechny informace o nákupní objednávce a naznačuje případné chyby. Chcete-li sestavu vytisknout, zvolte **Účtování**, a poté zvolte **Testovací sestava**.
 
 > [!IMPORTANT]  
-> When you post a purchase order for items, you can create both a receipt and an invoice. These can be done simultaneously or independently. You can also create a partial receipt and a partial invoice by completing the **Qty. to Receive** and **Qty. to Invoice** fields on the individual purchase order lines before you post. Note that you cannot create an invoice for something that has not been received. That is, before you can invoice, you must have recorded a receipt, or you must choose to receive and invoice at the same time.
+> Když zaúčtujete objednávku na zboží, můžete vytvořit příjemku i fakturu. To lze provést současně nebo nezávisle. Můžete také vytvořit částečný příjem a částečnou fakturu vyplněním **Množství k příjmu** a **Množství k fakturaci** na jednotlivých řádcích nákupní objednávky před zaúčtováním. Všimněte si, že nelze vytvořit fakturu za něco, co nebylo přijato. To znamená, že před fakturací musíte mít zaznamenanou příjemku, nebo se musíte rozhodnout zda přijímat a fakturovat současně.
 
-You can either post or post and print. If you choose to post and print, a report is printed when the order is posted. You can also choose the **Post Batch** function, which lets you post several orders at the same time. For more information, see [Post Multiple Documents at the Same Time](ui-batch-posting.md).
+Můžete buď účtovat, nebo účtovat a odeslat. Pokud se rozhodnete účtovat a vytisknout, po zaúčtování objednávky se vytiskne sestava. Můžete také zvolit funkci **Dávkové účtování**, která vám umožní zaúčtovat několik objednávek současně. Další informace naleznete v tématu [Dávkové účtování dokladů](ui-batch-posting.md).
 
-## Viewing Ledger Entries
-When the posting is completed, the posted purchase lines are removed from the order. A message tells you when the posting is completed. After this, you will be able to see the posted entries in the various pages that contain posted entries, such as the **Vendor Ledger Entries**, **G/L Entries**, **Item Ledger Entries**, **resource ledger entries**, **Purchase Receipts**, and **Posted Purchase Invoices** pages.
+## Zobrazení položek
+Po dokončení účtování budou zaúčtované nákupní řádky z objednávky odstraněny. Po dokončení účtování se zobrazí zpráva. Poté budete moci zobrazit zaúčtované položky na různých stránkách, které obsahují účtované položky, jako jsou stránky**Položky dodavatele**, **Věcné položky**, **Položky zboží**, **Položky zdrojů**, **Nákupní příjemky** a **Účtované nákupní faktury**.
 
-In most cases, you can open ledger entries from the affected card or document. For example, on the **Vendor Card** page, choose the **Entries** action.
+Ve většině případů můžete otevřít věcné položky z dané karty nebo dokumentu. Například na stránce **Karta dodavatele** vyberte akci **Položky dodavatele**.
 
-## Editing Ledger Entries
-You can edit certain fields on posted purchase documents, such as the **Payment Reference** field. For more information, see [Edit Posted Documents](across-edit-posted-document.md). For more critical fields that affect the auditing trail, you must reverse or undo posting. For more information, see [Reverse Journal Postings and Undo Receipts/Shipments](finance-how-reverse-journal-posting.md).
+## Úprava položek
+Můžete upravit některá pole na zaúčtovaných nákupních dokladech, jako je pole **Platební reference**. Další informace naleznete v tématu [Úprava účtovaných dokladů](across-edit-posted-document.md). U kritičtějších polí, která ovlivňují audit, je třeba účtování vrátit nebo zrušit. Další informace naleznete v tématu [Zpětné účtování deníku a Vrácení příjemek/dodávek zpět](finance-how-reverse-journal-posting.md).
 
 ## Podívejte se na související školení na webu [Microsoft Learn](/learn/modules/receive-invoice-dynamics-d365-business-central/index)
 
 ## Viz také
-[Edit Posted Documents](across-edit-posted-document.md)  
-[Post Multiple Documents at the Same Time](ui-batch-posting.md)  
-[Purchasing](purchasing-manage-purchasing.md)  
-[Posting Documents and Journals](ui-post-documents-journals.md)  
-[Correct or Cancel Unpaid Purchase Invoices](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
-[Finding Pages and Information with Tell Me](ui-search.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Úprava účtovaných dokladů](across-edit-posted-document.md)  
+[Dávkové účtování dokladů](ui-batch-posting.md)  
+[Nákup](purchasing-manage-purchasing.md)  
+[Účtování dokladů a deníků](ui-post-documents-journals.md)  
+[Úprava nebo zrušení nezaplacených nákupních faktur](purchasing-how-correct-cancel-unpaid-purchase-invoices.md)  
+[Vyhledávání stránek a informací pomocí Řekněte mi](ui-search.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

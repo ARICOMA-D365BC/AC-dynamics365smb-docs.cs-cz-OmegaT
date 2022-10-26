@@ -30,7 +30,7 @@ Existují různé způsoby, jak přizpůsobit aplikaci tak, aby vám a vašim ko
 > All feature descriptions in user documentation for [!INCLUDE[prod_short](includes/prod_short.md)] assume the **Premium** experience, meaning the descriptions cover the full scope of UI elements. Therefore, users with the **Essential** experience may in some topics read about functionality and UI elements that are not visible in their user interface. For more information, see [Change Which Features are Displayed](ui-experiences.md).
 
 ## Viz také
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 ## [!INCLUDE[prod_short](includes/free_trial_md.md)]
 

@@ -21,7 +21,7 @@ If a customer wants to return items or be reimbursed for items or services that 
 - Create the sales credit memo directly from the posted sales invoice.
 - Create a new sales credit memo with copied invoice information.
 
-If you need more control of the sales return process, such as warehouse documents for the item handling, or a better overview when receiving items from multiple sales documents with one sales return, then you can create sales return orders. A sales return order automatically issues the related sales credit memo and other return-related documents, such as a replacement sales order, if needed. For more information, see [Process sales return orders](sales-how-process-sales-returns-orders.md).
+Pokud potřebujete větší kontrolu nad procesem vracení tržeb, jako jsou skladové doklady pro manipulaci se zbožím, nebo lepší přehled při příjmu zboží z více prodejních dokladů s jednou prodejní vratkou, můžete vytvořit prodejní vratku objednávky. Vrácení prodejní objednávky automaticky vydá související prodejní dobropis a další doklady související s vrácením, například náhradní prodejní objednávku, v případě potřeby. For more information, see [Process sales return orders](sales-how-process-sales-returns-orders.md).
 
 > [!NOTE]  
 > If a posted sales invoice has not yet been paid, then you can use the **Correct** or **Cancel** functions on the posted sales invoice to reverse transactions. These functions only work for unpaid invoices, and they do not support partial returns or cancellations. For more information, see [Correct or Cancel Unpaid Sales Invoices](sales-how-correct-cancel-sales-invoice.md).
@@ -80,9 +80,9 @@ You can post this reduced price as an item charge in a credit memo or a return o
    You may want to create a special item charge number to cover sales allowances.
 6. In the **Quantity** field, enter **1**.
 7. In the **Unit Price Excl. Tax** field, enter the amount of the sales allowance.
-8. Assign the sales allowance as an item charge to the items in the posted shipment. For more information, see [Use Item Charges to Account for Additional Trade Costs](payables-how-assign-item-charges.md). When you have assigned the allowance, return to the **Sales Credit Memo** page.
+8. Assign the sales allowance as an item charge to the items in the posted shipment. Další informace [naleznete v tématu Použití poplatků za položku k účtování dodatečných obchodních nákladů](payables-how-assign-item-charges.md). When you have assigned the allowance, return to the **Sales Credit Memo** page.
 
-When you post the sales return order, the sales allowance is added to the relevant sales entry amount. In this way, you can maintain accurate inventory valuation.
+When you post the sales return order, the sales allowance is added to the relevant sales entry amount. Tímto způsobem můžete udržovat přesné ocenění zásob.
 
 ## To combine return receipts
 You can combine return receipts if your customer returns several items that are covered by different sales return orders.
@@ -147,12 +147,12 @@ For more information, see [Design Details: Inventory Costing](design-details-inv
 
 ## Viz také
 
-[Sales](sales-manage-sales.md)  
-[Setting Up Sales](sales-setup-sales.md)  
-[Managing Payables](payables-manage-payables.md)  
-[Send Documents by Email](ui-how-send-documents-email.md)  
-[Process Purchase Returns or Cancellations](purchasing-how-process-purchase-returns-cancellations.md)  
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Prodej](sales-manage-sales.md)  
+[Nastavení prodeje](sales-setup-sales.md)  
+[Správa závazků](payables-manage-payables.md)  
+[Odesílání dokladů e-mailem](ui-how-send-documents-email.md)  
+[Zpracování nebo zrušení nákupní vratky](purchasing-how-process-purchase-returns-cancellations.md)  
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
