@@ -20,7 +20,7 @@ Někdy možná budete muset převést částku z jednoho bankovního účtu [!IN
 
 ## Zaúčtování převodu mezi bankovními účty se stejným kódem měny
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky** související odkaz.
 2. Na řádku deníku vyplňte pole **Datum zaúčtování** a **Číslo dokladu**.
 3. V poli **Typ účtu** vyberte **Bankovní účet**.
 4. V poli **Číslo účtu** vyberte banku, ze které chcete převést prostředky.
@@ -35,7 +35,7 @@ Někdy možná budete muset převést částku z jednoho bankovního účtu [!IN
 
 Chcete-li převést prostředky mezi bankovními účty, které používají různé měny, je nutné zaúčtovat dva řádky finančního deníku.
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky** související odkaz.
 2. Vytvořte dva řádky deníku a vyplňte pole **Datum zaúčtování** a **Číslo dokladu**.
 3. Na prvním řádku deníku v poli **Typ** vyberte **Bankovní účet**.
 4. V poli **Číslo účtu** vyberte bankovní účet, ze kterého chcete prostředky převést.
@@ -71,8 +71,8 @@ Chcete-li převést prostředky mezi bankovními účty, které používají rů
 ## Viz také
 
 [Odsouhlasení bankovních účtů](bank-manage-bank-accounts.md)  
-[Nastavení bankovnictví](bank-setup-banking.md)  
-[Práce s Finačními deníky](ui-work-general-journals.md)  
+[Nastavení bankovních účtů](bank-setup-banking.md)  
+[Použití front úloh k plánování úkolů](ui-work-general-journals.md)  
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 

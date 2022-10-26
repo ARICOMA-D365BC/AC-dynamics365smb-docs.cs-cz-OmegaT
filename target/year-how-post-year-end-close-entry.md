@@ -20,7 +20,7 @@ After you use the **Close Income Statement** batch job to generate the year-end 
 
 ## To post the year end closing entry
 
-1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky<x5/> související odkaz.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Finanční deníky** související odkaz.
 2. On the **General Journal** page, in the **Batch Name** field, select the batch that contains the closing entries.
 3. Review the entries.
 4. To post the journal, choose the **Post** action.
