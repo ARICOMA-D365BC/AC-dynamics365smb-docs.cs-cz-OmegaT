@@ -3,7 +3,7 @@
     description: All completed workflow step instances are saved on the **Archived Workflow Step Instances** page. Each step consists of a workflow event and workflow response.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

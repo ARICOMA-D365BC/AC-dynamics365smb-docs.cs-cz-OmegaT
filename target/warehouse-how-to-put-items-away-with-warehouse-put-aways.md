@@ -3,7 +3,7 @@
     description: Learn how the different ways for putting away items in Business Central with the following Warehouse Put-aways tasks.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

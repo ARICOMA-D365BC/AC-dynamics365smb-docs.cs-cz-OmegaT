@@ -1,6 +1,6 @@
 ---
 title: Sell Items Assembled to Order
-description: If the item is set up for assemble-to-order, then the item is not expected to be in inventory, and it must be assembled specifically to a sales order.
+description: If the item is set up for assemble-to-order, then the item is not expected to be in inventory, and it must be assembled specifically to a sales order. 
 author: SorenGP
 
 ms.topic: conceptual

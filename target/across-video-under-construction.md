@@ -1,6 +1,6 @@
 ---
 title: Content Under Construction
-description: Occasionally we make a change to a feature that makes a video misleading, so we take the video down while we're updating the content.
+description: Occasionally we make a change to a feature that makes a video misleading, so we take the video down while we're updating the content. 
 author: brentholtorf
 
 

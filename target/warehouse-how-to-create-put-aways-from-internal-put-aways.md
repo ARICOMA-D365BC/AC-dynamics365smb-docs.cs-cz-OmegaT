@@ -1,6 +1,6 @@
 ---
 title: Create Put-aways from Internal Put-aways
-description: This topic covers how to pick and put away without a source document, both how to create an internal pick, and how to create an internal put-away.
+description: This topic covers how to pick and put away without a source document, both how to create an internal pick, and how to create an internal put-away. 
 author: SorenGP
 
 

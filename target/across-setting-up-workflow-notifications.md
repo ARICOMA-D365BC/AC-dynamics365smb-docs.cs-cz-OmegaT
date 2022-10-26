@@ -1,9 +1,9 @@
 ---
     title: Setting up Workflow Notifications
-    description: This topic tells you how to set up workflow notifications to alert a user that an event has occurred that they must react to; a workflow response is required.
+    description: This topic tells you how to set up workflow notifications to alert a user that an event has occurred that they must react to; a workflow response is required. 
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.workload: na
     ms.search.keywords:

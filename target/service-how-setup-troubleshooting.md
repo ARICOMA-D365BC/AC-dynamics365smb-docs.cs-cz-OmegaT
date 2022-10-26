@@ -3,7 +3,7 @@
     description: Learn how to set up processes that help service representatives identify and resolve issues with service items.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

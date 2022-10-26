@@ -3,7 +3,7 @@
     description: To understand how the dimension entry storing and posting is redesigned, it is important to understand the table structure.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

@@ -10,18 +10,18 @@ ms.search.keywords: OneDrive, share, browser
 ms.date: 02/28/2022
 ms.author: jswymer
 ---
-# Managing OneDrive Integration with Business Central
+# Správa integrace OneDrive s Business Central
 
-This article provides an overview of what an administrator can do to control OneDrive for Business integration with [!INCLUDE[prod_short](includes/prod_short.md)]. [!INCLUDE[prod_short](includes/prod_short.md)] online customers benefit from automatic integration, with no additional setup required to use these features.
+Tento článek poskytuje přehled o tom, co může správce udělat pro řízení integrace OneDrive pro firmy pomocí [!INCLUDE[prod_short](includes/prod_short.md)]. [!INCLUDE[prod_short](includes/prod_short.md)] online zákazníci těží z automatické integrace bez dalšího nastavování pro použití těchto funkcí.
 
-## Minimum Requirements
+## Minimální požadavky
 
-* Each user must have a license for [!INCLUDE[prod_short](includes/prod_short.md)] and OneDrive as part of a Microsoft 365 plan.
-* OneDrive must be set up for each user.
+* Každý uživatel musí mít licenci pro [!INCLUDE[prod_short](includes/prod_short.md)] a OneDrive jako součást plánu Microsoft 365.
+* OneDrive musí být nastavený pro každého uživatele.
 
-## Governance
+## Správa
 
-The SharePoint admin center provides extensive control over policies that govern the use of OneDrive throughout the organization. Global Admins, or users who have the SharePoint Admin role, can set up policies that determine who can access OneDrive, where data resides, the content lifecycle, and much more. The following links provide information about often-used features and settings that may enhance your integration with [!INCLUDE[prod_short](includes/prod_short.md)].
+Admin center pro správu SharePointu poskytuje rozsáhlou kontrolu nad zásadami, kterými se řídí používání OneDrive v celé organizaci. Global Admins, or users who have the SharePoint Admin role, can set up policies that determine who can access OneDrive, where data resides, the content lifecycle, and much more. The following links provide information about often-used features and settings that may enhance your integration with [!INCLUDE[prod_short](includes/prod_short.md)].
 
 * [Manage sharing settings](/sharepoint/turn-external-sharing-on-or-off)
 * [Use information barriers with SharePoint](/sharepoint/information-barriers)
@@ -60,7 +60,7 @@ An administrator must set up the connection between [!INCLUDE[prod_short](includ
 
 ### To prepare [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for connecting to OneDrive
 
-<!--
+<!-- 
 1. For the best experience Configure Azure Active Directory (AD) authentication.
 
    For more information, see [Authenticating Business Central Users with Azure Active Directory](/dynamics365/business-central/dev-itpro/administration/authenticating-users-with-azure-active-directory)-->
@@ -103,7 +103,7 @@ For more information about registering an application and configuring permission
    The URL for a OneDrive is usually in the following format: `https://<tenant name>-my.sharepoint.com`. For more information, see [OneDrive URLs for users in your organization](/onedrive/list-onedrive-urls) in the OneDrive documentation.
 5. In the **Client ID** field, enter the client ID from your application registration.
 6. In the **Client Secret** field, enter the secret from your application registration.
-   <!--
+   <!-- 
       For information about how to find the URLs, see the following:
       * [How to find your SharePoint server URL]
       * [How to find your OneDrive URL]-->

@@ -3,7 +3,7 @@
     description: Learn about the things you must set up before you can use service items, including default values such as response time and service price group.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

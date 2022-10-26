@@ -1,6 +1,6 @@
 ---
 title: Analyzing Report Data with Excel and XML
-description: Learn how to use Excel and XML to analyze a report dataset.
+description: Learn how to use Excel and XML to analyze a report dataset. 
 author: jswymer
 
 ms.topic: conceptual

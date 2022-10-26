@@ -1,6 +1,6 @@
 ---
 title: Post the Year-End Closing Entry
-description: Describes how to open the journal you specified in the Close Income Statement batch job, and then review and post the year-end closing entry.
+description: Describes how to open the journal you specified in the Close Income Statement batch job, and then review and post the year-end closing entry. 
 author: edupont04
 
 

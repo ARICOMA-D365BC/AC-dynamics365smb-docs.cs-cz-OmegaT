@@ -1,6 +1,6 @@
 ---
 title: Edit Posted Sales and Purchase Documents
-description: This topic explains how to update information on a posted document like a  sales shipment or purchase invoice when relevant information has changed.
+description: This topic explains how to update information on a posted document like a  sales shipment or purchase invoice when relevant information has changed. 
 author: SorenGP
 
 
