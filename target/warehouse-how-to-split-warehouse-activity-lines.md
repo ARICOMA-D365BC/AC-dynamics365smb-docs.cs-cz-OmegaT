@@ -1,9 +1,9 @@
 ---
     title: How to Split Warehouse Activity Lines
-    description: Read how to split warehouse activity lines if the available capacity in a suggested bin is not sufficient. 
+    description: Read how to split warehouse activity lines if the available capacity in a suggested bin is not sufficient.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

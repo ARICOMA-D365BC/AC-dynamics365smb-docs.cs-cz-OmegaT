@@ -1,6 +1,6 @@
 ---
 title: Set Up a Location Card and Define Transfer Routes (contains video)
-description: If you buy, store, or sell items at more than one place or warehouse, you must set up each location with a location card and define transfer routes. 
+description: If you buy, store, or sell items at more than one place or warehouse, you must set up each location with a location card and define transfer routes.
 author: SorenGP
 
 

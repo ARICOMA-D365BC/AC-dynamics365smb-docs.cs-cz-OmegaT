@@ -3,7 +3,7 @@ title: Sell Inventory Items in Assemble-to-Order Flows
 description: If an item is set up for assemble-to-order, the item must be assembled for sales orders and a linked assembly order is automatically created.
 author: SorenGP
 
-    
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na

@@ -1,9 +1,9 @@
 ---
     title: Design Details - Posting Engine Structure
-    description: The posting interface uses posting engine functions to prepare and insert general ledger entry and VAT entry records. 
+    description: The posting interface uses posting engine functions to prepare and insert general ledger entry and VAT entry records.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

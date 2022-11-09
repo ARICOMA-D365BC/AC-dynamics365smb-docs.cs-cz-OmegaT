@@ -68,7 +68,7 @@ If you have added data to your [!INCLUDE[prod_short](includes/prod_short.md)] fr
 
 ## Getting Started with a Subscription
 
-Pokaždé, když se během zkušebního období přihlásíte, zobrazí se v oznámení na modrém pruhu v horní části zbývající čas. Pokud se rozhodnete přihlásit k odběru, najděte si  [!INCLUDE[prod_short](includes/prod_short.md)] partnera. Pro další informace se podívejte na [Jak najít partnera?](/dynamics365/business-central/across-faq#findpartner). Prodejní partner vám může pomoci nastavit [!INCLUDE[prod_short](includes/prod_short.md)] tak, aby vyhovovaly vaší firmě, včetně importu dat z předchozího systému. Můžete také přizpůsobit [!INCLUDE[prod_short](includes/prod_short.md)] přidáním aplikací z  [Microsoft marketplace](https://go.microsoft.com/fwlink/?linkid=2081646).
+Pokaždé, když se během zkušebního období přihlásíte, zobrazí se v oznámení na modrém pruhu v horní části zbývající čas. Pokud se rozhodnete přihlásit k odběru, najděte si  [!INCLUDE[prod_short](includes/prod_short.md)] partnera. Pro více informací navštivte [Jak najdu prodejního partnera?](/dynamics365/business-central/across-faq#findpartner). Prodejní partner vám může pomoci nastavit [!INCLUDE[prod_short](includes/prod_short.md)] tak, aby vyhovovaly vaší firmě, včetně importu dat z předchozího systému. Můžete také přizpůsobit [!INCLUDE[prod_short](includes/prod_short.md)] přidáním aplikací z  [Microsoft marketplace](https://go.microsoft.com/fwlink/?linkid=2081646).
 
 [!INCLUDE[prod_short](includes/prod_short.md)] online používá Microsoft 365. Pokud vaše společnost používá jiný typ nastavení e-mailu, partner pro prodej vám může pomoci s rozhodnutím, jak provést migraci, nebo zda byste měli použít [!INCLUDE[prod_short](includes/prod_short.md)] on-premises.
 

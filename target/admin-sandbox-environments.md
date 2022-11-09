@@ -14,39 +14,39 @@ ms.date: 12/20/2021
 ms.author: solsen
 
 ---
-# Sandbox Environments in [!INCLUDE[prod_short](includes/prod_short.md)]
+# Sandboxová prostředí v [!INCLUDE[prod_short](includes/prod_short.md)]
 
-With [!INCLUDE[prod_short](includes/prod_short.md)] online, you can easily get a safe environment where you can test, train, or troubleshoot without disturbing your company's work processes or business data. Such a non-production environment is called a *sandbox*. Isolated from production, a sandbox environment is the place to safely explore, learn, demo, develop, and test the service without the risk of affecting the data and settings of your production environment.
+S [!INCLUDE[prod_short](includes/prod_short.md)] online, můžete snadno získat bezpečné prostředí, kde můžete testovat, školit nebo řešit problémy, aniž byste narušili pracovní procesy nebo obchodní data vaší společnosti. Takové neprodukční prostředí se nazývá *sandbox*. Izolované od produkce, sandboxové prostředí je místem, kde můžete bezpečně prozkoumávat, učit se, předvádět, vyvíjet a testovat službu bez rizika ovlivnění dat a nastavení vašeho produkčního prostředí.
 
 > [!TIP]
-> Did you land on this article after you chose the name of your [!INCLUDE [prod_short](includes/prod_short.md)] environment in the top bar? Currently, you cannot change the name or the environment that way. Instead, you must ask your admin to change the name, or ask them to share the link to another environment.
+> Dostali jste se na tento článek poté, co jste v horní liště vybrali název svého prostředí [!INCLUDE [prod_short](includes/prod_short.md)]? V současné době nelze tímto způsobem změnit název nebo prostředí. Místo toho musíte požádat svého správce o změnu názvu nebo požádat o sdílení odkazu na jiné prostředí.
 
-Your administrator manages sandbox environments in the [administration center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments?toc=/dynamics365/business-central/toc.json).
+Váš správce spravuje sandboxová prostředí v [Admin center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments?toc=/dynamics365/business-central/toc.json).
 
-For example, if you want to create a sandbox for benchmarking, your administrator can create a dedicated environment in the administration center. For more information, see [Production and Sandbox Environments](/dynamics365/business-central/dev-itpro/administration/environment-types) in the developer and administration content.
+Pokud například chcete vytvořit sandbox pro srovnávací testy, může správce vytvořit vyhrazené prostředí v admin centre. Pro více informací navštivte [Produkce a prostředí Sandbox](/dynamics365/business-central/dev-itpro/administration/environment-types) v obsahu pro vývojáře a správu.
 
-You can also safely use sandboxes for training, such as for following a learning path from [Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs), because it's a safe environment to experiment with. If anything goes wrong, you just delete the sandbox and start over.
+Sandboxy můžete také bezpečně používat pro školení, například pro sledování výukové cesty z [Microsoft Learn](/learn/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs), protože je to bezpečné prostředí pro experimentování. Pokud se něco pokazí, prostě smažete sandbox a začnete znovu.
 
-Once you're done, you can remove the sandbox, using the administration center.
+Jakmile budete hotovi, můžete sandbox odebrat pomocí admin center.
 
 > [!NOTE]
-> Technically, sandbox environments are very different from production environments. Your administrator can create a sandbox that includes production data, but it is still a sandbox, and you cannot request a database export, for example. For more information, see [Sandbox environments](/dynamics365/business-central/dev-itpro/administration/environment-types#sandbox-environments) in the developer and administration content.
+> Technicky se prostředí sandbox velmi liší od produkčního prostředí. Váš správce může vytvořit sandbox, který obsahuje produkční data, ale stále je to sandbox a nemůžete například požádat o export databáze. Pro více informací navštivte [Sandboxová prostředí](/dynamics365/business-central/dev-itpro/administration/environment-types#sandbox-environments) v obsahu pro vývojáře a správu.
 
-The sandbox environment is not least useful because it includes a couple of handy features:
+Sandboxové prostředí je v neposlední řadě užitečné, protože obsahuje několik užitečných funkcí:
 
-* [Advanced user experience](#advanced-user-experience)
+* [Pokročilé uživatelské prostředí](#advanced-user-experience)
 <!--* [Complete sample data](#complete-sample-data)  -->
 * [Návrhář](#designer)
 
-## Advanced user experience
+## Pokročilé uživatelské prostředí
 
-It is possible to enable and try the full functionality of the standard version of [!INCLUDE[prod_short](includes/prod_short.md)] in a sandbox tenant by setting the **Experience** field on the **Company Information** page to *Premium*. Find the **Company Information** page in the :::image type="content" source="media/ui-experience/settings_icon_small.png" alt-text="Settings icon."::: menu.
+Je možné povolit a vyzkoušet plnou funkčnost standardní verze [! INCLUDE[prod_short](includes/prod_short.md)] do sandboxového tenanta nastavením pole **Zkušenost** na stránce **Informace o společnosti** na *Premium*. Stránku **Informace o společnosti** najdete v nabídce :::image type="content" source="media/ui-experience/settings_icon_small.png" alt-text="Ikona nastavení."::: menu.
 
-After you have enabled the *Premium* user experience, you get access to all the standard profiles (roles) and Role Centers in the standard version. Alternatively, contact a reselling partner for a demonstration of the capabilities. Pro další informace se podívejte na [Jak najít partnera?](across-faq.yml#how-do-i-find-a-reselling-partner).
+Po aktivaci uživatelského prostředí *Premium* získáte přístup ke všem standardním profilům (rolím) a centrům rolí ve standardní verzi. Případně se obraťte na prodejního partnera pro předvedení možností. Pro více informací navštivte [Jak najdu prodejního partnera?](across-faq.yml#how-do-i-find-a-reselling-partner).
 
-### Complete sample data
+### Kompletní ukázková data
 
-For situations where you need additional sample data, please talk to your reselling partner.
+V situacích, kdy potřebujete další ukázková data, se obraťte na svého prodejního partnera.
 <!-- In the sandbox environment, you can also create a new company with the **Advanced Evaluation - Complete Sample Data** option so that you can take training or step through walkthroughs that require additional sample data, such as [Walkthrough: Receiving and Putting Away in Basic Warehouse Configurations](walkthrough-receiving-and-putting-away-in-basic-warehousing.md).   -->
 
 <!--#### To create a company with complete sample data in a sandbox
@@ -59,11 +59,11 @@ For situations where you need additional sample data, please talk to your resell
 
 When the assisted setup guide completes, you can start exploring the new company with the complete sample data. For more information, see [Creating New Companies in [!INCLUDE[prod_short](includes/prod_short.md)]](about-new-company.md).  -->
 
-## Designer
+## Návrhář
 
-In a sandbox environment, you will find the **Designer** enabled. You can activate Designer by selecting the design icon ![Designer.](./media/across-sandbox/sandbox-inclient-design-icon.png) on a page, or by choosing the **Design** menu item in the ![Settings](media/ui-experience/settings_icon_small.png) Settings menu.
+V sandboxovém prostředí najdete **Návrháře** povolené. Návrháře můžete aktivovat výběrem ikony návrhu ![Návrhář](./media/across-sandbox/sandbox-inclient-design-icon.png) na stránce nebo výběrem položky nabídky **Návrh** v ![Nastavení](media/ui-experience/settings_icon_small.png) Nabídky nastavení.
 
-For more information, see [Use Designer](/dynamics365/business-central/dev-itpro/developer/devenv-inclient-designer) in the developer and admin content (in English only).
+Pro více informací navštivte [Použití Návrháře](/dynamics365/business-central/dev-itpro/developer/devenv-inclient-designer) v obsahu pro vývojáře a správce (pouze v angličtině).
 
 <!-- ![In-client Designer.](./media/across-sandbox/sandbox-inclient-designer.png) -->
 

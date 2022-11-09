@@ -3,7 +3,7 @@
     description: This content contains detailed technical information about complex application features in Business Central.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

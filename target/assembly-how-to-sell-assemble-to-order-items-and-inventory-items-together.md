@@ -3,7 +3,7 @@ title: Sell Assemble-to-Order Items and Inventory Items Together
 description: If a part of an assembly item set up for assemble-to-stock is not available, you have the flexibility to create an assembly order for the remaining quantity.
 author: SorenGP
 
-    
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na

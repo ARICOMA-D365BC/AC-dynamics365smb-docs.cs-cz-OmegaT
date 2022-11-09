@@ -1,6 +1,6 @@
 ---
 title: Setting Up Printers
-description: Learn about setting up printers that you can use for reports and documents and the different print feature available to you in Business Central. 
+description: Learn about setting up printers that you can use for reports and documents and the different print feature available to you in Business Central.
 author: jswymer
 
 ms.topic: conceptual
@@ -160,7 +160,7 @@ Po přidání tiskárny můžete zobrazit a změnit její nastavení ve **Správ
 <!--
 ### Troubleshooting
 
-#### You don't see the a printer in the 
+#### You don't see the a printer in the
 
 The printer is not shared in Universal Print.
 
@@ -169,7 +169,7 @@ The printer is not shared in Universal Print.
 You have'nt been assigned a Uincersla Print license.
 
 There was an error fetching printers shared to you. You don't have access to the data. Make sure your account has been assigned a Universal Print license and you have the required permissions.
-or 
+or
 You don't seem to have access to Universal Print. Make sure you have a Universal Print subscription, and that your account has been assigned a Universal Print license.
 
 ## Could not upload the document to print job 50.

@@ -104,7 +104,7 @@ Licenci můžete také odebrat uživateli v Centru pro správu Microsoft 365. U�
 
 Když přiřadíte licenci pro [!INCLUDE[prod_short](includes/prod_short.md)] pro uživatele v Microsoftu 365, existují dva způsoby, jak vytvořit uživatele v [!INCLUDE[prod_short](includes/prod_short.md)].
 
-- Správce může přidat uživatele výběrem akce **Aktualizovat uživatele z Microsoft 365** na stránce **Uživatelé**, jak je popsáno v části [Přidání uživatele nebo aktualizace informací o uživateli v Business Central](#adduser) 
+- Správce může přidat uživatele výběrem akce **Aktualizovat uživatele z Microsoft 365** na stránce **Uživatelé**, jak je popsáno v části [Přidání uživatele nebo aktualizace informací o uživateli v Business Central](#adduser)
 - Informace o licenci se aktualizují automaticky při prvním přihlášení uživatele.
 
 V obou případech se automaticky provede několik nastavení. Tato nastavení jsou uvedena ve druhém a třetím sloupci v následující tabulce.

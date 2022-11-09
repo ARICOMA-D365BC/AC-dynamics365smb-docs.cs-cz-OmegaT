@@ -21,71 +21,71 @@ Tento článek poskytuje přehled o tom, co může správce udělat pro řízen�
 
 ## Správa
 
-Admin center pro správu SharePointu poskytuje rozsáhlou kontrolu nad zásadami, kterými se řídí používání OneDrive v celé organizaci. Global Admins, or users who have the SharePoint Admin role, can set up policies that determine who can access OneDrive, where data resides, the content lifecycle, and much more. The following links provide information about often-used features and settings that may enhance your integration with [!INCLUDE[prod_short](includes/prod_short.md)].
+Admin center pro správu SharePointu poskytuje rozsáhlou kontrolu nad zásadami, kterými se řídí používání OneDrive v celé organizaci. Globální správci nebo uživatelé, kteří mají roli správce SharePointu, mohou nastavit zásady, které určují, kdo má přístup k OneDrivu, kde jsou uložena data, životní cyklus obsahu a mnoho dalšího. Následující odkazy poskytují informace o často používaných funkcích a nastaveních, které mohou zlepšit integraci s [! INCLUDE[prod_short](includes/prod_short.md)].
 
-* [Manage sharing settings](/sharepoint/turn-external-sharing-on-or-off)
-* [Use information barriers with SharePoint](/sharepoint/information-barriers)
-* [Learn about data loss prevention](/microsoft-365/compliance/dlp-learn-about-dlp)
-* [Set the default storage space for OneDrive users](/onedrive/set-default-storage-space)
-* [Add and remove admins for a user's OneDrive](/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive)
-* [Disable OneDrive creation for some users](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users)
-* [Multi-Geo Capabilities in OneDrive and SharePoint Online](/microsoft-365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365)
+* [Správa nastavení sdílení](/sharepoint/turn-external-sharing-on-or-off)
+* [Použití informačních bariér se službou SharePoint](/sharepoint/information-barriers)
+* [Zjistěte více o ochraně před ztrátou informací](/microsoft-365/compliance/dlp-learn-about-dlp)
+* [Nastavení výchozího úložného prostoru pro uživatele OneDrive](/onedrive/set-default-storage-space)
+* [Přidat a odebrat správce pro OneDrive uživatele](/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive)
+* [Zakázat vytváření OneDrive pro některé uživatele](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users)
+* [Funkce Multi-Geo na OneDrive a SharePoint Online](/microsoft-365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365)
 
 > [!NOTE]
-> Some features may be available only for specific plans.
+> Některé funkce mohou být dostupné pouze pro konkrétní plány.
 
-## Managing Privacy
+## Správa ochrany osobních údajů
 
-Administrators and end users control the content stored in OneDrive, and this data is owned solely by your organization. For more information, see [How SharePoint and OneDrive safeguard your data in the cloud](/sharepoint/safeguarding-your-data). You can also visit our [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement), which explains the data that Microsoft processes, how Microsoft processes it, and for what purposes.
+Správci a koncoví uživatelé řídí obsah uložený na OneDrive a tato data vlastní výhradně vaše organizace. Pro více informací navštivte [Jak SharePoint a OneDrive chrání vaše data v cloudu](/sharepoint/safeguarding-your-data). Můžete také navštívit naše [Prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://privacy.microsoft.com/en-us/privacystatement), které vysvětluje, jaká data společnost Microsoft zpracovává, jak je zpracovává a pro jaké účely.
 
-## Restoring OneDrive and [!INCLUDE[prod_short](includes/prod_short.md)]
+## Obnovení OneDrive a [!INCLUDE[prod_short](includes/prod_short.md)]
 
-As part of a disaster recovery exercise, administrators might need to restore a [!INCLUDE[prod_short](includes/prod_short.md)] environment to a backup from a time in the past, and synchronize OneDrive storage to that same point in time. OneDrive provides various tools for this, such as restoring a user’s OneDrive to a previous time, restore a previous version of an individual file, or restore deleted files. For more information, see the following articles:
+V rámci cvičení zotavení po havárii může být nutné, aby správci obnovili [!INLCUDE[prod_short](includes/prod_short.md)] prostředí do zálohy z doby v minulosti a synchronizovat úložiště OneDrive do stejného bodu v čase. OneDrive k tomu poskytuje různé nástroje, jako je obnovení OneDrive uživatele do dřívější doby, obnovení předchozí verze jednotlivého souboru nebo obnovení smazaných souborů. Další informace naleznete v následujících článcích:
 
-* For [!INCLUDE[prod_short](includes/prod_short.md)], see [Restoring an Environment in the Admin Center](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-backup-restore).
-* For OneDrive, see [Restore your OneDrive](https://support.microsoft.com/en-us/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15?ui=en-us&rs=en-us&ad=us)
+* Pro informace o [! INCLUDE[prod_short](includes/prod_short.md)], navštivte [Obnovení prostředí v Admin centru](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-backup-restore).
+* Pro informace o OneDrive, navštivte [Obnovení OneDrive](https://support.microsoft.com/en-us/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15?ui=en-us&rs=en-us&ad=us)
 
-## Configuring Business Central On-Premises
+## Konfigurace Business Central On-Premises
 
-An administrator must set up the connection between [!INCLUDE[prod_short](includes/prod_short.md)] on premises and OneDrive. Unlike [!INCLUDE[prod_short](includes/prod_short.md)] online, the connection isn't automatic. If the connection isn't configured, users can't use the features for OneDrive.
+Správce musí nastavit připojení mezi [!INCLUDE[prod_short](includes/prod_short.md)] on premises a OneDrive. Na rozdíl od [! INCLUDE[prod_short](includes/prod_short.md)] online, připojení není automatické. Pokud připojení není nakonfigurované, uživatelé nemohou používat funkce pro OneDrive.
 
-[!INCLUDE[prod_short](includes/prod_short.md)] on-premises can only be connected to OneDrive hosted by Microsoft in the cloud. Connecting [!INCLUDE[prod_short](includes/prod_short.md)] on premises to the My Sites repository of SharePoint Server isn't supported.
+[!INCLUDE[prod_short](includes/prod_short.md)] on-premises lze připojit pouze k OneDrive hostovanému společností Microsoft v cloudu. Připojení [!INCLUDE[prod_short](includes/prod_short.md)] k on premises do úložiště osobních webů SharePoint Serveru se nepodporuje.
 
 > [!IMPORTANT]
-> By configuring this feature, you also enable legacy features that send files to OneDrive.
+> Nakonfigurováním této funkce také povolíte starší funkce, které posílají soubory na OneDrive.
 >
-> * The Open in Excel feature will automatically copy the Excel file to OneDrive, then open it in Excel Online.
-> * Exporting any report to a file will automatically copy the file to OneDrive, then open it in Excel Online, Word Online or OneDrive.
-> * Other features may also automatically open in OneDrive.
+> * Funkce Otevřít v aplikaci Excel automaticky zkopíruje excelový soubor na OneDrive a pak ho otevře v Excel Online.
+> * Při exportu jakékoli sestavy do souboru, se soubor automaticky zkopíruje na OneDrive a pak se otevře v Excel Online, Word Online nebo OneDrive.
+> * Další funkce se můžou automaticky otevírat i na OneDrive.
 
-### To prepare [!INCLUDE[prod_short](includes/prod_short.md)] on-premises for connecting to OneDrive
+### Abyste připravili [!INCLUDE[prod_short](includes/prod_short.md)] on-premises pro připojení k OneDrive
 
-<!-- 
+<!--
 1. For the best experience Configure Azure Active Directory (AD) authentication.
 
    For more information, see [Authenticating Business Central Users with Azure Active Directory](/dynamics365/business-central/dev-itpro/administration/authenticating-users-with-azure-active-directory)-->
 
-Add a registered application for Business Central in your Azure AD tenant of your Microsoft 365 plan. Like other Azure services that work with Business Central, OneDrive requires an app registration in Azure Active Directory (Azure AD). The app registration provides authentication and authorization services between Business Central and SharePoint, which is used by OneDrive.
+Přidejte registrovanou aplikaci pro Business Central do svého tenanta Azure AD vašeho plánu Microsoft 365. Stejně jako ostatní služby Azure, které pracují s Business Central, OneDrive vyžaduje registraci aplikace v Azure Active Directory (Azure AD). Registrace aplikace poskytuje služby ověřování a autorizace mezi Business Central a SharePoint, který používá OneDrive.
 
-Configure the registered application with the following delegated permissions to the SharePoint API:
+Nakonfigurujte registrovanou aplikaci s následujícími delegovanými oprávněními k rozhraní API služby SharePoint:
 
 - AllSites.FullControl
 - User.ReadWrite.All
 
-For Business Central 2021 release wave 2 (version 19), set these permissions instead:
+Pro Business Central 2021 vlnu vydání 2 (verze 19), nastavte místo toho tato oprávnění:
 
 - AllSites.Write
 - MyFiles.Write
 - User.Read.All
 
-You do this work in the Azure portal. Be sure to copy the Application (client) ID and client secret used by the registered application. You'll need this information in the next task.
+Tuto práci provedete v Azure Portal. Nezapomeňte zkopírovat ID aplikace (klienta) a tajný klíč klienta používaný registrovanou aplikací. Tyto informace budete potřebovat v dalším úkolu.
 
-For more information about registering an application and configuring permissions, see [Register an application in Azure Active Directory](/dynamics365/business-central/dev-itpro/administration/register-app-azure#register-an-application-in-azure-active-directory) in the developer and IT pro help.
+Další informace o registraci aplikace a konfiguraci oprávnění najdete v tématu [Registrace aplikace v Azure Active Directory](/dynamics365/business-central/dev-itpro/administration/register-app-azure#register-an-application-in-azure-active-directory) v nápovědě pro vývojáře a IT profesionály.
 
 > [!TIP]
-> If you've already registered an application as part of an integration with another Microsoft product, such as Power BI, then you can reuse that app registration. In this case, you'll just have to set the SharePoint permissions.
+> Pokud jste již zaregistrovali aplikaci v rámci integrace s jiným produktem společnosti Microsoft, jako je Power BI, můžete tuto registraci aplikace znovu použít. V takovém případě stačí nastavit oprávnění služby SharePoint.
 
-### To set up the connection in [!INCLUDE[prod_short](includes/prod_short.md)] on-premises
+### Nastavení připojení v [!INCLUDE[prod_short](includes/prod_short.md)] on-premises
 
 <!--
 > [!NOTE]
@@ -95,24 +95,24 @@ For more information about registering an application and configuring permission
 > * NavUserPassword
 > * Azure Active Directory
 -->
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Microsoft SharePoint Connection Setup**, and then choose the related link.
-2. In the **Description** field, enter a description for the connection, like **OneDrive**.
-3. In the **Folder** field, enter **Business Central**.
-4. In the **Location** field, enter the URL for your OneDrive.
+1. Vyberte ikonu![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Nastavení připojení k Microsoft SharePoint** a pak zvolte související odkaz.
+2. Do pole **Popis**, zadejte popis připojení, například **OneDrive**.
+3. Do pole **Složka**, zadejte **Business Central**.
+4. Do pole **Umístění**, zadejte adresu URL svého OneDrive.
 
-   The URL for a OneDrive is usually in the following format: `https://<tenant name>-my.sharepoint.com`. For more information, see [OneDrive URLs for users in your organization](/onedrive/list-onedrive-urls) in the OneDrive documentation.
-5. In the **Client ID** field, enter the client ID from your application registration.
-6. In the **Client Secret** field, enter the secret from your application registration.
-   <!-- 
+   Adresa URL OneDrive je obvykle v následujícím formátu: `https://<název tenanta>-my.sharepoint.com`. Další informace najdete v tématu [Adresy URL OneDrive pro uživatele ve vaší organizaci](/onedrive/list-onedrive-urls) v dokumentaci k OneDrive.
+5. Do pole ID klienta zadejte **ID klienta** z registrace aplikace.
+6. Do pole **Klientský tajný klíč**, zadejte tajný klíč z registrace vaší aplikace.
+   <!--
       For information about how to find the URLs, see the following:
       * [How to find your SharePoint server URL]
       * [How to find your OneDrive URL]-->
 
 > [!IMPORTANT]
-> The SharePoint Connection Setup page is used to configure multiple legacy features. The **General** section configures the connection to OneDrive, and the **Shared Documents** section redirects files to SharePoint instead. The legacy SharePoint feature will be deprecated in the near future. We recommend that you do not configure the **Shared Documents** section.
+> Stránka Nastavení připojení SharePoint se používá ke konfiguraci několika starších funkcí. Sekce **Obecné** konfiguruje připojení k OneDrive a sekce **Sdílené dokumenty** místo toho přesměrovává soubory na SharePoint. Starší funkce SharePoint bude v blízké budoucnosti ukončena. Doporučujeme, abyste sekci **Sdílené dokumenty** nekonfigurovali.
 
 ## Viz také
-[Business Central and OneDrive for Business Integration](across-onedrive-overview.md)  
-[Opening Business Central Files in OneDrive](across-share-onedrive.md)  
-[OneDrive FAQ](admin-onedrive-faq.md)
+[Integrace Business Central a OneDrive pro firmy](across-onedrive-overview.md)    
+[Otevírání souborů Business Central na OneDrive](across-share-onedrive.md)    
+[Nejčastější dotazy o OneDrive](admin-onedrive-faq.md)  
 

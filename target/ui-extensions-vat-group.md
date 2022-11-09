@@ -7,7 +7,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: VAT, value added tax, report
-ms.search.forms: 
+ms.search.forms:
 ms.date: 05/24/2022
 ms.author: bholtorf
 

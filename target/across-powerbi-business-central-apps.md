@@ -70,7 +70,7 @@ Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, 
 
    Po dokončení bude aplikace dostupná z **Aplikace** v navigační nabídce v Power BI.
 
-## Připojte ke svým datům aplikaci  [!INCLUDE[prod_short](includes/prod_short.md)] 
+## Připojte ke svým datům aplikaci  [!INCLUDE[prod_short](includes/prod_short.md)]
 
 1. V části **Aplikace** vyberte aplikaci Business Central a poté **Připojit**.
 2. Po zobrazení výzvy vyplňte **Název společnosti** a **Prostředí** informacemi o instanci [!INCLUDE[prod_short](includes/prod_short.md)], ke které se chcete připojit.

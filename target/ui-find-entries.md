@@ -39,14 +39,14 @@ Stránka **Najít položky** obsahuje všechny související doklady a položky 
 - Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Find Entries**, and then choose the related link.
 
     With this way, the **Find Entries** page might be empty, and you'll have to start searching for entries from scratch.
-    
+
 - Open a page that displays posted documents or posted documents entries, either a list or a card. Then, locate and select the **Find Entries** action.
 
     With this way, the **Find Entries**, page will include all related documents and entries based on the document no. and posting date.
 
 
     > [!TIP]
-    > If you are on a page that has the **Find Entries** action, press crtl+G to open the **Find Entries** page directly. 
+    > If you are on a page that has the **Find Entries** action, press crtl+G to open the **Find Entries** page directly.
 -->
 
 ## Vyhledávání položek
