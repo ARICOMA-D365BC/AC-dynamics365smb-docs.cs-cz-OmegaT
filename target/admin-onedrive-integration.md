@@ -21,7 +21,7 @@ Tento článek poskytuje přehled o tom, co může správce udělat pro řízen�
 
 ## Správa
 
-Admin center pro správu SharePointu poskytuje rozsáhlou kontrolu nad zásadami, kterými se řídí používání OneDrive v celé organizaci. Globální správci nebo uživatelé, kteří mají roli správce SharePointu, mohou nastavit zásady, které určují, kdo má přístup k OneDrivu, kde jsou uložena data, životní cyklus obsahu a mnoho dalšího. Následující odkazy poskytují informace o často používaných funkcích a nastaveních, které mohou zlepšit integraci s [! INCLUDE[prod_short](includes/prod_short.md)].
+Admin center pro správu SharePointu poskytuje rozsáhlou kontrolu nad zásadami, kterými se řídí používání OneDrive v celé organizaci. Globální správci nebo uživatelé, kteří mají roli správce SharePointu, mohou nastavit zásady, které určují, kdo má přístup k OneDrivu, kde jsou uložena data, životní cyklus obsahu a mnoho dalšího. Následující odkazy poskytují informace o často používaných funkcích a nastaveních, které mohou zlepšit integraci s [!INCLUDE[prod_short](includes/prod_short.md)].
 
 * [Správa nastavení sdílení](/sharepoint/turn-external-sharing-on-or-off)
 * [Použití informačních bariér se službou SharePoint](/sharepoint/information-barriers)
@@ -40,7 +40,7 @@ Správci a koncoví uživatelé řídí obsah uložený na OneDrive a tato data 
 
 ## Obnovení OneDrive a [!INCLUDE[prod_short](includes/prod_short.md)]
 
-V rámci cvičení zotavení po havárii může být nutné, aby správci obnovili [!INLCUDE[prod_short](includes/prod_short.md)] prostředí do zálohy z doby v minulosti a synchronizovat úložiště OneDrive do stejného bodu v čase. OneDrive k tomu poskytuje různé nástroje, jako je obnovení OneDrive uživatele do dřívější doby, obnovení předchozí verze jednotlivého souboru nebo obnovení smazaných souborů. Další informace naleznete v následujících článcích:
+V rámci cvičení zotavení po havárii může být nutné, aby správci obnovili [!INCLUDE[prod_short](includes/prod_short.md)] prostředí do zálohy z doby v minulosti a synchronizovat úložiště OneDrive do stejného bodu v čase. OneDrive k tomu poskytuje různé nástroje, jako je obnovení OneDrive uživatele do dřívější doby, obnovení předchozí verze jednotlivého souboru nebo obnovení smazaných souborů. Další informace naleznete v následujících článcích:
 
 * Pro informace o [! INCLUDE[prod_short](includes/prod_short.md)], navštivte [Obnovení prostředí v Admin centru](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-backup-restore).
 * Pro informace o OneDrive, navštivte [Obnovení OneDrive](https://support.microsoft.com/en-us/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15?ui=en-us&rs=en-us&ad=us)

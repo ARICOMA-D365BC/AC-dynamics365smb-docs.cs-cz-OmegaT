@@ -66,6 +66,6 @@ Pro více informací navštivte [Nejčastější dotazy ke kopírování a vklá
 
 ## Viz také
 
-[Integrace Business Central a OneDrive](across-onedrive-overview.md)  
-[Správa integrace OneDrive s Business Central](admin-onedrive-integration.md)  
-[Nejčastější dotazy k OneDrive](admin-onedrive-faq.md)
+[Integrace Business Central a OneDrive](across-onedrive-overview.md)    
+[Správa integrace OneDrive s Business Central](admin-onedrive-integration.md)    
+[Nejčastější dotazy k OneDrive](admin-onedrive-faq.md)  

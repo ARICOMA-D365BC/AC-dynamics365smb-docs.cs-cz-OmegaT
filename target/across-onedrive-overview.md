@@ -19,10 +19,10 @@ Vytvořili jsme spojení mezi [!INCLUDE[prod_short](includes/prod_short.md)] onl
 
 Na většině stránek, kde jsou dostupné soubory, jako je Schránka sestav nebo soubory připojené k záznamům, najdete akce **Otevřít na OneDrivu** a **Sdílet**.
 
-:::image type="content" source="media/onedrive-overview-report-inbox-w-outline.png" alt-text="The Open in OneDrive and Share actions for reports":::
+:::image type="content" source="media/onedrive-overview-report-inbox-w-outline.png" alt-text="Akce Otevřít na OneDrivu a Sdílet pro sestavy":::
 
 
-:::image type="content" source="media/one-drive-attachments-w-outline.png" alt-text="The Open in OneDrive and Share actions for attachments":::
+:::image type="content" source="media/one-drive-attachments-w-outline.png" alt-text="Akce Otevřít na OneDrivu a Sdílet pro přílohy":::
 
 | Vybrat... | K... | Zobrazit více informací... |
 |---------|-----|----------------|
