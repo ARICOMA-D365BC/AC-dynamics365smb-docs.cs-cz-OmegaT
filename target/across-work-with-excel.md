@@ -14,7 +14,7 @@ ms.author: jswymer
 ---
 # Zobrazení a úpravy v aplikaci Excel
 
-Se stránkami, které zobrazují seznam záznamů v řádcích a sloupcích, jako je seznam zákazníků, prodejních objednávek nebo faktur, můžete seznam exportovat do aplikace Microsoft Excel a zobrazit jej tam. V závislosti na stránce máte dvě možnosti zobrazení v aplikaci Excel. Obě možnosti jsou k dispozici na ikoně ![**Sdílet** Stránku sdílet v jiné aplikaci](media/share-icon.png) V horní části stránky. Na stránce můžete vybrat akci **Otevřít v Excelu** nebo **Upravit v Excelu**. Tento článek vysvětluje rozdíly mezi těmito dvěma akcemi.
+Se stránkami, které zobrazují seznam záznamů v řádcích a sloupcích, jako je seznam zákazníků, prodejních objednávek nebo faktur, můžete seznam exportovat do aplikace Microsoft Excel a zobrazit jej tam. V závislosti na stránce máte dvě možnosti zobrazení v aplikaci Excel. Obě možnosti jsou k dispozici z **Sdílet** ikony ![Stránku sdílet v jiné aplikaci](media/share-icon.png) V horní části stránky. Na stránce můžete vybrat akci **Otevřít v Excelu** nebo **Upravit v Excelu**. Tento článek vysvětluje rozdíly mezi těmito dvěma akcemi.
 
 ## Otevřít v aplikaci Excel
 
@@ -75,9 +75,9 @@ Pokud se doplněk z nějakého důvodu nenainstaluje, kontaktujte svého správc
 
 ## Viz také
 
-[Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md)    
-[Work with Business Central](ui-work-product.md)    
-[Enhancements to Excel integration in 2019 release wave 2](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)
+[Analýza účetní uzávěrky v aplikaci Microsoft Excel](finance-analyze-excel.md)    
+[Práce s Business Central](ui-work-product.md)    
+[Vylepšení integrace Excelu ve druhé vlně vydání 2019](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

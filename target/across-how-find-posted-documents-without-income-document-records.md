@@ -22,7 +22,7 @@ Na stránkách **Účetní osnova** a **Věcné položky** můžete pomocí funk
 3. Alternativně zvolte akci **Položky**.
 4. Na stránce **Věcné položky** zvolte akci **Zaúčtovat doklady bez došlých dokladů**.
 
-Otevře se stránka **Zaúčtované doklady bez došlého dokladu** zobrazující zaúčtované nákupní a prodejní doklady bez záznamů došlého dokladu reprezentovaných věcnch položek na finančním účtě, pro který jste stránku otevřeli. Stránka může ukázat maximálně 1000 řádků. Standardně tedy pole **Filtr data** obsahuje filtr, který omezuje řádky na záznamy s daty účtování od začátku účetního období do pracovního data.
+Otevře se stránka **Zaúčtované doklady bez došlého dokladu** zobrazující zaúčtované nákupní a prodejní doklady bez záznamů došlého dokladu reprezentovaných věcných položek na finančním účtě, pro který jste stránku otevřeli. Stránka může ukázat maximálně 1000 řádků. Standardně tedy pole **Filtr data** obsahuje filtr, který omezuje řádky na záznamy s daty účtování od začátku účetního období do pracovního data.
 
 ## Připojení nalezených dokladů k existujícím záznamům došlého dokladu
 1. Na stránce **Zaúčtované doklady bez došlého dokladu** vyberte řádek pro zaúčtovaný doklad, který chcete připojit k existujícímu záznamu došlého dokladu, a poté zvolte akci **Vybrat došlý doklad**.

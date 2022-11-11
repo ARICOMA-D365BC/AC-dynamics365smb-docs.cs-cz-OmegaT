@@ -20,7 +20,7 @@ ms.author: jswymer
 
 ### O doplňku
 
-Doplněk se nazývá **Doplněk Microsoft Dynamics Office** a je k dispozici pro instalaci z [Office Store (AppSource).](https://appsource.microsoft.com/) S nainstalovaným doplňkem je akce **Upravit v Excelu** dostupná na většině stránek seznamu a částí seznamu pomocí ikony **Sdílet** ![Sdílet stránku v jiné aplikaci. ](media/share-icon.png). Další informace o použití doplňku naleznete v tématu [Zobrazení a úpravy v aplikaci Excel z Business Central](across-work-with-excel.md).
+Doplněk se nazývá **Doplněk Microsoft Dynamics Office** a je k dispozici pro instalaci z [Office Store (AppSource).](https://appsource.microsoft.com/) S nainstalovaným doplňkem je akce **Upravit v Excelu** dostupná na většině stránek seznamu a částí seznamu pomocí ikony **Sdílet** ![Sdílet stránku v jiné aplikaci.](media/share-icon.png). Další informace o použití doplňku naleznete v tématu [Zobrazení a úpravy v aplikaci Excel z Business Central](across-work-with-excel.md).
 
 > [!NOTE]
 > Doplněk funguje pouze v systému Windows; ne na MacOS.
@@ -72,10 +72,10 @@ Budete pracovat v [!INCLUDE[prod_short](includes/prod_short.md)] i v centru pro 
    1. Zvolte **Získat aplikace** a otevřete Office Store (AppSource). <!--**Deploy Add-in** 5. In the **Deploy a new add-in**, select **Choose from the store**.-->
    2. Vyhledejte **Doplněk Microsoft Dynamics Office** a pak vyberte **Získat nyní**. <!--On the **Select add-in** page, search for and select **Microsoft Dynamics Office Add-in** > **Add** > **Continue**.-->
    3. Na stránce **Přidat uživatele** zadejte uživatele, pro které chcete doplněk nasadit, a pak zvolte **Další**.<!--On the **Configure add-in**, specify the users that you want to deploy the add-in for.-->
-   4. Zkontrolujte **Přijmout žádosti o oprávnění**a poté zvolte **Další** > **Dokončit implementaci**.
+   4. Zkontrolujte **Přijmout žádosti o oprávnění** a poté zvolte **Další** > **Dokončit implementaci**.
    5. Počkejte, až se u doplňku zobrazí zelená značka zaškrtnutí vedle položky **Nasazeno**, a poté vyberte možnost **Hotovo**. <!--Select **Deploy** and wait til successful, then **Next** > **Continue**.-->
 
-      Doplněk se zobrazí na stránce **Doplňky**. Další informace o nasazení doplňků v Centru pro správu Microsoft 365 najdete v tématu[Nasazení doplňků v centru pro správu](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
+      Doplněk se zobrazí na stránce **Doplňky**. Další informace o nasazení doplňků v Centru pro správu Microsoft 365 najdete v tématu [Nasazení doplňků v centru pro správu](/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true).
 4. Vraťte se k asistovanému nastavení **centralizovaného nasazení doplňku aplikace Excel** v [!INCLUDE[prod_short](includes/prod_short.md)] a zvolte **Další**.
 5. Zapněte **Použít centralizované nasazení** a zvolte **Dokončit**.
 
@@ -125,7 +125,7 @@ Někdy uživatelé narazí na problémy s doplňkem aplikace Excel. Tato část 
 | Data se nenačítají do Excelu | Otestujte připojení otevřením dalšího seznamu v aplikaci Excel z [!INCLUDE [prod_short](includes/prod_short.md)]. Nebo otevřete sešit v aplikaci Excel v prohlížeči. | Pokud uživatel zadal název společnosti, který obsahuje speciální znaky, doplněk se nemůže připojit. |
 | Data nelze publikovat zpět do [!INCLUDE [prod_short](includes/prod_short.md)]. | Otestujte připojení otevřením sešitu v aplikaci Excel v prohlížeči. | Někdy může rozšíření zablokovat úlohu publikování. Pokud je stránka rozšířená nebo přizpůsobená, odeberte rozšíření a poté to zkuste znovu. |
 | Data jsou špatná | Excel může zobrazovat časy a datumy v jiném formátu než [!INCLUDE [prod_short](includes/prod_short.md)]. Tato podmínka je nedělá špatně a data v [!INCLUDE [prod_short](includes/prod_short.md)] se nezkazí. |         |
-| U některých stránek seznamu způsobuje úprava více řádků v Excelu soustavně chyby. K této podmínce může dojít, pokud volání OData zahrnují dynamické pole a pole mimo ovládací prvek opakovače. | Na stránce **Webové služby** zaškrtněte políčka **Vyloučit neupravitelná dynamické pole** a **Vyloučit pole mimo opakovač** pro publikovanou stránku. Zaškrtnutím těchto políček vyloučíte z výpočtu eTag neupravitelná dynamická pole a pole. | Tato zaškrtávací políčka jsou ve výchozím nastavení skrytá. Chcete-li je zobrazit na stránce **Webové služby**, použijte [přizpůsobení](/dynamics365/business-central/ui-personalization-user). |
+| U některých stránek seznamu způsobuje úprava více řádků v Excelu soustavně chyby. K této podmínce může dojít, pokud volání OData zahrnují dynamické pole a pole mimo ovládací prvek opakovače. | Na stránce **Webové služby** zaškrtněte políčka **Vyloučit neupravitelná dynamické pole** a **Vyloučit pole mimo opakovač** pro publikovanou stránku. Zaškrtnutím těchto políček vyloučíte neupravitelné dynamické pole a pole z výpočtu eTag. | Tato zaškrtávací políčka jsou ve výchozím nastavení skrytá. Chcete-li je zobrazit na stránce **Webové služby**, použijte [přizpůsobení](/dynamics365/business-central/ui-personalization-user). |
 | Uživatelé se již nemohou přihlásit k doplňku. Když se pokusí přihlásit, proces se zastaví, aniž by byl dokončen. | Tento problém může být způsoben aktualizací doplňku, kterou jsme provedli někdy v červenci 2022. Další informace a opravu naleznete v tématu [Úprava konfigurace doplňku aplikace Excel pro podporu aktualizace z července 2022](/dynamics365/business-central/dev-itpro/administration/update-excel-addin-configuration). | Platí pro [!INCLUDE [prod_short](includes/prod_short.md)] pouze v místním prostředí |
 
 <!--
@@ -165,9 +165,9 @@ When the add-in is installed, it shows up as a panel in Excel. Next, you must co
 
 ## Viz také
 
-[Analyzing Financial Statements in Microsoft Excel](finance-analyze-excel.md)    
-[Work with Business Central](ui-work-product.md)    
-[Enhancements to Excel integration in 2019 release wave 2](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)
+[Analýza účetní uzávěrky v aplikaci Microsoft Excel](finance-analyze-excel.md)    
+[Práce s Business Central](ui-work-product.md)    
+[Vylepšení integrace Excelu ve druhé vlně vydání 2019](/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

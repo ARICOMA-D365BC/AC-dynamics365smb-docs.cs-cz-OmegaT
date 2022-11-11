@@ -36,9 +36,9 @@ Pokud v prodejním dokladu zvolíte akci **Účtovat a Odeslat**, **Zaúčtovat 
 3. V poli **Profil odesílání dokladů** vyberte profil, který jste nastavili, jak je popsáno v předchozím postupu.
 
 ## Viz také
-[Setting Up Sales](sales-setup-sales.md)    
-[Sales](sales-manage-sales.md)    
-[Work with [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
+[Nastavení prodeje](sales-setup-sales.md)    
+[Prodej](sales-manage-sales.md)    
+[Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
