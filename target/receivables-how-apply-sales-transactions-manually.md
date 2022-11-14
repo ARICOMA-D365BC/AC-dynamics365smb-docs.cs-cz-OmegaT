@@ -14,145 +14,145 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Reconcile Customer Payments with the Cash Receipt Journal or from Customer Ledger Entries
+# Odsouhlaste platby zákazníků s deníkem přijaté hotovosti nebo ze záznamů v položkách zákazníků
 
-When you receive a cash payment from a customer or give a cash refund you can apply the payment or refund to close open debits or credits. You can specify the amount to apply. For example, you can apply partial payments to customer ledger entries. Closing customer ledger entries keeps customer statistics, account statements, finance charges, and so on, up-to-date.
+Když obdržíte platbu v hotovosti od zákazníka nebo vrátíte hotovost, můžete platbu nebo refundaci použít k uzavření otevřených debetních nebo kreditních položek. Můžete určit částku, kterou chcete použít. Můžete například použít částečné platby na záznamy v položkách zákazníků. Uzavření položek zákazníka udržuje statistiky zákazníka, výpisy z účtu, finanční náklady atd. aktuální.
 
 > [!TIP]  
-> On the **Customer Ledger Entries** page, red font means that the related payment is past its due date. If overdue payments are becoming a problem, we can help you reduce their frequency. You can enable the **Late Payment Predictions** extension, which uses a predictive model that we built in Azure Machine Learning to predict the timing of payments. These predictions help you reduce outstanding receivables and fine-tune your collections strategy. For example, if a payment is predicted to be late, you can adjust the terms of payment or the payment method for the customer. For more information, see [Late Payment Predictions](ui-extensions-late-payment-prediction.md).
+> Na stránce **Položky zákazníka** červené písmo znamená, že související platba je po datu splatnosti. Pokud se platby po splatnosti stávají problémem, můžeme vám pomoci snížit jejich frekvenci. Můžete povolit rozšíření **Předpovědi opožděných plateb** , které používá prediktivní model, který jsme vytvořili ve službě Azure Machine Learning k předpovědi načasování plateb. Tyto předpovědi vám pomohou snížit neuhrazené pohledávky a vyladit strategii vymáhání pohledávek. Pokud se například předpokládá, že platba bude zpožděna, můžete upravit platební podmínky nebo způsob platby pro zákazníka. Další informace naleznete v tématu [Předpovědi pozdních plateb](ui-extensions-late-payment-prediction.md).
 
-You can apply customer ledger entries in several ways:
+Položky zákazníka můžete použít několika způsoby:
 
-* By entering information on dedicated pages:
-   * The **Payment Reconciliation Journal** page. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
-   * The **Payment Registration** page. For more information, see [Reconcile Customer Payments from a List of Unpaid Sales Documents](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md).
-   * The **Cash Receipt Journal**. This option is described below.
-* By filling in the **Applies-to Doc. No.** field on sales credit memo documents. This option is described below.
-* By using the **Set Applies-to ID** action on a customer ledger entry. This option is described below.
-* By using the **Apply Entries** action on the **Bank Deposit** page, and then entering the invoice number in the **Applies-to ID** field. For more information, see [Create Bank Deposits](bank-create-bank-deposits.md).
+* Zadáním informací na vyhrazené stránky:
+   * Stránka **Deník odsouhlasení plateb**. Další informace naleznete v části [Automatické použití plateb a Odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md).
+   * Stránka **Registrace platby**. Další informace naleznete v tématu [Odsouhlasení plateb odběratele ze seznamu nezaplacených prodejních dokladů](receivables-how-reconcile-customer-payments-list-unpaid-sales-documents.md).
+   * **Deník přijaté hotovosti**. Tato možnost je popsána níže.
+* Vyplněním **Čísla vyrovnání dokladu. Číslo** na dokladech prodejního dobropisu. Tato možnost je popsána níže.
+* Pomocí akce **Nastavit ID** pro položku zákazníka. Tato možnost je popsána níže.
+* Pomocí akce **Použít položky** na stránce **Bankovní vklad** a následným zadáním čísla faktury do pole **vztahuje se pro ID**. Další informace naleznete v tématu [Vytváření bankovních vkladů](bank-create-bank-deposits.md).
 
 > [!NOTE]  
-> If the **Application Method** field on the customer card contains **Apply to Oldest**, payments are applied to the oldest open credit entry, unless you manually specify an entry. If the application method is **Manual**, you always apply entries manually.
+> Pokud pole **Metoda vyrovnání** na zákaznické kartě obsahuje **Použít k nejstarším**, platby se použijí na nejstarší otevřený kreditní záznam, pokud ručně neurčíte záznam. Pokud je metoda vyrovnání **Ruční**, vždy aplikujete položky ručně.
 
-## To fill and post a cash receipt journal
-A cash receipt journal is a type of general journal. You can use it to post transactions to general ledger, bank, customer, vendor, and fixed assets accounts. You can apply the payment to one or more debit entries when you post the payment. You can also apply from the posted entries later.
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Receipt Journal**, and then choose the related link.
-2. Choose the **Edit Journal** action.
-3. Select the relevant batch in the **Batch Name** field.
-4. Fill in the **Posting Date** field.
-5. In the **Document Type** field, select **Payment**.
+## Vyplnění a zaúčtování deníku příjemek hotovosti
+Deník pokladních příjmů je typ finančního deníku. Můžete jej použít k zaúčtování transakcí na účty hlavní knihy, banky, zákazníka, dodavatele a dlouhodobého majetku. Platbu můžete použít na jednu nebo více debetních položek při zaúčtování platby. Můžete také požádat ze zaúčtovaných položek později.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky přijaté hotovosti** a poté vyberte související odkaz.
+2. Vyberte akci **Upravit deník**.
+3. Vyberte příslušnou dávku v poli **Název dávky**.
+4. Vyplňte pole **Zúčtovací datum**.
+5. V poli **Typ dokladu** vyberte **možnost Platba**.
 
-   The **Document No.** field is filled by the number series assigned to the batch.
-6. Use the **External Document No.** field to store an identifier, such as the customer's check number.
-7. In the **Account Type** field, select **Customer**.
-8. In the **Account No.** field, select the relevant G/L account.
-9. If you want to post the application at the same time as you post the journal, do one of the following.
-10. In the **Balancing Account Type** field, select **G/L Account** for cash payments, and **Bank Account** for other payments.
-11. In the **Balancing Account No.** field, select the cash account for cash payments, or the relevant bank account for other payments.
+   Pole **Číslo dokladu** je vyplněno číselnou řadou přiřazenou dávkou.
+6. Použijte pole **Číslo externího dokladu** k uložení identifikátoru, jako je číslo šeku zákazníka.
+7. V poli **Typ účtu** vyberte **možnost Zákazník**.
+8. V poli **Číslo účtu** vyberte příslušný finanční účet.
+9. Pokud chcete zaúčtovat aplikaci současně se zaúčtováním deníku, proveďte jednu z následujících akcí.
+10. V poli **Typ vyrovnávacího účtu** vyberte **Deník finančních účtů** pro hotovostní platby a **Bankovní účet** pro ostatní platby.
+11. V poli **Číslo vyrovnávacího účtu** vyberte pokladní účet pro hotovostní platby nebo příslušný bankovní účet pro ostatní platby.
 12. Zaúčtujte deník.
 
-## To apply a payment to a single customer ledger entry
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Receipt Journal** and choose the related link.
-2. Choose the **Edit Journal** action.
-3. On the first journal line, enter the relevant information about the entry to be applied.
-4. In the **Document Type** field, enter **Payment**.
-5. In the **Account Type** field, enter **Customer**.
-6. V poli **Číslo Account Type** field, enter **Bank Account**.
-7. In the **Applies-to Doc. No.** field, choose the field to open the **Apply Customer Entries** page.
-8. On the **Apply Customer Entries** page, select the entry to apply the payment to.
-9. In the **Amount to Apply** field, enter the amount you want to apply to the entry. If you don't enter an amount, the maximum amount is applied.
+## Použití platby na jednu položku zákazníka
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Deník přijaté hotovosti** a vyberte související odkaz.
+2. Vyberte akci **Upravit deník**.
+3. Na prvním řádku deníku zadejte příslušné informace o položce, která má být použita.
+4. Do pole **Typ dokladu** zadejte **Platba**.
+5. Do pole **Typ účtu** zadejte **Zákazník**.
+6. V poli **Číslo Typ účtu**, zadejte **Bankovní účet**.
+7. V **příslušném dokumentu Číslo** vyberte pole pro otevření stránky **Použít položky zákazníka**.
+8. Na stránce **Použít položky zákazníka** vyberte položku, na kterou chcete platbu použít.
+9. Do pole **Částka k použití** zadejte částku, kterou chcete na záznam použít. Pokud částku nezadáte, použije se maximální částka.
 
-   At the bottom of the **Apply Customer Entries** page, you can see the specific amount in the **Applied Amount** field and also whether the application balances.
-10. Zvolte tlačítko **OK**. The **Cash Receipt Journal** page now shows the entry in the **Applies-to Doc. Type** and **Applies-to Doc. No.** fields.
-11. Post the cash receipt journal.
+   V dolní části stránky **Použít položky zákazníků** můžete vidět konkrétní částku v poli **Použitá částka** a také to, zda je aplikace vyrovnaná.
+10. Zvolte tlačítko **OK**. **Na stránce Deník přijaté hotovosti** se nyní zobrazuje položka v **Číslo vyrovnání dokladu. Typ** a **Číslo vyrovnání dokladu. Číslo** pole.
+11. Zaúčtování deníku přijaté hotovosti.
 
-## To apply a payment to multiple customer ledger entries
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Receipt Journal**, and then choose the related link.
-2. Choose the **Edit Journal** action.
-3. On the first journal line, enter the relevant information about the entry to be applied.
-4. In the **Document Type** field, enter **Payment**.
-5. In the **Account Type** field, enter **Customer**.
-6. V poli **Číslo Account Type** field, enter **Bank Account**.
-7. In the **Amount** field, enter the full payment as a negative amount.
-8. To apply the payment to multiple customer ledger entries when posting, choose the **Apply Entries** action.
-9. Select the lines with the entries that you want the applying entry to be applied to, and then choose the **Set Applies-to ID** action.
-10. On each line, in the **Amount to Apply** field, enter the amount you want to apply to the individual entry. If you don't enter an amount, the maximum amount is applied.
+## Použití platby na více položek zákazníka
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Deníky přijaté hotovosti** a poté vyberte související odkaz.
+2. Vyberte akci **Upravit deník**.
+3. Na prvním řádku deníku zadejte příslušné informace o položce, která má být použita.
+4. Do pole **Typ dokladu** zadejte **Platba**.
+5. Do pole **Typ účtu** zadejte **Zákazník**.
+6. V poli **Číslo Typ účtu**, zadejte **Bankovní účet**.
+7. V poli **Částka** zadejte celou platbu jako zápornou částku.
+8. Chcete-li při zaúčtování použít platbu na více položek zákazníka, vyberte akci **Použít položky**.
+9. Vyberte řádky s položkami, na které chcete použít použitou položku, a poté vyberte akci **Nastavit ID**.
+10. Na každém řádku v poli **Částka k použití** zadejte částku, kterou chcete použít pro jednotlivou položku. Pokud částku nezadáte, použije se maximální částka.
 
-   At the bottom of the **Apply Customer Entries** page, you can see the specific amount in the **Applied Amount** field and also whether the application balances.
+   V dolní části stránky **Použít položky zákazníků** můžete vidět konkrétní částku v poli **Použitá částka** a také to, zda je aplikace vyrovnaná.
 11. Zvolte tlačítko **OK**.
-12. Post the cash receipt journal.
+12. Zaúčtování deníku přijaté hotovosti.
 
-## To apply a credit memo to a single customer ledger entry
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
-2. Open the relevant sales credit memo.
-3. To apply the credit memo to a single customer ledger entry when posting, in the **Applies-to Doc. No.** field, select the entry to which you want to apply the payment.
-4. On the line in the **Amount to Apply** field, enter the amount you want to apply to the entry.
+## Použití dobropisu na jednu položku zákazníka
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
+2. Otevřete příslušný prodejní dobropis.
+3. Chcete-li použít dobropis na jednu položku zákazníka při zaúčtování, v **Číslo vyrovnání dokladu Číslo** vyberte položku, na kterou chcete platbu použít.
+4. Na řádku v poli **Částka k použití** zadejte částku, kterou chcete u položky použít.
 
-   If you don't enter an amount, application automatically applies the maximum amount. At the bottom of the **Apply Customer Entries** page, you can see the specific amount in the **Applied Amount** field and also whether the application balances.
-5. Zvolte tlačítko **OK**. The **Sales Credit Memo** page now shows the entry you have selected entered in the **Applies-to Doc. Type** and **Applies-to Doc. No.** fields. And the amount of the credit memo to be posted, adjusted for any possible payment discounts.
-6. Post the credit memo.
+   Pokud částku nezadáte, aplikace automaticky použije maximální částku. V dolní části stránky **Použít položky zákazníků** můžete vidět konkrétní částku v poli **Použitá částka** a také to, zda je aplikace vyrovnaná.
+5. Zvolte tlačítko **OK**. Na stránce **Dobropis prodeje** se nyní zobrazuje položka, kterou jste vybrali a zadali do **Číslo vyrovnání dokladu. Typ** a **Číslo vyrovnání dokladu. Číslo** pole. A částku dobropisu, který má být zaúčtován, upravenou o případné platební slevy.
+6. Zaúčtujte dobropis.
 
-## To apply a credit memo to multiple customer ledger entries
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
-2. Open the relevant sales credit memo.
-3. To apply the credit memo to multiple customer ledger entries when posting, choose the **Apply Entries** action.
-4. Select the lines with the entries that you want the applying entry to be applied to, and then choose the **Set Applies-to ID** action.
-5. On each line, in the **Amount to Apply** field, enter the amount you want to apply to the individual entry. If you don't enter an amount, the maximum amount is applied.
+## Použití dobropisu na více položek odběratele
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
+2. Otevřete příslušný prodejní dobropis.
+3. Chcete-li použít dobropis na více položek zákazníka při zaúčtování, vyberte akci **Použít položky**.
+4. Vyberte řádky s položkami, na které chcete použít použitou položku, a poté vyberte akci **Nastavit ID**.
+5. Na každém řádku v poli **Částka k použití** zadejte částku, kterou chcete použít pro jednotlivou položku. Pokud částku nezadáte, použije se maximální částka.
 
-   At the bottom of the **Apply Customer Entries** page, you can see the specific amount in the **Applied Amount** field and also whether the application balances.
-6. Zvolte tlačítko **OK**. The **Sales Credit Memo** page now shows the amount of the credit memo to be posted, adjusted for any possible payment discounts.
-7. Post the credit memo.
+   V dolní části stránky **Použít položky zákazníků** můžete vidět konkrétní částku v poli **Použitá částka** a také to, zda je aplikace vyrovnaná.
+6. Zvolte tlačítko **OK**. Stránka **Prodejní dobropis** nyní zobrazuje částku dobropisu, který má být zaúčtován, upravenou o případné platební slevy.
+7. Zaúčtujte dobropis.
 
-## To apply posted customer ledger entries
+## Použití zaúčtovaných položek zákazníka
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Open the customer card for the customer with entries that you want to apply.
-3. Choose the **Ledger Entries** action, and then select the line with the entry that will be the applying entry.
+2. Otevřete kartu zákazníka s položkami, které chcete použít.
+3. Vyberte akci **Položky hlavní knihy** a poté vyberte řádek s položkou, která bude použitou položkou.
 4. Vyberte akci **Vyrovnat položky**. The **Apply Customer Entries** page opens showing the open entries for the customer.
-5. Select the lines with the entries that you want the applying entry to be applied to, and then choose the **Set Applies-to ID.** action.
-6. For each line in the **Amount to Apply** field, enter the amount you want to apply to the individual entry. If you don't enter an amount, the maximum amount is applied.
+5. Vyberte řádky s položkami, na které chcete použít použitou položku, a pak zvolte akci **Nastavit ID**
+6. Pro každý řádek v poli **Částka k použití** zadejte částku, kterou chcete použít na jednotlivou položku. Pokud částku nezadáte, použije se maximální částka.
 
-   At the bottom of the **Apply Customer Entries** page, you can see the specific amount in the **Applied Amount** field.
-7. Choose the **Post Application** action. The **Post Application** page appears with the document number of the applying entry and the posting date of the entry with the most recent posting date.
-8. Choose the **OK** button to post the application.
+   V dolní části stránky **Použít záznamy zákazníků** můžete v poli **Použitá částka** vidět konkrétní částku.
+7. Vyberte akci **Účtovat vyrovnání**. Zobrazí se stránka **Účtovat vyrovnání** s číslem dokumentu žádajícího záznamu a datem zaúčtování záznamu s posledním datem účtování.
+8. Kliknutím na tlačítko **OK** zaúčtujete vyrovnání.
 
-   If the posted application has resulted in closed customer ledger entries, the **Open** field is cleared for these ledger entries.
-9. To see the ledger entries, choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Customers**, and then choose the related link. Browse to the card for the relevant customer to see the ledger entries.
+   Pokud zaúčtované vyrovnání vyústilo v uzavřené položky zákazníka, pole **Otevřít** je pro tyto položky hlavní knihy vymazáno.
+9. Chcete-li zobrazit položky hlavní knihy, vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikona, zadejte **Zákazníci**a poté vyberte související odkaz. Přejdete na kartu příslušného zákazníka a zobrazte položky hlavní knihy.
 
-On the ledger entry list, on the line that contains the ledger entry that was fully applied to, you can see that the **Open** check box isn't selected.
+V seznamu položek hlavní knihy na řádku, který obsahuje položku hlavní knihy, která byla plně použita, vidíte, že není zaškrtnuto políčko **Otevřít**.
 
 > [!NOTE]  
-> After you select an entry on the **Apply Customer Entries** page, or several entries by setting the **Applies-to ID**, the **Applied Amount** field on the journal line will contain the sum of the remaining amounts for the posted entries you've selected, unless the field contains something already. If you select **Apply to Oldest** in the **Application Method** field on the customer card, the application occurs automatically.
+> Poté, co vyberete záznam na stránce **Použít záznamy zákazníků** nebo několik záznamů nastavením **Platí pro ID**, pole **Použitá částka** na řádek deníku bude obsahovat součet zbývajících částek pro zaúčtované položky, které jste vybrali, pokud pole již něco neobsahuje. Pokud vyberete **možnost Použít na nejstarší** v poli Metoda vyrovnání na kartě zákazníka, **vyrovnání** proběhne automaticky.
 
-## To apply customer ledger entries in different currencies to one another
-If you sell to a customer in one currency and receive payment in another currency, you can still apply the invoice to the payment.
+## Chcete-li použít položky zákazníka v různých měnách mezi sebou navzájem, postupujte takto:
+Pokud prodáváte zákazníkovi v jedné měně a přijímáte platbu v jiné měně, stále můžete fakturu použít k platbě.
 
-Here's an example. You apply Entry 1 in one currency to Entry 2 in another currency. The posting date on Entry 1 is used to find the exchange rate to use to convert amounts on Entry 2. The exchange rate is found on the **Currency Exchange Rates** page.
+Tady je příklad. Položku 1 použijete v jedné měně na položku 2 v jiné měně. Datum účtování na položce 1 se používá k vyhledání směnného kurzu, který se má použít k převodu částek na položce 2. Směnný kurz najdete na stránce **Směnné kurzy**.
 
-Applying customer ledger entries in different currencies must be enabled. For more information, see [Enable Application of Ledger Entries in Different Currencies](finance-how-enable-application-ledger-entries-different-currencies.md).
+Použití položek zákazníka v různých měnách musí být povoleno. Další informace naleznete v tématu [Povolení použití položek hlavní knihy v různých měnách](finance-how-enable-application-ledger-entries-different-currencies.md).
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Cash Receipts Journal**, and then choose the related link.
-2. Open the journal you want, and fill in the first empty journal line using a currency code.
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Deník přijaté hotovosti** a poté vyberte související odkaz.
+2. Otevřete požadovaný deník a vyplňte první prázdný řádek deníku pomocí kódu měny.
 3. Vyberte akci **Vyrovnat položky**.
-4. Select the line with the entry you want to apply to the entry in the cash receipt journal, choose the **Set Applies-to ID** action, and then select the entry you want to apply to.
-5. Choose the **OK** button to return to the cash receipt journal.
-6. Post the sales journal.
+4. Vyberte řádek s položkou, kterou chcete použít pro položku v deníku přijaté hotovosti, vyberte akci **Nastavit ID použití** a poté vyberte položku, kterou chcete použít.
+5. Kliknutím na tlačítko **OK** se vraťte do deníku přijaté hotovosti.
+6. Zaúčtujte prodejní deník.
 
 > [!IMPORTANT]  
-> When you apply entries in different currencies, the entries are converted to USD. Although the exchange rates for the two currencies are fixed, for example between USD and EUR, there may be a small residual amount when they are converted to USD. These small residual amounts are posted as gains and losses to the account specified in the **Realized Gains Account** or **Realized Losses Account** fields on the **Currencies** page. The **Amount (USD)** field is also adjusted on the vendor ledger entries.
+> Když použijete položky v různých měnách, položky se převedou na USD. I když jsou směnné kurzy pro obě měny pevné, například mezi USD a EUR, při jejich převodu na USD může existovat malá zbytková částka. Tyto malé zbytkové částky jsou zaúčtovány jako zisky a ztráty na účet uvedený v polích **Účet realizovaných zisků** nebo **Účet realizovaných ztrát** na stránce **Měny**. Pole **Částka (USD)** je také upraveno v položkách knihy dodavatelů.
 
-## To correct an application of customer entries
-When you correct an application, correcting entries are created and posted for all entries. The correcting entries are the same as the originals but have an opposite sign in the **Amount** field. The correcting entries include all general ledger entries derived from the application. For example, the payment discount and currency gains/losses. The entries that were closed by the application are reopened.
+## Chcete-li opravit vyrovnání položek zákazníků
+Když opravíte vyrovnání, jsou vytvořeny a zaúčtovány opravné položky pro všechny záznamy. Opravné položky jsou stejné jako originály, ale mají opačné znaménko v poli **Částka**. Opravné položky zahrnují všechny položky hlavní knihy odvozené z vyrovnání Například platební sleva a kurzové zisky/ztráty. Položky, které byly vyrovnáním uzavřeny, se znovu otevřou.
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete dělat"), zadejte **Zákazníci** a poté vyberte související odkaz.
-2. Open the relevant customer card.
-3. Choose the **Ledger Entries** action.
-4. Select the relevant ledger entry, and then choose the **Unapply Entries** action.
-5. Alternatively, choose the **Detailed Ledger Entry** action.
-6. Select the application entry, and then choose the **Unapply Entries** action.
-7. Fill in the fields in the header, and then choose the **Unapply** action.
+2. Otevřete příslušnou kartu zákazníka.
+3. Vyberte akci **Položky hlavní knihy**.
+4. Vyberte příslušnou položku hlavní knihy a poté vyberte akci **Zrušit vyrovnání položek**.
+5. Případně vyberte akci **Podrobná položka hlavní knihy**.
+6. Vyberte položku aplikace a poté vyberte akci **Zrušit vyrovnání položek**.
+7. Vyplňte pole v záhlaví a poté vyberte akci **Zrušit vyrovnání položek**.
 
 > [!IMPORTANT]  
-> If an entry has been applied by more than one application entry, you must unapply the latest application entry first.
+> Pokud byl záznam aplikován více než jedním záznamem aplikace, musíte nejprve zrušit použití posledního záznamu aplikace.
 
 ## Viz také
 [Správa pohledávek  [  

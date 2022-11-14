@@ -14,45 +14,45 @@ ms.author: edupont
 
 ---
 
-# Posting Date on Adjustment Value Entry Compared to the Source Entry
+# Datum zaúčtování adjustace položky ocenění ve srovnání se zdrojovým záznamem
 
-This article compares the Posting Date on the Adjustment Value Entry with the Posting Date on the entry causing the running of the Adjust Cost - Item Entries batch job, in particular a Revaluation scenario and an Item Charge scenario.
+Tento článek porovnává dzúčtovací datum u adjustace položky ocenění s datem účtování u položky, což způsobuje spuštění dávkové úlohy Úprava nákladů - položky zboží, zejména scénář přecenění a scénář nákladů na zboží.
 
-The **Adjust Cost - Item Entries** batch job will process your data depending on your scenario and configuration of [!INCLUDE[prod_short](includes/prod_short.md)]. In this section, we describe two separate processes, and for each one we show the type of impact the Adjust Cost - Item Entries batch job has on the data.
+Dávková úloha **Úprava nákladů - položky zboží** zpracuje vaše data v závislosti na vašem scénáři a konfiguraci [!INCLUDE[prod_short](includes/prod_short.md)]. V této části popisujeme dva samostatné procesy a pro každý z nich ukazujeme typ dopadu, který má dávková úloha Úprava nákladů - položky zboží na data.
 
-## Revaluation scenario
+## Scénář přecenění
 
 ### Předpoklady
 
-Please enter the following values:
+Zadejte následující hodnoty:
 
-**Inventory setup**:
+**Nastavení zásob**
 
 - Automatické účtování nákladů=Ano
 
-- Automatic Cost Adjustment = Always
+- Automatická adjustace nákladů=Vždy
 
-- Typ výpočtu prům.poř. Type = Item
+- Typ výpočtu prům.poř. ceny=Zboží
 
-- Average Cost Period = Day
+- Období průměrných nákladů=Den
 
-**General Ledger Setup**:
+**Nastavení financí**
 
-- Allow Posting From = January 1, 2021
+- Povolit účtování od = 1. leden 2021
 
-- Allow Posting To = Empty
+- Povolit účto do = prázdné
 
-**User Setup**:
+**Nastavení uživatelů**:
 
-- Allow Posting From = December 1, 2020
+- Povolit účtování od = 1. prosinec 2020.
 
-- Allow Posting To = Empty
+- Povolit účto do = prázdné
 
 ### Testování scénáře
 
-Test this scenario by carrying out the following steps.
+Otestujte tento scénář provedením následujících kroků.
 
-1. Create an **Item** called TEST with the following values:
+1. Vytvořte **Položku** s názvem TEST s následujícími hodnotami:
 
    - Základní měrná jednotka = KS
 
@@ -60,9 +60,9 @@ Test this scenario by carrying out the following steps.
 
    - Vyberte volitelné účto skupiny.
 
-2. Open an **Item Journal**, then create a new entry, and post a line as follows:
+2. Otevřete **Deníky zboží**, vytvořte novou položku a zaúčtujte řádek následujícím způsobem:
 
-   - Posting Date = December 15, 2020
+   - Zúčtovací datum = 15. prosinec 2020
 
    - Zboží = TEST
 
@@ -72,126 +72,126 @@ Test this scenario by carrying out the following steps.
 
    - Jednotková cena = 10
 
-3. Open an **Item Journal**, then create a new entry, and post a line as follows:
+3. Otevřete **Deníky zboží**, vytvořte novou položku a zaúčtujte řádek následujícím způsobem:
 
-   - Date = December 20, 2020
+   - Datum = 20. prosince 2020
 
    - Zboží = TEST
 
-   - Typ položky = Výdej
+   - Typ položky = záporná úprava
 
    - Množství = 2
 
-4. Open an **Item Journal**, then create a new entry, and post a line as follows:
+4. Otevřete **Deníky zboží**, vytvořte novou položku a zaúčtujte řádek následujícím způsobem:
 
-   - Date = January 15, 2021
+   - Datum = 15. leden 2021
 
    - Zboží = TEST
 
-   - Typ položky = Výdej
+   - Typ položky = záporná úprava
 
    - Množství = 3
 
-5. Open an **Item Revaluation Journal**, then create a new entry, and post a line as follows:
+5. Otevřete **Deník přecenění zboží**, vytvořte novou položku a zaúčtujte řádek následujícím způsobem:
 
    - Zboží = TEST
 
    - Vyrovnává položku = vyberte položku nákupu zaúčtovanou v kroku 2. Datum zaúčtování přecenění bude stejné jako položka, kterou upraví.
 
-   - Unit Cost (Revalued) = 40
+   - Pořizovací cena (přeceněná) = 40
 
-The following **Item Ledger** and **Value Entries** have been posted:
+Byly zaúčtovány následující položky **Položka zboží** a **Položky ocenění**:
 
-**Item Ledger Entry - purchase**:
+**Položka zboží - nákup**:
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
 |---------|---------|---------|---------|---------|---------|---------|---------|
 | 317 | TEST | 2020-12-15 | Nákup | T00001 | 100 | 4000 | 95 |
 
 **Položky ocenění**
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Number Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies to Entry | Source Code |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Množství čísla položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku | Zdrojový kód |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 376 | TEST | 2020-12-15 | 317 | Nákup | Přímé náklady | T00001 | 100 | 1 000,00 | 1 000,00 | Ne | 0 | ITEMNL |
 | 379 | TEST | **2020-12-15** | 317 | Nákup | Přecenění | T04002 | 0 | 3 000,00 | 3 000,00 | Ne | 0 | REVALINL |
 
-**Item Ledger Entry - negative adjustment, Step 3**
+**Položka zboží - negativní úprava, krok 3**
 
 | Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| 318 | TEST | 2020-12-20 | Negative Adjmt. | T00002 | -2 | -80 | 0 |
+| 318 | TEST | 2020-12-20 | Negatívní úprava. | T00002 | -2 | -80 | 0 |
 
 **Položky ocenění**
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Number Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies to Entry | Source Code |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Množství čísla položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku | Zdrojový kód |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 377 | TEST | 2020-12-20 | 318 | Negative Adjmt. | Přímé náklady | T00002 | -2 | -20 | -20 | Ne | 0 | ITEMNL |
-| 380 | TEST | **2021-01-01** | 318 | Negative Adjmt. | Přímé náklady | T04002 | 0 | -60 | -60 | Ano | 377 | INVTADAMT |
+| 377 | TEST | 2020-12-20 | 318 | Negatívní úprava. | Přímé náklady | T00002 | -2 | -20 | -20 | Ne | 0 | ITEMNL |
+| 380 | TEST | **2021-01-01** | 318 | Negatívní úprava. | Přímé náklady | T04002 | 0 | -60 | -60 | Ano | 377 | INVTADAMT |
 
-**Item Ledger Entry - negative adjustment, Step 4**
+**Položka zboží - negativní úprava, krok 4**
 
 | Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| 319 | TEST | 2021-01-15 | Negative Adjmt. | T00003 | -3 | -120 | 0 |
+| 319 | TEST | 2021-01-15 | Negatívní úprava. | T00003 | -3 | -120 | 0 |
 
 **Položky ocenění**
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Number Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Applies to Entry | Source Code |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Množství čísla položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku | Zdrojový kód |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 378 | TEST | 2021-01-15 | 319 | Negative Adjmt. | Přímé náklady | T00003 | -3 | -30 | -30 | Ne | 0 | ITEMNL |
-| 381 | TEST | **2021-01-15** | 319 | Negative Adjmt. | Přímé náklady | T04003 | 0 | -90 | -90 | Ano | 378 | INVTADAMT |
+| 378 | TEST | 2021-01-15 | 319 | Negatívní úprava. | Přímé náklady | T00003 | -3 | -30 | -30 | Ne | 0 | ITEMNL |
+| 381 | TEST | **2021-01-15** | 319 | Negatívní úprava. | Přímé náklady | T04003 | 0 | -90 | -90 | Ano | 378 | INVTADAMT |
 
-The **Adjust Cost – Item Entries** batch job has recognized a change in cost and adjusted the Negative Adjustments.
+Dávková úloha **Úprava nákladů - položky zboží** rozpoznala změnu nákladů a upravila záporné adjustace.
 
-**Review of Posting Dates on created adjustment value entries:** The earliest allowed Posting Date the Adjust Cost - Item Entries batch job has to relate to is January 1, 2021 as stated in the General Ledger Setup.
+**Kontrola zúčtovacího data u vytvořených adjustovaných položek ocenění:** Nejbližší povolené zúčtovací datum, ke kterému se dávková úloha Adjustace nákladů položek zboží musí vztahovat, je 1. ledna 2021, jak je uvedeno v nastavení financí.
 
-**Negative Adjustment in step 3:** assigned Posting Date is January 1, provided by General Ledger Setup. The Posting Date of the Value Entry in the scope for adjustment is December 20, 2020. According to the General Ledger Setup, the date is not within the allowed posting date range. Proto je adjustaci položky ocenění přiřazeno datum zaúčtování uvedené v poli Povolit účto od v nastavení financí.
+**Záporná adjustace v kroku 3:** přiřazené datum zaúčtování je 1. ledna, poskytnuté nastavením financí. Datum zaúčtování položky ocenění v rozsahu adjustace je 20. prosinec 2020. Podle nastavení financí datum není v povoleném rozsahu období účtování. Proto je adjustaci položky ocenění přiřazeno datum zaúčtování uvedené v poli Povolit účto od v nastavení financí.
 
-**Negative Adjustment in step 4:** assigned Posting Date is January 15. The Value Entry in scope of adjustment has Posting Date January 15, which is within the allowed posting date range according to General Ledger Setup.
+**Záporná úprava v kroku 4:** přiřazené zúčtovací datum je 15. ledna. Položka ocenění v rozsahu adjustace má zúčtovací datum 15. ledna, které je v povoleném rozsahu zúčtovacího data podle nastavení financí.
 
-Adjustace provedené pro negativní úpravu v kroku 3 způsobí diskusi. The favorable Posting Date for the Adjustment Value Entry would have been December 20 or at least within December as the revaluation causing the change in COGS was posted in December.
+Adjustace provedené pro negativní úpravu v kroku 3 způsobí diskusi. Příznivé datum zaúčtování pro adjustaci položky ocenění by bylo 20. prosince nebo alespoň do konce prosince, protože v prosinci bylo zaúčtováno přecenění způsobující změnu NNPZ.
 
-To achieve adjustment in December of the Negative Adjustment in step 3, the General Ledger Setup, Allow Posting From field, needs to state a date in December.
+Chcete-li v prosinci dosáhnout adjustaci záporné úpravy v kroku 3, musí být v nastavení financí, pole Povolit účto od nastaveno na datum v prosinci.
 
-### Conclusion
+### Závěr
 
-With the experience gained in this scenario, when considering the most suitable setup for an allowed posting date range for a company, you might want to consider the following. As long as you allow changes in the inventory value to be posted in a period, such as December in this case, the setup that the company uses for allowed posting date ranges should be aligned with this decision. The Allow Posting From in the General Ledger Setup, stating December 1, would allow the revaluation made in December to be forwarded to affected outbound entries in the same period.
+Se zkušenostmi získanými v tomto scénáři můžete při zvažování nejvhodnějšího nastavení pro povolené období účtování pro společnost zvážit následující. Pokud povolíte zaúčtování změn hodnoty zásob v období, jako je v tomto případě prosinec, nastavení, které společnost používá pro povolená období účtování, by mělo být v souladu s tímto rozhodnutím. Nastavení pole Povolit účto od v Nastavení financí s uvedením 1. prosince by umožnilo předání přehodnocení provedené v prosinci ovlivněným výstupním položkám ve stejném období.
 
 Skupiny uživatelů, které nemají povoleno účtovat v prosinci, ale v lednu, což bylo pravděpodobně zamýšleno v tomto scénáři jako omezené nastavením financí, by měly být místo toho řešeno prostřednictvím nastavení uživatele.
 
-## Item charge scenario
+## Scénář účtování poplatku za zboží:
 
 ### Předpoklady
 
-Please enter the following values:
+Zadejte následující hodnoty:
 
-**Inventory setup**:
+**Nastavení zásob**
 
 - Automatické účtování nákladů=Ano
 
-- Automatic Cost Adjustment = Always
+- Automatická adjustace nákladů=Vždy
 
-- Typ výpočtu prům.poř. Type = Item
+- Typ výpočtu prům.poř. ceny=Zboží
 
-- Average Cost Period = Day
+- Období průměrných nákladů=Den
 
-**General Ledger Setup**:
+**Nastavení financí**
 
-- Allow Posting From = December 1, 2020.
+- Povolit účto od = 1. prosinec 2020.
 
-- Allow Posting To = Empty
+- Povolit účto do = prázdné
 
-**User Setup**:
+**Nastavení uživatelů**:
 
-- Allow Posting From = December 1, 2020.
+- Povolit účto od = 1. prosinec 2020.
 
-- Allow Posting to = Empty
+- Povolit účto do = prázdné
 
 ### Testování scénáře
 
-Test this scenario by carrying out the following steps:
+Otestujte tento scénář provedením následujících kroků.
 
-1. Create an **Item** Charge with the following values:
+1. Vytvořte poplatek za **Zboží** s následujícími hodnotami:
 
    - Základní měrná jednotka = KS
 
@@ -199,15 +199,15 @@ Test this scenario by carrying out the following steps:
 
    - Vyberte volitelné účto skupiny.
 
-2. Create a new **Purchase Order** with the following values:
+2. Vytvořte novou **Nákupní objednávku** s následujícími hodnotami:
 
    - Nákup od dodavatele: 10000
 
-   - Posting Date = December 15, 2020
+   - Zúčtovací datum = 15. prosinec 2020
 
    - Číslo faktury dodavatele: 1234
 
-   On the Purchase Order Line select the following values:
+   Na řádku nákupní objednávky vyberte následující hodnoty:
 
    - Zboží = POPLATEK
 
@@ -215,15 +215,15 @@ Test this scenario by carrying out the following steps:
 
    - Nákupní cena = 100
 
-   To complete the step, Post the document as Received and Invoiced.
+   Chcete-li tento krok dokončit, zaúčtujte dokument jako přijatý a fakturovaný.
 
-3. Create a new **Sales Order** with the following values:
+3. Vytvořte novou **Prodejní objednávku** s následujícími hodnotami:
 
    - Zákazník-číslo: 10000
 
-   - Posting Date = December 16, 2020
+   - Zúčtovací datum = 16. prosinec 2020
 
-   On the Sales Order Line:
+   Na řádku prodejní objednávky:
 
    - Zboží = POPLATEK
 
@@ -231,23 +231,23 @@ Test this scenario by carrying out the following steps:
 
    - Jednotková cena = 135
 
-   To complete the step, Post the document as Received and Invoiced.
+   Chcete-li tento krok dokončit, zaúčtujte dokument jako přijatý a fakturovaný.
 
-4. Enter values for the **General Ledger Setup** page:
+4. Zadejte hodnoty pro stránku **Nastavení hlavní knihy**:
 
-   - Allow Posting From = January 1, 2021
+   - Povolit účtování od = 1. leden 2021
 
    - Povolit účto do = prázdné
 
-5. Create a new **Purchase Order** with the following values:
+5. Vytvořte novou **Nákupní objednávku** s následujícími hodnotami:
 
    - Nákup od dodavatele: 10000
 
-   - Posting Date = January 2, 2021
+   - Zúčtovací datum = 2. leden 2014
 
    - Číslo faktury dodavatele: 2345
 
-   On the Purchase Order Line:
+   Na řádku nákupní objednávky:
 
    - Poplatek za zboží = JB-PŘEPRAVA
 
@@ -255,48 +255,48 @@ Test this scenario by carrying out the following steps:
 
    - Nákupní cena = 3
 
-   - Assign the Item Charge to the Purchase Receipt from step 2.
+   - Přiřaďte Náklady zboží k nákupnímu dokladu z kroku 2.
 
-   To complete the step, Post the document as Received and Invoiced.
+   Chcete-li tento krok dokončit, zaúčtujte dokument jako přijatý a fakturovaný.
 
 
-**Status Item Ledger Entry of purchase step 2**:
-
-| Entry Number | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
-|---------|---------|---------|---------|---------|---------|---------|---------|
-| 324 | CHARGE | 2020-12-15 | Nákup | 107030 | 1 | 105 | 0 |
-
-**Položky ocenění**
-
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
-|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 397 | CHARGE | 2020-12-15 | 324 | Nákup | Přímé náklady | 108029 |         | 1 | 100 | 100 | NO | 0 |
-| 399 | CHARGE | 2021-01-02 | 324 | Nákup | Přímé náklady | 108009 | JBFREIGHT | 0 | 3 | 3 | NO | 0 |
-
-**Status Item Ledger Entry sale**:
+**Stav nákupu položky zboží krok 2**:
 
 | Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| 325 | CHARGE | 2020-12-16 | Prodej | 102035 | -1 | -105 | 0 |
+| 324 | Bez poplatku | 2020-12-15 | Nákup | 107030 | 1 | 105 | 0 |
 
 **Položky ocenění**
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Poplatek za položku č. | Množství položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 398 | CHARGE | 2020-12-16 | 325 | Prodej | Přímé náklady | 109024 |         | -1 | -100 | -100 | NO | 0 |
-| 400 | CHARGE | 2021-01-01 | 325 | Prodej | Přímé náklady | 109024 |         | 0 | -3 | -3 | Ano | 398 |
+| 397 | Bez poplatku | 2020-12-15 | 324 | Nákup | Přímé náklady | 108029 |         | 1 | 100 | 100 | NO | 0 |
+| 399 | Bez poplatku | 2021-01-02 | 324 | Nákup | Přímé náklady | 108009 | JBFREIGHT | 0 | 3 | 3 | NO | 0 |
 
-6. On work date January 3, a purchase invoice arrives containing an additional item charge to the purchase made in step 2. This invoice has document date December 30, and is therefore posted with Posting Date December 30, 2020.
+**Stav prodeje položky zboží**:
 
-   Create a new **Purchase Order** with the following values:
+| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
+|---------|---------|---------|---------|---------|---------|---------|---------|
+| 325 | Bez poplatku | 2020-12-16 | Prodej | 102035 | -1 | -105 | 0 |
+
+**Položky ocenění**
+
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Poplatek za položku č. | Množství položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
+|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 398 | Bez poplatku | 2020-12-16 | 325 | Prodej | Přímé náklady | 109024 |         | -1 | -100 | -100 | NO | 0 |
+| 400 | Bez poplatku | 2021-01-01 | 325 | Prodej | Přímé náklady | 109024 |         | 0 | -3 | -3 | Ano | 398 |
+
+6. V pracovní den 3. ledna dorazí nákupní faktura obsahující dodatečný poplatek za zboží provedený v kroku 2. Tato faktura má datum dokladu 30. prosince a je proto zaúčtována s datem zaúčtování 30. prosince 2020.
+
+   Vytvořte novou **Nákupní objednávku** s následujícími hodnotami:
 
    - Nákup od dodavatele: 10000
 
-   - Posting Date = December 30, 2020
+   - Zúčtovací datum = 30. prosinec 2020
 
    - Číslo faktury dodavatele: 3456
 
-   On the Purchase Order Line select the following values:
+   Na řádku nákupní objednávky vyberte následující hodnoty:
 
    - Poplatek za zboží = JB-PŘEPRAVA
 
@@ -304,54 +304,54 @@ Test this scenario by carrying out the following steps:
 
    - Nákupní cena = 2
 
-   Assign Item Charge to the Purchase Receipt from step 2
+   Přiřaďte Náklady zboží k nákupnímu dokladu z kroku 2.
 
-   To complete the step, Post the document as Received and Invoiced.
+   Chcete-li tento krok dokončit, zaúčtujte dokument jako přijatý a fakturovaný.
 
 
-**Status Item Ledger Entry of purchase**:
+**Stav nákupu položky zboží**:
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| 324 | CHARGE | 2020-12-15 | Nákup | 107030 | 1 | 105 | 0 |
+| 324 | Bez poplatku | 2020-12-15 | Nákup | 107030 | 1 | 105 | 0 |
 
 **Položky ocenění**
 
-| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Poplatek za položku č. | Množství položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 397 | CHARGE | 2020-12-15 | 324 | Nákup | Přímé náklady | 108029 |            | 1 | 100 | 100 | Ne | 0 |
-| 399 | CHARGE | 2021-01-02 | 324 | Nákup | Přímé náklady | 108030 | JBFREIGHT | 0 | 3 | 3 | Ne | 0 |
-| 401 | CHARGE | **2020-12-30** | 324 | Nákup | Přímé náklady | 108031 | JBFREIGHT | 0 | 2 | 2 | Ne | 0 |
+| 397 | Bez poplatku | 2020-12-15 | 324 | Nákup | Přímé náklady | 108029 |            | 1 | 100 | 100 | Ne | 0 |
+| 399 | Bez poplatku | 2021-01-02 | 324 | Nákup | Přímé náklady | 108030 | JBFREIGHT | 0 | 3 | 3 | Ne | 0 |
+| 401 | Bez poplatku | **2020-12-30** | 324 | Nákup | Přímé náklady | 108031 | JBFREIGHT | 0 | 2 | 2 | Ne | 0 |
 
-**Status Item Ledger Entry sale**:
+**Stav prodeje položky zboží**:
 
-| Entry Number | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Typ položky | Číslo dokladu | Množství | Částka nákladů (skutečná) | Zbývající množství |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| 325 | CHARGE | 2020-12-16 | Prodej | 102035 | -1 | -105 | 0 |
+| 325 | Bez poplatku | 2020-12-16 | Prodej | 102035 | -1 | -105 | 0 |
 
 **Položky ocenění**
 
-| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Item Charge No. | Item Ledger Entry Quantity | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
+| Číslo položky | Číslo zboží | Zúčtovací datum | Číslo položky zboží | Typ položky zboží | Typ položky | Číslo dokladu | Poplatek za položku č. | Množství položky zboží | Částka nákladů (skutečná) | Náklady zaúčtované do Hlavní finančí knihy | Adjustace | Vyrovnává položku |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 398 | CHARGE | 2020-12-16 | 325 | Prodej | Přímé náklady | 103024 |            | -1 | -100 | -100 | Ne | 0 |
-| 400 | CHARGE | 2021-01-01 | 325 | Prodej | Přímé náklady | 103024 |            | 0 | -3 | -3 | Ano | 398 |
-| 402 | CHARGE | **2021-01-01** | 325 | Prodej | Přímé náklady | 103024 |            | 0 | -2 | -2 | Ano | 398 |
+| 398 | Bez poplatku | 2020-12-16 | 325 | Prodej | Přímé náklady | 103024 |            | -1 | -100 | -100 | Ne | 0 |
+| 400 | Bez poplatku | 2021-01-01 | 325 | Prodej | Přímé náklady | 103024 |            | 0 | -3 | -3 | Ano | 398 |
+| 402 | Bez poplatku | **2021-01-01** | 325 | Prodej | Přímé náklady | 103024 |            | 0 | -2 | -2 | Ano | 398 |
 
-Inventory Valuation report is printed as of Date December 31, 2020
+Zpráva o ocenění zásob se vytiskne k datu 31. prosince 2020
 
-![Content of the Inventory Valuation report.](media/helene/TechArticleAdjustcost13.png "Content of the Inventory Valuation report")
+![Obsah sestavy Hodnota zásob](media/helene/TechArticleAdjustcost13.png "Obsah sestavy Hodnota zásob")
 
 **Shrnutí scénáře:**
 
-Popsaný scénář končí zprávou Hodnoty zásob ukazující Množství = 0, zatímco Hodnota = 2. The Item charge posted in step 6 is part of the Inventory Increase value of December while the Inventory Decrease of the same period is not affected.
+Popsaný scénář končí zprávou Hodnoty zásob ukazující Množství = 0, zatímco Hodnota = 2. Poplatek za zboží zaúčtovaný v kroku 6 je součástí hodnoty zvýšení zásob v prosinci, zatímco pokles zásob ve stejném období není ovlivněn.
 
-Having the General Ledger Setup stating Allow Posting From January 1 was a good thing for the first Item charge. Ve stejném období byly zaznamenány náklady na zvýšení i snížení zásob. U druhého poplatku za zboží však nastavení financí způsobí, že změna v NNPZ bude rozpoznána v období po.
+Nastavení financí, ve kterém bylo uvedeno Povolit účto od 1. ledna, byla dobrá věc pro první poplatek za zboží. Ve stejném období byly zaznamenány náklady na zvýšení i snížení zásob. U druhého poplatku za zboží však nastavení financí způsobí, že změna v NNPZ bude rozpoznána v období po.
 
 **Závěr:**
 
-It is a challenge to get the Inventory Valuation report to demonstrate Quantity = 0 while the Value <> 0. In this case it is also more difficult to express the optimal settings, having purchase invoices arriving the same day but addressing different periods or even fiscal years. Crossing to a new fiscal year usually requires some planning and as part of that the insight into Adjust Cost – Item entries process, recognizing COGS, is to be considered.
+Je výzvou získat zprávu o ocenění zásob, aby demonstrovala množství = 0, zatímco hodnota <> 0. V tomto případě je také obtížnější vyjádřit optimální nastavení, protože nákupní faktury přicházejí ve stejný den, ale řeší různá období nebo dokonce fiskální roky. Přechod do nového fiskálního roku obvykle vyžaduje určité plánování a v rámci toho je třeba vzít v úvahu pohled na proces Adjustace nákladů položek zboží rozpoznávající NNPZ.
 
-V tomto scénáři by jednou z možností mohlo být nastavení financí, konkrétně pole Povolit účto od na datum v prosinci o několik dní později a odložit zaúčtování prvního poplatku za zboží, aby bylo možné zaúčtovat všechny náklady za předchozí období/fiskální rok, se spuštěním dávkové úlohy Adjustace nákladů položek zboží a poté přesunout povolené zúčtovací datum do nového období/fiskálního roku. The first item charge with posting date January 2 could then be posted.
+V tomto scénáři by jednou z možností mohlo být nastavení financí, konkrétně pole Povolit účto od na datum v prosinci o několik dní později a odložit zaúčtování prvního poplatku za zboží, aby bylo možné zaúčtovat všechny náklady za předchozí období/fiskální rok, se spuštěním dávkové úlohy Adjustace nákladů položek zboží a poté přesunout povolené zúčtovací datum do nového období/fiskálního roku. První poplatek za zboží se zúčtovacím datem 2. ledna by pak mohl být zaúčtován.
 
 ## Viz také
 

@@ -16,7 +16,7 @@ ms.author: edupont
 ---
 # Set Up the Envestnet Yodlee Bank Feeds Service
 
-You can import electronic bank statements from your bank to quickly fill on the **Payment Reconciliation Journal** page so you can apply payments and reconcile the bank account. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
+You can import electronic bank statements from your bank to quickly fill on the **Payment Reconciliation Journal** page so you can apply payments and reconcile the bank account. Další informace naleznete v části [Automatické použití plateb a Odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md).
 
 > [!IMPORTANT]
 > Due to the Payment Services Directive in Europe (PSD2), after September 14, 2019, you will no longer be able to automatically import bank statements from banks in the United Kingdom into [!INCLUDE[prod_short](includes/prod_short.md)]. We are looking into the possibility of offering this feature again in the future.

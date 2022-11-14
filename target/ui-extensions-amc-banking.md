@@ -82,7 +82,7 @@ Using this extension is just a matter of exporting data on the **Payment Journal
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Reconciliation Journal**, and then choose the related link.
 2. Choose the **Import Bank Transaction** action, and then choose the converted file.
 
-   [!INCLUDE[prod_short](includes/prod_short.md)] will create a new payment reconciliation journal that contains the data in the file. For more information, see [Applying Payments Automatically and Reconciling Bank Accounts](receivables-apply-payments-auto-reconcile-bank-accounts.md).
+   [!INCLUDE[prod_short](includes/prod_short.md)] will create a new payment reconciliation journal that contains the data in the file. Další informace naleznete v části [Automatické použití plateb a Odsouhlasení bankovních účtů](receivables-apply-payments-auto-reconcile-bank-accounts.md).
 
 ## Viz také
 [Úprava [!INCLUDE[prod_short](includes/prod_short.md)] pomocí rozšíření](ui-extensions.md)  

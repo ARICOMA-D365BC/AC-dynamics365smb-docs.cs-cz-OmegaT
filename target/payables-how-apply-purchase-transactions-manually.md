@@ -37,7 +37,7 @@ You can also apply vendor payments, and customer payments, after the payments ap
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journal**, and then choose the related link.
 2. On the **Payment Journal** page, on the first journal line, enter the relevant information about the payment entry.
 3. To apply a single vendor ledger entry:
-   1. In the **Applies-to Doc. No.** field, choose the field to open the **Apply Vendor Entries** page.
+   1. V **příslušném dokumentu No.** field, choose the field to open the **Apply Vendor Entries** page.
    2. On the **Apply Vendor Entries** page, select the entry to apply the payment to.
    3. On the line in the **Amount to Apply** field, enter the amount to apply to the entry.
 4. Or, to apply multiple vendor ledger entries:
@@ -80,10 +80,10 @@ You can also apply vendor payments, and customer payments, after the payments ap
 7. For each line in the **Amount to Apply** field, enter the amount to apply to the individual entry.
 
    If you do not enter an amount, then the maximum amount is automatically applied. You can see the amount in the **Applied Amount** field at the bottom of the **Apply Vendor Entries** page.
-8. Choose the **Post Application** action.
+8. Vyberte akci **Účtovat vyrovnání**.
 
    The **Post Application** page opens with the document number of the applying entry and the posting date of the entry with the most recent posting date.
-9. Choose the **OK** button to post the application.
+9. Kliknutím na tlačítko **OK** zaúčtujete vyrovnání.
 
 ## To apply vendor ledger entries in different currencies to one another
 If you buy from a vendor in one currency and make payment in another currency, you can still apply the invoice to the payment.
@@ -91,7 +91,7 @@ If you buy from a vendor in one currency and make payment in another currency, y
 If you apply an entry (Entry 1) in one currency to an entry (Entry 2) in a different currency, the posting date on Entry 1 is used to find the relevant exchange rate to convert amounts on Entry 2. The relevant exchange rate is found on the **Currency Exchange Rates** page. In that case, you must enable application of vendor ledger entries in different currencies. For more information, see [Enable Application of Ledger Entries in Different Currencies](finance-how-enable-application-ledger-entries-different-currencies.md)
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Payment Journal**, and then choose the related link.
-2. Open the journal you want, and fill in the first empty journal line using a currency code.
+2. Otevřete požadovaný deník a vyplňte první prázdný řádek deníku pomocí kódu měny.
 3. Vyberte akci **Vyrovnat položky**.
 4. Select the line with the entry you want to apply to the entry in the payment journal, choose the **Set Applies-to ID** action, and then select the entry you want to apply to.
 5. Choose the **OK** button to return to the payment journal.
@@ -101,18 +101,18 @@ If you apply an entry (Entry 1) in one currency to an entry (Entry 2) in a diffe
 > When you apply entries in different currencies to one another, the entries are converted to USD. Even though the exchange rates for the two relevant currencies are fixed, for example between USD and EUR, there may be a small residual amount when these foreign-currency amounts are converted to USD. These small residual amounts are posted as gains and losses to the account specified in the **Realized Gains Account** or **Realized Losses Account** field on the **Currencies** page. The **Amount (USD)** field is also adjusted on the relevant vendor ledger entries.
 
 ## To unapply an application of vendor entries
-When you unapply an erroneous application, correcting entries that are identical to the original entry but with opposite sign in the amount field are created and posted for all entries, including all general ledger posting derived from the application, such as payment discount and currency gains/losses. The entries that were closed by the application are reopened.
+When you unapply an erroneous application, correcting entries that are identical to the original entry but with opposite sign in the amount field are created and posted for all entries, including all general ledger posting derived from the application, such as payment discount and currency gains/losses. Položky, které byly vyrovnáním uzavřeny, se znovu otevřou.
 
 1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Vendors**, and then choose the related link.
 2. Open the relevant vendor card.
-3. Choose the **Ledger Entries** action.
-4. Select the relevant ledger entry, and then choose the **Unapply Entries** action.
-5. Alternatively, choose the **Detailed Ledger Entry** action.
-6. Select the application entry, and then choose the **Unapply Entries** action.
-7. Fill in the fields in the header, and then choose the **Unapply** action.
+3. Vyberte akci **Položky hlavní knihy**.
+4. Vyberte příslušnou položku hlavní knihy a poté vyberte akci **Zrušit vyrovnání položek**.
+5. Případně vyberte akci **Podrobná položka hlavní knihy**.
+6. Vyberte položku aplikace a poté vyberte akci **Zrušit vyrovnání položek**.
+7. Vyplňte pole v záhlaví a poté vyberte akci **Zrušit vyrovnání položek**.
 
 > [!IMPORTANT]  
-> If an entry has been applied by more than one application entry, you must unapply the latest application entry first.
+> Pokud byl záznam aplikován více než jedním záznamem aplikace, musíte nejprve zrušit použití posledního záznamu aplikace.
 
 ## Viz také
 [Payables](payables-manage-payables.md)  

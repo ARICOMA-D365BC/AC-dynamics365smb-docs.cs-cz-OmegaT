@@ -58,7 +58,7 @@ The posted sales documents that you applied the credit memo to are now reversed,
 
 ## To create a sales credit memo by copying a posted sales invoice
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
 2. Choose the **New** action to open a new empty sales credit memo.
 3. In the **Customer Name** field, enter the name of an existing customer.
 4. Choose the **Prepare** action, then choose the **Copy Document** action.
@@ -72,7 +72,7 @@ The posted sales documents that you applied the credit memo to are now reversed,
 You can send a customer a credit memo with a price reduction if the customer has received slightly damaged items or received the items late.  
 You can post this reduced price as an item charge in a credit memo or a return order and assign it to the posted shipment. The following describes it for a sales credit memo, but the same steps apply to a sales return order.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
 2. Choose the **New** action to open a new empty sales credit memo.
 3. Fill in the credit memo header with relevant information about the customer that you want to give the sales allowance to.
 4. On the **Lines** FastTab, in the **Type** field, select **Charge (Item)**.
@@ -95,7 +95,7 @@ To combine return receipts, the **Combine Shipments** check box must be selected
 
 ### To manually combine return receipts
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Sales Credit Memos**, and then choose the related link.
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Prodejní dobropisy** a poté vyberte související odkaz.
 2. Vyberte akci **Nový**.
 3. On the **General** FastTab, fill in the fields as necessary.
 4. Choose the **Get Return Receipt Lines** action.
