@@ -3,7 +3,7 @@
     description: When you export payment files using the AMC Banking 365 Fundamentals extension, the data that you export is exposed to the service provider.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -41,7 +41,7 @@ The following table lists the fields in [!INCLUDE[prod_short](includes/prod_shor
 | Recipient City | City | Customer/Vendor | The recipient city that is specified on the customer or vendor card |
 | Recipient Name | Jméno | Customer/Vendor | The recipient name that is specified on the customer or vendor card |
 | Recipient Country/Region Code | Country/Region Code | Customer/Vendor | The recipient country/region code that is specified on the customer or vendor card |
-| Recipient Post Code | Post Code | Customer/Vendor | The recipient post code that is specified on the customer or vendor card |
+| Recipient Post Code | PSČ | Customer/Vendor | The recipient post code that is specified on the customer or vendor card |
 | Recipient Bank Acc. Ne. | Bank Account No./IBAN | Customer Bank Account/Vendor Bank Account | The recipient bank account number (IBAN or other) that is specified on the customer or vendor bank account card |
 | Recipient Bank Clearing Code | Bank Clearing Standard | Customer Bank Account/Vendor Bank Account | The national bank names register used for the recipient bank account |
 | Recipient Bank Clearing Std. | Bank Clearing Code | Customer Bank Account/Vendor Bank Account | The identifier of the recipient bank account in relation to the bank names register that is used |
@@ -56,12 +56,12 @@ The following table lists the fields in [!INCLUDE[prod_short](includes/prod_shor
 | The recipient bank account address that is specified on the customer or vendor bank account card | City | Customer Bank Account/Vendor Bank Account | The recipient bank account city that is specified on the customer or vendor bank account card |
 | Recipient Bank Name | Jméno | Customer Bank Account/Vendor Bank Account | The recipient bank account name that is specified on the customer or vendor bank account card |
 | Recipient Bank Country/Region | Country/Region Code | Customer Bank Account/Vendor Bank Account | The recipient bank account country/region that is specified on the customer or vendor bank account card |
-| Recipient Bank Post Code | Post Code | Customer Bank Account/Vendor Bank Account | The recipient bank account post code that is specified on the customer or vendor bank account card |
+| Recipient Bank Post Code | PSČ | Customer Bank Account/Vendor Bank Account | The recipient bank account post code that is specified on the customer or vendor bank account card |
 | Sender Bank Address | Address | Bank Account | The sender bank account address that is specified on the bank account card |
 | Sender Bank City | City | Bank Account | The sender bank account city that is specified on the bank account card |
 | Sender Bank Name | Jméno | Bank Account | The sender bank account name that is specified on the bank account card |
 | Sender Bank Country/Region | Country/Region Code | Bank Account | The sender bank account country/region that is specified on the bank account card |
-| Sender Bank Post Code | Post Code | Bank Account | The sender bank account post code that is specified on the bank account card |
+| Sender Bank Post Code | PSČ | Bank Account | The sender bank account post code that is specified on the bank account card |
 | General Journal Template | Journal Template Name | General Journal Line | The general journal template that is used for the payment line |
 | General Journal Batch Name | Journal Batch Name | General Journal Line | The general journal batch name that is used for the payment line |
 | Sender Bank Name - Data Conv. | Bank Name – Data Conv. | Bank Account | The sender bank account name that is requested by the AMC Banking 365 Fundamentals extension and specified on the bank account card |

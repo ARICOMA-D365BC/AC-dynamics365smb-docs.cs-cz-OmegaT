@@ -1,6 +1,6 @@
 ---
 title: Sharing Data
-description: Learn about the different ways to share business data from Business Central.
+description: Learn about the different ways to share business data from Business Central. 
 author: jswymer
 ms.topic: conceptual
 ms.workload: na

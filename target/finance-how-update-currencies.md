@@ -18,7 +18,7 @@ You can define different currencies in [!INCLUDE [prod_short](includes/prod_shor
 ## Měny
 
 > [!TIP]  
-> Pokud v [!INCLUDE[prod_short](includes/prod_short.md)] hledáte aktuální informace o směnných (FX) kurzech nebo historických kurzech, najdete je označované jako měna. Kromě tohoto článku si také přečtěte [Nastavení přídavní měny pro hlášení](finance-how-setup-additional-currencies.md).
+> Pokud v [!INCLUDE[prod_short](includes/prod_short.md)] hledáte aktuální informace o směnných kurzech nebo historických kurzech, najdete je označované jako měna. Kromě tohoto článku si také přečtěte [Nastavení přídavní měny pro hlášení](finance-how-setup-additional-currencies.md).
 
 [!INCLUDE [finance-currencies-def](includes/finance-currencies-def.md)]
 
@@ -30,7 +30,7 @@ Kódy měn zadáte v seznamu **Měny**, včetně dalších informací a nastaven
 
 ## Směnné kurzy
 
-Směnné kurzy jsou nástrojem pro výpočet hodnoty místní měny (LCY) každé měnové transakce. The **Exchange Rates** page includes the following fields:
+Směnné kurzy jsou nástrojem pro výpočet hodnoty lokální měny (LCY) každé měnové transakce. The **Exchange Rates** page includes the following fields:
 
 | Pole | Popis |
 |---------------------------------|---------------------------------------|  

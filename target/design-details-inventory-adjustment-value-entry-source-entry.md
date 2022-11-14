@@ -355,8 +355,8 @@ V tomto scénáři by jednou z možností mohlo být nastavení financí, konkr�
 
 ## Viz také
 
-[Design Details: Posting Date on Adjustment Value Entry](design-details-inventory-adjustment-value-entry-posting-date.md)  
-[Design Details: Inventory Costing](design-details-inventory-costing.md)  
-[Design Details: Item Application](design-details-item-application.md)
+[Detaily návrhu: Zúčtovací datum adjustace položky ocenění](design-details-inventory-adjustment-value-entry-posting-date.md)  
+[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)  
+[Detaily návrhu: Vyrovnání zboží](design-details-item-application.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

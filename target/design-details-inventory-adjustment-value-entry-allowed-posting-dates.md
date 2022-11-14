@@ -14,62 +14,62 @@ ms.author: edupont
 
 ---
 
-# Error message: "Posting Date is not within your range of allowed posting dates…"
+# Chybová zpráva: "Zúčtovací datum není v rozsahu povolených dat účtování..."
 
-When using the **Adjust Cost - Item Entries** batch job you may run into the following error message:
+Při použití dávkové úlohy **Upravit náklady - položky zboží** můžete narazit na následující chybovou zprávu:
 
-**Posting date is not within your range of allowed posting dates**
+**Zúčtovací datum nespadá do vašeho rozsahu povolených dat účtování**
 
-This error message indicates that the user is not allowed to post entries for the date in question, and this can be remedied by changing the user setup.
+Tato chybová zpráva označuje, že uživatel nemá povoleno zaúčtovat položky pro dané datum, což lze napravit změnou nastavení uživatele.
 
-## Change the user setup
+## Změňte nastavení uživatelů
 
-| ID uživatele | Allow Posting From | Allow Posting To |
+| ID uživatele | Povolit účtování z | Povolit účtování do |
 |---------|---------|--------|
-| EUROPE | 2020-09-11 | 2020-09-30 |
+| EVROPA | 2020-09-11 | 2020-09-30 |
 
-The user in this case has an allowed posting date range from September 11th to September 30th and is therefore not allowed to post the Adjustment Value Entry with Posting Date September 10th.
+Uživatel má v tomto případě povolený rozsah dat účtování od 11. září do 30. září, a proto nesmí zaúčtovat položku hodnoty úpravy s datem účtování 10. září.
 
-### Overview of involved posting date setup
+### Přehled nastavení příslušného data účtování
 
-#### Inventory Periods
+#### Období zásob
 
-| Koncové datum | Jméno | Closed |
+| Koncové datum | Jméno | ZAVŘENO |
 |---------|---------|---------|
-| 2020-01-31 | January 2020 | Ano |
-| 2020-02-28 | February 2020 | Ano |
-| 2020-03-31 | March 2020 | Ano |
-| 2020-04-30 | April 2020 | Ano |
-| 2020-05-31 | May   2020 | Ano |
-| 2020-06-30 | June   2020 | Ano |
-| 2020-07-31 | July  2020 | Ano |
-| 2020-08-31 | August   2020 | Ano |
-| 2020-09-30 | September   2020 |         |
-| 2020-10-31 | October   2020 |         |
-| 2020-11-30 | November   2020 |         |
-| 2020-12-31 | December   2020 |         |
+| 2020-01-31 | Leden 2020 | Ano |
+| 2020-02-28 | Únor 2020 | Ano |
+| 2020-03-31 | Březen 2020 | Ano |
+| 2020-04-30 | Duben 2020 | Ano |
+| 2020-05-31 | Květen 2020 | Ano |
+| 2020-06-30 | Červen 2020 | Ano |
+| 2020-07-31 | Červenec 2020 | Ano |
+| 2020-08-31 | Srpen 2020 | Ano |
+| 2020-09-30 | Září 2020 |         |
+| 2020-10-31 | Říjen 2020 |         |
+| 2020-11-30 | Listopad 2020 |         |
+| 2020-12-31 | Prosinec 2020 |         |
 
 #### Nastavení financí
 
 | Pole | Hodnota |
 |---------|---------|
-| Allow Posting From: | 2020-09-10 |
-| Allow Posting To: | 2020-09-30 |
-| Register Time: |         |
-| Local Address Format: | Post Code |
+| Povolit účtování z | 2020-09-10 |
+| Povolit účtování do | 2020-09-30 |
+| Sledovat čas: |         |
+| Formát místní adresy: | PSČ |
 
-#### User Setup
+#### Nastavení uživatele
 
-| ID uživatele | Allow Posting From | Allow Posting To |
+| ID uživatele | Povolit účtování z | Povolit účtování do |
 |---------|---------|--------|
-| USERNAME | 2020-09-10 | 2020-09-30 |
+| UŽIVATELSKÉ JMÉNO | 2020-09-10 | 2020-09-30 |
 
-Assigning a wider allowed posting date range, as in Inventory Period or General Ledger Setup, makes it possible to avoid the conflict that causes the error message. The Adjustment Value Entry with Posting Date September 10th will be posted successfully with this setup.
+Přiřazení širšího rozsahu povoleného účetního data zaúčtování, například v Nastavení období zásob nebo Nastavení financí, umožňuje vyhnout se konfliktu, který způsobuje chybovou zprávu. Položka hodnoty úpravy s datem účtování 10. září bude s tímto nastavením úspěšně zaúčtována.
 
 ## Viz také
 
-[Design Details: Posting Date on Adjustment Value Entry](design-details-inventory-adjustment-value-entry-posting-date.md)  
-[Design Details: Inventory Costing](design-details-inventory-costing.md)  
-[Design Details: Item Application](design-details-item-application.md)
+[Detaily návrhu: Zúčtovací datum adjustace položky ocenění](design-details-inventory-adjustment-value-entry-posting-date.md)  
+[Detaily návrhu: Ocenění zásob](design-details-inventory-costing.md)  
+[Detaily návrhu: Vyrovnání zboží](design-details-item-application.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

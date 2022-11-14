@@ -55,22 +55,22 @@ To assign the posting date for **Entry No. 391** the following steps were applie
 
 Podívejme se na výše uvedený prodej přidáním nastavení povolených rozsahů zúčtovacího data.
 
-#### Inventory Periods
+#### Období zásob
 
-| Koncové datum | Jméno | Closed |
+| Koncové datum | Jméno | ZAVŘENO |
 |---------|---------|---------|
-| 2020-01-31 | January 2020 | Ano |
-| 2020-02-28 | February 2020 | Ano |
-| 2020-03-31 | March 2020 | Ano |
-| 2020-04-30 | April 2020 | Ano |
-| 2020-05-31 | May   2020 | Ano |
-| 2020-06-30 | June   2020 | Ano |
-| 2020-07-31 | July  2020 | Ano |
-| 2020-08-31 | August   2020 | Ano |
-| 2020-09-30 | September   2020 |         |
-| 2020-10-31 | October   2020 |         |
-| 2020-11-30 | November   2020 |         |
-| 2020-12-31 | December   2020 |         |
+| 2020-01-31 | Leden 2020 | Ano |
+| 2020-02-28 | Únor 2020 | Ano |
+| 2020-03-31 | Březen 2020 | Ano |
+| 2020-04-30 | Duben 2020 | Ano |
+| 2020-05-31 | Květen 2020 | Ano |
+| 2020-06-30 | Červen 2020 | Ano |
+| 2020-07-31 | Červenec 2020 | Ano |
+| 2020-08-31 | Srpen 2020 | Ano |
+| 2020-09-30 | Září 2020 |         |
+| 2020-10-31 | Říjen 2020 |         |
+| 2020-11-30 | Listopad 2020 |         |
+| 2020-12-31 | Prosinec 2020 |         |
 
 The first allowed posting date is the first day in the first open period, which is September 1, 2020.
 
@@ -78,10 +78,10 @@ The first allowed posting date is the first day in the first open period, which 
 
 | Pole | Hodnota |
 |---------|---------|
-| Allow Posting From: | 2020-09-10 |
-| Allow Posting To: | 2020-09-30 |
-| Register Time: |         |
-| Local Address Format: | Post Code |
+| Povolit účtování z | 2020-09-10 |
+| Povolit účtování do | 2020-09-30 |
+| Sledovat čas: |         |
+| Formát místní adresy: | PSČ |
 
 The first allowed posting date is the date stated in field **Allow Posting From**: September 10, 2020. If both Inventory Periods and allowed posting dates in **General Ledger Setup** are defined, the later date of the two will define the allowed posting date range.
 
@@ -100,7 +100,7 @@ The initial assigned Posting Date was September 6 as illustrated in step 1. Howe
 
 There are two scenarios that the support team encounters frequently enough for them to warrant their own problem resolution articles.
 
-### Error message: "Posting Date is not within your range of allowed posting dates…"
+### Chybová zpráva: "Zúčtovací datum není v rozsahu povolených dat účtování..."
 
 If you encounter this error you need to adjust the dates for which the user is allowed to post entries. To learn more, see [Error Message "Posting Date is not within your range of allowed posting dates"](design-details-inventory-adjustment-value-entry-allowed-posting-dates.md).
 

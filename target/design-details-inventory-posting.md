@@ -3,7 +3,7 @@
     description: Each inventory transaction, such as a purchase receipt or a sales shipment, posts two entries of different types.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
