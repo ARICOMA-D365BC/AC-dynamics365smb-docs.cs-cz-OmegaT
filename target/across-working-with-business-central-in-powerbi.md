@@ -16,9 +16,9 @@ ms.author: jswymer
 
 V tomto článku se dozvíte některé základy práce se sestavami a řídicími panely v Power BI, které používají [!INCLUDE [prod_short](includes/prod_short.md)] jako zdroj dat. Článek pojednává o některých aspektech, které vám pomohou začít jako uživatel [!INCLUDE[prod_short](includes/prod_short.md)]. Obecné pokyny a pokyny k používání Power BI najdete v dokumentaci [Power BI pro spotřebitele](/power-bi/consumer).
 
-## Připravit se
+## Připravte se
 
-Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při registraci použijte pracovní e-mailovou adresu a heslo.
+Zaregistrujte se ke službě Power BI. Pokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při registraci použijte pracovní e-mailovou adresu a heslo.
 
 ## Začínáme
 

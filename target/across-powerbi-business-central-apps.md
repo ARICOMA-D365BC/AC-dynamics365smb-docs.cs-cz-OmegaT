@@ -48,9 +48,9 @@ Aplikace Power BI vyžadují oprávnění k tabulkám, ze kterých se načítaj�
 > [!TIP]
 > Snadný způsob, jak najít webové služby, je vyhledat *Webové služby* v [!INCLUDE[prod_short](includes/prod_short.md)]. Na stránce **Webové služby** zkontrolujte, zda je pro výše uvedené webové služby vybráno pole **Publikovat**. Pro více informací navštivte [Publikování webové služby](across-how-publish-web-service.md).
 
-## Připravit se
+## Připravte se
 
-Zaregistrujte se ke službě Power BI. IPokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
+Zaregistrujte se ke službě Power BI. Pokud jste se ještě nezaregistrovali, přejděte na [https://powerbi.microsoft.com](https://powerbi.microsoft.com). Při přihlášení použijte pracovní e-mailovou adresu a heslo.
 
 ## Nainstalujte si aplikaci [!INCLUDE[prod_short](includes/prod_short.md)] v Power BI
 

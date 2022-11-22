@@ -31,7 +31,7 @@ For more information about getting started, see [Use [!INCLUDE[prod_short](inclu
 
 ## Create a report for a list page
 
-1. Start Power BI Desktop.
+1. Spusťte Power BI Desktop.
 2. Select **Get Data**, and start choosing the data source for the report.
 
    Specify the Business Central list pages that contain the data that you want in the report. For example, to create a report for the **Sales Invoices** list, include pages related to sales.
