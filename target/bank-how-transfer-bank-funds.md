@@ -70,9 +70,9 @@ Chcete-li převést prostředky mezi bankovními účty, které používají rů
 
 ## Viz také
 
-[Odsouhlasení bankovních účtů](bank-manage-bank-accounts.md)  
-[Nastavení bankovních účtů](bank-setup-banking.md)  
-[Použití front úloh k plánování úkolů](ui-work-general-journals.md)  
+[Odsouhlasení bankovních účtů](bank-manage-bank-accounts.md)    
+[Nastavení bankovních účtů](bank-setup-banking.md)    
+[Použití front úloh k plánování úkolů](ui-work-general-journals.md)    
 [Práce s [!INCLUDE[prod_short](includes/prod_short.md)]](ui-work-product.md)
 
 
