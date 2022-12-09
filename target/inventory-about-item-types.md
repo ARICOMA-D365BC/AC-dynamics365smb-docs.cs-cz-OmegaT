@@ -22,8 +22,8 @@ V poli **Typ** na stránce **Karta zboží** můžete vybrat, k čemu se položk
 | Možnost | Typický účel |
 |------|-----------|
 | Zásoby | Fyzické věci, jako jsou jízdní kola, telefony a stoly, pro které chcete mít možnost používat všechny inventarizační procesy. To může také zahrnovat nefyzické položky, jako jsou softwarové licence a předplatné, pokud mají položky identifikační čísla, jako jsou sériová čísla. Můžete plně sledovat hodnoty položek a dostupnost ve skladu. |
-| Neskladované | Položky, které nejsou zásobami, jsou obvykle fyzické věci, jako jsou šrouby nebo pera, které podnik spotřebovává, ale nechce je plně sledovat v zásobách. Například proto, že se jedná o nízkonákladové položky a používají se pouze interně. |
-| Služba | Jednotka pracovní doby, například poradenská hodina, pro omezenou podporu podnikání. |
+| Neskladové položky | Položky, které nejsou zásobami, jsou obvykle fyzické věci, jako jsou šrouby nebo pera, které podnik spotřebovává, ale nechce je plně sledovat v zásobách. Například proto, že se jedná o nízkonákladové položky a používají se pouze interně. |
+| Služby | Jednotka pracovní doby, například poradenská hodina, pro omezenou podporu podnikání. |
 
 > [!NOTE]
 > Typy **Služba** a **Neskladové položky** nepodporují sledování množství a hodnot zásob. Podporovány jsou pouze vybrané typy transakcí a funkce položek.

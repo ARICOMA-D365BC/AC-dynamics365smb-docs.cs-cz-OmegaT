@@ -23,7 +23,7 @@ Následující tabulka popisuje pole v seznamu **Měny**.
 
 | Pole | Popis |
 |---------------------------------|---------------------------------------|  
-| Kód | Identifikátor měny. |
+| **Kód** | Identifikátor měny. |
 | **Popis** | Volný textový popis měny. |
 | **Kód ISO** | Mezinárodní třípísmenný kód měny definovaný v ISO 4217. |
 | **Číselný kód ISO** | Mezinárodní číselný odkaz na měnu definovanou v ISO 4217. |
@@ -39,18 +39,18 @@ Následující tabulka popisuje pole v seznamu **Měny**.
 | **Přesnost zaokrouhlení jednotkové částky** | Některé měny mají jiné formáty pro jednotkové částky, než jsou definovány na stránce **Nastavení hlavní knihy**. pokud změníte přesnost zaokrouhlení jednotkové částky pro měnu, všechny jednotkové částky v měně budou zaokrouhleny s aktualizovanou přesností. |
 | **Desetinná místa v jednotkách** | Některé měny mají jiné formáty pro jednotkové částky, než jsou definovány na stránce **Nastavení hlavní knihy**. Pokud pro měnu změníte desetinná místa částky jednotky, všechny částky jednotky v měně budou zaokrouhleny na aktualizovaná desetinná místa. |
 | **Přesnost zaokrouhlení aplikace** | Určuje velikost intervalu, který je povolen jako rozdíl zaokrouhlení při vzájemném použití položek v různých měnách. |
-| **Zaokrouhlení převodu LCY. Debetní účet** | Určuje informace o převodu, které musí také obsahovat debetní účet, pokud chcete vložit opravné řádky pro zaokrouhlení rozdílů ve finančních denících pomocí příkazu ** Vložit konv. LCY Rndg. zakázky**. |
-| **Konverze LCY Zaokrouhlovací kreditní účet** | Určuje informace o převodu, které musí také obsahovat debetní účet, pokud chcete vložit opravné řádky pro zaokrouhlení rozdílů ve finančních denících pomocí příkazu ** Vložit konv. LCY Rndg. zakázky**. |
+| **Zaokrouhlení převodu LM. Debetní účet** | Určuje informace o převodu, které musí také obsahovat debetní účet, pokud chcete vložit opravné řádky pro zaokrouhlení rozdílů ve finančních denících pomocí příkazu **Fin.účet realizovaných zisků**. |
+| **Konverze LM Zaokrouhlovací kreditní účet** | Určuje informace o převodu, které musí také obsahovat debetní účet, pokud chcete vložit opravné řádky pro zaokrouhlení rozdílů ve finančních denících pomocí příkazu **Vložit konv. LM Rndg. zakázky**. |
 | **Poslední datum úpravy** | Datum poslední měnové úpravy. |
 | **Datum poslední změny** | Datum změny nastavení měny. |
 | **Tolerance platby %** | Maximální tolerance platby % nastavená pro tuto měnu. Další informace naleznete v tématu [ Tolerance platby a Tolerance platební slevy](finance-payment-tolerance-and-payment-discount-tolerance.md). |
-| **Max. Částka tolerance platby** | Maximální částka tolerance platby nastavená pro tuto měnu. Další informace naleznete v tématu [ Tolerance platby a Tolerance platební slevy](finance-payment-tolerance-and-payment-discount-tolerance.md). |
+| **Max. částka tolerance platby** | Maximální částka tolerance platby nastavená pro tuto měnu. Další informace naleznete v tématu [ Tolerance platby a Tolerance platební slevy](finance-payment-tolerance-and-payment-discount-tolerance.md). |
 | **Měnový faktor** | Určuje vztah mezi měnou a místní měnou pomocí skutečného kurzu měny. |
-| **Účet realizovaných zisků hk** | Určuje finanční účet, který se používá k zaúčtování kurzových zisků pro měnové úpravy mezi místní měnou (LCY) a další měnou vykazování. Zisky směnného kurzu se vypočítají při spuštění dávkové úlohy Upravit směnné kurzy pro úpravu účtů hlavní knihy. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
-| **Účet realizovaných hlavních ztrát** | Určuje účet hlavní knihy, který se používá k zaúčtování kurzových ztrát pro měnové úpravy mezi místní měnou (LCY) a další měnou vykazování. Zisky směnného kurzu se vypočítají při spuštění dávkové úlohy Upravit směnné kurzy pro úpravu účtů hlavní knihy. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
-| **Reziduální účet zisků<x2/> | Určuje účet hlavní knihy, který se používá k zaúčtování částek zbytkového zisku (zaokrouhlovacích rozdílů), když je v oblasti aplikace hlavní knihy použita další měna vykazování. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
-| <g1/>Reziduální účet ztrát** | Určuje účet hlavní knihy, který se používá k zaúčtování částek zbytkových ztrát (rozdíly zaokrouhlení), pokud je v oblasti použití hlavní knihy použita další měna vykazování. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
-| **Max. Povolený rozdíl DPH** | Maximální povolená částka pro rozdíly DPH v této měně. Další informace naleznete v tématu [Ruční oprava částek DPH v prodejních a nákupních dokladech](finance-work-with-vat.md#correcting-vat-amounts-manually-in-sales-and-purchase-documents). Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
+| **Fin.účet realizovaných zisků** | Určuje finanční účet, který se používá k zaúčtování kurzových zisků pro měnové úpravy mezi místní měnou (LM) a další měnou vykazování. Zisky směnného kurzu se vypočítají při spuštění dávkové úlohy Upravit směnné kurzy pro úpravu účtů hlavní knihy. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
+| **Fin.účet realizovaných ztrát** | Určuje účet hlavní knihy, který se používá k zaúčtování kurzových ztrát pro měnové úpravy mezi místní měnou (LM) a další měnou vykazování. Zisky směnného kurzu se vypočítají při spuštění dávkové úlohy Upravit směnné kurzy pro úpravu účtů hlavní knihy. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
+| **Reziduální účet zisků** | Určuje účet hlavní knihy, který se používá k zaúčtování částek zbytkového zisku (zaokrouhlovacích rozdílů), když je v oblasti aplikace hlavní knihy použita další měna vykazování. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
+| **Reziduální účet ztrát** | Určuje účet hlavní knihy, který se používá k zaúčtování částek zbytkových ztrát (rozdíly zaokrouhlení), pokud je v oblasti použití hlavní knihy použita další měna vykazování. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
+| **Max. povolený rozdíl DPH** | Maximální povolená částka pro rozdíly DPH v této měně. Další informace naleznete v tématu [Ruční oprava částek DPH v prodejních a nákupních dokladech](finance-work-with-vat.md#correcting-vat-amounts-manually-in-sales-and-purchase-documents). Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
 | **Typ zaokrouhlení DPH** | Určuje metodu zaokrouhlení pro ruční opravu částek DPH v prodejních a nákupních dokladech. Toto pole nemusí být ve výchozím nastavení viditelné. Lze jej získat přizpůsobením stránky. |
 
 ### Dostupné měnové funkce
@@ -61,14 +61,14 @@ Následující tabulka popisuje klíčové akce na stránce **Měny**.
 |-------------|--------------|------------------------------|
 | **Probíhá** | **Návrh účtů** | Použití účtů z jiných měn. Budou vloženy nejčastěji používané účty. |
 |  | **Změna tolerance platby** | Změnit jedno nebo obě: maximální odchylka platby a procentuální odchylka platby a filtry dle měny. Další informace naleznete v tématu [ Tolerance platby a Tolerance platební slevy](finance-payment-tolerance-and-payment-discount-tolerance.md). |
-|  | Směnné kurzy | Zobrazit aktualizované směnné kurzy měn, které můžete použít. |
-|  | Úprava směnných kurzů | Upravit věcné položky, položky zákazníka, dodavatele a bankovního účtu, aby reflektovaly změnu směnného kurzu od doby, kdy byly položky zaúčtovány. |
+|  | **Směnné kurzy** | Zobrazit aktualizované směnné kurzy měn, které můžete použít. |
+|  | **Úprava směnných kurzů** | Upravit věcné položky, položky zákazníka, dodavatele a bankovního účtu, aby reflektovaly změnu směnného kurzu od doby, kdy byly položky zaúčtovány. |
 |  | **Registr úprav směnných kurzů** | Zobrazit výsledky spuštění dávkové úlohy **Upravit směnné kurzy**. Pro každou měnu nebo každou kombinaci měny a účetní skupiny, která je zahrnuta do úpravy, se vytvoří jeden řádek. |
 | **Služba směnných kurzů** | **Služba směnných kurzů** | Zobrazení nebo úprava nastavení služeb, které jsou nastaveny pro načtení aktualizovaných směnných kurzů měn, když zvolíte akci **Aktualizovat směnné kurzy**. |
 |  | **Aktualizace směnných kurzů** | Získat nejnovější směnné kurzy měn od poskytovatele služeb. |
-| Přehledy | **Zůstatek v cizí měně** | Zobrazení zůstatků pro všechny odběratele a dodavatele v cizích měnách i v místní měně (LCY). Sestava zobrazuje dva zůstatky LCY. Jedním z nich je zůstatek cizí měny převedený na LCY pomocí směnného kurzu v době transakce. Druhým je zůstatek cizí měny převedený na LCY pomocí směnného kurzu pracovního dne. |
+| **Přehledy** | **Zůstatek v cizí měně** | Zobrazení zůstatků pro všechny odběratele a dodavatele v cizích měnách i v místní měně (LM). Sestava zobrazuje dva zůstatky LM. Jedním z nich je zůstatek cizí měny převedený na LM pomocí směnného kurzu v době transakce. Druhým je zůstatek cizí měny převedený na LM pomocí směnného kurzu pracovního dne. |
 
-## LCY a další měny
+## LM a další měny
 
 [!INCLUDE [finance-currencies-lcy-def](includes/finance-currencies-lcy-def.md)]
 
@@ -82,7 +82,7 @@ Chcete-li spravovat měny, které nepoužívají desetinná místa, a vyhnout se
 
 Tyto funkce mohou pracovat nezávisle nebo v kombinaci. Kromě toho mohou funkce fungovat v souvislosti se zaokrouhlováním faktur.
 
-Na rozdíl od funkcí zaokrouhlování faktur ovlivňují funkce zaokrouhlování částek a jednotkové částky pouze částky v cizí měně – nikoli odpovídající částky v LCY. Tyto dvě funkce nebudou mít za následek žádné zaúčtování na účty hlavní knihy. V důsledku toho není třeba specifikovat žádný účet hlavní knihy na zaúčtovacích skupinách nebo jinde.
+Na rozdíl od funkcí zaokrouhlování faktur ovlivňují funkce zaokrouhlování částek a jednotkové částky pouze částky v cizí měně – nikoli odpovídající částky v LM. Tyto dvě funkce nebudou mít za následek žádné zaúčtování na účty hlavní knihy. V důsledku toho není třeba specifikovat žádný účet hlavní knihy na zaúčtovacích skupinách nebo jinde.
 
 ### Zaokrouhlení jednotkové částky
 
@@ -104,9 +104,9 @@ Historické směnné kurzy můžete zachovat na stránce **Směnné kurzy** měn
 
 ## Účty hlavní knihy
 
-Kódy měn nelze propojit s účty hlavní knihy, protože částky na účtech hlavní knihy jsou v LCY. Pokud máte bankovní půjčku v USD a vložíte vklady na bankovní účet v SEK, můžete tyto účty sledovat nastavením bankovních účtů v USD a SEK. Pomocí účetních skupin můžete propojit účty s příslušnými účty hlavní knihy. V hlavní knize je hodnota částek uvedena v LCY.
+Kódy měn nelze propojit s účty hlavní knihy, protože částky na účtech hlavní knihy jsou v LCY. Pokud máte bankovní půjčku v USD a vložíte vklady na bankovní účet v SEK, můžete tyto účty sledovat nastavením bankovních účtů v USD a SEK. Pomocí účetních skupin můžete propojit účty s příslušnými účty hlavní knihy. V hlavní knize je hodnota částek uvedena v LM.
 
-Můžete zadat kód měny na řádku finančního deníku a zaúčtovat řádek na účet hlavní knihy. Příslušný směnný kurz se používá k převodu částky na LCY před jejím zaúčtováním na účet hlavní knihy.
+Můžete zadat kód měny na řádku finančního deníku a zaúčtovat řádek na účet hlavní knihy. Příslušný směnný kurz se používá k převodu částky na LM před jejím zaúčtováním na účet hlavní knihy.
 
 ## Příklad měnové transakce pohledávky
 
