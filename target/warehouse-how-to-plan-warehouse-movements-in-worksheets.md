@@ -3,7 +3,7 @@
     description: Plan movements in the worksheet using a bin replenishment function or manually planning the lines that you want to create as movement instructions.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

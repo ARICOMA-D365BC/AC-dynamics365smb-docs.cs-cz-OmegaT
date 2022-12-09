@@ -81,7 +81,7 @@ One aspect of planning jobs is deciding which posting accounts to use for job co
 
 | Account field | Popis |
 | --- | --- |
-| Kód | A code for the posting group. You can enter up to 10 characters, including spaces. |
+| **Kód** | A code for the posting group. You can enter up to 10 characters, including spaces. |
 | **WIP Costs Account** | The WIP account for the calculated cost of the job WIP, which is a balance sheet capital asset account. |
 | **WIP Accrued Costs Account** | An account for the Cost Value or Cost of Sales method of WIP calculation, which is a balance sheet accrued expense liability account. This will be posted to when the WIP adjustment requires that usage costs posted to the income statement be increased. |
 | **Job Costs Applied Account** | A balancing account to the WIP Costs Account, which is a contra for a negative expense account. |

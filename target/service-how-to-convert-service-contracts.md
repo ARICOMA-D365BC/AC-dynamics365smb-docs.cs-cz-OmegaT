@@ -3,7 +3,7 @@
     description: This topic describes several alternative methods that you can use to convert service contracts that include VAT amounts.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

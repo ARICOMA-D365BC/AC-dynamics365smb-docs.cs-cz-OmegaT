@@ -3,7 +3,7 @@ title: Assemble Items
 description: If the Replenishment System field on the item card contains Assembly the default method of supplying the item is to assemble it from defined components.
 author: SorenGP
 
-    
+
 ms.topic: conceptual
 ms.devlang: na
 ms.tgt_pltfrm: na

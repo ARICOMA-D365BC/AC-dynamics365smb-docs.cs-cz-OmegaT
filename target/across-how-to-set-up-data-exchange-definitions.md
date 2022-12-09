@@ -3,7 +3,7 @@
     description: You can use an external provider of OCR services to have PDF or image files turned into electronic documents.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -47,7 +47,7 @@ This is described in the following procedures.
 
    | Pole | Definition |
    |---------------------------------|---------------------------------------|  
-   | Kód | Enter a code to identify the data exchange definition. |
+   | **Kód** | Enter a code to identify the data exchange definition. |
    | **Name** | Enter a name for the data exchange definition. |
    | **File Type** | Specify what type of file that the data exchange definition is used for. You can select between four file types:<br /><br /> -   **XML**: Layered strings of content and markup surrounded by tags indicating function.<br />-   **Variable Text**: Records have variable length and are separated by a character, such as comma or semi\-colon. Also known as *delimited file*.<br />-   **Fixed Text**: Records have the same length, using pad characters, and each record is on a separate line. Also known as *fixed-width file*.<br />- **Json**: Layered strings of content in JavaScript. |
    | **Typ** | Specify what type of business activity the data exchange definition is used for, such as **Payment Export**. |
@@ -72,7 +72,7 @@ This is described in the following procedures.
 
    | Pole | Popis |
    |---------------------------------|---------------------------------------|  
-   | Kód | Enter a code to identify the line in the file. |
+   | **Kód** | Enter a code to identify the line in the file. |
    | **Name** | Enter a name that describes the line in the file. |
    | **Column Count** | Specify how many columns the line in data file has. **Note:**  This field is only relevant for import. |
    | **Data Line Tag** | Specify the position in the related XML schema of the element that represents the main entry of the data file. **Note:**  This field is only relevant for import. |

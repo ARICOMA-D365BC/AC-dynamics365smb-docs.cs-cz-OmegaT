@@ -1,6 +1,6 @@
 ---
 title: Getting the Business Central Add-in for Excel
-description: Learn about how to get users the Business Central add-in for Excel. 
+description: Learn about how to get users the Business Central add-in for Excel.
 author: jswymer
 
 ms.topic: conceptual

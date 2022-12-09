@@ -3,7 +3,7 @@
     description: If you want to restrict a record from being used, you can incorporate two workflow responses in a workflow that controls the usage of the record.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

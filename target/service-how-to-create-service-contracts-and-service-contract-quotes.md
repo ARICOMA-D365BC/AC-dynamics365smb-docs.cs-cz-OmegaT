@@ -3,7 +3,7 @@
     description: You can create a service contract either manually or from a service contract quote. You can create a contract based on a service contract quote.
     author: brentholtorf
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

@@ -64,7 +64,7 @@ The **Set Up Email** assisted setup guide can help you get started quickly with 
 
 <!--
 > [!NOTE]
-> If you choose **Other (SMTP)** and are using an account that requires two-factor authentication, the password that you enter in the **Password** field must be the same that you use for your Microsoft 365 subscription, and it must be of type **App Password**. For more information, see [Manage app passwords for two-step verification](/azure/active-directory/user-help/multi-factor-authentication-end-user-app-passwords). 
+> If you choose **Other (SMTP)** and are using an account that requires two-factor authentication, the password that you enter in the **Password** field must be the same that you use for your Microsoft 365 subscription, and it must be of type **App Password**. For more information, see [Manage app passwords for two-step verification](/azure/active-directory/user-help/multi-factor-authentication-end-user-app-passwords).
 
 is this still true?-->
 ## Assign Email Scenarios to Email Accounts
@@ -219,9 +219,9 @@ After you register your application in Azure portal, in [!INCLUDE[prod_short](in
 13. On the navigation pane, choose **Certificates & secrets**.
 14. Under **Client secrets**, choose **New client secret**.
 15. Under **Add a client secret**, enter a description of the client, specify how long you want your secret to be available, and then choose **Add**.
-16. When the secret is generated, copy it. 
+16. When the secret is generated, copy it.
 17. In [!INCLUDE[prod_short](includes/prod_short.md)], in the assisted setup guide paste the secret in the **Client Secret field**.
-18. The **Verify Registration** button becomes available. 
+18. The **Verify Registration** button becomes available.
 
 -->
 

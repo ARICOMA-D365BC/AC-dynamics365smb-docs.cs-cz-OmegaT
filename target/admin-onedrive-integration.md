@@ -60,7 +60,7 @@ Správce musí nastavit připojení mezi [!INCLUDE[prod_short](includes/prod_sho
 
 ### Abyste připravili [!INCLUDE[prod_short](includes/prod_short.md)] on-premises pro připojení k OneDrive
 
-<!-- 
+<!--
 1. For the best experience Configure Azure Active Directory (AD) authentication.
 
    For more information, see [Authenticating Business Central Users with Azure Active Directory](/dynamics365/business-central/dev-itpro/administration/authenticating-users-with-azure-active-directory)-->
@@ -103,7 +103,7 @@ Další informace o registraci aplikace a konfiguraci oprávnění najdete v té
    Adresa URL OneDrive je obvykle v následujícím formátu: `https://<název tenanta>-my.sharepoint.com`. Další informace najdete v tématu [Adresy URL OneDrive pro uživatele ve vaší organizaci](/onedrive/list-onedrive-urls) v dokumentaci k OneDrive.
 5. Do pole ID klienta zadejte **ID klienta** z registrace aplikace.
 6. Do pole **Klientský tajný klíč**, zadejte tajný klíč z registrace vaší aplikace.
-   <!-- 
+   <!--
       For information about how to find the URLs, see the following:
       * [How to find your SharePoint server URL]
       * [How to find your OneDrive URL]-->

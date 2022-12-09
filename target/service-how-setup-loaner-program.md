@@ -3,7 +3,7 @@
     description: You can set up loaners that you can lend to customers to replace service items while they are in service.
     author: brentholtorf
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

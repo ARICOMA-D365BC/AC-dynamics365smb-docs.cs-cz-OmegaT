@@ -3,7 +3,7 @@
     description: This topic provides an overview of the global procedures and design details in the posting interface structure.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

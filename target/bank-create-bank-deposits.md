@@ -14,31 +14,31 @@
     ms.author: bholtorf
 
 ---
-# Create Bank Deposits
+# Vytváření bankovních vkladů
 > [!NOTE]
-> The ability to create bank deposits is new in Business Central 2022 release wave 1 for a lot of country versions. If you were using Business Central in the United States, Canada, or Mexico before that release, you might be using the earlier capabilities. You can continue, but the new capabilities will replace the old ones in a future release. To start using the new features described in this article, your administrator can go to the **Feature Management** page and turn on **Feature Update: Standardized bank reconciliation and deposits**.
+> Možnost vytvářet bankovní vklady je novinkou ve vlně 1 vydání Business Central 2022 pro mnoho verzí pro jednotlivé země. Pokud jste před tímto vydáním používali Business Central ve Spojených státech, Kanadě nebo Mexiku, možná používáte dřívější funkce. Můžete pokračovat, ale nové funkce nahradí staré v budoucí verzi. Chcete-li začít používat nové funkce popsané v tomto článku, může správce přejít na stránku **Správa funkcí** a zapnout možnost **Aktualizace funkcí: Standardizované odsouhlasení banky a vklady**.
 
-Use the **Bank Deposits** page to register deposits as a single document that posts one or more entries to a bank account. Typically, bank deposits are used to register cash deposits. The Bank Deposits page is available on the **Cash Management** menu on the Business Manager Role Center, and other Role Centers that deal with cash management.
+Použijte stránku **Bankovní vklady** k registraci vkladů jako jednoho dokumentu, který zaúčtuje jeden nebo více záznamů na bankovní účet. Bankovní vklady se obvykle používají k registraci hotovostních vkladů. Stránka Bankovní vklady je k dispozici v nabídce **Správa hotovosti** v Centru rolí manažera a dalších pracovních plochách rolí, které se zabývají správou hotovosti.
 
-Amounts on bank deposits can come from several sources:
+Částky na bankovních vkladech mohou pocházet z několika zdrojů:
 
-* Sales, using a G/L account for revenue.
-* Customers payments.
-* Cash refunds from vendors, or cash payments to them.
+* Prodeje, použití finančního účtu pro výnosy.
+* Platby zákazníků.
+* Vrácení hotovosti od prodejců nebo hotovostní platby na ně.
 
-Bank deposit lines contain information about individual deposits, such as checks from customers. The total of the amounts on the lines must add up to the total amount of the deposit.
+Řádky bankovních vkladů obsahují informace o jednotlivých vkladech, například šeky od zákazníků. The total of the amounts on the lines must add up to the total amount of the deposit.
 
-After you fill in the deposit information and lines, you must post it. Posting will update the relevant ledgers. These ledgers include the general ledger, and the bank, customer, and vendor ledgers. Posted deposits are stored for future reference on the **Posted Bank Deposits** page.
+Po vyplnění informací o vkladu a řádků je musíte zaúčtovat. Zaúčtováním se aktualizují příslušné účetní knihy. Tyto knihy zahrnují hlavní knihu a knihy bank, zákazníka a dodavatele. Zaúčtované vklady jsou uloženy pro budoucí použití na stránce **Zaúčtované bankovní vklady**.
 
-The **Bank Deposit** report displays customer and vendor deposits with the original deposit amount, the amount of the deposit that remains open, and the amount applied. The report also shows the total posted deposit amount to reconcile.
+Přehled **Bankovní vklad** zobrazuje vklady zákazníků a dodavatelů s původní částkou vkladu, částkou vkladu, která zůstává otevřená, a použitou částkou. Přehled také zobrazuje celkovou zaúčtovanou částku vkladu, kterou je třeba odsouhlasit.
 
 ## Než začnete
-There are a few things to set up before you can use bank deposits. You must have a number series and general journal template ready. You should also specify whether to post bank deposit amounts as a lump sum. That is, as a total of all the amounts on the deposit lines. Otherwise, each line is posted as an individual entry. Posting a deposit as a single bank ledger entry can make it easier to do bank reconciliation.
+Než budete moci používat bankovní vklady, musíte nastavit několik věcí. Musíte mít připravenou číselnou řadu a šablonu finančního deníku. Měli byste také určit, zda chcete zaúčtovat částky bankovního vkladu jako paušální částku. To znamená jako součet všech částek na depozitních řádcích. V opačném případě je každý řádek zaúčtován jako samostatná položka. Zaúčtování vkladu jako jedné položky bankovní knihy může usnadnit odsouhlasení banky.
 
-### Number Series and Lump Sum Deposits
-You must set up a number series for bank deposits, and then specify the series in the **Bank Deposit Nos.** field on the **Sales & Receivables Setup** page. For more information, see [Create Number Series](ui-create-number-series.md).
+### Číselné řady a paušální vklady
+Musíte nastavit číselnou řadu pro bankovní vklady a poté zadat řadu v poli **Čísla bankovních vkladů** na stránce **Nastavení prodeje a pohledávek**. Pro další informace se podívejte na [Vytvořit číselné řady](ui-create-number-series.md).
 
-Also on the **Sales & Receivables Setup** page, if you want to post deposits as lump sums rather than individual lines, turn on the **Post Bank Deposits as Lump Sum** toggle. Posting a deposit as a lump sum, which creates one bank ledger entry for the full amount of the deposit, can make it easier to do bank reconciliation.
+Také na stránce **Nastavení prodeje a pohledávek**, pokud chcete zaúčtovat vklady jako paušální částky a ne jako jednotlivé řádky, zapněte přepínač **Účtovat bankovní vklady jako paušální částku**. Posting a deposit as a lump sum, which creates one bank ledger entry for the full amount of the deposit, can make it easier to do bank reconciliation.
 
 ### General Journal Templates for Bank Deposits
 You must also create a general journal template for deposits. You use general journals to post entries to bank, customer, vendor, fixed asset, and general ledger accounts. The journal templates design the general journal to suit the purpose of your work. That is, the fields on the journal template are exactly the ones you need.

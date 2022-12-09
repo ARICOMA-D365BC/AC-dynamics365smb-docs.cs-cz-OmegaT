@@ -105,7 +105,7 @@ Vybraný soubor se nahraje do rozvržení a vrátíte se na stránku **Rozvržen
   - The table must have at least one column and can only include columns that are also in report dataset.
   - The table must start in the first cell A1 of the **Data** sheet.
 
-3. Report Metadata 
+3. Report Metadata
 -->
 
 ## Principy rozvržení sestav aplikace Excel

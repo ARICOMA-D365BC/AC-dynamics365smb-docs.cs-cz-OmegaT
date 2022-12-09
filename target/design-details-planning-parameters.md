@@ -3,7 +3,7 @@
     description: This topic describes the different planning parameters that you can use and how they affect the planning system.
     author: SorenGP
 
-    
+
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

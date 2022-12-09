@@ -7,7 +7,7 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords: payment process, cash receipt
-ms.search.form: 5052, 21, 5050 
+ms.search.form: 5052, 21, 5050
 ms.date: 04/01/2021
 ms.author: bholtorf
 

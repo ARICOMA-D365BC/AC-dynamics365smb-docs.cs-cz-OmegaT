@@ -13,7 +13,7 @@ ms.date: 06/14/2021
 ---
 
 # Klasifikace citlivosti dat
-Chcete-li klasifikovat pole, která obsahují citlivá nebo osobní data, může partner společnosti Microsoft nastavit vlastnost ```Klasifikace Dat``` na polích. To vyžaduje přístup k databázovým tabulkám, a to buď prostřednictvím vývojového prostředí, nebo spuštěním skriptu prostředí Windows PowerShell. Pro více informací navštivte [Klasifikaci dat].
+Chcete-li klasifikovat pole, která obsahují citlivá nebo osobní data, může partner společnosti Microsoft nastavit vlastnost ```Klasifikace Dat``` na polích. To vyžaduje přístup k databázovým tabulkám, a to buď prostřednictvím vývojového prostředí, nebo spuštěním skriptu prostředí Windows PowerShell. Pro více informací navštivte [Klasifikaci dat[.
 
 Jako zákazník můžete přidat druhou úroveň klasifikace zadáním úrovní citlivosti pro data, která ukládáte do standardních a vlastních polí. Klasifikace citlivosti dat pomáhá zajistit, abyste věděli, kde uchováváte osobní údaje ve svém systému, a usnadňuje reakci na požadavky subjektů údajů. Například pokud vás kontakt nebo zákazník požádá o export svých osobních údajů. Další informace naleznete v části [Odpovídání na žádosti o osobní údaje](admin-responding-to-requests-about-personal-data.md).
 

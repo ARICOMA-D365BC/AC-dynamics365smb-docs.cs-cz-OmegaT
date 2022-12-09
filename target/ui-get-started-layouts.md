@@ -79,7 +79,7 @@ Kopírování je rychlý způsob, jak vytvořit nové rozvržení, které je ste
 2. Vyberte rozvržení, které chcete pro nové rozvržení zkopírovat, a pak vyberte akci **Upravit**.
 
     Pokud jste vybrali rozvržení rozšíření, budete dotázáni, zda chcete upravit kopii. Chcete-li pokračovat, vyberte **Ano**.
-    
+
     > [!TIP]
     > Při hledání rozvržení vám pomůže pole **Vyhledávání**, panel **Filtr** a třídění sloupců.
 3. Změňte **Název rozvržení**.
