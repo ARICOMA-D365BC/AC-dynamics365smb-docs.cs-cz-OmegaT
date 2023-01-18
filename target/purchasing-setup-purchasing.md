@@ -14,7 +14,7 @@ ms.date: 04/01/2021
 ms.author: edupont
 
 ---
-# Setting Up Purchasing
+# [přibližně]Nastavení Nákupu
 Before you can manage purchase processes, you must configure the rules and values that define the company's purchase policies.
 
 You must define the general setup, such as which purchase documents are required and how their values are posted. Toto obecné nastavení se obvykle provádí jednou během počáteční implementace.

@@ -24,7 +24,7 @@ Pomocí upomínek můžete zákazníkům připomenout částky po splatnosti. Up
 
 Z karty zákazníka můžete vytvořit výpis transakcí mezi vámi a zákazníkem. Poté odešlete zákazníkovi vygenerovaný soubor PDF. Případně můžete pomocí sestavy **Výkaz zákazníka** poslat zákazníkům přehled o jejich podnikání s vámi. Výkaz zákazníka lze odeslat do Excelu k dalšímu zpracování.
 
-### Odeslání sestavy Výkaz zákazníka
+### Odeslání sestavy Výkaz zákazníka 
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi ](media/ui-search/search_small.png "Řekněte mi, co chcete dělat") zadejte **Výkaz zákazníka** a vyberte související odkaz..
 2. Vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
@@ -58,7 +58,7 @@ Penále je podobné faktuře. Záhlaví můžete vyplnit ručně a nechat řádk
 
 1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi 2.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat"), zadejte **Penále** a poté vyberte související odkaz .
 2. Zvolte tlačítko **Nový** a vyplňte pole dle potřeby.
-3. Zvolte **Navrhnout Fin. Řádky penále**
+3. Zvolte **Navrhnout Fin. Řádky penále** 
 4. Na stránce **Navrhnout řádky penále** nastavte filtr v **Zák. Záložka** Položka hlavní knihy, pokud chcete vytvořit finanční doklady pouze pro konkrétní položky.
 
    > [!NOTE]
@@ -78,11 +78,11 @@ Po vytvoření poznámek o penále a provedení potřebných úprav můžete bu�
 
 Po vystavení připomenutí jsou položky zveřejněny podle vašich specifikací na stránce **Podmínky penále**. Tato specifikace určuje, zda jsou úroky a/nebo další poplatky zaúčtovány na účet zákazníka a do hlavní knihy. Nastavení na stránce **Účto skupiny zákazníka** určuje, do kterých účtů jsou zaúčtovány.
 
-Pro každou položku knihy odběratelů v poznámce o penále je vytvořena položka na **Upomínky/Fin. Účtované položky**
+Pro každou položku knihy odběratelů v poznámce o penále je vytvořena položka na **Upomínky/Fin. Účtované položky** 
 
 Pokud jsou na stránce **Podmínky penále** zaškrtnuta políčka **Zaúčtovat úrok** nebo **Zaúčtovat dodatečný poplatek**, vytvoří se také následující položky:
 
-- Jedna položka na stránce **Zák. Položky hlavní knihy**
+- Jedna položka na stránce **Zák. Položky hlavní knihy** 
 - Jeden záznam pohledávky na příslušný účet hlavní knihy
 - Jeden úrok a/nebo jeden dodatečný poplatek na příslušném účtu hlavní knihy
 

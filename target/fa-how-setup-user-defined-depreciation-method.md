@@ -11,69 +11,69 @@ ms.date: 07/05/2021
 ms.author: edupont
 ---
 
-# Set Up Fixed Assets with User-Defined Depreciation Methods
+# Nastavení dlouhodobého majetku s uživatelsky definovanými odpisovými metodami
 
-You can use [!INCLUDE[prod_short](includes/prod_short.md)] to set up the user-defined depreciation methods as described here.
+Můžete použít [! INCLUDE[prod_short](includes/prod_short.md)] pro nastavení uživatelem definovaných odpisových metod, jak je popsáno zde.
 
-For each user-defined method, you use the **Depreciation Tables** page, where you must enter a depreciation percentage for each period (month, quarter, year, or accounting period). Then, when you assign a depreciation book with a user-defined method to a fixed asset, you must set the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields on the **FA Depreciation Books** page for the specific fixed asset.
+Pro každou uživatelsky definovanou metodu používáte stránku **Tabulky odpisů**, kde musíte zadat procento odpisů pro každé období (měsíc, čtvrtletí, rok nebo účetní období). Když pak přiřadíte knihu odpisů s uživatelem definovanou metodou k dlouhodobému majetku, musíte nastavit **První uživatelem definované prohlášení. Pole Datum** a **Datum zahájení odpisů ** na stránce ** Knihy odpisů DM**  pro konkrétní dlouhodobý majetek.
 
 Vzorec pro výpočet odpisových částek je:
 
-*Depreciation Amount = (Depreciation % x Number of Depreciation Days x Depr. odpisu) / (100 x 360)*
+*Částka odpisu = (Odpis % x Počet dnů odepisování x Základ odpisu) / (100 x 360)*
 
 
 > [!NOTE]  
-> While the date in the field **First User-Defined Depr. Date** is used to determine the time intervals, it is the **Depreciation Starting Date** that is used to determine the number of depreciation days. If the **First User-Defined Depr. Date** is earlier than the **Depreciation Starting Date**, the percentage for the first period in the depreciation table will be only partially used when the program calculates the first depreciation. This means that the asset will not be completely depreciated by the end of the last period.
+> Zatím co datum v poli **První uživ.definované datum. Datum** se používá k určení časových intervalů, je to **Datum zahájení odpisování**, které se používá k určení počtu dnů odepisování. Pokud **První uživ.definované datum. Datum** je dřívější než **Datum zahájení odpisování**, procento pro první období v odpisové tabulce bude použito pouze částečně, když program vypočítá první odpis. To znamená, že majetek nebude do konce posledního období zcela odepsán.
 
-## To assign a depreciation book to a fixed asset with a user-defined depreciation method
+## Přiřazení knihy odpisů k dlouhodobému majetku pomocí uživatelem definované metody odpisování
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Vyberte dlouhodobý majetek, pro který chcete nastavit knihu odpisů dlouhodobého majetku.
-3. Choose the **Related** action, and then choose **Fixed Asset**, and then **Depreciation Books**. This opens the **FA Depreciation Books** page.
+3. Zvolte akci **Související** a poté zvolte **Dlouhodobý majetek** a poté **Knihy odpisů**. Otevře se stránka **Knihy odpisů DM.**
 
-   By default, some of the fields that need to be filled in per the instructions below are hidden, so you must display them. To do this you need to personalize the page. For more information, see [To start personalizing a page through the Personalizing banner](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).
-4. In the field **Depreciation Method**, select **User-Defined**.
-5. In the field **Depreciation Table Code**, select the **Depreciation Table** you want to use.
-6. In the field **Depreciation Starting Date**, select the starting date for the depreciation calculation.
-7. When you use a user-defined method, the **First User-Defined Depr. Date** field must be set to a date that is the same or earlier than the field **Depreciation Starting Date**. If you have selected a value in the **Period Length** field in the depreciation table, the date in the field **First User-Defined Depr. Date** must be the starting date of an accounting period.
-8. Either fill in the field **No. of Depreciation Years** or the field **Depreciation Ending Date**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+   Ve výchozím nastavení jsou některá pole, která je třeba vyplnit podle níže uvedených pokynů skrytá, takže je musíte zobrazit. Chcete-li to provést, musíte stránku přizpůsobit. Další informace naleznete v tématu <g6>Přizpůsobení stránky pomocí pásu Přizpůsobení</g6>.
+4. V poli **Metoda odpisování** vyberte **Definováno uživatelem**.
+5. V poli **Kód odpisové tabulky** vyberte **Tabulku odpisů**, kterou chcete použít.
+6. V poli **Počáteční datum odpisu** vyberte počáteční datum pro výpočet odpisů.
+7. Použijete-li metodu definovanou uživatelem, **První uživ. definované období Pole Datum** musí být nastaveno na datum, které je stejné nebo dřívější než pole **Počáteční datum odpisů**. Pokud jste vybrali hodnotu v poli **Délka období** v odpisové tabulce, datum v poli **První uživatelem definované období. Datum** musí být počátečním datem účetního období.
+8. Buď vyplňte pole **č. odpisových roků** nebo pole **Datum ukončení odpisů**. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
-## To set up user-defined depreciation methods
+## Nastavení uživatelských metod odpisování
 
-On the **Depreciation Table** page, you can set up user-defined depreciation methods. For example, you can set up depreciation based on number of units.
+Na stránce **Tabulka odpisů** můžete nastavit uživatelem definované metody odpisování. Například můžete nastavit odpis podle počtu jednotek.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Depreciation Tables**, and then choose the related link.
-2. On the **Depreciation Table List** page, choose the **New** action.
-3. On the **Depreciation Table Card** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
+1. Vyberte ![Žárovku, která otevře funkci Řekněte mi.](media/ui-search/search_small.png "Řekněte mi, co chcete udělat") ikona, zadejte **Tabulky odpisů**a poté vyberte související odkaz.
+2. Na stránce **Seznam odpisové tabulky** vyberte akci **Nový**.
+3. Na stránce **Karta odpisové tabulky** vyplňte pole podle potřeby. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
 > [!TIP]
-> Use the **Create Sum of Digits Table** function to define a depreciation table based on the *Sum of Digits* method.
+> Pomocí funkce **Vytvořit tabulku součtu číslic** definujte odpisovou tabulku založenou na metodě *Součet číslic*.
 
-With the *Sum of Digits* method, if a fixed asset is depreciated over 4 years, then the depreciation for each year is calculated in the following way:
+Pokud je u metody *Součet číslic* dlouhodobý majetek odepisován po dobu 4 let, pak se odpisy za každý rok vypočítají následujícím způsobem:
 
-Sum of Digits = 1 + 2 + 3 + 4 = 10
-Depreciation:
+Součet číslic = 1 + 2 + 3 + 4 = 10
+Amortizace:
 
-* Year 1 = 4/10
-* Year 2 = 3/10
-* Year 3 = 2/10
-* Year 4 = 1/10
+* Rok 1 = 4/10:
+* Rok 2 = 3/10:
+* Rok 3 = 2/10:
+* Rok 4 = 1/10:
 
-### Depreciation Based on Number of Units
+### Odpisy založené na počtu jednotek
 
-This user-defined method can also be used to depreciate based on number of units, for example, in the case of production machines with an established lifetime capacity. On the **Depreciation Tables** page, you can enter the number of units that can be produced in each period (month, quarter, year,or accounting period).
+Tuto uživatelsky definovanou metodu lze také použít k odpisování na základě počtu jednotek, například v případě výrobních strojů se stanovenou životností. Na stránce **Odpisové tabulky** můžete zadat počet jednotek, které lze vyrobit v každém období (měsíc, čtvrtletí, rok nebo účetní období).
 
-### Example - User-defined Depreciation
+### Příklad - Odpisy definované uživatelem
 
-You use a depreciation method that allows you to depreciate assets in an accelerated manner for income tax purposes.
+Používáte metodu odpisování, která vám umožňuje rychleji odpisovat majetek pro účely daně z příjmů.
 
-You would use the following depreciation rates for a fixed asset with a three-year lifetime for tax purposes:
+Pro dlouhodobý majetek s tříletou životností pro daňové účely byste použili následující odpisové sazby:
 
-* Year 1: 25%
-* Year 2: 38%
-* Year 3: 37%
+* Rok 1: 25 %
+* Rok 2: 38 %
+* Rok 3: 37%
 
-The acquisition cost is LCY 100,000, and the depreciable lifetime is five years. Depreciation is calculated annually.
+Pořizovací cena činí 100 000 LM a odpisovatelná životnost je pět let. [přibližně]Odpisy se vypočítají ročně.
 
 | Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ The acquisition cost is LCY 100,000, and the depreciable lifetime is five years.
 | 31,12.23 | Odpisy | Žádné | Žádné | 0 |
 | 31.12.24 | Odpisy | Žádné | Žádné | 0 |
 
-In the previous example, both the **First User-Defined Depr. Date** and **Depreciation Starting Date** fields would be set to 01/01/20 in the **FA Depreciation Books** page for the specific fixed asset. If, however, the **First User-Defined Depr. Date** field contained 01/01/20 and the **Depreciation Starting Date** field contained 04/01/20, the result would be:
+V předchozím příkladu bylo provedeno **První uživatelem definované období. Pole** Datum a **Datum zahájení odpisů** budou nastavena na 01/01/20 na stránce **Knihy odpisů FA** pro konkrétní dlouhodobý majetek. Pokud však **První uživatelem definované období. Pole Datum obsahuje 01/01/20 a pole Datum zahájení odpisování obsahuje 04/01/20, výsledek bude:
 
 | Datum | Typ zaúčtování DM | Dny | Částka | Účetní hodnota |
 | --- | --- | --- | --- | --- |
@@ -97,9 +97,9 @@ In the previous example, both the **First User-Defined Depr. Date** and **Deprec
 
 
 ## Viz také
-[Setting Up Fixed Assets](fa-setup.md)  
-[Fixed Assets](fa-manage.md)  
-[Set Up Fixed Asset Depreciation](fa-how-setup-depreciation.md)  
-[Depreciation Methods for Fixed Assets](fa-depreciation-methods.md)
+[Nastavení dlouhodobého majetku](fa-setup.md)   
+[Dlouhodobá aktiva](fa-manage.md)   
+[Nastavení odpisů dlouhodobého majetku](fa-how-setup-depreciation.md)   
+[Metody odpisování dlouhodobého majetku](fa-depreciation-methods.md) 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

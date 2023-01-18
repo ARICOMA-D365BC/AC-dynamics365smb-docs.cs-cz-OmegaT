@@ -9,12 +9,12 @@ ms.devlang: na
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.search.keywords:
-ms.search.form: 189, 190, 191
+ms.search.form: 189, 190, 191 
 ms.date: 06/23/2021
 ms.author: edupont
 
 ---
-# Receive and Convert Electronic Documents
+# [přibližně]Příjem a převod elektronických dokumentů
 
 The generic version of [!INCLUDE[prod_short](includes/prod_short.md)] supports receiving electronic invoices and credit memos in the PEPPOL format, which is supported by the largest providers of document exchange services. To receive an invoice from a vendor as an electronic PEPPOL document, you process the document in the Incoming Documents page to convert it to a purchase invoice or general journal line in [!INCLUDE[prod_short](includes/prod_short.md)].
 

@@ -1,9 +1,9 @@
 ---
     title: Setting Up and Invoicing Sales Prepayments
-    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing.
+    description: Prepayments are payments that are invoiced and posted to a sales or purchase prepayment order before final invoicing. 
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na
@@ -130,7 +130,7 @@ Susan vytvoří zálohovou fakturu a odešle ji zákazníkovi.
    | **Zboží** | **1896-S** | **1** |
    | **Zboží** | **1900-S** | **1** |
 
-   Ve výchozím nastavení jsou pole zálohy na prodejním řádku skrytá, takže je nutné je zobrazit. To do this you need to personalize the page. For more information, see [To start personalizing a page through the Personalizing banner](ui-personalization-user.md#to-start-personalizing-a-page-through-the-personalizing-banner).
+   Ve výchozím nastavení jsou pole zálohy na prodejním řádku skrytá, takže je nutné je zobrazit. Chcete-li to provést, musíte stránku přizpůsobit. Další informace naleznete v tématu <g6>Přizpůsobení stránky pomocí pásu Přizpůsobení</g6>.
 
 6. Verify that the **Prepayment %** field on the line with item **1900-S** contains **30**. Výchozí hodnota byla převzata z prodejní hlavičky, která byla vyplněna z karty zákazníka.
 

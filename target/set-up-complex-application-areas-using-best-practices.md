@@ -3,7 +3,7 @@
     description: Entering the correct setup values from the start is important to the success of any new business software.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

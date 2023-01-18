@@ -457,7 +457,7 @@
 ### [Work with Recurring Revenue](finance-recurring-invoicing.md)
 ### [Enter External Document Numbers](across-enter-external-document-numbers.md)
 
-## Purchasing
+## [přibližně]Nákup
 ### [Purchasing Overview](purchasing-manage-purchasing.md)
 ### [Purchasing Reports](purchase-reports.md)
 ### [Walkthrough: Set Up and Use a Purchase Approval Workflow](walkthrough-setting-up-and-using-a-purchase-approval-workflow.md)
@@ -721,7 +721,7 @@
 ##### [VAT Reporting](LocalFunctionality/Austria/vat-reporting.md)
 #### Banking & Payments
 ##### [Print Vendor Payments List Reports](LocalFunctionality/Austria/how-to-print-vendor-payments-list-reports.md)
-#### Purchasing
+#### [přibližně]Nákup
 ##### [Delivery Reminders](LocalFunctionality/Austria/delivery-reminders.md)
 ##### [Set Up Delivery Reminders](LocalFunctionality/Austria/how-to-set-up-delivery-reminders.md)
 ##### [Set Up Delivery Reminder Terms, Levels, and Text](LocalFunctionality/Austria/how-to-set-up-delivery-reminder-terms-levels-and-text.md)
@@ -910,7 +910,7 @@
 ##### [GDPDU Filter Examples](LocalFunctionality/Germany/gdpdu-filter-examples.md)
 ##### [Upgrade a .DTD Definition File](LocalFunctionality/Germany/how-to-upgrade-a-.dtd-definition-file.md)
 ##### [Walkthrough: Exporting Data for a Digital Audit](LocalFunctionality/Germany/walkthrough-exporting-data-for-a-digital-audit.md)
-#### Purchasing
+#### [přibližně]Nákup
 ##### [Set Up Delivery Reminders](LocalFunctionality/Germany/how-to-set-up-delivery-reminders.md)
 ##### [Set Up Delivery Reminder Terms, Levels, and Text](LocalFunctionality/Germany/how-to-set-up-delivery-reminder-terms-levels-and-text.md)
 ##### [Delivery Reminders](LocalFunctionality/Germany/delivery-reminders.md)
@@ -1131,7 +1131,7 @@
 #### Core Finance
 ##### [Apply and Unapply General Ledger Entries](LocalFunctionality/Netherlands/how-to-apply-and-unapply-general-ledger-entries.md)
 ##### [Required Descriptions in G/L Entries](LocalFunctionality/Netherlands/required-descriptions-in-g-l-entry.md)
-#### Purchasing
+#### [přibližně]Nákup
 ##### [Check Purchase Amounts](LocalFunctionality/Netherlands/check-purchase-amounts.md)
 ##### [Edit Document Amounts in Purchase Invoices and Credit Memos](LocalFunctionality/Netherlands/how-to-edit-document-amounts-in-purchase-invoices-and-credit-memos.md)
 ##### [Set Up Validation of Purchase Amounts](LocalFunctionality/Netherlands/how-to-set-up-validation-of-purchase-amounts.md)
@@ -1383,7 +1383,7 @@
 ##### Úprava směnných kurzů
 ##### [View Temporary Balances in General Ledger Journals](LocalFunctionality/Switzerland/how-to-view-temporary-balances-in-general-ledger-journals.md)
 ##### [Print General Ledger Setup Information](LocalFunctionality/Switzerland/how-to-print-general-ledger-setup-information.md)
-#### Purchasing
+#### [přibližně]Nákup
 ##### [Delivery Reminders](LocalFunctionality/Switzerland/delivery-reminders.md)
 ##### [Set Up Delivery Reminders](LocalFunctionality/Switzerland/how-to-set-up-delivery-reminders.md)
 ##### [Set Up Delivery Reminder Terms, Levels, and Texts](LocalFunctionality/Switzerland/how-to-set-up-delivery-reminder-terms-levels-and-text.md)
@@ -1668,7 +1668,7 @@
 #### [Package Tracking](sales-how-track-packages.md)
 #### [View unposted and posted blanket sales order lines](sales-how-to-create-blanket-sales-orders.md#to-view-unposted-and-posted-blanket-sales-order-lines)
 
-### Purchasing
+### [přibližně]Nákup
 #### [Purchasing Reports](purchase-reports.md)
 #### [View Purchasing Ledger Entries](ui-post-purchases.md#viewing-ledger-entries)
 

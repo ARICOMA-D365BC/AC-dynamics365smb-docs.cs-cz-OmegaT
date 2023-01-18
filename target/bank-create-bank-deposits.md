@@ -40,73 +40,73 @@ Musíte nastavit číselnou řadu pro bankovní vklady a poté zadat řadu v pol
 
 Také na stránce **Nastavení prodeje a pohledávek**, pokud chcete zaúčtovat vklady jako paušální částky a ne jako jednotlivé řádky, zapněte přepínač **Účtovat bankovní vklady jako paušální částku**. Posting a deposit as a lump sum, which creates one bank ledger entry for the full amount of the deposit, can make it easier to do bank reconciliation.
 
-### General Journal Templates for Bank Deposits
-You must also create a general journal template for deposits. You use general journals to post entries to bank, customer, vendor, fixed asset, and general ledger accounts. The journal templates design the general journal to suit the purpose of your work. That is, the fields on the journal template are exactly the ones you need.
+### Šablony finančních deníků pro bankovní vklady
+Musíte také vytvořit šablonu finančního deníku pro vklady. Hlavní deníky používáte k zaúčtování položek na účty bank, zákazníků, dodavatelů, dlouhodobého majetku a hlavní knihy. Šablony deníku navrhují hlavní deník tak, aby vyhovoval účelu vaší práce. To znamená, že pole v šabloně deníku jsou přesně ta, která potřebujete.
 
-The deposits will be cash receipts, so you might want to reuse your number series for cash receipt journals. Alternatively, if you need to distinguish between bank deposit and cash receipt journal entries, use a different number series.
+Vklady budou hotovostní příjmy, takže možná budete chtít znovu použít číselné řady pro deníky příjmů hotovosti. Případně, pokud potřebujete rozlišovat mezi položkami bankovního vkladu a deníku přijaté hotovosti, použijte jinou číselnou řadu.
 
-You'll also need to create a batch job for the template. To create a batch job, on the **General Journal Templates** page, choose the **Batches** action. For more information, see [Using Journal Templates and Batches](ui-work-general-journals.md#use-journal-templates-and-batches).
+Budete také muset vytvořit dávkovou úlohu pro šablonu. Chcete-li vytvořit dávkovou úlohu, na stránce **Šablony finančního deníku** vyberte akci **Dávky**. Další informace naleznete v tématu [Použití šablon deníku a dávek](ui-work-general-journals.md#use-journal-templates-and-batches).
 
-## Dimensions on Bank Deposit Lines
-The lines on the bank deposit will automatically use the default dimensions you specified in the **Department Code** and **Customer group Code** fields. When you choose **Customer** or **Vendor** in the **Account Type** field, the dimensions that are specified for the customer or vendor will replace the defaults. You can change the dimensions on the lines, if needed.
+## Dimenze na řádcíh bankovních vkladů
+Řádky bankovního vkladu automaticky použijí výchozí dimenze, které jste zadali v polích **Kód oddělení** a **Kód skupiny zákazníků**. Když v poli **Typ účtu** vyberete **Zákazník** nebo **Dodavatel**, výchozí hodnoty nahradí dimenze zadané pro zákazníka nebo dodavatele. V případě potřeby můžete změnit dimenze na řádcích.
 
 > [!TIP]
-> Dimension on lines are set according to Default Dimension Priorities. Line dimensions prioritized over header dimensions. To avoid conflicts, you can create rules that prioritize when to use a dimension depending on the source. If you want to change how dimensions are prioritized, you can change their rankings on the **Default Dimension Priorities** page. For more information, see [To set up default dimension priorities](finance-dimensions.md#to-set-up-default-dimension-priorities).
+> Dimenze na řádcích jsou nastaveny podle výchozích priorit dimenzí. Dimenze rádků mají přednost před dimenzemi záhlaví. Chcete-li se vyhnout konfliktům, můžete vytvořit pravidla, která upřednostňují, kdy použít dimenzi v závislosti na zdroji. Chcete-li změnit způsob stanovení priority dimenzí, můžete změnit jejich pořadí na stránce **Výchozí priority dimenzí**. Další informace naleznete v tématu [Nastavení výchozích priorit dimenzí](finance-dimensions.md#to-set-up-default-dimension-priorities).
 
-## Create a Bank Deposit
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Bank Deposits**, and then choose the related link.
-2. Choose **New** to open the **Bank Deposit** page.
-3. Choose the general journal template that you created for bank deposits.
+## Vytvoření bankovního vkladu
+1. Vyberte žárovku![, která otevře funkci Řekněte mi.](media/ui-search/search_small.png " Řekněte mi, co chcete udělat"), zadejte **Bankovní vklady** a poté vyberte související odkaz.
+2. Zvolte **Nový** a otevřete stránku **Bankovní vklad**.
+3. Vyberte šablonu finančního deníku, kterou jste vytvořili pro bankovní vklady.
 
    > [!NOTE]
-   > If the general journal template has more than one batch, you will be prompted to choose one.
+   > Pokud má šablona finančního deníku více než jednu dávku, budete vyzváni k výběru jedné.
 
-4. In the **Bank Account No.** field, choose the bank account in which to make the deposit.
+4. V poli **Číslo bankovního účtu** vyberte bankovní účet, na který chcete provést vklad.
 
    > [!TIP]
-   > You can double-check that you're depositing to the correct account by using the **Account Card** and **Account Ledger Entries** actions to look up the ledger entries for the selected bank account. For example, to see whether similar deposits were made to the account.
+   > Pomocí akcí **Karta účtu** a **Položky účtu** můžete znovu zkontrolovat, zda provádíte vklad na správný účet, a vyhledat položky pro vybraný bankovní účet. Například zjistit, zda byly na účet provedeny podobné vklady.
 
-5. In the **Total Deposit Amount** field, enter the total amount of the deposit. This total must be the sum of the amounts on all lines.
+5. V poli **Celková částka vkladu** zadejte celkovou částku vkladu. Tento součet musí být součtem částek na všech řádcích.
 6. Podle potřeby vyplňte zbývající pole. [!INCLUDE [tooltip-inline-tip_md](../archive/SetupAndAdministration/includes/tooltip-inline-tip_md.md)]
 
-   The date in the **Posting Date** field and the dimensions in the **Department Code** and **Customer group Code** fields will be assigned to the lines that you create for the bank deposit. You can change them if needed.
+   Datum v poli **Zúčtovací datum** a dimenze v polích **Kód oddělení** a **Kód skupiny zákazníků** budou přiřazeny k řádkům, které vytvoříte pro bankovní vklad. V případě potřeby je můžete změnit.
 
-7. Depending on whether you want to post the bank deposit as lump sum or each line individually to the bank ledger, turn the **Post as Lump Sum** toggle on or off. The default setting comes from the same toggle on the **Sales & Receivables Setup** page.
-
-   > [!NOTE]
-   > The **Currency Code** field shows the currency that is specified for the bank account you chose. You cannot choose a different currency.
-
-8. On the **Lines** FastTab, create a new line for each cash payment that you want to deposit.
-9. In the **Account Type** field, specify where the payment originated. For bank deposits, the type is typically **Customer** or **Vendor**.
+7. V závislosti na tom, zda chcete zaúčtovat bankovní vklad jako jednorázovou částku nebo každý řádek jednotlivě do hlavní knihy banky, zapněte nebo vypněte přepínač **Zaúčtovat jako jednorázovou částku**. Výchozí nastavení pochází ze stejného přepínače na stránce **Nastavení prodeje a pohledávek**.
 
    > [!NOTE]
-   > You can also register a cash payment to a vendor. To do that, choose **Vendor** and then enter the payment amount as a negative number in the **Credit Amount** field on the line.
+   > Pole **Kód měny** zobrazuje měnu, která je určena pro bankovní účet, který jste vybrali. Nemůžete si vybrat jinou měnu.
 
-10. In the **Document No.** field, enter the document number of the invoice from which the credit amount originated. You can use a document number for each line, or the same number for all lines.
+8. Na pevné záložce **Řádky** vytvořte nový řádek pro každou hotovostní platbu, kterou chcete vložit.
+9. V poli **Typ účtu** určete, odkud platba pochází. U bankovních vkladů je typ obvykle **Zákazník** nebo **Dodavatel**.
+
+   > [!NOTE]
+   > Můžete také zaregistrovat hotovostní platbu dodavateli. Chcete-li to provést, zvolte **Dodavatel** a poté zadejte částku platby jako záporné číslo do pole **Částka Dal** na řádku.
+
+10. Do pole **Číslo dokladu** zadejte číslo dokladu faktury, ze které dobropisová částka pochází. Můžete použít číslo dokumentu pro každý řádek nebo stejné číslo pro všechny řádky.
 
    > [!TIP]
-   > Typically, you don't need to fill in the **Document Type** field for financial entries. For example, if you're depositing cash from a day's sale you leave the field blank. If you're depositing cash from a customer payment, you choose **Payment**.
+   > Pro finanční záznamy obvykle nemusíte vyplňovat pole **Typ dokumentu**. Pokud například vkládáte hotovost z denního prodeje, ponecháte pole prázdné. Pokud vkládáte hotovost z platby zákazníka, zvolíte **Platba**.
 
-11. If you're depositing a cash payment for a specific customer invoice, choose the **Apply Entries** action, and then enter the invoice number in the **Applies-to ID** field.
-12. If you're ready to post the bank deposit, choose the **Post** action.
+11. Pokud vkládáte hotovostní platbu za konkrétní fakturu zákazníka, zvolte akci **Použít záznamy** a poté zadejte číslo faktury do pole **Platí pro ID**.
+12. Pokud jste připraveni zaúčtovat bankovní vklad, vyberte akci **Zaúčtovat**.
 
    > [!TIP]
-   > Before you post the deposit you can use the **Test Report** action to review your data. The report will show whether there are any issues, such as missing data, that will prevent posting.
+   > Před odesláním vkladu můžete pomocí akce **Testovací zpráva** zkontrolovat svá data. Sestava ukáže, zda existují nějaké problémy, například chybějící data, které zabrání zaúčtování.
 
-## Finding Posted Bank Deposits
-The **Posted Bank Deposits** page lists your company's previous deposits. In the list, you can review the comments and dimensions that were specified for the deposits. You can open the bank deposit to view more details, and from there you can investigate further. For example, you can choose the Find entries action to view the posted bank ledger entries. From the bank ledger entry, you can find its corresponding posted general ledger entry.
+## Vyhledání zaúčtovaných bankovních vkladů
+Na stránce **Zaúčtované bankovní vklady** jsou uvedeny předchozí vklady vaší společnosti. V seznamu si můžete prohlédnout komentáře a dimenze, které byly zadány pro vklady. Můžete otevřít bankovní vklad a zobrazit další podrobnosti a odtud můžete dále zkoumat. Můžete například zvolit akci Najít položky pro zobrazení zaúčtovaných položek banky. Ze záznamu položky bankovní knihy můžete najít odpovídající zaúčtovanou položku hlavní knihy.
 
-If you want to look up all general ledger entries for the posted deposit lines, go to the **G/L Register** page and use the **General Ledger** action. There you'll find all of the general ledger entries, including the entries for customers and vendors.
+Chcete-li vyhledat všechny položky hlavní knihy pro zaúčtované řádky vkladu, přejděte na stránku **Finanční žurnál** a použijte akci **Hlavní kniha**. Zde najdete všechny položky hlavní knihy, včetně položek pro zákazníky a dodavatele.
 
-## Reversing a Posted Bank Deposit
-To reverse a posted deposit, go to the **G/L Registers** page, find the register for the deposit, and then choose the **Reverse Register** action.
+## Zrušení zaúčtovaného bankovního vkladu
+Chcete-li zrušit zaúčtovaný vklad, přejděte na stránku **Finanční žurnál**, vyhledejte registr vkladu a poté vyberte akci **Stornovat žurnál.**
 
 > [!NOTE]
-> You can only reverse a register that contains a single type of entry. That is, the register must contain only customer entries or vendor entries, but not both. If a register contains both you must manually reverse the deposit.
+> Stornovat lze pouze žurnál, který obsahuje jeden typ položky. To znamená, že žurnál musí obsahovat pouze položky zákazníka nebo položky dodavatele, ale ne obojí. Pokud žurnál obsahuje obojí, musíte vklad ručně zrušit.
 
 ## Viz také
-[Finance](finance.md)  
-[Setting Up Finance](finance.md)
+[Finance](finance.md)    
+[Nastavení financí](finance.md)  
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

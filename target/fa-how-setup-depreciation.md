@@ -37,7 +37,7 @@ V knize odpisů dlouhodobého majetku určíte způsob odpisování dlouhodobéh
 For example, if you dispose of a fixed asset where the depreciation book does not specify rounding, but your company's general ledger setup requires rounding, then, when you dispose of the fixed asset, you will see an error message that an amount must be rounded on a ledger entry.
 
 ## Přiřazení knihy odpisů k dlouhodobému majetku
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Vyberte dlouhodobý majetek, pro který chcete nastavit knihu odpisů dlouhodobého majetku.
 3. On the **Depreciation Book** FastTab, fill in the fields as necessary.
 4. If you need to assign more than one depreciation book to the fixed asset, choose the **Add More Depreciation Books** action.
@@ -52,7 +52,7 @@ For example, if you dispose of a fixed asset where the depreciation book does no
 ## Přiřazení knihy odpisů k více DM pomocí dávkové úlohy
 If you want to assign a depreciation book to several fixed assets, you can use the **Create FA Depreciation Books** batch job to create fixed asset depreciation books.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Select the fixed asset that you want to set up a assign a depreciation book to, and then choose the **Edit** action.
 3. On the **Depreciation Book Card** page, choose the **Create FA Depreciation Books** action.
 4. On the **Create FA Depreciation Books** page, fill in the **Depreciation Book** field.

@@ -1,6 +1,6 @@
 ---
 title: Dispose or Retire FA
-description: When you sell or otherwise dispose of a fixed asset, the disposal value must be posted to calculate and record the gain or loss.
+description: When you sell or otherwise dispose of a fixed asset, the disposal value must be posted to calculate and record the gain or loss. 
 author: edupont04
 
 
@@ -39,7 +39,7 @@ If you sell or dispose of part of a fixed asset, you must split up the asset bef
 ## To view disposal ledger entries
 When you sell or dispose of a fixed asset, the disposal value is posted to the general ledger where you can view the result.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Select the fixed asset that you want to view entries for, and then choose the **Depreciation Books** action.
 3. Select the depreciation book that you want to view entries for, and then choose the **Ledger Entries** action.
 4. Select a line with **Disposal** in the **FA Posting Category** field, and then choose the **Find Entries** action.

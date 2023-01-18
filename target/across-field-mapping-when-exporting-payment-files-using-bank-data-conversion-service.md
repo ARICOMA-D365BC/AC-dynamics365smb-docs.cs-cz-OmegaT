@@ -3,7 +3,7 @@
     description: When you export payment files using the AMC Banking 365 Fundamentals extension, the data that you export is exposed to the service provider.
     author: SorenGP
 
-
+    
     ms.topic: conceptual
     ms.devlang: na
     ms.tgt_pltfrm: na

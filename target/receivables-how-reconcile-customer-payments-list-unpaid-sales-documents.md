@@ -18,7 +18,7 @@ ms.author: edupont
 Když vaši zákazníci provedli platby na váš elektronický bankovní účet, musíte použít každou zaplacenou částku na související prodejní doklad a poté zaúčtovat platbu, abyste aktualizovali odběratele, hlavní knihu a položky bankovní knihy. V závislosti na vašich obchodních potřebách můžete dostat zaplaceno a zaregistrovat tuto platbu různými způsoby: ručně, automaticky a prostřednictvím platebních služeb.
 
 > [!NOTE]  
-> Můžete provádět stejné úkoly, včetně plateb dodavatele na stránce **Deník odsouhlasení plateb** pomocí funkcí pro import výpisu z účtu, automatickou aplikaci a odsouhlasení bankovního účtu. Pro více informací navštivte [Automatické odsouhlasení plateb  .
+> Můžete provádět stejné úkoly, včetně plateb dodavatele na stránce **Deník odsouhlasení plateb** pomocí funkcí pro import výpisu z účtu, automatickou aplikaci a odsouhlasení bankovního účtu. Pro více informací navštivte [Automatické odsouhlasení plateb](receivables-how-reconcile-payments-auto-application.md).
 
 Stránka **Registrovat platby zákazníků** je navržena tak, aby vám pomohla při vyrovnávání interních účtů pomocí skutečných peněžních údajů, aby bylo zajištěno, že platby jsou od zákazníků shromažďovány efektivně. Tento nástroj pro zpracování plateb vám umožňuje rychle ověřit a zaúčtovat jednotlivé nebo paušální platby, zpracovat zlevněné platby a najít konkrétní nezaplacené doklady, za které se platí.
 

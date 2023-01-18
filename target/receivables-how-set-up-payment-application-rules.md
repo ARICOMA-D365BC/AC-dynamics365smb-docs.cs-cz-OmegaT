@@ -16,9 +16,9 @@ ms.author: edupont
 ---
 # Nastavení pravidel pro automatickou aplikaci plateb
 
-Na stránce **Pravidla aplikace platby** nastavíte pravidla, která určují, jak je text platby (u bankovní transakce) automaticky spárován s textem na souvisejících otevřených (nezaplacených) fakturách, dobropisech nebo jiných položkách při použití **Použít automaticky** funkce na stránce **Deník odsouhlasení plateb**. Pro více informací navštivte **Automatické odsouhlasení plateb**.
+Na stránce **Pravidla vyrovnání plateb** nastavíte pravidla, která určují, jak je text platby (u bankovní transakce) automaticky spárován s textem na souvisejících otevřených (nezaplacených) fakturách, dobropisech nebo jiných položkách při použití funkce **Použít automaticky** na stránce **Deník odsouhlasení plateb**. Pro více informací navštivte [Automatické odsouhlasení plateb](receivables-how-reconcile-payments-auto-application.md).
 
-Nová pravidla aplikace platby nastavíte tak, že zvolíte, které typy dat na řádku deníku odsouhlasení plateb se musí shodovat s daty o jedné nebo více otevřených položkách, než bude související platba automaticky použita na otevřené položky. Kvalita každé automatické aplikace je zobrazena jako hodnota **Nízká** až **Vysoká** v poli **Spolehlivost shody** na stránce **Deník odsouhlasení plateb** podle použitého pravidla platební aplikace.
+Nová pravidla pro aplikace platby nastavíte tak, že zvolíte, které typy dat na řádku deníku odsouhlasení plateb se musí shodovat s daty o jedné nebo více otevřených položkách, než bude související platba automaticky použita na otevřené položky. Kvalita každé automatické aplikace je zobrazena jako hodnota **Nízká** až **Vysoká** v poli **Spolehlivost shody** na stránce **Deník odsouhlasení plateb** podle použitého pravidla platební aplikace.
 
 Každý řádek na stránce **Pravidla aplikace platby** představuje pravidlo žádosti o platbu. Pravidla se používají v pořadí určeném v poli **Pořadí řazení**. Pokud je současně použito více pravidel, použije se shoda nejvyššího seřazeného pravidla.
 

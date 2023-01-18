@@ -20,7 +20,7 @@ To manage fixed asset maintenance, you must first set up some general maintenanc
 ## To set up general maintenance information
 If you set up the fields for maintenance, you can post maintenance expenses from the fixed asset journal.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Select the fixed asset that you to define insurance coverage for, and then choose the **Edit** action.
 3. On the **Maintenance** FastTab, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 

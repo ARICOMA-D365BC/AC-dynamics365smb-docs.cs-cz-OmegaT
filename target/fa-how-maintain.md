@@ -24,7 +24,7 @@ Indexation is used to adjust values for general price-level changes. The **Index
 ## To record maintenance work on a fixed asset
 Every time maintenance has been performed, such as a service visit, you can record it for the relevant fixed asset on the **Maintenance Registrations** page.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Select the fixed asset that you want to record maintenance for, and then choose the **Maintenance Registration** action.
 3. On the **Maintenance Registration** page, fill in the fields as necessary. [!INCLUDE[tooltip-inline-tip](includes/tooltip-inline-tip_md.md)]
 
@@ -51,7 +51,7 @@ You can print the **Maintenance - Next Service** report to see which assets you 
 ## To monitor maintenance costs
 You can view the maintenance costs when you look at the statistics of a fixed asset.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Select the fixed asset you want to view maintenance costs for, and then choose the **Depreciation Books** action.
 3. On the **FA Depreciation Books** page, select the relevant fixed asset depreciation book, and then choose the **Statistics** action.
 4. On the **Fixed Asset Statistics** page, choose the **Maintenance** field.
@@ -68,7 +68,7 @@ In the **Maintenance - Analysis** report, you can select to see maintenance base
 ## To view maintenance ledger entries
 You can also study maintenance costs by viewing the maintenance ledger entries.
 
-1. Choose the ![Lightbulb that opens the Tell Me feature.](media/ui-search/search_small.png "Tell me what you want to do") icon, enter **Fixed Assets**, and then choose the related link.
+1. Vyberte ikonu ![Žárovky, která otevře funkci Řekněte mi](media/ui-search/search_small.png " Řekněte mi, co chcete dělat") zadejte **Dlouhodobý majetek<x5/> a vyberte související odkaz.
 2. Select the fixed asset that you want to view ledger entries for, and then choose the **Depreciation Books** action.
 3. On the **FA Depreciation Books** page, select the relevant fixed asset depreciation book, and then choose the **Maintenance Ledger Entries** action.
 
